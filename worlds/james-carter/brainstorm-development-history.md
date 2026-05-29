@@ -66,38 +66,33 @@ Type: transition-of-care + source hierarchy. A draft discharge plan or routine d
 
 1. Discharge medication reconciliation / medication safety review
 
-Workflow mapping: P0: Discharge Medication Reconciliation.
-
 After the hospitalization, the clinician reconciles the final medication plan. The distinct competency is medication action reasoning: determine what should continue, restart, stop, or require follow-up without blindly copying admission medications or early inpatient holds. It draws on the HF-AKI medication reconciliation trap and steroid timeline/source-of-truth trap.
 
 2. Hospital discharge summary generation
-
-Workflow mapping: P0: Hospital Discharge Summary Generation.
 
 The clinician creates an accurate discharge summary from the completed hospitalization. The distinct competency is narrative fidelity: summarize the true hospital course, including suspected sepsis treatment, AKI course, medication changes, consultant recommendations, unresolved follow-up issues, and discharge considerations without importing outdated assumptions. It draws on source-of-truth reasoning, temporal sequence, and avoiding copy-forward errors.
 
 3. Transition-of-care / discharge readiness plan
 
-Workflow mapping: P0: Discharge Planning Documentation.
-
 The clinician evaluates discharge needs and creates a safe transition plan. The distinct competency is disposition safety: integrate family concerns, PT/nursing information, functional status, medication complexity, and follow-up needs when the patient is medically improved but not clearly back to baseline. It draws on the buried functional/cognitive status trap and discharge plan source-hierarchy trap.
 
 4. Post-hospital follow-up assessment note
-
-Workflow mapping: P0: Transitional Care Management Documentation (TCM).
 
 The patient is seen shortly after discharge. The distinct competency is reassessment after transition: review the hospitalization and determine what ongoing issues need attention, including weakness, blood pressure, medication tolerance, steroid plan, and renal recovery. The task tests temporal clinical reasoning and avoidance of sepsis anchoring after partial improvement.
 
 5. Consultant recommendation synthesis / care coordination note
 
-Workflow mapping: P1: Interdisciplinary Care Plan Development and Documentation.
-
 The clinician reconciles recommendations from nephrology, cardiology, and endocrinology into one coherent plan. The distinct competency is consultant-priority synthesis: determine which recommendations remain applicable, which were time-limited, and how to handle reasonable but competing specialist priorities. It draws on time-sensitive consultant recommendations and stakeholder friction.
 
 6. Readmission risk / patient safety review
 
-Workflow mapping: P0: Patient Risk Stratification Assessment.
-
 The clinician reviews the hospitalization to identify preventable readmission risks. The distinct competency is retrospective safety analysis: recognize vulnerabilities around medication confusion, functional decline, incomplete follow-up, complex chronic disease management, and family concerns. It draws on discharge safety, medication reconciliation, and transition-of-care traps without requiring a new diagnosis.
 
 Reserve option: future ED reassessment after return visit. Several days after discharge, the patient could return with weakness/lightheadedness. This should not be framed as "missed adrenal insufficiency"; it would test broad reassessment of medication effects, volume status, renal function, infection recurrence, and steroid-related risk. Keep as reserve rather than primary.
+
+## 5. Reviewer Questions / Physician Input Needed
+
+- Confirm approved workflow mapping and P0/P1 priority labels once the official task tracker is available.
+- Ensure the World snapshot remains discharge planning / near discharge so tasks can branch after the hospital course.
+- In World Spec, avoid including an over-authoritative final discharge synthesis that would make discharge summary or medication reconciliation tasks too easy.
+- In World Spec, define exact lab trends, medication changes, consultant note timing, and discharge-planning artifact hierarchy without turning the Brainstorm into a full timeline.

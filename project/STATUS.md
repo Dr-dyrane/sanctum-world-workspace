@@ -10,19 +10,19 @@ Working title: James Carter World
 
 ## Current State
 
-Pass 1 clinical interview completed. Pass 2 Brainstorm draft assembly approved and in progress.
+Brainstorm submission candidate finalized after tracker mapping and final upload QC.
 
 ## Current Pass
 
-Pass 2 - Brainstorm draft assembly.
+Pass 2 - Brainstorm draft assembly complete.
 
 ## Next Pass
 
-Pass 3: Reviewer-risk audit.
+Pass 6 - RL Studio upload and Brainstorm AutoQC, pending explicit Alexander authorization for browser/RL Studio access.
 
 ## Active Blocker
 
-Need draft Brainstorm assembled from locked physician decisions, then internal audit and Claude review package before approval to proceed.
+No local Brainstorm blockers. External action required: Alexander must authorize RL Studio/browser access or manually upload the Brainstorm.
 
 ## Current Git Checkpoint
 
@@ -38,7 +38,7 @@ Return to baseline commit if workflow becomes corrupted.
 
 ## Next Command For Codex
 
-Assemble James Carter Brainstorm draft from locked physician decisions only; run internal Brainstorm audit; prepare Claude review package; stop for approval.
+Ask Alexander for RL Studio/browser authorization or manual-upload instructions; do not start World Spec.
 
 ## Scope Guardrails
 
