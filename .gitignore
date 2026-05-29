@@ -1,0 +1,49 @@
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*_secret*
+*_secrets*
+*credentials*
+*token*
+
+# Browser/session exports
+browser-exports/
+chrome-exports/
+cookies*.txt
+cookies*.json
+session*.json
+local-storage*.json
+
+# Raw/proprietary downloads that are not intentionally promoted to reference
+downloads/
+raw-downloads/
+reference/source/raw/
+reference/source/downloads/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.swp
+~$*
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Logs and generated caches
+*.log
+.cache/
+node_modules/
+__pycache__/
+
