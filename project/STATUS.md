@@ -24,6 +24,18 @@ Pass 1: Brainstorm clinical interview.
 
 Need Alexander's physician interview answers for James Carter Brainstorm before drafting final clinical content.
 
+## Current Git Checkpoint
+
+baseline workspace initialized
+
+## Active Branch
+
+james-carter-brainstorm
+
+## Rollback Strategy
+
+Return to baseline commit if workflow becomes corrupted.
+
 ## Next Command For Codex
 
 Begin Pass 1 and interview Alexander section by section for World Setup, Major Friction Points, Major Traps, and Rough Task Ideas.
