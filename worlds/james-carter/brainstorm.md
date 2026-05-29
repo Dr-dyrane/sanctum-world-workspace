@@ -1,5 +1,7 @@
 # James Carter World Brainstorm
 
+Document date: May 29, 2026
+
 ## 1. World Setup
 
 This is an Emergency Medicine / Internal Medicine acute hospital world built around a multi-day hospitalization that begins with ED evaluation of an undifferentiated patient and follows inpatient admission, evolving workup, consultant involvement, treatment changes, and discharge planning.
@@ -10,7 +12,7 @@ He presents after several days of poor oral intake, weakness, confusion, reduced
 
 The complexity develops over time. Infection markers improve and the patient becomes more stable, but not every symptom resolves. Persistent weakness, intermittent confusion, borderline blood pressure, evolving renal function, medication changes, functional decline, and unclear steroid timeline force reassessment of overlapping contributors: infection, dehydration/AKI, medication effects, endocrine risk from recent steroid exposure, and chronic disease burden.
 
-The World ends around hospital day 5-7 during discharge planning. At that point, the patient is clinically improved: vitals are better, infection appears controlled, renal function is improving, and acute issues appear addressed. But he is not clearly back to baseline: he remains weaker, family reports intermittent cognitive concerns, and the medication plan has changed significantly. The central clinical question is whether the patient is medically stable on paper or actually safe leaving the hospital.
+The World closes on Hospital Day 6 at 18:00 during discharge planning. At that point, the patient is clinically improved: vitals are better, infection appears controlled, renal function is improving, and acute issues appear addressed. But he is not clearly back to baseline: he remains weaker, family reports intermittent cognitive concerns, and the medication plan has changed significantly. The central clinical question is whether the patient is medically stable on paper or actually safe leaving the hospital.
 
 ## 2. Major Friction Points
 
@@ -68,11 +70,19 @@ Type: transition-of-care + source hierarchy. A draft discharge plan or routine d
 
 Workflow mapping: P0: Discharge Medication Reconciliation.
 
-After the hospitalization, the clinician reconciles the final medication plan. The distinct competency is medication action reasoning: determine what should continue, restart, stop, or require follow-up without blindly copying admission medications or early inpatient holds. It draws on the HF-AKI medication reconciliation trap and steroid timeline/source-of-truth trap.
+Requester and anchor: Hospitalist requests this on Hospital Day 7, after the World close.
+
+Task-level trap: The final medication list contains a copied-forward inconsistency from an earlier medication hold, requiring the clinician to distinguish intentional discharge changes from outdated inpatient orders.
+
+The clinician reconciles the final medication plan. The distinct competency is medication action reasoning: determine what should continue, restart, stop, or require follow-up without blindly copying admission medications or early inpatient holds. It draws on the HF-AKI medication reconciliation trap and steroid timeline/source-of-truth trap.
 
 2. Hospital discharge summary generation
 
 Workflow mapping: P0: Hospital Discharge Summary Generation.
+
+Requester and anchor: Attending physician requests this on Hospital Day 7, after the World close.
+
+Task-level trap: The summary must avoid copying the early sepsis-only framing into the final hospital course after later documents clarify persistent noninfectious contributors.
 
 The clinician creates an accurate discharge summary from the completed hospitalization. The distinct competency is narrative fidelity: summarize the true hospital course, including suspected sepsis treatment, AKI course, medication changes, consultant recommendations, unresolved follow-up issues, and discharge considerations without importing outdated assumptions. It draws on source-of-truth reasoning, temporal sequence, and avoiding copy-forward errors.
 
@@ -80,23 +90,39 @@ The clinician creates an accurate discharge summary from the completed hospitali
 
 Workflow mapping: P0: Discharge Planning Documentation.
 
+Requester and anchor: Case manager and hospital medicine team request this on Hospital Day 7, after the World close.
+
+Task-level trap: Discharge planning documents conflict about whether home discharge, home health, or rehab-level support is safest, requiring synthesis rather than accepting the most reassuring note.
+
 The clinician evaluates discharge needs and creates a safe transition plan. The distinct competency is disposition safety: integrate family concerns, PT/nursing information, functional status, medication complexity, and follow-up needs when the patient is medically improved but not clearly back to baseline. It draws on the buried functional/cognitive status trap and discharge plan source-hierarchy trap.
 
 4. Post-hospital follow-up assessment note
 
 Workflow mapping: P0: Transitional Care Management Documentation (TCM).
 
-The patient is seen shortly after discharge. The distinct competency is reassessment after transition: review the hospitalization and determine what ongoing issues need attention, including weakness, blood pressure, medication tolerance, steroid plan, and renal recovery. The task tests temporal clinical reasoning and avoidance of sepsis anchoring after partial improvement.
+Requester and anchor: Primary care physician requests this 7 days after discharge, after the World close.
+
+Task-level trap: The follow-up note must distinguish symptoms present before discharge from new or persistent post-discharge problems rather than treating all weakness and blood pressure concerns as a new event.
+
+The distinct competency is reassessment after transition: review the hospitalization and determine what ongoing issues need attention, including weakness, blood pressure, medication tolerance, steroid plan, and renal recovery. The task tests temporal clinical reasoning and avoidance of sepsis anchoring after partial improvement.
 
 5. Consultant recommendation synthesis / care coordination note
 
 Workflow mapping: P1: Interdisciplinary Care Plan Development and Documentation.
+
+Requester and anchor: Hospital care team requests this on Hospital Day 7, after the World close.
+
+Task-level trap: Consultant recommendations occur at different timestamps, so the clinician must identify which recommendations were time-limited and which remain applicable after renal function, blood pressure, and steroid plan changed.
 
 The clinician reconciles recommendations from nephrology, cardiology, and endocrinology into one coherent plan. The distinct competency is consultant-priority synthesis: determine which recommendations remain applicable, which were time-limited, and how to handle reasonable but competing specialist priorities. It draws on time-sensitive consultant recommendations and stakeholder friction.
 
 6. Readmission risk / patient safety review
 
 Workflow mapping: P0: Patient Risk Stratification Assessment.
+
+Requester and anchor: Quality and patient safety team requests this 30 days after discharge, after the World close.
+
+Task-level trap: The review must identify subtle preventable risk factors, including medication confusion, incomplete functional recovery, and follow-up fragility, rather than focusing only on whether infection treatment was completed.
 
 The clinician reviews the hospitalization to identify preventable readmission risks. The distinct competency is retrospective safety analysis: recognize vulnerabilities around medication confusion, functional decline, incomplete follow-up, complex chronic disease management, and family concerns. It draws on discharge safety, medication reconciliation, and transition-of-care traps without requiring a new diagnosis.
 

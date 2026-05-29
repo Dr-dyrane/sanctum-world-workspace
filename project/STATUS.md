@@ -10,19 +10,19 @@ Working title: James Carter World
 
 ## Current State
 
-Brainstorm submission candidate finalized after tracker mapping and final upload QC.
+Brainstorm AutoQC completed with 45 passed, 6 failed, 0 neutral. Required AutoQC fixes have been applied locally and the DOCX submission artifact has been regenerated.
 
 ## Current Pass
 
-Pass 2 - Brainstorm draft assembly complete.
+Pass 6 - Brainstorm AutoQC remediation.
 
 ## Next Pass
 
-Pass 6 - RL Studio upload and Brainstorm AutoQC, pending explicit Alexander authorization for browser/RL Studio access.
+Re-upload revised Brainstorm DOCX and rerun Brainstorm AutoQC after Alexander approval.
 
 ## Active Blocker
 
-No local Brainstorm blockers. External action required: Alexander must authorize RL Studio/browser access or manually upload the Brainstorm.
+Revised DOCX must be re-uploaded and AutoQC rerun in RL Studio. Do not submit Plan for Review yet.
 
 ## Current Git Checkpoint
 
@@ -38,7 +38,7 @@ Return to baseline commit if workflow becomes corrupted.
 
 ## Next Command For Codex
 
-Ask Alexander for RL Studio/browser authorization or manual-upload instructions; do not start World Spec.
+Wait for Alexander approval for re-upload/AutoQC rerun; do not begin World Spec.
 
 ## Scope Guardrails
 
