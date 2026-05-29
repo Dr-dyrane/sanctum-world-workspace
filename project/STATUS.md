@@ -10,19 +10,19 @@ Working title: James Carter World
 
 ## Current State
 
-Source of truth imported. Ready to begin James Carter Brainstorm.
+Pass 1 clinical interview completed. Pass 2 Brainstorm draft assembly approved and in progress.
 
 ## Current Pass
 
-Pass 0: Workspace setup and source import.
+Pass 2 - Brainstorm draft assembly.
 
 ## Next Pass
 
-Pass 1: Brainstorm clinical interview.
+Pass 3: Reviewer-risk audit.
 
 ## Active Blocker
 
-Need Alexander's physician interview answers for James Carter Brainstorm before drafting final clinical content.
+Need draft Brainstorm assembled from locked physician decisions, then internal audit and Claude review package before approval to proceed.
 
 ## Current Git Checkpoint
 
@@ -38,7 +38,7 @@ Return to baseline commit if workflow becomes corrupted.
 
 ## Next Command For Codex
 
-Begin Pass 1 and interview Alexander section by section for World Setup, Major Friction Points, Major Traps, and Rough Task Ideas.
+Assemble James Carter Brainstorm draft from locked physician decisions only; run internal Brainstorm audit; prepare Claude review package; stop for approval.
 
 ## Scope Guardrails
 
