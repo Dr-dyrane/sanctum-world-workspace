@@ -1,91 +1,116 @@
 # Execution State
 
-## Current Phase
+Purpose: compressed current state for Claude. Use `project/STATUS.md` and `docs/status-dashboard.md` locally for live status.
 
-Phase 1: World Building onboarding.
+## Project State
 
-Scope is Steps 1-6 only:
+Current phase: Preparation only while waiting for Brainstorm Human Review.
 
-1. Brainstorm
-2. Brainstorm AutoQC
-3. Human Brainstorm Review
-4. World Spec Document
-5. World Spec AutoQC
-6. Human World Spec Review
+Brainstorm:
 
-## Current Pass
+- Submitted in RL Studio.
+- RL Studio task ID: `cyau8803`.
+- RL Studio status: `Ready for Plan Review`.
+- Submission timestamp: `5/29/2026 2:49 PM PDT`.
+- Brainstorm AutoQC: final pass, `51/51`.
+- Human Review: pending.
 
-Pass 1 - Brainstorm clinical interview.
+Current blocker:
 
-Status: World Setup interview substantially completed. Frictions interview is next.
+- Need Brainstorm Human Review result: GO or SEND BACK.
 
-## Next Actions
+Next legal action:
 
-1. Complete Frictions interview.
-2. Complete Traps interview.
-3. Complete Rough Task Ideas interview.
-4. Compare each section against Brainstorm criteria.
-5. Identify reviewer risks and missing clinical decisions.
-6. Only after Alexander approval: move to Pass 2 Brainstorm draft.
+- If GO: begin post-GO physician decision interview using `worlds/james-carter/world-spec-prep/post-go-interview-plan.md`.
+- If SEND BACK: triage reviewer feedback, revise only what is required, and resubmit Brainstorm as directed.
 
-## Active Blocker
+## Completed
 
-Need Alexander's physician answers for:
+- Brainstorm physician interview.
+- Brainstorm draft assembly.
+- Brainstorm internal audit.
+- Claude hostile Brainstorm review triage and selective remediation.
+- Brainstorm AutoQC remediation.
+- Official Brainstorm template rebuild.
+- Submission artifact generation: `worlds/james-carter/submission/James_Carter_Brainstorm.docx`.
+- RL Studio Brainstorm upload.
+- Brainstorm AutoQC final pass recorded.
+- Brainstorm submitted for Human Review.
+- World Spec preparation packet created.
+- Official World Spec template acquired: `reference/templates/World_Spec_Template_05_06.docx`.
+- World Spec AutoQC v6.3 acquired: `reference/templates/AutoQC_Section_2_World_Spec_v6.3_writer.docx`.
+- 113-check AutoQC master index created: `reference/world-spec-guidelines/08_autoqc_master_index.md`.
+- World Spec writer playbook created: `reference/world-spec-guidelines/09_world_spec_writer_playbook.md`.
+- Reviewer response protocol created: `docs/reviewer-response-protocol.md`.
+- Repository hardening and documentation completed.
+- Document tooling installed and verified.
+- MCP/integration audit completed.
+- Claude World Spec prep review triaged: `worlds/james-carter/world-spec-prep/claude-review-triage.md`.
+- Workspace file map created: `project/WORKSPACE_FILE_MAP.md`.
+- Post-GO interview plan created: `worlds/james-carter/world-spec-prep/post-go-interview-plan.md`.
 
-- Major Friction Points
-- Major Traps
-- Rough Task Ideas
+## Latest Git Checkpoints
 
-Do not draft final Brainstorm until these are complete and Alexander approves moving to Pass 2.
+- `af603ed checkpoint: expand world spec preparation and review workflow`
+- `cf2ad14 checkpoint: install and verify document tooling stack`
+- `17d6eb1 add instruction guide for new writers`
+- `0d9b066 checkpoint: harden repository workflow and documentation`
+- `02bb7bd checkpoint: add world spec autoqc prompt`
+- `949929a checkpoint: prepare world spec operating packet`
+- `b9b8766 checkpoint: submit brainstorm for human review`
+- `6e8e0fd checkpoint: record brainstorm autoqc pass`
+- `8820ddd checkpoint: rebuild brainstorm using official docx template`
+- `96b5a68 checkpoint: address brainstorm autoqc findings`
 
-## Claude Role Right Now
+## Authorized Right Now
 
-Claude may be used after physician-originated Brainstorm content exists.
+- Preparation.
+- Auditing.
+- Checklist building.
+- Reviewer-risk analysis.
+- Claude package refresh.
+- Local documentation updates that preserve phase boundaries.
 
-Claude can:
+## Not Authorized Right Now
 
-- organize the Brainstorm
-- improve consistency
-- check formatting
-- critique against Brainstorm checklist
+- World Spec drafting.
+- Populating the World Spec template.
+- Creating a final Section 3 World File Plan or file inventory.
+- Creating synthetic patient files.
+- Creating final task prompts.
+- Creating golden responses.
+- Creating grader guidelines.
+- Creating failure analysis.
+- Changing Brainstorm clinical content.
+- Renaming the patient or changing task concepts before Human Review GO and Alexander approval.
+- Accessing RL Studio or browser operations without explicit authorization.
 
-Claude must not:
+## Claude Operating Mode
 
-- invent scenario concept
-- invent traps
-- invent task ideas
-- write production task prompts
-- write golden responses
-- write grader guidelines
+Claude remains the official Sanctum drafting assistant, but drafting is gated.
 
-## Do Not Do Yet
+Claude may help:
 
-- do not draft final Brainstorm
-- do not upload to RL Studio
-- do not run AutoQC
-- do not begin World Spec
-- do not create file inventory
-- do not create exact dates, labs, med doses, or consultant notes
-- do not create synthetic files
-- do not write task prompts
-- do not write golden responses
-- do not write grader guidelines
-- do not do failure analysis
+- compress context;
+- critique plans against AutoQC v6.3;
+- identify reviewer risks;
+- prepare post-GO interview questions;
+- organize physician decisions after Alexander provides them.
 
-## Local Workflow
+Claude must not replace physician judgment or originate clinical design.
 
-Codex manages local continuity.
+## Current Prep Artifacts To Use
 
-Alexander supplies clinical decisions.
-
-Claude is official drafting assistant when recommended by Sanctum workflow.
-
-Before any drafting:
-
-- use physician-provided content only
-- preserve clinical intent
-- challenge weak reasoning
-- reject assumptions
-- keep frictions separate from traps
-- keep Brainstorm as concept pitch
-
+- `claude-package/01_SANCTUM_CORE_RULES.md`
+- `claude-package/02_BRAINSTORM_GUIDE.md`
+- `claude-package/03_WORLD_SPEC_GUIDE.md`
+- `claude-package/04_JAMES_CARTER_CONTEXT.md`
+- `claude-package/05_EXECUTION_STATE.md`
+- `claude-package/06_HANDOFF_STATE.md`
+- `worlds/james-carter/brainstorm.md`
+- `worlds/james-carter/task-map.md`
+- `worlds/james-carter/world-spec-prep/claude-review-triage.md`
+- `worlds/james-carter/world-spec-prep/post-go-interview-plan.md`
+- `reference/world-spec-guidelines/08_autoqc_master_index.md`
+- `reference/world-spec-guidelines/09_world_spec_writer_playbook.md`
+- `project/WORKSPACE_FILE_MAP.md`
