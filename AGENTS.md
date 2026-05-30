@@ -19,9 +19,19 @@ The current project phase is onboarding World Building only, limited to steps 1-
 
 Do not proceed into task execution, synthetic file generation, production task creation, golden responses, grader guidelines, or failure analysis unless Alexander explicitly updates the project phase.
 
+Always read `project/STATUS.md` first.
+
 Always check `project/EXECUTION_CHECKLIST.md` and `project/PASS_PLAN.md` before making changes.
 
 Never advance to a later pass without explicit user approval.
+
+Always respect the current phase in `project/STATUS.md`. Never cross a phase boundary without explicit Alexander approval.
+
+Use official templates as the base for submission artifacts when a template exists.
+
+Stop before irreversible actions, including RL Studio submission, browser control, external access, destructive git operations, or major restructuring, unless explicitly authorized.
+
+Commit checkpoints after major milestones.
 
 ## Clinical Authority
 

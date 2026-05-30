@@ -1,0 +1,142 @@
+# Sanctum World Workspace
+
+Private local workspace for Alexander Udeogaranya's Mercor Project Sanctum medical expert work.
+
+## Purpose
+
+This repository organizes Project Sanctum World Building work: source-of-truth materials, local operating checklists, clinical design notes, review artifacts, submission documents, and checkpoint history.
+
+Project Sanctum Worlds are realistic clinical environments that test frontier AI models on physician-level judgment: synthesis across messy documents, prioritization, uncertainty handling, medication reasoning, specialist conflict resolution, and safe decision-making.
+
+## Current Status
+
+- Active world: James Carter World
+- RL Studio task ID: `cyau8803`
+- Brainstorm status: submitted successfully
+- RL Studio status: `Ready for Plan Review`
+- Brainstorm AutoQC: final pass achieved
+- Current gate: waiting for Human Review (Brainstorm)
+- World Spec: preparation packet exists, but drafting is blocked until Brainstorm returns `GO`
+
+## Onboarding Scope
+
+Current scope is Project Sanctum Phase 1 World Building onboarding, steps 1-6 only:
+
+1. Brainstorm
+2. Brainstorm AutoQC
+3. Human Brainstorm Review
+4. World Spec Document
+5. World Spec AutoQC
+6. Human World Spec Review
+
+Do not move into synthetic file generation, production task creation, golden responses, grader guidelines, failure analysis, preference labeling, or downstream evaluation unless Alexander explicitly updates the project phase.
+
+## Active World
+
+James Carter is an Emergency Medicine / Internal Medicine acute hospital world. The approved Brainstorm centers on a 62-year-old male with diabetes, hypertension, CKD stage 3, HFrEF/CAD, polypharmacy, PMR with unclear prednisone taper, suspected urinary-source sepsis, AKI, medication-management tension, and discharge-readiness complexity.
+
+The clinical design principle is realistic hospital complexity, not a rare disease puzzle.
+
+## Workflow Phases
+
+- Brainstorm: concept pitch with World Setup, Frictions, Traps, and Rough Task Ideas.
+- Brainstorm AutoQC: automated RL Studio check.
+- Human Brainstorm Review: reviewer returns `GO` or `SEND BACK`.
+- World Spec preparation: allowed readiness work only before GO.
+- World Spec drafting: begins only after Brainstorm GO and Alexander approval.
+- World Spec AutoQC and Human Review: onboarding ends after Step 6 approval.
+
+## Folder Structure
+
+```text
+AGENTS.md
+README.md
+CONTRIBUTING.md
+docs/
+  agent-workflow.md
+  git-workflow.md
+  security-and-privacy.md
+  status-dashboard.md
+  tooling-audit.md
+project/
+  STATUS.md
+  DECISIONS.md
+  EXECUTION_CHECKLIST.md
+  PASS_PLAN.md
+  PHASE_MAP.md
+reference/
+  source/
+  templates/
+  workflows/
+  checklists/
+  world-spec-guidelines/
+worlds/
+  james-carter/
+    brainstorm.md
+    world-spec.md
+    clinical-logic.md
+    frictions.md
+    traps.md
+    task-map.md
+    reviewer-feedback.md
+    reviews/
+    submission/
+    world-spec-prep/
+```
+
+## How To Use This Repo
+
+1. Read [project/STATUS.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/project/STATUS.md>) first.
+2. Check [project/PASS_PLAN.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/project/PASS_PLAN.md>) and [project/EXECUTION_CHECKLIST.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/project/EXECUTION_CHECKLIST.md>) before acting.
+3. Confirm the current phase gate.
+4. Use official templates from `reference/templates/`.
+5. Keep source/reference material separate from authored work.
+6. Commit checkpoints after major milestones.
+
+## Assistant Roles
+
+- Alexander: physician expert, clinical source of truth, final approver.
+- Codex: local workspace manager, source controller, git checkpoint manager, reviewer simulation, continuity system.
+- Claude: official Sanctum drafting assistant for structure, formatting, consistency, and template-heavy drafting after the guide recommends it.
+- ChatGPT: ad hoc reasoning/review support if used, subject to the same source-of-truth and authorship boundaries.
+
+AI may organize, critique, audit, and format. AI must not originate final clinical decisions, task prompts, golden responses, grader guidelines, or downstream evaluation content outside the authorized phase.
+
+## Source-Of-Truth Policy
+
+- Official Sanctum instructions live under `reference/`.
+- Project state lives in `project/STATUS.md`.
+- Clinical authored work lives under `worlds/james-carter/`.
+- Physician decisions come from Alexander.
+- Official templates are used as bases for submission artifacts.
+
+## Privacy And Confidentiality
+
+Keep this repository private. Do not publish Mercor, Sanctum, RL Studio, internal templates, proprietary guide content, authenticated links, credentials, browser exports, or any real patient data.
+
+James Carter and all future patient identities must be fictional.
+
+## Rollback And Checkpoints
+
+Use git for local checkpoints, rollback, and change review. Before any RL Studio upload, prefer a clean working tree or a clearly documented pending state.
+
+Useful commands:
+
+```powershell
+git status --short --branch
+git log --oneline -10
+git diff
+git restore --source <commit> -- <path>
+```
+
+## Do Not Commit Publicly
+
+Do not commit publicly:
+
+- Credentials, tokens, API keys, cookies, browser profiles, or session exports
+- Real patient data or PHI
+- Authenticated-only links that expose private work
+- Raw proprietary downloads unless intentionally approved for private reference storage
+- RL Studio exports containing sensitive reviewer or platform information without review
+- Work that violates the current phase boundary
+
