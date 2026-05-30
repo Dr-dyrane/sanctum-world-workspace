@@ -8,7 +8,11 @@ Official AutoQC prompt link from source guide:
 
 https://docs.google.com/document/d/1KN6LRvJIWIHF3cBuIiXpPRcyKWX-5Klg/edit?usp=drive_link&ouid=102712554993580078883&rtpof=true&sd=true
 
-Local status: the AutoQC prompt link is known, but the prompt DOCX itself is not currently saved locally.
+Local prompt DOCX: `reference/templates/AutoQC_Section_2_World_Spec_v6.3_writer.docx`
+
+Detected version: AutoQC Healthcare v6.3, revised 05/23/2026. This supersedes v6.2, v6.1, v6.0, and v5.1.
+
+Writer edition note: run in Claude before RL Studio upload. The file contains 113 numbered QC checks for Section 2 (World Spec), each with severity, description, pass criteria, fail criteria, and QA verdict row.
 
 ## RL Studio Process
 
@@ -43,3 +47,23 @@ Local status: the AutoQC prompt link is known, but the prompt DOCX itself is not
 - Fictional patient, provider, institution, MRN, and dates are internally consistent.
 - No em dashes, en dashes, arrows, or AI-sounding phrasing.
 
+## Exact Local Check Families Extracted From V6.3
+
+The v6.3 prompt includes checks covering:
+
+- Header table completeness
+- Synthetic patient name and MRN format
+- Spec filename convention
+- Big Picture patient-first hook, task count, integration anchor, and file-plan composition
+- Patient profile identity fields, anthropometrics, allergies, PMH, home meds, multiple med lists, decision friction table, and code status
+- Clinical History prose, coverage, fact provenance, and regulatory backstory if applicable
+- Key Milestones table format, MM/DD/YYYY date format, every spec date listed, and no orphan milestones
+- Clinical Complexity explanation of why the world is hard for AI
+- Care team roster and standardized provider names
+- Task required components, clinician voice, natural anchor, no trap hints, specific/differentiated expected outputs
+- Failure Design trap count, grounded remediation, plausible wrong answers, and frictions versus traps distinction
+- Task-level files line, single deliverable per task, task independence, and temporal architecture verification
+- File plan row completeness, filename format, file dates matching milestones, source/tool/template origin, description, and pearls/traps/friction
+- Essential versus supplementary file classification and file mix
+- Reference Templates folder and two-track filename convention
+- Writer-produced media filename convention

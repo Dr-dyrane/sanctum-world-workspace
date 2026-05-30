@@ -8,6 +8,8 @@ Online template: https://docs.google.com/document/d/1KT7TjQi18RQKqcZNOuwrtziX1w_
 
 World Spec AutoQC prompt link: https://docs.google.com/document/d/1KN6LRvJIWIHF3cBuIiXpPRcyKWX-5Klg/edit?usp=drive_link&ouid=102712554993580078883&rtpof=true&sd=true
 
+Local World Spec AutoQC prompt DOCX: `reference/templates/AutoQC_Section_2_World_Spec_v6.3_writer.docx`
+
 Example World Spec references from the source guide:
 
 - World 001: https://docs.google.com/document/d/1yI-ixOoKAp7sfzSNIRttGdfTRKoE1pEt1XdKryoffkQ/edit?tab=t.euyybs7lwpsv#heading=h.6ccpubv5lkze
