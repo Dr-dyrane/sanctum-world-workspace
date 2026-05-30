@@ -10,7 +10,7 @@ Working title: James Carter World
 
 ## Current State
 
-RL Studio Brainstorm submission completed. AutoQC final pass achieved. Human review is pending.
+RL Studio Brainstorm submission completed. AutoQC final pass achieved. Human review is pending. World Spec preparation packet has been created for readiness only; no World Spec drafting is authorized before Brainstorm GO.
 
 ## RL Studio Submission
 
@@ -46,7 +46,7 @@ Return to baseline commit if workflow becomes corrupted.
 
 ## Next Command For Codex
 
-Wait for reviewer result. Do not start World Spec, create files, expand the clinical scenario, or modify the Brainstorm.
+Wait for reviewer result. If Brainstorm returns GO, begin Section 1 physician interview using the World Spec preparation packet. If Brainstorm returns SEND BACK, address reviewer feedback first.
 
 ## Scope Guardrails
 
