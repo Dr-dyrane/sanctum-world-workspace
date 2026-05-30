@@ -108,7 +108,7 @@ The world should test prioritization, pattern recognition, synthesis across mult
 
 Clinical environment: Emergency Medicine / Internal Medicine / acute hospital setting.
 
-Working patient: a 62-year-old male with diabetes mellitus, hypertension, chronic kidney disease, cardiovascular comorbidity risk, medication complexity, and possible steroid exposure history. He presents with altered mental status, progressive weakness, poor oral intake, and borderline hypotension. Initial working diagnosis is sepsis, but the case evolves beyond the first impression.
+Working patient: Korvin Merrow, a fictional 62-year-old male with type 2 diabetes mellitus, hypertension, CKD stage 3, HFrEF, CAD history, hyperlipidemia, anemia of CKD, osteoporosis/osteopenia from chronic steroid exposure, obstructive sleep apnea, diabetic peripheral neuropathy, polypharmacy, and PMR with unclear chronic prednisone taper history. He presents with altered mental status, progressive weakness, poor oral intake, and borderline hypotension. Initial working diagnosis is suspected urinary-source sepsis, but the case evolves beyond the first impression.
 
 Competing clinical concerns include adrenal insufficiency from previous steroid exposure, acute kidney injury, electrolyte abnormalities, medication-related complications, possible cardiac involvement, and discharge safety concerns.
 

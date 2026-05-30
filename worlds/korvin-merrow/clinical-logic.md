@@ -43,12 +43,35 @@ Emergency Medicine / Internal Medicine / acute hospital setting.
 
 62-year-old male with:
 
-- diabetes mellitus
+- type 2 diabetes mellitus
 - hypertension
-- chronic kidney disease
-- cardiovascular comorbidity risk
-- medication complexity
-- possible steroid exposure history
+- CKD stage 3
+- HFrEF
+- CAD history
+- hyperlipidemia
+- anemia of CKD
+- osteoporosis/osteopenia from chronic steroid exposure
+- obstructive sleep apnea
+- diabetic peripheral neuropathy
+- medication complexity/polypharmacy
+- PMR with unclear chronic prednisone taper history
+
+Approved compact medication list:
+
+- sacubitril/valsartan 24/26 mg BID
+- carvedilol 12.5 mg BID
+- furosemide 40 mg daily
+- spironolactone 25 mg daily
+- empagliflozin 10 mg daily
+- aspirin 81 mg daily
+- atorvastatin 40 mg nightly
+- metformin ER 500 mg BID
+- insulin glargine 18 units nightly
+- prednisone with inconsistent documented taper/dose
+- alendronate 70 mg weekly
+- calcium/vitamin D daily
+- ferrous sulfate 325 mg every other day
+- gabapentin 300 mg nightly
 
 ## Presentation
 

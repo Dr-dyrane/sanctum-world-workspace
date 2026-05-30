@@ -15,7 +15,7 @@ RL Studio:
 - Brainstorm AutoQC: `51/51 passed`
 - Human Review: SEND BACK from Stacey S
 
-Current state: Brainstorm reviewer remediation only. World Spec drafting is not authorized.
+Current state: Brainstorm reviewer remediation has been prepared locally. World Spec drafting is not authorized.
 
 ## Locked Decisions
 
@@ -23,7 +23,7 @@ Locked from approved Brainstorm:
 
 - Acute hospital medicine world, ED to inpatient admission.
 - Multi-day hospitalization ending at Hospital Day 6 at 18:00 during discharge planning.
-- Patient seed: 62-year-old male with T2DM, HTN, CKD stage 3, HFrEF, CAD, polypharmacy, PMR with prior chronic prednisone and recent taper.
+- Patient seed: 62-year-old male with T2DM, HTN, CKD stage 3, HFrEF, CAD, hyperlipidemia, anemia of CKD, osteoporosis/osteopenia from chronic steroid exposure, obstructive sleep apnea, diabetic peripheral neuropathy, polypharmacy, PMR with prior chronic prednisone and recent taper.
 - Presentation: AMS, progressive weakness, poor oral intake, reduced activity, borderline hypotension, AKI on CKD, possible urinary-source infection.
 - Initial suspected sepsis treatment is appropriate.
 - Complexity evolves from overlapping common hospital contributors, not from a single rare diagnosis.
@@ -55,15 +55,19 @@ Reserve only:
 
 - Future ED reassessment after return visit.
 
+Approved Brainstorm remediation additions:
+
+- World Type: Typical Clinical World.
+- Medication list: sacubitril/valsartan 24/26 mg BID; carvedilol 12.5 mg BID; furosemide 40 mg daily; spironolactone 25 mg daily; empagliflozin 10 mg daily; aspirin 81 mg daily; atorvastatin 40 mg nightly; metformin ER 500 mg BID; insulin glargine 18 units nightly; prednisone with inconsistent documented taper/dose; alendronate 70 mg weekly; calcium/vitamin D daily; ferrous sulfate 325 mg every other day; gabapentin 300 mg nightly.
+- Active DOCX: `worlds/korvin-merrow/submission/Korvin_Merrow_Brainstorm.docx`.
+
 ## Decisions Remaining
 
 Do not answer these without Alexander.
 
 Identity/compliance:
 
-- Confirm comorbidity additions for Brainstorm remediation.
-- Confirm medication names/doses for Brainstorm remediation.
-- Confirm when to regenerate the final Brainstorm submission DOCX and reupload.
+- Confirm when to reupload the revised Brainstorm and rerun AutoQC.
 - Synthetic MRN format.
 - DOB, age consistency, sex, allergies, code status, height, weight, BMI, and clinically relevant demographics.
 
@@ -102,18 +106,18 @@ Use these as future World Spec priorities only after Brainstorm GO:
 
 ## Next Legal Action
 
-Wait for Alexander approval of comorbidity and medication decisions.
+Wait for Alexander authorization for RL Studio reupload.
 
-If Alexander approves the reviewer-remediation decisions:
+If Alexander authorizes reupload:
 
-1. Incorporate only approved comorbidity and medication specificity changes into Brainstorm.
-2. Regenerate final Brainstorm submission DOCX.
-3. Run final local QC.
-4. Ask Alexander before RL Studio reupload.
+1. Upload `worlds/korvin-merrow/submission/Korvin_Merrow_Brainstorm.docx`.
+2. Rerun Brainstorm AutoQC.
+3. Capture results locally before further edits.
+4. Stop before final submit action unless explicitly authorized.
 
-If Alexander rejects or modifies any proposed decision:
+If Alexander requests more local review first:
 
-1. Revise the decision brief or Brainstorm plan accordingly.
+1. Audit the current revised Brainstorm package.
 2. Do not reupload until approved.
 3. Do not begin World Spec.
 

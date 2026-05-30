@@ -12,7 +12,9 @@ Brainstorm SEND BACK remediation.
 - Submission timestamp: `5/29/2026 2:49 PM PDT`
 - AutoQC: `51/51 passed`
 - Human review: SEND BACK from Stacey S
-- Current remediation: identity/world-type fixes plus physician decision briefs for comorbidity and medication specificity
+- Current remediation: identity/world-type fixes, approved comorbidity expansion, and approved medication specificity applied locally
+- Revised DOCX: `worlds/korvin-merrow/submission/Korvin_Merrow_Brainstorm.docx`
+- Reupload: pending explicit Alexander authorization
 
 ## World Spec
 
@@ -22,7 +24,7 @@ Brainstorm SEND BACK remediation.
 - World Spec AutoQC prompt v6.3: saved locally
 - World Spec AutoQC v6.3 checks: indexed in `reference/world-spec-guidelines/08_autoqc_master_index.md`
 - World Spec writer playbook: created in `reference/world-spec-guidelines/09_world_spec_writer_playbook.md`
-- Next allowed action: complete Brainstorm reviewer remediation only; no World Spec until Brainstorm GO
+- Next allowed action: reupload revised Brainstorm only after Alexander authorizes RL Studio access; no World Spec until Brainstorm GO
 
 ## Tooling
 
@@ -35,6 +37,6 @@ Brainstorm SEND BACK remediation.
 ## Boundaries
 
 - Do not draft World Spec before Brainstorm GO.
-- Do not modify unresolved clinical content until Alexander approves comorbidity and medication decisions.
+- Do not modify clinical content beyond reviewer-required remediation without Alexander approval.
 - Do not start synthetic generation, task prompts, golden responses, grader guidelines, or failure analysis.
 - Do not access RL Studio without explicit authorization.

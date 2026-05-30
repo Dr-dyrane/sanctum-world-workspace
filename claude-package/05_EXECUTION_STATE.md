@@ -17,11 +17,11 @@ Brainstorm:
 
 Current blocker:
 
-- Need Alexander approval of reviewer-required comorbidity and medication decisions before final Brainstorm resubmission package is regenerated.
+- Revised Brainstorm package is prepared locally. Need explicit Alexander authorization before RL Studio reupload and AutoQC rerun.
 
 Next legal action:
 
-- Complete reviewer-required Brainstorm remediation only.
+- Reupload revised Brainstorm only if Alexander authorizes RL Studio access.
 - Do not begin World Spec.
 
 ## Completed
@@ -37,9 +37,12 @@ Next legal action:
 - Brainstorm AutoQC final pass recorded.
 - Brainstorm submitted for Human Review.
 - Human Review SEND BACK captured.
-- Synthetic identity and World Type remediation prepared.
-- Comorbidity decision brief created.
-- Medication decision brief created.
+- Synthetic identity and World Type remediation applied locally.
+- Comorbidity decision brief created and physician-approved.
+- Medication decision brief created and physician-approved.
+- Reviewer remediation compliance review created.
+- Active Brainstorm source updated with approved comorbidity expansion and medication specificity.
+- `Korvin_Merrow_Brainstorm.docx` regenerated and locally verified.
 - World Spec preparation packet created.
 - Official World Spec template acquired: `reference/templates/World_Spec_Template_05_06.docx`.
 - World Spec AutoQC v6.3 acquired: `reference/templates/AutoQC_Section_2_World_Spec_v6.3_writer.docx`.
@@ -65,6 +68,8 @@ Next legal action:
 - `6e8e0fd checkpoint: record brainstorm autoqc pass`
 - `8820ddd checkpoint: rebuild brainstorm using official docx template`
 - `96b5a68 checkpoint: address brainstorm autoqc findings`
+- `6318735 checkpoint: complete Korvin Merrow identity migration`
+- `1ca33f0 checkpoint: apply brainstorm reviewer remediation`
 
 ## Authorized Right Now
 
@@ -87,7 +92,7 @@ Next legal action:
 - Creating golden responses.
 - Creating grader guidelines.
 - Creating failure analysis.
-- Changing Brainstorm clinical content.
+- Changing Brainstorm clinical content beyond the approved reviewer remediation.
 - Further identity changes or task concept changes beyond the reviewer-required Korvin Merrow remediation without Alexander approval.
 - Accessing RL Studio or browser operations without explicit authorization.
 

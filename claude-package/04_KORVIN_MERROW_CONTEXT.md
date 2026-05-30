@@ -2,7 +2,7 @@
 
 Purpose: compressed Claude context for a fresh Project Sanctum session. Use this as operational context only; the full source of truth remains local under `reference/` and `worlds/korvin-merrow/`.
 
-Boundary: Brainstorm returned SEND BACK from Stacey S. Remediation is limited to reviewer-required Brainstorm fixes. World Spec drafting is not authorized until Brainstorm Human Review returns GO and Alexander explicitly authorizes drafting.
+Boundary: Brainstorm returned SEND BACK from Stacey S. Reviewer-required Brainstorm fixes have been prepared locally and are awaiting explicit Alexander authorization for RL Studio reupload. World Spec drafting is not authorized until Brainstorm Human Review returns GO and Alexander explicitly authorizes drafting.
 
 ## Current World Concept
 
@@ -23,7 +23,7 @@ Design philosophy:
 
 ## Approved Brainstorm Summary
 
-Brainstorm submitted in RL Studio and passed final Brainstorm AutoQC 51/51 before Human Review. Human Review returned SEND BACK requiring synthetic identity, World Type declaration, comorbidity expansion, and medication specificity.
+Brainstorm submitted in RL Studio and passed final Brainstorm AutoQC 51/51 before Human Review. Human Review returned SEND BACK requiring synthetic identity, World Type declaration, comorbidity expansion, and medication specificity. Local remediation has been applied to the active Brainstorm source and regenerated DOCX, but it has not yet been reuploaded.
 
 World setup:
 
@@ -39,10 +39,32 @@ Patient seed:
 - Hypertension.
 - CKD stage 3.
 - HFrEF and CAD history.
-- Polypharmacy.
+- Hyperlipidemia.
+- Anemia of CKD.
+- Osteoporosis/osteopenia from chronic steroid exposure.
+- Obstructive sleep apnea.
+- Diabetic peripheral neuropathy.
+- Polypharmacy with a specific approved medication list.
 - Polymyalgia rheumatica previously treated with chronic prednisone and recent tapering.
 - Lives at home with spouse/family.
 - Baseline: independent ADLs, ambulates without major assistance, manages some medications with family support.
+
+Approved compact medication list:
+
+- Sacubitril/valsartan 24/26 mg BID.
+- Carvedilol 12.5 mg BID.
+- Furosemide 40 mg daily.
+- Spironolactone 25 mg daily.
+- Empagliflozin 10 mg daily.
+- Aspirin 81 mg daily.
+- Atorvastatin 40 mg nightly.
+- Metformin ER 500 mg BID.
+- Insulin glargine 18 units nightly.
+- Prednisone with inconsistent documented taper/dose.
+- Alendronate 70 mg weekly.
+- Calcium/vitamin D daily.
+- Ferrous sulfate 325 mg every other day.
+- Gabapentin 300 mg nightly.
 
 ## Locked Primary Frictions
 
@@ -79,7 +101,7 @@ Patient seed:
 
 2. HF-AKI medication reconciliation and time-sensitive consultant trap
 
-- ARB/ARNI, diuretic, SGLT2 inhibitor, beta blocker, and other HFrEF/CAD therapies are held or adjusted during AKI/hypotension.
+- Sacubitril/valsartan, furosemide, spironolactone, empagliflozin, carvedilol, and other HFrEF/CAD therapies are held or adjusted during AKI/hypotension.
 - Early "hold" recommendations may persist visually after renal function and BP evolve.
 - Correct reasoning avoids both premature restart and inappropriate long-term omission.
 
@@ -160,16 +182,23 @@ These are World Spec preparation risks, not authorization to change Brainstorm:
 - Task independence is a blocker under Check 2.40.
 - Failure Design tables need at least 5 grounded traps per task under Check 2.34, without inappropriate duplication under Check 2.91.
 
-## Current Remediation Queue
+## Current Remediation State
 
-Resolve only Brainstorm SEND BACK items. Do not start World Spec.
+Reviewer-required Brainstorm changes are applied locally. Do not start World Spec.
 
-1. Confirm Korvin Merrow remains the final synthetic patient name after Brainstorm remediation.
-2. Add `World Type: Typical Clinical World`.
-3. Get Alexander approval for comorbidity additions before changing clinical content.
-4. Get Alexander approval for medication names/doses before changing clinical content.
-5. Regenerate final Brainstorm submission package only after physician approval.
-6. Reupload/run AutoQC only after Alexander authorizes.
+Applied:
+
+1. Korvin Merrow synthetic patient identity.
+2. `World Type: Typical Clinical World`.
+3. Approved 10+ comorbidity burden.
+4. Approved compact medication list with drug names/doses.
+5. Regenerated `worlds/korvin-merrow/submission/Korvin_Merrow_Brainstorm.docx`.
+
+Still pending:
+
+1. Alexander authorization for RL Studio reupload.
+2. Brainstorm AutoQC rerun after upload.
+3. Human reviewer decision after resubmission.
 
 ## Claude Use Rules
 

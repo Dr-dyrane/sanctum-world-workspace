@@ -17,8 +17,11 @@ Required revisions:
 
 Current response:
 
-- Identity and World Type remediation prepared.
-- Comorbidity and medication decision briefs created for Alexander approval before clinical content changes.
+- Identity and World Type remediation applied locally.
+- Comorbidity and medication decision briefs created and physician-approved.
+- Brainstorm source and `Korvin_Merrow_Brainstorm.docx` regenerated with the approved comorbidity expansion and medication list.
+- Compliance review created at `worlds/korvin-merrow/reviewer-remediation-compliance-review.md`.
+- RL Studio reupload remains pending explicit Alexander authorization.
 - No World Spec drafting started.
 
 ## External Review Artifacts
