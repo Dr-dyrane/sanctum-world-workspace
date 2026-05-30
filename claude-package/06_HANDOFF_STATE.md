@@ -6,16 +6,17 @@ Purpose: enable a brand-new Claude session to resume accurately without stale as
 
 Project Sanctum onboarding is in Phase 1 World Building, but only steps 1-6 are in scope.
 
-The Brainstorm for Korvin Merrow World has been completed, passed AutoQC, uploaded to RL Studio, and returned SEND BACK from Human Review.
+The Brainstorm for Korvin Merrow World has been completed, passed AutoQC, uploaded to RL Studio, returned SEND BACK from Human Review, remediated, reuploaded, and resubmitted for reviewer review.
 
 RL Studio:
 
 - Task ID: `cyau8803`
-- Status: `Writer Actions / Start Plan Fixes`
-- Brainstorm AutoQC: `51/51 passed`
-- Human Review: SEND BACK from Stacey S
+- Status: awaiting reviewer decision after remediation resubmission
+- Brainstorm AutoQC: revised run `0 failed / 51 passed`
+- Diagnostics reviewed: yes
+- Human Review: pending after SEND BACK remediation resubmission
 
-Current state: Brainstorm reviewer remediation has been prepared locally. World Spec drafting is not authorized.
+Current state: Brainstorm resubmitted after SEND BACK remediation. World Spec drafting is not authorized.
 
 ## Locked Decisions
 
@@ -106,19 +107,18 @@ Use these as future World Spec priorities only after Brainstorm GO:
 
 ## Next Legal Action
 
-Wait for Alexander authorization for RL Studio reupload.
+Wait for reviewer decision.
 
-If Alexander authorizes reupload:
+If reviewer returns GO:
 
-1. Upload `worlds/korvin-merrow/submission/Korvin_Merrow_Brainstorm.docx`.
-2. Rerun Brainstorm AutoQC.
-3. Capture results locally before further edits.
-4. Stop before final submit action unless explicitly authorized.
+1. Record GO in status and reviewer-feedback files.
+2. Ask Alexander before starting World Spec.
+3. Continue only preparation until Alexander authorizes Pass 8.
 
-If Alexander requests more local review first:
+If reviewer returns SEND BACK again:
 
-1. Audit the current revised Brainstorm package.
-2. Do not reupload until approved.
+1. Capture feedback exactly.
+2. Do not edit Brainstorm until Alexander approves the response plan.
 3. Do not begin World Spec.
 
 ## Hard Boundaries
@@ -134,7 +134,7 @@ Do not:
 - write golden responses;
 - write grader guidelines;
 - do failure analysis;
-- change Brainstorm clinical content beyond reviewer-required remediation without Alexander approval.
+- change Brainstorm clinical content unless new reviewer feedback arrives and Alexander approves the response plan.
 
 ## Current Best Claude Task
 

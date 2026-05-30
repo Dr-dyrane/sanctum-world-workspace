@@ -2,7 +2,7 @@
 
 ## Current Phase
 
-Brainstorm SEND BACK remediation.
+Brainstorm resubmitted after SEND BACK remediation.
 
 ## Current World
 
@@ -10,15 +10,17 @@ Working title: Korvin Merrow World
 
 ## Current State
 
-RL Studio Brainstorm submission completed and AutoQC final pass achieved. Human review returned SEND BACK from Stacey S with narrow revision requests: synthetic patient identity, World Type declaration, expanded comorbidity burden, and medication specificity. World Spec drafting remains unauthorized.
+RL Studio Brainstorm remediation has been uploaded and resubmitted after Stacey S SEND BACK feedback. Revised Brainstorm AutoQC rerun passed with 0 failed and 51 passed, diagnostics were reviewed, and the plan was resubmitted for reviewer review. World Spec drafting remains unauthorized.
 
 ## RL Studio Submission
 
 Task ID: cyau8803
 
-Status: Writer Actions / Start Plan Fixes
+Status: awaiting reviewer decision after remediation resubmission
 
-Submission timestamp: 5/29/2026 2:49 PM PDT
+Original submission timestamp: 5/29/2026 2:49 PM PDT
+
+Latest remediation submission: revised Korvin Merrow Brainstorm uploaded; AutoQC 0 failed, 51 passed; diagnostics reviewed; plan resubmitted for reviewer review.
 
 ## Current Pass
 
@@ -26,11 +28,11 @@ Pass 7 - Brainstorm reviewer revisions.
 
 ## Next Pass
 
-Complete reviewer-required Brainstorm remediation only, then wait for Alexander approval before RL Studio reupload.
+Await Brainstorm reviewer decision. Do not begin World Spec unless Brainstorm receives GO and Alexander explicitly authorizes the next phase.
 
 ## Active Blocker
 
-Brainstorm SEND BACK revisions have been prepared locally with physician-approved comorbidity and medication additions. RL Studio reupload remains blocked until Alexander explicitly authorizes browser/RL Studio upload.
+Human reviewer decision pending after remediation resubmission.
 
 ## Current Git Checkpoint
 
@@ -50,7 +52,7 @@ Return to baseline commit if workflow becomes corrupted.
 
 ## Next Command For Codex
 
-Await Alexander approval for RL Studio reupload of the revised Korvin Merrow Brainstorm. Do not start World Spec.
+Continue preparation-only activities while awaiting reviewer decision. Do not modify Brainstorm unless new reviewer feedback arrives. Do not start World Spec.
 
 ## Scope Guardrails
 

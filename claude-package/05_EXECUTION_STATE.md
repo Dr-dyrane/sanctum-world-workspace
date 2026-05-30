@@ -4,25 +4,29 @@ Purpose: compressed current state for Claude. Use `project/STATUS.md` and `docs/
 
 ## Project State
 
-Current phase: Brainstorm SEND BACK remediation.
+Current phase: Brainstorm resubmitted after SEND BACK remediation.
 
 Brainstorm:
 
-- Submitted in RL Studio.
+- Original Brainstorm submitted in RL Studio.
 - RL Studio task ID: `cyau8803`.
-- RL Studio status: `Writer Actions / Start Plan Fixes`.
-- Submission timestamp: `5/29/2026 2:49 PM PDT`.
-- Brainstorm AutoQC: final pass, `51/51`.
-- Human Review: SEND BACK from Stacey S.
+- RL Studio status: awaiting reviewer decision after remediation resubmission.
+- Original submission timestamp: `5/29/2026 2:49 PM PDT`.
+- Revised Korvin Merrow Brainstorm uploaded after SEND BACK remediation.
+- Brainstorm AutoQC rerun: `0 failed / 51 passed`.
+- Diagnostics reviewed.
+- Plan resubmitted for reviewer review.
+- Human Review: pending reviewer decision after remediation.
 
 Current blocker:
 
-- Revised Brainstorm package is prepared locally. Need explicit Alexander authorization before RL Studio reupload and AutoQC rerun.
+- Human reviewer decision pending after Brainstorm remediation resubmission.
 
 Next legal action:
 
-- Reupload revised Brainstorm only if Alexander authorizes RL Studio access.
+- Continue preparation-only activities while awaiting reviewer decision.
 - Do not begin World Spec.
+- Do not modify Brainstorm unless new reviewer feedback arrives.
 
 ## Completed
 
@@ -43,6 +47,10 @@ Next legal action:
 - Reviewer remediation compliance review created.
 - Active Brainstorm source updated with approved comorbidity expansion and medication specificity.
 - `Korvin_Merrow_Brainstorm.docx` regenerated and locally verified.
+- Revised Korvin Merrow Brainstorm uploaded to RL Studio.
+- Brainstorm AutoQC rerun completed: `0 failed / 51 passed`.
+- Diagnostics reviewed.
+- Plan resubmitted for reviewer review.
 - World Spec preparation packet created.
 - Official World Spec template acquired: `reference/templates/World_Spec_Template_05_06.docx`.
 - World Spec AutoQC v6.3 acquired: `reference/templates/AutoQC_Section_2_World_Spec_v6.3_writer.docx`.
@@ -70,10 +78,11 @@ Next legal action:
 - `96b5a68 checkpoint: address brainstorm autoqc findings`
 - `6318735 checkpoint: complete Korvin Merrow identity migration`
 - `1ca33f0 checkpoint: apply brainstorm reviewer remediation`
+- `6e2ffb9 checkpoint: refresh reviewer remediation continuity files`
 
 ## Authorized Right Now
 
-- Brainstorm reviewer remediation.
+- Preparation-only activities while waiting for Brainstorm reviewer decision.
 - Preparation.
 - Auditing.
 - Checklist building.
@@ -93,6 +102,7 @@ Next legal action:
 - Creating grader guidelines.
 - Creating failure analysis.
 - Changing Brainstorm clinical content beyond the approved reviewer remediation.
+- Modifying Brainstorm unless new reviewer feedback arrives.
 - Further identity changes or task concept changes beyond the reviewer-required Korvin Merrow remediation without Alexander approval.
 - Accessing RL Studio or browser operations without explicit authorization.
 
