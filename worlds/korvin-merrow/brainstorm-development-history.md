@@ -1,5 +1,8 @@
 # James Carter World Brainstorm
 
+Historical artifact used prior working name James Carter; current patient identity is Korvin Merrow.
+
+
 ## 1. World Setup
 
 This is an Emergency Medicine / Internal Medicine acute hospital world built around a multi-day hospitalization that begins with ED evaluation of an undifferentiated patient and follows inpatient admission, evolving workup, consultant involvement, treatment changes, and discharge planning.

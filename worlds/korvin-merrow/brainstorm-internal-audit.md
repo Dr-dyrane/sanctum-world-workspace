@@ -1,5 +1,8 @@
 # James Carter Brainstorm Internal Audit
 
+Historical artifact used prior working name James Carter; current patient identity is Korvin Merrow.
+
+
 Status: Final Brainstorm upload QC passed. Not a World Spec.
 
 ## Sanctum Checklist
@@ -104,7 +107,7 @@ Status: pass with World Spec dependency.
 
 ## External Claude Review Response
 
-Claude review artifact: `worlds/james-carter/reviews/claude-brainstorm-review-01.md`.
+Claude review artifact: `worlds/korvin-merrow/reviews/claude-brainstorm-review-01.md`.
 
 Accepted:
 

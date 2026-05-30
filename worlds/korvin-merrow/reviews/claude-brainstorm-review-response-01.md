@@ -1,6 +1,6 @@
 # Claude Brainstorm Review Response 01
 
-Source artifact: `worlds/james-carter/reviews/claude-brainstorm-review-01.md`
+Source artifact: `worlds/korvin-merrow/reviews/claude-brainstorm-review-01.md`
 
 Decision rule: apply only changes that improve approval probability while preserving Alexander's clinical foundation.
 

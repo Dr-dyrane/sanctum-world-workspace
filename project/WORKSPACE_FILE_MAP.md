@@ -22,6 +22,7 @@ Current status: Brainstorm returned SEND BACK, reviewer remediation in progress,
 | `project/STATUS.md` | Current phase, branch, blocker, next action. | Read first before acting; authoritative current state. |
 | `project/DECISIONS.md` | Project decision log. | Use for durable decisions, not transient notes. |
 | `project/EXECUTION_CHECKLIST.md` | Official onboarding checklist. | Process checklist; not pass methodology. |
+| `project/IDENTITY_MIGRATION_LOG.md` | Current identity migration record from prior working name to Korvin Merrow. | Includes branch rename status, historical-file exceptions, and verification results. |
 | `project/PASS_PLAN.md` | Local pass-based operating system. | Controls pass transitions. |
 | `project/PHASE_MAP.md` | Phase boundaries and definitions. | Boundary reference; do not duplicate in every prep file. |
 | `project/WORKSPACE_FILE_MAP.md` | Current repo file map. | This file; update when structure changes materially. |
@@ -102,51 +103,51 @@ Current status: Brainstorm returned SEND BACK, reviewer remediation in progress,
 
 | File | Role | Duplication note |
 | --- | --- | --- |
-| `worlds/james-carter/brainstorm.md` | Active Brainstorm remediation source. | Modify only for reviewer-required changes approved by Alexander. |
-| `worlds/james-carter/brainstorm-development-history.md` | Internal Brainstorm history. | Historical only. |
-| `worlds/james-carter/brainstorm-internal-audit.md` | Internal Brainstorm audit. | Historical QC. |
-| `worlds/james-carter/clinical-logic.md` | Clinical reasoning notes. | Prep/support only. |
-| `worlds/james-carter/frictions.md` | Friction notes. | Source for later Decision Friction planning. |
-| `worlds/james-carter/traps.md` | Trap notes. | Source for later trap substrate planning. |
-| `worlds/james-carter/task-map.md` | Rough task mapping. | Brainstorm-level mapping; not final World Spec task architecture. |
-| `worlds/james-carter/world-spec.md` | Placeholder/skeleton. | Do not draft/populate before GO. |
-| `worlds/james-carter/reviewer-feedback.md` | Review notes and moved internal questions. | Use for reviewer feedback history. |
-| `worlds/james-carter/reviewer-comorbidity-decision-brief.md` | Physician decision brief for SEND BACK comorbidity expansion. | Prep only; do not treat proposed additions as locked until approved. |
-| `worlds/james-carter/reviewer-medication-decision-brief.md` | Physician decision brief for SEND BACK medication specificity. | Prep only; do not treat proposed medication list as locked until approved. |
-| `worlds/james-carter/rename-audit.md` | Audit of reviewer-required synthetic identity rename. | Confirms active files use Korvin Merrow and prior name remains only in historical archives. |
-| `worlds/james-carter/KORVIN_MERROW_PASS_PLAN.md` | World-specific pass plan. | Planning only. |
-| `worlds/james-carter/claude-brainstorm-review-package.md` | Claude Brainstorm review package. | Historical support artifact. |
+| `worlds/korvin-merrow/brainstorm.md` | Active Brainstorm remediation source. | Modify only for reviewer-required changes approved by Alexander. |
+| `worlds/korvin-merrow/brainstorm-development-history.md` | Internal Brainstorm history. | Historical only. |
+| `worlds/korvin-merrow/brainstorm-internal-audit.md` | Internal Brainstorm audit. | Historical QC. |
+| `worlds/korvin-merrow/clinical-logic.md` | Clinical reasoning notes. | Prep/support only. |
+| `worlds/korvin-merrow/frictions.md` | Friction notes. | Source for later Decision Friction planning. |
+| `worlds/korvin-merrow/traps.md` | Trap notes. | Source for later trap substrate planning. |
+| `worlds/korvin-merrow/task-map.md` | Rough task mapping. | Brainstorm-level mapping; not final World Spec task architecture. |
+| `worlds/korvin-merrow/world-spec.md` | Placeholder/skeleton. | Do not draft/populate before GO. |
+| `worlds/korvin-merrow/reviewer-feedback.md` | Review notes and moved internal questions. | Use for reviewer feedback history. |
+| `worlds/korvin-merrow/reviewer-comorbidity-decision-brief.md` | Physician decision brief for SEND BACK comorbidity expansion. | Prep only; do not treat proposed additions as locked until approved. |
+| `worlds/korvin-merrow/reviewer-medication-decision-brief.md` | Physician decision brief for SEND BACK medication specificity. | Prep only; do not treat proposed medication list as locked until approved. |
+| `worlds/korvin-merrow/rename-audit.md` | Audit of reviewer-required synthetic identity rename. | Confirms active files use Korvin Merrow and prior name remains only in historical archives. |
+| `worlds/korvin-merrow/KORVIN_MERROW_PASS_PLAN.md` | World-specific pass plan. | Planning only. |
+| `worlds/korvin-merrow/claude-brainstorm-review-package.md` | Claude Brainstorm review package. | Historical support artifact. |
 
 ## Korvin Merrow Reviews
 
 | File | Role | Duplication note |
 | --- | --- | --- |
-| `worlds/james-carter/reviews/brainstorm-autoqc-01.md` | First Brainstorm AutoQC output. | Historical failed/partial QC artifact. |
-| `worlds/james-carter/reviews/brainstorm-autoqc-02.md` | Final Brainstorm AutoQC pass summary. | Current Brainstorm AutoQC status. |
-| `worlds/james-carter/reviews/claude-brainstorm-review-01.md` | Claude hostile Brainstorm review. | External review artifact. |
-| `worlds/james-carter/reviews/claude-brainstorm-review-response-01.md` | Response to Claude Brainstorm review. | Historical triage/action record. |
+| `worlds/korvin-merrow/reviews/brainstorm-autoqc-01.md` | First Brainstorm AutoQC output. | Historical failed/partial QC artifact using prior working name. |
+| `worlds/korvin-merrow/reviews/brainstorm-autoqc-02.md` | Final Brainstorm AutoQC pass summary. | Current Brainstorm AutoQC status. |
+| `worlds/korvin-merrow/reviews/claude-brainstorm-review-01.md` | Claude hostile Brainstorm review. | Historical external review artifact using prior working name. |
+| `worlds/korvin-merrow/reviews/claude-brainstorm-review-response-01.md` | Response to Claude Brainstorm review. | Historical triage/action record. |
 
 ## Korvin Merrow Submission
 
 | File | Role | Duplication note |
 | --- | --- | --- |
-| `worlds/james-carter/submission/Korvin_Merrow_Brainstorm.docx` | Current Brainstorm DOCX remediation artifact. | Not final for reupload until comorbidity and medication decisions are approved and incorporated. |
+| `worlds/korvin-merrow/submission/Korvin_Merrow_Brainstorm.docx` | Current Brainstorm DOCX remediation artifact. | Not final for reupload until comorbidity and medication decisions are approved and incorporated. |
 
 ## Korvin Merrow World Spec Prep
 
 | File | Role | Duplication note |
 | --- | --- | --- |
-| `worlds/james-carter/world-spec-prep/autoqc-preflight-checklist.md` | Local preflight checklist. | Summary; exact check source is `08_autoqc_master_index.md`. |
-| `worlds/james-carter/world-spec-prep/claude-review-triage.md` | Triage of Claude World Spec prep review. | Decision queue; not clinical content. |
-| `worlds/james-carter/world-spec-prep/decision-register.md` | Prep decision register. | Use for pending/locked decisions after GO. |
-| `worlds/james-carter/world-spec-prep/file-plan-planning.md` | File plan planning scaffold. | Not a final file inventory. |
-| `worlds/james-carter/world-spec-prep/friction-to-task-map.md` | Friction/task planning map. | Planning only. |
-| `worlds/james-carter/world-spec-prep/post-go-interview-plan.md` | Interview sequence after Brainstorm GO. | This file; do not use before GO except for prep. |
-| `worlds/james-carter/world-spec-prep/readiness-map.md` | World Spec readiness map. | Prep status. |
-| `worlds/james-carter/world-spec-prep/self-containment-matrix.md` | Self-containment planning scaffold. | Not final traceability proof. |
-| `worlds/james-carter/world-spec-prep/task-spec-planning.md` | Task spec planning scaffold. | No final prompts. |
-| `worlds/james-carter/world-spec-prep/timeline-planning.md` | Timeline planning scaffold. | No final dates until physician approval. |
-| `worlds/james-carter/world-spec-prep/trap-to-file-map.md` | Trap-to-file planning scaffold. | Not a Section 3 file inventory. |
+| `worlds/korvin-merrow/world-spec-prep/autoqc-preflight-checklist.md` | Local preflight checklist. | Summary; exact check source is `08_autoqc_master_index.md`. |
+| `worlds/korvin-merrow/world-spec-prep/claude-review-triage.md` | Triage of Claude World Spec prep review. | Decision queue; not clinical content. |
+| `worlds/korvin-merrow/world-spec-prep/decision-register.md` | Prep decision register. | Use for pending/locked decisions after GO. |
+| `worlds/korvin-merrow/world-spec-prep/file-plan-planning.md` | File plan planning scaffold. | Not a final file inventory. |
+| `worlds/korvin-merrow/world-spec-prep/friction-to-task-map.md` | Friction/task planning map. | Planning only. |
+| `worlds/korvin-merrow/world-spec-prep/post-go-interview-plan.md` | Interview sequence after Brainstorm GO. | This file; do not use before GO except for prep. |
+| `worlds/korvin-merrow/world-spec-prep/readiness-map.md` | World Spec readiness map. | Prep status. |
+| `worlds/korvin-merrow/world-spec-prep/self-containment-matrix.md` | Self-containment planning scaffold. | Not final traceability proof. |
+| `worlds/korvin-merrow/world-spec-prep/task-spec-planning.md` | Task spec planning scaffold. | No final prompts. |
+| `worlds/korvin-merrow/world-spec-prep/timeline-planning.md` | Timeline planning scaffold. | No final dates until physician approval. |
+| `worlds/korvin-merrow/world-spec-prep/trap-to-file-map.md` | Trap-to-file planning scaffold. | Not a Section 3 file inventory. |
 
 ## Duplication Watchlist
 

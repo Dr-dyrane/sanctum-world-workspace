@@ -1,6 +1,6 @@
 # Korvin Merrow Context
 
-Purpose: compressed Claude context for a fresh Project Sanctum session. Use this as operational context only; the full source of truth remains local under `reference/` and `worlds/james-carter/`.
+Purpose: compressed Claude context for a fresh Project Sanctum session. Use this as operational context only; the full source of truth remains local under `reference/` and `worlds/korvin-merrow/`.
 
 Boundary: Brainstorm returned SEND BACK from Stacey S. Remediation is limited to reviewer-required Brainstorm fixes. World Spec drafting is not authorized until Brainstorm Human Review returns GO and Alexander explicitly authorizes drafting.
 

@@ -8,7 +8,7 @@ Current onboarding scope: Steps 1-6 only.
 
 - [ ] Confirm workspace structure exists
   - Platform: Local workspace
-  - Expected output: `reference/`, `project/`, and `worlds/james-carter/` folders exist
+  - Expected output: `reference/`, `project/`, and `worlds/korvin-merrow/` folders exist
   - Stop condition: Required folders or source guide are missing
   - Reviewer: Alexander
 
@@ -64,7 +64,7 @@ Current onboarding scope: Steps 1-6 only.
 
 - [ ] Finalize Brainstorm draft
   - Platform: Local workspace
-  - Expected output: `worlds/james-carter/brainstorm.md` contains final physician-approved Brainstorm content
+  - Expected output: `worlds/korvin-merrow/brainstorm.md` contains final physician-approved Brainstorm content
   - Stop condition: Alexander has not approved final language
   - Reviewer: Alexander
 
@@ -112,7 +112,7 @@ Current onboarding scope: Steps 1-6 only.
 
 - [ ] Review Brainstorm feedback
   - Platform: RL Studio, Slack only for clarification
-  - Expected output: Reviewer comments captured in `worlds/james-carter/reviewer-feedback.md`
+  - Expected output: Reviewer comments captured in `worlds/korvin-merrow/reviewer-feedback.md`
   - Stop condition: Feedback is unclear and needs reviewer clarification
   - Reviewer: Alexander and Codex
 
@@ -222,7 +222,7 @@ Current onboarding scope: Steps 1-6 only.
 
 - [ ] Review World Spec feedback
   - Platform: RL Studio, Slack only for clarification
-  - Expected output: Feedback captured in `worlds/james-carter/reviewer-feedback.md`
+  - Expected output: Feedback captured in `worlds/korvin-merrow/reviewer-feedback.md`
   - Stop condition: Feedback is unclear and needs reviewer clarification
   - Reviewer: Alexander and Codex
 

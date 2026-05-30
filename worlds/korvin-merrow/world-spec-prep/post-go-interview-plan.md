@@ -8,7 +8,7 @@ Boundary: this is an interview sequence, not a World Spec draft. Do not populate
 
 Source inputs:
 
-- `worlds/james-carter/world-spec-prep/claude-review-triage.md`
+- `worlds/korvin-merrow/world-spec-prep/claude-review-triage.md`
 - `reference/templates/AutoQC_Section_2_World_Spec_v6.3_writer.docx`
 - `reference/world-spec-guidelines/08_autoqc_master_index.md`
 - `reference/templates/World_Spec_Template_05_06.docx`

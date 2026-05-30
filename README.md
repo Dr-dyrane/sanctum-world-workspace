@@ -71,7 +71,7 @@ reference/
   checklists/
   world-spec-guidelines/
 worlds/
-  james-carter/
+  korvin-merrow/
     brainstorm.md
     world-spec.md
     clinical-logic.md
@@ -109,7 +109,7 @@ AI may organize, critique, audit, and format. AI must not originate final clinic
 - Official Sanctum instructions live under `reference/`.
 - Project state lives in `project/STATUS.md`.
 - Workspace structure and duplication tracking live in `project/WORKSPACE_FILE_MAP.md`.
-- Clinical authored work lives under `worlds/james-carter/`.
+- Clinical authored work lives under `worlds/korvin-merrow/`.
 - Physician decisions come from Alexander.
 - Official templates are used as bases for submission artifacts.
 

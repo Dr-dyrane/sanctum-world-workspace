@@ -118,7 +118,7 @@ Major clinical friction themes: emergency/inpatient stabilization and sepsis man
 
 Design principle: do not make this a rare disease puzzle. Complexity comes from realistic medicine: common diseases, messy documentation, competing priorities, and evolving information.
 
-AGENTS.md keeps operating context. Detailed evolving clinical design belongs under `worlds/james-carter/`.
+AGENTS.md keeps operating context. Detailed evolving clinical design belongs under `worlds/korvin-merrow/`.
 
 ## Source And Authored Work Separation
 

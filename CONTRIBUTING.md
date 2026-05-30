@@ -7,8 +7,8 @@ This is a private working repository for Project Sanctum onboarding and future p
 Recommended branches:
 
 - `main`
-- `james-carter-brainstorm`
-- `james-carter-world-spec`
+- `korvin-merrow-brainstorm`
+- `korvin-merrow-world-spec`
 - `reviewer-fixes/<short-topic>`
 - `autoqc-fixes/<short-topic>`
 
@@ -58,8 +58,8 @@ Before committing:
 
 Record reviewer feedback in:
 
-- `worlds/james-carter/reviewer-feedback.md`
-- or a dated file under `worlds/james-carter/reviews/`
+- `worlds/korvin-merrow/reviewer-feedback.md`
+- or a dated file under `worlds/korvin-merrow/reviews/`
 
 Keep the official feedback record in RL Studio. Slack can clarify, but RL Studio remains the source of truth.
 

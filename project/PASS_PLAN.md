@@ -88,7 +88,7 @@ Actions:
 
 Outputs:
 
-- Draft `worlds/james-carter/brainstorm.md`
+- Draft `worlds/korvin-merrow/brainstorm.md`
 
 Done criteria:
 
@@ -232,7 +232,7 @@ Inputs:
 
 Actions:
 
-- Capture feedback in `worlds/james-carter/reviewer-feedback.md`.
+- Capture feedback in `worlds/korvin-merrow/reviewer-feedback.md`.
 - Clarify feedback if needed.
 - Revise locally.
 - Re-upload and rerun AutoQC.
@@ -298,7 +298,7 @@ Actions:
 
 Outputs:
 
-- Draft `worlds/james-carter/world-spec.md`
+- Draft `worlds/korvin-merrow/world-spec.md`
 
 Done criteria:
 

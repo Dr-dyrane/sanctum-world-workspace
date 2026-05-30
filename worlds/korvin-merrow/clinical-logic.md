@@ -121,4 +121,4 @@ Complexity comes from realistic medicine:
 
 `AGENTS.md` keeps operating context.
 
-Detailed evolving clinical design belongs under `worlds/james-carter/`.
+Detailed evolving clinical design belongs under `worlds/korvin-merrow/`.

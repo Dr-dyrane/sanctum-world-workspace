@@ -37,7 +37,7 @@ Evaluation:
 
 ## Draft To Review
 
-See `worlds/james-carter/brainstorm.md`.
+See `worlds/korvin-merrow/brainstorm.md`.
 
 ## Known Reviewer Risks To Check
 

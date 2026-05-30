@@ -14,7 +14,7 @@ World Spec drafting remains blocked until Brainstorm receives `GO`.
 
 When reviewer returns `GO`:
 
-1. Capture the GO decision in `worlds/james-carter/reviewer-feedback.md` or a dated file under `worlds/james-carter/reviews/`.
+1. Capture the GO decision in `worlds/korvin-merrow/reviewer-feedback.md` or a dated file under `worlds/korvin-merrow/reviews/`.
 2. Update `project/STATUS.md`.
 3. Commit a checkpoint.
 4. Move to World Spec Section 1 physician interview only after Alexander authorizes.

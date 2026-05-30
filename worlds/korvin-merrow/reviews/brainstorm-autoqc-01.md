@@ -1,5 +1,8 @@
 # Brainstorm AutoQC 01
 
+Historical artifact used prior working name James Carter and old submission filename; current patient identity is Korvin Merrow.
+
+
 Source: RL Studio Brainstorm AutoQC, transcribed from user-provided output.
 
 Date recorded: 2026-05-29

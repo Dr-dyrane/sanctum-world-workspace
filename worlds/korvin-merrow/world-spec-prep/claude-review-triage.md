@@ -12,8 +12,8 @@ Primary source materials checked:
 - `reference/world-spec-guidelines/08_autoqc_master_index.md`
 - `reference/templates/World_Spec_Template_05_06.docx`
 - `reference/templates/brainstorm.docx`
-- `worlds/james-carter/reviews/brainstorm-autoqc-01.md`
-- `worlds/james-carter/reviews/brainstorm-autoqc-02.md`
+- `worlds/korvin-merrow/reviews/brainstorm-autoqc-01.md`
+- `worlds/korvin-merrow/reviews/brainstorm-autoqc-02.md`
 - `reference/New Writers Version - Instruction Guide (05_24).md`
 
 ## Executive Triage
@@ -56,9 +56,9 @@ DISPUTED as stated. The local Brainstorm template requires patient/world setup b
 Evidence:
 
 - `reference/templates/brainstorm.docx`, table 0: Brainstorm asks for demographics, comorbidities, environment, encounter type, and timeline shape.
-- `worlds/james-carter/reviews/brainstorm-autoqc-01.md:113`: "Fictional Patient Identity."
-- `worlds/james-carter/reviews/brainstorm-autoqc-01.md:115`: "The name is clearly invented and no real identifiers are used... This meets the pass criteria at the brainstorm stage."
-- `worlds/james-carter/reviews/brainstorm-autoqc-02.md`: final Brainstorm AutoQC passed with no failures or neutral items.
+- `worlds/korvin-merrow/reviews/brainstorm-autoqc-01.md:113`: "Fictional Patient Identity."
+- `worlds/korvin-merrow/reviews/brainstorm-autoqc-01.md:115`: "The name is clearly invented and no real identifiers are used... This meets the pass criteria at the brainstorm stage."
+- `worlds/korvin-merrow/reviews/brainstorm-autoqc-02.md`: final Brainstorm AutoQC passed with no failures or neutral items.
 
 Conclusion: Brainstorm passed its identity check. The stricter synthetic-name blocker should be treated as a World Spec preparation decision, not a retroactive Brainstorm defect.
 

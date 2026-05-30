@@ -32,7 +32,7 @@ Next legal action:
 - Claude hostile Brainstorm review triage and selective remediation.
 - Brainstorm AutoQC remediation.
 - Official Brainstorm template rebuild.
-- Submission artifact generation: `worlds/james-carter/submission/Korvin_Merrow_Brainstorm.docx`.
+- Submission artifact generation: `worlds/korvin-merrow/submission/Korvin_Merrow_Brainstorm.docx`.
 - RL Studio Brainstorm upload.
 - Brainstorm AutoQC final pass recorded.
 - Brainstorm submitted for Human Review.
@@ -49,9 +49,9 @@ Next legal action:
 - Repository hardening and documentation completed.
 - Document tooling installed and verified.
 - MCP/integration audit completed.
-- Claude World Spec prep review triaged: `worlds/james-carter/world-spec-prep/claude-review-triage.md`.
+- Claude World Spec prep review triaged: `worlds/korvin-merrow/world-spec-prep/claude-review-triage.md`.
 - Workspace file map created: `project/WORKSPACE_FILE_MAP.md`.
-- Post-GO interview plan created: `worlds/james-carter/world-spec-prep/post-go-interview-plan.md`.
+- Post-GO interview plan created: `worlds/korvin-merrow/world-spec-prep/post-go-interview-plan.md`.
 
 ## Latest Git Checkpoints
 
@@ -113,10 +113,10 @@ Claude must not replace physician judgment or originate clinical design.
 - `claude-package/04_KORVIN_MERROW_CONTEXT.md`
 - `claude-package/05_EXECUTION_STATE.md`
 - `claude-package/06_HANDOFF_STATE.md`
-- `worlds/james-carter/brainstorm.md`
-- `worlds/james-carter/task-map.md`
-- `worlds/james-carter/world-spec-prep/claude-review-triage.md`
-- `worlds/james-carter/world-spec-prep/post-go-interview-plan.md`
+- `worlds/korvin-merrow/brainstorm.md`
+- `worlds/korvin-merrow/task-map.md`
+- `worlds/korvin-merrow/world-spec-prep/claude-review-triage.md`
+- `worlds/korvin-merrow/world-spec-prep/post-go-interview-plan.md`
 - `reference/world-spec-guidelines/08_autoqc_master_index.md`
 - `reference/world-spec-guidelines/09_world_spec_writer_playbook.md`
 - `project/WORKSPACE_FILE_MAP.md`

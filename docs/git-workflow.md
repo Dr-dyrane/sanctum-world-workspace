@@ -5,8 +5,8 @@ Git is used for local checkpoints, rollback, and change review. Do not push or p
 ## Recommended Branches
 
 - `main`: stable private baseline.
-- `james-carter-brainstorm`: current Brainstorm work and submitted artifacts.
-- `james-carter-world-spec`: future World Spec work after Brainstorm GO.
+- `korvin-merrow-brainstorm`: current Brainstorm work and submitted artifacts.
+- `korvin-merrow-world-spec`: future World Spec work after Brainstorm GO.
 - `reviewer-fixes/*`: human reviewer feedback revisions.
 - `autoqc-fixes/*`: AutoQC remediation branches.
 
@@ -24,10 +24,10 @@ Use tags only after the milestone has actually occurred.
 ## Checkpoint Commit Examples
 
 ```powershell
-git add project/STATUS.md worlds/james-carter/reviews/brainstorm-autoqc-02.md
+git add project/STATUS.md worlds/korvin-merrow/reviews/brainstorm-autoqc-02.md
 git commit -m "checkpoint: record brainstorm autoqc pass"
 
-git add worlds/james-carter/submission/Korvin_Merrow_Brainstorm.docx
+git add worlds/korvin-merrow/submission/Korvin_Merrow_Brainstorm.docx
 git commit -m "checkpoint: rebuild brainstorm using official docx template"
 ```
 

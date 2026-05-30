@@ -25,7 +25,7 @@ Current response:
 
 ### Claude Hostile Reviewer Pass 01
 
-Path: `worlds/james-carter/reviews/claude-brainstorm-review-01.md`
+Path: `worlds/korvin-merrow/reviews/claude-brainstorm-review-01.md`
 
 Status: reviewed by Codex and selectively applied.
 
@@ -42,7 +42,7 @@ Rejected/deferred themes:
 - Do not add earlier-course tasks solely to spread temporal anchoring at Brainstorm stage.
 - Do not introduce new diagnoses, new traps, or new task concepts.
 
-Response/change summary: `worlds/james-carter/reviews/claude-brainstorm-review-response-01.md`
+Response/change summary: `worlds/korvin-merrow/reviews/claude-brainstorm-review-response-01.md`
 
 ## Internal Submission Notes
 
@@ -56,5 +56,5 @@ Moved from Brainstorm upload-facing draft:
 Local tracker search result:
 
 - Tracker retrieved locally at `reference/_Task Selection Categories For Team.xlsx`.
-- Exact workflow labels and priorities assigned for all six rough task concepts in `worlds/james-carter/task-map.md`.
+- Exact workflow labels and priorities assigned for all six rough task concepts in `worlds/korvin-merrow/task-map.md`.
 - Brainstorm upload-facing draft now contains only the four Sanctum-required sections.

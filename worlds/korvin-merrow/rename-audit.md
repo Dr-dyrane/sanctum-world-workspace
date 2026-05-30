@@ -28,38 +28,38 @@ Claude package:
 
 Active world files:
 
-- `worlds/james-carter/brainstorm.md`
-- `worlds/james-carter/clinical-logic.md`
-- `worlds/james-carter/frictions.md`
-- `worlds/james-carter/traps.md`
-- `worlds/james-carter/task-map.md`
-- `worlds/james-carter/world-spec.md`
-- `worlds/james-carter/KORVIN_MERROW_PASS_PLAN.md`
-- `worlds/james-carter/reviewer-feedback.md`
-- `worlds/james-carter/world-spec-prep/claude-review-triage.md`
-- `worlds/james-carter/world-spec-prep/decision-register.md`
-- `worlds/james-carter/world-spec-prep/post-go-interview-plan.md`
-- `worlds/james-carter/world-spec-prep/readiness-map.md`
+- `worlds/korvin-merrow/brainstorm.md`
+- `worlds/korvin-merrow/clinical-logic.md`
+- `worlds/korvin-merrow/frictions.md`
+- `worlds/korvin-merrow/traps.md`
+- `worlds/korvin-merrow/task-map.md`
+- `worlds/korvin-merrow/world-spec.md`
+- `worlds/korvin-merrow/KORVIN_MERROW_PASS_PLAN.md`
+- `worlds/korvin-merrow/reviewer-feedback.md`
+- `worlds/korvin-merrow/world-spec-prep/claude-review-triage.md`
+- `worlds/korvin-merrow/world-spec-prep/decision-register.md`
+- `worlds/korvin-merrow/world-spec-prep/post-go-interview-plan.md`
+- `worlds/korvin-merrow/world-spec-prep/readiness-map.md`
 
 Submission artifact:
 
-- Removed old remediation target: `worlds/james-carter/submission/James_Carter_Brainstorm.docx`
-- Created renamed remediation artifact: `worlds/james-carter/submission/Korvin_Merrow_Brainstorm.docx`
+- Removed old remediation target: `worlds/korvin-merrow/submission/James_Carter_Brainstorm.docx`
+- Created renamed remediation artifact: `worlds/korvin-merrow/submission/Korvin_Merrow_Brainstorm.docx`
 - Renamed `claude-package/04_JAMES_CARTER_CONTEXT.md` to `claude-package/04_KORVIN_MERROW_CONTEXT.md`
-- Renamed `worlds/james-carter/JAMES_CARTER_PASS_PLAN.md` to `worlds/james-carter/KORVIN_MERROW_PASS_PLAN.md`
+- Renamed `worlds/korvin-merrow/JAMES_CARTER_PASS_PLAN.md` to `worlds/korvin-merrow/KORVIN_MERROW_PASS_PLAN.md`
 
 New reviewer-remediation files:
 
-- `worlds/james-carter/reviewer-comorbidity-decision-brief.md`
-- `worlds/james-carter/reviewer-medication-decision-brief.md`
-- `worlds/james-carter/rename-audit.md`
+- `worlds/korvin-merrow/reviewer-comorbidity-decision-brief.md`
+- `worlds/korvin-merrow/reviewer-medication-decision-brief.md`
+- `worlds/korvin-merrow/rename-audit.md`
 
 ## Search Results
 
 Command:
 
 ```powershell
-rg -n --hidden -g '!**/.git/**' -g '!**/__pycache__/**' -g '!**/.cache/**' -g '!worlds/james-carter/reviews/**' -g '!worlds/james-carter/brainstorm-development-history.md' -g '!worlds/james-carter/brainstorm-internal-audit.md' -g '!worlds/james-carter/rename-audit.md' "James Carter|James_Carter|JAMES_CARTER"
+rg -n --hidden -g '!**/.git/**' -g '!**/__pycache__/**' -g '!**/.cache/**' -g '!worlds/korvin-merrow/reviews/**' -g '!worlds/korvin-merrow/brainstorm-development-history.md' -g '!worlds/korvin-merrow/brainstorm-internal-audit.md' -g '!worlds/korvin-merrow/rename-audit.md' "James Carter|James_Carter|JAMES_CARTER"
 ```
 
 Result:
@@ -71,10 +71,10 @@ No matches.
 Full repository search still finds the prior name only in historical archives:
 
 ```text
-worlds/james-carter/brainstorm-development-history.md
-worlds/james-carter/brainstorm-internal-audit.md
-worlds/james-carter/reviews/claude-brainstorm-review-01.md
-worlds/james-carter/reviews/brainstorm-autoqc-01.md
+worlds/korvin-merrow/brainstorm-development-history.md
+worlds/korvin-merrow/brainstorm-internal-audit.md
+worlds/korvin-merrow/reviews/claude-brainstorm-review-01.md
+worlds/korvin-merrow/reviews/brainstorm-autoqc-01.md
 ```
 
 ## Confirmation

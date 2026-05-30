@@ -1,5 +1,8 @@
 Strict Sanctum reviewer simulation — James Carter Brainstorm. No rewrite, no style edits, no new clinical content. Verdicts only.
 
+Historical artifact used prior working name James Carter; current patient identity is Korvin Merrow.
+
+
 ## 1. World Setup
 
 **Setting clear?** Yes. EM/IM acute hospital, ED → inpatient → consultants → discharge planning, multi-day course, snapshot fixed at day 5–7 discharge planning. Encounter type and branch point are explicit.
