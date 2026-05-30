@@ -4,7 +4,7 @@ Purpose: local repository hygiene map to prevent duplicate working files and acc
 
 Generated from local workspace file listing excluding `.git`, caches, and Python bytecode.
 
-Current status: Brainstorm returned SEND BACK, reviewer remediation in progress, World Spec preparation only.
+Current status: Brainstorm returned SEND BACK, reviewer remediation package prepared locally, World Spec preparation only.
 
 ## Root
 
@@ -114,6 +114,7 @@ Current status: Brainstorm returned SEND BACK, reviewer remediation in progress,
 | `worlds/korvin-merrow/reviewer-feedback.md` | Review notes and moved internal questions. | Use for reviewer feedback history. |
 | `worlds/korvin-merrow/reviewer-comorbidity-decision-brief.md` | Physician decision brief for SEND BACK comorbidity expansion. | Prep only; do not treat proposed additions as locked until approved. |
 | `worlds/korvin-merrow/reviewer-medication-decision-brief.md` | Physician decision brief for SEND BACK medication specificity. | Prep only; do not treat proposed medication list as locked until approved. |
+| `worlds/korvin-merrow/reviewer-remediation-compliance-review.md` | Compliance validation for reviewer-requested comorbidity and medication remediation. | Supports SEND BACK revisions; not a World Spec source. |
 | `worlds/korvin-merrow/rename-audit.md` | Audit of reviewer-required synthetic identity rename. | Confirms active files use Korvin Merrow and prior name remains only in historical archives. |
 | `worlds/korvin-merrow/KORVIN_MERROW_PASS_PLAN.md` | World-specific pass plan. | Planning only. |
 | `worlds/korvin-merrow/claude-brainstorm-review-package.md` | Claude Brainstorm review package. | Historical support artifact. |
@@ -131,7 +132,7 @@ Current status: Brainstorm returned SEND BACK, reviewer remediation in progress,
 
 | File | Role | Duplication note |
 | --- | --- | --- |
-| `worlds/korvin-merrow/submission/Korvin_Merrow_Brainstorm.docx` | Current Brainstorm DOCX remediation artifact. | Not final for reupload until comorbidity and medication decisions are approved and incorporated. |
+| `worlds/korvin-merrow/submission/Korvin_Merrow_Brainstorm.docx` | Current Brainstorm DOCX remediation artifact. | Regenerated with approved reviewer fixes; pending Alexander approval before RL Studio reupload. |
 
 ## Korvin Merrow World Spec Prep
 

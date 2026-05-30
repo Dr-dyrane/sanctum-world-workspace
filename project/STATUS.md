@@ -26,11 +26,11 @@ Pass 7 - Brainstorm reviewer revisions.
 
 ## Next Pass
 
-Complete reviewer-required Brainstorm remediation only, then wait for Alexander approval before regenerating final submission package or reuploading.
+Complete reviewer-required Brainstorm remediation only, then wait for Alexander approval before RL Studio reupload.
 
 ## Active Blocker
 
-Brainstorm SEND BACK revisions must be completed and approved by Alexander before reupload. Comorbidity and medication additions require physician approval before being locked.
+Brainstorm SEND BACK revisions have been prepared locally with physician-approved comorbidity and medication additions. RL Studio reupload remains blocked until Alexander explicitly authorizes browser/RL Studio upload.
 
 ## Current Git Checkpoint
 
@@ -50,7 +50,7 @@ Return to baseline commit if workflow becomes corrupted.
 
 ## Next Command For Codex
 
-Address Stacey S reviewer feedback only. Do not start World Spec. Do not reupload until Alexander approves comorbidity and medication decisions.
+Await Alexander approval for RL Studio reupload of the revised Korvin Merrow Brainstorm. Do not start World Spec.
 
 ## Scope Guardrails
 
