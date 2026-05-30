@@ -30,6 +30,8 @@ Commits should be small enough to review and rollback.
 Before committing:
 
 - [ ] `project/STATUS.md` matches the true phase.
+- [ ] `project/WORKSPACE_FILE_MAP.md` was checked before creating, moving, renaming, or deleting files.
+- [ ] `project/WORKSPACE_FILE_MAP.md` was updated if the workspace structure, official sources/templates, submission artifacts, or duplicate-purpose files changed.
 - [ ] Current work is allowed by the phase gate.
 - [ ] No clinical content changed without Alexander's approval.
 - [ ] No source material was blended into authored work without attribution.
@@ -71,3 +73,14 @@ For AutoQC:
 - Document disagreements for reviewer visibility.
 - Re-run AutoQC after changes when required.
 
+## Workspace File Map
+
+Use `project/WORKSPACE_FILE_MAP.md` as the local repository map to prevent duplicate working files and accidental edits. It is not the Sanctum World File Plan and must not be treated as Section 3 file inventory.
+
+Update it when:
+
+- adding or removing a top-level workflow folder;
+- importing a new official source or template;
+- creating or replacing a submission artifact;
+- superseding or retiring a prep file;
+- discovering files with duplicate purpose.

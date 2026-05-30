@@ -23,6 +23,10 @@ Always read `project/STATUS.md` first.
 
 Always check `project/EXECUTION_CHECKLIST.md` and `project/PASS_PLAN.md` before making changes.
 
+Always check `project/WORKSPACE_FILE_MAP.md` before creating, moving, renaming, or deleting workspace files.
+
+Update `project/WORKSPACE_FILE_MAP.md` whenever the workspace structure changes materially, a new official source/template is imported, a submission artifact is created or replaced, or a duplicate-purpose file is discovered.
+
 Never advance to a later pass without explicit user approval.
 
 Always respect the current phase in `project/STATUS.md`. Never cross a phase boundary without explicit Alexander approval.

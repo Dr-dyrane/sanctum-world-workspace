@@ -12,6 +12,8 @@ Codex is the local workspace manager:
 
 - reads `STATUS.md` first
 - checks phase gates
+- checks `WORKSPACE_FILE_MAP.md` before file creation, moves, renames, deletion, or restructuring
+- updates `WORKSPACE_FILE_MAP.md` when structure, official sources/templates, submission artifacts, or duplicate-purpose files change
 - organizes files
 - indexes source-of-truth materials
 - manages git checkpoints
@@ -60,4 +62,3 @@ Any ChatGPT output should be treated as advisory, not authoritative.
 - Task prompts must come from Alexander.
 - AutoQC disagreements should be documented honestly.
 - Reviewer feedback should be preserved in RL Studio and locally summarized.
-

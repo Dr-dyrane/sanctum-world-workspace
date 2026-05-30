@@ -88,10 +88,12 @@ worlds/
 
 1. Read [project/STATUS.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/project/STATUS.md>) first.
 2. Check [project/PASS_PLAN.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/project/PASS_PLAN.md>) and [project/EXECUTION_CHECKLIST.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/project/EXECUTION_CHECKLIST.md>) before acting.
-3. Confirm the current phase gate.
-4. Use official templates from `reference/templates/`.
-5. Keep source/reference material separate from authored work.
-6. Commit checkpoints after major milestones.
+3. Check [project/WORKSPACE_FILE_MAP.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/project/WORKSPACE_FILE_MAP.md>) before creating, moving, renaming, or deleting files.
+4. Confirm the current phase gate.
+5. Use official templates from `reference/templates/`.
+6. Keep source/reference material separate from authored work.
+7. Update the workspace file map when structure, official sources/templates, submission artifacts, or duplicate-purpose files change.
+8. Commit checkpoints after major milestones.
 
 ## Assistant Roles
 
@@ -106,6 +108,7 @@ AI may organize, critique, audit, and format. AI must not originate final clinic
 
 - Official Sanctum instructions live under `reference/`.
 - Project state lives in `project/STATUS.md`.
+- Workspace structure and duplication tracking live in `project/WORKSPACE_FILE_MAP.md`.
 - Clinical authored work lives under `worlds/james-carter/`.
 - Physician decisions come from Alexander.
 - Official templates are used as bases for submission artifacts.
@@ -139,4 +142,3 @@ Do not commit publicly:
 - Raw proprietary downloads unless intentionally approved for private reference storage
 - RL Studio exports containing sensitive reviewer or platform information without review
 - Work that violates the current phase boundary
-
