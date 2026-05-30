@@ -2,35 +2,35 @@
 
 ## Current Phase
 
-Waiting for Human Review (Brainstorm).
+Brainstorm SEND BACK remediation.
 
 ## Current World
 
-Working title: James Carter World
+Working title: Korvin Merrow World
 
 ## Current State
 
-RL Studio Brainstorm submission completed. AutoQC final pass achieved. Human review is pending. World Spec preparation packet has been created for readiness only; no World Spec drafting is authorized before Brainstorm GO.
+RL Studio Brainstorm submission completed and AutoQC final pass achieved. Human review returned SEND BACK from Stacey S with narrow revision requests: synthetic patient identity, World Type declaration, expanded comorbidity burden, and medication specificity. World Spec drafting remains unauthorized.
 
 ## RL Studio Submission
 
 Task ID: cyau8803
 
-Status: Ready for Plan Review
+Status: Writer Actions / Start Plan Fixes
 
 Submission timestamp: 5/29/2026 2:49 PM PDT
 
 ## Current Pass
 
-Pass 3 - Human Brainstorm Review pending.
+Pass 7 - Brainstorm reviewer revisions.
 
 ## Next Pass
 
-Only after reviewer returns GO or SEND BACK.
+Complete reviewer-required Brainstorm remediation only, then wait for Alexander approval before regenerating final submission package or reuploading.
 
 ## Active Blocker
 
-Human Brainstorm Review must return GO before World Spec begins.
+Brainstorm SEND BACK revisions must be completed and approved by Alexander before reupload. Comorbidity and medication additions require physician approval before being locked.
 
 ## Current Git Checkpoint
 
@@ -46,7 +46,7 @@ Return to baseline commit if workflow becomes corrupted.
 
 ## Next Command For Codex
 
-Wait for reviewer result. If Brainstorm returns GO, begin Section 1 physician interview using the World Spec preparation packet. If Brainstorm returns SEND BACK, address reviewer feedback first.
+Address Stacey S reviewer feedback only. Do not start World Spec. Do not reupload until Alexander approves comorbidity and medication decisions.
 
 ## Scope Guardrails
 

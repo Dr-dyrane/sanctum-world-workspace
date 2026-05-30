@@ -4,25 +4,25 @@ Purpose: compressed current state for Claude. Use `project/STATUS.md` and `docs/
 
 ## Project State
 
-Current phase: Preparation only while waiting for Brainstorm Human Review.
+Current phase: Brainstorm SEND BACK remediation.
 
 Brainstorm:
 
 - Submitted in RL Studio.
 - RL Studio task ID: `cyau8803`.
-- RL Studio status: `Ready for Plan Review`.
+- RL Studio status: `Writer Actions / Start Plan Fixes`.
 - Submission timestamp: `5/29/2026 2:49 PM PDT`.
 - Brainstorm AutoQC: final pass, `51/51`.
-- Human Review: pending.
+- Human Review: SEND BACK from Stacey S.
 
 Current blocker:
 
-- Need Brainstorm Human Review result: GO or SEND BACK.
+- Need Alexander approval of reviewer-required comorbidity and medication decisions before final Brainstorm resubmission package is regenerated.
 
 Next legal action:
 
-- If GO: begin post-GO physician decision interview using `worlds/james-carter/world-spec-prep/post-go-interview-plan.md`.
-- If SEND BACK: triage reviewer feedback, revise only what is required, and resubmit Brainstorm as directed.
+- Complete reviewer-required Brainstorm remediation only.
+- Do not begin World Spec.
 
 ## Completed
 
@@ -32,10 +32,14 @@ Next legal action:
 - Claude hostile Brainstorm review triage and selective remediation.
 - Brainstorm AutoQC remediation.
 - Official Brainstorm template rebuild.
-- Submission artifact generation: `worlds/james-carter/submission/James_Carter_Brainstorm.docx`.
+- Submission artifact generation: `worlds/james-carter/submission/Korvin_Merrow_Brainstorm.docx`.
 - RL Studio Brainstorm upload.
 - Brainstorm AutoQC final pass recorded.
 - Brainstorm submitted for Human Review.
+- Human Review SEND BACK captured.
+- Synthetic identity and World Type remediation prepared.
+- Comorbidity decision brief created.
+- Medication decision brief created.
 - World Spec preparation packet created.
 - Official World Spec template acquired: `reference/templates/World_Spec_Template_05_06.docx`.
 - World Spec AutoQC v6.3 acquired: `reference/templates/AutoQC_Section_2_World_Spec_v6.3_writer.docx`.
@@ -64,12 +68,14 @@ Next legal action:
 
 ## Authorized Right Now
 
+- Brainstorm reviewer remediation.
 - Preparation.
 - Auditing.
 - Checklist building.
 - Reviewer-risk analysis.
 - Claude package refresh.
 - Local documentation updates that preserve phase boundaries.
+- Physician decision-brief creation for reviewer-required changes.
 
 ## Not Authorized Right Now
 
@@ -82,7 +88,7 @@ Next legal action:
 - Creating grader guidelines.
 - Creating failure analysis.
 - Changing Brainstorm clinical content.
-- Renaming the patient or changing task concepts before Human Review GO and Alexander approval.
+- Further identity changes or task concept changes beyond the reviewer-required Korvin Merrow remediation without Alexander approval.
 - Accessing RL Studio or browser operations without explicit authorization.
 
 ## Claude Operating Mode
@@ -104,7 +110,7 @@ Claude must not replace physician judgment or originate clinical design.
 - `claude-package/01_SANCTUM_CORE_RULES.md`
 - `claude-package/02_BRAINSTORM_GUIDE.md`
 - `claude-package/03_WORLD_SPEC_GUIDE.md`
-- `claude-package/04_JAMES_CARTER_CONTEXT.md`
+- `claude-package/04_KORVIN_MERROW_CONTEXT.md`
 - `claude-package/05_EXECUTION_STATE.md`
 - `claude-package/06_HANDOFF_STATE.md`
 - `worlds/james-carter/brainstorm.md`

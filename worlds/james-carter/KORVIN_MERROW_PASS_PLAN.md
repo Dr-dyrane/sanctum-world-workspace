@@ -1,6 +1,6 @@
-# James Carter World Pass Plan
+# Korvin Merrow World Pass Plan
 
-This is the world-specific build plan for James Carter. It preserves the seed and open decisions without drafting final clinical content.
+This is the world-specific build plan for Korvin Merrow. It preserves the seed and open decisions without drafting final clinical content.
 
 ## Clinical Seed
 
@@ -39,7 +39,7 @@ World Setup:
 
 - What is the intended hospital timeline: ED-only, short admission, multi-day stay, or admission plus return visit?
 - What is the world snapshot event and approximate endpoint?
-- What is James Carter's baseline kidney function and CKD stage?
+- What is Korvin Merrow's baseline kidney function and CKD stage?
 - What is his diabetes treatment pattern and degree of control?
 - What cardiovascular history is confirmed vs risk-only?
 - What exactly is known, suspected, or ambiguous about prior steroid exposure?
@@ -154,7 +154,7 @@ Reviewer risks:
 - Expected outputs and grading anchors.
 - Data hierarchy note if source conflicts are central.
 
-## Build Sequence For James Carter
+## Build Sequence For Korvin Merrow
 
 1. Pass 1: Interview Alexander for Brainstorm section answers.
 2. Pass 2: Draft Brainstorm from Alexander's answers.

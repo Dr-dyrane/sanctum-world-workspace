@@ -4,7 +4,7 @@ Purpose: local repository hygiene map to prevent duplicate working files and acc
 
 Generated from local workspace file listing excluding `.git`, caches, and Python bytecode.
 
-Current status: Brainstorm submitted, Human Review pending, World Spec preparation only.
+Current status: Brainstorm returned SEND BACK, reviewer remediation in progress, World Spec preparation only.
 
 ## Root
 
@@ -52,8 +52,8 @@ Current status: Brainstorm submitted, Human Review pending, World Spec preparati
 | `claude-package/01_SANCTUM_CORE_RULES.md` | Compressed Claude knowledge: core rules. | Claude upload package only. |
 | `claude-package/02_BRAINSTORM_GUIDE.md` | Compressed Brainstorm guide. | Derived from source; not source of truth. |
 | `claude-package/03_WORLD_SPEC_GUIDE.md` | Compressed World Spec guide. | Derived from source; not source of truth. |
-| `claude-package/04_JAMES_CARTER_CONTEXT.md` | Refreshed James Carter context for Claude. | Includes submitted Brainstorm summary, locked decisions, and World Spec prep risks. |
-| `claude-package/05_EXECUTION_STATE.md` | Refreshed execution state for Claude. | Mirrors current Brainstorm Human Review pending state; use `project/STATUS.md` for live status. |
+| `claude-package/04_KORVIN_MERROW_CONTEXT.md` | Refreshed Korvin Merrow context for Claude. | Includes submitted Brainstorm summary, locked decisions, and World Spec prep risks. |
+| `claude-package/05_EXECUTION_STATE.md` | Refreshed execution state for Claude. | Mirrors current Brainstorm SEND BACK remediation state; use `project/STATUS.md` for live status. |
 | `claude-package/06_HANDOFF_STATE.md` | Fresh-session Claude handoff. | Summarizes locked decisions, remaining decisions, next legal action, and hard boundaries. |
 
 ## Reference Source
@@ -98,11 +98,11 @@ Current status: Brainstorm submitted, Human Review pending, World Spec preparati
 | `reference/world-spec-guidelines/08_autoqc_master_index.md` | Exact 113-check AutoQC index. | Primary local AutoQC index. |
 | `reference/world-spec-guidelines/09_world_spec_writer_playbook.md` | Section-by-section authoring workflow. | Practical workflow, not source artifact. |
 
-## James Carter Core Authored Files
+## Korvin Merrow Core Authored Files
 
 | File | Role | Duplication note |
 | --- | --- | --- |
-| `worlds/james-carter/brainstorm.md` | Submitted Brainstorm content. | Do not modify while Human Review pending. |
+| `worlds/james-carter/brainstorm.md` | Active Brainstorm remediation source. | Modify only for reviewer-required changes approved by Alexander. |
 | `worlds/james-carter/brainstorm-development-history.md` | Internal Brainstorm history. | Historical only. |
 | `worlds/james-carter/brainstorm-internal-audit.md` | Internal Brainstorm audit. | Historical QC. |
 | `worlds/james-carter/clinical-logic.md` | Clinical reasoning notes. | Prep/support only. |
@@ -111,10 +111,13 @@ Current status: Brainstorm submitted, Human Review pending, World Spec preparati
 | `worlds/james-carter/task-map.md` | Rough task mapping. | Brainstorm-level mapping; not final World Spec task architecture. |
 | `worlds/james-carter/world-spec.md` | Placeholder/skeleton. | Do not draft/populate before GO. |
 | `worlds/james-carter/reviewer-feedback.md` | Review notes and moved internal questions. | Use for reviewer feedback history. |
-| `worlds/james-carter/JAMES_CARTER_PASS_PLAN.md` | World-specific pass plan. | Planning only. |
+| `worlds/james-carter/reviewer-comorbidity-decision-brief.md` | Physician decision brief for SEND BACK comorbidity expansion. | Prep only; do not treat proposed additions as locked until approved. |
+| `worlds/james-carter/reviewer-medication-decision-brief.md` | Physician decision brief for SEND BACK medication specificity. | Prep only; do not treat proposed medication list as locked until approved. |
+| `worlds/james-carter/rename-audit.md` | Audit of reviewer-required synthetic identity rename. | Confirms active files use Korvin Merrow and prior name remains only in historical archives. |
+| `worlds/james-carter/KORVIN_MERROW_PASS_PLAN.md` | World-specific pass plan. | Planning only. |
 | `worlds/james-carter/claude-brainstorm-review-package.md` | Claude Brainstorm review package. | Historical support artifact. |
 
-## James Carter Reviews
+## Korvin Merrow Reviews
 
 | File | Role | Duplication note |
 | --- | --- | --- |
@@ -123,13 +126,13 @@ Current status: Brainstorm submitted, Human Review pending, World Spec preparati
 | `worlds/james-carter/reviews/claude-brainstorm-review-01.md` | Claude hostile Brainstorm review. | External review artifact. |
 | `worlds/james-carter/reviews/claude-brainstorm-review-response-01.md` | Response to Claude Brainstorm review. | Historical triage/action record. |
 
-## James Carter Submission
+## Korvin Merrow Submission
 
 | File | Role | Duplication note |
 | --- | --- | --- |
-| `worlds/james-carter/submission/James_Carter_Brainstorm.docx` | Submitted Brainstorm DOCX artifact. | Do not modify unless Brainstorm SEND BACK requires resubmission. |
+| `worlds/james-carter/submission/Korvin_Merrow_Brainstorm.docx` | Current Brainstorm DOCX remediation artifact. | Not final for reupload until comorbidity and medication decisions are approved and incorporated. |
 
-## James Carter World Spec Prep
+## Korvin Merrow World Spec Prep
 
 | File | Role | Duplication note |
 | --- | --- | --- |
@@ -147,7 +150,7 @@ Current status: Brainstorm submitted, Human Review pending, World Spec preparati
 
 ## Duplication Watchlist
 
-- `brainstorm.md`, `submission/James_Carter_Brainstorm.docx`, and `brainstorm-development-history.md` intentionally overlap. Treat `brainstorm.md` and the submitted DOCX as frozen while Human Review is pending.
+- `brainstorm.md`, `submission/Korvin_Merrow_Brainstorm.docx`, and `brainstorm-development-history.md` intentionally overlap. During SEND BACK remediation, only reviewer-required changes should be made.
 - `reference/world-spec-guidelines/04_world_spec_autoqc_requirements.md`, `08_autoqc_master_index.md`, and `09_world_spec_writer_playbook.md` overlap by design. Use `08` for exact checks and `09` for workflow.
 - `task-map.md` and `world-spec-prep/task-spec-planning.md` overlap by design. `task-map.md` is Brainstorm-level; `task-spec-planning.md` is World Spec prep.
 - `traps.md`, `trap-to-file-map.md`, and future Section 3 work may overlap. Do not convert planning maps into final file inventory before GO.

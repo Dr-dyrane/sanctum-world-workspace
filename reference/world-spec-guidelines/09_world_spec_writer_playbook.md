@@ -6,7 +6,7 @@ Source materials:
 - `reference/templates/World_Spec_Template_05_06.docx`
 - `reference/templates/AutoQC_Section_2_World_Spec_v6.3_writer.docx`
 - `reference/world-spec-guidelines/08_autoqc_master_index.md`
-- Approved James Carter Brainstorm
+- Approved Korvin Merrow Brainstorm
 - Task Selection Categories tracker
 
 Current boundary: this is authoring workflow preparation only. Do not draft the World Spec before Brainstorm Human Review returns GO.

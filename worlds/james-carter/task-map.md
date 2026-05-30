@@ -1,4 +1,4 @@
-# James Carter Task Map
+# Korvin Merrow Task Map
 
 This map uses only the six approved rough task concepts. It does not add new workflows or task prompts.
 

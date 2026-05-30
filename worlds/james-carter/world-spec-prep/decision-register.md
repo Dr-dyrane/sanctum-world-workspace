@@ -1,4 +1,4 @@
-# James Carter Decision Register
+# Korvin Merrow Decision Register
 
 ## Already Locked From Brainstorm
 

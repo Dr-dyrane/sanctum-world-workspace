@@ -1,12 +1,12 @@
-# James Carter Context
+# Korvin Merrow Context
 
 Purpose: compressed Claude context for a fresh Project Sanctum session. Use this as operational context only; the full source of truth remains local under `reference/` and `worlds/james-carter/`.
 
-Boundary: Brainstorm is submitted and awaiting Human Review. World Spec drafting is not authorized until Brainstorm Human Review returns GO and Alexander explicitly authorizes drafting.
+Boundary: Brainstorm returned SEND BACK from Stacey S. Remediation is limited to reviewer-required Brainstorm fixes. World Spec drafting is not authorized until Brainstorm Human Review returns GO and Alexander explicitly authorizes drafting.
 
 ## Current World Concept
 
-Working title: James Carter World.
+Working title: Korvin Merrow World.
 
 Clinical domain: Emergency Medicine / Internal Medicine / acute hospital medicine.
 
@@ -23,7 +23,7 @@ Design philosophy:
 
 ## Approved Brainstorm Summary
 
-Brainstorm submitted in RL Studio and passed final Brainstorm AutoQC 51/51.
+Brainstorm submitted in RL Studio and passed final Brainstorm AutoQC 51/51 before Human Review. Human Review returned SEND BACK requiring synthetic identity, World Type declaration, comorbidity expansion, and medication specificity.
 
 World setup:
 
@@ -149,7 +149,7 @@ Reserve only:
 
 These are World Spec preparation risks, not authorization to change Brainstorm:
 
-- World Spec patient name must be unmistakably synthetic under AutoQC v6.3 Check 2.2.
+- World Spec patient name must be unmistakably synthetic under AutoQC v6.3 Check 2.2. Reviewer SEND BACK requested replacing the prior common name with Korvin Merrow.
 - World Spec task suite must use 3-5 distinct catalog workflows under Check 2.107; current rough mapping has more distinct workflows than allowed.
 - Typical clinical/medical director worlds should include both clinical and healthcare administration work products where appropriate under Check 2.108.
 - Decision Friction Table is required if the world depends on 2+ specialty conflicts or embedded diagnostic conflicts under Check 2.14.
@@ -160,21 +160,16 @@ These are World Spec preparation risks, not authorization to change Brainstorm:
 - Task independence is a blocker under Check 2.40.
 - Failure Design tables need at least 5 grounded traps per task under Check 2.34, without inappropriate duplication under Check 2.91.
 
-## Post-GO Decision Queue
+## Current Remediation Queue
 
-Do not resolve these before Brainstorm Human Review GO unless Alexander explicitly authorizes decision-only planning.
+Resolve only Brainstorm SEND BACK items. Do not start World Spec.
 
-1. Choose final synthetic patient name for World Spec.
-2. Choose synthetic MRN format.
-3. Confirm demographics, DOB, age, sex, allergies, code status, height, weight, BMI, and relevant social facts.
-4. Convert Hospital Day timeline to exact MM/DD/YYYY milestone dates.
-5. Approve the world snapshot date/time.
-6. Approve source-of-truth hierarchy for conflicting chart evidence.
-7. Consolidate final task architecture to 3-5 distinct approved workflows.
-8. Decide whether and how to include an administrative deliverable consistent with the existing clinical foundation.
-9. Confirm each task remains independent and has one deliverable.
-10. Approve traceability workflow before Expected Output, Failure Design, or file plan content is drafted.
-11. Plan modalities and trap substrates only after task architecture is settled.
+1. Confirm Korvin Merrow remains the final synthetic patient name after Brainstorm remediation.
+2. Add `World Type: Typical Clinical World`.
+3. Get Alexander approval for comorbidity additions before changing clinical content.
+4. Get Alexander approval for medication names/doses before changing clinical content.
+5. Regenerate final Brainstorm submission package only after physician approval.
+6. Reupload/run AutoQC only after Alexander authorizes.
 
 ## Claude Use Rules
 

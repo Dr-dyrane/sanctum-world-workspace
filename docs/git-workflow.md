@@ -27,7 +27,7 @@ Use tags only after the milestone has actually occurred.
 git add project/STATUS.md worlds/james-carter/reviews/brainstorm-autoqc-02.md
 git commit -m "checkpoint: record brainstorm autoqc pass"
 
-git add worlds/james-carter/submission/James_Carter_Brainstorm.docx
+git add worlds/james-carter/submission/Korvin_Merrow_Brainstorm.docx
 git commit -m "checkpoint: rebuild brainstorm using official docx template"
 ```
 

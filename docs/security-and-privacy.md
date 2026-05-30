@@ -26,7 +26,7 @@ Do not expose authenticated-only links in public places. If a private Google Dri
 
 Do not include real patient data. All patients, providers, MRNs, dates, institutions, and identifiers in generated Worlds should be fictional unless the official project source explicitly authorizes a different synthetic standard.
 
-James Carter is fictional.
+Korvin Merrow is fictional.
 
 ## Mercor / Sanctum Source Documents
 

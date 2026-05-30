@@ -1,4 +1,25 @@
-# James Carter Reviewer Feedback
+# Korvin Merrow Reviewer Feedback
+
+## Human Brainstorm Review - SEND BACK
+
+Date: 2026-05-29
+
+Reviewer: Stacey S
+
+RL Studio status: Writer Actions / Start Plan Fixes.
+
+Required revisions:
+
+1. Replace prior common patient name with unmistakably fictional name "Korvin Merrow" and update all references including document title.
+2. Add formal declaration: `World Type: Typical Clinical World`.
+3. Expand comorbidity burden above the 10+ threshold. Reviewer suggested hyperlipidemia, anemia of CKD, osteoporosis from chronic prednisone, sleep apnea, and diabetic peripheral neuropathy.
+4. Add specific medication names and doses because current traps mention medication categories but no specific agents.
+
+Current response:
+
+- Identity and World Type remediation prepared.
+- Comorbidity and medication decision briefs created for Alexander approval before clinical content changes.
+- No World Spec drafting started.
 
 ## External Review Artifacts
 

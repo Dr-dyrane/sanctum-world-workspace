@@ -1,12 +1,14 @@
-# James Carter World Brainstorm
+# Korvin Merrow World Brainstorm
 
 Document date: May 29, 2026
 
 ## 1. World Setup
 
+World Type: Typical Clinical World
+
 This is an Emergency Medicine / Internal Medicine acute hospital world built around a multi-day hospitalization that begins with ED evaluation of an undifferentiated patient and follows inpatient admission, evolving workup, consultant involvement, treatment changes, and discharge planning.
 
-James Carter is a 62-year-old male with long-standing type 2 diabetes mellitus, hypertension, CKD stage 3, HFrEF, CAD history, polypharmacy, and polymyalgia rheumatica previously treated with chronic prednisone with recent tapering. He lives at home with spouse/family, was independent with ADLs before illness, ambulated without major assistance, and managed some medications himself with family support.
+Korvin Merrow is a 62-year-old male with long-standing type 2 diabetes mellitus, hypertension, CKD stage 3, HFrEF, CAD history, polypharmacy, and polymyalgia rheumatica previously treated with chronic prednisone with recent tapering. He lives at home with spouse/family, was independent with ADLs before illness, ambulated without major assistance, and managed some medications himself with family support.
 
 He presents after several days of poor oral intake, weakness, confusion, reduced activity, possible urinary symptoms, and subjective fever. Initial ED and inpatient findings support treating suspected urinary-source sepsis: abnormal vitals, inflammatory findings, possible UTI, AKI on CKD, and altered mental status. Treating possible sepsis initially is appropriate.
 

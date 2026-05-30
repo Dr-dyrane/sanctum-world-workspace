@@ -39,8 +39,8 @@ Reviewer risks:
 
 Physician decision required:
 
-- Choose the final synthetic patient name to use in the World Spec.
-- Decide whether the working title "James Carter World" remains an internal/project title while the patient identity changes for submission.
+- Confirm Korvin Merrow remains the final synthetic patient name for the World Spec if Brainstorm remediation is accepted.
+- Confirm all later World Spec header, patient profile, task, filename, and summary references use the same identity.
 
 ### Decision 1.2: Synthetic MRN
 

@@ -6,16 +6,16 @@ Purpose: enable a brand-new Claude session to resume accurately without stale as
 
 Project Sanctum onboarding is in Phase 1 World Building, but only steps 1-6 are in scope.
 
-The Brainstorm for James Carter World has been completed, passed AutoQC, uploaded to RL Studio, and submitted for Human Review.
+The Brainstorm for Korvin Merrow World has been completed, passed AutoQC, uploaded to RL Studio, and returned SEND BACK from Human Review.
 
 RL Studio:
 
 - Task ID: `cyau8803`
-- Status: `Ready for Plan Review`
+- Status: `Writer Actions / Start Plan Fixes`
 - Brainstorm AutoQC: `51/51 passed`
-- Human Review: pending
+- Human Review: SEND BACK from Stacey S
 
-Current state: preparation only. World Spec drafting is not authorized.
+Current state: Brainstorm reviewer remediation only. World Spec drafting is not authorized.
 
 ## Locked Decisions
 
@@ -61,7 +61,9 @@ Do not answer these without Alexander.
 
 Identity/compliance:
 
-- Final synthetic World Spec patient name.
+- Confirm comorbidity additions for Brainstorm remediation.
+- Confirm medication names/doses for Brainstorm remediation.
+- Confirm when to regenerate the final Brainstorm submission DOCX and reupload.
 - Synthetic MRN format.
 - DOB, age consistency, sex, allergies, code status, height, weight, BMI, and clinically relevant demographics.
 
@@ -86,7 +88,7 @@ Traceability/file strategy:
 
 ## Verified World Spec Risks
 
-Use these as post-GO interview priorities:
+Use these as future World Spec priorities only after Brainstorm GO:
 
 - AutoQC 2.2: patient name must be unmistakably synthetic.
 - AutoQC 2.3: MRN must be clearly synthetic.
@@ -100,26 +102,20 @@ Use these as post-GO interview priorities:
 
 ## Next Legal Action
 
-Wait for Brainstorm Human Review.
+Wait for Alexander approval of comorbidity and medication decisions.
 
-If reviewer returns GO:
+If Alexander approves the reviewer-remediation decisions:
 
-1. Record the GO in local status/reviewer feedback.
-2. Start the post-GO physician interview using `worlds/james-carter/world-spec-prep/post-go-interview-plan.md`.
-3. Resolve identity/compliance decisions first.
-4. Resolve timeline and source hierarchy.
-5. Resolve task architecture before any prompts or Expected Output.
-6. Resolve traceability/file strategy before any Section 3 file rows.
-7. Ask Alexander for explicit approval before drafting the World Spec in the official template.
+1. Incorporate only approved comorbidity and medication specificity changes into Brainstorm.
+2. Regenerate final Brainstorm submission DOCX.
+3. Run final local QC.
+4. Ask Alexander before RL Studio reupload.
 
-If reviewer returns SEND BACK:
+If Alexander rejects or modifies any proposed decision:
 
-1. Save exact reviewer feedback.
-2. Classify required vs optional changes.
-3. Compare to physician intent and source-of-truth criteria.
-4. Apply only required fixes to Brainstorm.
-5. Regenerate/upload only as authorized.
-6. Do not begin World Spec.
+1. Revise the decision brief or Brainstorm plan accordingly.
+2. Do not reupload until approved.
+3. Do not begin World Spec.
 
 ## Hard Boundaries
 
@@ -134,7 +130,7 @@ Do not:
 - write golden responses;
 - write grader guidelines;
 - do failure analysis;
-- change submitted Brainstorm content while Human Review is pending.
+- change Brainstorm clinical content beyond reviewer-required remediation without Alexander approval.
 
 ## Current Best Claude Task
 

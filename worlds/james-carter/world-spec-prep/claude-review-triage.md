@@ -33,7 +33,7 @@ The biggest true World Spec risks are:
 - A source-of-truth hierarchy is required because this world has authority/source ambiguity traps.
 - Every expected-output and failure-design fact must trace to the Clinical History narrative or a World File Plan row.
 
-No action should be taken on Brainstorm, tasks, or naming until Brainstorm Human Review returns GO and Alexander authorizes World Spec decisions.
+Reviewer SEND BACK subsequently required a synthetic-name remediation at the Brainstorm stage. The active remediation name is Korvin Merrow.
 
 ## Patient Name Audit
 
@@ -62,11 +62,11 @@ Evidence:
 
 Conclusion: Brainstorm passed its identity check. The stricter synthetic-name blocker should be treated as a World Spec preparation decision, not a retroactive Brainstorm defect.
 
-### Does a common name like "James Carter" fail?
+### What did this imply for the reviewer name fix?
 
-PLAUSIBLE for World Spec, not proven by an executed World Spec AutoQC because no World Spec exists yet. AutoQC 2.2 says generic common first-name plus common-surname combinations are avoided and that generically plausible names fail. "James Carter" is a common-looking first-name plus surname combination, so carrying it into the World Spec is high risk.
+VERIFIED as a risk for the prior submitted patient name because reviewer feedback specifically flagged that name as common and requested a more unmistakably fictional replacement. The current remediation name, Korvin Merrow, was supplied in the reviewer remediation instruction and should still be checked in the next Brainstorm AutoQC pass.
 
-Action required after GO: choose an unmistakably synthetic patient name before populating the World Spec header and Patient Profile. Do not rename anything now.
+Action required now: use Korvin Merrow consistently in the Brainstorm remediation package and verify no active references to the prior name remain outside historical archives.
 
 ### Are there examples of acceptable synthetic names?
 
@@ -78,7 +78,7 @@ Important caution: the AutoQC filename examples `Joseph_World_Marcus_latest_4_14
 
 | Classification | Finding | Evidence | Impact | Action required |
 | --- | --- | --- | --- | --- |
-| VERIFIED | World Spec patient name must be synthetic. | AutoQC v6.3 2.2; `08_autoqc_master_index.md:14`; World Spec template requires fictional name in header/profile. | Blocker if the World Spec uses a generically plausible name. | After GO, choose a clearly synthetic patient name before World Spec drafting. Do not rename Brainstorm now. |
+| VERIFIED | World Spec patient name must be synthetic. | AutoQC v6.3 2.2; `08_autoqc_master_index.md:14`; World Spec template requires fictional name in header/profile. | Blocker if the World Spec uses a generically plausible name. | Carry Korvin Merrow consistently into any later World Spec if Brainstorm remediation is accepted. |
 | VERIFIED | World Spec task suite must use 3-5 distinct approved catalog workflows. | AutoQC v6.3 2.107; `08_autoqc_master_index.md:119`. | Major fail if the spec keeps 6 distinct workflows. | After GO, decide how to consolidate existing task concepts into 3-5 distinct workflows without changing the approved clinical foundation until authorized. |
 | VERIFIED | World Spec should include clinical and healthcare administration work products where appropriate. | AutoQC v6.3 2.108; `08_autoqc_master_index.md:120`. | Major fail if this typical clinical world remains entirely clinical when an admin-clinical task is expected. | After GO, ask physician whether one approved task can map to an admin-clinical deliverable already consistent with the world, or whether team clarification is needed. |
 | VERIFIED | Decision Friction Table is required when the world depends on 2 or more specialty conflicts or embedded diagnostic conflicts. | AutoQC v6.3 2.14; `08_autoqc_master_index.md:26`; World Spec template table 2 describes the table format. | Major fail if frictions remain prose only in the World Spec. | After GO, populate a Decision Friction Table from the locked frictions: Nephrology vs Cardiology, Family vs Inpatient Medicine, Hospital Medicine vs Endocrinology. |
@@ -89,7 +89,7 @@ Important caution: the AutoQC filename examples `Joseph_World_Marcus_latest_4_14
 
 | ID | Classification | Finding | Evidence | Impact | Action required |
 | --- | --- | --- | --- | --- | --- |
-| R1 | PLAUSIBLE | "James Carter" is not synthetic enough for World Spec. | AutoQC 2.2 supports the synthetic-name rule; Brainstorm AutoQC passed fictional identity. | High World Spec blocker risk, not a current Brainstorm failure. | Decide synthetic name after GO. |
+| R1 | VERIFIED | Prior submitted name was not synthetic enough for reviewer expectations. | Reviewer SEND BACK explicitly required replacement with Korvin Merrow; AutoQC 2.2 supports the synthetic-name principle. | High rejection risk if any active reference remains. | Use Korvin Merrow consistently and audit active files. |
 | R2 | PLAUSIBLE | Task suite may look clinically monolithic. | AutoQC 2.108 supports clinical plus admin mix where appropriate. | Major World Spec risk if no admin-clinical deliverable is included. | Ask physician/team after GO before restructuring. |
 | R3 | VERIFIED | Six distinct workflows exceed World Spec workflow-count ceiling. | AutoQC 2.107 requires 3-5 distinct workflows. | Major fail if unchanged in the World Spec. | Consolidate workflow mappings only after GO and approval. |
 | R4 | VERIFIED | Frictions cannot remain prose only. | AutoQC 2.14 requires Decision Friction Table when 2+ conflicts exist. | Major fail if absent. | Build table after GO. |
@@ -114,7 +114,7 @@ Important caution: the AutoQC filename examples `Joseph_World_Marcus_latest_4_14
 
 | ID | Classification | Finding | Evidence | Impact | Action required |
 | --- | --- | --- | --- | --- | --- |
-| Q1 | PLAUSIBLE | Current patient name is a World Spec 2.2 risk. | AutoQC 2.2 verified; "James Carter" has not been run through World Spec AutoQC. | Blocker if carried forward. | Decide after GO. |
+| Q1 | PLAUSIBLE | Current remediated patient name still needs confirmation on rerun. | AutoQC 2.2 verified; Korvin Merrow has not yet been rerun through RL Studio Brainstorm AutoQC after remediation. | Low-to-moderate residual risk until rerun confirms pass. | Verify on next Brainstorm AutoQC after approved clinical edits are incorporated. |
 | Q2 | VERIFIED | More than 5 distinct workflows fails 2.107. | AutoQC 2.107. | Major fail. | Consolidate later with approval. |
 | Q3 | VERIFIED | Missing admin deliverable can fail 2.108. | AutoQC 2.108. | Major fail where appropriate. | Confirm task-suite strategy after GO. |
 | Q4 | VERIFIED | Decision Friction Table required. | AutoQC 2.14. | Major fail. | Add in World Spec only after GO. |

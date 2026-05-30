@@ -31,7 +31,7 @@ Done criteria:
 
 - Source of truth imported.
 - Operating boundaries documented.
-- Ready to begin James Carter Brainstorm.
+- Ready to begin Korvin Merrow Brainstorm.
 
 Do-not-cross boundary:
 
@@ -43,7 +43,7 @@ Goal: Extract physician-originated clinical reasoning for the Brainstorm.
 
 Inputs:
 
-- James Carter seed context
+- Korvin Merrow seed context
 - Brainstorm checklist
 - Alexander's clinical judgment
 

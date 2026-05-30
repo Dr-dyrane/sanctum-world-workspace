@@ -1,4 +1,4 @@
-# James Carter Traps
+# Korvin Merrow Traps
 
 Draft pending.
 

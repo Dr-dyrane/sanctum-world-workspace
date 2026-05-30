@@ -90,7 +90,7 @@ Separate frictions from traps:
 - Frictions are people or perspective conflicts.
 - Traps are information problems.
 
-## Active Project: James Carter World
+## Active Project: Korvin Merrow World
 
 Role perspective: this world is designed from Alexander's background as an Emergency Medicine and Internal Medicine physician managing undifferentiated adult patients in acute hospital settings and coordinating care across specialties.
 

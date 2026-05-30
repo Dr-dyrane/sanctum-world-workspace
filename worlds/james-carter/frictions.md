@@ -1,4 +1,4 @@
-# James Carter Frictions
+# Korvin Merrow Frictions
 
 Draft pending.
 

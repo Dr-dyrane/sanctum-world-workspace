@@ -10,12 +10,12 @@ Project Sanctum Worlds are realistic clinical environments that test frontier AI
 
 ## Current Status
 
-- Active world: James Carter World
+- Active world: Korvin Merrow World
 - RL Studio task ID: `cyau8803`
 - Brainstorm status: submitted successfully
-- RL Studio status: `Ready for Plan Review`
+- RL Studio status: `Writer Actions / Start Plan Fixes`
 - Brainstorm AutoQC: final pass achieved
-- Current gate: waiting for Human Review (Brainstorm)
+- Current gate: Brainstorm SEND BACK remediation
 - World Spec: preparation packet exists, but drafting is blocked until Brainstorm returns `GO`
 
 ## Onboarding Scope
@@ -33,7 +33,7 @@ Do not move into synthetic file generation, production task creation, golden res
 
 ## Active World
 
-James Carter is an Emergency Medicine / Internal Medicine acute hospital world. The approved Brainstorm centers on a 62-year-old male with diabetes, hypertension, CKD stage 3, HFrEF/CAD, polypharmacy, PMR with unclear prednisone taper, suspected urinary-source sepsis, AKI, medication-management tension, and discharge-readiness complexity.
+Korvin Merrow is an Emergency Medicine / Internal Medicine acute hospital world. The approved Brainstorm centers on a 62-year-old male with diabetes, hypertension, CKD stage 3, HFrEF/CAD, polypharmacy, PMR with unclear prednisone taper, suspected urinary-source sepsis, AKI, medication-management tension, and discharge-readiness complexity.
 
 The clinical design principle is realistic hospital complexity, not a rare disease puzzle.
 
@@ -117,7 +117,7 @@ AI may organize, critique, audit, and format. AI must not originate final clinic
 
 Keep this repository private. Do not publish Mercor, Sanctum, RL Studio, internal templates, proprietary guide content, authenticated links, credentials, browser exports, or any real patient data.
 
-James Carter and all future patient identities must be fictional.
+Korvin Merrow and all future patient identities must be fictional.
 
 ## Rollback And Checkpoints
 

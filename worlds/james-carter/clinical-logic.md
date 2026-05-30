@@ -1,8 +1,8 @@
-# James Carter Clinical Logic
+# Korvin Merrow Clinical Logic
 
 ## Active Project Context
 
-This file preserves the evolving clinical reasoning and design philosophy for the James Carter World. It is not the final Brainstorm deliverable.
+This file preserves the evolving clinical reasoning and design philosophy for the Korvin Merrow World. It is not the final Brainstorm deliverable.
 
 ## Role Perspective
 

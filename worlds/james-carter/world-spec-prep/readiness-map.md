@@ -1,10 +1,10 @@
-# James Carter World Spec Readiness Map
+# Korvin Merrow World Spec Readiness Map
 
 ## Already Locked From Brainstorm
 
 - World type: typical clinical world.
 - Setting: Emergency Medicine / Internal Medicine acute hospital admission.
-- Patient: fictional 62-year-old male, James Carter.
+- Patient: fictional 62-year-old male, Korvin Merrow.
 - Core timeline: ED evaluation through inpatient admission and discharge planning.
 - World close: Hospital Day 6 at 18:00 during discharge planning.
 - Approved rough task count: six primary tasks, with future ED reassessment only as reserve.

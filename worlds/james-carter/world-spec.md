@@ -1,4 +1,4 @@
-# James Carter World Spec
+# Korvin Merrow World Spec
 
 Draft pending.
 
