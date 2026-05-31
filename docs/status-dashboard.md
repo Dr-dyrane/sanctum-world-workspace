@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-Brainstorm approved. World Spec transition pending Alexander authorization.
+World Spec kickoff / ready for physician interview.
 
 ## Brainstorm
 
@@ -21,13 +21,16 @@ Brainstorm approved. World Spec transition pending Alexander authorization.
 
 ## World Spec
 
-- World Spec drafting: allowed only after explicit Alexander authorization
+- World Spec kickoff: recorded in `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`
+- World Spec drafting: not started
+- Official Claude World Spec session: pending
+- Physician interview: ready to begin when Alexander explicitly starts it
 - World Spec prep packet: created
 - Official World Spec template: saved locally
 - World Spec AutoQC prompt v6.3: saved locally
 - World Spec AutoQC v6.3 checks: indexed in `reference/world-spec-guidelines/08_autoqc_master_index.md`
 - World Spec writer playbook: created in `reference/world-spec-guidelines/09_world_spec_writer_playbook.md`
-- Next allowed action: await Alexander authorization to start Pass 8 using `worlds/korvin-merrow/world-spec-prep/post-go-interview-plan.md`
+- Next allowed action: use the kickoff packet, then begin the physician decision interview only when Alexander explicitly starts it
 
 ## Tooling
 

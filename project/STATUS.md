@@ -2,7 +2,7 @@
 
 ## Current Phase
 
-Brainstorm approved. World Spec transition pending Alexander authorization.
+World Spec kickoff / ready for physician interview.
 
 ## Current World
 
@@ -10,13 +10,13 @@ Working title: Korvin Merrow World
 
 ## Current State
 
-Brainstorm Human Review returned GO from Stacey S after SEND BACK remediation. Reviewer approved the Korvin Merrow Brainstorm and indicated next steps are World Spec and file template development. World Spec drafting is now allowed only after explicit Alexander authorization and using the post-GO interview plan.
+Brainstorm Human Review returned GO from Stacey S after SEND BACK remediation. Reviewer approved the Korvin Merrow Brainstorm and indicated next steps are World Spec and file template development. World Spec kickoff is now recorded in `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`. World Spec drafting has not started.
 
 ## RL Studio Submission
 
 Task ID: cyau8803
 
-Status: Brainstorm approved / ready for World Spec transition
+Status: Brainstorm approved / World Spec kickoff / ready for physician interview
 
 Original submission timestamp: 5/29/2026 2:49 PM PDT
 
@@ -26,15 +26,15 @@ Reviewer GO: Stacey S approved Brainstorm via Slack. Recorded in `worlds/korvin-
 
 ## Current Pass
 
-Pass 7 complete - Brainstorm reviewer revisions approved.
+Pass 8 kickoff - ready for World Spec physician interview.
 
 ## Next Pass
 
-Next eligible pass: Pass 8 - World Spec interview. Do not begin until Alexander explicitly authorizes Pass 8.
+Next eligible action: begin the World Spec physician decision interview when Alexander explicitly starts the interview.
 
 ## Active Blocker
 
-No active blocker to World Spec preparation. World Spec drafting/interview is gated on explicit Alexander authorization.
+No active reviewer blocker. World Spec drafting is blocked until Alexander completes/approves the physician decision interview and explicitly authorizes drafting.
 
 ## Current Git Checkpoint
 
@@ -54,7 +54,7 @@ Return to baseline commit if workflow becomes corrupted.
 
 ## Next Command For Codex
 
-Await Alexander authorization to start Pass 8 using `worlds/korvin-merrow/world-spec-prep/post-go-interview-plan.md`. Do not draft World Spec or create file inventory before authorization.
+Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md` for orientation. When Alexander explicitly starts the interview, use `worlds/korvin-merrow/world-spec-prep/post-go-interview-plan.md`. Do not draft World Spec or create file inventory before authorization.
 
 ## Scope Guardrails
 

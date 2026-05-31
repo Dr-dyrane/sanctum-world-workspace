@@ -4,7 +4,7 @@ Purpose: compressed current state for Claude. Use `project/STATUS.md` and `docs/
 
 ## Project State
 
-Current phase: Brainstorm approved. World Spec transition pending Alexander authorization.
+Current phase: World Spec kickoff / ready for physician interview.
 
 Brainstorm:
 
@@ -22,12 +22,13 @@ Brainstorm:
 
 Current blocker:
 
-- No reviewer blocker. World Spec interview/drafting is gated on explicit Alexander authorization.
+- No reviewer blocker. World Spec kickoff is recorded. World Spec drafting is gated on completion/approval of the physician decision interview and explicit Alexander authorization.
 
 Next legal action:
 
-- Await Alexander authorization to start Pass 8 using `worlds/korvin-merrow/world-spec-prep/post-go-interview-plan.md`.
-- Do not draft World Spec until Alexander authorizes.
+- Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md` for orientation.
+- When Alexander explicitly starts the interview, use `worlds/korvin-merrow/world-spec-prep/post-go-interview-plan.md`.
+- Do not draft World Spec until Alexander authorizes drafting after the interview.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
 
 ## Completed
@@ -67,6 +68,8 @@ Next legal action:
 - Claude World Spec prep review triaged: `worlds/korvin-merrow/world-spec-prep/claude-review-triage.md`.
 - Workspace file map created: `project/WORKSPACE_FILE_MAP.md`.
 - Post-GO interview plan created: `worlds/korvin-merrow/world-spec-prep/post-go-interview-plan.md`.
+- World Spec kickoff packet created: `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`.
+- Workspace bloat/doctrine audit recorded inside the kickoff packet.
 
 ## Latest Git Checkpoints
 
@@ -87,7 +90,8 @@ Next legal action:
 
 ## Authorized Right Now
 
-- Preparation-only activities for World Spec transition.
+- World Spec kickoff and preparation.
+- Physician interview support when Alexander explicitly starts it.
 - Preparation.
 - Auditing.
 - Checklist building.
@@ -98,7 +102,7 @@ Next legal action:
 
 ## Not Authorized Right Now
 
-- World Spec drafting before explicit Alexander authorization.
+- World Spec drafting before completion/approval of the physician interview and explicit Alexander authorization.
 - Populating the World Spec template before explicit Alexander authorization.
 - Creating a final Section 3 World File Plan or file inventory.
 - Creating synthetic patient files.
@@ -137,6 +141,7 @@ Claude must not replace physician judgment or originate clinical design.
 - `worlds/korvin-merrow/task-map.md`
 - `worlds/korvin-merrow/world-spec-prep/claude-review-triage.md`
 - `worlds/korvin-merrow/world-spec-prep/post-go-interview-plan.md`
+- `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`
 - `reference/world-spec-guidelines/08_autoqc_master_index.md`
 - `reference/world-spec-guidelines/09_world_spec_writer_playbook.md`
 - `project/WORKSPACE_FILE_MAP.md`

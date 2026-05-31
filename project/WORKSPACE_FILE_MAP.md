@@ -4,7 +4,7 @@ Purpose: local repository hygiene map to prevent duplicate working files and acc
 
 Generated from local workspace file listing excluding `.git`, caches, and Python bytecode.
 
-Current status: Brainstorm approved after SEND BACK remediation. World Spec transition pending explicit Alexander authorization.
+Current status: World Spec kickoff / ready for physician interview. World Spec drafting has not started.
 
 ## Root
 
@@ -26,6 +26,7 @@ Current status: Brainstorm approved after SEND BACK remediation. World Spec tran
 | `project/PASS_PLAN.md` | Local pass-based operating system. | Controls pass transitions. |
 | `project/PHASE_MAP.md` | Phase boundaries and definitions. | Boundary reference; do not duplicate in every prep file. |
 | `project/WORKSPACE_FILE_MAP.md` | Current repo file map. | This file; update when structure changes materially. |
+| `project/CLAUDE_COMPLIANCE_MAP.md` | Expected Claude workflow vs actual assistant workflow compliance map. | Use before World Spec drafting to close Claude/transcript gaps. |
 
 ## Documentation
 
@@ -98,6 +99,10 @@ Current status: Brainstorm approved after SEND BACK remediation. World Spec tran
 | `reference/world-spec-guidelines/07_reviewer_failure_patterns.md` | GO/SEND BACK and reviewer risks. | Reviewer prep reference. |
 | `reference/world-spec-guidelines/08_autoqc_master_index.md` | Exact 113-check AutoQC index. | Primary local AutoQC index. |
 | `reference/world-spec-guidelines/09_world_spec_writer_playbook.md` | Section-by-section authoring workflow. | Practical workflow, not source artifact. |
+| `reference/world-spec-guidelines/10_submission_package_requirements.md` | Source-cited World Spec submission package requirements. | Submission packaging reference; includes explicit not-found findings. |
+| `reference/world-spec-guidelines/11_transcript_requirements.md` | Source-cited transcript requirement search results. | Records that detailed Claude transcript requirements were not found in local text source. |
+| `reference/world-spec-guidelines/12_required_upload_inventory.md` | Source-cited upload inventory manifest. | Not a Korvin Merrow file inventory; use only for package preparation. |
+| `reference/world-spec-guidelines/13_claude_workflow_audit.md` | Source-cited Claude workflow and transcript audit. | Use with `project/CLAUDE_COMPLIANCE_MAP.md` before World Spec drafting. |
 
 ## Korvin Merrow Core Authored Files
 
@@ -150,6 +155,7 @@ Current status: Brainstorm approved after SEND BACK remediation. World Spec tran
 | `worlds/korvin-merrow/world-spec-prep/task-spec-planning.md` | Task spec planning scaffold. | No final prompts. |
 | `worlds/korvin-merrow/world-spec-prep/timeline-planning.md` | Timeline planning scaffold. | No final dates until physician approval. |
 | `worlds/korvin-merrow/world-spec-prep/trap-to-file-map.md` | Trap-to-file planning scaffold. | Not a Section 3 file inventory. |
+| `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md` | Active World Spec kickoff cockpit and workspace bloat/doctrine audit note. | Use first for World Spec transition orientation; not a draft spec. |
 
 ## Duplication Watchlist
 
@@ -159,6 +165,7 @@ Current status: Brainstorm approved after SEND BACK remediation. World Spec tran
 - `traps.md`, `trap-to-file-map.md`, and future Section 3 work may overlap. Do not convert planning maps into final file inventory before GO.
 - `frictions.md` and `friction-to-task-map.md` overlap. Use them later to build the Decision Friction Table only after GO.
 - `claude-package/*` is a compressed Claude context copy. Do not treat it as the current source of truth.
+- `WORLD_SPEC_KICKOFF.md` now reduces navigation bloat by serving as the active cockpit. Older prep docs remain supporting references.
 
 ## Update Rule
 

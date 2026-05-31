@@ -18,7 +18,7 @@ RL Studio:
 - Approval source: Slack / Stacey S
 - Reviewer message: "great job! I approved your brainstorm. Next steps are to move forward with world spec and file template development."
 
-Current state: Brainstorm approved. World Spec drafting is allowed only after explicit Alexander authorization and using the post-GO interview plan.
+Current state: World Spec kickoff / ready for physician interview. World Spec drafting has not started and remains gated on physician interview decisions plus explicit Alexander authorization.
 
 ## Locked Decisions
 
@@ -109,15 +109,17 @@ Use these as future World Spec priorities only after Brainstorm GO:
 
 ## Next Legal Action
 
-Wait for Alexander authorization to start Pass 8.
+Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md` for orientation.
 
-If Alexander authorizes Pass 8:
+Wait for Alexander to explicitly start the World Spec physician decision interview.
+
+If Alexander starts the interview:
 
 1. Read `project/STATUS.md`, `project/PASS_PLAN.md`, and `worlds/korvin-merrow/world-spec-prep/post-go-interview-plan.md`.
 2. Run the World Spec physician interview sequence.
 3. Do not populate the official World Spec template until Alexander authorizes drafting after the interview.
 
-If Alexander has not authorized Pass 8:
+If Alexander has not started the interview:
 
 1. Continue preparation-only activities.
 2. Do not draft World Spec.
@@ -147,3 +149,7 @@ If asked to help now, Claude should only support preparation:
 - prepare or refine post-GO interview questions;
 - critique proposed physician decisions;
 - help maintain consistency with the approved Brainstorm.
+
+## Workspace Doctrine Note
+
+The workspace contains overlapping prep and guideline docs. This is intentional but should now be treated as supporting reference material. The active cockpit for the World Spec transition is `WORLD_SPEC_KICKOFF.md`; the live state source is `project/STATUS.md`; exact AutoQC checks live in `reference/world-spec-guidelines/08_autoqc_master_index.md`; practical authoring flow lives in `reference/world-spec-guidelines/09_world_spec_writer_playbook.md`.
