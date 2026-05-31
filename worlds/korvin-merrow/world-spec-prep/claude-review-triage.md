@@ -2,7 +2,9 @@
 
 Date: 2026-05-29
 
-Scope: Preparation only. Brainstorm remains submitted and unchanged. World Spec drafting is not authorized until Brainstorm Human Review returns GO.
+Status note: historical pre-GO World Spec preparation artifact. Some findings mention waiting for Brainstorm GO; those are superseded by reviewer approval and the ratified Clinical Story Skeleton. For live state, use `project/STATUS.md` and `WORLD_SPEC_KICKOFF.md`.
+
+Scope: Preparation only. Brainstorm remained submitted and unchanged at the time of this artifact. World Spec drafting is still not authorized until Alexander explicitly authorizes drafting.
 
 Reviewed artifact: `C:\Users\Dyrane\Downloads\Pasted markdown(17).md`
 

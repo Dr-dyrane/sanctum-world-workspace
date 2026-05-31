@@ -27,6 +27,8 @@ Always check `project/WORKSPACE_FILE_MAP.md` before creating, moving, renaming, 
 
 Update `project/WORKSPACE_FILE_MAP.md` whenever the workspace structure changes materially, a new official source/template is imported, a submission artifact is created or replaced, or a duplicate-purpose file is discovered.
 
+Avoid creating new navigation, audit, or status documents when an existing status/map/cockpit file can carry the information. Prefer updating `project/STATUS.md`, `project/WORKSPACE_FILE_MAP.md`, or the active world cockpit before adding another file.
+
 Never advance to a later pass without explicit user approval.
 
 Always respect the current phase in `project/STATUS.md`. Never cross a phase boundary without explicit Alexander approval.
@@ -114,7 +116,7 @@ Competing clinical concerns include adrenal insufficiency from previous steroid 
 
 World journey should follow emergency evaluation, inpatient admission, evolving diagnostic workup, consultant recommendations, medication changes, treatment decisions, and discharge planning.
 
-Current locked story state: Clinical Story Skeleton v1 is locked. The world is a mixed physiology world where infection, steroid issues, CKD/HF physiology, polypharmacy, and functional decline interact across an approximately 3-week decline and a 6-day hospitalization ending at HD6 18:00. The core theme is medically improving but operationally dangerous. The primary failure target is disposition safety, functional decline recognition, and discharge-readiness reasoning.
+Current locked story state: Clinical Story Skeleton v1 is ratified. The world is a mixed physiology world where infection, steroid issues, CKD/HF physiology, polypharmacy, and functional decline interact across an approximately 3-week decline and a 6-day hospitalization ending at HD6 18:00. The core theme is medically improving but operationally dangerous. The primary failure target is disposition safety, functional decline recognition, and discharge-readiness reasoning.
 
 Major clinical friction themes: emergency/inpatient stabilization and sepsis management; endocrinology concern for adrenal crisis/adrenal insufficiency; nephrology concern for kidney injury and medication safety; cardiology balancing long-term protective medications; family/caregiver concern that the patient has not returned to baseline despite medical stability.
 

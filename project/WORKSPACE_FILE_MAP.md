@@ -6,6 +6,42 @@ Generated from local workspace file listing excluding `.git`, caches, and Python
 
 Current status: Clinical Story Skeleton v1 ratified / ready for Identity Package. World Spec drafting has not started.
 
+## Navigation Rule
+
+For a new collaborator or new AI session, read in this order:
+
+1. `project/STATUS.md` for live state and phase gate.
+2. `project/WORKSPACE_FILE_MAP.md` for file locations and duplication risks.
+3. `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md` for the active World Spec cockpit.
+4. `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions.
+5. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
+
+Do not start by opening every prep file. Most prep files are supporting memory, not active instructions.
+
+## Hygiene Audit 2026-05-31
+
+Status: controlled bloat.
+
+Findings:
+
+- Root is clean: only `.gitignore`, `AGENTS.md`, `CONTRIBUTING.md`, and `README.md`.
+- README placement is acceptable: root README plus folder-policy READMEs in `reference/source/` and `tools/`.
+- `tmp/` contains generated render artifacts and is ignored by git.
+- Highest-bloat folders are `worlds/korvin-merrow/world-spec-prep/`, `worlds/korvin-merrow/`, and `reference/world-spec-guidelines/`.
+- Several files intentionally overlap by lifecycle stage, especially Brainstorm history/reviews and World Spec prep/checklist material.
+- Do not add new audit or navigation docs unless an existing map/status file cannot carry the information.
+
+No-move rule:
+
+- Do not move, archive, or delete existing artifacts without Alexander approval, because many files preserve review history or source-trace context.
+
+Recommended future cleanup if Alexander approves:
+
+- Move historical Brainstorm development artifacts into a `worlds/korvin-merrow/history/` or `worlds/korvin-merrow/archive/` folder.
+- Move reviewer remediation decision briefs into `worlds/korvin-merrow/reviews/` or a `reviewer-remediation/` subfolder.
+- Placeholder files (`frictions.md`, `traps.md`, `world-spec.md`) now contain explicit notices. Move them into future-phase folders only with Alexander approval.
+- Consolidate thin planning scaffolds in `world-spec-prep/` after Identity and Governance packages are complete.
+
 ## Root
 
 | File | Role | Duplication note |
@@ -112,10 +148,10 @@ Current status: Clinical Story Skeleton v1 ratified / ready for Identity Package
 | `worlds/korvin-merrow/brainstorm-development-history.md` | Internal Brainstorm history. | Historical only. |
 | `worlds/korvin-merrow/brainstorm-internal-audit.md` | Internal Brainstorm audit. | Historical QC. |
 | `worlds/korvin-merrow/clinical-logic.md` | Clinical reasoning notes. | Prep/support only. |
-| `worlds/korvin-merrow/frictions.md` | Friction notes. | Source for later Decision Friction planning. |
-| `worlds/korvin-merrow/traps.md` | Trap notes. | Source for later trap substrate planning. |
+| `worlds/korvin-merrow/frictions.md` | Placeholder for later friction notes. | Do not use as active source until governance/Decision Friction work is authorized. |
+| `worlds/korvin-merrow/traps.md` | Placeholder for later trap notes. | Do not use as active source until trap substrate planning is authorized. |
 | `worlds/korvin-merrow/task-map.md` | Rough task mapping. | Brainstorm-level mapping; not final World Spec task architecture. |
-| `worlds/korvin-merrow/world-spec.md` | Placeholder/skeleton. | Do not draft/populate before GO. |
+| `worlds/korvin-merrow/world-spec.md` | Explicit World Spec placeholder. | Do not draft/populate until Alexander authorizes World Spec drafting. |
 | `worlds/korvin-merrow/reviewer-feedback.md` | Review notes and moved internal questions. | Use for reviewer feedback history. |
 | `worlds/korvin-merrow/reviewer-comorbidity-decision-brief.md` | Physician decision brief for SEND BACK comorbidity expansion. | Prep only; do not treat proposed additions as locked until approved. |
 | `worlds/korvin-merrow/reviewer-medication-decision-brief.md` | Physician decision brief for SEND BACK medication specificity. | Prep only; do not treat proposed medication list as locked until approved. |
@@ -148,7 +184,7 @@ Current status: Clinical Story Skeleton v1 ratified / ready for Identity Package
 | `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-interview.md` | Clinical Story Skeleton physician interview framework. | Historical interview scaffold; skeleton now locked in decision log 02. |
 | `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-review.md` | Review of locked Clinical Story Skeleton v1. | Recommends GO to Identity Package; not a World Spec draft. |
 | `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md` | Ratification of Clinical Story Skeleton v1 after Claude hostile review minor findings. | Governance/story-logic guardrails only; not a narrative rewrite or World Spec draft. |
-| `worlds/korvin-merrow/world-spec-prep/claude-review-triage.md` | Triage of Claude World Spec prep review. | Decision queue; not clinical content. |
+| `worlds/korvin-merrow/world-spec-prep/claude-review-triage.md` | Historical pre-GO triage of Claude World Spec prep review. | Some wait-for-GO language is superseded; use status/kickoff for live state. |
 | `worlds/korvin-merrow/world-spec-prep/decision-register.md` | Prep decision register. | Use for pending/locked decisions after GO. |
 | `worlds/korvin-merrow/world-spec-prep/file-plan-planning.md` | File plan planning scaffold. | Not a final file inventory. |
 | `worlds/korvin-merrow/world-spec-prep/friction-to-task-map.md` | Friction/task planning map. | Planning only. |

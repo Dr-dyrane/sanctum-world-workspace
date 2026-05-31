@@ -14,10 +14,11 @@ Scope: full active/current project identity migration. Historical reviewer and a
 
 ## Current Status
 
-- Brainstorm SEND BACK remediation is in progress.
-- World Spec is not authorized.
-- RL Studio reupload is not authorized yet.
-- Comorbidity expansion and medication specificity still require Alexander's physician approval before being incorporated into the final Brainstorm.
+- Identity migration is complete.
+- Brainstorm SEND BACK remediation was completed.
+- Revised Korvin Merrow Brainstorm was reuploaded, passed AutoQC, and received reviewer GO.
+- Clinical Story Skeleton v1 is ratified.
+- World Spec drafting has not started and remains blocked until Alexander explicitly authorizes drafting.
 
 ## Files And Paths Changed
 
@@ -63,7 +64,7 @@ Future-facing world files:
 Submission artifact:
 
 - `worlds/korvin-merrow/submission/James_Carter_Brainstorm.docx` removed
-- `worlds/korvin-merrow/submission/Korvin_Merrow_Brainstorm.docx` created as interim remediation artifact
+- `worlds/korvin-merrow/submission/Korvin_Merrow_Brainstorm.docx` created, reuploaded, AutoQC-passed, and approved
 
 Reviewer-remediation files:
 
@@ -127,25 +128,21 @@ Remaining occurrences are classified as:
 
 No active current submission source, current submission DOCX filename, Claude current context filename, or future-facing world folder uses the old patient identity.
 
-## Remaining Reviewer Fixes
+## Reviewer Fixes
 
-Already prepared:
+Completed:
 
 - `World Type: Typical Clinical World` added to Brainstorm source and interim DOCX.
 - Synthetic identity migrated to Korvin Merrow.
 - Comorbidity decision brief created.
 - Medication decision brief created.
-
-Still requires Alexander approval:
-
-- Which comorbidities to add.
-- Which medications and doses to include.
-- Whether to use compact or full medication list format in the Brainstorm.
-- Whether to regenerate final DOCX after those approved clinical edits.
+- Comorbidity additions approved by Alexander and incorporated.
+- Medication list approved by Alexander and incorporated.
+- Final DOCX regenerated, uploaded, AutoQC-passed, and approved.
 
 ## Guardrails
 
-- Do not reupload yet.
-- Do not start World Spec.
+- Do not reupload Brainstorm unless new reviewer feedback arrives.
+- Do not start World Spec drafting until Alexander explicitly authorizes drafting.
 - Do not alter historical reviewer evidence blindly.
-- Do not lock proposed comorbidities or medications until Alexander approves them.
+- Do not alter the ratified Clinical Story Skeleton unless Alexander explicitly reopens it.

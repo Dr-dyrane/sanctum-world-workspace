@@ -12,11 +12,11 @@ Project Sanctum Worlds are realistic clinical environments that test frontier AI
 
 - Active world: Korvin Merrow World
 - RL Studio task ID: `cyau8803`
-- Brainstorm status: submitted successfully
-- RL Studio status: `Writer Actions / Start Plan Fixes`
-- Brainstorm AutoQC: final pass achieved
-- Current gate: Brainstorm SEND BACK remediation
-- World Spec: preparation packet exists, but drafting is blocked until Brainstorm returns `GO`
+- Brainstorm status: approved after SEND BACK remediation
+- Brainstorm AutoQC: revised pass achieved, `0 failed / 51 passed`
+- Human review: GO from Stacey S
+- Current gate: Clinical Story Skeleton v1 ratified / ready for Identity Package
+- World Spec: preparation packet exists, but drafting has not started and remains blocked until Alexander explicitly authorizes drafting
 
 ## Onboarding Scope
 
@@ -42,8 +42,8 @@ The clinical design principle is realistic hospital complexity, not a rare disea
 - Brainstorm: concept pitch with World Setup, Frictions, Traps, and Rough Task Ideas.
 - Brainstorm AutoQC: automated RL Studio check.
 - Human Brainstorm Review: reviewer returns `GO` or `SEND BACK`.
-- World Spec preparation: allowed readiness work only before GO.
-- World Spec drafting: begins only after Brainstorm GO and Alexander approval.
+- World Spec preparation: allowed after Brainstorm GO, including identity/governance/story readiness work.
+- World Spec drafting: begins only after Alexander explicitly authorizes drafting.
 - World Spec AutoQC and Human Review: onboarding ends after Step 6 approval.
 
 ## Folder Structure
@@ -84,6 +84,17 @@ worlds/
     world-spec-prep/
 ```
 
+## Start Here
+
+For a new collaborator or a future AI session, use this order:
+
+1. [project/STATUS.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/project/STATUS.md>) for live state.
+2. [project/WORKSPACE_FILE_MAP.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/project/WORKSPACE_FILE_MAP.md>) for where things live and what not to duplicate.
+3. [worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md>) for the current World Spec cockpit.
+4. [worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md>) for the ratified Clinical Story Skeleton.
+
+Do not start by browsing every prep file. Most prep files are supporting memory, not active instructions.
+
 ## How To Use This Repo
 
 1. Read [project/STATUS.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/project/STATUS.md>) first.
@@ -94,6 +105,18 @@ worlds/
 6. Keep source/reference material separate from authored work.
 7. Update the workspace file map when structure, official sources/templates, submission artifacts, or duplicate-purpose files change.
 8. Commit checkpoints after major milestones.
+
+## Repository Hygiene
+
+- Keep root files limited to repository-level orientation and agent rules.
+- Keep official source and templates under `reference/`.
+- Keep current project state under `project/`.
+- Keep durable documentation under `docs/`.
+- Keep world-specific authored work under `worlds/korvin-merrow/`.
+- Keep review artifacts in `worlds/korvin-merrow/reviews/`.
+- Keep submission artifacts in `worlds/korvin-merrow/submission/`.
+- Keep World Spec preparation artifacts in `worlds/korvin-merrow/world-spec-prep/`.
+- Do not create a new folder or README unless it clarifies navigation better than updating `WORKSPACE_FILE_MAP.md`.
 
 ## Assistant Roles
 
