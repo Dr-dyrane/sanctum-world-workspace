@@ -222,7 +222,7 @@ Decision: Clinical Story Timeline Package v1 is created as the candidate story-e
 
 Artifact:
 
-- `worlds/korvin-merrow/world-spec-prep/candidate-review/clinical-story-timeline-package-v1.md`
+- `worlds/korvin-merrow/world-spec-prep/locked/clinical-story-timeline-package-v1.md`
 
 Purpose:
 
@@ -231,7 +231,40 @@ Purpose:
 
 Status:
 
-- Clinical Story Timeline Package v1: CANDIDATE REVIEW.
+- Clinical Story Timeline Package v1: LOCKED.
+
+## 2026-05-31 - Clinical Story Timeline Package v1 Ratification
+
+Decision: Clinical Story Timeline Package v1 is ratified and locked.
+
+Artifact:
+
+- `worlds/korvin-merrow/world-spec-prep/locked/clinical-story-timeline-package-v1.md`
+
+Ratification:
+
+- `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-timeline-ratification.md`
+
+Review basis:
+
+- Cascade MCP Claude Review returned GO, LOCK READY, no true defects, no blockers.
+- Claude Code Review returned GO, LOCK READY, no true defects, no blockers.
+
+Carry-forward note:
+
+- Preserve the distinction between Trap #3 and Trap #5 during future file construction.
+- Trap #3 is buried functional/cognitive evidence: important evidence exists but is easy to miss.
+- Trap #5 is a reassuring but incomplete discharge/source-hierarchy artifact: a visible artifact appears sufficient if trusted alone.
+
+Construction-preparation chain:
+
+- Key Milestones Calendar Skeleton: LOCKED.
+- Baseline Anchor Package: LOCKED.
+- Clinical Story Timeline Package: LOCKED.
+
+Boundary:
+
+- This decision does not authorize World Spec drafting, labs, vitals, medication schedules, file inventory, task architecture, prompts, goldens, grader guidance, templates, reference files, or synthetic documents.
 
 Boundaries:
 

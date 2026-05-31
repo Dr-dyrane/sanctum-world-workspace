@@ -2,7 +2,7 @@
 
 Date created: 2026-05-31
 
-Status: CANDIDATE REVIEW.
+Status: LOCKED.
 
 Purpose: define the canonical story-evolution framework for Korvin Merrow's case before eventual World Spec construction.
 
@@ -73,8 +73,15 @@ This timeline remains compatible with future construction requirements without r
 - Future surgical-history documentation requirements.
 - AutoQC 2.107 workflow-count constraints.
 - AutoQC 2.108 administrative-deliverable constraints.
+- Trap #3 vs Trap #5 concrete distinction during file construction.
 
 These items are not resolved or redesigned here.
+
+Carry-forward trap distinction:
+
+- Trap #3 is the buried functional/cognitive evidence trap. The issue is that important functional or cognitive evidence exists but is easy to miss.
+- Trap #5 is the reassuring but incomplete discharge/source-hierarchy artifact trap. The issue is that a visible discharge-facing artifact appears sufficient if trusted alone.
+- This distinction is a future file-construction concern, not a timeline defect.
 
 ## Clinical Story Timeline Consistency Review
 
@@ -182,4 +189,4 @@ Action required: physician review before locking.
 
 Clinical Story Timeline Package v1
 
-Status: CANDIDATE REVIEW
+Status: LOCKED

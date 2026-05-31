@@ -30,6 +30,10 @@ Baseline Anchor Package v1: `worlds/korvin-merrow/world-spec-prep/locked/baselin
 
 Baseline Anchor Package ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/baseline-anchor-ratification.md`
 
+Clinical Story Timeline Package v1: `worlds/korvin-merrow/world-spec-prep/locked/clinical-story-timeline-package-v1.md`
+
+Clinical Story Timeline Package ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-timeline-ratification.md`
+
 ## Locked Clinical Story Skeleton v1
 
 Patient:
@@ -422,3 +426,40 @@ Boundary:
 
 - These are baseline anchors, not admission labs or hospital-course trends.
 - This does not create file inventory, task architecture, World Spec prose, prompts, golden responses, grader guidance, templates, reference files, or synthetic files.
+
+## Clinical Story Timeline Package v1
+
+Status: LOCKED.
+
+Purpose: canonical story-evolution framework from pre-admission decline through HD1-HD6, discharge, +7, and +30 anchors.
+
+Ratification:
+
+- Cascade MCP Claude Review: Would lock today, YES. Status: LOCK READY. Final Recommendation: GO. True defects: none. Blockers: none.
+- Claude Code Review: Would lock today, YES. Status: LOCK READY. Final Recommendation: GO. True defects: none. Blockers: none.
+
+Completed construction-preparation chain:
+
+- Key Milestones Calendar Skeleton: LOCKED.
+- Baseline Anchor Package: LOCKED.
+- Clinical Story Timeline Package: LOCKED.
+
+Carry-forward file-construction note:
+
+- Trap #3 is buried functional/cognitive evidence; the issue is that important evidence exists but is easy to miss.
+- Trap #5 is a reassuring but incomplete discharge/source-hierarchy artifact; the issue is that a visible artifact appears sufficient if trusted alone.
+- This distinction is a future file-construction concern, not a timeline defect.
+
+Active future watch items:
+
+- Medication expansion to 18-22 medications.
+- Comorbidity expansion to 12-15 conditions.
+- Named-provider roster.
+- Surgical-history documentation.
+- AutoQC 2.107 workflow consolidation.
+- AutoQC 2.108 administrative deliverable.
+- Trap #3 vs Trap #5 concrete distinction during file construction.
+
+Boundary:
+
+- This does not authorize World Spec drafting, labs, vitals, medication schedules, file inventory, task architecture, prompts, golden responses, grader guidance, templates, reference files, or synthetic documents.

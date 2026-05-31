@@ -291,15 +291,19 @@ This package does not create admission labs, hospital-course lab trends, file in
 
 ## Clinical Story Timeline Package v1
 
-Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/clinical-story-timeline-package-v1.md`
+Artifact: `worlds/korvin-merrow/world-spec-prep/locked/clinical-story-timeline-package-v1.md`
 
-Status: CANDIDATE REVIEW.
+Ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-timeline-ratification.md`
+
+Status: LOCKED.
 
 Purpose: canonical story-evolution framework from pre-admission decline through HD1-HD6, discharge, +7, and +30 anchors.
 
 This package preserves mixed physiology, multi-factorial near-fall, medically improving but operationally dangerous discharge tension, functional-decline failure target, prednisone source-of-truth ambiguity, and friction/trap separation.
 
 It does not create labs, vitals, medication doses, medication schedules, hospital notes, file inventory, task architecture, World Spec prose, prompts, goldens, grader guidance, templates, reference files, or synthetic documents.
+
+Carry-forward file-construction note: preserve the distinction between Trap #3, where important functional/cognitive evidence exists but is easy to miss, and Trap #5, where a visible discharge/source-hierarchy artifact appears sufficient if trusted alone.
 
 ## Locked Clinical Story Skeleton v1
 
@@ -362,7 +366,7 @@ Identity review addendum:
 
 ## Current State
 
-Brainstorm approved. Clinical Story Skeleton v1 ratified. Identity Package v1 locked. Governance Package v1 ratified. Physician Architecture Layer complete. Key Milestones Calendar Skeleton v1 locked. Baseline Anchor Package v1 locked. Clinical Story Timeline Package v1 candidate review. Do not start World Spec drafting.
+Brainstorm approved. Clinical Story Skeleton v1 ratified. Identity Package v1 locked. Governance Package v1 ratified. Physician Architecture Layer complete. Key Milestones Calendar Skeleton v1 locked. Baseline Anchor Package v1 locked. Clinical Story Timeline Package v1 locked. Do not start World Spec drafting.
 
 Completed:
 
@@ -384,12 +388,12 @@ Completed:
 16. Physician Architecture Layer completed.
 17. Key Milestones Calendar Skeleton v1 locked.
 18. Baseline Anchor Package v1 locked after physician review.
-19. Clinical Story Timeline Package v1 created for candidate review.
+19. Clinical Story Timeline Package v1 created and locked.
 
 Still pending before World Spec drafting:
 
 1. Official Claude World Spec session.
-2. Physician review of Clinical Story Timeline Package v1.
+2. Next Alexander-authorized World Spec Construction Preparation step.
 3. Alexander authorization to draft the World Spec.
 
 ## Claude Use Rules

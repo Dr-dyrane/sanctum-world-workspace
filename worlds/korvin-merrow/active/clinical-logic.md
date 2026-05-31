@@ -394,15 +394,29 @@ This package does not create admission labs, hospital-course lab trends, file in
 
 ## Clinical Story Timeline Package v1
 
-Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/clinical-story-timeline-package-v1.md`
+Artifact: `worlds/korvin-merrow/world-spec-prep/locked/clinical-story-timeline-package-v1.md`
 
-Status: CANDIDATE REVIEW.
+Ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-timeline-ratification.md`
+
+Status: LOCKED.
 
 Purpose: define the story-evolution framework from pre-admission decline through HD1-HD6, discharge, +7, and +30 anchors.
 
 This package preserves the mixed-physiology model, multi-factorial near-fall model, medically improving but operationally dangerous tension, functional-decline failure target, prednisone source-of-truth ambiguity, and friction/trap separation.
 
 It does not create labs, vitals, medication doses, medication schedules, hospital notes, file inventory, task architecture, World Spec prose, prompts, goldens, grader guidance, templates, reference files, or synthetic documents.
+
+Carry-forward file-construction note:
+
+- Trap #3 is buried functional/cognitive evidence: important evidence exists but is easy to miss.
+- Trap #5 is a reassuring but incomplete discharge/source-hierarchy artifact: a visible artifact appears sufficient if trusted alone.
+- Preserve this distinction when future files are constructed.
+
+Completed construction-preparation chain:
+
+- Key Milestones Calendar Skeleton: LOCKED.
+- Baseline Anchor Package: LOCKED.
+- Clinical Story Timeline Package: LOCKED.
 
 ## Locked World Tone
 
