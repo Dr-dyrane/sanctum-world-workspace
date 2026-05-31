@@ -2,7 +2,7 @@
 
 ## Current Phase
 
-Brainstorm resubmitted after SEND BACK remediation.
+Brainstorm approved. World Spec transition pending Alexander authorization.
 
 ## Current World
 
@@ -10,29 +10,31 @@ Working title: Korvin Merrow World
 
 ## Current State
 
-RL Studio Brainstorm remediation has been uploaded and resubmitted after Stacey S SEND BACK feedback. Revised Brainstorm AutoQC rerun passed with 0 failed and 51 passed, diagnostics were reviewed, and the plan was resubmitted for reviewer review. World Spec drafting remains unauthorized.
+Brainstorm Human Review returned GO from Stacey S after SEND BACK remediation. Reviewer approved the Korvin Merrow Brainstorm and indicated next steps are World Spec and file template development. World Spec drafting is now allowed only after explicit Alexander authorization and using the post-GO interview plan.
 
 ## RL Studio Submission
 
 Task ID: cyau8803
 
-Status: awaiting reviewer decision after remediation resubmission
+Status: Brainstorm approved / ready for World Spec transition
 
 Original submission timestamp: 5/29/2026 2:49 PM PDT
 
 Latest remediation submission: revised Korvin Merrow Brainstorm uploaded; AutoQC 0 failed, 51 passed; diagnostics reviewed; plan resubmitted for reviewer review.
 
+Reviewer GO: Stacey S approved Brainstorm via Slack. Recorded in `worlds/korvin-merrow/reviews/reviewer-go-01.md`.
+
 ## Current Pass
 
-Pass 7 - Brainstorm reviewer revisions.
+Pass 7 complete - Brainstorm reviewer revisions approved.
 
 ## Next Pass
 
-Await Brainstorm reviewer decision. Do not begin World Spec unless Brainstorm receives GO and Alexander explicitly authorizes the next phase.
+Next eligible pass: Pass 8 - World Spec interview. Do not begin until Alexander explicitly authorizes Pass 8.
 
 ## Active Blocker
 
-Human reviewer decision pending after remediation resubmission.
+No active blocker to World Spec preparation. World Spec drafting/interview is gated on explicit Alexander authorization.
 
 ## Current Git Checkpoint
 
@@ -52,7 +54,7 @@ Return to baseline commit if workflow becomes corrupted.
 
 ## Next Command For Codex
 
-Continue preparation-only activities while awaiting reviewer decision. Do not modify Brainstorm unless new reviewer feedback arrives. Do not start World Spec.
+Await Alexander authorization to start Pass 8 using `worlds/korvin-merrow/world-spec-prep/post-go-interview-plan.md`. Do not draft World Spec or create file inventory before authorization.
 
 ## Scope Guardrails
 

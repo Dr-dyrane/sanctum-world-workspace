@@ -4,28 +4,30 @@ Purpose: compressed current state for Claude. Use `project/STATUS.md` and `docs/
 
 ## Project State
 
-Current phase: Brainstorm resubmitted after SEND BACK remediation.
+Current phase: Brainstorm approved. World Spec transition pending Alexander authorization.
 
 Brainstorm:
 
 - Original Brainstorm submitted in RL Studio.
 - RL Studio task ID: `cyau8803`.
-- RL Studio status: awaiting reviewer decision after remediation resubmission.
+- RL Studio status: Brainstorm approved / ready for World Spec transition.
 - Original submission timestamp: `5/29/2026 2:49 PM PDT`.
 - Revised Korvin Merrow Brainstorm uploaded after SEND BACK remediation.
 - Brainstorm AutoQC rerun: `0 failed / 51 passed`.
 - Diagnostics reviewed.
 - Plan resubmitted for reviewer review.
-- Human Review: pending reviewer decision after remediation.
+- Human Review: GO from Stacey S after SEND BACK remediation.
+- Approval source: Slack / Stacey S.
+- Reviewer message: "great job! I approved your brainstorm. Next steps are to move forward with world spec and file template development."
 
 Current blocker:
 
-- Human reviewer decision pending after Brainstorm remediation resubmission.
+- No reviewer blocker. World Spec interview/drafting is gated on explicit Alexander authorization.
 
 Next legal action:
 
-- Continue preparation-only activities while awaiting reviewer decision.
-- Do not begin World Spec.
+- Await Alexander authorization to start Pass 8 using `worlds/korvin-merrow/world-spec-prep/post-go-interview-plan.md`.
+- Do not draft World Spec until Alexander authorizes.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
 
 ## Completed
@@ -51,6 +53,8 @@ Next legal action:
 - Brainstorm AutoQC rerun completed: `0 failed / 51 passed`.
 - Diagnostics reviewed.
 - Plan resubmitted for reviewer review.
+- Brainstorm Human Review GO received from Stacey S.
+- Reviewer GO recorded: `worlds/korvin-merrow/reviews/reviewer-go-01.md`.
 - World Spec preparation packet created.
 - Official World Spec template acquired: `reference/templates/World_Spec_Template_05_06.docx`.
 - World Spec AutoQC v6.3 acquired: `reference/templates/AutoQC_Section_2_World_Spec_v6.3_writer.docx`.
@@ -79,10 +83,11 @@ Next legal action:
 - `6318735 checkpoint: complete Korvin Merrow identity migration`
 - `1ca33f0 checkpoint: apply brainstorm reviewer remediation`
 - `6e2ffb9 checkpoint: refresh reviewer remediation continuity files`
+- `646f1df checkpoint: record brainstorm remediation resubmission`
 
 ## Authorized Right Now
 
-- Preparation-only activities while waiting for Brainstorm reviewer decision.
+- Preparation-only activities for World Spec transition.
 - Preparation.
 - Auditing.
 - Checklist building.
@@ -93,8 +98,8 @@ Next legal action:
 
 ## Not Authorized Right Now
 
-- World Spec drafting.
-- Populating the World Spec template.
+- World Spec drafting before explicit Alexander authorization.
+- Populating the World Spec template before explicit Alexander authorization.
 - Creating a final Section 3 World File Plan or file inventory.
 - Creating synthetic patient files.
 - Creating final task prompts.

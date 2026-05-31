@@ -6,17 +6,19 @@ Purpose: enable a brand-new Claude session to resume accurately without stale as
 
 Project Sanctum onboarding is in Phase 1 World Building, but only steps 1-6 are in scope.
 
-The Brainstorm for Korvin Merrow World has been completed, passed AutoQC, uploaded to RL Studio, returned SEND BACK from Human Review, remediated, reuploaded, and resubmitted for reviewer review.
+The Brainstorm for Korvin Merrow World has been completed, passed AutoQC, uploaded to RL Studio, returned SEND BACK from Human Review, remediated, reuploaded, resubmitted, and approved by Stacey S.
 
 RL Studio:
 
 - Task ID: `cyau8803`
-- Status: awaiting reviewer decision after remediation resubmission
+- Status: Brainstorm approved / ready for World Spec transition
 - Brainstorm AutoQC: revised run `0 failed / 51 passed`
 - Diagnostics reviewed: yes
-- Human Review: pending after SEND BACK remediation resubmission
+- Human Review: GO from Stacey S
+- Approval source: Slack / Stacey S
+- Reviewer message: "great job! I approved your brainstorm. Next steps are to move forward with world spec and file template development."
 
-Current state: Brainstorm resubmitted after SEND BACK remediation. World Spec drafting is not authorized.
+Current state: Brainstorm approved. World Spec drafting is allowed only after explicit Alexander authorization and using the post-GO interview plan.
 
 ## Locked Decisions
 
@@ -107,27 +109,27 @@ Use these as future World Spec priorities only after Brainstorm GO:
 
 ## Next Legal Action
 
-Wait for reviewer decision.
+Wait for Alexander authorization to start Pass 8.
 
-If reviewer returns GO:
+If Alexander authorizes Pass 8:
 
-1. Record GO in status and reviewer-feedback files.
-2. Ask Alexander before starting World Spec.
-3. Continue only preparation until Alexander authorizes Pass 8.
+1. Read `project/STATUS.md`, `project/PASS_PLAN.md`, and `worlds/korvin-merrow/world-spec-prep/post-go-interview-plan.md`.
+2. Run the World Spec physician interview sequence.
+3. Do not populate the official World Spec template until Alexander authorizes drafting after the interview.
 
-If reviewer returns SEND BACK again:
+If Alexander has not authorized Pass 8:
 
-1. Capture feedback exactly.
-2. Do not edit Brainstorm until Alexander approves the response plan.
-3. Do not begin World Spec.
+1. Continue preparation-only activities.
+2. Do not draft World Spec.
+3. Do not create file inventory.
 
 ## Hard Boundaries
 
 Do not:
 
-- draft the World Spec;
-- populate the World Spec template;
-- create Section 3 file inventory;
+- draft the World Spec before explicit Alexander authorization;
+- populate the World Spec template before explicit Alexander authorization;
+- create Section 3 file inventory before explicit authorization;
 - create synthetic chart files;
 - invent labs, vitals, medications, doses, dates, provider names, MRN, or patient name;
 - write final task prompts;
@@ -142,6 +144,6 @@ If asked to help now, Claude should only support preparation:
 
 - summarize current state;
 - audit against AutoQC v6.3;
-- prepare interview questions;
+- prepare or refine post-GO interview questions;
 - critique proposed physician decisions;
 - help maintain consistency with the approved Brainstorm.

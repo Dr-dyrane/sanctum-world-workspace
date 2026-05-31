@@ -4,7 +4,7 @@ Purpose: local repository hygiene map to prevent duplicate working files and acc
 
 Generated from local workspace file listing excluding `.git`, caches, and Python bytecode.
 
-Current status: Brainstorm returned SEND BACK, reviewer remediation package prepared locally, World Spec preparation only.
+Current status: Brainstorm approved after SEND BACK remediation. World Spec transition pending explicit Alexander authorization.
 
 ## Root
 
@@ -54,7 +54,7 @@ Current status: Brainstorm returned SEND BACK, reviewer remediation package prep
 | `claude-package/02_BRAINSTORM_GUIDE.md` | Compressed Brainstorm guide. | Derived from source; not source of truth. |
 | `claude-package/03_WORLD_SPEC_GUIDE.md` | Compressed World Spec guide. | Derived from source; not source of truth. |
 | `claude-package/04_KORVIN_MERROW_CONTEXT.md` | Refreshed Korvin Merrow context for Claude. | Includes submitted Brainstorm summary, locked decisions, and World Spec prep risks. |
-| `claude-package/05_EXECUTION_STATE.md` | Refreshed execution state for Claude. | Mirrors current Brainstorm SEND BACK remediation state; use `project/STATUS.md` for live status. |
+| `claude-package/05_EXECUTION_STATE.md` | Refreshed execution state for Claude. | Mirrors current Brainstorm approval / World Spec transition state; use `project/STATUS.md` for live status. |
 | `claude-package/06_HANDOFF_STATE.md` | Fresh-session Claude handoff. | Summarizes locked decisions, remaining decisions, next legal action, and hard boundaries. |
 
 ## Reference Source
@@ -127,12 +127,13 @@ Current status: Brainstorm returned SEND BACK, reviewer remediation package prep
 | `worlds/korvin-merrow/reviews/brainstorm-autoqc-02.md` | Final Brainstorm AutoQC pass summary. | Current Brainstorm AutoQC status. |
 | `worlds/korvin-merrow/reviews/claude-brainstorm-review-01.md` | Claude hostile Brainstorm review. | Historical external review artifact using prior working name. |
 | `worlds/korvin-merrow/reviews/claude-brainstorm-review-response-01.md` | Response to Claude Brainstorm review. | Historical triage/action record. |
+| `worlds/korvin-merrow/reviews/reviewer-go-01.md` | Stacey S Brainstorm GO approval record. | Current human approval artifact authorizing transition toward World Spec, gated by Alexander authorization. |
 
 ## Korvin Merrow Submission
 
 | File | Role | Duplication note |
 | --- | --- | --- |
-| `worlds/korvin-merrow/submission/Korvin_Merrow_Brainstorm.docx` | Current Brainstorm DOCX remediation artifact. | Regenerated with approved reviewer fixes; pending Alexander approval before RL Studio reupload. |
+| `worlds/korvin-merrow/submission/Korvin_Merrow_Brainstorm.docx` | Approved Brainstorm DOCX remediation artifact. | Reuploaded, AutoQC passed, and approved by reviewer. Preserve as approved Brainstorm source artifact. |
 
 ## Korvin Merrow World Spec Prep
 
