@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-Clinical Story Skeleton v1 locked / ready for Identity Package.
+Clinical Story Skeleton v1 ratified / ready for Identity Package.
 
 ## Brainstorm
 
@@ -24,7 +24,7 @@ Clinical Story Skeleton v1 locked / ready for Identity Package.
 - World Spec kickoff: recorded in `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`
 - Physician decision log: recorded in `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md`
 - World Spec drafting: not started
-- Clinical Story Skeleton: v1 locked and reviewed
+- Clinical Story Skeleton: v1 locked, reviewed, and ratified
 - Official Claude World Spec session: pending
 - Current state: ready for Identity Package when Alexander explicitly starts that phase
 - World Spec prep packet: created
@@ -33,6 +33,7 @@ Clinical Story Skeleton v1 locked / ready for Identity Package.
 - World Spec AutoQC v6.3 checks: indexed in `reference/world-spec-guidelines/08_autoqc_master_index.md`
 - World Spec writer playbook: created in `reference/world-spec-guidelines/09_world_spec_writer_playbook.md`
 - Clinical Story Skeleton review: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-review.md`
+- Clinical Story Skeleton ratification: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`
 - Next allowed action: begin Identity Package only when Alexander explicitly starts it
 

@@ -18,7 +18,7 @@ RL Studio:
 - Approval source: Slack / Stacey S
 - Reviewer message: "great job! I approved your brainstorm. Next steps are to move forward with world spec and file template development."
 
-Current state: Clinical Story Skeleton v1 locked / ready for Identity Package. World Spec drafting has not started and remains gated on explicit Alexander authorization.
+Current state: Clinical Story Skeleton v1 ratified / ready for Identity Package. World Spec drafting has not started and remains gated on explicit Alexander authorization.
 
 ## Locked Decisions
 
@@ -89,6 +89,16 @@ Locked Clinical Story Skeleton v1:
 - Near-fall framework: multi-factorial and not attributable to a single cause.
 - Review artifact: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-review.md`.
 - Lock record: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`.
+- Ratification artifact: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`.
+
+Ratified governance/story-logic guardrails:
+
+- Endocrine friction label is Endocrinology vs Primary Team.
+- Do not use Endocrinology vs Documentation. Documentation is evidence, not a friction participant.
+- Steroid-record discrepancy remains a trap.
+- Prednisone Source-of-Truth Hierarchy: rheumatology attending recommendation > verified medication reconciliation > pharmacy / refill history > family report > patient recollection.
+- Family vs Primary Team is balanced: family concern is defensible, and primary team discharge reasoning is also defensible.
+- Near-fall is intentionally multi-factorial with no single intended explanation.
 
 ## Decisions Remaining
 
@@ -134,13 +144,13 @@ Use these as future World Spec priorities only after Brainstorm GO:
 
 ## Next Legal Action
 
-Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`, `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`, and `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-review.md` for orientation.
+Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`, `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`, `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-review.md`, and `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md` for orientation.
 
 Wait for Alexander to explicitly start Identity Package.
 
 If Alexander starts Identity Package:
 
-1. Read `project/STATUS.md`, `project/PASS_PLAN.md`, `WORLD_SPEC_KICKOFF.md`, `physician-decision-log-01.md`, `physician-decision-log-02.md`, and `clinical-story-skeleton-review.md`.
+1. Read `project/STATUS.md`, `project/PASS_PLAN.md`, `WORLD_SPEC_KICKOFF.md`, `physician-decision-log-01.md`, `physician-decision-log-02.md`, `clinical-story-skeleton-review.md`, and `clinical-story-skeleton-ratification.md`.
 2. Use only locked physician decisions, the locked Clinical Story Skeleton, and approved Brainstorm material.
 3. Make identity/compliance decisions only. Do not populate the official World Spec template until Alexander authorizes drafting.
 

@@ -4,7 +4,7 @@ Purpose: compressed current state for Claude. Use `project/STATUS.md` and `docs/
 
 ## Project State
 
-Current phase: Clinical Story Skeleton v1 locked / ready for Identity Package.
+Current phase: Clinical Story Skeleton v1 ratified / ready for Identity Package.
 
 Brainstorm:
 
@@ -22,12 +22,13 @@ Brainstorm:
 
 Current blocker:
 
-- No reviewer blocker. World Spec kickoff is recorded. Post-kickoff physician decisions are synchronized. Clinical Story Skeleton v1 is locked and reviewed. Identity Package is the next legal phase when Alexander authorizes it. World Spec drafting remains gated on explicit Alexander authorization.
+- No reviewer blocker. World Spec kickoff is recorded. Post-kickoff physician decisions are synchronized. Clinical Story Skeleton v1 is locked, reviewed, and ratified. Identity Package is the next legal phase when Alexander authorizes it. World Spec drafting remains gated on explicit Alexander authorization.
 
 Next legal action:
 
 - Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md` and `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md` for orientation.
 - Use `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-review.md` and `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md` as the locked Clinical Story Skeleton v1 record.
+- Use `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md` for ratified governance/story-logic guardrails.
 - When Alexander explicitly starts Identity Package, proceed with identity and compliance decisions only.
 - Do not revise the locked Clinical Story Skeleton, draft World Spec, or create file inventory until Alexander explicitly starts/authorizes the relevant phase.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
@@ -77,6 +78,8 @@ Next legal action:
 - Clinical Story Skeleton v1 locked by Alexander.
 - Clinical Story Skeleton v1 reviewed with GO recommendation.
 - Clinical Story Skeleton lock recorded in `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`.
+- Clinical Story Skeleton v1 ratified after Claude hostile review minor findings.
+- Ratification artifact created: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`.
 
 ## Latest Git Checkpoints
 
@@ -154,6 +157,7 @@ Claude must not replace physician judgment or originate clinical design.
 - `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md`
 - `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`
 - `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-review.md`
+- `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`
 - `reference/world-spec-guidelines/08_autoqc_master_index.md`
 - `reference/world-spec-guidelines/09_world_spec_writer_playbook.md`
 - `project/WORKSPACE_FILE_MAP.md`

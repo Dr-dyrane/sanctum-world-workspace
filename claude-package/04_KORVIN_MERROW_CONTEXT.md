@@ -2,7 +2,7 @@
 
 Purpose: compressed Claude context for a fresh Project Sanctum session. Use this as operational context only; the full source of truth remains local under `reference/` and `worlds/korvin-merrow/`.
 
-Boundary: Brainstorm is approved after SEND BACK remediation. Clinical Story Skeleton v1 is locked and reviewed. Identity Package is next when Alexander explicitly authorizes it. World Spec drafting is not authorized until Alexander explicitly authorizes drafting.
+Boundary: Brainstorm is approved after SEND BACK remediation. Clinical Story Skeleton v1 is locked, reviewed, and ratified. Identity Package is next when Alexander explicitly authorizes it. World Spec drafting is not authorized until Alexander explicitly authorizes drafting.
 
 ## Current World Concept
 
@@ -80,12 +80,13 @@ Approved compact medication list:
 - Inpatient team sees improved vitals, controlled infection, improving renal function, and acute stabilization.
 - Core tension: medically stable on paper vs functionally safe in the real world.
 
-3. Emergency/Inpatient Medicine vs Endocrinology
+3. Endocrinology vs Primary Team
 
 - ED/inpatient medicine appropriately treated suspected sepsis and wants to avoid unnecessary prolonged steroids once acute infection appears improved.
 - Endocrinology recognizes chronic prednisone exposure for PMR, unclear taper history, persistent weakness, borderline hypotension, and overlapping symptoms.
 - Core tension: risk of premature steroid withdrawal vs risk of unnecessary steroid continuation.
 - Guardrail: this is a risk-interpretation disagreement, not "Endocrinology finds the missed diagnosis."
+- Documentation is evidence for the steroid trap, not a friction participant.
 
 ## Locked World-Level Traps
 
@@ -184,11 +185,13 @@ These are World Spec preparation risks, not authorization to change Brainstorm:
 
 ## Locked Clinical Story Skeleton v1
 
-Status: locked after review on 2026-05-31.
+Status: ratified after review on 2026-05-31.
 
 Review artifact: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-review.md`
 
 Decision log: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`
+
+Ratification artifact: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`
 
 Core story:
 
@@ -204,9 +207,17 @@ Core story:
 - Primary failure target: disposition safety, functional decline recognition, and discharge-readiness reasoning.
 - Near-fall is multi-factorial, not a single-cause clue.
 
+Ratified governance/story-logic guardrails:
+
+- Endocrine friction label is Endocrinology vs Primary Team.
+- Do not use Endocrinology vs Documentation.
+- Prednisone Source-of-Truth Hierarchy: rheumatology attending recommendation > verified medication reconciliation > pharmacy / refill history > family report > patient recollection.
+- Family vs Primary Team is balanced: family concern is defensible, and discharge is clinically defensible from the primary team's perspective because infection, AKI, mental status, and oral intake are improving and follow-up is available.
+- Near-fall remains intentionally multi-factorial with no single intended explanation.
+
 ## Current State
 
-Brainstorm approved. Clinical Story Skeleton v1 locked. Do not start World Spec drafting.
+Brainstorm approved. Clinical Story Skeleton v1 ratified. Do not start World Spec drafting.
 
 Completed:
 
@@ -219,6 +230,7 @@ Completed:
 7. AutoQC passed 51/51.
 8. Brainstorm approved by Stacey S.
 9. Clinical Story Skeleton v1 locked and reviewed.
+10. Clinical Story Skeleton v1 ratified after Claude hostile review minor findings.
 
 Still pending before World Spec drafting:
 

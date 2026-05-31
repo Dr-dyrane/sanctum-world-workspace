@@ -121,11 +121,13 @@ The decline includes worsening weakness, reduced oral intake, near-fall/lighthea
 
 ## Locked Clinical Story Skeleton v1
 
-Status: LOCKED after review on 2026-05-31.
+Status: RATIFIED after review on 2026-05-31.
 
 Review artifact: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-review.md`
 
 Decision log: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`
+
+Ratification artifact: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`
 
 Baseline:
 
@@ -200,6 +202,55 @@ Near-fall framework:
 - Multi-factorial.
 - Not attributable to a single cause.
 - Contributors include poor intake, volume depletion, medication effects, neuropathy, deconditioning, infection physiology, and steroid-related physiology.
+
+## Ratified Governance Guardrails
+
+### Endocrine Friction
+
+Use: Endocrinology vs Primary Team.
+
+Do not use: Endocrinology vs Documentation.
+
+Documentation is evidence. Documentation is not a friction participant. The steroid-record discrepancy remains a trap. The friction remains a human-to-human disagreement about steroid risk interpretation and management.
+
+### Prednisone Source-of-Truth Hierarchy
+
+1. Rheumatology attending recommendation.
+2. Verified medication reconciliation.
+3. Pharmacy / refill history.
+4. Family report.
+5. Patient recollection.
+
+This hierarchy should guide later World Spec governance when prednisone exposure, taper timing, and adrenal suppression risk need to be reconstructed.
+
+### Family vs Primary Team Balance
+
+Both positions are defensible.
+
+Family position:
+
+- Not back to baseline.
+- Functional concerns remain.
+- Safety concerns remain.
+
+Primary team position:
+
+- Infection improved.
+- AKI improving.
+- Mental status improved.
+- Oral intake improving.
+- Follow-up available.
+- Discharge is clinically defensible.
+
+The discharge-readiness friction should remain a gray-zone judgment problem, not an obvious unsafe-discharge case.
+
+### Near-Fall Guardrail
+
+The near-fall event is intentionally multi-factorial.
+
+No single contributor is intended to explain the event.
+
+Potential contributors include poor intake, volume depletion, medication effects, neuropathy, deconditioning, infection physiology, and steroid-related physiology.
 
 ## Locked World Tone
 

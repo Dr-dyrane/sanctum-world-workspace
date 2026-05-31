@@ -1,6 +1,6 @@
 # Korvin Merrow World Spec Kickoff
 
-Status: Clinical Story Skeleton v1 locked / ready for Identity Package.
+Status: Clinical Story Skeleton v1 ratified / ready for Identity Package.
 
 Purpose: mark the transition from approved Brainstorm to World Spec preparation without drafting the World Spec, populating the template, creating a final file inventory, or inventing clinical values.
 
@@ -11,12 +11,14 @@ Purpose: mark the transition from approved Brainstorm to World Spec preparation 
 - RL Studio task ID: `cyau8803`.
 - World Spec phase is authorized for kickoff and preparation.
 - World Spec drafting has not started.
-- Clinical Story Skeleton v1 is locked.
+- Clinical Story Skeleton v1 is locked and ratified.
 - Clinical Story Skeleton review completed with GO recommendation.
+- Clinical Story Skeleton ratification completed after Claude hostile review minor findings.
 - Official Claude World Spec session is still pending.
 - Post-kickoff physician decision record: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md`.
 - Latest skeleton lock record: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`.
 - Clinical Story Skeleton review: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-review.md`.
+- Clinical Story Skeleton ratification: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`.
 - Next allowed substantive action: begin Identity Package only when Alexander explicitly starts that phase.
 
 ## Workspace Bloat And Doctrine Audit
@@ -145,11 +147,20 @@ Locked Clinical Story Skeleton v1:
 - Discharge state: infection, AKI, hemodynamics, mental status, and intake improve, while functional reserve, medication restart strategy, steroid interpretation, family concern, and disposition risk remain unresolved.
 - Near-fall framework: multi-factorial, not attributable to a single cause.
 
+Ratified governance/story-logic guardrails:
+
+- Endocrine friction wording: Endocrinology vs Primary Team.
+- Do not use "Endocrinology vs Documentation." Documentation is evidence, not a friction participant.
+- Steroid-record discrepancy remains a trap.
+- Prednisone Source-of-Truth Hierarchy: rheumatology attending recommendation > verified medication reconciliation > pharmacy / refill history > family report > patient recollection.
+- Family vs Primary Team remains balanced: family concern is defensible because he is not back to baseline and functional/safety concerns remain; primary team discharge reasoning is also defensible because infection, AKI, mental status, and oral intake are improving and follow-up is available.
+- Near-fall remains intentionally multi-factorial, with no single intended explanation. Potential contributors include poor intake, volume depletion, medication effects, neuropathy, deconditioning, infection physiology, and steroid-related physiology.
+
 Primary frictions:
 
 1. Nephrology vs Cardiology: renal/hemodynamic safety during AKI/hypotension vs HFrEF/CAD long-term protective therapy.
 2. Family vs Inpatient Medicine: medical stability on paper vs functional readiness and real-world discharge safety.
-3. Emergency/Inpatient Medicine vs Endocrinology: risk of premature steroid withdrawal vs risk of unnecessary steroid continuation.
+3. Endocrinology vs Primary Team: risk of premature steroid withdrawal vs risk of unnecessary steroid continuation.
 
 World-level traps:
 
@@ -205,9 +216,9 @@ Clinical structure:
 - Key Milestones.
 - Confirmed vs presumed condition split.
 - Care team roster.
-- Source-of-truth hierarchy.
+- Source-of-truth hierarchy. Prednisone hierarchy is already ratified; broader chart hierarchy still pending.
 - Decision Friction Table details.
-- Clinical Story Skeleton details that operationalize the locked mixed-physiology arc without creating a single-diagnosis reveal.
+- Clinical Story Skeleton v1 is ratified. Do not reopen unless Alexander explicitly does so.
 - Medication expansion from the approved compact list toward the World Spec target of 18-22 medications.
 - Final comorbidity list refinement within the World Spec target of 12-15 comorbidities.
 
