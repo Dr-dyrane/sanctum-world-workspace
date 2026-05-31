@@ -113,6 +113,12 @@ Action required: None.
 - Do not infer new diagnoses from BMI.
 - Do not draft World Spec or populate templates from this package until Alexander explicitly authorizes drafting.
 
+## Review Addendum
+
+Claude hostile-review implementation notes are recorded in `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md`.
+
+These notes do not reopen Identity Package v1. They only carry forward future implementation requirements: treat lisinopril cough as an ACE-inhibitor intolerance, eventually provide coherent prior ACE-inhibitor-to-ARNI medication history, and explicitly place baseline anchors such as baseline function, baseline creatinine, dry weight, and similar comparison points during Patient Profile / Clinical History design.
+
 ## Final Status
 
 Identity Package v1

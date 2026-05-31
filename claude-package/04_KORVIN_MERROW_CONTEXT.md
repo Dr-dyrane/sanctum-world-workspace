@@ -234,6 +234,14 @@ Consistency:
 - BMI 30.6 is consistent with 97 kg and 178 cm.
 - Later calendar skeleton must preserve age-62 consistency unless Alexander explicitly reopens DOB or age.
 
+Identity review addendum:
+
+- Claude hostile-review observations are carry-forward implementation notes only.
+- Treat lisinopril cough as ACE-inhibitor intolerance during World Spec construction.
+- Later medication history should coherently explain current ARNI therapy in relation to prior ACE-inhibitor use/intolerance.
+- Baseline function, baseline creatinine, dry weight, and similar baseline anchors should be explicitly placed during Patient Profile / Clinical History design.
+- Do not reopen Identity Package v1.
+
 ## Current State
 
 Brainstorm approved. Clinical Story Skeleton v1 ratified. Identity Package v1 locked. Do not start World Spec drafting.
@@ -251,6 +259,7 @@ Completed:
 9. Clinical Story Skeleton v1 locked and reviewed.
 10. Clinical Story Skeleton v1 ratified after Claude hostile review minor findings.
 11. Identity Package v1 locked.
+12. Identity Package review addendum recorded without reopening identity values.
 
 Still pending before World Spec drafting:
 

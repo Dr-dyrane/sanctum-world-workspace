@@ -14,6 +14,8 @@ Ratification artifact: `worlds/korvin-merrow/world-spec-prep/clinical-story-skel
 
 Identity Package v1 artifact: `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`
 
+Identity Package review addendum: `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md`
+
 ## Locked Clinical Story Skeleton v1
 
 Patient:
@@ -218,3 +220,10 @@ Consistency checks:
 - Identity details do not conflict with the approved Brainstorm.
 - Identity details do not conflict with the ratified Clinical Story Skeleton.
 - Later calendar skeleton must preserve age-62 consistency unless Alexander explicitly reopens DOB or age.
+
+Carry-forward implementation notes:
+
+- Lisinopril cough should be treated as an ACE-inhibitor intolerance during World Spec construction.
+- ARNI therapy should eventually have a coherent prior ACE-inhibitor transition history.
+- Baseline function, baseline creatinine, dry weight, and similar baseline anchors should be explicitly placed during Patient Profile / Clinical History design.
+- These notes do not reopen Identity Package v1 and do not authorize Governance Package work or World Spec drafting.

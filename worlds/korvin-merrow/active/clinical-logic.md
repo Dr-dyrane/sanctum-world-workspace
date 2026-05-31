@@ -72,6 +72,13 @@ Identity checks:
 - BMI 30.6 is consistent with height 178 cm and weight 97 kg.
 - The identity package does not alter the mixed physiology story, discharge safety target, approved frictions, or approved traps.
 
+Identity review addendum:
+
+- Treat lisinopril cough as ACE-inhibitor intolerance during later World Spec construction.
+- Later medication history should coherently explain prior ACE-inhibitor transition in the context of current sacubitril/valsartan therapy.
+- Baseline function, baseline creatinine, dry weight, and similar baseline anchors should be explicitly placed during Patient Profile / Clinical History design.
+- These notes do not reopen Identity Package v1.
+
 Approved compact medication list:
 
 - sacubitril/valsartan 24/26 mg BID

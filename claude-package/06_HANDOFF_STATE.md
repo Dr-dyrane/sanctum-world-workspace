@@ -114,6 +114,9 @@ Locked Identity Package v1:
 - Artifact: `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`.
 - Age 62 is consistent with DOB for a 2026 encounter after 2026-02-18.
 - BMI 30.6 is consistent with 97 kg and 178 cm.
+- Review addendum: `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md`.
+- Addendum notes are carry-forward implementation notes only: lisinopril cough is ACE-inhibitor intolerance; later medication history should explain prior ACE-inhibitor/ARNI transition coherently; baseline function, baseline creatinine, dry weight, and similar baseline anchors should be placed during Patient Profile / Clinical History design.
+- Do not reopen Identity Package v1.
 
 ## Decisions Remaining
 
@@ -122,6 +125,7 @@ Do not answer these without Alexander.
 Identity/compliance:
 
 - Identity Package v1 is locked.
+- Identity Package review addendum is recorded and does not reopen identity values.
 - Later calendar skeleton must preserve DOB/age consistency unless Alexander explicitly reopens DOB or age.
 
 Clinical scenario:

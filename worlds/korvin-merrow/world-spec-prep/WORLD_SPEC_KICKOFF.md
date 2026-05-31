@@ -21,6 +21,7 @@ Purpose: mark the transition from approved Brainstorm to World Spec preparation 
 - Clinical Story Skeleton review: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-review.md`.
 - Clinical Story Skeleton ratification: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`.
 - Identity Package v1: `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`.
+- Identity Package review addendum: `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md`.
 - Next allowed substantive action: begin Governance Package only when Alexander explicitly starts that phase.
 
 ## Workspace Bloat And Doctrine Audit
@@ -74,6 +75,7 @@ Identity consistency:
 - Age 62 is consistent with DOB for a 2026 encounter after 2026-02-18.
 - BMI 30.6 is consistent with 97 kg and 178 cm.
 - Later calendar skeleton must preserve age-62 consistency unless Alexander explicitly reopens DOB or age.
+- Identity Package review addendum carries forward implementation notes only: lisinopril cough should be treated as ACE-inhibitor intolerance; later medication history should explain prior ACE-inhibitor/ARNI transition coherently; baseline function, baseline creatinine, dry weight, and similar baseline anchors should be placed during Patient Profile / Clinical History design.
 
 World Type: Typical Clinical World.
 
@@ -225,6 +227,7 @@ Workflow guardrails:
 Identity and demographics:
 
 - Identity Package v1 is locked.
+- Identity Package review addendum is recorded and does not reopen Identity Package v1.
 - Calendar date skeleton remains pending and must preserve DOB/age consistency.
 
 Clinical structure:

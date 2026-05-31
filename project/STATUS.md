@@ -12,6 +12,8 @@ Working title: Korvin Merrow World
 
 Brainstorm Human Review returned GO from Stacey S after SEND BACK remediation. Reviewer approved the Korvin Merrow Brainstorm and indicated next steps are World Spec and file template development. World Spec kickoff is recorded in `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`. Clinical Story Skeleton v1 is locked, reviewed, and ratified at `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`. Identity Package v1 is locked at `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`. Durable physician decision record: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`. World Spec drafting has not started.
 
+Claude Identity Package hostile-review observations are recorded as carry-forward implementation notes in `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md`. Identity Package v1 remains locked.
+
 ## RL Studio Submission
 
 Task ID: cyau8803

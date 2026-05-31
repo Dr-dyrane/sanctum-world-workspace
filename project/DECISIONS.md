@@ -57,3 +57,23 @@ Boundaries:
 
 - Do not draft World Spec yet.
 - Do not create milestones, final file inventory, task prompts, golden responses, grader guidance, or synthetic chart files.
+
+## 2026-05-31 - Identity Package Review Addendum Recorded
+
+Decision: Claude Identity Package hostile-review observations are accepted as carry-forward implementation notes only. Identity Package v1 remains locked.
+
+Artifact:
+
+- `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md`
+
+Carry-forward notes:
+
+- Treat lisinopril cough as an ACE-inhibitor intolerance during World Spec construction.
+- Provide a coherent prior ACE-inhibitor transition history for current ARNI therapy during Patient Profile / Clinical History design.
+- Explicitly place baseline function, baseline creatinine, dry weight, and similar baseline anchors during Patient Profile / Clinical History design.
+
+Boundaries:
+
+- Do not change MRN, DOB, age, anthropometrics, allergy, or code status.
+- Do not reopen Identity Package v1.
+- Do not start Governance Package or World Spec drafting from these notes.

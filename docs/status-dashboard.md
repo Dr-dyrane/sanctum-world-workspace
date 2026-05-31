@@ -36,6 +36,7 @@ Identity Package v1 locked / ready for Governance Package.
 - Clinical Story Skeleton review: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-review.md`
 - Clinical Story Skeleton ratification: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`
 - Identity Package v1: `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`
+- Identity Package review addendum: `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md`
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`
 - Next allowed action: begin Governance Package only when Alexander explicitly starts it
 
@@ -51,6 +52,7 @@ Identity Package v1 locked / ready for Governance Package.
 
 - Do not draft World Spec before Alexander authorizes Pass 8.
 - Do not revise the locked Clinical Story Skeleton unless Alexander explicitly reopens it.
+- Do not reopen Identity Package v1; use the review addendum only as carry-forward implementation notes.
 - Do not begin Governance Package before Alexander explicitly starts that phase.
 - Do not create milestones before Alexander authorizes that step.
 - Do not create file inventory before Alexander authorizes that step.
