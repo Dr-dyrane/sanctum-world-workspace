@@ -124,6 +124,8 @@ Current governance state: Governance Package v1 is ratified at `worlds/korvin-me
 
 Completed Architecture Layers: Brainstorm APPROVED; Temporal Architecture LOCKED; Clinical Story Skeleton RATIFIED; Identity Package LOCKED; Governance Package RATIFIED. Physician Architecture Layer status: COMPLETE. Recommended next legal phase: World Spec Construction Preparation, only after explicit Alexander authorization.
 
+Current construction-preparation state: Key Milestones Calendar Skeleton v1 is candidate-locked at `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-skeleton-v1.md`. Use it as the canonical date framework. It is not a final World Spec milestone table, task architecture, file inventory, or clinical content draft.
+
 Major clinical friction themes: emergency/inpatient stabilization and sepsis management; endocrinology concern for adrenal crisis/adrenal insufficiency; nephrology concern for kidney injury and medication safety; cardiology balancing long-term protective medications; family/caregiver concern that the patient has not returned to baseline despite medical stability.
 
 Design principle: do not make this a rare disease puzzle. Complexity comes from realistic medicine: common diseases, messy documentation, competing priorities, and evolving information.

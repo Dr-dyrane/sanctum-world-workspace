@@ -1,6 +1,6 @@
 # Korvin Merrow World Spec Kickoff
 
-Status: Physician Architecture Layer complete / ready for World Spec Construction Preparation.
+Status: World Spec Construction Preparation / Key Milestones Calendar Skeleton v1 candidate lock.
 
 Purpose: mark the transition from approved Brainstorm to World Spec preparation without drafting the World Spec, populating the template, creating a final file inventory, or inventing clinical values.
 
@@ -25,6 +25,7 @@ Purpose: mark the transition from approved Brainstorm to World Spec preparation 
 - Governance Package v1 candidate: `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`.
 - Governance Package clarification: `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md`.
 - Governance Package ratification: `worlds/korvin-merrow/world-spec-prep/governance-package-ratification.md`.
+- Key Milestones Calendar Skeleton v1: `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-skeleton-v1.md`.
 - Next allowed substantive action: proceed only when Alexander explicitly authorizes the next World Spec preparation or construction step.
 
 ## Workspace Bloat And Doctrine Audit
@@ -206,6 +207,21 @@ Completed Architecture Layers:
 
 Physician Architecture Layer status: COMPLETE.
 
+Key Milestones Calendar Skeleton v1:
+
+- Approximate decline begins: 04/27/2026.
+- Admission / HD1: 05/18/2026.
+- HD2: 05/19/2026.
+- HD3: 05/20/2026.
+- HD4: 05/21/2026.
+- HD5: 05/22/2026.
+- HD6 and world snapshot day: 05/23/2026.
+- World snapshot / world close: 05/23/2026 18:00.
+- Discharge anchor: 05/24/2026.
+- +7 day anchor: 05/31/2026.
+- +30 day anchor: 06/23/2026.
+- Status: CANDIDATE LOCK.
+
 Primary frictions:
 
 1. Nephrology vs Cardiology: renal/hemodynamic safety during AKI/hypotension vs HFrEF/CAD long-term protective therapy.
@@ -256,7 +272,7 @@ Identity and demographics:
 
 - Identity Package v1 is locked.
 - Identity Package review addendum is recorded and does not reopen Identity Package v1.
-- Calendar date skeleton remains pending and must preserve DOB/age consistency.
+- Calendar date skeleton v1 is candidate-locked and preserves DOB/age consistency.
 
 Clinical structure:
 

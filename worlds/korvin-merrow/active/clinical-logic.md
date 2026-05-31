@@ -338,6 +338,30 @@ Physician Architecture Layer Status: COMPLETE.
 
 Next legal phase recommendation: World Spec Construction Preparation.
 
+## Key Milestones Calendar Skeleton v1
+
+Artifact: `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-skeleton-v1.md`
+
+Status: CANDIDATE LOCK.
+
+Canonical date framework:
+
+- Approximate decline begins: 2026-04-27 / 04/27/2026.
+- Final pre-admission week begins: 2026-05-11 / 05/11/2026.
+- Day before presentation: 2026-05-17 / 05/17/2026.
+- Admission / HD1: 2026-05-18 / 05/18/2026.
+- HD2: 2026-05-19 / 05/19/2026.
+- HD3: 2026-05-20 / 05/20/2026.
+- HD4: 2026-05-21 / 05/21/2026.
+- HD5: 2026-05-22 / 05/22/2026.
+- HD6: 2026-05-23 / 05/23/2026.
+- World snapshot / world close: 2026-05-23 18:00 / 05/23/2026 18:00.
+- Discharge anchor: 2026-05-24 / 05/24/2026.
+- +7 day anchor: 2026-05-31 / 05/31/2026.
+- +30 day anchor: 2026-06-23 / 06/23/2026.
+
+This skeleton is a date framework only. It does not create clinical milestone content, task architecture, file inventory, prompts, goldens, grader guidance, or synthetic files.
+
 ## Locked World Tone
 
 The patient is medically improving but operationally dangerous to discharge.

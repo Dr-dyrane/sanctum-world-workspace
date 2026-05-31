@@ -22,6 +22,8 @@ Governance Package clarification: `worlds/korvin-merrow/world-spec-prep/governan
 
 Governance Package ratification: `worlds/korvin-merrow/world-spec-prep/governance-package-ratification.md`
 
+Key Milestones Calendar Skeleton v1: `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-skeleton-v1.md`
+
 ## Locked Clinical Story Skeleton v1
 
 Patient:
@@ -339,3 +341,30 @@ Active future watch items:
 - AutoQC 2.108 administrative-deliverable resolution.
 
 These are task-architecture concerns, not governance defects.
+
+## Key Milestones Calendar Skeleton v1
+
+Status: CANDIDATE LOCK.
+
+Purpose: canonical date framework for World Spec construction preparation.
+
+Calendar anchors:
+
+- Approximate decline begins: 04/27/2026.
+- Final pre-admission week begins: 05/11/2026.
+- Day before presentation: 05/17/2026.
+- Admission / HD1: 05/18/2026.
+- HD2: 05/19/2026.
+- HD3: 05/20/2026.
+- HD4: 05/21/2026.
+- HD5: 05/22/2026.
+- HD6: 05/23/2026.
+- World snapshot / world close: 05/23/2026 18:00.
+- Discharge anchor: 05/24/2026.
+- +7 day anchor: 05/31/2026.
+- +30 day anchor: 06/23/2026.
+
+Boundary:
+
+- This is a date framework only.
+- It does not create final World Spec prose, task architecture, final file inventory, prompts, golden responses, grader guidance, or synthetic files.

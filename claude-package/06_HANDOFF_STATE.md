@@ -18,7 +18,7 @@ RL Studio:
 - Approval source: Slack / Stacey S
 - Reviewer message: "great job! I approved your brainstorm. Next steps are to move forward with world spec and file template development."
 
-Current state: Physician Architecture Layer complete / ready for World Spec Construction Preparation. World Spec drafting has not started and remains gated on explicit Alexander authorization.
+Current state: World Spec Construction Preparation / Key Milestones Calendar Skeleton v1 candidate lock. World Spec drafting has not started and remains gated on explicit Alexander authorization.
 
 ## Locked Decisions
 
@@ -148,6 +148,18 @@ Completed Architecture Layers:
 
 Physician Architecture Layer Status: COMPLETE.
 
+Key Milestones Calendar Skeleton v1:
+
+- Artifact: `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-skeleton-v1.md`.
+- Status: CANDIDATE LOCK.
+- Approximate decline begins: 04/27/2026.
+- Admission / HD1: 05/18/2026.
+- World snapshot / world close: 05/23/2026 18:00.
+- Discharge anchor: 05/24/2026.
+- +7 day anchor: 05/31/2026.
+- +30 day anchor: 06/23/2026.
+- Date framework only; not a final milestone table, task architecture, file inventory, or World Spec draft.
+
 ## Decisions Remaining
 
 Do not answer these without Alexander.
@@ -193,7 +205,7 @@ Use these as future World Spec priorities only after Brainstorm GO:
 
 ## Next Legal Action
 
-Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`, `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`, `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`, `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md`, `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md`, and `worlds/korvin-merrow/world-spec-prep/governance-package-ratification.md` for orientation.
+Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`, `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`, `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`, `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md`, `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md`, `worlds/korvin-merrow/world-spec-prep/governance-package-ratification.md`, and `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-skeleton-v1.md` for orientation.
 
 Wait for Alexander to explicitly authorize World Spec Construction Preparation or another specific next step.
 

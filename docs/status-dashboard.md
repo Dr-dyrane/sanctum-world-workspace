@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-Physician Architecture Layer complete / ready for World Spec Construction Preparation.
+World Spec Construction Preparation / Key Milestones Calendar Skeleton v1 candidate lock.
 
 ## Brainstorm
 
@@ -28,8 +28,9 @@ Physician Architecture Layer complete / ready for World Spec Construction Prepar
 - Identity Package: v1 locked
 - Governance Package: v1 ratified
 - Physician Architecture Layer: complete
+- Key Milestones Calendar Skeleton: v1 candidate lock
 - Official Claude World Spec session: pending
-- Current state: Physician Architecture Layer complete; World Spec Construction Preparation is the next recommended legal phase and still requires explicit Alexander authorization
+- Current state: World Spec Construction Preparation has begun with Key Milestones Calendar Skeleton v1 candidate-locked
 - World Spec prep packet: created
 - Official World Spec template: saved locally
 - World Spec AutoQC prompt v6.3: saved locally
@@ -42,8 +43,9 @@ Physician Architecture Layer complete / ready for World Spec Construction Prepar
 - Governance Package v1: `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`
 - Governance Package clarification: `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md`
 - Governance Package ratification: `worlds/korvin-merrow/world-spec-prep/governance-package-ratification.md`
+- Key Milestones Calendar Skeleton v1: `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-skeleton-v1.md`
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`
-- Next allowed action: World Spec Construction Preparation only after Alexander explicitly authorizes it
+- Next allowed action: continue only after Alexander explicitly authorizes the next World Spec construction-preparation artifact
 
 ## Tooling
 

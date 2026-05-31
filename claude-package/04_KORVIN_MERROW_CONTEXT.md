@@ -235,6 +235,30 @@ Completed Architecture Layers: Brainstorm APPROVED; Temporal Architecture LOCKED
 
 Physician Architecture Layer Status: COMPLETE.
 
+## Key Milestones Calendar Skeleton v1
+
+Artifact: `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-skeleton-v1.md`
+
+Status: CANDIDATE LOCK.
+
+Canonical anchors:
+
+- Approximate decline begins: 04/27/2026.
+- Final pre-admission week begins: 05/11/2026.
+- Day before presentation: 05/17/2026.
+- Admission / HD1: 05/18/2026.
+- HD2: 05/19/2026.
+- HD3: 05/20/2026.
+- HD4: 05/21/2026.
+- HD5: 05/22/2026.
+- HD6: 05/23/2026.
+- World snapshot / world close: 05/23/2026 18:00.
+- Discharge anchor: 05/24/2026.
+- +7 day anchor: 05/31/2026.
+- +30 day anchor: 06/23/2026.
+
+This is a date framework only. It is not a World Spec draft, final milestone table, task architecture, or file inventory.
+
 ## Locked Clinical Story Skeleton v1
 
 Status: ratified after review on 2026-05-31.
@@ -296,7 +320,7 @@ Identity review addendum:
 
 ## Current State
 
-Brainstorm approved. Clinical Story Skeleton v1 ratified. Identity Package v1 locked. Governance Package v1 ratified. Physician Architecture Layer complete. Do not start World Spec drafting.
+Brainstorm approved. Clinical Story Skeleton v1 ratified. Identity Package v1 locked. Governance Package v1 ratified. Physician Architecture Layer complete. Key Milestones Calendar Skeleton v1 candidate-locked. Do not start World Spec drafting.
 
 Completed:
 
@@ -316,6 +340,7 @@ Completed:
 14. Governance Package v1 clarification recorded.
 15. Governance Package v1 ratified.
 16. Physician Architecture Layer completed.
+17. Key Milestones Calendar Skeleton v1 candidate-locked.
 
 Still pending before World Spec drafting:
 

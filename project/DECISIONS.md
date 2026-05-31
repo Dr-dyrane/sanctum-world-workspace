@@ -133,3 +133,29 @@ Completed Architecture Layers:
 Next legal phase recommendation:
 
 - World Spec Construction Preparation.
+
+## 2026-05-31 - Key Milestones Calendar Skeleton v1 Candidate Lock
+
+Decision: Key Milestones Calendar Skeleton v1 is the candidate-locked canonical date framework for World Spec construction preparation.
+
+Artifact:
+
+- `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-skeleton-v1.md`
+
+Canonical anchors:
+
+- Approximate decline begins: 04/27/2026.
+- Admission / HD1: 05/18/2026.
+- HD6 world snapshot: 05/23/2026 18:00.
+- Discharge anchor: 05/24/2026.
+- +7 day anchor: 05/31/2026.
+- +30 day anchor: 06/23/2026.
+
+Status:
+
+- Key Milestones Calendar Skeleton v1: CANDIDATE LOCK.
+
+Boundaries:
+
+- Date framework only.
+- Do not treat this as final World Spec prose, a final milestone table, task architecture, file inventory, prompts, goldens, grader guidance, or synthetic files.
