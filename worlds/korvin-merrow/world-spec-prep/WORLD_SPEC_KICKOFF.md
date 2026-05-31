@@ -1,6 +1,6 @@
 # Korvin Merrow World Spec Kickoff
 
-Status: World Spec Construction Preparation / Key Milestones Calendar Skeleton v1 candidate lock.
+Status: World Spec Construction Preparation / calendar locked / Baseline Anchor Package v1 candidate review.
 
 Purpose: mark the transition from approved Brainstorm to World Spec preparation without drafting the World Spec, populating the template, creating a final file inventory, or inventing clinical values.
 
@@ -26,6 +26,8 @@ Purpose: mark the transition from approved Brainstorm to World Spec preparation 
 - Governance Package clarification: `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md`.
 - Governance Package ratification: `worlds/korvin-merrow/world-spec-prep/governance-package-ratification.md`.
 - Key Milestones Calendar Skeleton v1: `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-skeleton-v1.md`.
+- Key Milestones Calendar ratification: `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-ratification.md`.
+- Baseline Anchor Package v1: `worlds/korvin-merrow/world-spec-prep/baseline-anchor-package-v1.md`.
 - Next allowed substantive action: proceed only when Alexander explicitly authorizes the next World Spec preparation or construction step.
 
 ## Workspace Bloat And Doctrine Audit
@@ -220,7 +222,13 @@ Key Milestones Calendar Skeleton v1:
 - Discharge anchor: 05/24/2026.
 - +7 day anchor: 05/31/2026.
 - +30 day anchor: 06/23/2026.
-- Status: CANDIDATE LOCK.
+- Status: LOCKED.
+
+Baseline Anchor Package v1:
+
+- Status: CANDIDATE REVIEW.
+- Candidate baseline anchors include functional status, creatinine, eGFR, hemoglobin, A1c, dry weight, mobility, cognition, medication-management ability, and home support.
+- Candidate package does not create admission labs, hospital-course trends, file inventory, task architecture, World Spec prose, prompts, goldens, grader guidance, templates, reference files, or synthetic files.
 
 Primary frictions:
 
@@ -272,7 +280,7 @@ Identity and demographics:
 
 - Identity Package v1 is locked.
 - Identity Package review addendum is recorded and does not reopen Identity Package v1.
-- Calendar date skeleton v1 is candidate-locked and preserves DOB/age consistency.
+- Calendar date skeleton v1 is locked and preserves DOB/age consistency.
 
 Clinical structure:
 

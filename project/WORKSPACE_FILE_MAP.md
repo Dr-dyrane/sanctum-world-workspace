@@ -4,7 +4,7 @@ Purpose: local repository hygiene map to prevent duplicate working files and acc
 
 Generated from local workspace file listing excluding `.git`, caches, and Python bytecode.
 
-Current status: World Spec Construction Preparation / Key Milestones Calendar Skeleton v1 candidate lock. Identity Package review addendum recorded as carry-forward notes only. World Spec drafting has not started.
+Current status: World Spec Construction Preparation / calendar locked / Baseline Anchor Package v1 candidate review. Identity Package review addendum recorded as carry-forward notes only. World Spec drafting has not started.
 
 ## Navigation Rule
 
@@ -18,9 +18,11 @@ For a new collaborator or new AI session, read in this order:
 6. `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md` for ratified governance architecture.
 7. `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md` for accepted governance clarifications.
 8. `worlds/korvin-merrow/world-spec-prep/governance-package-ratification.md` for governance ratification and completed architecture layer status.
-9. `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-skeleton-v1.md` for the canonical date framework.
-10. `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions.
-11. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
+9. `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-skeleton-v1.md` for the locked canonical date framework.
+10. `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-ratification.md` for calendar ratification and +7/+30 doctrine.
+11. `worlds/korvin-merrow/world-spec-prep/baseline-anchor-package-v1.md` for candidate baseline anchors awaiting physician review.
+12. `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions.
+13. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
 
 Do not start by opening every prep file. Most prep files are supporting memory, not active instructions.
 
@@ -234,7 +236,9 @@ Reviewed for duplicate-purpose files:
 | `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md` | Ratified governance architecture: care team, authority hierarchy, source-of-truth hierarchy, condition split, friction table, admin deliverable decision, and workflow umbrella. | Not a World Spec draft, task spec, milestone list, or file inventory. |
 | `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md` | Locked identity and demographic/compliance package. | Use as identity source of truth; not a World Spec draft. |
 | `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md` | Claude hostile-review observations recorded as carry-forward implementation notes. | Does not reopen Identity Package v1; use only for later Patient Profile / Clinical History implementation. |
-| `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-skeleton-v1.md` | Candidate-locked canonical date framework for admission, HD1-HD6, world snapshot, discharge anchor, +7 anchor, and +30 anchor. | Timeline framework only; not a World Spec draft, final milestone table, task architecture, or file inventory. |
+| `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-ratification.md` | Calendar ratification record and +7/+30-from-discharge doctrine. | Does not create clinical milestone content, tasks, or files. |
+| `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-skeleton-v1.md` | Locked canonical date framework for admission, HD1-HD6, world snapshot, discharge anchor, +7 anchor, and +30 anchor. | Timeline framework only; not a World Spec draft, final milestone table, task architecture, or file inventory. |
+| `worlds/korvin-merrow/world-spec-prep/baseline-anchor-package-v1.md` | Candidate baseline comparator values and baseline function anchors awaiting physician review. | Not admission labs, hospital-course trends, file inventory, task architecture, or World Spec prose. |
 | `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md` | Durable post-kickoff physician decision record. | Historical state sync record; superseded for skeleton lock by decision log 02. |
 | `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md` | Durable Clinical Story Skeleton v1 ratification record. | Use before Identity Package; not a draft spec or file inventory. |
 | `worlds/korvin-merrow/world-spec-prep/post-go-interview-plan.md` | Interview sequence after Brainstorm GO. | This file; do not use before GO except for prep. |

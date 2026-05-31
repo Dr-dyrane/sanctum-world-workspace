@@ -134,13 +134,14 @@ Next legal phase recommendation:
 
 - World Spec Construction Preparation.
 
-## 2026-05-31 - Key Milestones Calendar Skeleton v1 Candidate Lock
+## 2026-05-31 - Key Milestones Calendar Skeleton v1 Locked
 
-Decision: Key Milestones Calendar Skeleton v1 is the candidate-locked canonical date framework for World Spec construction preparation.
+Decision: Key Milestones Calendar Skeleton v1 is the locked canonical date framework for World Spec construction preparation.
 
 Artifact:
 
 - `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-skeleton-v1.md`
+- `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-ratification.md`
 
 Canonical anchors:
 
@@ -151,11 +152,47 @@ Canonical anchors:
 - +7 day anchor: 05/31/2026.
 - +30 day anchor: 06/23/2026.
 
+Doctrine:
+
+- +7 and +30 anchors are measured from discharge anchor 05/24/2026.
+- They are not measured from HD6 world close.
+
 Status:
 
-- Key Milestones Calendar Skeleton v1: CANDIDATE LOCK.
+- Key Milestones Calendar Skeleton v1: LOCKED.
 
 Boundaries:
 
 - Date framework only.
 - Do not treat this as final World Spec prose, a final milestone table, task architecture, file inventory, prompts, goldens, grader guidance, or synthetic files.
+
+## 2026-05-31 - Baseline Anchor Package v1 Candidate Review
+
+Decision: Baseline Anchor Package v1 is prepared for physician review as comparator anchors for later World Spec construction.
+
+Artifact:
+
+- `worlds/korvin-merrow/world-spec-prep/baseline-anchor-package-v1.md`
+
+Candidate anchors:
+
+- Baseline functional status.
+- Baseline creatinine.
+- Baseline eGFR.
+- Baseline hemoglobin.
+- Baseline A1c.
+- Dry weight.
+- Baseline mobility.
+- Baseline cognition.
+- Baseline medication-management ability.
+- Baseline home support.
+
+Status:
+
+- Baseline Anchor Package v1: CANDIDATE REVIEW.
+
+Boundaries:
+
+- Candidate baseline anchors are not admission labs.
+- Candidate baseline anchors are not hospital-course lab trends.
+- This package does not create file inventory, task architecture, World Spec prose, prompts, golden responses, grader guidance, templates, reference files, or synthetic files.

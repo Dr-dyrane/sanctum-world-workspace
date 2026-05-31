@@ -24,6 +24,10 @@ Governance Package ratification: `worlds/korvin-merrow/world-spec-prep/governanc
 
 Key Milestones Calendar Skeleton v1: `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-skeleton-v1.md`
 
+Key Milestones Calendar ratification: `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-ratification.md`
+
+Baseline Anchor Package v1: `worlds/korvin-merrow/world-spec-prep/baseline-anchor-package-v1.md`
+
 ## Locked Clinical Story Skeleton v1
 
 Patient:
@@ -344,7 +348,7 @@ These are task-architecture concerns, not governance defects.
 
 ## Key Milestones Calendar Skeleton v1
 
-Status: CANDIDATE LOCK.
+Status: LOCKED.
 
 Purpose: canonical date framework for World Spec construction preparation.
 
@@ -364,7 +368,36 @@ Calendar anchors:
 - +7 day anchor: 05/31/2026.
 - +30 day anchor: 06/23/2026.
 
+Locked doctrine:
+
+- +7 and +30 anchors are measured from discharge anchor 05/24/2026.
+- They are not measured from HD6 world close.
+
 Boundary:
 
 - This is a date framework only.
 - It does not create final World Spec prose, task architecture, final file inventory, prompts, golden responses, grader guidance, or synthetic files.
+
+## Baseline Anchor Package v1
+
+Status: CANDIDATE REVIEW.
+
+Purpose: define baseline comparator values and baseline function anchors for later World Spec construction after physician review.
+
+Candidate anchors for physician review:
+
+- Baseline functional status.
+- Baseline creatinine.
+- Baseline eGFR.
+- Baseline hemoglobin.
+- Baseline A1c.
+- Dry weight.
+- Baseline mobility.
+- Baseline cognition.
+- Baseline medication-management ability.
+- Baseline home support.
+
+Boundary:
+
+- These are candidate baseline anchors, not admission labs or hospital-course trends.
+- This does not create file inventory, task architecture, World Spec prose, prompts, golden responses, grader guidance, templates, reference files, or synthetic files.

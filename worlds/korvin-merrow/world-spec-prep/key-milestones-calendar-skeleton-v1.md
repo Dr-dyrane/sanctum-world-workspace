@@ -2,7 +2,7 @@
 
 Date created: 2026-05-31
 
-Status: CANDIDATE LOCK.
+Status: LOCKED.
 
 Purpose: establish the canonical date framework for World Spec construction. This is the single timeline source of truth for admission timeline, HD1-HD6 progression, world snapshot, discharge anchor, +7 day anchor, +30 day anchor, future file dates, future task dates, temporal gate compliance, and trap date-lock compliance.
 
@@ -13,6 +13,8 @@ This artifact does not draft World Spec sections, create a file inventory, creat
 The calendar uses a fictional May-June 2026 timeline. Korvin Merrow's DOB is 1964-02-18, so he is 62 throughout all dates below.
 
 All future World Spec dates should inherit from this skeleton. If any future construction step needs a new date, add it to the Key Milestones framework first so AutoQC 2.22 and 2.23 remain auditable.
+
+Locked doctrine: +7 and +30 anchors are measured from the discharge anchor on 05/24/2026. They are not measured from HD6 world close.
 
 ## Pre-Admission Timeline
 
@@ -44,8 +46,8 @@ All future World Spec dates should inherit from this skeleton. If any future con
 | Anchor | Date | Relationship To Snapshot | Use |
 | --- | --- | --- | --- |
 | Discharge anchor | 2026-05-24 / 05/24/2026 | After HD6 18:00 world close | Earliest post-snapshot discharge-facing anchor. |
-| +7 day anchor | 2026-05-31 / 05/31/2026 | 7 days after discharge anchor | Post-discharge follow-up anchor. |
-| +30 day anchor | 2026-06-23 / 06/23/2026 | 30 days after discharge anchor | Later safety/readmission-review anchor. |
+| +7 day anchor | 2026-05-31 / 05/31/2026 | 7 days after discharge anchor, not world close | Post-discharge follow-up anchor. |
+| +30 day anchor | 2026-06-23 / 06/23/2026 | 30 days after discharge anchor, not world close | Later safety/readmission-review anchor. |
 
 ## Temporal Consistency Review
 
@@ -133,4 +135,4 @@ Action required: none.
 
 Key Milestones Calendar Skeleton v1
 
-Status: CANDIDATE LOCK
+Status: LOCKED

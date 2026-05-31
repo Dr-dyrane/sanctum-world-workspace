@@ -342,7 +342,7 @@ Next legal phase recommendation: World Spec Construction Preparation.
 
 Artifact: `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-skeleton-v1.md`
 
-Status: CANDIDATE LOCK.
+Status: LOCKED.
 
 Canonical date framework:
 
@@ -361,6 +361,31 @@ Canonical date framework:
 - +30 day anchor: 2026-06-23 / 06/23/2026.
 
 This skeleton is a date framework only. It does not create clinical milestone content, task architecture, file inventory, prompts, goldens, grader guidance, or synthetic files.
+
+Ratification: `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-ratification.md`
+
+Locked doctrine: +7 and +30 anchors are measured from discharge anchor 05/24/2026, not from HD6 world close.
+
+## Baseline Anchor Package v1
+
+Artifact: `worlds/korvin-merrow/world-spec-prep/baseline-anchor-package-v1.md`
+
+Status: CANDIDATE REVIEW.
+
+Candidate baseline anchors for physician review:
+
+- Baseline functional status.
+- Baseline creatinine.
+- Baseline eGFR.
+- Baseline hemoglobin.
+- Baseline A1c.
+- Dry weight.
+- Baseline mobility.
+- Baseline cognition.
+- Baseline medication-management ability.
+- Baseline home support.
+
+This package does not create admission labs, hospital-course lab trends, file inventory, task architecture, World Spec prose, prompts, goldens, grader guidance, templates, reference files, or synthetic files.
 
 ## Locked World Tone
 

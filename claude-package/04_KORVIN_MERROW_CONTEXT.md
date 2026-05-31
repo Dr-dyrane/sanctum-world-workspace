@@ -2,7 +2,7 @@
 
 Purpose: compressed Claude context for a fresh Project Sanctum session. Use this as operational context only; the full source of truth remains local under `reference/` and `worlds/korvin-merrow/`.
 
-Boundary: Brainstorm is approved after SEND BACK remediation. Clinical Story Skeleton v1 is ratified. Identity Package v1 is locked. Governance Package v1 is ratified. Physician Architecture Layer is complete. World Spec drafting is not authorized until Alexander explicitly authorizes drafting.
+Boundary: Brainstorm is approved after SEND BACK remediation. Clinical Story Skeleton v1 is ratified. Identity Package v1 is locked. Governance Package v1 is ratified. Physician Architecture Layer is complete. Key Milestones Calendar Skeleton v1 is locked. Baseline Anchor Package v1 is in candidate review. World Spec drafting is not authorized until Alexander explicitly authorizes drafting.
 
 ## Current World Concept
 
@@ -239,7 +239,7 @@ Physician Architecture Layer Status: COMPLETE.
 
 Artifact: `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-skeleton-v1.md`
 
-Status: CANDIDATE LOCK.
+Status: LOCKED.
 
 Canonical anchors:
 
@@ -258,6 +258,31 @@ Canonical anchors:
 - +30 day anchor: 06/23/2026.
 
 This is a date framework only. It is not a World Spec draft, final milestone table, task architecture, or file inventory.
+
+Ratification artifact: `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-ratification.md`
+
+Locked doctrine: +7 and +30 anchors are measured from discharge anchor 05/24/2026, not from HD6 world close.
+
+## Baseline Anchor Package v1
+
+Artifact: `worlds/korvin-merrow/world-spec-prep/baseline-anchor-package-v1.md`
+
+Status: CANDIDATE REVIEW.
+
+Candidate baseline anchors for physician review:
+
+- Baseline functional status.
+- Baseline creatinine.
+- Baseline eGFR.
+- Baseline hemoglobin.
+- Baseline A1c.
+- Dry weight.
+- Baseline mobility.
+- Baseline cognition.
+- Baseline medication-management ability.
+- Baseline home support.
+
+This package does not create admission labs, hospital-course lab trends, file inventory, task architecture, World Spec prose, prompts, goldens, grader guidance, templates, reference files, or synthetic files.
 
 ## Locked Clinical Story Skeleton v1
 
@@ -320,7 +345,7 @@ Identity review addendum:
 
 ## Current State
 
-Brainstorm approved. Clinical Story Skeleton v1 ratified. Identity Package v1 locked. Governance Package v1 ratified. Physician Architecture Layer complete. Key Milestones Calendar Skeleton v1 candidate-locked. Do not start World Spec drafting.
+Brainstorm approved. Clinical Story Skeleton v1 ratified. Identity Package v1 locked. Governance Package v1 ratified. Physician Architecture Layer complete. Key Milestones Calendar Skeleton v1 locked. Baseline Anchor Package v1 candidate review. Do not start World Spec drafting.
 
 Completed:
 
@@ -340,11 +365,12 @@ Completed:
 14. Governance Package v1 clarification recorded.
 15. Governance Package v1 ratified.
 16. Physician Architecture Layer completed.
-17. Key Milestones Calendar Skeleton v1 candidate-locked.
+17. Key Milestones Calendar Skeleton v1 locked.
+18. Baseline Anchor Package v1 prepared for physician candidate review.
 
 Still pending before World Spec drafting:
 
-1. World Spec Construction Preparation explicitly authorized by Alexander.
+1. Physician review of Baseline Anchor Package v1.
 2. Official Claude World Spec session.
 3. Alexander authorization to draft the World Spec.
 

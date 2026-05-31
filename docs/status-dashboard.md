@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-World Spec Construction Preparation / Key Milestones Calendar Skeleton v1 candidate lock.
+World Spec Construction Preparation / calendar locked / Baseline Anchor Package v1 candidate review.
 
 ## Brainstorm
 
@@ -28,9 +28,10 @@ World Spec Construction Preparation / Key Milestones Calendar Skeleton v1 candid
 - Identity Package: v1 locked
 - Governance Package: v1 ratified
 - Physician Architecture Layer: complete
-- Key Milestones Calendar Skeleton: v1 candidate lock
+- Key Milestones Calendar Skeleton: v1 locked
+- Baseline Anchor Package: v1 candidate review
 - Official Claude World Spec session: pending
-- Current state: World Spec Construction Preparation has begun with Key Milestones Calendar Skeleton v1 candidate-locked
+- Current state: World Spec Construction Preparation has begun; calendar is locked and Baseline Anchor Package v1 awaits physician review
 - World Spec prep packet: created
 - Official World Spec template: saved locally
 - World Spec AutoQC prompt v6.3: saved locally
@@ -44,8 +45,10 @@ World Spec Construction Preparation / Key Milestones Calendar Skeleton v1 candid
 - Governance Package clarification: `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md`
 - Governance Package ratification: `worlds/korvin-merrow/world-spec-prep/governance-package-ratification.md`
 - Key Milestones Calendar Skeleton v1: `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-skeleton-v1.md`
+- Key Milestones Calendar ratification: `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-ratification.md`
+- Baseline Anchor Package v1: `worlds/korvin-merrow/world-spec-prep/baseline-anchor-package-v1.md`
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`
-- Next allowed action: continue only after Alexander explicitly authorizes the next World Spec construction-preparation artifact
+- Next allowed action: physician review of Baseline Anchor Package v1
 
 ## Tooling
 
