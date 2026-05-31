@@ -4,7 +4,7 @@ Purpose: compressed current state for Claude. Use `project/STATUS.md` and `docs/
 
 ## Project State
 
-Current phase: Governance Package v1 ready for ratification review / ready for next authorized World Spec preparation step.
+Current phase: Physician Architecture Layer complete / ready for World Spec Construction Preparation.
 
 Brainstorm:
 
@@ -22,7 +22,7 @@ Brainstorm:
 
 Current blocker:
 
-- No reviewer blocker. World Spec kickoff is recorded. Clinical Story Skeleton v1 is locked, reviewed, and ratified. Identity Package v1 is locked. Identity Package hostile-review addendum is recorded as carry-forward implementation notes only. Governance Package v1 is ready for ratification review. World Spec drafting remains gated on explicit Alexander authorization.
+- No reviewer blocker. World Spec kickoff is recorded. Clinical Story Skeleton v1 is locked, reviewed, and ratified. Identity Package v1 is locked. Identity Package hostile-review addendum is recorded as carry-forward implementation notes only. Governance Package v1 is ratified. Physician Architecture Layer is complete. World Spec drafting remains gated on explicit Alexander authorization.
 
 Next legal action:
 
@@ -31,8 +31,9 @@ Next legal action:
 - Use `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md` for ratified governance/story-logic guardrails.
 - Use `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md` as the locked identity source.
 - Use `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md` for carry-forward implementation notes only; do not reopen locked identity values.
-- Use `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md` as the governance source ready for ratification review.
+- Use `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md` as the ratified governance source.
 - Use `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md` for accepted governance clarifications.
+- Use `worlds/korvin-merrow/world-spec-prep/governance-package-ratification.md` for governance ratification status.
 - Do not revise the locked Clinical Story Skeleton or locked Identity Package, draft World Spec, create milestones, or create file inventory until Alexander explicitly starts/authorizes the relevant phase.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
 
@@ -85,8 +86,10 @@ Next legal action:
 - Ratification artifact created: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`.
 - Identity Package v1 locked: `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`.
 - Identity Package hostile-review addendum recorded: `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md`.
-- Governance Package v1 ready for ratification review: `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`.
+- Governance Package v1 ratified: `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`.
 - Governance Package clarification recorded: `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md`.
+- Governance Package ratification recorded: `worlds/korvin-merrow/world-spec-prep/governance-package-ratification.md`.
+- Physician Architecture Layer completed.
 
 ## Latest Git Checkpoints
 
@@ -109,6 +112,7 @@ Next legal action:
 
 - State synchronization and preparation.
 - Governance Package v1 consistency review and maintenance if Alexander requests it.
+- World Spec Construction Preparation when Alexander explicitly authorizes it.
 - Preparation.
 - Auditing.
 - Checklist building.
@@ -173,6 +177,7 @@ Claude must not replace physician judgment or originate clinical design.
 - `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md`
 - `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`
 - `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md`
+- `worlds/korvin-merrow/world-spec-prep/governance-package-ratification.md`
 - `reference/world-spec-guidelines/08_autoqc_master_index.md`
 - `reference/world-spec-guidelines/09_world_spec_writer_playbook.md`
 - `project/WORKSPACE_FILE_MAP.md`

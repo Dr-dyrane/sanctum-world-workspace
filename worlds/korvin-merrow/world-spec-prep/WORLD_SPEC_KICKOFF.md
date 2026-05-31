@@ -1,6 +1,6 @@
 # Korvin Merrow World Spec Kickoff
 
-Status: Identity Package v1 locked / ready for Governance Package.
+Status: Physician Architecture Layer complete / ready for World Spec Construction Preparation.
 
 Purpose: mark the transition from approved Brainstorm to World Spec preparation without drafting the World Spec, populating the template, creating a final file inventory, or inventing clinical values.
 
@@ -24,6 +24,7 @@ Purpose: mark the transition from approved Brainstorm to World Spec preparation 
 - Identity Package review addendum: `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md`.
 - Governance Package v1 candidate: `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`.
 - Governance Package clarification: `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md`.
+- Governance Package ratification: `worlds/korvin-merrow/world-spec-prep/governance-package-ratification.md`.
 - Next allowed substantive action: proceed only when Alexander explicitly authorizes the next World Spec preparation or construction step.
 
 ## Workspace Bloat And Doctrine Audit
@@ -193,6 +194,17 @@ Governance Package v1:
 - Governance clarification: authority hierarchy resolves factual/documentation conflicts but does not resolve clinical recommendation disagreements. Consultant disagreements require evidence synthesis, timing, trends, patient status, and discharge safety.
 - Governance clarification: confirmed steroid-related osteoporosis/osteopenia reflects cumulative chronic steroid exposure but does not prove current symptoms are primarily caused by adrenal suppression.
 - Task-architecture watch items remain deferred: AutoQC 2.107 workflow count and 2.108 administrative deliverable must be resolved during task architecture, not inside Governance Package v1.
+- Governance Package v1 status: RATIFIED.
+
+Completed Architecture Layers:
+
+- Brainstorm: APPROVED.
+- Temporal Architecture: LOCKED.
+- Clinical Story Skeleton: RATIFIED.
+- Identity Package: LOCKED.
+- Governance Package: RATIFIED.
+
+Physician Architecture Layer status: COMPLETE.
 
 Primary frictions:
 
@@ -253,7 +265,7 @@ Clinical structure:
 - Care team roster.
 - Source-of-truth hierarchy. Prednisone hierarchy is already ratified; broader chart hierarchy still pending.
 - Decision Friction Table details.
-- Governance Package v1 is ready for ratification review and contains the care team roster, broader source-of-truth hierarchy, confirmed vs presumed condition split, Decision Friction Table, administrative deliverable decision, and workflow umbrella.
+- Governance Package v1 is ratified and contains the care team roster, broader source-of-truth hierarchy, confirmed vs presumed condition split, Decision Friction Table, administrative deliverable decision, and workflow umbrella.
 - Clinical Story Skeleton v1 is ratified. Do not reopen unless Alexander explicitly does so.
 - Medication expansion from the approved compact list toward the World Spec target of 18-22 medications.
 - Final comorbidity list refinement within the World Spec target of 12-15 comorbidities.

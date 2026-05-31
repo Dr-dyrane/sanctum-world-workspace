@@ -2,7 +2,7 @@
 
 Purpose: compressed Claude context for a fresh Project Sanctum session. Use this as operational context only; the full source of truth remains local under `reference/` and `worlds/korvin-merrow/`.
 
-Boundary: Brainstorm is approved after SEND BACK remediation. Clinical Story Skeleton v1 is ratified. Identity Package v1 is locked. Governance Package v1 is ready for ratification review. World Spec drafting is not authorized until Alexander explicitly authorizes drafting.
+Boundary: Brainstorm is approved after SEND BACK remediation. Clinical Story Skeleton v1 is ratified. Identity Package v1 is locked. Governance Package v1 is ratified. Physician Architecture Layer is complete. World Spec drafting is not authorized until Alexander explicitly authorizes drafting.
 
 ## Current World Concept
 
@@ -189,7 +189,9 @@ Artifact: `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`
 
 Clarification artifact: `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md`
 
-Status: READY FOR RATIFICATION REVIEW.
+Status: RATIFIED.
+
+Ratification artifact: `worlds/korvin-merrow/world-spec-prep/governance-package-ratification.md`
 
 Care team roster:
 
@@ -228,6 +230,10 @@ Administrative deliverable decision: yes. At least one future task should involv
 Workflow umbrella: Acute Hospital Management, with subdomains of diagnosis, medication management, consultant synthesis, functional assessment, and disposition planning. Exact future task workflow lines must still use official tracker names.
 
 Deferred task-architecture watch items: AutoQC 2.107 workflow count and 2.108 administrative deliverable must be resolved during task architecture, not inside Governance Package v1.
+
+Completed Architecture Layers: Brainstorm APPROVED; Temporal Architecture LOCKED; Clinical Story Skeleton RATIFIED; Identity Package LOCKED; Governance Package RATIFIED.
+
+Physician Architecture Layer Status: COMPLETE.
 
 ## Locked Clinical Story Skeleton v1
 
@@ -290,7 +296,7 @@ Identity review addendum:
 
 ## Current State
 
-Brainstorm approved. Clinical Story Skeleton v1 ratified. Identity Package v1 locked. Governance Package v1 ready for ratification review. Do not start World Spec drafting.
+Brainstorm approved. Clinical Story Skeleton v1 ratified. Identity Package v1 locked. Governance Package v1 ratified. Physician Architecture Layer complete. Do not start World Spec drafting.
 
 Completed:
 
@@ -307,11 +313,13 @@ Completed:
 11. Identity Package v1 locked.
 12. Identity Package review addendum recorded without reopening identity values.
 13. Governance Package v1 candidate lock recorded.
-14. Governance Package v1 clarification recorded and status moved to ready for ratification review.
+14. Governance Package v1 clarification recorded.
+15. Governance Package v1 ratified.
+16. Physician Architecture Layer completed.
 
 Still pending before World Spec drafting:
 
-1. Next World Spec preparation/construction step explicitly authorized by Alexander.
+1. World Spec Construction Preparation explicitly authorized by Alexander.
 2. Official Claude World Spec session.
 3. Alexander authorization to draft the World Spec.
 

@@ -4,7 +4,7 @@ Purpose: local repository hygiene map to prevent duplicate working files and acc
 
 Generated from local workspace file listing excluding `.git`, caches, and Python bytecode.
 
-Current status: Governance Package v1 ready for ratification review / ready for next authorized World Spec preparation step. Identity Package review addendum recorded as carry-forward notes only. World Spec drafting has not started.
+Current status: Physician Architecture Layer complete / ready for World Spec Construction Preparation. Identity Package review addendum recorded as carry-forward notes only. World Spec drafting has not started.
 
 ## Navigation Rule
 
@@ -15,10 +15,11 @@ For a new collaborator or new AI session, read in this order:
 3. `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md` for the active World Spec cockpit.
 4. `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md` for locked identity values.
 5. `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md` for identity implementation notes that do not reopen Identity Package v1.
-6. `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md` for governance architecture ready for ratification review.
+6. `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md` for ratified governance architecture.
 7. `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md` for accepted governance clarifications.
-8. `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions.
-9. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
+8. `worlds/korvin-merrow/world-spec-prep/governance-package-ratification.md` for governance ratification and completed architecture layer status.
+9. `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions.
+10. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
 
 Do not start by opening every prep file. Most prep files are supporting memory, not active instructions.
 
@@ -228,7 +229,8 @@ Reviewed for duplicate-purpose files:
 | `worlds/korvin-merrow/world-spec-prep/file-plan-planning.md` | File plan planning scaffold. | Not a final file inventory. |
 | `worlds/korvin-merrow/world-spec-prep/friction-to-task-map.md` | Friction/task planning map. | Planning only. |
 | `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md` | Accepted governance clarifications from Claude hostile review. | Clarification layer only; no redesign, task architecture, or World Spec drafting. |
-| `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md` | Governance architecture ready for ratification review: care team, authority hierarchy, source-of-truth hierarchy, condition split, friction table, admin deliverable decision, and workflow umbrella. | Not a World Spec draft, task spec, milestone list, or file inventory. |
+| `worlds/korvin-merrow/world-spec-prep/governance-package-ratification.md` | Governance ratification record and completed architecture layer status. | Does not authorize drafting, task architecture, milestones, file inventory, prompts, or synthetic files. |
+| `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md` | Ratified governance architecture: care team, authority hierarchy, source-of-truth hierarchy, condition split, friction table, admin deliverable decision, and workflow umbrella. | Not a World Spec draft, task spec, milestone list, or file inventory. |
 | `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md` | Locked identity and demographic/compliance package. | Use as identity source of truth; not a World Spec draft. |
 | `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md` | Claude hostile-review observations recorded as carry-forward implementation notes. | Does not reopen Identity Package v1; use only for later Patient Profile / Clinical History implementation. |
 | `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md` | Durable post-kickoff physician decision record. | Historical state sync record; superseded for skeleton lock by decision log 02. |

@@ -78,14 +78,15 @@ Boundaries:
 - Do not reopen Identity Package v1.
 - Do not start Governance Package or World Spec drafting from these notes.
 
-## 2026-05-31 - Governance Package v1 Candidate Lock
+## 2026-05-31 - Governance Package v1 Ratified
 
-Decision: Governance Package v1 is recorded before World Spec construction and clarified as ready for ratification review.
+Decision: Governance Package v1 is ratified before World Spec construction. Physician Architecture Layer is complete.
 
 Artifact:
 
 - `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`
 - `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md`
+- `worlds/korvin-merrow/world-spec-prep/governance-package-ratification.md`
 
 Locked candidate architecture:
 
@@ -113,3 +114,22 @@ Clarifications:
 - Consultant disagreements must be reconciled through evidence synthesis, timing, trends, patient status, and discharge safety.
 - Confirmed steroid-related osteoporosis/osteopenia reflects cumulative chronic steroid exposure but does not prove current symptoms are primarily caused by adrenal suppression.
 - AutoQC 2.107 workflow count and 2.108 administrative deliverable remain task-architecture watch items.
+
+Ratification:
+
+- Claude closeout review: would ratify today, YES.
+- Claude final recommendation: GO.
+- Governance Package v1 Status: RATIFIED.
+- Physician Architecture Layer Status: COMPLETE.
+
+Completed Architecture Layers:
+
+- Brainstorm: APPROVED.
+- Temporal Architecture: LOCKED.
+- Clinical Story Skeleton: RATIFIED.
+- Identity Package: LOCKED.
+- Governance Package: RATIFIED.
+
+Next legal phase recommendation:
+
+- World Spec Construction Preparation.

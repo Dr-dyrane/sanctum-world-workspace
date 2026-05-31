@@ -2,7 +2,7 @@
 
 Date: 2026-05-31
 
-Status: READY FOR RATIFICATION REVIEW.
+Status: RATIFIED.
 
 Purpose: formalize physician-approved governance architecture before World Spec construction.
 
@@ -15,6 +15,8 @@ This document does not draft the World Spec, create a final file inventory, crea
 - Ratified Clinical Story Skeleton v1.
 - Locked Identity Package v1.
 - Identity Package review addendum.
+- Governance Package clarification.
+- Governance Package ratification.
 - World Spec AutoQC v6.3 watch items.
 
 ## 1. Care Team Roster
@@ -308,4 +310,8 @@ Action required: stop before World Spec construction until Alexander explicitly 
 
 Governance Package v1
 
-Status: READY FOR RATIFICATION REVIEW
+Status: RATIFIED
+
+Physician Architecture Layer
+
+Status: COMPLETE

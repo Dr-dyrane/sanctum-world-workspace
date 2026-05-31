@@ -62,12 +62,16 @@ Reason: Governance Package v1 records that an administrative deliverable is requ
 
 None.
 
-## Status Recommendation
+## Ratification Outcome
 
-Governance Package v1 should proceed to ratification review after these clarifications.
+Governance Package v1 proceeded to ratification review after these clarifications and was ratified.
 
 ## Final Status
 
 Governance Package v1
 
-Status: READY FOR RATIFICATION REVIEW
+Status: RATIFIED
+
+Physician Architecture Layer
+
+Status: COMPLETE

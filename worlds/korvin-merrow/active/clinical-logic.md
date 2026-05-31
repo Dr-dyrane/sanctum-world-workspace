@@ -279,7 +279,7 @@ Potential contributors include poor intake, volume depletion, medication effects
 
 Artifact: `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`
 
-Status: READY FOR RATIFICATION REVIEW.
+Status: RATIFIED.
 
 Care team roster:
 
@@ -325,6 +325,18 @@ Administrative deliverable decision: yes. At least one future task should involv
 Workflow umbrella: Acute Hospital Management, with subdomains of diagnosis, medication management, consultant synthesis, functional assessment, and disposition planning. Exact future task workflow lines must still use official tracker names.
 
 Task-architecture watch items: AutoQC 2.107 workflow count and 2.108 administrative deliverable remain deferred until task architecture.
+
+Completed Architecture Layers:
+
+- Brainstorm: APPROVED.
+- Temporal Architecture: LOCKED.
+- Clinical Story Skeleton: RATIFIED.
+- Identity Package: LOCKED.
+- Governance Package: RATIFIED.
+
+Physician Architecture Layer Status: COMPLETE.
+
+Next legal phase recommendation: World Spec Construction Preparation.
 
 ## Locked World Tone
 

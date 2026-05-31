@@ -18,7 +18,7 @@ RL Studio:
 - Approval source: Slack / Stacey S
 - Reviewer message: "great job! I approved your brainstorm. Next steps are to move forward with world spec and file template development."
 
-Current state: Governance Package v1 ready for ratification review / ready for next authorized World Spec preparation step. World Spec drafting has not started and remains gated on explicit Alexander authorization.
+Current state: Physician Architecture Layer complete / ready for World Spec Construction Preparation. World Spec drafting has not started and remains gated on explicit Alexander authorization.
 
 ## Locked Decisions
 
@@ -122,7 +122,8 @@ Governance Package v1:
 
 - Artifact: `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`.
 - Clarification artifact: `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md`.
-- Status: ready for ratification review.
+- Ratification artifact: `worlds/korvin-merrow/world-spec-prep/governance-package-ratification.md`.
+- Status: RATIFIED.
 - Care team roster: Hospitalist Service; Cardiology; Nephrology; Endocrinology; Physical Therapy; Occupational Therapy; Case Management; Social Work; Patient; Family/Caregiver; Primary Care Physician.
 - Authority hierarchy: attending hospitalist > consulting attending specialists > PT/OT functional assessments > Case Management / Social Work > family reports > patient recollection.
 - Master clinical source-of-truth hierarchy: attending documentation > verified medication reconciliation > pharmacy history > consultant documentation > primary care documentation > family report > patient recollection.
@@ -136,6 +137,16 @@ Governance Package v1:
 - Administrative deliverable decision: yes.
 - Workflow umbrella: Acute Hospital Management. Exact future task workflow lines must still use official tracker names.
 - AutoQC 2.107 workflow count and 2.108 administrative deliverable remain deferred task-architecture watch items.
+
+Completed Architecture Layers:
+
+- Brainstorm: APPROVED.
+- Temporal Architecture: LOCKED.
+- Clinical Story Skeleton: RATIFIED.
+- Identity Package: LOCKED.
+- Governance Package: RATIFIED.
+
+Physician Architecture Layer Status: COMPLETE.
 
 ## Decisions Remaining
 
@@ -182,14 +193,14 @@ Use these as future World Spec priorities only after Brainstorm GO:
 
 ## Next Legal Action
 
-Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`, `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`, `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`, `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md`, `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`, and `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md` for orientation.
+Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`, `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`, `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`, `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md`, `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md`, and `worlds/korvin-merrow/world-spec-prep/governance-package-ratification.md` for orientation.
 
-Wait for Alexander to explicitly authorize the next World Spec preparation/construction step.
+Wait for Alexander to explicitly authorize World Spec Construction Preparation or another specific next step.
 
-If Alexander starts the next World Spec preparation/construction step:
+If Alexander starts World Spec Construction Preparation:
 
-1. Read `project/STATUS.md`, `project/PASS_PLAN.md`, `WORLD_SPEC_KICKOFF.md`, `physician-decision-log-02.md`, `clinical-story-skeleton-ratification.md`, `identity-package-v1.md`, `identity-package-review-addendum.md`, and `governance-package-v1.md`.
-2. Use only locked physician decisions, the ratified Clinical Story Skeleton, locked Identity Package, Governance Package v1 candidate, and approved Brainstorm material.
+1. Read `project/STATUS.md`, `project/PASS_PLAN.md`, `WORLD_SPEC_KICKOFF.md`, `physician-decision-log-02.md`, `clinical-story-skeleton-ratification.md`, `identity-package-v1.md`, `identity-package-review-addendum.md`, `governance-package-v1.md`, `governance-package-clarification.md`, and `governance-package-ratification.md`.
+2. Use only locked physician decisions, the ratified Clinical Story Skeleton, locked Identity Package, ratified Governance Package v1, and approved Brainstorm material.
 3. Do not populate the official World Spec template until Alexander authorizes drafting.
 
 If Alexander has not started Governance Package:

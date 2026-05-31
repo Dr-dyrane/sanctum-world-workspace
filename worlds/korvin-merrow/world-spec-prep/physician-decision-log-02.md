@@ -20,6 +20,8 @@ Governance Package v1 candidate: `worlds/korvin-merrow/world-spec-prep/governanc
 
 Governance Package clarification: `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md`
 
+Governance Package ratification: `worlds/korvin-merrow/world-spec-prep/governance-package-ratification.md`
+
 ## Locked Clinical Story Skeleton v1
 
 Patient:
@@ -234,7 +236,7 @@ Carry-forward implementation notes:
 
 ## Governance Package v1 Candidate
 
-Status: READY FOR RATIFICATION REVIEW.
+Status: RATIFIED.
 
 Care team roster:
 
@@ -315,3 +317,25 @@ Clarifications accepted before ratification review:
 - Confirmed steroid-related osteoporosis/osteopenia reflects cumulative chronic steroid exposure but does not prove current symptoms are primarily caused by adrenal suppression.
 - Current adrenal/steroid contribution remains an active interpretive question.
 - AutoQC 2.107 workflow count and 2.108 administrative deliverable remain task-architecture watch items and are not resolved inside Governance Package v1.
+
+Ratification:
+
+- Claude closeout review determination: would ratify today, YES.
+- Claude final recommendation: GO.
+- Governance Package v1 Status: RATIFIED.
+- Physician Architecture Layer Status: COMPLETE.
+
+Completed Architecture Layers:
+
+- Brainstorm: APPROVED.
+- Temporal Architecture: LOCKED.
+- Clinical Story Skeleton: RATIFIED.
+- Identity Package: LOCKED.
+- Governance Package: RATIFIED.
+
+Active future watch items:
+
+- AutoQC 2.107 workflow-count resolution.
+- AutoQC 2.108 administrative-deliverable resolution.
+
+These are task-architecture concerns, not governance defects.

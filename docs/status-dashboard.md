@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-Governance Package v1 ready for ratification review / ready for next authorized World Spec preparation step.
+Physician Architecture Layer complete / ready for World Spec Construction Preparation.
 
 ## Brainstorm
 
@@ -26,9 +26,10 @@ Governance Package v1 ready for ratification review / ready for next authorized 
 - World Spec drafting: not started
 - Clinical Story Skeleton: v1 locked, reviewed, and ratified
 - Identity Package: v1 locked
-- Governance Package: v1 ready for ratification review
+- Governance Package: v1 ratified
+- Physician Architecture Layer: complete
 - Official Claude World Spec session: pending
-- Current state: Governance Package v1 ready for ratification review; next step requires explicit Alexander authorization
+- Current state: Physician Architecture Layer complete; World Spec Construction Preparation is the next recommended legal phase and still requires explicit Alexander authorization
 - World Spec prep packet: created
 - Official World Spec template: saved locally
 - World Spec AutoQC prompt v6.3: saved locally
@@ -40,8 +41,9 @@ Governance Package v1 ready for ratification review / ready for next authorized 
 - Identity Package review addendum: `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md`
 - Governance Package v1: `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`
 - Governance Package clarification: `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md`
+- Governance Package ratification: `worlds/korvin-merrow/world-spec-prep/governance-package-ratification.md`
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`
-- Next allowed action: continue only after Alexander explicitly authorizes the next World Spec preparation/construction step
+- Next allowed action: World Spec Construction Preparation only after Alexander explicitly authorizes it
 
 ## Tooling
 
@@ -59,6 +61,7 @@ Governance Package v1 ready for ratification review / ready for next authorized 
 - Do not change Governance Package v1 without Alexander approval.
 - Do not create milestones before Alexander authorizes that step.
 - Do not create file inventory before Alexander authorizes that step.
+- Do not create task architecture before Alexander authorizes that step.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
 - Do not modify clinical content beyond reviewer-required remediation without Alexander approval.
 - Do not start synthetic generation, task prompts, golden responses, grader guidelines, or failure analysis.
