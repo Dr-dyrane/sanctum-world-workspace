@@ -1,6 +1,6 @@
 # Korvin Merrow World Spec Kickoff
 
-Status: World Spec kickoff / ready for physician interview.
+Status: State synchronized / ready for Clinical Story Skeleton preparation.
 
 Purpose: mark the transition from approved Brainstorm to World Spec preparation without drafting the World Spec, populating the template, creating a final file inventory, or inventing clinical values.
 
@@ -11,8 +11,10 @@ Purpose: mark the transition from approved Brainstorm to World Spec preparation 
 - RL Studio task ID: `cyau8803`.
 - World Spec phase is authorized for kickoff and preparation.
 - World Spec drafting has not started.
+- Clinical Story Skeleton has not been created.
 - Official Claude World Spec session is still pending.
-- Next allowed substantive action: physician decision interview using `worlds/korvin-merrow/world-spec-prep/post-go-interview-plan.md`.
+- Latest durable physician decision record: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md`.
+- Next allowed substantive action: begin Clinical Story Skeleton development only when Alexander explicitly starts that phase.
 
 ## Workspace Bloat And Doctrine Audit
 
@@ -86,6 +88,49 @@ Approved compact medication list:
 
 World close: Hospital Day 6 at 18:00 during discharge planning.
 
+Locked temporal architecture:
+
+- 6-day hospitalization.
+- HD6 18:00 world close.
+- Discharge anchor after world close.
+- +7 day post-discharge anchor.
+- +30 day post-discharge anchor.
+
+Locked underlying clinical story:
+
+- Mixed physiology world.
+- Infection, steroid issues, CKD/HF, and polypharmacy interact.
+- Not a single-diagnosis world.
+
+Locked presentation trigger:
+
+- Progressive weakness.
+- Poor oral intake.
+- Near-fall/lightheadedness.
+- Family-noticed confusion.
+- Possible urinary symptoms.
+
+Locked clinical evolution:
+
+- Approximately 3-week decline before presentation.
+
+Locked world tone:
+
+- Medically improving.
+- Operationally dangerous discharge.
+
+Locked primary failure target:
+
+- Functional decline.
+- Disposition safety.
+- Discharge readiness reasoning.
+
+Locked complexity targets:
+
+- Exceed reviewer minimums.
+- Target 12-15 comorbidities.
+- Target 18-22 medications.
+
 Primary frictions:
 
 1. Nephrology vs Cardiology: renal/hemodynamic safety during AKI/hypotension vs HFrEF/CAD long-term protective therapy.
@@ -148,6 +193,9 @@ Clinical structure:
 - Care team roster.
 - Source-of-truth hierarchy.
 - Decision Friction Table details.
+- Clinical Story Skeleton details that operationalize the locked mixed-physiology arc without creating a single-diagnosis reveal.
+- Medication expansion from the approved compact list toward the World Spec target of 18-22 medications.
+- Final comorbidity list refinement within the World Spec target of 12-15 comorbidities.
 
 Task architecture:
 
@@ -195,7 +243,8 @@ Known unresolved package questions:
 
 Stop before:
 
-- World Spec drafting unless Alexander explicitly starts the physician interview and later authorizes drafting.
+- Clinical Story Skeleton creation unless Alexander explicitly starts that phase.
+- World Spec drafting unless Alexander explicitly authorizes drafting.
 - Final file inventory.
 - Task prompts.
 - Golden responses.
@@ -205,4 +254,3 @@ Stop before:
 - RL Studio upload/submission without explicit authorization.
 
 If any requested step appears to cross these boundaries, pause and ask Alexander.
-

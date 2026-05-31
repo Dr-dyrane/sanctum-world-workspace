@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-World Spec kickoff / ready for physician interview.
+State synchronized / ready for Clinical Story Skeleton preparation.
 
 ## Brainstorm
 
@@ -22,15 +22,17 @@ World Spec kickoff / ready for physician interview.
 ## World Spec
 
 - World Spec kickoff: recorded in `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`
+- Physician decision log: recorded in `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md`
 - World Spec drafting: not started
+- Clinical Story Skeleton: not started
 - Official Claude World Spec session: pending
-- Physician interview: ready to begin when Alexander explicitly starts it
+- Current state: ready for Clinical Story Skeleton preparation when Alexander explicitly starts that phase
 - World Spec prep packet: created
 - Official World Spec template: saved locally
 - World Spec AutoQC prompt v6.3: saved locally
 - World Spec AutoQC v6.3 checks: indexed in `reference/world-spec-guidelines/08_autoqc_master_index.md`
 - World Spec writer playbook: created in `reference/world-spec-guidelines/09_world_spec_writer_playbook.md`
-- Next allowed action: use the kickoff packet, then begin the physician decision interview only when Alexander explicitly starts it
+- Next allowed action: use the kickoff packet and physician decision log, then begin Clinical Story Skeleton development only when Alexander explicitly starts it
 
 ## Tooling
 
@@ -43,6 +45,7 @@ World Spec kickoff / ready for physician interview.
 ## Boundaries
 
 - Do not draft World Spec before Alexander authorizes Pass 8.
+- Do not create the Clinical Story Skeleton before Alexander explicitly starts that phase.
 - Do not create file inventory before Alexander authorizes that step.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
 - Do not modify clinical content beyond reviewer-required remediation without Alexander approval.

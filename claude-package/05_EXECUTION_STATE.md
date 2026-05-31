@@ -4,7 +4,7 @@ Purpose: compressed current state for Claude. Use `project/STATUS.md` and `docs/
 
 ## Project State
 
-Current phase: World Spec kickoff / ready for physician interview.
+Current phase: State synchronized / ready for Clinical Story Skeleton preparation.
 
 Brainstorm:
 
@@ -22,13 +22,13 @@ Brainstorm:
 
 Current blocker:
 
-- No reviewer blocker. World Spec kickoff is recorded. World Spec drafting is gated on completion/approval of the physician decision interview and explicit Alexander authorization.
+- No reviewer blocker. World Spec kickoff is recorded. Post-kickoff physician decisions are synchronized. Clinical Story Skeleton creation and World Spec drafting are gated on explicit Alexander authorization for those phases.
 
 Next legal action:
 
-- Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md` for orientation.
-- When Alexander explicitly starts the interview, use `worlds/korvin-merrow/world-spec-prep/post-go-interview-plan.md`.
-- Do not draft World Spec until Alexander authorizes drafting after the interview.
+- Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md` and `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md` for orientation.
+- When Alexander explicitly starts Clinical Story Skeleton development, use the locked physician decisions in the decision log.
+- Do not create the Clinical Story Skeleton, draft World Spec, or create file inventory until Alexander explicitly starts/authorizes the relevant phase.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
 
 ## Completed
@@ -70,6 +70,8 @@ Next legal action:
 - Post-GO interview plan created: `worlds/korvin-merrow/world-spec-prep/post-go-interview-plan.md`.
 - World Spec kickoff packet created: `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`.
 - Workspace bloat/doctrine audit recorded inside the kickoff packet.
+- Physician decision log created: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md`.
+- Post-kickoff physician decisions synchronized across kickoff, status, dashboard, clinical logic, and Claude handoff files.
 
 ## Latest Git Checkpoints
 
@@ -90,8 +92,8 @@ Next legal action:
 
 ## Authorized Right Now
 
-- World Spec kickoff and preparation.
-- Physician interview support when Alexander explicitly starts it.
+- State synchronization and preparation.
+- Clinical Story Skeleton support when Alexander explicitly starts it.
 - Preparation.
 - Auditing.
 - Checklist building.
@@ -102,7 +104,8 @@ Next legal action:
 
 ## Not Authorized Right Now
 
-- World Spec drafting before completion/approval of the physician interview and explicit Alexander authorization.
+- Clinical Story Skeleton creation before Alexander explicitly starts that phase.
+- World Spec drafting before explicit Alexander authorization.
 - Populating the World Spec template before explicit Alexander authorization.
 - Creating a final Section 3 World File Plan or file inventory.
 - Creating synthetic patient files.
@@ -142,6 +145,7 @@ Claude must not replace physician judgment or originate clinical design.
 - `worlds/korvin-merrow/world-spec-prep/claude-review-triage.md`
 - `worlds/korvin-merrow/world-spec-prep/post-go-interview-plan.md`
 - `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`
+- `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md`
 - `reference/world-spec-guidelines/08_autoqc_master_index.md`
 - `reference/world-spec-guidelines/09_world_spec_writer_playbook.md`
 - `project/WORKSPACE_FILE_MAP.md`

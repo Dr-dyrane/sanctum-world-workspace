@@ -18,7 +18,7 @@ RL Studio:
 - Approval source: Slack / Stacey S
 - Reviewer message: "great job! I approved your brainstorm. Next steps are to move forward with world spec and file template development."
 
-Current state: World Spec kickoff / ready for physician interview. World Spec drafting has not started and remains gated on physician interview decisions plus explicit Alexander authorization.
+Current state: State synchronized / ready for Clinical Story Skeleton preparation. World Spec drafting and Clinical Story Skeleton creation have not started and remain gated on explicit Alexander authorization.
 
 ## Locked Decisions
 
@@ -63,6 +63,17 @@ Approved Brainstorm remediation additions:
 - World Type: Typical Clinical World.
 - Medication list: sacubitril/valsartan 24/26 mg BID; carvedilol 12.5 mg BID; furosemide 40 mg daily; spironolactone 25 mg daily; empagliflozin 10 mg daily; aspirin 81 mg daily; atorvastatin 40 mg nightly; metformin ER 500 mg BID; insulin glargine 18 units nightly; prednisone with inconsistent documented taper/dose; alendronate 70 mg weekly; calcium/vitamin D daily; ferrous sulfate 325 mg every other day; gabapentin 300 mg nightly.
 - Active DOCX: `worlds/korvin-merrow/submission/Korvin_Merrow_Brainstorm.docx`.
+
+Post-kickoff physician-locked decisions:
+
+- Temporal architecture: 6-day hospitalization; HD6 18:00 world close; discharge anchor; +7 day anchor; +30 day anchor.
+- Underlying clinical story: mixed physiology world with infection, steroid issues, CKD/HF, and polypharmacy interaction. Not a single-diagnosis world.
+- Presentation trigger: progressive weakness, poor oral intake, near-fall/lightheadedness, family-noticed confusion, possible urinary symptoms.
+- Clinical evolution: approximately 3-week decline before presentation.
+- World tone: medically improving but operationally dangerous discharge.
+- Primary failure target: functional decline, disposition safety, discharge readiness reasoning.
+- Complexity targets: exceed reviewer minimums; target 12-15 comorbidities and 18-22 medications.
+- Durable record: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md`.
 
 ## Decisions Remaining
 
@@ -109,27 +120,29 @@ Use these as future World Spec priorities only after Brainstorm GO:
 
 ## Next Legal Action
 
-Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md` for orientation.
+Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md` and `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md` for orientation.
 
-Wait for Alexander to explicitly start the World Spec physician decision interview.
+Wait for Alexander to explicitly start Clinical Story Skeleton development.
 
-If Alexander starts the interview:
+If Alexander starts Clinical Story Skeleton development:
 
-1. Read `project/STATUS.md`, `project/PASS_PLAN.md`, and `worlds/korvin-merrow/world-spec-prep/post-go-interview-plan.md`.
-2. Run the World Spec physician interview sequence.
-3. Do not populate the official World Spec template until Alexander authorizes drafting after the interview.
+1. Read `project/STATUS.md`, `project/PASS_PLAN.md`, `WORLD_SPEC_KICKOFF.md`, and `physician-decision-log-01.md`.
+2. Use only locked physician decisions and approved Brainstorm material.
+3. Do not populate the official World Spec template until Alexander authorizes drafting.
 
-If Alexander has not started the interview:
+If Alexander has not started Clinical Story Skeleton development:
 
 1. Continue preparation-only activities.
-2. Do not draft World Spec.
-3. Do not create file inventory.
+2. Do not create the Clinical Story Skeleton.
+3. Do not draft World Spec.
+4. Do not create file inventory.
 
 ## Hard Boundaries
 
 Do not:
 
 - draft the World Spec before explicit Alexander authorization;
+- create the Clinical Story Skeleton before Alexander explicitly starts that phase;
 - populate the World Spec template before explicit Alexander authorization;
 - create Section 3 file inventory before explicit authorization;
 - create synthetic chart files;

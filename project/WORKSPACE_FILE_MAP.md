@@ -4,7 +4,7 @@ Purpose: local repository hygiene map to prevent duplicate working files and acc
 
 Generated from local workspace file listing excluding `.git`, caches, and Python bytecode.
 
-Current status: World Spec kickoff / ready for physician interview. World Spec drafting has not started.
+Current status: State synchronized / ready for Clinical Story Skeleton preparation. Clinical Story Skeleton and World Spec drafting have not started.
 
 ## Root
 
@@ -149,6 +149,7 @@ Current status: World Spec kickoff / ready for physician interview. World Spec d
 | `worlds/korvin-merrow/world-spec-prep/decision-register.md` | Prep decision register. | Use for pending/locked decisions after GO. |
 | `worlds/korvin-merrow/world-spec-prep/file-plan-planning.md` | File plan planning scaffold. | Not a final file inventory. |
 | `worlds/korvin-merrow/world-spec-prep/friction-to-task-map.md` | Friction/task planning map. | Planning only. |
+| `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md` | Durable post-kickoff physician decision record. | Use before Clinical Story Skeleton development; not a draft spec. |
 | `worlds/korvin-merrow/world-spec-prep/post-go-interview-plan.md` | Interview sequence after Brainstorm GO. | This file; do not use before GO except for prep. |
 | `worlds/korvin-merrow/world-spec-prep/readiness-map.md` | World Spec readiness map. | Prep status. |
 | `worlds/korvin-merrow/world-spec-prep/self-containment-matrix.md` | Self-containment planning scaffold. | Not final traceability proof. |

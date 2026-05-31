@@ -80,11 +80,69 @@ Patient arrives with:
 - altered mental status
 - progressive weakness
 - poor oral intake
+- near-fall/lightheadedness
+- family-noticed confusion
+- possible urinary symptoms
 - borderline hypotension
 
 Initial working diagnosis: sepsis.
 
 The case evolves beyond the first impression.
+
+## Locked Temporal Architecture
+
+- 6-day hospitalization.
+- World close: Hospital Day 6 at 18:00.
+- Discharge anchor after world close.
+- +7 day post-discharge anchor.
+- +30 day post-discharge anchor.
+
+Tasks must remain temporally after the world close and independent from one another.
+
+## Locked Underlying Clinical Story
+
+This is a mixed physiology world.
+
+The clinical burden comes from interaction among:
+
+- infection
+- steroid exposure/taper uncertainty
+- CKD/HF physiology
+- polypharmacy
+- functional decline
+
+This is not a single-diagnosis world. It should not collapse into a hidden adrenal insufficiency reveal or a sepsis-only case.
+
+## Locked Clinical Evolution
+
+The patient has approximately 3 weeks of decline before presentation.
+
+The decline includes worsening weakness, reduced oral intake, near-fall/lightheadedness, family-noticed confusion, and possible urinary symptoms.
+
+## Locked World Tone
+
+The patient is medically improving but operationally dangerous to discharge.
+
+The world should make the patient look better by some objective markers while still creating a realistic discharge safety problem.
+
+## Primary Failure Target
+
+The primary failure target is:
+
+- functional decline
+- disposition safety
+- discharge readiness reasoning
+
+The intended failure is not missing a rare diagnosis. The intended failure is over-weighting medical stabilization and under-weighting the functional, medication, and transition-of-care risk.
+
+## Complexity Targets
+
+World Spec development should exceed reviewer minimums:
+
+- target 12-15 comorbidities
+- target 18-22 medications
+
+Any expansion should strengthen the existing cardiorenal, diabetes, steroid, neuropathy, bone-health, and discharge-reconciliation logic without adding unrelated noise.
 
 ## Competing Clinical Concerns
 

@@ -2,7 +2,7 @@
 
 ## Current Phase
 
-World Spec kickoff / ready for physician interview.
+State synchronized / ready for Clinical Story Skeleton preparation.
 
 ## Current World
 
@@ -10,13 +10,13 @@ Working title: Korvin Merrow World
 
 ## Current State
 
-Brainstorm Human Review returned GO from Stacey S after SEND BACK remediation. Reviewer approved the Korvin Merrow Brainstorm and indicated next steps are World Spec and file template development. World Spec kickoff is now recorded in `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`. World Spec drafting has not started.
+Brainstorm Human Review returned GO from Stacey S after SEND BACK remediation. Reviewer approved the Korvin Merrow Brainstorm and indicated next steps are World Spec and file template development. World Spec kickoff is recorded in `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`. Post-kickoff physician decisions are synchronized in `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md`. World Spec drafting and Clinical Story Skeleton creation have not started.
 
 ## RL Studio Submission
 
 Task ID: cyau8803
 
-Status: Brainstorm approved / World Spec kickoff / ready for physician interview
+Status: Brainstorm approved / state synchronized / ready for Clinical Story Skeleton preparation
 
 Original submission timestamp: 5/29/2026 2:49 PM PDT
 
@@ -26,15 +26,15 @@ Reviewer GO: Stacey S approved Brainstorm via Slack. Recorded in `worlds/korvin-
 
 ## Current Pass
 
-Pass 8 kickoff - ready for World Spec physician interview.
+Pass 8 state synchronization - ready for Clinical Story Skeleton preparation.
 
 ## Next Pass
 
-Next eligible action: begin the World Spec physician decision interview when Alexander explicitly starts the interview.
+Next eligible action: begin Clinical Story Skeleton development when Alexander explicitly starts that phase.
 
 ## Active Blocker
 
-No active reviewer blocker. World Spec drafting is blocked until Alexander completes/approves the physician decision interview and explicitly authorizes drafting.
+No active reviewer blocker. Clinical Story Skeleton creation is blocked until Alexander explicitly starts that phase. World Spec drafting remains blocked until Alexander explicitly authorizes drafting.
 
 ## Current Git Checkpoint
 
@@ -54,7 +54,7 @@ Return to baseline commit if workflow becomes corrupted.
 
 ## Next Command For Codex
 
-Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md` for orientation. When Alexander explicitly starts the interview, use `worlds/korvin-merrow/world-spec-prep/post-go-interview-plan.md`. Do not draft World Spec or create file inventory before authorization.
+Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md` and `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md` for orientation. Do not create the Clinical Story Skeleton, draft World Spec, or create file inventory before Alexander explicitly starts/authorizes the relevant phase.
 
 ## Scope Guardrails
 
