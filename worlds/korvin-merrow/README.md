@@ -1,6 +1,6 @@
 # Korvin Merrow World
 
-Current state: World Spec Construction Preparation / calendar locked / Baseline Anchor Package v1 locked.
+Current state: World Spec Construction Preparation / Clinical Story Timeline Package v1 candidate review.
 
 Start here only after reading `project/STATUS.md`.
 
@@ -17,6 +17,7 @@ Start here only after reading `project/STATUS.md`.
 ## Active Entry Points
 
 - `world-spec-prep/WORLD_SPEC_KICKOFF.md`
+- `world-spec-prep/candidate-review/clinical-story-timeline-package-v1.md`
 - `world-spec-prep/locked/baseline-anchor-package-v1.md`
 - `world-spec-prep/ratifications/baseline-anchor-ratification.md`
 - `world-spec-prep/locked/identity-package-v1.md`

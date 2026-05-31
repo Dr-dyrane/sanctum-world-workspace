@@ -4,7 +4,7 @@ Purpose: local repository hygiene map to prevent duplicate working files and acc
 
 Generated from local workspace file listing excluding `.git`, caches, and Python bytecode.
 
-Current status: World Spec Construction Preparation / calendar locked / Baseline Anchor Package v1 locked. Identity Package review addendum recorded as carry-forward notes only. World Spec drafting has not started.
+Current status: World Spec Construction Preparation / Clinical Story Timeline Package v1 candidate review. Identity Package review addendum recorded as carry-forward notes only. World Spec drafting has not started.
 
 ## Navigation Rule
 
@@ -22,8 +22,9 @@ For a new collaborator or new AI session, read in this order:
 10. `worlds/korvin-merrow/world-spec-prep/ratifications/key-milestones-calendar-ratification.md` for calendar ratification and +7/+30 doctrine.
 11. `worlds/korvin-merrow/world-spec-prep/locked/baseline-anchor-package-v1.md` for locked baseline anchors.
 12. `worlds/korvin-merrow/world-spec-prep/ratifications/baseline-anchor-ratification.md` for baseline physician sign-off and BP carry-forward note.
-13. `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions.
-14. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
+13. `worlds/korvin-merrow/world-spec-prep/candidate-review/clinical-story-timeline-package-v1.md` for the current candidate story-evolution framework.
+14. `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions.
+15. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
 
 Do not start by opening every prep file. Most prep files are supporting memory, not active instructions.
 
@@ -226,7 +227,7 @@ Reviewed for duplicate-purpose files:
 Lifecycle clustering:
 
 - `WORLD_SPEC_KICKOFF.md`: the only root cockpit file in `world-spec-prep/`.
-- `candidate-review/`: artifacts awaiting physician decision or lock. Currently empty after Baseline Anchor Package v1 was locked.
+- `candidate-review/`: artifacts awaiting physician decision or lock. Currently contains Clinical Story Timeline Package v1.
 - `locked/`: locked architecture packages and canonical frameworks.
 - `ratifications/`: formal ratification records.
 - `reviews/`: review findings, hostile reviews, clarifications, and addenda.
@@ -252,6 +253,7 @@ Lifecycle clustering:
 | `worlds/korvin-merrow/world-spec-prep/locked/key-milestones-calendar-skeleton-v1.md` | Locked canonical date framework for admission, HD1-HD6, world snapshot, discharge anchor, +7 anchor, and +30 anchor. | Timeline framework only; not a World Spec draft, final milestone table, task architecture, or file inventory. |
 | `worlds/korvin-merrow/world-spec-prep/locked/baseline-anchor-package-v1.md` | Locked baseline comparator values and baseline function anchors. | Not admission labs, hospital-course trends, file inventory, task architecture, or World Spec prose. |
 | `worlds/korvin-merrow/world-spec-prep/ratifications/baseline-anchor-ratification.md` | Baseline Anchor Package v1 ratification record and physician sign-off. | Records optional non-numeric baseline BP carry-forward note; does not create BP value. |
+| `worlds/korvin-merrow/world-spec-prep/candidate-review/clinical-story-timeline-package-v1.md` | Candidate story-evolution framework from pre-admission through +30 anchor. | Does not create labs, vitals, medication schedules, notes, files, task architecture, or World Spec prose. |
 | `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-01.md` | Durable post-kickoff physician decision record. | Historical state sync record; superseded for skeleton lock by decision log 02. |
 | `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` | Durable Clinical Story Skeleton v1 ratification record. | Use before Identity Package; not a draft spec or file inventory. |
 | `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/post-go-interview-plan.md` | Interview sequence after Brainstorm GO. | This file; do not use before GO except for prep. |

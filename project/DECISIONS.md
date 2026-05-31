@@ -215,3 +215,24 @@ Boundaries:
 - Baseline anchors are not admission labs.
 - Baseline anchors are not hospital-course lab trends.
 - This package does not create file inventory, task architecture, World Spec prose, prompts, golden responses, grader guidance, templates, reference files, or synthetic files.
+
+## 2026-05-31 - Clinical Story Timeline Package v1 Candidate Review
+
+Decision: Clinical Story Timeline Package v1 is created as the candidate story-evolution framework for World Spec construction preparation.
+
+Artifact:
+
+- `worlds/korvin-merrow/world-spec-prep/candidate-review/clinical-story-timeline-package-v1.md`
+
+Purpose:
+
+- Answer what changes over time from pre-admission decline through HD1-HD6, discharge, +7, and +30 anchors.
+- Preserve mixed physiology, multi-factorial near-fall logic, medically improving but operationally dangerous discharge tension, functional-decline failure target, prednisone source-of-truth ambiguity, and friction/trap separation.
+
+Status:
+
+- Clinical Story Timeline Package v1: CANDIDATE REVIEW.
+
+Boundaries:
+
+- Does not create labs, vitals, medication doses, medication schedules, hospital notes, file inventory, task architecture, milestones beyond locked dates, World Spec prose, prompts, golden responses, grader guidance, templates, reference files, or synthetic documents.

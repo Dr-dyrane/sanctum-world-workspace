@@ -392,6 +392,18 @@ Baseline blood pressure may be considered as a future candidate anchor during co
 
 This package does not create admission labs, hospital-course lab trends, file inventory, task architecture, World Spec prose, prompts, goldens, grader guidance, templates, reference files, or synthetic files.
 
+## Clinical Story Timeline Package v1
+
+Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/clinical-story-timeline-package-v1.md`
+
+Status: CANDIDATE REVIEW.
+
+Purpose: define the story-evolution framework from pre-admission decline through HD1-HD6, discharge, +7, and +30 anchors.
+
+This package preserves the mixed-physiology model, multi-factorial near-fall model, medically improving but operationally dangerous tension, functional-decline failure target, prednisone source-of-truth ambiguity, and friction/trap separation.
+
+It does not create labs, vitals, medication doses, medication schedules, hospital notes, file inventory, task architecture, World Spec prose, prompts, goldens, grader guidance, templates, reference files, or synthetic documents.
+
 ## Locked World Tone
 
 The patient is medically improving but operationally dangerous to discharge.

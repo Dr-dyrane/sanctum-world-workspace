@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-World Spec Construction Preparation / calendar locked / Baseline Anchor Package v1 locked.
+World Spec Construction Preparation / Clinical Story Timeline Package v1 candidate review.
 
 ## Brainstorm
 
@@ -30,8 +30,9 @@ World Spec Construction Preparation / calendar locked / Baseline Anchor Package 
 - Physician Architecture Layer: complete
 - Key Milestones Calendar Skeleton: v1 locked
 - Baseline Anchor Package: v1 locked
+- Clinical Story Timeline Package: v1 candidate review
 - Official Claude World Spec session: pending
-- Current state: World Spec Construction Preparation has begun; calendar is locked and Baseline Anchor Package v1 is locked
+- Current state: World Spec Construction Preparation has begun; calendar and baseline anchors are locked; Clinical Story Timeline Package v1 awaits physician review
 - World Spec prep packet: created
 - Official World Spec template: saved locally
 - World Spec AutoQC prompt v6.3: saved locally
@@ -48,9 +49,10 @@ World Spec Construction Preparation / calendar locked / Baseline Anchor Package 
 - Key Milestones Calendar ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/key-milestones-calendar-ratification.md`
 - Baseline Anchor Package v1: `worlds/korvin-merrow/world-spec-prep/locked/baseline-anchor-package-v1.md`
 - Baseline Anchor ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/baseline-anchor-ratification.md`
+- Clinical Story Timeline Package v1: `worlds/korvin-merrow/world-spec-prep/candidate-review/clinical-story-timeline-package-v1.md`
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 - World Spec prep folder structure: reorganized by lifecycle buckets (`candidate-review/`, `locked/`, `ratifications/`, `reviews/`, `decision-logs/`, `planning-scaffolds/`)
-- Next allowed action: next World Spec construction preparation step only after explicit Alexander authorization
+- Next allowed action: physician review of Clinical Story Timeline Package v1
 
 ## Tooling
 
