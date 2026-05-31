@@ -166,22 +166,23 @@ Boundaries:
 - Date framework only.
 - Do not treat this as final World Spec prose, a final milestone table, task architecture, file inventory, prompts, goldens, grader guidance, or synthetic files.
 
-## 2026-05-31 - Baseline Anchor Package v1 Candidate Review
+## 2026-05-31 - Baseline Anchor Package v1 Locked
 
-Decision: Baseline Anchor Package v1 is prepared for physician review as comparator anchors for later World Spec construction.
+Decision: Baseline Anchor Package v1 is locked as comparator anchors for later World Spec construction.
 
 Artifact:
 
-- `worlds/korvin-merrow/world-spec-prep/candidate-review/baseline-anchor-package-v1.md`
+- `worlds/korvin-merrow/world-spec-prep/locked/baseline-anchor-package-v1.md`
+- `worlds/korvin-merrow/world-spec-prep/ratifications/baseline-anchor-ratification.md`
 
-Candidate anchors:
+Locked anchors:
 
 - Baseline functional status.
 - Baseline creatinine.
 - Baseline eGFR.
 - Baseline hemoglobin.
 - Baseline A1c.
-- Dry weight.
+- Dry weight approximately 97 kg.
 - Baseline mobility.
 - Baseline cognition.
 - Baseline medication-management ability.
@@ -189,10 +190,28 @@ Candidate anchors:
 
 Status:
 
-- Baseline Anchor Package v1: CANDIDATE REVIEW.
+- Baseline Anchor Package v1: LOCKED.
+
+Physician sign-off:
+
+- Completed.
+- Dry weight approximately 97 kg: APPROVED.
+- Baseline anchor framework: APPROVED.
+
+Claude ratification review:
+
+- True defects: NONE.
+- Blockers: NONE.
+- Would lock today: YES.
+- Final recommendation: GO.
+
+Carry-forward note:
+
+- Baseline blood pressure may be considered as a future candidate anchor during construction.
+- Do not create a numeric baseline blood pressure value at this stage.
 
 Boundaries:
 
-- Candidate baseline anchors are not admission labs.
-- Candidate baseline anchors are not hospital-course lab trends.
+- Baseline anchors are not admission labs.
+- Baseline anchors are not hospital-course lab trends.
 - This package does not create file inventory, task architecture, World Spec prose, prompts, golden responses, grader guidance, templates, reference files, or synthetic files.

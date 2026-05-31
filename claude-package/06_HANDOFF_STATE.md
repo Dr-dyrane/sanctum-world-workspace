@@ -18,7 +18,7 @@ RL Studio:
 - Approval source: Slack / Stacey S
 - Reviewer message: "great job! I approved your brainstorm. Next steps are to move forward with world spec and file template development."
 
-Current state: World Spec Construction Preparation / calendar locked / Baseline Anchor Package v1 candidate review. World Spec drafting has not started and remains gated on explicit Alexander authorization.
+Current state: World Spec Construction Preparation / calendar locked / Baseline Anchor Package v1 locked. World Spec drafting has not started and remains gated on explicit Alexander authorization.
 
 ## Locked Decisions
 
@@ -164,9 +164,13 @@ Key Milestones Calendar Skeleton v1:
 
 Baseline Anchor Package v1:
 
-- Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/baseline-anchor-package-v1.md`.
-- Status: CANDIDATE REVIEW.
-- Candidate anchors include baseline functional status, creatinine, eGFR, hemoglobin, A1c, dry weight, mobility, cognition, medication-management ability, and home support.
+- Artifact: `worlds/korvin-merrow/world-spec-prep/locked/baseline-anchor-package-v1.md`.
+- Ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/baseline-anchor-ratification.md`.
+- Status: LOCKED.
+- Physician sign-off completed.
+- Locked anchors include baseline creatinine, eGFR, hemoglobin, A1c, dry weight approximately 97 kg, mobility, cognition, medication-management ability, and home support.
+- Baseline functional status remains part of the approved baseline framework through mobility, cognition, medication-management ability, and home support.
+- Baseline blood pressure may be considered as a future candidate anchor during construction only; do not create a numeric value at this stage.
 - These are not admission labs, hospital-course trends, final file inventory, task architecture, or World Spec prose.
 
 ## Decisions Remaining
@@ -181,7 +185,6 @@ Identity/compliance:
 
 Clinical scenario:
 
-- Baseline Anchor Package v1 physician review.
 - Final key milestone list for the eventual World Spec template.
 - Source-of-truth hierarchy for conflicting evidence.
 
@@ -214,14 +217,14 @@ Use these as future World Spec priorities only after Brainstorm GO:
 
 ## Next Legal Action
 
-Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`, `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/identity-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/reviews/identity-package-review-addendum.md`, `worlds/korvin-merrow/world-spec-prep/locked/governance-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/reviews/governance-package-clarification.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/governance-package-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/key-milestones-calendar-skeleton-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/key-milestones-calendar-ratification.md`, and `worlds/korvin-merrow/world-spec-prep/candidate-review/baseline-anchor-package-v1.md` for orientation.
+Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`, `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/identity-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/reviews/identity-package-review-addendum.md`, `worlds/korvin-merrow/world-spec-prep/locked/governance-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/reviews/governance-package-clarification.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/governance-package-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/key-milestones-calendar-skeleton-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/key-milestones-calendar-ratification.md`, and `worlds/korvin-merrow/world-spec-prep/locked/baseline-anchor-package-v1.md` for orientation.
 
-Wait for Alexander's physician review of Baseline Anchor Package v1 or another explicitly authorized preparation step.
+Wait for Alexander to authorize the next World Spec construction preparation step.
 
 For the next preparation step:
 
 1. Read `project/STATUS.md`, `project/PASS_PLAN.md`, `WORLD_SPEC_KICKOFF.md`, `physician-decision-log-02.md`, `clinical-story-skeleton-ratification.md`, `identity-package-v1.md`, `identity-package-review-addendum.md`, `governance-package-v1.md`, `governance-package-clarification.md`, `governance-package-ratification.md`, `key-milestones-calendar-skeleton-v1.md`, `key-milestones-calendar-ratification.md`, and `baseline-anchor-package-v1.md`.
-2. Use only locked physician decisions, the ratified Clinical Story Skeleton, locked Identity Package, ratified Governance Package v1, locked calendar skeleton, candidate baseline anchor package, and approved Brainstorm material.
+2. Use only locked physician decisions, the ratified Clinical Story Skeleton, locked Identity Package, ratified Governance Package v1, locked calendar skeleton, locked baseline anchor package, and approved Brainstorm material.
 3. Do not populate the official World Spec template until Alexander authorizes drafting.
 
 Until Alexander authorizes the next construction unit:

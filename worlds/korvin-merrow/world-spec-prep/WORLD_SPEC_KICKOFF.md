@@ -1,6 +1,6 @@
 # Korvin Merrow World Spec Kickoff
 
-Status: World Spec Construction Preparation / calendar locked / Baseline Anchor Package v1 candidate review.
+Status: World Spec Construction Preparation / calendar locked / Baseline Anchor Package v1 locked.
 
 Purpose: mark the transition from approved Brainstorm to World Spec preparation without drafting the World Spec, populating the template, creating a final file inventory, or inventing clinical values.
 
@@ -27,7 +27,7 @@ Purpose: mark the transition from approved Brainstorm to World Spec preparation 
 - Governance Package ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/governance-package-ratification.md`.
 - Key Milestones Calendar Skeleton v1: `worlds/korvin-merrow/world-spec-prep/locked/key-milestones-calendar-skeleton-v1.md`.
 - Key Milestones Calendar ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/key-milestones-calendar-ratification.md`.
-- Baseline Anchor Package v1: `worlds/korvin-merrow/world-spec-prep/candidate-review/baseline-anchor-package-v1.md`.
+- Baseline Anchor Package v1: `worlds/korvin-merrow/world-spec-prep/locked/baseline-anchor-package-v1.md`.
 - Next allowed substantive action: proceed only when Alexander explicitly authorizes the next World Spec preparation or construction step.
 
 ## Workspace Bloat And Doctrine Audit
@@ -226,9 +226,13 @@ Key Milestones Calendar Skeleton v1:
 
 Baseline Anchor Package v1:
 
-- Status: CANDIDATE REVIEW.
-- Candidate baseline anchors include functional status, creatinine, eGFR, hemoglobin, A1c, dry weight, mobility, cognition, medication-management ability, and home support.
-- Candidate package does not create admission labs, hospital-course trends, file inventory, task architecture, World Spec prose, prompts, goldens, grader guidance, templates, reference files, or synthetic files.
+- Status: LOCKED.
+- Ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/baseline-anchor-ratification.md`.
+- Physician sign-off completed.
+- Locked anchors include baseline creatinine, eGFR, hemoglobin, A1c, dry weight approximately 97 kg, mobility, cognition, medication-management ability, and home support.
+- Baseline functional status remains part of the approved baseline framework through mobility, cognition, medication-management ability, and home support.
+- Baseline blood pressure may be considered later as a non-numeric future candidate anchor during construction.
+- Locked package does not create admission labs, hospital-course trends, file inventory, task architecture, World Spec prose, prompts, goldens, grader guidance, templates, reference files, or synthetic files.
 
 Primary frictions:
 

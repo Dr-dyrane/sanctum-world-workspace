@@ -2,7 +2,7 @@
 
 Purpose: compressed Claude context for a fresh Project Sanctum session. Use this as operational context only; the full source of truth remains local under `reference/` and `worlds/korvin-merrow/`.
 
-Boundary: Brainstorm is approved after SEND BACK remediation. Clinical Story Skeleton v1 is ratified. Identity Package v1 is locked. Governance Package v1 is ratified. Physician Architecture Layer is complete. Key Milestones Calendar Skeleton v1 is locked. Baseline Anchor Package v1 is in candidate review. World Spec drafting is not authorized until Alexander explicitly authorizes drafting.
+Boundary: Brainstorm is approved after SEND BACK remediation. Clinical Story Skeleton v1 is ratified. Identity Package v1 is locked. Governance Package v1 is ratified. Physician Architecture Layer is complete. Key Milestones Calendar Skeleton v1 is locked. Baseline Anchor Package v1 is locked. World Spec drafting is not authorized until Alexander explicitly authorizes drafting.
 
 ## Current World Concept
 
@@ -265,22 +265,27 @@ Locked doctrine: +7 and +30 anchors are measured from discharge anchor 05/24/202
 
 ## Baseline Anchor Package v1
 
-Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/baseline-anchor-package-v1.md`
+Artifact: `worlds/korvin-merrow/world-spec-prep/locked/baseline-anchor-package-v1.md`
 
-Status: CANDIDATE REVIEW.
+Ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/baseline-anchor-ratification.md`
 
-Candidate baseline anchors for physician review:
+Status: LOCKED.
 
-- Baseline functional status.
+Locked baseline anchors:
+
 - Baseline creatinine.
 - Baseline eGFR.
 - Baseline hemoglobin.
 - Baseline A1c.
-- Dry weight.
+- Dry weight approximately 97 kg.
 - Baseline mobility.
 - Baseline cognition.
 - Baseline medication-management ability.
 - Baseline home support.
+
+Physician sign-off completed. Baseline functional status remains part of the approved baseline framework through mobility, cognition, medication-management ability, and home support.
+
+Baseline blood pressure may be considered as a future candidate anchor during construction only. Do not create a numeric baseline blood pressure value at this stage.
 
 This package does not create admission labs, hospital-course lab trends, file inventory, task architecture, World Spec prose, prompts, goldens, grader guidance, templates, reference files, or synthetic files.
 
@@ -345,7 +350,7 @@ Identity review addendum:
 
 ## Current State
 
-Brainstorm approved. Clinical Story Skeleton v1 ratified. Identity Package v1 locked. Governance Package v1 ratified. Physician Architecture Layer complete. Key Milestones Calendar Skeleton v1 locked. Baseline Anchor Package v1 candidate review. Do not start World Spec drafting.
+Brainstorm approved. Clinical Story Skeleton v1 ratified. Identity Package v1 locked. Governance Package v1 ratified. Physician Architecture Layer complete. Key Milestones Calendar Skeleton v1 locked. Baseline Anchor Package v1 locked. Do not start World Spec drafting.
 
 Completed:
 
@@ -366,13 +371,12 @@ Completed:
 15. Governance Package v1 ratified.
 16. Physician Architecture Layer completed.
 17. Key Milestones Calendar Skeleton v1 locked.
-18. Baseline Anchor Package v1 prepared for physician candidate review.
+18. Baseline Anchor Package v1 locked after physician review.
 
 Still pending before World Spec drafting:
 
-1. Physician review of Baseline Anchor Package v1.
-2. Official Claude World Spec session.
-3. Alexander authorization to draft the World Spec.
+1. Official Claude World Spec session.
+2. Alexander authorization to draft the World Spec.
 
 ## Claude Use Rules
 

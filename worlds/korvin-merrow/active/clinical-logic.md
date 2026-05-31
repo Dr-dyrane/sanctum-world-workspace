@@ -368,22 +368,27 @@ Locked doctrine: +7 and +30 anchors are measured from discharge anchor 05/24/202
 
 ## Baseline Anchor Package v1
 
-Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/baseline-anchor-package-v1.md`
+Artifact: `worlds/korvin-merrow/world-spec-prep/locked/baseline-anchor-package-v1.md`
 
-Status: CANDIDATE REVIEW.
+Ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/baseline-anchor-ratification.md`
 
-Candidate baseline anchors for physician review:
+Status: LOCKED.
 
-- Baseline functional status.
+Locked baseline anchors:
+
 - Baseline creatinine.
 - Baseline eGFR.
 - Baseline hemoglobin.
 - Baseline A1c.
-- Dry weight.
+- Dry weight approximately 97 kg.
 - Baseline mobility.
 - Baseline cognition.
 - Baseline medication-management ability.
 - Baseline home support.
+
+Baseline functional status remains part of the approved baseline framework through mobility, cognition, medication-management ability, and home support.
+
+Baseline blood pressure may be considered as a future candidate anchor during construction only. Do not create a numeric baseline blood pressure value at this stage.
 
 This package does not create admission labs, hospital-course lab trends, file inventory, task architecture, World Spec prose, prompts, goldens, grader guidance, templates, reference files, or synthetic files.
 

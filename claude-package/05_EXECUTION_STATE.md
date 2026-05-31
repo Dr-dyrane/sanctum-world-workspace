@@ -4,7 +4,7 @@ Purpose: compressed current state for Claude. Use `project/STATUS.md` and `docs/
 
 ## Project State
 
-Current phase: World Spec Construction Preparation / calendar locked / Baseline Anchor Package v1 candidate review.
+Current phase: World Spec Construction Preparation / calendar locked / Baseline Anchor Package v1 locked.
 
 Brainstorm:
 
@@ -22,7 +22,7 @@ Brainstorm:
 
 Current blocker:
 
-- No reviewer blocker. World Spec kickoff is recorded. Clinical Story Skeleton v1 is locked, reviewed, and ratified. Identity Package v1 is locked. Identity Package hostile-review addendum is recorded as carry-forward implementation notes only. Governance Package v1 is ratified. Physician Architecture Layer is complete. Key Milestones Calendar Skeleton v1 is locked. Baseline Anchor Package v1 is in candidate review. World Spec drafting remains gated on explicit Alexander authorization.
+- No reviewer blocker. World Spec kickoff is recorded. Clinical Story Skeleton v1 is locked, reviewed, and ratified. Identity Package v1 is locked. Identity Package hostile-review addendum is recorded as carry-forward implementation notes only. Governance Package v1 is ratified. Physician Architecture Layer is complete. Key Milestones Calendar Skeleton v1 is locked. Baseline Anchor Package v1 is locked. World Spec drafting remains gated on explicit Alexander authorization.
 
 Next legal action:
 
@@ -35,7 +35,7 @@ Next legal action:
 - Use `worlds/korvin-merrow/world-spec-prep/reviews/governance-package-clarification.md` for accepted governance clarifications.
 - Use `worlds/korvin-merrow/world-spec-prep/ratifications/governance-package-ratification.md` for governance ratification status.
 - Use `worlds/korvin-merrow/world-spec-prep/locked/key-milestones-calendar-skeleton-v1.md` for the canonical date framework and `worlds/korvin-merrow/world-spec-prep/ratifications/key-milestones-calendar-ratification.md` for the locked +7/+30-from-discharge doctrine.
-- Use `worlds/korvin-merrow/world-spec-prep/candidate-review/baseline-anchor-package-v1.md` for candidate baseline anchors awaiting physician review.
+- Use `worlds/korvin-merrow/world-spec-prep/locked/baseline-anchor-package-v1.md` for locked baseline anchors and `worlds/korvin-merrow/world-spec-prep/ratifications/baseline-anchor-ratification.md` for physician sign-off.
 - Do not revise the locked Clinical Story Skeleton or locked Identity Package, draft World Spec, create milestones, or create file inventory until Alexander explicitly starts/authorizes the relevant phase.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
 
@@ -94,7 +94,8 @@ Next legal action:
 - Physician Architecture Layer completed.
 - Key Milestones Calendar Skeleton v1 locked: `worlds/korvin-merrow/world-spec-prep/locked/key-milestones-calendar-skeleton-v1.md`.
 - Key Milestones Calendar ratification recorded: `worlds/korvin-merrow/world-spec-prep/ratifications/key-milestones-calendar-ratification.md`.
-- Baseline Anchor Package v1 prepared for candidate review: `worlds/korvin-merrow/world-spec-prep/candidate-review/baseline-anchor-package-v1.md`.
+- Baseline Anchor Package v1 locked after physician review: `worlds/korvin-merrow/world-spec-prep/locked/baseline-anchor-package-v1.md`.
+- Baseline Anchor Package ratification recorded: `worlds/korvin-merrow/world-spec-prep/ratifications/baseline-anchor-ratification.md`.
 
 ## Latest Git Checkpoints
 
@@ -116,7 +117,6 @@ Next legal action:
 ## Authorized Right Now
 
 - State synchronization and preparation.
-- Baseline Anchor Package v1 physician review support.
 - World Spec Construction Preparation activities explicitly authorized by Alexander.
 - Preparation.
 - Auditing.
@@ -184,7 +184,7 @@ Claude must not replace physician judgment or originate clinical design.
 - `worlds/korvin-merrow/world-spec-prep/ratifications/governance-package-ratification.md`
 - `worlds/korvin-merrow/world-spec-prep/locked/key-milestones-calendar-skeleton-v1.md`
 - `worlds/korvin-merrow/world-spec-prep/ratifications/key-milestones-calendar-ratification.md`
-- `worlds/korvin-merrow/world-spec-prep/candidate-review/baseline-anchor-package-v1.md`
+- `worlds/korvin-merrow/world-spec-prep/locked/baseline-anchor-package-v1.md`
 - `reference/world-spec-guidelines/08_autoqc_master_index.md`
 - `reference/world-spec-guidelines/09_world_spec_writer_playbook.md`
 - `project/WORKSPACE_FILE_MAP.md`

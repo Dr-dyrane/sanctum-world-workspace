@@ -26,7 +26,9 @@ Key Milestones Calendar Skeleton v1: `worlds/korvin-merrow/world-spec-prep/locke
 
 Key Milestones Calendar ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/key-milestones-calendar-ratification.md`
 
-Baseline Anchor Package v1: `worlds/korvin-merrow/world-spec-prep/candidate-review/baseline-anchor-package-v1.md`
+Baseline Anchor Package v1: `worlds/korvin-merrow/world-spec-prep/locked/baseline-anchor-package-v1.md`
+
+Baseline Anchor Package ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/baseline-anchor-ratification.md`
 
 ## Locked Clinical Story Skeleton v1
 
@@ -380,24 +382,43 @@ Boundary:
 
 ## Baseline Anchor Package v1
 
-Status: CANDIDATE REVIEW.
+Status: LOCKED.
 
 Purpose: define baseline comparator values and baseline function anchors for later World Spec construction after physician review.
 
-Candidate anchors for physician review:
+Locked anchors:
 
-- Baseline functional status.
 - Baseline creatinine.
 - Baseline eGFR.
 - Baseline hemoglobin.
 - Baseline A1c.
-- Dry weight.
+- Dry weight approximately 97 kg.
 - Baseline mobility.
 - Baseline cognition.
 - Baseline medication-management ability.
 - Baseline home support.
 
+Baseline functional status remains part of the approved baseline framework through mobility, cognition, medication-management ability, and home support.
+
+Physician sign-off:
+
+- Completed.
+- Dry weight approximately 97 kg: APPROVED.
+- Baseline anchor framework: APPROVED.
+
+Claude ratification review:
+
+- True defects: NONE.
+- Blockers: NONE.
+- Would lock today: YES.
+- Final recommendation: GO.
+
+Carry-forward note:
+
+- Baseline blood pressure may be considered as a future candidate anchor during construction.
+- Do not create a numeric baseline blood pressure value at this stage.
+
 Boundary:
 
-- These are candidate baseline anchors, not admission labs or hospital-course trends.
+- These are baseline anchors, not admission labs or hospital-course trends.
 - This does not create file inventory, task architecture, World Spec prose, prompts, golden responses, grader guidance, templates, reference files, or synthetic files.
