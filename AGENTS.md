@@ -29,6 +29,8 @@ Update `project/WORKSPACE_FILE_MAP.md` whenever the workspace structure changes 
 
 Avoid creating new navigation, audit, or status documents when an existing status/map/cockpit file can carry the information. Prefer updating `project/STATUS.md`, `project/WORKSPACE_FILE_MAP.md`, or the active world cockpit before adding another file.
 
+Workspace bloat control is part of the operating doctrine. Do not create a new file just because a new thought exists. First decide whether the information belongs in an existing status file, cockpit file, decision log, review artifact, or source map. When a folder starts mixing lifecycle types, prefer a deliberate restructuring pass over ad hoc movement. Reasonable lifecycle groupings include candidate packages, locked decisions, ratifications, reviews, planning scaffolds, submissions, and historical archives. Keep current working context easy for a new collaborator to enter: one active cockpit, one live status source, one file map, and clearly separated historical evidence.
+
 Never advance to a later pass without explicit user approval.
 
 Always respect the current phase in `project/STATUS.md`. Never cross a phase boundary without explicit Alexander approval.
