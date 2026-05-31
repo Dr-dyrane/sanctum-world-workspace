@@ -18,7 +18,7 @@ RL Studio:
 - Approval source: Slack / Stacey S
 - Reviewer message: "great job! I approved your brainstorm. Next steps are to move forward with world spec and file template development."
 
-Current state: Clinical Story Skeleton v1 ratified / ready for Identity Package. World Spec drafting has not started and remains gated on explicit Alexander authorization.
+Current state: Identity Package v1 locked / ready for Governance Package. World Spec drafting has not started and remains gated on explicit Alexander authorization.
 
 ## Locked Decisions
 
@@ -100,14 +100,29 @@ Ratified governance/story-logic guardrails:
 - Family vs Primary Team is balanced: family concern is defensible, and primary team discharge reasoning is also defensible.
 - Near-fall is intentionally multi-factorial with no single intended explanation.
 
+Locked Identity Package v1:
+
+- Name: Korvin Merrow.
+- DOB: 1964-02-18.
+- Age: 62.
+- MRN: KM-6427819.
+- Height: 178 cm (5'10").
+- Weight: 97 kg (214 lb).
+- BMI: 30.6.
+- Allergy: Lisinopril (cough).
+- Code Status: Full Code.
+- Artifact: `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`.
+- Age 62 is consistent with DOB for a 2026 encounter after 2026-02-18.
+- BMI 30.6 is consistent with 97 kg and 178 cm.
+
 ## Decisions Remaining
 
 Do not answer these without Alexander.
 
 Identity/compliance:
 
-- Synthetic MRN format.
-- DOB, age consistency, sex, allergies, code status, height, weight, BMI, and clinically relevant demographics.
+- Identity Package v1 is locked.
+- Later calendar skeleton must preserve DOB/age consistency unless Alexander explicitly reopens DOB or age.
 
 Clinical scenario:
 
@@ -144,17 +159,17 @@ Use these as future World Spec priorities only after Brainstorm GO:
 
 ## Next Legal Action
 
-Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`, `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`, `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-review.md`, and `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md` for orientation.
+Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`, `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`, `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`, and `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md` for orientation.
 
-Wait for Alexander to explicitly start Identity Package.
+Wait for Alexander to explicitly start Governance Package.
 
-If Alexander starts Identity Package:
+If Alexander starts Governance Package:
 
-1. Read `project/STATUS.md`, `project/PASS_PLAN.md`, `WORLD_SPEC_KICKOFF.md`, `physician-decision-log-01.md`, `physician-decision-log-02.md`, `clinical-story-skeleton-review.md`, and `clinical-story-skeleton-ratification.md`.
-2. Use only locked physician decisions, the locked Clinical Story Skeleton, and approved Brainstorm material.
-3. Make identity/compliance decisions only. Do not populate the official World Spec template until Alexander authorizes drafting.
+1. Read `project/STATUS.md`, `project/PASS_PLAN.md`, `WORLD_SPEC_KICKOFF.md`, `physician-decision-log-02.md`, `clinical-story-skeleton-ratification.md`, and `identity-package-v1.md`.
+2. Use only locked physician decisions, the ratified Clinical Story Skeleton, locked Identity Package, and approved Brainstorm material.
+3. Make governance decisions only. Do not populate the official World Spec template until Alexander authorizes drafting.
 
-If Alexander has not started Identity Package:
+If Alexander has not started Governance Package:
 
 1. Continue preparation-only activities.
 2. Do not revise the locked Clinical Story Skeleton.
@@ -167,9 +182,11 @@ Do not:
 
 - draft the World Spec before explicit Alexander authorization;
 - revise the locked Clinical Story Skeleton without explicit Alexander approval;
-- start Identity Package before Alexander explicitly starts that phase;
+- revise Identity Package v1 without explicit Alexander approval;
+- start Governance Package before Alexander explicitly starts that phase;
 - populate the World Spec template before explicit Alexander authorization;
 - create Section 3 file inventory before explicit authorization;
+- create milestones before explicit authorization;
 - create synthetic chart files;
 - invent labs, vitals, medications, doses, dates, provider names, MRN, or patient name;
 - write final task prompts;
@@ -184,7 +201,7 @@ If asked to help now, Claude should only support preparation:
 
 - summarize current state;
 - audit against AutoQC v6.3;
-- prepare or refine Identity Package interview questions;
+- prepare or refine Governance Package interview questions;
 - critique proposed physician decisions;
 - help maintain consistency with the approved Brainstorm.
 

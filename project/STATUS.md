@@ -2,7 +2,7 @@
 
 ## Current Phase
 
-Clinical Story Skeleton v1 ratified / ready for Identity Package.
+Identity Package v1 locked / ready for Governance Package.
 
 ## Current World
 
@@ -10,13 +10,13 @@ Working title: Korvin Merrow World
 
 ## Current State
 
-Brainstorm Human Review returned GO from Stacey S after SEND BACK remediation. Reviewer approved the Korvin Merrow Brainstorm and indicated next steps are World Spec and file template development. World Spec kickoff is recorded in `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`. Post-kickoff physician decisions are synchronized in `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md`. Clinical Story Skeleton v1 is locked, reviewed, and ratified at `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`. Durable physician decision record: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`. World Spec drafting has not started.
+Brainstorm Human Review returned GO from Stacey S after SEND BACK remediation. Reviewer approved the Korvin Merrow Brainstorm and indicated next steps are World Spec and file template development. World Spec kickoff is recorded in `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`. Clinical Story Skeleton v1 is locked, reviewed, and ratified at `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`. Identity Package v1 is locked at `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`. Durable physician decision record: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`. World Spec drafting has not started.
 
 ## RL Studio Submission
 
 Task ID: cyau8803
 
-Status: Brainstorm approved / Clinical Story Skeleton v1 ratified
+Status: Brainstorm approved / Identity Package v1 locked
 
 Original submission timestamp: 5/29/2026 2:49 PM PDT
 
@@ -26,15 +26,15 @@ Reviewer GO: Stacey S approved Brainstorm via Slack. Recorded in `worlds/korvin-
 
 ## Current Pass
 
-Pass 2 - Clinical Story Skeleton v1 ratified.
+Pass 3 - Identity Package v1 locked.
 
 ## Next Pass
 
-Pass 3 - Identity Package.
+Governance Package.
 
 ## Active Blocker
 
-No active reviewer blocker. Identity Package may begin when Alexander authorizes it. World Spec drafting, final file inventory, task prompts, golden responses, grader guidance, and synthetic file generation remain blocked.
+No active reviewer blocker. Governance Package may begin when Alexander authorizes it. World Spec drafting, milestones, final file inventory, task prompts, golden responses, grader guidance, and synthetic file generation remain blocked.
 
 ## Current Git Checkpoint
 
@@ -54,7 +54,7 @@ Return to baseline commit if workflow becomes corrupted.
 
 ## Next Command For Codex
 
-Begin Pass 3 - Identity Package only when Alexander authorizes it. Use `WORLD_SPEC_KICKOFF.md`, `physician-decision-log-02.md`, `clinical-story-skeleton-review.md`, and `clinical-story-skeleton-ratification.md` for orientation. Do not draft World Spec or create file inventory before Alexander explicitly authorizes the relevant phase.
+Begin Governance Package only when Alexander authorizes it. Use `WORLD_SPEC_KICKOFF.md`, `physician-decision-log-02.md`, `clinical-story-skeleton-ratification.md`, and `identity-package-v1.md` for orientation. Do not draft World Spec, create milestones, or create file inventory before Alexander explicitly authorizes the relevant phase.
 
 ## Scope Guardrails
 

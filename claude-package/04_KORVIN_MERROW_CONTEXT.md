@@ -2,7 +2,7 @@
 
 Purpose: compressed Claude context for a fresh Project Sanctum session. Use this as operational context only; the full source of truth remains local under `reference/` and `worlds/korvin-merrow/`.
 
-Boundary: Brainstorm is approved after SEND BACK remediation. Clinical Story Skeleton v1 is locked, reviewed, and ratified. Identity Package is next when Alexander explicitly authorizes it. World Spec drafting is not authorized until Alexander explicitly authorizes drafting.
+Boundary: Brainstorm is approved after SEND BACK remediation. Clinical Story Skeleton v1 is ratified. Identity Package v1 is locked. Governance Package is next when Alexander explicitly authorizes it. World Spec drafting is not authorized until Alexander explicitly authorizes drafting.
 
 ## Current World Concept
 
@@ -215,9 +215,28 @@ Ratified governance/story-logic guardrails:
 - Family vs Primary Team is balanced: family concern is defensible, and discharge is clinically defensible from the primary team's perspective because infection, AKI, mental status, and oral intake are improving and follow-up is available.
 - Near-fall remains intentionally multi-factorial with no single intended explanation.
 
+## Locked Identity Package v1
+
+- Name: Korvin Merrow.
+- DOB: 1964-02-18.
+- Age: 62.
+- MRN: KM-6427819.
+- Height: 178 cm (5'10").
+- Weight: 97 kg (214 lb).
+- BMI: 30.6.
+- Allergy: Lisinopril (cough).
+- Code Status: Full Code.
+- Artifact: `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`.
+
+Consistency:
+
+- Age 62 is consistent with DOB for a 2026 encounter after 2026-02-18.
+- BMI 30.6 is consistent with 97 kg and 178 cm.
+- Later calendar skeleton must preserve age-62 consistency unless Alexander explicitly reopens DOB or age.
+
 ## Current State
 
-Brainstorm approved. Clinical Story Skeleton v1 ratified. Do not start World Spec drafting.
+Brainstorm approved. Clinical Story Skeleton v1 ratified. Identity Package v1 locked. Do not start World Spec drafting.
 
 Completed:
 
@@ -231,13 +250,13 @@ Completed:
 8. Brainstorm approved by Stacey S.
 9. Clinical Story Skeleton v1 locked and reviewed.
 10. Clinical Story Skeleton v1 ratified after Claude hostile review minor findings.
+11. Identity Package v1 locked.
 
 Still pending before World Spec drafting:
 
-1. Identity Package.
-2. Governance Package.
-3. Official Claude World Spec session.
-4. Alexander authorization to draft the World Spec.
+1. Governance Package.
+2. Official Claude World Spec session.
+3. Alexander authorization to draft the World Spec.
 
 ## Claude Use Rules
 

@@ -1,6 +1,6 @@
 # Korvin Merrow World Spec Kickoff
 
-Status: Clinical Story Skeleton v1 ratified / ready for Identity Package.
+Status: Identity Package v1 locked / ready for Governance Package.
 
 Purpose: mark the transition from approved Brainstorm to World Spec preparation without drafting the World Spec, populating the template, creating a final file inventory, or inventing clinical values.
 
@@ -14,12 +14,14 @@ Purpose: mark the transition from approved Brainstorm to World Spec preparation 
 - Clinical Story Skeleton v1 is locked and ratified.
 - Clinical Story Skeleton review completed with GO recommendation.
 - Clinical Story Skeleton ratification completed after Claude hostile review minor findings.
+- Identity Package v1 is locked.
 - Official Claude World Spec session is still pending.
 - Post-kickoff physician decision record: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md`.
 - Latest skeleton lock record: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`.
 - Clinical Story Skeleton review: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-review.md`.
 - Clinical Story Skeleton ratification: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`.
-- Next allowed substantive action: begin Identity Package only when Alexander explicitly starts that phase.
+- Identity Package v1: `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`.
+- Next allowed substantive action: begin Governance Package only when Alexander explicitly starts that phase.
 
 ## Workspace Bloat And Doctrine Audit
 
@@ -54,6 +56,24 @@ Correction going forward:
 ## 2. Approved Foundation
 
 Patient identity: Korvin Merrow.
+
+Locked Identity Package v1:
+
+- Name: Korvin Merrow.
+- DOB: 1964-02-18.
+- Age: 62.
+- MRN: KM-6427819.
+- Height: 178 cm (5'10").
+- Weight: 97 kg (214 lb).
+- BMI: 30.6.
+- Allergy: Lisinopril (cough).
+- Code Status: Full Code.
+
+Identity consistency:
+
+- Age 62 is consistent with DOB for a 2026 encounter after 2026-02-18.
+- BMI 30.6 is consistent with 97 kg and 178 cm.
+- Later calendar skeleton must preserve age-62 consistency unless Alexander explicitly reopens DOB or age.
 
 World Type: Typical Clinical World.
 
@@ -204,12 +224,8 @@ Workflow guardrails:
 
 Identity and demographics:
 
-- Synthetic MRN.
-- DOB/age consistency.
-- Height, weight, and BMI.
-- Allergies.
-- Code status.
-- Calendar date skeleton.
+- Identity Package v1 is locked.
+- Calendar date skeleton remains pending and must preserve DOB/age consistency.
 
 Clinical structure:
 
@@ -269,8 +285,10 @@ Known unresolved package questions:
 Stop before:
 
 - Revising the locked Clinical Story Skeleton unless Alexander explicitly reopens it.
-- Identity Package work unless Alexander explicitly starts that phase.
+- Revising Identity Package v1 unless Alexander explicitly reopens it.
+- Governance Package work unless Alexander explicitly starts that phase.
 - World Spec drafting unless Alexander explicitly authorizes drafting.
+- Milestone creation.
 - Final file inventory.
 - Task prompts.
 - Golden responses.

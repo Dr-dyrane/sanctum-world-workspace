@@ -41,7 +41,7 @@ Emergency Medicine / Internal Medicine / acute hospital setting.
 
 ## Working Patient
 
-62-year-old male with:
+Korvin Merrow is a 62-year-old male with:
 
 - type 2 diabetes mellitus
 - hypertension
@@ -55,6 +55,22 @@ Emergency Medicine / Internal Medicine / acute hospital setting.
 - diabetic peripheral neuropathy
 - medication complexity/polypharmacy
 - PMR with unclear chronic prednisone taper history
+
+Locked Identity Package v1:
+
+- DOB: 1964-02-18
+- MRN: KM-6427819
+- Height: 178 cm (5'10")
+- Weight: 97 kg (214 lb)
+- BMI: 30.6
+- Allergy: lisinopril (cough)
+- Code Status: Full Code
+
+Identity checks:
+
+- Age 62 is consistent with DOB for a 2026 encounter after 2026-02-18.
+- BMI 30.6 is consistent with height 178 cm and weight 97 kg.
+- The identity package does not alter the mixed physiology story, discharge safety target, approved frictions, or approved traps.
 
 Approved compact medication list:
 
@@ -335,4 +351,4 @@ Complexity comes from realistic medicine:
 
 `AGENTS.md` keeps operating context.
 
-Detailed evolving clinical design belongs under `worlds/korvin-merrow/`.
+Detailed evolving clinical design belongs under `worlds/korvin-merrow/active/` and locked preparation decisions belong under `worlds/korvin-merrow/world-spec-prep/`.

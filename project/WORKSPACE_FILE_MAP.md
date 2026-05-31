@@ -4,7 +4,7 @@ Purpose: local repository hygiene map to prevent duplicate working files and acc
 
 Generated from local workspace file listing excluding `.git`, caches, and Python bytecode.
 
-Current status: Clinical Story Skeleton v1 ratified / ready for Identity Package. World Spec drafting has not started.
+Current status: Identity Package v1 locked / ready for Governance Package. World Spec drafting has not started.
 
 ## Navigation Rule
 
@@ -13,8 +13,9 @@ For a new collaborator or new AI session, read in this order:
 1. `project/STATUS.md` for live state and phase gate.
 2. `project/WORKSPACE_FILE_MAP.md` for file locations and duplication risks.
 3. `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md` for the active World Spec cockpit.
-4. `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions.
-5. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
+4. `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md` for locked identity values.
+5. `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions.
+6. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
 
 Do not start by opening every prep file. Most prep files are supporting memory, not active instructions.
 
@@ -223,6 +224,7 @@ Reviewed for duplicate-purpose files:
 | `worlds/korvin-merrow/world-spec-prep/decision-register.md` | Prep decision register. | Use for pending/locked decisions after GO. |
 | `worlds/korvin-merrow/world-spec-prep/file-plan-planning.md` | File plan planning scaffold. | Not a final file inventory. |
 | `worlds/korvin-merrow/world-spec-prep/friction-to-task-map.md` | Friction/task planning map. | Planning only. |
+| `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md` | Locked identity and demographic/compliance package. | Use as identity source of truth; not a World Spec draft. |
 | `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md` | Durable post-kickoff physician decision record. | Historical state sync record; superseded for skeleton lock by decision log 02. |
 | `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md` | Durable Clinical Story Skeleton v1 ratification record. | Use before Identity Package; not a draft spec or file inventory. |
 | `worlds/korvin-merrow/world-spec-prep/post-go-interview-plan.md` | Interview sequence after Brainstorm GO. | This file; do not use before GO except for prep. |

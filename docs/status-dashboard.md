@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-Clinical Story Skeleton v1 ratified / ready for Identity Package.
+Identity Package v1 locked / ready for Governance Package.
 
 ## Brainstorm
 
@@ -25,8 +25,9 @@ Clinical Story Skeleton v1 ratified / ready for Identity Package.
 - Physician decision log: recorded in `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md`
 - World Spec drafting: not started
 - Clinical Story Skeleton: v1 locked, reviewed, and ratified
+- Identity Package: v1 locked
 - Official Claude World Spec session: pending
-- Current state: ready for Identity Package when Alexander explicitly starts that phase
+- Current state: ready for Governance Package when Alexander explicitly starts that phase
 - World Spec prep packet: created
 - Official World Spec template: saved locally
 - World Spec AutoQC prompt v6.3: saved locally
@@ -34,8 +35,9 @@ Clinical Story Skeleton v1 ratified / ready for Identity Package.
 - World Spec writer playbook: created in `reference/world-spec-guidelines/09_world_spec_writer_playbook.md`
 - Clinical Story Skeleton review: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-review.md`
 - Clinical Story Skeleton ratification: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`
+- Identity Package v1: `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`
-- Next allowed action: begin Identity Package only when Alexander explicitly starts it
+- Next allowed action: begin Governance Package only when Alexander explicitly starts it
 
 ## Tooling
 
@@ -49,7 +51,8 @@ Clinical Story Skeleton v1 ratified / ready for Identity Package.
 
 - Do not draft World Spec before Alexander authorizes Pass 8.
 - Do not revise the locked Clinical Story Skeleton unless Alexander explicitly reopens it.
-- Do not begin Identity Package before Alexander explicitly starts that phase.
+- Do not begin Governance Package before Alexander explicitly starts that phase.
+- Do not create milestones before Alexander authorizes that step.
 - Do not create file inventory before Alexander authorizes that step.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
 - Do not modify clinical content beyond reviewer-required remediation without Alexander approval.

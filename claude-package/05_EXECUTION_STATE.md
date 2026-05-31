@@ -4,7 +4,7 @@ Purpose: compressed current state for Claude. Use `project/STATUS.md` and `docs/
 
 ## Project State
 
-Current phase: Clinical Story Skeleton v1 ratified / ready for Identity Package.
+Current phase: Identity Package v1 locked / ready for Governance Package.
 
 Brainstorm:
 
@@ -22,15 +22,16 @@ Brainstorm:
 
 Current blocker:
 
-- No reviewer blocker. World Spec kickoff is recorded. Post-kickoff physician decisions are synchronized. Clinical Story Skeleton v1 is locked, reviewed, and ratified. Identity Package is the next legal phase when Alexander authorizes it. World Spec drafting remains gated on explicit Alexander authorization.
+- No reviewer blocker. World Spec kickoff is recorded. Clinical Story Skeleton v1 is locked, reviewed, and ratified. Identity Package v1 is locked. Governance Package is the next legal phase when Alexander authorizes it. World Spec drafting remains gated on explicit Alexander authorization.
 
 Next legal action:
 
 - Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md` and `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md` for orientation.
 - Use `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-review.md` and `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md` as the locked Clinical Story Skeleton v1 record.
 - Use `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md` for ratified governance/story-logic guardrails.
-- When Alexander explicitly starts Identity Package, proceed with identity and compliance decisions only.
-- Do not revise the locked Clinical Story Skeleton, draft World Spec, or create file inventory until Alexander explicitly starts/authorizes the relevant phase.
+- Use `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md` as the locked identity source.
+- When Alexander explicitly starts Governance Package, proceed with governance decisions only.
+- Do not revise the locked Clinical Story Skeleton or locked Identity Package, draft World Spec, create milestones, or create file inventory until Alexander explicitly starts/authorizes the relevant phase.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
 
 ## Completed
@@ -80,6 +81,7 @@ Next legal action:
 - Clinical Story Skeleton lock recorded in `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`.
 - Clinical Story Skeleton v1 ratified after Claude hostile review minor findings.
 - Ratification artifact created: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`.
+- Identity Package v1 locked: `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`.
 
 ## Latest Git Checkpoints
 
@@ -101,7 +103,7 @@ Next legal action:
 ## Authorized Right Now
 
 - State synchronization and preparation.
-- Identity Package preparation when Alexander explicitly starts it.
+- Governance Package preparation when Alexander explicitly starts it.
 - Preparation.
 - Auditing.
 - Checklist building.
@@ -113,10 +115,12 @@ Next legal action:
 ## Not Authorized Right Now
 
 - Revising the locked Clinical Story Skeleton without explicit Alexander approval.
-- Identity Package work before Alexander explicitly starts that phase.
+- Governance Package work before Alexander explicitly starts that phase.
+- Revising Identity Package v1 without explicit Alexander approval.
 - World Spec drafting before explicit Alexander authorization.
 - Populating the World Spec template before explicit Alexander authorization.
 - Creating a final Section 3 World File Plan or file inventory.
+- Creating milestones before Alexander authorizes that step.
 - Creating synthetic patient files.
 - Creating final task prompts.
 - Creating golden responses.
@@ -136,7 +140,7 @@ Claude may help:
 - compress context;
 - critique plans against AutoQC v6.3;
 - identify reviewer risks;
-- prepare post-GO interview questions;
+- prepare Governance Package interview questions;
 - organize physician decisions after Alexander provides them.
 
 Claude must not replace physician judgment or originate clinical design.
@@ -158,6 +162,7 @@ Claude must not replace physician judgment or originate clinical design.
 - `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`
 - `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-review.md`
 - `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`
+- `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`
 - `reference/world-spec-guidelines/08_autoqc_master_index.md`
 - `reference/world-spec-guidelines/09_world_spec_writer_playbook.md`
 - `project/WORKSPACE_FILE_MAP.md`

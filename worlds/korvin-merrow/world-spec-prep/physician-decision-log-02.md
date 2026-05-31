@@ -12,6 +12,8 @@ Overall recommendation: GO to Identity Package and Governance Package preparatio
 
 Ratification artifact: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`
 
+Identity Package v1 artifact: `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`
+
 ## Locked Clinical Story Skeleton v1
 
 Patient:
@@ -192,3 +194,27 @@ Purpose:
 
 - Preserve the disposition-safety world design.
 - Prevent reveal-drift toward a single-cause explanation.
+
+## Locked Identity Package v1
+
+Status: LOCKED.
+
+| Field | Locked value |
+| --- | --- |
+| Name | Korvin Merrow |
+| DOB | 1964-02-18 |
+| Age | 62 |
+| MRN | KM-6427819 |
+| Height | 178 cm (5'10") |
+| Weight | 97 kg (214 lb) |
+| BMI | 30.6 |
+| Allergy | Lisinopril (cough) |
+| Code Status | Full Code |
+
+Consistency checks:
+
+- Age is consistent with DOB for a 2026 encounter after 2026-02-18.
+- BMI is consistent with 97 kg and 178 cm.
+- Identity details do not conflict with the approved Brainstorm.
+- Identity details do not conflict with the ratified Clinical Story Skeleton.
+- Later calendar skeleton must preserve age-62 consistency unless Alexander explicitly reopens DOB or age.

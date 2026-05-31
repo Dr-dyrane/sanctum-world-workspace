@@ -16,6 +16,8 @@ Source inputs:
 
 ## Phase 1: Identity And Compliance Decisions
 
+Status: completed by `identity-package-v1.md`.
+
 Goal: establish a single synthetic identity block before any World Spec section is populated.
 
 ### Decision 1.1: Synthetic Patient Name
@@ -39,7 +41,7 @@ Reviewer risks:
 
 Physician decision required:
 
-- Confirm Korvin Merrow remains the final synthetic patient name for the World Spec if Brainstorm remediation is accepted.
+- Completed: Korvin Merrow remains the final synthetic patient name.
 - Confirm all later World Spec header, patient profile, task, filename, and summary references use the same identity.
 
 ### Decision 1.2: Synthetic MRN
@@ -61,7 +63,7 @@ Reviewer risks:
 
 Physician decision required:
 
-- Approve a clearly synthetic MRN format.
+- Completed: locked MRN is `KM-6427819`.
 - Decide whether the MRN should be visible in every simulated chart artifact or only in selected file types later.
 
 ### Decision 1.3: Demographics And Anthropometrics Consistency
@@ -88,7 +90,7 @@ Reviewer risks:
 
 Physician decision required:
 
-- Confirm final age, DOB relative to the snapshot date, sex, allergies, code status, height, weight, BMI, and any clinically relevant social/demographic details.
+- Completed for DOB, age, allergy, code status, height, weight, and BMI. Later calendar skeleton must preserve DOB/age consistency.
 
 ## Phase 2: Clinical Scenario Decisions
 
@@ -339,7 +341,7 @@ Physician decision required:
 ## First Interview Sequence After GO
 
 1. Confirm Brainstorm Human Review result and whether any reviewer conditions apply.
-2. Resolve Phase 1 identity/compliance decisions.
+2. Phase 1 identity/compliance decisions are complete in `identity-package-v1.md`.
 3. Resolve Phase 2 calendar timeline, milestones, and authority hierarchy.
 4. Resolve Phase 3 task architecture decisions before prompts or expected outputs.
 5. Resolve Phase 4 traceability/file-strategy decisions before any Section 3 file plan rows.

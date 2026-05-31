@@ -1,6 +1,6 @@
 # Korvin Merrow World
 
-Current state: Clinical Story Skeleton v1 ratified / ready for Identity Package.
+Current state: Identity Package v1 locked / ready for Governance Package.
 
 Start here only after reading `project/STATUS.md`.
 
@@ -17,6 +17,7 @@ Start here only after reading `project/STATUS.md`.
 ## Active Entry Points
 
 - `world-spec-prep/WORLD_SPEC_KICKOFF.md`
+- `world-spec-prep/identity-package-v1.md`
 - `world-spec-prep/physician-decision-log-02.md`
 - `world-spec-prep/clinical-story-skeleton-ratification.md`
 - `active/brainstorm.md`

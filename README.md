@@ -15,7 +15,7 @@ Project Sanctum Worlds are realistic clinical environments that test frontier AI
 - Brainstorm status: approved after SEND BACK remediation
 - Brainstorm AutoQC: revised pass achieved, `0 failed / 51 passed`
 - Human review: GO from Stacey S
-- Current gate: Clinical Story Skeleton v1 ratified / ready for Identity Package
+- Current gate: Identity Package v1 locked / ready for Governance Package
 - World Spec: preparation packet exists, but drafting has not started and remains blocked until Alexander explicitly authorizes drafting
 
 ## Onboarding Scope
