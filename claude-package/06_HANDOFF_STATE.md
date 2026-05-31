@@ -18,7 +18,7 @@ RL Studio:
 - Approval source: Slack / Stacey S
 - Reviewer message: "great job! I approved your brainstorm. Next steps are to move forward with world spec and file template development."
 
-Current state: Governance Package v1 candidate lock / ready for next authorized World Spec preparation step. World Spec drafting has not started and remains gated on explicit Alexander authorization.
+Current state: Governance Package v1 ready for ratification review / ready for next authorized World Spec preparation step. World Spec drafting has not started and remains gated on explicit Alexander authorization.
 
 ## Locked Decisions
 
@@ -118,18 +118,24 @@ Locked Identity Package v1:
 - Addendum notes are carry-forward implementation notes only: lisinopril cough is ACE-inhibitor intolerance; later medication history should explain prior ACE-inhibitor/ARNI transition coherently; baseline function, baseline creatinine, dry weight, and similar baseline anchors should be placed during Patient Profile / Clinical History design.
 - Do not reopen Identity Package v1.
 
-Governance Package v1 candidate:
+Governance Package v1:
 
 - Artifact: `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`.
+- Clarification artifact: `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md`.
+- Status: ready for ratification review.
 - Care team roster: Hospitalist Service; Cardiology; Nephrology; Endocrinology; Physical Therapy; Occupational Therapy; Case Management; Social Work; Patient; Family/Caregiver; Primary Care Physician.
 - Authority hierarchy: attending hospitalist > consulting attending specialists > PT/OT functional assessments > Case Management / Social Work > family reports > patient recollection.
-- Master clinical source-of-truth hierarchy: attending documentation > verified medication reconciliation > pharmacy history > consultant documentation > family report > patient recollection.
+- Master clinical source-of-truth hierarchy: attending documentation > verified medication reconciliation > pharmacy history > consultant documentation > primary care documentation > family report > patient recollection.
 - Preserve prednisone-specific hierarchy: rheumatology attending recommendation > verified medication reconciliation > pharmacy / refill history > family report > patient recollection.
+- Authority Hierarchy and Source-of-Truth Hierarchy are distinct. Authority Hierarchy governs role-based governance, disposition interpretation, functional/discharge evidence, stakeholder input, and decision ownership. Source-of-Truth Hierarchy governs factual conflict resolution.
+- Authority hierarchy does not resolve clinical recommendation disagreements. Consultant disagreements require evidence synthesis, timing, trends, patient status, and discharge safety.
 - Confirmed conditions: HFrEF, CKD Stage 3, Type 2 Diabetes, CAD, Hypertension, Hyperlipidemia, OSA, Diabetic Neuropathy, PMR, Anemia of CKD, Osteoporosis/Osteopenia.
 - Presumed / active questions: current infection source, steroid contribution, adrenal suppression contribution, degree of dehydration, relative medication contribution, discharge readiness.
+- Steroid-related osteoporosis/osteopenia reflects cumulative chronic steroid exposure but does not prove current symptoms are primarily caused by adrenal suppression.
 - Final friction table: Cardiology vs Nephrology for medication restart timing; Family vs Primary Team for discharge readiness; Endocrinology vs Primary Team for steroid interpretation and risk.
 - Administrative deliverable decision: yes.
 - Workflow umbrella: Acute Hospital Management. Exact future task workflow lines must still use official tracker names.
+- AutoQC 2.107 workflow count and 2.108 administrative deliverable remain deferred task-architecture watch items.
 
 ## Decisions Remaining
 
@@ -176,7 +182,7 @@ Use these as future World Spec priorities only after Brainstorm GO:
 
 ## Next Legal Action
 
-Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`, `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`, `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`, `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md`, and `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md` for orientation.
+Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`, `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`, `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`, `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md`, `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`, and `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md` for orientation.
 
 Wait for Alexander to explicitly authorize the next World Spec preparation/construction step.
 

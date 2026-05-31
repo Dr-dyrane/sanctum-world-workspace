@@ -279,7 +279,7 @@ Potential contributors include poor intake, volume depletion, medication effects
 
 Artifact: `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`
 
-Status: CANDIDATE LOCK.
+Status: READY FOR RATIFICATION REVIEW.
 
 Care team roster:
 
@@ -304,20 +304,27 @@ Master source-of-truth hierarchy for clinical facts:
 2. Verified Medication Reconciliation.
 3. Pharmacy History.
 4. Consultant Documentation.
-5. Family Report.
-6. Patient Recollection.
+5. Primary Care Documentation.
+6. Family Report.
+7. Patient Recollection.
 
 Preserve the prednisone-specific hierarchy: rheumatology attending recommendation > verified medication reconciliation > pharmacy / refill history > family report > patient recollection.
+
+Hierarchy clarification: Authority Hierarchy is used for role-based governance, disposition interpretation, functional/discharge evidence, stakeholder input, and decision ownership. Source-of-Truth Hierarchy is used for factual conflict resolution. Authority hierarchy does not resolve clinical recommendation disagreements; consultant disagreements require evidence synthesis, timing, trends, patient status, and discharge safety.
 
 Confirmed conditions: HFrEF, CKD Stage 3, Type 2 Diabetes, CAD, Hypertension, Hyperlipidemia, OSA, Diabetic Neuropathy, PMR, Anemia of CKD, Osteoporosis/Osteopenia.
 
 Presumed / active questions: current infection source, steroid contribution, adrenal suppression contribution, degree of dehydration, relative medication contribution, discharge readiness.
+
+Steroid-related bone disease clarification: osteoporosis/osteopenia reflects cumulative chronic steroid exposure but does not prove current adrenal suppression is the dominant explanation for current symptoms.
 
 Final friction table: Cardiology vs Nephrology for medication restart timing; Family vs Primary Team for discharge readiness; Endocrinology vs Primary Team for steroid interpretation and risk.
 
 Administrative deliverable decision: yes. At least one future task should involve transition of care, discharge planning, care coordination, or follow-up planning.
 
 Workflow umbrella: Acute Hospital Management, with subdomains of diagnosis, medication management, consultant synthesis, functional assessment, and disposition planning. Exact future task workflow lines must still use official tracker names.
+
+Task-architecture watch items: AutoQC 2.107 workflow count and 2.108 administrative deliverable remain deferred until task architecture.
 
 ## Locked World Tone
 

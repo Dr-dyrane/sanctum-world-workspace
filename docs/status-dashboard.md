@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-Governance Package v1 candidate lock / ready for next authorized World Spec preparation step.
+Governance Package v1 ready for ratification review / ready for next authorized World Spec preparation step.
 
 ## Brainstorm
 
@@ -26,9 +26,9 @@ Governance Package v1 candidate lock / ready for next authorized World Spec prep
 - World Spec drafting: not started
 - Clinical Story Skeleton: v1 locked, reviewed, and ratified
 - Identity Package: v1 locked
-- Governance Package: v1 candidate lock
+- Governance Package: v1 ready for ratification review
 - Official Claude World Spec session: pending
-- Current state: Governance Package v1 candidate lock; next step requires explicit Alexander authorization
+- Current state: Governance Package v1 ready for ratification review; next step requires explicit Alexander authorization
 - World Spec prep packet: created
 - Official World Spec template: saved locally
 - World Spec AutoQC prompt v6.3: saved locally
@@ -39,6 +39,7 @@ Governance Package v1 candidate lock / ready for next authorized World Spec prep
 - Identity Package v1: `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`
 - Identity Package review addendum: `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md`
 - Governance Package v1: `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`
+- Governance Package clarification: `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md`
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`
 - Next allowed action: continue only after Alexander explicitly authorizes the next World Spec preparation/construction step
 

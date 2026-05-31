@@ -80,17 +80,18 @@ Boundaries:
 
 ## 2026-05-31 - Governance Package v1 Candidate Lock
 
-Decision: Governance Package v1 is recorded as a candidate lock before World Spec construction.
+Decision: Governance Package v1 is recorded before World Spec construction and clarified as ready for ratification review.
 
 Artifact:
 
 - `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`
+- `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md`
 
 Locked candidate architecture:
 
 - Care Team Roster: Hospitalist Service; Cardiology; Nephrology; Endocrinology; Physical Therapy; Occupational Therapy; Case Management; Social Work; Patient; Family/Caregiver; Primary Care Physician.
 - Authority Hierarchy: attending hospitalist > consulting attending specialists > PT/OT functional assessments > Case Management / Social Work > family reports > patient recollection.
-- Master Source-of-Truth Hierarchy for clinical facts: attending documentation > verified medication reconciliation > pharmacy history > consultant documentation > family report > patient recollection.
+- Master Source-of-Truth Hierarchy for clinical facts: attending documentation > verified medication reconciliation > pharmacy history > consultant documentation > primary care documentation > family report > patient recollection.
 - Prednisone-specific hierarchy remains rheumatology attending recommendation > verified medication reconciliation > pharmacy / refill history > family report > patient recollection.
 - Confirmed Conditions: HFrEF, CKD Stage 3, Type 2 Diabetes, CAD, Hypertension, Hyperlipidemia, OSA, Diabetic Neuropathy, PMR, Anemia of CKD, Osteoporosis/Osteopenia.
 - Presumed / Active Questions: current infection source, steroid contribution, adrenal suppression contribution, degree of dehydration, relative medication contribution, discharge readiness.
@@ -102,3 +103,13 @@ Boundaries:
 
 - Do not draft World Spec yet.
 - Do not create milestones, final file inventory, task prompts, reference files, golden responses, grader guidance, or synthetic chart files.
+
+Clarifications:
+
+- Authority Hierarchy and Source-of-Truth Hierarchy are distinct.
+- Authority Hierarchy governs role-based governance, disposition interpretation, functional/discharge evidence, stakeholder input, and decision ownership.
+- Source-of-Truth Hierarchy governs factual conflict resolution.
+- Authority hierarchy resolves factual/documentation conflicts; it does not resolve clinical recommendation disagreements.
+- Consultant disagreements must be reconciled through evidence synthesis, timing, trends, patient status, and discharge safety.
+- Confirmed steroid-related osteoporosis/osteopenia reflects cumulative chronic steroid exposure but does not prove current symptoms are primarily caused by adrenal suppression.
+- AutoQC 2.107 workflow count and 2.108 administrative deliverable remain task-architecture watch items.

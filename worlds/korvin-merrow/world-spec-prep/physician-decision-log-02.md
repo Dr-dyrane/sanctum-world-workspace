@@ -18,6 +18,8 @@ Identity Package review addendum: `worlds/korvin-merrow/world-spec-prep/identity
 
 Governance Package v1 candidate: `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`
 
+Governance Package clarification: `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md`
+
 ## Locked Clinical Story Skeleton v1
 
 Patient:
@@ -232,7 +234,7 @@ Carry-forward implementation notes:
 
 ## Governance Package v1 Candidate
 
-Status: CANDIDATE LOCK.
+Status: READY FOR RATIFICATION REVIEW.
 
 Care team roster:
 
@@ -257,8 +259,9 @@ Master source-of-truth hierarchy for clinical facts:
 2. Verified Medication Reconciliation.
 3. Pharmacy History.
 4. Consultant Documentation.
-5. Family Report.
-6. Patient Recollection.
+5. Primary Care Documentation.
+6. Family Report.
+7. Patient Recollection.
 
 Preserve the previously ratified prednisone hierarchy:
 
@@ -300,3 +303,15 @@ Final friction table:
 Administrative deliverable decision: YES. At least one future task should involve transition of care, discharge planning, care coordination, or follow-up planning.
 
 Workflow consolidation: use Acute Hospital Management as the single workflow umbrella, with subdomains of diagnosis, medication management, consultant synthesis, functional assessment, and disposition planning. Final task workflow lines must still use exact approved tracker names.
+
+Clarifications accepted before ratification review:
+
+- Authority hierarchy and source-of-truth hierarchy are distinct.
+- Authority Hierarchy is used for role-based governance, disposition interpretation, functional/discharge evidence, stakeholder input, and decision ownership.
+- Source-of-Truth Hierarchy is used for factual conflict resolution, especially medication history, outpatient records, consultant documentation, family reports, and patient recollection.
+- If both appear relevant, the World Spec must state which hierarchy governs the task or trap.
+- Authority hierarchy resolves factual/documentation conflicts; it does not resolve clinical recommendation disagreements.
+- Consultant disagreements must be reconciled through evidence synthesis, timing, trends, patient status, and discharge safety, not by automatically deferring to the highest-ranked authority.
+- Confirmed steroid-related osteoporosis/osteopenia reflects cumulative chronic steroid exposure but does not prove current symptoms are primarily caused by adrenal suppression.
+- Current adrenal/steroid contribution remains an active interpretive question.
+- AutoQC 2.107 workflow count and 2.108 administrative deliverable remain task-architecture watch items and are not resolved inside Governance Package v1.

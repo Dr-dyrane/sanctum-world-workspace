@@ -23,7 +23,8 @@ Purpose: mark the transition from approved Brainstorm to World Spec preparation 
 - Identity Package v1: `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`.
 - Identity Package review addendum: `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md`.
 - Governance Package v1 candidate: `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`.
-- Next allowed substantive action: begin Governance Package only when Alexander explicitly starts that phase.
+- Governance Package clarification: `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md`.
+- Next allowed substantive action: proceed only when Alexander explicitly authorizes the next World Spec preparation or construction step.
 
 ## Workspace Bloat And Doctrine Audit
 
@@ -179,16 +180,19 @@ Ratified governance/story-logic guardrails:
 - Family vs Primary Team remains balanced: family concern is defensible because he is not back to baseline and functional/safety concerns remain; primary team discharge reasoning is also defensible because infection, AKI, mental status, and oral intake are improving and follow-up is available.
 - Near-fall remains intentionally multi-factorial, with no single intended explanation. Potential contributors include poor intake, volume depletion, medication effects, neuropathy, deconditioning, infection physiology, and steroid-related physiology.
 
-Governance Package v1 candidate:
+Governance Package v1:
 
 - Care Team Roster: Hospitalist Service; Cardiology; Nephrology; Endocrinology; Physical Therapy; Occupational Therapy; Case Management; Social Work; Patient; Family/Caregiver; Primary Care Physician.
 - Authority Hierarchy: attending hospitalist > consulting attending specialists > PT/OT functional assessments > Case Management / Social Work > family reports > patient recollection.
-- Master Source-of-Truth Hierarchy for clinical facts: attending documentation > verified medication reconciliation > pharmacy history > consultant documentation > family report > patient recollection.
+- Master Source-of-Truth Hierarchy for clinical facts: attending documentation > verified medication reconciliation > pharmacy history > consultant documentation > primary care documentation > family report > patient recollection.
 - Confirmed Conditions: HFrEF, CKD Stage 3, Type 2 Diabetes, CAD, Hypertension, Hyperlipidemia, OSA, Diabetic Neuropathy, PMR, Anemia of CKD, Osteoporosis/Osteopenia.
 - Presumed / Active Questions: current infection source, steroid contribution, adrenal suppression contribution, degree of dehydration, relative medication contribution, discharge readiness.
 - Final Friction Table: Cardiology vs Nephrology for medication restart timing; Family vs Primary Team for discharge readiness; Endocrinology vs Primary Team for steroid interpretation and risk.
 - Administrative Deliverable Decision: yes, at least one future task should involve transition of care, discharge planning, care coordination, or follow-up planning.
 - Workflow umbrella: Acute Hospital Management, with subdomains of diagnosis, medication management, consultant synthesis, functional assessment, and disposition planning.
+- Governance clarification: authority hierarchy resolves factual/documentation conflicts but does not resolve clinical recommendation disagreements. Consultant disagreements require evidence synthesis, timing, trends, patient status, and discharge safety.
+- Governance clarification: confirmed steroid-related osteoporosis/osteopenia reflects cumulative chronic steroid exposure but does not prove current symptoms are primarily caused by adrenal suppression.
+- Task-architecture watch items remain deferred: AutoQC 2.107 workflow count and 2.108 administrative deliverable must be resolved during task architecture, not inside Governance Package v1.
 
 Primary frictions:
 
@@ -249,7 +253,7 @@ Clinical structure:
 - Care team roster.
 - Source-of-truth hierarchy. Prednisone hierarchy is already ratified; broader chart hierarchy still pending.
 - Decision Friction Table details.
-- Governance Package v1 is now candidate-locked and contains the care team roster, broader source-of-truth hierarchy, confirmed vs presumed condition split, Decision Friction Table, administrative deliverable decision, and workflow umbrella.
+- Governance Package v1 is ready for ratification review and contains the care team roster, broader source-of-truth hierarchy, confirmed vs presumed condition split, Decision Friction Table, administrative deliverable decision, and workflow umbrella.
 - Clinical Story Skeleton v1 is ratified. Do not reopen unless Alexander explicitly does so.
 - Medication expansion from the approved compact list toward the World Spec target of 18-22 medications.
 - Final comorbidity list refinement within the World Spec target of 12-15 comorbidities.

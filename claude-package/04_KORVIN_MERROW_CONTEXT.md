@@ -2,7 +2,7 @@
 
 Purpose: compressed Claude context for a fresh Project Sanctum session. Use this as operational context only; the full source of truth remains local under `reference/` and `worlds/korvin-merrow/`.
 
-Boundary: Brainstorm is approved after SEND BACK remediation. Clinical Story Skeleton v1 is ratified. Identity Package v1 is locked. Governance Package v1 is candidate-locked. World Spec drafting is not authorized until Alexander explicitly authorizes drafting.
+Boundary: Brainstorm is approved after SEND BACK remediation. Clinical Story Skeleton v1 is ratified. Identity Package v1 is locked. Governance Package v1 is ready for ratification review. World Spec drafting is not authorized until Alexander explicitly authorizes drafting.
 
 ## Current World Concept
 
@@ -183,11 +183,13 @@ These are World Spec preparation risks, not authorization to change Brainstorm:
 - Task independence is a blocker under Check 2.40.
 - Failure Design tables need at least 5 grounded traps per task under Check 2.34, without inappropriate duplication under Check 2.91.
 
-## Governance Package v1 Candidate
+## Governance Package v1
 
 Artifact: `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`
 
-Status: CANDIDATE LOCK.
+Clarification artifact: `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md`
+
+Status: READY FOR RATIFICATION REVIEW.
 
 Care team roster:
 
@@ -205,19 +207,27 @@ Care team roster:
 
 Authority hierarchy: attending hospitalist > consulting attending specialists > PT/OT functional assessments > Case Management / Social Work > family reports > patient recollection.
 
-Master source-of-truth hierarchy for clinical facts: attending documentation > verified medication reconciliation > pharmacy history > consultant documentation > family report > patient recollection.
+Master source-of-truth hierarchy for clinical facts: attending documentation > verified medication reconciliation > pharmacy history > consultant documentation > primary care documentation > family report > patient recollection.
 
 Preserve prednisone-specific hierarchy: rheumatology attending recommendation > verified medication reconciliation > pharmacy / refill history > family report > patient recollection.
+
+Hierarchy clarification: Authority Hierarchy is used for role-based governance, disposition interpretation, functional/discharge evidence, stakeholder input, and decision ownership. Source-of-Truth Hierarchy is used for factual conflict resolution. If both appear relevant, the World Spec must state which hierarchy governs the task or trap.
+
+Operational rule: authority hierarchy resolves factual/documentation conflicts. It does not resolve clinical recommendation disagreements. Consultant disagreements must be reconciled through evidence synthesis, timing, trends, patient status, and discharge safety.
 
 Confirmed conditions: HFrEF, CKD Stage 3, Type 2 Diabetes, CAD, Hypertension, Hyperlipidemia, OSA, Diabetic Neuropathy, PMR, Anemia of CKD, Osteoporosis/Osteopenia.
 
 Presumed / active questions: current infection source, steroid contribution, adrenal suppression contribution, degree of dehydration, relative medication contribution, discharge readiness.
+
+Steroid-related bone disease clarification: confirmed osteoporosis/osteopenia reflects cumulative chronic steroid exposure but does not prove current symptoms are primarily caused by adrenal suppression. Current adrenal/steroid contribution remains an active interpretive question.
 
 Final friction table: Cardiology vs Nephrology for medication restart timing; Family vs Primary Team for discharge readiness; Endocrinology vs Primary Team for steroid interpretation and risk.
 
 Administrative deliverable decision: yes. At least one future task should involve transition of care, discharge planning, care coordination, or follow-up planning.
 
 Workflow umbrella: Acute Hospital Management, with subdomains of diagnosis, medication management, consultant synthesis, functional assessment, and disposition planning. Exact future task workflow lines must still use official tracker names.
+
+Deferred task-architecture watch items: AutoQC 2.107 workflow count and 2.108 administrative deliverable must be resolved during task architecture, not inside Governance Package v1.
 
 ## Locked Clinical Story Skeleton v1
 
@@ -280,7 +290,7 @@ Identity review addendum:
 
 ## Current State
 
-Brainstorm approved. Clinical Story Skeleton v1 ratified. Identity Package v1 locked. Governance Package v1 candidate-locked. Do not start World Spec drafting.
+Brainstorm approved. Clinical Story Skeleton v1 ratified. Identity Package v1 locked. Governance Package v1 ready for ratification review. Do not start World Spec drafting.
 
 Completed:
 
@@ -297,6 +307,7 @@ Completed:
 11. Identity Package v1 locked.
 12. Identity Package review addendum recorded without reopening identity values.
 13. Governance Package v1 candidate lock recorded.
+14. Governance Package v1 clarification recorded and status moved to ready for ratification review.
 
 Still pending before World Spec drafting:
 

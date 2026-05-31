@@ -2,7 +2,7 @@
 
 Date: 2026-05-31
 
-Status: CANDIDATE LOCK.
+Status: READY FOR RATIFICATION REVIEW.
 
 Purpose: formalize physician-approved governance architecture before World Spec construction.
 
@@ -56,7 +56,9 @@ Approved authority ordering:
 5. Family Reports.
 6. Patient Recollection.
 
-Implementation note: this is a governance hierarchy for resolving clinical documentation, functional/disposition evidence, and stakeholder reports during World Spec construction. It does not erase consultant disagreement; it defines how evidence should be interpreted when documents conflict.
+Implementation note: this is a governance hierarchy for role-based governance, disposition interpretation, functional/discharge evidence, stakeholder input, and decision ownership during World Spec construction.
+
+Operational rule: authority hierarchy resolves factual/documentation conflicts. Authority hierarchy does not resolve clinical recommendation disagreements. Consultant disagreements must be reconciled through evidence synthesis, timing, trends, patient status, and discharge safety, not by automatically deferring to the highest-ranked authority.
 
 ## 3. Master Source-of-Truth Hierarchy
 
@@ -66,8 +68,9 @@ Clinical facts:
 2. Verified Medication Reconciliation.
 3. Pharmacy History.
 4. Consultant Documentation.
-5. Family Report.
-6. Patient Recollection.
+5. Primary Care Documentation.
+6. Family Report.
+7. Patient Recollection.
 
 Preserved prednisone-specific hierarchy:
 
@@ -77,7 +80,9 @@ Preserved prednisone-specific hierarchy:
 4. Family report.
 5. Patient recollection.
 
-Implementation note: the master hierarchy governs general clinical facts. The prednisone hierarchy remains the more specific hierarchy for the steroid timeline/source-of-truth trap.
+Implementation note: the master hierarchy governs factual conflict resolution, especially medication history, outpatient records, consultant documentation, family reports, and patient recollection. The prednisone hierarchy remains the more specific hierarchy for the steroid timeline/source-of-truth trap.
+
+Authority hierarchy vs source-of-truth hierarchy: Authority Hierarchy is used for role-based governance, disposition interpretation, functional/discharge evidence, stakeholder input, and decision ownership. Source-of-Truth Hierarchy is used for factual conflict resolution. If both appear relevant, the World Spec must state which hierarchy governs the task or trap.
 
 ## 4. Confirmed Conditions
 
@@ -103,6 +108,8 @@ Implementation note: the master hierarchy governs general clinical facts. The pr
 - Discharge readiness.
 
 Implementation note: these are unresolved interpretive questions for the world design. They should remain clinically uncertain where appropriate and should not be converted into a single hidden diagnosis.
+
+Steroid-related bone disease clarification: confirmed osteoporosis/osteopenia reflects cumulative chronic steroid exposure. It does not prove that current symptoms are primarily caused by adrenal suppression. Current adrenal/steroid contribution remains an active interpretive question.
 
 ## 6. Final Friction Table
 
@@ -159,6 +166,12 @@ Subdomains:
 
 Implementation note: this is a governance umbrella for coherence. Final World Spec task workflow lines must still use exact approved tracker workflow names and must satisfy the 3-5 distinct catalog workflow constraint.
 
+Task-architecture watch items:
+
+- AutoQC 2.107 workflow count must be resolved during task architecture.
+- AutoQC 2.108 administrative deliverable must be secured during task architecture.
+- Do not attempt to solve final task workflow count or administrative deliverable design inside Governance Package v1.
+
 ## Governance Consistency Review
 
 ### VERIFIED
@@ -175,11 +188,31 @@ Action required: when World Spec drafting is authorized, ensure every named cons
 
 Finding: authority and source-of-truth hierarchies directly address source ambiguity and authority-trap risk.
 
-Evidence: the master hierarchy and preserved prednisone hierarchy specify how to interpret attending documentation, med rec, pharmacy history, consultant documentation, family report, and patient recollection.
+Evidence: the master hierarchy and preserved prednisone hierarchy specify how to interpret attending documentation, med rec, pharmacy history, consultant documentation, primary care documentation, family report, and patient recollection.
 
 Impact: supports AutoQC source-of-truth hierarchy requirements for authority traps.
 
 Action required: carry these hierarchies into Patient Profile / Clinical Complexity Overview when World Spec drafting is authorized.
+
+### VERIFIED
+
+Finding: PCP is now represented in the source-of-truth hierarchy.
+
+Evidence: Primary Care Documentation is placed after Consultant Documentation and before Family Report.
+
+Impact: PCP longitudinal information can be considered without creating a gap between the care team roster and factual hierarchy.
+
+Action required: later World Spec construction should use PCP documentation for longitudinal outpatient facts when appropriate.
+
+### VERIFIED
+
+Finding: authority hierarchy and source-of-truth hierarchy are explicitly distinguished.
+
+Evidence: Governance Package v1 now states Authority Hierarchy handles role-based governance, disposition interpretation, functional/discharge evidence, stakeholder input, and decision ownership, while Source-of-Truth Hierarchy handles factual conflict resolution.
+
+Impact: reduces risk of flattening consultant frictions into a single authority answer.
+
+Action required: later task/trap design should state which hierarchy governs when both are relevant.
 
 ### VERIFIED
 
@@ -233,6 +266,16 @@ Action required: during task architecture, use exact tracker workflow labels for
 
 ### PLAUSIBLE
 
+Finding: workflow count and administrative deliverable risks remain open task-architecture issues.
+
+Evidence: AutoQC 2.107 and 2.108 are watch items, but Governance Package v1 intentionally does not create final task specifications.
+
+Impact: this is appropriate now, but must be resolved before World Spec upload.
+
+Action required: address workflow count and administrative deliverable during task architecture, not in governance ratification.
+
+### PLAUSIBLE
+
 Finding: the authority hierarchy may require careful explanation because attending hospitalist and consulting attendings can reasonably disagree.
 
 Evidence: the world intentionally depends on consultant conflict; a rigid hierarchy could accidentally flatten that conflict.
@@ -265,4 +308,4 @@ Action required: stop before World Spec construction until Alexander explicitly 
 
 Governance Package v1
 
-Status: CANDIDATE LOCK
+Status: READY FOR RATIFICATION REVIEW
