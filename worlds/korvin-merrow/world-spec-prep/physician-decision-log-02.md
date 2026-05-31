@@ -16,6 +16,8 @@ Identity Package v1 artifact: `worlds/korvin-merrow/world-spec-prep/identity-pac
 
 Identity Package review addendum: `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md`
 
+Governance Package v1 candidate: `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`
+
 ## Locked Clinical Story Skeleton v1
 
 Patient:
@@ -227,3 +229,74 @@ Carry-forward implementation notes:
 - ARNI therapy should eventually have a coherent prior ACE-inhibitor transition history.
 - Baseline function, baseline creatinine, dry weight, and similar baseline anchors should be explicitly placed during Patient Profile / Clinical History design.
 - These notes do not reopen Identity Package v1 and do not authorize Governance Package work or World Spec drafting.
+
+## Governance Package v1 Candidate
+
+Status: CANDIDATE LOCK.
+
+Care team roster:
+
+- Primary Team: Hospitalist Service.
+- Consultants: Cardiology, Nephrology, Endocrinology.
+- Functional Team: Physical Therapy, Occupational Therapy.
+- Transition Team: Case Management, Social Work.
+- Stakeholders: Patient, Family/Caregiver, Primary Care Physician.
+
+Authority hierarchy:
+
+1. Attending Hospitalist.
+2. Consulting Attending Specialists.
+3. PT/OT Functional Assessments.
+4. Case Management / Social Work.
+5. Family Reports.
+6. Patient Recollection.
+
+Master source-of-truth hierarchy for clinical facts:
+
+1. Attending Documentation.
+2. Verified Medication Reconciliation.
+3. Pharmacy History.
+4. Consultant Documentation.
+5. Family Report.
+6. Patient Recollection.
+
+Preserve the previously ratified prednisone hierarchy:
+
+1. Rheumatology attending recommendation.
+2. Verified medication reconciliation.
+3. Pharmacy / refill history.
+4. Family report.
+5. Patient recollection.
+
+Confirmed conditions:
+
+- HFrEF.
+- CKD Stage 3.
+- Type 2 Diabetes.
+- CAD.
+- Hypertension.
+- Hyperlipidemia.
+- OSA.
+- Diabetic Neuropathy.
+- PMR.
+- Anemia of CKD.
+- Osteoporosis/Osteopenia.
+
+Presumed / active questions:
+
+- Current infection source.
+- Steroid contribution.
+- Adrenal suppression contribution.
+- Degree of dehydration.
+- Relative medication contribution.
+- Discharge readiness.
+
+Final friction table:
+
+- Cardiology vs Nephrology: medication restart timing.
+- Family vs Primary Team: discharge readiness.
+- Endocrinology vs Primary Team: steroid interpretation and risk.
+
+Administrative deliverable decision: YES. At least one future task should involve transition of care, discharge planning, care coordination, or follow-up planning.
+
+Workflow consolidation: use Acute Hospital Management as the single workflow umbrella, with subdomains of diagnosis, medication management, consultant synthesis, functional assessment, and disposition planning. Final task workflow lines must still use exact approved tracker names.

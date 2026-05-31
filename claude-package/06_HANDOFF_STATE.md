@@ -18,7 +18,7 @@ RL Studio:
 - Approval source: Slack / Stacey S
 - Reviewer message: "great job! I approved your brainstorm. Next steps are to move forward with world spec and file template development."
 
-Current state: Identity Package v1 locked / ready for Governance Package. World Spec drafting has not started and remains gated on explicit Alexander authorization.
+Current state: Governance Package v1 candidate lock / ready for next authorized World Spec preparation step. World Spec drafting has not started and remains gated on explicit Alexander authorization.
 
 ## Locked Decisions
 
@@ -118,6 +118,19 @@ Locked Identity Package v1:
 - Addendum notes are carry-forward implementation notes only: lisinopril cough is ACE-inhibitor intolerance; later medication history should explain prior ACE-inhibitor/ARNI transition coherently; baseline function, baseline creatinine, dry weight, and similar baseline anchors should be placed during Patient Profile / Clinical History design.
 - Do not reopen Identity Package v1.
 
+Governance Package v1 candidate:
+
+- Artifact: `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`.
+- Care team roster: Hospitalist Service; Cardiology; Nephrology; Endocrinology; Physical Therapy; Occupational Therapy; Case Management; Social Work; Patient; Family/Caregiver; Primary Care Physician.
+- Authority hierarchy: attending hospitalist > consulting attending specialists > PT/OT functional assessments > Case Management / Social Work > family reports > patient recollection.
+- Master clinical source-of-truth hierarchy: attending documentation > verified medication reconciliation > pharmacy history > consultant documentation > family report > patient recollection.
+- Preserve prednisone-specific hierarchy: rheumatology attending recommendation > verified medication reconciliation > pharmacy / refill history > family report > patient recollection.
+- Confirmed conditions: HFrEF, CKD Stage 3, Type 2 Diabetes, CAD, Hypertension, Hyperlipidemia, OSA, Diabetic Neuropathy, PMR, Anemia of CKD, Osteoporosis/Osteopenia.
+- Presumed / active questions: current infection source, steroid contribution, adrenal suppression contribution, degree of dehydration, relative medication contribution, discharge readiness.
+- Final friction table: Cardiology vs Nephrology for medication restart timing; Family vs Primary Team for discharge readiness; Endocrinology vs Primary Team for steroid interpretation and risk.
+- Administrative deliverable decision: yes.
+- Workflow umbrella: Acute Hospital Management. Exact future task workflow lines must still use official tracker names.
+
 ## Decisions Remaining
 
 Do not answer these without Alexander.
@@ -163,15 +176,15 @@ Use these as future World Spec priorities only after Brainstorm GO:
 
 ## Next Legal Action
 
-Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`, `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`, `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`, and `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md` for orientation.
+Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`, `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`, `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`, `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md`, and `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md` for orientation.
 
-Wait for Alexander to explicitly start Governance Package.
+Wait for Alexander to explicitly authorize the next World Spec preparation/construction step.
 
-If Alexander starts Governance Package:
+If Alexander starts the next World Spec preparation/construction step:
 
-1. Read `project/STATUS.md`, `project/PASS_PLAN.md`, `WORLD_SPEC_KICKOFF.md`, `physician-decision-log-02.md`, `clinical-story-skeleton-ratification.md`, and `identity-package-v1.md`.
-2. Use only locked physician decisions, the ratified Clinical Story Skeleton, locked Identity Package, and approved Brainstorm material.
-3. Make governance decisions only. Do not populate the official World Spec template until Alexander authorizes drafting.
+1. Read `project/STATUS.md`, `project/PASS_PLAN.md`, `WORLD_SPEC_KICKOFF.md`, `physician-decision-log-02.md`, `clinical-story-skeleton-ratification.md`, `identity-package-v1.md`, `identity-package-review-addendum.md`, and `governance-package-v1.md`.
+2. Use only locked physician decisions, the ratified Clinical Story Skeleton, locked Identity Package, Governance Package v1 candidate, and approved Brainstorm material.
+3. Do not populate the official World Spec template until Alexander authorizes drafting.
 
 If Alexander has not started Governance Package:
 
@@ -187,7 +200,7 @@ Do not:
 - draft the World Spec before explicit Alexander authorization;
 - revise the locked Clinical Story Skeleton without explicit Alexander approval;
 - revise Identity Package v1 without explicit Alexander approval;
-- start Governance Package before Alexander explicitly starts that phase;
+- change Governance Package v1 without Alexander approval;
 - populate the World Spec template before explicit Alexander authorization;
 - create Section 3 file inventory before explicit authorization;
 - create milestones before explicit authorization;

@@ -275,6 +275,50 @@ No single contributor is intended to explain the event.
 
 Potential contributors include poor intake, volume depletion, medication effects, neuropathy, deconditioning, infection physiology, and steroid-related physiology.
 
+## Governance Package v1 Candidate
+
+Artifact: `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`
+
+Status: CANDIDATE LOCK.
+
+Care team roster:
+
+- Primary Team: Hospitalist Service.
+- Consultants: Cardiology, Nephrology, Endocrinology.
+- Functional Team: Physical Therapy, Occupational Therapy.
+- Transition Team: Case Management, Social Work.
+- Stakeholders: Patient, Family/Caregiver, Primary Care Physician.
+
+Authority hierarchy:
+
+1. Attending Hospitalist.
+2. Consulting Attending Specialists.
+3. PT/OT Functional Assessments.
+4. Case Management / Social Work.
+5. Family Reports.
+6. Patient Recollection.
+
+Master source-of-truth hierarchy for clinical facts:
+
+1. Attending Documentation.
+2. Verified Medication Reconciliation.
+3. Pharmacy History.
+4. Consultant Documentation.
+5. Family Report.
+6. Patient Recollection.
+
+Preserve the prednisone-specific hierarchy: rheumatology attending recommendation > verified medication reconciliation > pharmacy / refill history > family report > patient recollection.
+
+Confirmed conditions: HFrEF, CKD Stage 3, Type 2 Diabetes, CAD, Hypertension, Hyperlipidemia, OSA, Diabetic Neuropathy, PMR, Anemia of CKD, Osteoporosis/Osteopenia.
+
+Presumed / active questions: current infection source, steroid contribution, adrenal suppression contribution, degree of dehydration, relative medication contribution, discharge readiness.
+
+Final friction table: Cardiology vs Nephrology for medication restart timing; Family vs Primary Team for discharge readiness; Endocrinology vs Primary Team for steroid interpretation and risk.
+
+Administrative deliverable decision: yes. At least one future task should involve transition of care, discharge planning, care coordination, or follow-up planning.
+
+Workflow umbrella: Acute Hospital Management, with subdomains of diagnosis, medication management, consultant synthesis, functional assessment, and disposition planning. Exact future task workflow lines must still use official tracker names.
+
 ## Locked World Tone
 
 The patient is medically improving but operationally dangerous to discharge.

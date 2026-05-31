@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-Identity Package v1 locked / ready for Governance Package.
+Governance Package v1 candidate lock / ready for next authorized World Spec preparation step.
 
 ## Brainstorm
 
@@ -26,8 +26,9 @@ Identity Package v1 locked / ready for Governance Package.
 - World Spec drafting: not started
 - Clinical Story Skeleton: v1 locked, reviewed, and ratified
 - Identity Package: v1 locked
+- Governance Package: v1 candidate lock
 - Official Claude World Spec session: pending
-- Current state: ready for Governance Package when Alexander explicitly starts that phase
+- Current state: Governance Package v1 candidate lock; next step requires explicit Alexander authorization
 - World Spec prep packet: created
 - Official World Spec template: saved locally
 - World Spec AutoQC prompt v6.3: saved locally
@@ -37,8 +38,9 @@ Identity Package v1 locked / ready for Governance Package.
 - Clinical Story Skeleton ratification: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`
 - Identity Package v1: `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`
 - Identity Package review addendum: `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md`
+- Governance Package v1: `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`
-- Next allowed action: begin Governance Package only when Alexander explicitly starts it
+- Next allowed action: continue only after Alexander explicitly authorizes the next World Spec preparation/construction step
 
 ## Tooling
 
@@ -53,7 +55,7 @@ Identity Package v1 locked / ready for Governance Package.
 - Do not draft World Spec before Alexander authorizes Pass 8.
 - Do not revise the locked Clinical Story Skeleton unless Alexander explicitly reopens it.
 - Do not reopen Identity Package v1; use the review addendum only as carry-forward implementation notes.
-- Do not begin Governance Package before Alexander explicitly starts that phase.
+- Do not change Governance Package v1 without Alexander approval.
 - Do not create milestones before Alexander authorizes that step.
 - Do not create file inventory before Alexander authorizes that step.
 - Do not modify Brainstorm unless new reviewer feedback arrives.

@@ -2,7 +2,7 @@
 
 Purpose: compressed Claude context for a fresh Project Sanctum session. Use this as operational context only; the full source of truth remains local under `reference/` and `worlds/korvin-merrow/`.
 
-Boundary: Brainstorm is approved after SEND BACK remediation. Clinical Story Skeleton v1 is ratified. Identity Package v1 is locked. Governance Package is next when Alexander explicitly authorizes it. World Spec drafting is not authorized until Alexander explicitly authorizes drafting.
+Boundary: Brainstorm is approved after SEND BACK remediation. Clinical Story Skeleton v1 is ratified. Identity Package v1 is locked. Governance Package v1 is candidate-locked. World Spec drafting is not authorized until Alexander explicitly authorizes drafting.
 
 ## Current World Concept
 
@@ -183,6 +183,42 @@ These are World Spec preparation risks, not authorization to change Brainstorm:
 - Task independence is a blocker under Check 2.40.
 - Failure Design tables need at least 5 grounded traps per task under Check 2.34, without inappropriate duplication under Check 2.91.
 
+## Governance Package v1 Candidate
+
+Artifact: `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`
+
+Status: CANDIDATE LOCK.
+
+Care team roster:
+
+- Hospitalist Service.
+- Cardiology.
+- Nephrology.
+- Endocrinology.
+- Physical Therapy.
+- Occupational Therapy.
+- Case Management.
+- Social Work.
+- Patient.
+- Family/Caregiver.
+- Primary Care Physician.
+
+Authority hierarchy: attending hospitalist > consulting attending specialists > PT/OT functional assessments > Case Management / Social Work > family reports > patient recollection.
+
+Master source-of-truth hierarchy for clinical facts: attending documentation > verified medication reconciliation > pharmacy history > consultant documentation > family report > patient recollection.
+
+Preserve prednisone-specific hierarchy: rheumatology attending recommendation > verified medication reconciliation > pharmacy / refill history > family report > patient recollection.
+
+Confirmed conditions: HFrEF, CKD Stage 3, Type 2 Diabetes, CAD, Hypertension, Hyperlipidemia, OSA, Diabetic Neuropathy, PMR, Anemia of CKD, Osteoporosis/Osteopenia.
+
+Presumed / active questions: current infection source, steroid contribution, adrenal suppression contribution, degree of dehydration, relative medication contribution, discharge readiness.
+
+Final friction table: Cardiology vs Nephrology for medication restart timing; Family vs Primary Team for discharge readiness; Endocrinology vs Primary Team for steroid interpretation and risk.
+
+Administrative deliverable decision: yes. At least one future task should involve transition of care, discharge planning, care coordination, or follow-up planning.
+
+Workflow umbrella: Acute Hospital Management, with subdomains of diagnosis, medication management, consultant synthesis, functional assessment, and disposition planning. Exact future task workflow lines must still use official tracker names.
+
 ## Locked Clinical Story Skeleton v1
 
 Status: ratified after review on 2026-05-31.
@@ -244,7 +280,7 @@ Identity review addendum:
 
 ## Current State
 
-Brainstorm approved. Clinical Story Skeleton v1 ratified. Identity Package v1 locked. Do not start World Spec drafting.
+Brainstorm approved. Clinical Story Skeleton v1 ratified. Identity Package v1 locked. Governance Package v1 candidate-locked. Do not start World Spec drafting.
 
 Completed:
 
@@ -260,10 +296,11 @@ Completed:
 10. Clinical Story Skeleton v1 ratified after Claude hostile review minor findings.
 11. Identity Package v1 locked.
 12. Identity Package review addendum recorded without reopening identity values.
+13. Governance Package v1 candidate lock recorded.
 
 Still pending before World Spec drafting:
 
-1. Governance Package.
+1. Next World Spec preparation/construction step explicitly authorized by Alexander.
 2. Official Claude World Spec session.
 3. Alexander authorization to draft the World Spec.
 

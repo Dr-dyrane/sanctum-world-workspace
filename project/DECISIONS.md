@@ -77,3 +77,28 @@ Boundaries:
 - Do not change MRN, DOB, age, anthropometrics, allergy, or code status.
 - Do not reopen Identity Package v1.
 - Do not start Governance Package or World Spec drafting from these notes.
+
+## 2026-05-31 - Governance Package v1 Candidate Lock
+
+Decision: Governance Package v1 is recorded as a candidate lock before World Spec construction.
+
+Artifact:
+
+- `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`
+
+Locked candidate architecture:
+
+- Care Team Roster: Hospitalist Service; Cardiology; Nephrology; Endocrinology; Physical Therapy; Occupational Therapy; Case Management; Social Work; Patient; Family/Caregiver; Primary Care Physician.
+- Authority Hierarchy: attending hospitalist > consulting attending specialists > PT/OT functional assessments > Case Management / Social Work > family reports > patient recollection.
+- Master Source-of-Truth Hierarchy for clinical facts: attending documentation > verified medication reconciliation > pharmacy history > consultant documentation > family report > patient recollection.
+- Prednisone-specific hierarchy remains rheumatology attending recommendation > verified medication reconciliation > pharmacy / refill history > family report > patient recollection.
+- Confirmed Conditions: HFrEF, CKD Stage 3, Type 2 Diabetes, CAD, Hypertension, Hyperlipidemia, OSA, Diabetic Neuropathy, PMR, Anemia of CKD, Osteoporosis/Osteopenia.
+- Presumed / Active Questions: current infection source, steroid contribution, adrenal suppression contribution, degree of dehydration, relative medication contribution, discharge readiness.
+- Final Friction Table: Cardiology vs Nephrology for medication restart timing; Family vs Primary Team for discharge readiness; Endocrinology vs Primary Team for steroid interpretation and risk.
+- Administrative Deliverable Decision: yes.
+- Workflow umbrella: Acute Hospital Management.
+
+Boundaries:
+
+- Do not draft World Spec yet.
+- Do not create milestones, final file inventory, task prompts, reference files, golden responses, grader guidance, or synthetic chart files.

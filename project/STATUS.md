@@ -2,7 +2,7 @@
 
 ## Current Phase
 
-Identity Package v1 locked / ready for Governance Package.
+Governance Package v1 candidate lock / ready for next authorized World Spec preparation step.
 
 ## Current World
 
@@ -10,7 +10,7 @@ Working title: Korvin Merrow World
 
 ## Current State
 
-Brainstorm Human Review returned GO from Stacey S after SEND BACK remediation. Reviewer approved the Korvin Merrow Brainstorm and indicated next steps are World Spec and file template development. World Spec kickoff is recorded in `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`. Clinical Story Skeleton v1 is locked, reviewed, and ratified at `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`. Identity Package v1 is locked at `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`. Durable physician decision record: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`. World Spec drafting has not started.
+Brainstorm Human Review returned GO from Stacey S after SEND BACK remediation. Reviewer approved the Korvin Merrow Brainstorm and indicated next steps are World Spec and file template development. World Spec kickoff is recorded in `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`. Clinical Story Skeleton v1 is locked, reviewed, and ratified at `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`. Identity Package v1 is locked at `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`. Governance Package v1 is candidate-locked at `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`. Durable physician decision record: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`. World Spec drafting has not started.
 
 Claude Identity Package hostile-review observations are recorded as carry-forward implementation notes in `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md`. Identity Package v1 remains locked.
 
@@ -18,7 +18,7 @@ Claude Identity Package hostile-review observations are recorded as carry-forwar
 
 Task ID: cyau8803
 
-Status: Brainstorm approved / Identity Package v1 locked
+Status: Brainstorm approved / Governance Package v1 candidate lock
 
 Original submission timestamp: 5/29/2026 2:49 PM PDT
 
@@ -28,19 +28,19 @@ Reviewer GO: Stacey S approved Brainstorm via Slack. Recorded in `worlds/korvin-
 
 ## Current Pass
 
-Pass 3 - Identity Package v1 locked.
+Governance Package v1 candidate lock.
 
 ## Next Pass
 
-Governance Package.
+Next authorized World Spec preparation step. World Spec drafting only after explicit Alexander authorization.
 
 ## Active Blocker
 
-No active reviewer blocker. Governance Package may begin when Alexander authorizes it. World Spec drafting, milestones, final file inventory, task prompts, golden responses, grader guidance, and synthetic file generation remain blocked.
+No active reviewer blocker. Governance Package v1 is recorded as a candidate lock. World Spec drafting, milestones, final file inventory, task prompts, golden responses, grader guidance, and synthetic file generation remain blocked.
 
 ## Current Git Checkpoint
 
-baseline workspace initialized
+checkpoint: create governance package v1 candidate
 
 ## Active Branch
 
@@ -56,7 +56,7 @@ Return to baseline commit if workflow becomes corrupted.
 
 ## Next Command For Codex
 
-Begin Governance Package only when Alexander authorizes it. Use `WORLD_SPEC_KICKOFF.md`, `physician-decision-log-02.md`, `clinical-story-skeleton-ratification.md`, and `identity-package-v1.md` for orientation. Do not draft World Spec, create milestones, or create file inventory before Alexander explicitly authorizes the relevant phase.
+Await Alexander's next explicit authorization. Use `WORLD_SPEC_KICKOFF.md`, `physician-decision-log-02.md`, `clinical-story-skeleton-ratification.md`, `identity-package-v1.md`, `identity-package-review-addendum.md`, and `governance-package-v1.md` for orientation. Do not draft World Spec, create milestones, or create file inventory before Alexander explicitly authorizes the relevant phase.
 
 ## Scope Guardrails
 

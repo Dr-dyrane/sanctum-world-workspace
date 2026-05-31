@@ -4,7 +4,7 @@ Purpose: compressed current state for Claude. Use `project/STATUS.md` and `docs/
 
 ## Project State
 
-Current phase: Identity Package v1 locked / ready for Governance Package.
+Current phase: Governance Package v1 candidate lock / ready for next authorized World Spec preparation step.
 
 Brainstorm:
 
@@ -22,7 +22,7 @@ Brainstorm:
 
 Current blocker:
 
-- No reviewer blocker. World Spec kickoff is recorded. Clinical Story Skeleton v1 is locked, reviewed, and ratified. Identity Package v1 is locked. Identity Package hostile-review addendum is recorded as carry-forward implementation notes only. Governance Package is the next legal phase when Alexander authorizes it. World Spec drafting remains gated on explicit Alexander authorization.
+- No reviewer blocker. World Spec kickoff is recorded. Clinical Story Skeleton v1 is locked, reviewed, and ratified. Identity Package v1 is locked. Identity Package hostile-review addendum is recorded as carry-forward implementation notes only. Governance Package v1 is candidate-locked. World Spec drafting remains gated on explicit Alexander authorization.
 
 Next legal action:
 
@@ -31,7 +31,7 @@ Next legal action:
 - Use `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md` for ratified governance/story-logic guardrails.
 - Use `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md` as the locked identity source.
 - Use `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md` for carry-forward implementation notes only; do not reopen locked identity values.
-- When Alexander explicitly starts Governance Package, proceed with governance decisions only.
+- Use `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md` as the candidate-locked governance source.
 - Do not revise the locked Clinical Story Skeleton or locked Identity Package, draft World Spec, create milestones, or create file inventory until Alexander explicitly starts/authorizes the relevant phase.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
 
@@ -84,6 +84,7 @@ Next legal action:
 - Ratification artifact created: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`.
 - Identity Package v1 locked: `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`.
 - Identity Package hostile-review addendum recorded: `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md`.
+- Governance Package v1 candidate-locked: `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`.
 
 ## Latest Git Checkpoints
 
@@ -105,7 +106,7 @@ Next legal action:
 ## Authorized Right Now
 
 - State synchronization and preparation.
-- Governance Package preparation when Alexander explicitly starts it.
+- Governance Package v1 consistency review and maintenance if Alexander requests it.
 - Preparation.
 - Auditing.
 - Checklist building.
@@ -120,6 +121,7 @@ Next legal action:
 - Governance Package work before Alexander explicitly starts that phase.
 - Revising Identity Package v1 without explicit Alexander approval.
 - Treating the Identity Package review addendum as permission to reopen MRN, DOB, age, anthropometrics, allergy, or code status.
+- Changing Governance Package v1 without Alexander approval.
 - World Spec drafting before explicit Alexander authorization.
 - Populating the World Spec template before explicit Alexander authorization.
 - Creating a final Section 3 World File Plan or file inventory.
@@ -167,6 +169,7 @@ Claude must not replace physician judgment or originate clinical design.
 - `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`
 - `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`
 - `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md`
+- `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`
 - `reference/world-spec-guidelines/08_autoqc_master_index.md`
 - `reference/world-spec-guidelines/09_world_spec_writer_playbook.md`
 - `project/WORKSPACE_FILE_MAP.md`

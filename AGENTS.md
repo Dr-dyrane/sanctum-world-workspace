@@ -120,6 +120,8 @@ Current locked story state: Clinical Story Skeleton v1 is ratified. The world is
 
 Current locked identity state: Identity Package v1 is locked. Claude Identity Package hostile-review observations are recorded only as carry-forward implementation notes in `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md`; do not reopen MRN, DOB, age, anthropometrics, allergy, or code status from those notes.
 
+Current governance state: Governance Package v1 is candidate-locked at `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`. Use it for care team roster, authority hierarchy, source-of-truth hierarchy, confirmed vs presumed condition split, final friction table, administrative deliverable decision, and workflow umbrella. Do not treat it as a World Spec draft, milestone list, task spec, or file inventory.
+
 Major clinical friction themes: emergency/inpatient stabilization and sepsis management; endocrinology concern for adrenal crisis/adrenal insufficiency; nephrology concern for kidney injury and medication safety; cardiology balancing long-term protective medications; family/caregiver concern that the patient has not returned to baseline despite medical stability.
 
 Design principle: do not make this a rare disease puzzle. Complexity comes from realistic medicine: common diseases, messy documentation, competing priorities, and evolving information.
