@@ -145,6 +145,7 @@ Current status: State synchronized / ready for Clinical Story Skeleton preparati
 | File | Role | Duplication note |
 | --- | --- | --- |
 | `worlds/korvin-merrow/world-spec-prep/autoqc-preflight-checklist.md` | Local preflight checklist. | Summary; exact check source is `08_autoqc_master_index.md`. |
+| `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-interview.md` | Clinical Story Skeleton physician interview framework. | Questions only; not the skeleton, not a spec draft, not a file inventory. |
 | `worlds/korvin-merrow/world-spec-prep/claude-review-triage.md` | Triage of Claude World Spec prep review. | Decision queue; not clinical content. |
 | `worlds/korvin-merrow/world-spec-prep/decision-register.md` | Prep decision register. | Use for pending/locked decisions after GO. |
 | `worlds/korvin-merrow/world-spec-prep/file-plan-planning.md` | File plan planning scaffold. | Not a final file inventory. |
