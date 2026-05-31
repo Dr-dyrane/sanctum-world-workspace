@@ -10,9 +10,9 @@ Working title: Korvin Merrow World
 
 ## Current State
 
-Brainstorm Human Review returned GO from Stacey S after SEND BACK remediation. Reviewer approved the Korvin Merrow Brainstorm and indicated next steps are World Spec and file template development. World Spec kickoff is recorded in `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`. Clinical Story Skeleton v1 is locked, reviewed, and ratified at `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`. Identity Package v1 is locked at `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`. Governance Package v1 is ratified at `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`, with clarifications recorded at `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md` and ratification recorded at `worlds/korvin-merrow/world-spec-prep/governance-package-ratification.md`. Key Milestones Calendar Skeleton v1 is locked at `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-skeleton-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-ratification.md`. Baseline Anchor Package v1 is in candidate review at `worlds/korvin-merrow/world-spec-prep/baseline-anchor-package-v1.md`. Durable physician decision record: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`. World Spec drafting has not started.
+Brainstorm Human Review returned GO from Stacey S after SEND BACK remediation. Reviewer approved the Korvin Merrow Brainstorm and indicated next steps are World Spec and file template development. World Spec kickoff is recorded in `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`. Clinical Story Skeleton v1 is locked, reviewed, and ratified at `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`. Identity Package v1 is locked at `worlds/korvin-merrow/world-spec-prep/locked/identity-package-v1.md`. Governance Package v1 is ratified at `worlds/korvin-merrow/world-spec-prep/locked/governance-package-v1.md`, with clarifications recorded at `worlds/korvin-merrow/world-spec-prep/reviews/governance-package-clarification.md` and ratification recorded at `worlds/korvin-merrow/world-spec-prep/ratifications/governance-package-ratification.md`. Key Milestones Calendar Skeleton v1 is locked at `worlds/korvin-merrow/world-spec-prep/locked/key-milestones-calendar-skeleton-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-prep/ratifications/key-milestones-calendar-ratification.md`. Baseline Anchor Package v1 is in candidate review at `worlds/korvin-merrow/world-spec-prep/candidate-review/baseline-anchor-package-v1.md`. Durable physician decision record: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`. World Spec drafting has not started.
 
-Claude Identity Package hostile-review observations are recorded as carry-forward implementation notes in `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md`. Identity Package v1 remains locked.
+Claude Identity Package hostile-review observations are recorded as carry-forward implementation notes in `worlds/korvin-merrow/world-spec-prep/reviews/identity-package-review-addendum.md`. Identity Package v1 remains locked.
 
 ## RL Studio Submission
 
@@ -40,7 +40,7 @@ No active reviewer blocker. Governance Package v1 is ratified, the Physician Arc
 
 ## Current Git Checkpoint
 
-checkpoint: ratify calendar and prepare baseline anchors
+checkpoint: reorganize world spec prep lifecycle folders
 
 ## Active Branch
 

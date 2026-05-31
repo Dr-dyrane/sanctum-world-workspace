@@ -1,6 +1,6 @@
 # Korvin Merrow World
 
-Current state: Identity Package v1 locked / ready for Governance Package.
+Current state: World Spec Construction Preparation / calendar locked / Baseline Anchor Package v1 candidate review.
 
 Start here only after reading `project/STATUS.md`.
 
@@ -12,14 +12,16 @@ Start here only after reading `project/STATUS.md`.
 - `remediation/`: reviewer SEND BACK remediation decision briefs and compliance review.
 - `reviews/`: external/human/AutoQC review artifacts and reviewer feedback history.
 - `submission/`: RL Studio submission artifacts.
-- `world-spec-prep/`: World Spec preparation cockpit, decision logs, ratification records, and planning scaffolds.
+- `world-spec-prep/`: World Spec preparation cockpit plus lifecycle subfolders for locked decisions, candidate review, ratifications, reviews, decision logs, and planning scaffolds.
 
 ## Active Entry Points
 
 - `world-spec-prep/WORLD_SPEC_KICKOFF.md`
-- `world-spec-prep/identity-package-v1.md`
-- `world-spec-prep/physician-decision-log-02.md`
-- `world-spec-prep/clinical-story-skeleton-ratification.md`
+- `world-spec-prep/candidate-review/baseline-anchor-package-v1.md`
+- `world-spec-prep/locked/identity-package-v1.md`
+- `world-spec-prep/locked/key-milestones-calendar-skeleton-v1.md`
+- `world-spec-prep/decision-logs/physician-decision-log-02.md`
+- `world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`
 - `active/brainstorm.md`
 
 Do not draft World Spec, create file inventory, create task prompts, write golden responses, or write grader guidance until Alexander explicitly authorizes the relevant phase.

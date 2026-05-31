@@ -13,22 +13,22 @@ For a new collaborator or new AI session, read in this order:
 1. `project/STATUS.md` for live state and phase gate.
 2. `project/WORKSPACE_FILE_MAP.md` for file locations and duplication risks.
 3. `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md` for the active World Spec cockpit.
-4. `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md` for locked identity values.
-5. `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md` for identity implementation notes that do not reopen Identity Package v1.
-6. `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md` for ratified governance architecture.
-7. `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md` for accepted governance clarifications.
-8. `worlds/korvin-merrow/world-spec-prep/governance-package-ratification.md` for governance ratification and completed architecture layer status.
-9. `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-skeleton-v1.md` for the locked canonical date framework.
-10. `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-ratification.md` for calendar ratification and +7/+30 doctrine.
-11. `worlds/korvin-merrow/world-spec-prep/baseline-anchor-package-v1.md` for candidate baseline anchors awaiting physician review.
-12. `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions.
+4. `worlds/korvin-merrow/world-spec-prep/locked/identity-package-v1.md` for locked identity values.
+5. `worlds/korvin-merrow/world-spec-prep/reviews/identity-package-review-addendum.md` for identity implementation notes that do not reopen Identity Package v1.
+6. `worlds/korvin-merrow/world-spec-prep/locked/governance-package-v1.md` for ratified governance architecture.
+7. `worlds/korvin-merrow/world-spec-prep/reviews/governance-package-clarification.md` for accepted governance clarifications.
+8. `worlds/korvin-merrow/world-spec-prep/ratifications/governance-package-ratification.md` for governance ratification and completed architecture layer status.
+9. `worlds/korvin-merrow/world-spec-prep/locked/key-milestones-calendar-skeleton-v1.md` for the locked canonical date framework.
+10. `worlds/korvin-merrow/world-spec-prep/ratifications/key-milestones-calendar-ratification.md` for calendar ratification and +7/+30 doctrine.
+11. `worlds/korvin-merrow/world-spec-prep/candidate-review/baseline-anchor-package-v1.md` for candidate baseline anchors awaiting physician review.
+12. `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions.
 13. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
 
 Do not start by opening every prep file. Most prep files are supporting memory, not active instructions.
 
 ## Hygiene Audit 2026-05-31
 
-Status: restructured into junction folders and purpose folders.
+Status: restructured into junction folders, purpose folders, and World Spec prep lifecycle folders.
 
 Findings:
 
@@ -37,6 +37,7 @@ Findings:
 - `tmp/` contains generated render artifacts and is ignored by git.
 - `reference/` is now a junction folder with source files moved into `reference/source/`.
 - `worlds/korvin-merrow/` is now a junction folder with one README and purpose subfolders.
+- World Spec prep artifacts are clustered by lifecycle stage so candidate, locked, ratified, review, decision-log, and planning-scaffold files do not sit in one flat folder.
 - Several files intentionally overlap by lifecycle stage, especially Brainstorm history/reviews and World Spec prep/checklist material.
 - Do not add new audit or navigation docs unless an existing map/status file cannot carry the information.
 
@@ -57,11 +58,11 @@ Reviewed for duplicate-purpose files:
 
 - `project/STATUS.md` and `docs/status-dashboard.md`: keep both. `STATUS.md` is operational source of truth; dashboard is human-readable summary.
 - `project/WORKSPACE_FILE_MAP.md` and root `README.md`: keep both. README orients; file map governs placement and duplication.
-- `worlds/korvin-merrow/active/clinical-logic.md`, `world-spec-prep/physician-decision-log-02.md`, and `world-spec-prep/clinical-story-skeleton-ratification.md`: keep all. Clinical logic is evolving reasoning; decision log is durable physician record; ratification is review resolution.
+- `worlds/korvin-merrow/active/clinical-logic.md`, `world-spec-prep/decision-logs/physician-decision-log-02.md`, and `world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`: keep all. Clinical logic is evolving reasoning; decision log is durable physician record; ratification is review resolution.
 - `reference/world-spec-guidelines/04_world_spec_autoqc_requirements.md`, `08_autoqc_master_index.md`, and `09_world_spec_writer_playbook.md`: keep all. `08` is exact check index; `09` is authoring workflow; `04` is older summary reference.
 - `claude-package/*`: keep as a separate compressed handoff package because Claude Project context has different constraints than local Codex continuity.
-- `worlds/korvin-merrow/active/frictions.md` and `world-spec-prep/friction-to-task-map.md`: keep for now. The active file is a placeholder; the prep map is planning substrate.
-- `worlds/korvin-merrow/active/traps.md` and `world-spec-prep/trap-to-file-map.md`: keep for now. The active file is a placeholder; the prep map is planning substrate.
+- `worlds/korvin-merrow/active/frictions.md` and `world-spec-prep/planning-scaffolds/friction-to-task-map.md`: keep for now. The active file is a placeholder; the prep map is planning substrate.
+- `worlds/korvin-merrow/active/traps.md` and `world-spec-prep/planning-scaffolds/trap-to-file-map.md`: keep for now. The active file is a placeholder; the prep map is planning substrate.
 - Historical Brainstorm artifacts in `history/` and review artifacts in `reviews/`: keep separate to preserve audit trail.
 
 ## Root
@@ -221,41 +222,51 @@ Reviewed for duplicate-purpose files:
 
 ## Korvin Merrow World Spec Prep
 
+Lifecycle clustering:
+
+- `WORLD_SPEC_KICKOFF.md`: the only root cockpit file in `world-spec-prep/`.
+- `candidate-review/`: artifacts awaiting physician decision or lock.
+- `locked/`: locked architecture packages and canonical frameworks.
+- `ratifications/`: formal ratification records.
+- `reviews/`: review findings, hostile reviews, clarifications, and addenda.
+- `decision-logs/`: durable physician/project decision records.
+- `planning-scaffolds/`: temporary scaffolds and maps that are not final deliverables.
+
 | File | Role | Duplication note |
 | --- | --- | --- |
-| `worlds/korvin-merrow/world-spec-prep/autoqc-preflight-checklist.md` | Local preflight checklist. | Summary; exact check source is `08_autoqc_master_index.md`. |
-| `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-interview.md` | Clinical Story Skeleton physician interview framework. | Historical interview scaffold; skeleton now locked in decision log 02. |
-| `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-review.md` | Review of locked Clinical Story Skeleton v1. | Recommends GO to Identity Package; not a World Spec draft. |
-| `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md` | Ratification of Clinical Story Skeleton v1 after Claude hostile review minor findings. | Governance/story-logic guardrails only; not a narrative rewrite or World Spec draft. |
-| `worlds/korvin-merrow/world-spec-prep/claude-review-triage.md` | Historical pre-GO triage of Claude World Spec prep review. | Some wait-for-GO language is superseded; use status/kickoff for live state. |
-| `worlds/korvin-merrow/world-spec-prep/decision-register.md` | Prep decision register. | Use for pending/locked decisions after GO. |
-| `worlds/korvin-merrow/world-spec-prep/file-plan-planning.md` | File plan planning scaffold. | Not a final file inventory. |
-| `worlds/korvin-merrow/world-spec-prep/friction-to-task-map.md` | Friction/task planning map. | Planning only. |
-| `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md` | Accepted governance clarifications from Claude hostile review. | Clarification layer only; no redesign, task architecture, or World Spec drafting. |
-| `worlds/korvin-merrow/world-spec-prep/governance-package-ratification.md` | Governance ratification record and completed architecture layer status. | Does not authorize drafting, task architecture, milestones, file inventory, prompts, or synthetic files. |
-| `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md` | Ratified governance architecture: care team, authority hierarchy, source-of-truth hierarchy, condition split, friction table, admin deliverable decision, and workflow umbrella. | Not a World Spec draft, task spec, milestone list, or file inventory. |
-| `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md` | Locked identity and demographic/compliance package. | Use as identity source of truth; not a World Spec draft. |
-| `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md` | Claude hostile-review observations recorded as carry-forward implementation notes. | Does not reopen Identity Package v1; use only for later Patient Profile / Clinical History implementation. |
-| `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-ratification.md` | Calendar ratification record and +7/+30-from-discharge doctrine. | Does not create clinical milestone content, tasks, or files. |
-| `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-skeleton-v1.md` | Locked canonical date framework for admission, HD1-HD6, world snapshot, discharge anchor, +7 anchor, and +30 anchor. | Timeline framework only; not a World Spec draft, final milestone table, task architecture, or file inventory. |
-| `worlds/korvin-merrow/world-spec-prep/baseline-anchor-package-v1.md` | Candidate baseline comparator values and baseline function anchors awaiting physician review. | Not admission labs, hospital-course trends, file inventory, task architecture, or World Spec prose. |
-| `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md` | Durable post-kickoff physician decision record. | Historical state sync record; superseded for skeleton lock by decision log 02. |
-| `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md` | Durable Clinical Story Skeleton v1 ratification record. | Use before Identity Package; not a draft spec or file inventory. |
-| `worlds/korvin-merrow/world-spec-prep/post-go-interview-plan.md` | Interview sequence after Brainstorm GO. | This file; do not use before GO except for prep. |
-| `worlds/korvin-merrow/world-spec-prep/readiness-map.md` | World Spec readiness map. | Prep status. |
-| `worlds/korvin-merrow/world-spec-prep/self-containment-matrix.md` | Self-containment planning scaffold. | Not final traceability proof. |
-| `worlds/korvin-merrow/world-spec-prep/task-spec-planning.md` | Task spec planning scaffold. | No final prompts. |
-| `worlds/korvin-merrow/world-spec-prep/timeline-planning.md` | Timeline planning scaffold. | No final dates until physician approval. |
-| `worlds/korvin-merrow/world-spec-prep/trap-to-file-map.md` | Trap-to-file planning scaffold. | Not a Section 3 file inventory. |
+| `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/autoqc-preflight-checklist.md` | Local preflight checklist. | Summary; exact check source is `08_autoqc_master_index.md`. |
+| `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/clinical-story-skeleton-interview.md` | Clinical Story Skeleton physician interview framework. | Historical interview scaffold; skeleton now locked in decision log 02. |
+| `worlds/korvin-merrow/world-spec-prep/reviews/clinical-story-skeleton-review.md` | Review of locked Clinical Story Skeleton v1. | Recommends GO to Identity Package; not a World Spec draft. |
+| `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-skeleton-ratification.md` | Ratification of Clinical Story Skeleton v1 after Claude hostile review minor findings. | Governance/story-logic guardrails only; not a narrative rewrite or World Spec draft. |
+| `worlds/korvin-merrow/world-spec-prep/reviews/claude-review-triage.md` | Historical pre-GO triage of Claude World Spec prep review. | Some wait-for-GO language is superseded; use status/kickoff for live state. |
+| `worlds/korvin-merrow/world-spec-prep/decision-logs/decision-register.md` | Prep decision register. | Use for pending/locked decisions after GO. |
+| `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/file-plan-planning.md` | File plan planning scaffold. | Not a final file inventory. |
+| `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/friction-to-task-map.md` | Friction/task planning map. | Planning only. |
+| `worlds/korvin-merrow/world-spec-prep/reviews/governance-package-clarification.md` | Accepted governance clarifications from Claude hostile review. | Clarification layer only; no redesign, task architecture, or World Spec drafting. |
+| `worlds/korvin-merrow/world-spec-prep/ratifications/governance-package-ratification.md` | Governance ratification record and completed architecture layer status. | Does not authorize drafting, task architecture, milestones, file inventory, prompts, or synthetic files. |
+| `worlds/korvin-merrow/world-spec-prep/locked/governance-package-v1.md` | Ratified governance architecture: care team, authority hierarchy, source-of-truth hierarchy, condition split, friction table, admin deliverable decision, and workflow umbrella. | Not a World Spec draft, task spec, milestone list, or file inventory. |
+| `worlds/korvin-merrow/world-spec-prep/locked/identity-package-v1.md` | Locked identity and demographic/compliance package. | Use as identity source of truth; not a World Spec draft. |
+| `worlds/korvin-merrow/world-spec-prep/reviews/identity-package-review-addendum.md` | Claude hostile-review observations recorded as carry-forward implementation notes. | Does not reopen Identity Package v1; use only for later Patient Profile / Clinical History implementation. |
+| `worlds/korvin-merrow/world-spec-prep/ratifications/key-milestones-calendar-ratification.md` | Calendar ratification record and +7/+30-from-discharge doctrine. | Does not create clinical milestone content, tasks, or files. |
+| `worlds/korvin-merrow/world-spec-prep/locked/key-milestones-calendar-skeleton-v1.md` | Locked canonical date framework for admission, HD1-HD6, world snapshot, discharge anchor, +7 anchor, and +30 anchor. | Timeline framework only; not a World Spec draft, final milestone table, task architecture, or file inventory. |
+| `worlds/korvin-merrow/world-spec-prep/candidate-review/baseline-anchor-package-v1.md` | Candidate baseline comparator values and baseline function anchors awaiting physician review. | Not admission labs, hospital-course trends, file inventory, task architecture, or World Spec prose. |
+| `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-01.md` | Durable post-kickoff physician decision record. | Historical state sync record; superseded for skeleton lock by decision log 02. |
+| `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` | Durable Clinical Story Skeleton v1 ratification record. | Use before Identity Package; not a draft spec or file inventory. |
+| `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/post-go-interview-plan.md` | Interview sequence after Brainstorm GO. | This file; do not use before GO except for prep. |
+| `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/readiness-map.md` | World Spec readiness map. | Prep status. |
+| `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/self-containment-matrix.md` | Self-containment planning scaffold. | Not final traceability proof. |
+| `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-spec-planning.md` | Task spec planning scaffold. | No final prompts. |
+| `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/timeline-planning.md` | Timeline planning scaffold. | No final dates until physician approval. |
+| `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/trap-to-file-map.md` | Trap-to-file planning scaffold. | Not a Section 3 file inventory. |
 | `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md` | Active World Spec kickoff cockpit and workspace bloat/doctrine audit note. | Updated with ratified Clinical Story Skeleton state; not a draft spec. |
 
 ## Duplication Watchlist
 
 - `brainstorm.md`, `submission/Korvin_Merrow_Brainstorm.docx`, and `brainstorm-development-history.md` intentionally overlap. During SEND BACK remediation, only reviewer-required changes should be made.
 - `reference/world-spec-guidelines/04_world_spec_autoqc_requirements.md`, `08_autoqc_master_index.md`, and `09_world_spec_writer_playbook.md` overlap by design. Use `08` for exact checks and `09` for workflow.
-- `task-map.md` and `world-spec-prep/task-spec-planning.md` overlap by design. `task-map.md` is Brainstorm-level; `task-spec-planning.md` is World Spec prep.
-- `traps.md`, `trap-to-file-map.md`, and future Section 3 work may overlap. Do not convert planning maps into final file inventory before GO.
-- `frictions.md` and `friction-to-task-map.md` overlap. Use them later to build the Decision Friction Table only after GO.
+- `task-map.md` and `world-spec-prep/planning-scaffolds/task-spec-planning.md` overlap by design. `task-map.md` is Brainstorm-level; `task-spec-planning.md` is World Spec prep.
+- `traps.md`, `planning-scaffolds/trap-to-file-map.md`, and future Section 3 work may overlap. Do not convert planning maps into final file inventory before GO.
+- `frictions.md` and `planning-scaffolds/friction-to-task-map.md` overlap. Use them later to build the Decision Friction Table only after GO.
 - `claude-package/*` is a compressed Claude context copy. Do not treat it as the current source of truth.
 - `WORLD_SPEC_KICKOFF.md` now reduces navigation bloat by serving as the active cockpit. Older prep docs remain supporting references.
 

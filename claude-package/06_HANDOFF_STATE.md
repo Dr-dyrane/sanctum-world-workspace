@@ -73,7 +73,7 @@ Post-kickoff physician-locked decisions:
 - World tone: medically improving but operationally dangerous discharge.
 - Primary failure target: functional decline, disposition safety, discharge readiness reasoning.
 - Complexity targets: exceed reviewer minimums; target 12-15 comorbidities and 18-22 medications.
-- Durable record: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md`.
+- Durable record: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-01.md`.
 
 Locked Clinical Story Skeleton v1:
 
@@ -87,9 +87,9 @@ Locked Clinical Story Skeleton v1:
 - Discharge state: infection, AKI, hemodynamics, mental status, and oral intake improved, while functional reserve, medication restart strategy, steroid interpretation, family concern, and disposition risk remain unresolved.
 - Primary failure target: disposition safety, functional decline recognition, and discharge-readiness reasoning.
 - Near-fall framework: multi-factorial and not attributable to a single cause.
-- Review artifact: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-review.md`.
-- Lock record: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`.
-- Ratification artifact: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`.
+- Review artifact: `worlds/korvin-merrow/world-spec-prep/reviews/clinical-story-skeleton-review.md`.
+- Lock record: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`.
+- Ratification artifact: `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`.
 
 Ratified governance/story-logic guardrails:
 
@@ -111,18 +111,18 @@ Locked Identity Package v1:
 - BMI: 30.6.
 - Allergy: Lisinopril (cough).
 - Code Status: Full Code.
-- Artifact: `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`.
+- Artifact: `worlds/korvin-merrow/world-spec-prep/locked/identity-package-v1.md`.
 - Age 62 is consistent with DOB for a 2026 encounter after 2026-02-18.
 - BMI 30.6 is consistent with 97 kg and 178 cm.
-- Review addendum: `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md`.
+- Review addendum: `worlds/korvin-merrow/world-spec-prep/reviews/identity-package-review-addendum.md`.
 - Addendum notes are carry-forward implementation notes only: lisinopril cough is ACE-inhibitor intolerance; later medication history should explain prior ACE-inhibitor/ARNI transition coherently; baseline function, baseline creatinine, dry weight, and similar baseline anchors should be placed during Patient Profile / Clinical History design.
 - Do not reopen Identity Package v1.
 
 Governance Package v1:
 
-- Artifact: `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`.
-- Clarification artifact: `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md`.
-- Ratification artifact: `worlds/korvin-merrow/world-spec-prep/governance-package-ratification.md`.
+- Artifact: `worlds/korvin-merrow/world-spec-prep/locked/governance-package-v1.md`.
+- Clarification artifact: `worlds/korvin-merrow/world-spec-prep/reviews/governance-package-clarification.md`.
+- Ratification artifact: `worlds/korvin-merrow/world-spec-prep/ratifications/governance-package-ratification.md`.
 - Status: RATIFIED.
 - Care team roster: Hospitalist Service; Cardiology; Nephrology; Endocrinology; Physical Therapy; Occupational Therapy; Case Management; Social Work; Patient; Family/Caregiver; Primary Care Physician.
 - Authority hierarchy: attending hospitalist > consulting attending specialists > PT/OT functional assessments > Case Management / Social Work > family reports > patient recollection.
@@ -150,7 +150,7 @@ Physician Architecture Layer Status: COMPLETE.
 
 Key Milestones Calendar Skeleton v1:
 
-- Artifact: `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-skeleton-v1.md`.
+- Artifact: `worlds/korvin-merrow/world-spec-prep/locked/key-milestones-calendar-skeleton-v1.md`.
 - Status: LOCKED.
 - Approximate decline begins: 04/27/2026.
 - Admission / HD1: 05/18/2026.
@@ -159,12 +159,12 @@ Key Milestones Calendar Skeleton v1:
 - +7 day anchor: 05/31/2026.
 - +30 day anchor: 06/23/2026.
 - Locked doctrine: +7 and +30 anchors are measured from discharge anchor 05/24/2026, not from HD6 world close.
-- Ratification artifact: `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-ratification.md`.
+- Ratification artifact: `worlds/korvin-merrow/world-spec-prep/ratifications/key-milestones-calendar-ratification.md`.
 - Date framework only; not a final milestone table, task architecture, file inventory, or World Spec draft.
 
 Baseline Anchor Package v1:
 
-- Artifact: `worlds/korvin-merrow/world-spec-prep/baseline-anchor-package-v1.md`.
+- Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/baseline-anchor-package-v1.md`.
 - Status: CANDIDATE REVIEW.
 - Candidate anchors include baseline functional status, creatinine, eGFR, hemoglobin, A1c, dry weight, mobility, cognition, medication-management ability, and home support.
 - These are not admission labs, hospital-course trends, final file inventory, task architecture, or World Spec prose.
@@ -214,7 +214,7 @@ Use these as future World Spec priorities only after Brainstorm GO:
 
 ## Next Legal Action
 
-Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`, `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`, `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`, `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md`, `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md`, `worlds/korvin-merrow/world-spec-prep/governance-package-ratification.md`, `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-skeleton-v1.md`, `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-ratification.md`, and `worlds/korvin-merrow/world-spec-prep/baseline-anchor-package-v1.md` for orientation.
+Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`, `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/identity-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/reviews/identity-package-review-addendum.md`, `worlds/korvin-merrow/world-spec-prep/locked/governance-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/reviews/governance-package-clarification.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/governance-package-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/key-milestones-calendar-skeleton-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/key-milestones-calendar-ratification.md`, and `worlds/korvin-merrow/world-spec-prep/candidate-review/baseline-anchor-package-v1.md` for orientation.
 
 Wait for Alexander's physician review of Baseline Anchor Package v1 or another explicitly authorized preparation step.
 

@@ -8,8 +8,8 @@ This ratification applies implementation guardrails at the governance/story-logi
 
 ## Source Inputs
 
-- `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-review.md`
-- `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`
+- `worlds/korvin-merrow/world-spec-prep/reviews/clinical-story-skeleton-review.md`
+- `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 - `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`
 - `worlds/korvin-merrow/active/clinical-logic.md`
 - Claude hostile review findings provided by Alexander

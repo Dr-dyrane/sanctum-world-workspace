@@ -146,11 +146,11 @@ The decline includes worsening weakness, reduced oral intake, near-fall/lighthea
 
 Status: RATIFIED after review on 2026-05-31.
 
-Review artifact: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-review.md`
+Review artifact: `worlds/korvin-merrow/world-spec-prep/reviews/clinical-story-skeleton-review.md`
 
-Decision log: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`
+Decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 
-Ratification artifact: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`
+Ratification artifact: `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`
 
 Baseline:
 
@@ -277,7 +277,7 @@ Potential contributors include poor intake, volume depletion, medication effects
 
 ## Governance Package v1 Candidate
 
-Artifact: `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`
+Artifact: `worlds/korvin-merrow/world-spec-prep/locked/governance-package-v1.md`
 
 Status: RATIFIED.
 
@@ -340,7 +340,7 @@ Next legal phase recommendation: World Spec Construction Preparation.
 
 ## Key Milestones Calendar Skeleton v1
 
-Artifact: `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-skeleton-v1.md`
+Artifact: `worlds/korvin-merrow/world-spec-prep/locked/key-milestones-calendar-skeleton-v1.md`
 
 Status: LOCKED.
 
@@ -362,13 +362,13 @@ Canonical date framework:
 
 This skeleton is a date framework only. It does not create clinical milestone content, task architecture, file inventory, prompts, goldens, grader guidance, or synthetic files.
 
-Ratification: `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-ratification.md`
+Ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/key-milestones-calendar-ratification.md`
 
 Locked doctrine: +7 and +30 anchors are measured from discharge anchor 05/24/2026, not from HD6 world close.
 
 ## Baseline Anchor Package v1
 
-Artifact: `worlds/korvin-merrow/world-spec-prep/baseline-anchor-package-v1.md`
+Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/baseline-anchor-package-v1.md`
 
 Status: CANDIDATE REVIEW.
 

@@ -8,6 +8,6 @@ Current authoritative friction sources:
 
 - Approved Brainstorm: `worlds/korvin-merrow/active/brainstorm.md`
 - World Spec cockpit: `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`
-- Ratified skeleton guardrails: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`
+- Ratified skeleton guardrails: `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`
 
 This file should be populated only when Alexander authorizes the relevant World Spec governance or Decision Friction Table work.

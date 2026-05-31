@@ -17,7 +17,7 @@ Status:
 - Brainstorm approved.
 - Brainstorm remediation complete.
 - Move from Brainstorm remediation to World Spec and file template development.
-- World Spec drafting starts only after explicit Alexander authorization and using `worlds/korvin-merrow/world-spec-prep/post-go-interview-plan.md`.
+- World Spec drafting starts only after explicit Alexander authorization and using `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/post-go-interview-plan.md`.
 
 Review artifact: `worlds/korvin-merrow/reviews/reviewer-go-01.md`
 

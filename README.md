@@ -87,6 +87,12 @@ worlds/
     reviews/
     submission/
     world-spec-prep/
+      candidate-review/
+      decision-logs/
+      locked/
+      planning-scaffolds/
+      ratifications/
+      reviews/
 ```
 
 ## Start Here
@@ -96,7 +102,7 @@ For a new collaborator or a future AI session, use this order:
 1. [project/STATUS.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/project/STATUS.md>) for live state.
 2. [project/WORKSPACE_FILE_MAP.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/project/WORKSPACE_FILE_MAP.md>) for where things live and what not to duplicate.
 3. [worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md>) for the current World Spec cockpit.
-4. [worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md>) for the ratified Clinical Story Skeleton.
+4. [worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md>) for the ratified Clinical Story Skeleton.
 
 Do not start by browsing every prep file. Most prep files are supporting memory, not active instructions.
 

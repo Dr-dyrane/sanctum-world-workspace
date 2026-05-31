@@ -10,9 +10,9 @@ Recommendation: GO to Identity Package and Governance Package preparation.
 
 Artifacts:
 
-- `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-review.md`
-- `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`
-- `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`
+- `worlds/korvin-merrow/world-spec-prep/reviews/clinical-story-skeleton-review.md`
+- `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`
+- `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 
 Ratified guardrails:
 
@@ -33,7 +33,7 @@ Decision: Identity Package v1 for Korvin Merrow is locked.
 
 Artifact:
 
-- `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`
+- `worlds/korvin-merrow/world-spec-prep/locked/identity-package-v1.md`
 
 Locked values:
 
@@ -64,7 +64,7 @@ Decision: Claude Identity Package hostile-review observations are accepted as ca
 
 Artifact:
 
-- `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md`
+- `worlds/korvin-merrow/world-spec-prep/reviews/identity-package-review-addendum.md`
 
 Carry-forward notes:
 
@@ -84,9 +84,9 @@ Decision: Governance Package v1 is ratified before World Spec construction. Phys
 
 Artifact:
 
-- `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`
-- `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md`
-- `worlds/korvin-merrow/world-spec-prep/governance-package-ratification.md`
+- `worlds/korvin-merrow/world-spec-prep/locked/governance-package-v1.md`
+- `worlds/korvin-merrow/world-spec-prep/reviews/governance-package-clarification.md`
+- `worlds/korvin-merrow/world-spec-prep/ratifications/governance-package-ratification.md`
 
 Locked candidate architecture:
 
@@ -140,8 +140,8 @@ Decision: Key Milestones Calendar Skeleton v1 is the locked canonical date frame
 
 Artifact:
 
-- `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-skeleton-v1.md`
-- `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-ratification.md`
+- `worlds/korvin-merrow/world-spec-prep/locked/key-milestones-calendar-skeleton-v1.md`
+- `worlds/korvin-merrow/world-spec-prep/ratifications/key-milestones-calendar-ratification.md`
 
 Canonical anchors:
 
@@ -172,7 +172,7 @@ Decision: Baseline Anchor Package v1 is prepared for physician review as compara
 
 Artifact:
 
-- `worlds/korvin-merrow/world-spec-prep/baseline-anchor-package-v1.md`
+- `worlds/korvin-merrow/world-spec-prep/candidate-review/baseline-anchor-package-v1.md`
 
 Candidate anchors:
 

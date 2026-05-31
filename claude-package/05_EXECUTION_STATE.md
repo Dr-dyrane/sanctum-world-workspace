@@ -26,16 +26,16 @@ Current blocker:
 
 Next legal action:
 
-- Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md` and `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md` for orientation.
-- Use `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-review.md` and `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md` as the locked Clinical Story Skeleton v1 record.
-- Use `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md` for ratified governance/story-logic guardrails.
-- Use `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md` as the locked identity source.
-- Use `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md` for carry-forward implementation notes only; do not reopen locked identity values.
-- Use `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md` as the ratified governance source.
-- Use `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md` for accepted governance clarifications.
-- Use `worlds/korvin-merrow/world-spec-prep/governance-package-ratification.md` for governance ratification status.
-- Use `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-skeleton-v1.md` for the canonical date framework and `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-ratification.md` for the locked +7/+30-from-discharge doctrine.
-- Use `worlds/korvin-merrow/world-spec-prep/baseline-anchor-package-v1.md` for candidate baseline anchors awaiting physician review.
+- Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md` and `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-01.md` for orientation.
+- Use `worlds/korvin-merrow/world-spec-prep/reviews/clinical-story-skeleton-review.md` and `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` as the locked Clinical Story Skeleton v1 record.
+- Use `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-skeleton-ratification.md` for ratified governance/story-logic guardrails.
+- Use `worlds/korvin-merrow/world-spec-prep/locked/identity-package-v1.md` as the locked identity source.
+- Use `worlds/korvin-merrow/world-spec-prep/reviews/identity-package-review-addendum.md` for carry-forward implementation notes only; do not reopen locked identity values.
+- Use `worlds/korvin-merrow/world-spec-prep/locked/governance-package-v1.md` as the ratified governance source.
+- Use `worlds/korvin-merrow/world-spec-prep/reviews/governance-package-clarification.md` for accepted governance clarifications.
+- Use `worlds/korvin-merrow/world-spec-prep/ratifications/governance-package-ratification.md` for governance ratification status.
+- Use `worlds/korvin-merrow/world-spec-prep/locked/key-milestones-calendar-skeleton-v1.md` for the canonical date framework and `worlds/korvin-merrow/world-spec-prep/ratifications/key-milestones-calendar-ratification.md` for the locked +7/+30-from-discharge doctrine.
+- Use `worlds/korvin-merrow/world-spec-prep/candidate-review/baseline-anchor-package-v1.md` for candidate baseline anchors awaiting physician review.
 - Do not revise the locked Clinical Story Skeleton or locked Identity Package, draft World Spec, create milestones, or create file inventory until Alexander explicitly starts/authorizes the relevant phase.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
 
@@ -73,28 +73,28 @@ Next legal action:
 - Repository hardening and documentation completed.
 - Document tooling installed and verified.
 - MCP/integration audit completed.
-- Claude World Spec prep review triaged: `worlds/korvin-merrow/world-spec-prep/claude-review-triage.md`.
+- Claude World Spec prep review triaged: `worlds/korvin-merrow/world-spec-prep/reviews/claude-review-triage.md`.
 - Workspace file map created: `project/WORKSPACE_FILE_MAP.md`.
-- Post-GO interview plan created: `worlds/korvin-merrow/world-spec-prep/post-go-interview-plan.md`.
+- Post-GO interview plan created: `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/post-go-interview-plan.md`.
 - World Spec kickoff packet created: `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`.
 - Workspace bloat/doctrine audit recorded inside the kickoff packet.
-- Physician decision log created: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md`.
+- Physician decision log created: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-01.md`.
 - Post-kickoff physician decisions synchronized across kickoff, status, dashboard, clinical logic, and Claude handoff files.
 - Clinical Story Skeleton interview framework created.
 - Clinical Story Skeleton v1 locked by Alexander.
 - Clinical Story Skeleton v1 reviewed with GO recommendation.
-- Clinical Story Skeleton lock recorded in `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`.
+- Clinical Story Skeleton lock recorded in `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`.
 - Clinical Story Skeleton v1 ratified after Claude hostile review minor findings.
-- Ratification artifact created: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`.
-- Identity Package v1 locked: `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`.
-- Identity Package hostile-review addendum recorded: `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md`.
-- Governance Package v1 ratified: `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`.
-- Governance Package clarification recorded: `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md`.
-- Governance Package ratification recorded: `worlds/korvin-merrow/world-spec-prep/governance-package-ratification.md`.
+- Ratification artifact created: `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`.
+- Identity Package v1 locked: `worlds/korvin-merrow/world-spec-prep/locked/identity-package-v1.md`.
+- Identity Package hostile-review addendum recorded: `worlds/korvin-merrow/world-spec-prep/reviews/identity-package-review-addendum.md`.
+- Governance Package v1 ratified: `worlds/korvin-merrow/world-spec-prep/locked/governance-package-v1.md`.
+- Governance Package clarification recorded: `worlds/korvin-merrow/world-spec-prep/reviews/governance-package-clarification.md`.
+- Governance Package ratification recorded: `worlds/korvin-merrow/world-spec-prep/ratifications/governance-package-ratification.md`.
 - Physician Architecture Layer completed.
-- Key Milestones Calendar Skeleton v1 locked: `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-skeleton-v1.md`.
-- Key Milestones Calendar ratification recorded: `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-ratification.md`.
-- Baseline Anchor Package v1 prepared for candidate review: `worlds/korvin-merrow/world-spec-prep/baseline-anchor-package-v1.md`.
+- Key Milestones Calendar Skeleton v1 locked: `worlds/korvin-merrow/world-spec-prep/locked/key-milestones-calendar-skeleton-v1.md`.
+- Key Milestones Calendar ratification recorded: `worlds/korvin-merrow/world-spec-prep/ratifications/key-milestones-calendar-ratification.md`.
+- Baseline Anchor Package v1 prepared for candidate review: `worlds/korvin-merrow/world-spec-prep/candidate-review/baseline-anchor-package-v1.md`.
 
 ## Latest Git Checkpoints
 
@@ -170,21 +170,21 @@ Claude must not replace physician judgment or originate clinical design.
 - `claude-package/06_HANDOFF_STATE.md`
 - `worlds/korvin-merrow/active/brainstorm.md`
 - `worlds/korvin-merrow/active/task-map.md`
-- `worlds/korvin-merrow/world-spec-prep/claude-review-triage.md`
-- `worlds/korvin-merrow/world-spec-prep/post-go-interview-plan.md`
+- `worlds/korvin-merrow/world-spec-prep/reviews/claude-review-triage.md`
+- `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/post-go-interview-plan.md`
 - `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`
-- `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md`
-- `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`
-- `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-review.md`
-- `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`
-- `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`
-- `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md`
-- `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`
-- `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md`
-- `worlds/korvin-merrow/world-spec-prep/governance-package-ratification.md`
-- `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-skeleton-v1.md`
-- `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-ratification.md`
-- `worlds/korvin-merrow/world-spec-prep/baseline-anchor-package-v1.md`
+- `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-01.md`
+- `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
+- `worlds/korvin-merrow/world-spec-prep/reviews/clinical-story-skeleton-review.md`
+- `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`
+- `worlds/korvin-merrow/world-spec-prep/locked/identity-package-v1.md`
+- `worlds/korvin-merrow/world-spec-prep/reviews/identity-package-review-addendum.md`
+- `worlds/korvin-merrow/world-spec-prep/locked/governance-package-v1.md`
+- `worlds/korvin-merrow/world-spec-prep/reviews/governance-package-clarification.md`
+- `worlds/korvin-merrow/world-spec-prep/ratifications/governance-package-ratification.md`
+- `worlds/korvin-merrow/world-spec-prep/locked/key-milestones-calendar-skeleton-v1.md`
+- `worlds/korvin-merrow/world-spec-prep/ratifications/key-milestones-calendar-ratification.md`
+- `worlds/korvin-merrow/world-spec-prep/candidate-review/baseline-anchor-package-v1.md`
 - `reference/world-spec-guidelines/08_autoqc_master_index.md`
 - `reference/world-spec-guidelines/09_world_spec_writer_playbook.md`
 - `project/WORKSPACE_FILE_MAP.md`

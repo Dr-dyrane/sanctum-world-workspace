@@ -16,18 +16,18 @@ Purpose: mark the transition from approved Brainstorm to World Spec preparation 
 - Clinical Story Skeleton ratification completed after Claude hostile review minor findings.
 - Identity Package v1 is locked.
 - Official Claude World Spec session is still pending.
-- Post-kickoff physician decision record: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md`.
-- Latest skeleton lock record: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`.
-- Clinical Story Skeleton review: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-review.md`.
-- Clinical Story Skeleton ratification: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`.
-- Identity Package v1: `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`.
-- Identity Package review addendum: `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md`.
-- Governance Package v1 candidate: `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`.
-- Governance Package clarification: `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md`.
-- Governance Package ratification: `worlds/korvin-merrow/world-spec-prep/governance-package-ratification.md`.
-- Key Milestones Calendar Skeleton v1: `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-skeleton-v1.md`.
-- Key Milestones Calendar ratification: `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-ratification.md`.
-- Baseline Anchor Package v1: `worlds/korvin-merrow/world-spec-prep/baseline-anchor-package-v1.md`.
+- Post-kickoff physician decision record: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-01.md`.
+- Latest skeleton lock record: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`.
+- Clinical Story Skeleton review: `worlds/korvin-merrow/world-spec-prep/reviews/clinical-story-skeleton-review.md`.
+- Clinical Story Skeleton ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`.
+- Identity Package v1: `worlds/korvin-merrow/world-spec-prep/locked/identity-package-v1.md`.
+- Identity Package review addendum: `worlds/korvin-merrow/world-spec-prep/reviews/identity-package-review-addendum.md`.
+- Governance Package v1 candidate: `worlds/korvin-merrow/world-spec-prep/locked/governance-package-v1.md`.
+- Governance Package clarification: `worlds/korvin-merrow/world-spec-prep/reviews/governance-package-clarification.md`.
+- Governance Package ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/governance-package-ratification.md`.
+- Key Milestones Calendar Skeleton v1: `worlds/korvin-merrow/world-spec-prep/locked/key-milestones-calendar-skeleton-v1.md`.
+- Key Milestones Calendar ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/key-milestones-calendar-ratification.md`.
+- Baseline Anchor Package v1: `worlds/korvin-merrow/world-spec-prep/candidate-review/baseline-anchor-package-v1.md`.
 - Next allowed substantive action: proceed only when Alexander explicitly authorizes the next World Spec preparation or construction step.
 
 ## Workspace Bloat And Doctrine Audit

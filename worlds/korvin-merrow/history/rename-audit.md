@@ -36,10 +36,10 @@ Active world files:
 - `worlds/korvin-merrow/active/world-spec.md`
 - `worlds/korvin-merrow/planning/KORVIN_MERROW_PASS_PLAN.md`
 - `worlds/korvin-merrow/reviews/reviewer-feedback.md`
-- `worlds/korvin-merrow/world-spec-prep/claude-review-triage.md`
-- `worlds/korvin-merrow/world-spec-prep/decision-register.md`
-- `worlds/korvin-merrow/world-spec-prep/post-go-interview-plan.md`
-- `worlds/korvin-merrow/world-spec-prep/readiness-map.md`
+- `worlds/korvin-merrow/world-spec-prep/reviews/claude-review-triage.md`
+- `worlds/korvin-merrow/world-spec-prep/decision-logs/decision-register.md`
+- `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/post-go-interview-plan.md`
+- `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/readiness-map.md`
 
 Submission artifact:
 

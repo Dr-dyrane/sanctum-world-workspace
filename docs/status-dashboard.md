@@ -22,7 +22,7 @@ World Spec Construction Preparation / calendar locked / Baseline Anchor Package 
 ## World Spec
 
 - World Spec kickoff: recorded in `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`
-- Physician decision log: recorded in `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md`
+- Physician decision log: recorded in `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-01.md`
 - World Spec drafting: not started
 - Clinical Story Skeleton: v1 locked, reviewed, and ratified
 - Identity Package: v1 locked
@@ -37,17 +37,18 @@ World Spec Construction Preparation / calendar locked / Baseline Anchor Package 
 - World Spec AutoQC prompt v6.3: saved locally
 - World Spec AutoQC v6.3 checks: indexed in `reference/world-spec-guidelines/08_autoqc_master_index.md`
 - World Spec writer playbook: created in `reference/world-spec-guidelines/09_world_spec_writer_playbook.md`
-- Clinical Story Skeleton review: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-review.md`
-- Clinical Story Skeleton ratification: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`
-- Identity Package v1: `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`
-- Identity Package review addendum: `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md`
-- Governance Package v1: `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`
-- Governance Package clarification: `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md`
-- Governance Package ratification: `worlds/korvin-merrow/world-spec-prep/governance-package-ratification.md`
-- Key Milestones Calendar Skeleton v1: `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-skeleton-v1.md`
-- Key Milestones Calendar ratification: `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-ratification.md`
-- Baseline Anchor Package v1: `worlds/korvin-merrow/world-spec-prep/baseline-anchor-package-v1.md`
-- Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`
+- Clinical Story Skeleton review: `worlds/korvin-merrow/world-spec-prep/reviews/clinical-story-skeleton-review.md`
+- Clinical Story Skeleton ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`
+- Identity Package v1: `worlds/korvin-merrow/world-spec-prep/locked/identity-package-v1.md`
+- Identity Package review addendum: `worlds/korvin-merrow/world-spec-prep/reviews/identity-package-review-addendum.md`
+- Governance Package v1: `worlds/korvin-merrow/world-spec-prep/locked/governance-package-v1.md`
+- Governance Package clarification: `worlds/korvin-merrow/world-spec-prep/reviews/governance-package-clarification.md`
+- Governance Package ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/governance-package-ratification.md`
+- Key Milestones Calendar Skeleton v1: `worlds/korvin-merrow/world-spec-prep/locked/key-milestones-calendar-skeleton-v1.md`
+- Key Milestones Calendar ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/key-milestones-calendar-ratification.md`
+- Baseline Anchor Package v1: `worlds/korvin-merrow/world-spec-prep/candidate-review/baseline-anchor-package-v1.md`
+- Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
+- World Spec prep folder structure: reorganized by lifecycle buckets (`candidate-review/`, `locked/`, `ratifications/`, `reviews/`, `decision-logs/`, `planning-scaffolds/`)
 - Next allowed action: physician review of Baseline Anchor Package v1
 
 ## Tooling

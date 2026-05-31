@@ -185,13 +185,13 @@ These are World Spec preparation risks, not authorization to change Brainstorm:
 
 ## Governance Package v1
 
-Artifact: `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`
+Artifact: `worlds/korvin-merrow/world-spec-prep/locked/governance-package-v1.md`
 
-Clarification artifact: `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md`
+Clarification artifact: `worlds/korvin-merrow/world-spec-prep/reviews/governance-package-clarification.md`
 
 Status: RATIFIED.
 
-Ratification artifact: `worlds/korvin-merrow/world-spec-prep/governance-package-ratification.md`
+Ratification artifact: `worlds/korvin-merrow/world-spec-prep/ratifications/governance-package-ratification.md`
 
 Care team roster:
 
@@ -237,7 +237,7 @@ Physician Architecture Layer Status: COMPLETE.
 
 ## Key Milestones Calendar Skeleton v1
 
-Artifact: `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-skeleton-v1.md`
+Artifact: `worlds/korvin-merrow/world-spec-prep/locked/key-milestones-calendar-skeleton-v1.md`
 
 Status: LOCKED.
 
@@ -259,13 +259,13 @@ Canonical anchors:
 
 This is a date framework only. It is not a World Spec draft, final milestone table, task architecture, or file inventory.
 
-Ratification artifact: `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-ratification.md`
+Ratification artifact: `worlds/korvin-merrow/world-spec-prep/ratifications/key-milestones-calendar-ratification.md`
 
 Locked doctrine: +7 and +30 anchors are measured from discharge anchor 05/24/2026, not from HD6 world close.
 
 ## Baseline Anchor Package v1
 
-Artifact: `worlds/korvin-merrow/world-spec-prep/baseline-anchor-package-v1.md`
+Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/baseline-anchor-package-v1.md`
 
 Status: CANDIDATE REVIEW.
 
@@ -288,11 +288,11 @@ This package does not create admission labs, hospital-course lab trends, file in
 
 Status: ratified after review on 2026-05-31.
 
-Review artifact: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-review.md`
+Review artifact: `worlds/korvin-merrow/world-spec-prep/reviews/clinical-story-skeleton-review.md`
 
-Decision log: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`
+Decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 
-Ratification artifact: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`
+Ratification artifact: `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`
 
 Core story:
 
@@ -327,7 +327,7 @@ Ratified governance/story-logic guardrails:
 - BMI: 30.6.
 - Allergy: Lisinopril (cough).
 - Code Status: Full Code.
-- Artifact: `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`.
+- Artifact: `worlds/korvin-merrow/world-spec-prep/locked/identity-package-v1.md`.
 
 Consistency:
 

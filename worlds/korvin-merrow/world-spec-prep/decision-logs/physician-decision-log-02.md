@@ -6,27 +6,27 @@ Purpose: durable record that Clinical Story Skeleton v1 is locked after physicia
 
 Status: Clinical Story Skeleton v1 RATIFIED.
 
-Review artifact: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-review.md`
+Review artifact: `worlds/korvin-merrow/world-spec-prep/reviews/clinical-story-skeleton-review.md`
 
 Overall recommendation: GO to Identity Package and Governance Package preparation. World Spec drafting remains blocked until Alexander explicitly authorizes drafting.
 
-Ratification artifact: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-ratification.md`
+Ratification artifact: `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`
 
-Identity Package v1 artifact: `worlds/korvin-merrow/world-spec-prep/identity-package-v1.md`
+Identity Package v1 artifact: `worlds/korvin-merrow/world-spec-prep/locked/identity-package-v1.md`
 
-Identity Package review addendum: `worlds/korvin-merrow/world-spec-prep/identity-package-review-addendum.md`
+Identity Package review addendum: `worlds/korvin-merrow/world-spec-prep/reviews/identity-package-review-addendum.md`
 
-Governance Package v1 candidate: `worlds/korvin-merrow/world-spec-prep/governance-package-v1.md`
+Governance Package v1 candidate: `worlds/korvin-merrow/world-spec-prep/locked/governance-package-v1.md`
 
-Governance Package clarification: `worlds/korvin-merrow/world-spec-prep/governance-package-clarification.md`
+Governance Package clarification: `worlds/korvin-merrow/world-spec-prep/reviews/governance-package-clarification.md`
 
-Governance Package ratification: `worlds/korvin-merrow/world-spec-prep/governance-package-ratification.md`
+Governance Package ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/governance-package-ratification.md`
 
-Key Milestones Calendar Skeleton v1: `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-skeleton-v1.md`
+Key Milestones Calendar Skeleton v1: `worlds/korvin-merrow/world-spec-prep/locked/key-milestones-calendar-skeleton-v1.md`
 
-Key Milestones Calendar ratification: `worlds/korvin-merrow/world-spec-prep/key-milestones-calendar-ratification.md`
+Key Milestones Calendar ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/key-milestones-calendar-ratification.md`
 
-Baseline Anchor Package v1: `worlds/korvin-merrow/world-spec-prep/baseline-anchor-package-v1.md`
+Baseline Anchor Package v1: `worlds/korvin-merrow/world-spec-prep/candidate-review/baseline-anchor-package-v1.md`
 
 ## Locked Clinical Story Skeleton v1
 
