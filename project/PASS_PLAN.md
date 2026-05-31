@@ -1,6 +1,6 @@
 # Project Sanctum Pass Plan
 
-Source of truth: `reference/New Writers Version - Instruction Guide (05_24).md`
+Source of truth: `reference/source/New Writers Version - Instruction Guide (05_24).md`
 
 This is the local operating method. Do not advance to a later pass without explicit Alexander approval.
 
@@ -88,7 +88,7 @@ Actions:
 
 Outputs:
 
-- Draft `worlds/korvin-merrow/brainstorm.md`
+- Draft `worlds/korvin-merrow/active/brainstorm.md`
 
 Done criteria:
 
@@ -232,7 +232,7 @@ Inputs:
 
 Actions:
 
-- Capture feedback in `worlds/korvin-merrow/reviewer-feedback.md`.
+- Capture feedback in `worlds/korvin-merrow/reviews/reviewer-feedback.md`.
 - Clarify feedback if needed.
 - Revise locally.
 - Re-upload and rerun AutoQC.
@@ -298,7 +298,7 @@ Actions:
 
 Outputs:
 
-- Draft `worlds/korvin-merrow/world-spec.md`
+- Draft `worlds/korvin-merrow/active/world-spec.md`
 
 Done criteria:
 

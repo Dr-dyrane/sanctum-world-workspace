@@ -8,10 +8,10 @@ Purpose: preserve Alexander's physician-originated decisions after World Spec ki
 
 ## Source Context
 
-- Approved Brainstorm: `worlds/korvin-merrow/brainstorm.md`
+- Approved Brainstorm: `worlds/korvin-merrow/active/brainstorm.md`
 - Reviewer GO: `worlds/korvin-merrow/reviews/reviewer-go-01.md`
 - World Spec kickoff packet: `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`
-- Clinical logic file: `worlds/korvin-merrow/clinical-logic.md`
+- Clinical logic file: `worlds/korvin-merrow/active/clinical-logic.md`
 
 ## Locked Temporal Architecture
 

@@ -2,7 +2,7 @@
 
 Source materials:
 
-- `reference/New Writers Version - Instruction Guide (05_24).md`
+- `reference/source/New Writers Version - Instruction Guide (05_24).md`
 - `reference/templates/World_Spec_Template_05_06.docx`
 - `reference/templates/AutoQC_Section_2_World_Spec_v6.3_writer.docx`
 - `reference/world-spec-guidelines/08_autoqc_master_index.md`

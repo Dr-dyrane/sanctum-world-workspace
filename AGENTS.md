@@ -122,13 +122,13 @@ Major clinical friction themes: emergency/inpatient stabilization and sepsis man
 
 Design principle: do not make this a rare disease puzzle. Complexity comes from realistic medicine: common diseases, messy documentation, competing priorities, and evolving information.
 
-AGENTS.md keeps operating context. Detailed evolving clinical design belongs under `worlds/korvin-merrow/`.
+AGENTS.md keeps operating context. Detailed evolving clinical design belongs under `worlds/korvin-merrow/active/` and active preparation decisions belong under `worlds/korvin-merrow/world-spec-prep/`.
 
 ## Source And Authored Work Separation
 
 Keep external/reference material separated from authored project work.
 
-Use `reference/source/` for source documents or notes copied from authorized external materials.
+Use `reference/source/` for source documents, official guides, task trackers, or notes copied from authorized external materials.
 
 Use `worlds/` and `project/` for authored work, planning, status, decisions, and generated drafts.
 

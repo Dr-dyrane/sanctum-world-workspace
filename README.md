@@ -51,8 +51,8 @@ The clinical design principle is realistic hospital complexity, not a rare disea
 ```text
 AGENTS.md
 README.md
-CONTRIBUTING.md
 docs/
+  CONTRIBUTING.md
   agent-workflow.md
   git-workflow.md
   security-and-privacy.md
@@ -66,19 +66,24 @@ project/
   PHASE_MAP.md
 reference/
   source/
+    New Writers Version - Instruction Guide (05_24).docx
+    New Writers Version - Instruction Guide (05_24).md
+    _Task Selection Categories For Team.xlsx
   templates/
   workflows/
   checklists/
   world-spec-guidelines/
 worlds/
   korvin-merrow/
-    brainstorm.md
-    world-spec.md
-    clinical-logic.md
-    frictions.md
-    traps.md
-    task-map.md
-    reviewer-feedback.md
+    README.md
+    active/
+      brainstorm.md
+      clinical-logic.md
+      task-map.md
+      world-spec.md
+    history/
+    planning/
+    remediation/
     reviews/
     submission/
     world-spec-prep/
@@ -108,11 +113,13 @@ Do not start by browsing every prep file. Most prep files are supporting memory,
 
 ## Repository Hygiene
 
-- Keep root files limited to repository-level orientation and agent rules.
+- Keep root files limited to `README.md`, `AGENTS.md`, `.gitignore`, and unavoidable repository controls.
 - Keep official source and templates under `reference/`.
 - Keep current project state under `project/`.
 - Keep durable documentation under `docs/`.
-- Keep world-specific authored work under `worlds/korvin-merrow/`.
+- Keep world-specific authored work under `worlds/korvin-merrow/active/`.
+- Keep world-specific historical artifacts under `worlds/korvin-merrow/history/`.
+- Keep reviewer remediation briefs under `worlds/korvin-merrow/remediation/`.
 - Keep review artifacts in `worlds/korvin-merrow/reviews/`.
 - Keep submission artifacts in `worlds/korvin-merrow/submission/`.
 - Keep World Spec preparation artifacts in `worlds/korvin-merrow/world-spec-prep/`.
@@ -132,7 +139,7 @@ AI may organize, critique, audit, and format. AI must not originate final clinic
 - Official Sanctum instructions live under `reference/`.
 - Project state lives in `project/STATUS.md`.
 - Workspace structure and duplication tracking live in `project/WORKSPACE_FILE_MAP.md`.
-- Clinical authored work lives under `worlds/korvin-merrow/`.
+- Clinical authored work lives under `worlds/korvin-merrow/active/`.
 - Physician decisions come from Alexander.
 - Official templates are used as bases for submission artifacts.
 

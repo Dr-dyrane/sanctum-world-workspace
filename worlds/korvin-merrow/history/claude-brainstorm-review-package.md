@@ -37,7 +37,7 @@ Evaluation:
 
 ## Draft To Review
 
-See `worlds/korvin-merrow/brainstorm.md`.
+See `worlds/korvin-merrow/active/brainstorm.md`.
 
 ## Known Reviewer Risks To Check
 

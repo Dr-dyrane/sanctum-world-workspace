@@ -41,7 +41,7 @@ Current response:
 - Identity and World Type remediation applied locally.
 - Comorbidity and medication decision briefs created and physician-approved.
 - Brainstorm source and `Korvin_Merrow_Brainstorm.docx` regenerated with the approved comorbidity expansion and medication list.
-- Compliance review created at `worlds/korvin-merrow/reviewer-remediation-compliance-review.md`.
+- Compliance review created at `worlds/korvin-merrow/remediation/reviewer-remediation-compliance-review.md`.
 - RL Studio reupload completed.
 - AutoQC rerun passed with 0 failed / 51 passed.
 - Diagnostics reviewed.
@@ -82,6 +82,6 @@ Moved from Brainstorm upload-facing draft:
 
 Local tracker search result:
 
-- Tracker retrieved locally at `reference/_Task Selection Categories For Team.xlsx`.
-- Exact workflow labels and priorities assigned for all six rough task concepts in `worlds/korvin-merrow/task-map.md`.
+- Tracker retrieved locally at `reference/source/_Task Selection Categories For Team.xlsx`.
+- Exact workflow labels and priorities assigned for all six rough task concepts in `worlds/korvin-merrow/active/task-map.md`.
 - Brainstorm upload-facing draft now contains only the four Sanctum-required sections.

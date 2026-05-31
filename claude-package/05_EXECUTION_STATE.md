@@ -149,8 +149,8 @@ Claude must not replace physician judgment or originate clinical design.
 - `claude-package/04_KORVIN_MERROW_CONTEXT.md`
 - `claude-package/05_EXECUTION_STATE.md`
 - `claude-package/06_HANDOFF_STATE.md`
-- `worlds/korvin-merrow/brainstorm.md`
-- `worlds/korvin-merrow/task-map.md`
+- `worlds/korvin-merrow/active/brainstorm.md`
+- `worlds/korvin-merrow/active/task-map.md`
 - `worlds/korvin-merrow/world-spec-prep/claude-review-triage.md`
 - `worlds/korvin-merrow/world-spec-prep/post-go-interview-plan.md`
 - `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`

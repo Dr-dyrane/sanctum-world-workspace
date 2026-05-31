@@ -1,6 +1,6 @@
 # World Spec Checklist
 
-Source indexed: `reference/New Writers Version - Instruction Guide (05_24).md`
+Source indexed: `reference/source/New Writers Version - Instruction Guide (05_24).md`
 
 Use this checklist after Brainstorm approval and before World Spec AutoQC.
 

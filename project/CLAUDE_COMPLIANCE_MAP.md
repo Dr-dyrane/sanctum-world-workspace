@@ -4,7 +4,7 @@ Purpose: compare the official Claude workflow expected by source-of-truth materi
 
 Primary evidence:
 
-- `reference/New Writers Version - Instruction Guide (05_24).md`
+- `reference/source/New Writers Version - Instruction Guide (05_24).md`
 - `reference/world-spec-guidelines/13_claude_workflow_audit.md`
 - `project/STATUS.md`
 - `claude-package/05_EXECUTION_STATE.md`

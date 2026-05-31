@@ -16,7 +16,7 @@ Primary source materials checked:
 - `reference/templates/brainstorm.docx`
 - `worlds/korvin-merrow/reviews/brainstorm-autoqc-01.md`
 - `worlds/korvin-merrow/reviews/brainstorm-autoqc-02.md`
-- `reference/New Writers Version - Instruction Guide (05_24).md`
+- `reference/source/New Writers Version - Instruction Guide (05_24).md`
 
 ## Executive Triage
 

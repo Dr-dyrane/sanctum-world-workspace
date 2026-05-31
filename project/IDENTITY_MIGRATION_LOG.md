@@ -48,14 +48,14 @@ World folder:
 
 Future-facing world files:
 
-- `worlds/korvin-merrow/brainstorm.md`
-- `worlds/korvin-merrow/clinical-logic.md`
-- `worlds/korvin-merrow/frictions.md`
-- `worlds/korvin-merrow/traps.md`
-- `worlds/korvin-merrow/task-map.md`
-- `worlds/korvin-merrow/world-spec.md`
-- `worlds/korvin-merrow/JAMES_CARTER_PASS_PLAN.md` renamed to `worlds/korvin-merrow/KORVIN_MERROW_PASS_PLAN.md`
-- `worlds/korvin-merrow/reviewer-feedback.md`
+- `worlds/korvin-merrow/active/brainstorm.md`
+- `worlds/korvin-merrow/active/clinical-logic.md`
+- `worlds/korvin-merrow/active/frictions.md`
+- `worlds/korvin-merrow/active/traps.md`
+- `worlds/korvin-merrow/active/task-map.md`
+- `worlds/korvin-merrow/active/world-spec.md`
+- `worlds/korvin-merrow/JAMES_CARTER_PASS_PLAN.md` renamed to `worlds/korvin-merrow/planning/KORVIN_MERROW_PASS_PLAN.md`
+- `worlds/korvin-merrow/reviews/reviewer-feedback.md`
 - `worlds/korvin-merrow/world-spec-prep/claude-review-triage.md`
 - `worlds/korvin-merrow/world-spec-prep/decision-register.md`
 - `worlds/korvin-merrow/world-spec-prep/post-go-interview-plan.md`
@@ -68,16 +68,16 @@ Submission artifact:
 
 Reviewer-remediation files:
 
-- `worlds/korvin-merrow/rename-audit.md`
-- `worlds/korvin-merrow/reviewer-comorbidity-decision-brief.md`
-- `worlds/korvin-merrow/reviewer-medication-decision-brief.md`
+- `worlds/korvin-merrow/history/rename-audit.md`
+- `worlds/korvin-merrow/remediation/reviewer-comorbidity-decision-brief.md`
+- `worlds/korvin-merrow/remediation/reviewer-medication-decision-brief.md`
 
 ## Historical Files Intentionally Left With Old Name
 
 These files are preserved as historical evidence. Notes were added where appropriate:
 
-- `worlds/korvin-merrow/brainstorm-development-history.md`
-- `worlds/korvin-merrow/brainstorm-internal-audit.md`
+- `worlds/korvin-merrow/history/brainstorm-development-history.md`
+- `worlds/korvin-merrow/history/brainstorm-internal-audit.md`
 - `worlds/korvin-merrow/reviews/brainstorm-autoqc-01.md`
 - `worlds/korvin-merrow/reviews/claude-brainstorm-review-01.md`
 - `worlds/korvin-merrow/reviews/claude-brainstorm-review-response-01.md`

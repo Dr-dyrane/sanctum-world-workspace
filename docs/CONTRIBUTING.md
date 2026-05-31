@@ -58,7 +58,7 @@ Before committing:
 
 Record reviewer feedback in:
 
-- `worlds/korvin-merrow/reviewer-feedback.md`
+- `worlds/korvin-merrow/reviews/reviewer-feedback.md`
 - or a dated file under `worlds/korvin-merrow/reviews/`
 
 Keep the official feedback record in RL Studio. Slack can clarify, but RL Studio remains the source of truth.

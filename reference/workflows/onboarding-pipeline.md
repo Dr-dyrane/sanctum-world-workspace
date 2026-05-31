@@ -1,6 +1,6 @@
 # Onboarding Pipeline
 
-Source indexed: `reference/New Writers Version - Instruction Guide (05_24).md`
+Source indexed: `reference/source/New Writers Version - Instruction Guide (05_24).md`
 
 This workflow captures the onboarding scope and operational gates.
 

@@ -2,7 +2,7 @@
 
 This map uses only the six approved rough task concepts. It does not add new workflows or task prompts.
 
-Source: `reference/_Task Selection Categories For Team.xlsx`
+Source: `reference/source/_Task Selection Categories For Team.xlsx`
 
 ## Current Mapping
 

@@ -128,7 +128,7 @@ Not accepted:
 - Four required sections only: pass.
 - Reviewer-facing placeholders removed from upload-facing Brainstorm: pass.
 - Six primary rough task ideas: pass.
-- Exact workflow mapping and P0/P1/P2 priorities assigned from `reference/_Task Selection Categories For Team.xlsx`: pass.
+- Exact workflow mapping and P0/P1/P2 priorities assigned from `reference/source/_Task Selection Categories For Team.xlsx`: pass.
 - At least one P0: pass.
 - Frictions remain people/perspective conflicts: pass.
 - Traps remain information problems requiring multi-document synthesis: pass.

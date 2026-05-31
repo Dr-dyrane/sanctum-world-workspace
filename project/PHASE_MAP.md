@@ -1,6 +1,6 @@
 # Project Sanctum Phase Map
 
-Source of truth: `reference/New Writers Version - Instruction Guide (05_24).md`
+Source of truth: `reference/source/New Writers Version - Instruction Guide (05_24).md`
 
 ## Official Phases
 

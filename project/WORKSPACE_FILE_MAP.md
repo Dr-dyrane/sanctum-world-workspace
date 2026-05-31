@@ -20,27 +20,41 @@ Do not start by opening every prep file. Most prep files are supporting memory, 
 
 ## Hygiene Audit 2026-05-31
 
-Status: controlled bloat.
+Status: restructured into junction folders and purpose folders.
 
 Findings:
 
-- Root is clean: only `.gitignore`, `AGENTS.md`, `CONTRIBUTING.md`, and `README.md`.
+- Root is clean by repo-standard exception: `.gitignore`, `AGENTS.md`, and `README.md`.
 - README placement is acceptable: root README plus folder-policy READMEs in `reference/source/` and `tools/`.
 - `tmp/` contains generated render artifacts and is ignored by git.
-- Highest-bloat folders are `worlds/korvin-merrow/world-spec-prep/`, `worlds/korvin-merrow/`, and `reference/world-spec-guidelines/`.
+- `reference/` is now a junction folder with source files moved into `reference/source/`.
+- `worlds/korvin-merrow/` is now a junction folder with one README and purpose subfolders.
 - Several files intentionally overlap by lifecycle stage, especially Brainstorm history/reviews and World Spec prep/checklist material.
 - Do not add new audit or navigation docs unless an existing map/status file cannot carry the information.
 
-No-move rule:
+Junction folder rule:
 
-- Do not move, archive, or delete existing artifacts without Alexander approval, because many files preserve review history or source-trace context.
+- Any folder with subfolders should contain no more than one ordinary markdown/document file, ideally a README or cockpit file.
+- Root is the exception for `.gitignore` and `AGENTS.md`.
+- Do not place mixed-purpose files directly in a junction folder.
 
 Recommended future cleanup if Alexander approves:
 
-- Move historical Brainstorm development artifacts into a `worlds/korvin-merrow/history/` or `worlds/korvin-merrow/archive/` folder.
-- Move reviewer remediation decision briefs into `worlds/korvin-merrow/reviews/` or a `reviewer-remediation/` subfolder.
-- Placeholder files (`frictions.md`, `traps.md`, `world-spec.md`) now contain explicit notices. Move them into future-phase folders only with Alexander approval.
 - Consolidate thin planning scaffolds in `world-spec-prep/` after Identity and Governance packages are complete.
+- Reassess whether `claude-package/` can be regenerated from fewer local source files after World Spec submission.
+
+## Consolidation Decisions
+
+Reviewed for duplicate-purpose files:
+
+- `project/STATUS.md` and `docs/status-dashboard.md`: keep both. `STATUS.md` is operational source of truth; dashboard is human-readable summary.
+- `project/WORKSPACE_FILE_MAP.md` and root `README.md`: keep both. README orients; file map governs placement and duplication.
+- `worlds/korvin-merrow/active/clinical-logic.md`, `world-spec-prep/physician-decision-log-02.md`, and `world-spec-prep/clinical-story-skeleton-ratification.md`: keep all. Clinical logic is evolving reasoning; decision log is durable physician record; ratification is review resolution.
+- `reference/world-spec-guidelines/04_world_spec_autoqc_requirements.md`, `08_autoqc_master_index.md`, and `09_world_spec_writer_playbook.md`: keep all. `08` is exact check index; `09` is authoring workflow; `04` is older summary reference.
+- `claude-package/*`: keep as a separate compressed handoff package because Claude Project context has different constraints than local Codex continuity.
+- `worlds/korvin-merrow/active/frictions.md` and `world-spec-prep/friction-to-task-map.md`: keep for now. The active file is a placeholder; the prep map is planning substrate.
+- `worlds/korvin-merrow/active/traps.md` and `world-spec-prep/trap-to-file-map.md`: keep for now. The active file is a placeholder; the prep map is planning substrate.
+- Historical Brainstorm artifacts in `history/` and review artifacts in `reviews/`: keep separate to preserve audit trail.
 
 ## Root
 
@@ -48,7 +62,6 @@ Recommended future cleanup if Alexander approves:
 | --- | --- | --- |
 | `.gitignore` | Git hygiene and local-secret protection. | Single root ignore file. |
 | `AGENTS.md` | Codex operating instructions. | Root behavior source; includes current Korvin Merrow active project and locked Clinical Story Skeleton state. |
-| `CONTRIBUTING.md` | Contribution and review rules. | Complements `README.md`; not a project status file. |
 | `README.md` | Repository overview and usage guide. | Root orientation only. |
 
 ## Project Tracking
@@ -68,6 +81,7 @@ Recommended future cleanup if Alexander approves:
 
 | File | Role | Duplication note |
 | --- | --- | --- |
+| `docs/CONTRIBUTING.md` | Contribution and review rules. | Complements `README.md`; not a project status file. |
 | `docs/agent-workflow.md` | Codex/Claude/ChatGPT/Alexander roles. | Role policy; AGENTS remains runtime instruction source. |
 | `docs/git-workflow.md` | Branching, tags, rollback, checkpoint examples. | Git policy only. |
 | `docs/mcp-audit.md` | MCP and connector audit. | Do not store MCP tokens/config here. |
@@ -98,9 +112,9 @@ Recommended future cleanup if Alexander approves:
 
 | File | Role | Duplication note |
 | --- | --- | --- |
-| `reference/New Writers Version - Instruction Guide (05_24).docx` | Official instruction guide source DOCX. | Preserve unchanged. |
-| `reference/New Writers Version - Instruction Guide (05_24).md` | Markdown extraction of official guide. | Operational reading copy; DOCX remains source artifact. |
-| `reference/_Task Selection Categories For Team.xlsx` | Official task tracker. | Preserve unchanged. |
+| `reference/source/New Writers Version - Instruction Guide (05_24).docx` | Official instruction guide source DOCX. | Preserve unchanged. |
+| `reference/source/New Writers Version - Instruction Guide (05_24).md` | Markdown extraction of official guide. | Operational reading copy; DOCX remains source artifact. |
+| `reference/source/_Task Selection Categories For Team.xlsx` | Official task tracker. | Preserve unchanged. |
 | `reference/source/README.md` | Source material policy. | No proprietary source edits here. |
 
 ## Reference Checklists And Workflows
@@ -140,25 +154,46 @@ Recommended future cleanup if Alexander approves:
 | `reference/world-spec-guidelines/12_required_upload_inventory.md` | Source-cited upload inventory manifest. | Not a Korvin Merrow file inventory; use only for package preparation. |
 | `reference/world-spec-guidelines/13_claude_workflow_audit.md` | Source-cited Claude workflow and transcript audit. | Use with `project/CLAUDE_COMPLIANCE_MAP.md` before World Spec drafting. |
 
-## Korvin Merrow Core Authored Files
+## Korvin Merrow Junction
 
 | File | Role | Duplication note |
 | --- | --- | --- |
-| `worlds/korvin-merrow/brainstorm.md` | Active Brainstorm remediation source. | Modify only for reviewer-required changes approved by Alexander. |
-| `worlds/korvin-merrow/brainstorm-development-history.md` | Internal Brainstorm history. | Historical only. |
-| `worlds/korvin-merrow/brainstorm-internal-audit.md` | Internal Brainstorm audit. | Historical QC. |
-| `worlds/korvin-merrow/clinical-logic.md` | Clinical reasoning notes. | Prep/support only. |
-| `worlds/korvin-merrow/frictions.md` | Placeholder for later friction notes. | Do not use as active source until governance/Decision Friction work is authorized. |
-| `worlds/korvin-merrow/traps.md` | Placeholder for later trap notes. | Do not use as active source until trap substrate planning is authorized. |
-| `worlds/korvin-merrow/task-map.md` | Rough task mapping. | Brainstorm-level mapping; not final World Spec task architecture. |
-| `worlds/korvin-merrow/world-spec.md` | Explicit World Spec placeholder. | Do not draft/populate until Alexander authorizes World Spec drafting. |
-| `worlds/korvin-merrow/reviewer-feedback.md` | Review notes and moved internal questions. | Use for reviewer feedback history. |
-| `worlds/korvin-merrow/reviewer-comorbidity-decision-brief.md` | Physician decision brief for SEND BACK comorbidity expansion. | Prep only; do not treat proposed additions as locked until approved. |
-| `worlds/korvin-merrow/reviewer-medication-decision-brief.md` | Physician decision brief for SEND BACK medication specificity. | Prep only; do not treat proposed medication list as locked until approved. |
-| `worlds/korvin-merrow/reviewer-remediation-compliance-review.md` | Compliance validation for reviewer-requested comorbidity and medication remediation. | Supports SEND BACK revisions; not a World Spec source. |
-| `worlds/korvin-merrow/rename-audit.md` | Audit of reviewer-required synthetic identity rename. | Confirms active files use Korvin Merrow and prior name remains only in historical archives. |
-| `worlds/korvin-merrow/KORVIN_MERROW_PASS_PLAN.md` | World-specific pass plan. | Planning only. |
-| `worlds/korvin-merrow/claude-brainstorm-review-package.md` | Claude Brainstorm review package. | Historical support artifact. |
+| `worlds/korvin-merrow/README.md` | World folder index. | Single junction file; points to active/history/planning/remediation/reviews/submission/prep folders. |
+
+## Korvin Merrow Active Files
+
+| File | Role | Duplication note |
+| --- | --- | --- |
+| `worlds/korvin-merrow/active/brainstorm.md` | Active Brainstorm remediation source. | Modify only for reviewer-required changes approved by Alexander. |
+| `worlds/korvin-merrow/active/clinical-logic.md` | Clinical reasoning notes. | Prep/support only. |
+| `worlds/korvin-merrow/active/frictions.md` | Placeholder for later friction notes. | Do not use as active source until governance/Decision Friction work is authorized. |
+| `worlds/korvin-merrow/active/traps.md` | Placeholder for later trap notes. | Do not use as active source until trap substrate planning is authorized. |
+| `worlds/korvin-merrow/active/task-map.md` | Rough task mapping. | Brainstorm-level mapping; not final World Spec task architecture. |
+| `worlds/korvin-merrow/active/world-spec.md` | Explicit World Spec placeholder. | Do not draft/populate until Alexander authorizes World Spec drafting. |
+
+## Korvin Merrow History
+
+| File | Role | Duplication note |
+| --- | --- | --- |
+| `worlds/korvin-merrow/history/brainstorm-development-history.md` | Internal Brainstorm history. | Historical only. |
+| `worlds/korvin-merrow/history/brainstorm-internal-audit.md` | Internal Brainstorm audit. | Historical QC. |
+| `worlds/korvin-merrow/history/rename-audit.md` | Audit of reviewer-required synthetic identity rename. | Confirms active files use Korvin Merrow and prior name remains only in historical archives. |
+| `worlds/korvin-merrow/history/claude-brainstorm-review-package.md` | Claude Brainstorm review package. | Historical support artifact. |
+
+## Korvin Merrow Remediation
+
+| File | Role | Duplication note |
+| --- | --- | --- |
+| `worlds/korvin-merrow/reviews/reviewer-feedback.md` | Review notes and moved internal questions. | Use for reviewer feedback history. |
+| `worlds/korvin-merrow/remediation/reviewer-comorbidity-decision-brief.md` | Physician decision brief for SEND BACK comorbidity expansion. | Prep only; do not treat proposed additions as locked until approved. |
+| `worlds/korvin-merrow/remediation/reviewer-medication-decision-brief.md` | Physician decision brief for SEND BACK medication specificity. | Prep only; do not treat proposed medication list as locked until approved. |
+| `worlds/korvin-merrow/remediation/reviewer-remediation-compliance-review.md` | Compliance validation for reviewer-requested comorbidity and medication remediation. | Supports SEND BACK revisions; not a World Spec source. |
+
+## Korvin Merrow Planning
+
+| File | Role | Duplication note |
+| --- | --- | --- |
+| `worlds/korvin-merrow/planning/KORVIN_MERROW_PASS_PLAN.md` | World-specific pass plan. | Planning only. |
 
 ## Korvin Merrow Reviews
 
