@@ -18,7 +18,7 @@ RL Studio:
 - Approval source: Slack / Stacey S
 - Reviewer message: "great job! I approved your brainstorm. Next steps are to move forward with world spec and file template development."
 
-Current state: State synchronized / ready for Clinical Story Skeleton preparation. World Spec drafting and Clinical Story Skeleton creation have not started and remain gated on explicit Alexander authorization.
+Current state: Clinical Story Skeleton v1 locked / ready for Identity Package. World Spec drafting has not started and remains gated on explicit Alexander authorization.
 
 ## Locked Decisions
 
@@ -75,13 +75,27 @@ Post-kickoff physician-locked decisions:
 - Complexity targets: exceed reviewer minimums; target 12-15 comorbidities and 18-22 medications.
 - Durable record: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md`.
 
+Locked Clinical Story Skeleton v1:
+
+- Patient: Korvin Merrow, 62-year-old male, Typical Clinical World.
+- Baseline: lives with family; independent but slowed by chronic illness; occasional cane use; mild age-related forgetfulness only; chronic diseases generally stable before current decline.
+- PMR/prednisone: several-year PMR history, chronic prednisone exposure, multiple prior flares and taper attempts, recent taper due to controlled symptoms, and reconstructable source-of-truth inconsistencies.
+- Pre-hospital decline: approximately 3 weeks of reduced stamina, reduced activity, poor appetite, reduced fluid intake, increasing weakness, increasing family dependence, possible urinary symptoms, progressive unsteadiness, and progressive cognitive slowing.
+- Escalation: medication-management mistakes, increased dependence, lightheadedness, near-fall event, and family recognition of meaningful deviation from baseline.
+- ED presentation: suspected urinary-source infection, dehydration, AKI risk, altered baseline mental status, functional decline, and reasonable sepsis-oriented management. Infection is a contributor, not the entire explanation.
+- Hospital course: HD1 admission/stabilization; HD2 partial improvement and consultant involvement begins; HD3 PT/OT identify functional concerns; HD4 consultant tensions emerge and steroid-history inconsistencies are recognized; HD5 medical improvement continues and disposition questions become dominant; HD6 patient appears medically improved but discharge remains debatable.
+- Discharge state: infection, AKI, hemodynamics, mental status, and oral intake improved, while functional reserve, medication restart strategy, steroid interpretation, family concern, and disposition risk remain unresolved.
+- Primary failure target: disposition safety, functional decline recognition, and discharge-readiness reasoning.
+- Near-fall framework: multi-factorial and not attributable to a single cause.
+- Review artifact: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-review.md`.
+- Lock record: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`.
+
 ## Decisions Remaining
 
 Do not answer these without Alexander.
 
 Identity/compliance:
 
-- Confirm when to reupload the revised Brainstorm and rerun AutoQC.
 - Synthetic MRN format.
 - DOB, age consistency, sex, allergies, code status, height, weight, BMI, and clinically relevant demographics.
 
@@ -120,20 +134,20 @@ Use these as future World Spec priorities only after Brainstorm GO:
 
 ## Next Legal Action
 
-Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md` and `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md` for orientation.
+Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`, `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`, and `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-review.md` for orientation.
 
-Wait for Alexander to explicitly start Clinical Story Skeleton development.
+Wait for Alexander to explicitly start Identity Package.
 
-If Alexander starts Clinical Story Skeleton development:
+If Alexander starts Identity Package:
 
-1. Read `project/STATUS.md`, `project/PASS_PLAN.md`, `WORLD_SPEC_KICKOFF.md`, and `physician-decision-log-01.md`.
-2. Use only locked physician decisions and approved Brainstorm material.
-3. Do not populate the official World Spec template until Alexander authorizes drafting.
+1. Read `project/STATUS.md`, `project/PASS_PLAN.md`, `WORLD_SPEC_KICKOFF.md`, `physician-decision-log-01.md`, `physician-decision-log-02.md`, and `clinical-story-skeleton-review.md`.
+2. Use only locked physician decisions, the locked Clinical Story Skeleton, and approved Brainstorm material.
+3. Make identity/compliance decisions only. Do not populate the official World Spec template until Alexander authorizes drafting.
 
-If Alexander has not started Clinical Story Skeleton development:
+If Alexander has not started Identity Package:
 
 1. Continue preparation-only activities.
-2. Do not create the Clinical Story Skeleton.
+2. Do not revise the locked Clinical Story Skeleton.
 3. Do not draft World Spec.
 4. Do not create file inventory.
 
@@ -142,7 +156,8 @@ If Alexander has not started Clinical Story Skeleton development:
 Do not:
 
 - draft the World Spec before explicit Alexander authorization;
-- create the Clinical Story Skeleton before Alexander explicitly starts that phase;
+- revise the locked Clinical Story Skeleton without explicit Alexander approval;
+- start Identity Package before Alexander explicitly starts that phase;
 - populate the World Spec template before explicit Alexander authorization;
 - create Section 3 file inventory before explicit authorization;
 - create synthetic chart files;
@@ -159,7 +174,7 @@ If asked to help now, Claude should only support preparation:
 
 - summarize current state;
 - audit against AutoQC v6.3;
-- prepare or refine post-GO interview questions;
+- prepare or refine Identity Package interview questions;
 - critique proposed physician decisions;
 - help maintain consistency with the approved Brainstorm.
 

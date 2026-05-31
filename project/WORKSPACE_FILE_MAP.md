@@ -4,14 +4,14 @@ Purpose: local repository hygiene map to prevent duplicate working files and acc
 
 Generated from local workspace file listing excluding `.git`, caches, and Python bytecode.
 
-Current status: State synchronized / ready for Clinical Story Skeleton preparation. Clinical Story Skeleton and World Spec drafting have not started.
+Current status: Clinical Story Skeleton v1 locked / ready for Identity Package. World Spec drafting has not started.
 
 ## Root
 
 | File | Role | Duplication note |
 | --- | --- | --- |
 | `.gitignore` | Git hygiene and local-secret protection. | Single root ignore file. |
-| `AGENTS.md` | Codex operating instructions. | Root behavior source; do not duplicate in docs. |
+| `AGENTS.md` | Codex operating instructions. | Root behavior source; includes current Korvin Merrow active project and locked Clinical Story Skeleton state. |
 | `CONTRIBUTING.md` | Contribution and review rules. | Complements `README.md`; not a project status file. |
 | `README.md` | Repository overview and usage guide. | Root orientation only. |
 
@@ -54,9 +54,9 @@ Current status: State synchronized / ready for Clinical Story Skeleton preparati
 | `claude-package/01_SANCTUM_CORE_RULES.md` | Compressed Claude knowledge: core rules. | Claude upload package only. |
 | `claude-package/02_BRAINSTORM_GUIDE.md` | Compressed Brainstorm guide. | Derived from source; not source of truth. |
 | `claude-package/03_WORLD_SPEC_GUIDE.md` | Compressed World Spec guide. | Derived from source; not source of truth. |
-| `claude-package/04_KORVIN_MERROW_CONTEXT.md` | Refreshed Korvin Merrow context for Claude. | Includes submitted Brainstorm summary, locked decisions, and World Spec prep risks. |
-| `claude-package/05_EXECUTION_STATE.md` | Refreshed execution state for Claude. | Mirrors current Brainstorm approval / World Spec transition state; use `project/STATUS.md` for live status. |
-| `claude-package/06_HANDOFF_STATE.md` | Fresh-session Claude handoff. | Summarizes locked decisions, remaining decisions, next legal action, and hard boundaries. |
+| `claude-package/04_KORVIN_MERROW_CONTEXT.md` | Refreshed Korvin Merrow context for Claude. | Includes approved Brainstorm summary, locked Clinical Story Skeleton, and World Spec prep risks. |
+| `claude-package/05_EXECUTION_STATE.md` | Refreshed execution state for Claude. | Mirrors current Clinical Story Skeleton lock / Identity Package readiness state; use `project/STATUS.md` for live status. |
+| `claude-package/06_HANDOFF_STATE.md` | Fresh-session Claude handoff. | Summarizes locked decisions, locked skeleton, remaining decisions, next legal action, and hard boundaries. |
 
 ## Reference Source
 
@@ -145,19 +145,21 @@ Current status: State synchronized / ready for Clinical Story Skeleton preparati
 | File | Role | Duplication note |
 | --- | --- | --- |
 | `worlds/korvin-merrow/world-spec-prep/autoqc-preflight-checklist.md` | Local preflight checklist. | Summary; exact check source is `08_autoqc_master_index.md`. |
-| `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-interview.md` | Clinical Story Skeleton physician interview framework. | Questions only; not the skeleton, not a spec draft, not a file inventory. |
+| `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-interview.md` | Clinical Story Skeleton physician interview framework. | Historical interview scaffold; skeleton now locked in decision log 02. |
+| `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-review.md` | Review of locked Clinical Story Skeleton v1. | Recommends GO to Identity Package; not a World Spec draft. |
 | `worlds/korvin-merrow/world-spec-prep/claude-review-triage.md` | Triage of Claude World Spec prep review. | Decision queue; not clinical content. |
 | `worlds/korvin-merrow/world-spec-prep/decision-register.md` | Prep decision register. | Use for pending/locked decisions after GO. |
 | `worlds/korvin-merrow/world-spec-prep/file-plan-planning.md` | File plan planning scaffold. | Not a final file inventory. |
 | `worlds/korvin-merrow/world-spec-prep/friction-to-task-map.md` | Friction/task planning map. | Planning only. |
-| `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md` | Durable post-kickoff physician decision record. | Use before Clinical Story Skeleton development; not a draft spec. |
+| `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md` | Durable post-kickoff physician decision record. | Historical state sync record; superseded for skeleton lock by decision log 02. |
+| `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md` | Durable Clinical Story Skeleton v1 lock record. | Use before Identity Package; not a draft spec or file inventory. |
 | `worlds/korvin-merrow/world-spec-prep/post-go-interview-plan.md` | Interview sequence after Brainstorm GO. | This file; do not use before GO except for prep. |
 | `worlds/korvin-merrow/world-spec-prep/readiness-map.md` | World Spec readiness map. | Prep status. |
 | `worlds/korvin-merrow/world-spec-prep/self-containment-matrix.md` | Self-containment planning scaffold. | Not final traceability proof. |
 | `worlds/korvin-merrow/world-spec-prep/task-spec-planning.md` | Task spec planning scaffold. | No final prompts. |
 | `worlds/korvin-merrow/world-spec-prep/timeline-planning.md` | Timeline planning scaffold. | No final dates until physician approval. |
 | `worlds/korvin-merrow/world-spec-prep/trap-to-file-map.md` | Trap-to-file planning scaffold. | Not a Section 3 file inventory. |
-| `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md` | Active World Spec kickoff cockpit and workspace bloat/doctrine audit note. | Use first for World Spec transition orientation; not a draft spec. |
+| `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md` | Active World Spec kickoff cockpit and workspace bloat/doctrine audit note. | Updated with locked Clinical Story Skeleton state; not a draft spec. |
 
 ## Duplication Watchlist
 

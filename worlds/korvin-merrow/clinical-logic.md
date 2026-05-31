@@ -119,6 +119,88 @@ The patient has approximately 3 weeks of decline before presentation.
 
 The decline includes worsening weakness, reduced oral intake, near-fall/lightheadedness, family-noticed confusion, and possible urinary symptoms.
 
+## Locked Clinical Story Skeleton v1
+
+Status: LOCKED after review on 2026-05-31.
+
+Review artifact: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-review.md`
+
+Decision log: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`
+
+Baseline:
+
+- Lives with family.
+- Independent but slowed by chronic illness.
+- Occasional cane use.
+- Mild age-related forgetfulness only.
+- Chronic diseases generally stable before current decline.
+
+PMR / prednisone:
+
+- Several-year PMR history.
+- Chronic prednisone exposure.
+- Multiple prior flares and taper attempts.
+- Recent taper initiated because symptoms appeared controlled.
+- Prednisone history contains reconstructable source-of-truth inconsistencies across documentation, medication history, family understanding, and patient recollection.
+
+Three-week decline:
+
+- Reduced stamina.
+- Reduced activity.
+- Poor appetite.
+- Reduced fluid intake.
+- Increasing weakness.
+- Increasing family dependence.
+- Possible urinary symptoms.
+- Progressive unsteadiness.
+- Progressive cognitive slowing.
+
+Escalation:
+
+- Medication-management mistakes.
+- Increased dependence.
+- Lightheadedness.
+- Near-fall event.
+- Family recognizes meaningful deviation from baseline and seeks care.
+
+ED presentation:
+
+- Suspected urinary-source infection.
+- Dehydration.
+- AKI risk.
+- Altered baseline mental status.
+- Functional decline.
+- Sepsis-oriented management is clinically reasonable.
+- Infection is a contributor, not the entire explanation.
+
+Hospital course:
+
+- HD1: admission and stabilization.
+- HD2: partial improvement and consultant involvement begins.
+- HD3: PT/OT identify functional concerns.
+- HD4: consultant tensions emerge and steroid-history inconsistencies are recognized.
+- HD5: medical improvement continues and disposition questions become dominant.
+- HD6: patient appears medically improved but discharge remains debatable.
+
+Discharge state:
+
+- Infection improved.
+- AKI improving.
+- Hemodynamics stable.
+- Mental status improved.
+- Oral intake improved.
+- Functional reserve uncertain.
+- Medication restart strategy not fully settled.
+- Steroid interpretation imperfect.
+- Family concern persists.
+- Disposition risk remains meaningful.
+
+Near-fall framework:
+
+- Multi-factorial.
+- Not attributable to a single cause.
+- Contributors include poor intake, volume depletion, medication effects, neuropathy, deconditioning, infection physiology, and steroid-related physiology.
+
 ## Locked World Tone
 
 The patient is medically improving but operationally dangerous to discharge.

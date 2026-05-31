@@ -2,7 +2,7 @@
 
 ## Current Phase
 
-Pass 2 - Clinical Story Skeleton interview prepared.
+Clinical Story Skeleton v1 locked / ready for Identity Package.
 
 ## Current World
 
@@ -10,13 +10,13 @@ Working title: Korvin Merrow World
 
 ## Current State
 
-Brainstorm Human Review returned GO from Stacey S after SEND BACK remediation. Reviewer approved the Korvin Merrow Brainstorm and indicated next steps are World Spec and file template development. World Spec kickoff is recorded in `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`. Post-kickoff physician decisions are synchronized in `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md`. Clinical Story Skeleton interview framework is prepared at `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-interview.md`. World Spec drafting and Clinical Story Skeleton creation have not started.
+Brainstorm Human Review returned GO from Stacey S after SEND BACK remediation. Reviewer approved the Korvin Merrow Brainstorm and indicated next steps are World Spec and file template development. World Spec kickoff is recorded in `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`. Post-kickoff physician decisions are synchronized in `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md`. Clinical Story Skeleton v1 is locked and reviewed at `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-review.md`. Durable physician decision record: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`. World Spec drafting has not started.
 
 ## RL Studio Submission
 
 Task ID: cyau8803
 
-Status: Brainstorm approved / Clinical Story Skeleton interview prepared
+Status: Brainstorm approved / Clinical Story Skeleton v1 locked
 
 Original submission timestamp: 5/29/2026 2:49 PM PDT
 
@@ -26,15 +26,15 @@ Reviewer GO: Stacey S approved Brainstorm via Slack. Recorded in `worlds/korvin-
 
 ## Current Pass
 
-Pass 2 - Clinical Story Skeleton interview prepared.
+Pass 2 - Clinical Story Skeleton v1 locked.
 
 ## Next Pass
 
-Next eligible action: run the Clinical Story Skeleton interview section by section with Alexander.
+Pass 3 - Identity Package.
 
 ## Active Blocker
 
-No active reviewer blocker. Clinical Story Skeleton drafting remains blocked until Alexander answers the interview and explicitly authorizes skeleton creation. World Spec drafting remains blocked until Alexander explicitly authorizes drafting.
+No active reviewer blocker. Identity Package may begin when Alexander authorizes it. World Spec drafting, final file inventory, task prompts, golden responses, grader guidance, and synthetic file generation remain blocked.
 
 ## Current Git Checkpoint
 
@@ -54,7 +54,7 @@ Return to baseline commit if workflow becomes corrupted.
 
 ## Next Command For Codex
 
-Use `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-interview.md` to interview Alexander section by section. Do not create the Clinical Story Skeleton, draft World Spec, or create file inventory before Alexander explicitly authorizes the relevant phase.
+Begin Pass 3 - Identity Package only when Alexander authorizes it. Use `WORLD_SPEC_KICKOFF.md`, `physician-decision-log-02.md`, and `clinical-story-skeleton-review.md` for orientation. Do not draft World Spec or create file inventory before Alexander explicitly authorizes the relevant phase.
 
 ## Scope Guardrails
 

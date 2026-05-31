@@ -1,6 +1,6 @@
 # Korvin Merrow World Spec Kickoff
 
-Status: State synchronized / ready for Clinical Story Skeleton preparation.
+Status: Clinical Story Skeleton v1 locked / ready for Identity Package.
 
 Purpose: mark the transition from approved Brainstorm to World Spec preparation without drafting the World Spec, populating the template, creating a final file inventory, or inventing clinical values.
 
@@ -11,10 +11,13 @@ Purpose: mark the transition from approved Brainstorm to World Spec preparation 
 - RL Studio task ID: `cyau8803`.
 - World Spec phase is authorized for kickoff and preparation.
 - World Spec drafting has not started.
-- Clinical Story Skeleton has not been created.
+- Clinical Story Skeleton v1 is locked.
+- Clinical Story Skeleton review completed with GO recommendation.
 - Official Claude World Spec session is still pending.
-- Latest durable physician decision record: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md`.
-- Next allowed substantive action: begin Clinical Story Skeleton development only when Alexander explicitly starts that phase.
+- Post-kickoff physician decision record: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-01.md`.
+- Latest skeleton lock record: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`.
+- Clinical Story Skeleton review: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-review.md`.
+- Next allowed substantive action: begin Identity Package only when Alexander explicitly starts that phase.
 
 ## Workspace Bloat And Doctrine Audit
 
@@ -131,6 +134,17 @@ Locked complexity targets:
 - Target 12-15 comorbidities.
 - Target 18-22 medications.
 
+Locked Clinical Story Skeleton v1:
+
+- Baseline: lives with family; independent but slowed by chronic illness; occasional cane use; mild age-related forgetfulness only; chronic diseases generally stable before current decline.
+- PMR/prednisone: several-year PMR history with chronic prednisone exposure, multiple prior flares and taper attempts, recent taper due to controlled symptoms, and reconstructable source-of-truth inconsistencies.
+- Pre-hospital decline: approximately 3 weeks of reduced stamina, reduced activity, poor appetite, reduced fluid intake, increasing weakness, increasing family dependence, possible urinary symptoms, progressive unsteadiness, and progressive cognitive slowing.
+- Escalation: medication-management mistakes, increased dependence, lightheadedness, near-fall event, and family recognition of meaningful deviation from baseline.
+- ED presentation: suspected urinary-source infection, dehydration, AKI risk, altered baseline mental status, functional decline, and clinically reasonable sepsis-oriented management. Infection is a contributor, not the entire explanation.
+- Hospital course: HD1 admission/stabilization; HD2 partial improvement and consultant involvement begins; HD3 PT/OT identify functional concerns; HD4 consultant tensions emerge and steroid-history inconsistencies are recognized; HD5 medical improvement continues and disposition questions become dominant; HD6 patient appears medically improved but discharge remains debatable.
+- Discharge state: infection, AKI, hemodynamics, mental status, and intake improve, while functional reserve, medication restart strategy, steroid interpretation, family concern, and disposition risk remain unresolved.
+- Near-fall framework: multi-factorial, not attributable to a single cause.
+
 Primary frictions:
 
 1. Nephrology vs Cardiology: renal/hemodynamic safety during AKI/hypotension vs HFrEF/CAD long-term protective therapy.
@@ -243,7 +257,8 @@ Known unresolved package questions:
 
 Stop before:
 
-- Clinical Story Skeleton creation unless Alexander explicitly starts that phase.
+- Revising the locked Clinical Story Skeleton unless Alexander explicitly reopens it.
+- Identity Package work unless Alexander explicitly starts that phase.
 - World Spec drafting unless Alexander explicitly authorizes drafting.
 - Final file inventory.
 - Task prompts.

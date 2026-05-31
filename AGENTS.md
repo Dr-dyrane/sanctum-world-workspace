@@ -108,11 +108,13 @@ The world should test prioritization, pattern recognition, synthesis across mult
 
 Clinical environment: Emergency Medicine / Internal Medicine / acute hospital setting.
 
-Working patient: Korvin Merrow, a fictional 62-year-old male with type 2 diabetes mellitus, hypertension, CKD stage 3, HFrEF, CAD history, hyperlipidemia, anemia of CKD, osteoporosis/osteopenia from chronic steroid exposure, obstructive sleep apnea, diabetic peripheral neuropathy, polypharmacy, and PMR with unclear chronic prednisone taper history. He presents with altered mental status, progressive weakness, poor oral intake, and borderline hypotension. Initial working diagnosis is suspected urinary-source sepsis, but the case evolves beyond the first impression.
+Working patient: Korvin Merrow, a fictional 62-year-old male with type 2 diabetes mellitus, hypertension, CKD stage 3, HFrEF, CAD history, hyperlipidemia, anemia of CKD, osteoporosis/osteopenia from chronic steroid exposure, obstructive sleep apnea, diabetic peripheral neuropathy, polypharmacy, and PMR with unclear chronic prednisone taper history. He presents with altered mental status, progressive weakness, poor oral intake, near-fall/lightheadedness, family-noticed confusion, possible urinary symptoms, and borderline hypotension. Initial working diagnosis is suspected urinary-source sepsis, but the case evolves beyond the first impression.
 
 Competing clinical concerns include adrenal insufficiency from previous steroid exposure, acute kidney injury, electrolyte abnormalities, medication-related complications, possible cardiac involvement, and discharge safety concerns.
 
 World journey should follow emergency evaluation, inpatient admission, evolving diagnostic workup, consultant recommendations, medication changes, treatment decisions, and discharge planning.
+
+Current locked story state: Clinical Story Skeleton v1 is locked. The world is a mixed physiology world where infection, steroid issues, CKD/HF physiology, polypharmacy, and functional decline interact across an approximately 3-week decline and a 6-day hospitalization ending at HD6 18:00. The core theme is medically improving but operationally dangerous. The primary failure target is disposition safety, functional decline recognition, and discharge-readiness reasoning.
 
 Major clinical friction themes: emergency/inpatient stabilization and sepsis management; endocrinology concern for adrenal crisis/adrenal insufficiency; nephrology concern for kidney injury and medication safety; cardiology balancing long-term protective medications; family/caregiver concern that the patient has not returned to baseline despite medical stability.
 

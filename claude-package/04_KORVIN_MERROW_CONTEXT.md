@@ -2,7 +2,7 @@
 
 Purpose: compressed Claude context for a fresh Project Sanctum session. Use this as operational context only; the full source of truth remains local under `reference/` and `worlds/korvin-merrow/`.
 
-Boundary: Brainstorm returned SEND BACK from Stacey S. Reviewer-required Brainstorm fixes have been prepared locally and are awaiting explicit Alexander authorization for RL Studio reupload. World Spec drafting is not authorized until Brainstorm Human Review returns GO and Alexander explicitly authorizes drafting.
+Boundary: Brainstorm is approved after SEND BACK remediation. Clinical Story Skeleton v1 is locked and reviewed. Identity Package is next when Alexander explicitly authorizes it. World Spec drafting is not authorized until Alexander explicitly authorizes drafting.
 
 ## Current World Concept
 
@@ -23,7 +23,7 @@ Design philosophy:
 
 ## Approved Brainstorm Summary
 
-Brainstorm submitted in RL Studio and passed final Brainstorm AutoQC 51/51 before Human Review. Human Review returned SEND BACK requiring synthetic identity, World Type declaration, comorbidity expansion, and medication specificity. Local remediation has been applied to the active Brainstorm source and regenerated DOCX, but it has not yet been reuploaded.
+Brainstorm submitted in RL Studio and passed final Brainstorm AutoQC 51/51 before Human Review. Human Review returned SEND BACK requiring synthetic identity, World Type declaration, comorbidity expansion, and medication specificity. Remediation was applied, the Korvin Merrow Brainstorm was reuploaded, AutoQC passed 51/51, and Stacey S approved the Brainstorm.
 
 World setup:
 
@@ -182,23 +182,50 @@ These are World Spec preparation risks, not authorization to change Brainstorm:
 - Task independence is a blocker under Check 2.40.
 - Failure Design tables need at least 5 grounded traps per task under Check 2.34, without inappropriate duplication under Check 2.91.
 
-## Current Remediation State
+## Locked Clinical Story Skeleton v1
 
-Reviewer-required Brainstorm changes are applied locally. Do not start World Spec.
+Status: locked after review on 2026-05-31.
 
-Applied:
+Review artifact: `worlds/korvin-merrow/world-spec-prep/clinical-story-skeleton-review.md`
+
+Decision log: `worlds/korvin-merrow/world-spec-prep/physician-decision-log-02.md`
+
+Core story:
+
+- Korvin Merrow lives with family and was independent but slowed by chronic illness before a 3-week decline.
+- Baseline includes occasional cane use and mild age-related forgetfulness only.
+- PMR/prednisone history includes several-year PMR, chronic prednisone exposure, prior flares and taper attempts, and a recent taper with reconstructable source-of-truth inconsistency.
+- Decline includes reduced stamina, reduced activity, poor appetite, reduced fluid intake, increasing weakness, increased family dependence, possible urinary symptoms, progressive unsteadiness, and cognitive slowing.
+- Escalation includes medication-management mistakes, lightheadedness, near-fall, and family recognition of meaningful deviation from baseline.
+- ED presentation includes suspected urinary-source infection, dehydration, AKI risk, altered baseline mental status, functional decline, and clinically reasonable sepsis-oriented management.
+- Infection is a contributor, not the entire explanation.
+- Hospital course: HD1 stabilization; HD2 partial improvement and consultant involvement begins; HD3 PT/OT identifies functional concerns; HD4 consultant tensions and steroid-history inconsistency recognized; HD5 disposition concerns dominate; HD6 medically improved but discharge remains debatable.
+- Discharge state: infection, AKI, hemodynamics, mental status, and oral intake improve, but functional reserve, medication restart strategy, steroid interpretation, family concern, and disposition risk remain unresolved.
+- Primary failure target: disposition safety, functional decline recognition, and discharge-readiness reasoning.
+- Near-fall is multi-factorial, not a single-cause clue.
+
+## Current State
+
+Brainstorm approved. Clinical Story Skeleton v1 locked. Do not start World Spec drafting.
+
+Completed:
 
 1. Korvin Merrow synthetic patient identity.
 2. `World Type: Typical Clinical World`.
 3. Approved 10+ comorbidity burden.
 4. Approved compact medication list with drug names/doses.
 5. Regenerated `worlds/korvin-merrow/submission/Korvin_Merrow_Brainstorm.docx`.
+6. Reuploaded revised Brainstorm to RL Studio.
+7. AutoQC passed 51/51.
+8. Brainstorm approved by Stacey S.
+9. Clinical Story Skeleton v1 locked and reviewed.
 
-Still pending:
+Still pending before World Spec drafting:
 
-1. Alexander authorization for RL Studio reupload.
-2. Brainstorm AutoQC rerun after upload.
-3. Human reviewer decision after resubmission.
+1. Identity Package.
+2. Governance Package.
+3. Official Claude World Spec session.
+4. Alexander authorization to draft the World Spec.
 
 ## Claude Use Rules
 
@@ -207,10 +234,10 @@ Claude may:
 - organize physician-provided decisions;
 - critique against AutoQC and reviewer-risk criteria;
 - help prepare decision checklists and consistency audits;
-- later help with World Spec drafting only after GO and explicit Alexander approval.
+- later help with World Spec drafting only after explicit Alexander approval.
 
 Claude must not:
 
 - invent scenario concept, traps, task ideas, diagnoses, labs, dates, medications, doses, patient identity, MRN, provider names, file inventory, final prompts, golden responses, grader guidance, or failure analysis;
 - treat World Spec preparation risks as permission to revise Brainstorm;
-- imply World Spec drafting is authorized before Brainstorm GO.
+- imply World Spec drafting is authorized before Alexander explicitly authorizes it.
