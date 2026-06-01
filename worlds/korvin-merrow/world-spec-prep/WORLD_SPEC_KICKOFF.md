@@ -1,6 +1,6 @@
 # Korvin Merrow World Spec Kickoff
 
-Status: File Inventory v1 / File Inventory v1 locked.
+Status: Synthetic World-Level File Construction Plan v1 / Candidate review.
 
 Purpose: active cockpit for the transition from approved Brainstorm through World Spec construction while preserving phase boundaries around template population, file inventory, tasks, and downstream deliverables.
 
@@ -21,7 +21,8 @@ Purpose: active cockpit for the transition from approved Brainstorm through Worl
 - File Inventory v1 is locked at `worlds/korvin-merrow/file-inventory/locked/file-inventory-v1.md`.
 - File Inventory v1 ratification: `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-v1-ratification.md`.
 - File Inventory Planning is complete.
-- Next eligible phase: Synthetic World-Level File Construction.
+- Synthetic World-Level File Construction Plan v1 is in candidate review at `worlds/korvin-merrow/synthetic-files/candidate-review/synthetic-world-file-construction-plan-v1.md`.
+- Next eligible phase: review and ratification of Synthetic World-Level File Construction Plan v1.
 - Synthetic files, chart notes, discharge summaries, medication lists, medication schedules, lab values, vital signs, consultant recommendation text, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission packaging, RL Studio upload, notes, labs, and vitals have not started.
 - Clinical Story Skeleton v1 is locked and ratified.
 - Clinical Story Skeleton review completed with GO recommendation.
@@ -56,7 +57,7 @@ Purpose: active cockpit for the transition from approved Brainstorm through Worl
 - Daily Hospital Course Framework v1: `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md`.
 - Daily Hospital Course Framework ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md`.
 - Preparation Layer status: COMPLETE.
-- Next eligible phase: Synthetic World-Level File Construction. Synthetic files, chart notes, discharge summaries, medication lists, medication schedules, lab values, vital signs, consultant recommendation text, task specifications, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission packaging, RL Studio upload, notes, labs, and vitals remain blocked until explicitly authorized.
+- Next eligible phase: review and ratification of Synthetic World-Level File Construction Plan v1. Synthetic files, chart notes, discharge summaries, medication lists, medication schedules, lab values, vital signs, consultant recommendation text, task specifications, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission packaging, RL Studio upload, notes, labs, and vitals remain blocked until explicitly authorized.
 
 ## Workspace Bloat And Doctrine Audit
 
@@ -74,7 +75,7 @@ Doctrine check:
 - World Spec v1 has been locked and ratified.
 - No official World Spec template has been populated.
 - File Inventory v1 planned inventory table has been locked, but no synthetic chart files or downstream file contents have been created.
-- No synthetic chart files have been created.
+- No synthetic chart files have been created. The only synthetic-files artifact is a candidate construction plan.
 - No final task prompts, golden responses, grader guidelines, or failure analysis have been created.
 - Clinical decisions remain physician-originated and Brainstorm-locked.
 - Claude remains an official drafting assistant, not the clinical source of truth.
@@ -366,7 +367,7 @@ Preparation Layer:
 - Status: COMPLETE.
 - Completed artifacts: Brainstorm, Temporal Architecture, Clinical Story Skeleton, Identity Package, Governance Package, Key Milestones Calendar Skeleton, Baseline Anchor Package, Clinical Story Timeline Package, Task Architecture Package, Medication Expansion Package, Comorbidity Expansion Package, Provider Roster Package, Surgical History Package, and Daily Hospital Course Framework.
 - World Spec Construction status: COMPLETE.
-- Boundary: World Spec v1 is locked. File Inventory Architecture v1 is locked, Phase 3 File Inventory Architecture is complete, File Inventory v1 is locked, and File Inventory Planning is complete. Synthetic files, chart notes, discharge summaries, medication lists, medication schedules, lab values, vital signs, consultant recommendation text, task specifications, prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission packaging, RL Studio upload, and hospital-course documentation remain unstarted until Alexander explicitly authorizes the relevant next step.
+- Boundary: World Spec v1 is locked. File Inventory Architecture v1 is locked, Phase 3 File Inventory Architecture is complete, File Inventory v1 is locked, File Inventory Planning is complete, and Synthetic World-Level File Construction Plan v1 is in candidate review. Synthetic files, chart notes, discharge summaries, medication lists, medication schedules, lab values, vital signs, consultant recommendation text, task specifications, prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission packaging, RL Studio upload, and hospital-course documentation remain unstarted until Alexander explicitly authorizes the relevant next step.
 
 File Inventory Architecture v1:
 
@@ -375,10 +376,17 @@ File Inventory Architecture v1:
 - Ratification: `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-architecture-ratification.md`.
 - Purpose: define the planned file ecosystem for the locked World Spec without creating final Section 3 rows, filenames, synthetic files, notes, labs, vitals, medication lists, task prompts, expected outputs, goldens, or grader guidance.
 - It preserves the world close at 05/23/2026 18:00, classifies post-world anchors as task/post-world context only, maps all five traps and three frictions to planned file-source categories, and records future AutoQC v6.3 8-column file-plan readiness.
-- Next eligible phase: File Inventory v1 review / ratification.
+- Next eligible phase: review and ratification of Synthetic World-Level File Construction Plan v1.
 - File Inventory v1 locked table: `worlds/korvin-merrow/file-inventory/locked/file-inventory-v1.md`.
 - File Inventory v1 ratification: `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-v1-ratification.md`.
 - Current status: LOCKED.
+
+Synthetic World-Level File Construction Plan v1:
+
+- Status: CANDIDATE REVIEW.
+- Artifact: `worlds/korvin-merrow/synthetic-files/candidate-review/synthetic-world-file-construction-plan-v1.md`.
+- Purpose: construction strategy for the 22 locked world-level files FI-W01 through FI-W22.
+- It does not create synthetic file contents, filenames, chart notes, discharge summaries, consultant recommendations, labs, vitals, medication lists, medication schedules, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, or submission materials.
 
 Fetched World Spec source examples:
 
