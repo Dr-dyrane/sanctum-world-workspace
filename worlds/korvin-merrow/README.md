@@ -1,6 +1,6 @@
 # Korvin Merrow World
 
-Current state: World Spec Construction / World Spec Skeleton v1 locked.
+Current state: World Spec Construction / World Spec v1 candidate review.
 
 Start here only after reading `project/STATUS.md`.
 
@@ -13,10 +13,12 @@ Start here only after reading `project/STATUS.md`.
 - `reviews/`: external/human/AutoQC review artifacts and reviewer feedback history.
 - `submission/`: RL Studio submission artifacts.
 - `world-spec-prep/`: World Spec preparation cockpit plus lifecycle subfolders for locked decisions, locked, ratifications, reviews, decision logs, and planning scaffolds.
+- `world-spec-construction/`: World Spec construction lifecycle folders for candidate review artifacts, locked construction artifacts, and ratifications.
 
 ## Active Entry Points
 
 - `world-spec-prep/WORLD_SPEC_KICKOFF.md`
+- `world-spec-construction/candidate-review/world-spec-v1.md`
 - `world-spec-construction/locked/world-spec-skeleton-v1.md`
 - `world-spec-construction/ratifications/world-spec-skeleton-ratification.md`
 - `world-spec-prep/locked/clinical-story-timeline-package-v1.md`
@@ -43,4 +45,4 @@ Start here only after reading `project/STATUS.md`.
 - `world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`
 - `active/brainstorm.md`
 
-World Spec construction is authorized, but do not draft World Spec sections, create file inventory, create task prompts, write golden responses, write grader guidance, create notes, labs, vitals, templates, reference files, or synthetic documents until Alexander explicitly authorizes the relevant step.
+World Spec v1 is a candidate-review artifact. Do not create file inventory rows, synthetic files, task prompts, expected outputs, golden responses, grader guidance, AutoQC responses, DOCX submission artifacts, RL Studio uploads, notes, labs, vitals, templates, or reference files until Alexander explicitly authorizes the relevant step.

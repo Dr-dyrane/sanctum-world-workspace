@@ -4,7 +4,7 @@ Purpose: compressed current state for Claude. Use `project/STATUS.md` and `docs/
 
 ## Project State
 
-Current phase: World Spec Construction / World Spec Skeleton v1 locked.
+Current phase: World Spec Construction / World Spec v1 candidate review.
 
 Brainstorm:
 
@@ -22,7 +22,7 @@ Brainstorm:
 
 Current blocker:
 
-- No reviewer blocker. Preparation Layer is complete. World Spec Skeleton v1 is locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`. World Spec kickoff is recorded. Clinical Story Skeleton v1 is locked, reviewed, and ratified. Identity Package v1 is locked. Identity Package hostile-review addendum is recorded as carry-forward implementation notes only. Governance Package v1 is ratified. Physician Architecture Layer is complete. Key Milestones Calendar Skeleton v1 is locked. Baseline Anchor Package v1 is locked. Clinical Story Timeline Package v1 is locked. Task Architecture Interview v1 is complete. Task Architecture Package v1 is locked. Medication Expansion Package v1 is locked after physician decision resolution and ratification. Comorbidity Expansion Package v1 is locked after independent review and physician ratification. Provider Roster Package v1 is locked after independent review and physician ratification. Surgical History Package v1 is locked after independent review and physician ratification. Daily Hospital Course Framework v1 is locked after independent review and physician ratification. Full World Spec drafting, file inventory, tasks, prompts, goldens, grader guidance, notes, labs, vitals, and synthetic files remain gated on explicit Alexander authorization for the relevant step.
+- No reviewer blocker. Preparation Layer is complete. World Spec Skeleton v1 is locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`. World Spec v1 has been created as a candidate-review artifact at `worlds/korvin-merrow/world-spec-construction/candidate-review/world-spec-v1.md`. File inventory, tasks, prompts, expected outputs, goldens, grader guidance, notes, labs, vitals, synthetic files, DOCX submission packaging, AutoQC, and RL Studio upload remain gated on explicit Alexander authorization for the relevant step.
 
 Next legal action:
 
@@ -131,6 +131,7 @@ Next legal action:
 - Daily Hospital Course Framework v1 ratified and locked: `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md`.
 - Preparation Layer completed: `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md`.
 - World Spec Skeleton v1 locked and ratified: `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`.
+- World Spec v1 candidate created: `worlds/korvin-merrow/world-spec-construction/candidate-review/world-spec-v1.md`.
 - World Spec example source documents recorded under `reference/word-spec-examples/`.
 
 ## Latest Git Checkpoints

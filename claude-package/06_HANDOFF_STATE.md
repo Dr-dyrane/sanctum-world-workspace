@@ -18,7 +18,7 @@ RL Studio:
 - Approval source: Slack / Stacey S
 - Reviewer message: "great job! I approved your brainstorm. Next steps are to move forward with world spec and file template development."
 
-Current state: World Spec Construction / World Spec Skeleton v1 locked. World Spec Skeleton v1 is at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`. Full World Spec drafting, file inventory, tasks, prompts, goldens, grader guidance, notes, labs, vitals, and synthetic files remain gated on explicit Alexander authorization for the relevant step.
+Current state: World Spec Construction / World Spec v1 candidate review. World Spec Skeleton v1 is locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`. World Spec v1 has been created as a candidate-review artifact at `worlds/korvin-merrow/world-spec-construction/candidate-review/world-spec-v1.md`. File inventory, tasks, prompts, expected outputs, goldens, grader guidance, notes, labs, vitals, synthetic files, DOCX submission packaging, AutoQC, and RL Studio upload remain gated on explicit Alexander authorization for the relevant step.
 
 ## Locked Decisions
 
@@ -265,6 +265,13 @@ World Spec Skeleton v1:
 - Purpose: structural map for final World Spec section order, source-package mapping, construction boundaries, Studio alignment, AutoQC readiness, and construction order.
 - Boundary: does not create final World Spec prose, synthetic files, file inventory rows, clinical notes, labs, vitals, task prompts, expected outputs, goldens, grader guidance, reference files, or templates.
 
+World Spec v1:
+
+- Artifact: `worlds/korvin-merrow/world-spec-construction/candidate-review/world-spec-v1.md`.
+- Status: CANDIDATE REVIEW.
+- Purpose: first complete World Spec candidate built from locked architecture only.
+- Boundary: does not create file inventory rows, synthetic files, clinical notes, labs, vitals, medication schedules, task prompts, expected outputs, golden responses, grader guidance, AutoQC responses, reference files, templates, DOCX submission artifacts, or RL Studio upload.
+
 Fetched World Spec source examples:
 
 - Alexander added source/reference examples under `reference/word-spec-examples/`.
@@ -316,19 +323,19 @@ Use these as future World Spec priorities only after Brainstorm GO:
 
 Use `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`, `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-skeleton-ratification.md`, `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`, `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/identity-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/reviews/identity-package-review-addendum.md`, `worlds/korvin-merrow/world-spec-prep/locked/governance-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/reviews/governance-package-clarification.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/governance-package-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/key-milestones-calendar-skeleton-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/key-milestones-calendar-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/baseline-anchor-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/locked/clinical-story-timeline-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-timeline-ratification.md`, `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md`, `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/medication-expansion-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/locked/comorbidity-expansion-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/comorbidity-expansion-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/provider-roster-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/provider-roster-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/surgical-history-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/surgical-history-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md`, and `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md` for orientation.
 
-Wait for Alexander to authorize the next World Spec construction action.
+Wait for Alexander to review or authorize the next action for World Spec v1.
 
 For the next preparation step:
 
 1. Read `project/STATUS.md`, `project/PASS_PLAN.md`, `WORLD_SPEC_KICKOFF.md`, `physician-decision-log-02.md`, `clinical-story-skeleton-ratification.md`, `identity-package-v1.md`, `identity-package-review-addendum.md`, `governance-package-v1.md`, `governance-package-clarification.md`, `governance-package-ratification.md`, `key-milestones-calendar-skeleton-v1.md`, `key-milestones-calendar-ratification.md`, `baseline-anchor-package-v1.md`, `clinical-story-timeline-package-v1.md`, `clinical-story-timeline-ratification.md`, `task-architecture-interview-v1.md`, `task-architecture-package-v1.md`, `task-architecture-ratification.md`, `medication-expansion-package-v1.md`, `comorbidity-expansion-package-v1.md`, `comorbidity-expansion-ratification.md`, `provider-roster-package-v1.md`, `provider-roster-ratification.md`, `surgical-history-package-v1.md`, `daily-hospital-course-framework-v1.md`, `world-spec-skeleton-v1.md`, and `world-spec-skeleton-ratification.md`.
 2. Use only locked physician decisions, the ratified Clinical Story Skeleton, locked Identity Package, ratified Governance Package v1, locked calendar skeleton, locked baseline anchor package, and approved Brainstorm material.
-3. Do not populate the official World Spec template until Alexander authorizes drafting.
+3. Do not populate the official World Spec template until Alexander authorizes template population.
 
 Until Alexander authorizes the next construction unit:
 
-1. Continue preparation-only activities.
+1. Continue only explicitly authorized World Spec construction or review activities.
 2. Do not revise the locked Clinical Story Skeleton.
-3. Do not draft World Spec.
+3. Do not revise or ratify World Spec v1 without Alexander approval.
 4. Do not create file inventory.
 
 ## Hard Boundaries
