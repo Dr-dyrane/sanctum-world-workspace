@@ -340,7 +340,9 @@ Preparation Layer Status: COMPLETE.
 
 World Spec Construction Status: AUTHORIZED.
 
-Current Construction Artifact: World Spec Skeleton v1 candidate review at `worlds/korvin-merrow/world-spec-construction/candidate-review/world-spec-skeleton-v1.md`.
+Current Construction Artifact: World Spec Skeleton v1 locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-skeleton-ratification.md`.
+
+World Spec Skeleton Phase Status: COMPLETE.
 
 ## Key Milestones Calendar Skeleton v1
 

@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-World Spec Construction / World Spec Skeleton v1 candidate review.
+World Spec Construction / World Spec Skeleton v1 locked.
 
 ## Brainstorm
 
@@ -24,7 +24,8 @@ World Spec Construction / World Spec Skeleton v1 candidate review.
 - World Spec kickoff: recorded in `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`
 - Physician decision log: recorded in `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-01.md`
 - World Spec construction: authorized
-- World Spec Skeleton v1: candidate review
+- World Spec Skeleton v1: locked
+- World Spec Skeleton Phase: complete
 - Full World Spec drafting: not started
 - Clinical Story Skeleton: v1 locked, reviewed, and ratified
 - Identity Package: v1 locked
@@ -41,9 +42,10 @@ World Spec Construction / World Spec Skeleton v1 candidate review.
 - Surgical History Package: v1 locked
 - Daily Hospital Course Framework: v1 locked
 - Preparation Layer: complete
-- World Spec Skeleton v1: `worlds/korvin-merrow/world-spec-construction/candidate-review/world-spec-skeleton-v1.md`
+- World Spec Skeleton v1: `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`
+- World Spec Skeleton ratification: `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-skeleton-ratification.md`
 - Official Claude World Spec session: pending
-- Current state: World Spec Skeleton v1 is in candidate review; calendar, baseline anchors, Clinical Story Timeline Package v1, Task Architecture Package v1, Medication Expansion Package v1, Comorbidity Expansion Package v1, Provider Roster Package v1, Surgical History Package v1, and Daily Hospital Course Framework v1 are locked
+- Current state: World Spec Skeleton v1 is locked; calendar, baseline anchors, Clinical Story Timeline Package v1, Task Architecture Package v1, Medication Expansion Package v1, Comorbidity Expansion Package v1, Provider Roster Package v1, Surgical History Package v1, and Daily Hospital Course Framework v1 are locked
 - World Spec prep packet: created
 - Official World Spec template: saved locally
 - World Spec AutoQC prompt v6.3: saved locally

@@ -2,7 +2,7 @@
 
 Date created: 2026-06-01
 
-Status: CANDIDATE REVIEW
+Status: LOCKED
 
 Purpose: define the structure, section order, source-package mapping, and construction boundaries for the final Korvin Merrow World Spec before full World Spec prose is drafted.
 
@@ -361,10 +361,10 @@ Evidence: it contains no final prose, synthetic files, file inventory rows, clin
 
 Impact: phase boundary remains intact.
 
-Action required: stop after skeleton candidate review.
+Action required: proceed only when Alexander authorizes the next construction step.
 
 ## Final Status
 
 World Spec Skeleton v1
 
-Status: CANDIDATE REVIEW
+Status: LOCKED

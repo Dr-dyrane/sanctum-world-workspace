@@ -789,3 +789,39 @@ World Spec Construction:
 
 - Status: AUTHORIZED.
 - File inventory, synthetic files, tasks, prompts, expected outputs, goldens, grader guidance, notes, labs, vitals, and hospital-course documentation have not started.
+
+## World Spec Skeleton v1
+
+Status: LOCKED.
+
+Artifact: `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`
+
+Ratification: `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-skeleton-ratification.md`
+
+Review outcomes:
+
+- Windsurf Claude Review: YES / LOCK READY / GO.
+- Claude Code Review: YES / LOCK READY / GO.
+- No true defects.
+- No blockers.
+- No orphaned locked packages.
+- No template conflicts.
+- No hierarchy conflicts.
+- No timeline conflicts.
+- No friction or trap collapse.
+- No premature file inventory, task construction, prompt, golden, or grader creation.
+
+Watch items:
+
+- Future World File Plan construction must follow AutoQC v6.3 requirements, including the 8-column file-plan structure.
+- Transcript packaging remains a future submission-layer activity.
+- Administrative-deliverable watch item (AutoQC 2.108) remains preserved as a future-construction consideration.
+
+World Spec Skeleton Phase:
+
+- Status: COMPLETE.
+
+World Spec Construction:
+
+- Status: AUTHORIZED.
+- Full World Spec prose, file inventory rows, synthetic files, tasks, prompts, expected outputs, goldens, grader guidance, reference files, submission artifacts, notes, labs, vitals, and hospital-course documentation have not started.

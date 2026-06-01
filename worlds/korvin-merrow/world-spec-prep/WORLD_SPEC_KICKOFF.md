@@ -1,6 +1,6 @@
 # Korvin Merrow World Spec Kickoff
 
-Status: World Spec Construction / World Spec Skeleton v1 candidate review.
+Status: World Spec Construction / World Spec Skeleton v1 locked.
 
 Purpose: mark the transition from approved Brainstorm to World Spec preparation without drafting the World Spec, populating the template, creating a final file inventory, or inventing clinical values.
 
@@ -11,7 +11,8 @@ Purpose: mark the transition from approved Brainstorm to World Spec preparation 
 - RL Studio task ID: `cyau8803`.
 - World Spec phase is authorized for kickoff and preparation.
 - World Spec construction is authorized.
-- World Spec Skeleton v1 is in candidate review at `worlds/korvin-merrow/world-spec-construction/candidate-review/world-spec-skeleton-v1.md`.
+- World Spec Skeleton v1 is locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`.
+- World Spec Skeleton ratification: `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-skeleton-ratification.md`.
 - World Spec drafting, file inventory, tasks, prompts, goldens, grader guidance, notes, labs, vitals, and synthetic files have not started.
 - Clinical Story Skeleton v1 is locked and ratified.
 - Clinical Story Skeleton review completed with GO recommendation.
@@ -46,7 +47,7 @@ Purpose: mark the transition from approved Brainstorm to World Spec preparation 
 - Daily Hospital Course Framework v1: `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md`.
 - Daily Hospital Course Framework ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md`.
 - Preparation Layer status: COMPLETE.
-- Next allowed substantive action: review World Spec Skeleton v1. Full World Spec prose, file inventory, tasks, prompts, expected outputs, goldens, grader guidance, notes, labs, vitals, and synthetic files remain blocked until explicitly authorized.
+- Next allowed substantive action: Alexander's explicit next World Spec construction instruction. Full World Spec prose, file inventory, tasks, prompts, expected outputs, goldens, grader guidance, notes, labs, vitals, and synthetic files remain blocked until explicitly authorized.
 
 ## Workspace Bloat And Doctrine Audit
 

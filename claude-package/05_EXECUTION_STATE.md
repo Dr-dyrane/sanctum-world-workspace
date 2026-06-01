@@ -4,7 +4,7 @@ Purpose: compressed current state for Claude. Use `project/STATUS.md` and `docs/
 
 ## Project State
 
-Current phase: World Spec Construction / World Spec Skeleton v1 candidate review.
+Current phase: World Spec Construction / World Spec Skeleton v1 locked.
 
 Brainstorm:
 
@@ -22,7 +22,7 @@ Brainstorm:
 
 Current blocker:
 
-- No reviewer blocker. Preparation Layer is complete. World Spec Skeleton v1 is in candidate review at `worlds/korvin-merrow/world-spec-construction/candidate-review/world-spec-skeleton-v1.md`. World Spec kickoff is recorded. Clinical Story Skeleton v1 is locked, reviewed, and ratified. Identity Package v1 is locked. Identity Package hostile-review addendum is recorded as carry-forward implementation notes only. Governance Package v1 is ratified. Physician Architecture Layer is complete. Key Milestones Calendar Skeleton v1 is locked. Baseline Anchor Package v1 is locked. Clinical Story Timeline Package v1 is locked. Task Architecture Interview v1 is complete. Task Architecture Package v1 is locked. Medication Expansion Package v1 is locked after physician decision resolution and ratification. Comorbidity Expansion Package v1 is locked after independent review and physician ratification. Provider Roster Package v1 is locked after independent review and physician ratification. Surgical History Package v1 is locked after independent review and physician ratification. Daily Hospital Course Framework v1 is locked after independent review and physician ratification. Full World Spec drafting, file inventory, tasks, prompts, goldens, grader guidance, notes, labs, vitals, and synthetic files remain gated on explicit Alexander authorization for the relevant step.
+- No reviewer blocker. Preparation Layer is complete. World Spec Skeleton v1 is locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`. World Spec kickoff is recorded. Clinical Story Skeleton v1 is locked, reviewed, and ratified. Identity Package v1 is locked. Identity Package hostile-review addendum is recorded as carry-forward implementation notes only. Governance Package v1 is ratified. Physician Architecture Layer is complete. Key Milestones Calendar Skeleton v1 is locked. Baseline Anchor Package v1 is locked. Clinical Story Timeline Package v1 is locked. Task Architecture Interview v1 is complete. Task Architecture Package v1 is locked. Medication Expansion Package v1 is locked after physician decision resolution and ratification. Comorbidity Expansion Package v1 is locked after independent review and physician ratification. Provider Roster Package v1 is locked after independent review and physician ratification. Surgical History Package v1 is locked after independent review and physician ratification. Daily Hospital Course Framework v1 is locked after independent review and physician ratification. Full World Spec drafting, file inventory, tasks, prompts, goldens, grader guidance, notes, labs, vitals, and synthetic files remain gated on explicit Alexander authorization for the relevant step.
 
 Next legal action:
 
@@ -52,7 +52,8 @@ Next legal action:
 - Use `worlds/korvin-merrow/world-spec-prep/ratifications/surgical-history-ratification.md` for surgical-history ratification and noise-control guardrails.
 - Use `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md` as the locked HD1-HD6 daily evolution framework.
 - Use `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md` for preparation-layer completion and daily framework ratification.
-- Use `worlds/korvin-merrow/world-spec-construction/candidate-review/world-spec-skeleton-v1.md` as the active World Spec Skeleton candidate.
+- Use `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md` as the locked World Spec Skeleton.
+- Use `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-skeleton-ratification.md` for World Spec Skeleton ratification and watch items.
 - Do not revise the locked Clinical Story Skeleton or locked Identity Package, draft World Spec, create milestones, or create file inventory until Alexander explicitly starts/authorizes the relevant phase.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
 
@@ -129,7 +130,7 @@ Next legal action:
 - Surgical History Package v1 ratification recorded: `worlds/korvin-merrow/world-spec-prep/ratifications/surgical-history-ratification.md`.
 - Daily Hospital Course Framework v1 ratified and locked: `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md`.
 - Preparation Layer completed: `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md`.
-- World Spec Skeleton v1 created for candidate review: `worlds/korvin-merrow/world-spec-construction/candidate-review/world-spec-skeleton-v1.md`.
+- World Spec Skeleton v1 locked and ratified: `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`.
 - World Spec example source documents recorded under `reference/word-spec-examples/`.
 
 ## Latest Git Checkpoints
@@ -233,7 +234,8 @@ Claude must not replace physician judgment or originate clinical design.
 - `worlds/korvin-merrow/world-spec-prep/ratifications/surgical-history-ratification.md`
 - `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md`
 - `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md`
-- `worlds/korvin-merrow/world-spec-construction/candidate-review/world-spec-skeleton-v1.md`
+- `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`
+- `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-skeleton-ratification.md`
 - `reference/world-spec-guidelines/08_autoqc_master_index.md`
 - `reference/world-spec-guidelines/09_world_spec_writer_playbook.md`
 - `project/WORKSPACE_FILE_MAP.md`
