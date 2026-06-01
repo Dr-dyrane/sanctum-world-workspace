@@ -4,7 +4,7 @@ Purpose: compressed current state for Claude. Use `project/STATUS.md` and `docs/
 
 ## Project State
 
-Current phase: File Inventory Architecture / File Inventory Architecture v1 locked.
+Current phase: File Inventory v1 / File Inventory v1 candidate review.
 
 Brainstorm:
 
@@ -22,7 +22,7 @@ Brainstorm:
 
 Current blocker:
 
-- No reviewer blocker. Preparation Layer is complete. World Spec Skeleton v1 is locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`. World Spec v1 is locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-v1-ratification.md`. World Spec Construction is complete. File Inventory Architecture v1 is locked at `worlds/korvin-merrow/file-inventory/locked/file-inventory-architecture-v1.md`, with ratification recorded at `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-architecture-ratification.md`. Phase 3 File Inventory Architecture is complete. Final Section 3 file rows, filenames, file IDs, tasks, prompts, expected outputs, goldens, grader guidance, notes, labs, vitals, synthetic files, DOCX submission packaging, AutoQC, and RL Studio upload remain gated on explicit Alexander authorization for the relevant step.
+- No reviewer blocker. Preparation Layer is complete. World Spec Skeleton v1 is locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`. World Spec v1 is locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-v1-ratification.md`. World Spec Construction is complete. File Inventory Architecture v1 is locked at `worlds/korvin-merrow/file-inventory/locked/file-inventory-architecture-v1.md`, with ratification recorded at `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-architecture-ratification.md`. Phase 3 File Inventory Architecture is complete. File Inventory v1 candidate table is active at `worlds/korvin-merrow/file-inventory/candidate-review/file-inventory-v1.md`. Synthetic files, chart notes, discharge summaries, medication lists, medication schedules, lab values, vital signs, consultant recommendation text, tasks, prompts, expected outputs, goldens, grader guidance, DOCX submission packaging, AutoQC, and RL Studio upload remain gated on explicit Alexander authorization for the relevant step.
 
 Next legal action:
 
@@ -136,6 +136,7 @@ Next legal action:
 - World Spec example source documents recorded under `reference/word-spec-examples/`.
 - File Inventory Architecture v1 ratified and locked: `worlds/korvin-merrow/file-inventory/locked/file-inventory-architecture-v1.md`.
 - File Inventory Architecture ratification recorded: `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-architecture-ratification.md`.
+- File Inventory v1 candidate table created: `worlds/korvin-merrow/file-inventory/candidate-review/file-inventory-v1.md`.
 
 ## Latest Git Checkpoints
 
@@ -172,7 +173,7 @@ Next legal action:
 - Changing Governance Package v1 without Alexander approval.
 - World Spec drafting before explicit Alexander authorization for drafting.
 - Populating the World Spec template before explicit Alexander authorization for template population.
-- Creating final Section 3 file rows or synthetic file contents.
+- Creating synthetic file contents, chart notes, or downstream file/task outputs.
 - Creating milestones before Alexander authorizes that step.
 - Creating medication schedules, medication reconciliation outputs, hospital medication changes, admission medication lists, or discharge medication lists before Alexander authorizes those steps.
 - Creating synthetic patient files.

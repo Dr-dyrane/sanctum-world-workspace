@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-File Inventory Architecture / File Inventory Architecture v1 locked.
+File Inventory v1 / File Inventory v1 candidate review.
 
 ## Brainstorm
 
@@ -31,6 +31,8 @@ File Inventory Architecture / File Inventory Architecture v1 locked.
 - File Inventory Architecture v1: locked at `worlds/korvin-merrow/file-inventory/locked/file-inventory-architecture-v1.md`
 - File Inventory Architecture ratification: `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-architecture-ratification.md`
 - Phase 3 File Inventory Architecture: complete
+- File Inventory v1 candidate table: `worlds/korvin-merrow/file-inventory/candidate-review/file-inventory-v1.md`
+- Phase 4 File Inventory v1 Table Construction: candidate review
 - Clinical Story Skeleton: v1 locked, reviewed, and ratified
 - Identity Package: v1 locked
 - Governance Package: v1 ratified
@@ -49,7 +51,7 @@ File Inventory Architecture / File Inventory Architecture v1 locked.
 - World Spec Skeleton v1: `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`
 - World Spec Skeleton ratification: `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-skeleton-ratification.md`
 - Official Claude World Spec session: pending
-- Current state: World Spec v1 is locked; File Inventory Architecture v1 is locked; calendar, baseline anchors, Clinical Story Timeline Package v1, Task Architecture Package v1, Medication Expansion Package v1, Comorbidity Expansion Package v1, Provider Roster Package v1, Surgical History Package v1, Daily Hospital Course Framework v1, and World Spec Skeleton v1 are locked
+- Current state: World Spec v1 is locked; File Inventory Architecture v1 is locked; File Inventory v1 is in candidate review; calendar, baseline anchors, Clinical Story Timeline Package v1, Task Architecture Package v1, Medication Expansion Package v1, Comorbidity Expansion Package v1, Provider Roster Package v1, Surgical History Package v1, Daily Hospital Course Framework v1, and World Spec Skeleton v1 are locked
 - World Spec prep packet: created
 - Official World Spec template: saved locally
 - World Spec AutoQC prompt v6.3: saved locally
@@ -85,7 +87,7 @@ File Inventory Architecture / File Inventory Architecture v1 locked.
 - Fetched World Spec example source documents: `reference/word-spec-examples/`
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 - World Spec prep folder structure: reorganized by lifecycle buckets (`candidate-review/`, `locked/`, `ratifications/`, `reviews/`, `decision-logs/`, `planning-scaffolds/`)
-- Next eligible phase: File Inventory v1 Table Construction. Do not create final Section 3 file rows, filenames, file IDs, synthetic files, task specifications, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission artifacts, or RL Studio uploads until explicitly authorized.
+- Next eligible phase: File Inventory v1 review / ratification. Do not create synthetic files, chart notes, discharge summaries, medication lists, medication schedules, lab values, vital signs, consultant recommendation text, task specifications, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission artifacts, or RL Studio uploads until explicitly authorized.
 
 ## Tooling
 
@@ -102,7 +104,7 @@ File Inventory Architecture / File Inventory Architecture v1 locked.
 - Do not reopen Identity Package v1; use the review addendum only as carry-forward implementation notes.
 - Do not change Governance Package v1 without Alexander approval.
 - Do not create milestones before Alexander authorizes that step.
-- Do not create final Section 3 file inventory rows or synthetic files before Alexander authorizes that step.
+- Do not create synthetic files or downstream task/file contents before Alexander authorizes that step.
 - Do not revise locked task architecture or create task prompts before Alexander authorizes that step.
 - Do not treat fetched World Spec examples as authored Korvin Merrow content.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
