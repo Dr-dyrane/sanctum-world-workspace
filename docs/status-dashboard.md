@@ -31,7 +31,7 @@ World Spec Construction Preparation / Task Architecture Package v1 locked.
 - Key Milestones Calendar Skeleton: v1 locked
 - Baseline Anchor Package: v1 locked
 - Clinical Story Timeline Package: v1 locked
-- Task Architecture Interview: v1 candidate review
+- Task Architecture Interview: v1 historical planning scaffold
 - Task Architecture Package: v1 locked
 - Official Claude World Spec session: pending
 - Current state: World Spec Construction Preparation has begun; calendar, baseline anchors, Clinical Story Timeline Package v1, and Task Architecture Package v1 are locked
@@ -53,7 +53,7 @@ World Spec Construction Preparation / Task Architecture Package v1 locked.
 - Baseline Anchor ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/baseline-anchor-ratification.md`
 - Clinical Story Timeline Package v1: `worlds/korvin-merrow/world-spec-prep/locked/clinical-story-timeline-package-v1.md`
 - Clinical Story Timeline ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-timeline-ratification.md`
-- Task Architecture Interview v1: `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-interview-v1.md`
+- Task Architecture Interview v1: `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md`
 - Task Architecture Package v1: `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md`
 - Task Architecture ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md`
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
@@ -76,7 +76,7 @@ World Spec Construction Preparation / Task Architecture Package v1 locked.
 - Do not change Governance Package v1 without Alexander approval.
 - Do not create milestones before Alexander authorizes that step.
 - Do not create file inventory before Alexander authorizes that step.
-- Do not create task architecture before Alexander authorizes that step.
+- Do not revise locked task architecture or create task prompts before Alexander authorizes that step.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
 - Do not modify clinical content beyond reviewer-required remediation without Alexander approval.
 - Do not start synthetic generation, task prompts, golden responses, grader guidelines, or failure analysis.

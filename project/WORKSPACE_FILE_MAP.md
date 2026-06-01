@@ -4,7 +4,7 @@ Purpose: local repository hygiene map to prevent duplicate working files and acc
 
 Generated from local workspace file listing excluding `.git`, caches, and Python bytecode.
 
-Current status: World Spec Construction Preparation / Task Architecture Package v1 locked. Identity Package review addendum recorded as carry-forward notes only. World Spec drafting has not started.
+Current status: World Spec Construction Preparation / Task Architecture Package v1 locked. Task Architecture Interview v1 is preserved as historical planning scaffold; Task Architecture Package v1 is authoritative. Identity Package review addendum recorded as carry-forward notes only. World Spec drafting has not started.
 
 ## Navigation Rule
 
@@ -27,7 +27,7 @@ For a new collaborator or new AI session, read in this order:
 15. `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md` for the locked task-architecture package.
 16. `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md` for task architecture ratification and carry-forward watch items.
 17. `worlds/korvin-merrow/active/task-map.md` for reconciled current vs historical workflow mapping.
-18. `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-interview-v1.md` for interview basis.
+18. `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md` for historical interview basis.
 19. `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions.
 20. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
 
@@ -45,6 +45,7 @@ Findings:
 - `reference/` is now a junction folder with source files moved into `reference/source/`.
 - `worlds/korvin-merrow/` is now a junction folder with one README and purpose subfolders.
 - World Spec prep artifacts are clustered by lifecycle stage so candidate, locked, ratified, review, decision-log, and planning-scaffold files do not sit in one flat folder.
+- `candidate-review/` is reserved for active candidate artifacts only. Task Architecture Interview v1 moved to `planning-scaffolds/` after Task Architecture Package v1 lock.
 - Several files intentionally overlap by lifecycle stage, especially Brainstorm history/reviews and World Spec prep/checklist material.
 - Do not add new audit or navigation docs unless an existing map/status file cannot carry the information.
 
@@ -232,7 +233,7 @@ Reviewed for duplicate-purpose files:
 Lifecycle clustering:
 
 - `WORLD_SPEC_KICKOFF.md`: the only root cockpit file in `world-spec-prep/`.
-- `candidate-review/`: artifacts awaiting physician decision or lock. Currently contains Task Architecture Interview v1 only after Task Architecture Package v1 ratification.
+- `candidate-review/`: artifacts awaiting physician decision or lock. Currently expected to be empty unless Alexander authorizes a new active candidate artifact.
 - `locked/`: locked architecture packages and canonical frameworks.
 - `ratifications/`: formal ratification records.
 - `reviews/`: review findings, hostile reviews, clarifications, and addenda.
@@ -260,7 +261,7 @@ Lifecycle clustering:
 | `worlds/korvin-merrow/world-spec-prep/ratifications/baseline-anchor-ratification.md` | Baseline Anchor Package v1 ratification record and physician sign-off. | Records optional non-numeric baseline BP carry-forward note; does not create BP value. |
 | `worlds/korvin-merrow/world-spec-prep/locked/clinical-story-timeline-package-v1.md` | Locked story-evolution framework from pre-admission through +30 anchor. | Does not create labs, vitals, medication schedules, notes, files, task architecture, or World Spec prose. |
 | `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-timeline-ratification.md` | Ratification record for Clinical Story Timeline Package v1. | Records carry-forward distinction between Trap #3 buried evidence and Trap #5 reassuring but incomplete discharge/source-hierarchy artifact. |
-| `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-interview-v1.md` | Candidate interview-only framework for task architecture decisions. | Does not create final tasks, prompts, expected outputs, file inventory, World Spec sections, reference templates, or synthetic files. |
+| `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md` | Historical interview-only scaffold for task architecture decisions. | Task Architecture Package v1 is now authoritative; this scaffold does not create final tasks, prompts, expected outputs, file inventory, World Spec sections, reference templates, or synthetic files. |
 | `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md` | Locked formal task architecture package defining six task concepts across four workflows. | Does not create prompts, expected outputs, goldens, grader guidance, file inventory, World Spec sections, templates, reference files, or synthetic files. |
 | `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md` | Ratification record for Task Architecture Package v1. | Records AutoQC 2.108 contingency, Discharge Planning Documentation differentiation requirements, and superseded TCM/risk standalone workflow mappings. |
 | `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-01.md` | Durable post-kickoff physician decision record. | Historical state sync record; superseded for skeleton lock by decision log 02. |
@@ -277,7 +278,7 @@ Lifecycle clustering:
 
 - `brainstorm.md`, `submission/Korvin_Merrow_Brainstorm.docx`, and `brainstorm-development-history.md` intentionally overlap. During SEND BACK remediation, only reviewer-required changes should be made.
 - `reference/world-spec-guidelines/04_world_spec_autoqc_requirements.md`, `08_autoqc_master_index.md`, and `09_world_spec_writer_playbook.md` overlap by design. Use `08` for exact checks and `09` for workflow.
-- `task-map.md` and `world-spec-prep/planning-scaffolds/task-spec-planning.md` overlap by design. `task-map.md` is Brainstorm-level; `task-spec-planning.md` is World Spec prep.
+- `task-map.md` and `world-spec-prep/planning-scaffolds/task-spec-planning.md` overlap by design. `task-map.md` is reconciled and states the locked Task Architecture Package v1 supersedes old Brainstorm-level workflow mappings; `task-spec-planning.md` is earlier World Spec prep.
 - `traps.md`, `planning-scaffolds/trap-to-file-map.md`, and future Section 3 work may overlap. Do not convert planning maps into final file inventory before GO.
 - `frictions.md` and `planning-scaffolds/friction-to-task-map.md` overlap. Use them later to build the Decision Friction Table only after GO.
 - `claude-package/*` is a compressed Claude context copy. Do not treat it as the current source of truth.

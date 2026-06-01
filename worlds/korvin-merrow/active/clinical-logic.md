@@ -420,7 +420,7 @@ Completed construction-preparation chain:
 
 ## Task Architecture Interview v1
 
-Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-interview-v1.md`
+Artifact: `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md`
 
 Status: COMPLETE / SUPERSEDED BY LOCKED TASK ARCHITECTURE PACKAGE.
 

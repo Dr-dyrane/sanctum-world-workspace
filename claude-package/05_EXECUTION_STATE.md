@@ -38,7 +38,7 @@ Next legal action:
 - Use `worlds/korvin-merrow/world-spec-prep/locked/baseline-anchor-package-v1.md` for locked baseline anchors and `worlds/korvin-merrow/world-spec-prep/ratifications/baseline-anchor-ratification.md` for physician sign-off.
 - Use `worlds/korvin-merrow/world-spec-prep/locked/clinical-story-timeline-package-v1.md` as the locked story-evolution framework.
 - Use `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-timeline-ratification.md` for ratification and carry-forward trap-distinction notes.
-- Use `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-interview-v1.md` as the current task-architecture interview framework.
+- Use `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md` only as historical task-architecture interview scaffold; `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md` is authoritative.
 - Use `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md` as the locked task-architecture package.
 - Use `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md` for task architecture ratification, 2.108 contingency, and workflow-supersession notes.
 - Do not revise the locked Clinical Story Skeleton or locked Identity Package, draft World Spec, create milestones, or create file inventory until Alexander explicitly starts/authorizes the relevant phase.
@@ -103,7 +103,7 @@ Next legal action:
 - Baseline Anchor Package ratification recorded: `worlds/korvin-merrow/world-spec-prep/ratifications/baseline-anchor-ratification.md`.
 - Clinical Story Timeline Package v1 locked: `worlds/korvin-merrow/world-spec-prep/locked/clinical-story-timeline-package-v1.md`.
 - Clinical Story Timeline Package ratification recorded: `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-timeline-ratification.md`.
-- Task Architecture Interview v1 created for candidate review: `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-interview-v1.md`.
+- Task Architecture Interview v1 preserved as planning scaffold: `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md`.
 - Task Architecture Package v1 locked: `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md`.
 - Task Architecture Package ratification recorded: `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md`.
 
@@ -197,7 +197,7 @@ Claude must not replace physician judgment or originate clinical design.
 - `worlds/korvin-merrow/world-spec-prep/locked/baseline-anchor-package-v1.md`
 - `worlds/korvin-merrow/world-spec-prep/locked/clinical-story-timeline-package-v1.md`
 - `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-timeline-ratification.md`
-- `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-interview-v1.md`
+- `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md`
 - `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md`
 - `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md`
 - `reference/world-spec-guidelines/08_autoqc_master_index.md`

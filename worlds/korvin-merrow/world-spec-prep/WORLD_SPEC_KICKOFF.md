@@ -30,7 +30,7 @@ Purpose: mark the transition from approved Brainstorm to World Spec preparation 
 - Baseline Anchor Package v1: `worlds/korvin-merrow/world-spec-prep/locked/baseline-anchor-package-v1.md`.
 - Clinical Story Timeline Package v1: `worlds/korvin-merrow/world-spec-prep/locked/clinical-story-timeline-package-v1.md`.
 - Clinical Story Timeline ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-timeline-ratification.md`.
-- Task Architecture Interview v1: `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-interview-v1.md`.
+- Task Architecture Interview v1: `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md`.
 - Task Architecture Package v1: `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md`.
 - Task Architecture ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md`.
 - Next allowed substantive action: proceed only when Alexander explicitly authorizes the next World Spec preparation or construction step.
@@ -257,7 +257,7 @@ Completed construction-preparation chain:
 Task Architecture Interview v1:
 
 - Status: COMPLETE / SUPERSEDED BY LOCKED TASK ARCHITECTURE PACKAGE.
-- Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-interview-v1.md`.
+- Artifact: `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md`.
 - Purpose: interview-only framework for resolving AutoQC 2.107 workflow-count constraints, AutoQC 2.108 administrative-deliverable requirements, final task distribution, and workflow consolidation strategy.
 - It does not create tasks, task prompts, expected outputs, goldens, grader guidance, file inventory, World Spec sections, reference templates, synthetic files, or new workflows not already implied by approved architecture.
 
@@ -268,6 +268,7 @@ Task Architecture Package v1:
 - Ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md`.
 - Purpose: formal task-architecture framework defining six task concepts across four workflows before task drafting.
 - Physician decisions recorded: target task count 6, target workflow count 4, administrative deliverable Discharge Planning / Care Coordination, TCM folded into transition/discharge workflow, readmission-risk reasoning kept inside existing workflow structures, consultant synthesis preserved as distinct reasoning area, coding/billing/prior authorization not preferred unless later required.
+- `worlds/korvin-merrow/active/task-map.md` has been reconciled; old Brainstorm-level workflow mappings are superseded by this locked package.
 - It does not create task prompts, expected outputs, goldens, grader guidance, file inventory, World Spec sections, templates, reference files, or synthetic documents.
 
 Completed construction-preparation chain:

@@ -266,13 +266,13 @@ Boundary:
 
 - This decision does not authorize World Spec drafting, labs, vitals, medication schedules, file inventory, task architecture, prompts, goldens, grader guidance, templates, reference files, or synthetic documents.
 
-## 2026-05-31 - Task Architecture Interview v1 Candidate Review
+## 2026-05-31 - Task Architecture Interview v1 Planning Scaffold
 
 Decision: create an interview-only framework for final task architecture decisions.
 
 Artifact:
 
-- `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-interview-v1.md`
+- `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md`
 
 Purpose:
 
@@ -282,7 +282,9 @@ Purpose:
 
 Status:
 
-- Task Architecture Interview v1: CANDIDATE REVIEW.
+- Task Architecture Interview v1: historical planning scaffold.
+- Task Architecture Package v1 is the authoritative locked architecture.
+- `worlds/korvin-merrow/active/task-map.md` has been reconciled; old Brainstorm-level workflow mappings are superseded.
 
 Boundary:
 
