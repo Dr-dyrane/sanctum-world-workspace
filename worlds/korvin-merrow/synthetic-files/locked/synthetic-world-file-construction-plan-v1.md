@@ -2,7 +2,7 @@
 
 Date created: 2026-06-01
 
-Status: CANDIDATE REVIEW
+Status: LOCKED
 
 Purpose: define the controlled construction strategy for the 22 locked world-level files in File Inventory v1 before any synthetic chart content is created.
 
@@ -309,4 +309,4 @@ Action required: stop at candidate review.
 
 Synthetic World-Level File Construction Plan v1
 
-Status: CANDIDATE REVIEW
+Status: LOCKED

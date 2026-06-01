@@ -959,3 +959,45 @@ Next eligible phase:
 Boundary:
 
 - This does not authorize synthetic files, file contents, clinical notes, progress notes, discharge summaries, labs, vitals, medication lists, consultant recommendations, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission materials, or RL Studio activity.
+
+## Synthetic World-Level File Construction Plan v1
+
+Status: LOCKED.
+
+Artifact: `worlds/korvin-merrow/synthetic-files/locked/synthetic-world-file-construction-plan-v1.md`
+
+Ratification: `worlds/korvin-merrow/synthetic-files/ratifications/synthetic-world-file-construction-plan-v1-ratification.md`
+
+Review outcome:
+
+- Claude Code Review: YES / LOCK READY / GO.
+- Windsurf Claude Review: YES / LOCK READY / GO.
+- No true defects identified.
+- No blockers identified.
+- All 22 FI-W world-level rows accounted for.
+- No missing IDs, duplicated IDs, or invented IDs.
+- Dependency ordering and batch sequencing verified.
+- FI-W22 construction-last strategy endorsed.
+- Trap preservation, friction preservation, source-of-truth preservation, temporal preservation, construction governance, anti-answer-file doctrine, and closed-world discipline verified.
+- Batch 1 construction readiness verified.
+
+Accepted carry-forward items:
+
+- Batch 3 and Batch 4 may remain sequential or run in parallel after Batch 2.
+- Cross-file consistency checkpoint remains future construction governance.
+- Per-file Tool / Origin assignment remains future file-construction work.
+- FI-W12 trend representation remains future construction work.
+- FI-W13 MAR representation remains future construction work.
+- Synthetic file content remains future construction work.
+
+Synthetic File Construction Governance:
+
+- Status: COMPLETE.
+
+Next eligible phase:
+
+- Batch 1 Synthetic World-Level File Construction, pending explicit Alexander authorization.
+
+Boundary:
+
+- This does not authorize synthetic files, filenames, chart notes, admission notes, consultant notes, nursing notes, therapy notes, discharge summaries, labs, vitals, medication lists, medication schedules, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, or RL Studio activity.

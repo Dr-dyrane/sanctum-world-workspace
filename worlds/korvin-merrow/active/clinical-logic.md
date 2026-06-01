@@ -359,9 +359,11 @@ File Inventory Architecture v1:
 - File Inventory v1 is locked at `worlds/korvin-merrow/file-inventory/locked/file-inventory-v1.md`.
 - File Inventory v1 ratification is recorded at `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-v1-ratification.md`.
 - File Inventory Planning is complete.
-- Synthetic World-Level File Construction Plan v1 is in candidate review at `worlds/korvin-merrow/synthetic-files/candidate-review/synthetic-world-file-construction-plan-v1.md`.
-- Next eligible phase is review and ratification of Synthetic World-Level File Construction Plan v1.
-- Synthetic files, chart notes, discharge summaries, medication lists, medication schedules, lab values, vital signs, consultant recommendation text, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
+- Synthetic World-Level File Construction Plan v1 is locked at `worlds/korvin-merrow/synthetic-files/locked/synthetic-world-file-construction-plan-v1.md`.
+- Synthetic World-Level File Construction Plan v1 ratification is recorded at `worlds/korvin-merrow/synthetic-files/ratifications/synthetic-world-file-construction-plan-v1-ratification.md`.
+- Synthetic File Construction Governance is complete.
+- Next eligible phase is Batch 1 Synthetic World-Level File Construction.
+- Synthetic files, filenames, chart notes, admission notes, consultant notes, nursing notes, therapy notes, discharge summaries, medication lists, medication schedules, lab values, vital signs, consultant recommendation text, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
 
 ## Key Milestones Calendar Skeleton v1
 
