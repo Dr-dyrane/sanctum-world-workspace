@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-World Spec Construction Preparation / Provider Roster Package v1 locked.
+World Spec Construction Preparation / Surgical History Package v1 candidate review.
 
 ## Brainstorm
 
@@ -36,8 +36,9 @@ World Spec Construction Preparation / Provider Roster Package v1 locked.
 - Medication Expansion Package: v1 locked
 - Comorbidity Expansion Package: v1 locked
 - Provider Roster Package: v1 locked
+- Surgical History Package: v1 candidate review
 - Official Claude World Spec session: pending
-- Current state: World Spec Construction Preparation has begun; calendar, baseline anchors, Clinical Story Timeline Package v1, Task Architecture Package v1, Medication Expansion Package v1, Comorbidity Expansion Package v1, and Provider Roster Package v1 are locked
+- Current state: World Spec Construction Preparation has begun; calendar, baseline anchors, Clinical Story Timeline Package v1, Task Architecture Package v1, Medication Expansion Package v1, Comorbidity Expansion Package v1, and Provider Roster Package v1 are locked; Surgical History Package v1 is in candidate review
 - World Spec prep packet: created
 - Official World Spec template: saved locally
 - World Spec AutoQC prompt v6.3: saved locally
@@ -66,10 +67,11 @@ World Spec Construction Preparation / Provider Roster Package v1 locked.
 - Comorbidity Expansion ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/comorbidity-expansion-ratification.md`
 - Provider Roster Package v1: `worlds/korvin-merrow/world-spec-prep/locked/provider-roster-package-v1.md`
 - Provider Roster ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/provider-roster-ratification.md`
+- Surgical History Package v1: `worlds/korvin-merrow/world-spec-prep/candidate-review/surgical-history-package-v1.md`
 - Fetched World Spec example source documents: `reference/word-spec-examples/`
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 - World Spec prep folder structure: reorganized by lifecycle buckets (`candidate-review/`, `locked/`, `ratifications/`, `reviews/`, `decision-logs/`, `planning-scaffolds/`)
-- Next allowed action: next World Spec Construction Preparation step only after explicit Alexander authorization
+- Next allowed action: physician review / independent review of Surgical History Package v1
 
 ## Tooling
 

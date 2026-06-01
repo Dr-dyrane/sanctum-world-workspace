@@ -1,6 +1,6 @@
 # Korvin Merrow World Spec Kickoff
 
-Status: World Spec Construction Preparation / Provider Roster Package v1 locked.
+Status: World Spec Construction Preparation / Surgical History Package v1 candidate review.
 
 Purpose: mark the transition from approved Brainstorm to World Spec preparation without drafting the World Spec, populating the template, creating a final file inventory, or inventing clinical values.
 
@@ -39,7 +39,8 @@ Purpose: mark the transition from approved Brainstorm to World Spec preparation 
 - Comorbidity Expansion ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/comorbidity-expansion-ratification.md`.
 - Provider Roster Package v1: `worlds/korvin-merrow/world-spec-prep/locked/provider-roster-package-v1.md`.
 - Provider Roster ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/provider-roster-ratification.md`.
-- Next allowed substantive action: proceed only when Alexander explicitly authorizes the next World Spec preparation or construction step.
+- Surgical History Package v1: `worlds/korvin-merrow/world-spec-prep/candidate-review/surgical-history-package-v1.md`.
+- Next allowed substantive action: physician review / independent review of Surgical History Package v1.
 
 ## Workspace Bloat And Doctrine Audit
 
@@ -322,6 +323,15 @@ Provider Roster Package v1:
 - Shared Merrow surname for Korvin Merrow and Mara Merrow is intentionally approved.
 - Minor or rotating contributors remain service-role placeholders to avoid over-naming.
 - It does not create clinical notes, provider-authored documents, file inventory, task prompts, expected outputs, goldens, grader guidance, medication schedules, hospital-course events, labs, vitals, templates, reference files, synthetic documents, or World Spec prose.
+
+Surgical History Package v1:
+
+- Status: CANDIDATE REVIEW.
+- Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/surgical-history-package-v1.md`.
+- Purpose: pre-world surgical/procedural history architecture before Daily Hospital Course Framework, World Spec construction, file inventory planning, synthetic documents, task prompts, expected outputs, goldens, or grader guidance.
+- Candidate confirmed procedural anchors: remote percutaneous coronary intervention with coronary stent placement and remote diagnostic sleep study confirming obstructive sleep apnea.
+- Candidate exclusions: CABG, dialysis access, major orthopedic fracture repair or joint replacement, limb amputation/major diabetic foot surgery, temporal artery biopsy/rheumatologic diagnostic procedure, and screening colonoscopy for v1 purposes.
+- Guardrail: surgical/procedural history should remain background realism and provenance support; it must not create a new disease arc, reveal the cause of the presentation, collapse mixed physiology, or weaken frictions/traps.
 
 Fetched World Spec source examples:
 

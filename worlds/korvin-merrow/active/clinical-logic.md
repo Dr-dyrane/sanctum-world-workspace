@@ -585,6 +585,37 @@ Guardrails:
 - No additional provider naming is authorized.
 - Provider roster does not create notes, files, dates, task prompts, synthetic documents, or World Spec prose.
 
+## Surgical History Package v1
+
+Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/surgical-history-package-v1.md`
+
+Status: CANDIDATE REVIEW.
+
+Purpose: pre-world surgical/procedural history architecture before Daily Hospital Course Framework, World Spec construction, file inventory planning, synthetic documents, task prompts, expected outputs, goldens, or grader guidance.
+
+Candidate confirmed procedural anchors:
+
+- Remote percutaneous coronary intervention with coronary stent placement.
+- Remote diagnostic sleep study confirming obstructive sleep apnea.
+
+Candidate exclusions:
+
+- Coronary artery bypass grafting.
+- Dialysis access creation or kidney procedure.
+- Major orthopedic fracture repair or joint replacement.
+- Limb amputation or major diabetic foot surgery.
+- Temporal artery biopsy or rheumatologic diagnostic procedure.
+- Screening colonoscopy for v1 purposes.
+
+Guardrails:
+
+- Surgical/procedural history should stay clinically realistic but quiet.
+- PCI supports established CAD, chronic cardiovascular medication rationale, and cardiology involvement.
+- Sleep study supports locked OSA diagnosis and baseline reserve context.
+- Surgical history must not create a new dominant disease arc.
+- Surgical history must not explain the admission, near-fall, weakness, hypotension, altered mental status, steroid concern, AKI, or discharge readiness by itself.
+- Surgical history does not create operative reports, procedure notes, hospital-course events, file inventory, task prompts, synthetic documents, or World Spec prose.
+
 ## Locked World Tone
 
 The patient is medically improving but operationally dangerous to discharge.

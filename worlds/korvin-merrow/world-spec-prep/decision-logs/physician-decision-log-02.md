@@ -679,3 +679,36 @@ Carry-forward watch items:
 Boundary:
 
 - This does not authorize clinical notes, provider-authored documents, file inventory, task prompts, expected outputs, golden responses, grader guidance, medication schedules, hospital-course events, labs, vitals, World Spec drafting, templates, reference files, or synthetic documents.
+
+## Surgical History Package v1
+
+Status: CANDIDATE REVIEW.
+
+Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/surgical-history-package-v1.md`
+
+Purpose:
+
+- Define pre-world surgical/procedural history architecture before Daily Hospital Course Framework, World Spec construction, file inventory planning, synthetic documents, task prompts, expected outputs, goldens, or grader guidance.
+
+Candidate confirmed procedural anchors for physician review:
+
+- Remote percutaneous coronary intervention with coronary stent placement.
+- Remote diagnostic sleep study confirming obstructive sleep apnea.
+
+Candidate exclusions for physician review:
+
+- Coronary artery bypass grafting.
+- Dialysis access creation or kidney procedure.
+- Major orthopedic fracture repair or joint replacement.
+- Limb amputation or major diabetic foot surgery.
+- Temporal artery biopsy or rheumatologic diagnostic procedure.
+- Screening colonoscopy for v1 purposes.
+
+Guardrails:
+
+- Surgical/procedural history should remain background realism and provenance support.
+- It should not create a new dominant disease arc.
+- It should not answer open clinical questions.
+- It should not collapse mixed physiology.
+- It should not weaken Trap #1, Trap #2, Trap #3, or Trap #5.
+- It should not create operative reports, procedure notes, hospital-course events, labs, vitals, file inventory, task prompts, expected outputs, goldens, grader guidance, synthetic files, World Spec prose, templates, or reference files.
