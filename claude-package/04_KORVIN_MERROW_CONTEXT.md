@@ -147,10 +147,11 @@ Use these as rough concepts only. Do not write final prompts, golden responses, 
    - Competency: disposition safety.
 
 4. Post-hospital follow-up assessment note
-   - Current tracker mapping: P0 Transitional Care Management Documentation (TCM).
+   - Current authoritative workflow: Discharge Planning Documentation.
+   - Historical Brainstorm-level tracker mapping superseded: P0 Transitional Care Management Documentation (TCM).
    - Requester: primary care physician.
    - Anchor: 7 days after discharge.
-   - Competency: reassessment after transition.
+   - Competency: reassessment after transition. TCM reasoning remains embedded inside the transition/discharge workflow.
 
 5. Consultant recommendation synthesis / care coordination note
    - Current tracker mapping: P1 Interdisciplinary Care Plan Development and Documentation.
@@ -159,10 +160,11 @@ Use these as rough concepts only. Do not write final prompts, golden responses, 
    - Competency: consultant-priority synthesis.
 
 6. Readmission risk / patient safety review
-   - Current tracker mapping: P0 Patient Risk Stratification Assessment.
+   - Current authoritative workflow: Discharge Planning Documentation.
+   - Historical Brainstorm-level tracker mapping superseded: P0 Patient Risk Stratification Assessment.
    - Requester: quality and patient safety team.
    - Anchor: 30 days after discharge.
-   - Competency: retrospective safety analysis.
+   - Competency: retrospective safety analysis. Readmission-risk reasoning remains embedded inside existing workflow structures.
 
 Reserve only:
 
@@ -173,8 +175,8 @@ Reserve only:
 These are World Spec preparation risks, not authorization to change Brainstorm:
 
 - World Spec patient name must be unmistakably synthetic under AutoQC v6.3 Check 2.2. Reviewer SEND BACK requested replacing the prior common name with Korvin Merrow.
-- World Spec task suite must use 3-5 distinct catalog workflows under Check 2.107; current rough mapping has more distinct workflows than allowed.
-- Typical clinical/medical director worlds should include both clinical and healthcare administration work products where appropriate under Check 2.108.
+- World Spec task suite must use 3-5 distinct catalog workflows under Check 2.107; resolved by locked four-workflow Task Architecture Package v1.
+- Typical clinical/medical director worlds should include both clinical and healthcare administration work products where appropriate under Check 2.108; this remains a documented reviewer-risk bet, not a blocker, with Discharge Planning Documentation / Care Coordination as the primary administrative deliverable.
 - Decision Friction Table is required if the world depends on 2+ specialty conflicts or embedded diagnostic conflicts under Check 2.14.
 - Source-of-truth hierarchy must be documented when authority traps are present under Check 2.65.
 - Fact-to-file traceability is a hard requirement under Checks 2.18, 2.48, 2.49, and 2.60.
@@ -366,9 +368,9 @@ Identity review addendum:
 
 ## Current State
 
-Brainstorm approved. Clinical Story Skeleton v1 ratified. Identity Package v1 locked. Governance Package v1 ratified. Physician Architecture Layer complete. Key Milestones Calendar Skeleton v1 locked. Baseline Anchor Package v1 locked. Clinical Story Timeline Package v1 locked. Do not start World Spec drafting.
+Brainstorm approved. Clinical Story Skeleton v1 ratified. Identity Package v1 locked. Governance Package v1 ratified. Physician Architecture Layer complete. Key Milestones Calendar Skeleton v1 locked. Baseline Anchor Package v1 locked. Clinical Story Timeline Package v1 locked. Task Architecture Package v1 locked. Do not start World Spec drafting.
 
-Task Architecture Interview v1 is complete at `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-interview-v1.md`. Task Architecture Package v1 is in candidate review at `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-package-v1.md`. It defines the candidate architecture of six task concepts across four workflows: Discharge Medication Reconciliation, Hospital Discharge Summary Generation, Discharge Planning Documentation, and Interdisciplinary Care Plan Development and Documentation. It does not create final task prompts, expected outputs, file inventory, World Spec sections, reference templates, or synthetic files.
+Task Architecture Interview v1 is complete at `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-interview-v1.md`. Task Architecture Package v1 is locked at `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md`. It defines the authoritative architecture of six task concepts across four workflows: Discharge Medication Reconciliation, Hospital Discharge Summary Generation, Discharge Planning Documentation, and Interdisciplinary Care Plan Development and Documentation. It does not create final task prompts, expected outputs, file inventory, World Spec sections, reference templates, or synthetic files.
 
 Completed:
 
@@ -392,12 +394,12 @@ Completed:
 18. Baseline Anchor Package v1 locked after physician review.
 19. Clinical Story Timeline Package v1 created and locked.
 20. Task Architecture Interview v1 created for candidate review.
-21. Task Architecture Package v1 created for candidate review.
+21. Task Architecture Package v1 locked and ratified.
 
 Still pending before World Spec drafting:
 
 1. Official Claude World Spec session.
-2. Physician review of Task Architecture Package v1.
+2. Next Alexander-authorized World Spec Construction Preparation step.
 3. Alexander authorization to draft the World Spec.
 
 ## Claude Use Rules

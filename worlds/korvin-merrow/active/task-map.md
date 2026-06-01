@@ -1,10 +1,59 @@
 # Korvin Merrow Task Map
 
-This map uses only the six approved rough task concepts. It does not add new workflows or task prompts.
+This map uses only the six approved rough task concepts. It does not add task prompts, expected outputs, golden responses, grader guidance, file inventory, World Spec sections, or synthetic files.
 
 Source: `reference/source/_Task Selection Categories For Team.xlsx`
 
-## Current Mapping
+## Current Authoritative Architecture
+
+Source: `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md`
+
+Ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md`
+
+Status: LOCKED.
+
+Task Architecture Package v1 supersedes the Brainstorm-level original workflow mapping for World Spec construction.
+
+Final architecture:
+
+- Target task count: 6.
+- Target workflow count: 4 distinct workflows.
+- Administrative deliverable: Discharge Planning Documentation / Care Coordination.
+
+Authoritative workflows:
+
+1. Discharge Medication Reconciliation.
+2. Hospital Discharge Summary Generation.
+3. Discharge Planning Documentation.
+4. Interdisciplinary Care Plan Development and Documentation.
+
+Current task-family mapping:
+
+| Rough task concept | Authoritative workflow | Architecture note |
+| --- | --- | --- |
+| Discharge medication reconciliation / medication safety review | Discharge Medication Reconciliation | Distinct medication-safety workflow preserving HF-AKI medication timing and steroid med-reconciliation complexity. |
+| Hospital discharge summary generation | Hospital Discharge Summary Generation | Distinct narrative synthesis workflow preserving temporal course and copy-forward avoidance. |
+| Transition-of-care / discharge readiness plan | Discharge Planning Documentation | Primary administrative/discharge-safety workflow. |
+| Post-hospital follow-up assessment note | Discharge Planning Documentation | TCM reasoning and +7 anchor remain valid, but TCM is not a standalone workflow category in the locked architecture. |
+| Consultant recommendation synthesis / care coordination note | Interdisciplinary Care Plan Development and Documentation | Distinct consultant synthesis and care-plan reasoning workflow. |
+| Readmission risk / patient safety review | Discharge Planning Documentation | Readmission-risk reasoning remains valid, but Patient Risk Stratification Assessment is not a standalone workflow category in the locked architecture. |
+
+Discharge Planning Documentation carries three task concepts and must be differentiated later by:
+
+- requester;
+- time anchor;
+- reasoning emphasis;
+- deliverable surface.
+
+AutoQC 2.108 note:
+
+- Primary administrative deliverable is Discharge Planning Documentation / Care Coordination.
+- Utilization Review is a contingency only if later challenged by reviewer or source guidance.
+- Do not add Utilization Review now.
+
+## Historical Brainstorm-Level Mapping
+
+The following mapping was used for Brainstorm approval and task-tracker validation. It is preserved for history only and is superseded by Task Architecture Package v1 for World Spec construction.
 
 | Rough task | Recommended exact tracker workflow | Priority | Rationale |
 | --- | --- | --- | --- |
@@ -30,12 +79,17 @@ Source: `reference/source/_Task Selection Categories For Team.xlsx`
 
 ## QC Notes
 
-- Exact tracker labels assigned for all six rough task concepts.
-- At least one P0 present.
-- Six tasks span five distinct selected workflow categories:
+- Historical Brainstorm labels were assigned for all six rough task concepts.
+- At least one P0 was present.
+- Brainstorm-level mapping spanned five distinct selected workflow categories:
   - Medication reconciliation
   - Discharge documentation/planning
   - Transitional care management
   - Interdisciplinary care planning
   - Patient risk stratification
+- Current locked World Spec construction architecture supersedes this with four workflows:
+  - Discharge Medication Reconciliation
+  - Hospital Discharge Summary Generation
+  - Discharge Planning Documentation
+  - Interdisciplinary Care Plan Development and Documentation
 - No new clinical task concepts added.

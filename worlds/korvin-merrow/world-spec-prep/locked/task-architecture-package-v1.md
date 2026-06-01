@@ -2,7 +2,7 @@
 
 Date created: 2026-05-31
 
-Status: CANDIDATE REVIEW.
+Status: LOCKED.
 
 Purpose: define the final workflow structure and task-distribution framework for Korvin Merrow World before any task drafting begins.
 
@@ -78,9 +78,12 @@ Do-not-cross boundary:
 
 AutoQC 2.108 requires typical clinical worlds to include both direct clinical work products and healthcare-administration work products where appropriate.
 
+Ratification note: AutoQC 2.108 remains a documented reviewer-risk bet, not a blocker.
+
 Administrative deliverable location:
 
 - Discharge Planning Documentation.
+- Care Coordination.
 
 Why it fits naturally:
 
@@ -109,6 +112,12 @@ Administrative options not selected:
 | Prior authorization | Could become realistic later only if source material or future file construction requires payer/post-acute authorization facts. Not preferred now. |
 | Utilization review | Plausible but not the best first administrative fit; discharge planning and care coordination are more directly supported by the current world. |
 | Standalone readmission-risk workflow | Readmission-risk reasoning is preserved, but it lives inside transition/discharge planning rather than creating another workflow category. |
+
+Contingency if challenged later:
+
+- Utilization Review may be considered as a second administrative deliverable.
+- Do not add Utilization Review now.
+- This is a contingency only, not part of locked v1 workflow architecture.
 
 ## 4. Trap Distribution Analysis
 
@@ -217,6 +226,8 @@ Impact: this is coherent, but later drafting must avoid making multiple discharg
 
 Action required: later task drafting should differentiate requester, time anchor, reasoning emphasis, and deliverable surface within the same workflow.
 
+Carry-forward requirement: because Discharge Planning Documentation carries three task concepts, later task construction must differentiate them by requester, time anchor, reasoning emphasis, and deliverable surface.
+
 ### PLAUSIBLE
 
 Finding: four workflows may be safer than five for reviewer/AutoQC compliance.
@@ -261,4 +272,4 @@ Action required: stop before task drafting, expected outputs, file inventory, Wo
 
 Task Architecture Package v1
 
-Status: CANDIDATE REVIEW
+Status: LOCKED

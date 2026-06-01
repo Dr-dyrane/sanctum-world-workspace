@@ -292,9 +292,13 @@ Boundary:
 
 Decision: create formal task-architecture package from completed physician interview decisions.
 
-Artifact:
+Original candidate artifact:
 
 - `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-package-v1.md`
+
+Current artifact after ratification:
+
+- `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md`
 
 Physician decisions recorded:
 
@@ -315,11 +319,55 @@ Candidate workflow architecture:
 
 Status:
 
-- Task Architecture Package v1: CANDIDATE REVIEW.
+- Task Architecture Package v1: CANDIDATE REVIEW at creation; later RATIFIED and LOCKED.
 
 Boundary:
 
 - This does not create task prompts, expected outputs, golden responses, grader guidance, file inventory, World Spec sections, templates, reference files, or synthetic documents.
+
+## 2026-05-31 - Task Architecture Package v1 Ratification
+
+Decision: Task Architecture Package v1 is ratified and locked.
+
+Artifact:
+
+- `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md`
+
+Ratification:
+
+- `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md`
+
+Review basis:
+
+- Two independent reviews returned GO, would ratify today YES, true defects none, and SEND BACK risks none.
+- AutoQC 2.107 is resolved.
+- Four workflows are exact approved catalog labels.
+- TCM and readmission-risk reasoning are correctly embedded rather than separate workflows.
+
+Locked workflows:
+
+1. Discharge Medication Reconciliation.
+2. Hospital Discharge Summary Generation.
+3. Discharge Planning Documentation.
+4. Interdisciplinary Care Plan Development and Documentation.
+
+Carry-forward notes:
+
+- AutoQC 2.108 remains a documented reviewer-risk bet, not a blocker.
+- Primary administrative deliverable is Discharge Planning Documentation / Care Coordination.
+- Utilization Review is contingency only if challenged later; do not add it now.
+- Discharge Planning Documentation carries three task concepts and must be differentiated later by requester, time anchor, reasoning emphasis, and deliverable surface.
+
+Construction-preparation chain:
+
+- Key Milestones Calendar Skeleton: LOCKED.
+- Baseline Anchor Package: LOCKED.
+- Clinical Story Timeline Package: LOCKED.
+- Task Architecture Package: LOCKED.
+
+Boundary:
+
+- This does not authorize task prompts, expected outputs, golden responses, grader guidance, file inventory, World Spec drafting, templates, reference files, or synthetic documents.
 
 Boundaries:
 

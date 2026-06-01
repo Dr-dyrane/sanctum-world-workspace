@@ -422,7 +422,7 @@ Completed construction-preparation chain:
 
 Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-interview-v1.md`
 
-Status: CANDIDATE REVIEW.
+Status: COMPLETE / SUPERSEDED BY LOCKED TASK ARCHITECTURE PACKAGE.
 
 Purpose: interview-only framework for resolving AutoQC 2.107 workflow-count constraints, AutoQC 2.108 administrative-deliverable requirements, final task distribution, and workflow consolidation strategy.
 
@@ -430,9 +430,11 @@ This artifact does not create tasks, task prompts, expected outputs, goldens, gr
 
 ## Task Architecture Package v1
 
-Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-package-v1.md`
+Artifact: `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md`
 
-Status: CANDIDATE REVIEW.
+Ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md`
+
+Status: LOCKED.
 
 Physician decisions:
 
@@ -450,6 +452,13 @@ Candidate workflow architecture:
 - Hospital Discharge Summary Generation.
 - Discharge Planning Documentation.
 - Interdisciplinary Care Plan Development and Documentation.
+
+Carry-forward:
+
+- AutoQC 2.108 remains a documented reviewer-risk bet, not a blocker.
+- Discharge Planning Documentation / Care Coordination is the primary administrative deliverable.
+- Utilization Review is contingency only if challenged later; do not add it now.
+- Discharge Planning Documentation carries three task concepts and must be differentiated later by requester, time anchor, reasoning emphasis, and deliverable surface.
 
 This package does not create task prompts, expected outputs, goldens, grader guidance, file inventory, World Spec sections, templates, reference files, or synthetic documents.
 

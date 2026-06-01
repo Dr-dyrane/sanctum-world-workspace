@@ -34,6 +34,10 @@ Clinical Story Timeline Package v1: `worlds/korvin-merrow/world-spec-prep/locked
 
 Clinical Story Timeline Package ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-timeline-ratification.md`
 
+Task Architecture Package v1: `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md`
+
+Task Architecture Package ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md`
+
 ## Locked Clinical Story Skeleton v1
 
 Patient:
@@ -463,3 +467,47 @@ Active future watch items:
 Boundary:
 
 - This does not authorize World Spec drafting, labs, vitals, medication schedules, file inventory, task architecture, prompts, golden responses, grader guidance, templates, reference files, or synthetic documents.
+
+## Task Architecture Package v1
+
+Status: LOCKED.
+
+Purpose: formal task-architecture framework defining six task concepts across four exact approved catalog workflows before task drafting.
+
+Locked workflows:
+
+1. Discharge Medication Reconciliation.
+2. Hospital Discharge Summary Generation.
+3. Discharge Planning Documentation.
+4. Interdisciplinary Care Plan Development and Documentation.
+
+Physician decisions:
+
+- Target task count: 6.
+- Target workflow count: 4.
+- Administrative deliverable: Discharge Planning Documentation / Care Coordination.
+- TCM and readmission-risk reasoning remain embedded inside Discharge Planning Documentation rather than becoming standalone workflow categories.
+- Consultant synthesis remains distinct.
+- Coding, billing, and prior authorization are not preferred unless later required by source material.
+
+Completed construction-preparation chain:
+
+- Key Milestones Calendar Skeleton: LOCKED.
+- Baseline Anchor Package: LOCKED.
+- Clinical Story Timeline Package: LOCKED.
+- Task Architecture Package: LOCKED.
+
+Carry-forward watch items:
+
+- AutoQC 2.108 administrative-deliverable reviewer-risk contingency.
+- Differentiate three Discharge Planning Documentation task concepts later.
+- Medication expansion to 18-22 medications.
+- Comorbidity expansion to 12-15 conditions.
+- Named-provider roster.
+- Surgical-history documentation.
+- Trap #3 vs Trap #5 concrete file distinction.
+- Exact task prompt / expected output / failure design still not created.
+
+Boundary:
+
+- This does not authorize task prompts, expected outputs, golden responses, grader guidance, file inventory, World Spec drafting, templates, reference files, or synthetic documents.
