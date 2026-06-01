@@ -720,9 +720,50 @@ Carry-forward watch items:
 
 - Keep PCI remote so aspirin-only baseline remains consistent.
 - Decide procedural provenance during file inventory.
-- Daily Hospital Course Framework remains next.
+- Daily Hospital Course Framework v1 is now the active candidate review artifact.
 - File Inventory Architecture remains deferred.
 - World Spec construction remains deferred.
 - Trap #3 vs Trap #5 concrete file distinction remains deferred.
 - AutoQC 2.107 workflow-count discipline remains preserved.
 - AutoQC 2.108 administrative-deliverable contingency remains preserved.
+
+## Daily Hospital Course Framework v1
+
+Status: CANDIDATE REVIEW.
+
+Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/daily-hospital-course-framework-v1.md`
+
+Purpose:
+
+- Define canonical HD1-HD6 daily evolution before World Spec construction, file inventory architecture, synthetic file construction, task implementation, prompt construction, expected outputs, golden responses, or grader guidance.
+
+Candidate framework scope:
+
+- HD1-HD6 primary clinical state.
+- What changed since prior day.
+- What improved.
+- What remains concerning.
+- Active frictions.
+- Active traps.
+- Relevant provider groups.
+- Disposition readiness status.
+- Improvement trajectory.
+- Friction activation timeline.
+- Trap activation timeline.
+- Provider involvement timeline.
+- Disposition-safety framework.
+
+Guardrails:
+
+- This is a major bridge artifact, not a small package.
+- Preserve mixed physiology.
+- Preserve no hidden single answer.
+- Preserve no reveal-drift.
+- Preserve improving but not safely solved.
+- Preserve medically improving but operationally dangerous discharge logic.
+- Preserve both sides of each friction as defensible.
+- Preserve Trap #3 as buried functional/cognitive evidence and Trap #5 as visible but incomplete discharge/source-hierarchy artifact.
+
+Boundary:
+
+- This does not authorize labs, lab trends, vitals, medication doses, medication schedules, medication orders, clinical notes, consultant notes, discharge summaries, operative reports, procedure notes, file inventory, tasks, prompts, expected outputs, goldens, grader guidance, synthetic files, World Spec prose, templates, or reference files.

@@ -117,7 +117,7 @@ The excluded procedures protect the world from avoidable noise:
 
 - Keep PCI remote so aspirin-only baseline remains consistent.
 - Decide procedural provenance during file inventory.
-- Daily Hospital Course Framework remains next.
+- Daily Hospital Course Framework v1 has since become the active candidate review artifact.
 - File Inventory Architecture remains deferred.
 - World Spec construction remains deferred.
 - Trap #3 vs Trap #5 concrete file distinction remains deferred.

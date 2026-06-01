@@ -2,7 +2,7 @@
 
 ## Current Phase
 
-World Spec Construction Preparation / Surgical History Package v1 locked.
+World Spec Construction Preparation / Daily Hospital Course Framework v1 candidate review.
 
 ## Current World
 
@@ -20,7 +20,7 @@ Claude Identity Package hostile-review observations are recorded as carry-forwar
 
 Task ID: cyau8803
 
-Status: Brainstorm approved / Surgical History Package v1 locked
+Status: Brainstorm approved / Daily Hospital Course Framework v1 candidate review
 
 Original submission timestamp: 5/29/2026 2:49 PM PDT
 
@@ -30,19 +30,19 @@ Reviewer GO: Stacey S approved Brainstorm via Slack. Recorded in `worlds/korvin-
 
 ## Current Pass
 
-World Spec Construction Preparation: Surgical History Package v1 locked.
+World Spec Construction Preparation: Daily Hospital Course Framework v1 candidate review.
 
 ## Next Pass
 
-Next World Spec Construction Preparation step only after explicit Alexander authorization. World Spec drafting remains blocked until explicitly authorized.
+Physician review / independent review of Daily Hospital Course Framework v1. World Spec drafting remains blocked until explicitly authorized.
 
 ## Active Blocker
 
-No active reviewer blocker. Medication Expansion Package v1 is locked. Comorbidity Expansion Package v1 is locked. Provider Roster Package v1 is locked. Surgical History Package v1 is locked. Governance Package v1 is ratified, the Physician Architecture Layer is complete, Key Milestones Calendar Skeleton v1 is locked, Baseline Anchor Package v1 is locked, Clinical Story Timeline Package v1 is locked, and Task Architecture Package v1 is locked. Daily Hospital Course Framework remains next but has not started. World Spec drafting, admission labs, hospital-course lab trends, medication schedules, medication reconciliation outputs, final file inventory, task prompts, expected outputs, golden responses, grader guidance, and synthetic file generation remain blocked.
+No active reviewer blocker. Medication Expansion Package v1 is locked. Comorbidity Expansion Package v1 is locked. Provider Roster Package v1 is locked. Surgical History Package v1 is locked. Governance Package v1 is ratified, the Physician Architecture Layer is complete, Key Milestones Calendar Skeleton v1 is locked, Baseline Anchor Package v1 is locked, Clinical Story Timeline Package v1 is locked, and Task Architecture Package v1 is locked. Daily Hospital Course Framework v1 is in candidate review. World Spec drafting, admission labs, hospital-course lab trends, medication schedules, medication reconciliation outputs, final file inventory, task prompts, expected outputs, golden responses, grader guidance, and synthetic file generation remain blocked.
 
 ## Current Git Checkpoint
 
-checkpoint: ratify surgical history package v1
+checkpoint: create daily hospital course framework v1
 
 ## Active Branch
 
@@ -58,7 +58,7 @@ Return to baseline commit if workflow becomes corrupted.
 
 ## Next Command For Codex
 
-Await Alexander's next explicit World Spec Construction Preparation authorization. Use `WORLD_SPEC_KICKOFF.md`, `physician-decision-log-02.md`, `clinical-story-skeleton-ratification.md`, `identity-package-v1.md`, `identity-package-review-addendum.md`, `governance-package-v1.md`, `governance-package-clarification.md`, `governance-package-ratification.md`, `key-milestones-calendar-skeleton-v1.md`, `key-milestones-calendar-ratification.md`, `baseline-anchor-package-v1.md`, `baseline-anchor-ratification.md`, `clinical-story-timeline-package-v1.md`, `clinical-story-timeline-ratification.md`, `planning-scaffolds/task-architecture-interview-v1.md`, `task-architecture-package-v1.md`, `task-architecture-ratification.md`, `locked/medication-expansion-package-v1.md`, `medication-expansion-ratification.md`, `reviews/medication-expansion-decision-addendum.md`, `locked/comorbidity-expansion-package-v1.md`, `comorbidity-expansion-ratification.md`, `locked/provider-roster-package-v1.md`, `provider-roster-ratification.md`, `locked/surgical-history-package-v1.md`, and `surgical-history-ratification.md` for orientation. Do not draft World Spec, create admission labs, create hospital-course lab trends, create medication schedules, create medication reconciliation outputs, create final file inventory, task prompts, expected outputs, goldens, grader guidance, templates, reference files, or synthetic documents before Alexander explicitly authorizes the relevant phase.
+Await Alexander's review of `worlds/korvin-merrow/world-spec-prep/candidate-review/daily-hospital-course-framework-v1.md`. Use `WORLD_SPEC_KICKOFF.md`, `physician-decision-log-02.md`, `clinical-story-skeleton-ratification.md`, `identity-package-v1.md`, `identity-package-review-addendum.md`, `governance-package-v1.md`, `governance-package-clarification.md`, `governance-package-ratification.md`, `key-milestones-calendar-skeleton-v1.md`, `key-milestones-calendar-ratification.md`, `baseline-anchor-package-v1.md`, `baseline-anchor-ratification.md`, `clinical-story-timeline-package-v1.md`, `clinical-story-timeline-ratification.md`, `planning-scaffolds/task-architecture-interview-v1.md`, `task-architecture-package-v1.md`, `task-architecture-ratification.md`, `locked/medication-expansion-package-v1.md`, `medication-expansion-ratification.md`, `reviews/medication-expansion-decision-addendum.md`, `locked/comorbidity-expansion-package-v1.md`, `comorbidity-expansion-ratification.md`, `locked/provider-roster-package-v1.md`, `provider-roster-ratification.md`, `locked/surgical-history-package-v1.md`, and `surgical-history-ratification.md` for orientation. Do not draft World Spec, create admission labs, create hospital-course lab trends, create medication schedules, create medication reconciliation outputs, create final file inventory, task prompts, expected outputs, goldens, grader guidance, templates, reference files, or synthetic documents before Alexander explicitly authorizes the relevant phase.
 
 ## Scope Guardrails
 

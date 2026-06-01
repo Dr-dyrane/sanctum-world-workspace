@@ -621,6 +621,26 @@ Guardrails:
 - Surgical history must not explain the admission, near-fall, weakness, hypotension, altered mental status, steroid concern, AKI, or discharge readiness by itself.
 - Surgical history does not create operative reports, procedure notes, hospital-course events, file inventory, task prompts, synthetic documents, or World Spec prose.
 
+## Daily Hospital Course Framework v1
+
+Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/daily-hospital-course-framework-v1.md`
+
+Status: CANDIDATE REVIEW.
+
+Purpose: canonical HD1-HD6 evolution model between locked architecture and later World Spec/file/task construction.
+
+Scope:
+
+- Defines what changes on each hospital day.
+- Captures daily clinical state, changes, improvements, remaining concerns, active frictions, active traps, relevant provider groups, and disposition readiness.
+- Preserves the improving but not safely solved design principle.
+- Preserves mixed physiology and no hidden single answer.
+- Preserves Trap #3 vs Trap #5 distinction.
+
+Boundaries:
+
+- Does not create labs, lab trends, vitals, medication doses, medication schedules, medication orders, consultant notes, discharge summaries, operative reports, procedure notes, file inventory, tasks, prompts, expected outputs, goldens, grader guidance, synthetic files, World Spec prose, templates, or reference files.
+
 ## Locked World Tone
 
 The patient is medically improving but operationally dangerous to discharge.

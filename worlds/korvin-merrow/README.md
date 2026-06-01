@@ -1,6 +1,6 @@
 # Korvin Merrow World
 
-Current state: World Spec Construction Preparation / Surgical History Package v1 locked.
+Current state: World Spec Construction Preparation / Daily Hospital Course Framework v1 candidate review.
 
 Start here only after reading `project/STATUS.md`.
 
@@ -31,6 +31,7 @@ Start here only after reading `project/STATUS.md`.
 - `world-spec-prep/ratifications/provider-roster-ratification.md`
 - `world-spec-prep/locked/surgical-history-package-v1.md`
 - `world-spec-prep/ratifications/surgical-history-ratification.md`
+- `world-spec-prep/candidate-review/daily-hospital-course-framework-v1.md`
 - `world-spec-prep/locked/baseline-anchor-package-v1.md`
 - `world-spec-prep/ratifications/baseline-anchor-ratification.md`
 - `world-spec-prep/locked/identity-package-v1.md`

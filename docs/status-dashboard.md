@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-World Spec Construction Preparation / Surgical History Package v1 locked.
+World Spec Construction Preparation / Daily Hospital Course Framework v1 candidate review.
 
 ## Brainstorm
 
