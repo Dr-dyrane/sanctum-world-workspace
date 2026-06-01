@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-World Spec Construction Preparation / Task Architecture Interview v1 candidate review.
+World Spec Construction Preparation / Task Architecture Package v1 candidate review.
 
 ## Brainstorm
 
@@ -32,8 +32,9 @@ World Spec Construction Preparation / Task Architecture Interview v1 candidate r
 - Baseline Anchor Package: v1 locked
 - Clinical Story Timeline Package: v1 locked
 - Task Architecture Interview: v1 candidate review
+- Task Architecture Package: v1 candidate review
 - Official Claude World Spec session: pending
-- Current state: World Spec Construction Preparation has begun; calendar, baseline anchors, and Clinical Story Timeline Package v1 are locked; Task Architecture Interview v1 awaits physician review
+- Current state: World Spec Construction Preparation has begun; calendar, baseline anchors, and Clinical Story Timeline Package v1 are locked; Task Architecture Package v1 awaits physician review
 - World Spec prep packet: created
 - Official World Spec template: saved locally
 - World Spec AutoQC prompt v6.3: saved locally
@@ -53,9 +54,10 @@ World Spec Construction Preparation / Task Architecture Interview v1 candidate r
 - Clinical Story Timeline Package v1: `worlds/korvin-merrow/world-spec-prep/locked/clinical-story-timeline-package-v1.md`
 - Clinical Story Timeline ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-timeline-ratification.md`
 - Task Architecture Interview v1: `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-interview-v1.md`
+- Task Architecture Package v1: `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-package-v1.md`
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 - World Spec prep folder structure: reorganized by lifecycle buckets (`candidate-review/`, `locked/`, `ratifications/`, `reviews/`, `decision-logs/`, `planning-scaffolds/`)
-- Next allowed action: physician review of Task Architecture Interview v1
+- Next allowed action: physician review of Task Architecture Package v1
 
 ## Tooling
 

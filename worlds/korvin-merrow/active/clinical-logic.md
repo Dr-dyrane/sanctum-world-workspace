@@ -428,6 +428,31 @@ Purpose: interview-only framework for resolving AutoQC 2.107 workflow-count cons
 
 This artifact does not create tasks, task prompts, expected outputs, goldens, grader guidance, file inventory, World Spec sections, reference templates, synthetic files, or new workflows not already implied by approved architecture.
 
+## Task Architecture Package v1
+
+Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-package-v1.md`
+
+Status: CANDIDATE REVIEW.
+
+Physician decisions:
+
+- Target task count: 6.
+- Target workflow count: 4 distinct workflows.
+- Administrative deliverable: Discharge Planning / Care Coordination.
+- TCM remains part of the Transition/Discharge workflow and does not become its own workflow.
+- Consultant synthesis remains a distinct reasoning area.
+- Readmission-risk reasoning lives inside existing workflow structures rather than creating a new workflow.
+- Coding, billing, and prior authorization are not preferred unless later required by source material.
+
+Candidate workflow architecture:
+
+- Discharge Medication Reconciliation.
+- Hospital Discharge Summary Generation.
+- Discharge Planning Documentation.
+- Interdisciplinary Care Plan Development and Documentation.
+
+This package does not create task prompts, expected outputs, goldens, grader guidance, file inventory, World Spec sections, templates, reference files, or synthetic documents.
+
 ## Locked World Tone
 
 The patient is medically improving but operationally dangerous to discharge.

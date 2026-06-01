@@ -1,6 +1,6 @@
 # Korvin Merrow World Spec Kickoff
 
-Status: World Spec Construction Preparation / Task Architecture Interview v1 candidate review.
+Status: World Spec Construction Preparation / Task Architecture Package v1 candidate review.
 
 Purpose: mark the transition from approved Brainstorm to World Spec preparation without drafting the World Spec, populating the template, creating a final file inventory, or inventing clinical values.
 
@@ -31,6 +31,7 @@ Purpose: mark the transition from approved Brainstorm to World Spec preparation 
 - Clinical Story Timeline Package v1: `worlds/korvin-merrow/world-spec-prep/locked/clinical-story-timeline-package-v1.md`.
 - Clinical Story Timeline ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-timeline-ratification.md`.
 - Task Architecture Interview v1: `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-interview-v1.md`.
+- Task Architecture Package v1: `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-package-v1.md`.
 - Next allowed substantive action: proceed only when Alexander explicitly authorizes the next World Spec preparation or construction step.
 
 ## Workspace Bloat And Doctrine Audit
@@ -258,6 +259,14 @@ Task Architecture Interview v1:
 - Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-interview-v1.md`.
 - Purpose: interview-only framework for resolving AutoQC 2.107 workflow-count constraints, AutoQC 2.108 administrative-deliverable requirements, final task distribution, and workflow consolidation strategy.
 - It does not create tasks, task prompts, expected outputs, goldens, grader guidance, file inventory, World Spec sections, reference templates, synthetic files, or new workflows not already implied by approved architecture.
+
+Task Architecture Package v1:
+
+- Status: CANDIDATE REVIEW.
+- Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-package-v1.md`.
+- Purpose: formal task-architecture framework defining six task concepts across four workflows before task drafting.
+- Physician decisions recorded: target task count 6, target workflow count 4, administrative deliverable Discharge Planning / Care Coordination, TCM folded into transition/discharge workflow, readmission-risk reasoning kept inside existing workflow structures, consultant synthesis preserved as distinct reasoning area, coding/billing/prior authorization not preferred unless later required.
+- It does not create task prompts, expected outputs, goldens, grader guidance, file inventory, World Spec sections, templates, reference files, or synthetic documents.
 
 Primary frictions:
 

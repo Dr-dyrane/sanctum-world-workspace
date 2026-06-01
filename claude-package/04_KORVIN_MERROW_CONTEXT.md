@@ -368,7 +368,7 @@ Identity review addendum:
 
 Brainstorm approved. Clinical Story Skeleton v1 ratified. Identity Package v1 locked. Governance Package v1 ratified. Physician Architecture Layer complete. Key Milestones Calendar Skeleton v1 locked. Baseline Anchor Package v1 locked. Clinical Story Timeline Package v1 locked. Do not start World Spec drafting.
 
-Task Architecture Interview v1 is in candidate review at `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-interview-v1.md`. It is interview-only and does not create final tasks, task prompts, expected outputs, file inventory, World Spec sections, reference templates, or synthetic files.
+Task Architecture Interview v1 is complete at `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-interview-v1.md`. Task Architecture Package v1 is in candidate review at `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-package-v1.md`. It defines the candidate architecture of six task concepts across four workflows: Discharge Medication Reconciliation, Hospital Discharge Summary Generation, Discharge Planning Documentation, and Interdisciplinary Care Plan Development and Documentation. It does not create final task prompts, expected outputs, file inventory, World Spec sections, reference templates, or synthetic files.
 
 Completed:
 
@@ -392,11 +392,12 @@ Completed:
 18. Baseline Anchor Package v1 locked after physician review.
 19. Clinical Story Timeline Package v1 created and locked.
 20. Task Architecture Interview v1 created for candidate review.
+21. Task Architecture Package v1 created for candidate review.
 
 Still pending before World Spec drafting:
 
 1. Official Claude World Spec session.
-2. Physician review of Task Architecture Interview v1.
+2. Physician review of Task Architecture Package v1.
 3. Alexander authorization to draft the World Spec.
 
 ## Claude Use Rules

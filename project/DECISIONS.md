@@ -288,6 +288,39 @@ Boundary:
 
 - This does not create tasks, task prompts, expected outputs, golden responses, grader guidance, file inventory, World Spec sections, reference templates, synthetic files, or new workflows not already implied by approved architecture.
 
+## 2026-05-31 - Task Architecture Package v1 Candidate Review
+
+Decision: create formal task-architecture package from completed physician interview decisions.
+
+Artifact:
+
+- `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-package-v1.md`
+
+Physician decisions recorded:
+
+- Target task count: 6.
+- Target workflow count: 4 distinct workflows.
+- Administrative deliverable: Discharge Planning / Care Coordination.
+- TCM remains part of the Transition/Discharge workflow and does not become its own workflow.
+- Consultant synthesis remains distinct.
+- Readmission-risk reasoning lives inside existing workflow structures rather than creating a new workflow.
+- Coding, billing, and prior authorization are not preferred unless later required by source material.
+
+Candidate workflow architecture:
+
+- Discharge Medication Reconciliation.
+- Hospital Discharge Summary Generation.
+- Discharge Planning Documentation.
+- Interdisciplinary Care Plan Development and Documentation.
+
+Status:
+
+- Task Architecture Package v1: CANDIDATE REVIEW.
+
+Boundary:
+
+- This does not create task prompts, expected outputs, golden responses, grader guidance, file inventory, World Spec sections, templates, reference files, or synthetic documents.
+
 Boundaries:
 
 - Does not create labs, vitals, medication doses, medication schedules, hospital notes, file inventory, task architecture, milestones beyond locked dates, World Spec prose, prompts, golden responses, grader guidance, templates, reference files, or synthetic documents.

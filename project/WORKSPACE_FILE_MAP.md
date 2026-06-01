@@ -4,7 +4,7 @@ Purpose: local repository hygiene map to prevent duplicate working files and acc
 
 Generated from local workspace file listing excluding `.git`, caches, and Python bytecode.
 
-Current status: World Spec Construction Preparation / Task Architecture Interview v1 candidate review. Identity Package review addendum recorded as carry-forward notes only. World Spec drafting has not started.
+Current status: World Spec Construction Preparation / Task Architecture Package v1 candidate review. Identity Package review addendum recorded as carry-forward notes only. World Spec drafting has not started.
 
 ## Navigation Rule
 
@@ -24,9 +24,10 @@ For a new collaborator or new AI session, read in this order:
 12. `worlds/korvin-merrow/world-spec-prep/ratifications/baseline-anchor-ratification.md` for baseline physician sign-off and BP carry-forward note.
 13. `worlds/korvin-merrow/world-spec-prep/locked/clinical-story-timeline-package-v1.md` for the locked story-evolution framework.
 14. `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-timeline-ratification.md` for timeline ratification and Trap #3 vs Trap #5 carry-forward note.
-15. `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-interview-v1.md` for the current task-architecture interview framework.
-16. `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions.
-17. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
+15. `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-package-v1.md` for the current task-architecture candidate package.
+16. `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-interview-v1.md` for interview basis.
+17. `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions.
+18. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
 
 Do not start by opening every prep file. Most prep files are supporting memory, not active instructions.
 
@@ -229,7 +230,7 @@ Reviewed for duplicate-purpose files:
 Lifecycle clustering:
 
 - `WORLD_SPEC_KICKOFF.md`: the only root cockpit file in `world-spec-prep/`.
-- `candidate-review/`: artifacts awaiting physician decision or lock. Currently contains Task Architecture Interview v1.
+- `candidate-review/`: artifacts awaiting physician decision or lock. Currently contains Task Architecture Interview v1 and Task Architecture Package v1.
 - `locked/`: locked architecture packages and canonical frameworks.
 - `ratifications/`: formal ratification records.
 - `reviews/`: review findings, hostile reviews, clarifications, and addenda.
@@ -258,6 +259,7 @@ Lifecycle clustering:
 | `worlds/korvin-merrow/world-spec-prep/locked/clinical-story-timeline-package-v1.md` | Locked story-evolution framework from pre-admission through +30 anchor. | Does not create labs, vitals, medication schedules, notes, files, task architecture, or World Spec prose. |
 | `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-timeline-ratification.md` | Ratification record for Clinical Story Timeline Package v1. | Records carry-forward distinction between Trap #3 buried evidence and Trap #5 reassuring but incomplete discharge/source-hierarchy artifact. |
 | `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-interview-v1.md` | Candidate interview-only framework for task architecture decisions. | Does not create final tasks, prompts, expected outputs, file inventory, World Spec sections, reference templates, or synthetic files. |
+| `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-package-v1.md` | Candidate formal task architecture package defining six task concepts across four workflows. | Does not create prompts, expected outputs, goldens, grader guidance, file inventory, World Spec sections, templates, reference files, or synthetic files. |
 | `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-01.md` | Durable post-kickoff physician decision record. | Historical state sync record; superseded for skeleton lock by decision log 02. |
 | `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` | Durable Clinical Story Skeleton v1 ratification record. | Use before Identity Package; not a draft spec or file inventory. |
 | `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/post-go-interview-plan.md` | Interview sequence after Brainstorm GO. | This file; do not use before GO except for prep. |
