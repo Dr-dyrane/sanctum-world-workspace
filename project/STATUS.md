@@ -2,7 +2,7 @@
 
 ## Current Phase
 
-File Inventory Architecture / File Inventory Architecture v1 candidate review.
+File Inventory Architecture / File Inventory Architecture v1 locked.
 
 ## Current World
 
@@ -10,7 +10,7 @@ Working title: Korvin Merrow World
 
 ## Current State
 
-Brainstorm Human Review returned GO from Stacey S after SEND BACK remediation. Reviewer approved the Korvin Merrow Brainstorm and indicated next steps are World Spec and file template development. Preparation Layer is complete, World Spec Skeleton v1 is locked, and World Spec v1 is locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-v1-ratification.md`. World Spec Construction is complete. File Inventory Architecture v1 is created for candidate review at `worlds/korvin-merrow/file-inventory/candidate-review/file-inventory-architecture-v1.md`. This is architecture only, not final Section 3 file rows or synthetic file construction.
+Brainstorm Human Review returned GO from Stacey S after SEND BACK remediation. Reviewer approved the Korvin Merrow Brainstorm and indicated next steps are World Spec and file template development. Preparation Layer is complete, World Spec Skeleton v1 is locked, and World Spec v1 is locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-v1-ratification.md`. World Spec Construction is complete. File Inventory Architecture v1 is locked at `worlds/korvin-merrow/file-inventory/locked/file-inventory-architecture-v1.md`, with ratification recorded at `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-architecture-ratification.md`. Phase 3 File Inventory Architecture is complete. This is architecture only, not final Section 3 file rows or synthetic file construction.
 
 Source/reference note: Alexander added World Spec example source documents under `reference/word-spec-examples/`. Preserve them as source/reference artifacts, not authored Korvin Merrow content.
 
@@ -20,7 +20,7 @@ Claude Identity Package hostile-review observations are recorded as carry-forwar
 
 Task ID: cyau8803
 
-Status: Brainstorm approved / World Spec v1 locked / File Inventory Architecture v1 candidate review
+Status: Brainstorm approved / World Spec v1 locked / File Inventory Architecture v1 locked
 
 Original submission timestamp: 5/29/2026 2:49 PM PDT
 
@@ -30,19 +30,19 @@ Reviewer GO: Stacey S approved Brainstorm via Slack. Recorded in `worlds/korvin-
 
 ## Current Pass
 
-File Inventory Architecture v1: CANDIDATE REVIEW.
+File Inventory Architecture v1: LOCKED. Phase 3 File Inventory Architecture: COMPLETE.
 
 ## Next Pass
 
-Next eligible phase: File Inventory Architecture v1 review and ratification decision. Final Section 3 file rows, synthetic files, task specifications, task prompts, expected outputs, goldens, grader guidance, AutoQC, DOCX population, Studio submission packaging, and RL Studio upload remain blocked until specifically authorized.
+Next eligible phase: File Inventory v1 Table Construction. Final Section 3 file rows, filenames, file IDs, synthetic files, task specifications, task prompts, expected outputs, goldens, grader guidance, AutoQC, DOCX population, Studio submission packaging, and RL Studio upload remain blocked until specifically authorized.
 
 ## Active Blocker
 
-No active reviewer blocker. Preparation Layer is complete. World Spec Skeleton v1 is locked. World Spec v1 is locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-v1.md`. World Spec Construction is complete. File Inventory Architecture v1 is in candidate review. Final file inventory rows, synthetic files, task specifications, task prompts, expected outputs, golden responses, grader guidance, AutoQC, DOCX population, Studio submission packaging, and RL Studio upload remain blocked until specifically authorized.
+No active reviewer blocker. Preparation Layer is complete. World Spec Skeleton v1 is locked. World Spec v1 is locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-v1.md`. World Spec Construction is complete. File Inventory Architecture v1 is locked. Final file inventory rows, filenames, file IDs, synthetic files, task specifications, task prompts, expected outputs, golden responses, grader guidance, AutoQC, DOCX population, Studio submission packaging, and RL Studio upload remain blocked until specifically authorized.
 
 ## Current Git Checkpoint
 
-checkpoint: create file inventory architecture v1
+checkpoint: ratify file inventory architecture v1
 
 ## Active Branch
 
@@ -58,7 +58,7 @@ Return to baseline commit if workflow becomes corrupted.
 
 ## Next Command For Codex
 
-Await review/ratification of File Inventory Architecture v1. Do not create final file inventory rows, synthetic files, task specifications, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission artifacts, Studio submission packaging, or RL Studio uploads before Alexander explicitly authorizes the relevant phase.
+Await Alexander authorization for File Inventory v1 Table Construction. Do not create final file inventory rows, filenames, file IDs, synthetic files, task specifications, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission artifacts, Studio submission packaging, or RL Studio uploads before Alexander explicitly authorizes the relevant phase.
 
 ## Scope Guardrails
 

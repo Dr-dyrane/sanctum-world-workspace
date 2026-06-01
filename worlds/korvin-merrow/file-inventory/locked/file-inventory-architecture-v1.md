@@ -2,7 +2,7 @@
 
 Date created: 2026-06-01
 
-Status: CANDIDATE REVIEW
+Status: LOCKED
 
 Purpose: define the planned file ecosystem for the Korvin Merrow world before synthetic file creation, final Section 3 file rows, task prompts, expected outputs, goldens, grader guidance, DOCX population, AutoQC responses, or submission packaging.
 
@@ -360,4 +360,4 @@ Action required: stop before downstream construction.
 
 File Inventory Architecture v1
 
-Status: CANDIDATE REVIEW
+Status: LOCKED

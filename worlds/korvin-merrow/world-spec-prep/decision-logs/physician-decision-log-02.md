@@ -721,7 +721,7 @@ Carry-forward watch items:
 - Keep PCI remote so aspirin-only baseline remains consistent.
 - Decide procedural provenance during file inventory.
 - Daily Hospital Course Framework v1 is locked.
-- File Inventory Architecture remains deferred.
+- File Inventory Architecture v1 is locked; final table construction remains deferred.
 - World Spec construction is authorized, but downstream artifacts remain unstarted until specifically authorized.
 - Trap #3 vs Trap #5 concrete file distinction remains deferred.
 - AutoQC 2.107 workflow-count discipline remains preserved.
@@ -788,7 +788,7 @@ Preparation Layer:
 World Spec Construction:
 
 - Status: AUTHORIZED.
-- File inventory, synthetic files, tasks, prompts, expected outputs, goldens, grader guidance, notes, labs, vitals, and hospital-course documentation have not started.
+- Final file inventory table rows, synthetic files, tasks, prompts, expected outputs, goldens, grader guidance, notes, labs, vitals, and hospital-course documentation have not started.
 
 ## World Spec Skeleton v1
 
@@ -853,7 +853,7 @@ Preserved future-construction watch items:
 - Insulin lispro remains inpatient-only candidate logic.
 - AutoQC 2.108 administrative deliverable watch item remains preserved.
 - Transcript packaging remains future submission-layer activity.
-- File Inventory Architecture not yet started.
+- File Inventory Architecture v1 locked; File Inventory v1 Table Construction not yet started.
 - Synthetic world files not yet started.
 - Task Specifications not yet started.
 - Task prompts not yet started.
@@ -864,6 +864,47 @@ Preserved future-construction watch items:
 - DOCX population not yet started.
 - Studio submission packaging not yet started.
 
+## File Inventory Architecture v1
+
+Status: LOCKED.
+
+Artifact: `worlds/korvin-merrow/file-inventory/locked/file-inventory-architecture-v1.md`
+
+Ratification: `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-architecture-ratification.md`
+
+Review outcome:
+
+- Windsurf Claude Review: YES / LOCK READY / GO.
+- Claude Code Review: YES / LOCK READY / GO.
+- No true defects identified.
+- No blockers identified.
+- File ecosystem is faithful to locked World Spec v1.
+- All four locked workflows have file support.
+- All five traps have planned document substrates.
+- Trap #3 vs Trap #5 distinction is preserved.
+- All three frictions have two-sided file support.
+- Authority hierarchy, master source-of-truth hierarchy, and prednisone-specific hierarchy are covered.
+- Temporal boundary is preserved: no world-level file after 05/23/2026 18:00.
+
+Accepted watch items:
+
+- Future File Inventory v1 table must use AutoQC v6.3 8-column structure.
+- Source/Tool separation must be preserved.
+- Fact-to-file traceability must be enforced.
+- Essential/supplementary ratio should be checked during table construction.
+- Trap #3 and Trap #5 must be instantiated as distinct source patterns.
+- Objective trend and MAR values remain future synthetic-file construction.
+- Social Work and remote procedural provenance remain final-table judgment calls.
+- Transcript packaging remains future submission-layer work.
+
+Phase 3 File Inventory Architecture:
+
+- Status: COMPLETE.
+
 Next eligible phase:
 
-- File Inventory Architecture, pending explicit Alexander authorization.
+- File Inventory v1 Table Construction, pending explicit Alexander authorization.
+
+Boundary:
+
+- This does not authorize final Section 3 file rows, filenames, file IDs, synthetic files, clinical notes, labs, vitals, medication lists, discharge summaries, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, or submission materials.

@@ -350,10 +350,13 @@ World Spec v1 Status: LOCKED.
 
 File Inventory Architecture v1:
 
-- Status: CANDIDATE REVIEW.
-- Artifact: `worlds/korvin-merrow/file-inventory/candidate-review/file-inventory-architecture-v1.md`.
+- Status: LOCKED.
+- Artifact: `worlds/korvin-merrow/file-inventory/locked/file-inventory-architecture-v1.md`.
+- Ratification: `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-architecture-ratification.md`.
 - Purpose: planned file ecosystem only, defining world-level, task-level, and supplementary/noise file categories needed to support the locked World Spec, workflows, traps, frictions, source hierarchy, and temporal architecture.
 - It does not create final Section 3 rows, filenames, synthetic files, notes, labs, vitals, medication lists, discharge summaries, task prompts, expected outputs, goldens, grader guidance, reference files, templates, DOCX artifacts, AutoQC responses, or RL Studio submissions.
+- Phase 3 File Inventory Architecture is complete.
+- Next eligible phase is File Inventory v1 Table Construction, pending explicit Alexander authorization.
 - Final file inventory row construction remains blocked pending explicit Alexander authorization.
 
 ## Key Milestones Calendar Skeleton v1

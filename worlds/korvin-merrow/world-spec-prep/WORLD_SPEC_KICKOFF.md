@@ -1,6 +1,6 @@
 # Korvin Merrow World Spec Kickoff
 
-Status: File Inventory Architecture / File Inventory Architecture v1 candidate review.
+Status: File Inventory Architecture / File Inventory Architecture v1 locked.
 
 Purpose: active cockpit for the transition from approved Brainstorm through World Spec construction while preserving phase boundaries around template population, file inventory, tasks, and downstream deliverables.
 
@@ -15,8 +15,10 @@ Purpose: active cockpit for the transition from approved Brainstorm through Worl
 - World Spec Skeleton ratification: `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-skeleton-ratification.md`.
 - World Spec v1 locked artifact: `worlds/korvin-merrow/world-spec-construction/locked/world-spec-v1.md`.
 - World Spec v1 ratification: `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-v1-ratification.md`.
-- File Inventory Architecture v1 is in candidate review at `worlds/korvin-merrow/file-inventory/candidate-review/file-inventory-architecture-v1.md`.
-- Final Section 3 file rows, synthetic files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission packaging, RL Studio upload, notes, labs, and vitals have not started.
+- File Inventory Architecture v1 is locked at `worlds/korvin-merrow/file-inventory/locked/file-inventory-architecture-v1.md`.
+- File Inventory Architecture ratification: `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-architecture-ratification.md`.
+- Phase 3 File Inventory Architecture is complete.
+- Final Section 3 file rows, filenames, file IDs, synthetic files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission packaging, RL Studio upload, notes, labs, and vitals have not started.
 - Clinical Story Skeleton v1 is locked and ratified.
 - Clinical Story Skeleton review completed with GO recommendation.
 - Clinical Story Skeleton ratification completed after Claude hostile review minor findings.
@@ -50,7 +52,7 @@ Purpose: active cockpit for the transition from approved Brainstorm through Worl
 - Daily Hospital Course Framework v1: `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md`.
 - Daily Hospital Course Framework ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md`.
 - Preparation Layer status: COMPLETE.
-- Next eligible phase: File Inventory Architecture v1 review and ratification decision. Final Section 3 file rows, synthetic files, task specifications, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission packaging, RL Studio upload, notes, labs, and vitals remain blocked until explicitly authorized.
+- Next eligible phase: File Inventory v1 Table Construction. Final Section 3 file rows, filenames, file IDs, synthetic files, task specifications, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission packaging, RL Studio upload, notes, labs, and vitals remain blocked until explicitly authorized.
 
 ## Workspace Bloat And Doctrine Audit
 
@@ -343,7 +345,7 @@ Surgical History Package v1:
 - Confirmed procedural anchors: remote percutaneous coronary intervention with coronary stent placement and remote diagnostic sleep study confirming obstructive sleep apnea.
 - Excluded/noise-controlled procedures: ICD/CRT/pacemaker, CABG, dialysis access, major orthopedic fracture repair or joint replacement, limb amputation/major diabetic foot surgery, temporal artery biopsy/rheumatologic diagnostic procedure, and screening colonoscopy for v1 purposes.
 - Guardrail: surgical/procedural history should remain background realism and provenance support; it must not create a new disease arc, reveal the cause of the presentation, collapse mixed physiology, or weaken frictions/traps.
-- Carry-forward: keep PCI remote so aspirin-only baseline remains consistent; decide procedural provenance during file inventory; File Inventory Architecture remains deferred.
+- Carry-forward: keep PCI remote so aspirin-only baseline remains consistent; decide procedural provenance during File Inventory v1 Table Construction; File Inventory Architecture v1 is locked.
 
 Daily Hospital Course Framework v1:
 
@@ -360,14 +362,16 @@ Preparation Layer:
 - Status: COMPLETE.
 - Completed artifacts: Brainstorm, Temporal Architecture, Clinical Story Skeleton, Identity Package, Governance Package, Key Milestones Calendar Skeleton, Baseline Anchor Package, Clinical Story Timeline Package, Task Architecture Package, Medication Expansion Package, Comorbidity Expansion Package, Provider Roster Package, Surgical History Package, and Daily Hospital Course Framework.
 - World Spec Construction status: COMPLETE.
-- Boundary: World Spec v1 is locked. File Inventory Architecture v1 is in candidate review. Final file inventory rows, synthetic files, task specifications, prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission packaging, RL Studio upload, notes, labs, vitals, and hospital-course documentation remain unstarted until Alexander explicitly authorizes the relevant next step.
+- Boundary: World Spec v1 is locked. File Inventory Architecture v1 is locked and Phase 3 File Inventory Architecture is complete. Final file inventory rows, filenames, file IDs, synthetic files, task specifications, prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission packaging, RL Studio upload, notes, labs, vitals, and hospital-course documentation remain unstarted until Alexander explicitly authorizes the relevant next step.
 
 File Inventory Architecture v1:
 
-- Status: CANDIDATE REVIEW.
-- Artifact: `worlds/korvin-merrow/file-inventory/candidate-review/file-inventory-architecture-v1.md`.
+- Status: LOCKED.
+- Artifact: `worlds/korvin-merrow/file-inventory/locked/file-inventory-architecture-v1.md`.
+- Ratification: `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-architecture-ratification.md`.
 - Purpose: define the planned file ecosystem for the locked World Spec without creating final Section 3 rows, filenames, synthetic files, notes, labs, vitals, medication lists, task prompts, expected outputs, goldens, or grader guidance.
 - It preserves the world close at 05/23/2026 18:00, classifies post-world anchors as task/post-world context only, maps all five traps and three frictions to planned file-source categories, and records future AutoQC v6.3 8-column file-plan readiness.
+- Next eligible phase: File Inventory v1 Table Construction.
 
 Fetched World Spec source examples:
 
