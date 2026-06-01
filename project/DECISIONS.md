@@ -266,6 +266,28 @@ Boundary:
 
 - This decision does not authorize World Spec drafting, labs, vitals, medication schedules, file inventory, task architecture, prompts, goldens, grader guidance, templates, reference files, or synthetic documents.
 
+## 2026-05-31 - Task Architecture Interview v1 Candidate Review
+
+Decision: create an interview-only framework for final task architecture decisions.
+
+Artifact:
+
+- `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-interview-v1.md`
+
+Purpose:
+
+- Resolve AutoQC 2.107 workflow-count constraints.
+- Resolve AutoQC 2.108 administrative-deliverable requirements.
+- Frame final task distribution and workflow consolidation strategy before task drafting.
+
+Status:
+
+- Task Architecture Interview v1: CANDIDATE REVIEW.
+
+Boundary:
+
+- This does not create tasks, task prompts, expected outputs, golden responses, grader guidance, file inventory, World Spec sections, reference templates, synthetic files, or new workflows not already implied by approved architecture.
+
 Boundaries:
 
 - Does not create labs, vitals, medication doses, medication schedules, hospital notes, file inventory, task architecture, milestones beyond locked dates, World Spec prose, prompts, golden responses, grader guidance, templates, reference files, or synthetic documents.

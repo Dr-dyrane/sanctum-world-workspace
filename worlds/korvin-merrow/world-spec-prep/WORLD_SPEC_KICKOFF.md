@@ -1,6 +1,6 @@
 # Korvin Merrow World Spec Kickoff
 
-Status: World Spec Construction Preparation / Clinical Story Timeline Package v1 locked.
+Status: World Spec Construction Preparation / Task Architecture Interview v1 candidate review.
 
 Purpose: mark the transition from approved Brainstorm to World Spec preparation without drafting the World Spec, populating the template, creating a final file inventory, or inventing clinical values.
 
@@ -30,6 +30,7 @@ Purpose: mark the transition from approved Brainstorm to World Spec preparation 
 - Baseline Anchor Package v1: `worlds/korvin-merrow/world-spec-prep/locked/baseline-anchor-package-v1.md`.
 - Clinical Story Timeline Package v1: `worlds/korvin-merrow/world-spec-prep/locked/clinical-story-timeline-package-v1.md`.
 - Clinical Story Timeline ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-timeline-ratification.md`.
+- Task Architecture Interview v1: `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-interview-v1.md`.
 - Next allowed substantive action: proceed only when Alexander explicitly authorizes the next World Spec preparation or construction step.
 
 ## Workspace Bloat And Doctrine Audit
@@ -250,6 +251,13 @@ Completed construction-preparation chain:
 - Key Milestones Calendar Skeleton: LOCKED.
 - Baseline Anchor Package: LOCKED.
 - Clinical Story Timeline Package: LOCKED.
+
+Task Architecture Interview v1:
+
+- Status: CANDIDATE REVIEW.
+- Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-interview-v1.md`.
+- Purpose: interview-only framework for resolving AutoQC 2.107 workflow-count constraints, AutoQC 2.108 administrative-deliverable requirements, final task distribution, and workflow consolidation strategy.
+- It does not create tasks, task prompts, expected outputs, goldens, grader guidance, file inventory, World Spec sections, reference templates, synthetic files, or new workflows not already implied by approved architecture.
 
 Primary frictions:
 

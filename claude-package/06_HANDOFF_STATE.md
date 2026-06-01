@@ -18,7 +18,7 @@ RL Studio:
 - Approval source: Slack / Stacey S
 - Reviewer message: "great job! I approved your brainstorm. Next steps are to move forward with world spec and file template development."
 
-Current state: World Spec Construction Preparation / Clinical Story Timeline Package v1 locked. World Spec drafting has not started and remains gated on explicit Alexander authorization.
+Current state: World Spec Construction Preparation / Task Architecture Interview v1 candidate review. World Spec drafting has not started and remains gated on explicit Alexander authorization.
 
 ## Locked Decisions
 
@@ -182,6 +182,13 @@ Clinical Story Timeline Package v1:
 - It does not create labs, vitals, medication doses, medication schedules, hospital notes, file inventory, task architecture, World Spec prose, prompts, goldens, grader guidance, templates, reference files, or synthetic documents.
 - Carry-forward note: preserve Trap #3 as buried functional/cognitive evidence and Trap #5 as reassuring but incomplete discharge/source-hierarchy artifact during later file construction.
 
+Task Architecture Interview v1:
+
+- Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-interview-v1.md`.
+- Status: CANDIDATE REVIEW.
+- Purpose: interview-only framework for resolving AutoQC 2.107 workflow-count constraints, AutoQC 2.108 administrative-deliverable requirements, final task distribution, and workflow consolidation strategy.
+- Boundary: does not create tasks, task prompts, expected outputs, goldens, grader guidance, file inventory, World Spec sections, reference templates, synthetic files, or new workflows not already implied by approved architecture.
+
 ## Decisions Remaining
 
 Do not answer these without Alexander.
@@ -194,7 +201,7 @@ Identity/compliance:
 
 Clinical scenario:
 
-- Next Alexander-authorized World Spec Construction Preparation step.
+- Physician review of Task Architecture Interview v1.
 - Final key milestone list for the eventual World Spec template.
 - Source-of-truth hierarchy for conflicting evidence.
 
@@ -227,13 +234,13 @@ Use these as future World Spec priorities only after Brainstorm GO:
 
 ## Next Legal Action
 
-Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`, `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/identity-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/reviews/identity-package-review-addendum.md`, `worlds/korvin-merrow/world-spec-prep/locked/governance-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/reviews/governance-package-clarification.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/governance-package-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/key-milestones-calendar-skeleton-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/key-milestones-calendar-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/baseline-anchor-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/locked/clinical-story-timeline-package-v1.md`, and `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-timeline-ratification.md` for orientation.
+Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`, `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/identity-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/reviews/identity-package-review-addendum.md`, `worlds/korvin-merrow/world-spec-prep/locked/governance-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/reviews/governance-package-clarification.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/governance-package-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/key-milestones-calendar-skeleton-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/key-milestones-calendar-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/baseline-anchor-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/locked/clinical-story-timeline-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-timeline-ratification.md`, and `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-interview-v1.md` for orientation.
 
 Wait for Alexander to authorize the next World Spec construction preparation step.
 
 For the next preparation step:
 
-1. Read `project/STATUS.md`, `project/PASS_PLAN.md`, `WORLD_SPEC_KICKOFF.md`, `physician-decision-log-02.md`, `clinical-story-skeleton-ratification.md`, `identity-package-v1.md`, `identity-package-review-addendum.md`, `governance-package-v1.md`, `governance-package-clarification.md`, `governance-package-ratification.md`, `key-milestones-calendar-skeleton-v1.md`, `key-milestones-calendar-ratification.md`, `baseline-anchor-package-v1.md`, `clinical-story-timeline-package-v1.md`, and `clinical-story-timeline-ratification.md`.
+1. Read `project/STATUS.md`, `project/PASS_PLAN.md`, `WORLD_SPEC_KICKOFF.md`, `physician-decision-log-02.md`, `clinical-story-skeleton-ratification.md`, `identity-package-v1.md`, `identity-package-review-addendum.md`, `governance-package-v1.md`, `governance-package-clarification.md`, `governance-package-ratification.md`, `key-milestones-calendar-skeleton-v1.md`, `key-milestones-calendar-ratification.md`, `baseline-anchor-package-v1.md`, `clinical-story-timeline-package-v1.md`, `clinical-story-timeline-ratification.md`, and `task-architecture-interview-v1.md`.
 2. Use only locked physician decisions, the ratified Clinical Story Skeleton, locked Identity Package, ratified Governance Package v1, locked calendar skeleton, locked baseline anchor package, and approved Brainstorm material.
 3. Do not populate the official World Spec template until Alexander authorizes drafting.
 

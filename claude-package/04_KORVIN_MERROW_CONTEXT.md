@@ -368,6 +368,8 @@ Identity review addendum:
 
 Brainstorm approved. Clinical Story Skeleton v1 ratified. Identity Package v1 locked. Governance Package v1 ratified. Physician Architecture Layer complete. Key Milestones Calendar Skeleton v1 locked. Baseline Anchor Package v1 locked. Clinical Story Timeline Package v1 locked. Do not start World Spec drafting.
 
+Task Architecture Interview v1 is in candidate review at `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-interview-v1.md`. It is interview-only and does not create final tasks, task prompts, expected outputs, file inventory, World Spec sections, reference templates, or synthetic files.
+
 Completed:
 
 1. Korvin Merrow synthetic patient identity.
@@ -389,11 +391,12 @@ Completed:
 17. Key Milestones Calendar Skeleton v1 locked.
 18. Baseline Anchor Package v1 locked after physician review.
 19. Clinical Story Timeline Package v1 created and locked.
+20. Task Architecture Interview v1 created for candidate review.
 
 Still pending before World Spec drafting:
 
 1. Official Claude World Spec session.
-2. Next Alexander-authorized World Spec Construction Preparation step.
+2. Physician review of Task Architecture Interview v1.
 3. Alexander authorization to draft the World Spec.
 
 ## Claude Use Rules

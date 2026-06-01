@@ -418,6 +418,16 @@ Completed construction-preparation chain:
 - Baseline Anchor Package: LOCKED.
 - Clinical Story Timeline Package: LOCKED.
 
+## Task Architecture Interview v1
+
+Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-interview-v1.md`
+
+Status: CANDIDATE REVIEW.
+
+Purpose: interview-only framework for resolving AutoQC 2.107 workflow-count constraints, AutoQC 2.108 administrative-deliverable requirements, final task distribution, and workflow consolidation strategy.
+
+This artifact does not create tasks, task prompts, expected outputs, goldens, grader guidance, file inventory, World Spec sections, reference templates, synthetic files, or new workflows not already implied by approved architecture.
+
 ## Locked World Tone
 
 The patient is medically improving but operationally dangerous to discharge.

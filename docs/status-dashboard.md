@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-World Spec Construction Preparation / Clinical Story Timeline Package v1 locked.
+World Spec Construction Preparation / Task Architecture Interview v1 candidate review.
 
 ## Brainstorm
 
@@ -31,8 +31,9 @@ World Spec Construction Preparation / Clinical Story Timeline Package v1 locked.
 - Key Milestones Calendar Skeleton: v1 locked
 - Baseline Anchor Package: v1 locked
 - Clinical Story Timeline Package: v1 locked
+- Task Architecture Interview: v1 candidate review
 - Official Claude World Spec session: pending
-- Current state: World Spec Construction Preparation has begun; calendar, baseline anchors, and Clinical Story Timeline Package v1 are locked
+- Current state: World Spec Construction Preparation has begun; calendar, baseline anchors, and Clinical Story Timeline Package v1 are locked; Task Architecture Interview v1 awaits physician review
 - World Spec prep packet: created
 - Official World Spec template: saved locally
 - World Spec AutoQC prompt v6.3: saved locally
@@ -51,9 +52,10 @@ World Spec Construction Preparation / Clinical Story Timeline Package v1 locked.
 - Baseline Anchor ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/baseline-anchor-ratification.md`
 - Clinical Story Timeline Package v1: `worlds/korvin-merrow/world-spec-prep/locked/clinical-story-timeline-package-v1.md`
 - Clinical Story Timeline ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-timeline-ratification.md`
+- Task Architecture Interview v1: `worlds/korvin-merrow/world-spec-prep/candidate-review/task-architecture-interview-v1.md`
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 - World Spec prep folder structure: reorganized by lifecycle buckets (`candidate-review/`, `locked/`, `ratifications/`, `reviews/`, `decision-logs/`, `planning-scaffolds/`)
-- Next allowed action: next World Spec Construction Preparation step only after explicit Alexander authorization
+- Next allowed action: physician review of Task Architecture Interview v1
 
 ## Tooling
 

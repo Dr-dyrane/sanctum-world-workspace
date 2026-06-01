@@ -1,6 +1,6 @@
 # Korvin Merrow World
 
-Current state: World Spec Construction Preparation / Clinical Story Timeline Package v1 locked.
+Current state: World Spec Construction Preparation / Task Architecture Interview v1 candidate review.
 
 Start here only after reading `project/STATUS.md`.
 
@@ -19,6 +19,7 @@ Start here only after reading `project/STATUS.md`.
 - `world-spec-prep/WORLD_SPEC_KICKOFF.md`
 - `world-spec-prep/locked/clinical-story-timeline-package-v1.md`
 - `world-spec-prep/ratifications/clinical-story-timeline-ratification.md`
+- `world-spec-prep/candidate-review/task-architecture-interview-v1.md`
 - `world-spec-prep/locked/baseline-anchor-package-v1.md`
 - `world-spec-prep/ratifications/baseline-anchor-ratification.md`
 - `world-spec-prep/locked/identity-package-v1.md`
