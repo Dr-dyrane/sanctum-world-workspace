@@ -356,9 +356,10 @@ File Inventory Architecture v1:
 - Purpose: planned file ecosystem only, defining world-level, task-level, and supplementary/noise file categories needed to support the locked World Spec, workflows, traps, frictions, source hierarchy, and temporal architecture.
 - It does not create final Section 3 rows, filenames, synthetic files, notes, labs, vitals, medication lists, discharge summaries, task prompts, expected outputs, goldens, grader guidance, reference files, templates, DOCX artifacts, AutoQC responses, or RL Studio submissions.
 - Phase 3 File Inventory Architecture is complete.
-- File Inventory v1 candidate table is active at `worlds/korvin-merrow/file-inventory/candidate-review/file-inventory-v1.md`.
-- Phase 4 File Inventory v1 Table Construction is in candidate review.
-- Next eligible phase is File Inventory v1 review / ratification.
+- File Inventory v1 is locked at `worlds/korvin-merrow/file-inventory/locked/file-inventory-v1.md`.
+- File Inventory v1 ratification is recorded at `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-v1-ratification.md`.
+- File Inventory Planning is complete.
+- Next eligible phase is Synthetic World-Level File Construction.
 - Synthetic files, chart notes, discharge summaries, medication lists, medication schedules, lab values, vital signs, consultant recommendation text, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
 
 ## Key Milestones Calendar Skeleton v1

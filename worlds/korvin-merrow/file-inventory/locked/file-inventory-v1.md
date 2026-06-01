@@ -2,7 +2,7 @@
 
 Date created: 2026-06-01
 
-Status: CANDIDATE REVIEW
+Status: LOCKED
 
 Purpose: convert the locked File Inventory Architecture v1 into the first AutoQC v6.3-compatible planned file inventory table for the Korvin Merrow world.
 
@@ -182,7 +182,7 @@ Supplementary rows:
 - FI-S03 is anchored no later than 05/23/2026 18:00.
 - No supplementary file carries sole critical evidence.
 
-Temporal safety assessment: pass for candidate review.
+Temporal safety assessment: locked.
 
 ## 7. File Count Review
 
@@ -210,7 +210,7 @@ Evidence: rows map directly to the locked World Spec's patient profile, HD1-HD6 
 
 Impact: no locked world fact is reopened.
 
-Action required: candidate review before lock.
+Action required: locked; preserve as canonical planned file inventory unless Alexander explicitly reopens it.
 
 ### VERIFIED
 
@@ -270,7 +270,7 @@ Evidence: all world-level rows are anchored no later than 05/23/2026 18:00; all 
 
 Impact: protects closed-world boundary and post-world task anchor discipline.
 
-Action required: none before candidate review.
+Action required: none unless Alexander explicitly reopens File Inventory v1.
 
 ### PLAUSIBLE
 
@@ -278,9 +278,9 @@ Finding: 33 planned rows is readable for this world.
 
 Evidence: 22 world-level, 7 task-level, and 4 supplementary rows stay within requested targets and cover a complex 6-day hospitalization without one-row-per-day/per-service inflation.
 
-Impact: likely sufficient for reviewer expectations, but row density should be reassessed after candidate review.
+Impact: reviewer checks accepted the row density as lock-ready.
 
-Action required: reviewers may trim or merge if any row feels redundant.
+Action required: locked; future changes require explicit Alexander authorization.
 
 ### PLAUSIBLE
 
@@ -316,4 +316,4 @@ Action required: stop before downstream construction.
 
 File Inventory v1
 
-Status: CANDIDATE REVIEW
+Status: LOCKED

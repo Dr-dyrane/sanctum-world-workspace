@@ -1,6 +1,6 @@
 # Korvin Merrow World
 
-Current state: File Inventory v1 / File Inventory v1 candidate review.
+Current state: File Inventory v1 / File Inventory v1 locked.
 
 Start here only after reading `project/STATUS.md`.
 
@@ -14,14 +14,15 @@ Start here only after reading `project/STATUS.md`.
 - `submission/`: RL Studio submission artifacts.
 - `world-spec-prep/`: World Spec preparation cockpit plus lifecycle subfolders for locked decisions, locked, ratifications, reviews, decision logs, and planning scaffolds.
 - `world-spec-construction/`: World Spec construction lifecycle folders for candidate review artifacts, locked construction artifacts, and ratifications.
-- `file-inventory/`: file inventory lifecycle area. Locked architecture defines planned file ecosystem, and the active candidate table converts it into planned inventory rows; neither creates synthetic files or chart contents.
+- `file-inventory/`: file inventory lifecycle area. Locked architecture defines planned file ecosystem, and locked File Inventory v1 defines the planned inventory rows; neither creates synthetic files or chart contents.
 
 ## Active Entry Points
 
 - `world-spec-prep/WORLD_SPEC_KICKOFF.md`
 - `world-spec-construction/locked/world-spec-v1.md`
 - `world-spec-construction/ratifications/world-spec-v1-ratification.md`
-- `file-inventory/candidate-review/file-inventory-v1.md`
+- `file-inventory/locked/file-inventory-v1.md`
+- `file-inventory/ratifications/file-inventory-v1-ratification.md`
 - `file-inventory/locked/file-inventory-architecture-v1.md`
 - `file-inventory/ratifications/file-inventory-architecture-ratification.md`
 - `world-spec-construction/locked/world-spec-skeleton-v1.md`
@@ -50,4 +51,4 @@ Start here only after reading `project/STATUS.md`.
 - `world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`
 - `active/brainstorm.md`
 
-World Spec v1 is locked. File Inventory Architecture v1 is locked. Phase 3 File Inventory Architecture is complete. File Inventory v1 candidate table is active at `file-inventory/candidate-review/file-inventory-v1.md`. Next eligible phase is File Inventory v1 review / ratification. Do not create synthetic files, chart notes, discharge summaries, medication lists, medication schedules, lab values, vital signs, consultant recommendation text, task specifications, task prompts, expected outputs, golden responses, grader guidance, AutoQC responses, DOCX submission artifacts, RL Studio uploads, templates, or reference files until Alexander explicitly authorizes the relevant step.
+World Spec v1 is locked. File Inventory Architecture v1 is locked. Phase 3 File Inventory Architecture is complete. File Inventory v1 is locked at `file-inventory/locked/file-inventory-v1.md`. File Inventory Planning is complete. Next eligible phase is Synthetic World-Level File Construction. Do not create synthetic files, chart notes, discharge summaries, medication lists, medication schedules, lab values, vital signs, consultant recommendation text, task specifications, task prompts, expected outputs, golden responses, grader guidance, AutoQC responses, DOCX submission artifacts, RL Studio uploads, templates, or reference files until Alexander explicitly authorizes the relevant step.

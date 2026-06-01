@@ -908,3 +908,54 @@ Next eligible phase:
 Boundary:
 
 - This does not authorize final Section 3 file rows, filenames, file IDs, synthetic files, clinical notes, labs, vitals, medication lists, discharge summaries, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, or submission materials.
+
+## File Inventory v1
+
+Status: LOCKED.
+
+Artifact: `worlds/korvin-merrow/file-inventory/locked/file-inventory-v1.md`
+
+Ratification: `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-v1-ratification.md`
+
+Review outcome:
+
+- Claude Code Review: YES / LOCK READY / GO.
+- Windsurf Claude Review: YES / LOCK READY / GO.
+- No true defects identified.
+- No blockers identified.
+- World Spec fidelity verified.
+- File Inventory Architecture fidelity verified.
+- All 33 planned files validated.
+- ID integrity, count integrity, temporal integrity, workflow coverage, trap coverage, friction coverage, source-of-truth coverage, and AutoQC v6.3 structure verified.
+- Source vs Tool separation preserved.
+- Trap #3 vs Trap #5 distinction preserved.
+- No answer-file risk identified.
+- No post-world leakage identified.
+
+Locked counts:
+
+- World-Level files: 22.
+- Task-Level files: 7.
+- Supplementary files: 4.
+- Total planned files: 33.
+
+Accepted carry-forward items:
+
+- Per-file Tool / Origin values remain future synthetic-file construction work.
+- Two-track filename convention remains future synthetic-file construction work.
+- FI-W12 trend representation remains future synthetic-file construction work.
+- FI-W13 MAR representation remains future synthetic-file construction work.
+- Trap remediation paths remain future grader-guidance work.
+- Transcript packaging remains future submission-layer work.
+
+File Inventory Planning:
+
+- Status: COMPLETE.
+
+Next eligible phase:
+
+- Synthetic World-Level File Construction, pending explicit Alexander authorization.
+
+Boundary:
+
+- This does not authorize synthetic files, file contents, clinical notes, progress notes, discharge summaries, labs, vitals, medication lists, consultant recommendations, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission materials, or RL Studio activity.
