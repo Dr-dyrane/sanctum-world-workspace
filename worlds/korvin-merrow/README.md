@@ -1,6 +1,6 @@
 # Korvin Merrow World
 
-Current state: World Spec Construction / Preparation Layer complete.
+Current state: World Spec Construction / World Spec Skeleton v1 candidate review.
 
 Start here only after reading `project/STATUS.md`.
 
@@ -17,6 +17,7 @@ Start here only after reading `project/STATUS.md`.
 ## Active Entry Points
 
 - `world-spec-prep/WORLD_SPEC_KICKOFF.md`
+- `world-spec-construction/candidate-review/world-spec-skeleton-v1.md`
 - `world-spec-prep/locked/clinical-story-timeline-package-v1.md`
 - `world-spec-prep/ratifications/clinical-story-timeline-ratification.md`
 - `world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md`

@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-World Spec Construction / Preparation Layer complete.
+World Spec Construction / World Spec Skeleton v1 candidate review.
 
 ## Brainstorm
 
@@ -24,7 +24,8 @@ World Spec Construction / Preparation Layer complete.
 - World Spec kickoff: recorded in `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`
 - Physician decision log: recorded in `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-01.md`
 - World Spec construction: authorized
-- World Spec drafting: not started
+- World Spec Skeleton v1: candidate review
+- Full World Spec drafting: not started
 - Clinical Story Skeleton: v1 locked, reviewed, and ratified
 - Identity Package: v1 locked
 - Governance Package: v1 ratified
@@ -40,8 +41,9 @@ World Spec Construction / Preparation Layer complete.
 - Surgical History Package: v1 locked
 - Daily Hospital Course Framework: v1 locked
 - Preparation Layer: complete
+- World Spec Skeleton v1: `worlds/korvin-merrow/world-spec-construction/candidate-review/world-spec-skeleton-v1.md`
 - Official Claude World Spec session: pending
-- Current state: World Spec Construction is authorized; calendar, baseline anchors, Clinical Story Timeline Package v1, Task Architecture Package v1, Medication Expansion Package v1, Comorbidity Expansion Package v1, Provider Roster Package v1, Surgical History Package v1, and Daily Hospital Course Framework v1 are locked
+- Current state: World Spec Skeleton v1 is in candidate review; calendar, baseline anchors, Clinical Story Timeline Package v1, Task Architecture Package v1, Medication Expansion Package v1, Comorbidity Expansion Package v1, Provider Roster Package v1, Surgical History Package v1, and Daily Hospital Course Framework v1 are locked
 - World Spec prep packet: created
 - Official World Spec template: saved locally
 - World Spec AutoQC prompt v6.3: saved locally
@@ -77,7 +79,7 @@ World Spec Construction / Preparation Layer complete.
 - Fetched World Spec example source documents: `reference/word-spec-examples/`
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 - World Spec prep folder structure: reorganized by lifecycle buckets (`candidate-review/`, `locked/`, `ratifications/`, `reviews/`, `decision-logs/`, `planning-scaffolds/`)
-- Next allowed action: next World Spec construction step only after explicit Alexander authorization
+- Next allowed action: review World Spec Skeleton v1; do not draft full World Spec prose or downstream artifacts until explicitly authorized
 
 ## Tooling
 
