@@ -607,3 +607,75 @@ Carry-forward watch items:
 Boundary:
 
 - This does not authorize labs, vitals, medication doses, medication schedules, hospital-course events, provider names, surgical history, tasks, prompts, expected outputs, golden responses, grader guidance, file inventory, World Spec drafting, templates, reference files, or synthetic documents.
+
+## Provider Roster Package v1
+
+Status: LOCKED.
+
+Purpose: provider/care-team and stakeholder architecture for Korvin Merrow before World Spec construction, file planning, note authorship, synthetic documents, task prompts, expected outputs, golden responses, or grader guidance.
+
+Ratification:
+
+- Claude Review: YES / LOCK READY / GO.
+- Claude Code Review: YES / LOCK READY / GO.
+- No true defects identified.
+- No blockers identified.
+- No hierarchy conflicts identified.
+- No friction collapse identified.
+- No trap degradation identified.
+- No governance incompatibilities identified.
+
+Accepted physician decisions:
+
+- Shared Merrow surname is intentional.
+- Korvin Merrow and Mara Merrow may share the Merrow surname.
+- Resident remains role-based.
+- Pharmacy remains role-based.
+- No additional provider naming is authorized.
+
+Approved named high-authority roles:
+
+- Attending hospitalist: Dr. Elian Vossmere.
+- Cardiology attending: Dr. Maris Caldrane.
+- Nephrology attending: Dr. Iven Solthar.
+- Endocrinology attending: Dr. Nerea Veylorn.
+- Primary care physician: Dr. Talia Quenor.
+- Outpatient rheumatology attending: Dr. Soren Halvek.
+- Family/caregiver stakeholder: Mara Merrow.
+
+Approved role-based contributors:
+
+- Hospitalist resident / covering clinician.
+- Bedside nursing team.
+- Physical Therapy.
+- Occupational Therapy.
+- Case Management.
+- Social Work.
+- Pharmacy / medication reconciliation pharmacist.
+
+Compatibility confirmed:
+
+- Authority hierarchy compatibility confirmed.
+- Master source-of-truth compatibility confirmed.
+- Prednisone hierarchy compatibility confirmed.
+- Friction architecture preserved.
+- Trap architecture preserved.
+- Governance compatibility confirmed.
+
+Carry-forward watch items:
+
+- Named-provider roster must not expand without Alexander approval.
+- Resident remains role-based unless future construction explicitly requires a named recurring covering clinician.
+- Pharmacy remains role-based unless future medication-reconciliation construction explicitly requires a named recurring pharmacist.
+- Surgical-history package.
+- Daily hospital-course framework.
+- Future medication reconciliation construction.
+- File inventory architecture.
+- Source-of-truth and document-provenance traceability.
+- AutoQC 2.107 workflow-count discipline.
+- AutoQC 2.108 administrative-deliverable contingency.
+- Trap #3 vs Trap #5 concrete file distinction.
+
+Boundary:
+
+- This does not authorize clinical notes, provider-authored documents, file inventory, task prompts, expected outputs, golden responses, grader guidance, medication schedules, hospital-course events, labs, vitals, World Spec drafting, templates, reference files, or synthetic documents.

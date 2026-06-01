@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-World Spec Construction Preparation / Provider Roster Package v1 candidate review.
+World Spec Construction Preparation / Provider Roster Package v1 locked.
 
 ## Brainstorm
 
@@ -35,9 +35,9 @@ World Spec Construction Preparation / Provider Roster Package v1 candidate revie
 - Task Architecture Package: v1 locked
 - Medication Expansion Package: v1 locked
 - Comorbidity Expansion Package: v1 locked
-- Provider Roster Package: v1 candidate review
+- Provider Roster Package: v1 locked
 - Official Claude World Spec session: pending
-- Current state: World Spec Construction Preparation has begun; calendar, baseline anchors, Clinical Story Timeline Package v1, Task Architecture Package v1, Medication Expansion Package v1, and Comorbidity Expansion Package v1 are locked; Provider Roster Package v1 is in candidate review
+- Current state: World Spec Construction Preparation has begun; calendar, baseline anchors, Clinical Story Timeline Package v1, Task Architecture Package v1, Medication Expansion Package v1, Comorbidity Expansion Package v1, and Provider Roster Package v1 are locked
 - World Spec prep packet: created
 - Official World Spec template: saved locally
 - World Spec AutoQC prompt v6.3: saved locally
@@ -64,11 +64,12 @@ World Spec Construction Preparation / Provider Roster Package v1 candidate revie
 - Medication Expansion Decision Addendum: `worlds/korvin-merrow/world-spec-prep/reviews/medication-expansion-decision-addendum.md`
 - Comorbidity Expansion Package v1: `worlds/korvin-merrow/world-spec-prep/locked/comorbidity-expansion-package-v1.md`
 - Comorbidity Expansion ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/comorbidity-expansion-ratification.md`
-- Provider Roster Package v1: `worlds/korvin-merrow/world-spec-prep/candidate-review/provider-roster-package-v1.md`
+- Provider Roster Package v1: `worlds/korvin-merrow/world-spec-prep/locked/provider-roster-package-v1.md`
+- Provider Roster ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/provider-roster-ratification.md`
 - Fetched World Spec example source documents: `reference/word-spec-examples/`
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 - World Spec prep folder structure: reorganized by lifecycle buckets (`candidate-review/`, `locked/`, `ratifications/`, `reviews/`, `decision-logs/`, `planning-scaffolds/`)
-- Next allowed action: physician review of Provider Roster Package v1
+- Next allowed action: next World Spec Construction Preparation step only after explicit Alexander authorization
 
 ## Tooling
 

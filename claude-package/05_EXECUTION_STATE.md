@@ -4,7 +4,7 @@ Purpose: compressed current state for Claude. Use `project/STATUS.md` and `docs/
 
 ## Project State
 
-Current phase: World Spec Construction Preparation / Provider Roster Package v1 candidate review.
+Current phase: World Spec Construction Preparation / Provider Roster Package v1 locked.
 
 Brainstorm:
 
@@ -22,7 +22,7 @@ Brainstorm:
 
 Current blocker:
 
-- No reviewer blocker. World Spec kickoff is recorded. Clinical Story Skeleton v1 is locked, reviewed, and ratified. Identity Package v1 is locked. Identity Package hostile-review addendum is recorded as carry-forward implementation notes only. Governance Package v1 is ratified. Physician Architecture Layer is complete. Key Milestones Calendar Skeleton v1 is locked. Baseline Anchor Package v1 is locked. Clinical Story Timeline Package v1 is locked. Task Architecture Interview v1 is complete. Task Architecture Package v1 is locked. Medication Expansion Package v1 is locked after physician decision resolution and ratification. Comorbidity Expansion Package v1 is locked after independent review and physician ratification. Provider Roster Package v1 is in candidate review and not yet locked. World Spec drafting remains gated on explicit Alexander authorization.
+- No reviewer blocker. World Spec kickoff is recorded. Clinical Story Skeleton v1 is locked, reviewed, and ratified. Identity Package v1 is locked. Identity Package hostile-review addendum is recorded as carry-forward implementation notes only. Governance Package v1 is ratified. Physician Architecture Layer is complete. Key Milestones Calendar Skeleton v1 is locked. Baseline Anchor Package v1 is locked. Clinical Story Timeline Package v1 is locked. Task Architecture Interview v1 is complete. Task Architecture Package v1 is locked. Medication Expansion Package v1 is locked after physician decision resolution and ratification. Comorbidity Expansion Package v1 is locked after independent review and physician ratification. Provider Roster Package v1 is locked after independent review and physician ratification. World Spec drafting remains gated on explicit Alexander authorization.
 
 Next legal action:
 
@@ -46,7 +46,8 @@ Next legal action:
 - Use `worlds/korvin-merrow/world-spec-prep/reviews/medication-expansion-decision-addendum.md` for the accepted physician decision removing insulin lispro from baseline architecture and reserving it as future inpatient-only candidate logic.
 - Use `worlds/korvin-merrow/world-spec-prep/locked/comorbidity-expansion-package-v1.md` as the locked baseline comorbidity architecture.
 - Use `worlds/korvin-merrow/world-spec-prep/ratifications/comorbidity-expansion-ratification.md` for comorbidity ratification and carry-forward watch items.
-- Use `worlds/korvin-merrow/world-spec-prep/candidate-review/provider-roster-package-v1.md` as the active provider/care-team roster candidate under physician review.
+- Use `worlds/korvin-merrow/world-spec-prep/locked/provider-roster-package-v1.md` as the locked provider/care-team roster architecture.
+- Use `worlds/korvin-merrow/world-spec-prep/ratifications/provider-roster-ratification.md` for provider roster ratification and naming guardrails.
 - Do not revise the locked Clinical Story Skeleton or locked Identity Package, draft World Spec, create milestones, or create file inventory until Alexander explicitly starts/authorizes the relevant phase.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
 
@@ -117,7 +118,8 @@ Next legal action:
 - Medication Expansion Package v1 ratified and locked: `worlds/korvin-merrow/world-spec-prep/ratifications/medication-expansion-ratification.md`.
 - Comorbidity Expansion Package v1 created for candidate review and then ratified/locked: `worlds/korvin-merrow/world-spec-prep/locked/comorbidity-expansion-package-v1.md`.
 - Comorbidity Expansion Package v1 ratification recorded: `worlds/korvin-merrow/world-spec-prep/ratifications/comorbidity-expansion-ratification.md`.
-- Provider Roster Package v1 created for candidate review: `worlds/korvin-merrow/world-spec-prep/candidate-review/provider-roster-package-v1.md`.
+- Provider Roster Package v1 created for candidate review and then ratified/locked: `worlds/korvin-merrow/world-spec-prep/locked/provider-roster-package-v1.md`.
+- Provider Roster Package v1 ratification recorded: `worlds/korvin-merrow/world-spec-prep/ratifications/provider-roster-ratification.md`.
 - World Spec example source documents recorded under `reference/word-spec-examples/`.
 
 ## Latest Git Checkpoints
@@ -145,7 +147,7 @@ Next legal action:
 - Auditing.
 - Checklist building.
 - Reviewer-risk analysis.
-- Candidate provider roster architecture review.
+- Preparation and reviewer-risk analysis only.
 - Claude package refresh.
 - Local documentation updates that preserve phase boundaries.
 - Physician decision-brief creation for reviewer-required changes.
@@ -218,7 +220,8 @@ Claude must not replace physician judgment or originate clinical design.
 - `worlds/korvin-merrow/world-spec-prep/locked/medication-expansion-package-v1.md`
 - `worlds/korvin-merrow/world-spec-prep/locked/comorbidity-expansion-package-v1.md`
 - `worlds/korvin-merrow/world-spec-prep/ratifications/comorbidity-expansion-ratification.md`
-- `worlds/korvin-merrow/world-spec-prep/candidate-review/provider-roster-package-v1.md`
+- `worlds/korvin-merrow/world-spec-prep/locked/provider-roster-package-v1.md`
+- `worlds/korvin-merrow/world-spec-prep/ratifications/provider-roster-ratification.md`
 - `reference/world-spec-guidelines/08_autoqc_master_index.md`
 - `reference/world-spec-guidelines/09_world_spec_writer_playbook.md`
 - `project/WORKSPACE_FILE_MAP.md`

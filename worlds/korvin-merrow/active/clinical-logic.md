@@ -547,13 +547,15 @@ This package does not create labs, vitals, medication doses, medication schedule
 
 ## Provider Roster Package v1
 
-Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/provider-roster-package-v1.md`
+Artifact: `worlds/korvin-merrow/world-spec-prep/locked/provider-roster-package-v1.md`
 
-Status: CANDIDATE REVIEW.
+Ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/provider-roster-ratification.md`
+
+Status: LOCKED.
 
 Purpose: provider/care-team and stakeholder architecture before note authorship, file planning, task drafting, synthetic documents, or World Spec drafting.
 
-Proposed named high-authority roles:
+Locked named high-authority roles:
 
 - Attending hospitalist: Dr. Elian Vossmere.
 - Cardiology attending: Dr. Maris Caldrane.
@@ -575,8 +577,12 @@ Service-role placeholders:
 
 Guardrails:
 
+- Shared Merrow surname for Korvin Merrow and Mara Merrow is intentionally approved.
 - Named providers are architecture placeholders only.
 - Service-role placeholders prevent over-naming minor or rotating contributors.
+- Resident remains role-based.
+- Pharmacy remains role-based.
+- No additional provider naming is authorized.
 - Provider roster does not create notes, files, dates, task prompts, synthetic documents, or World Spec prose.
 
 ## Locked World Tone

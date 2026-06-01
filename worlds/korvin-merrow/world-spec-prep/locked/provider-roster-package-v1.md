@@ -2,7 +2,7 @@
 
 Date created: 2026-06-01
 
-Status: CANDIDATE REVIEW.
+Status: LOCKED.
 
 Purpose: define the provider, care-team, and stakeholder architecture for Korvin Merrow before World Spec construction, file planning, note authorship, synthetic documents, task prompts, expected outputs, golden responses, or grader guidance.
 
@@ -258,7 +258,7 @@ Evidence: Cardiology, Nephrology, Endocrinology, Primary Team, Family, PT/OT, nu
 
 Impact: supports the approved frictions and major traps.
 
-Action required: physician review before lock.
+Action required: locked; preserve unless Alexander explicitly reopens the package.
 
 ### VERIFIED
 
@@ -344,4 +344,4 @@ Action required: stop before downstream construction.
 
 Provider Roster Package v1
 
-Status: CANDIDATE REVIEW
+Status: LOCKED.

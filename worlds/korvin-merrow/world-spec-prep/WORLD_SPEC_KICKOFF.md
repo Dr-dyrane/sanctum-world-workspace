@@ -1,6 +1,6 @@
 # Korvin Merrow World Spec Kickoff
 
-Status: World Spec Construction Preparation / Provider Roster Package v1 candidate review.
+Status: World Spec Construction Preparation / Provider Roster Package v1 locked.
 
 Purpose: mark the transition from approved Brainstorm to World Spec preparation without drafting the World Spec, populating the template, creating a final file inventory, or inventing clinical values.
 
@@ -37,7 +37,8 @@ Purpose: mark the transition from approved Brainstorm to World Spec preparation 
 - Medication Expansion ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/medication-expansion-ratification.md`.
 - Comorbidity Expansion Package v1: `worlds/korvin-merrow/world-spec-prep/locked/comorbidity-expansion-package-v1.md`.
 - Comorbidity Expansion ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/comorbidity-expansion-ratification.md`.
-- Provider Roster Package v1: `worlds/korvin-merrow/world-spec-prep/candidate-review/provider-roster-package-v1.md`.
+- Provider Roster Package v1: `worlds/korvin-merrow/world-spec-prep/locked/provider-roster-package-v1.md`.
+- Provider Roster ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/provider-roster-ratification.md`.
 - Next allowed substantive action: proceed only when Alexander explicitly authorizes the next World Spec preparation or construction step.
 
 ## Workspace Bloat And Doctrine Audit
@@ -313,10 +314,12 @@ Comorbidity Expansion Package v1:
 
 Provider Roster Package v1:
 
-- Status: CANDIDATE REVIEW.
-- Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/provider-roster-package-v1.md`.
+- Status: LOCKED.
+- Artifact: `worlds/korvin-merrow/world-spec-prep/locked/provider-roster-package-v1.md`.
+- Ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/provider-roster-ratification.md`.
 - Purpose: provider/care-team and stakeholder architecture before note authorship, file planning, task drafting, synthetic documents, or World Spec drafting.
-- Named high-authority roles are proposed for attending hospitalist, cardiology, nephrology, endocrinology, PCP, outpatient rheumatology, and family/caregiver stakeholder.
+- Named high-authority roles are locked for attending hospitalist, cardiology, nephrology, endocrinology, PCP, outpatient rheumatology, and family/caregiver stakeholder.
+- Shared Merrow surname for Korvin Merrow and Mara Merrow is intentionally approved.
 - Minor or rotating contributors remain service-role placeholders to avoid over-naming.
 - It does not create clinical notes, provider-authored documents, file inventory, task prompts, expected outputs, goldens, grader guidance, medication schedules, hospital-course events, labs, vitals, templates, reference files, synthetic documents, or World Spec prose.
 
