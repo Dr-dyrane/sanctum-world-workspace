@@ -4,7 +4,7 @@ Purpose: local repository hygiene map to prevent duplicate working files and acc
 
 Generated from local workspace file listing excluding `.git`, caches, and Python bytecode.
 
-Current status: World Spec Construction Preparation / Medication Expansion Package v1 candidate review. Task Architecture Interview v1 is preserved as historical planning scaffold; Task Architecture Package v1 is authoritative. Identity Package review addendum recorded as carry-forward notes only. World Spec drafting has not started.
+Current status: World Spec Construction Preparation / Medication Expansion Package v1 ready for ratification. Task Architecture Interview v1 is preserved as historical planning scaffold; Task Architecture Package v1 is authoritative. Identity Package review addendum recorded as carry-forward notes only. World Spec drafting has not started.
 
 ## Navigation Rule
 
@@ -27,10 +27,11 @@ For a new collaborator or new AI session, read in this order:
 15. `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md` for the locked task-architecture package.
 16. `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md` for task architecture ratification and carry-forward watch items.
 17. `worlds/korvin-merrow/active/task-map.md` for reconciled current vs historical workflow mapping.
-18. `worlds/korvin-merrow/world-spec-prep/candidate-review/medication-expansion-package-v1.md` for the active medication architecture candidate.
-19. `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md` for historical interview basis.
-20. `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions.
-21. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
+18. `worlds/korvin-merrow/world-spec-prep/candidate-review/medication-expansion-package-v1.md` for the medication architecture candidate ready for ratification.
+19. `worlds/korvin-merrow/world-spec-prep/reviews/medication-expansion-decision-addendum.md` for accepted physician decision resolution.
+20. `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md` for historical interview basis.
+21. `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions.
+22. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
 
 Do not start by opening every prep file. Most prep files are supporting memory, not active instructions.
 
@@ -265,7 +266,8 @@ Lifecycle clustering:
 | `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md` | Historical interview-only scaffold for task architecture decisions. | Task Architecture Package v1 is now authoritative; this scaffold does not create final tasks, prompts, expected outputs, file inventory, World Spec sections, reference templates, or synthetic files. |
 | `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md` | Locked formal task architecture package defining six task concepts across four workflows. | Does not create prompts, expected outputs, goldens, grader guidance, file inventory, World Spec sections, templates, reference files, or synthetic files. |
 | `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md` | Ratification record for Task Architecture Package v1. | Records AutoQC 2.108 contingency, Discharge Planning Documentation differentiation requirements, and superseded TCM/risk standalone workflow mappings. |
-| `worlds/korvin-merrow/world-spec-prep/candidate-review/medication-expansion-package-v1.md` | Candidate baseline medication architecture targeting 18-22 medications. | Active candidate review artifact only; does not create doses, schedules, med-rec outputs, hospital medication changes, file inventory, tasks, World Spec prose, templates, reference files, or synthetic documents. |
+| `worlds/korvin-merrow/world-spec-prep/candidate-review/medication-expansion-package-v1.md` | Candidate baseline medication architecture targeting 18-22 medications. | Ready for ratification; baseline count is 20 after removing insulin lispro from baseline and reserving it as future inpatient-only candidate logic. Does not create doses, schedules, med-rec outputs, hospital medication changes, file inventory, tasks, World Spec prose, templates, reference files, or synthetic documents. |
+| `worlds/korvin-merrow/world-spec-prep/reviews/medication-expansion-decision-addendum.md` | Accepted physician decision resolution for Medication Expansion Package v1. | Records insulin lispro removal from baseline architecture and future inpatient-only reservation; not a medication schedule, med-rec output, task, or World Spec draft. |
 | `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-01.md` | Durable post-kickoff physician decision record. | Historical state sync record; superseded for skeleton lock by decision log 02. |
 | `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` | Durable Clinical Story Skeleton v1 ratification record. | Use before Identity Package; not a draft spec or file inventory. |
 | `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/post-go-interview-plan.md` | Interview sequence after Brainstorm GO. | This file; do not use before GO except for prep. |

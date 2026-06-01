@@ -287,9 +287,11 @@ Task Architecture carry-forward watch items:
 
 Medication Expansion Package v1:
 
-- Status: CANDIDATE REVIEW.
+- Status: READY FOR RATIFICATION.
 - Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/medication-expansion-package-v1.md`.
+- Decision addendum: `worlds/korvin-merrow/world-spec-prep/reviews/medication-expansion-decision-addendum.md`.
 - Purpose: candidate baseline medication architecture targeting approximately 18-22 baseline medications before medication schedules, reconciliation outputs, hospital medication changes, discharge lists, file inventory, or World Spec drafting.
+- Physician decision resolution: insulin lispro removed from baseline architecture and reserved as a future inpatient-only candidate medication. Baseline medication count is 20.
 - It does not create doses, frequencies, schedules, medication timelines, admission medication lists, discharge medication lists, tasks, prompts, expected outputs, goldens, grader guidance, file inventory, templates, reference files, or synthetic documents.
 
 Primary frictions:

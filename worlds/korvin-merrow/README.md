@@ -23,6 +23,7 @@ Start here only after reading `project/STATUS.md`.
 - `world-spec-prep/locked/task-architecture-package-v1.md`
 - `world-spec-prep/ratifications/task-architecture-ratification.md`
 - `world-spec-prep/candidate-review/medication-expansion-package-v1.md`
+- `world-spec-prep/reviews/medication-expansion-decision-addendum.md`
 - `world-spec-prep/locked/baseline-anchor-package-v1.md`
 - `world-spec-prep/ratifications/baseline-anchor-ratification.md`
 - `world-spec-prep/locked/identity-package-v1.md`

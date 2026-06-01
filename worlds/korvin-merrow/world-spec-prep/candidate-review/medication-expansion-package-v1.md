@@ -2,7 +2,7 @@
 
 Date created: 2026-05-31
 
-Status: CANDIDATE REVIEW.
+Status: READY FOR RATIFICATION.
 
 Purpose: define the baseline medication architecture for Korvin Merrow before admission labs, hospital-course medication changes, medication reconciliation tasks, discharge medications, file inventory, or World Spec drafting.
 
@@ -37,7 +37,7 @@ Use only:
 
 ## 1. Medication Architecture Expansion
 
-Candidate baseline medication count: 21 medication items.
+Candidate baseline medication count: 20 medication items.
 
 ### Core Cardiovascular Medications
 
@@ -69,7 +69,8 @@ Candidate baseline medication count: 21 medication items.
 | --- | --- | --- | --- |
 | Metformin ER | Type 2 diabetes therapy. | Fits long-standing diabetes and baseline A1c framework, with renal/acute illness relevance. | Supports AKI-related medication safety and discharge restart reasoning. |
 | Insulin glargine | Basal diabetes control. | Fits long-standing diabetes with imperfect baseline control. | Supports discharge medication-management ability and family safety concerns. |
-| Insulin lispro | Prandial/correction diabetes control. | Plausible in a patient with long-standing diabetes, steroid exposure, and complex glycemic management. | Adds medication-management complexity and supports discharge safety without creating a new task. |
+
+Carry-forward note: insulin lispro is removed from baseline medication architecture and reserved as a future inpatient-only candidate medication during hospital-course construction. This preserves inpatient glycemic-management reasoning without over-expanding baseline outpatient medications.
 
 ### Neuropathy / Pain Medications
 
@@ -110,7 +111,7 @@ No additional unrelated chronic medication class is needed in v1. The candidate 
 
 Finding: candidate medication burden meets the target range.
 
-Evidence: the package identifies 21 baseline medication items, within the target of approximately 18-22.
+Evidence: the package identifies 20 baseline medication items, within the target of approximately 18-22.
 
 Impact: supports reviewer expectations for complex inpatient medication reasoning without exceeding a plausible outpatient burden.
 
@@ -324,7 +325,7 @@ Evidence: medication categories map to confirmed conditions and support the rati
 
 Impact: no governance redesign required.
 
-Action required: physician review before lock.
+Action required: ratification review before lock.
 
 ### VERIFIED
 
@@ -334,7 +335,7 @@ Evidence: the package preserves mixed physiology, medication-management mistakes
 
 Impact: timeline remains intact.
 
-Action required: none before candidate review.
+Action required: none before ratification review.
 
 ### VERIFIED
 
@@ -344,7 +345,7 @@ Evidence: medication logic uses baseline creatinine/eGFR, A1c, dry weight, mobil
 
 Impact: baseline anchors remain useful without becoming admission values.
 
-Action required: none before candidate review.
+Action required: none before ratification review.
 
 ### VERIFIED
 
@@ -354,17 +355,17 @@ Evidence: HF medications support Cardiology vs Nephrology; prednisone supports E
 
 Impact: strengthens current architecture without adding new frictions or traps.
 
-Action required: none before candidate review.
+Action required: none before ratification review.
 
 ### PLAUSIBLE
 
-Finding: medication burden is realistic but should be physician-reviewed for exact final composition.
+Finding: medication burden is realistic after physician decision resolution.
 
-Evidence: 21 medications is plausible for this comorbidity profile, but some supportive medications may be optional depending on desired final burden.
+Evidence: 20 medications remains plausible for this comorbidity profile after removing insulin lispro from baseline architecture and reserving it as a future inpatient-only candidate.
 
-Impact: candidate review should decide whether to keep all 21 or trim to a slightly smaller list within target range.
+Impact: the package remains within the 18-22 target range while preserving baseline diabetes architecture as metformin plus basal insulin.
 
-Action required: Alexander should approve, revise, or reject individual candidate additions before lock.
+Action required: proceed to ratification review when Alexander authorizes.
 
 ### NO ISSUE
 
@@ -386,16 +387,25 @@ Impact: no redesign required.
 
 Action required: none before physician review.
 
-## Physician Review Questions
+## Physician Decision Resolution
 
-1. Keep the candidate baseline medication count at 21, or trim supportive medications while staying in the 18-22 target range?
-2. Confirm whether insulin lispro belongs in baseline outpatient architecture or should be reserved for inpatient glycemic management later.
-3. Confirm whether nitroglycerin rescue medication belongs in the baseline CAD architecture.
-4. Confirm whether polyethylene glycol and senna should both remain, or whether only one bowel regimen medication should be carried forward.
-5. Confirm whether cholecalciferol should remain separate from calcium/vitamin D combination therapy for medication-reconciliation complexity.
+Accepted decisions:
+
+- Remove insulin lispro from baseline medication architecture.
+- Reserve insulin lispro as a future inpatient-only candidate medication during hospital-course construction.
+- Preserve all other medications unchanged.
+- Preserve all medication categories unchanged.
+- Preserve all trap and friction rationale unchanged.
+
+Result:
+
+- Baseline medication architecture contains 20 medications.
+- Medication Expansion Package v1 remains within the approved 18-22 target range.
+- Baseline diabetes architecture remains aligned with the locked Baseline Anchor Package rationale: metformin plus basal insulin.
+- Future inpatient glycemic-management reasoning remains available for discharge and medication-reconciliation construction.
 
 ## Final Status
 
 Medication Expansion Package v1
 
-Status: CANDIDATE REVIEW
+Status: READY FOR RATIFICATION
