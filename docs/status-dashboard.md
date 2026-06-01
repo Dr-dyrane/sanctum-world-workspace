@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-World Spec Construction Preparation / Task Architecture Package v1 locked.
+World Spec Construction Preparation / Medication Expansion Package v1 candidate review.
 
 ## Brainstorm
 
@@ -33,8 +33,9 @@ World Spec Construction Preparation / Task Architecture Package v1 locked.
 - Clinical Story Timeline Package: v1 locked
 - Task Architecture Interview: v1 historical planning scaffold
 - Task Architecture Package: v1 locked
+- Medication Expansion Package: v1 candidate review
 - Official Claude World Spec session: pending
-- Current state: World Spec Construction Preparation has begun; calendar, baseline anchors, Clinical Story Timeline Package v1, and Task Architecture Package v1 are locked
+- Current state: World Spec Construction Preparation has begun; calendar, baseline anchors, Clinical Story Timeline Package v1, and Task Architecture Package v1 are locked; Medication Expansion Package v1 is in candidate review
 - World Spec prep packet: created
 - Official World Spec template: saved locally
 - World Spec AutoQC prompt v6.3: saved locally
@@ -56,9 +57,10 @@ World Spec Construction Preparation / Task Architecture Package v1 locked.
 - Task Architecture Interview v1: `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md`
 - Task Architecture Package v1: `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md`
 - Task Architecture ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md`
+- Medication Expansion Package v1: `worlds/korvin-merrow/world-spec-prep/candidate-review/medication-expansion-package-v1.md`
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 - World Spec prep folder structure: reorganized by lifecycle buckets (`candidate-review/`, `locked/`, `ratifications/`, `reviews/`, `decision-logs/`, `planning-scaffolds/`)
-- Next allowed action: next World Spec Construction Preparation step only after explicit Alexander authorization
+- Next allowed action: physician review of Medication Expansion Package v1
 
 ## Tooling
 

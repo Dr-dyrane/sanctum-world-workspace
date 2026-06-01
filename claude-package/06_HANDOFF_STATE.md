@@ -18,7 +18,7 @@ RL Studio:
 - Approval source: Slack / Stacey S
 - Reviewer message: "great job! I approved your brainstorm. Next steps are to move forward with world spec and file template development."
 
-Current state: World Spec Construction Preparation / Task Architecture Package v1 locked. World Spec drafting has not started and remains gated on explicit Alexander authorization.
+Current state: World Spec Construction Preparation / Medication Expansion Package v1 candidate review. World Spec drafting has not started and remains gated on explicit Alexander authorization.
 
 ## Locked Decisions
 
@@ -201,6 +201,13 @@ Task Architecture Package v1:
 - TCM and readmission-risk reasoning are embedded inside Discharge Planning Documentation rather than standalone workflow categories.
 - Boundary: does not create task prompts, expected outputs, goldens, grader guidance, file inventory, World Spec sections, templates, reference files, or synthetic documents.
 
+Medication Expansion Package v1:
+
+- Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/medication-expansion-package-v1.md`.
+- Status: CANDIDATE REVIEW.
+- Purpose: candidate baseline medication architecture targeting approximately 18-22 medications.
+- Boundary: does not create doses, frequencies, schedules, medication timelines, reconciliation outputs, hospital medication changes, admission medication lists, discharge medication lists, tasks, prompts, expected outputs, goldens, grader guidance, file inventory, World Spec prose, templates, reference files, or synthetic documents.
+
 ## Decisions Remaining
 
 Do not answer these without Alexander.
@@ -213,7 +220,7 @@ Identity/compliance:
 
 Clinical scenario:
 
-- Next Alexander-authorized World Spec Construction Preparation step.
+- Physician review of Medication Expansion Package v1.
 - Final key milestone list for the eventual World Spec template.
 - Source-of-truth hierarchy for conflicting evidence.
 

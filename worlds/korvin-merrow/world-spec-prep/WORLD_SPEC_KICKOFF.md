@@ -33,6 +33,7 @@ Purpose: mark the transition from approved Brainstorm to World Spec preparation 
 - Task Architecture Interview v1: `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md`.
 - Task Architecture Package v1: `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md`.
 - Task Architecture ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md`.
+- Medication Expansion Package v1: `worlds/korvin-merrow/world-spec-prep/candidate-review/medication-expansion-package-v1.md`.
 - Next allowed substantive action: proceed only when Alexander explicitly authorizes the next World Spec preparation or construction step.
 
 ## Workspace Bloat And Doctrine Audit
@@ -283,6 +284,13 @@ Task Architecture carry-forward watch items:
 - AutoQC 2.108 administrative-deliverable reviewer-risk contingency.
 - Differentiate three Discharge Planning Documentation task concepts later by requester, time anchor, reasoning emphasis, and deliverable surface.
 - Utilization Review is contingency only if challenged later; do not add it now.
+
+Medication Expansion Package v1:
+
+- Status: CANDIDATE REVIEW.
+- Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/medication-expansion-package-v1.md`.
+- Purpose: candidate baseline medication architecture targeting approximately 18-22 baseline medications before medication schedules, reconciliation outputs, hospital medication changes, discharge lists, file inventory, or World Spec drafting.
+- It does not create doses, frequencies, schedules, medication timelines, admission medication lists, discharge medication lists, tasks, prompts, expected outputs, goldens, grader guidance, file inventory, templates, reference files, or synthetic documents.
 
 Primary frictions:
 

@@ -4,7 +4,7 @@ Purpose: compressed current state for Claude. Use `project/STATUS.md` and `docs/
 
 ## Project State
 
-Current phase: World Spec Construction Preparation / Task Architecture Package v1 locked.
+Current phase: World Spec Construction Preparation / Medication Expansion Package v1 candidate review.
 
 Brainstorm:
 
@@ -22,7 +22,7 @@ Brainstorm:
 
 Current blocker:
 
-- No reviewer blocker. World Spec kickoff is recorded. Clinical Story Skeleton v1 is locked, reviewed, and ratified. Identity Package v1 is locked. Identity Package hostile-review addendum is recorded as carry-forward implementation notes only. Governance Package v1 is ratified. Physician Architecture Layer is complete. Key Milestones Calendar Skeleton v1 is locked. Baseline Anchor Package v1 is locked. Clinical Story Timeline Package v1 is locked. Task Architecture Interview v1 is complete. Task Architecture Package v1 is locked. World Spec drafting remains gated on explicit Alexander authorization.
+- No reviewer blocker. World Spec kickoff is recorded. Clinical Story Skeleton v1 is locked, reviewed, and ratified. Identity Package v1 is locked. Identity Package hostile-review addendum is recorded as carry-forward implementation notes only. Governance Package v1 is ratified. Physician Architecture Layer is complete. Key Milestones Calendar Skeleton v1 is locked. Baseline Anchor Package v1 is locked. Clinical Story Timeline Package v1 is locked. Task Architecture Interview v1 is complete. Task Architecture Package v1 is locked. Medication Expansion Package v1 is in candidate review. World Spec drafting remains gated on explicit Alexander authorization.
 
 Next legal action:
 
@@ -41,6 +41,7 @@ Next legal action:
 - Use `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md` only as historical task-architecture interview scaffold; `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md` is authoritative.
 - Use `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md` as the locked task-architecture package.
 - Use `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md` for task architecture ratification, 2.108 contingency, and workflow-supersession notes.
+- Use `worlds/korvin-merrow/world-spec-prep/candidate-review/medication-expansion-package-v1.md` as the active candidate medication architecture package.
 - Do not revise the locked Clinical Story Skeleton or locked Identity Package, draft World Spec, create milestones, or create file inventory until Alexander explicitly starts/authorizes the relevant phase.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
 
@@ -106,6 +107,7 @@ Next legal action:
 - Task Architecture Interview v1 preserved as planning scaffold: `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md`.
 - Task Architecture Package v1 locked: `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md`.
 - Task Architecture Package ratification recorded: `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md`.
+- Medication Expansion Package v1 created for candidate review: `worlds/korvin-merrow/world-spec-prep/candidate-review/medication-expansion-package-v1.md`.
 
 ## Latest Git Checkpoints
 
@@ -132,6 +134,7 @@ Next legal action:
 - Auditing.
 - Checklist building.
 - Reviewer-risk analysis.
+- Candidate medication architecture review.
 - Claude package refresh.
 - Local documentation updates that preserve phase boundaries.
 - Physician decision-brief creation for reviewer-required changes.
@@ -146,6 +149,7 @@ Next legal action:
 - Populating the World Spec template before explicit Alexander authorization.
 - Creating a final Section 3 World File Plan or file inventory.
 - Creating milestones before Alexander authorizes that step.
+- Creating medication schedules, medication reconciliation outputs, hospital medication changes, admission medication lists, or discharge medication lists before Alexander authorizes those steps.
 - Creating synthetic patient files.
 - Creating final task prompts.
 - Creating golden responses.
