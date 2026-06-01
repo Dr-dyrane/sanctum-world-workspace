@@ -18,7 +18,7 @@ RL Studio:
 - Approval source: Slack / Stacey S
 - Reviewer message: "great job! I approved your brainstorm. Next steps are to move forward with world spec and file template development."
 
-Current state: World Spec Construction Preparation / Daily Hospital Course Framework v1 candidate review. World Spec drafting has not started and remains gated on explicit Alexander authorization.
+Current state: World Spec Construction / Preparation Layer complete. World Spec Construction is authorized, but drafting, file inventory, tasks, prompts, goldens, grader guidance, notes, labs, vitals, and synthetic files remain gated on explicit Alexander authorization for the relevant step.
 
 ## Locked Decisions
 
@@ -245,11 +245,17 @@ Surgical History Package v1:
 
 Daily Hospital Course Framework v1:
 
-- Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/daily-hospital-course-framework-v1.md`.
-- Status: CANDIDATE REVIEW.
+- Artifact: `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md`.
+- Ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md`.
+- Status: LOCKED.
 - Purpose: major bridge artifact defining architecture-level HD1-HD6 daily evolution before World Spec/file/task construction.
 - Captures primary clinical state, what changed, what improved, what remains concerning, active frictions, active traps, relevant provider groups, and disposition readiness for each hospital day.
 - Boundary: does not create labs, lab trends, vitals, medication doses, medication schedules, orders, notes, discharge summaries, file inventory, tasks, prompts, expected outputs, goldens, grader guidance, synthetic files, World Spec prose, templates, or reference files.
+
+Preparation Layer:
+
+- Status: COMPLETE.
+- Completed artifacts: Brainstorm, Temporal Architecture, Clinical Story Skeleton, Identity Package, Governance Package, Key Milestones Calendar Skeleton, Baseline Anchor Package, Clinical Story Timeline Package, Task Architecture Package, Medication Expansion Package, Comorbidity Expansion Package, Provider Roster Package, Surgical History Package, and Daily Hospital Course Framework.
 
 Fetched World Spec source examples:
 
@@ -268,7 +274,6 @@ Identity/compliance:
 
 Clinical scenario:
 
-- Daily Hospital Course Framework v1 physician review / independent review.
 - Final key milestone list for the eventual World Spec template.
 - Source-of-truth hierarchy for conflicting evidence.
 
@@ -301,9 +306,9 @@ Use these as future World Spec priorities only after Brainstorm GO:
 
 ## Next Legal Action
 
-Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`, `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/identity-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/reviews/identity-package-review-addendum.md`, `worlds/korvin-merrow/world-spec-prep/locked/governance-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/reviews/governance-package-clarification.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/governance-package-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/key-milestones-calendar-skeleton-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/key-milestones-calendar-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/baseline-anchor-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/locked/clinical-story-timeline-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-timeline-ratification.md`, `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md`, `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/medication-expansion-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/locked/comorbidity-expansion-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/comorbidity-expansion-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/provider-roster-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/provider-roster-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/surgical-history-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/surgical-history-ratification.md`, and `worlds/korvin-merrow/world-spec-prep/candidate-review/daily-hospital-course-framework-v1.md` for orientation.
+Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`, `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/identity-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/reviews/identity-package-review-addendum.md`, `worlds/korvin-merrow/world-spec-prep/locked/governance-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/reviews/governance-package-clarification.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/governance-package-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/key-milestones-calendar-skeleton-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/key-milestones-calendar-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/baseline-anchor-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/locked/clinical-story-timeline-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-timeline-ratification.md`, `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md`, `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/medication-expansion-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/locked/comorbidity-expansion-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/comorbidity-expansion-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/provider-roster-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/provider-roster-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/surgical-history-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/surgical-history-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md`, and `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md` for orientation.
 
-Wait for Alexander to review Daily Hospital Course Framework v1 or authorize the next action.
+Wait for Alexander to authorize the next World Spec construction action.
 
 For the next preparation step:
 

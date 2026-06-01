@@ -720,24 +720,26 @@ Carry-forward watch items:
 
 - Keep PCI remote so aspirin-only baseline remains consistent.
 - Decide procedural provenance during file inventory.
-- Daily Hospital Course Framework v1 is now the active candidate review artifact.
+- Daily Hospital Course Framework v1 is locked.
 - File Inventory Architecture remains deferred.
-- World Spec construction remains deferred.
+- World Spec construction is authorized, but downstream artifacts remain unstarted until specifically authorized.
 - Trap #3 vs Trap #5 concrete file distinction remains deferred.
 - AutoQC 2.107 workflow-count discipline remains preserved.
 - AutoQC 2.108 administrative-deliverable contingency remains preserved.
 
 ## Daily Hospital Course Framework v1
 
-Status: CANDIDATE REVIEW.
+Status: LOCKED.
 
-Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/daily-hospital-course-framework-v1.md`
+Artifact: `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md`
+
+Ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md`
 
 Purpose:
 
 - Define canonical HD1-HD6 daily evolution before World Spec construction, file inventory architecture, synthetic file construction, task implementation, prompt construction, expected outputs, golden responses, or grader guidance.
 
-Candidate framework scope:
+Locked framework scope:
 
 - HD1-HD6 primary clinical state.
 - What changed since prior day.
@@ -767,3 +769,23 @@ Guardrails:
 Boundary:
 
 - This does not authorize labs, lab trends, vitals, medication doses, medication schedules, medication orders, clinical notes, consultant notes, discharge summaries, operative reports, procedure notes, file inventory, tasks, prompts, expected outputs, goldens, grader guidance, synthetic files, World Spec prose, templates, or reference files.
+
+Ratification findings:
+
+- Daily progression realism verified.
+- Timeline consistency verified.
+- Friction architecture verified.
+- Trap architecture verified.
+- Provider involvement timeline verified.
+- Disposition-safety architecture verified.
+- Future workflow compatibility verified.
+- Preparation-layer completion verified.
+
+Preparation Layer:
+
+- Status: COMPLETE.
+
+World Spec Construction:
+
+- Status: AUTHORIZED.
+- File inventory, synthetic files, tasks, prompts, expected outputs, goldens, grader guidance, notes, labs, vitals, and hospital-course documentation have not started.

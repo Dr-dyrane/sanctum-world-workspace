@@ -368,7 +368,7 @@ Identity review addendum:
 
 ## Current State
 
-Brainstorm approved. Clinical Story Skeleton v1 ratified. Identity Package v1 locked. Governance Package v1 ratified. Physician Architecture Layer complete. Key Milestones Calendar Skeleton v1 locked. Baseline Anchor Package v1 locked. Clinical Story Timeline Package v1 locked. Task Architecture Package v1 locked. Medication Expansion Package v1 locked. Comorbidity Expansion Package v1 locked. Provider Roster Package v1 locked. Surgical History Package v1 locked. Daily Hospital Course Framework v1 is in candidate review. Do not start World Spec drafting.
+Brainstorm approved. Clinical Story Skeleton v1 ratified. Identity Package v1 locked. Governance Package v1 ratified. Physician Architecture Layer complete. Key Milestones Calendar Skeleton v1 locked. Baseline Anchor Package v1 locked. Clinical Story Timeline Package v1 locked. Task Architecture Package v1 locked. Medication Expansion Package v1 locked. Comorbidity Expansion Package v1 locked. Provider Roster Package v1 locked. Surgical History Package v1 locked. Daily Hospital Course Framework v1 locked. Preparation Layer complete. World Spec Construction authorized. Do not draft World Spec sections, create file inventory, tasks, prompts, goldens, grader guidance, notes, labs, vitals, or synthetic files without explicit Alexander authorization for that step.
 
 Task Architecture Interview v1 is preserved as historical planning scaffold at `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md`. Task Architecture Package v1 is locked and authoritative at `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md`. It defines the authoritative architecture of six task concepts across four workflows: Discharge Medication Reconciliation, Hospital Discharge Summary Generation, Discharge Planning Documentation, and Interdisciplinary Care Plan Development and Documentation. `worlds/korvin-merrow/active/task-map.md` has been reconciled; old Brainstorm-level mappings are superseded. It does not create final task prompts, expected outputs, file inventory, World Spec sections, reference templates, or synthetic files.
 
@@ -380,7 +380,7 @@ Provider Roster Package v1 is locked at `worlds/korvin-merrow/world-spec-prep/lo
 
 Surgical History Package v1 is locked at `worlds/korvin-merrow/world-spec-prep/locked/surgical-history-package-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-prep/ratifications/surgical-history-ratification.md`. Confirmed procedural anchors are remote percutaneous coronary intervention with coronary stent placement and remote diagnostic sleep study confirming obstructive sleep apnea. Excluded/noise-controlled procedures include ICD/CRT/pacemaker, CABG, dialysis access, major orthopedic fracture repair or joint replacement, limb amputation/major diabetic foot surgery, temporal artery biopsy/rheumatologic diagnostic procedure, and screening colonoscopy for v1 purposes. This package does not create operative reports, procedure notes, hospital-course events, labs, vitals, file inventory, tasks, synthetic files, or World Spec prose.
 
-Daily Hospital Course Framework v1 is in candidate review at `worlds/korvin-merrow/world-spec-prep/candidate-review/daily-hospital-course-framework-v1.md`. It is the major bridge artifact defining architecture-level HD1-HD6 evolution before World Spec/file/task construction. It does not create labs, lab trends, vitals, medication schedules, orders, notes, file inventory, tasks, prompts, expected outputs, goldens, grader guidance, synthetic files, or World Spec prose.
+Daily Hospital Course Framework v1 is locked at `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md`. It is the major bridge artifact defining architecture-level HD1-HD6 evolution before World Spec/file/task construction. It does not create labs, lab trends, vitals, medication schedules, orders, notes, file inventory, tasks, prompts, expected outputs, goldens, grader guidance, synthetic files, or World Spec prose.
 
 Completed:
 
@@ -409,12 +409,13 @@ Completed:
 23. Comorbidity Expansion Package v1 locked and ratified.
 24. Provider Roster Package v1 locked and ratified.
 25. Surgical History Package v1 locked and ratified.
-26. Daily Hospital Course Framework v1 created for candidate review.
+26. Daily Hospital Course Framework v1 locked and ratified.
+27. Preparation Layer completed.
 
 Still pending before World Spec drafting:
 
 1. Official Claude World Spec session.
-2. Physician review / independent review of Daily Hospital Course Framework v1.
+2. Alexander authorization for the next specific World Spec construction step.
 3. Alexander authorization to draft the World Spec.
 
 ## Claude Use Rules

@@ -2,7 +2,7 @@
 
 Date created: 2026-06-01
 
-Status: CANDIDATE REVIEW.
+Status: LOCKED.
 
 Purpose: define the canonical HD1-HD6 evolution model for Korvin Merrow before World Spec construction, file inventory architecture, synthetic file construction, task implementation, prompt construction, expected outputs, golden responses, or grader guidance.
 
@@ -556,4 +556,4 @@ Action required: none.
 
 Daily Hospital Course Framework v1
 
-Status: CANDIDATE REVIEW
+Status: LOCKED

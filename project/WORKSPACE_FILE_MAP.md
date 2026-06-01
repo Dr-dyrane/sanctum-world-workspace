@@ -4,7 +4,7 @@ Purpose: local repository hygiene map to prevent duplicate working files and acc
 
 Generated from local workspace file listing excluding `.git`, caches, and Python bytecode.
 
-Current status: World Spec Construction Preparation / Daily Hospital Course Framework v1 candidate review. Task Architecture Interview v1 is preserved as historical planning scaffold; Task Architecture Package v1 is authoritative. Medication Expansion Package v1, Comorbidity Expansion Package v1, Provider Roster Package v1, and Surgical History Package v1 are locked. Identity Package review addendum recorded as carry-forward notes only. World Spec drafting has not started.
+Current status: World Spec Construction / Preparation Layer complete. Task Architecture Interview v1 is preserved as historical planning scaffold; Task Architecture Package v1 is authoritative. Medication Expansion Package v1, Comorbidity Expansion Package v1, Provider Roster Package v1, Surgical History Package v1, and Daily Hospital Course Framework v1 are locked. Identity Package review addendum recorded as carry-forward notes only. World Spec construction is authorized; drafting, file inventory, tasks, prompts, goldens, grader guidance, notes, labs, vitals, and synthetic files have not started.
 
 ## Navigation Rule
 
@@ -36,10 +36,11 @@ For a new collaborator or new AI session, read in this order:
 24. `worlds/korvin-merrow/world-spec-prep/ratifications/provider-roster-ratification.md` for provider roster ratification and naming guardrails.
 25. `worlds/korvin-merrow/world-spec-prep/locked/surgical-history-package-v1.md` for the locked surgical/procedural history architecture.
 26. `worlds/korvin-merrow/world-spec-prep/ratifications/surgical-history-ratification.md` for surgical-history ratification and noise-control guardrails.
-27. `worlds/korvin-merrow/world-spec-prep/candidate-review/daily-hospital-course-framework-v1.md` for the active HD1-HD6 daily evolution candidate.
-28. `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md` for historical interview basis.
-29. `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions.
-30. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
+27. `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md` for the locked HD1-HD6 daily evolution framework.
+28. `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md` for preparation-layer completion.
+29. `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md` for historical interview basis.
+30. `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions.
+31. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
 
 Do not start by opening every prep file. Most prep files are supporting memory, not active instructions.
 
@@ -55,7 +56,7 @@ Findings:
 - `reference/` is now a junction folder with source files moved into `reference/source/`.
 - `worlds/korvin-merrow/` is now a junction folder with one README and purpose subfolders.
 - World Spec prep artifacts are clustered by lifecycle stage so candidate, locked, ratified, review, decision-log, and planning-scaffold files do not sit in one flat folder.
-- `candidate-review/` is reserved for active candidate artifacts only. Task Architecture Interview v1 moved to `planning-scaffolds/` after Task Architecture Package v1 lock. It currently is empty after Surgical History Package v1 lock.
+- `candidate-review/` is reserved for active candidate artifacts only. Task Architecture Interview v1 moved to `planning-scaffolds/` after Task Architecture Package v1 lock. It currently is empty after Daily Hospital Course Framework v1 lock.
 - Several files intentionally overlap by lifecycle stage, especially Brainstorm history/reviews and World Spec prep/checklist material.
 - Do not add new audit or navigation docs unless an existing map/status file cannot carry the information.
 
@@ -254,7 +255,7 @@ These are fetched source/reference examples, not authored Korvin Merrow content 
 Lifecycle clustering:
 
 - `WORLD_SPEC_KICKOFF.md`: the only root cockpit file in `world-spec-prep/`.
-- `candidate-review/`: artifacts awaiting physician decision or lock. Currently contains active Daily Hospital Course Framework v1 candidate review.
+- `candidate-review/`: artifacts awaiting physician decision or lock. Currently empty after Daily Hospital Course Framework v1 lock.
 - `locked/`: locked architecture packages and canonical frameworks.
 - `ratifications/`: formal ratification records.
 - `reviews/`: review findings, hostile reviews, clarifications, and addenda.
@@ -294,7 +295,8 @@ Lifecycle clustering:
 | `worlds/korvin-merrow/world-spec-prep/ratifications/provider-roster-ratification.md` | Ratification record for Provider Roster Package v1. | Records review GO verdicts, shared Merrow surname approval, no-extra-naming guardrail, hierarchy compatibility, and carry-forward watch items. |
 | `worlds/korvin-merrow/world-spec-prep/locked/surgical-history-package-v1.md` | Locked surgical/procedural history architecture. | Ratified and locked; confirms remote PCI with coronary stent placement and remote diagnostic sleep study confirming OSA, while excluding ICD/CRT/pacemaker, CABG, dialysis access, major orthopedic repair/joint replacement, limb amputation/major diabetic foot surgery, temporal artery biopsy/rheumatologic procedure, and screening colonoscopy for v1 purposes. Does not create operative reports, procedure notes, hospital-course events, labs, vitals, file inventory, task prompts, expected outputs, goldens, grader guidance, synthetic files, World Spec prose, templates, or reference files. |
 | `worlds/korvin-merrow/world-spec-prep/ratifications/surgical-history-ratification.md` | Ratification record for Surgical History Package v1. | Records GO verdicts, medication-count clarification, accepted physician decisions, excluded/noise-controlled procedures, and carry-forward watch items. |
-| `worlds/korvin-merrow/world-spec-prep/candidate-review/daily-hospital-course-framework-v1.md` | Active candidate HD1-HD6 daily hospital course framework. | Bridge artifact between locked architecture and later World Spec/file/task construction. Does not create labs, lab trends, vitals, medication doses, medication schedules, orders, notes, discharge summaries, operative reports, procedure notes, file inventory, tasks, prompts, expected outputs, goldens, grader guidance, synthetic files, World Spec prose, templates, or reference files. |
+| `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md` | Locked HD1-HD6 daily hospital course framework. | Bridge artifact between locked architecture and later World Spec/file/task construction. Does not create labs, lab trends, vitals, medication doses, medication schedules, orders, notes, discharge summaries, operative reports, procedure notes, file inventory, tasks, prompts, expected outputs, goldens, grader guidance, synthetic files, World Spec prose, templates, or reference files. |
+| `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md` | Ratification record for Daily Hospital Course Framework v1. | Records GO verdicts, accepted physician decisions, preparation-layer completion, World Spec Construction authorization status, and carry-forward watch items. |
 | `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-01.md` | Durable post-kickoff physician decision record. | Historical state sync record; superseded for skeleton lock by decision log 02. |
 | `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` | Durable Clinical Story Skeleton v1 ratification record. | Use before Identity Package; not a draft spec or file inventory. |
 | `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/post-go-interview-plan.md` | Interview sequence after Brainstorm GO. | This file; do not use before GO except for prep. |

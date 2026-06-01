@@ -336,7 +336,9 @@ Completed Architecture Layers:
 
 Physician Architecture Layer Status: COMPLETE.
 
-Next legal phase recommendation: World Spec Construction Preparation.
+Preparation Layer Status: COMPLETE.
+
+World Spec Construction Status: AUTHORIZED.
 
 ## Key Milestones Calendar Skeleton v1
 
@@ -623,9 +625,11 @@ Guardrails:
 
 ## Daily Hospital Course Framework v1
 
-Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/daily-hospital-course-framework-v1.md`
+Artifact: `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md`
 
-Status: CANDIDATE REVIEW.
+Status: LOCKED.
+
+Ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md`
 
 Purpose: canonical HD1-HD6 evolution model between locked architecture and later World Spec/file/task construction.
 
@@ -640,6 +644,12 @@ Scope:
 Boundaries:
 
 - Does not create labs, lab trends, vitals, medication doses, medication schedules, medication orders, consultant notes, discharge summaries, operative reports, procedure notes, file inventory, tasks, prompts, expected outputs, goldens, grader guidance, synthetic files, World Spec prose, templates, or reference files.
+
+Preparation Layer:
+
+- Status: COMPLETE.
+- Daily Hospital Course Framework v1 completes the preparation layer before World Spec construction.
+- World Spec Construction is authorized, but downstream artifacts remain unstarted until specifically authorized.
 
 ## Locked World Tone
 

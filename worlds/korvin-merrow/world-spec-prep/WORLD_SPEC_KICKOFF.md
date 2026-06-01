@@ -1,6 +1,6 @@
 # Korvin Merrow World Spec Kickoff
 
-Status: World Spec Construction Preparation / Daily Hospital Course Framework v1 candidate review.
+Status: World Spec Construction / Preparation Layer complete.
 
 Purpose: mark the transition from approved Brainstorm to World Spec preparation without drafting the World Spec, populating the template, creating a final file inventory, or inventing clinical values.
 
@@ -10,7 +10,8 @@ Purpose: mark the transition from approved Brainstorm to World Spec preparation 
 - Reviewer GO received from Stacey S.
 - RL Studio task ID: `cyau8803`.
 - World Spec phase is authorized for kickoff and preparation.
-- World Spec drafting has not started.
+- World Spec construction is authorized.
+- World Spec drafting, file inventory, tasks, prompts, goldens, grader guidance, notes, labs, vitals, and synthetic files have not started.
 - Clinical Story Skeleton v1 is locked and ratified.
 - Clinical Story Skeleton review completed with GO recommendation.
 - Clinical Story Skeleton ratification completed after Claude hostile review minor findings.
@@ -41,8 +42,10 @@ Purpose: mark the transition from approved Brainstorm to World Spec preparation 
 - Provider Roster ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/provider-roster-ratification.md`.
 - Surgical History Package v1: `worlds/korvin-merrow/world-spec-prep/locked/surgical-history-package-v1.md`.
 - Surgical History ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/surgical-history-ratification.md`.
-- Daily Hospital Course Framework v1: `worlds/korvin-merrow/world-spec-prep/candidate-review/daily-hospital-course-framework-v1.md`.
-- Next allowed substantive action: physician review / independent review of Daily Hospital Course Framework v1.
+- Daily Hospital Course Framework v1: `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md`.
+- Daily Hospital Course Framework ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md`.
+- Preparation Layer status: COMPLETE.
+- Next allowed substantive action: Alexander's explicit next World Spec construction instruction.
 
 ## Workspace Bloat And Doctrine Audit
 
@@ -335,16 +338,24 @@ Surgical History Package v1:
 - Confirmed procedural anchors: remote percutaneous coronary intervention with coronary stent placement and remote diagnostic sleep study confirming obstructive sleep apnea.
 - Excluded/noise-controlled procedures: ICD/CRT/pacemaker, CABG, dialysis access, major orthopedic fracture repair or joint replacement, limb amputation/major diabetic foot surgery, temporal artery biopsy/rheumatologic diagnostic procedure, and screening colonoscopy for v1 purposes.
 - Guardrail: surgical/procedural history should remain background realism and provenance support; it must not create a new disease arc, reveal the cause of the presentation, collapse mixed physiology, or weaken frictions/traps.
-- Carry-forward: keep PCI remote so aspirin-only baseline remains consistent; decide procedural provenance during file inventory; Daily Hospital Course Framework v1 is now the active candidate review artifact; File Inventory Architecture and World Spec construction remain deferred.
+- Carry-forward: keep PCI remote so aspirin-only baseline remains consistent; decide procedural provenance during file inventory; File Inventory Architecture remains deferred.
 
 Daily Hospital Course Framework v1:
 
-- Status: CANDIDATE REVIEW.
-- Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/daily-hospital-course-framework-v1.md`.
+- Status: LOCKED.
+- Artifact: `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md`.
+- Ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md`.
 - Purpose: canonical HD1-HD6 evolution model that bridges locked architecture and later World Spec/file/task construction.
 - It defines primary clinical state, changes, improvements, remaining concerns, active frictions, active traps, relevant provider groups, and disposition readiness status for each hospital day.
 - It does not create labs, lab trends, vitals, medication doses, medication schedules, medication orders, clinical notes, file inventory, tasks, prompts, expected outputs, goldens, grader guidance, synthetic files, World Spec prose, templates, or reference files.
 - Guardrail: this is a major bridge artifact, not a small package. Treat it as the daily construction spine while preserving mixed physiology, no reveal-drift, and medically improving but operationally dangerous discharge logic.
+
+Preparation Layer:
+
+- Status: COMPLETE.
+- Completed artifacts: Brainstorm, Temporal Architecture, Clinical Story Skeleton, Identity Package, Governance Package, Key Milestones Calendar Skeleton, Baseline Anchor Package, Clinical Story Timeline Package, Task Architecture Package, Medication Expansion Package, Comorbidity Expansion Package, Provider Roster Package, Surgical History Package, and Daily Hospital Course Framework.
+- World Spec Construction status: AUTHORIZED.
+- Boundary: World Spec drafting, file inventory, synthetic files, tasks, prompts, expected outputs, goldens, grader guidance, notes, labs, vitals, and hospital-course documentation remain unstarted until Alexander explicitly authorizes the relevant next step.
 
 Fetched World Spec source examples:
 

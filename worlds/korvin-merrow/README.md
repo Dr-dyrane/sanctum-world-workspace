@@ -1,6 +1,6 @@
 # Korvin Merrow World
 
-Current state: World Spec Construction Preparation / Daily Hospital Course Framework v1 candidate review.
+Current state: World Spec Construction / Preparation Layer complete.
 
 Start here only after reading `project/STATUS.md`.
 
@@ -31,7 +31,8 @@ Start here only after reading `project/STATUS.md`.
 - `world-spec-prep/ratifications/provider-roster-ratification.md`
 - `world-spec-prep/locked/surgical-history-package-v1.md`
 - `world-spec-prep/ratifications/surgical-history-ratification.md`
-- `world-spec-prep/candidate-review/daily-hospital-course-framework-v1.md`
+- `world-spec-prep/locked/daily-hospital-course-framework-v1.md`
+- `world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md`
 - `world-spec-prep/locked/baseline-anchor-package-v1.md`
 - `world-spec-prep/ratifications/baseline-anchor-ratification.md`
 - `world-spec-prep/locked/identity-package-v1.md`
@@ -40,4 +41,4 @@ Start here only after reading `project/STATUS.md`.
 - `world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`
 - `active/brainstorm.md`
 
-Do not draft World Spec, create file inventory, create task prompts, write golden responses, or write grader guidance until Alexander explicitly authorizes the relevant phase.
+World Spec construction is authorized, but do not draft World Spec sections, create file inventory, create task prompts, write golden responses, write grader guidance, create notes, labs, vitals, templates, reference files, or synthetic documents until Alexander explicitly authorizes the relevant step.

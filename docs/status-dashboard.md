@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-World Spec Construction Preparation / Daily Hospital Course Framework v1 candidate review.
+World Spec Construction / Preparation Layer complete.
 
 ## Brainstorm
 
@@ -23,6 +23,7 @@ World Spec Construction Preparation / Daily Hospital Course Framework v1 candida
 
 - World Spec kickoff: recorded in `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`
 - Physician decision log: recorded in `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-01.md`
+- World Spec construction: authorized
 - World Spec drafting: not started
 - Clinical Story Skeleton: v1 locked, reviewed, and ratified
 - Identity Package: v1 locked
@@ -37,8 +38,10 @@ World Spec Construction Preparation / Daily Hospital Course Framework v1 candida
 - Comorbidity Expansion Package: v1 locked
 - Provider Roster Package: v1 locked
 - Surgical History Package: v1 locked
+- Daily Hospital Course Framework: v1 locked
+- Preparation Layer: complete
 - Official Claude World Spec session: pending
-- Current state: World Spec Construction Preparation has begun; calendar, baseline anchors, Clinical Story Timeline Package v1, Task Architecture Package v1, Medication Expansion Package v1, Comorbidity Expansion Package v1, Provider Roster Package v1, and Surgical History Package v1 are locked
+- Current state: World Spec Construction is authorized; calendar, baseline anchors, Clinical Story Timeline Package v1, Task Architecture Package v1, Medication Expansion Package v1, Comorbidity Expansion Package v1, Provider Roster Package v1, Surgical History Package v1, and Daily Hospital Course Framework v1 are locked
 - World Spec prep packet: created
 - Official World Spec template: saved locally
 - World Spec AutoQC prompt v6.3: saved locally
@@ -69,10 +72,12 @@ World Spec Construction Preparation / Daily Hospital Course Framework v1 candida
 - Provider Roster ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/provider-roster-ratification.md`
 - Surgical History Package v1: `worlds/korvin-merrow/world-spec-prep/locked/surgical-history-package-v1.md`
 - Surgical History ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/surgical-history-ratification.md`
+- Daily Hospital Course Framework v1: `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md`
+- Daily Hospital Course Framework ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md`
 - Fetched World Spec example source documents: `reference/word-spec-examples/`
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 - World Spec prep folder structure: reorganized by lifecycle buckets (`candidate-review/`, `locked/`, `ratifications/`, `reviews/`, `decision-logs/`, `planning-scaffolds/`)
-- Next allowed action: next World Spec Construction Preparation step only after explicit Alexander authorization
+- Next allowed action: next World Spec construction step only after explicit Alexander authorization
 
 ## Tooling
 

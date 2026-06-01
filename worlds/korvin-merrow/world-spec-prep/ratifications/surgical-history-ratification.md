@@ -117,9 +117,9 @@ The excluded procedures protect the world from avoidable noise:
 
 - Keep PCI remote so aspirin-only baseline remains consistent.
 - Decide procedural provenance during file inventory.
-- Daily Hospital Course Framework v1 has since become the active candidate review artifact.
+- Daily Hospital Course Framework v1 has since been ratified and locked.
 - File Inventory Architecture remains deferred.
-- World Spec construction remains deferred.
+- World Spec construction is authorized, but downstream artifacts remain unstarted until specifically authorized.
 - Trap #3 vs Trap #5 concrete file distinction remains deferred.
 - AutoQC 2.107 workflow-count discipline remains a future task/file architecture constraint.
 - AutoQC 2.108 administrative-deliverable contingency remains preserved.

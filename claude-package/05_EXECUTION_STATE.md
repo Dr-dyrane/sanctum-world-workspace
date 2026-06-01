@@ -4,7 +4,7 @@ Purpose: compressed current state for Claude. Use `project/STATUS.md` and `docs/
 
 ## Project State
 
-Current phase: World Spec Construction Preparation / Daily Hospital Course Framework v1 candidate review.
+Current phase: World Spec Construction / Preparation Layer complete.
 
 Brainstorm:
 
@@ -22,7 +22,7 @@ Brainstorm:
 
 Current blocker:
 
-- No reviewer blocker. World Spec kickoff is recorded. Clinical Story Skeleton v1 is locked, reviewed, and ratified. Identity Package v1 is locked. Identity Package hostile-review addendum is recorded as carry-forward implementation notes only. Governance Package v1 is ratified. Physician Architecture Layer is complete. Key Milestones Calendar Skeleton v1 is locked. Baseline Anchor Package v1 is locked. Clinical Story Timeline Package v1 is locked. Task Architecture Interview v1 is complete. Task Architecture Package v1 is locked. Medication Expansion Package v1 is locked after physician decision resolution and ratification. Comorbidity Expansion Package v1 is locked after independent review and physician ratification. Provider Roster Package v1 is locked after independent review and physician ratification. Surgical History Package v1 is locked after independent review and physician ratification. Daily Hospital Course Framework v1 is in candidate review. World Spec drafting remains gated on explicit Alexander authorization.
+- No reviewer blocker. Preparation Layer is complete. World Spec kickoff is recorded. Clinical Story Skeleton v1 is locked, reviewed, and ratified. Identity Package v1 is locked. Identity Package hostile-review addendum is recorded as carry-forward implementation notes only. Governance Package v1 is ratified. Physician Architecture Layer is complete. Key Milestones Calendar Skeleton v1 is locked. Baseline Anchor Package v1 is locked. Clinical Story Timeline Package v1 is locked. Task Architecture Interview v1 is complete. Task Architecture Package v1 is locked. Medication Expansion Package v1 is locked after physician decision resolution and ratification. Comorbidity Expansion Package v1 is locked after independent review and physician ratification. Provider Roster Package v1 is locked after independent review and physician ratification. Surgical History Package v1 is locked after independent review and physician ratification. Daily Hospital Course Framework v1 is locked after independent review and physician ratification. World Spec Construction is authorized, but drafting, file inventory, tasks, prompts, goldens, grader guidance, notes, labs, vitals, and synthetic files remain gated on explicit Alexander authorization for the relevant step.
 
 Next legal action:
 
@@ -50,7 +50,8 @@ Next legal action:
 - Use `worlds/korvin-merrow/world-spec-prep/ratifications/provider-roster-ratification.md` for provider roster ratification and naming guardrails.
 - Use `worlds/korvin-merrow/world-spec-prep/locked/surgical-history-package-v1.md` as the locked surgical/procedural history architecture.
 - Use `worlds/korvin-merrow/world-spec-prep/ratifications/surgical-history-ratification.md` for surgical-history ratification and noise-control guardrails.
-- Use `worlds/korvin-merrow/world-spec-prep/candidate-review/daily-hospital-course-framework-v1.md` as the active HD1-HD6 daily evolution candidate.
+- Use `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md` as the locked HD1-HD6 daily evolution framework.
+- Use `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md` for preparation-layer completion and daily framework ratification.
 - Do not revise the locked Clinical Story Skeleton or locked Identity Package, draft World Spec, create milestones, or create file inventory until Alexander explicitly starts/authorizes the relevant phase.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
 
@@ -125,7 +126,8 @@ Next legal action:
 - Provider Roster Package v1 ratification recorded: `worlds/korvin-merrow/world-spec-prep/ratifications/provider-roster-ratification.md`.
 - Surgical History Package v1 created for candidate review and then ratified/locked: `worlds/korvin-merrow/world-spec-prep/locked/surgical-history-package-v1.md`.
 - Surgical History Package v1 ratification recorded: `worlds/korvin-merrow/world-spec-prep/ratifications/surgical-history-ratification.md`.
-- Daily Hospital Course Framework v1 created for candidate review: `worlds/korvin-merrow/world-spec-prep/candidate-review/daily-hospital-course-framework-v1.md`.
+- Daily Hospital Course Framework v1 ratified and locked: `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md`.
+- Preparation Layer completed: `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md`.
 - World Spec example source documents recorded under `reference/word-spec-examples/`.
 
 ## Latest Git Checkpoints
@@ -148,15 +150,12 @@ Next legal action:
 ## Authorized Right Now
 
 - State synchronization and preparation.
-- World Spec Construction Preparation activities explicitly authorized by Alexander.
-- Preparation.
+- World Spec Construction activities explicitly authorized by Alexander, one step at a time.
 - Auditing.
 - Checklist building.
 - Reviewer-risk analysis.
-- Preparation and reviewer-risk analysis only.
 - Claude package refresh.
 - Local documentation updates that preserve phase boundaries.
-- Physician decision-brief creation for reviewer-required changes.
 
 ## Not Authorized Right Now
 
@@ -164,8 +163,8 @@ Next legal action:
 - Revising Identity Package v1 without explicit Alexander approval.
 - Treating the Identity Package review addendum as permission to reopen MRN, DOB, age, anthropometrics, allergy, or code status.
 - Changing Governance Package v1 without Alexander approval.
-- World Spec drafting before explicit Alexander authorization.
-- Populating the World Spec template before explicit Alexander authorization.
+- World Spec drafting before explicit Alexander authorization for drafting.
+- Populating the World Spec template before explicit Alexander authorization for template population.
 - Creating a final Section 3 World File Plan or file inventory.
 - Creating milestones before Alexander authorizes that step.
 - Creating medication schedules, medication reconciliation outputs, hospital medication changes, admission medication lists, or discharge medication lists before Alexander authorizes those steps.
@@ -230,7 +229,8 @@ Claude must not replace physician judgment or originate clinical design.
 - `worlds/korvin-merrow/world-spec-prep/ratifications/provider-roster-ratification.md`
 - `worlds/korvin-merrow/world-spec-prep/locked/surgical-history-package-v1.md`
 - `worlds/korvin-merrow/world-spec-prep/ratifications/surgical-history-ratification.md`
-- `worlds/korvin-merrow/world-spec-prep/candidate-review/daily-hospital-course-framework-v1.md`
+- `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md`
+- `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md`
 - `reference/world-spec-guidelines/08_autoqc_master_index.md`
 - `reference/world-spec-guidelines/09_world_spec_writer_playbook.md`
 - `project/WORKSPACE_FILE_MAP.md`
