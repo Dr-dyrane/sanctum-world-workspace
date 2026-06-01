@@ -1001,3 +1001,49 @@ Next eligible phase:
 Boundary:
 
 - This does not authorize synthetic files, filenames, chart notes, admission notes, consultant notes, nursing notes, therapy notes, discharge summaries, labs, vitals, medication lists, medication schedules, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, or RL Studio activity.
+
+## Batch 1 Synthetic World-Level File Construction
+
+Status: CANDIDATE REVIEW.
+
+Candidate folder: `worlds/korvin-merrow/synthetic-files/candidate-review/batch-1/`
+
+Validation review: `worlds/korvin-merrow/synthetic-files/candidate-review/batch-1/batch-1-validation-review.md`
+
+Authorized files constructed:
+
+- FI-W01: ED triage / initial intake documentation.
+- FI-W02: ED provider assessment.
+- FI-W03: Admission history and physical.
+- FI-W04: Initial medication reconciliation note.
+- FI-W05: Pharmacy / refill-history report.
+- FI-W06: Outpatient rheumatology prednisone provenance.
+- FI-W07: Primary care outpatient baseline summary.
+
+Construction governance:
+
+- Used locked File Inventory v1 row purposes.
+- Preserved closed-world discipline.
+- Preserved locked timeline and HD1 / pre-admission provenance boundaries.
+- Preserved locked diagnoses, medication architecture, provider roster, source-of-truth hierarchies, and active frictions.
+- Preserved Trap #1 as a reconstructable prednisone source hierarchy across rheumatology, med rec, pharmacy history, family report, and patient recollection.
+- Preserved Trap #2 substrate through HF/AKI medication complexity without creating final medication recommendations.
+- No answer file created.
+
+Validation result:
+
+- FI-W01 through FI-W07 exist.
+- All files map to locked inventory rows.
+- No unauthorized FI-W IDs created.
+- No temporal leakage identified.
+- Prednisone hierarchy preserved.
+- Source-of-truth hierarchy preserved.
+- Frictions preserved.
+
+Next eligible phase:
+
+- Batch 1 review and ratification.
+
+Boundary:
+
+- Batch 2 files, FI-W08 or later, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.

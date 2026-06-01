@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-Synthetic World-Level File Construction Plan v1 locked / Synthetic File Construction Governance complete.
+Batch 1 Synthetic World-Level File Construction / Candidate review.
 
 ## Brainstorm
 
@@ -37,7 +37,9 @@ Synthetic World-Level File Construction Plan v1 locked / Synthetic File Construc
 - Synthetic World-Level File Construction Plan v1: locked at `worlds/korvin-merrow/synthetic-files/locked/synthetic-world-file-construction-plan-v1.md`
 - Synthetic World-Level File Construction Plan ratification: `worlds/korvin-merrow/synthetic-files/ratifications/synthetic-world-file-construction-plan-v1-ratification.md`
 - Synthetic File Construction Governance: complete
-- Next eligible phase: Batch 1 Synthetic World-Level File Construction
+- Batch 1 synthetic files FI-W01 through FI-W07: constructed for candidate review at `worlds/korvin-merrow/synthetic-files/candidate-review/batch-1/`
+- Batch 1 validation review: `worlds/korvin-merrow/synthetic-files/candidate-review/batch-1/batch-1-validation-review.md`
+- Next eligible phase: Batch 1 review and ratification
 - Clinical Story Skeleton: v1 locked, reviewed, and ratified
 - Identity Package: v1 locked
 - Governance Package: v1 ratified
@@ -56,7 +58,7 @@ Synthetic World-Level File Construction Plan v1 locked / Synthetic File Construc
 - World Spec Skeleton v1: `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`
 - World Spec Skeleton ratification: `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-skeleton-ratification.md`
 - Official Claude World Spec session: pending
-- Current state: World Spec v1 is locked; File Inventory Architecture v1 is locked; File Inventory v1 is locked; Synthetic World-Level File Construction Plan v1 is locked; Synthetic File Construction Governance is complete; calendar, baseline anchors, Clinical Story Timeline Package v1, Task Architecture Package v1, Medication Expansion Package v1, Comorbidity Expansion Package v1, Provider Roster Package v1, Surgical History Package v1, Daily Hospital Course Framework v1, and World Spec Skeleton v1 are locked
+- Current state: World Spec v1 is locked; File Inventory Architecture v1 is locked; File Inventory v1 is locked; Synthetic World-Level File Construction Plan v1 is locked; Synthetic File Construction Governance is complete; Batch 1 synthetic world-level files are in candidate review; calendar, baseline anchors, Clinical Story Timeline Package v1, Task Architecture Package v1, Medication Expansion Package v1, Comorbidity Expansion Package v1, Provider Roster Package v1, Surgical History Package v1, Daily Hospital Course Framework v1, and World Spec Skeleton v1 are locked
 - World Spec prep packet: created
 - Official World Spec template: saved locally
 - World Spec AutoQC prompt v6.3: saved locally
@@ -92,7 +94,7 @@ Synthetic World-Level File Construction Plan v1 locked / Synthetic File Construc
 - Fetched World Spec example source documents: `reference/word-spec-examples/`
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 - World Spec prep folder structure: reorganized by lifecycle buckets (`candidate-review/`, `locked/`, `ratifications/`, `reviews/`, `decision-logs/`, `planning-scaffolds/`)
-- Next eligible phase: Batch 1 Synthetic World-Level File Construction. Do not create synthetic files, filenames, chart notes, admission notes, consultant notes, nursing notes, therapy notes, discharge summaries, medication lists, medication schedules, lab values, vital signs, consultant recommendation text, task specifications, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission artifacts, or RL Studio uploads until explicitly authorized.
+- Next eligible phase: Batch 1 review and ratification. Do not create Batch 2 files, FI-W08 or later, task specifications, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission artifacts, or RL Studio uploads until explicitly authorized.
 
 ## Tooling
 

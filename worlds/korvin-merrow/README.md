@@ -1,6 +1,6 @@
 # Korvin Merrow World
 
-Current state: Synthetic World-Level File Construction Plan v1 locked / Synthetic File Construction Governance complete.
+Current state: Batch 1 Synthetic World-Level File Construction / Candidate review.
 
 Start here only after reading `project/STATUS.md`.
 
@@ -15,7 +15,7 @@ Start here only after reading `project/STATUS.md`.
 - `world-spec-prep/`: World Spec preparation cockpit plus lifecycle subfolders for locked decisions, locked, ratifications, reviews, decision logs, and planning scaffolds.
 - `world-spec-construction/`: World Spec construction lifecycle folders for candidate review artifacts, locked construction artifacts, and ratifications.
 - `file-inventory/`: file inventory lifecycle area. Locked architecture defines planned file ecosystem, and locked File Inventory v1 defines the planned inventory rows; neither creates synthetic files or chart contents.
-- `synthetic-files/`: synthetic file construction lifecycle area. Locked construction plan governs future Batch 1 work; no synthetic files or chart contents have been created.
+- `synthetic-files/`: synthetic file construction lifecycle area. Locked construction plan governs construction order; Batch 1 files are in candidate review.
 
 ## Active Entry Points
 
@@ -26,6 +26,7 @@ Start here only after reading `project/STATUS.md`.
 - `file-inventory/ratifications/file-inventory-v1-ratification.md`
 - `synthetic-files/locked/synthetic-world-file-construction-plan-v1.md`
 - `synthetic-files/ratifications/synthetic-world-file-construction-plan-v1-ratification.md`
+- `synthetic-files/candidate-review/batch-1/batch-1-validation-review.md`
 - `file-inventory/locked/file-inventory-architecture-v1.md`
 - `file-inventory/ratifications/file-inventory-architecture-ratification.md`
 - `world-spec-construction/locked/world-spec-skeleton-v1.md`
@@ -54,4 +55,4 @@ Start here only after reading `project/STATUS.md`.
 - `world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`
 - `active/brainstorm.md`
 
-World Spec v1 is locked. File Inventory Architecture v1 is locked. Phase 3 File Inventory Architecture is complete. File Inventory v1 is locked at `file-inventory/locked/file-inventory-v1.md`. File Inventory Planning is complete. Synthetic World-Level File Construction Plan v1 is locked at `synthetic-files/locked/synthetic-world-file-construction-plan-v1.md`. Synthetic File Construction Governance is complete. Next eligible phase is Batch 1 Synthetic World-Level File Construction. Do not create synthetic files, filenames, chart notes, admission notes, consultant notes, nursing notes, therapy notes, discharge summaries, medication lists, medication schedules, lab values, vital signs, consultant recommendation text, task specifications, task prompts, expected outputs, golden responses, grader guidance, AutoQC responses, DOCX submission artifacts, RL Studio uploads, templates, or reference files until Alexander explicitly authorizes the relevant step.
+World Spec v1 is locked. File Inventory Architecture v1 is locked. Phase 3 File Inventory Architecture is complete. File Inventory v1 is locked at `file-inventory/locked/file-inventory-v1.md`. File Inventory Planning is complete. Synthetic World-Level File Construction Plan v1 is locked at `synthetic-files/locked/synthetic-world-file-construction-plan-v1.md`. Synthetic File Construction Governance is complete. Batch 1 synthetic world-level files FI-W01 through FI-W07 are constructed for candidate review at `synthetic-files/candidate-review/batch-1/`. Next eligible phase is Batch 1 review and ratification. Do not create Batch 2 files, FI-W08 or later, task specifications, task prompts, expected outputs, golden responses, grader guidance, AutoQC responses, DOCX submission artifacts, RL Studio uploads, templates, or reference files until Alexander explicitly authorizes the relevant step.
