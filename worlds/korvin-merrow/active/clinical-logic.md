@@ -503,6 +503,46 @@ Carry-forward watch items:
 
 This package does not create doses, frequencies, schedules, medication timelines, admission medication lists, discharge medication lists, medication reconciliation outputs, tasks, prompts, expected outputs, goldens, grader guidance, file inventory, templates, reference files, synthetic documents, or World Spec prose.
 
+## Comorbidity Expansion Package v1
+
+Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/comorbidity-expansion-package-v1.md`
+
+Status: CANDIDATE REVIEW.
+
+Purpose: baseline chronic-condition architecture targeting approximately 12-15 comorbidities before labs, hospital-course events, task drafting, file planning, or World Spec drafting.
+
+Candidate baseline comorbidity count: 14 conditions.
+
+Preserved already-approved conditions:
+
+- HFrEF.
+- CAD.
+- Hypertension.
+- Hyperlipidemia.
+- CKD stage 3.
+- Type 2 diabetes mellitus.
+- Diabetic peripheral neuropathy.
+- Obstructive sleep apnea.
+- Polymyalgia rheumatica.
+- Anemia of CKD.
+- Osteoporosis/osteopenia.
+
+Candidate secondary additions for physician review:
+
+- Class I obesity by locked BMI 30.6.
+- Chronic gastroesophageal reflux / chronic acid-suppression indication.
+- Chronic constipation tendency.
+
+Guardrails:
+
+- These candidate additions should remain secondary baseline complexity.
+- They should not create new dominant arcs.
+- They should not answer open clinical questions.
+- They should not collapse the mixed physiology model.
+- They should not convert the case into a single-cause explanation for the near-fall or discharge risk.
+
+This package does not create labs, vitals, medication doses, medication schedules, hospital-course events, provider names, surgical history, tasks, prompts, expected outputs, goldens, grader guidance, file inventory, templates, reference files, synthetic documents, or World Spec prose.
+
 ## Locked World Tone
 
 The patient is medically improving but operationally dangerous to discharge.

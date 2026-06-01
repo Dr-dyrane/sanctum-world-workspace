@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-World Spec Construction Preparation / Medication Expansion Package v1 locked.
+World Spec Construction Preparation / Comorbidity Expansion Package v1 candidate review.
 
 ## Brainstorm
 
@@ -34,8 +34,9 @@ World Spec Construction Preparation / Medication Expansion Package v1 locked.
 - Task Architecture Interview: v1 historical planning scaffold
 - Task Architecture Package: v1 locked
 - Medication Expansion Package: v1 locked
+- Comorbidity Expansion Package: v1 candidate review
 - Official Claude World Spec session: pending
-- Current state: World Spec Construction Preparation has begun; calendar, baseline anchors, Clinical Story Timeline Package v1, Task Architecture Package v1, and Medication Expansion Package v1 are locked
+- Current state: World Spec Construction Preparation has begun; calendar, baseline anchors, Clinical Story Timeline Package v1, Task Architecture Package v1, and Medication Expansion Package v1 are locked; Comorbidity Expansion Package v1 is in candidate review
 - World Spec prep packet: created
 - Official World Spec template: saved locally
 - World Spec AutoQC prompt v6.3: saved locally
@@ -60,9 +61,11 @@ World Spec Construction Preparation / Medication Expansion Package v1 locked.
 - Medication Expansion Package v1: `worlds/korvin-merrow/world-spec-prep/locked/medication-expansion-package-v1.md`
 - Medication Expansion ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/medication-expansion-ratification.md`
 - Medication Expansion Decision Addendum: `worlds/korvin-merrow/world-spec-prep/reviews/medication-expansion-decision-addendum.md`
+- Comorbidity Expansion Package v1: `worlds/korvin-merrow/world-spec-prep/candidate-review/comorbidity-expansion-package-v1.md`
+- Fetched World Spec example source documents: `reference/word-spec-examples/`
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 - World Spec prep folder structure: reorganized by lifecycle buckets (`candidate-review/`, `locked/`, `ratifications/`, `reviews/`, `decision-logs/`, `planning-scaffolds/`)
-- Next allowed action: next World Spec Construction Preparation step only after explicit Alexander authorization
+- Next allowed action: physician review of Comorbidity Expansion Package v1
 
 ## Tooling
 
@@ -81,6 +84,7 @@ World Spec Construction Preparation / Medication Expansion Package v1 locked.
 - Do not create milestones before Alexander authorizes that step.
 - Do not create file inventory before Alexander authorizes that step.
 - Do not revise locked task architecture or create task prompts before Alexander authorizes that step.
+- Do not treat fetched World Spec examples as authored Korvin Merrow content.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
 - Do not modify clinical content beyond reviewer-required remediation without Alexander approval.
 - Do not start synthetic generation, task prompts, golden responses, grader guidelines, or failure analysis.

@@ -1,6 +1,6 @@
 # Korvin Merrow World Spec Kickoff
 
-Status: World Spec Construction Preparation / Medication Expansion Package v1 locked.
+Status: World Spec Construction Preparation / Comorbidity Expansion Package v1 candidate review.
 
 Purpose: mark the transition from approved Brainstorm to World Spec preparation without drafting the World Spec, populating the template, creating a final file inventory, or inventing clinical values.
 
@@ -35,6 +35,7 @@ Purpose: mark the transition from approved Brainstorm to World Spec preparation 
 - Task Architecture ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md`.
 - Medication Expansion Package v1: `worlds/korvin-merrow/world-spec-prep/locked/medication-expansion-package-v1.md`.
 - Medication Expansion ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/medication-expansion-ratification.md`.
+- Comorbidity Expansion Package v1: `worlds/korvin-merrow/world-spec-prep/candidate-review/comorbidity-expansion-package-v1.md`.
 - Next allowed substantive action: proceed only when Alexander explicitly authorizes the next World Spec preparation or construction step.
 
 ## Workspace Bloat And Doctrine Audit
@@ -297,6 +298,21 @@ Medication Expansion Package v1:
 - Retained medication decisions: nitroglycerin, polyethylene glycol, senna, and cholecalciferol remain in the baseline architecture.
 - It does not create doses, frequencies, schedules, medication timelines, admission medication lists, discharge medication lists, tasks, prompts, expected outputs, goldens, grader guidance, file inventory, templates, reference files, or synthetic documents.
 
+Comorbidity Expansion Package v1:
+
+- Status: CANDIDATE REVIEW.
+- Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/comorbidity-expansion-package-v1.md`.
+- Purpose: baseline chronic-condition architecture targeting approximately 12-15 comorbidities before labs, hospital-course events, task drafting, file planning, or World Spec drafting.
+- Candidate baseline comorbidity count: 14 conditions.
+- Candidate additions for physician review: class I obesity by locked BMI, chronic gastroesophageal reflux / chronic acid-suppression indication, and chronic constipation tendency.
+- Preserved architecture: all approved conditions, mixed physiology model, presumed/active questions, discharge-safety reasoning, and source-of-truth design.
+- It does not create labs, vitals, medication doses, medication schedules, hospital-course events, provider names, surgical history, tasks, prompts, expected outputs, goldens, grader guidance, file inventory, templates, reference files, synthetic documents, or World Spec prose.
+
+Fetched World Spec source examples:
+
+- Alexander added World Spec example source documents under `reference/word-spec-examples/`.
+- These are source/reference artifacts only. Preserve them separately from authored Korvin Merrow work and do not treat them as generated project content or as the Korvin Merrow file inventory.
+
 Primary frictions:
 
 1. Nephrology vs Cardiology: renal/hemodynamic safety during AKI/hypotension vs HFrEF/CAD long-term protective therapy.
@@ -358,8 +374,8 @@ Clinical structure:
 - Decision Friction Table details.
 - Governance Package v1 is ratified and contains the care team roster, broader source-of-truth hierarchy, confirmed vs presumed condition split, Decision Friction Table, administrative deliverable decision, and workflow umbrella.
 - Clinical Story Skeleton v1 is ratified. Do not reopen unless Alexander explicitly does so.
-- Medication expansion from the approved compact list toward the World Spec target of 18-22 medications.
-- Final comorbidity list refinement within the World Spec target of 12-15 comorbidities.
+- Medication Expansion Package v1 is locked at 20 baseline medication items.
+- Comorbidity Expansion Package v1 is in candidate review at 14 baseline conditions.
 
 Task architecture:
 
