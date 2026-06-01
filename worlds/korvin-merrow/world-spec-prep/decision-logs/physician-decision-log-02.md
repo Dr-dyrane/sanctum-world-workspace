@@ -682,21 +682,24 @@ Boundary:
 
 ## Surgical History Package v1
 
-Status: CANDIDATE REVIEW.
+Status: LOCKED.
 
-Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/surgical-history-package-v1.md`
+Artifact: `worlds/korvin-merrow/world-spec-prep/locked/surgical-history-package-v1.md`
+
+Ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/surgical-history-ratification.md`
 
 Purpose:
 
 - Define pre-world surgical/procedural history architecture before Daily Hospital Course Framework, World Spec construction, file inventory planning, synthetic documents, task prompts, expected outputs, goldens, or grader guidance.
 
-Candidate confirmed procedural anchors for physician review:
+Confirmed surgical/procedural anchors:
 
 - Remote percutaneous coronary intervention with coronary stent placement.
 - Remote diagnostic sleep study confirming obstructive sleep apnea.
 
-Candidate exclusions for physician review:
+Excluded / noise-controlled procedures:
 
+- ICD / CRT / pacemaker.
 - Coronary artery bypass grafting.
 - Dialysis access creation or kidney procedure.
 - Major orthopedic fracture repair or joint replacement.
@@ -712,3 +715,14 @@ Guardrails:
 - It should not collapse mixed physiology.
 - It should not weaken Trap #1, Trap #2, Trap #3, or Trap #5.
 - It should not create operative reports, procedure notes, hospital-course events, labs, vitals, file inventory, task prompts, expected outputs, goldens, grader guidance, synthetic files, World Spec prose, templates, or reference files.
+
+Carry-forward watch items:
+
+- Keep PCI remote so aspirin-only baseline remains consistent.
+- Decide procedural provenance during file inventory.
+- Daily Hospital Course Framework remains next.
+- File Inventory Architecture remains deferred.
+- World Spec construction remains deferred.
+- Trap #3 vs Trap #5 concrete file distinction remains deferred.
+- AutoQC 2.107 workflow-count discipline remains preserved.
+- AutoQC 2.108 administrative-deliverable contingency remains preserved.

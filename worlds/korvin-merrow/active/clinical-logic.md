@@ -587,19 +587,22 @@ Guardrails:
 
 ## Surgical History Package v1
 
-Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/surgical-history-package-v1.md`
+Artifact: `worlds/korvin-merrow/world-spec-prep/locked/surgical-history-package-v1.md`
 
-Status: CANDIDATE REVIEW.
+Ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/surgical-history-ratification.md`
+
+Status: LOCKED.
 
 Purpose: pre-world surgical/procedural history architecture before Daily Hospital Course Framework, World Spec construction, file inventory planning, synthetic documents, task prompts, expected outputs, goldens, or grader guidance.
 
-Candidate confirmed procedural anchors:
+Confirmed surgical/procedural anchors:
 
 - Remote percutaneous coronary intervention with coronary stent placement.
 - Remote diagnostic sleep study confirming obstructive sleep apnea.
 
-Candidate exclusions:
+Excluded / noise-controlled procedures:
 
+- ICD / CRT / pacemaker.
 - Coronary artery bypass grafting.
 - Dialysis access creation or kidney procedure.
 - Major orthopedic fracture repair or joint replacement.
@@ -610,6 +613,8 @@ Candidate exclusions:
 Guardrails:
 
 - Surgical/procedural history should stay clinically realistic but quiet.
+- Keep PCI remote so aspirin-only baseline remains consistent.
+- Procedural provenance should be decided during future file inventory architecture.
 - PCI supports established CAD, chronic cardiovascular medication rationale, and cardiology involvement.
 - Sleep study supports locked OSA diagnosis and baseline reserve context.
 - Surgical history must not create a new dominant disease arc.

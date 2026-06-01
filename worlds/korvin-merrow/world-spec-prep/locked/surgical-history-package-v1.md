@@ -2,7 +2,7 @@
 
 Date created: 2026-06-01
 
-Status: CANDIDATE REVIEW.
+Status: LOCKED.
 
 Purpose: define the pre-world surgical and procedural history architecture for Korvin Merrow before Daily Hospital Course Framework construction, World Spec drafting, file inventory planning, synthetic documents, task prompts, expected outputs, golden responses, or grader guidance.
 
@@ -43,12 +43,13 @@ It should:
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | Percutaneous coronary intervention with coronary stent placement | Remote pre-world history, several years before admission | Fits established CAD and supports chronic secondary-prevention therapy. | Supports aspirin, statin, nitroglycerin rescue medication, cardiology involvement, and the importance of not losing protective therapy during discharge medication reconciliation. | Most authoritative source would be cardiology history, prior procedure summary, or outpatient problem list; patient/family recollection may be less precise. | May later appear as prior cardiac procedure history in admission history, cardiology consult background, PCP records, or discharge summary history section. | Confirmed |
 | 2 | Diagnostic sleep study confirming obstructive sleep apnea | Remote pre-world history, before current hospitalization | Fits locked OSA diagnosis and baseline fatigue/functional-reserve context without creating an acute procedural issue. | Supports OSA as a chronic comorbidity and background contributor to reduced reserve, but does not explain the acute decline alone. | Most authoritative source would be outpatient sleep medicine or PCP documentation; family/patient may report CPAP use or nonuse imprecisely. | May later appear in baseline medical history, PCP records, or functional/disposition context if sleep quality or home routine is relevant. | Confirmed |
-| 3 | Coronary artery bypass grafting | Not included | Would be plausible for some CAD/HFrEF patients but is not required by the current architecture. | Would add unnecessary cardiac-surgical complexity and could over-intensify the cardiac history beyond what is needed. | Not applicable. | Not planned. | Unnecessary |
-| 4 | Dialysis access creation or kidney procedure | Not included | CKD stage 3 does not justify dialysis-access history. | Would contradict the intended CKD3 baseline and create a renal arc that is too advanced for this world. | Not applicable. | Not planned. | Unnecessary |
-| 5 | Major orthopedic fracture repair or joint replacement | Not included | Osteoporosis/osteopenia increases fall-consequence risk, but no fracture-repair history is needed. | Could distract from the intentionally multi-factorial near-fall model and create a competing mobility explanation. | Not applicable. | Not planned. | Unnecessary |
-| 6 | Limb amputation or major diabetic foot surgery | Not included | Diabetic neuropathy supports mobility vulnerability, but no major diabetic foot procedural history is needed. | Would create a dominant functional-disability arc and weaken the current baseline of independent but slowed function. | Not applicable. | Not planned. | Unnecessary |
-| 7 | Temporal artery biopsy or rheumatologic diagnostic procedure | Not included | PMR does not require a procedural history for this world. | Could introduce giant-cell arteritis or a separate rheumatologic diagnostic arc not approved in the Brainstorm. | Not applicable. | Not planned. | Unnecessary |
-| 8 | Screening colonoscopy | Background-only if needed later | Common for age-appropriate preventive care, but not required by the current architecture. | Does not support the active frictions, traps, medication reasoning, or discharge-safety failure target. | Not needed for source-of-truth hierarchy. | Do not include unless later source material requires routine preventive-history texture. | Unnecessary for v1 |
+| 3 | ICD / CRT / pacemaker | Not included | HFrEF can coexist with device therapy, but device-management complexity is not required for this world. | Would add a device arc and could distract from medication, renal/hemodynamic, functional, and discharge-safety reasoning. | Not applicable. | Not planned. | Unnecessary |
+| 4 | Coronary artery bypass grafting | Not included | Would be plausible for some CAD/HFrEF patients but is not required by the current architecture. | Would add unnecessary cardiac-surgical complexity and could over-intensify the cardiac history beyond what is needed. | Not applicable. | Not planned. | Unnecessary |
+| 5 | Dialysis access creation or kidney procedure | Not included | CKD stage 3 does not justify dialysis-access history. | Would contradict the intended CKD3 baseline and create a renal arc that is too advanced for this world. | Not applicable. | Not planned. | Unnecessary |
+| 6 | Major orthopedic fracture repair or joint replacement | Not included | Osteoporosis/osteopenia increases fall-consequence risk, but no fracture-repair history is needed. | Could distract from the intentionally multi-factorial near-fall model and create a competing mobility explanation. | Not applicable. | Not planned. | Unnecessary |
+| 7 | Limb amputation or major diabetic foot surgery | Not included | Diabetic neuropathy supports mobility vulnerability, but no major diabetic foot procedural history is needed. | Would create a dominant functional-disability arc and weaken the current baseline of independent but slowed function. | Not applicable. | Not planned. | Unnecessary |
+| 8 | Temporal artery biopsy or rheumatologic diagnostic procedure | Not included | PMR does not require a procedural history for this world. | Could introduce giant-cell arteritis or a separate rheumatologic diagnostic arc not approved in the Brainstorm. | Not applicable. | Not planned. | Unnecessary |
+| 9 | Screening colonoscopy | Background-only if needed later | Common for age-appropriate preventive care, but not required by the current architecture. | Does not support the active frictions, traps, medication reasoning, or discharge-safety failure target. | Not needed for source-of-truth hierarchy. | Do not include unless later source material requires routine preventive-history texture. | Unnecessary for v1 |
 
 ## 2. Surgical History Classification
 
@@ -66,6 +67,7 @@ Rationale: no procedure should be presumed merely to add realism. If a procedure
 ### Unnecessary
 
 - Coronary artery bypass grafting.
+- ICD / CRT / pacemaker.
 - Dialysis access creation or kidney procedure.
 - Major orthopedic fracture repair or joint replacement.
 - Limb amputation or major diabetic foot surgery.
@@ -312,13 +314,13 @@ Evidence: PCI supports established CAD and cardiovascular medication reasoning; 
 
 Impact: surgical/procedural history strengthens realism without adding unrelated complexity.
 
-Action required: physician review should confirm whether PCI and sleep study should remain the only confirmed procedures.
+Action required: locked; preserve remote PCI and diagnostic sleep study unless Alexander explicitly reopens the package.
 
 ### VERIFIED
 
 Finding: no unnecessary surgical complexity is introduced.
 
-Evidence: CABG, dialysis access, orthopedic repair, amputation/diabetic foot surgery, rheumatologic biopsy, and screening colonoscopy are not included as active architecture.
+Evidence: ICD/CRT/pacemaker, CABG, dialysis access, orthopedic repair, amputation/diabetic foot surgery, rheumatologic biopsy, and screening colonoscopy are not included as active architecture.
 
 Impact: the world remains focused on mixed physiology, medication reasoning, functional decline, and discharge safety.
 
@@ -332,7 +334,7 @@ Evidence: confirmed procedures map to CAD and OSA only and do not contradict CKD
 
 Impact: no comorbidity redesign required.
 
-Action required: none before physician review.
+Action required: none.
 
 ### VERIFIED
 
@@ -342,7 +344,7 @@ Evidence: PCI supports existing CAD medications; diagnostic sleep study does not
 
 Impact: no medication architecture change required.
 
-Action required: none before physician review.
+Action required: none.
 
 ### VERIFIED
 
@@ -398,4 +400,4 @@ Action required: none.
 
 Surgical History Package v1
 
-Status: CANDIDATE REVIEW
+Status: LOCKED
