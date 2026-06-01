@@ -545,6 +545,40 @@ Guardrails:
 
 This package does not create labs, vitals, medication doses, medication schedules, hospital-course events, provider names, surgical history, tasks, prompts, expected outputs, goldens, grader guidance, file inventory, templates, reference files, synthetic documents, or World Spec prose.
 
+## Provider Roster Package v1
+
+Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/provider-roster-package-v1.md`
+
+Status: CANDIDATE REVIEW.
+
+Purpose: provider/care-team and stakeholder architecture before note authorship, file planning, task drafting, synthetic documents, or World Spec drafting.
+
+Proposed named high-authority roles:
+
+- Attending hospitalist: Dr. Elian Vossmere.
+- Cardiology attending: Dr. Maris Caldrane.
+- Nephrology attending: Dr. Iven Solthar.
+- Endocrinology attending: Dr. Nerea Veylorn.
+- Primary care physician: Dr. Talia Quenor.
+- Outpatient rheumatology attending: Dr. Soren Halvek.
+- Family/caregiver stakeholder: Mara Merrow.
+
+Service-role placeholders:
+
+- Hospitalist resident / covering clinician.
+- Bedside nursing team.
+- Physical Therapy.
+- Occupational Therapy.
+- Case Management.
+- Social Work.
+- Pharmacy / medication reconciliation pharmacist.
+
+Guardrails:
+
+- Named providers are architecture placeholders only.
+- Service-role placeholders prevent over-naming minor or rotating contributors.
+- Provider roster does not create notes, files, dates, task prompts, synthetic documents, or World Spec prose.
+
 ## Locked World Tone
 
 The patient is medically improving but operationally dangerous to discharge.
