@@ -2,7 +2,7 @@
 
 Purpose: compressed Claude context for a fresh Project Sanctum session. Use this as operational context only; the full source of truth remains local under `reference/` and `worlds/korvin-merrow/`.
 
-Boundary: Brainstorm is approved after SEND BACK remediation. Clinical Story Skeleton v1 is ratified. Identity Package v1 is locked. Governance Package v1 is ratified. Physician Architecture Layer is complete. Key Milestones Calendar Skeleton v1 is locked. Baseline Anchor Package v1 is locked. Medication Expansion Package v1 is locked. Comorbidity Expansion Package v1 is locked. Provider Roster Package v1 is locked. World Spec drafting is not authorized until Alexander explicitly authorizes drafting.
+Boundary: Brainstorm is approved after SEND BACK remediation. Clinical Story Skeleton v1 is ratified. Identity Package v1 is locked. Governance Package v1 is ratified. Physician Architecture Layer is complete. Preparation Layer is complete. World Spec Skeleton v1 is locked. World Spec v1 is locked. World Spec Construction is complete. File Inventory Architecture is the next eligible phase, but it is not authorized until Alexander explicitly starts it.
 
 ## Current World Concept
 
@@ -368,7 +368,7 @@ Identity review addendum:
 
 ## Current State
 
-Brainstorm approved. Clinical Story Skeleton v1 ratified. Identity Package v1 locked. Governance Package v1 ratified. Physician Architecture Layer complete. Key Milestones Calendar Skeleton v1 locked. Baseline Anchor Package v1 locked. Clinical Story Timeline Package v1 locked. Task Architecture Package v1 locked. Medication Expansion Package v1 locked. Comorbidity Expansion Package v1 locked. Provider Roster Package v1 locked. Surgical History Package v1 locked. Daily Hospital Course Framework v1 locked. Preparation Layer complete. World Spec Skeleton Phase complete. World Spec Construction authorized. World Spec Skeleton v1 is locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-skeleton-ratification.md`. Do not draft full World Spec prose, create file inventory, tasks, prompts, goldens, grader guidance, notes, labs, vitals, or synthetic files without explicit Alexander authorization for that step.
+Brainstorm approved. Clinical Story Skeleton v1 ratified. Identity Package v1 locked. Governance Package v1 ratified. Physician Architecture Layer complete. Key Milestones Calendar Skeleton v1 locked. Baseline Anchor Package v1 locked. Clinical Story Timeline Package v1 locked. Task Architecture Package v1 locked. Medication Expansion Package v1 locked. Comorbidity Expansion Package v1 locked. Provider Roster Package v1 locked. Surgical History Package v1 locked. Daily Hospital Course Framework v1 locked. Preparation Layer complete. World Spec Skeleton Phase complete. World Spec Construction complete. World Spec Skeleton v1 is locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-skeleton-ratification.md`. World Spec v1 is locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-v1-ratification.md`. Do not create file inventory, tasks, prompts, goldens, grader guidance, notes, labs, vitals, synthetic files, DOCX submission artifacts, AutoQC responses, or RL Studio uploads without explicit Alexander authorization for that step.
 
 Task Architecture Interview v1 is preserved as historical planning scaffold at `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md`. Task Architecture Package v1 is locked and authoritative at `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md`. It defines the authoritative architecture of six task concepts across four workflows: Discharge Medication Reconciliation, Hospital Discharge Summary Generation, Discharge Planning Documentation, and Interdisciplinary Care Plan Development and Documentation. `worlds/korvin-merrow/active/task-map.md` has been reconciled; old Brainstorm-level mappings are superseded. It does not create final task prompts, expected outputs, file inventory, World Spec sections, reference templates, or synthetic files.
 
@@ -412,12 +412,16 @@ Completed:
 26. Daily Hospital Course Framework v1 locked and ratified.
 27. Preparation Layer completed.
 28. World Spec Skeleton v1 locked and ratified.
+29. World Spec v1 locked and ratified.
 
-Still pending before World Spec drafting:
+Still pending before downstream construction:
 
 1. Official Claude World Spec session.
-2. Alexander authorization for the next specific World Spec construction step.
-3. Alexander authorization to draft the World Spec.
+2. Alexander authorization for File Inventory Architecture.
+3. File inventory.
+4. Synthetic files.
+5. Task specifications.
+6. Prompts, expected outputs, goldens, grader guidance.
 
 ## Claude Use Rules
 

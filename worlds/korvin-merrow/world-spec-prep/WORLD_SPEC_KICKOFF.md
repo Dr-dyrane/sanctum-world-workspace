@@ -1,6 +1,6 @@
 # Korvin Merrow World Spec Kickoff
 
-Status: World Spec Construction / World Spec v1 candidate review.
+Status: World Spec Construction / World Spec v1 locked.
 
 Purpose: active cockpit for the transition from approved Brainstorm through World Spec construction while preserving phase boundaries around template population, file inventory, tasks, and downstream deliverables.
 
@@ -13,7 +13,8 @@ Purpose: active cockpit for the transition from approved Brainstorm through Worl
 - World Spec construction is authorized.
 - World Spec Skeleton v1 is locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`.
 - World Spec Skeleton ratification: `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-skeleton-ratification.md`.
-- World Spec v1 candidate review artifact: `worlds/korvin-merrow/world-spec-construction/candidate-review/world-spec-v1.md`.
+- World Spec v1 locked artifact: `worlds/korvin-merrow/world-spec-construction/locked/world-spec-v1.md`.
+- World Spec v1 ratification: `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-v1-ratification.md`.
 - File inventory, synthetic files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission packaging, RL Studio upload, notes, labs, and vitals have not started.
 - Clinical Story Skeleton v1 is locked and ratified.
 - Clinical Story Skeleton review completed with GO recommendation.
@@ -48,7 +49,7 @@ Purpose: active cockpit for the transition from approved Brainstorm through Worl
 - Daily Hospital Course Framework v1: `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md`.
 - Daily Hospital Course Framework ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md`.
 - Preparation Layer status: COMPLETE.
-- Next allowed substantive action: review World Spec v1 candidate or await Alexander's explicit next World Spec construction instruction. File inventory, synthetic files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission packaging, RL Studio upload, notes, labs, and vitals remain blocked until explicitly authorized.
+- Next eligible phase: File Inventory Architecture, pending explicit Alexander authorization. Synthetic files, task specifications, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission packaging, RL Studio upload, notes, labs, and vitals remain blocked until explicitly authorized.
 
 ## Workspace Bloat And Doctrine Audit
 
@@ -63,7 +64,7 @@ Current bloat risks:
 
 Doctrine check:
 
-- World Spec v1 candidate has been created from locked architecture only.
+- World Spec v1 has been locked and ratified.
 - No official World Spec template has been populated.
 - No final Section 3 World File Plan or file inventory has been created.
 - No synthetic chart files have been created.
@@ -357,8 +358,8 @@ Preparation Layer:
 
 - Status: COMPLETE.
 - Completed artifacts: Brainstorm, Temporal Architecture, Clinical Story Skeleton, Identity Package, Governance Package, Key Milestones Calendar Skeleton, Baseline Anchor Package, Clinical Story Timeline Package, Task Architecture Package, Medication Expansion Package, Comorbidity Expansion Package, Provider Roster Package, Surgical History Package, and Daily Hospital Course Framework.
-- World Spec Construction status: AUTHORIZED.
-- Boundary: World Spec v1 candidate is now in review. File inventory, synthetic files, tasks, prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission packaging, RL Studio upload, notes, labs, vitals, and hospital-course documentation remain unstarted until Alexander explicitly authorizes the relevant next step.
+- World Spec Construction status: COMPLETE.
+- Boundary: World Spec v1 is locked. File inventory, synthetic files, task specifications, prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission packaging, RL Studio upload, notes, labs, vitals, and hospital-course documentation remain unstarted until Alexander explicitly authorizes the relevant next step.
 
 Fetched World Spec source examples:
 

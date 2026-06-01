@@ -338,11 +338,17 @@ Physician Architecture Layer Status: COMPLETE.
 
 Preparation Layer Status: COMPLETE.
 
-World Spec Construction Status: AUTHORIZED.
+World Spec Construction Status: COMPLETE.
 
-Current Construction Artifact: World Spec Skeleton v1 locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-skeleton-ratification.md`.
+World Spec Skeleton v1 is locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-skeleton-ratification.md`.
+
+World Spec v1 is locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-v1-ratification.md`.
 
 World Spec Skeleton Phase Status: COMPLETE.
+
+World Spec v1 Status: LOCKED.
+
+Next eligible phase: File Inventory Architecture, pending explicit Alexander authorization.
 
 ## Key Milestones Calendar Skeleton v1
 
@@ -653,7 +659,7 @@ Preparation Layer:
 
 - Status: COMPLETE.
 - Daily Hospital Course Framework v1 completes the preparation layer before World Spec construction.
-- World Spec Construction is authorized, but downstream artifacts remain unstarted until specifically authorized.
+- World Spec Construction is complete after World Spec v1 lock; downstream artifacts remain unstarted until specifically authorized.
 
 ## Locked World Tone
 

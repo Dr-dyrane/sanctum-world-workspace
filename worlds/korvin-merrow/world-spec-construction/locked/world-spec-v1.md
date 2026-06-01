@@ -2,7 +2,7 @@
 
 Date created: 2026-06-01
 
-Status: CANDIDATE REVIEW
+Status: LOCKED
 
 Purpose: first complete World Spec candidate for the Korvin Merrow world, built only from locked physician-approved architecture.
 
@@ -338,7 +338,7 @@ Evidence: identity, comorbidities, medications, providers, procedures, calendar 
 
 Impact: no locked decision is reopened.
 
-Action required: physician review before any ratification or template population.
+Action required: preserve as the canonical locked World Spec source for later file inventory architecture and submission preparation.
 
 ### VERIFIED
 
@@ -438,10 +438,10 @@ Evidence: no contradiction found with the locked source packages used for this c
 
 Impact: no redesign required before review.
 
-Action required: physician and reviewer-style audit before lock.
+Action required: none.
 
 ## Final Status
 
 World Spec v1
 
-Status: CANDIDATE REVIEW
+Status: LOCKED

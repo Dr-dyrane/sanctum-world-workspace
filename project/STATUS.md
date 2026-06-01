@@ -2,7 +2,7 @@
 
 ## Current Phase
 
-World Spec Construction / World Spec v1 candidate review.
+World Spec Construction / World Spec v1 locked.
 
 ## Current World
 
@@ -10,7 +10,7 @@ Working title: Korvin Merrow World
 
 ## Current State
 
-Brainstorm Human Review returned GO from Stacey S after SEND BACK remediation. Reviewer approved the Korvin Merrow Brainstorm and indicated next steps are World Spec and file template development. Preparation Layer is complete, World Spec Skeleton v1 is locked, and the first complete World Spec candidate has been created at `worlds/korvin-merrow/world-spec-construction/candidate-review/world-spec-v1.md`. The candidate uses locked architecture only and remains in candidate review. It does not create file inventory rows, synthetic files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, or submission artifacts.
+Brainstorm Human Review returned GO from Stacey S after SEND BACK remediation. Reviewer approved the Korvin Merrow Brainstorm and indicated next steps are World Spec and file template development. Preparation Layer is complete, World Spec Skeleton v1 is locked, and World Spec v1 is locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-v1-ratification.md`. World Spec Construction is complete. File Inventory Architecture is the next eligible phase, but it has not started and still requires explicit Alexander authorization.
 
 Source/reference note: Alexander added World Spec example source documents under `reference/word-spec-examples/`. Preserve them as source/reference artifacts, not authored Korvin Merrow content.
 
@@ -20,7 +20,7 @@ Claude Identity Package hostile-review observations are recorded as carry-forwar
 
 Task ID: cyau8803
 
-Status: Brainstorm approved / World Spec v1 candidate review
+Status: Brainstorm approved / World Spec v1 locked
 
 Original submission timestamp: 5/29/2026 2:49 PM PDT
 
@@ -30,19 +30,19 @@ Reviewer GO: Stacey S approved Brainstorm via Slack. Recorded in `worlds/korvin-
 
 ## Current Pass
 
-World Spec Construction: World Spec v1 candidate review.
+World Spec Construction: COMPLETE. World Spec v1 locked.
 
 ## Next Pass
 
-Await Alexander's review direction for `worlds/korvin-merrow/world-spec-construction/candidate-review/world-spec-v1.md`. File inventory, synthetic files, task prompts, expected outputs, goldens, grader guidance, AutoQC, DOCX submission packaging, and RL Studio upload remain blocked until specifically authorized.
+Next eligible phase: File Inventory Architecture, pending explicit Alexander authorization. Synthetic files, task specifications, task prompts, expected outputs, goldens, grader guidance, AutoQC, DOCX population, Studio submission packaging, and RL Studio upload remain blocked until specifically authorized.
 
 ## Active Blocker
 
-No active reviewer blocker. Preparation Layer is complete. World Spec Skeleton v1 is locked. World Spec v1 is in candidate review at `worlds/korvin-merrow/world-spec-construction/candidate-review/world-spec-v1.md`. File inventory, synthetic files, task prompts, expected outputs, golden responses, grader guidance, AutoQC, DOCX submission packaging, and RL Studio upload remain blocked until specifically authorized.
+No active reviewer blocker. Preparation Layer is complete. World Spec Skeleton v1 is locked. World Spec v1 is locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-v1.md`. World Spec Construction is complete. File Inventory Architecture, synthetic files, task specifications, task prompts, expected outputs, golden responses, grader guidance, AutoQC, DOCX population, Studio submission packaging, and RL Studio upload remain blocked until specifically authorized.
 
 ## Current Git Checkpoint
 
-checkpoint: create world spec v1
+checkpoint: ratify world spec v1
 
 ## Active Branch
 
@@ -58,7 +58,7 @@ Return to baseline commit if workflow becomes corrupted.
 
 ## Next Command For Codex
 
-Review `worlds/korvin-merrow/world-spec-construction/candidate-review/world-spec-v1.md` when Alexander requests it. Do not create file inventory rows, synthetic files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission artifacts, or RL Studio uploads before Alexander explicitly authorizes the relevant phase.
+Await Alexander authorization for the next eligible phase: File Inventory Architecture. Do not create file inventory rows, synthetic files, task specifications, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission artifacts, Studio submission packaging, or RL Studio uploads before Alexander explicitly authorizes the relevant phase.
 
 ## Scope Guardrails
 

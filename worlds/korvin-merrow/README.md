@@ -1,6 +1,6 @@
 # Korvin Merrow World
 
-Current state: World Spec Construction / World Spec v1 candidate review.
+Current state: World Spec Construction / World Spec v1 locked.
 
 Start here only after reading `project/STATUS.md`.
 
@@ -18,7 +18,8 @@ Start here only after reading `project/STATUS.md`.
 ## Active Entry Points
 
 - `world-spec-prep/WORLD_SPEC_KICKOFF.md`
-- `world-spec-construction/candidate-review/world-spec-v1.md`
+- `world-spec-construction/locked/world-spec-v1.md`
+- `world-spec-construction/ratifications/world-spec-v1-ratification.md`
 - `world-spec-construction/locked/world-spec-skeleton-v1.md`
 - `world-spec-construction/ratifications/world-spec-skeleton-ratification.md`
 - `world-spec-prep/locked/clinical-story-timeline-package-v1.md`
@@ -45,4 +46,4 @@ Start here only after reading `project/STATUS.md`.
 - `world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`
 - `active/brainstorm.md`
 
-World Spec v1 is a candidate-review artifact. Do not create file inventory rows, synthetic files, task prompts, expected outputs, golden responses, grader guidance, AutoQC responses, DOCX submission artifacts, RL Studio uploads, notes, labs, vitals, templates, or reference files until Alexander explicitly authorizes the relevant step.
+World Spec v1 is locked. Next eligible phase is File Inventory Architecture, but do not create file inventory rows, synthetic files, task specifications, task prompts, expected outputs, golden responses, grader guidance, AutoQC responses, DOCX submission artifacts, RL Studio uploads, notes, labs, vitals, templates, or reference files until Alexander explicitly authorizes the relevant step.

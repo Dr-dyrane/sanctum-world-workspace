@@ -823,5 +823,47 @@ World Spec Skeleton Phase:
 
 World Spec Construction:
 
-- Status: AUTHORIZED.
-- Full World Spec prose, file inventory rows, synthetic files, tasks, prompts, expected outputs, goldens, grader guidance, reference files, submission artifacts, notes, labs, vitals, and hospital-course documentation have not started.
+- Status: COMPLETE.
+
+## World Spec v1
+
+Status: LOCKED.
+
+Artifact: `worlds/korvin-merrow/world-spec-construction/locked/world-spec-v1.md`
+
+Ratification: `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-v1-ratification.md`
+
+Review outcome:
+
+- Windsurf Claude Review: YES / LOCK READY / GO.
+- Claude Code Review: YES / LOCK READY / GO.
+- No true defects identified.
+- No blockers identified.
+- Exact fidelity verified against all locked source packages.
+- No timeline, hierarchy, medication, comorbidity, or provider drift.
+- No friction collapse, trap collapse, reveal drift, or hidden-answer drift.
+- Mixed physiology preserved.
+- Task architecture support preserved.
+- Studio alignment preserved.
+
+Preserved future-construction watch items:
+
+- Section 3 World File Plan must use AutoQC v6.3 8-column structure.
+- Trap #3 vs Trap #5 distinction remains protected.
+- Insulin lispro remains inpatient-only candidate logic.
+- AutoQC 2.108 administrative deliverable watch item remains preserved.
+- Transcript packaging remains future submission-layer activity.
+- File Inventory Architecture not yet started.
+- Synthetic world files not yet started.
+- Task Specifications not yet started.
+- Task prompts not yet started.
+- Expected outputs not yet started.
+- Goldens not yet started.
+- Grader guidance not yet started.
+- AutoQC not yet started.
+- DOCX population not yet started.
+- Studio submission packaging not yet started.
+
+Next eligible phase:
+
+- File Inventory Architecture, pending explicit Alexander authorization.
