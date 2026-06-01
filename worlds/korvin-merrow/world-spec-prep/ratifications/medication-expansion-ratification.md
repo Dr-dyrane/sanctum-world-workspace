@@ -46,7 +46,7 @@ This ratification does not create medication doses, medication schedules, medica
 
 - Future inpatient glycemic-management reasoning.
 - Future medication reconciliation construction.
-- Future comorbidity expansion package.
+- Comorbidity Expansion Package v1 is now locked; future watch item is condition-to-file consistency during later construction.
 - AutoQC 2.107 workflow-count discipline.
 - AutoQC 2.108 administrative-deliverable reviewer-risk contingency.
 

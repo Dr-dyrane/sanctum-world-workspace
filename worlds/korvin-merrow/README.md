@@ -1,6 +1,6 @@
 # Korvin Merrow World
 
-Current state: World Spec Construction Preparation / Comorbidity Expansion Package v1 candidate review.
+Current state: World Spec Construction Preparation / Comorbidity Expansion Package v1 locked.
 
 Start here only after reading `project/STATUS.md`.
 
@@ -25,7 +25,8 @@ Start here only after reading `project/STATUS.md`.
 - `world-spec-prep/locked/medication-expansion-package-v1.md`
 - `world-spec-prep/ratifications/medication-expansion-ratification.md`
 - `world-spec-prep/reviews/medication-expansion-decision-addendum.md`
-- `world-spec-prep/candidate-review/comorbidity-expansion-package-v1.md`
+- `world-spec-prep/locked/comorbidity-expansion-package-v1.md`
+- `world-spec-prep/ratifications/comorbidity-expansion-ratification.md`
 - `world-spec-prep/locked/baseline-anchor-package-v1.md`
 - `world-spec-prep/ratifications/baseline-anchor-ratification.md`
 - `world-spec-prep/locked/identity-package-v1.md`

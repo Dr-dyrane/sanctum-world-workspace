@@ -2,7 +2,7 @@
 
 Date created: 2026-05-31
 
-Status: CANDIDATE REVIEW.
+Status: LOCKED.
 
 Purpose: define the baseline chronic-condition architecture for Korvin Merrow before labs, hospital-course events, task drafting, file planning, or World Spec drafting.
 
@@ -34,7 +34,7 @@ Use only:
 - Do not create conditions that collapse mixed physiology.
 - Do not create conditions solely to increase count.
 
-Candidate baseline comorbidity count: 14 conditions.
+Ratified baseline comorbidity count: 14 conditions.
 
 ## 1. Comorbidity Architecture Expansion
 
@@ -65,7 +65,7 @@ Evidence: the package retains HFrEF, CKD stage 3, type 2 diabetes, CAD, hyperten
 
 Impact: no approved Brainstorm, Governance, or reviewer-remediation condition is removed.
 
-Action required: physician review should confirm whether the three added secondary conditions are acceptable for lock.
+Action required: locked; preserve the three retained secondary conditions unless Alexander explicitly reopens the package.
 
 ### VERIFIED
 
@@ -242,11 +242,11 @@ Action required: do not create provider names here.
 
 Finding: the package reaches the target comorbidity range.
 
-Evidence: 14 candidate baseline conditions are listed, within the target range of approximately 12-15.
+Evidence: 14 ratified baseline conditions are listed, within the target range of approximately 12-15.
 
 Impact: satisfies the reviewer-driven complexity target without padding the case with unrelated diagnoses.
 
-Action required: physician review before lock.
+Action required: preserve during later authorized construction.
 
 ### VERIFIED
 
@@ -256,7 +256,7 @@ Evidence: it preserves the ratified confirmed conditions and keeps presumed/acti
 
 Impact: Governance Package v1 remains authoritative.
 
-Action required: none before physician review.
+Action required: none.
 
 ### VERIFIED
 
@@ -286,7 +286,7 @@ Evidence: both fit the locked medication package and polypharmacy logic, but the
 
 Impact: they strengthen medication complexity and real-world discharge burden.
 
-Action required: physician review should confirm they do not feel like count-padding.
+Action required: preserve as secondary complexity during later construction; do not elevate into dominant arcs.
 
 ### NO ISSUE
 
@@ -302,9 +302,9 @@ Action required: stop before downstream construction.
 
 Finding: none.
 
-Evidence: no candidate condition contradicts the approved Brainstorm, ratified Clinical Story Skeleton, locked Identity Package, ratified Governance Package, locked Timeline Package, locked Baseline Anchor Package, locked Task Architecture Package, or locked Medication Expansion Package.
+Evidence: no ratified condition contradicts the approved Brainstorm, ratified Clinical Story Skeleton, locked Identity Package, ratified Governance Package, locked Timeline Package, locked Baseline Anchor Package, locked Task Architecture Package, or locked Medication Expansion Package.
 
-Impact: no redesign required before physician review.
+Impact: no redesign required.
 
 Action required: none.
 
@@ -312,4 +312,4 @@ Action required: none.
 
 Comorbidity Expansion Package v1
 
-Status: CANDIDATE REVIEW
+Status: LOCKED

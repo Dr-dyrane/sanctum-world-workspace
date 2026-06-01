@@ -1,6 +1,6 @@
 # Korvin Merrow World Spec Kickoff
 
-Status: World Spec Construction Preparation / Comorbidity Expansion Package v1 candidate review.
+Status: World Spec Construction Preparation / Comorbidity Expansion Package v1 locked.
 
 Purpose: mark the transition from approved Brainstorm to World Spec preparation without drafting the World Spec, populating the template, creating a final file inventory, or inventing clinical values.
 
@@ -35,7 +35,8 @@ Purpose: mark the transition from approved Brainstorm to World Spec preparation 
 - Task Architecture ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md`.
 - Medication Expansion Package v1: `worlds/korvin-merrow/world-spec-prep/locked/medication-expansion-package-v1.md`.
 - Medication Expansion ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/medication-expansion-ratification.md`.
-- Comorbidity Expansion Package v1: `worlds/korvin-merrow/world-spec-prep/candidate-review/comorbidity-expansion-package-v1.md`.
+- Comorbidity Expansion Package v1: `worlds/korvin-merrow/world-spec-prep/locked/comorbidity-expansion-package-v1.md`.
+- Comorbidity Expansion ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/comorbidity-expansion-ratification.md`.
 - Next allowed substantive action: proceed only when Alexander explicitly authorizes the next World Spec preparation or construction step.
 
 ## Workspace Bloat And Doctrine Audit
@@ -300,11 +301,12 @@ Medication Expansion Package v1:
 
 Comorbidity Expansion Package v1:
 
-- Status: CANDIDATE REVIEW.
-- Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/comorbidity-expansion-package-v1.md`.
+- Status: LOCKED.
+- Artifact: `worlds/korvin-merrow/world-spec-prep/locked/comorbidity-expansion-package-v1.md`.
+- Ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/comorbidity-expansion-ratification.md`.
 - Purpose: baseline chronic-condition architecture targeting approximately 12-15 comorbidities before labs, hospital-course events, task drafting, file planning, or World Spec drafting.
-- Candidate baseline comorbidity count: 14 conditions.
-- Candidate additions for physician review: class I obesity by locked BMI, chronic gastroesophageal reflux / chronic acid-suppression indication, and chronic constipation tendency.
+- Ratified baseline comorbidity count: 14 conditions.
+- Retained secondary additions: class I obesity by locked BMI, chronic gastroesophageal reflux / chronic acid-suppression indication, and chronic constipation tendency.
 - Preserved architecture: all approved conditions, mixed physiology model, presumed/active questions, discharge-safety reasoning, and source-of-truth design.
 - It does not create labs, vitals, medication doses, medication schedules, hospital-course events, provider names, surgical history, tasks, prompts, expected outputs, goldens, grader guidance, file inventory, templates, reference files, synthetic documents, or World Spec prose.
 
@@ -375,7 +377,7 @@ Clinical structure:
 - Governance Package v1 is ratified and contains the care team roster, broader source-of-truth hierarchy, confirmed vs presumed condition split, Decision Friction Table, administrative deliverable decision, and workflow umbrella.
 - Clinical Story Skeleton v1 is ratified. Do not reopen unless Alexander explicitly does so.
 - Medication Expansion Package v1 is locked at 20 baseline medication items.
-- Comorbidity Expansion Package v1 is in candidate review at 14 baseline conditions.
+- Comorbidity Expansion Package v1 is locked at 14 baseline conditions.
 
 Task architecture:
 

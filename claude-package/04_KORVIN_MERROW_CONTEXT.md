@@ -2,7 +2,7 @@
 
 Purpose: compressed Claude context for a fresh Project Sanctum session. Use this as operational context only; the full source of truth remains local under `reference/` and `worlds/korvin-merrow/`.
 
-Boundary: Brainstorm is approved after SEND BACK remediation. Clinical Story Skeleton v1 is ratified. Identity Package v1 is locked. Governance Package v1 is ratified. Physician Architecture Layer is complete. Key Milestones Calendar Skeleton v1 is locked. Baseline Anchor Package v1 is locked. Medication Expansion Package v1 is locked. Comorbidity Expansion Package v1 is in candidate review. World Spec drafting is not authorized until Alexander explicitly authorizes drafting.
+Boundary: Brainstorm is approved after SEND BACK remediation. Clinical Story Skeleton v1 is ratified. Identity Package v1 is locked. Governance Package v1 is ratified. Physician Architecture Layer is complete. Key Milestones Calendar Skeleton v1 is locked. Baseline Anchor Package v1 is locked. Medication Expansion Package v1 is locked. Comorbidity Expansion Package v1 is locked. World Spec drafting is not authorized until Alexander explicitly authorizes drafting.
 
 ## Current World Concept
 
@@ -368,13 +368,13 @@ Identity review addendum:
 
 ## Current State
 
-Brainstorm approved. Clinical Story Skeleton v1 ratified. Identity Package v1 locked. Governance Package v1 ratified. Physician Architecture Layer complete. Key Milestones Calendar Skeleton v1 locked. Baseline Anchor Package v1 locked. Clinical Story Timeline Package v1 locked. Task Architecture Package v1 locked. Medication Expansion Package v1 locked. Comorbidity Expansion Package v1 is in candidate review. Do not start World Spec drafting.
+Brainstorm approved. Clinical Story Skeleton v1 ratified. Identity Package v1 locked. Governance Package v1 ratified. Physician Architecture Layer complete. Key Milestones Calendar Skeleton v1 locked. Baseline Anchor Package v1 locked. Clinical Story Timeline Package v1 locked. Task Architecture Package v1 locked. Medication Expansion Package v1 locked. Comorbidity Expansion Package v1 locked. Do not start World Spec drafting.
 
 Task Architecture Interview v1 is preserved as historical planning scaffold at `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md`. Task Architecture Package v1 is locked and authoritative at `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md`. It defines the authoritative architecture of six task concepts across four workflows: Discharge Medication Reconciliation, Hospital Discharge Summary Generation, Discharge Planning Documentation, and Interdisciplinary Care Plan Development and Documentation. `worlds/korvin-merrow/active/task-map.md` has been reconciled; old Brainstorm-level mappings are superseded. It does not create final task prompts, expected outputs, file inventory, World Spec sections, reference templates, or synthetic files.
 
 Medication Expansion Package v1 is locked at `worlds/korvin-merrow/world-spec-prep/locked/medication-expansion-package-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-prep/ratifications/medication-expansion-ratification.md` and decision addendum at `worlds/korvin-merrow/world-spec-prep/reviews/medication-expansion-decision-addendum.md`. Baseline medication count is finalized at 20. Insulin lispro is removed from baseline architecture and reserved for future inpatient-only candidate use. Nitroglycerin, polyethylene glycol, senna, and cholecalciferol are retained. This does not create doses, schedules, medication timelines, admission or discharge medication lists, medication reconciliation outputs, tasks, file inventory, or World Spec prose.
 
-Comorbidity Expansion Package v1 is in candidate review at `worlds/korvin-merrow/world-spec-prep/candidate-review/comorbidity-expansion-package-v1.md`. Candidate baseline comorbidity count is 14. It preserves all approved conditions and adds only secondary candidate complexity: class I obesity by locked BMI, chronic gastroesophageal reflux / chronic acid-suppression indication, and chronic constipation tendency. This does not create labs, vitals, hospital-course events, provider names, surgical history, tasks, file inventory, or World Spec prose.
+Comorbidity Expansion Package v1 is locked at `worlds/korvin-merrow/world-spec-prep/locked/comorbidity-expansion-package-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-prep/ratifications/comorbidity-expansion-ratification.md`. Final baseline comorbidity count is 14. It preserves all approved conditions and retains only secondary additions: class I obesity by locked BMI, chronic gastroesophageal reflux / chronic acid-suppression indication, and chronic constipation tendency. This does not create labs, vitals, hospital-course events, provider names, surgical history, tasks, file inventory, or World Spec prose.
 
 Completed:
 
@@ -400,7 +400,7 @@ Completed:
 20. Task Architecture Interview v1 created for candidate review.
 21. Task Architecture Package v1 locked and ratified.
 22. Medication Expansion Package v1 locked and ratified.
-23. Comorbidity Expansion Package v1 created for candidate review.
+23. Comorbidity Expansion Package v1 locked and ratified.
 
 Still pending before World Spec drafting:
 

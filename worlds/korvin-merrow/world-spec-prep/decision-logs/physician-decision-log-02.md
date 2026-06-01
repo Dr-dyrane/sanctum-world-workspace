@@ -548,10 +548,62 @@ Carry-forward watch items:
 
 - Future inpatient glycemic-management reasoning.
 - Future medication reconciliation construction.
-- Future comorbidity expansion package.
+- Comorbidity Expansion Package v1 is now locked; future watch item is condition-to-file consistency during later file construction, not baseline condition expansion.
 - AutoQC 2.107 workflow-count discipline.
 - AutoQC 2.108 administrative-deliverable reviewer-risk contingency.
 
 Boundary:
 
 - This does not authorize medication doses, medication schedules, medication timelines, admission medication lists, discharge medication lists, medication reconciliation outputs, tasks, prompts, expected outputs, golden responses, grader guidance, file inventory, World Spec drafting, templates, reference files, or synthetic documents.
+
+## Comorbidity Expansion Package v1
+
+Status: LOCKED.
+
+Purpose: baseline chronic-condition architecture for Korvin Merrow before labs, vitals, hospital-course events, provider names, surgical history, file inventory, tasks, or World Spec drafting.
+
+Ratification:
+
+- Claude Code independent review: LOCK READY / YES / GO.
+- Cascade/Windsurf Claude independent review: LOCK READY / YES / GO.
+- Physician review: GO.
+- No blockers.
+- No clinical defects.
+- No new dominant disease arc.
+- No open clinical question answered.
+
+Accepted physician decisions:
+
+- Keep Class I obesity by locked BMI 30.6.
+- Keep chronic GERD / acid-suppression indication.
+- Keep chronic constipation tendency.
+- Final baseline comorbidity count finalized at 14.
+
+Clarification:
+
+- Medication Expansion Package v1 remains locked at 20 baseline medications.
+- Insulin lispro remains removed from baseline architecture and reserved for future inpatient-only logic.
+- Comorbidity Expansion Package v1 correctly references the 20-medication baseline architecture.
+
+Preserved architecture:
+
+- Mixed physiology preserved.
+- Trap architecture preserved.
+- Friction architecture preserved.
+- Medication architecture preserved.
+- No active clinical question is resolved by the comorbidity expansion.
+
+Carry-forward watch items:
+
+- Named-provider roster package.
+- Surgical-history package.
+- Daily hospital-course framework.
+- Future medication reconciliation construction.
+- File inventory architecture.
+- AutoQC 2.107 workflow-count discipline.
+- AutoQC 2.108 administrative-deliverable contingency.
+- Trap #3 vs Trap #5 concrete file distinction.
+
+Boundary:
+
+- This does not authorize labs, vitals, medication doses, medication schedules, hospital-course events, provider names, surgical history, tasks, prompts, expected outputs, golden responses, grader guidance, file inventory, World Spec drafting, templates, reference files, or synthetic documents.

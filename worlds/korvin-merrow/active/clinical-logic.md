@@ -497,7 +497,7 @@ Carry-forward watch items:
 
 - Future inpatient glycemic-management reasoning.
 - Future medication reconciliation construction.
-- Future comorbidity expansion package.
+- Locked comorbidity architecture: 14 baseline conditions.
 - AutoQC 2.107 workflow-count discipline.
 - AutoQC 2.108 administrative-deliverable reviewer-risk contingency.
 
@@ -505,13 +505,15 @@ This package does not create doses, frequencies, schedules, medication timelines
 
 ## Comorbidity Expansion Package v1
 
-Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/comorbidity-expansion-package-v1.md`
+Artifact: `worlds/korvin-merrow/world-spec-prep/locked/comorbidity-expansion-package-v1.md`
 
-Status: CANDIDATE REVIEW.
+Ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/comorbidity-expansion-ratification.md`
+
+Status: LOCKED.
 
 Purpose: baseline chronic-condition architecture targeting approximately 12-15 comorbidities before labs, hospital-course events, task drafting, file planning, or World Spec drafting.
 
-Candidate baseline comorbidity count: 14 conditions.
+Ratified baseline comorbidity count: 14 conditions.
 
 Preserved already-approved conditions:
 
@@ -527,7 +529,7 @@ Preserved already-approved conditions:
 - Anemia of CKD.
 - Osteoporosis/osteopenia.
 
-Candidate secondary additions for physician review:
+Retained secondary additions:
 
 - Class I obesity by locked BMI 30.6.
 - Chronic gastroesophageal reflux / chronic acid-suppression indication.
@@ -535,7 +537,7 @@ Candidate secondary additions for physician review:
 
 Guardrails:
 
-- These candidate additions should remain secondary baseline complexity.
+- These additions should remain secondary baseline complexity.
 - They should not create new dominant arcs.
 - They should not answer open clinical questions.
 - They should not collapse the mixed physiology model.

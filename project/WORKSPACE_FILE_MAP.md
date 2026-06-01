@@ -4,7 +4,7 @@ Purpose: local repository hygiene map to prevent duplicate working files and acc
 
 Generated from local workspace file listing excluding `.git`, caches, and Python bytecode.
 
-Current status: World Spec Construction Preparation / Comorbidity Expansion Package v1 candidate review. Task Architecture Interview v1 is preserved as historical planning scaffold; Task Architecture Package v1 is authoritative. Medication Expansion Package v1 is locked. Identity Package review addendum recorded as carry-forward notes only. World Spec drafting has not started.
+Current status: World Spec Construction Preparation / Comorbidity Expansion Package v1 locked. Task Architecture Interview v1 is preserved as historical planning scaffold; Task Architecture Package v1 is authoritative. Medication Expansion Package v1 is locked. Identity Package review addendum recorded as carry-forward notes only. World Spec drafting has not started.
 
 ## Navigation Rule
 
@@ -30,10 +30,11 @@ For a new collaborator or new AI session, read in this order:
 18. `worlds/korvin-merrow/world-spec-prep/locked/medication-expansion-package-v1.md` for the locked medication architecture.
 19. `worlds/korvin-merrow/world-spec-prep/ratifications/medication-expansion-ratification.md` for medication architecture ratification.
 20. `worlds/korvin-merrow/world-spec-prep/reviews/medication-expansion-decision-addendum.md` for accepted physician decision resolution.
-21. `worlds/korvin-merrow/world-spec-prep/candidate-review/comorbidity-expansion-package-v1.md` for the active comorbidity candidate under physician review.
-22. `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md` for historical interview basis.
-23. `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions.
-24. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
+21. `worlds/korvin-merrow/world-spec-prep/locked/comorbidity-expansion-package-v1.md` for the locked comorbidity architecture.
+22. `worlds/korvin-merrow/world-spec-prep/ratifications/comorbidity-expansion-ratification.md` for comorbidity ratification and carry-forward watch items.
+23. `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md` for historical interview basis.
+24. `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions.
+25. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
 
 Do not start by opening every prep file. Most prep files are supporting memory, not active instructions.
 
@@ -49,7 +50,7 @@ Findings:
 - `reference/` is now a junction folder with source files moved into `reference/source/`.
 - `worlds/korvin-merrow/` is now a junction folder with one README and purpose subfolders.
 - World Spec prep artifacts are clustered by lifecycle stage so candidate, locked, ratified, review, decision-log, and planning-scaffold files do not sit in one flat folder.
-- `candidate-review/` is reserved for active candidate artifacts only. Task Architecture Interview v1 moved to `planning-scaffolds/` after Task Architecture Package v1 lock. Comorbidity Expansion Package v1 is the current active candidate.
+- `candidate-review/` is reserved for active candidate artifacts only. Task Architecture Interview v1 moved to `planning-scaffolds/` after Task Architecture Package v1 lock. It is currently empty after Comorbidity Expansion Package v1 lock.
 - Several files intentionally overlap by lifecycle stage, especially Brainstorm history/reviews and World Spec prep/checklist material.
 - Do not add new audit or navigation docs unless an existing map/status file cannot carry the information.
 
@@ -248,7 +249,7 @@ These are fetched source/reference examples, not authored Korvin Merrow content 
 Lifecycle clustering:
 
 - `WORLD_SPEC_KICKOFF.md`: the only root cockpit file in `world-spec-prep/`.
-- `candidate-review/`: artifacts awaiting physician decision or lock. Currently contains Comorbidity Expansion Package v1 as the active candidate artifact.
+- `candidate-review/`: artifacts awaiting physician decision or lock. Currently expected to be empty unless Alexander authorizes a new active candidate artifact.
 - `locked/`: locked architecture packages and canonical frameworks.
 - `ratifications/`: formal ratification records.
 - `reviews/`: review findings, hostile reviews, clarifications, and addenda.
@@ -282,7 +283,8 @@ Lifecycle clustering:
 | `worlds/korvin-merrow/world-spec-prep/locked/medication-expansion-package-v1.md` | Locked baseline medication architecture targeting 18-22 medications. | Ratified and locked; baseline count is 20 after removing insulin lispro from baseline and reserving it as future inpatient-only candidate logic. Does not create doses, schedules, med-rec outputs, hospital medication changes, file inventory, tasks, World Spec prose, templates, reference files, or synthetic documents. |
 | `worlds/korvin-merrow/world-spec-prep/ratifications/medication-expansion-ratification.md` | Ratification record for Medication Expansion Package v1. | Records LOCK READY/GO verdicts, accepted physician decisions, and carry-forward watch items. |
 | `worlds/korvin-merrow/world-spec-prep/reviews/medication-expansion-decision-addendum.md` | Accepted physician decision resolution for Medication Expansion Package v1. | Records insulin lispro removal from baseline architecture and future inpatient-only reservation; not a medication schedule, med-rec output, task, or World Spec draft. |
-| `worlds/korvin-merrow/world-spec-prep/candidate-review/comorbidity-expansion-package-v1.md` | Active candidate baseline comorbidity architecture targeting 12-15 conditions. | Candidate review only; does not create labs, vitals, hospital-course events, provider names, surgical history, task prompts, file inventory, World Spec prose, templates, reference files, or synthetic documents. |
+| `worlds/korvin-merrow/world-spec-prep/locked/comorbidity-expansion-package-v1.md` | Locked baseline comorbidity architecture targeting 12-15 conditions. | Ratified and locked; baseline count is 14. Does not create labs, vitals, hospital-course events, provider names, surgical history, task prompts, file inventory, World Spec prose, templates, reference files, or synthetic documents. |
+| `worlds/korvin-merrow/world-spec-prep/ratifications/comorbidity-expansion-ratification.md` | Ratification record for Comorbidity Expansion Package v1. | Records GO verdicts, accepted physician decisions, retained secondary additions, medication-count clarification, and carry-forward watch items. |
 | `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-01.md` | Durable post-kickoff physician decision record. | Historical state sync record; superseded for skeleton lock by decision log 02. |
 | `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` | Durable Clinical Story Skeleton v1 ratification record. | Use before Identity Package; not a draft spec or file inventory. |
 | `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/post-go-interview-plan.md` | Interview sequence after Brainstorm GO. | This file; do not use before GO except for prep. |
