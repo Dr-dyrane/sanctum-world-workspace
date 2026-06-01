@@ -18,7 +18,7 @@ RL Studio:
 - Approval source: Slack / Stacey S
 - Reviewer message: "great job! I approved your brainstorm. Next steps are to move forward with world spec and file template development."
 
-Current state: World Spec Construction Preparation / Medication Expansion Package v1 ready for ratification. World Spec drafting has not started and remains gated on explicit Alexander authorization.
+Current state: World Spec Construction Preparation / Medication Expansion Package v1 locked. World Spec drafting has not started and remains gated on explicit Alexander authorization.
 
 ## Locked Decisions
 
@@ -203,9 +203,10 @@ Task Architecture Package v1:
 
 Medication Expansion Package v1:
 
-- Artifact: `worlds/korvin-merrow/world-spec-prep/candidate-review/medication-expansion-package-v1.md`.
+- Artifact: `worlds/korvin-merrow/world-spec-prep/locked/medication-expansion-package-v1.md`.
+- Ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/medication-expansion-ratification.md`.
 - Decision addendum: `worlds/korvin-merrow/world-spec-prep/reviews/medication-expansion-decision-addendum.md`.
-- Status: READY FOR RATIFICATION.
+- Status: LOCKED.
 - Purpose: candidate baseline medication architecture targeting approximately 18-22 medications.
 - Physician decision: insulin lispro removed from baseline medication architecture and reserved as future inpatient-only candidate medication. Baseline medication count is 20.
 - Boundary: does not create doses, frequencies, schedules, medication timelines, reconciliation outputs, hospital medication changes, admission medication lists, discharge medication lists, tasks, prompts, expected outputs, goldens, grader guidance, file inventory, World Spec prose, templates, reference files, or synthetic documents.
@@ -222,7 +223,7 @@ Identity/compliance:
 
 Clinical scenario:
 
-- Ratification review of Medication Expansion Package v1.
+- Next Alexander-authorized World Spec Construction Preparation step.
 - Final key milestone list for the eventual World Spec template.
 - Source-of-truth hierarchy for conflicting evidence.
 

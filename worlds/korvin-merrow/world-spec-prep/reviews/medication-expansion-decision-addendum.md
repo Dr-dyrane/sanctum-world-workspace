@@ -33,4 +33,4 @@ This addendum does not create new medications, medication doses, medication sche
 
 Medication Expansion Package v1
 
-Status: READY FOR RATIFICATION
+Status: LOCKED after ratification

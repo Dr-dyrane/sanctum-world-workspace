@@ -46,7 +46,7 @@ It preserves:
 
 ## Active Future Watch Items
 
-- Medication expansion to 18-22 medications.
+- Medication Expansion Package v1 is now locked; future watch item is medication reconciliation construction, not baseline medication expansion.
 - Comorbidity expansion to 12-15 conditions.
 - Named-provider roster.
 - Surgical-history documentation.

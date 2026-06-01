@@ -2,7 +2,7 @@
 
 Date created: 2026-05-31
 
-Status: READY FOR RATIFICATION.
+Status: LOCKED.
 
 Purpose: define the baseline medication architecture for Korvin Merrow before admission labs, hospital-course medication changes, medication reconciliation tasks, discharge medications, file inventory, or World Spec drafting.
 
@@ -365,7 +365,7 @@ Evidence: 20 medications remains plausible for this comorbidity profile after re
 
 Impact: the package remains within the 18-22 target range while preserving baseline diabetes architecture as metformin plus basal insulin.
 
-Action required: proceed to ratification review when Alexander authorizes.
+Action required: carry forward into later authorized medication reconciliation and hospital-course construction.
 
 ### NO ISSUE
 
@@ -408,4 +408,4 @@ Result:
 
 Medication Expansion Package v1
 
-Status: READY FOR RATIFICATION
+Status: LOCKED

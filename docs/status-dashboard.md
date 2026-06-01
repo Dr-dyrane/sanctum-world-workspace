@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-World Spec Construction Preparation / Medication Expansion Package v1 ready for ratification.
+World Spec Construction Preparation / Medication Expansion Package v1 locked.
 
 ## Brainstorm
 
@@ -33,9 +33,9 @@ World Spec Construction Preparation / Medication Expansion Package v1 ready for 
 - Clinical Story Timeline Package: v1 locked
 - Task Architecture Interview: v1 historical planning scaffold
 - Task Architecture Package: v1 locked
-- Medication Expansion Package: v1 ready for ratification
+- Medication Expansion Package: v1 locked
 - Official Claude World Spec session: pending
-- Current state: World Spec Construction Preparation has begun; calendar, baseline anchors, Clinical Story Timeline Package v1, and Task Architecture Package v1 are locked; Medication Expansion Package v1 is ready for ratification
+- Current state: World Spec Construction Preparation has begun; calendar, baseline anchors, Clinical Story Timeline Package v1, Task Architecture Package v1, and Medication Expansion Package v1 are locked
 - World Spec prep packet: created
 - Official World Spec template: saved locally
 - World Spec AutoQC prompt v6.3: saved locally
@@ -57,11 +57,12 @@ World Spec Construction Preparation / Medication Expansion Package v1 ready for 
 - Task Architecture Interview v1: `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md`
 - Task Architecture Package v1: `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md`
 - Task Architecture ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md`
-- Medication Expansion Package v1: `worlds/korvin-merrow/world-spec-prep/candidate-review/medication-expansion-package-v1.md`
+- Medication Expansion Package v1: `worlds/korvin-merrow/world-spec-prep/locked/medication-expansion-package-v1.md`
+- Medication Expansion ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/medication-expansion-ratification.md`
 - Medication Expansion Decision Addendum: `worlds/korvin-merrow/world-spec-prep/reviews/medication-expansion-decision-addendum.md`
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 - World Spec prep folder structure: reorganized by lifecycle buckets (`candidate-review/`, `locked/`, `ratifications/`, `reviews/`, `decision-logs/`, `planning-scaffolds/`)
-- Next allowed action: ratification review of Medication Expansion Package v1
+- Next allowed action: next World Spec Construction Preparation step only after explicit Alexander authorization
 
 ## Tooling
 

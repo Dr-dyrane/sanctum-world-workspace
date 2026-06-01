@@ -368,9 +368,11 @@ Identity review addendum:
 
 ## Current State
 
-Brainstorm approved. Clinical Story Skeleton v1 ratified. Identity Package v1 locked. Governance Package v1 ratified. Physician Architecture Layer complete. Key Milestones Calendar Skeleton v1 locked. Baseline Anchor Package v1 locked. Clinical Story Timeline Package v1 locked. Task Architecture Package v1 locked. Do not start World Spec drafting.
+Brainstorm approved. Clinical Story Skeleton v1 ratified. Identity Package v1 locked. Governance Package v1 ratified. Physician Architecture Layer complete. Key Milestones Calendar Skeleton v1 locked. Baseline Anchor Package v1 locked. Clinical Story Timeline Package v1 locked. Task Architecture Package v1 locked. Medication Expansion Package v1 locked. Do not start World Spec drafting.
 
 Task Architecture Interview v1 is preserved as historical planning scaffold at `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md`. Task Architecture Package v1 is locked and authoritative at `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md`. It defines the authoritative architecture of six task concepts across four workflows: Discharge Medication Reconciliation, Hospital Discharge Summary Generation, Discharge Planning Documentation, and Interdisciplinary Care Plan Development and Documentation. `worlds/korvin-merrow/active/task-map.md` has been reconciled; old Brainstorm-level mappings are superseded. It does not create final task prompts, expected outputs, file inventory, World Spec sections, reference templates, or synthetic files.
+
+Medication Expansion Package v1 is locked at `worlds/korvin-merrow/world-spec-prep/locked/medication-expansion-package-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-prep/ratifications/medication-expansion-ratification.md` and decision addendum at `worlds/korvin-merrow/world-spec-prep/reviews/medication-expansion-decision-addendum.md`. Baseline medication count is finalized at 20. Insulin lispro is removed from baseline architecture and reserved for future inpatient-only candidate use. Nitroglycerin, polyethylene glycol, senna, and cholecalciferol are retained. This does not create doses, schedules, medication timelines, admission or discharge medication lists, medication reconciliation outputs, tasks, file inventory, or World Spec prose.
 
 Completed:
 
@@ -395,6 +397,7 @@ Completed:
 19. Clinical Story Timeline Package v1 created and locked.
 20. Task Architecture Interview v1 created for candidate review.
 21. Task Architecture Package v1 locked and ratified.
+22. Medication Expansion Package v1 locked and ratified.
 
 Still pending before World Spec drafting:
 

@@ -1,6 +1,6 @@
 # Korvin Merrow World
 
-Current state: World Spec Construction Preparation / Task Architecture Package v1 locked.
+Current state: World Spec Construction Preparation / Medication Expansion Package v1 locked.
 
 Start here only after reading `project/STATUS.md`.
 
@@ -22,7 +22,8 @@ Start here only after reading `project/STATUS.md`.
 - `world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md`
 - `world-spec-prep/locked/task-architecture-package-v1.md`
 - `world-spec-prep/ratifications/task-architecture-ratification.md`
-- `world-spec-prep/candidate-review/medication-expansion-package-v1.md`
+- `world-spec-prep/locked/medication-expansion-package-v1.md`
+- `world-spec-prep/ratifications/medication-expansion-ratification.md`
 - `world-spec-prep/reviews/medication-expansion-decision-addendum.md`
 - `world-spec-prep/locked/baseline-anchor-package-v1.md`
 - `world-spec-prep/ratifications/baseline-anchor-ratification.md`

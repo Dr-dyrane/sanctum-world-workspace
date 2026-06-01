@@ -4,7 +4,7 @@ Purpose: compressed current state for Claude. Use `project/STATUS.md` and `docs/
 
 ## Project State
 
-Current phase: World Spec Construction Preparation / Medication Expansion Package v1 ready for ratification.
+Current phase: World Spec Construction Preparation / Medication Expansion Package v1 locked.
 
 Brainstorm:
 
@@ -22,7 +22,7 @@ Brainstorm:
 
 Current blocker:
 
-- No reviewer blocker. World Spec kickoff is recorded. Clinical Story Skeleton v1 is locked, reviewed, and ratified. Identity Package v1 is locked. Identity Package hostile-review addendum is recorded as carry-forward implementation notes only. Governance Package v1 is ratified. Physician Architecture Layer is complete. Key Milestones Calendar Skeleton v1 is locked. Baseline Anchor Package v1 is locked. Clinical Story Timeline Package v1 is locked. Task Architecture Interview v1 is complete. Task Architecture Package v1 is locked. Medication Expansion Package v1 is ready for ratification after physician decision resolution. World Spec drafting remains gated on explicit Alexander authorization.
+- No reviewer blocker. World Spec kickoff is recorded. Clinical Story Skeleton v1 is locked, reviewed, and ratified. Identity Package v1 is locked. Identity Package hostile-review addendum is recorded as carry-forward implementation notes only. Governance Package v1 is ratified. Physician Architecture Layer is complete. Key Milestones Calendar Skeleton v1 is locked. Baseline Anchor Package v1 is locked. Clinical Story Timeline Package v1 is locked. Task Architecture Interview v1 is complete. Task Architecture Package v1 is locked. Medication Expansion Package v1 is locked after physician decision resolution and ratification. World Spec drafting remains gated on explicit Alexander authorization.
 
 Next legal action:
 
@@ -41,7 +41,8 @@ Next legal action:
 - Use `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md` only as historical task-architecture interview scaffold; `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md` is authoritative.
 - Use `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md` as the locked task-architecture package.
 - Use `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md` for task architecture ratification, 2.108 contingency, and workflow-supersession notes.
-- Use `worlds/korvin-merrow/world-spec-prep/candidate-review/medication-expansion-package-v1.md` as the medication architecture package ready for ratification.
+- Use `worlds/korvin-merrow/world-spec-prep/locked/medication-expansion-package-v1.md` as the locked medication architecture package.
+- Use `worlds/korvin-merrow/world-spec-prep/ratifications/medication-expansion-ratification.md` for the medication expansion ratification record.
 - Use `worlds/korvin-merrow/world-spec-prep/reviews/medication-expansion-decision-addendum.md` for the accepted physician decision removing insulin lispro from baseline architecture and reserving it as future inpatient-only candidate logic.
 - Do not revise the locked Clinical Story Skeleton or locked Identity Package, draft World Spec, create milestones, or create file inventory until Alexander explicitly starts/authorizes the relevant phase.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
@@ -108,8 +109,9 @@ Next legal action:
 - Task Architecture Interview v1 preserved as planning scaffold: `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md`.
 - Task Architecture Package v1 locked: `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md`.
 - Task Architecture Package ratification recorded: `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md`.
-- Medication Expansion Package v1 created for candidate review: `worlds/korvin-merrow/world-spec-prep/candidate-review/medication-expansion-package-v1.md`.
+- Medication Expansion Package v1 created for candidate review: `worlds/korvin-merrow/world-spec-prep/locked/medication-expansion-package-v1.md`.
 - Medication Expansion Package v1 physician decisions resolved; decision addendum created: `worlds/korvin-merrow/world-spec-prep/reviews/medication-expansion-decision-addendum.md`.
+- Medication Expansion Package v1 ratified and locked: `worlds/korvin-merrow/world-spec-prep/ratifications/medication-expansion-ratification.md`.
 
 ## Latest Git Checkpoints
 

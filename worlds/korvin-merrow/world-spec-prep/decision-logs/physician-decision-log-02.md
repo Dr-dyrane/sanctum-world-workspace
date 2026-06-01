@@ -456,7 +456,7 @@ Carry-forward file-construction note:
 
 Active future watch items:
 
-- Medication expansion to 18-22 medications.
+- Medication Expansion Package v1 is now locked; future watch item is medication reconciliation construction, not baseline medication expansion.
 - Comorbidity expansion to 12-15 conditions.
 - Named-provider roster.
 - Surgical-history documentation.
@@ -501,7 +501,7 @@ Carry-forward watch items:
 
 - AutoQC 2.108 administrative-deliverable reviewer-risk contingency.
 - Differentiate three Discharge Planning Documentation task concepts later.
-- Medication expansion to 18-22 medications.
+- Medication Expansion Package v1 is now locked; future watch item is medication reconciliation construction, not baseline medication expansion.
 - Comorbidity expansion to 12-15 conditions.
 - Named-provider roster.
 - Surgical-history documentation.
@@ -511,3 +511,47 @@ Carry-forward watch items:
 Boundary:
 
 - This does not authorize task prompts, expected outputs, golden responses, grader guidance, file inventory, World Spec drafting, templates, reference files, or synthetic documents.
+
+## Medication Expansion Package v1
+
+Status: LOCKED.
+
+Purpose: baseline medication architecture for Korvin Merrow before admission medication lists, hospital-course medication changes, discharge medication lists, medication reconciliation outputs, file inventory, tasks, or World Spec drafting.
+
+Ratification:
+
+- Independent Review #1: LOCK READY / YES / GO.
+- Independent Review #2: LOCK READY / YES / GO.
+- No true defects identified.
+- No blockers identified.
+
+Accepted physician decisions:
+
+- Insulin lispro removed from baseline architecture.
+- Insulin lispro reserved for future inpatient-only candidate use.
+- Baseline medication count finalized at 20.
+- Nitroglycerin retained.
+- Polyethylene glycol retained.
+- Senna retained.
+- Cholecalciferol retained.
+
+Preserved architecture:
+
+- All other baseline medications preserved.
+- All medication categories preserved.
+- All trap architecture preserved.
+- All friction architecture preserved.
+- Baseline diabetes architecture remains aligned with locked baseline rationale: metformin plus basal insulin.
+- Future inpatient glycemic-management reasoning remains available for discharge and medication-reconciliation construction.
+
+Carry-forward watch items:
+
+- Future inpatient glycemic-management reasoning.
+- Future medication reconciliation construction.
+- Future comorbidity expansion package.
+- AutoQC 2.107 workflow-count discipline.
+- AutoQC 2.108 administrative-deliverable reviewer-risk contingency.
+
+Boundary:
+
+- This does not authorize medication doses, medication schedules, medication timelines, admission medication lists, discharge medication lists, medication reconciliation outputs, tasks, prompts, expected outputs, golden responses, grader guidance, file inventory, World Spec drafting, templates, reference files, or synthetic documents.

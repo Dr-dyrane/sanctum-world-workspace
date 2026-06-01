@@ -85,7 +85,7 @@ TCM and readmission-risk reasoning remain valid reasoning/anchor components insi
 
 - AutoQC 2.108 administrative-deliverable reviewer-risk contingency.
 - Differentiate three Discharge Planning Documentation task concepts later.
-- Medication expansion to 18-22 medications.
+- Medication Expansion Package v1 is now locked; future watch item is medication reconciliation construction, not baseline medication expansion.
 - Comorbidity expansion to 12-15 conditions.
 - Named-provider roster.
 - Surgical-history documentation.

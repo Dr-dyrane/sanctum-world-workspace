@@ -462,6 +462,47 @@ Carry-forward:
 
 This package does not create task prompts, expected outputs, goldens, grader guidance, file inventory, World Spec sections, templates, reference files, or synthetic documents.
 
+## Medication Expansion Package v1
+
+Artifact: `worlds/korvin-merrow/world-spec-prep/locked/medication-expansion-package-v1.md`
+
+Ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/medication-expansion-ratification.md`
+
+Decision addendum: `worlds/korvin-merrow/world-spec-prep/reviews/medication-expansion-decision-addendum.md`
+
+Status: LOCKED.
+
+Purpose: baseline medication architecture targeting realistic 18-22 medication polypharmacy before medication schedules, reconciliation outputs, hospital-course medication changes, discharge lists, file inventory, or World Spec drafting.
+
+Accepted physician decisions:
+
+- Insulin lispro removed from baseline architecture.
+- Insulin lispro reserved for future inpatient-only candidate use.
+- Baseline medication count finalized at 20.
+- Nitroglycerin retained.
+- Polyethylene glycol retained.
+- Senna retained.
+- Cholecalciferol retained.
+
+Preserved architecture:
+
+- All other baseline medications preserved.
+- All medication categories preserved.
+- All trap architecture preserved.
+- All friction architecture preserved.
+- Baseline diabetes architecture remains metformin plus basal insulin.
+- Future inpatient glycemic-management reasoning remains available for discharge and medication-reconciliation construction.
+
+Carry-forward watch items:
+
+- Future inpatient glycemic-management reasoning.
+- Future medication reconciliation construction.
+- Future comorbidity expansion package.
+- AutoQC 2.107 workflow-count discipline.
+- AutoQC 2.108 administrative-deliverable reviewer-risk contingency.
+
+This package does not create doses, frequencies, schedules, medication timelines, admission medication lists, discharge medication lists, medication reconciliation outputs, tasks, prompts, expected outputs, goldens, grader guidance, file inventory, templates, reference files, synthetic documents, or World Spec prose.
+
 ## Locked World Tone
 
 The patient is medically improving but operationally dangerous to discharge.
