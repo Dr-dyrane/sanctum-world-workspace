@@ -18,7 +18,7 @@ RL Studio:
 - Approval source: Slack / Stacey S
 - Reviewer message: "great job! I approved your brainstorm. Next steps are to move forward with world spec and file template development."
 
-Current state: World Spec Construction / World Spec v1 locked. World Spec Skeleton v1 is locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`. World Spec v1 is locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-v1-ratification.md`. World Spec Construction is complete. File Inventory Architecture is the next eligible phase, but file inventory, tasks, prompts, expected outputs, goldens, grader guidance, notes, labs, vitals, synthetic files, DOCX submission packaging, AutoQC, and RL Studio upload remain gated on explicit Alexander authorization for the relevant step.
+Current state: File Inventory Architecture / File Inventory Architecture v1 candidate review. World Spec Skeleton v1 is locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`. World Spec v1 is locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-v1-ratification.md`. World Spec Construction is complete. File Inventory Architecture v1 is in candidate review at `worlds/korvin-merrow/file-inventory/candidate-review/file-inventory-architecture-v1.md`. Final Section 3 file rows, tasks, prompts, expected outputs, goldens, grader guidance, notes, labs, vitals, synthetic files, DOCX submission packaging, AutoQC, and RL Studio upload remain gated on explicit Alexander authorization for the relevant step.
 
 ## Locked Decisions
 
@@ -324,7 +324,7 @@ Use these as future World Spec priorities only after Brainstorm GO:
 
 Use `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`, `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-skeleton-ratification.md`, `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`, `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/identity-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/reviews/identity-package-review-addendum.md`, `worlds/korvin-merrow/world-spec-prep/locked/governance-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/reviews/governance-package-clarification.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/governance-package-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/key-milestones-calendar-skeleton-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/key-milestones-calendar-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/baseline-anchor-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/locked/clinical-story-timeline-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-timeline-ratification.md`, `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md`, `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/medication-expansion-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/locked/comorbidity-expansion-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/comorbidity-expansion-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/provider-roster-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/provider-roster-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/surgical-history-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/surgical-history-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md`, and `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md` for orientation.
 
-Wait for Alexander to authorize the next eligible phase: File Inventory Architecture.
+Wait for Alexander to review/ratify File Inventory Architecture v1 or authorize the next file-inventory construction step.
 
 For the next preparation step:
 
@@ -337,7 +337,7 @@ Until Alexander authorizes the next construction unit:
 1. Continue only explicitly authorized World Spec construction or review activities.
 2. Do not revise the locked Clinical Story Skeleton.
 3. Do not revise locked World Spec v1 without Alexander approval.
-4. Do not create file inventory.
+4. Do not create final Section 3 file rows or synthetic file contents.
 
 ## Hard Boundaries
 

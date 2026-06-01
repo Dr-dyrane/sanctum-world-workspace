@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-World Spec Construction / World Spec v1 locked.
+File Inventory Architecture / File Inventory Architecture v1 candidate review.
 
 ## Brainstorm
 
@@ -28,6 +28,7 @@ World Spec Construction / World Spec v1 locked.
 - World Spec Skeleton Phase: complete
 - World Spec v1: locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-v1.md`
 - World Spec v1 ratification: `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-v1-ratification.md`
+- File Inventory Architecture v1: candidate review at `worlds/korvin-merrow/file-inventory/candidate-review/file-inventory-architecture-v1.md`
 - Clinical Story Skeleton: v1 locked, reviewed, and ratified
 - Identity Package: v1 locked
 - Governance Package: v1 ratified
@@ -46,7 +47,7 @@ World Spec Construction / World Spec v1 locked.
 - World Spec Skeleton v1: `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`
 - World Spec Skeleton ratification: `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-skeleton-ratification.md`
 - Official Claude World Spec session: pending
-- Current state: World Spec v1 is locked; calendar, baseline anchors, Clinical Story Timeline Package v1, Task Architecture Package v1, Medication Expansion Package v1, Comorbidity Expansion Package v1, Provider Roster Package v1, Surgical History Package v1, Daily Hospital Course Framework v1, and World Spec Skeleton v1 are locked
+- Current state: World Spec v1 is locked; File Inventory Architecture v1 is in candidate review; calendar, baseline anchors, Clinical Story Timeline Package v1, Task Architecture Package v1, Medication Expansion Package v1, Comorbidity Expansion Package v1, Provider Roster Package v1, Surgical History Package v1, Daily Hospital Course Framework v1, and World Spec Skeleton v1 are locked
 - World Spec prep packet: created
 - Official World Spec template: saved locally
 - World Spec AutoQC prompt v6.3: saved locally
@@ -82,7 +83,7 @@ World Spec Construction / World Spec v1 locked.
 - Fetched World Spec example source documents: `reference/word-spec-examples/`
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 - World Spec prep folder structure: reorganized by lifecycle buckets (`candidate-review/`, `locked/`, `ratifications/`, `reviews/`, `decision-logs/`, `planning-scaffolds/`)
-- Next eligible phase: File Inventory Architecture. Do not create file inventory rows, synthetic files, task specifications, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission artifacts, or RL Studio uploads until explicitly authorized.
+- Next eligible phase: File Inventory Architecture v1 review and ratification. Do not create final Section 3 file rows, synthetic files, task specifications, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission artifacts, or RL Studio uploads until explicitly authorized.
 
 ## Tooling
 
@@ -99,7 +100,7 @@ World Spec Construction / World Spec v1 locked.
 - Do not reopen Identity Package v1; use the review addendum only as carry-forward implementation notes.
 - Do not change Governance Package v1 without Alexander approval.
 - Do not create milestones before Alexander authorizes that step.
-- Do not create file inventory before Alexander authorizes that step.
+- Do not create final Section 3 file inventory rows or synthetic files before Alexander authorizes that step.
 - Do not revise locked task architecture or create task prompts before Alexander authorizes that step.
 - Do not treat fetched World Spec examples as authored Korvin Merrow content.
 - Do not modify Brainstorm unless new reviewer feedback arrives.

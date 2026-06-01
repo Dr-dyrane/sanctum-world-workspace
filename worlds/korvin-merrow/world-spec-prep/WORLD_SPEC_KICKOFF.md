@@ -1,6 +1,6 @@
 # Korvin Merrow World Spec Kickoff
 
-Status: World Spec Construction / World Spec v1 locked.
+Status: File Inventory Architecture / File Inventory Architecture v1 candidate review.
 
 Purpose: active cockpit for the transition from approved Brainstorm through World Spec construction while preserving phase boundaries around template population, file inventory, tasks, and downstream deliverables.
 
@@ -15,7 +15,8 @@ Purpose: active cockpit for the transition from approved Brainstorm through Worl
 - World Spec Skeleton ratification: `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-skeleton-ratification.md`.
 - World Spec v1 locked artifact: `worlds/korvin-merrow/world-spec-construction/locked/world-spec-v1.md`.
 - World Spec v1 ratification: `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-v1-ratification.md`.
-- File inventory, synthetic files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission packaging, RL Studio upload, notes, labs, and vitals have not started.
+- File Inventory Architecture v1 is in candidate review at `worlds/korvin-merrow/file-inventory/candidate-review/file-inventory-architecture-v1.md`.
+- Final Section 3 file rows, synthetic files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission packaging, RL Studio upload, notes, labs, and vitals have not started.
 - Clinical Story Skeleton v1 is locked and ratified.
 - Clinical Story Skeleton review completed with GO recommendation.
 - Clinical Story Skeleton ratification completed after Claude hostile review minor findings.
@@ -49,7 +50,7 @@ Purpose: active cockpit for the transition from approved Brainstorm through Worl
 - Daily Hospital Course Framework v1: `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md`.
 - Daily Hospital Course Framework ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md`.
 - Preparation Layer status: COMPLETE.
-- Next eligible phase: File Inventory Architecture, pending explicit Alexander authorization. Synthetic files, task specifications, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission packaging, RL Studio upload, notes, labs, and vitals remain blocked until explicitly authorized.
+- Next eligible phase: File Inventory Architecture v1 review and ratification decision. Final Section 3 file rows, synthetic files, task specifications, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission packaging, RL Studio upload, notes, labs, and vitals remain blocked until explicitly authorized.
 
 ## Workspace Bloat And Doctrine Audit
 
@@ -66,7 +67,7 @@ Doctrine check:
 
 - World Spec v1 has been locked and ratified.
 - No official World Spec template has been populated.
-- No final Section 3 World File Plan or file inventory has been created.
+- No final Section 3 World File Plan, final file rows, or synthetic chart files have been created.
 - No synthetic chart files have been created.
 - No final task prompts, golden responses, grader guidelines, or failure analysis have been created.
 - Clinical decisions remain physician-originated and Brainstorm-locked.
@@ -359,7 +360,14 @@ Preparation Layer:
 - Status: COMPLETE.
 - Completed artifacts: Brainstorm, Temporal Architecture, Clinical Story Skeleton, Identity Package, Governance Package, Key Milestones Calendar Skeleton, Baseline Anchor Package, Clinical Story Timeline Package, Task Architecture Package, Medication Expansion Package, Comorbidity Expansion Package, Provider Roster Package, Surgical History Package, and Daily Hospital Course Framework.
 - World Spec Construction status: COMPLETE.
-- Boundary: World Spec v1 is locked. File inventory, synthetic files, task specifications, prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission packaging, RL Studio upload, notes, labs, vitals, and hospital-course documentation remain unstarted until Alexander explicitly authorizes the relevant next step.
+- Boundary: World Spec v1 is locked. File Inventory Architecture v1 is in candidate review. Final file inventory rows, synthetic files, task specifications, prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission packaging, RL Studio upload, notes, labs, vitals, and hospital-course documentation remain unstarted until Alexander explicitly authorizes the relevant next step.
+
+File Inventory Architecture v1:
+
+- Status: CANDIDATE REVIEW.
+- Artifact: `worlds/korvin-merrow/file-inventory/candidate-review/file-inventory-architecture-v1.md`.
+- Purpose: define the planned file ecosystem for the locked World Spec without creating final Section 3 rows, filenames, synthetic files, notes, labs, vitals, medication lists, task prompts, expected outputs, goldens, or grader guidance.
+- It preserves the world close at 05/23/2026 18:00, classifies post-world anchors as task/post-world context only, maps all five traps and three frictions to planned file-source categories, and records future AutoQC v6.3 8-column file-plan readiness.
 
 Fetched World Spec source examples:
 
@@ -481,7 +489,7 @@ Stop before:
 - Governance Package work unless Alexander explicitly starts that phase.
 - World Spec drafting unless Alexander explicitly authorizes drafting.
 - Milestone creation.
-- Final file inventory.
+- Final Section 3 file inventory rows.
 - Task prompts.
 - Golden responses.
 - Grader guidelines.

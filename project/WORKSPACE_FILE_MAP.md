@@ -4,7 +4,7 @@ Purpose: local repository hygiene map to prevent duplicate working files and acc
 
 Generated from local workspace file listing excluding `.git`, caches, and Python bytecode.
 
-Current status: World Spec Construction / World Spec v1 locked. Task Architecture Interview v1 is preserved as historical planning scaffold; Task Architecture Package v1 is authoritative. Medication Expansion Package v1, Comorbidity Expansion Package v1, Provider Roster Package v1, Surgical History Package v1, Daily Hospital Course Framework v1, World Spec Skeleton v1, and World Spec v1 are locked. File Inventory Architecture is the next eligible phase, pending explicit Alexander authorization. File inventory, tasks, prompts, expected outputs, goldens, grader guidance, notes, labs, vitals, synthetic files, DOCX submission packaging, AutoQC, and RL Studio upload have not started.
+Current status: File Inventory Architecture / File Inventory Architecture v1 candidate review. Task Architecture Interview v1 is preserved as historical planning scaffold; Task Architecture Package v1 is authoritative. Medication Expansion Package v1, Comorbidity Expansion Package v1, Provider Roster Package v1, Surgical History Package v1, Daily Hospital Course Framework v1, World Spec Skeleton v1, and World Spec v1 are locked. File Inventory Architecture v1 is in candidate review at `worlds/korvin-merrow/file-inventory/candidate-review/file-inventory-architecture-v1.md`. Final Section 3 file rows, tasks, prompts, expected outputs, goldens, grader guidance, notes, labs, vitals, synthetic files, DOCX submission packaging, AutoQC, and RL Studio upload have not started.
 
 ## Navigation Rule
 
@@ -42,9 +42,10 @@ For a new collaborator or new AI session, read in this order:
 30. `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-skeleton-ratification.md` for World Spec Skeleton ratification.
 31. `worlds/korvin-merrow/world-spec-construction/locked/world-spec-v1.md` for the locked World Spec.
 32. `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-v1-ratification.md` for World Spec v1 ratification and watch items.
-33. `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md` for historical interview basis.
-34. `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions and construction-lock status.
-35. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
+33. `worlds/korvin-merrow/file-inventory/candidate-review/file-inventory-architecture-v1.md` for the current file inventory architecture candidate.
+34. `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md` for historical interview basis.
+35. `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions and construction-lock status.
+36. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
 
 Do not start by opening every prep file. Most prep files are supporting memory, not active instructions.
 
@@ -59,8 +60,9 @@ Findings:
 - `tmp/` contains generated render artifacts and is ignored by git.
 - `reference/` is now a junction folder with source files moved into `reference/source/`.
 - `worlds/korvin-merrow/` is now a junction folder with one README and purpose subfolders.
+- `worlds/korvin-merrow/file-inventory/` is now a lifecycle folder for file inventory architecture and later file-plan work; it currently contains an active candidate-review artifact only.
 - World Spec prep artifacts are clustered by lifecycle stage so candidate, locked, ratified, review, decision-log, and planning-scaffold files do not sit in one flat folder.
-- `candidate-review/` is reserved for active candidate artifacts only. Task Architecture Interview v1 moved to `planning-scaffolds/` after Task Architecture Package v1 lock. It currently is empty after Daily Hospital Course Framework v1 lock.
+- `candidate-review/` is reserved for active candidate artifacts only. Task Architecture Interview v1 moved to `planning-scaffolds/` after Task Architecture Package v1 lock. World Spec prep `candidate-review/` is empty after Daily Hospital Course Framework v1 lock; file-inventory `candidate-review/` now contains File Inventory Architecture v1.
 - Several files intentionally overlap by lifecycle stage, especially Brainstorm history/reviews and World Spec prep/checklist material.
 - Do not add new audit or navigation docs unless an existing map/status file cannot carry the information.
 
@@ -201,7 +203,7 @@ These are fetched source/reference examples, not authored Korvin Merrow content 
 
 | File | Role | Duplication note |
 | --- | --- | --- |
-| `worlds/korvin-merrow/README.md` | World folder index. | Single junction file; points to active/history/planning/remediation/reviews/submission/prep folders. |
+| `worlds/korvin-merrow/README.md` | World folder index. | Single junction file; points to active/history/planning/remediation/reviews/submission/prep/construction/file-inventory folders. |
 
 ## Korvin Merrow Active Files
 
@@ -326,6 +328,17 @@ Lifecycle clustering:
 | `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-v1-ratification.md` | Ratification record for World Spec v1. | Records YES/LOCK READY/GO reviews, locked status, construction completion, future watch items, and boundaries. Does not create downstream artifacts. |
 | `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md` | Locked World Spec Skeleton. | Structural map only. Defines final World Spec section order, source-package mapping, boundaries, Studio alignment, AutoQC readiness, and construction order. Does not create final World Spec prose, synthetic files, file inventory rows, clinical notes, labs, vitals, task prompts, expected outputs, goldens, grader guidance, reference files, or templates. |
 | `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-skeleton-ratification.md` | Ratification record for World Spec Skeleton v1. | Records YES/LOCK READY/GO reviews, skeleton phase completion, future watch items, and boundaries. Does not create World Spec prose, file inventory rows, synthetic files, tasks, prompts, expected outputs, goldens, grader guidance, reference files, or submission artifacts. |
+
+## Korvin Merrow File Inventory
+
+Lifecycle clustering:
+
+- `candidate-review/`: active file inventory architecture artifacts awaiting physician review or lock.
+- Future `locked/` and `ratifications/` folders should be created only when the lifecycle stage exists.
+
+| File | Role | Duplication note |
+| --- | --- | --- |
+| `worlds/korvin-merrow/file-inventory/candidate-review/file-inventory-architecture-v1.md` | Candidate file inventory architecture defining planned world-level, task-level, and supplementary/noise file ecosystem. | Architecture only; not final Section 3 rows, filenames, synthetic files, notes, labs, vitals, medication lists, discharge summaries, task prompts, expected outputs, goldens, grader guidance, DOCX artifacts, AutoQC responses, or RL Studio submission materials. |
 
 ## Duplication Watchlist
 

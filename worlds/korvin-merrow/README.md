@@ -1,6 +1,6 @@
 # Korvin Merrow World
 
-Current state: World Spec Construction / World Spec v1 locked.
+Current state: File Inventory Architecture / File Inventory Architecture v1 candidate review.
 
 Start here only after reading `project/STATUS.md`.
 
@@ -14,12 +14,14 @@ Start here only after reading `project/STATUS.md`.
 - `submission/`: RL Studio submission artifacts.
 - `world-spec-prep/`: World Spec preparation cockpit plus lifecycle subfolders for locked decisions, locked, ratifications, reviews, decision logs, and planning scaffolds.
 - `world-spec-construction/`: World Spec construction lifecycle folders for candidate review artifacts, locked construction artifacts, and ratifications.
+- `file-inventory/`: file inventory architecture lifecycle area. Current candidate defines planned file ecosystem only; it is not final Section 3 rows or synthetic file construction.
 
 ## Active Entry Points
 
 - `world-spec-prep/WORLD_SPEC_KICKOFF.md`
 - `world-spec-construction/locked/world-spec-v1.md`
 - `world-spec-construction/ratifications/world-spec-v1-ratification.md`
+- `file-inventory/candidate-review/file-inventory-architecture-v1.md`
 - `world-spec-construction/locked/world-spec-skeleton-v1.md`
 - `world-spec-construction/ratifications/world-spec-skeleton-ratification.md`
 - `world-spec-prep/locked/clinical-story-timeline-package-v1.md`
@@ -46,4 +48,4 @@ Start here only after reading `project/STATUS.md`.
 - `world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`
 - `active/brainstorm.md`
 
-World Spec v1 is locked. Next eligible phase is File Inventory Architecture, but do not create file inventory rows, synthetic files, task specifications, task prompts, expected outputs, golden responses, grader guidance, AutoQC responses, DOCX submission artifacts, RL Studio uploads, notes, labs, vitals, templates, or reference files until Alexander explicitly authorizes the relevant step.
+World Spec v1 is locked. File Inventory Architecture v1 is in candidate review. Do not create final Section 3 file rows, synthetic files, task specifications, task prompts, expected outputs, golden responses, grader guidance, AutoQC responses, DOCX submission artifacts, RL Studio uploads, notes, labs, vitals, templates, or reference files until Alexander explicitly authorizes the relevant step.
