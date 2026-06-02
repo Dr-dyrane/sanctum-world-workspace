@@ -483,3 +483,42 @@ Boundaries:
 
 - Do not lock FI-T files until explicitly authorized.
 - Do not create FI-S files, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, RL Studio submission artifacts, or final task outputs until explicitly authorized.
+
+## 2026-06-02 - Task-Level Context File Construction Locked
+
+Decision: Task-Level Context File Construction is ratified and locked.
+
+Artifacts:
+
+- `worlds/korvin-merrow/task-context-files/locked/FI-T01_discharge-medication-reconciliation-request-context.md`
+- `worlds/korvin-merrow/task-context-files/locked/FI-T02_discharge-summary-drafting-request-context.md`
+- `worlds/korvin-merrow/task-context-files/locked/FI-T03_discharge-readiness-care-coordination-request-context.md`
+- `worlds/korvin-merrow/task-context-files/locked/FI-T04_consultant-synthesis-interdisciplinary-care-plan-request-context.md`
+- `worlds/korvin-merrow/task-context-files/locked/FI-T05_early-post-discharge-follow-up-assessment-request-context.md`
+- `worlds/korvin-merrow/task-context-files/locked/FI-T06_patient-safety-readmission-risk-review-request-context.md`
+- `worlds/korvin-merrow/task-context-files/locked/FI-T07_medication-safety-handoff-task-context-addendum.md`
+- `worlds/korvin-merrow/task-context-files/locked/task-context-files-validation-review.md`
+- `worlds/korvin-merrow/task-context-files/ratifications/task-level-context-file-construction-ratification.md`
+
+Review basis:
+
+- Reviewer A: LOCK READY / GO.
+- Reviewer B: Clinical Architecture Status STRONG; Final Recommendation GO WITH MINOR NOTES.
+- Carry-forward watch items recorded in `task-context-files-validation-review.md`.
+- True defects: NONE.
+- Architecture defects: NONE.
+- Governance defects: NONE.
+
+Status:
+
+- Task-Level Context File Construction: LOCKED.
+- FI-T01 through FI-T07: LOCKED.
+- Task-Level Context Files: COMPLETE.
+
+Next eligible phase:
+
+- Supplementary File Architecture / Construction.
+
+Boundaries:
+
+- Do not create FI-S files, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, RL Studio submission artifacts, or final task outputs until explicitly authorized.

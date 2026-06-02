@@ -1628,3 +1628,54 @@ Boundary:
 
 - Do not lock FI-T files without explicit Alexander authorization.
 - Do not create FI-S01 through FI-S04, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, or RL Studio activity until explicitly authorized.
+
+## Task-Level Context File Construction Ratification Record
+
+Status:
+
+- Task-Level Context File Construction: LOCKED.
+- FI-T01 through FI-T07: LOCKED.
+- Task-Level Context Files: COMPLETE.
+
+Ratification authorization:
+
+- Alexander authorized Task-Level Context File Construction ratification and lock after candidate review.
+
+Review outcome:
+
+- Reviewer A verdict: LOCK READY / GO.
+- Reviewer B clinical architecture status: STRONG.
+- Reviewer B final recommendation: GO WITH MINOR NOTES.
+- True defects: NONE.
+- Architecture defects: NONE.
+- Governance defects: NONE.
+
+Locked artifacts:
+
+- `worlds/korvin-merrow/task-context-files/locked/FI-T01_discharge-medication-reconciliation-request-context.md`
+- `worlds/korvin-merrow/task-context-files/locked/FI-T02_discharge-summary-drafting-request-context.md`
+- `worlds/korvin-merrow/task-context-files/locked/FI-T03_discharge-readiness-care-coordination-request-context.md`
+- `worlds/korvin-merrow/task-context-files/locked/FI-T04_consultant-synthesis-interdisciplinary-care-plan-request-context.md`
+- `worlds/korvin-merrow/task-context-files/locked/FI-T05_early-post-discharge-follow-up-assessment-request-context.md`
+- `worlds/korvin-merrow/task-context-files/locked/FI-T06_patient-safety-readmission-risk-review-request-context.md`
+- `worlds/korvin-merrow/task-context-files/locked/FI-T07_medication-safety-handoff-task-context-addendum.md`
+- `worlds/korvin-merrow/task-context-files/locked/task-context-files-validation-review.md`
+
+Ratification:
+
+- `worlds/korvin-merrow/task-context-files/ratifications/task-level-context-file-construction-ratification.md`
+
+Carry-forward:
+
+- Carry-forward / future prompt-layer watch items are preserved in `worlds/korvin-merrow/task-context-files/locked/task-context-files-validation-review.md`.
+- FI-T01 vs FI-T07 differentiation must be preserved during future prompt construction.
+- FI-T02 future discharge-summary prompt construction must preserve anti-transcription / synthesis-by-evolution emphasis.
+- FI-T03 and FI-T06 future deliverables must preserve physician-authored, physician-reviewed, physician-supervised, or physician-communicated framing.
+
+Next eligible phase:
+
+- Supplementary File Architecture / Construction.
+
+Boundary:
+
+- FI-S01 through FI-S04, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
