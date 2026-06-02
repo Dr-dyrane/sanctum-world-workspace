@@ -1357,9 +1357,9 @@ Preserved boundaries:
 - Prednisone hierarchy unchanged: rheumatology attending recommendation remains highest outpatient prednisone authority, followed by verified medication reconciliation, pharmacy/refill history, family report, and patient recollection.
 - Batch 4 is locked by the Batch 4 ratification record.
 
-Next eligible phase:
+Historical next eligible phase after FI-W20 reconciliation:
 
-- Task-Level Context File Architecture / Construction.
+- Task-Level Context File Architecture / Construction, now superseded by Task-Level Context File Architecture v1 candidate review.
 
 Boundary:
 
@@ -1412,9 +1412,9 @@ Status record:
 - Batch 4 Construction: COMPLETE.
 - FI-W20 reconciliation: COMPLETE.
 
-Next eligible phase:
+Historical next eligible phase after Batch 4 lock:
 
-- Task-Level Context File Architecture / Construction.
+- Task-Level Context File Architecture / Construction, now superseded by Task-Level Context File Architecture v1 candidate review.
 
 Boundary:
 
@@ -1483,9 +1483,50 @@ Final status:
 - World-Level Synthetic File Layer: COMPLETE.
 - Completed World-Level Files: FI-W01 through FI-W22.
 
+Historical next eligible phase after Batch 5 lock:
+
+- Task-Level Context File Architecture / Construction, now superseded by Task-Level Context File Architecture v1 candidate review.
+
+## Task-Level Context File Architecture v1 Candidate Review Record
+
+Status:
+
+- CANDIDATE REVIEW.
+
+Artifact:
+
+- `worlds/korvin-merrow/task-layer-architecture/candidate-review/task-level-context-file-architecture-v1.md`
+
+Authorization:
+
+- Alexander authorized Task-Level Context File Architecture as architecture and boundary-setting only.
+
+Purpose:
+
+- Define future FI-T01 through FI-T07 structure, responsibilities, constraints, trap/friction coverage, workflow mapping, world-necessity safeguards, source-of-truth safeguards, boundary conditions, and construction roadmap before any FI-T files are created.
+
+Preserved boundaries:
+
+- World-Level Synthetic File Layer remains complete with FI-W01 through FI-W22 locked.
+- Task-Level Context File Architecture v1 does not create FI-T files, FI-S files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, RL Studio submission artifacts, or final task outputs.
+- Locked clinical artifacts unchanged.
+- Locked synthetic files unchanged.
+- FI-W22 remains visible but incomplete and must not become an answer file.
+- Trap #3 remains buried functional/cognitive evidence.
+- Trap #5 remains over-trust of a visible but incomplete discharge-facing source.
+- Master source-of-truth hierarchy unchanged.
+- Authority hierarchy unchanged.
+- Prednisone hierarchy unchanged.
+- Medication-restart uncertainty preserved.
+- Physician-perspective task-layer guidance preserved.
+
 Next eligible phase:
 
-- Task-Level Context File Architecture / Construction.
+- Task-Level Context File Architecture Review.
+
+Boundary:
+
+- FI-T01 through FI-T07 construction, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
 
 Boundary:
 

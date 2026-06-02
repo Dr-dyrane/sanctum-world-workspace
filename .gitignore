@@ -80,6 +80,7 @@ temp/
 *.swp
 *.swo
 ~$*
+.~lock.*#
 ~WRL*.tmp
 *.crdownload
 

@@ -23,9 +23,9 @@ Onboarding ends after Step 6 approval.
 
 Goal: Engineering generates synthetic files from approved spec and reference templates; writer reviews files and writes tasks in RL Studio.
 
-Status: Out of scope until approval and phase update.
+Status: Limited local exception authorized by Alexander for task-layer architecture only.
 
-Korvin Merrow current exception: Alexander has explicitly authorized local, batch-gated synthetic world-level file construction through Batch 5 ratification and lock. Batch 1 FI-W01 through FI-W07 are locked. Batch 2 FI-W08 through FI-W13 are locked. Batch 3 FI-W14 through FI-W16 are locked. Batch 4 FI-W17 through FI-W21 are locked. Batch 5 FI-W22 is locked. World-Level Synthetic File Layer is complete. Task-Level Context File Architecture / Construction is the next eligible phase and must not begin without Alexander authorization.
+Korvin Merrow current exception: Alexander has explicitly authorized local, batch-gated synthetic world-level file construction through Batch 5 ratification and lock. Batch 1 FI-W01 through FI-W07 are locked. Batch 2 FI-W08 through FI-W13 are locked. Batch 3 FI-W14 through FI-W16 are locked. Batch 4 FI-W17 through FI-W21 are locked. Batch 5 FI-W22 is locked. World-Level Synthetic File Layer is complete. World-Level Layer Closure Audit passed. Task-Level Context File Architecture v1 is in candidate review at `worlds/korvin-merrow/task-layer-architecture/candidate-review/task-level-context-file-architecture-v1.md`. Next eligible phase is Task-Level Context File Architecture Review. FI-T construction, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, and RL Studio submission artifacts must not begin without separate explicit authorization.
 
 ### Phase 3: QA Your Tasks
 

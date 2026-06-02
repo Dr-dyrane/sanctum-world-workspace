@@ -1,6 +1,6 @@
 # Korvin Merrow World
 
-Current state: Batch 5 Synthetic World-Level File Construction / Locked.
+Current state: Task-Level Context File Architecture v1 / Candidate Review.
 
 Start here only after reading `project/STATUS.md`.
 
@@ -16,6 +16,7 @@ Start here only after reading `project/STATUS.md`.
 - `world-spec-construction/`: World Spec construction lifecycle folders for candidate review artifacts, locked construction artifacts, and ratifications.
 - `file-inventory/`: file inventory lifecycle area. Locked architecture defines planned file ecosystem, and locked File Inventory v1 defines the planned inventory rows; neither creates synthetic files or chart contents.
 - `synthetic-files/`: synthetic file construction lifecycle area. Locked construction plan governs construction order; Batch 1 through Batch 5 files are locked, and the World-Level Synthetic File Layer is complete.
+- `task-layer-architecture/`: task-layer architecture lifecycle area. Current candidate defines future FI-T governance only and does not create task files, supplementary files, prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, or submission materials.
 
 ## Active Entry Points
 
@@ -36,6 +37,7 @@ Start here only after reading `project/STATUS.md`.
 - `synthetic-files/ratifications/batch-4-ratification.md`
 - `synthetic-files/locked/batch-5/batch-5-validation-review.md`
 - `synthetic-files/ratifications/batch-5-ratification.md`
+- `task-layer-architecture/candidate-review/task-level-context-file-architecture-v1.md`
 - `file-inventory/locked/file-inventory-architecture-v1.md`
 - `file-inventory/ratifications/file-inventory-architecture-ratification.md`
 - `world-spec-construction/locked/world-spec-skeleton-v1.md`
@@ -64,6 +66,6 @@ Start here only after reading `project/STATUS.md`.
 - `world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`
 - `active/brainstorm.md`
 
-World Spec v1 is locked. File Inventory Architecture v1 is locked. Phase 3 File Inventory Architecture is complete. File Inventory v1 is locked at `file-inventory/locked/file-inventory-v1.md`, with FI-W20 row reconciliation recorded at `file-inventory/reviews/fi-w20-inventory-row-reconciliation.md`. File Inventory Planning is complete. Synthetic World-Level File Construction Plan v1 is locked at `synthetic-files/locked/synthetic-world-file-construction-plan-v1.md`. Synthetic File Construction Governance is complete. Batch 1 synthetic world-level files FI-W01 through FI-W07 are locked at `synthetic-files/locked/batch-1/`. Batch 1 Construction is complete. Batch 2 synthetic world-level files FI-W08 through FI-W13 are locked at `synthetic-files/locked/batch-2/`. Batch 2 Construction is complete. Batch 3 synthetic world-level files FI-W14 through FI-W16 are locked at `synthetic-files/locked/batch-3/`. Batch 3 Construction is complete. Batch 4 synthetic world-level files FI-W17 through FI-W21 are locked at `synthetic-files/locked/batch-4/`. Batch 4 Construction is complete. Batch 5 synthetic world-level file FI-W22 is locked at `synthetic-files/locked/batch-5/`. Batch 5 Construction is complete. World-Level Synthetic File Layer is complete with FI-W01 through FI-W22 locked. Next eligible phase is Task-Level Context File Architecture / Construction. Do not create FI-T01 through FI-T07, supplementary files, task specifications, task prompts, expected outputs, golden responses, grader guidance, AutoQC responses, DOCX submission artifacts, RL Studio uploads, templates, or reference files until Alexander explicitly authorizes the relevant step.
+World Spec v1 is locked. File Inventory Architecture v1 is locked. Phase 3 File Inventory Architecture is complete. File Inventory v1 is locked at `file-inventory/locked/file-inventory-v1.md`, with FI-W20 row reconciliation recorded at `file-inventory/reviews/fi-w20-inventory-row-reconciliation.md`. File Inventory Planning is complete. Synthetic World-Level File Construction Plan v1 is locked at `synthetic-files/locked/synthetic-world-file-construction-plan-v1.md`. Synthetic File Construction Governance is complete. Batch 1 synthetic world-level files FI-W01 through FI-W07 are locked at `synthetic-files/locked/batch-1/`. Batch 1 Construction is complete. Batch 2 synthetic world-level files FI-W08 through FI-W13 are locked at `synthetic-files/locked/batch-2/`. Batch 2 Construction is complete. Batch 3 synthetic world-level files FI-W14 through FI-W16 are locked at `synthetic-files/locked/batch-3/`. Batch 3 Construction is complete. Batch 4 synthetic world-level files FI-W17 through FI-W21 are locked at `synthetic-files/locked/batch-4/`. Batch 4 Construction is complete. Batch 5 synthetic world-level file FI-W22 is locked at `synthetic-files/locked/batch-5/`. Batch 5 Construction is complete. World-Level Synthetic File Layer is complete with FI-W01 through FI-W22 locked. World-Level Layer Closure Audit passed at `reviews/world-level-layer-closure-audit.md`. Task-Level Context File Architecture v1 is in candidate review at `task-layer-architecture/candidate-review/task-level-context-file-architecture-v1.md`. Next eligible phase is Task-Level Context File Architecture Review. Do not create FI-T01 through FI-T07, supplementary files, task specifications, task prompts, expected outputs, golden responses, grader guidance, AutoQC responses, DOCX submission artifacts, RL Studio uploads, templates, or reference files until Alexander explicitly authorizes the relevant step.
 
 Task-design guidance: future task prompts and deliverables must be framed from the physician perspective or physician voice, even when supporting sources come from pharmacy, nursing, PT/OT, case management, social work, family, or administrative sources. This is a task-layer rule only; it does not reopen Governance Package v1 or change source-of-truth hierarchy.

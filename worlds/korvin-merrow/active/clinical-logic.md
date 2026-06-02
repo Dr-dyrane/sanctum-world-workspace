@@ -383,7 +383,9 @@ File Inventory Architecture v1:
 - Batch 5 validation review is at `worlds/korvin-merrow/synthetic-files/locked/batch-5/batch-5-validation-review.md`.
 - Batch 5 ratification is at `worlds/korvin-merrow/synthetic-files/ratifications/batch-5-ratification.md`.
 - World-Level Synthetic File Layer is complete with FI-W01 through FI-W22 locked.
-- Next eligible phase is Task-Level Context File Architecture / Construction.
+- World-Level Layer Closure Audit passed at `worlds/korvin-merrow/reviews/world-level-layer-closure-audit.md`.
+- Task-Level Context File Architecture v1 is in candidate review at `worlds/korvin-merrow/task-layer-architecture/candidate-review/task-level-context-file-architecture-v1.md`.
+- Next eligible phase is Task-Level Context File Architecture Review.
 - FI-T01 through FI-T07, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
 
 ## Key Milestones Calendar Skeleton v1
@@ -830,7 +832,7 @@ Batch 4 clinical logic:
 
 - Carries the functional, cognitive, caregiver, and discharge-readiness substrate.
 - Preserves Trap #3 as buried-but-discoverable evidence distributed across nursing, PT, OT, family, and case management/social work.
-- Preserves Trap #3 vs Trap #5 by avoiding a visible discharge-facing artifact inside Batch 4; FI-W22 now carries that later visible-but-incomplete role as a Batch 5 candidate.
+- Preserves Trap #3 vs Trap #5 by avoiding a visible discharge-facing artifact inside Batch 4; FI-W22 carries that visible-but-incomplete role as a locked Batch 5 file.
 - Preserves Family vs Primary Team as a balanced friction rather than making either side obviously correct.
 - Preserves medication-restart uncertainty, prednisone uncertainty, insulin lispro inpatient-only logic, and consultant caveat synthesis.
 - FI-W20's collateral steroid-history role remains lower-authority family report. It supports Trap #1 and Endocrinology vs Primary Team without becoming a prednisone source-of-truth file, endocrine answer file, or override of rheumatology provenance.
@@ -859,6 +861,18 @@ Batch 5 clinical logic:
 Boundary:
 
 - FI-W22 is locked and the world-level synthetic file layer is complete. Do not create FI-T01 through FI-T07, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission materials, or RL Studio activity until explicitly authorized.
+
+Task-Level Context File Architecture v1:
+
+- Status: CANDIDATE REVIEW.
+- Candidate path: `worlds/korvin-merrow/task-layer-architecture/candidate-review/task-level-context-file-architecture-v1.md`.
+- Purpose: define future FI-T01 through FI-T07 architecture only.
+- It does not construct FI-T files, FI-S files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, RL Studio submission artifacts, or final task outputs.
+- Task-level context files must frame requester/date/workflow context without backfilling missing world evidence.
+- FI-W22 must remain visible but incomplete and must not become a task answer file.
+- Trap #3 remains buried functional/cognitive evidence; Trap #5 remains over-trust of a visible but incomplete discharge-facing source.
+- Prednisone hierarchy, master source-of-truth hierarchy, authority hierarchy, and medication-restart uncertainty remain unchanged.
+- Next eligible phase: Task-Level Context File Architecture Review.
 
 ## Major Clinical Friction Themes
 
