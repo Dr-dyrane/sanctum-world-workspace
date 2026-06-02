@@ -1164,8 +1164,8 @@ Next eligible phase:
 
 Boundary:
 
-- FI-W14 through FI-W22, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
-- Historical note: this was the Batch 2 lock boundary at the time of that ratification. It is superseded for FI-W14 through FI-W16 by the Batch 3 ratification recorded below; FI-W17 through FI-W22 remain blocked until explicitly authorized.
+- Historical Batch 2 lock boundary: FI-W14 through FI-W22, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity were blocked at that time until explicitly authorized.
+- Historical note: this was the Batch 2 lock boundary at the time of that ratification. It is superseded for FI-W14 through FI-W16 by the Batch 3 ratification and for FI-W17 through FI-W21 by the Batch 4 construction record below; FI-W22 remains blocked until explicitly authorized.
 
 ## Task-Design Physician-Perspective Guidance
 
@@ -1275,4 +1275,60 @@ Next eligible phase:
 
 Boundary:
 
-- FI-W17 through FI-W22, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
+- Historical Batch 3 lock boundary: FI-W17 through FI-W22, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity were blocked at that time until explicitly authorized.
+- Historical note: this was the Batch 3 lock boundary at the time of that ratification. It is superseded for FI-W17 through FI-W21 by the Batch 4 construction record below; FI-W22 remains blocked until explicitly authorized.
+
+## Batch 4 Synthetic World-Level File Construction Record
+
+Status: CANDIDATE REVIEW.
+
+Files constructed:
+
+- FI-W17 Nursing Documentation.
+- FI-W18 Physical Therapy Documentation.
+- FI-W19 Occupational Therapy Documentation.
+- FI-W20 Family Communication Documentation.
+- FI-W21 Case Management / Social Work Documentation.
+
+Candidate path:
+
+- `worlds/korvin-merrow/synthetic-files/candidate-review/batch-4/`
+
+Validation review:
+
+- `worlds/korvin-merrow/synthetic-files/candidate-review/batch-4/batch-4-validation-review.md`
+
+Construction findings:
+
+- FI-W17 through FI-W21 were created within the authorized Batch 4 scope.
+- Trap #3 is carried as buried functional/cognitive evidence distributed across nursing, PT, OT, family, and case management/social work.
+- Trap #3 vs Trap #5 remains distinct; Batch 4 does not create FI-W22 or a visible discharge-facing artifact.
+- Family vs Primary Team friction remains balanced and two-sided.
+- Family concerns are clinically meaningful but not independently dispositive.
+- Primary-team medical-improvement reasoning remains defensible.
+- Medication-restart uncertainty remains active.
+- Prednisone uncertainty and the prednisone source hierarchy remain active.
+- Insulin lispro remains inpatient-only.
+- Batch 1, Batch 2, and Batch 3 consistency is preserved.
+
+Accepted carry-forward items:
+
+- Batch 4 requires candidate review before lock.
+- FI-W22 later must remain visible-but-incomplete.
+- FI-W22 must not duplicate or resolve all Batch 4 functional/cognitive evidence.
+- FI-W22 must not resolve final disposition, final medication restart, final prednisone taper, or all consultant caveats.
+- Later files must preserve family concerns as meaningful but not independently dispositive.
+
+Final status:
+
+- Batch 4 Synthetic World-Level File Construction: CANDIDATE REVIEW.
+- FI-W17 through FI-W21: CANDIDATE REVIEW.
+- Batch 4 Construction: not locked.
+
+Next eligible phase:
+
+- Batch 4 Candidate Review and ratification decision.
+
+Boundary:
+
+- FI-W22, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.

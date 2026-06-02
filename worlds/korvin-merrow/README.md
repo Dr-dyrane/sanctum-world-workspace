@@ -1,6 +1,6 @@
 # Korvin Merrow World
 
-Current state: Batch 3 Synthetic World-Level File Construction / Locked.
+Current state: Batch 4 Synthetic World-Level File Construction / Candidate Review.
 
 Start here only after reading `project/STATUS.md`.
 
@@ -32,6 +32,7 @@ Start here only after reading `project/STATUS.md`.
 - `synthetic-files/ratifications/batch-2-ratification.md`
 - `synthetic-files/locked/batch-3/batch-3-validation-review.md`
 - `synthetic-files/ratifications/batch-3-ratification.md`
+- `synthetic-files/candidate-review/batch-4/batch-4-validation-review.md`
 - `file-inventory/locked/file-inventory-architecture-v1.md`
 - `file-inventory/ratifications/file-inventory-architecture-ratification.md`
 - `world-spec-construction/locked/world-spec-skeleton-v1.md`
@@ -60,6 +61,6 @@ Start here only after reading `project/STATUS.md`.
 - `world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`
 - `active/brainstorm.md`
 
-World Spec v1 is locked. File Inventory Architecture v1 is locked. Phase 3 File Inventory Architecture is complete. File Inventory v1 is locked at `file-inventory/locked/file-inventory-v1.md`. File Inventory Planning is complete. Synthetic World-Level File Construction Plan v1 is locked at `synthetic-files/locked/synthetic-world-file-construction-plan-v1.md`. Synthetic File Construction Governance is complete. Batch 1 synthetic world-level files FI-W01 through FI-W07 are locked at `synthetic-files/locked/batch-1/`. Batch 1 Construction is complete. Batch 2 synthetic world-level files FI-W08 through FI-W13 are locked at `synthetic-files/locked/batch-2/`. Batch 2 Construction is complete. Batch 3 synthetic world-level files FI-W14 through FI-W16 are locked at `synthetic-files/locked/batch-3/`. Batch 3 Construction is complete. Next eligible phase is Batch 4 Synthetic World-Level File Construction. Do not create FI-W17 through FI-W22, task specifications, task prompts, expected outputs, golden responses, grader guidance, AutoQC responses, DOCX submission artifacts, RL Studio uploads, templates, or reference files until Alexander explicitly authorizes the relevant step.
+World Spec v1 is locked. File Inventory Architecture v1 is locked. Phase 3 File Inventory Architecture is complete. File Inventory v1 is locked at `file-inventory/locked/file-inventory-v1.md`. File Inventory Planning is complete. Synthetic World-Level File Construction Plan v1 is locked at `synthetic-files/locked/synthetic-world-file-construction-plan-v1.md`. Synthetic File Construction Governance is complete. Batch 1 synthetic world-level files FI-W01 through FI-W07 are locked at `synthetic-files/locked/batch-1/`. Batch 1 Construction is complete. Batch 2 synthetic world-level files FI-W08 through FI-W13 are locked at `synthetic-files/locked/batch-2/`. Batch 2 Construction is complete. Batch 3 synthetic world-level files FI-W14 through FI-W16 are locked at `synthetic-files/locked/batch-3/`. Batch 3 Construction is complete. Batch 4 synthetic world-level files FI-W17 through FI-W21 are in candidate review at `synthetic-files/candidate-review/batch-4/`. Next eligible phase is Batch 4 Candidate Review and ratification decision. Do not create FI-W22, task specifications, task prompts, expected outputs, golden responses, grader guidance, AutoQC responses, DOCX submission artifacts, RL Studio uploads, templates, or reference files until Alexander explicitly authorizes the relevant step.
 
 Task-design guidance: future task prompts and deliverables must be framed from the physician perspective or physician voice, even when supporting sources come from pharmacy, nursing, PT/OT, case management, social work, family, or administrative sources. This is a task-layer rule only; it does not reopen Governance Package v1 or change source-of-truth hierarchy.

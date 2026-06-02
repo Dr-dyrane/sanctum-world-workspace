@@ -25,7 +25,7 @@ Goal: Engineering generates synthetic files from approved spec and reference tem
 
 Status: Out of scope until approval and phase update.
 
-Korvin Merrow current exception: Alexander has explicitly authorized local, batch-gated synthetic world-level file construction through Batch 3. Batch 1 FI-W01 through FI-W07 are locked. Batch 2 FI-W08 through FI-W13 are locked. Batch 3 FI-W14 through FI-W16 are locked. Batch 4 Synthetic World-Level File Construction is the next eligible phase, but FI-W17 through FI-W22 remain explicitly gated and must not begin without Alexander authorization.
+Korvin Merrow current exception: Alexander has explicitly authorized local, batch-gated synthetic world-level file construction through Batch 4. Batch 1 FI-W01 through FI-W07 are locked. Batch 2 FI-W08 through FI-W13 are locked. Batch 3 FI-W14 through FI-W16 are locked. Batch 4 FI-W17 through FI-W21 are in candidate review and are not locked. Batch 4 Candidate Review and ratification decision is the next eligible phase; FI-W22 remains explicitly gated and must not begin without Alexander authorization.
 
 ### Phase 3: QA Your Tasks
 
@@ -41,7 +41,7 @@ Status: Out of scope until approval and phase update.
 
 ## Explicitly Out Of Scope Until Approval
 
-- Batch 4 or later synthetic file generation unless explicitly authorized by Alexander
+- Batch 5 or later synthetic file generation unless explicitly authorized by Alexander
 - World file review
 - Production task setup
 - Production task prompts

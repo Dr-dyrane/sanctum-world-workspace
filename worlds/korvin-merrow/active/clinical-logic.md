@@ -374,8 +374,11 @@ File Inventory Architecture v1:
 - Batch 3 validation review is recorded at `worlds/korvin-merrow/synthetic-files/locked/batch-3/batch-3-validation-review.md`.
 - Batch 3 ratification is recorded at `worlds/korvin-merrow/synthetic-files/ratifications/batch-3-ratification.md`.
 - Batch 3 Construction status is complete.
-- Next eligible phase is Batch 4 Synthetic World-Level File Construction.
-- FI-W17 through FI-W22, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
+- Batch 4 candidate files FI-W17 through FI-W21 are constructed at `worlds/korvin-merrow/synthetic-files/candidate-review/batch-4/`.
+- Batch 4 validation review is recorded at `worlds/korvin-merrow/synthetic-files/candidate-review/batch-4/batch-4-validation-review.md`.
+- Batch 4 Construction status is candidate review, not locked.
+- Next eligible phase is Batch 4 Candidate Review and ratification decision.
+- FI-W22, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
 
 ## Key Milestones Calendar Skeleton v1
 
@@ -806,7 +809,22 @@ Batch 3 clinical logic:
 
 Boundary:
 
-- FI-W17 through FI-W22, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission materials, and RL Studio activity remain blocked until explicitly authorized.
+- FI-W22, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission materials, and RL Studio activity remain blocked until explicitly authorized.
+
+Batch 4 Synthetic World-Level File Construction:
+
+- Status: CANDIDATE REVIEW.
+- Files constructed: FI-W17 through FI-W21.
+- Candidate folder: `worlds/korvin-merrow/synthetic-files/candidate-review/batch-4/`.
+- Validation review: `worlds/korvin-merrow/synthetic-files/candidate-review/batch-4/batch-4-validation-review.md`.
+
+Batch 4 clinical logic:
+
+- Carries the functional, cognitive, caregiver, and discharge-readiness substrate.
+- Preserves Trap #3 as buried-but-discoverable evidence distributed across nursing, PT, OT, family, and case management/social work.
+- Preserves Trap #3 vs Trap #5 by avoiding a visible discharge-facing artifact; FI-W22 remains reserved for that later role.
+- Preserves Family vs Primary Team as a balanced friction rather than making either side obviously correct.
+- Preserves medication-restart uncertainty, prednisone uncertainty, insulin lispro inpatient-only logic, and consultant caveat synthesis.
 
 ## Major Clinical Friction Themes
 
