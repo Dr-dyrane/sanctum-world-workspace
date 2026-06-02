@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-Task-Level Context File Architecture v1 / Candidate Review.
+Task-Level Context File Architecture v1 / LOCKED.
 
 ## Brainstorm
 
@@ -62,10 +62,13 @@ Task-Level Context File Architecture v1 / Candidate Review.
 - World-Level Synthetic File Layer: complete
 - Completed World-Level Files: FI-W01 through FI-W22
 - World-Level Layer Closure Audit: `worlds/korvin-merrow/reviews/world-level-layer-closure-audit.md`
-- Task-Level Context File Architecture v1: candidate review at `worlds/korvin-merrow/task-layer-architecture/candidate-review/task-level-context-file-architecture-v1.md`
-- Task-Level Context File Architecture v1 reconciliation: complete. File Inventory metadata now reflects supported FI-T secondary trap/friction mappings, and candidate architecture now marks P0/P1/P2 labels as tracker-provenance metadata rather than governing workflow architecture.
-- Next eligible phase: Task-Level Context File Architecture Review
+- Task-Level Context File Architecture v1: locked at `worlds/korvin-merrow/task-layer-architecture/locked/task-level-context-file-architecture-v1.md`
+- Task-Level Context File Architecture v1 ratification: `worlds/korvin-merrow/task-layer-architecture/ratifications/task-level-context-file-architecture-v1-ratification.md`
+- Task-Level Context File Architecture v1 reconciliation: complete. File Inventory metadata now reflects supported FI-T secondary trap/friction mappings, and locked architecture marks P0/P1/P2 labels as tracker-provenance metadata rather than governing workflow architecture.
+- Task-Level Context File Architecture: complete
+- Next eligible phase: Task-Level Context File Construction
 - FI-T01 through FI-T07: not constructed
+- FI-S01 through FI-S04: not constructed
 - Task-design physician-perspective guidance: recorded as a future task-layer rule only. It does not change source-of-truth hierarchy or Governance Package v1; future task prompts and deliverables must remain physician-centered even when supporting sources are pharmacy, nursing, PT/OT, case management, social work, family, or administrative sources.
 - Collaborator session-exit discipline: standing process / handoff rule. Every future session must leave the repository clean or explicitly documented, update phase and next-phase surfaces, preserve locked artifacts unless explicitly authorized, label candidate artifacts, move newly locked artifacts to locked paths with ratification references, update continuity and Claude handoff files, record carry-forward watch items and future task-layer guidance, commit completed work unless explicitly told not to, and report what changed, what did not change, current status, next eligible phase, and whether the repository is safe for another collaborator.
 - Cross-artifact consistency verification: standing governance rule. Before creating, modifying, ratifying, or locking architecture, inventory, matrices, mappings, workflow/trap/friction/hierarchy tables, or governance artifacts, future collaborators must cross-check applicable locked canonical sources and document any expansion, narrowing, redistribution, reprioritization, relabeling, or reclassification before ratification or lock.
@@ -87,7 +90,7 @@ Task-Level Context File Architecture v1 / Candidate Review.
 - World Spec Skeleton v1: `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`
 - World Spec Skeleton ratification: `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-skeleton-ratification.md`
 - Official Claude World Spec session: pending
-- Current state: World Spec v1 is locked; File Inventory Architecture v1 is locked; File Inventory v1 is locked with FI-W20 row reconciliation and FI-T inventory/task-layer architecture reconciliation recorded; Synthetic World-Level File Construction Plan v1 is locked; Synthetic File Construction Governance is complete; Batch 1 synthetic world-level files are locked; Batch 2 synthetic world-level files are locked; Batch 3 synthetic world-level files are locked; Batch 4 synthetic world-level files are locked; Batch 5 FI-W22 is locked; World-Level Synthetic File Layer is complete; Task-Level Context File Architecture v1 is in candidate review after metadata/provenance reconciliation; calendar, baseline anchors, Clinical Story Timeline Package v1, Task Architecture Package v1, Medication Expansion Package v1, Comorbidity Expansion Package v1, Provider Roster Package v1, Surgical History Package v1, Daily Hospital Course Framework v1, and World Spec Skeleton v1 are locked
+- Current state: World Spec v1 is locked; File Inventory Architecture v1 is locked; File Inventory v1 is locked with FI-W20 row reconciliation and FI-T inventory/task-layer architecture reconciliation recorded; Synthetic World-Level File Construction Plan v1 is locked; Synthetic File Construction Governance is complete; Batch 1 synthetic world-level files are locked; Batch 2 synthetic world-level files are locked; Batch 3 synthetic world-level files are locked; Batch 4 synthetic world-level files are locked; Batch 5 FI-W22 is locked; World-Level Synthetic File Layer is complete; Task-Level Context File Architecture v1 is locked and Task-Level Context File Architecture is complete; calendar, baseline anchors, Clinical Story Timeline Package v1, Task Architecture Package v1, Medication Expansion Package v1, Comorbidity Expansion Package v1, Provider Roster Package v1, Surgical History Package v1, Daily Hospital Course Framework v1, and World Spec Skeleton v1 are locked
 - World Spec prep packet: created
 - Official World Spec template: saved locally
 - World Spec AutoQC prompt v6.3: saved locally
@@ -123,7 +126,7 @@ Task-Level Context File Architecture v1 / Candidate Review.
 - Fetched World Spec example source documents: `reference/word-spec-examples/`
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 - World Spec prep folder structure: reorganized by lifecycle buckets (`candidate-review/`, `locked/`, `ratifications/`, `reviews/`, `decision-logs/`, `planning-scaffolds/`)
-- Next eligible phase: Task-Level Context File Architecture Review. Do not create FI-T01 through FI-T07, supplementary files, task specifications, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission artifacts, or RL Studio uploads until explicitly authorized.
+- Next eligible phase: Task-Level Context File Construction. Do not create FI-T01 through FI-T07, FI-S01 through FI-S04, supplementary files, task specifications, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission artifacts, or RL Studio uploads until explicitly authorized.
 
 ## Tooling
 

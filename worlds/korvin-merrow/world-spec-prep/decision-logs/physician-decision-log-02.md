@@ -1359,7 +1359,7 @@ Preserved boundaries:
 
 Historical next eligible phase after FI-W20 reconciliation:
 
-- Task-Level Context File Architecture / Construction, now superseded by Task-Level Context File Architecture v1 candidate review.
+- Task-Level Context File Architecture / Construction, now superseded by Task-Level Context File Architecture v1 ratification and lock.
 
 Boundary:
 
@@ -1414,7 +1414,7 @@ Status record:
 
 Historical next eligible phase after Batch 4 lock:
 
-- Task-Level Context File Architecture / Construction, now superseded by Task-Level Context File Architecture v1 candidate review.
+- Task-Level Context File Architecture / Construction, now superseded by Task-Level Context File Architecture v1 ratification and lock.
 
 Boundary:
 
@@ -1485,13 +1485,13 @@ Final status:
 
 Historical next eligible phase after Batch 5 lock:
 
-- Task-Level Context File Architecture / Construction, now superseded by Task-Level Context File Architecture v1 candidate review.
+- Task-Level Context File Architecture / Construction, now superseded by Task-Level Context File Architecture v1 ratification and lock.
 
 ## Task-Level Context File Architecture v1 Candidate Review Record
 
 Status:
 
-- CANDIDATE REVIEW.
+- HISTORICAL / SUPERSEDED BY LOCK.
 
 Artifact:
 
@@ -1522,7 +1522,7 @@ Preserved boundaries:
 
 Next eligible phase:
 
-- Task-Level Context File Architecture Review.
+- Historical next eligible phase after candidate creation: Task-Level Context File Architecture Review, now superseded by Task-Level Context File Architecture v1 ratification and lock.
 
 Boundary:
 
@@ -1531,3 +1531,60 @@ Boundary:
 Boundary:
 
 - FI-T01 through FI-T07, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
+
+## Task-Level Context File Architecture v1 Ratification Record
+
+Status:
+
+- LOCKED.
+
+Locked artifact:
+
+- `worlds/korvin-merrow/task-layer-architecture/locked/task-level-context-file-architecture-v1.md`
+
+Ratification:
+
+- `worlds/korvin-merrow/task-layer-architecture/ratifications/task-level-context-file-architecture-v1-ratification.md`
+
+Reconciliation:
+
+- `worlds/korvin-merrow/file-inventory/reviews/fi-t-inventory-task-layer-architecture-reconciliation.md`
+
+Review outcome:
+
+- Reviewer B: LOCK READY / GO.
+- Reviewer A recertification: LOCK READY / GO.
+- Reconciliation completed.
+- True defects: NONE.
+- Architecture approved for lock.
+
+Final status:
+
+- Task-Level Context File Architecture v1: LOCKED.
+- Task-Level Context File Architecture: COMPLETE.
+
+Preserved boundaries:
+
+- No FI-T files created.
+- No FI-S files created.
+- No task prompts created.
+- No expected outputs created.
+- No goldens created.
+- No grader guidance created.
+- No AutoQC responses created.
+- No DOCX artifacts created.
+- No RL Studio submission artifacts created.
+- Locked world-level synthetic files unchanged.
+- Master source-of-truth hierarchy unchanged.
+- Authority hierarchy unchanged.
+- Prednisone hierarchy unchanged.
+- Medication-restart uncertainty preserved.
+- Locked four-workflow architecture preserved.
+
+Next eligible phase:
+
+- Task-Level Context File Construction.
+
+Boundary:
+
+- FI-T01 through FI-T07, FI-S01 through FI-S04, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.

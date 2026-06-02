@@ -4,7 +4,7 @@ World: Korvin Merrow
 
 Date created: 2026-06-02
 
-Status: CANDIDATE REVIEW
+Status: LOCKED
 
 Purpose: define the structure, responsibilities, constraints, and governance of future task-level context files before any FI-T files are created.
 
@@ -236,8 +236,8 @@ This architecture may be reviewed, revised, ratified, or locked only under expli
 
 Roadmap only:
 
-1. Task-Level Context File Architecture Review.
-2. Task-Level Context File Architecture ratification and lock.
+1. Task-Level Context File Architecture Review. COMPLETE.
+2. Task-Level Context File Architecture ratification and lock. COMPLETE.
 3. Task-Level Context File Construction.
 4. Task Prompt Architecture.
 5. Task Prompt Construction.
@@ -246,13 +246,13 @@ Roadmap only:
 8. Grader Guidance Architecture.
 9. Packaging.
 
-No roadmap item is authorized by this document except architecture candidate review.
+No roadmap item after ratification and lock is authorized by this document.
 
 ## Verification Record
 
 Architecture created:
 
-- `worlds/korvin-merrow/task-layer-architecture/candidate-review/task-level-context-file-architecture-v1.md`
+- `worlds/korvin-merrow/task-layer-architecture/locked/task-level-context-file-architecture-v1.md`
 
 Confirmed boundaries:
 
@@ -274,8 +274,8 @@ Task-Level Context File Architecture v1
 
 Status:
 
-CANDIDATE REVIEW
+LOCKED
 
 Next Eligible Phase:
 
-Task-Level Context File Architecture Review
+Task-Level Context File Construction

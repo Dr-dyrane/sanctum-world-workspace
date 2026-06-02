@@ -385,9 +385,11 @@ File Inventory Architecture v1:
 - Batch 5 ratification is at `worlds/korvin-merrow/synthetic-files/ratifications/batch-5-ratification.md`.
 - World-Level Synthetic File Layer is complete with FI-W01 through FI-W22 locked.
 - World-Level Layer Closure Audit passed at `worlds/korvin-merrow/reviews/world-level-layer-closure-audit.md`.
-- Task-Level Context File Architecture v1 is in candidate review at `worlds/korvin-merrow/task-layer-architecture/candidate-review/task-level-context-file-architecture-v1.md`.
-- Next eligible phase is Task-Level Context File Architecture Review.
-- FI-T01 through FI-T07, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
+- Task-Level Context File Architecture v1 is locked at `worlds/korvin-merrow/task-layer-architecture/locked/task-level-context-file-architecture-v1.md`.
+- Task-Level Context File Architecture v1 ratification is recorded at `worlds/korvin-merrow/task-layer-architecture/ratifications/task-level-context-file-architecture-v1-ratification.md`.
+- Task-Level Context File Architecture status is complete.
+- Next eligible phase is Task-Level Context File Construction.
+- FI-T01 through FI-T07, FI-S01 through FI-S04, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
 
 ## Key Milestones Calendar Skeleton v1
 
@@ -861,12 +863,13 @@ Batch 5 clinical logic:
 
 Boundary:
 
-- FI-W22 is locked and the world-level synthetic file layer is complete. Do not create FI-T01 through FI-T07, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission materials, or RL Studio activity until explicitly authorized.
+- FI-W22 is locked and the world-level synthetic file layer is complete. Task-Level Context File Architecture v1 is locked and complete. Do not create FI-T01 through FI-T07, FI-S01 through FI-S04, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission materials, or RL Studio activity until explicitly authorized.
 
 Task-Level Context File Architecture v1:
 
-- Status: CANDIDATE REVIEW.
-- Candidate path: `worlds/korvin-merrow/task-layer-architecture/candidate-review/task-level-context-file-architecture-v1.md`.
+- Status: LOCKED.
+- Locked path: `worlds/korvin-merrow/task-layer-architecture/locked/task-level-context-file-architecture-v1.md`.
+- Ratification: `worlds/korvin-merrow/task-layer-architecture/ratifications/task-level-context-file-architecture-v1-ratification.md`.
 - Purpose: define future FI-T01 through FI-T07 architecture only.
 - It does not construct FI-T files, FI-S files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, RL Studio submission artifacts, or final task outputs.
 - Task-level context files must frame requester/date/workflow context without backfilling missing world evidence.
@@ -875,7 +878,8 @@ Task-Level Context File Architecture v1:
 - Prednisone hierarchy, master source-of-truth hierarchy, authority hierarchy, and medication-restart uncertainty remain unchanged.
 - P0/P1/P2 labels are tracker-provenance metadata only; they do not create new workflow categories or override locked Task Architecture Package v1.
 - Cross-artifact consistency verification is a standing governance rule before any future architecture, inventory, matrix, mapping, coverage table, workflow table, trap table, friction table, hierarchy table, or governance artifact is created, modified, ratified, or locked.
-- Next eligible phase: Task-Level Context File Architecture Review.
+- Task-Level Context File Architecture status: COMPLETE.
+- Next eligible phase: Task-Level Context File Construction.
 
 ## Major Clinical Friction Themes
 

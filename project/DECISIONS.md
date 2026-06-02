@@ -397,10 +397,43 @@ Rule:
 Associated reconciliation:
 
 - FI-T inventory / task-layer architecture reconciliation aligned File Inventory metadata with locked Task Architecture Package v1 for FI-T02, FI-T04, FI-T05, and FI-T06 secondary trap/friction support.
-- Candidate Task-Level Context File Architecture v1 now treats P0/P1/P2 labels as tracker-provenance metadata only.
+- Task-Level Context File Architecture v1 treats P0/P1/P2 labels as tracker-provenance metadata only.
 
 Boundaries:
 
 - This does not create FI-T files, FI-S files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, RL Studio submission artifacts, or task outputs.
-- This does not ratify or lock Task-Level Context File Architecture v1.
+- This reconciliation did not itself ratify or lock Task-Level Context File Architecture v1; ratification occurred later in the 2026-06-02 lock decision below.
 - This does not change source-of-truth hierarchy, authority hierarchy, prednisone hierarchy, or workflow count.
+
+## 2026-06-02 - Task-Level Context File Architecture v1 Locked
+
+Decision: Task-Level Context File Architecture v1 is ratified and locked.
+
+Artifacts:
+
+- `worlds/korvin-merrow/task-layer-architecture/locked/task-level-context-file-architecture-v1.md`
+- `worlds/korvin-merrow/task-layer-architecture/ratifications/task-level-context-file-architecture-v1-ratification.md`
+- `worlds/korvin-merrow/file-inventory/reviews/fi-t-inventory-task-layer-architecture-reconciliation.md`
+
+Review basis:
+
+- Reviewer B: LOCK READY / GO.
+- Reviewer A recertification: LOCK READY / GO.
+- Reconciliation status: COMPLETE.
+- True defects: NONE.
+
+Status:
+
+- Task-Level Context File Architecture v1: LOCKED.
+- Task-Level Context File Architecture: COMPLETE.
+
+Next eligible phase:
+
+- Task-Level Context File Construction.
+
+Boundaries:
+
+- Do not create FI-T01 through FI-T07 until explicitly authorized.
+- Do not create FI-S01 through FI-S04 until explicitly authorized.
+- Do not create task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, RL Studio submission artifacts, or final task outputs until explicitly authorized.
+- This lock does not change source-of-truth hierarchy, authority hierarchy, prednisone hierarchy, medication-restart uncertainty, or the locked four-workflow architecture.
