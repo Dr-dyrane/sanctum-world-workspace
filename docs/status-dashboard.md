@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-Supplementary File Architecture / LOCKED.
+Supplementary File Construction / CANDIDATE REVIEW.
 
 ## Brainstorm
 
@@ -77,8 +77,10 @@ Supplementary File Architecture / LOCKED.
 - Supplementary File Architecture ratification: `worlds/korvin-merrow/supplementary-file-architecture/ratifications/supplementary-file-architecture-v1-ratification.md`
 - Supplementary File Architecture: complete
 - Supplementary File Architecture reconciliation finding: CLOSED
-- Next eligible phase: Supplementary File Construction
-- FI-S01 through FI-S04: not constructed
+- Supplementary files FI-S01 through FI-S04: constructed under `worlds/korvin-merrow/supplementary-files/candidate-review/`
+- Supplementary file construction validation review: `worlds/korvin-merrow/supplementary-files/candidate-review/supplementary-file-construction-validation-review.md`
+- Supplementary File Construction: candidate review
+- Next eligible phase: Supplementary File Construction Review
 - Task-design physician-perspective guidance: recorded as a future task-layer rule only. It does not change source-of-truth hierarchy or Governance Package v1; future task prompts and deliverables must remain physician-centered even when supporting sources are pharmacy, nursing, PT/OT, case management, social work, family, or administrative sources.
 - Collaborator session-exit discipline: standing process / handoff rule. Every future session must leave the repository clean or explicitly documented, update phase and next-phase surfaces, preserve locked artifacts unless explicitly authorized, label candidate artifacts, move newly locked artifacts to locked paths with ratification references, update continuity and Claude handoff files, record carry-forward watch items and future task-layer guidance, commit completed work unless explicitly told not to, and report what changed, what did not change, current status, next eligible phase, and whether the repository is safe for another collaborator.
 - Cross-artifact consistency verification: standing governance rule. Before creating, modifying, ratifying, or locking architecture, inventory, matrices, mappings, workflow/trap/friction/hierarchy tables, or governance artifacts, future collaborators must cross-check applicable locked canonical sources and document any expansion, narrowing, redistribution, reprioritization, relabeling, or reclassification before ratification or lock.
@@ -136,7 +138,7 @@ Supplementary File Architecture / LOCKED.
 - Fetched World Spec example source documents: `reference/word-spec-examples/`
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 - World Spec prep folder structure: reorganized by lifecycle buckets (`candidate-review/`, `locked/`, `ratifications/`, `reviews/`, `decision-logs/`, `planning-scaffolds/`)
-- Next eligible phase: Supplementary File Construction. Do not create FI-S01 through FI-S04, supplementary files, task specifications, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission artifacts, or RL Studio uploads until explicitly authorized.
+- Next eligible phase: Supplementary File Construction Review. Do not lock FI-S01 through FI-S04, create task specifications, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission artifacts, or RL Studio uploads until explicitly authorized.
 
 ## Tooling
 

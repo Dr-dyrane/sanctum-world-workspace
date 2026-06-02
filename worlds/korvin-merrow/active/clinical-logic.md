@@ -396,8 +396,10 @@ File Inventory Architecture v1:
 - Supplementary File Architecture ratification is recorded at `worlds/korvin-merrow/supplementary-file-architecture/ratifications/supplementary-file-architecture-v1-ratification.md`.
 - FI-S03 Trap #5 reconciliation is complete at `worlds/korvin-merrow/file-inventory/reviews/supplementary-file-trap5-reconciliation.md`.
 - Supplementary File Architecture determines FI-S count as four, matching locked File Inventory v1: FI-S01 through FI-S04.
-- Next eligible phase is Supplementary File Construction.
-- FI-S01 through FI-S04, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
+- Supplementary File Construction is in candidate review at `worlds/korvin-merrow/supplementary-files/candidate-review/`.
+- FI-S01 through FI-S04 and `supplementary-file-construction-validation-review.md` are candidate-review artifacts only.
+- Next eligible phase is Supplementary File Construction Review.
+- Task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
 
 ## Key Milestones Calendar Skeleton v1
 
@@ -871,7 +873,7 @@ Batch 5 clinical logic:
 
 Boundary:
 
-- FI-W22 is locked and the world-level synthetic file layer is complete. Task-Level Context File Architecture v1 is locked and complete. FI-T01 through FI-T07 are locked at `worlds/korvin-merrow/task-context-files/locked/`, with ratification recorded at `worlds/korvin-merrow/task-context-files/ratifications/task-level-context-file-construction-ratification.md`. Do not create FI-S01 through FI-S04, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission materials, or RL Studio activity until explicitly authorized.
+- FI-W22 is locked and the world-level synthetic file layer is complete. Task-Level Context File Architecture v1 is locked and complete. FI-T01 through FI-T07 are locked at `worlds/korvin-merrow/task-context-files/locked/`, with ratification recorded at `worlds/korvin-merrow/task-context-files/ratifications/task-level-context-file-construction-ratification.md`. FI-S01 through FI-S04 are candidate-review supplementary files only. Do not lock FI-S files, create task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission materials, or RL Studio activity until explicitly authorized.
 
 Task-Level Context File Architecture v1:
 
@@ -897,7 +899,10 @@ Task-Level Context File Architecture v1:
 - Locked validation review: `worlds/korvin-merrow/supplementary-file-architecture/locked/supplementary-file-architecture-validation-review.md`.
 - Ratification: `worlds/korvin-merrow/supplementary-file-architecture/ratifications/supplementary-file-architecture-v1-ratification.md`.
 - FI-S03 Trap #5 reconciliation: `worlds/korvin-merrow/file-inventory/reviews/supplementary-file-trap5-reconciliation.md`.
-- Next eligible phase: Supplementary File Construction.
+- Supplementary File Construction: CANDIDATE REVIEW.
+- Candidate files: `worlds/korvin-merrow/supplementary-files/candidate-review/`.
+- Files constructed: FI-S01 through FI-S04 plus `supplementary-file-construction-validation-review.md`.
+- Next eligible phase: Supplementary File Construction Review.
 
 ## Major Clinical Friction Themes
 
