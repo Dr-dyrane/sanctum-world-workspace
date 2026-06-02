@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-Supplementary File Architecture / LOCK READY.
+Supplementary File Architecture / LOCKED.
 
 ## Brainstorm
 
@@ -72,10 +72,12 @@ Supplementary File Architecture / LOCK READY.
 - Task-context validation review: `worlds/korvin-merrow/task-context-files/locked/task-context-files-validation-review.md`
 - Task-Level Context File Construction ratification: `worlds/korvin-merrow/task-context-files/ratifications/task-level-context-file-construction-ratification.md`
 - Task-Level Context Files: complete
-- Supplementary File Architecture v1: LOCK READY at `worlds/korvin-merrow/supplementary-file-architecture/candidate-review/supplementary-file-architecture-v1.md`
-- Supplementary File Architecture validation review: `worlds/korvin-merrow/supplementary-file-architecture/candidate-review/supplementary-file-architecture-validation-review.md`
+- Supplementary File Architecture v1: locked at `worlds/korvin-merrow/supplementary-file-architecture/locked/supplementary-file-architecture-v1.md`
+- Supplementary File Architecture validation review: `worlds/korvin-merrow/supplementary-file-architecture/locked/supplementary-file-architecture-validation-review.md`
+- Supplementary File Architecture ratification: `worlds/korvin-merrow/supplementary-file-architecture/ratifications/supplementary-file-architecture-v1-ratification.md`
+- Supplementary File Architecture: complete
 - Supplementary File Architecture reconciliation finding: CLOSED
-- Next eligible phase: Supplementary File Architecture Ratification and Lock
+- Next eligible phase: Supplementary File Construction
 - FI-S01 through FI-S04: not constructed
 - Task-design physician-perspective guidance: recorded as a future task-layer rule only. It does not change source-of-truth hierarchy or Governance Package v1; future task prompts and deliverables must remain physician-centered even when supporting sources are pharmacy, nursing, PT/OT, case management, social work, family, or administrative sources.
 - Collaborator session-exit discipline: standing process / handoff rule. Every future session must leave the repository clean or explicitly documented, update phase and next-phase surfaces, preserve locked artifacts unless explicitly authorized, label candidate artifacts, move newly locked artifacts to locked paths with ratification references, update continuity and Claude handoff files, record carry-forward watch items and future task-layer guidance, commit completed work unless explicitly told not to, and report what changed, what did not change, current status, next eligible phase, and whether the repository is safe for another collaborator.
@@ -98,7 +100,7 @@ Supplementary File Architecture / LOCK READY.
 - World Spec Skeleton v1: `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`
 - World Spec Skeleton ratification: `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-skeleton-ratification.md`
 - Official Claude World Spec session: pending
-- Current state: World Spec v1 is locked; File Inventory Architecture v1 is locked; File Inventory v1 is locked with FI-W20 row reconciliation, FI-T inventory/task-layer architecture reconciliation, and FI-S03 Trap #5 reconciliation recorded; Synthetic World-Level File Construction Plan v1 is locked; Synthetic File Construction Governance is complete; Batch 1 synthetic world-level files are locked; Batch 2 synthetic world-level files are locked; Batch 3 synthetic world-level files are locked; Batch 4 synthetic world-level files are locked; Batch 5 FI-W22 is locked; World-Level Synthetic File Layer is complete; Task-Level Context File Architecture v1 is locked and Task-Level Context File Architecture is complete; FI-T01 through FI-T07 are locked and Task-Level Context Files are complete; Supplementary File Architecture v1 is lock ready; calendar, baseline anchors, Clinical Story Timeline Package v1, Task Architecture Package v1, Medication Expansion Package v1, Comorbidity Expansion Package v1, Provider Roster Package v1, Surgical History Package v1, Daily Hospital Course Framework v1, and World Spec Skeleton v1 are locked
+- Current state: World Spec v1 is locked; File Inventory Architecture v1 is locked; File Inventory v1 is locked with FI-W20 row reconciliation, FI-T inventory/task-layer architecture reconciliation, and FI-S03 Trap #5 reconciliation recorded; Synthetic World-Level File Construction Plan v1 is locked; Synthetic File Construction Governance is complete; Batch 1 synthetic world-level files are locked; Batch 2 synthetic world-level files are locked; Batch 3 synthetic world-level files are locked; Batch 4 synthetic world-level files are locked; Batch 5 FI-W22 is locked; World-Level Synthetic File Layer is complete; Task-Level Context File Architecture v1 is locked and Task-Level Context File Architecture is complete; FI-T01 through FI-T07 are locked and Task-Level Context Files are complete; Supplementary File Architecture v1 is locked and Supplementary File Architecture is complete; calendar, baseline anchors, Clinical Story Timeline Package v1, Task Architecture Package v1, Medication Expansion Package v1, Comorbidity Expansion Package v1, Provider Roster Package v1, Surgical History Package v1, Daily Hospital Course Framework v1, and World Spec Skeleton v1 are locked
 - World Spec prep packet: created
 - Official World Spec template: saved locally
 - World Spec AutoQC prompt v6.3: saved locally
@@ -134,7 +136,7 @@ Supplementary File Architecture / LOCK READY.
 - Fetched World Spec example source documents: `reference/word-spec-examples/`
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 - World Spec prep folder structure: reorganized by lifecycle buckets (`candidate-review/`, `locked/`, `ratifications/`, `reviews/`, `decision-logs/`, `planning-scaffolds/`)
-- Next eligible phase: Supplementary File Architecture Ratification and Lock. Do not create FI-S01 through FI-S04, supplementary files, task specifications, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission artifacts, or RL Studio uploads until explicitly authorized.
+- Next eligible phase: Supplementary File Construction. Do not create FI-S01 through FI-S04, supplementary files, task specifications, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission artifacts, or RL Studio uploads until explicitly authorized.
 
 ## Tooling
 
