@@ -2,7 +2,7 @@
 
 Purpose: compressed Claude context for a fresh Project Sanctum session. Use this as operational context only; the full source of truth remains local under `reference/` and `worlds/korvin-merrow/`.
 
-Boundary: Brainstorm is approved after SEND BACK remediation. Clinical Story Skeleton v1 is ratified. Identity Package v1 is locked. Governance Package v1 is ratified. Physician Architecture Layer is complete. Preparation Layer is complete. World Spec Skeleton v1 is locked. World Spec v1 is locked. World Spec Construction is complete. File Inventory Architecture v1 is locked. File Inventory v1 is locked. Synthetic World-Level File Construction Plan v1 is locked. Batch 1 and Batch 2 synthetic world-level files are locked. Batch 3 Synthetic World-Level File Construction is the next eligible phase, but it is not authorized until Alexander explicitly starts it.
+Boundary: Brainstorm is approved after SEND BACK remediation. Clinical Story Skeleton v1 is ratified. Identity Package v1 is locked. Governance Package v1 is ratified. Physician Architecture Layer is complete. Preparation Layer is complete. World Spec Skeleton v1 is locked. World Spec v1 is locked. World Spec Construction is complete. File Inventory Architecture v1 is locked. File Inventory v1 is locked. Synthetic World-Level File Construction Plan v1 is locked. Batch 1 and Batch 2 synthetic world-level files are locked. Batch 3 synthetic world-level files FI-W14 through FI-W16 are in candidate review. Batch 3 is not locked. Batch 3 Candidate Review and ratification decision is the next eligible phase.
 
 ## Current World Concept
 
@@ -368,7 +368,7 @@ Identity review addendum:
 
 ## Current State
 
-Brainstorm approved. Clinical Story Skeleton v1 ratified. Identity Package v1 locked. Governance Package v1 ratified. Physician Architecture Layer complete. Key Milestones Calendar Skeleton v1 locked. Baseline Anchor Package v1 locked. Clinical Story Timeline Package v1 locked. Task Architecture Package v1 locked. Medication Expansion Package v1 locked. Comorbidity Expansion Package v1 locked. Provider Roster Package v1 locked. Surgical History Package v1 locked. Daily Hospital Course Framework v1 locked. Preparation Layer complete. World Spec Skeleton Phase complete. World Spec Construction complete. World Spec Skeleton v1 is locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-skeleton-ratification.md`. World Spec v1 is locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-v1-ratification.md`. File Inventory Architecture v1 and File Inventory v1 are locked. Synthetic World-Level File Construction Plan v1 is locked. Batch 1 FI-W01 through FI-W07 and Batch 2 FI-W08 through FI-W13 are locked. Do not create FI-W14 through FI-W22, tasks, prompts, goldens, grader guidance, notes, labs, vitals, additional synthetic files, DOCX submission artifacts, AutoQC responses, or RL Studio uploads without explicit Alexander authorization for that step.
+Brainstorm approved. Clinical Story Skeleton v1 ratified. Identity Package v1 locked. Governance Package v1 ratified. Physician Architecture Layer complete. Key Milestones Calendar Skeleton v1 locked. Baseline Anchor Package v1 locked. Clinical Story Timeline Package v1 locked. Task Architecture Package v1 locked. Medication Expansion Package v1 locked. Comorbidity Expansion Package v1 locked. Provider Roster Package v1 locked. Surgical History Package v1 locked. Daily Hospital Course Framework v1 locked. Preparation Layer complete. World Spec Skeleton Phase complete. World Spec Construction complete. World Spec Skeleton v1 is locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-skeleton-ratification.md`. World Spec v1 is locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-v1-ratification.md`. File Inventory Architecture v1 and File Inventory v1 are locked. Synthetic World-Level File Construction Plan v1 is locked. Batch 1 FI-W01 through FI-W07 and Batch 2 FI-W08 through FI-W13 are locked. Batch 3 FI-W14 through FI-W16 are in candidate review at `worlds/korvin-merrow/synthetic-files/candidate-review/batch-3/`. Do not create FI-W17 through FI-W22, tasks, prompts, goldens, grader guidance, notes, labs, vitals, additional synthetic files, DOCX submission artifacts, AutoQC responses, or RL Studio uploads without explicit Alexander authorization for that step.
 
 Task Architecture Interview v1 is preserved as historical planning scaffold at `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md`. Task Architecture Package v1 is locked and authoritative at `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md`. It defines the authoritative architecture of six task concepts across four workflows: Discharge Medication Reconciliation, Hospital Discharge Summary Generation, Discharge Planning Documentation, and Interdisciplinary Care Plan Development and Documentation. `worlds/korvin-merrow/active/task-map.md` has been reconciled; old Brainstorm-level mappings are superseded. It does not create final task prompts, expected outputs, file inventory, World Spec sections, reference templates, or synthetic files.
 
@@ -413,15 +413,21 @@ Completed:
 27. Preparation Layer completed.
 28. World Spec Skeleton v1 locked and ratified.
 29. World Spec v1 locked and ratified.
+30. File Inventory Architecture v1 and File Inventory v1 locked and ratified.
+31. Synthetic World-Level File Construction Plan v1 locked and ratified.
+32. Batch 1 synthetic world-level files FI-W01 through FI-W07 locked and ratified.
+33. Batch 2 synthetic world-level files FI-W08 through FI-W13 locked and ratified.
+34. Batch 3 synthetic world-level candidate files FI-W14 through FI-W16 constructed for candidate review.
+35. Batch 3 candidate validation review created at `worlds/korvin-merrow/synthetic-files/candidate-review/batch-3/batch-3-validation-review.md`.
 
-Still pending before downstream construction:
+Still pending:
 
-1. Official Claude World Spec session.
-2. Alexander authorization for File Inventory Architecture.
-3. File inventory.
-4. Synthetic files.
-5. Task specifications.
-6. Prompts, expected outputs, goldens, grader guidance.
+1. Batch 3 candidate review and ratification decision.
+2. Batch 4 FI-W17 through FI-W21, pending explicit authorization.
+3. Batch 5 FI-W22, pending explicit authorization.
+4. Task specifications.
+5. Prompts, expected outputs, goldens, grader guidance.
+6. AutoQC responses, DOCX submission packaging, and RL Studio upload.
 
 ## Claude Use Rules
 

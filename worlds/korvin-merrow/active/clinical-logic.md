@@ -370,8 +370,11 @@ File Inventory Architecture v1:
 - Batch 2 ratification is recorded at `worlds/korvin-merrow/synthetic-files/ratifications/batch-2-ratification.md`.
 - Batch 2 validation review is recorded at `worlds/korvin-merrow/synthetic-files/locked/batch-2/batch-2-validation-review.md`.
 - Batch 2 Construction is complete.
-- Next eligible phase is Batch 3 Synthetic World-Level File Construction.
-- FI-W14 through FI-W22, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
+- Batch 3 candidate files FI-W14 through FI-W16 are constructed at `worlds/korvin-merrow/synthetic-files/candidate-review/batch-3/`.
+- Batch 3 validation review is recorded at `worlds/korvin-merrow/synthetic-files/candidate-review/batch-3/batch-3-validation-review.md`.
+- Batch 3 Construction status is candidate review, not locked.
+- Next eligible phase is Batch 3 Candidate Review and ratification decision.
+- FI-W17 through FI-W22, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
 
 ## Key Milestones Calendar Skeleton v1
 
@@ -783,9 +786,24 @@ Batch 2 clinical logic:
 - Preserves Trap #3 as buried functional/cognitive evidence and Trap #5 as visible but incomplete discharge/source-hierarchy reasoning.
 - Uses FI-W06 outpatient rheumatology provenance only according to the locked HD4 availability constraint.
 
+Batch 3 Synthetic World-Level File Construction:
+
+- Status: CANDIDATE REVIEW.
+- Files constructed: FI-W14 through FI-W16.
+- Candidate folder: `worlds/korvin-merrow/synthetic-files/candidate-review/batch-3/`.
+- Validation review: `worlds/korvin-merrow/synthetic-files/candidate-review/batch-3/batch-3-validation-review.md`.
+
+Batch 3 clinical logic:
+
+- Builds the consultant layer on top of the Batch 1 provenance and Batch 2 hospital-course spine.
+- Preserves Cardiology vs Nephrology as a defensible timing and risk-balancing friction.
+- Preserves Endocrinology vs Primary Team as steroid-risk interpretation, not a hidden diagnosis reveal.
+- Preserves hospitalist-synthesizes-not-defers governance.
+- Preserves FI-W12 trend data and FI-W13 MAR/action data as inputs, not final answers.
+
 Boundary:
 
-- FI-W14 through FI-W22, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission materials, and RL Studio activity remain blocked until explicitly authorized.
+- FI-W17 through FI-W22, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission materials, and RL Studio activity remain blocked until explicitly authorized.
 
 ## Major Clinical Friction Themes
 

@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-Batch 2 Synthetic World-Level File Construction / Locked.
+Batch 3 Synthetic World-Level File Construction / Candidate Review.
 
 ## Brainstorm
 
@@ -45,7 +45,10 @@ Batch 2 Synthetic World-Level File Construction / Locked.
 - Batch 2 ratification: `worlds/korvin-merrow/synthetic-files/ratifications/batch-2-ratification.md`
 - Batch 2 validation review: `worlds/korvin-merrow/synthetic-files/locked/batch-2/batch-2-validation-review.md`
 - Batch 2 Construction: complete
-- Next eligible phase: Batch 3 Synthetic World-Level File Construction
+- Batch 3 synthetic files FI-W14 through FI-W16: candidate review at `worlds/korvin-merrow/synthetic-files/candidate-review/batch-3/`
+- Batch 3 validation review: `worlds/korvin-merrow/synthetic-files/candidate-review/batch-3/batch-3-validation-review.md`
+- Batch 3 Construction: candidate review, not locked
+- Next eligible phase: Batch 3 Candidate Review and ratification decision
 - Task-design physician-perspective guidance: recorded as a future task-layer rule only. It does not change source-of-truth hierarchy or Governance Package v1; future task prompts and deliverables must remain physician-centered even when supporting sources are pharmacy, nursing, PT/OT, case management, social work, family, or administrative sources.
 - Collaborator session-exit discipline: standing process / handoff rule. Every future session must leave the repository clean or explicitly documented, update phase and next-phase surfaces, preserve locked artifacts unless explicitly authorized, label candidate artifacts, move newly locked artifacts to locked paths with ratification references, update continuity and Claude handoff files, record carry-forward watch items and future task-layer guidance, commit completed work unless explicitly told not to, and report what changed, what did not change, current status, next eligible phase, and whether the repository is safe for another collaborator.
 - Clinical Story Skeleton: v1 locked, reviewed, and ratified
@@ -66,7 +69,7 @@ Batch 2 Synthetic World-Level File Construction / Locked.
 - World Spec Skeleton v1: `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`
 - World Spec Skeleton ratification: `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-skeleton-ratification.md`
 - Official Claude World Spec session: pending
-- Current state: World Spec v1 is locked; File Inventory Architecture v1 is locked; File Inventory v1 is locked; Synthetic World-Level File Construction Plan v1 is locked; Synthetic File Construction Governance is complete; Batch 1 synthetic world-level files are locked; Batch 2 synthetic world-level files are locked; calendar, baseline anchors, Clinical Story Timeline Package v1, Task Architecture Package v1, Medication Expansion Package v1, Comorbidity Expansion Package v1, Provider Roster Package v1, Surgical History Package v1, Daily Hospital Course Framework v1, and World Spec Skeleton v1 are locked
+- Current state: World Spec v1 is locked; File Inventory Architecture v1 is locked; File Inventory v1 is locked; Synthetic World-Level File Construction Plan v1 is locked; Synthetic File Construction Governance is complete; Batch 1 synthetic world-level files are locked; Batch 2 synthetic world-level files are locked; Batch 3 synthetic world-level files are in candidate review; calendar, baseline anchors, Clinical Story Timeline Package v1, Task Architecture Package v1, Medication Expansion Package v1, Comorbidity Expansion Package v1, Provider Roster Package v1, Surgical History Package v1, Daily Hospital Course Framework v1, and World Spec Skeleton v1 are locked
 - World Spec prep packet: created
 - Official World Spec template: saved locally
 - World Spec AutoQC prompt v6.3: saved locally
@@ -102,7 +105,7 @@ Batch 2 Synthetic World-Level File Construction / Locked.
 - Fetched World Spec example source documents: `reference/word-spec-examples/`
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 - World Spec prep folder structure: reorganized by lifecycle buckets (`candidate-review/`, `locked/`, `ratifications/`, `reviews/`, `decision-logs/`, `planning-scaffolds/`)
-- Next eligible phase: Batch 3 Synthetic World-Level File Construction. Do not create FI-W14 through FI-W22, task specifications, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission artifacts, or RL Studio uploads until explicitly authorized.
+- Next eligible phase: Batch 3 Candidate Review and ratification decision. Do not create FI-W17 through FI-W22, task specifications, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission artifacts, or RL Studio uploads until explicitly authorized.
 
 ## Tooling
 
@@ -119,11 +122,11 @@ Batch 2 Synthetic World-Level File Construction / Locked.
 - Do not reopen Identity Package v1; use the review addendum only as carry-forward implementation notes.
 - Do not change Governance Package v1 without Alexander approval.
 - Do not create milestones before Alexander authorizes that step.
-- Do not create Batch 3 synthetic files or downstream task/file contents before Alexander authorizes that step.
+- Do not lock Batch 3, create Batch 4 synthetic files, or create downstream task/file contents before Alexander authorizes that step.
 - Do not revise locked task architecture or create task prompts before Alexander authorizes that step.
 - Do not treat fetched World Spec examples as authored Korvin Merrow content.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
 - Do not modify clinical content beyond reviewer-required remediation without Alexander approval.
-- Do not start Batch 3 or later synthetic generation, task prompts, golden responses, grader guidelines, or failure analysis without explicit authorization.
+- Do not start Batch 4 or later synthetic generation, task prompts, golden responses, grader guidelines, or failure analysis without explicit authorization.
 - Do not access RL Studio without explicit authorization.
 - Do not end a working session without applying collaborator session-exit discipline.
