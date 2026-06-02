@@ -4,7 +4,7 @@ Purpose: enable a brand-new Claude session to resume accurately without stale as
 
 ## Where We Are
 
-Project Sanctum onboarding is in Phase 1 World Building. Alexander has explicitly authorized local construction beyond the earlier steps through Batch 4 synthetic world-level file construction. Batch 1, Batch 2, and Batch 3 are locked. Batch 4 is in candidate review and is not locked.
+Project Sanctum onboarding is in Phase 1 World Building. Alexander has explicitly authorized local construction beyond the earlier steps through Batch 4 synthetic world-level file construction. Batch 1, Batch 2, and Batch 3 are locked. Batch 4 is in candidate review and is not locked. FI-W20 inventory row reconciliation is recorded at `worlds/korvin-merrow/file-inventory/reviews/fi-w20-inventory-row-reconciliation.md` and preserves FI-W20 content, Batch 4 content, source-of-truth hierarchy, and prednisone hierarchy.
 
 The Brainstorm for Korvin Merrow World has been completed, passed AutoQC, uploaded to RL Studio, returned SEND BACK from Human Review, remediated, reuploaded, resubmitted, and approved by Stacey S.
 

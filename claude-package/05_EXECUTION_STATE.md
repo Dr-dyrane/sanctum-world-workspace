@@ -6,6 +6,8 @@ Purpose: compressed current state for Claude. Use `project/STATUS.md` and `docs/
 
 Current phase: Batch 4 Synthetic World-Level File Construction / Candidate Review.
 
+FI-W20 inventory row reconciliation is recorded at `worlds/korvin-merrow/file-inventory/reviews/fi-w20-inventory-row-reconciliation.md`. The reconciliation expands only the FI-W20 File Inventory v1 row's supported-tags cell to include secondary/collateral Trap #1 and Endocrinology vs Primary Team support through lower-authority family report; it does not change FI-W20 content, Batch 4 content, source-of-truth hierarchy, prednisone hierarchy, or Batch 4 lock status.
+
 Brainstorm:
 
 - Original Brainstorm submitted in RL Studio.

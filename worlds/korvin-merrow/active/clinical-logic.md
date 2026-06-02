@@ -377,6 +377,7 @@ File Inventory Architecture v1:
 - Batch 4 candidate files FI-W17 through FI-W21 are constructed at `worlds/korvin-merrow/synthetic-files/candidate-review/batch-4/`.
 - Batch 4 validation review is recorded at `worlds/korvin-merrow/synthetic-files/candidate-review/batch-4/batch-4-validation-review.md`.
 - Batch 4 Construction status is candidate review, not locked.
+- FI-W20 File Inventory row reconciliation is recorded at `worlds/korvin-merrow/file-inventory/reviews/fi-w20-inventory-row-reconciliation.md`; the row now explicitly includes secondary/collateral Trap #1 and Endocrinology vs Primary Team support through lower-authority family report without changing the synthetic FI-W20 file or prednisone hierarchy.
 - Next eligible phase is Batch 4 Candidate Review and ratification decision.
 - FI-W22, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
 
@@ -825,6 +826,7 @@ Batch 4 clinical logic:
 - Preserves Trap #3 vs Trap #5 by avoiding a visible discharge-facing artifact; FI-W22 remains reserved for that later role.
 - Preserves Family vs Primary Team as a balanced friction rather than making either side obviously correct.
 - Preserves medication-restart uncertainty, prednisone uncertainty, insulin lispro inpatient-only logic, and consultant caveat synthesis.
+- FI-W20's collateral steroid-history role remains lower-authority family report. It supports Trap #1 and Endocrinology vs Primary Team without becoming a prednisone source-of-truth file, endocrine answer file, or override of rheumatology provenance.
 
 ## Major Clinical Friction Themes
 

@@ -1329,6 +1329,34 @@ Next eligible phase:
 
 - Batch 4 Candidate Review and ratification decision.
 
+## FI-W20 Inventory Row Reconciliation Record
+
+Status:
+
+- RECORDED.
+
+Context:
+
+- Batch 4 governance reconciliation resolved the FI-W20 supported-tags question by expanding the locked File Inventory v1 FI-W20 row rather than reducing the constructed FI-W20 candidate file.
+
+Resolution:
+
+- Canonical resolution: expand the locked FI-W20 row to record secondary/collateral Trap #1 and Endocrinology vs Primary Team support through lower-authority family report.
+- Reconciliation record: `worlds/korvin-merrow/file-inventory/reviews/fi-w20-inventory-row-reconciliation.md`.
+
+Preserved boundaries:
+
+- FI-W20 content unchanged.
+- Batch 4 content unchanged.
+- Batch 1 through Batch 3 content unchanged.
+- Source-of-truth hierarchy unchanged.
+- Prednisone hierarchy unchanged: rheumatology attending recommendation remains highest outpatient prednisone authority, followed by verified medication reconciliation, pharmacy/refill history, family report, and patient recollection.
+- Batch 4 remains candidate review and is not locked by this reconciliation.
+
+Next eligible phase:
+
+- Batch 4 Candidate Review and ratification decision.
+
 Boundary:
 
 - FI-W22, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.

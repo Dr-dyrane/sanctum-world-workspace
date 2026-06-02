@@ -38,6 +38,7 @@ Purpose: active cockpit for the transition from approved Brainstorm through Worl
 - Batch 3 Construction is complete.
 - Batch 4 synthetic world-level files FI-W17 through FI-W21 are in candidate review at `worlds/korvin-merrow/synthetic-files/candidate-review/batch-4/`.
 - Batch 4 validation review: `worlds/korvin-merrow/synthetic-files/candidate-review/batch-4/batch-4-validation-review.md`.
+- FI-W20 inventory row reconciliation: `worlds/korvin-merrow/file-inventory/reviews/fi-w20-inventory-row-reconciliation.md`.
 - Batch 4 Construction is in candidate review and is not locked.
 - Next eligible phase: Batch 4 Candidate Review and ratification decision.
 - FI-W22, task files, prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission packaging, RL Studio upload, and submission materials have not started.
@@ -427,6 +428,7 @@ Synthetic World-Level File Construction Plan v1:
 - Batch 4 candidate folder: `worlds/korvin-merrow/synthetic-files/candidate-review/batch-4/`.
 - Batch 4 validation review: `worlds/korvin-merrow/synthetic-files/candidate-review/batch-4/batch-4-validation-review.md`.
 - Files constructed: FI-W17 through FI-W21.
+- FI-W20 File Inventory row reconciliation is complete; FI-W20 retains primary Family Communication / Family vs Primary Team / Traps #3 and #5 role, with secondary/collateral Trap #1 and Endocrinology vs Primary Team support through lower-authority family report.
 - Next eligible phase: Batch 4 Candidate Review and ratification decision.
 
 Fetched World Spec source examples:
