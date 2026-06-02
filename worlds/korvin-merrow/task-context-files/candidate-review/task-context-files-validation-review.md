@@ -161,6 +161,33 @@ This construction did not create:
 - new synthetic world-level files;
 - post-world clinical evidence.
 
+## Carry-Forward / Future Prompt-Layer Watch Items
+
+### RECORDED
+
+Reviewer A returned LOCK READY / GO. Reviewer B returned GO WITH MINOR NOTES. No true defects, architecture defects, or governance defects were identified. The following items are carry-forward / future prompt-layer watch items only:
+
+1. FI-T01 vs FI-T07 differentiation must be preserved at prompt-construction time.
+
+   - FI-T01 should remain the full discharge medication reconciliation context.
+   - FI-T07 should remain a focused medication-safety handoff/addendum context.
+   - Future prompts must not create two near-duplicate medication reconciliation tasks.
+
+2. FI-T02 discharge-summary prompt construction must preserve anti-transcription emphasis.
+
+   - Future prompt construction should require synthesis by clinical evolution, not copied problem-list transcription.
+   - Trap #4 sepsis anchoring must remain active.
+   - FI-W22 must not substitute for the full hospital course.
+
+3. FI-T03 / FI-T06 physician-voice watch item.
+
+   - Supporting evidence may come from case management, social work, quality/safety, PT/OT, nursing, pharmacy, and family.
+   - Future deliverables must remain physician-authored, physician-reviewed, physician-supervised, or physician-communicated.
+
+4. FI-S construction remains a separate blocked phase.
+
+5. Task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, and submission artifacts remain blocked until explicit authorization.
+
 ## Final Validation Status
 
 Task-Level Context File Construction:
