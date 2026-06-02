@@ -374,11 +374,12 @@ File Inventory Architecture v1:
 - Batch 3 validation review is recorded at `worlds/korvin-merrow/synthetic-files/locked/batch-3/batch-3-validation-review.md`.
 - Batch 3 ratification is recorded at `worlds/korvin-merrow/synthetic-files/ratifications/batch-3-ratification.md`.
 - Batch 3 Construction status is complete.
-- Batch 4 candidate files FI-W17 through FI-W21 are constructed at `worlds/korvin-merrow/synthetic-files/candidate-review/batch-4/`.
-- Batch 4 validation review is recorded at `worlds/korvin-merrow/synthetic-files/candidate-review/batch-4/batch-4-validation-review.md`.
-- Batch 4 Construction status is candidate review, not locked.
+- Batch 4 files FI-W17 through FI-W21 are locked at `worlds/korvin-merrow/synthetic-files/locked/batch-4/`.
+- Batch 4 validation review is recorded at `worlds/korvin-merrow/synthetic-files/locked/batch-4/batch-4-validation-review.md`.
+- Batch 4 ratification is recorded at `worlds/korvin-merrow/synthetic-files/ratifications/batch-4-ratification.md`.
+- Batch 4 Construction status is complete.
 - FI-W20 File Inventory row reconciliation is recorded at `worlds/korvin-merrow/file-inventory/reviews/fi-w20-inventory-row-reconciliation.md`; the row now explicitly includes secondary/collateral Trap #1 and Endocrinology vs Primary Team support through lower-authority family report without changing the synthetic FI-W20 file or prednisone hierarchy.
-- Next eligible phase is Batch 4 Candidate Review and ratification decision.
+- Next eligible phase is Batch 5 Synthetic World-Level File Construction.
 - FI-W22, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
 
 ## Key Milestones Calendar Skeleton v1
@@ -814,10 +815,12 @@ Boundary:
 
 Batch 4 Synthetic World-Level File Construction:
 
-- Status: CANDIDATE REVIEW.
-- Files constructed: FI-W17 through FI-W21.
-- Candidate folder: `worlds/korvin-merrow/synthetic-files/candidate-review/batch-4/`.
-- Validation review: `worlds/korvin-merrow/synthetic-files/candidate-review/batch-4/batch-4-validation-review.md`.
+- Status: LOCKED.
+- Files locked: FI-W17 through FI-W21.
+- Locked folder: `worlds/korvin-merrow/synthetic-files/locked/batch-4/`.
+- Validation review: `worlds/korvin-merrow/synthetic-files/locked/batch-4/batch-4-validation-review.md`.
+- Ratification: `worlds/korvin-merrow/synthetic-files/ratifications/batch-4-ratification.md`.
+- Batch 4 Construction status: COMPLETE.
 
 Batch 4 clinical logic:
 

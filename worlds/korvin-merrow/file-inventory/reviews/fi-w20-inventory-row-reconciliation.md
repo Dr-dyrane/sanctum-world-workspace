@@ -66,11 +66,11 @@ The reconciliation preserves:
 This reconciliation does not:
 
 - change FI-W20 content;
-- change Batch 4 candidate synthetic files;
+- change the Batch 4 synthetic file contents;
 - change Batch 1, Batch 2, or Batch 3 locked synthetic files;
 - change the source-of-truth hierarchy;
 - change the prednisone hierarchy;
-- lock Batch 4;
+- lock Batch 4 by itself; Batch 4 was later locked by `worlds/korvin-merrow/synthetic-files/ratifications/batch-4-ratification.md`;
 - create FI-W22;
 - create task files, prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, or submission materials.
 

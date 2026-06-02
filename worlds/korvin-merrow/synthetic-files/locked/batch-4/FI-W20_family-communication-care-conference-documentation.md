@@ -14,7 +14,7 @@ Tool / Origin: Writer-created synthetic chart file
 
 Purpose: Carry family baseline knowledge, home safety concerns, medication-management concerns, and disagreement with superficial discharge readiness.
 
-Supported Workflow(s) / Trap(s) / Friction(s): Discharge Planning Documentation; Hospital Discharge Summary Generation; Traps #1, #3, #5; Family vs Primary Team; Endocrinology vs Primary Team
+Supported Workflow(s) / Trap(s) / Friction(s): Discharge Planning Documentation; Hospital Discharge Summary Generation; Traps #3, #5; Trap #1 secondary/collateral; Family vs Primary Team; Endocrinology vs Primary Team secondary/collateral
 
 World Boundary: contains only documented family communication available through 05/23/2026 at 18:00. It contains no completed discharge outcome, post-discharge follow-up, task framing, expected output, golden response, or grader guidance.
 
@@ -112,4 +112,4 @@ Family communication does not determine:
 
 ## Guardrails
 
-FI-W20 preserves Family vs Primary Team friction. It makes family concerns meaningful without making discharge obviously unsafe by itself. It supports Trap #3 and Trap #1 but does not become a hidden answer file or a visible discharge-facing plan.
+FI-W20 preserves Family vs Primary Team friction. It makes family concerns meaningful without making discharge obviously unsafe by itself. It supports Trap #3 primarily and Trap #1 only as secondary/collateral family report without overriding rheumatology prednisone authority, but does not become a hidden answer file or a visible discharge-facing plan.

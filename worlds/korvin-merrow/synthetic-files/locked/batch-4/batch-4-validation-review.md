@@ -4,15 +4,15 @@ World: Korvin Merrow
 
 Artifact set: Batch 4 Synthetic World-Level Files
 
-Status: CANDIDATE REVIEW
+Status: LOCKED
 
 Files reviewed:
 
-- `worlds/korvin-merrow/synthetic-files/candidate-review/batch-4/FI-W17_bedside-nursing-observation-notes-flowsheet-summary.md`
-- `worlds/korvin-merrow/synthetic-files/candidate-review/batch-4/FI-W18_physical-therapy-assessment.md`
-- `worlds/korvin-merrow/synthetic-files/candidate-review/batch-4/FI-W19_occupational-therapy-assessment.md`
-- `worlds/korvin-merrow/synthetic-files/candidate-review/batch-4/FI-W20_family-communication-care-conference-documentation.md`
-- `worlds/korvin-merrow/synthetic-files/candidate-review/batch-4/FI-W21_case-management-social-work-discharge-planning-note.md`
+- `worlds/korvin-merrow/synthetic-files/locked/batch-4/FI-W17_bedside-nursing-observation-notes-flowsheet-summary.md`
+- `worlds/korvin-merrow/synthetic-files/locked/batch-4/FI-W18_physical-therapy-assessment.md`
+- `worlds/korvin-merrow/synthetic-files/locked/batch-4/FI-W19_occupational-therapy-assessment.md`
+- `worlds/korvin-merrow/synthetic-files/locked/batch-4/FI-W20_family-communication-care-conference-documentation.md`
+- `worlds/korvin-merrow/synthetic-files/locked/batch-4/FI-W21_case-management-social-work-discharge-planning-note.md`
 
 This validation review checks Batch 4 construction against locked World Spec v1, File Inventory v1, Synthetic World-Level File Construction Plan v1, Governance Package v1, locked Batches 1-3, and the explicit Batch 4 authorization.
 
@@ -22,13 +22,13 @@ It does not create FI-W22, task prompts, expected outputs, golden responses, gra
 
 ### VERIFIED
 
-Finding: FI-W17 through FI-W21 were created in the authorized candidate-review path.
+Finding: FI-W17 through FI-W21 were created in the authorized Batch 4 path and later locked in the canonical locked path.
 
-Evidence: the Batch 4 candidate folder contains nursing, physical therapy, occupational therapy, family communication, case management/social work, and this validation review only.
+Evidence: the Batch 4 locked folder contains nursing, physical therapy, occupational therapy, family communication, case management/social work, and this validation review only.
 
 Impact: construction stayed within the authorized Batch 4 file IDs.
 
-Action required: none before candidate review.
+Action required: none after lock.
 
 ### VERIFIED
 
@@ -44,11 +44,11 @@ Action required: do not create FI-W22 until explicitly authorized.
 
 Finding: no task-level, supplementary, prompt, golden, grader, AutoQC, DOCX, or submission artifacts were created.
 
-Evidence: constructed artifacts are limited to the authorized Batch 4 candidate-review files and validation review.
+Evidence: constructed artifacts are limited to the authorized Batch 4 files and validation review.
 
 Impact: downstream phase boundaries remain intact.
 
-Action required: none before candidate review.
+Action required: none after lock.
 
 ## Temporal Validation
 
@@ -60,7 +60,7 @@ Evidence: FI-W17 through FI-W21 are anchored from HD1-HD6, HD3-HD6, or HD5-HD6 a
 
 Impact: closed-world discipline is preserved.
 
-Action required: none before candidate review.
+Action required: none after lock.
 
 ### VERIFIED
 
@@ -88,7 +88,7 @@ Evidence:
 
 Impact: functional/cognitive concerns require synthesis across nursing, PT, OT, family, and care coordination.
 
-Action required: candidate review should confirm the evidence is subtle enough and not overly decisive.
+Action required: none after lock; future FI-W22 construction must not over-concentrate this evidence.
 
 ### VERIFIED
 
@@ -108,7 +108,7 @@ Evidence: Batch 4 uses weakness, endurance limits, cueing needs, medication-mana
 
 Impact: discharge remains plausible but not safely solved.
 
-Action required: none before candidate review.
+Action required: none after lock.
 
 ## Trap #3 vs Trap #5 Validation
 
@@ -142,7 +142,7 @@ Evidence: FI-W17 and FI-W20 record family baseline knowledge; FI-W19 and FI-W21 
 
 Impact: family is not dismissed as generic anxiety.
 
-Action required: none before candidate review.
+Action required: none after lock.
 
 ### VERIFIED
 
@@ -152,7 +152,7 @@ Evidence: Batch 4 repeatedly acknowledges medical improvement, better intake, im
 
 Impact: family is not made obviously correct and the primary team is not made careless.
 
-Action required: preserve balance in candidate review.
+Action required: preserve balance in later construction.
 
 ### VERIFIED
 
@@ -162,7 +162,7 @@ Evidence: FI-W20 states Mara wants discharge when safe, asks appropriate questio
 
 Impact: the friction remains two-sided.
 
-Action required: none before candidate review.
+Action required: none after lock.
 
 ## Source Hierarchy Validation
 
@@ -174,7 +174,7 @@ Evidence: FI-W20 states family report is clinically important but lower authorit
 
 Impact: governance remains intact.
 
-Action required: none before candidate review.
+Action required: none after lock.
 
 ### VERIFIED
 
@@ -206,7 +206,7 @@ Evidence: Batch 4 uses FI-W07 baseline function and family support context, FI-W
 
 Impact: baseline remains the comparator rather than being rewritten.
 
-Action required: none before candidate review.
+Action required: none after lock.
 
 ### VERIFIED
 
@@ -216,7 +216,7 @@ Evidence: Batch 4 builds on FI-W09's emerging functional/cognitive concern, FI-W
 
 Impact: hospital-course spine is preserved.
 
-Action required: none before candidate review.
+Action required: none after lock.
 
 ### VERIFIED
 
@@ -226,7 +226,7 @@ Evidence: Batch 4 references consultant concerns as active context but does not 
 
 Impact: consultant notes remain interpretation sources requiring hospitalist synthesis.
 
-Action required: none before candidate review.
+Action required: none after lock.
 
 ## Inpatient-Only Insulin Lispro Validation
 
@@ -238,7 +238,7 @@ Evidence: FI-W21 states inpatient-only correctional insulin lispro should not be
 
 Impact: Medication Expansion Package v1 and FI-W13 logic remain intact.
 
-Action required: none before candidate review.
+Action required: none after lock.
 
 ## Answer-File Drift Validation
 
@@ -256,7 +256,7 @@ Evidence:
 
 Impact: Batch 4 supports synthesis rather than replacing it.
 
-Action required: candidate review should preserve this design.
+Action required: none after lock; preserve this design in FI-W22 and later task-context construction.
 
 ## Carry-Forward Watch Items
 
@@ -266,12 +266,24 @@ Action required: candidate review should preserve this design.
 - Later files must preserve family concerns as meaningful but not independently dispositive.
 - Later files must preserve the difference between medical improvement and discharge readiness.
 
+## FI-W20 Footprint Reconciliation
+
+### VERIFIED
+
+Finding: FI-W20 supported-tags drift was identified and reconciled.
+
+Evidence: independent ratification review found FI-W20 declared Trap #1 and Endocrinology vs Primary Team beyond locked File Inventory v1 row 68, which listed Traps #3, #5 and Family vs Primary Team. The expansion was ratified in File Inventory v1 row 68 as secondary/collateral support for Trap #1 and Endocrinology vs Primary Team through lower-authority family report without overriding rheumatology prednisone authority. FI-W20 metadata was then aligned to mark Trap #1 and Endocrinology vs Primary Team as secondary/collateral, matching the inventory weighting and the FI-W21 "Trap #3 secondary" convention.
+
+Impact: the file and the locked inventory now agree on FI-W20's primary footprint (Traps #3, #5; Family vs Primary Team) and its secondary/collateral footprint (Trap #1; Endocrinology vs Primary Team). The prednisone source hierarchy is unchanged, with rheumatology remaining the highest outpatient taper authority.
+
+Action required: none. Alignment was metadata-only; no clinical content, family evidence, source hierarchy, or Batch 4 architecture was changed.
+
 ## Final Validation Status
 
 Batch 4 Synthetic World-Level File Construction:
 
 - FI-W17 through FI-W21 created.
-- Status: CANDIDATE REVIEW.
+- Status: LOCKED.
 - No unauthorized files created.
 - No temporal leakage identified.
 - No answer-file drift identified.
@@ -279,3 +291,4 @@ Batch 4 Synthetic World-Level File Construction:
 - Trap #3 vs Trap #5 distinction preserved.
 - Family vs Primary Team friction preserved.
 - Batch 1, Batch 2, and Batch 3 consistency preserved.
+- FI-W20 footprint reconciled: Trap #1 and Endocrinology vs Primary Team marked secondary/collateral, consistent with File Inventory v1 row 68.

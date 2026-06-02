@@ -4,9 +4,9 @@ Purpose: compressed current state for Claude. Use `project/STATUS.md` and `docs/
 
 ## Project State
 
-Current phase: Batch 4 Synthetic World-Level File Construction / Candidate Review.
+Current phase: Batch 4 Synthetic World-Level File Construction / Locked.
 
-FI-W20 inventory row reconciliation is recorded at `worlds/korvin-merrow/file-inventory/reviews/fi-w20-inventory-row-reconciliation.md`. The reconciliation expands only the FI-W20 File Inventory v1 row's supported-tags cell to include secondary/collateral Trap #1 and Endocrinology vs Primary Team support through lower-authority family report; it does not change FI-W20 content, Batch 4 content, source-of-truth hierarchy, prednisone hierarchy, or Batch 4 lock status.
+FI-W20 inventory row reconciliation is recorded at `worlds/korvin-merrow/file-inventory/reviews/fi-w20-inventory-row-reconciliation.md`. The reconciliation expands only the FI-W20 File Inventory v1 row's supported-tags cell to include secondary/collateral Trap #1 and Endocrinology vs Primary Team support through lower-authority family report; it does not change source-of-truth hierarchy or prednisone hierarchy. Batch 4 is locked at `worlds/korvin-merrow/synthetic-files/locked/batch-4/`.
 
 Brainstorm:
 
@@ -24,7 +24,7 @@ Brainstorm:
 
 Current blocker:
 
-- No reviewer blocker. Preparation Layer is complete. World Spec Skeleton v1 is locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`. World Spec v1 is locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-v1-ratification.md`. World Spec Construction is complete. File Inventory Architecture v1 is locked at `worlds/korvin-merrow/file-inventory/locked/file-inventory-architecture-v1.md`, with ratification recorded at `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-architecture-ratification.md`. Phase 3 File Inventory Architecture is complete. File Inventory v1 is locked at `worlds/korvin-merrow/file-inventory/locked/file-inventory-v1.md`, with ratification recorded at `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-v1-ratification.md`. File Inventory Planning is complete. Synthetic World-Level File Construction Plan v1 is locked at `worlds/korvin-merrow/synthetic-files/locked/synthetic-world-file-construction-plan-v1.md`, with ratification recorded at `worlds/korvin-merrow/synthetic-files/ratifications/synthetic-world-file-construction-plan-v1-ratification.md`. Synthetic File Construction Governance is complete. Batch 1 synthetic world-level files FI-W01 through FI-W07 are locked at `worlds/korvin-merrow/synthetic-files/locked/batch-1/`, with ratification recorded at `worlds/korvin-merrow/synthetic-files/ratifications/batch-1-ratification.md` and validation recorded at `worlds/korvin-merrow/synthetic-files/locked/batch-1/batch-1-validation-review.md`. Batch 1 Construction is complete. Batch 2 synthetic world-level files FI-W08 through FI-W13 are locked at `worlds/korvin-merrow/synthetic-files/locked/batch-2/`, with ratification recorded at `worlds/korvin-merrow/synthetic-files/ratifications/batch-2-ratification.md` and validation recorded at `worlds/korvin-merrow/synthetic-files/locked/batch-2/batch-2-validation-review.md`. Batch 2 Construction is complete. Batch 3 synthetic world-level files FI-W14 through FI-W16 are locked at `worlds/korvin-merrow/synthetic-files/locked/batch-3/`, with ratification recorded at `worlds/korvin-merrow/synthetic-files/ratifications/batch-3-ratification.md` and validation recorded at `worlds/korvin-merrow/synthetic-files/locked/batch-3/batch-3-validation-review.md`. Batch 3 Construction is complete. Batch 4 candidate synthetic world-level files FI-W17 through FI-W21 are in candidate review at `worlds/korvin-merrow/synthetic-files/candidate-review/batch-4/`, with candidate validation review recorded at `worlds/korvin-merrow/synthetic-files/candidate-review/batch-4/batch-4-validation-review.md`. FI-W22, task prompts, expected outputs, goldens, grader guidance, DOCX submission packaging, AutoQC, and RL Studio upload remain gated on explicit Alexander authorization for the relevant step.
+- No reviewer blocker. Preparation Layer is complete. World Spec Skeleton v1 is locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`. World Spec v1 is locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-v1-ratification.md`. World Spec Construction is complete. File Inventory Architecture v1 is locked at `worlds/korvin-merrow/file-inventory/locked/file-inventory-architecture-v1.md`, with ratification recorded at `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-architecture-ratification.md`. Phase 3 File Inventory Architecture is complete. File Inventory v1 is locked at `worlds/korvin-merrow/file-inventory/locked/file-inventory-v1.md`, with ratification recorded at `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-v1-ratification.md`. File Inventory Planning is complete. Synthetic World-Level File Construction Plan v1 is locked at `worlds/korvin-merrow/synthetic-files/locked/synthetic-world-file-construction-plan-v1.md`, with ratification recorded at `worlds/korvin-merrow/synthetic-files/ratifications/synthetic-world-file-construction-plan-v1-ratification.md`. Synthetic File Construction Governance is complete. Batch 1 synthetic world-level files FI-W01 through FI-W07 are locked at `worlds/korvin-merrow/synthetic-files/locked/batch-1/`, with ratification recorded at `worlds/korvin-merrow/synthetic-files/ratifications/batch-1-ratification.md` and validation recorded at `worlds/korvin-merrow/synthetic-files/locked/batch-1/batch-1-validation-review.md`. Batch 1 Construction is complete. Batch 2 synthetic world-level files FI-W08 through FI-W13 are locked at `worlds/korvin-merrow/synthetic-files/locked/batch-2/`, with ratification recorded at `worlds/korvin-merrow/synthetic-files/ratifications/batch-2-ratification.md` and validation recorded at `worlds/korvin-merrow/synthetic-files/locked/batch-2/batch-2-validation-review.md`. Batch 2 Construction is complete. Batch 3 synthetic world-level files FI-W14 through FI-W16 are locked at `worlds/korvin-merrow/synthetic-files/locked/batch-3/`, with ratification recorded at `worlds/korvin-merrow/synthetic-files/ratifications/batch-3-ratification.md` and validation recorded at `worlds/korvin-merrow/synthetic-files/locked/batch-3/batch-3-validation-review.md`. Batch 3 Construction is complete. Batch 4 synthetic world-level files FI-W17 through FI-W21 are locked at `worlds/korvin-merrow/synthetic-files/locked/batch-4/`, with ratification recorded at `worlds/korvin-merrow/synthetic-files/ratifications/batch-4-ratification.md` and validation recorded at `worlds/korvin-merrow/synthetic-files/locked/batch-4/batch-4-validation-review.md`. Batch 4 Construction is complete. FI-W22, task prompts, expected outputs, goldens, grader guidance, DOCX submission packaging, AutoQC, and RL Studio upload remain gated on explicit Alexander authorization for the relevant step.
 
 Next legal action:
 
@@ -56,7 +56,7 @@ Next legal action:
 - Use `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md` for preparation-layer completion and daily framework ratification.
 - Use `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md` as the locked World Spec Skeleton.
 - Use `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-skeleton-ratification.md` for World Spec Skeleton ratification and watch items.
-- Do not revise the locked Clinical Story Skeleton or locked Identity Package, draft new World Spec content, create milestones, revise locked file inventory, lock Batch 4, or create FI-W22 until Alexander explicitly starts/authorizes the relevant phase.
+- Do not revise the locked Clinical Story Skeleton or locked Identity Package, draft new World Spec content, create milestones, revise locked file inventory, or create FI-W22 until Alexander explicitly starts/authorizes the relevant phase.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
 
 ## Completed
@@ -154,8 +154,9 @@ Next legal action:
 - Batch 3 synthetic world-level files ratified and locked: FI-W14 through FI-W16 under `worlds/korvin-merrow/synthetic-files/locked/batch-3/`.
 - Batch 3 ratification recorded: `worlds/korvin-merrow/synthetic-files/ratifications/batch-3-ratification.md`.
 - Batch 3 validation review locked: `worlds/korvin-merrow/synthetic-files/locked/batch-3/batch-3-validation-review.md`.
-- Batch 4 synthetic world-level candidate files constructed: FI-W17 through FI-W21 under `worlds/korvin-merrow/synthetic-files/candidate-review/batch-4/`.
-- Batch 4 candidate validation review recorded: `worlds/korvin-merrow/synthetic-files/candidate-review/batch-4/batch-4-validation-review.md`.
+- Batch 4 synthetic world-level files locked: FI-W17 through FI-W21 under `worlds/korvin-merrow/synthetic-files/locked/batch-4/`.
+- Batch 4 validation review recorded: `worlds/korvin-merrow/synthetic-files/locked/batch-4/batch-4-validation-review.md`.
+- Batch 4 ratification recorded: `worlds/korvin-merrow/synthetic-files/ratifications/batch-4-ratification.md`.
 
 ## Latest Git Checkpoints
 
@@ -183,7 +184,7 @@ Next legal action:
 - Reviewer-risk analysis.
 - Claude package refresh.
 - Local documentation updates that preserve phase boundaries.
-- Batch 4 candidate review and ratification support when explicitly authorized.
+- Batch 5 Synthetic World-Level File Construction support when explicitly authorized.
 - Applying the Medicine Team Lead physician-perspective guidance later during authorized task design, task prompts, expected outputs, goldens, and grader guidance. This guidance is future task-layer framing only; it does not reopen Governance Package v1 or change source-of-truth hierarchy.
 - Applying collaborator session-exit discipline at the end of every working session.
 
@@ -195,7 +196,7 @@ Next legal action:
 - Changing Governance Package v1 without Alexander approval.
 - World Spec drafting before explicit Alexander authorization for drafting.
 - Populating the World Spec template before explicit Alexander authorization for template population.
-- Locking Batch 4 or creating FI-W22 before explicit Alexander authorization.
+- Creating FI-W22 before explicit Alexander authorization.
 - Creating Batch 5 or later synthetic file contents, chart notes, or downstream file/task outputs before explicit authorization.
 - Creating milestones before Alexander authorizes that step.
 - Creating medication schedules, medication reconciliation outputs, hospital medication changes, admission medication lists, or discharge medication lists before Alexander authorizes those steps.

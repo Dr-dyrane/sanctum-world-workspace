@@ -1280,9 +1280,9 @@ Boundary:
 
 ## Batch 4 Synthetic World-Level File Construction Record
 
-Status: CANDIDATE REVIEW.
+Status: LOCKED.
 
-Files constructed:
+Files locked:
 
 - FI-W17 Nursing Documentation.
 - FI-W18 Physical Therapy Documentation.
@@ -1290,13 +1290,17 @@ Files constructed:
 - FI-W20 Family Communication Documentation.
 - FI-W21 Case Management / Social Work Documentation.
 
-Candidate path:
+Locked path:
 
-- `worlds/korvin-merrow/synthetic-files/candidate-review/batch-4/`
+- `worlds/korvin-merrow/synthetic-files/locked/batch-4/`
 
 Validation review:
 
-- `worlds/korvin-merrow/synthetic-files/candidate-review/batch-4/batch-4-validation-review.md`
+- `worlds/korvin-merrow/synthetic-files/locked/batch-4/batch-4-validation-review.md`
+
+Ratification:
+
+- `worlds/korvin-merrow/synthetic-files/ratifications/batch-4-ratification.md`
 
 Construction findings:
 
@@ -1313,7 +1317,7 @@ Construction findings:
 
 Accepted carry-forward items:
 
-- Batch 4 requires candidate review before lock.
+- Batch 4 is locked and complete.
 - FI-W22 later must remain visible-but-incomplete.
 - FI-W22 must not duplicate or resolve all Batch 4 functional/cognitive evidence.
 - FI-W22 must not resolve final disposition, final medication restart, final prednisone taper, or all consultant caveats.
@@ -1321,13 +1325,13 @@ Accepted carry-forward items:
 
 Final status:
 
-- Batch 4 Synthetic World-Level File Construction: CANDIDATE REVIEW.
-- FI-W17 through FI-W21: CANDIDATE REVIEW.
-- Batch 4 Construction: not locked.
+- Batch 4 Synthetic World-Level File Construction: LOCKED.
+- FI-W17 through FI-W21: LOCKED.
+- Batch 4 Construction: COMPLETE.
 
 Next eligible phase:
 
-- Batch 4 Candidate Review and ratification decision.
+- Batch 5 Synthetic World-Level File Construction.
 
 ## FI-W20 Inventory Row Reconciliation Record
 
@@ -1351,11 +1355,66 @@ Preserved boundaries:
 - Batch 1 through Batch 3 content unchanged.
 - Source-of-truth hierarchy unchanged.
 - Prednisone hierarchy unchanged: rheumatology attending recommendation remains highest outpatient prednisone authority, followed by verified medication reconciliation, pharmacy/refill history, family report, and patient recollection.
-- Batch 4 remains candidate review and is not locked by this reconciliation.
+- Batch 4 is locked by the Batch 4 ratification record.
 
 Next eligible phase:
 
-- Batch 4 Candidate Review and ratification decision.
+- Batch 5 Synthetic World-Level File Construction.
+
+Boundary:
+
+- FI-W22, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
+
+## Batch 4 Synthetic World-Level File Construction Ratification Record
+
+Status:
+
+- LOCKED.
+
+Files locked:
+
+- FI-W17 through FI-W21.
+
+Ratification:
+
+- `worlds/korvin-merrow/synthetic-files/ratifications/batch-4-ratification.md`.
+
+Locked folder:
+
+- `worlds/korvin-merrow/synthetic-files/locked/batch-4/`.
+
+Validation review:
+
+- `worlds/korvin-merrow/synthetic-files/locked/batch-4/batch-4-validation-review.md`.
+
+Review outcome:
+
+- Claude Code Review: YES / LOCK READY / GO.
+- Windsurf Claude Review: YES / LOCK READY / GO.
+- FI-W20 governance reconciliation completed.
+- No remaining OPEN items.
+- No remaining BLOCKERs.
+
+Accepted carry-forward items:
+
+- FI-W22 must remain visible-but-incomplete.
+- FI-W22 must not duplicate the distributed Batch 4 substrate.
+- FI-W22 must not resolve final disposition, medication restart timing, or prednisone history.
+- FI-W22 must not collapse Trap #3 into Trap #5.
+- Family concerns must remain meaningful but not dispositive.
+- Consultant caveats must remain partially absent from FI-W22.
+- FI-W22 must preserve the distinction between visible evidence and complete evidence.
+
+Status record:
+
+- Batch 4 Synthetic World-Level File Construction: LOCKED.
+- FI-W17 through FI-W21: LOCKED.
+- Batch 4 Construction: COMPLETE.
+- FI-W20 reconciliation: COMPLETE.
+
+Next eligible phase:
+
+- Batch 5 Synthetic World-Level File Construction.
 
 Boundary:
 

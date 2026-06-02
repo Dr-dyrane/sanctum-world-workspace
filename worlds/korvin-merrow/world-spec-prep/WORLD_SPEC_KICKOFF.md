@@ -1,6 +1,6 @@
 # Korvin Merrow World Spec Kickoff
 
-Status: Batch 4 Synthetic World-Level File Construction / Candidate Review.
+Status: Batch 4 Synthetic World-Level File Construction / Locked.
 
 Purpose: active cockpit for the transition from approved Brainstorm through World Spec construction while preserving phase boundaries around template population, file inventory, tasks, and downstream deliverables.
 
@@ -36,11 +36,12 @@ Purpose: active cockpit for the transition from approved Brainstorm through Worl
 - Batch 3 validation review: `worlds/korvin-merrow/synthetic-files/locked/batch-3/batch-3-validation-review.md`.
 - Batch 3 ratification: `worlds/korvin-merrow/synthetic-files/ratifications/batch-3-ratification.md`.
 - Batch 3 Construction is complete.
-- Batch 4 synthetic world-level files FI-W17 through FI-W21 are in candidate review at `worlds/korvin-merrow/synthetic-files/candidate-review/batch-4/`.
-- Batch 4 validation review: `worlds/korvin-merrow/synthetic-files/candidate-review/batch-4/batch-4-validation-review.md`.
+- Batch 4 synthetic world-level files FI-W17 through FI-W21 are locked at `worlds/korvin-merrow/synthetic-files/locked/batch-4/`.
+- Batch 4 validation review: `worlds/korvin-merrow/synthetic-files/locked/batch-4/batch-4-validation-review.md`.
+- Batch 4 ratification: `worlds/korvin-merrow/synthetic-files/ratifications/batch-4-ratification.md`.
 - FI-W20 inventory row reconciliation: `worlds/korvin-merrow/file-inventory/reviews/fi-w20-inventory-row-reconciliation.md`.
-- Batch 4 Construction is in candidate review and is not locked.
-- Next eligible phase: Batch 4 Candidate Review and ratification decision.
+- Batch 4 Construction is complete.
+- Next eligible phase: Batch 5 Synthetic World-Level File Construction.
 - FI-W22, task files, prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission packaging, RL Studio upload, and submission materials have not started.
 - Clinical Story Skeleton v1 is locked and ratified.
 - Clinical Story Skeleton review completed with GO recommendation.
@@ -75,7 +76,7 @@ Purpose: active cockpit for the transition from approved Brainstorm through Worl
 - Daily Hospital Course Framework v1: `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md`.
 - Daily Hospital Course Framework ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md`.
 - Preparation Layer status: COMPLETE.
-- Next eligible phase: Batch 4 Candidate Review and ratification decision. FI-W22, task specifications, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission packaging, RL Studio upload, and RL Studio activity remain blocked until explicitly authorized.
+- Next eligible phase: Batch 5 Synthetic World-Level File Construction. FI-W22, task specifications, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission packaging, RL Studio upload, and RL Studio activity remain blocked until explicitly authorized.
 
 ## Workspace Bloat And Doctrine Audit
 
@@ -93,7 +94,7 @@ Doctrine check:
 - World Spec v1 has been locked and ratified.
 - No official World Spec template has been populated.
 - File Inventory v1 planned inventory table has been locked, but no synthetic chart files or downstream file contents have been created.
-- Batch 1 synthetic chart files FI-W01 through FI-W07 are locked. Batch 2 synthetic chart files FI-W08 through FI-W13 are locked. Batch 3 synthetic chart files FI-W14 through FI-W16 are locked. Batch 4 candidate chart files FI-W17 through FI-W21 have been created for candidate review only. No FI-W22, task files, prompts, goldens, grader guidance, AutoQC responses, DOCX artifacts, or submission materials have been created.
+- Batch 1 synthetic chart files FI-W01 through FI-W07 are locked. Batch 2 synthetic chart files FI-W08 through FI-W13 are locked. Batch 3 synthetic chart files FI-W14 through FI-W16 are locked. Batch 4 synthetic chart files FI-W17 through FI-W21 are locked. No FI-W22, task files, prompts, goldens, grader guidance, AutoQC responses, DOCX artifacts, or submission materials have been created.
 - No final task prompts, golden responses, grader guidelines, or failure analysis have been created.
 - Clinical decisions remain physician-originated and Brainstorm-locked.
 - Claude remains an official drafting assistant, not the clinical source of truth.
@@ -385,7 +386,7 @@ Preparation Layer:
 - Status: COMPLETE.
 - Completed artifacts: Brainstorm, Temporal Architecture, Clinical Story Skeleton, Identity Package, Governance Package, Key Milestones Calendar Skeleton, Baseline Anchor Package, Clinical Story Timeline Package, Task Architecture Package, Medication Expansion Package, Comorbidity Expansion Package, Provider Roster Package, Surgical History Package, and Daily Hospital Course Framework.
 - World Spec Construction status: COMPLETE.
-- Boundary: World Spec v1 is locked. File Inventory Architecture v1 is locked, Phase 3 File Inventory Architecture is complete, File Inventory v1 is locked, File Inventory Planning is complete, Synthetic World-Level File Construction Plan v1 is locked, Synthetic File Construction Governance is complete, Batch 1 FI-W01 through FI-W07 are locked, Batch 2 FI-W08 through FI-W13 are locked, Batch 3 FI-W14 through FI-W16 are locked, and Batch 4 FI-W17 through FI-W21 are in candidate review. FI-W22, task specifications, prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission packaging, RL Studio upload, and RL Studio activity remain unstarted until Alexander explicitly authorizes the relevant next step.
+- Boundary: World Spec v1 is locked. File Inventory Architecture v1 is locked, Phase 3 File Inventory Architecture is complete, File Inventory v1 is locked, File Inventory Planning is complete, Synthetic World-Level File Construction Plan v1 is locked, Synthetic File Construction Governance is complete, Batch 1 FI-W01 through FI-W07 are locked, Batch 2 FI-W08 through FI-W13 are locked, Batch 3 FI-W14 through FI-W16 are locked, and Batch 4 FI-W17 through FI-W21 are locked. FI-W22, task specifications, prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission packaging, RL Studio upload, and RL Studio activity remain unstarted until Alexander explicitly authorizes the relevant next step.
 
 File Inventory Architecture v1:
 
@@ -394,7 +395,7 @@ File Inventory Architecture v1:
 - Ratification: `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-architecture-ratification.md`.
 - Purpose: define the planned file ecosystem for the locked World Spec without creating final Section 3 rows, filenames, synthetic files, notes, labs, vitals, medication lists, task prompts, expected outputs, goldens, or grader guidance.
 - It preserves the world close at 05/23/2026 18:00, classifies post-world anchors as task/post-world context only, maps all five traps and three frictions to planned file-source categories, and records future AutoQC v6.3 8-column file-plan readiness.
-- Next eligible phase: Batch 4 Candidate Review and ratification decision.
+- Next eligible phase: Batch 5 Synthetic World-Level File Construction.
 - File Inventory v1 locked table: `worlds/korvin-merrow/file-inventory/locked/file-inventory-v1.md`.
 - File Inventory v1 ratification: `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-v1-ratification.md`.
 - Current status: LOCKED.
@@ -424,12 +425,14 @@ Synthetic World-Level File Construction Plan v1:
 - Batch 3 ratification: `worlds/korvin-merrow/synthetic-files/ratifications/batch-3-ratification.md`.
 - Files locked: FI-W14 through FI-W16.
 - Batch 3 Construction status: COMPLETE.
-- Batch 4 Synthetic World-Level File Construction status: CANDIDATE REVIEW.
-- Batch 4 candidate folder: `worlds/korvin-merrow/synthetic-files/candidate-review/batch-4/`.
-- Batch 4 validation review: `worlds/korvin-merrow/synthetic-files/candidate-review/batch-4/batch-4-validation-review.md`.
+- Batch 4 Synthetic World-Level File Construction status: LOCKED.
+- Batch 4 locked folder: `worlds/korvin-merrow/synthetic-files/locked/batch-4/`.
+- Batch 4 validation review: `worlds/korvin-merrow/synthetic-files/locked/batch-4/batch-4-validation-review.md`.
+- Batch 4 ratification: `worlds/korvin-merrow/synthetic-files/ratifications/batch-4-ratification.md`.
 - Files constructed: FI-W17 through FI-W21.
 - FI-W20 File Inventory row reconciliation is complete; FI-W20 retains primary Family Communication / Family vs Primary Team / Traps #3 and #5 role, with secondary/collateral Trap #1 and Endocrinology vs Primary Team support through lower-authority family report.
-- Next eligible phase: Batch 4 Candidate Review and ratification decision.
+- Batch 4 Construction status: COMPLETE.
+- Next eligible phase: Batch 5 Synthetic World-Level File Construction.
 
 Fetched World Spec source examples:
 
@@ -551,7 +554,7 @@ Stop before:
 - Governance Package work unless Alexander explicitly starts that phase.
 - World Spec drafting unless Alexander explicitly authorizes drafting.
 - Milestone creation.
-- Batch 5 or later synthetic file construction, downstream file contents, or any non-Batch-4 review/ratification work unless Alexander explicitly authorizes that construction unit.
+- Batch 5 or later synthetic file construction, downstream file contents, or any non-Batch-4 lock follow-up work unless Alexander explicitly authorizes that construction unit.
 - Task prompts.
 - Golden responses.
 - Grader guidelines.
