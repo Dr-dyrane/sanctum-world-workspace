@@ -41,6 +41,28 @@ Stop before irreversible actions, including RL Studio submission, browser contro
 
 Commit checkpoints after major milestones.
 
+## Collaborator Session Exit Discipline
+
+Every Codex, Claude, or writer session must leave the repository in a clean handoff state so the next collaborator can cold-start from repository files alone.
+
+Before ending a working session, ensure:
+
+1. Working tree is clean, or any uncommitted state is explicitly documented.
+2. Current phase is updated.
+3. Next eligible phase is updated.
+4. Locked artifacts are unchanged unless Alexander explicitly authorized reopening or editing them.
+5. Candidate artifacts are clearly located and status-labeled.
+6. Newly locked artifacts are moved to locked paths.
+7. Ratifications are created and referenced when a lock occurs.
+8. Continuity surfaces are updated.
+9. Claude handoff files are updated.
+10. No stale active candidate paths remain unless explicitly marked historical.
+11. No unauthorized files are created.
+12. Carry-forward watch items are recorded.
+13. Future task-layer guidance is preserved.
+14. A checkpoint commit is created for completed work unless Alexander explicitly instructs not to commit.
+15. Final report states exactly what changed, what did not change, current status, next eligible phase, and whether the repository is safe for another collaborator to continue.
+
 ## Clinical Authority
 
 Alexander is the clinical expert. Human physician judgment is the source of truth.

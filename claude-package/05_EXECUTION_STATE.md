@@ -54,7 +54,7 @@ Next legal action:
 - Use `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md` for preparation-layer completion and daily framework ratification.
 - Use `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md` as the locked World Spec Skeleton.
 - Use `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-skeleton-ratification.md` for World Spec Skeleton ratification and watch items.
-- Do not revise the locked Clinical Story Skeleton or locked Identity Package, draft World Spec, create milestones, or create file inventory until Alexander explicitly starts/authorizes the relevant phase.
+- Do not revise the locked Clinical Story Skeleton or locked Identity Package, draft new World Spec content, create milestones, revise locked file inventory, or create FI-W14 through FI-W22 until Alexander explicitly starts/authorizes the relevant phase.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
 
 ## Completed
@@ -148,6 +148,7 @@ Next legal action:
 - Batch 2 synthetic world-level files ratified and locked: FI-W08 through FI-W13 under `worlds/korvin-merrow/synthetic-files/locked/batch-2/`.
 - Batch 2 ratification recorded: `worlds/korvin-merrow/synthetic-files/ratifications/batch-2-ratification.md`.
 - Batch 2 validation review locked: `worlds/korvin-merrow/synthetic-files/locked/batch-2/batch-2-validation-review.md`.
+- Collaborator session-exit discipline integrated as a standing process / handoff rule in `AGENTS.md`, `project/STATUS.md`, `docs/status-dashboard.md`, `docs/git-workflow.md`, and Claude handoff surfaces.
 
 ## Latest Git Checkpoints
 
@@ -177,6 +178,7 @@ Next legal action:
 - Local documentation updates that preserve phase boundaries.
 - Batch 3 construction support when explicitly authorized.
 - Applying the Medicine Team Lead physician-perspective guidance later during authorized task design, task prompts, expected outputs, goldens, and grader guidance. This guidance is future task-layer framing only; it does not reopen Governance Package v1 or change source-of-truth hierarchy.
+- Applying collaborator session-exit discipline at the end of every working session.
 
 ## Not Authorized Right Now
 
@@ -200,6 +202,22 @@ Next legal action:
 - Modifying Brainstorm unless new reviewer feedback arrives.
 - Further identity changes or task concept changes beyond the reviewer-required Korvin Merrow remediation without Alexander approval.
 - Accessing RL Studio or browser operations without explicit authorization.
+
+## Collaborator Session Exit Discipline
+
+Standing process / handoff rule:
+
+1. Working tree must be clean, or uncommitted state must be explicitly documented.
+2. Current phase and next eligible phase must be updated.
+3. Locked artifacts must remain unchanged unless Alexander explicitly authorized reopening or editing them.
+4. Candidate artifacts must be clearly located and status-labeled.
+5. Newly locked artifacts must move to locked paths, with ratifications created and referenced.
+6. Continuity surfaces and Claude handoff files must be updated.
+7. Stale active candidate paths must be removed or explicitly marked historical.
+8. Unauthorized files must not be created.
+9. Carry-forward watch items and future task-layer guidance must be preserved.
+10. A checkpoint commit must be created for completed work unless Alexander explicitly instructs not to commit.
+11. Final reports must state what changed, what did not change, current status, next eligible phase, and whether the repository is safe for another collaborator to continue.
 
 ## Claude Operating Mode
 

@@ -47,6 +47,7 @@ Batch 2 Synthetic World-Level File Construction / Locked.
 - Batch 2 Construction: complete
 - Next eligible phase: Batch 3 Synthetic World-Level File Construction
 - Task-design physician-perspective guidance: recorded as a future task-layer rule only. It does not change source-of-truth hierarchy or Governance Package v1; future task prompts and deliverables must remain physician-centered even when supporting sources are pharmacy, nursing, PT/OT, case management, social work, family, or administrative sources.
+- Collaborator session-exit discipline: standing process / handoff rule. Every future session must leave the repository clean or explicitly documented, update phase and next-phase surfaces, preserve locked artifacts unless explicitly authorized, label candidate artifacts, move newly locked artifacts to locked paths with ratification references, update continuity and Claude handoff files, record carry-forward watch items and future task-layer guidance, commit completed work unless explicitly told not to, and report what changed, what did not change, current status, next eligible phase, and whether the repository is safe for another collaborator.
 - Clinical Story Skeleton: v1 locked, reviewed, and ratified
 - Identity Package: v1 locked
 - Governance Package: v1 ratified
@@ -125,3 +126,4 @@ Batch 2 Synthetic World-Level File Construction / Locked.
 - Do not modify clinical content beyond reviewer-required remediation without Alexander approval.
 - Do not start Batch 3 or later synthetic generation, task prompts, golden responses, grader guidelines, or failure analysis without explicit authorization.
 - Do not access RL Studio without explicit authorization.
+- Do not end a working session without applying collaborator session-exit discipline.

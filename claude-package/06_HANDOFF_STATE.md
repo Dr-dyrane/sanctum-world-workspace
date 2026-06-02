@@ -20,6 +20,8 @@ RL Studio:
 
 Current state: Batch 2 Synthetic World-Level File Construction / Locked. World Spec Skeleton v1 is locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`. World Spec v1 is locked at `worlds/korvin-merrow/world-spec-construction/locked/world-spec-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-v1-ratification.md`. World Spec Construction is complete. File Inventory Architecture v1 is locked at `worlds/korvin-merrow/file-inventory/locked/file-inventory-architecture-v1.md`, with ratification recorded at `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-architecture-ratification.md`. Phase 3 File Inventory Architecture is complete. File Inventory v1 is locked at `worlds/korvin-merrow/file-inventory/locked/file-inventory-v1.md`, with ratification recorded at `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-v1-ratification.md`. File Inventory Planning is complete. Synthetic World-Level File Construction Plan v1 is locked at `worlds/korvin-merrow/synthetic-files/locked/synthetic-world-file-construction-plan-v1.md`, with ratification recorded at `worlds/korvin-merrow/synthetic-files/ratifications/synthetic-world-file-construction-plan-v1-ratification.md`. Synthetic File Construction Governance is complete. Batch 1 synthetic world-level files FI-W01 through FI-W07 are locked at `worlds/korvin-merrow/synthetic-files/locked/batch-1/`, with ratification recorded at `worlds/korvin-merrow/synthetic-files/ratifications/batch-1-ratification.md` and validation recorded at `worlds/korvin-merrow/synthetic-files/locked/batch-1/batch-1-validation-review.md`. Batch 1 Construction is complete. Batch 2 synthetic world-level files FI-W08 through FI-W13 are locked at `worlds/korvin-merrow/synthetic-files/locked/batch-2/`, with ratification recorded at `worlds/korvin-merrow/synthetic-files/ratifications/batch-2-ratification.md` and validation recorded at `worlds/korvin-merrow/synthetic-files/locked/batch-2/batch-2-validation-review.md`. Batch 2 Construction is complete. FI-W14 through FI-W22, tasks, prompts, expected outputs, goldens, grader guidance, DOCX submission packaging, AutoQC, and RL Studio upload remain gated on explicit Alexander authorization for the relevant step.
 
+Repository collaboration readiness note: a new Codex session reconstructed the repository state from repository files alone. The repository is collaboration-ready because `project/STATUS.md`, `docs/status-dashboard.md`, `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`, `project/WORKSPACE_FILE_MAP.md`, and this handoff converge on Batch 2 locked / Batch 3 next eligible. The canonical file map is `project/WORKSPACE_FILE_MAP.md`.
+
 ## Locked Decisions
 
 Locked from approved Brainstorm:
@@ -305,7 +307,7 @@ Traceability/file strategy:
 - Evidence provenance workflow.
 - Later file modalities.
 - Later trap substrate planning.
-- No final file inventory yet.
+- File Inventory v1 is locked; later work must preserve its rows unless Alexander explicitly reopens it.
 
 ## Verified World Spec Risks
 
@@ -339,6 +341,20 @@ Until Alexander authorizes the next construction unit:
 2. Do not revise the locked Clinical Story Skeleton.
 3. Do not revise locked World Spec v1 without Alexander approval.
 4. Do not create FI-W14 through FI-W22, or downstream file/task outputs.
+
+Before ending any working session:
+
+1. Leave the working tree clean, or explicitly document uncommitted state.
+2. Update current phase and next eligible phase.
+3. Preserve locked artifacts unless Alexander explicitly authorized reopening or editing them.
+4. Locate and status-label candidate artifacts.
+5. Move newly locked artifacts to locked paths and create/reference ratifications.
+6. Update continuity surfaces and Claude handoff files.
+7. Remove or explicitly mark stale active candidate paths as historical.
+8. Avoid unauthorized files.
+9. Record carry-forward watch items and future task-layer guidance.
+10. Commit completed work unless Alexander explicitly instructs not to commit.
+11. Final report must state what changed, what did not change, current status, next eligible phase, and whether the repository is safe for another collaborator.
 
 ## Hard Boundaries
 

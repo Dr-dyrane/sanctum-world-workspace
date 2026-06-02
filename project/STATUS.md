@@ -18,6 +18,8 @@ Claude Identity Package hostile-review observations are recorded as carry-forwar
 
 Task-design physician-perspective guidance from Medicine Team Lead has been recorded as a future task-layer rule only. It does not alter source-of-truth hierarchy, Governance Package v1, locked clinical architecture, or locked synthetic files. Future task prompts, expected outputs, goldens, and grader guidance must frame final deliverables from the physician perspective or physician voice.
 
+Collaborator session-exit discipline is now a standing process / handoff rule: every Codex, Claude, or writer session must leave the repository clean or explicitly documented, keep current and next phase surfaces updated, preserve locked artifacts unless explicitly authorized, label candidate artifacts clearly, move newly locked artifacts into locked paths with ratification references, update continuity and Claude handoff surfaces, remove or clearly mark stale active candidate paths, record carry-forward watch items and future task-layer guidance, and create a checkpoint commit for completed work unless Alexander explicitly instructs not to commit. Final reports must state what changed, what did not change, current status, next eligible phase, and whether the repository is safe for another collaborator to continue.
+
 ## RL Studio Submission
 
 Task ID: cyau8803
@@ -44,7 +46,7 @@ No active reviewer blocker. Preparation Layer is complete. World Spec Skeleton v
 
 ## Current Git Checkpoint
 
-checkpoint: integrate physician-perspective task guidance
+checkpoint: integrate collaborator session exit discipline
 
 ## Active Branch
 
@@ -61,6 +63,8 @@ Return to baseline commit if workflow becomes corrupted.
 ## Next Command For Codex
 
 Await explicit Alexander authorization before starting Batch 3 Synthetic World-Level File Construction. Do not create FI-W14 through FI-W22, task specifications, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission artifacts, Studio submission packaging, or RL Studio uploads before Alexander explicitly authorizes the relevant phase.
+
+At the end of any working session, apply the collaborator session-exit discipline before final reporting and commit completed process or construction work unless Alexander explicitly instructs not to commit.
 
 ## Scope Guardrails
 
