@@ -2,7 +2,7 @@
 
 Date created: 2026-06-02
 
-Status: CANDIDATE REVIEW
+Status: LOCKED
 
 Purpose: validate Batch 2 Synthetic World-Level File Construction for FI-W08 through FI-W13 against locked File Inventory v1, Synthetic World-Level File Construction Plan v1, Batch 1 locked files, and locked world architecture.
 
@@ -268,7 +268,7 @@ Impact: downstream phase boundaries remain intact.
 
 Action required: none before candidate review.
 
-## Candidate Review Risks
+## Ratification Carry-Forward Risks
 
 ### PLAUSIBLE
 
@@ -294,7 +294,7 @@ Action required: Batch 3 should preserve both consultant defensibility and MAR/s
 
 Finding: Batch 2 preserves closed-world and batch-gated construction doctrine.
 
-Evidence: only FI-W08 through FI-W13 were created in candidate-review/batch-2. No FI-W14 through FI-W22, task-level files, supplementary files, prompts, goldens, grader guidance, AutoQC responses, or submission materials were created.
+Evidence: only FI-W08 through FI-W13 were created and locked for Batch 2. No FI-W14 through FI-W22, task-level files, supplementary files, prompts, goldens, grader guidance, AutoQC responses, or submission materials were created.
 
 Impact: phase boundary remains intact.
 
@@ -318,4 +318,4 @@ Files Constructed:
 
 FI-W08 through FI-W13
 
-Status: CANDIDATE REVIEW
+Status: LOCKED

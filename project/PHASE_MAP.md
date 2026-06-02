@@ -25,7 +25,7 @@ Goal: Engineering generates synthetic files from approved spec and reference tem
 
 Status: Out of scope until approval and phase update.
 
-Korvin Merrow current exception: Alexander has explicitly authorized local, batch-gated synthetic world-level file construction through Batch 2 only. Batch 1 FI-W01 through FI-W07 are locked. Batch 2 FI-W08 through FI-W13 is constructed for candidate review and is not locked. FI-W14 and later remain explicitly gated and must not begin without Alexander authorization.
+Korvin Merrow current exception: Alexander has explicitly authorized local, batch-gated synthetic world-level file construction through Batch 2 only. Batch 1 FI-W01 through FI-W07 are locked. Batch 2 FI-W08 through FI-W13 are locked. FI-W14 through FI-W22 remain explicitly gated and must not begin without Alexander authorization.
 
 ### Phase 3: QA Your Tasks
 

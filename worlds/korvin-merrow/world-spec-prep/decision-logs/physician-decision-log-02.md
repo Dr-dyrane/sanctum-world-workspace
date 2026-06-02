@@ -1083,11 +1083,13 @@ Boundary:
 
 ## Batch 2 Synthetic World-Level File Construction
 
-Status: CANDIDATE REVIEW.
+Status: LOCKED.
 
-Candidate folder: `worlds/korvin-merrow/synthetic-files/candidate-review/batch-2/`
+Locked folder: `worlds/korvin-merrow/synthetic-files/locked/batch-2/`
 
-Validation review: `worlds/korvin-merrow/synthetic-files/candidate-review/batch-2/batch-2-validation-review.md`
+Validation review: `worlds/korvin-merrow/synthetic-files/locked/batch-2/batch-2-validation-review.md`
+
+Ratification: `worlds/korvin-merrow/synthetic-files/ratifications/batch-2-ratification.md`
 
 Authorized files constructed:
 
@@ -1120,15 +1122,46 @@ Validation result:
 - Frictions preserved.
 - Batch 1 consistency preserved.
 
+Ratification review outcome:
+
+- Claude Code Review: YES / LOCK READY / GO.
+- Windsurf Claude Review: YES / LOCK READY / GO.
+- No true defects identified.
+- No blockers identified.
+- Hospital-course spine verified.
+- FI-W12 objective trend values verified as clinically coherent.
+- FI-W13 MAR/action source verified as non-final and non-discharge-facing.
+- FI-W06 HD4 availability constraint preserved.
+- Baseline-versus-admission-value distinction preserved.
+- Insulin lispro remains inpatient-only.
+- Baseline medication count remains 20.
+- Trap #1 preserved.
+- Trap #2 strengthened without over-resolution.
+- Trap #3 and Trap #5 distinction preserved.
+- Trap #4 preserved without sepsis reversal.
+- All three frictions remain two-sided.
+- No answer-file drift identified.
+- No post-world leakage identified.
+
+Accepted carry-forward items:
+
+- Batch 3 consultants must respond to the Batch 1-2 clinical spine.
+- Nephrology and Cardiology must remain defensible and time-sensitive.
+- Endocrinology must remain interpretive, not a hidden single-diagnosis reveal.
+- Prednisone hierarchy must preserve rheumatology as highest outpatient taper authority.
+- FI-W12 values must not be overused by later files as if they settle medication restart or disposition.
+- FI-W13 actions must not become a final discharge medication plan.
+
 Final status:
 
-- Batch 2 Synthetic World-Level File Construction: CANDIDATE REVIEW.
-- FI-W08 through FI-W13: CANDIDATE REVIEW.
+- Batch 2 Synthetic World-Level File Construction: LOCKED.
+- FI-W08 through FI-W13: LOCKED.
+- Batch 2 Construction: COMPLETE.
 
 Next eligible phase:
 
-- Batch 2 candidate review and ratification decision.
+- Batch 3 Synthetic World-Level File Construction.
 
 Boundary:
 
-- FI-W14 or later, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
+- FI-W14 through FI-W22, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
