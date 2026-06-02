@@ -95,7 +95,7 @@ Findings:
 - `worlds/korvin-merrow/task-context-files/` is now a lifecycle folder for FI-T task-context file construction. FI-T01 through FI-T07 are locked and Task-Level Context Files are complete; no FI-S files, prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, or submission artifacts exist in this folder.
 - `worlds/korvin-merrow/supplementary-file-architecture/` is now a lifecycle folder for FI-S architecture only. Supplementary File Architecture v1 is locked and ratified; no constructed FI-S files belong in the architecture folder.
 - `worlds/korvin-merrow/supplementary-files/` is now a lifecycle folder for FI-S file construction. FI-S01 through FI-S04 are candidate-review artifacts only.
-- `candidate-review/` is reserved for active candidate artifacts only. Task Architecture Interview v1 moved to `planning-scaffolds/` after Task Architecture Package v1 lock. World Spec prep `candidate-review/` is empty after Daily Hospital Course Framework v1 lock; file-inventory `candidate-review/` is empty after File Inventory v1 lock; synthetic-files `candidate-review/` is empty after Batch 5 lock; task-layer-architecture `candidate-review/` is empty after Task-Level Context File Architecture v1 lock; task-context-files `candidate-review/` is no longer active after Task-Level Context File Construction lock; supplementary-file-architecture `candidate-review/` is no longer active after Supplementary File Architecture v1 lock.
+- `candidate-review/` is reserved for active candidate artifacts only. Inactive candidate-review folders should be absent from the visible tree and recreated on demand when a new candidate artifact exists. Task Architecture Interview v1 moved to `planning-scaffolds/` after Task Architecture Package v1 lock. The only active candidate-review folder is currently `worlds/korvin-merrow/supplementary-files/candidate-review/`.
 - Several files intentionally overlap by lifecycle stage, especially Brainstorm history/reviews and World Spec prep/checklist material.
 - Do not add new audit or navigation docs unless an existing map/status file cannot carry the information.
 
@@ -294,7 +294,7 @@ These are fetched source/reference examples, not authored Korvin Merrow content 
 Lifecycle clustering:
 
 - `WORLD_SPEC_KICKOFF.md`: the only root cockpit file in `world-spec-prep/`.
-- `candidate-review/`: artifacts awaiting physician decision or lock. Currently empty after Daily Hospital Course Framework v1 lock.
+- `candidate-review/`: artifacts awaiting physician decision or lock. Folder absent unless an active World Spec prep candidate exists.
 - `locked/`: locked architecture packages and canonical frameworks.
 - `ratifications/`: formal ratification records.
 - `reviews/`: review findings, hostile reviews, clarifications, and addenda.
@@ -350,7 +350,7 @@ Lifecycle clustering:
 
 Lifecycle clustering:
 
-- `candidate-review/`: active World Spec construction artifacts awaiting physician review or lock. Currently empty after World Spec v1 lock.
+- `candidate-review/`: active World Spec construction artifacts awaiting physician review or lock. Folder absent unless an active construction candidate exists.
 - `locked/`: locked World Spec construction artifacts.
 - `ratifications/`: ratification records for construction artifacts.
 - Future `reviews/` folder may be added only when the lifecycle stage exists.
@@ -366,7 +366,7 @@ Lifecycle clustering:
 
 Lifecycle clustering:
 
-- `candidate-review/`: active file inventory artifacts awaiting physician review or lock. Currently empty after File Inventory v1 lock.
+- `candidate-review/`: active file inventory artifacts awaiting physician review or lock. Folder absent unless an active file-inventory candidate exists.
 - `locked/`: locked file inventory architecture and planned inventory artifacts.
 - `ratifications/`: ratification records for file inventory artifacts.
 - `reviews/`: reconciliation and review records for authorized inventory governance updates.
@@ -384,7 +384,7 @@ Lifecycle clustering:
 
 Lifecycle clustering:
 
-- `candidate-review/`: active synthetic-file construction artifacts awaiting physician review or lock. Currently empty after Batch 5 lock.
+- `candidate-review/`: active synthetic-file construction artifacts awaiting physician review or lock. Folder absent unless an active synthetic-file candidate exists.
 - `locked/`: locked synthetic-file construction governance and locked construction units.
 - `ratifications/`: ratification records for synthetic-file construction governance or future construction units.
 - This area must not contain synthetic chart contents unless Alexander explicitly authorizes that phase.
@@ -430,7 +430,7 @@ Lifecycle clustering:
 
 Lifecycle clustering:
 
-- `candidate-review/`: active task-layer architecture artifacts awaiting physician/reviewer review or lock. Currently empty after Task-Level Context File Architecture v1 lock.
+- `candidate-review/`: active task-layer architecture artifacts awaiting physician/reviewer review or lock. Folder absent unless an active task-layer architecture candidate exists.
 - `locked/`: locked task-layer architecture artifacts.
 - `ratifications/`: ratification records for task-layer architecture artifacts.
 - This area is architecture only unless Alexander explicitly authorizes a later construction phase.
@@ -444,7 +444,7 @@ Lifecycle clustering:
 
 Lifecycle clustering:
 
-- `candidate-review/`: active task-context files awaiting review or lock. Currently no active candidate artifacts after Task-Level Context File Construction lock.
+- `candidate-review/`: active task-context files awaiting review or lock. Folder absent unless an active task-context candidate exists.
 - `locked/`: locked task-context files after ratification. FI-T01 through FI-T07 are locked here.
 - `ratifications/`: ratification records for task-context file construction batches.
 
@@ -464,7 +464,7 @@ Lifecycle clustering:
 
 Lifecycle clustering:
 
-- `candidate-review/`: active supplementary architecture artifacts awaiting lock. Currently no active candidate artifacts after Supplementary File Architecture v1 lock.
+- `candidate-review/`: active supplementary architecture artifacts awaiting lock. Folder absent unless an active supplementary architecture candidate exists.
 - `locked/`: locked supplementary architecture artifacts.
 - `ratifications/`: ratification records for supplementary architecture.
 
