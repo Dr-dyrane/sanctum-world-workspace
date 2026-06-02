@@ -433,7 +433,53 @@ Next eligible phase:
 
 Boundaries:
 
-- Do not create FI-T01 through FI-T07 until explicitly authorized.
+- Historical boundary at architecture lock: do not create FI-T01 through FI-T07 until explicitly authorized. Superseded by the later Task-Level Context File Construction authorization and candidate construction record below.
 - Do not create FI-S01 through FI-S04 until explicitly authorized.
 - Do not create task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, RL Studio submission artifacts, or final task outputs until explicitly authorized.
 - This lock does not change source-of-truth hierarchy, authority hierarchy, prednisone hierarchy, medication-restart uncertainty, or the locked four-workflow architecture.
+
+## 2026-06-02 - Task-Level Context File Construction Candidate Review
+
+Decision: Task-Level Context File Construction is complete for candidate review.
+
+Artifacts:
+
+- `worlds/korvin-merrow/task-context-files/candidate-review/FI-T01_discharge-medication-reconciliation-request-context.md`
+- `worlds/korvin-merrow/task-context-files/candidate-review/FI-T02_discharge-summary-drafting-request-context.md`
+- `worlds/korvin-merrow/task-context-files/candidate-review/FI-T03_discharge-readiness-care-coordination-request-context.md`
+- `worlds/korvin-merrow/task-context-files/candidate-review/FI-T04_consultant-synthesis-interdisciplinary-care-plan-request-context.md`
+- `worlds/korvin-merrow/task-context-files/candidate-review/FI-T05_early-post-discharge-follow-up-assessment-request-context.md`
+- `worlds/korvin-merrow/task-context-files/candidate-review/FI-T06_patient-safety-readmission-risk-review-request-context.md`
+- `worlds/korvin-merrow/task-context-files/candidate-review/FI-T07_medication-safety-handoff-task-context-addendum.md`
+- `worlds/korvin-merrow/task-context-files/candidate-review/task-context-files-validation-review.md`
+
+Status:
+
+- Task-Level Context File Construction: CANDIDATE REVIEW.
+- FI-T01 through FI-T07: CANDIDATE REVIEW.
+
+Construction basis:
+
+- Locked Task-Level Context File Architecture v1.
+- Locked File Inventory v1.
+- Locked World Spec v1.
+- Ratified Governance Package v1.
+- Locked FI-W01 through FI-W22.
+- Ratifications and reconciliation records.
+
+Validation findings:
+
+- FI-T01 through FI-T07 are request-framing / task-context files only.
+- Each FI-T forces synthesis across locked world files.
+- No FI-T replaces FI-W01 through FI-W22.
+- FI-W22 remains visible but incomplete.
+- All five traps, all three frictions, source hierarchies, and physician-perspective framing are preserved.
+
+Next eligible phase:
+
+- Task-Level Context File Construction Review.
+
+Boundaries:
+
+- Do not lock FI-T files until explicitly authorized.
+- Do not create FI-S files, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, RL Studio submission artifacts, or final task outputs until explicitly authorized.

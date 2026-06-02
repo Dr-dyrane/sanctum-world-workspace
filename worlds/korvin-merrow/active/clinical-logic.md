@@ -863,7 +863,7 @@ Batch 5 clinical logic:
 
 Boundary:
 
-- FI-W22 is locked and the world-level synthetic file layer is complete. Task-Level Context File Architecture v1 is locked and complete. Do not create FI-T01 through FI-T07, FI-S01 through FI-S04, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission materials, or RL Studio activity until explicitly authorized.
+- FI-W22 is locked and the world-level synthetic file layer is complete. Task-Level Context File Architecture v1 is locked and complete. FI-T01 through FI-T07 are in candidate review at `worlds/korvin-merrow/task-context-files/candidate-review/`. Do not lock FI-T files, create FI-S01 through FI-S04, create supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission materials, or RL Studio activity until explicitly authorized.
 
 Task-Level Context File Architecture v1:
 
@@ -879,7 +879,10 @@ Task-Level Context File Architecture v1:
 - P0/P1/P2 labels are tracker-provenance metadata only; they do not create new workflow categories or override locked Task Architecture Package v1.
 - Cross-artifact consistency verification is a standing governance rule before any future architecture, inventory, matrix, mapping, coverage table, workflow table, trap table, friction table, hierarchy table, or governance artifact is created, modified, ratified, or locked.
 - Task-Level Context File Architecture status: COMPLETE.
-- Next eligible phase: Task-Level Context File Construction.
+- Task-Level Context File Construction status: CANDIDATE REVIEW.
+- Candidate files: FI-T01 through FI-T07 at `worlds/korvin-merrow/task-context-files/candidate-review/`.
+- Validation review: `worlds/korvin-merrow/task-context-files/candidate-review/task-context-files-validation-review.md`.
+- Next eligible phase: Task-Level Context File Construction Review.
 
 ## Major Clinical Friction Themes
 

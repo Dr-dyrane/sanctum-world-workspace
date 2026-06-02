@@ -1526,7 +1526,7 @@ Next eligible phase:
 
 Boundary:
 
-- FI-T01 through FI-T07 construction, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
+- Historical boundary after architecture candidate creation: FI-T01 through FI-T07 construction, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remained blocked until explicitly authorized. Superseded by the later Task-Level Context File Construction authorization and candidate construction record below.
 
 Boundary:
 
@@ -1588,3 +1588,43 @@ Next eligible phase:
 Boundary:
 
 - FI-T01 through FI-T07, FI-S01 through FI-S04, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
+
+## Task-Level Context File Construction Candidate Review Record
+
+Status:
+
+- Task-Level Context File Construction: CANDIDATE REVIEW.
+- FI-T01 through FI-T07: CANDIDATE REVIEW.
+
+Construction authorization:
+
+- Alexander authorized Task-Level Context File Construction after Task-Level Context File Architecture v1 lock.
+
+Candidate artifacts:
+
+- `worlds/korvin-merrow/task-context-files/candidate-review/FI-T01_discharge-medication-reconciliation-request-context.md`
+- `worlds/korvin-merrow/task-context-files/candidate-review/FI-T02_discharge-summary-drafting-request-context.md`
+- `worlds/korvin-merrow/task-context-files/candidate-review/FI-T03_discharge-readiness-care-coordination-request-context.md`
+- `worlds/korvin-merrow/task-context-files/candidate-review/FI-T04_consultant-synthesis-interdisciplinary-care-plan-request-context.md`
+- `worlds/korvin-merrow/task-context-files/candidate-review/FI-T05_early-post-discharge-follow-up-assessment-request-context.md`
+- `worlds/korvin-merrow/task-context-files/candidate-review/FI-T06_patient-safety-readmission-risk-review-request-context.md`
+- `worlds/korvin-merrow/task-context-files/candidate-review/FI-T07_medication-safety-handoff-task-context-addendum.md`
+- `worlds/korvin-merrow/task-context-files/candidate-review/task-context-files-validation-review.md`
+
+Validation:
+
+- Cross-artifact consistency verification completed before construction.
+- FI-T rows match locked File Inventory v1 and locked Task-Level Context File Architecture v1.
+- P0/P1/P2 labels remain tracker-provenance metadata only.
+- FI-T files are request-framing / task-context files only.
+- No task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, RL Studio submission artifacts, FI-S files, supplementary files, or final task outputs were created.
+- FI-W01 through FI-W22 remain locked and unchanged.
+
+Next eligible phase:
+
+- Task-Level Context File Construction Review.
+
+Boundary:
+
+- Do not lock FI-T files without explicit Alexander authorization.
+- Do not create FI-S01 through FI-S04, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, or RL Studio activity until explicitly authorized.
