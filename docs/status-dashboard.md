@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-Batch 1 Synthetic World-Level File Construction / Locked.
+Batch 2 Synthetic World-Level File Construction / Candidate Review.
 
 ## Brainstorm
 
@@ -41,7 +41,9 @@ Batch 1 Synthetic World-Level File Construction / Locked.
 - Batch 1 ratification: `worlds/korvin-merrow/synthetic-files/ratifications/batch-1-ratification.md`
 - Batch 1 validation review: `worlds/korvin-merrow/synthetic-files/locked/batch-1/batch-1-validation-review.md`
 - Batch 1 Construction: complete
-- Next eligible phase: Batch 2 Synthetic World-Level File Construction
+- Batch 2 synthetic files FI-W08 through FI-W13: candidate review at `worlds/korvin-merrow/synthetic-files/candidate-review/batch-2/`
+- Batch 2 validation review: `worlds/korvin-merrow/synthetic-files/candidate-review/batch-2/batch-2-validation-review.md`
+- Next eligible phase: Batch 2 candidate review and ratification decision
 - Clinical Story Skeleton: v1 locked, reviewed, and ratified
 - Identity Package: v1 locked
 - Governance Package: v1 ratified
@@ -60,7 +62,7 @@ Batch 1 Synthetic World-Level File Construction / Locked.
 - World Spec Skeleton v1: `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`
 - World Spec Skeleton ratification: `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-skeleton-ratification.md`
 - Official Claude World Spec session: pending
-- Current state: World Spec v1 is locked; File Inventory Architecture v1 is locked; File Inventory v1 is locked; Synthetic World-Level File Construction Plan v1 is locked; Synthetic File Construction Governance is complete; Batch 1 synthetic world-level files are locked; calendar, baseline anchors, Clinical Story Timeline Package v1, Task Architecture Package v1, Medication Expansion Package v1, Comorbidity Expansion Package v1, Provider Roster Package v1, Surgical History Package v1, Daily Hospital Course Framework v1, and World Spec Skeleton v1 are locked
+- Current state: World Spec v1 is locked; File Inventory Architecture v1 is locked; File Inventory v1 is locked; Synthetic World-Level File Construction Plan v1 is locked; Synthetic File Construction Governance is complete; Batch 1 synthetic world-level files are locked; Batch 2 synthetic world-level files are in candidate review; calendar, baseline anchors, Clinical Story Timeline Package v1, Task Architecture Package v1, Medication Expansion Package v1, Comorbidity Expansion Package v1, Provider Roster Package v1, Surgical History Package v1, Daily Hospital Course Framework v1, and World Spec Skeleton v1 are locked
 - World Spec prep packet: created
 - Official World Spec template: saved locally
 - World Spec AutoQC prompt v6.3: saved locally
@@ -96,7 +98,7 @@ Batch 1 Synthetic World-Level File Construction / Locked.
 - Fetched World Spec example source documents: `reference/word-spec-examples/`
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 - World Spec prep folder structure: reorganized by lifecycle buckets (`candidate-review/`, `locked/`, `ratifications/`, `reviews/`, `decision-logs/`, `planning-scaffolds/`)
-- Next eligible phase: Batch 2 Synthetic World-Level File Construction. Do not create Batch 2 files, FI-W08 or later, task specifications, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission artifacts, or RL Studio uploads until explicitly authorized.
+- Next eligible phase: Batch 2 candidate review and ratification decision. Do not create FI-W14 or later, task specifications, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission artifacts, or RL Studio uploads until explicitly authorized.
 
 ## Tooling
 
@@ -113,10 +115,10 @@ Batch 1 Synthetic World-Level File Construction / Locked.
 - Do not reopen Identity Package v1; use the review addendum only as carry-forward implementation notes.
 - Do not change Governance Package v1 without Alexander approval.
 - Do not create milestones before Alexander authorizes that step.
-- Do not create Batch 2 or later synthetic files, or downstream task/file contents, before Alexander authorizes that step.
+- Do not create Batch 3 or later synthetic files, or downstream task/file contents, before Alexander authorizes that step.
 - Do not revise locked task architecture or create task prompts before Alexander authorizes that step.
 - Do not treat fetched World Spec examples as authored Korvin Merrow content.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
 - Do not modify clinical content beyond reviewer-required remediation without Alexander approval.
-- Do not start Batch 2 or later synthetic generation, task prompts, golden responses, grader guidelines, or failure analysis without explicit authorization.
+- Do not start Batch 3 or later synthetic generation, task prompts, golden responses, grader guidelines, or failure analysis without explicit authorization.
 - Do not access RL Studio without explicit authorization.

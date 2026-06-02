@@ -366,8 +366,11 @@ File Inventory Architecture v1:
 - Batch 1 validation review is recorded at `worlds/korvin-merrow/synthetic-files/locked/batch-1/batch-1-validation-review.md`.
 - Batch 1 ratification is recorded at `worlds/korvin-merrow/synthetic-files/ratifications/batch-1-ratification.md`.
 - Batch 1 Construction is complete.
-- Next eligible phase is Batch 2 Synthetic World-Level File Construction.
-- Batch 2 files, FI-W08 or later, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
+- Batch 2 synthetic world-level files FI-W08 through FI-W13 are constructed for candidate review at `worlds/korvin-merrow/synthetic-files/candidate-review/batch-2/`.
+- Batch 2 validation review is recorded at `worlds/korvin-merrow/synthetic-files/candidate-review/batch-2/batch-2-validation-review.md`.
+- Batch 2 is not locked.
+- Next eligible phase is Batch 2 candidate review and ratification decision.
+- FI-W14 or later, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
 
 ## Key Milestones Calendar Skeleton v1
 
@@ -739,6 +742,36 @@ Potential documents may include:
 - imaging reports
 - consultant notes
 - discharge documentation
+
+## Synthetic World-Level Files
+
+Batch 1 Synthetic World-Level File Construction:
+
+- Status: LOCKED.
+- Locked files: FI-W01 through FI-W07.
+- Canonical folder: `worlds/korvin-merrow/synthetic-files/locked/batch-1/`.
+- Validation review: `worlds/korvin-merrow/synthetic-files/locked/batch-1/batch-1-validation-review.md`.
+
+Batch 2 Synthetic World-Level File Construction:
+
+- Status: CANDIDATE REVIEW.
+- Candidate files constructed: FI-W08 through FI-W13.
+- Candidate folder: `worlds/korvin-merrow/synthetic-files/candidate-review/batch-2/`.
+- Validation review: `worlds/korvin-merrow/synthetic-files/candidate-review/batch-2/batch-2-validation-review.md`.
+
+Batch 2 clinical logic:
+
+- Builds the HD1-HD6 hospital-course spine.
+- Preserves infection-versus-mixed-physiology uncertainty.
+- Preserves steroid-versus-nonsteroid uncertainty.
+- Strengthens HF/AKI medication-restart substrate without creating a final medication plan.
+- Preserves baseline-versus-admission-value separation.
+- Preserves Trap #3 as buried functional/cognitive evidence and Trap #5 as visible but incomplete discharge/source-hierarchy reasoning.
+- Uses FI-W06 outpatient rheumatology provenance only according to the locked HD4 availability constraint.
+
+Boundary:
+
+- FI-W14 or later, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission materials, and RL Studio activity remain blocked until explicitly authorized.
 
 ## Major Clinical Friction Themes
 

@@ -1079,4 +1079,56 @@ Next eligible phase:
 
 Boundary:
 
-- Batch 2 files, FI-W08 or later, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
+- FI-W14 or later, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
+
+## Batch 2 Synthetic World-Level File Construction
+
+Status: CANDIDATE REVIEW.
+
+Candidate folder: `worlds/korvin-merrow/synthetic-files/candidate-review/batch-2/`
+
+Validation review: `worlds/korvin-merrow/synthetic-files/candidate-review/batch-2/batch-2-validation-review.md`
+
+Authorized files constructed:
+
+- FI-W08: HD1-HD2 hospitalist progress documentation.
+- FI-W09: HD3 hospitalist progress documentation.
+- FI-W10: HD4 hospitalist progress documentation.
+- FI-W11: HD5-HD6 hospitalist discharge-planning progress documentation.
+- FI-W12: objective renal / infection / hemodynamic trend summary source.
+- FI-W13: medication administration / inpatient medication action source.
+
+Construction governance:
+
+- Used locked File Inventory v1 row purposes.
+- Preserved closed-world discipline through 05/23/2026 at 18:00.
+- Preserved locked diagnoses, medication architecture, provider roster, source-of-truth hierarchies, and active frictions.
+- Preserved FI-W06 HD4 availability timing.
+- Preserved insulin lispro as inpatient-only medication action logic, not baseline medication architecture.
+- Preserved baseline-versus-admission-value separation.
+- Preserved Trap #1, strengthened Trap #2 substrate, and preserved Trap #3 versus Trap #5 distinction.
+- No answer file created.
+
+Validation result:
+
+- FI-W08 through FI-W13 exist.
+- All files map to locked inventory rows.
+- No unauthorized FI-W IDs created.
+- No temporal leakage identified.
+- No discharge outcome, +7 information, or +30 information created.
+- Source-of-truth hierarchy preserved.
+- Frictions preserved.
+- Batch 1 consistency preserved.
+
+Final status:
+
+- Batch 2 Synthetic World-Level File Construction: CANDIDATE REVIEW.
+- FI-W08 through FI-W13: CANDIDATE REVIEW.
+
+Next eligible phase:
+
+- Batch 2 candidate review and ratification decision.
+
+Boundary:
+
+- FI-W14 or later, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
