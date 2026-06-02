@@ -1679,3 +1679,40 @@ Next eligible phase:
 Boundary:
 
 - FI-S01 through FI-S04, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
+
+## Supplementary File Architecture Candidate Review Record
+
+Status:
+
+- Supplementary File Architecture v1: CANDIDATE REVIEW.
+
+Authorization:
+
+- Alexander authorized Supplementary File Architecture construction after World-Level Synthetic File Layer completion, Task-Level Context File Architecture completion, and Task-Level Context File Construction lock.
+
+Candidate artifacts:
+
+- `worlds/korvin-merrow/supplementary-file-architecture/candidate-review/supplementary-file-architecture-v1.md`
+- `worlds/korvin-merrow/supplementary-file-architecture/candidate-review/supplementary-file-architecture-validation-review.md`
+
+Architecture determinations:
+
+- Supplementary files are required because locked File Inventory v1 includes four FI-S rows and maps them into workflow, trap, friction, authority, and temporal coverage.
+- Exact FI-S count: 4.
+- Future FI-S files: FI-S01 through FI-S04.
+- FI-S files remain supplementary support only and must not carry sole critical evidence.
+
+Validation:
+
+- Cross-artifact consistency verification completed.
+- No new workflow, trap, friction, hierarchy, authority assignment, or source-of-truth rule introduced.
+- No FI-S files created.
+- No task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, RL Studio submission artifacts, or final task outputs created.
+
+Next eligible phase:
+
+- Supplementary File Architecture Review.
+
+Boundary:
+
+- Do not lock Supplementary File Architecture v1, create FI-S01 through FI-S04, create supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, or RL Studio activity until explicitly authorized.

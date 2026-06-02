@@ -522,3 +522,43 @@ Next eligible phase:
 Boundaries:
 
 - Do not create FI-S files, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, RL Studio submission artifacts, or final task outputs until explicitly authorized.
+
+## 2026-06-02 - Supplementary File Architecture v1 Candidate Review
+
+Decision: Supplementary File Architecture v1 is created for candidate review.
+
+Artifacts:
+
+- `worlds/korvin-merrow/supplementary-file-architecture/candidate-review/supplementary-file-architecture-v1.md`
+- `worlds/korvin-merrow/supplementary-file-architecture/candidate-review/supplementary-file-architecture-validation-review.md`
+
+Architecture basis:
+
+- Locked World Spec v1.
+- Ratified Governance Package v1.
+- Locked File Inventory Architecture v1.
+- Locked File Inventory v1.
+- Locked Task-Level Context File Architecture v1.
+- Locked FI-W01 through FI-W22.
+- Locked FI-T01 through FI-T07.
+- Ratification and reconciliation records.
+
+Status:
+
+- Supplementary File Architecture v1: CANDIDATE REVIEW.
+
+Determinations:
+
+- Supplementary files are required for the planned file ecosystem because locked File Inventory v1 contains four FI-S rows.
+- Exact FI-S count: 4.
+- Future FI-S rows: FI-S01 through FI-S04.
+- No FI-S files were constructed.
+
+Next eligible phase:
+
+- Supplementary File Architecture Review.
+
+Boundaries:
+
+- Do not lock Supplementary File Architecture v1 until explicitly authorized.
+- Do not create FI-S files, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, RL Studio submission artifacts, or final task outputs until explicitly authorized.

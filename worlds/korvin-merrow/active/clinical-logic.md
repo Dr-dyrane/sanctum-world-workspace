@@ -391,7 +391,10 @@ File Inventory Architecture v1:
 - Task-Level Context File Construction is locked at `worlds/korvin-merrow/task-context-files/locked/`.
 - Task-Level Context File Construction ratification is recorded at `worlds/korvin-merrow/task-context-files/ratifications/task-level-context-file-construction-ratification.md`.
 - Task-Level Context Files status is complete.
-- Next eligible phase is Supplementary File Architecture / Construction.
+- Supplementary File Architecture v1 is in candidate review at `worlds/korvin-merrow/supplementary-file-architecture/candidate-review/supplementary-file-architecture-v1.md`.
+- Supplementary File Architecture validation review is at `worlds/korvin-merrow/supplementary-file-architecture/candidate-review/supplementary-file-architecture-validation-review.md`.
+- Supplementary File Architecture determines FI-S count as four, matching locked File Inventory v1: FI-S01 through FI-S04.
+- Next eligible phase is Supplementary File Architecture Review.
 - FI-S01 through FI-S04, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
 
 ## Key Milestones Calendar Skeleton v1
@@ -887,7 +890,10 @@ Task-Level Context File Architecture v1:
 - Validation review: `worlds/korvin-merrow/task-context-files/locked/task-context-files-validation-review.md`.
 - Ratification: `worlds/korvin-merrow/task-context-files/ratifications/task-level-context-file-construction-ratification.md`.
 - Task-Level Context Files status: COMPLETE.
-- Next eligible phase: Supplementary File Architecture / Construction.
+- Supplementary File Architecture status: CANDIDATE REVIEW.
+- Candidate architecture: `worlds/korvin-merrow/supplementary-file-architecture/candidate-review/supplementary-file-architecture-v1.md`.
+- Validation review: `worlds/korvin-merrow/supplementary-file-architecture/candidate-review/supplementary-file-architecture-validation-review.md`.
+- Next eligible phase: Supplementary File Architecture Review.
 
 ## Major Clinical Friction Themes
 
