@@ -2,7 +2,7 @@
 
 Date created: 2026-06-02
 
-Status: CANDIDATE REVIEW
+Status: LOCK READY
 
 Purpose: validate Supplementary File Architecture v1 against locked World Spec v1, Governance Package v1, File Inventory Architecture v1, File Inventory v1, Task-Level Context File Architecture v1, FI-W01 through FI-W22, FI-T01 through FI-T07, ratifications, reconciliation records, and the Cross-Artifact Consistency Verification rule.
 
@@ -41,6 +41,29 @@ Supplementary File Architecture v1 was checked against:
 - Cross-Artifact Consistency Verification standing governance rule.
 
 No silent broadening or narrowing of trap coverage, friction coverage, workflow mapping, priority labels, file responsibilities, source hierarchy, prednisone hierarchy, or authority hierarchy was introduced.
+
+### RECONCILED FINDING
+
+Independent reconciliation review identified a TRUE INCONSISTENCY between the locked FI-S03 inventory row and the locked File Inventory v1 Trap Coverage Matrix.
+
+Issue:
+
+- FI-S03 row carried Trap #5 secondary support.
+- The Trap Coverage Matrix did not list FI-S03 under Trap #5 secondary supporting files.
+
+Canonical resolution:
+
+- The FI-S03 row is the authoritative per-file responsibility statement.
+- The Trap Coverage Matrix was under-specified.
+- The Trap Coverage Matrix was minimally updated to include FI-S03 under Trap #5 secondary supporting files.
+
+Reconciliation record:
+
+- `worlds/korvin-merrow/file-inventory/reviews/supplementary-file-trap5-reconciliation.md`
+
+Finding: CLOSED.
+
+This reconciliation did not change Supplementary File Architecture v1, workflow coverage, friction coverage, source-of-truth hierarchy, authority hierarchy, or any FI-S construction boundary.
 
 ## FI-S Count Validation
 
@@ -184,8 +207,8 @@ Blocked until explicit authorization:
 
 Supplementary File Architecture v1:
 
-- Status: CANDIDATE REVIEW.
+- Status: LOCK READY.
 
 Next eligible phase:
 
-- Supplementary File Architecture Review.
+- Supplementary File Architecture Ratification and Lock.

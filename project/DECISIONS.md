@@ -562,3 +562,45 @@ Boundaries:
 
 - Do not lock Supplementary File Architecture v1 until explicitly authorized.
 - Do not create FI-S files, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, RL Studio submission artifacts, or final task outputs until explicitly authorized.
+
+## 2026-06-02 - Supplementary FI-S03 Trap #5 Matrix Reconciliation
+
+Decision: FI-S03 Trap #5 reconciliation is complete.
+
+Issue:
+
+- The locked FI-S03 inventory row carried Trap #5 secondary support.
+- The locked File Inventory v1 Trap Coverage Matrix did not list FI-S03 under Trap #5 secondary supporting file IDs.
+
+Canonical resolution:
+
+- The FI-S03 row is the authoritative per-file responsibility statement.
+- The Trap Coverage Matrix was under-specified.
+- File Inventory v1 Trap Coverage Matrix was minimally updated so Trap #5 secondary supporting file IDs include FI-S03.
+
+Reconciliation record:
+
+- `worlds/korvin-merrow/file-inventory/reviews/supplementary-file-trap5-reconciliation.md`
+
+Verification:
+
+- FI-S03 inventory row unchanged.
+- Supplementary File Architecture v1 unchanged.
+- No workflow coverage changed.
+- No friction coverage changed.
+- No hierarchy or source-of-truth rule changed.
+- No FI-S files or downstream artifacts created.
+
+Status:
+
+- Finding: CLOSED.
+- Supplementary File Architecture v1: LOCK READY.
+
+Next eligible phase:
+
+- Supplementary File Architecture Ratification and Lock.
+
+Boundaries:
+
+- Do not lock Supplementary File Architecture v1 until explicitly authorized.
+- Do not create FI-S files, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, RL Studio submission artifacts, or final task outputs until explicitly authorized.

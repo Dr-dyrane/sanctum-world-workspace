@@ -1684,7 +1684,7 @@ Boundary:
 
 Status:
 
-- Supplementary File Architecture v1: CANDIDATE REVIEW.
+- Supplementary File Architecture v1: LOCK READY.
 
 Authorization:
 
@@ -1708,11 +1708,51 @@ Validation:
 - No new workflow, trap, friction, hierarchy, authority assignment, or source-of-truth rule introduced.
 - No FI-S files created.
 - No task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, RL Studio submission artifacts, or final task outputs created.
+- FI-S03 Trap #5 reconciliation completed and recorded at `worlds/korvin-merrow/file-inventory/reviews/supplementary-file-trap5-reconciliation.md`.
+- Reconciliation finding: CLOSED.
 
 Next eligible phase:
 
-- Supplementary File Architecture Review.
+- Supplementary File Architecture Ratification and Lock.
 
 Boundary:
 
 - Do not lock Supplementary File Architecture v1, create FI-S01 through FI-S04, create supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, or RL Studio activity until explicitly authorized.
+
+## Supplementary FI-S03 Trap #5 Reconciliation Record
+
+Status:
+
+- COMPLETE.
+
+Finding:
+
+- TRUE INCONSISTENCY.
+
+Issue:
+
+- FI-S03 inventory row explicitly carried Trap #5 secondary support.
+- File Inventory v1 Trap Coverage Matrix did not list FI-S03 under Trap #5 secondary support.
+
+Canonical resolution:
+
+- Treat the FI-S03 row as the authoritative per-file responsibility statement.
+- Treat the Trap Coverage Matrix as under-specified.
+- Update only the Trap #5 secondary supporting file list to include FI-S03.
+
+Reconciliation artifact:
+
+- `worlds/korvin-merrow/file-inventory/reviews/supplementary-file-trap5-reconciliation.md`
+
+Verification:
+
+- FI-S03 inventory row unchanged.
+- Supplementary File Architecture v1 unchanged.
+- No workflow coverage changed.
+- No friction coverage changed.
+- No hierarchy or source-of-truth rule changed.
+- No FI-S files, prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission artifacts, or RL Studio materials created.
+
+Next eligible phase:
+
+- Supplementary File Architecture Ratification and Lock.
