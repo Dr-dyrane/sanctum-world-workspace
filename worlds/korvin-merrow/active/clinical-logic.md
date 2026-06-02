@@ -379,10 +379,12 @@ File Inventory Architecture v1:
 - Batch 4 ratification is recorded at `worlds/korvin-merrow/synthetic-files/ratifications/batch-4-ratification.md`.
 - Batch 4 Construction status is complete.
 - FI-W20 File Inventory row reconciliation is recorded at `worlds/korvin-merrow/file-inventory/reviews/fi-w20-inventory-row-reconciliation.md`; the row now explicitly includes secondary/collateral Trap #1 and Endocrinology vs Primary Team support through lower-authority family report without changing the synthetic FI-W20 file or prednisone hierarchy.
-- Batch 5 FI-W22 is in candidate review at `worlds/korvin-merrow/synthetic-files/candidate-review/batch-5/FI-W22_discharge-facing-plan-snapshot-before-world-close.md`.
-- Batch 5 validation review is at `worlds/korvin-merrow/synthetic-files/candidate-review/batch-5/batch-5-validation-review.md`.
-- Next eligible phase is Batch 5 Candidate Review and ratification decision.
-- Batch 5 lock, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
+- Batch 5 FI-W22 is locked at `worlds/korvin-merrow/synthetic-files/locked/batch-5/FI-W22_discharge-facing-plan-snapshot-before-world-close.md`.
+- Batch 5 validation review is at `worlds/korvin-merrow/synthetic-files/locked/batch-5/batch-5-validation-review.md`.
+- Batch 5 ratification is at `worlds/korvin-merrow/synthetic-files/ratifications/batch-5-ratification.md`.
+- World-Level Synthetic File Layer is complete with FI-W01 through FI-W22 locked.
+- Next eligible phase is Task-Level Context File Architecture / Construction.
+- FI-T01 through FI-T07, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
 
 ## Key Milestones Calendar Skeleton v1
 
@@ -813,7 +815,7 @@ Batch 3 clinical logic:
 
 Boundary:
 
-- Batch 5 lock, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission materials, and RL Studio activity remain blocked until explicitly authorized.
+- FI-T01 through FI-T07, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission materials, and RL Studio activity remain blocked until explicitly authorized.
 
 Batch 4 Synthetic World-Level File Construction:
 
@@ -835,11 +837,14 @@ Batch 4 clinical logic:
 
 Batch 5 Synthetic World-Level File Construction:
 
-- Status: CANDIDATE REVIEW.
-- File constructed: FI-W22.
-- Candidate folder: `worlds/korvin-merrow/synthetic-files/candidate-review/batch-5/`.
-- Validation review: `worlds/korvin-merrow/synthetic-files/candidate-review/batch-5/batch-5-validation-review.md`.
-- Batch 5 Construction status: COMPLETE pending review and ratification decision.
+- Status: LOCKED.
+- File locked: FI-W22.
+- Locked folder: `worlds/korvin-merrow/synthetic-files/locked/batch-5/`.
+- Validation review: `worlds/korvin-merrow/synthetic-files/locked/batch-5/batch-5-validation-review.md`.
+- Ratification: `worlds/korvin-merrow/synthetic-files/ratifications/batch-5-ratification.md`.
+- Batch 5 Construction status: COMPLETE.
+- World-Level Synthetic File Layer status: COMPLETE.
+- Completed World-Level Files: FI-W01 through FI-W22.
 
 Batch 5 clinical logic:
 
@@ -853,7 +858,7 @@ Batch 5 clinical logic:
 
 Boundary:
 
-- Batch 5 remains candidate only. Do not move FI-W22 to locked, create a ratification, create task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission materials, or RL Studio activity until explicitly authorized.
+- FI-W22 is locked and the world-level synthetic file layer is complete. Do not create FI-T01 through FI-T07, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission materials, or RL Studio activity until explicitly authorized.
 
 ## Major Clinical Friction Themes
 

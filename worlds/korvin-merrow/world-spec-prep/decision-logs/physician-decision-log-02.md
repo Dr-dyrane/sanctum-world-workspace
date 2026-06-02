@@ -1331,7 +1331,7 @@ Final status:
 
 Next eligible phase:
 
-- Batch 5 Candidate Review and ratification decision.
+- Historical next eligible phase after Batch 4 lock: Batch 5 Candidate Review and ratification decision, now completed by Batch 5 ratification and lock.
 
 ## FI-W20 Inventory Row Reconciliation Record
 
@@ -1359,11 +1359,11 @@ Preserved boundaries:
 
 Next eligible phase:
 
-- Batch 5 Synthetic World-Level File Construction.
+- Task-Level Context File Architecture / Construction.
 
 Boundary:
 
-- Batch 5 lock, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
+- FI-T01 through FI-T07, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
 
 ## Batch 4 Synthetic World-Level File Construction Ratification Record
 
@@ -1414,29 +1414,43 @@ Status record:
 
 Next eligible phase:
 
-- Batch 5 Candidate Review and ratification decision.
+- Task-Level Context File Architecture / Construction.
 
 Boundary:
 
-- Batch 5 lock, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
+- FI-T01 through FI-T07, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
 
-## Batch 5 Synthetic World-Level File Construction Record
+## Batch 5 Synthetic World-Level File Construction Ratification Record
 
 Status:
 
-- CANDIDATE REVIEW.
+- LOCKED.
 
-Files constructed:
+Files locked:
 
 - FI-W22 Discharge-Facing Plan Snapshot Before World Close.
 
-Candidate path:
+Locked path:
 
-- `worlds/korvin-merrow/synthetic-files/candidate-review/batch-5/`
+- `worlds/korvin-merrow/synthetic-files/locked/batch-5/`
 
 Validation review:
 
-- `worlds/korvin-merrow/synthetic-files/candidate-review/batch-5/batch-5-validation-review.md`
+- `worlds/korvin-merrow/synthetic-files/locked/batch-5/batch-5-validation-review.md`
+
+Ratification:
+
+- `worlds/korvin-merrow/synthetic-files/ratifications/batch-5-ratification.md`
+
+Review outcome:
+
+- Claude Review: YES / LOCK READY / GO.
+- Independent Review: YES / LOCK READY / GO.
+- World Necessity Test: PASS.
+- Trap #5 Validation: PASS.
+- Trap #3 vs Trap #5 Separation: PASS.
+- No true defects identified.
+- No blockers identified.
 
 Construction findings:
 
@@ -1448,25 +1462,31 @@ Construction findings:
 - FI-W22 preserves Family vs Primary Team as a balanced discharge-readiness friction.
 - FI-W22 preserves the prednisone source hierarchy with rheumatology as highest outpatient taper authority.
 - FI-W22 contains no discharge outcome, post-world follow-up, final medication list, final prednisone taper, task prompt, golden, grader guidance, AutoQC response, DOCX artifact, or submission material.
+- FI-W01 through FI-W22 now exist and are locked.
+- All five traps remain operational.
+- All three frictions remain operational.
+- All source hierarchies remain operational.
+- World-Level Synthetic File Layer is complete.
 
 Carry-forward items:
 
-- Candidate review must test whether FI-W22 is too complete or too explicitly caveated.
-- FI-W22 must remain useful, visible, and reassuring but insufficient if trusted alone.
-- FI-W22 must not resolve final disposition, medication restart timing, prednisone history, consultant disagreement, family concern, functional support level, or service sufficiency.
+- Future task-level context file architecture / construction must preserve FI-W22 as useful, visible, and reassuring but insufficient if trusted alone.
+- Future task files must not let FI-W22 resolve final disposition, medication restart timing, prednisone history, consultant disagreement, family concern, functional support level, or service sufficiency.
 - Future task files must not turn FI-W22 into the source-of-truth answer.
 - Future task prompts, expected outputs, goldens, and grader guidance remain blocked until explicitly authorized and must preserve physician-perspective task-design guidance.
 
 Final status:
 
-- Batch 5 Synthetic World-Level File Construction: CANDIDATE REVIEW.
-- FI-W22: CANDIDATE.
-- Batch 5 Construction: COMPLETE pending review and ratification decision.
+- Batch 5 Synthetic World-Level File Construction: LOCKED.
+- FI-W22: LOCKED.
+- Batch 5 Construction: COMPLETE.
+- World-Level Synthetic File Layer: COMPLETE.
+- Completed World-Level Files: FI-W01 through FI-W22.
 
 Next eligible phase:
 
-- Batch 5 Candidate Review and ratification decision.
+- Task-Level Context File Architecture / Construction.
 
 Boundary:
 
-- Batch 5 lock, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
+- FI-T01 through FI-T07, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
