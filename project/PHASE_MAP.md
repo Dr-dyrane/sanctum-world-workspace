@@ -55,6 +55,21 @@ Status: Out of scope until approval and phase update.
 - Preference labeling
 - Final delivery review
 
+## Cross-Artifact Consistency Gate
+
+Before any architecture, inventory, matrix, mapping, coverage table, workflow table, trap table, friction table, hierarchy table, or governance artifact is created, modified, ratified, or locked, collaborators must explicitly cross-check applicable locked canonical sources:
+
+- World Spec
+- Governance Package
+- File Inventory
+- Architecture Packages
+- Ratified review decisions
+- Previously reconciled governance decisions
+
+If proposed work expands, narrows, redistributes, reprioritizes, relabels, or reclassifies trap coverage, friction coverage, workflow coverage, priority tiers, source-of-truth mappings, authority hierarchies, file responsibilities, inventory rows, or matrix entries, the change must either be supported by a locked canonical source and explicitly cited, or the discrepancy must be surfaced and documented before ratification or lock.
+
+Historical, planning, superseded, tracker, or provenance metadata must not be silently promoted into governing architecture.
+
 ## RL Studio Task vs Clinical Task
 
 RL Studio task:

@@ -131,30 +131,33 @@ Locked workflow architecture uses four approved workflow categories:
 
 Future FI-T mapping:
 
+Priority family is tracker-provenance metadata only. It records the historical approved workflow-priority context used during Brainstorm/task architecture validation, but it does not supersede the locked four-workflow architecture, create a new workflow category, or promote historical/superseded tracker labels into governing task-layer architecture.
+
 | Future file | Workflow category | Priority family | Physician-perspective implementation |
 | --- | --- | --- | --- |
-| FI-T01 | Discharge Medication Reconciliation | P0 | Physician, pharmacist, or discharge clinician request must preserve physician review and final clinical ownership. |
-| FI-T02 | Hospital Discharge Summary Generation | P0 | Attending/discharging-service frame; final deliverable should be physician-authored, physician-reviewed, or physician-supervised when later authorized. |
-| FI-T03 | Discharge Planning Documentation | P0 | Administrative/care-coordination deliverable remains physician-facing or physician-supervised, even when case management, social work, PT/OT, nursing, and family evidence support it. |
-| FI-T04 | Interdisciplinary Care Plan Development and Documentation | P1 | Hospitalist-led interdisciplinary synthesis; physician remains responsible for reconciling specialty recommendations. |
-| FI-T05 | Discharge Planning Documentation | P0-derived transition/discharge reasoning | +7 follow-up context may involve primary care or transition team, but final requested reasoning remains physician-facing. |
-| FI-T06 | Discharge Planning Documentation | P0/P1 safety reasoning inside discharge planning | Readmission/safety review remains inside discharge-planning workflow, not a standalone Patient Risk Stratification workflow. |
-| FI-T07 | Discharge Medication Reconciliation | P0 | Medication-safety addendum may be pharmacy-framed, but physician review responsibility and discharge safety remain explicit. |
+| FI-T01 | Discharge Medication Reconciliation | P0 tracker provenance | Physician, pharmacist, or discharge clinician request must preserve physician review and final clinical ownership. |
+| FI-T02 | Hospital Discharge Summary Generation | P0 tracker provenance | Attending/discharging-service frame; final deliverable should be physician-authored, physician-reviewed, or physician-supervised when later authorized. |
+| FI-T03 | Discharge Planning Documentation | P0 tracker provenance | Administrative/care-coordination deliverable remains physician-facing or physician-supervised, even when case management, social work, PT/OT, nursing, and family evidence support it. |
+| FI-T04 | Interdisciplinary Care Plan Development and Documentation | P1 tracker provenance | Hospitalist-led interdisciplinary synthesis; physician remains responsible for reconciling specialty recommendations. |
+| FI-T05 | Discharge Planning Documentation | P0-derived tracker provenance folded into Discharge Planning Documentation | +7 follow-up context may involve primary care or transition team, but final requested reasoning remains physician-facing. |
+| FI-T06 | Discharge Planning Documentation | Historical P0/P1 safety provenance folded into Discharge Planning Documentation | Readmission/safety review remains inside discharge-planning workflow, not a standalone Patient Risk Stratification workflow. |
+| FI-T07 | Discharge Medication Reconciliation | P0 tracker provenance | Medication-safety addendum may be pharmacy-framed, but physician review responsibility and discharge safety remain explicit. |
 
-P0 workflows represented:
+P0 tracker-provenance workflows represented within locked workflow architecture:
 
 - Discharge Medication Reconciliation.
 - Hospital Discharge Summary Generation.
 - Discharge Planning Documentation.
 
-P1 workflow represented:
+P1 tracker-provenance workflow represented within locked workflow architecture:
 
 - Interdisciplinary Care Plan Development and Documentation.
 
-P2 workflow handling:
+P2 tracker-provenance handling:
 
 - P2 medication/readmission-related ideas remain allowable as secondary reasoning texture only.
 - No P2 workflow becomes a separate primary workflow in this architecture.
+- P0/P1/P2 labels must not be used to reopen the locked workflow count, create a standalone Patient Risk Stratification workflow, or override the File Inventory / Task Architecture Package source hierarchy.
 
 Physician-perspective guidance:
 

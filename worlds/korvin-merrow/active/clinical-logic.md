@@ -379,6 +379,7 @@ File Inventory Architecture v1:
 - Batch 4 ratification is recorded at `worlds/korvin-merrow/synthetic-files/ratifications/batch-4-ratification.md`.
 - Batch 4 Construction status is complete.
 - FI-W20 File Inventory row reconciliation is recorded at `worlds/korvin-merrow/file-inventory/reviews/fi-w20-inventory-row-reconciliation.md`; the row now explicitly includes secondary/collateral Trap #1 and Endocrinology vs Primary Team support through lower-authority family report without changing the synthetic FI-W20 file or prednisone hierarchy.
+- FI-T inventory / task-layer architecture reconciliation is recorded at `worlds/korvin-merrow/file-inventory/reviews/fi-t-inventory-task-layer-architecture-reconciliation.md`; the metadata update aligns FI-T02, FI-T04, FI-T05, and FI-T06 secondary trap/friction support with locked Task Architecture Package v1 and clarifies that P0/P1/P2 labels are tracker provenance only.
 - Batch 5 FI-W22 is locked at `worlds/korvin-merrow/synthetic-files/locked/batch-5/FI-W22_discharge-facing-plan-snapshot-before-world-close.md`.
 - Batch 5 validation review is at `worlds/korvin-merrow/synthetic-files/locked/batch-5/batch-5-validation-review.md`.
 - Batch 5 ratification is at `worlds/korvin-merrow/synthetic-files/ratifications/batch-5-ratification.md`.
@@ -872,6 +873,8 @@ Task-Level Context File Architecture v1:
 - FI-W22 must remain visible but incomplete and must not become a task answer file.
 - Trap #3 remains buried functional/cognitive evidence; Trap #5 remains over-trust of a visible but incomplete discharge-facing source.
 - Prednisone hierarchy, master source-of-truth hierarchy, authority hierarchy, and medication-restart uncertainty remain unchanged.
+- P0/P1/P2 labels are tracker-provenance metadata only; they do not create new workflow categories or override locked Task Architecture Package v1.
+- Cross-artifact consistency verification is a standing governance rule before any future architecture, inventory, matrix, mapping, coverage table, workflow table, trap table, friction table, hierarchy table, or governance artifact is created, modified, ratified, or locked.
 - Next eligible phase: Task-Level Context File Architecture Review.
 
 ## Major Clinical Friction Themes

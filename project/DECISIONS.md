@@ -374,3 +374,33 @@ Boundary:
 Boundaries:
 
 - Does not create labs, vitals, medication doses, medication schedules, hospital notes, file inventory, task architecture, milestones beyond locked dates, World Spec prose, prompts, golden responses, grader guidance, templates, reference files, or synthetic documents.
+
+## 2026-06-02 - Cross-Artifact Consistency Verification Rule Recorded
+
+Decision: Cross-artifact consistency verification is a standing governance rule for Korvin Merrow architecture, inventory, matrix, mapping, coverage table, workflow table, trap table, friction table, hierarchy table, and governance work.
+
+Artifacts:
+
+- `AGENTS.md`
+- `project/PHASE_MAP.md`
+- `worlds/korvin-merrow/file-inventory/reviews/fi-t-inventory-task-layer-architecture-reconciliation.md`
+
+Rule:
+
+- Before creating, modifying, ratifying, or locking applicable governance artifacts, cross-check locked canonical sources: World Spec, Governance Package, File Inventory, Architecture Packages, ratified review decisions, and previously reconciled governance decisions.
+- If proposed work expands, narrows, redistributes, reprioritizes, relabels, or reclassifies trap coverage, friction coverage, workflow coverage, priority tiers, source-of-truth mappings, authority hierarchies, file responsibilities, inventory rows, or matrix entries, the change must be supported by a locked canonical source and cited, or the discrepancy must be surfaced and documented before artifact creation, ratification, or lock.
+- Do not silently broaden coverage.
+- Do not silently narrow coverage.
+- Do not silently reinterpret inventory rows.
+- Do not silently promote historical, planning, superseded, tracker, or provenance metadata into governing architecture.
+
+Associated reconciliation:
+
+- FI-T inventory / task-layer architecture reconciliation aligned File Inventory metadata with locked Task Architecture Package v1 for FI-T02, FI-T04, FI-T05, and FI-T06 secondary trap/friction support.
+- Candidate Task-Level Context File Architecture v1 now treats P0/P1/P2 labels as tracker-provenance metadata only.
+
+Boundaries:
+
+- This does not create FI-T files, FI-S files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, RL Studio submission artifacts, or task outputs.
+- This does not ratify or lock Task-Level Context File Architecture v1.
+- This does not change source-of-truth hierarchy, authority hierarchy, prednisone hierarchy, or workflow count.

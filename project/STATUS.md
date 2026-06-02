@@ -18,7 +18,11 @@ Claude Identity Package hostile-review observations are recorded as carry-forwar
 
 Task-design physician-perspective guidance from Medicine Team Lead has been recorded as a future task-layer rule only. It does not alter source-of-truth hierarchy, Governance Package v1, locked clinical architecture, or locked synthetic files. Future task prompts, expected outputs, goldens, and grader guidance must frame final deliverables from the physician perspective or physician voice.
 
+Task-Level Context File Architecture v1 reconciliation review is complete. FI-T inventory / task-layer architecture reconciliation is recorded at `worlds/korvin-merrow/file-inventory/reviews/fi-t-inventory-task-layer-architecture-reconciliation.md`. The locked File Inventory metadata now reflects FI-T02, FI-T04, FI-T05, and FI-T06 secondary trap/friction support where already supported by locked Task Architecture Package v1. Candidate Task-Level Context File Architecture v1 now clarifies that P0/P1/P2 labels are tracker-provenance metadata only, not governing workflow architecture. No FI-T files, supplementary files, prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission artifacts, or synthetic files were created.
+
 Collaborator session-exit discipline is now a standing process / handoff rule: every Codex, Claude, or writer session must leave the repository clean or explicitly documented, keep current and next phase surfaces updated, preserve locked artifacts unless explicitly authorized, label candidate artifacts clearly, move newly locked artifacts into locked paths with ratification references, update continuity and Claude handoff surfaces, remove or clearly mark stale active candidate paths, record carry-forward watch items and future task-layer guidance, and create a checkpoint commit for completed work unless Alexander explicitly instructs not to commit. Final reports must state what changed, what did not change, current status, next eligible phase, and whether the repository is safe for another collaborator to continue.
+
+Cross-artifact consistency verification is now a standing governance rule: before any architecture, inventory, matrix, mapping, coverage table, workflow table, trap table, friction table, hierarchy table, or governance artifact is created, modified, ratified, or locked, collaborators must explicitly cross-check applicable locked canonical sources and document any expansion, narrowing, redistribution, reprioritization, relabeling, or reclassification before ratification or lock. Historical, planning, superseded, tracker, or provenance metadata must not be silently promoted into governing architecture.
 
 ## RL Studio Submission
 
@@ -34,7 +38,7 @@ Reviewer GO: Stacey S approved Brainstorm via Slack. Recorded in `worlds/korvin-
 
 ## Current Pass
 
-Task-Level Context File Architecture v1: CANDIDATE REVIEW. Candidate artifact: `worlds/korvin-merrow/task-layer-architecture/candidate-review/task-level-context-file-architecture-v1.md`. World-Level Synthetic File Layer is complete with FI-W01 through FI-W22 locked. The architecture defines future FI-T01 through FI-T07 structure only; no FI-T files have been constructed.
+Task-Level Context File Architecture v1: CANDIDATE REVIEW after authorized metadata reconciliation. Candidate artifact: `worlds/korvin-merrow/task-layer-architecture/candidate-review/task-level-context-file-architecture-v1.md`. Reconciliation record: `worlds/korvin-merrow/file-inventory/reviews/fi-t-inventory-task-layer-architecture-reconciliation.md`. World-Level Synthetic File Layer is complete with FI-W01 through FI-W22 locked. The architecture defines future FI-T01 through FI-T07 structure only; no FI-T files have been constructed.
 
 ## Next Pass
 
@@ -46,7 +50,7 @@ No active reviewer blocker. Preparation Layer is complete. World Spec Skeleton v
 
 ## Current Git Checkpoint
 
-checkpoint: create task level context file architecture v1
+checkpoint: reconcile task architecture inventory metadata
 
 ## Active Branch
 
