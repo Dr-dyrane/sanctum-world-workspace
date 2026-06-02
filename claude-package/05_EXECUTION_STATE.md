@@ -176,6 +176,7 @@ Next legal action:
 - Claude package refresh.
 - Local documentation updates that preserve phase boundaries.
 - Batch 3 construction support when explicitly authorized.
+- Applying the Medicine Team Lead physician-perspective guidance later during authorized task design, task prompts, expected outputs, goldens, and grader guidance. This guidance is future task-layer framing only; it does not reopen Governance Package v1 or change source-of-truth hierarchy.
 
 ## Not Authorized Right Now
 
@@ -194,6 +195,7 @@ Next legal action:
 - Creating golden responses.
 - Creating grader guidelines.
 - Creating failure analysis.
+- Redesigning the world, reopening Governance Package v1, or changing source-of-truth hierarchy because of the Medicine Team Lead task-design guidance.
 - Changing Brainstorm clinical content beyond the approved reviewer remediation.
 - Modifying Brainstorm unless new reviewer feedback arrives.
 - Further identity changes or task concept changes beyond the reviewer-required Korvin Merrow remediation without Alexander approval.

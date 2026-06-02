@@ -16,6 +16,8 @@ Source/reference note: Alexander added World Spec example source documents under
 
 Claude Identity Package hostile-review observations are recorded as carry-forward implementation notes in `worlds/korvin-merrow/world-spec-prep/reviews/identity-package-review-addendum.md`. Identity Package v1 remains locked.
 
+Task-design physician-perspective guidance from Medicine Team Lead has been recorded as a future task-layer rule only. It does not alter source-of-truth hierarchy, Governance Package v1, locked clinical architecture, or locked synthetic files. Future task prompts, expected outputs, goldens, and grader guidance must frame final deliverables from the physician perspective or physician voice.
+
 ## RL Studio Submission
 
 Task ID: cyau8803
@@ -42,7 +44,7 @@ No active reviewer blocker. Preparation Layer is complete. World Spec Skeleton v
 
 ## Current Git Checkpoint
 
-checkpoint: ratify batch 2 synthetic world files
+checkpoint: integrate physician-perspective task guidance
 
 ## Active Branch
 

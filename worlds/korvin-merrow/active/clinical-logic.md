@@ -488,6 +488,17 @@ Candidate workflow architecture:
 - Discharge Planning Documentation.
 - Interdisciplinary Care Plan Development and Documentation.
 
+Task-design physician-perspective guidance:
+
+- Status: FUTURE TASK-LAYER RULE.
+- Classification: not a source-of-truth hierarchy rule and not a governance redesign.
+- Source-of-truth hierarchy answers: "When sources disagree, which evidence source is authoritative?"
+- Task-design guidance answers: "Who is the final deliverable written by or for?"
+- Future task prompts, expected outputs, goldens, and grader guidance must frame final deliverables from the physician perspective or physician voice.
+- Supporting sources may come from pharmacy, nursing, PT/OT, case management, social work, family, or healthcare administration, but the deliverable must remain physician-authored, physician-reviewed, physician-supervised, or physician-communicated.
+- Current locked workflows remain compatible: Discharge Medication Reconciliation, Hospital Discharge Summary Generation, Discharge Planning Documentation, and Interdisciplinary Care Plan Development and Documentation.
+- Do not redesign the world, reopen Governance Package v1, or alter source-of-truth hierarchy because of this guidance.
+
 Carry-forward:
 
 - AutoQC 2.108 remains a documented reviewer-risk bet, not a blocker.

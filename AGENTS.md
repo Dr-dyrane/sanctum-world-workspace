@@ -89,6 +89,8 @@ Brainstorming assistance is allowed, but the scenario concept, traps, and task i
 
 Task prompts, golden responses, and grader guidelines must remain human-created. Do not draft them unless Alexander explicitly provides human-authored text to review or QC, and do not move into those phases unless the project phase is explicitly updated.
 
+Medicine Team Lead task-design guidance is recorded as a future task-layer rule, not a source-of-truth hierarchy rule and not a reason to reopen Governance Package v1. Source-of-truth hierarchy answers: "When sources disagree, which evidence source is authoritative?" Task-design guidance answers: "Who is the final deliverable written by or for?" Future task prompts, expected outputs, goldens, and grader guidance must frame final deliverables from the physician perspective or physician voice, even when supporting sources come from pharmacy, nursing, PT/OT, case management, social work, family, or healthcare administration. The locked Korvin workflows remain compatible because they can be physician-authored, physician-reviewed, physician-supervised, or physician-communicated.
+
 Separate frictions from traps:
 
 - Frictions are people or perspective conflicts.

@@ -1165,3 +1165,38 @@ Next eligible phase:
 Boundary:
 
 - FI-W14 through FI-W22, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
+
+## Task-Design Physician-Perspective Guidance
+
+Status: FUTURE TASK-LAYER RULE.
+
+Source: Medicine Team Lead Slack clarification.
+
+Classification:
+
+- Not a source-of-truth hierarchy rule.
+- Not a Governance Package v1 revision.
+- Not a reason to redesign the world or reopen locked clinical architecture.
+
+Distinction:
+
+- Source-of-truth hierarchy answers: "When sources disagree, which evidence source is authoritative?"
+- Task-design guidance answers: "Who is the final deliverable written by or for?"
+
+Future task-design rule:
+
+- All future task prompts and deliverables must be framed from the physician perspective or physician voice.
+- Supporting sources may come from pharmacy, nursing, PT/OT, case management, social work, family, or healthcare administration.
+- The final deliverable must remain physician-authored, physician-reviewed, physician-supervised, or physician-communicated.
+
+Current workflow compatibility:
+
+- Discharge Medication Reconciliation: compatible.
+- Hospital Discharge Summary Generation: compatible.
+- Discharge Planning Documentation: compatible.
+- Interdisciplinary Care Plan Development and Documentation: compatible.
+
+Carry-forward instruction:
+
+- Apply this rule later during authorized task design, task prompts, expected outputs, goldens, and grader guidance.
+- Do not modify source-of-truth hierarchies, Governance Package v1, locked clinical architecture, or locked synthetic files because of this guidance.

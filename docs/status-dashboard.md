@@ -46,6 +46,7 @@ Batch 2 Synthetic World-Level File Construction / Locked.
 - Batch 2 validation review: `worlds/korvin-merrow/synthetic-files/locked/batch-2/batch-2-validation-review.md`
 - Batch 2 Construction: complete
 - Next eligible phase: Batch 3 Synthetic World-Level File Construction
+- Task-design physician-perspective guidance: recorded as a future task-layer rule only. It does not change source-of-truth hierarchy or Governance Package v1; future task prompts and deliverables must remain physician-centered even when supporting sources are pharmacy, nursing, PT/OT, case management, social work, family, or administrative sources.
 - Clinical Story Skeleton: v1 locked, reviewed, and ratified
 - Identity Package: v1 locked
 - Governance Package: v1 ratified

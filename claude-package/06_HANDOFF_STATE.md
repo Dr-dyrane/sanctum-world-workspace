@@ -199,6 +199,7 @@ Task Architecture Package v1:
 - Candidate workflows: Discharge Medication Reconciliation; Hospital Discharge Summary Generation; Discharge Planning Documentation; Interdisciplinary Care Plan Development and Documentation.
 - AutoQC 2.108 remains a documented reviewer-risk bet, not a blocker. Utilization Review is contingency only if challenged later and should not be added now.
 - TCM and readmission-risk reasoning are embedded inside Discharge Planning Documentation rather than standalone workflow categories.
+- Medicine Team Lead task-design guidance is future task-layer framing only, not source-of-truth hierarchy and not governance redesign. Source-of-truth hierarchy answers: "When sources disagree, which evidence source is authoritative?" Task-design guidance answers: "Who is the final deliverable written by or for?" Later task prompts, expected outputs, goldens, and grader guidance must frame final deliverables from the physician perspective or physician voice, even when supporting sources are pharmacy, nursing, PT/OT, case management, social work, family, or administrative sources. Do not redesign the world, reopen Governance Package v1, or alter source-of-truth hierarchy because of this guidance.
 - Boundary: does not create task prompts, expected outputs, goldens, grader guidance, file inventory, World Spec sections, templates, reference files, or synthetic documents.
 
 Medication Expansion Package v1:
