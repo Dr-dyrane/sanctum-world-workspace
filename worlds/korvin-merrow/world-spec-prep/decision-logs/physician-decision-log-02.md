@@ -1165,7 +1165,7 @@ Next eligible phase:
 Boundary:
 
 - Historical Batch 2 lock boundary: FI-W14 through FI-W22, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity were blocked at that time until explicitly authorized.
-- Historical note: this was the Batch 2 lock boundary at the time of that ratification. It is superseded for FI-W14 through FI-W16 by the Batch 3 ratification and for FI-W17 through FI-W21 by the Batch 4 construction record below; FI-W22 remains blocked until explicitly authorized.
+- Historical note: this was the Batch 2 lock boundary at the time of that ratification. It is superseded for FI-W14 through FI-W16 by the Batch 3 ratification, for FI-W17 through FI-W21 by the Batch 4 construction record below, and for FI-W22 by the Batch 5 candidate construction record below.
 
 ## Task-Design Physician-Perspective Guidance
 
@@ -1276,7 +1276,7 @@ Next eligible phase:
 Boundary:
 
 - Historical Batch 3 lock boundary: FI-W17 through FI-W22, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity were blocked at that time until explicitly authorized.
-- Historical note: this was the Batch 3 lock boundary at the time of that ratification. It is superseded for FI-W17 through FI-W21 by the Batch 4 construction record below; FI-W22 remains blocked until explicitly authorized.
+- Historical note: this was the Batch 3 lock boundary at the time of that ratification. It is superseded for FI-W17 through FI-W21 by the Batch 4 construction record below and for FI-W22 by the Batch 5 candidate construction record below.
 
 ## Batch 4 Synthetic World-Level File Construction Record
 
@@ -1331,7 +1331,7 @@ Final status:
 
 Next eligible phase:
 
-- Batch 5 Synthetic World-Level File Construction.
+- Batch 5 Candidate Review and ratification decision.
 
 ## FI-W20 Inventory Row Reconciliation Record
 
@@ -1363,7 +1363,7 @@ Next eligible phase:
 
 Boundary:
 
-- FI-W22, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
+- Batch 5 lock, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
 
 ## Batch 4 Synthetic World-Level File Construction Ratification Record
 
@@ -1414,8 +1414,59 @@ Status record:
 
 Next eligible phase:
 
-- Batch 5 Synthetic World-Level File Construction.
+- Batch 5 Candidate Review and ratification decision.
 
 Boundary:
 
-- FI-W22, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
+- Batch 5 lock, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
+
+## Batch 5 Synthetic World-Level File Construction Record
+
+Status:
+
+- CANDIDATE REVIEW.
+
+Files constructed:
+
+- FI-W22 Discharge-Facing Plan Snapshot Before World Close.
+
+Candidate path:
+
+- `worlds/korvin-merrow/synthetic-files/candidate-review/batch-5/`
+
+Validation review:
+
+- `worlds/korvin-merrow/synthetic-files/candidate-review/batch-5/batch-5-validation-review.md`
+
+Construction findings:
+
+- FI-W22 was created within the authorized Batch 5 scope.
+- FI-W22 implements Trap #5 as a visible, reassuring, but incomplete discharge-facing artifact.
+- FI-W22 preserves the Trap #3 vs Trap #5 distinction by not duplicating the distributed Batch 4 functional/cognitive substrate.
+- FI-W22 preserves Cardiology vs Nephrology as a timing and sequencing friction without choosing the final medication-restart answer.
+- FI-W22 preserves Endocrinology vs Primary Team as an interpretive steroid-risk friction without proving adrenal insufficiency.
+- FI-W22 preserves Family vs Primary Team as a balanced discharge-readiness friction.
+- FI-W22 preserves the prednisone source hierarchy with rheumatology as highest outpatient taper authority.
+- FI-W22 contains no discharge outcome, post-world follow-up, final medication list, final prednisone taper, task prompt, golden, grader guidance, AutoQC response, DOCX artifact, or submission material.
+
+Carry-forward items:
+
+- Candidate review must test whether FI-W22 is too complete or too explicitly caveated.
+- FI-W22 must remain useful, visible, and reassuring but insufficient if trusted alone.
+- FI-W22 must not resolve final disposition, medication restart timing, prednisone history, consultant disagreement, family concern, functional support level, or service sufficiency.
+- Future task files must not turn FI-W22 into the source-of-truth answer.
+- Future task prompts, expected outputs, goldens, and grader guidance remain blocked until explicitly authorized and must preserve physician-perspective task-design guidance.
+
+Final status:
+
+- Batch 5 Synthetic World-Level File Construction: CANDIDATE REVIEW.
+- FI-W22: CANDIDATE.
+- Batch 5 Construction: COMPLETE pending review and ratification decision.
+
+Next eligible phase:
+
+- Batch 5 Candidate Review and ratification decision.
+
+Boundary:
+
+- Batch 5 lock, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
