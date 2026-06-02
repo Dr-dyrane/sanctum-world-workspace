@@ -1004,11 +1004,13 @@ Boundary:
 
 ## Batch 1 Synthetic World-Level File Construction
 
-Status: CANDIDATE REVIEW.
+Status: LOCKED.
 
-Candidate folder: `worlds/korvin-merrow/synthetic-files/candidate-review/batch-1/`
+Locked folder: `worlds/korvin-merrow/synthetic-files/locked/batch-1/`
 
-Validation review: `worlds/korvin-merrow/synthetic-files/candidate-review/batch-1/batch-1-validation-review.md`
+Validation review: `worlds/korvin-merrow/synthetic-files/locked/batch-1/batch-1-validation-review.md`
+
+Ratification: `worlds/korvin-merrow/synthetic-files/ratifications/batch-1-ratification.md`
 
 Authorized files constructed:
 
@@ -1040,9 +1042,40 @@ Validation result:
 - Source-of-truth hierarchy preserved.
 - Frictions preserved.
 
+Review outcome:
+
+- Claude Code Review: YES / LOCK READY / GO.
+- Windsurf Claude Review: YES / LOCK READY / GO.
+- No true defects identified.
+- No blockers identified.
+- All 7 Batch 1 files validated against locked File Inventory rows.
+- Cross-file identity, provider, medication, comorbidity, surgical-history, and baseline-anchor consistency verified.
+- Insulin lispro exclusion preserved.
+- Prednisone hierarchy preserved.
+- Source-of-truth hierarchies preserved.
+- Temporal integrity preserved.
+- No post-world leakage.
+- No answer-file drift.
+- Trap and friction preservation verified.
+
+Accepted carry-forward items:
+
+- FI-W06 availability remains governed by HD4 timing during future construction.
+- Batch 2 must preserve prednisone uncertainty.
+- Batch 2 must preserve infection-vs-mixed-physiology uncertainty.
+- Batch 2 must preserve medication-restart uncertainty.
+- Batch 2 must preserve baseline-vs-admission-value separation.
+- Batch 2 must preserve all hierarchy ordering.
+
+Final status:
+
+- Batch 1 Synthetic World-Level File Construction: LOCKED.
+- FI-W01 through FI-W07: LOCKED.
+- Batch 1 Construction: COMPLETE.
+
 Next eligible phase:
 
-- Batch 1 review and ratification.
+- Batch 2 Synthetic World-Level File Construction.
 
 Boundary:
 

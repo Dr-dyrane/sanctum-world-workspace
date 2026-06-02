@@ -4,7 +4,7 @@ Purpose: local repository hygiene map to prevent duplicate working files and acc
 
 Generated from local workspace file listing excluding `.git`, caches, and Python bytecode.
 
-Current status: Batch 1 Synthetic World-Level File Construction / Candidate review. Task Architecture Interview v1 is preserved as historical planning scaffold; Task Architecture Package v1 is authoritative. Medication Expansion Package v1, Comorbidity Expansion Package v1, Provider Roster Package v1, Surgical History Package v1, Daily Hospital Course Framework v1, World Spec Skeleton v1, World Spec v1, File Inventory Architecture v1, File Inventory v1, and Synthetic World-Level File Construction Plan v1 are locked. File Inventory Architecture v1 is locked at `worlds/korvin-merrow/file-inventory/locked/file-inventory-architecture-v1.md`, with ratification recorded at `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-architecture-ratification.md`. File Inventory v1 is locked at `worlds/korvin-merrow/file-inventory/locked/file-inventory-v1.md`, with ratification recorded at `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-v1-ratification.md`. File Inventory Planning is complete. Synthetic World-Level File Construction Plan v1 is locked at `worlds/korvin-merrow/synthetic-files/locked/synthetic-world-file-construction-plan-v1.md`, with ratification recorded at `worlds/korvin-merrow/synthetic-files/ratifications/synthetic-world-file-construction-plan-v1-ratification.md`. Synthetic File Construction Governance is complete. Batch 1 synthetic world-level files FI-W01 through FI-W07 are constructed for candidate review at `worlds/korvin-merrow/synthetic-files/candidate-review/batch-1/`. Batch 2 files, FI-W08 or later, tasks, prompts, expected outputs, goldens, grader guidance, DOCX submission packaging, AutoQC, and RL Studio upload have not started.
+Current status: Batch 1 Synthetic World-Level File Construction / Locked. Task Architecture Interview v1 is preserved as historical planning scaffold; Task Architecture Package v1 is authoritative. Medication Expansion Package v1, Comorbidity Expansion Package v1, Provider Roster Package v1, Surgical History Package v1, Daily Hospital Course Framework v1, World Spec Skeleton v1, World Spec v1, File Inventory Architecture v1, File Inventory v1, Synthetic World-Level File Construction Plan v1, and Batch 1 Synthetic World-Level File Construction are locked. File Inventory Architecture v1 is locked at `worlds/korvin-merrow/file-inventory/locked/file-inventory-architecture-v1.md`, with ratification recorded at `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-architecture-ratification.md`. File Inventory v1 is locked at `worlds/korvin-merrow/file-inventory/locked/file-inventory-v1.md`, with ratification recorded at `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-v1-ratification.md`. File Inventory Planning is complete. Synthetic World-Level File Construction Plan v1 is locked at `worlds/korvin-merrow/synthetic-files/locked/synthetic-world-file-construction-plan-v1.md`, with ratification recorded at `worlds/korvin-merrow/synthetic-files/ratifications/synthetic-world-file-construction-plan-v1-ratification.md`. Synthetic File Construction Governance is complete. Batch 1 synthetic world-level files FI-W01 through FI-W07 are locked at `worlds/korvin-merrow/synthetic-files/locked/batch-1/`, with ratification recorded at `worlds/korvin-merrow/synthetic-files/ratifications/batch-1-ratification.md`. Batch 1 Construction is complete. Batch 2 files, FI-W08 or later, tasks, prompts, expected outputs, goldens, grader guidance, DOCX submission packaging, AutoQC, and RL Studio upload have not started.
 
 ## Navigation Rule
 
@@ -48,10 +48,11 @@ For a new collaborator or new AI session, read in this order:
 36. `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-v1-ratification.md` for the File Inventory v1 lock record and carry-forward items.
 37. `worlds/korvin-merrow/synthetic-files/locked/synthetic-world-file-construction-plan-v1.md` for locked construction governance before synthetic world-level file construction.
 38. `worlds/korvin-merrow/synthetic-files/ratifications/synthetic-world-file-construction-plan-v1-ratification.md` for the lock record and next-phase boundaries.
-39. `worlds/korvin-merrow/synthetic-files/candidate-review/batch-1/batch-1-validation-review.md` for active Batch 1 validation.
-40. `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md` for historical interview basis.
-41. `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions and construction-lock status.
-42. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
+39. `worlds/korvin-merrow/synthetic-files/locked/batch-1/batch-1-validation-review.md` for locked Batch 1 validation.
+40. `worlds/korvin-merrow/synthetic-files/ratifications/batch-1-ratification.md` for Batch 1 lock record.
+41. `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md` for historical interview basis.
+42. `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions and construction-lock status.
+43. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
 
 Do not start by opening every prep file. Most prep files are supporting memory, not active instructions.
 
@@ -68,7 +69,7 @@ Findings:
 - `worlds/korvin-merrow/` is now a junction folder with one README and purpose subfolders.
 - `worlds/korvin-merrow/file-inventory/` is now a lifecycle folder for file inventory architecture and file-plan work; File Inventory Architecture v1 and File Inventory v1 are locked and ratified.
 - World Spec prep and construction artifacts are clustered by lifecycle stage so candidate, locked, ratified, review, decision-log, and planning-scaffold files do not sit in one flat folder.
-- `worlds/korvin-merrow/synthetic-files/` is now a lifecycle folder for synthetic file planning/construction. Synthetic World-Level File Construction Plan v1 is locked and ratified. Batch 1 synthetic world-level files are in candidate review.
+- `worlds/korvin-merrow/synthetic-files/` is now a lifecycle folder for synthetic file planning/construction. Synthetic World-Level File Construction Plan v1 is locked and ratified. Batch 1 synthetic world-level files are locked and ratified.
 - `candidate-review/` is reserved for active candidate artifacts only. Task Architecture Interview v1 moved to `planning-scaffolds/` after Task Architecture Package v1 lock. World Spec prep `candidate-review/` is empty after Daily Hospital Course Framework v1 lock; file-inventory `candidate-review/` is empty after File Inventory v1 lock.
 - Several files intentionally overlap by lifecycle stage, especially Brainstorm history/reviews and World Spec prep/checklist material.
 - Do not add new audit or navigation docs unless an existing map/status file cannot carry the information.
@@ -355,8 +356,8 @@ Lifecycle clustering:
 
 Lifecycle clustering:
 
-- `candidate-review/`: active synthetic-file construction artifacts awaiting physician review or lock. Current active candidate: `batch-1/`.
-- `locked/`: locked synthetic-file construction governance or future locked construction units.
+- `candidate-review/`: active synthetic-file construction artifacts awaiting physician review or lock. Currently empty after Batch 1 lock.
+- `locked/`: locked synthetic-file construction governance and locked construction units.
 - `ratifications/`: ratification records for synthetic-file construction governance or future construction units.
 - This area must not contain synthetic chart contents unless Alexander explicitly authorizes that phase.
 
@@ -364,14 +365,15 @@ Lifecycle clustering:
 | --- | --- | --- |
 | `worlds/korvin-merrow/synthetic-files/locked/synthetic-world-file-construction-plan-v1.md` | Locked construction strategy for the 22 locked world-level files FI-W01 through FI-W22. | Governance/planning only; not filenames, synthetic file contents, chart notes, admission notes, consultant notes, nursing notes, therapy notes, discharge summaries, labs, vitals, medication lists, medication schedules, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, or submission materials. |
 | `worlds/korvin-merrow/synthetic-files/ratifications/synthetic-world-file-construction-plan-v1-ratification.md` | Ratification record for Synthetic World-Level File Construction Plan v1. | Records GO reviews, accepted carry-forward items, Synthetic File Construction Governance completion, Batch 1 next eligible phase, and downstream boundaries. |
-| `worlds/korvin-merrow/synthetic-files/candidate-review/batch-1/FI-W01_ed-triage-initial-intake.md` | Candidate synthetic world-level file FI-W01. | ED triage/intake documentation only; not locked until Batch 1 ratification. |
-| `worlds/korvin-merrow/synthetic-files/candidate-review/batch-1/FI-W02_ed-provider-assessment.md` | Candidate synthetic world-level file FI-W02. | ED provider assessment only; not locked until Batch 1 ratification. |
-| `worlds/korvin-merrow/synthetic-files/candidate-review/batch-1/FI-W03_admission-history-and-physical.md` | Candidate synthetic world-level file FI-W03. | Admission H&P only; not locked until Batch 1 ratification. |
-| `worlds/korvin-merrow/synthetic-files/candidate-review/batch-1/FI-W04_initial-medication-reconciliation-note.md` | Candidate synthetic world-level file FI-W04. | Initial medication reconciliation note only; not a discharge medication list or final reconciliation output. |
-| `worlds/korvin-merrow/synthetic-files/candidate-review/batch-1/FI-W05_pharmacy-refill-history-report.md` | Candidate synthetic world-level file FI-W05. | Pharmacy/refill provenance only; not proof of actual ingestion or discharge appropriateness. |
-| `worlds/korvin-merrow/synthetic-files/candidate-review/batch-1/FI-W06_outpatient-rheumatology-prednisone-provenance.md` | Candidate synthetic world-level file FI-W06. | Outpatient rheumatology prednisone provenance only; not an inpatient consult or steroid answer file. |
-| `worlds/korvin-merrow/synthetic-files/candidate-review/batch-1/FI-W07_primary-care-outpatient-baseline-summary.md` | Candidate synthetic world-level file FI-W07. | Primary care baseline/provenance only; not a disposition decision or hospital-course trend file. |
-| `worlds/korvin-merrow/synthetic-files/candidate-review/batch-1/batch-1-validation-review.md` | Candidate validation review for Batch 1 FI-W01 through FI-W07. | Review artifact only; not a synthetic chart file, task prompt, golden, grader guidance, AutoQC response, or submission artifact. |
+| `worlds/korvin-merrow/synthetic-files/locked/batch-1/FI-W01_ed-triage-initial-intake.md` | Locked synthetic world-level file FI-W01. | ED triage/intake documentation only. |
+| `worlds/korvin-merrow/synthetic-files/locked/batch-1/FI-W02_ed-provider-assessment.md` | Locked synthetic world-level file FI-W02. | ED provider assessment only. |
+| `worlds/korvin-merrow/synthetic-files/locked/batch-1/FI-W03_admission-history-and-physical.md` | Locked synthetic world-level file FI-W03. | Admission H&P only. |
+| `worlds/korvin-merrow/synthetic-files/locked/batch-1/FI-W04_initial-medication-reconciliation-note.md` | Locked synthetic world-level file FI-W04. | Initial medication reconciliation note only; not a discharge medication list or final reconciliation output. |
+| `worlds/korvin-merrow/synthetic-files/locked/batch-1/FI-W05_pharmacy-refill-history-report.md` | Locked synthetic world-level file FI-W05. | Pharmacy/refill provenance only; not proof of actual ingestion or discharge appropriateness. |
+| `worlds/korvin-merrow/synthetic-files/locked/batch-1/FI-W06_outpatient-rheumatology-prednisone-provenance.md` | Locked synthetic world-level file FI-W06. | Outpatient rheumatology prednisone provenance only; not an inpatient consult or steroid answer file. |
+| `worlds/korvin-merrow/synthetic-files/locked/batch-1/FI-W07_primary-care-outpatient-baseline-summary.md` | Locked synthetic world-level file FI-W07. | Primary care baseline/provenance only; not a disposition decision or hospital-course trend file. |
+| `worlds/korvin-merrow/synthetic-files/locked/batch-1/batch-1-validation-review.md` | Locked validation review for Batch 1 FI-W01 through FI-W07. | Review artifact only; not a synthetic chart file, task prompt, golden, grader guidance, AutoQC response, or submission artifact. |
+| `worlds/korvin-merrow/synthetic-files/ratifications/batch-1-ratification.md` | Ratification record for Batch 1 Synthetic World-Level File Construction. | Records GO reviews, accepted carry-forward items, Batch 1 lock, Batch 1 Construction completion, Batch 2 next eligible phase, and downstream boundaries. |
 
 ## Duplication Watchlist
 

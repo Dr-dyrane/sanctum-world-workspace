@@ -2,7 +2,7 @@
 
 Date created: 2026-06-01
 
-Status: CANDIDATE REVIEW
+Status: LOCKED
 
 Purpose: validate Batch 1 Synthetic World-Level File Construction for FI-W01 through FI-W07 against locked File Inventory v1, Synthetic World-Level File Construction Plan v1, and locked world architecture.
 
@@ -291,4 +291,4 @@ Files Constructed:
 
 FI-W01 through FI-W07
 
-Status: CANDIDATE REVIEW
+Status: LOCKED

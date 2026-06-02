@@ -362,9 +362,11 @@ File Inventory Architecture v1:
 - Synthetic World-Level File Construction Plan v1 is locked at `worlds/korvin-merrow/synthetic-files/locked/synthetic-world-file-construction-plan-v1.md`.
 - Synthetic World-Level File Construction Plan v1 ratification is recorded at `worlds/korvin-merrow/synthetic-files/ratifications/synthetic-world-file-construction-plan-v1-ratification.md`.
 - Synthetic File Construction Governance is complete.
-- Batch 1 synthetic world-level files FI-W01 through FI-W07 are constructed for candidate review at `worlds/korvin-merrow/synthetic-files/candidate-review/batch-1/`.
-- Batch 1 validation review is recorded at `worlds/korvin-merrow/synthetic-files/candidate-review/batch-1/batch-1-validation-review.md`.
-- Next eligible phase is Batch 1 review and ratification.
+- Batch 1 synthetic world-level files FI-W01 through FI-W07 are locked at `worlds/korvin-merrow/synthetic-files/locked/batch-1/`.
+- Batch 1 validation review is recorded at `worlds/korvin-merrow/synthetic-files/locked/batch-1/batch-1-validation-review.md`.
+- Batch 1 ratification is recorded at `worlds/korvin-merrow/synthetic-files/ratifications/batch-1-ratification.md`.
+- Batch 1 Construction is complete.
+- Next eligible phase is Batch 2 Synthetic World-Level File Construction.
 - Batch 2 files, FI-W08 or later, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
 
 ## Key Milestones Calendar Skeleton v1
