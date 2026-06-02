@@ -522,12 +522,12 @@ Stop before:
 - Governance Package work unless Alexander explicitly starts that phase.
 - World Spec drafting unless Alexander explicitly authorizes drafting.
 - Milestone creation.
-- Synthetic file construction or downstream file contents.
+- Batch 2 or later synthetic file construction, downstream file contents, or any non-Batch-1 synthetic file work unless Alexander explicitly authorizes that construction unit.
 - Task prompts.
 - Golden responses.
 - Grader guidelines.
 - Invented clinical values, dates, lab values, vitals, provider names, MRN, or file names.
-- Synthetic file generation.
+- Unrestricted synthetic file generation outside the approved batch-gated construction workflow.
 - RL Studio upload/submission without explicit authorization.
 
 If any requested step appears to cross these boundaries, pause and ask Alexander.

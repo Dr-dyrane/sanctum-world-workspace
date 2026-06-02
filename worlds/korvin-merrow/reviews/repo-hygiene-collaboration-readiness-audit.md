@@ -8,6 +8,8 @@ Scope: audit only. No construction work, locked artifact edits, Batch 2 files, t
 
 Status: PASS WITH MINOR ISSUES
 
+Post-audit cleanup note: the minor issues identified here were addressed in the repository hygiene cleanup pass. `PHASE_MAP.md` and `WORLD_SPEC_KICKOFF.md` now describe synthetic construction as batch-gated, Batch 1 is locked, Batch 2 remains explicitly gated, and the old branch name is documented as a known historical branch-name mismatch rather than an active identity issue. Remaining active issues: none.
+
 The repository is ready for a new Codex, Claude, or writer collaborator to enter cold and understand the current Korvin Merrow state from files alone.
 
 Current state is consistently discoverable across the primary continuity surfaces:

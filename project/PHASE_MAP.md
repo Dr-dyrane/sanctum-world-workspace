@@ -25,6 +25,8 @@ Goal: Engineering generates synthetic files from approved spec and reference tem
 
 Status: Out of scope until approval and phase update.
 
+Korvin Merrow current exception: Alexander has explicitly authorized local, batch-gated synthetic world-level file construction through Batch 1 only. Batch 1 FI-W01 through FI-W07 are locked. Batch 2 FI-W08 through FI-W13 is the next eligible phase, but it remains explicitly gated and must not begin without Alexander authorization.
+
 ### Phase 3: QA Your Tasks
 
 Goal: Address Task AutoQC findings and complete trajectory/grading audit.
@@ -39,7 +41,7 @@ Status: Out of scope until approval and phase update.
 
 ## Explicitly Out Of Scope Until Approval
 
-- Synthetic file generation
+- Batch 2 or later synthetic file generation unless explicitly authorized by Alexander
 - World file review
 - Production task setup
 - Production task prompts
@@ -117,4 +119,3 @@ Tasks:
 - Each task should produce a concrete, evaluable output.
 - Tasks are independent encounters and do not depend on one another.
 - Tasks should be anchored after the World snapshot.
-

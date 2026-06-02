@@ -10,6 +10,8 @@ Git is used for local checkpoints, rollback, and change review. Do not push or p
 - `reviewer-fixes/*`: human reviewer feedback revisions.
 - `autoqc-fixes/*`: AutoQC remediation branches.
 
+Current note: the active local branch may still be `james-carter-brainstorm` because it tracks `origin/james-carter-brainstorm` and is ahead by local commits. Treat that as a known historical branch-name mismatch, not a current patient-identity signal. Rename only after Alexander approves the remote strategy.
+
 ## Tagging Strategy
 
 Suggested tags:
@@ -87,4 +89,3 @@ This workspace currently has an `origin` remote configured. Before any push, ver
 - no prohibited source docs or secrets are staged
 - `.gitignore` protects credentials and local exports
 - Alexander approves the push
-

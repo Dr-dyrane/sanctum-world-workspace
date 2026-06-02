@@ -113,7 +113,7 @@ Batch 1 Synthetic World-Level File Construction / Locked.
 - Do not reopen Identity Package v1; use the review addendum only as carry-forward implementation notes.
 - Do not change Governance Package v1 without Alexander approval.
 - Do not create milestones before Alexander authorizes that step.
-- Do not create synthetic files or downstream task/file contents before Alexander authorizes that step.
+- Do not create Batch 2 or later synthetic files, or downstream task/file contents, before Alexander authorizes that step.
 - Do not revise locked task architecture or create task prompts before Alexander authorizes that step.
 - Do not treat fetched World Spec examples as authored Korvin Merrow content.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
