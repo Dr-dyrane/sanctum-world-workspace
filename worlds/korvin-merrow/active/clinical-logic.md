@@ -370,10 +370,11 @@ File Inventory Architecture v1:
 - Batch 2 ratification is recorded at `worlds/korvin-merrow/synthetic-files/ratifications/batch-2-ratification.md`.
 - Batch 2 validation review is recorded at `worlds/korvin-merrow/synthetic-files/locked/batch-2/batch-2-validation-review.md`.
 - Batch 2 Construction is complete.
-- Batch 3 candidate files FI-W14 through FI-W16 are constructed at `worlds/korvin-merrow/synthetic-files/candidate-review/batch-3/`.
-- Batch 3 validation review is recorded at `worlds/korvin-merrow/synthetic-files/candidate-review/batch-3/batch-3-validation-review.md`.
-- Batch 3 Construction status is candidate review, not locked.
-- Next eligible phase is Batch 3 Candidate Review and ratification decision.
+- Batch 3 files FI-W14 through FI-W16 are locked at `worlds/korvin-merrow/synthetic-files/locked/batch-3/`.
+- Batch 3 validation review is recorded at `worlds/korvin-merrow/synthetic-files/locked/batch-3/batch-3-validation-review.md`.
+- Batch 3 ratification is recorded at `worlds/korvin-merrow/synthetic-files/ratifications/batch-3-ratification.md`.
+- Batch 3 Construction status is complete.
+- Next eligible phase is Batch 4 Synthetic World-Level File Construction.
 - FI-W17 through FI-W22, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
 
 ## Key Milestones Calendar Skeleton v1
@@ -788,10 +789,12 @@ Batch 2 clinical logic:
 
 Batch 3 Synthetic World-Level File Construction:
 
-- Status: CANDIDATE REVIEW.
-- Files constructed: FI-W14 through FI-W16.
-- Candidate folder: `worlds/korvin-merrow/synthetic-files/candidate-review/batch-3/`.
-- Validation review: `worlds/korvin-merrow/synthetic-files/candidate-review/batch-3/batch-3-validation-review.md`.
+- Status: LOCKED.
+- Files locked: FI-W14 through FI-W16.
+- Locked folder: `worlds/korvin-merrow/synthetic-files/locked/batch-3/`.
+- Validation review: `worlds/korvin-merrow/synthetic-files/locked/batch-3/batch-3-validation-review.md`.
+- Ratification: `worlds/korvin-merrow/synthetic-files/ratifications/batch-3-ratification.md`.
+- Batch 3 Construction status: COMPLETE.
 
 Batch 3 clinical logic:
 

@@ -1165,6 +1165,7 @@ Next eligible phase:
 Boundary:
 
 - FI-W14 through FI-W22, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
+- Historical note: this was the Batch 2 lock boundary at the time of that ratification. It is superseded for FI-W14 through FI-W16 by the Batch 3 ratification recorded below; FI-W17 through FI-W22 remain blocked until explicitly authorized.
 
 ## Task-Design Physician-Perspective Guidance
 
@@ -1200,3 +1201,78 @@ Carry-forward instruction:
 
 - Apply this rule later during authorized task design, task prompts, expected outputs, goldens, and grader guidance.
 - Do not modify source-of-truth hierarchies, Governance Package v1, locked clinical architecture, or locked synthetic files because of this guidance.
+
+## Batch 3 Synthetic World-Level File Construction Ratification
+
+Status: LOCKED.
+
+Files locked:
+
+- FI-W14 Nephrology Consultation.
+- FI-W15 Cardiology Consultation.
+- FI-W16 Endocrinology Consultation.
+
+Canonical locked path:
+
+- `worlds/korvin-merrow/synthetic-files/locked/batch-3/`
+
+Ratification record:
+
+- `worlds/korvin-merrow/synthetic-files/ratifications/batch-3-ratification.md`
+
+Validation review:
+
+- `worlds/korvin-merrow/synthetic-files/locked/batch-3/batch-3-validation-review.md`
+
+Review outcome:
+
+- Claude Code Review: YES / LOCK READY / GO.
+- Windsurf Claude Review: YES / LOCK READY / GO.
+- No true defects identified.
+- No blockers identified.
+
+Accepted findings:
+
+- FI-W14 through FI-W16 validate against locked File Inventory rows.
+- Nephrology consultation is clinically defensible.
+- Cardiology consultation is clinically defensible.
+- Endocrinology consultation is clinically defensible.
+- Cardiology vs Nephrology remains a timing and sequencing friction.
+- Neither Cardiology nor Nephrology is obviously correct or careless.
+- Neither consultant becomes the final medication-restart authority.
+- Endocrinology remains interpretive.
+- Adrenal insufficiency is not proven.
+- Steroid risk remains meaningful but not dominant.
+- Prednisone hierarchy is preserved with Rheumatology as highest outpatient taper authority.
+- Consultant notes remain interpretation sources, not source-of-truth overrides.
+- Hospitalist-synthesizes-not-defers governance is preserved.
+- FI-W12 values are cited consistently.
+- FI-W13 MAR/action source is not converted into a final medication plan.
+- Insulin lispro remains inpatient-only.
+- No answer-file drift identified.
+- No post-world leakage identified.
+- Batch 1 and Batch 2 consistency preserved.
+
+Accepted carry-forward items:
+
+- Batch 4 must carry buried functional and cognitive evidence.
+- Batch 4 must preserve Trap #3 as buried-but-discoverable evidence.
+- Batch 4 must preserve the Trap #3 vs Trap #5 distinction.
+- FI-W20 family communication must not make discharge obviously unsafe by itself.
+- FI-W22 later must remain visible-but-incomplete and must not duplicate or resolve all consultant caveats.
+- Later files must not let Endocrinology replace Rheumatology as prednisone-history source of truth.
+- Later files must not let either consultant become the final medication authority.
+
+Final status:
+
+- Batch 3 Synthetic World-Level File Construction: LOCKED.
+- FI-W14 through FI-W16: LOCKED.
+- Batch 3 Construction: COMPLETE.
+
+Next eligible phase:
+
+- Batch 4 Synthetic World-Level File Construction.
+
+Boundary:
+
+- FI-W17 through FI-W22, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
