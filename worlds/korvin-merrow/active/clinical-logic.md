@@ -437,8 +437,9 @@ File Inventory Architecture v1:
 - AutoQC status is COMPLETE.
 - Packaging Architecture v1 is LOCKED at `worlds/korvin-merrow/packaging-architecture/locked/`.
 - Packaging Architecture ratification is recorded at `worlds/korvin-merrow/packaging-architecture/ratifications/packaging-architecture-ratification.md`.
-- Packaging Construction v1 is in CANDIDATE REVIEW at `worlds/korvin-merrow/packaging/candidate-review/`.
-- Next eligible phase is Packaging Construction Review.
+- Packaging Construction is LOCKED at `worlds/korvin-merrow/packaging/locked/`.
+- Submission Preparation is LOCKED at `worlds/korvin-merrow/submission-preparation/locked/` with ratification at `worlds/korvin-merrow/submission-preparation/ratifications/submission-preparation-ratification.md`.
+- Next eligible phase is Execution Preparation.
 - AutoQC runs, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
 
 ## Key Milestones Calendar Skeleton v1
@@ -978,8 +979,9 @@ Task-Level Context File Architecture v1:
 - AutoQC status is COMPLETE.
 - Packaging Architecture v1 is LOCKED at `worlds/korvin-merrow/packaging-architecture/locked/`.
 - Packaging Architecture is COMPLETE.
-- Packaging Construction v1 is in CANDIDATE REVIEW at `worlds/korvin-merrow/packaging/candidate-review/`.
-- Next eligible phase: Packaging Construction Review.
+- Packaging Construction is LOCKED at `worlds/korvin-merrow/packaging/locked/`.
+- Submission Preparation is LOCKED at `worlds/korvin-merrow/submission-preparation/locked/` with ratification at `worlds/korvin-merrow/submission-preparation/ratifications/submission-preparation-ratification.md`.
+- Next eligible phase: Execution Preparation.
 
 ## Major Clinical Friction Themes
 
@@ -1005,3 +1007,16 @@ Complexity comes from realistic medicine:
 `AGENTS.md` keeps operating context.
 
 Detailed evolving clinical design belongs under `worlds/korvin-merrow/active/` and locked preparation decisions belong under `worlds/korvin-merrow/world-spec-prep/`.
+## Submission Preparation Lock State
+
+Status: LOCKED.
+
+Submission Preparation v1 is locked at `worlds/korvin-merrow/submission-preparation/locked/submission-preparation-v1.md`.
+
+Validation review is locked at `worlds/korvin-merrow/submission-preparation/locked/submission-preparation-validation-review.md`.
+
+Ratification is recorded at `worlds/korvin-merrow/submission-preparation/ratifications/submission-preparation-ratification.md`.
+
+Submission Preparation is complete. The next eligible phase is Execution Preparation.
+
+Execution Preparation, execution artifacts, DOCX artifacts, manifests, submission packages, AutoQC runs, uploads, and submissions remain blocked until Alexander explicitly authorizes the relevant phase.

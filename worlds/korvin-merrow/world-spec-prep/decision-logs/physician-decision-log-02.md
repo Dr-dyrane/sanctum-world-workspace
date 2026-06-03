@@ -2805,7 +2805,7 @@ Status:
 
 - AutoQC Construction: LOCKED.
 - AutoQC: COMPLETE.
-- Historical next eligible phase after AutoQC Construction lock: Packaging Architecture. Current next eligible phase: Packaging Construction Review.
+- Historical next eligible phase after AutoQC Construction lock: Packaging Architecture. Current next eligible phase: Execution Preparation.
 
 Authorization:
 
@@ -2851,7 +2851,7 @@ Status:
 - AutoQC Construction: LOCKED.
 - AutoQC: COMPLETE.
 - Packaging Architecture: COMPLETE.
-- Historical next eligible phase after Packaging Architecture lock: Packaging Construction. Current next eligible phase: Packaging Construction Review.
+- Historical next eligible phase after Packaging Architecture lock: Packaging Construction. Current next eligible phase: Execution Preparation.
 
 Authorization:
 
@@ -2908,7 +2908,7 @@ Status:
 - Packaging Construction v1: CANDIDATE REVIEW.
 - Packaging Architecture v1: LOCKED.
 - Packaging Architecture: COMPLETE.
-- Next eligible phase: Packaging Construction Review.
+- Historical next eligible phase at Packaging Construction candidate record: Packaging Construction Review.
 
 Authorization:
 
@@ -3017,3 +3017,34 @@ Boundary preserved:
 Next eligible phase:
 
 - AutoQC Construction Review.
+## Submission Preparation Ratification Record
+
+Date: 2026-06-03
+
+Decision:
+
+- Submission Preparation v1 is ratified and locked.
+- Submission Preparation is complete.
+- Next eligible phase is Execution Preparation.
+
+Locked artifacts:
+
+- `worlds/korvin-merrow/submission-preparation/locked/submission-preparation-v1.md`
+- `worlds/korvin-merrow/submission-preparation/locked/submission-preparation-validation-review.md`
+
+Ratification:
+
+- `worlds/korvin-merrow/submission-preparation/ratifications/submission-preparation-ratification.md`
+
+Review findings:
+
+- Independent Review A: LOCK READY / GO.
+- Independent Review B: LOCK READY / GO.
+- Decision Register, Dependency Register, Evidence Register, Stop-Point Register, Execution Order, transcript handling, reference-file handling, template fidelity protection, RL Studio dependency handling, AutoQC dependency handling, and authorization gates were verified.
+- The 7-column vs 8-column discrepancy remains correctly blocked to future reconciliation before DOCX population.
+- No true defects, governance issues, canon conflicts, or open reconciliations were identified.
+
+Boundaries:
+
+- Do not begin Execution Preparation without explicit authorization.
+- Do not create execution artifacts, DOCX artifacts, manifests, submission packages, AutoQC responses, scoring artifacts, uploads, or submissions without explicit authorization.
