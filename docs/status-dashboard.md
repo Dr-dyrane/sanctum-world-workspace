@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-Packaging Construction / LOCKED.
+Submission Preparation v1 / CANDIDATE REVIEW.
 
 ## Brainstorm
 
@@ -143,8 +143,11 @@ Packaging Construction / LOCKED.
 - Files locked: `packaging-construction-v1.md`; `packaging-construction-validation-review.md`
 - Packaging Construction ratification: `worlds/korvin-merrow/packaging/ratifications/packaging-construction-ratification.md`
 - Packaging: complete
+- Submission Preparation v1: candidate review
+- Submission Preparation candidate artifacts: `worlds/korvin-merrow/submission-preparation/candidate-review/`
+- Files constructed: `submission-preparation-v1.md`; `submission-preparation-validation-review.md`
 - No GG-KM07 exists
-- Next eligible phase: Submission Preparation
+- Next eligible phase: Submission Preparation Review
 - Claude transcript: `docs/claude-transcript.md` is tracked as raw historical transcript evidence for future submission/packaging review. It is not formatted, converted, scoped, or submission-ready.
 - Task-design physician-perspective guidance: recorded as a future task-layer rule only. It does not change source-of-truth hierarchy or Governance Package v1; future task prompts and deliverables must remain physician-centered even when supporting sources are pharmacy, nursing, PT/OT, case management, social work, family, or administrative sources.
 - Collaborator session-exit discipline: standing process / handoff rule. Every future session must leave the repository clean or explicitly documented, update phase and next-phase surfaces, preserve locked artifacts unless explicitly authorized, label candidate artifacts, move newly locked artifacts to locked paths with ratification references, update continuity and Claude handoff files, record carry-forward watch items and future task-layer guidance, commit completed work unless explicitly told not to, and report what changed, what did not change, current status, next eligible phase, and whether the repository is safe for another collaborator.
@@ -203,7 +206,7 @@ Packaging Construction / LOCKED.
 - Fetched World Spec example source documents: `reference/word-spec-examples/` (local-only / gitignored)
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 - World Spec prep folder structure: reorganized by lifecycle buckets (`candidate-review/`, `locked/`, `ratifications/`, `reviews/`, `decision-logs/`, `planning-scaffolds/`)
-- Next eligible phase: Submission Preparation. Do not run AutoQC, create AutoQC responses, create scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX submission artifacts, manifests, final submission packages, or RL Studio uploads until explicitly authorized.
+- Next eligible phase: Submission Preparation Review. Do not run AutoQC, create AutoQC responses, create scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX submission artifacts, manifests, final submission packages, or RL Studio uploads until explicitly authorized.
 
 ## Tooling
 
@@ -225,6 +228,6 @@ Packaging Construction / LOCKED.
 - Do not treat fetched World Spec examples as authored Korvin Merrow content or source-of-truth material.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
 - Do not modify clinical content beyond reviewer-required remediation without Alexander approval.
-- Do not proceed beyond Packaging Construction into AutoQC runs, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX packaging, submission artifacts, or failure analysis without explicit authorization.
+- Do not proceed beyond Submission Preparation Review into AutoQC runs, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX packaging, manifest creation, final submission packaging, upload, submission, or failure analysis without explicit authorization.
 - Do not access RL Studio without explicit authorization.
 - Do not end a working session without applying collaborator session-exit discipline.

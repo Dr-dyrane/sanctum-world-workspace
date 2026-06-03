@@ -1,6 +1,6 @@
 # Korvin Merrow World Spec Kickoff
 
-Status: Packaging Construction / LOCKED.
+Status: Submission Preparation v1 / CANDIDATE REVIEW.
 
 Purpose: active cockpit for the transition from approved Brainstorm through World Spec construction while preserving phase boundaries around template population, file inventory, tasks, and downstream deliverables.
 
@@ -123,7 +123,7 @@ Purpose: active cockpit for the transition from approved Brainstorm through Worl
 - Packaging Construction locked artifacts: `worlds/korvin-merrow/packaging/locked/packaging-construction-v1.md` and `worlds/korvin-merrow/packaging/locked/packaging-construction-validation-review.md`.
 - Packaging Construction ratification: `worlds/korvin-merrow/packaging/ratifications/packaging-construction-ratification.md`.
 - Packaging status: COMPLETE.
-- Next eligible phase: Submission Preparation.
+- Next eligible phase: Submission Preparation Review.
 - AutoQC runs, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX submission packaging, RL Studio upload, and submission materials have not started.
 - Clinical Story Skeleton v1 is locked and ratified.
 - Clinical Story Skeleton review completed with GO recommendation.
@@ -158,7 +158,7 @@ Purpose: active cockpit for the transition from approved Brainstorm through Worl
 - Daily Hospital Course Framework v1: `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md`.
 - Daily Hospital Course Framework ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md`.
 - Preparation Layer status: COMPLETE.
-- Next eligible phase: Submission Preparation. AutoQC runs, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX submission packaging, manifest creation, final submission packaging, RL Studio upload, and RL Studio activity remain blocked until explicitly authorized.
+- Next eligible phase: Submission Preparation Review. AutoQC runs, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX submission packaging, manifest creation, final submission packaging, RL Studio upload, and RL Studio activity remain blocked until explicitly authorized.
 
 ## Workspace Bloat And Doctrine Audit
 
