@@ -4,9 +4,9 @@ Purpose: compressed current state for Claude. Use `project/STATUS.md` and `docs/
 
 ## Project State
 
-Current phase: Task Prompt Architecture v1 / Locked.
+Current phase: Task Prompt Construction / CANDIDATE REVIEW.
 
-FI-W20 inventory row reconciliation is recorded at `worlds/korvin-merrow/file-inventory/reviews/fi-w20-inventory-row-reconciliation.md`. FI-S03 Trap #5 reconciliation is recorded at `worlds/korvin-merrow/file-inventory/reviews/supplementary-file-trap5-reconciliation.md`. World-Level Synthetic File Layer, Task-Level Context Files, Supplementary Files, the Entire File Ecosystem, and Task Prompt Architecture are complete and locked. Task Prompt Architecture v1 is locked at `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-v1.md`, with validation review at `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-validation-review.md` and ratification at `worlds/korvin-merrow/task-prompt-architecture/ratifications/task-prompt-architecture-ratification.md`. It defines six future prompt families and keeps FI-T07 as medication-safety addendum support rather than a seventh prompt.
+FI-W20 inventory row reconciliation is recorded at `worlds/korvin-merrow/file-inventory/reviews/fi-w20-inventory-row-reconciliation.md`. FI-S03 Trap #5 reconciliation is recorded at `worlds/korvin-merrow/file-inventory/reviews/supplementary-file-trap5-reconciliation.md`. World-Level Synthetic File Layer, Task-Level Context Files, Supplementary Files, the Entire File Ecosystem, and Task Prompt Architecture are complete and locked. Task Prompt Architecture v1 is locked at `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-v1.md`, with validation review at `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-validation-review.md` and ratification at `worlds/korvin-merrow/task-prompt-architecture/ratifications/task-prompt-architecture-ratification.md`. Task Prompt Construction is in candidate review at `worlds/korvin-merrow/task-prompts/candidate-review/`; TP-KM01 through TP-KM06 and `task-prompt-construction-validation-review.md` have been constructed.
 
 Brainstorm:
 
@@ -24,7 +24,7 @@ Brainstorm:
 
 Current blocker:
 
-- No reviewer blocker. Entire File Ecosystem is complete and locked. Task Prompt Architecture v1 is locked and Task Prompt Architecture is complete. Task Prompt Construction is the next eligible phase. Expected outputs, goldens, grader guidance, DOCX submission packaging, AutoQC, and RL Studio upload remain gated on explicit Alexander authorization for the relevant step.
+- No reviewer blocker. Entire File Ecosystem is complete and locked. Task Prompt Architecture v1 is locked and Task Prompt Architecture is complete. Task Prompt Construction is in candidate review. Task Prompt Construction Review is the next eligible phase. Task prompts are not locked. Expected outputs, goldens, grader guidance, DOCX submission packaging, AutoQC, and RL Studio upload remain gated on explicit Alexander authorization for the relevant step.
 
 Next legal action:
 

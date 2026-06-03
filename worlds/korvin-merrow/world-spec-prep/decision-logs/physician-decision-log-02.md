@@ -1968,3 +1968,37 @@ Next eligible phase:
 Boundary:
 
 - Expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission artifacts, and RL Studio activity remain blocked until explicitly authorized.
+
+## Task Prompt Construction Candidate Record
+
+Status:
+
+- Task Prompt Construction: CANDIDATE REVIEW.
+
+Authorization:
+
+- Alexander authorized Task Prompt Construction candidate creation after Task Prompt Architecture v1 lock.
+
+Constructed candidate artifacts:
+
+- `worlds/korvin-merrow/task-prompts/candidate-review/TP-KM01.md`
+- `worlds/korvin-merrow/task-prompts/candidate-review/TP-KM02.md`
+- `worlds/korvin-merrow/task-prompts/candidate-review/TP-KM03.md`
+- `worlds/korvin-merrow/task-prompts/candidate-review/TP-KM04.md`
+- `worlds/korvin-merrow/task-prompts/candidate-review/TP-KM05.md`
+- `worlds/korvin-merrow/task-prompts/candidate-review/TP-KM06.md`
+- `worlds/korvin-merrow/task-prompts/candidate-review/task-prompt-construction-validation-review.md`
+
+Continuity decision:
+
+- TP-KM01 through TP-KM06 are candidate-review task prompts only.
+- They are not locked.
+- They do not create expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission artifacts, or RL Studio materials.
+
+Next eligible phase:
+
+- Task Prompt Construction Review.
+
+Boundary:
+
+- Do not lock task prompts, create expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission artifacts, or RL Studio activity until Alexander explicitly authorizes the relevant phase.

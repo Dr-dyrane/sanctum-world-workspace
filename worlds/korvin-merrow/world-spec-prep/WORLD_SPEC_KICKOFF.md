@@ -1,6 +1,6 @@
 # Korvin Merrow World Spec Kickoff
 
-Status: Task Prompt Architecture v1 / LOCKED.
+Status: Task Prompt Construction / CANDIDATE REVIEW.
 
 Purpose: active cockpit for the transition from approved Brainstorm through World Spec construction while preserving phase boundaries around template population, file inventory, tasks, and downstream deliverables.
 
@@ -75,7 +75,11 @@ Purpose: active cockpit for the transition from approved Brainstorm through Worl
 - Task Prompt Architecture ratification: `worlds/korvin-merrow/task-prompt-architecture/ratifications/task-prompt-architecture-ratification.md`.
 - Task Prompt Architecture v1 status: LOCKED.
 - Task Prompt Architecture status: COMPLETE.
-- Next eligible phase: Task Prompt Construction.
+- Task Prompt Construction status: CANDIDATE REVIEW.
+- Task prompt candidate files: `worlds/korvin-merrow/task-prompts/candidate-review/`.
+- Files constructed: TP-KM01 through TP-KM06.
+- Task prompt construction validation review: `worlds/korvin-merrow/task-prompts/candidate-review/task-prompt-construction-validation-review.md`.
+- Next eligible phase: Task Prompt Construction Review.
 - Expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission packaging, RL Studio upload, and submission materials have not started.
 - Clinical Story Skeleton v1 is locked and ratified.
 - Clinical Story Skeleton review completed with GO recommendation.
@@ -110,7 +114,7 @@ Purpose: active cockpit for the transition from approved Brainstorm through Worl
 - Daily Hospital Course Framework v1: `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md`.
 - Daily Hospital Course Framework ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md`.
 - Preparation Layer status: COMPLETE.
-- Next eligible phase: Task Prompt Construction. Expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission packaging, RL Studio upload, and RL Studio activity remain blocked until explicitly authorized.
+- Next eligible phase: Task Prompt Construction Review. Task prompts are not locked. Expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission packaging, RL Studio upload, and RL Studio activity remain blocked until explicitly authorized.
 
 ## Workspace Bloat And Doctrine Audit
 
@@ -430,7 +434,7 @@ File Inventory Architecture v1:
 - Ratification: `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-architecture-ratification.md`.
 - Purpose: define the planned file ecosystem for the locked World Spec without creating final Section 3 rows, filenames, synthetic files, notes, labs, vitals, medication lists, task prompts, expected outputs, goldens, or grader guidance.
 - It preserves the world close at 05/23/2026 18:00, classifies post-world anchors as task/post-world context only, maps all five traps and three frictions to planned file-source categories, and records future AutoQC v6.3 8-column file-plan readiness.
-- Next eligible phase: Task Prompt Construction.
+- Next eligible phase: Task Prompt Construction Review.
 - File Inventory v1 locked table: `worlds/korvin-merrow/file-inventory/locked/file-inventory-v1.md`.
 - File Inventory v1 ratification: `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-v1-ratification.md`.
 - FI-T metadata reconciliation: `worlds/korvin-merrow/file-inventory/reviews/fi-t-inventory-task-layer-architecture-reconciliation.md`.
@@ -498,7 +502,7 @@ Synthetic World-Level File Construction Plan v1:
 - Ratification: `worlds/korvin-merrow/supplementary-files/ratifications/supplementary-file-construction-ratification.md`.
 - Supplementary Files status: COMPLETE.
 - Entire File Ecosystem status: COMPLETE.
-- Next eligible phase: Task Prompt Construction.
+- Next eligible phase: Task Prompt Construction Review.
 
 Fetched World Spec source examples:
 

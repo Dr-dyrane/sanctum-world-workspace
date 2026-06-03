@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-Task Prompt Architecture v1 / LOCKED.
+Task Prompt Construction / CANDIDATE REVIEW.
 
 ## Brainstorm
 
@@ -88,7 +88,11 @@ Task Prompt Architecture v1 / LOCKED.
 - Task Prompt Architecture validation review: `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-validation-review.md`
 - Task Prompt Architecture ratification: `worlds/korvin-merrow/task-prompt-architecture/ratifications/task-prompt-architecture-ratification.md`
 - Task Prompt Architecture: complete
-- Next eligible phase: Task Prompt Construction
+- Task Prompt Construction: candidate review
+- Task prompt candidate files: `worlds/korvin-merrow/task-prompts/candidate-review/`
+- Files constructed: TP-KM01 through TP-KM06
+- Task prompt construction validation review: `worlds/korvin-merrow/task-prompts/candidate-review/task-prompt-construction-validation-review.md`
+- Next eligible phase: Task Prompt Construction Review
 - Task-design physician-perspective guidance: recorded as a future task-layer rule only. It does not change source-of-truth hierarchy or Governance Package v1; future task prompts and deliverables must remain physician-centered even when supporting sources are pharmacy, nursing, PT/OT, case management, social work, family, or administrative sources.
 - Collaborator session-exit discipline: standing process / handoff rule. Every future session must leave the repository clean or explicitly documented, update phase and next-phase surfaces, preserve locked artifacts unless explicitly authorized, label candidate artifacts, move newly locked artifacts to locked paths with ratification references, update continuity and Claude handoff files, record carry-forward watch items and future task-layer guidance, commit completed work unless explicitly told not to, and report what changed, what did not change, current status, next eligible phase, and whether the repository is safe for another collaborator.
 - Cross-artifact consistency verification: standing governance rule. Before creating, modifying, ratifying, or locking architecture, inventory, matrices, mappings, workflow/trap/friction/hierarchy tables, or governance artifacts, future collaborators must cross-check applicable locked canonical sources and document any expansion, narrowing, redistribution, reprioritization, relabeling, or reclassification before ratification or lock.
@@ -110,7 +114,7 @@ Task Prompt Architecture v1 / LOCKED.
 - World Spec Skeleton v1: `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`
 - World Spec Skeleton ratification: `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-skeleton-ratification.md`
 - Official Claude World Spec session: pending
-- Current state: World Spec v1 is locked; File Inventory Architecture v1 is locked; File Inventory v1 is locked with FI-W20 row reconciliation, FI-T inventory/task-layer architecture reconciliation, and FI-S03 Trap #5 reconciliation recorded; Synthetic World-Level File Construction Plan v1 is locked; Synthetic File Construction Governance is complete; Batch 1 synthetic world-level files are locked; Batch 2 synthetic world-level files are locked; Batch 3 synthetic world-level files are locked; Batch 4 synthetic world-level files are locked; Batch 5 FI-W22 is locked; World-Level Synthetic File Layer is complete; Task-Level Context File Architecture v1 is locked and Task-Level Context File Architecture is complete; FI-T01 through FI-T07 are locked and Task-Level Context Files are complete; Supplementary File Architecture v1 is locked and Supplementary File Architecture is complete; FI-S01 through FI-S04 are locked and Supplementary Files are complete; Entire File Ecosystem is complete; calendar, baseline anchors, Clinical Story Timeline Package v1, Task Architecture Package v1, Medication Expansion Package v1, Comorbidity Expansion Package v1, Provider Roster Package v1, Surgical History Package v1, Daily Hospital Course Framework v1, and World Spec Skeleton v1 are locked
+- Current state: World Spec v1 is locked; File Inventory Architecture v1 is locked; File Inventory v1 is locked with FI-W20 row reconciliation, FI-T inventory/task-layer architecture reconciliation, and FI-S03 Trap #5 reconciliation recorded; Synthetic World-Level File Construction Plan v1 is locked; Synthetic File Construction Governance is complete; Batch 1 synthetic world-level files are locked; Batch 2 synthetic world-level files are locked; Batch 3 synthetic world-level files are locked; Batch 4 synthetic world-level files are locked; Batch 5 FI-W22 is locked; World-Level Synthetic File Layer is complete; Task-Level Context File Architecture v1 is locked and Task-Level Context File Architecture is complete; FI-T01 through FI-T07 are locked and Task-Level Context Files are complete; Supplementary File Architecture v1 is locked and Supplementary File Architecture is complete; FI-S01 through FI-S04 are locked and Supplementary Files are complete; Entire File Ecosystem is complete; Task Prompt Architecture v1 is locked and complete; Task Prompt Construction is in candidate review with TP-KM01 through TP-KM06 constructed; calendar, baseline anchors, Clinical Story Timeline Package v1, Task Architecture Package v1, Medication Expansion Package v1, Comorbidity Expansion Package v1, Provider Roster Package v1, Surgical History Package v1, Daily Hospital Course Framework v1, and World Spec Skeleton v1 are locked
 - World Spec prep packet: created
 - Official World Spec template: saved locally
 - World Spec AutoQC prompt v6.3: saved locally
@@ -146,7 +150,7 @@ Task Prompt Architecture v1 / LOCKED.
 - Fetched World Spec example source documents: `reference/word-spec-examples/` (local-only / gitignored)
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 - World Spec prep folder structure: reorganized by lifecycle buckets (`candidate-review/`, `locked/`, `ratifications/`, `reviews/`, `decision-logs/`, `planning-scaffolds/`)
-- Next eligible phase: Task Prompt Construction. Do not create expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission artifacts, or RL Studio uploads until explicitly authorized.
+- Next eligible phase: Task Prompt Construction Review. Do not lock task prompts, create expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission artifacts, or RL Studio uploads until explicitly authorized.
 
 ## Tooling
 
@@ -164,10 +168,10 @@ Task Prompt Architecture v1 / LOCKED.
 - Do not change Governance Package v1 without Alexander approval.
 - Do not create milestones before Alexander authorizes that step.
 - Do not create task-level, supplementary, or downstream task/file contents before Alexander authorizes that step.
-- Do not revise locked task architecture or create task prompts before Alexander authorizes that step.
+- Do not revise locked task architecture, lock task prompts, or create downstream task artifacts before Alexander authorizes that step.
 - Do not treat fetched World Spec examples as authored Korvin Merrow content or source-of-truth material.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
 - Do not modify clinical content beyond reviewer-required remediation without Alexander approval.
-- Do not start supplementary file generation, task prompts, golden responses, grader guidelines, or failure analysis without explicit authorization.
+- Do not lock task prompts, start golden responses, grader guidelines, or failure analysis without explicit authorization.
 - Do not access RL Studio without explicit authorization.
 - Do not end a working session without applying collaborator session-exit discipline.

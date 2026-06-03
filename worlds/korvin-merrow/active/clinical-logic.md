@@ -405,7 +405,9 @@ File Inventory Architecture v1:
 - Task Prompt Architecture v1 is locked at `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-v1.md`, with validation review at `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-validation-review.md`.
 - Task Prompt Architecture ratification is recorded at `worlds/korvin-merrow/task-prompt-architecture/ratifications/task-prompt-architecture-ratification.md`.
 - Task Prompt Architecture status is complete.
-- Next eligible phase is Task Prompt Construction.
+- Task Prompt Construction status is candidate review at `worlds/korvin-merrow/task-prompts/candidate-review/`.
+- Files constructed: TP-KM01 through TP-KM06 plus `task-prompt-construction-validation-review.md`.
+- Next eligible phase is Task Prompt Construction Review.
 - Expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
 
 ## Key Milestones Calendar Skeleton v1
@@ -880,7 +882,7 @@ Batch 5 clinical logic:
 
 Boundary:
 
-- FI-W22 is locked and the world-level synthetic file layer is complete. Task-Level Context File Architecture v1 is locked and complete. FI-T01 through FI-T07 are locked at `worlds/korvin-merrow/task-context-files/locked/`, with ratification recorded at `worlds/korvin-merrow/task-context-files/ratifications/task-level-context-file-construction-ratification.md`. FI-S01 through FI-S04 are locked at `worlds/korvin-merrow/supplementary-files/locked/`, with ratification recorded at `worlds/korvin-merrow/supplementary-files/ratifications/supplementary-file-construction-ratification.md`. Entire File Ecosystem is complete. Do not create task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission materials, or RL Studio activity until explicitly authorized.
+- FI-W22 is locked and the world-level synthetic file layer is complete. Task-Level Context File Architecture v1 is locked and complete. FI-T01 through FI-T07 are locked at `worlds/korvin-merrow/task-context-files/locked/`, with ratification recorded at `worlds/korvin-merrow/task-context-files/ratifications/task-level-context-file-construction-ratification.md`. FI-S01 through FI-S04 are locked at `worlds/korvin-merrow/supplementary-files/locked/`, with ratification recorded at `worlds/korvin-merrow/supplementary-files/ratifications/supplementary-file-construction-ratification.md`. Entire File Ecosystem is complete. Task Prompt Architecture v1 is locked and complete. Task Prompt Construction is in candidate review at `worlds/korvin-merrow/task-prompts/candidate-review/` with TP-KM01 through TP-KM06 constructed. Do not lock task prompts, create expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission materials, or RL Studio activity until explicitly authorized.
 
 Task-Level Context File Architecture v1:
 
@@ -914,7 +916,10 @@ Task-Level Context File Architecture v1:
 - Entire File Ecosystem: COMPLETE.
 - Task Prompt Architecture v1: LOCKED.
 - Task Prompt Architecture: COMPLETE.
-- Next eligible phase: Task Prompt Construction.
+- Task Prompt Construction: CANDIDATE REVIEW.
+- Candidate files: `worlds/korvin-merrow/task-prompts/candidate-review/`.
+- Files constructed: TP-KM01 through TP-KM06 plus `task-prompt-construction-validation-review.md`.
+- Next eligible phase: Task Prompt Construction Review.
 
 ## Major Clinical Friction Themes
 
