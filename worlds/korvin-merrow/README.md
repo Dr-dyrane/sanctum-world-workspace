@@ -1,6 +1,6 @@
 # Korvin Merrow World
 
-Current state: Task Prompt Architecture v1 / CANDIDATE REVIEW.
+Current state: Task Prompt Architecture v1 / LOCKED.
 
 Start here only after reading `project/STATUS.md`.
 
@@ -20,7 +20,7 @@ Start here only after reading `project/STATUS.md`.
 - `task-context-files/`: task-level context file lifecycle area. FI-T01 through FI-T07 are locked request-framing files only.
 - `supplementary-file-architecture/`: supplementary FI-S architecture lifecycle area. Locked architecture defines future FI-S01 through FI-S04 only and does not construct FI-S files.
 - `supplementary-files/`: supplementary FI-S file construction lifecycle area. FI-S01 through FI-S04 are locked supplementary files.
-- `task-prompt-architecture/`: task-prompt architecture lifecycle area. Candidate Task Prompt Architecture v1 defines future prompt families and packaging rules only; it does not create task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, or submission materials.
+- `task-prompt-architecture/`: task-prompt architecture lifecycle area. Locked Task Prompt Architecture v1 defines future prompt families and packaging rules only; it does not create task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, or submission materials.
 
 ## Active Entry Points
 
@@ -59,8 +59,9 @@ Start here only after reading `project/STATUS.md`.
 - `supplementary-file-architecture/ratifications/supplementary-file-architecture-v1-ratification.md`
 - `supplementary-files/locked/supplementary-file-construction-validation-review.md`
 - `supplementary-files/ratifications/supplementary-file-construction-ratification.md`
-- `task-prompt-architecture/candidate-review/task-prompt-architecture-v1.md`
-- `task-prompt-architecture/candidate-review/task-prompt-architecture-validation-review.md`
+- `task-prompt-architecture/locked/task-prompt-architecture-v1.md`
+- `task-prompt-architecture/locked/task-prompt-architecture-validation-review.md`
+- `task-prompt-architecture/ratifications/task-prompt-architecture-ratification.md`
 - `supplementary-files/locked/FI-S01_remote-pci-coronary-stent-provenance-summary.md`
 - `supplementary-files/locked/FI-S02_remote-sleep-study-osa-provenance-summary.md`
 - `supplementary-files/locked/FI-S03_home-support-equipment-logistics-reference.md`
@@ -93,7 +94,7 @@ Start here only after reading `project/STATUS.md`.
 - `world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`
 - `active/brainstorm.md`
 
-World Spec v1 is locked. File Inventory Architecture v1 is locked. File Inventory v1 is locked with FI-W20, FI-T, and FI-S03 reconciliations recorded. FI-W01 through FI-W22, FI-T01 through FI-T07, and FI-S01 through FI-S04 are locked. Entire File Ecosystem is complete. Task Prompt Architecture v1 is in candidate review at `task-prompt-architecture/candidate-review/task-prompt-architecture-v1.md`, with validation at `task-prompt-architecture/candidate-review/task-prompt-architecture-validation-review.md`. Next eligible phase is Task Prompt Architecture Review. Do not create task prompts, expected outputs, golden responses, grader guidance, AutoQC responses, DOCX submission artifacts, RL Studio uploads, templates, or reference files until Alexander explicitly authorizes the relevant step.
+World Spec v1 is locked. File Inventory Architecture v1 is locked. File Inventory v1 is locked with FI-W20, FI-T, and FI-S03 reconciliations recorded. FI-W01 through FI-W22, FI-T01 through FI-T07, FI-S01 through FI-S04, and Task Prompt Architecture v1 are locked. Entire File Ecosystem and Task Prompt Architecture are complete. Task Prompt Architecture v1 is locked at `task-prompt-architecture/locked/task-prompt-architecture-v1.md`, with validation at `task-prompt-architecture/locked/task-prompt-architecture-validation-review.md` and ratification at `task-prompt-architecture/ratifications/task-prompt-architecture-ratification.md`. Next eligible phase is Task Prompt Construction. Do not create expected outputs, golden responses, grader guidance, AutoQC responses, DOCX submission artifacts, RL Studio uploads, templates, or reference files until Alexander explicitly authorizes the relevant step.
 
 Task-design guidance: future task prompts and deliverables must be framed from the physician perspective or physician voice, even when supporting sources come from pharmacy, nursing, PT/OT, case management, social work, family, or administrative sources. This is a task-layer rule only; it does not reopen Governance Package v1 or change source-of-truth hierarchy.
 

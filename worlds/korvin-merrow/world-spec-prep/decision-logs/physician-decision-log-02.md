@@ -1866,19 +1866,21 @@ Boundary:
 
 ## Task Prompt Architecture v1 Candidate Construction Record
 
+Historical note: this section records the original candidate construction step. The current canonical locked artifacts are recorded in the ratification and lock record below.
+
 Status:
 
-- Task Prompt Architecture v1: CANDIDATE REVIEW.
-- Task Prompt Architecture validation review: CANDIDATE REVIEW.
+- Task Prompt Architecture v1: CANDIDATE REVIEW at the time of construction.
+- Task Prompt Architecture validation review: CANDIDATE REVIEW at the time of construction.
 
 Authorization:
 
 - Alexander authorized Task Prompt Architecture v1 construction after the Entire File Ecosystem was complete and locked.
 
-Artifacts created:
+Artifacts created as candidates and now locked canonically:
 
-- `worlds/korvin-merrow/task-prompt-architecture/candidate-review/task-prompt-architecture-v1.md`
-- `worlds/korvin-merrow/task-prompt-architecture/candidate-review/task-prompt-architecture-validation-review.md`
+- `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-v1.md`
+- `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-validation-review.md`
 
 Key architecture decision:
 
@@ -1896,10 +1898,73 @@ Verification:
 - No submission artifacts or RL Studio materials were created.
 - Locked FI-W, FI-T, and FI-S artifacts were not modified.
 
-Next eligible phase:
+Next phase at the time:
 
-- Task Prompt Architecture Review.
+- Architecture review, now completed before ratification and lock.
 
 Boundary:
 
 - Task prompt construction, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission artifacts, and RL Studio activity remain blocked until explicitly authorized.
+
+## Task Prompt Architecture v1 Ratification And Lock Record
+
+Status:
+
+- Task Prompt Architecture v1: LOCKED.
+- Task Prompt Architecture: COMPLETE.
+
+Authorization:
+
+- Alexander authorized Task Prompt Architecture v1 ratification and lock after Independent Review A and Independent Review B both returned LOCK READY.
+
+Locked artifacts:
+
+- `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-v1.md`
+- `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-validation-review.md`
+
+Ratification:
+
+- `worlds/korvin-merrow/task-prompt-architecture/ratifications/task-prompt-architecture-ratification.md`
+
+Review consensus:
+
+- Independent Review A: LOCK READY.
+- Independent Review B: LOCK READY.
+- Review consensus: UNANIMOUS.
+- True defects: NONE.
+- Governance inconsistencies: NONE.
+- Canon conflicts: NONE.
+- Open reconciliations: NONE.
+
+Ratified architecture decisions:
+
+- Six prompt-family architecture approved.
+- FI-T07 addendum architecture approved.
+- Workflow coverage verified.
+- Trap coverage verified.
+- Friction coverage verified.
+- Hierarchy preservation verified.
+- File dependency matrix verified.
+- Anti-answer-file protections verified.
+
+Verification:
+
+- Candidate-review path is no longer active.
+- Locked path is canonical.
+- Architecture content was preserved as a move.
+- Validation review content was preserved as a move.
+- No task prompt text was created.
+- No expected outputs were created.
+- No goldens were created.
+- No grader guidance was created.
+- No AutoQC responses were created.
+- No DOCX artifacts were created.
+- No submission artifacts or RL Studio materials were created.
+
+Next eligible phase:
+
+- Task Prompt Construction.
+
+Boundary:
+
+- Expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission artifacts, and RL Studio activity remain blocked until explicitly authorized.
