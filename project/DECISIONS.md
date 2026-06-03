@@ -638,3 +638,49 @@ Next eligible phase:
 Boundaries:
 
 - Do not create FI-S01 through FI-S04, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, RL Studio submission artifacts, or final task outputs until explicitly authorized.
+
+## 2026-06-02 - Supplementary File Construction Ratification And Lock
+
+Decision: Supplementary File Construction is ratified and locked.
+
+Artifacts:
+
+- `worlds/korvin-merrow/supplementary-files/locked/FI-S01_remote-pci-coronary-stent-provenance-summary.md`
+- `worlds/korvin-merrow/supplementary-files/locked/FI-S02_remote-sleep-study-osa-provenance-summary.md`
+- `worlds/korvin-merrow/supplementary-files/locked/FI-S03_home-support-equipment-logistics-reference.md`
+- `worlds/korvin-merrow/supplementary-files/locked/FI-S04_problem-list-past-history-snapshot.md`
+- `worlds/korvin-merrow/supplementary-files/locked/supplementary-file-construction-validation-review.md`
+- `worlds/korvin-merrow/supplementary-files/ratifications/supplementary-file-construction-ratification.md`
+
+Review basis:
+
+- Reviewer A: LOCK READY / GO.
+- Reviewer B: LOCK READY / GO.
+- Clinical Architecture Status: STRONG.
+- FI-S03 Trap #5 reconciliation already closed.
+- True defects: NONE.
+- Governance / metadata inconsistencies: NONE.
+- Governance defects: NONE.
+- Architecture defects: NONE.
+- Open reconciliations: NONE.
+
+Status:
+
+- Supplementary File Construction: LOCKED.
+- FI-S01 through FI-S04: LOCKED.
+- Supplementary Files: COMPLETE.
+- Entire File Ecosystem: COMPLETE.
+
+Completed File Ecosystem:
+
+- FI-W01 through FI-W22.
+- FI-T01 through FI-T07.
+- FI-S01 through FI-S04.
+
+Next eligible phase:
+
+- Task Prompt Architecture.
+
+Boundaries:
+
+- Do not create task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, RL Studio submission artifacts, or final task outputs until explicitly authorized.

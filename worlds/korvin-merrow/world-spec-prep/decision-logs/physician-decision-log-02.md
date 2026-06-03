@@ -1804,3 +1804,62 @@ Next eligible phase:
 Boundary:
 
 - FI-S01 through FI-S04, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
+
+## Supplementary File Construction Ratification Record
+
+Status:
+
+- Supplementary File Construction: LOCKED.
+- FI-S01 through FI-S04: LOCKED.
+- Supplementary Files: COMPLETE.
+- Entire File Ecosystem: COMPLETE.
+
+Ratification authorization:
+
+- Alexander authorized Supplementary File Construction ratification and lock after candidate review completion.
+
+Review outcome:
+
+- Reviewer A verdict: LOCK READY / GO.
+- Reviewer B verdict: LOCK READY / GO.
+- Clinical Architecture Status: STRONG.
+- True defects: NONE.
+- Governance / metadata inconsistencies: NONE.
+- Governance defects: NONE.
+- Architecture defects: NONE.
+- Open reconciliations: NONE.
+- FI-S03 Trap #5 reconciliation already closed.
+
+Locked artifacts:
+
+- `worlds/korvin-merrow/supplementary-files/locked/FI-S01_remote-pci-coronary-stent-provenance-summary.md`
+- `worlds/korvin-merrow/supplementary-files/locked/FI-S02_remote-sleep-study-osa-provenance-summary.md`
+- `worlds/korvin-merrow/supplementary-files/locked/FI-S03_home-support-equipment-logistics-reference.md`
+- `worlds/korvin-merrow/supplementary-files/locked/FI-S04_problem-list-past-history-snapshot.md`
+- `worlds/korvin-merrow/supplementary-files/locked/supplementary-file-construction-validation-review.md`
+
+Ratification:
+
+- `worlds/korvin-merrow/supplementary-files/ratifications/supplementary-file-construction-ratification.md`
+
+Completed File Ecosystem:
+
+- FI-W01 through FI-W22.
+- FI-T01 through FI-T07.
+- FI-S01 through FI-S04.
+
+Verification:
+
+- Candidate-review path is no longer active.
+- Locked path is canonical.
+- FI-S01 through FI-S04 and the validation review were moved without content changes.
+- No FI-S05 or unauthorized supplementary file was created.
+- No task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission artifacts, or RL Studio materials were created.
+
+Next eligible phase:
+
+- Task Prompt Architecture.
+
+Boundary:
+
+- Task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
