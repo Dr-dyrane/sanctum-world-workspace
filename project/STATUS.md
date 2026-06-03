@@ -16,7 +16,7 @@ Task Prompt Construction is LOCKED. Six task prompts (TP-KM01 through TP-KM06) a
 
 Source/reference note: Alexander added World Spec example source documents under `reference/word-spec-examples/`. This folder is intentionally local-only and gitignored because the example corpus is large and can confuse project-specific source-of-truth boundaries. Preserve it as source/reference material, not authored Korvin Merrow content.
 
-Claude transcript carry-forward note: `docs/claude-transcript.md` exists and should be handled during Submission / Packaging Preparation. Future work should determine required format, styling, transcript scope, and whether it must be submitted. Do not format, rewrite, color/style, convert to DOCX, submit, or package it until explicitly authorized.
+Claude transcript carry-forward note: `docs/claude-transcript.md` is tracked as raw historical Claude transcript evidence for future Submission / Packaging Preparation review. It is not formatted, styled, converted, scoped, or submission-ready. Future work should determine required format, transcript scope, and whether it must be submitted. Do not rewrite, color/style, convert to DOCX, submit, or package it until explicitly authorized. Historical James Carter references and export encoding artifacts inside the transcript are expected provenance, not current identity defects.
 
 Claude Identity Package hostile-review observations are recorded as carry-forward implementation notes in `worlds/korvin-merrow/world-spec-prep/reviews/identity-package-review-addendum.md`. Identity Package v1 remains locked.
 

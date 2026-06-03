@@ -187,6 +187,8 @@ Preserve source documents separately from generated work. Do not blend copied so
 
 When Alexander fetches additional World Spec source documents, examples, templates, or reference artifacts, record them in `project/WORKSPACE_FILE_MAP.md`, keep them under `reference/`, and do not treat them as authored Korvin Merrow content or as the Korvin Merrow World File Plan.
 
+`docs/claude-transcript.md` is a tracked raw Claude transcript. Treat it as historical/provenance evidence for future transcript packaging review, not as a current source of truth and not as a submission-ready artifact. Do not rewrite, style, colorize, convert to DOCX, package, or submit it until Alexander explicitly authorizes that packaging phase. Historical James Carter references inside the transcript are expected pre-migration evidence; the current patient identity remains Korvin Merrow.
+
 ## Access And Submission Rules
 
 Ask before browser control, external access, document access, submissions, or major restructuring.

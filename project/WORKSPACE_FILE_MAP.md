@@ -196,6 +196,7 @@ Reviewed for duplicate-purpose files:
 | `docs/reviewer-response-protocol.md` | GO/SEND BACK response workflow. | Use for reviewer feedback handling. |
 | `docs/security-and-privacy.md` | Privacy and confidentiality guidance. | Security policy only. |
 | `docs/status-dashboard.md` | Human-readable status summary. | Mirrors key `STATUS.md` items for dashboard use. |
+| `docs/claude-transcript.md` | Raw Claude conversation transcript for the Korvin Merrow build. | Tracked historical/provenance evidence for future submission-packaging review; not formatted, not DOCX, not submission-ready. Historical James Carter references and export encoding artifacts are expected. |
 | `docs/tooling-audit.md` | Tool availability audit before install. | Historical audit. |
 | `docs/tooling-verification.md` | Installed tool verification. | Current tooling proof. |
 
