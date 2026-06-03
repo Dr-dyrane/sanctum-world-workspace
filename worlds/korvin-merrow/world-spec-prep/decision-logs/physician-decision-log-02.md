@@ -2149,20 +2149,17 @@ Next eligible phase:
 Status:
 
 - Expected Output Construction: CANDIDATE REVIEW.
+- Historical record only. Superseded by the later Expected Output Construction Ratification Record.
 
 Authorization:
 
 - Alexander authorized Expected Output Construction after Expected Output Architecture v1 lock.
 
-Candidate artifacts:
+Historical candidate artifacts before lock:
 
-- `worlds/korvin-merrow/expected-outputs/candidate-review/EO-KM01.md`
-- `worlds/korvin-merrow/expected-outputs/candidate-review/EO-KM02.md`
-- `worlds/korvin-merrow/expected-outputs/candidate-review/EO-KM03.md`
-- `worlds/korvin-merrow/expected-outputs/candidate-review/EO-KM04.md`
-- `worlds/korvin-merrow/expected-outputs/candidate-review/EO-KM05.md`
-- `worlds/korvin-merrow/expected-outputs/candidate-review/EO-KM06.md`
-- `worlds/korvin-merrow/expected-outputs/candidate-review/expected-output-construction-validation-review.md`
+- EO-KM01 through EO-KM06.
+- `expected-output-construction-validation-review.md`.
+- These artifacts were originally created under the expected-output candidate-review lifecycle folder and were later moved unchanged to `worlds/korvin-merrow/expected-outputs/locked/`.
 
 Construction decisions:
 
@@ -2184,3 +2181,65 @@ Boundary:
 Next eligible phase:
 
 - Expected Output Construction Review.
+- Historical next phase at candidate stage. Superseded by Golden Architecture after ratification.
+
+## Expected Output Construction Ratification Record
+
+Status:
+
+- Expected Output Construction: LOCKED.
+- Expected Outputs: COMPLETE.
+
+Authorization:
+
+- Alexander authorized Expected Output Construction ratification and lock after candidate review completion.
+
+Review outcomes:
+
+- Reviewer A verdict: LOCK READY; Clinical Expected Output Quality: STRONG; Final Recommendation: GO.
+- Reviewer B verdict: LOCK READY; Clinical Expected Output Quality: STRONG; Final Recommendation: GO.
+- True defects: NONE.
+- Governance / metadata inconsistencies: NONE.
+- Canon conflicts: NONE.
+- Open reconciliations: NONE.
+
+Locked artifacts:
+
+- `worlds/korvin-merrow/expected-outputs/locked/EO-KM01.md`
+- `worlds/korvin-merrow/expected-outputs/locked/EO-KM02.md`
+- `worlds/korvin-merrow/expected-outputs/locked/EO-KM03.md`
+- `worlds/korvin-merrow/expected-outputs/locked/EO-KM04.md`
+- `worlds/korvin-merrow/expected-outputs/locked/EO-KM05.md`
+- `worlds/korvin-merrow/expected-outputs/locked/EO-KM06.md`
+- `worlds/korvin-merrow/expected-outputs/locked/expected-output-construction-validation-review.md`
+
+Ratification:
+
+- `worlds/korvin-merrow/expected-outputs/ratifications/expected-output-construction-ratification.md`
+
+Ratified findings:
+
+- EO-KM01 through EO-KM06 reviewed and approved.
+- No EO-KM07 created.
+- FI-T07 addendum relationship preserved.
+- Workflow fidelity verified.
+- Trap protection verified.
+- Friction protection verified.
+- Hierarchy protection verified.
+- Source-synthesis fidelity verified.
+- Anti-overanswer protections verified.
+- Anti-underanswer protections verified.
+- Golden-leakage check passed.
+
+Boundary:
+
+- No golden responses were created.
+- No grader guidance was created.
+- No rubrics were created.
+- No AutoQC responses were created.
+- No DOCX artifacts were created.
+- No submission artifacts or RL Studio materials were created.
+
+Next eligible phase:
+
+- Golden Architecture.

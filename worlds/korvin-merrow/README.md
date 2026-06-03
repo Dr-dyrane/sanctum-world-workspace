@@ -1,6 +1,6 @@
 # Korvin Merrow World
 
-Current state: Expected Output Construction / CANDIDATE REVIEW.
+Current state: Expected Output Construction / LOCKED.
 
 Start here only after reading `project/STATUS.md`.
 
@@ -23,7 +23,7 @@ Start here only after reading `project/STATUS.md`.
 - `task-prompt-architecture/`: task-prompt architecture lifecycle area. Locked Task Prompt Architecture v1 defines future prompt families and packaging rules only; it does not create task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, or submission materials.
 - `task-prompts/`: task prompt construction lifecycle area. TP-KM01 through TP-KM06 are locked prompts only; they do not create expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, or submission materials.
 - `expected-output-architecture/`: expected-output architecture lifecycle area. Locked Expected Output Architecture v1 defines EO-KM01 through EO-KM06 structure only; it does not create actual expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, or submission materials.
-- `expected-outputs/`: expected-output construction lifecycle area. EO-KM01 through EO-KM06 are candidate expected-output drafts under `candidate-review/`; they are not locked goldens, grader guidance, rubrics, AutoQC responses, DOCX artifacts, or submission materials.
+- `expected-outputs/`: expected-output construction lifecycle area. EO-KM01 through EO-KM06 are locked expected outputs under `locked/`; they are not golden responses, grader guidance, rubrics, AutoQC responses, DOCX artifacts, or submission materials.
 
 ## Active Entry Points
 
@@ -76,13 +76,14 @@ Start here only after reading `project/STATUS.md`.
 - `expected-output-architecture/locked/expected-output-architecture-v1.md`
 - `expected-output-architecture/locked/expected-output-architecture-validation-review.md`
 - `expected-output-architecture/ratifications/expected-output-architecture-ratification.md`
-- `expected-outputs/candidate-review/EO-KM01.md`
-- `expected-outputs/candidate-review/EO-KM02.md`
-- `expected-outputs/candidate-review/EO-KM03.md`
-- `expected-outputs/candidate-review/EO-KM04.md`
-- `expected-outputs/candidate-review/EO-KM05.md`
-- `expected-outputs/candidate-review/EO-KM06.md`
-- `expected-outputs/candidate-review/expected-output-construction-validation-review.md`
+- `expected-outputs/locked/EO-KM01.md`
+- `expected-outputs/locked/EO-KM02.md`
+- `expected-outputs/locked/EO-KM03.md`
+- `expected-outputs/locked/EO-KM04.md`
+- `expected-outputs/locked/EO-KM05.md`
+- `expected-outputs/locked/EO-KM06.md`
+- `expected-outputs/locked/expected-output-construction-validation-review.md`
+- `expected-outputs/ratifications/expected-output-construction-ratification.md`
 - `supplementary-files/locked/FI-S01_remote-pci-coronary-stent-provenance-summary.md`
 - `supplementary-files/locked/FI-S02_remote-sleep-study-osa-provenance-summary.md`
 - `supplementary-files/locked/FI-S03_home-support-equipment-logistics-reference.md`
@@ -115,7 +116,7 @@ Start here only after reading `project/STATUS.md`.
 - `world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`
 - `active/brainstorm.md`
 
-World Spec v1 is locked. File Inventory Architecture v1 is locked. File Inventory v1 is locked with FI-W20, FI-T, and FI-S03 reconciliations recorded. FI-W01 through FI-W22, FI-T01 through FI-T07, FI-S01 through FI-S04, Task Prompt Architecture v1, TP-KM01 through TP-KM06, and Expected Output Architecture v1 are locked. Entire File Ecosystem, Task Prompt Architecture, Task Prompts, and Expected Output Architecture are complete. Task Prompt Architecture v1 is locked at `task-prompt-architecture/locked/task-prompt-architecture-v1.md`, with validation at `task-prompt-architecture/locked/task-prompt-architecture-validation-review.md` and ratification at `task-prompt-architecture/ratifications/task-prompt-architecture-ratification.md`. Task Prompt Construction is locked at `task-prompts/locked/`; ratification is recorded at `task-prompts/ratifications/task-prompt-construction-ratification.md`. Expected Output Architecture v1 is locked at `expected-output-architecture/locked/`; ratification is recorded at `expected-output-architecture/ratifications/expected-output-architecture-ratification.md`. Expected Output Construction is in candidate review at `expected-outputs/candidate-review/` with EO-KM01 through EO-KM06 and validation review constructed. Next eligible phase is Expected Output Construction Review. Do not create golden responses, grader guidance, rubrics, AutoQC responses, DOCX submission artifacts, RL Studio uploads, templates, or reference files until Alexander explicitly authorizes the relevant step.
+World Spec v1 is locked. File Inventory Architecture v1 is locked. File Inventory v1 is locked with FI-W20, FI-T, and FI-S03 reconciliations recorded. FI-W01 through FI-W22, FI-T01 through FI-T07, FI-S01 through FI-S04, Task Prompt Architecture v1, TP-KM01 through TP-KM06, Expected Output Architecture v1, and EO-KM01 through EO-KM06 are locked. Entire File Ecosystem, Task Prompt Architecture, Task Prompts, Expected Output Architecture, and Expected Outputs are complete. Task Prompt Architecture v1 is locked at `task-prompt-architecture/locked/task-prompt-architecture-v1.md`, with validation at `task-prompt-architecture/locked/task-prompt-architecture-validation-review.md` and ratification at `task-prompt-architecture/ratifications/task-prompt-architecture-ratification.md`. Task Prompt Construction is locked at `task-prompts/locked/`; ratification is recorded at `task-prompts/ratifications/task-prompt-construction-ratification.md`. Expected Output Architecture v1 is locked at `expected-output-architecture/locked/`; ratification is recorded at `expected-output-architecture/ratifications/expected-output-architecture-ratification.md`. Expected Output Construction is locked at `expected-outputs/locked/`; ratification is recorded at `expected-outputs/ratifications/expected-output-construction-ratification.md`. Next eligible phase is Golden Architecture. Do not create golden responses, grader guidance, rubrics, AutoQC responses, DOCX submission artifacts, RL Studio uploads, templates, or reference files until Alexander explicitly authorizes the relevant step.
 
 Task-design guidance: future task prompts and deliverables must be framed from the physician perspective or physician voice, even when supporting sources come from pharmacy, nursing, PT/OT, case management, social work, family, or administrative sources. This is a task-layer rule only; it does not reopen Governance Package v1 or change source-of-truth hierarchy.
 
