@@ -4,7 +4,7 @@ Purpose: local repository hygiene map to prevent duplicate working files and acc
 
 Generated from local workspace file listing excluding `.git`, caches, and Python bytecode.
 
-Current status: AutoQC Architecture v1 / CANDIDATE REVIEW. Locked and complete layers include World Spec v1, File Inventory Architecture v1, File Inventory v1, World-Level Synthetic File Layer FI-W01 through FI-W22, Task-Level Context Files FI-T01 through FI-T07, Supplementary Files FI-S01 through FI-S04, the Entire File Ecosystem, Task Prompt Architecture v1, Task Prompts TP-KM01 through TP-KM06, Expected Output Architecture v1, Expected Outputs EO-KM01 through EO-KM06, Golden Architecture v1, Golden-KM01 through Golden-KM06, Grader Guidance Architecture v1, and GG-KM01 through GG-KM06. Grader Guidance Construction locked artifacts are under `worlds/korvin-merrow/grader-guidance/locked/`: GG-KM01 through GG-KM06 plus `grader-guidance-construction-validation-review.md`, with ratification at `worlds/korvin-merrow/grader-guidance/ratifications/grader-guidance-construction-ratification.md`. Grader Guidance is complete. AutoQC Architecture v1 candidate artifacts are under `worlds/korvin-merrow/autoqc-architecture/candidate-review/`: `autoqc-architecture-v1.md` and `autoqc-architecture-validation-review.md`. Next eligible phase is AutoQC Architecture Review. AutoQC runs, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX submission packaging, submission artifacts, and RL Studio upload have not started.
+Current status: AutoQC Architecture v1 / LOCKED. Locked and complete layers include World Spec v1, File Inventory Architecture v1, File Inventory v1, World-Level Synthetic File Layer FI-W01 through FI-W22, Task-Level Context Files FI-T01 through FI-T07, Supplementary Files FI-S01 through FI-S04, the Entire File Ecosystem, Task Prompt Architecture v1, Task Prompts TP-KM01 through TP-KM06, Expected Output Architecture v1, Expected Outputs EO-KM01 through EO-KM06, Golden Architecture v1, Golden-KM01 through Golden-KM06, Grader Guidance Architecture v1, GG-KM01 through GG-KM06, and AutoQC Architecture v1. Grader Guidance Construction locked artifacts are under `worlds/korvin-merrow/grader-guidance/locked/`: GG-KM01 through GG-KM06 plus `grader-guidance-construction-validation-review.md`, with ratification at `worlds/korvin-merrow/grader-guidance/ratifications/grader-guidance-construction-ratification.md`. Grader Guidance is complete. AutoQC Architecture v1 locked artifacts are under `worlds/korvin-merrow/autoqc-architecture/locked/`: `autoqc-architecture-v1.md` and `autoqc-architecture-validation-review.md`, with ratification at `worlds/korvin-merrow/autoqc-architecture/ratifications/autoqc-architecture-ratification.md`. AutoQC Architecture is complete. Next eligible phase is AutoQC Construction. AutoQC runs, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX submission packaging, submission artifacts, and RL Studio upload have not started.
 
 ## Navigation Rule
 
@@ -107,11 +107,12 @@ For a new collaborator or new AI session, read in this order:
 95. `worlds/korvin-merrow/grader-guidance/locked/GG-KM06.md` for locked Grader Guidance KM06.
 96. `worlds/korvin-merrow/grader-guidance/locked/grader-guidance-construction-validation-review.md` for locked Grader Guidance Construction validation review.
 97. `worlds/korvin-merrow/grader-guidance/ratifications/grader-guidance-construction-ratification.md` for Grader Guidance Construction ratification and lock record.
-98. `worlds/korvin-merrow/autoqc-architecture/candidate-review/autoqc-architecture-v1.md` for AutoQC Architecture v1 candidate review.
-99. `worlds/korvin-merrow/autoqc-architecture/candidate-review/autoqc-architecture-validation-review.md` for AutoQC Architecture v1 candidate validation review.
-100. `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md` for historical interview basis.
-101. `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions and construction-lock status.
-102. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
+98. `worlds/korvin-merrow/autoqc-architecture/locked/autoqc-architecture-v1.md` for locked AutoQC Architecture v1.
+99. `worlds/korvin-merrow/autoqc-architecture/locked/autoqc-architecture-validation-review.md` for locked AutoQC Architecture v1 validation review.
+100. `worlds/korvin-merrow/autoqc-architecture/ratifications/autoqc-architecture-ratification.md` for AutoQC Architecture v1 ratification and lock record.
+101. `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md` for historical interview basis.
+102. `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions and construction-lock status.
+103. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
 
 Do not start by opening every prep file. Most prep files are supporting memory, not active instructions.
 
@@ -133,7 +134,7 @@ Findings:
 - `worlds/korvin-merrow/task-context-files/` is now a lifecycle folder for FI-T task-context file construction. FI-T01 through FI-T07 are locked and Task-Level Context Files are complete; no FI-S files, prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, or submission artifacts exist in this folder.
 - `worlds/korvin-merrow/supplementary-file-architecture/` is now a lifecycle folder for FI-S architecture only. Supplementary File Architecture v1 is locked and ratified; no constructed FI-S files belong in the architecture folder.
 - `worlds/korvin-merrow/supplementary-files/` is now a lifecycle folder for FI-S file construction. FI-S01 through FI-S04 are locked and Supplementary Files are complete.
-- `candidate-review/` is reserved for active candidate artifacts only. Inactive candidate-review folders should be absent from the visible tree and recreated on demand when a new candidate artifact exists. The current active candidate-review folder is `worlds/korvin-merrow/autoqc-architecture/candidate-review/`.
+- `candidate-review/` is reserved for active candidate artifacts only. Inactive candidate-review folders should be absent from the visible tree and recreated on demand when a new candidate artifact exists. There is no active candidate-review folder after AutoQC Architecture v1 lock.
 - Several files intentionally overlap by lifecycle stage, especially Brainstorm history/reviews and World Spec prep/checklist material.
 - Do not add new audit or navigation docs unless an existing map/status file cannot carry the information.
 
@@ -640,15 +641,16 @@ Lifecycle clustering:
 
 Lifecycle clustering:
 
-- `candidate-review/`: active AutoQC Architecture v1 candidate artifacts.
-- `locked/`: future locked AutoQC architecture artifacts after ratification.
-- `ratifications/`: future ratification records for AutoQC Architecture.
+- `candidate-review/`: inactive after AutoQC Architecture v1 lock; folder absent unless a future candidate is explicitly authorized.
+- `locked/`: locked AutoQC Architecture v1 artifacts after ratification.
+- `ratifications/`: ratification records for AutoQC Architecture.
 - This area is architecture only. It must not contain AutoQC responses, executed AutoQC results, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX artifacts, RL Studio submission artifacts, or submission materials unless Alexander explicitly authorizes those later phases.
 
 | File | Role | Duplication note |
 | --- | --- | --- |
-| `worlds/korvin-merrow/autoqc-architecture/candidate-review/autoqc-architecture-v1.md` | Candidate architecture for future AutoQC organization. | Defines AutoQC scope, artifact IDs, relationship to locally available World Spec AutoQC v6.3, boundary to the not-yet-local Section 6 Grader Guidelines AutoQC prompt, task/file/prompt/expected-output/golden/grader-guidance/packaging QC boundaries, and carry-forward watch items. It does not run AutoQC or create AutoQC responses. |
-| `worlds/korvin-merrow/autoqc-architecture/candidate-review/autoqc-architecture-validation-review.md` | Candidate validation review for AutoQC Architecture v1. | Verifies alignment with locked sources and the ecosystem comparison audit, confirms required watch items, and preserves prohibitions against AutoQC responses, scoring artifacts, DOCX artifacts, and submission artifacts. |
+| `worlds/korvin-merrow/autoqc-architecture/locked/autoqc-architecture-v1.md` | Locked architecture for future AutoQC organization. | Defines AutoQC scope, artifact IDs, relationship to locally available World Spec AutoQC v6.3, boundary to the not-yet-local Section 6 Grader Guidelines AutoQC prompt, task/file/prompt/expected-output/golden/grader-guidance/packaging QC boundaries, and carry-forward watch items. It does not run AutoQC or create AutoQC responses. |
+| `worlds/korvin-merrow/autoqc-architecture/locked/autoqc-architecture-validation-review.md` | Locked validation review for AutoQC Architecture v1. | Verifies alignment with locked sources and the ecosystem comparison audit, confirms required watch items, and preserves prohibitions against AutoQC responses, scoring artifacts, DOCX artifacts, and submission artifacts. |
+| `worlds/korvin-merrow/autoqc-architecture/ratifications/autoqc-architecture-ratification.md` | Ratification record for AutoQC Architecture v1. | Records LOCK READY / GO review outcome, STRONG architecture quality, HIGH governance fidelity, no defects, lock, AutoQC Architecture completion, and next eligible AutoQC Construction phase. |
 
 ## Korvin Merrow Supplementary File Architecture
 

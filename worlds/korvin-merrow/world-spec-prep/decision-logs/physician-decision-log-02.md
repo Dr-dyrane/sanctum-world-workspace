@@ -2691,7 +2691,7 @@ Boundary preserved:
 
 Next eligible phase:
 
-- AutoQC Architecture Review.
+- AutoQC Construction.
 
 ## AutoQC Architecture v1 Candidate Record
 
@@ -2699,7 +2699,8 @@ Date recorded: 2026-06-03
 
 Status:
 
-- AutoQC Architecture v1: CANDIDATE REVIEW.
+- Historical record: AutoQC Architecture v1 was in CANDIDATE REVIEW at candidate construction.
+- Current AutoQC Architecture v1 status is LOCKED as of the ratification record below.
 - Grader Guidance Construction remains LOCKED.
 - Grader Guidance remains COMPLETE.
 
@@ -2709,10 +2710,11 @@ Authorization:
 - This construction phase defines how future AutoQC will be organized.
 - This construction phase does not run AutoQC and does not create AutoQC responses.
 
-Candidate artifacts:
+Locked artifacts after ratification:
 
-- `worlds/korvin-merrow/autoqc-architecture/candidate-review/autoqc-architecture-v1.md`
-- `worlds/korvin-merrow/autoqc-architecture/candidate-review/autoqc-architecture-validation-review.md`
+- `worlds/korvin-merrow/autoqc-architecture/locked/autoqc-architecture-v1.md`
+- `worlds/korvin-merrow/autoqc-architecture/locked/autoqc-architecture-validation-review.md`
+- `worlds/korvin-merrow/autoqc-architecture/ratifications/autoqc-architecture-ratification.md`
 
 Architecture scope recorded:
 
@@ -2746,4 +2748,51 @@ Boundary preserved:
 
 Next eligible phase:
 
-- AutoQC Architecture Review.
+- AutoQC Construction.
+
+## AutoQC Architecture v1 Ratification and Lock Record
+
+Date recorded: 2026-06-03
+
+Status:
+
+- AutoQC Architecture v1: LOCKED.
+- AutoQC Architecture: COMPLETE.
+
+Authorization:
+
+- Alexander authorized AutoQC Architecture v1 ratification and lock after independent review returned LOCK READY / GO.
+- Architecture Quality was STRONG.
+- Governance Fidelity was HIGH.
+- True defects, governance issues, and canon conflicts were NONE.
+
+Locked artifacts:
+
+- `worlds/korvin-merrow/autoqc-architecture/locked/autoqc-architecture-v1.md`
+- `worlds/korvin-merrow/autoqc-architecture/locked/autoqc-architecture-validation-review.md`
+- `worlds/korvin-merrow/autoqc-architecture/ratifications/autoqc-architecture-ratification.md`
+
+Ratification findings:
+
+- AutoQC Architecture v1 approved for lock.
+- AQC-KM01 through AQC-KM07 architecture approved.
+- World Spec AutoQC v6.3 relationship preserved.
+- Future Section 6 Grader Guidelines AutoQC boundary preserved without fabricating missing prompt content.
+- Task-layer, file-layer, prompt, expected-output, golden, grader-guidance, and packaging QC boundaries preserved.
+- Carry-forward watch items preserved.
+- Locked-artifact protection, no-fabrication rule, and import-not-inference rule preserved.
+
+Boundary preserved:
+
+- No AutoQC was run.
+- No platform responses or AutoQC responses were created.
+- No scoring rubrics were created.
+- No scoring thresholds were created.
+- No point allocations or pass/fail bands were created.
+- No DOCX artifacts were created.
+- No submission artifacts were created.
+- No Section 6 AutoQC prompt content was fabricated.
+
+Next eligible phase:
+
+- AutoQC Construction.
