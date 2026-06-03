@@ -1973,13 +1973,13 @@ Boundary:
 
 Status:
 
-- Task Prompt Construction: CANDIDATE REVIEW.
+- Historical candidate record, superseded by Task Prompt Construction Ratification And Lock Record below.
 
 Authorization:
 
 - Alexander authorized Task Prompt Construction candidate creation after Task Prompt Architecture v1 lock.
 
-Constructed candidate artifacts:
+Historical candidate artifacts before lock:
 
 - `worlds/korvin-merrow/task-prompts/candidate-review/TP-KM01.md`
 - `worlds/korvin-merrow/task-prompts/candidate-review/TP-KM02.md`
@@ -1991,14 +1991,68 @@ Constructed candidate artifacts:
 
 Continuity decision:
 
-- TP-KM01 through TP-KM06 are candidate-review task prompts only.
-- They are not locked.
+- TP-KM01 through TP-KM06 were candidate-review task prompts at this stage.
+- This candidate state is superseded by the later lock record below.
 - They do not create expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission artifacts, or RL Studio materials.
 
 Next eligible phase:
 
-- Task Prompt Construction Review.
+- Historical next phase at the time: Task Prompt Construction Review.
 
 Boundary:
 
-- Do not lock task prompts, create expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission artifacts, or RL Studio activity until Alexander explicitly authorizes the relevant phase.
+- Historical boundary at the time: do not lock task prompts, create expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission artifacts, or RL Studio activity until Alexander explicitly authorizes the relevant phase.
+
+## Task Prompt Construction Ratification And Lock Record
+
+Status:
+
+- Task Prompt Construction: LOCKED.
+- Task Prompts: COMPLETE.
+
+Authorization:
+
+- Alexander authorized Task Prompt Construction ratification and lock after Reviewer A and Reviewer B both returned LOCK READY / GO with STRONG clinical prompt quality and PASS on contributor validation test.
+
+Locked artifacts:
+
+- `worlds/korvin-merrow/task-prompts/locked/TP-KM01.md`
+- `worlds/korvin-merrow/task-prompts/locked/TP-KM02.md`
+- `worlds/korvin-merrow/task-prompts/locked/TP-KM03.md`
+- `worlds/korvin-merrow/task-prompts/locked/TP-KM04.md`
+- `worlds/korvin-merrow/task-prompts/locked/TP-KM05.md`
+- `worlds/korvin-merrow/task-prompts/locked/TP-KM06.md`
+- `worlds/korvin-merrow/task-prompts/locked/task-prompt-construction-validation-review.md`
+
+Ratification:
+
+- `worlds/korvin-merrow/task-prompts/ratifications/task-prompt-construction-ratification.md`
+
+Review consensus:
+
+- Reviewer A: LOCK READY / GO.
+- Reviewer B: LOCK READY / GO.
+- Clinical Prompt Quality: STRONG.
+- Contributor Validation Test: PASS.
+- True defects: NONE.
+- Governance / metadata inconsistencies: NONE.
+- Canon conflicts: NONE.
+- Open reconciliations: NONE.
+
+Ratified findings:
+
+- Six prompts reviewed.
+- FI-T07 addendum relationship preserved.
+- Workflow fidelity verified.
+- Trap protection verified.
+- Friction protection verified.
+- Hierarchy protection verified.
+- Anti-answer-file protections verified.
+
+Next eligible phase:
+
+- Expected Output Architecture.
+
+Boundary:
+
+- Expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission artifacts, and RL Studio activity remain blocked until Alexander explicitly authorizes the relevant phase.

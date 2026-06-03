@@ -23,9 +23,9 @@ Onboarding ends after Step 6 approval.
 
 Goal: Engineering generates synthetic files from approved spec and reference templates; writer reviews files and writes tasks in RL Studio.
 
-Status: Limited local exception authorized by Alexander through Task Prompt Construction candidate creation; FI-W01 through FI-W22, FI-T01 through FI-T07, FI-S01 through FI-S04, and Task Prompt Architecture v1 are locked. The Entire File Ecosystem and Task Prompt Architecture are complete. Task Prompt Construction is in candidate review with TP-KM01 through TP-KM06 constructed.
+Status: Limited local exception authorized by Alexander through Task Prompt Construction ratification and lock; FI-W01 through FI-W22, FI-T01 through FI-T07, FI-S01 through FI-S04, Task Prompt Architecture v1, and TP-KM01 through TP-KM06 are locked. The Entire File Ecosystem, Task Prompt Architecture, and Task Prompts are complete.
 
-Korvin Merrow current exception: Alexander has explicitly authorized local, batch-gated file ecosystem construction through Supplementary File Construction ratification and lock, has authorized Task Prompt Architecture v1 ratification and lock, and has authorized Task Prompt Construction candidate creation. Batch 1 through Batch 5 world-level files are locked. FI-T01 through FI-T07 are locked. FI-S01 through FI-S04 are locked. Entire File Ecosystem is complete. Task Prompt Architecture v1 is locked at `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-v1.md`, with validation at `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-validation-review.md` and ratification at `worlds/korvin-merrow/task-prompt-architecture/ratifications/task-prompt-architecture-ratification.md`. Task Prompt Architecture is complete. Task Prompt Construction status is CANDIDATE REVIEW at `worlds/korvin-merrow/task-prompts/candidate-review/`; files constructed are TP-KM01 through TP-KM06. Next eligible phase is Task Prompt Construction Review. Expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, and RL Studio submission artifacts must not begin without separate explicit authorization.
+Korvin Merrow current exception: Alexander has explicitly authorized local, batch-gated file ecosystem construction through Supplementary File Construction ratification and lock, has authorized Task Prompt Architecture v1 ratification and lock, and has authorized Task Prompt Construction ratification and lock. Batch 1 through Batch 5 world-level files are locked. FI-T01 through FI-T07 are locked. FI-S01 through FI-S04 are locked. Entire File Ecosystem is complete. Task Prompt Architecture v1 is locked at `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-v1.md`, with validation at `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-validation-review.md` and ratification at `worlds/korvin-merrow/task-prompt-architecture/ratifications/task-prompt-architecture-ratification.md`. Task Prompt Architecture is complete. Task Prompt Construction is locked at `worlds/korvin-merrow/task-prompts/locked/`, with ratification at `worlds/korvin-merrow/task-prompts/ratifications/task-prompt-construction-ratification.md`. Task Prompts are complete. Next eligible phase is Expected Output Architecture. Expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, and RL Studio submission artifacts must not begin without separate explicit authorization.
 
 ### Phase 3: QA Your Tasks
 
@@ -41,7 +41,7 @@ Status: Out of scope until approval and phase update.
 
 ## Explicitly Out Of Scope Until Approval
 
-- Task prompt locking, expected outputs, goldens, grader guidance, AutoQC responses, or later task-layer output generation unless explicitly authorized by Alexander
+- Expected outputs, goldens, grader guidance, AutoQC responses, or later task-layer output generation unless explicitly authorized by Alexander
 - World file review
 - Production task setup
 - Production task prompts

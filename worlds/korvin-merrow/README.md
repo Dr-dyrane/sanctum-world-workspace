@@ -1,6 +1,6 @@
 # Korvin Merrow World
 
-Current state: Task Prompt Construction / CANDIDATE REVIEW.
+Current state: Task Prompt Construction / LOCKED.
 
 Start here only after reading `project/STATUS.md`.
 
@@ -21,7 +21,7 @@ Start here only after reading `project/STATUS.md`.
 - `supplementary-file-architecture/`: supplementary FI-S architecture lifecycle area. Locked architecture defines future FI-S01 through FI-S04 only and does not construct FI-S files.
 - `supplementary-files/`: supplementary FI-S file construction lifecycle area. FI-S01 through FI-S04 are locked supplementary files.
 - `task-prompt-architecture/`: task-prompt architecture lifecycle area. Locked Task Prompt Architecture v1 defines future prompt families and packaging rules only; it does not create task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, or submission materials.
-- `task-prompts/`: task prompt construction lifecycle area. TP-KM01 through TP-KM06 are candidate-review prompts only; they are not locked and do not create expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, or submission materials.
+- `task-prompts/`: task prompt construction lifecycle area. TP-KM01 through TP-KM06 are locked prompts only; they do not create expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, or submission materials.
 
 ## Active Entry Points
 
@@ -63,13 +63,14 @@ Start here only after reading `project/STATUS.md`.
 - `task-prompt-architecture/locked/task-prompt-architecture-v1.md`
 - `task-prompt-architecture/locked/task-prompt-architecture-validation-review.md`
 - `task-prompt-architecture/ratifications/task-prompt-architecture-ratification.md`
-- `task-prompts/candidate-review/task-prompt-construction-validation-review.md`
-- `task-prompts/candidate-review/TP-KM01.md`
-- `task-prompts/candidate-review/TP-KM02.md`
-- `task-prompts/candidate-review/TP-KM03.md`
-- `task-prompts/candidate-review/TP-KM04.md`
-- `task-prompts/candidate-review/TP-KM05.md`
-- `task-prompts/candidate-review/TP-KM06.md`
+- `task-prompts/locked/task-prompt-construction-validation-review.md`
+- `task-prompts/ratifications/task-prompt-construction-ratification.md`
+- `task-prompts/locked/TP-KM01.md`
+- `task-prompts/locked/TP-KM02.md`
+- `task-prompts/locked/TP-KM03.md`
+- `task-prompts/locked/TP-KM04.md`
+- `task-prompts/locked/TP-KM05.md`
+- `task-prompts/locked/TP-KM06.md`
 - `supplementary-files/locked/FI-S01_remote-pci-coronary-stent-provenance-summary.md`
 - `supplementary-files/locked/FI-S02_remote-sleep-study-osa-provenance-summary.md`
 - `supplementary-files/locked/FI-S03_home-support-equipment-logistics-reference.md`
@@ -102,7 +103,7 @@ Start here only after reading `project/STATUS.md`.
 - `world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`
 - `active/brainstorm.md`
 
-World Spec v1 is locked. File Inventory Architecture v1 is locked. File Inventory v1 is locked with FI-W20, FI-T, and FI-S03 reconciliations recorded. FI-W01 through FI-W22, FI-T01 through FI-T07, FI-S01 through FI-S04, and Task Prompt Architecture v1 are locked. Entire File Ecosystem and Task Prompt Architecture are complete. Task Prompt Architecture v1 is locked at `task-prompt-architecture/locked/task-prompt-architecture-v1.md`, with validation at `task-prompt-architecture/locked/task-prompt-architecture-validation-review.md` and ratification at `task-prompt-architecture/ratifications/task-prompt-architecture-ratification.md`. Task Prompt Construction is in candidate review at `task-prompts/candidate-review/`; files constructed are TP-KM01 through TP-KM06 plus `task-prompt-construction-validation-review.md`. Next eligible phase is Task Prompt Construction Review. Do not lock task prompts, create expected outputs, golden responses, grader guidance, AutoQC responses, DOCX submission artifacts, RL Studio uploads, templates, or reference files until Alexander explicitly authorizes the relevant step.
+World Spec v1 is locked. File Inventory Architecture v1 is locked. File Inventory v1 is locked with FI-W20, FI-T, and FI-S03 reconciliations recorded. FI-W01 through FI-W22, FI-T01 through FI-T07, FI-S01 through FI-S04, Task Prompt Architecture v1, and TP-KM01 through TP-KM06 are locked. Entire File Ecosystem, Task Prompt Architecture, and Task Prompts are complete. Task Prompt Architecture v1 is locked at `task-prompt-architecture/locked/task-prompt-architecture-v1.md`, with validation at `task-prompt-architecture/locked/task-prompt-architecture-validation-review.md` and ratification at `task-prompt-architecture/ratifications/task-prompt-architecture-ratification.md`. Task Prompt Construction is locked at `task-prompts/locked/`; ratification is recorded at `task-prompts/ratifications/task-prompt-construction-ratification.md`. Next eligible phase is Expected Output Architecture. Do not create expected outputs, golden responses, grader guidance, AutoQC responses, DOCX submission artifacts, RL Studio uploads, templates, or reference files until Alexander explicitly authorizes the relevant step.
 
 Task-design guidance: future task prompts and deliverables must be framed from the physician perspective or physician voice, even when supporting sources come from pharmacy, nursing, PT/OT, case management, social work, family, or administrative sources. This is a task-layer rule only; it does not reopen Governance Package v1 or change source-of-truth hierarchy.
 

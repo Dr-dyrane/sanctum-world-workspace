@@ -2,7 +2,7 @@
 
 ## Current Phase
 
-Task Prompt Construction / CANDIDATE REVIEW.
+Task Prompt Construction / LOCKED.
 
 ## Current World
 
@@ -10,9 +10,9 @@ Working title: Korvin Merrow World
 
 ## Current State
 
-Brainstorm Human Review returned GO from Stacey S after SEND BACK remediation. Reviewer approved the Korvin Merrow Brainstorm and indicated next steps are World Spec and file template development. Preparation Layer, World Spec v1, File Inventory Architecture v1, File Inventory v1, Synthetic World-Level File Construction Plan v1, FI-W01 through FI-W22, Task-Level Context File Architecture v1, FI-T01 through FI-T07, Supplementary File Architecture v1, FI-S01 through FI-S04, and Task Prompt Architecture v1 are locked and complete. Entire File Ecosystem is complete: FI-W01 through FI-W22, FI-T01 through FI-T07, and FI-S01 through FI-S04. Task Prompt Architecture v1 is locked at `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-v1.md`, with validation review at `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-validation-review.md` and ratification at `worlds/korvin-merrow/task-prompt-architecture/ratifications/task-prompt-architecture-ratification.md`. It defines six future prompt families, preserves FI-T07 as a medication-safety addendum to TP-KM01 rather than a seventh prompt, and creates no prompt text, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, or submission materials.
+Brainstorm Human Review returned GO from Stacey S after SEND BACK remediation. Reviewer approved the Korvin Merrow Brainstorm and indicated next steps are World Spec and file template development. Preparation Layer, World Spec v1, File Inventory Architecture v1, File Inventory v1, Synthetic World-Level File Construction Plan v1, FI-W01 through FI-W22, Task-Level Context File Architecture v1, FI-T01 through FI-T07, Supplementary File Architecture v1, FI-S01 through FI-S04, Task Prompt Architecture v1, and Task Prompt Construction are locked and complete. Entire File Ecosystem is complete: FI-W01 through FI-W22, FI-T01 through FI-T07, and FI-S01 through FI-S04. Task Prompt Architecture v1 is locked at `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-v1.md`, with validation review at `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-validation-review.md` and ratification at `worlds/korvin-merrow/task-prompt-architecture/ratifications/task-prompt-architecture-ratification.md`.
 
-Task Prompt Construction is in CANDIDATE REVIEW. Six task prompts (TP-KM01 through TP-KM06) have been constructed under `worlds/korvin-merrow/task-prompts/candidate-review/` with `task-prompt-construction-validation-review.md`. Expected outputs, goldens, grader guidance, AutoQC, DOCX population, Studio submission packaging, and RL Studio upload remain blocked until specifically authorized.
+Task Prompt Construction is LOCKED. Six task prompts (TP-KM01 through TP-KM06) are locked under `worlds/korvin-merrow/task-prompts/locked/` with `task-prompt-construction-validation-review.md`. Ratification is recorded at `worlds/korvin-merrow/task-prompts/ratifications/task-prompt-construction-ratification.md`. Expected outputs, goldens, grader guidance, AutoQC, DOCX population, Studio submission packaging, and RL Studio upload remain blocked until specifically authorized.
 
 Source/reference note: Alexander added World Spec example source documents under `reference/word-spec-examples/`. This folder is intentionally local-only and gitignored because the example corpus is large and can confuse project-specific source-of-truth boundaries. Preserve it as source/reference material, not authored Korvin Merrow content.
 
@@ -40,19 +40,19 @@ Reviewer GO: Stacey S approved Brainstorm via Slack. Recorded in `worlds/korvin-
 
 ## Current Pass
 
-Task Prompt Construction: CANDIDATE REVIEW. Six task prompts (TP-KM01 through TP-KM06) are constructed under `worlds/korvin-merrow/task-prompts/candidate-review/` with `task-prompt-construction-validation-review.md`. Do not lock.
+Task Prompt Construction: LOCKED. Six task prompts (TP-KM01 through TP-KM06) are locked under `worlds/korvin-merrow/task-prompts/locked/` with `task-prompt-construction-validation-review.md`. Ratification is recorded at `worlds/korvin-merrow/task-prompts/ratifications/task-prompt-construction-ratification.md`.
 
 ## Next Pass
 
-Next eligible phase: Task Prompt Construction Review. Expected outputs, goldens, grader guidance, AutoQC, DOCX population, Studio submission packaging, and RL Studio upload remain blocked until specifically authorized.
+Next eligible phase: Expected Output Architecture. Expected outputs, goldens, grader guidance, AutoQC, DOCX population, Studio submission packaging, and RL Studio upload remain blocked until specifically authorized.
 
 ## Active Blocker
 
-No active reviewer blocker. Entire File Ecosystem is complete and locked. Task Prompt Architecture v1 is locked and Task Prompt Architecture is complete. Expected outputs, golden responses, grader guidance, AutoQC, DOCX population, Studio submission packaging, and RL Studio upload remain blocked until specifically authorized.
+No active reviewer blocker. Entire File Ecosystem is complete and locked. Task Prompt Architecture v1 is locked and Task Prompt Architecture is complete. Task Prompt Construction is locked and Task Prompts are complete. Expected outputs, golden responses, grader guidance, AutoQC, DOCX population, Studio submission packaging, and RL Studio upload remain blocked until specifically authorized.
 
 ## Current Git Checkpoint
 
-checkpoint: update continuity after task prompt construction
+checkpoint: ratify task prompt construction
 
 ## Active Branch
 
@@ -68,10 +68,10 @@ Return to baseline commit if workflow becomes corrupted.
 
 ## Next Command For Codex
 
-Proceed with Task Prompt Construction Review only when Alexander authorizes that review. Do not lock task prompts, create expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission artifacts, Studio submission packaging, or RL Studio uploads before Alexander explicitly authorizes the relevant phase.
+Proceed with Expected Output Architecture only when Alexander authorizes that phase. Do not create expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission artifacts, Studio submission packaging, or RL Studio uploads before Alexander explicitly authorizes the relevant phase.
 
 At the end of any working session, apply the collaborator session-exit discipline before final reporting and commit completed process or construction work unless Alexander explicitly instructs not to commit.
 
 ## Scope Guardrails
 
-Do not proceed beyond Task Prompt Construction into expected outputs, golden responses, grader guidelines, or failure analysis unless Alexander explicitly updates the project phase. Supplementary File Construction is locked, Supplementary Files are complete, and Task Prompt Architecture is complete.
+Do not proceed beyond Task Prompt Construction lock into expected outputs, golden responses, grader guidelines, or failure analysis unless Alexander explicitly updates the project phase. Supplementary File Construction is locked, Supplementary Files are complete, Task Prompt Architecture is complete, and Task Prompts are complete.
