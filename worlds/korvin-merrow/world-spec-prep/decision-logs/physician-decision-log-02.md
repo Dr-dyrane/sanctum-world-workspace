@@ -2368,7 +2368,7 @@ Authorization:
 - Alexander authorized Golden Construction after Golden Architecture v1 ratification and lock.
 - Construction scope was limited to candidate golden responses and a construction validation review.
 
-Constructed candidate artifacts:
+Historical candidate artifacts before lock:
 
 - `worlds/korvin-merrow/goldens/candidate-review/Golden-KM01.md`
 - `worlds/korvin-merrow/goldens/candidate-review/Golden-KM02.md`
@@ -2377,6 +2377,8 @@ Constructed candidate artifacts:
 - `worlds/korvin-merrow/goldens/candidate-review/Golden-KM05.md`
 - `worlds/korvin-merrow/goldens/candidate-review/Golden-KM06.md`
 - `worlds/korvin-merrow/goldens/candidate-review/golden-construction-validation-review.md`
+
+These artifacts were moved unchanged to `worlds/korvin-merrow/goldens/locked/` during Golden Construction ratification and lock.
 
 Mapping preserved:
 
@@ -2400,6 +2402,70 @@ Boundary preserved:
 - No RL Studio material was created.
 - No locked canonical artifact was edited during construction.
 
-Next eligible phase:
+Historical next eligible phase at candidate stage:
 
 - Golden Construction Review.
+
+Superseded by Golden Construction ratification and lock; current next eligible phase is Grader Guidance Architecture.
+
+## Golden Construction Ratification And Lock Record
+
+Date: 2026-06-03
+
+Status:
+
+- Golden Construction: LOCKED.
+- Goldens: COMPLETE.
+
+Authorization:
+
+- Alexander authorized Golden Construction ratification and lock after candidate review completion.
+- Reviewer A and Reviewer B both returned LOCK READY / GO with STRONG clinical golden quality and HIGH benchmark integrity.
+
+Locked artifacts:
+
+- `worlds/korvin-merrow/goldens/locked/Golden-KM01.md`
+- `worlds/korvin-merrow/goldens/locked/Golden-KM02.md`
+- `worlds/korvin-merrow/goldens/locked/Golden-KM03.md`
+- `worlds/korvin-merrow/goldens/locked/Golden-KM04.md`
+- `worlds/korvin-merrow/goldens/locked/Golden-KM05.md`
+- `worlds/korvin-merrow/goldens/locked/Golden-KM06.md`
+- `worlds/korvin-merrow/goldens/locked/golden-construction-validation-review.md`
+
+Ratification:
+
+- `worlds/korvin-merrow/goldens/ratifications/golden-construction-ratification.md`
+
+Ratified findings:
+
+- Reviewer A completed.
+- Reviewer B completed.
+- Golden-KM01 through Golden-KM06 reviewed.
+- Six goldens approved.
+- No Golden-KM07 created.
+- FI-T07 addendum relationship preserved.
+- Workflow fidelity verified.
+- Hierarchy fidelity verified.
+- Friction fidelity verified.
+- Information-problem coverage verified.
+- Uncertainty preservation verified.
+- Multi-path physician-answer principle verified.
+- Benchmark integrity verified.
+- Grading-leakage check passed.
+- No true defects.
+- No governance defects.
+- No canon conflicts.
+- No open reconciliations.
+
+Boundary:
+
+- No grader guidance created.
+- No scoring rubrics created.
+- No AutoQC responses created.
+- No DOCX artifacts created.
+- No submission artifacts created.
+- No RL Studio materials created.
+
+Next eligible phase:
+
+- Grader Guidance Architecture.
