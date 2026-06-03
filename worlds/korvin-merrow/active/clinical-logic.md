@@ -425,8 +425,10 @@ File Inventory Architecture v1:
 - Goldens status is COMPLETE.
 - Grader Guidance Architecture v1 is locked at `worlds/korvin-merrow/grader-guidance-architecture/locked/`.
 - Grader Guidance Architecture ratification is recorded at `worlds/korvin-merrow/grader-guidance-architecture/ratifications/grader-guidance-architecture-ratification.md`.
-- Next eligible phase is Grader Guidance Construction.
-- Actual grader guidance construction has not started. Scoring rubrics, scoring thresholds, AutoQC responses, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
+- Grader Guidance Construction status is CANDIDATE REVIEW at `worlds/korvin-merrow/grader-guidance/candidate-review/`.
+- Files constructed: GG-KM01 through GG-KM06 plus `grader-guidance-construction-validation-review.md`.
+- Next eligible phase is Grader Guidance Construction Review.
+- Scoring rubrics, scoring thresholds, AutoQC responses, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
 
 ## Key Milestones Calendar Skeleton v1
 
@@ -900,7 +902,7 @@ Batch 5 clinical logic:
 
 Boundary:
 
-- FI-W22 is locked and the world-level synthetic file layer is complete. Task-Level Context File Architecture v1 is locked and complete. FI-T01 through FI-T07 are locked at `worlds/korvin-merrow/task-context-files/locked/`, with ratification recorded at `worlds/korvin-merrow/task-context-files/ratifications/task-level-context-file-construction-ratification.md`. FI-S01 through FI-S04 are locked at `worlds/korvin-merrow/supplementary-files/locked/`, with ratification recorded at `worlds/korvin-merrow/supplementary-files/ratifications/supplementary-file-construction-ratification.md`. Entire File Ecosystem is complete. Task Prompt Architecture v1 is locked and complete. Task Prompt Construction is locked at `worlds/korvin-merrow/task-prompts/locked/` with TP-KM01 through TP-KM06 locked. Task Prompt Construction ratification is recorded at `worlds/korvin-merrow/task-prompts/ratifications/task-prompt-construction-ratification.md`. Expected Output Architecture v1 is locked. Expected Output Construction is locked at `worlds/korvin-merrow/expected-outputs/locked/` with EO-KM01 through EO-KM06 locked. Golden Construction is locked at `worlds/korvin-merrow/goldens/locked/` with ratification recorded at `worlds/korvin-merrow/goldens/ratifications/golden-construction-ratification.md`. Do not create grader guidance, rubrics, AutoQC responses, DOCX artifacts, submission materials, or RL Studio activity until explicitly authorized.
+- FI-W22 is locked and the world-level synthetic file layer is complete. Task-Level Context File Architecture v1 is locked and complete. FI-T01 through FI-T07 are locked at `worlds/korvin-merrow/task-context-files/locked/`, with ratification recorded at `worlds/korvin-merrow/task-context-files/ratifications/task-level-context-file-construction-ratification.md`. FI-S01 through FI-S04 are locked at `worlds/korvin-merrow/supplementary-files/locked/`, with ratification recorded at `worlds/korvin-merrow/supplementary-files/ratifications/supplementary-file-construction-ratification.md`. Entire File Ecosystem is complete. Task Prompt Architecture v1 is locked and complete. Task Prompt Construction is locked at `worlds/korvin-merrow/task-prompts/locked/` with TP-KM01 through TP-KM06 locked. Task Prompt Construction ratification is recorded at `worlds/korvin-merrow/task-prompts/ratifications/task-prompt-construction-ratification.md`. Expected Output Architecture v1 is locked. Expected Output Construction is locked at `worlds/korvin-merrow/expected-outputs/locked/` with EO-KM01 through EO-KM06 locked. Golden Construction is locked at `worlds/korvin-merrow/goldens/locked/` with ratification recorded at `worlds/korvin-merrow/goldens/ratifications/golden-construction-ratification.md`. Grader Guidance Construction is in candidate review with GG-KM01 through GG-KM06 under `worlds/korvin-merrow/grader-guidance/candidate-review/`. Do not lock grader guidance, create rubrics, AutoQC responses, DOCX artifacts, submission materials, or RL Studio activity until explicitly authorized.
 
 Task-Level Context File Architecture v1:
 
@@ -957,8 +959,10 @@ Task-Level Context File Architecture v1:
 - Grader Guidance Architecture ratification is recorded at `worlds/korvin-merrow/grader-guidance-architecture/ratifications/grader-guidance-architecture-ratification.md`.
 - Grader Guidance Architecture v1 preserves the principle that future grader guidance should reward strong physician reasoning rather than verbatim matching to the golden.
 - Architecture guardrails: no GG-KM07, FI-T07 remains addendum support for GG-KM01 only, FI-W22 remains visible but incomplete, FI-S files remain background/supporting only, hierarchy remains reasoning rather than shortcut logic, and frictions remain defensible disagreements rather than automatic winner selection.
-- No grader guidance, scoring rubrics, scoring thresholds, AutoQC responses, DOCX artifacts, submission materials, or RL Studio activity have been created.
-- Next eligible phase: Grader Guidance Construction.
+- Grader Guidance Construction is in CANDIDATE REVIEW at `worlds/korvin-merrow/grader-guidance/candidate-review/`.
+- Files constructed: GG-KM01 through GG-KM06 plus `grader-guidance-construction-validation-review.md`.
+- No GG-KM07, scoring rubrics, scoring thresholds, AutoQC responses, DOCX artifacts, submission materials, or RL Studio activity have been created.
+- Next eligible phase: Grader Guidance Construction Review.
 
 ## Major Clinical Friction Themes
 

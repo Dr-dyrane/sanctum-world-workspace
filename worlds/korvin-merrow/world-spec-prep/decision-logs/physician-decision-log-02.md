@@ -2581,3 +2581,58 @@ Boundary verification:
 Next eligible phase:
 
 - Grader Guidance Construction.
+
+## Grader Guidance Construction Candidate Record
+
+Date recorded: 2026-06-03
+
+Status:
+
+- Grader Guidance Construction: CANDIDATE REVIEW.
+
+Authorization:
+
+- Alexander authorized Grader Guidance Construction after Grader Guidance Architecture v1 ratification and lock.
+- Construction scope was limited to candidate GG-KM01 through GG-KM06 and a construction validation review.
+
+Candidate artifacts:
+
+- `worlds/korvin-merrow/grader-guidance/candidate-review/GG-KM01.md`
+- `worlds/korvin-merrow/grader-guidance/candidate-review/GG-KM02.md`
+- `worlds/korvin-merrow/grader-guidance/candidate-review/GG-KM03.md`
+- `worlds/korvin-merrow/grader-guidance/candidate-review/GG-KM04.md`
+- `worlds/korvin-merrow/grader-guidance/candidate-review/GG-KM05.md`
+- `worlds/korvin-merrow/grader-guidance/candidate-review/GG-KM06.md`
+- `worlds/korvin-merrow/grader-guidance/candidate-review/grader-guidance-construction-validation-review.md`
+
+Mapping preserved:
+
+- GG-KM01 maps to TP-KM01, EO-KM01, and Golden-KM01.
+- GG-KM02 maps to TP-KM02, EO-KM02, and Golden-KM02.
+- GG-KM03 maps to TP-KM03, EO-KM03, and Golden-KM03.
+- GG-KM04 maps to TP-KM04, EO-KM04, and Golden-KM04.
+- GG-KM05 maps to TP-KM05, EO-KM05, and Golden-KM05.
+- GG-KM06 maps to TP-KM06, EO-KM06, and Golden-KM06.
+- FI-T07 remains addendum support for GG-KM01 only.
+- No GG-KM07 was created.
+
+Construction principles:
+
+- Candidate guidance rewards strong physician reasoning rather than verbatim matching to the golden.
+- Golden responses remain benchmarks, not rigid answer keys.
+- Multi-path defensibility, uncertainty handling, hierarchy reasoning, friction preservation, and physician-perspective judgment remain protected.
+
+Boundary preserved:
+
+- No grader guidance lock or ratification was created.
+- No scoring rubrics were created.
+- No scoring thresholds were created.
+- No point allocations or pass/fail bands were created.
+- No AutoQC responses were created.
+- No DOCX artifacts were created.
+- No submission artifacts were created.
+- No RL Studio materials were created.
+
+Next eligible phase:
+
+- Grader Guidance Construction Review.

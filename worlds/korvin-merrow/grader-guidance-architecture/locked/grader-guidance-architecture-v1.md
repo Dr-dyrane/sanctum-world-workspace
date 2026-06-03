@@ -355,7 +355,7 @@ Grader Guidance Architecture v1
 
 Status:
 
-CANDIDATE REVIEW
+LOCKED
 
 Next Eligible Phase:
 
