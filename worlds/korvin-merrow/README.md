@@ -1,6 +1,6 @@
 # Korvin Merrow World
 
-Current state: Packaging Architecture / CANDIDATE REVIEW.
+Current state: Packaging Architecture / LOCKED.
 
 Start here only after reading `project/STATUS.md`.
 
@@ -120,8 +120,9 @@ Start here only after reading `project/STATUS.md`.
 - `autoqc/locked/autoqc-construction-v1.md`
 - `autoqc/locked/autoqc-construction-validation-review.md`
 - `autoqc/ratifications/autoqc-construction-ratification.md`
-- `packaging-architecture/candidate-review/packaging-architecture-v1.md`
-- `packaging-architecture/candidate-review/packaging-architecture-validation-review.md`
+- `packaging-architecture/locked/packaging-architecture-v1.md`
+- `packaging-architecture/locked/packaging-architecture-validation-review.md`
+- `packaging-architecture/ratifications/packaging-architecture-ratification.md`
 - `supplementary-files/locked/FI-S01_remote-pci-coronary-stent-provenance-summary.md`
 - `supplementary-files/locked/FI-S02_remote-sleep-study-osa-provenance-summary.md`
 - `supplementary-files/locked/FI-S03_home-support-equipment-logistics-reference.md`
@@ -154,7 +155,7 @@ Start here only after reading `project/STATUS.md`.
 - `world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`
 - `active/brainstorm.md`
 
-World Spec v1 is locked. File Inventory Architecture v1 is locked. File Inventory v1 is locked with FI-W20, FI-T, and FI-S03 reconciliations recorded. FI-W01 through FI-W22, FI-T01 through FI-T07, FI-S01 through FI-S04, Task Prompt Architecture v1, TP-KM01 through TP-KM06, Expected Output Architecture v1, EO-KM01 through EO-KM06, Golden Architecture v1, Golden-KM01 through Golden-KM06, Grader Guidance Architecture v1, GG-KM01 through GG-KM06, AutoQC Architecture v1, and AutoQC Construction v1 are locked. Entire File Ecosystem, Task Prompt Architecture, Task Prompts, Expected Output Architecture, Expected Outputs, Golden Architecture, Goldens, Grader Guidance Architecture, Grader Guidance, AutoQC Architecture, and AutoQC are complete. Grader Guidance Construction is locked at `grader-guidance/locked/` with GG-KM01 through GG-KM06 plus `grader-guidance-construction-validation-review.md`; ratification is recorded at `grader-guidance/ratifications/grader-guidance-construction-ratification.md`. AutoQC Architecture v1 is locked at `autoqc-architecture/locked/` with ratification recorded at `autoqc-architecture/ratifications/autoqc-architecture-ratification.md`. AutoQC Construction is locked at `autoqc/locked/` with `autoqc-construction-v1.md` and `autoqc-construction-validation-review.md`; ratification is recorded at `autoqc/ratifications/autoqc-construction-ratification.md`. Packaging Architecture v1 is in candidate review at `packaging-architecture/candidate-review/`. Next eligible phase is Packaging Architecture Review. Do not run AutoQC, create platform responses, create AutoQC responses, create scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX submission artifacts, manifests, packaging artifacts, RL Studio uploads, templates, or reference files until Alexander explicitly authorizes the relevant step.
+World Spec v1 is locked. File Inventory Architecture v1 is locked. File Inventory v1 is locked with FI-W20, FI-T, and FI-S03 reconciliations recorded. FI-W01 through FI-W22, FI-T01 through FI-T07, FI-S01 through FI-S04, Task Prompt Architecture v1, TP-KM01 through TP-KM06, Expected Output Architecture v1, EO-KM01 through EO-KM06, Golden Architecture v1, Golden-KM01 through Golden-KM06, Grader Guidance Architecture v1, GG-KM01 through GG-KM06, AutoQC Architecture v1, AutoQC Construction v1, and Packaging Architecture v1 are locked. Entire File Ecosystem, Task Prompt Architecture, Task Prompts, Expected Output Architecture, Expected Outputs, Golden Architecture, Goldens, Grader Guidance Architecture, Grader Guidance, AutoQC Architecture, AutoQC, and Packaging Architecture are complete. Grader Guidance Construction is locked at `grader-guidance/locked/` with GG-KM01 through GG-KM06 plus `grader-guidance-construction-validation-review.md`; ratification is recorded at `grader-guidance/ratifications/grader-guidance-construction-ratification.md`. AutoQC Architecture v1 is locked at `autoqc-architecture/locked/` with ratification recorded at `autoqc-architecture/ratifications/autoqc-architecture-ratification.md`. AutoQC Construction is locked at `autoqc/locked/` with `autoqc-construction-v1.md` and `autoqc-construction-validation-review.md`; ratification is recorded at `autoqc/ratifications/autoqc-construction-ratification.md`. Packaging Architecture v1 is locked at `packaging-architecture/locked/` with ratification recorded at `packaging-architecture/ratifications/packaging-architecture-ratification.md`. Next eligible phase is Packaging Construction. Do not run AutoQC, create platform responses, create AutoQC responses, create scoring rubrics, scoring thresholds, pass/fail bands, point allocations, populate DOCX artifacts, create manifests, create final submission packages, use RL Studio, templates, or reference files until Alexander explicitly authorizes the relevant step.
 
 Task-design guidance: future task prompts and deliverables must be framed from the physician perspective or physician voice, even when supporting sources come from pharmacy, nursing, PT/OT, case management, social work, family, or administrative sources. This is a task-layer rule only; it does not reopen Governance Package v1 or change source-of-truth hierarchy.
 
