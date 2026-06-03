@@ -3048,3 +3048,46 @@ Boundaries:
 
 - Do not begin Execution Preparation without explicit authorization.
 - Do not create execution artifacts, DOCX artifacts, manifests, submission packages, AutoQC responses, scoring artifacts, uploads, or submissions without explicit authorization.
+
+## Execution Preparation Candidate Record
+
+Date: 2026-06-03
+
+Authorization:
+
+- Alexander authorized Execution Preparation v1 construction after Submission Preparation lock.
+
+Candidate artifacts:
+
+- `worlds/korvin-merrow/execution-preparation/candidate-review/execution-preparation-v1.md`
+- `worlds/korvin-merrow/execution-preparation/candidate-review/execution-preparation-validation-review.md`
+
+Recorded scope:
+
+- Execution Readiness Register.
+- Execution Dependency Register.
+- External-System Register.
+- Authorization Register.
+- Stop-Point Register.
+- Final Execution Order.
+- Readiness review for transcript resolution, reference file resolution, goldens/GG scope, template version, 7-column vs 8-column reconciliation, official AutoQC prompt import, formal AutoQC execution, AutoQC reconciliation, DOCX population, manifest creation, upload preparation, and submission.
+
+Boundary preserved:
+
+- No AutoQC was run.
+- No AutoQC responses were created.
+- No DOCX was populated.
+- No manifest was created.
+- No submission package was created.
+- No upload or submission occurred.
+- No locked artifacts were modified.
+- No scoring artifacts were created.
+
+Status:
+
+- Submission Preparation: LOCKED.
+- Execution Preparation v1: CANDIDATE REVIEW.
+
+Next eligible phase:
+
+- Execution Preparation Review.

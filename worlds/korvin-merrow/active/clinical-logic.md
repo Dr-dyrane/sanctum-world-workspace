@@ -439,7 +439,8 @@ File Inventory Architecture v1:
 - Packaging Architecture ratification is recorded at `worlds/korvin-merrow/packaging-architecture/ratifications/packaging-architecture-ratification.md`.
 - Packaging Construction is LOCKED at `worlds/korvin-merrow/packaging/locked/`.
 - Submission Preparation is LOCKED at `worlds/korvin-merrow/submission-preparation/locked/` with ratification at `worlds/korvin-merrow/submission-preparation/ratifications/submission-preparation-ratification.md`.
-- Next eligible phase is Execution Preparation.
+- Execution Preparation v1 is in CANDIDATE REVIEW at `worlds/korvin-merrow/execution-preparation/candidate-review/`.
+- Next eligible phase is Execution Preparation Review.
 - AutoQC runs, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
 
 ## Key Milestones Calendar Skeleton v1
@@ -981,7 +982,8 @@ Task-Level Context File Architecture v1:
 - Packaging Architecture is COMPLETE.
 - Packaging Construction is LOCKED at `worlds/korvin-merrow/packaging/locked/`.
 - Submission Preparation is LOCKED at `worlds/korvin-merrow/submission-preparation/locked/` with ratification at `worlds/korvin-merrow/submission-preparation/ratifications/submission-preparation-ratification.md`.
-- Next eligible phase: Execution Preparation.
+- Execution Preparation v1 is in CANDIDATE REVIEW at `worlds/korvin-merrow/execution-preparation/candidate-review/`.
+- Next eligible phase: Execution Preparation Review.
 
 ## Major Clinical Friction Themes
 
@@ -1017,6 +1019,16 @@ Validation review is locked at `worlds/korvin-merrow/submission-preparation/lock
 
 Ratification is recorded at `worlds/korvin-merrow/submission-preparation/ratifications/submission-preparation-ratification.md`.
 
-Submission Preparation is complete. The next eligible phase is Execution Preparation.
+Submission Preparation is complete. Execution Preparation v1 is in candidate review. The next eligible phase is Execution Preparation Review.
 
 Execution Preparation, execution artifacts, DOCX artifacts, manifests, submission packages, AutoQC runs, uploads, and submissions remain blocked until Alexander explicitly authorizes the relevant phase.
+
+## Execution Preparation Candidate State
+
+Execution Preparation v1 is in candidate review at `worlds/korvin-merrow/execution-preparation/candidate-review/execution-preparation-v1.md`.
+
+The validation review is at `worlds/korvin-merrow/execution-preparation/candidate-review/execution-preparation-validation-review.md`.
+
+This phase prepares execution only. It does not run AutoQC, create AutoQC responses, populate DOCX, create a manifest, create a submission package, upload, submit, modify locked artifacts, or create scoring artifacts.
+
+Next eligible phase: Execution Preparation Review.
