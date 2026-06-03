@@ -1863,3 +1863,43 @@ Next eligible phase:
 Boundary:
 
 - Task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
+
+## Task Prompt Architecture v1 Candidate Construction Record
+
+Status:
+
+- Task Prompt Architecture v1: CANDIDATE REVIEW.
+- Task Prompt Architecture validation review: CANDIDATE REVIEW.
+
+Authorization:
+
+- Alexander authorized Task Prompt Architecture v1 construction after the Entire File Ecosystem was complete and locked.
+
+Artifacts created:
+
+- `worlds/korvin-merrow/task-prompt-architecture/candidate-review/task-prompt-architecture-v1.md`
+- `worlds/korvin-merrow/task-prompt-architecture/candidate-review/task-prompt-architecture-validation-review.md`
+
+Key architecture decision:
+
+- Future task prompt count is six, consistent with locked Task Architecture Package v1.
+- FI-T07 remains medication-safety addendum support for TP-KM01 rather than a seventh near-duplicate medication reconciliation prompt.
+
+Verification:
+
+- No task prompts were created.
+- No expected outputs were created.
+- No goldens were created.
+- No grader guidance was created.
+- No AutoQC responses were created.
+- No DOCX artifacts were created.
+- No submission artifacts or RL Studio materials were created.
+- Locked FI-W, FI-T, and FI-S artifacts were not modified.
+
+Next eligible phase:
+
+- Task Prompt Architecture Review.
+
+Boundary:
+
+- Task prompt construction, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission artifacts, and RL Studio activity remain blocked until explicitly authorized.

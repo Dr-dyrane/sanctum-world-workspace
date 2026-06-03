@@ -402,7 +402,8 @@ File Inventory Architecture v1:
 - Supplementary Files status is complete.
 - Entire File Ecosystem status is complete.
 - Completed File Ecosystem: FI-W01 through FI-W22, FI-T01 through FI-T07, and FI-S01 through FI-S04.
-- Next eligible phase is Task Prompt Architecture.
+- Task Prompt Architecture v1 is in candidate review at `worlds/korvin-merrow/task-prompt-architecture/candidate-review/task-prompt-architecture-v1.md`, with validation review at `worlds/korvin-merrow/task-prompt-architecture/candidate-review/task-prompt-architecture-validation-review.md`.
+- Next eligible phase is Task Prompt Architecture Review.
 - Task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
 
 ## Key Milestones Calendar Skeleton v1
@@ -909,7 +910,8 @@ Task-Level Context File Architecture v1:
 - Ratification: `worlds/korvin-merrow/supplementary-files/ratifications/supplementary-file-construction-ratification.md`.
 - Supplementary Files: COMPLETE.
 - Entire File Ecosystem: COMPLETE.
-- Next eligible phase: Task Prompt Architecture.
+- Task Prompt Architecture v1: CANDIDATE REVIEW.
+- Next eligible phase: Task Prompt Architecture Review.
 
 ## Major Clinical Friction Themes
 

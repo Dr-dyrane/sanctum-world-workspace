@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-Supplementary File Construction / LOCKED.
+Task Prompt Architecture v1 / CANDIDATE REVIEW.
 
 ## Brainstorm
 
@@ -84,7 +84,9 @@ Supplementary File Construction / LOCKED.
 - Supplementary Files: complete
 - Entire File Ecosystem: complete
 - Completed File Ecosystem: FI-W01 through FI-W22; FI-T01 through FI-T07; FI-S01 through FI-S04
-- Next eligible phase: Task Prompt Architecture
+- Task Prompt Architecture v1: candidate review at `worlds/korvin-merrow/task-prompt-architecture/candidate-review/task-prompt-architecture-v1.md`
+- Task Prompt Architecture validation review: `worlds/korvin-merrow/task-prompt-architecture/candidate-review/task-prompt-architecture-validation-review.md`
+- Next eligible phase: Task Prompt Architecture Review
 - Task-design physician-perspective guidance: recorded as a future task-layer rule only. It does not change source-of-truth hierarchy or Governance Package v1; future task prompts and deliverables must remain physician-centered even when supporting sources are pharmacy, nursing, PT/OT, case management, social work, family, or administrative sources.
 - Collaborator session-exit discipline: standing process / handoff rule. Every future session must leave the repository clean or explicitly documented, update phase and next-phase surfaces, preserve locked artifacts unless explicitly authorized, label candidate artifacts, move newly locked artifacts to locked paths with ratification references, update continuity and Claude handoff files, record carry-forward watch items and future task-layer guidance, commit completed work unless explicitly told not to, and report what changed, what did not change, current status, next eligible phase, and whether the repository is safe for another collaborator.
 - Cross-artifact consistency verification: standing governance rule. Before creating, modifying, ratifying, or locking architecture, inventory, matrices, mappings, workflow/trap/friction/hierarchy tables, or governance artifacts, future collaborators must cross-check applicable locked canonical sources and document any expansion, narrowing, redistribution, reprioritization, relabeling, or reclassification before ratification or lock.
@@ -142,7 +144,7 @@ Supplementary File Construction / LOCKED.
 - Fetched World Spec example source documents: `reference/word-spec-examples/` (local-only / gitignored)
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 - World Spec prep folder structure: reorganized by lifecycle buckets (`candidate-review/`, `locked/`, `ratifications/`, `reviews/`, `decision-logs/`, `planning-scaffolds/`)
-- Next eligible phase: Task Prompt Architecture. Do not create task specifications, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission artifacts, or RL Studio uploads until explicitly authorized.
+- Next eligible phase: Task Prompt Architecture Review. Do not create task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission artifacts, or RL Studio uploads until explicitly authorized.
 
 ## Tooling
 
