@@ -1,6 +1,6 @@
 # Korvin Merrow World Spec Kickoff
 
-Status: AutoQC Construction / CANDIDATE REVIEW.
+Status: AutoQC COMPLETE / Packaging Architecture NOT STARTED.
 
 Purpose: active cockpit for the transition from approved Brainstorm through World Spec construction while preserving phase boundaries around template population, file inventory, tasks, and downstream deliverables.
 
@@ -112,9 +112,11 @@ Purpose: active cockpit for the transition from approved Brainstorm through Worl
 - AutoQC Architecture locked artifacts: `worlds/korvin-merrow/autoqc-architecture/locked/autoqc-architecture-v1.md` and `worlds/korvin-merrow/autoqc-architecture/locked/autoqc-architecture-validation-review.md`.
 - AutoQC Architecture ratification: `worlds/korvin-merrow/autoqc-architecture/ratifications/autoqc-architecture-ratification.md`.
 - AutoQC Architecture status: COMPLETE.
-- AutoQC Construction status: CANDIDATE REVIEW.
-- AutoQC Construction candidate artifacts: `worlds/korvin-merrow/autoqc/candidate-review/autoqc-construction-v1.md` and `worlds/korvin-merrow/autoqc/candidate-review/autoqc-construction-validation-review.md`.
-- Next eligible phase: AutoQC Construction Review.
+- AutoQC Construction status: LOCKED.
+- AutoQC Construction locked artifacts: `worlds/korvin-merrow/autoqc/locked/autoqc-construction-v1.md` and `worlds/korvin-merrow/autoqc/locked/autoqc-construction-validation-review.md`.
+- AutoQC Construction ratification: `worlds/korvin-merrow/autoqc/ratifications/autoqc-construction-ratification.md`.
+- AutoQC status: COMPLETE.
+- Next eligible phase: Packaging Architecture.
 - AutoQC runs, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX submission packaging, RL Studio upload, and submission materials have not started.
 - Clinical Story Skeleton v1 is locked and ratified.
 - Clinical Story Skeleton review completed with GO recommendation.
@@ -149,7 +151,7 @@ Purpose: active cockpit for the transition from approved Brainstorm through Worl
 - Daily Hospital Course Framework v1: `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md`.
 - Daily Hospital Course Framework ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md`.
 - Preparation Layer status: COMPLETE.
-- Next eligible phase: AutoQC Construction Review. AutoQC runs, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX submission packaging, RL Studio upload, and RL Studio activity remain blocked until explicitly authorized.
+- Next eligible phase: Packaging Architecture. AutoQC runs, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX submission packaging, RL Studio upload, and RL Studio activity remain blocked until explicitly authorized.
 
 ## Workspace Bloat And Doctrine Audit
 
@@ -460,7 +462,7 @@ Preparation Layer:
 - Status: COMPLETE.
 - Completed artifacts: Brainstorm, Temporal Architecture, Clinical Story Skeleton, Identity Package, Governance Package, Key Milestones Calendar Skeleton, Baseline Anchor Package, Clinical Story Timeline Package, Task Architecture Package, Medication Expansion Package, Comorbidity Expansion Package, Provider Roster Package, Surgical History Package, and Daily Hospital Course Framework.
 - World Spec Construction status: COMPLETE.
-- Boundary: World Spec v1 is locked. File Inventory Architecture v1 is locked, Phase 3 File Inventory Architecture is complete, File Inventory v1 is locked with FI-W20, FI-T, and FI-S03 Trap #5 metadata reconciliations recorded, File Inventory Planning is complete, Synthetic World-Level File Construction Plan v1 is locked, Synthetic File Construction Governance is complete, Batch 1 FI-W01 through FI-W07 are locked, Batch 2 FI-W08 through FI-W13 are locked, Batch 3 FI-W14 through FI-W16 are locked, Batch 4 FI-W17 through FI-W21 are locked, Batch 5 FI-W22 is locked, the World-Level Synthetic File Layer is complete, Task-Level Context File Architecture v1 is locked, Task-Level Context File Construction is locked, Supplementary File Architecture v1 is locked, Supplementary File Construction is locked, Task Prompt Architecture v1 is locked, Task Prompt Construction is locked, Expected Output Architecture v1 is locked, Expected Output Construction is locked, Golden Architecture v1 is locked, Golden Construction is locked, Grader Guidance Architecture v1 is locked, Grader Guidance Construction is locked, and AutoQC Architecture v1 is locked. Entire File Ecosystem, Task Prompt Architecture, Task Prompts, Expected Output Architecture, Expected Outputs, Golden Architecture, Goldens, Grader Guidance Architecture, Grader Guidance, and AutoQC Architecture are complete. AutoQC Construction is in candidate review only. AutoQC runs, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX submission packaging, RL Studio upload, and RL Studio activity remain unstarted until Alexander explicitly authorizes the relevant next step.
+- Boundary: World Spec v1 is locked. File Inventory Architecture v1 is locked, Phase 3 File Inventory Architecture is complete, File Inventory v1 is locked with FI-W20, FI-T, and FI-S03 Trap #5 metadata reconciliations recorded, File Inventory Planning is complete, Synthetic World-Level File Construction Plan v1 is locked, Synthetic File Construction Governance is complete, Batch 1 FI-W01 through FI-W07 are locked, Batch 2 FI-W08 through FI-W13 are locked, Batch 3 FI-W14 through FI-W16 are locked, Batch 4 FI-W17 through FI-W21 are locked, Batch 5 FI-W22 is locked, the World-Level Synthetic File Layer is complete, Task-Level Context File Architecture v1 is locked, Task-Level Context File Construction is locked, Supplementary File Architecture v1 is locked, Supplementary File Construction is locked, Task Prompt Architecture v1 is locked, Task Prompt Construction is locked, Expected Output Architecture v1 is locked, Expected Output Construction is locked, Golden Architecture v1 is locked, Golden Construction is locked, Grader Guidance Architecture v1 is locked, Grader Guidance Construction is locked, AutoQC Architecture v1 is locked, and AutoQC Construction v1 is locked. Entire File Ecosystem, Task Prompt Architecture, Task Prompts, Expected Output Architecture, Expected Outputs, Golden Architecture, Goldens, Grader Guidance Architecture, Grader Guidance, AutoQC Architecture, and AutoQC are complete. Packaging Architecture is the next eligible phase. AutoQC runs, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX submission packaging, RL Studio upload, and RL Studio activity remain unstarted until Alexander explicitly authorizes the relevant next step.
 
 File Inventory Architecture v1:
 
@@ -823,3 +825,42 @@ Boundary:
 - No DOCX artifacts, submission artifacts, or RL Studio materials were created.
 - Missing Section 6 prompt content was not fabricated.
 - Next eligible phase is AutoQC Construction Review.
+
+## AutoQC Construction Ratification and Lock Record
+
+Date recorded: 2026-06-03.
+
+Status:
+
+- AutoQC Construction is LOCKED.
+- AutoQC is COMPLETE.
+
+Locked artifacts:
+
+- `worlds/korvin-merrow/autoqc/locked/autoqc-construction-v1.md`
+- `worlds/korvin-merrow/autoqc/locked/autoqc-construction-validation-review.md`
+- `worlds/korvin-merrow/autoqc/ratifications/autoqc-construction-ratification.md`
+
+Ratification findings:
+
+- Independent Review A and Review B returned LOCK READY / GO.
+- Construction Quality was STRONG.
+- Governance Fidelity was HIGH.
+- AQC-KM01 through AQC-KM07 verified.
+- No AQC-KM08 created.
+- No-fabrication rule verified.
+- Import-not-inference rule verified.
+- Locked-artifact protection verified.
+- Response-routing, reconciliation-routing, packaging-routing, and transcript carry-forward verified.
+- No true defects, governance issues, canon conflicts, or open reconciliations remain.
+
+Boundary:
+
+- No AutoQC execution was performed.
+- No platform responses or AutoQC responses were created.
+- No scoring rubrics, scoring thresholds, pass/fail bands, or point allocations were created.
+- No DOCX artifacts, submission artifacts, or RL Studio materials were created.
+
+Next eligible phase:
+
+- Packaging Architecture.
