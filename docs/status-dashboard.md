@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-Grader Guidance Construction / LOCKED.
+AutoQC Architecture / CANDIDATE REVIEW.
 
 ## Brainstorm
 
@@ -124,8 +124,11 @@ Grader Guidance Construction / LOCKED.
 - Files locked: GG-KM01 through GG-KM06 plus `grader-guidance-construction-validation-review.md`
 - Grader Guidance Construction ratification: `worlds/korvin-merrow/grader-guidance/ratifications/grader-guidance-construction-ratification.md`
 - Grader Guidance: complete
+- AutoQC Architecture v1: candidate review
+- AutoQC Architecture candidate artifacts: `worlds/korvin-merrow/autoqc-architecture/candidate-review/`
+- Files constructed: `autoqc-architecture-v1.md`; `autoqc-architecture-validation-review.md`
 - No GG-KM07 exists
-- Next eligible phase: AutoQC / Packaging Preparation
+- Next eligible phase: AutoQC Architecture Review
 - Task-design physician-perspective guidance: recorded as a future task-layer rule only. It does not change source-of-truth hierarchy or Governance Package v1; future task prompts and deliverables must remain physician-centered even when supporting sources are pharmacy, nursing, PT/OT, case management, social work, family, or administrative sources.
 - Collaborator session-exit discipline: standing process / handoff rule. Every future session must leave the repository clean or explicitly documented, update phase and next-phase surfaces, preserve locked artifacts unless explicitly authorized, label candidate artifacts, move newly locked artifacts to locked paths with ratification references, update continuity and Claude handoff files, record carry-forward watch items and future task-layer guidance, commit completed work unless explicitly told not to, and report what changed, what did not change, current status, next eligible phase, and whether the repository is safe for another collaborator.
 - Cross-artifact consistency verification: standing governance rule. Before creating, modifying, ratifying, or locking architecture, inventory, matrices, mappings, workflow/trap/friction/hierarchy tables, or governance artifacts, future collaborators must cross-check applicable locked canonical sources and document any expansion, narrowing, redistribution, reprioritization, relabeling, or reclassification before ratification or lock.
@@ -147,7 +150,7 @@ Grader Guidance Construction / LOCKED.
 - World Spec Skeleton v1: `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`
 - World Spec Skeleton ratification: `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-skeleton-ratification.md`
 - Official Claude World Spec session: pending
-- Current state: World Spec v1 is locked; File Inventory Architecture v1 is locked; File Inventory v1 is locked with FI-W20 row reconciliation, FI-T inventory/task-layer architecture reconciliation, and FI-S03 Trap #5 reconciliation recorded; Synthetic World-Level File Construction Plan v1 is locked; Synthetic File Construction Governance is complete; Batch 1 synthetic world-level files are locked; Batch 2 synthetic world-level files are locked; Batch 3 synthetic world-level files are locked; Batch 4 synthetic world-level files are locked; Batch 5 FI-W22 is locked; World-Level Synthetic File Layer is complete; Task-Level Context File Architecture v1 is locked and Task-Level Context File Architecture is complete; FI-T01 through FI-T07 are locked and Task-Level Context Files are complete; Supplementary File Architecture v1 is locked and Supplementary File Architecture is complete; FI-S01 through FI-S04 are locked and Supplementary Files are complete; Entire File Ecosystem is complete; Task Prompt Architecture v1 is locked and complete; Task Prompt Construction is locked; Task Prompts are complete; Expected Output Architecture v1 is locked and Expected Output Architecture is complete; Expected Output Construction is locked and Expected Outputs are complete; Golden Architecture v1 is locked and Golden Architecture is complete; Golden Construction is locked and Goldens are complete under `worlds/korvin-merrow/goldens/locked/`; Grader Guidance Architecture v1 is locked under `worlds/korvin-merrow/grader-guidance-architecture/locked/`; Grader Guidance Construction is locked under `worlds/korvin-merrow/grader-guidance/locked/`; Grader Guidance is complete; calendar, baseline anchors, Clinical Story Timeline Package v1, Task Architecture Package v1, Medication Expansion Package v1, Comorbidity Expansion Package v1, Provider Roster Package v1, Surgical History Package v1, Daily Hospital Course Framework v1, and World Spec Skeleton v1 are locked
+- Current state: World Spec v1 is locked; File Inventory Architecture v1 is locked; File Inventory v1 is locked with FI-W20 row reconciliation, FI-T inventory/task-layer architecture reconciliation, and FI-S03 Trap #5 reconciliation recorded; Synthetic World-Level File Construction Plan v1 is locked; Synthetic File Construction Governance is complete; Batch 1 synthetic world-level files are locked; Batch 2 synthetic world-level files are locked; Batch 3 synthetic world-level files are locked; Batch 4 synthetic world-level files are locked; Batch 5 FI-W22 is locked; World-Level Synthetic File Layer is complete; Task-Level Context File Architecture v1 is locked and Task-Level Context File Architecture is complete; FI-T01 through FI-T07 are locked and Task-Level Context Files are complete; Supplementary File Architecture v1 is locked and Supplementary File Architecture is complete; FI-S01 through FI-S04 are locked and Supplementary Files are complete; Entire File Ecosystem is complete; Task Prompt Architecture v1 is locked and complete; Task Prompt Construction is locked; Task Prompts are complete; Expected Output Architecture v1 is locked and Expected Output Architecture is complete; Expected Output Construction is locked and Expected Outputs are complete; Golden Architecture v1 is locked and Golden Architecture is complete; Golden Construction is locked and Goldens are complete under `worlds/korvin-merrow/goldens/locked/`; Grader Guidance Architecture v1 is locked under `worlds/korvin-merrow/grader-guidance-architecture/locked/`; Grader Guidance Construction is locked under `worlds/korvin-merrow/grader-guidance/locked/`; Grader Guidance is complete; AutoQC Architecture v1 is in candidate review under `worlds/korvin-merrow/autoqc-architecture/candidate-review/`; calendar, baseline anchors, Clinical Story Timeline Package v1, Task Architecture Package v1, Medication Expansion Package v1, Comorbidity Expansion Package v1, Provider Roster Package v1, Surgical History Package v1, Daily Hospital Course Framework v1, and World Spec Skeleton v1 are locked
 - World Spec prep packet: created
 - Official World Spec template: saved locally
 - World Spec AutoQC prompt v6.3: saved locally
@@ -183,7 +186,7 @@ Grader Guidance Construction / LOCKED.
 - Fetched World Spec example source documents: `reference/word-spec-examples/` (local-only / gitignored)
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 - World Spec prep folder structure: reorganized by lifecycle buckets (`candidate-review/`, `locked/`, `ratifications/`, `reviews/`, `decision-logs/`, `planning-scaffolds/`)
-- Next eligible phase: AutoQC / Packaging Preparation. Do not create scoring rubrics, scoring thresholds, pass/fail bands, point allocations, AutoQC responses, DOCX submission artifacts, or RL Studio uploads until explicitly authorized.
+- Next eligible phase: AutoQC Architecture Review. Do not run AutoQC, create AutoQC responses, create scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX submission artifacts, or RL Studio uploads until explicitly authorized.
 
 ## Tooling
 
@@ -205,6 +208,6 @@ Grader Guidance Construction / LOCKED.
 - Do not treat fetched World Spec examples as authored Korvin Merrow content or source-of-truth material.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
 - Do not modify clinical content beyond reviewer-required remediation without Alexander approval.
-- Do not proceed beyond Grader Guidance Construction lock into scoring rubrics, scoring thresholds, pass/fail bands, point allocations, AutoQC, DOCX packaging, submission artifacts, or failure analysis without explicit authorization.
+- Do not proceed beyond AutoQC Architecture candidate review into AutoQC runs, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX packaging, submission artifacts, or failure analysis without explicit authorization.
 - Do not access RL Studio without explicit authorization.
 - Do not end a working session without applying collaborator session-exit discipline.

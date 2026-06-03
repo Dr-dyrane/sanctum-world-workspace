@@ -2691,4 +2691,59 @@ Boundary preserved:
 
 Next eligible phase:
 
-- AutoQC / Packaging Preparation.
+- AutoQC Architecture Review.
+
+## AutoQC Architecture v1 Candidate Record
+
+Date recorded: 2026-06-03
+
+Status:
+
+- AutoQC Architecture v1: CANDIDATE REVIEW.
+- Grader Guidance Construction remains LOCKED.
+- Grader Guidance remains COMPLETE.
+
+Authorization:
+
+- Alexander authorized AutoQC Architecture v1 construction after Grader Guidance Construction lock and ecosystem comparison audit commit.
+- This construction phase defines how future AutoQC will be organized.
+- This construction phase does not run AutoQC and does not create AutoQC responses.
+
+Candidate artifacts:
+
+- `worlds/korvin-merrow/autoqc-architecture/candidate-review/autoqc-architecture-v1.md`
+- `worlds/korvin-merrow/autoqc-architecture/candidate-review/autoqc-architecture-validation-review.md`
+
+Architecture scope recorded:
+
+- AutoQC scope.
+- AutoQC artifact IDs.
+- Relationship to locally available World Spec AutoQC v6.3.
+- Relationship boundary for future Section 6 Grader Guidelines AutoQC, whose official prompt is not yet locally available.
+- Task-layer, file-layer, prompt, expected-output, golden, grader-guidance, and packaging QC boundaries.
+- Carry-forward watch items from locked sources and the ecosystem comparison audit.
+
+Carry-forward watch items:
+
+- Official Section 6 Grader Guidelines AutoQC prompt is not yet locally available.
+- World Spec AutoQC v6.3 exists locally.
+- Packaging-layer checks remain pending.
+- Submission manifest remains pending.
+- DOCX population remains pending.
+- Transcript requirement remains ambiguous.
+- Goldens/grader guidance submission scope remains ambiguous.
+
+Boundary preserved:
+
+- No AutoQC was run.
+- No AutoQC responses were created.
+- No scoring rubrics were created.
+- No scoring thresholds were created.
+- No point allocations or pass/fail bands were created.
+- No DOCX artifacts were created.
+- No submission artifacts were created.
+- No RL Studio materials were created.
+
+Next eligible phase:
+
+- AutoQC Architecture Review.
