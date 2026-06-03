@@ -2795,4 +2795,63 @@ Boundary preserved:
 
 Next eligible phase:
 
-- AutoQC Construction.
+- AutoQC Construction Review.
+
+## AutoQC Construction Candidate Record
+
+Date recorded: 2026-06-03
+
+Status:
+
+- AutoQC Construction: CANDIDATE REVIEW.
+- AutoQC Architecture v1: LOCKED.
+- AutoQC Architecture: COMPLETE.
+
+Authorization:
+
+- Alexander authorized AutoQC Construction after AutoQC Architecture v1 ratification and lock.
+- Construction is limited to preparation artifacts and does not run AutoQC.
+
+Candidate artifacts:
+
+- `worlds/korvin-merrow/autoqc/candidate-review/autoqc-construction-v1.md`
+- `worlds/korvin-merrow/autoqc/candidate-review/autoqc-construction-validation-review.md`
+
+Construction scope recorded:
+
+- Future AutoQC execution order.
+- AQC-KM01 through AQC-KM07 mapping.
+- Required inputs for each AQC surface.
+- Blocked dependencies and official prompt dependencies.
+- Future response-routing paths.
+- Reconciliation-routing paths.
+- Packaging-routing paths.
+- No-fabrication rule.
+- Locked-artifact protection.
+- Import-not-inference rule.
+
+Carry-forward watch items:
+
+- Official Section 6 Grader Guidelines AutoQC prompt is not locally available.
+- World Spec AutoQC v6.3 exists locally.
+- Packaging-layer checks remain pending.
+- Submission manifest remains pending.
+- DOCX population remains pending.
+- Transcript requirement remains ambiguous.
+- `docs/claude-transcript.md` exists as a submission-phase carry-forward item.
+- Goldens/grader guidance submission scope remains ambiguous.
+
+Boundary preserved:
+
+- No AutoQC was run.
+- No platform responses or AutoQC responses were created.
+- No scoring rubrics were created.
+- No scoring thresholds were created.
+- No point allocations or pass/fail bands were created.
+- No DOCX artifacts were created.
+- No submission artifacts were created.
+- No Section 6 prompt content was fabricated.
+
+Next eligible phase:
+
+- AutoQC Construction Review.
