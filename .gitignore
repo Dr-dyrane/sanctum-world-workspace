@@ -59,6 +59,8 @@ installers/
 raw-downloads/
 reference/source/raw/
 reference/source/downloads/
+reference/word-spec-examples/
+reference/world-spec-examples/
 
 # Installers and downloaded archives
 *.exe

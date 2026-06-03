@@ -281,6 +281,7 @@ World Spec v1:
 Fetched World Spec source examples:
 
 - Alexander added source/reference examples under `reference/word-spec-examples/`.
+- This folder is intentionally local-only and gitignored because the example corpus is large and can confuse project-specific source-of-truth boundaries.
 - Treat them as source/reference material only, not authored Korvin Merrow content or the Korvin Merrow World File Plan.
 
 ## Decisions Remaining

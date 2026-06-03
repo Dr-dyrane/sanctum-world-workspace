@@ -498,6 +498,7 @@ Synthetic World-Level File Construction Plan v1:
 Fetched World Spec source examples:
 
 - Alexander added World Spec example source documents under `reference/word-spec-examples/`.
+- This folder is intentionally local-only and gitignored because the example corpus is large and can confuse project-specific source-of-truth boundaries.
 - These are source/reference artifacts only. Preserve them separately from authored Korvin Merrow work and do not treat them as generated project content or as the Korvin Merrow file inventory.
 
 Primary frictions:

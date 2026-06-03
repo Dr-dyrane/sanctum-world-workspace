@@ -135,7 +135,7 @@ Next legal action:
 - World Spec Skeleton v1 locked and ratified: `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`.
 - World Spec v1 ratified and locked: `worlds/korvin-merrow/world-spec-construction/locked/world-spec-v1.md`.
 - World Spec v1 ratification recorded: `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-v1-ratification.md`.
-- World Spec example source documents recorded under `reference/word-spec-examples/`.
+- World Spec example source documents recorded under `reference/word-spec-examples/` as local-only / gitignored reference material.
 - File Inventory Architecture v1 ratified and locked: `worlds/korvin-merrow/file-inventory/locked/file-inventory-architecture-v1.md`.
 - File Inventory Architecture ratification recorded: `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-architecture-ratification.md`.
 - File Inventory v1 ratified and locked: `worlds/korvin-merrow/file-inventory/locked/file-inventory-v1.md`.

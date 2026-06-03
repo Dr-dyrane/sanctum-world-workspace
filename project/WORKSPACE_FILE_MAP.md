@@ -187,14 +187,11 @@ Reviewed for duplicate-purpose files:
 
 ## World Spec Example Source Documents
 
-These are fetched source/reference examples, not authored Korvin Merrow content and not the Korvin Merrow World File Plan.
+These are fetched source/reference examples, not authored Korvin Merrow content and not the Korvin Merrow World File Plan. The folder is intentionally local-only and gitignored because the example corpus is large and can confuse project-specific source-of-truth boundaries.
 
 | File | Role | Duplication note |
 | --- | --- | --- |
-| `reference/word-spec-examples/Brainstorming_Document_Chen.docx` | Source/reference example Brainstorm document. | Preserve separately from authored work. |
-| `reference/word-spec-examples/World_Spec_Document_Harold.docx` | Source/reference example World Spec document. | Preserve separately from authored work. |
-| `reference/word-spec-examples/World_Spec_Document_Marcus.docx` | Source/reference example World Spec document. | Preserve separately from authored work. |
-| `reference/word-spec-examples/World_Spec_Document_Opus.docx` | Source/reference example World Spec document. | Preserve separately from authored work. |
+| `reference/word-spec-examples/` | Local-only source/reference example corpus. | Gitignored; preserve locally as reference material only, not authored project content or a source-of-truth hierarchy. |
 
 ## Reference Checklists And Workflows
 

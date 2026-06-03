@@ -139,7 +139,7 @@ Supplementary File Construction / LOCKED.
 - Surgical History ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/surgical-history-ratification.md`
 - Daily Hospital Course Framework v1: `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md`
 - Daily Hospital Course Framework ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md`
-- Fetched World Spec example source documents: `reference/word-spec-examples/`
+- Fetched World Spec example source documents: `reference/word-spec-examples/` (local-only / gitignored)
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 - World Spec prep folder structure: reorganized by lifecycle buckets (`candidate-review/`, `locked/`, `ratifications/`, `reviews/`, `decision-logs/`, `planning-scaffolds/`)
 - Next eligible phase: Task Prompt Architecture. Do not create task specifications, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission artifacts, or RL Studio uploads until explicitly authorized.
@@ -161,7 +161,7 @@ Supplementary File Construction / LOCKED.
 - Do not create milestones before Alexander authorizes that step.
 - Do not create task-level, supplementary, or downstream task/file contents before Alexander authorizes that step.
 - Do not revise locked task architecture or create task prompts before Alexander authorizes that step.
-- Do not treat fetched World Spec examples as authored Korvin Merrow content.
+- Do not treat fetched World Spec examples as authored Korvin Merrow content or source-of-truth material.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
 - Do not modify clinical content beyond reviewer-required remediation without Alexander approval.
 - Do not start supplementary file generation, task prompts, golden responses, grader guidelines, or failure analysis without explicit authorization.
