@@ -2,7 +2,7 @@
 
 ## Current Phase
 
-Expected Output Construction / LOCKED.
+Golden Architecture / CANDIDATE REVIEW.
 
 ## Current World
 
@@ -12,7 +12,7 @@ Working title: Korvin Merrow World
 
 Brainstorm Human Review returned GO from Stacey S after SEND BACK remediation. Reviewer approved the Korvin Merrow Brainstorm and indicated next steps are World Spec and file template development. Preparation Layer, World Spec v1, File Inventory Architecture v1, File Inventory v1, Synthetic World-Level File Construction Plan v1, FI-W01 through FI-W22, Task-Level Context File Architecture v1, FI-T01 through FI-T07, Supplementary File Architecture v1, FI-S01 through FI-S04, Task Prompt Architecture v1, Task Prompt Construction, and Expected Output Architecture v1 are locked and complete. Entire File Ecosystem is complete: FI-W01 through FI-W22, FI-T01 through FI-T07, and FI-S01 through FI-S04. Task Prompt Architecture v1 is locked at `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-v1.md`, with validation review at `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-validation-review.md` and ratification at `worlds/korvin-merrow/task-prompt-architecture/ratifications/task-prompt-architecture-ratification.md`.
 
-Task Prompt Construction is LOCKED. Six task prompts (TP-KM01 through TP-KM06) are locked under `worlds/korvin-merrow/task-prompts/locked/` with `task-prompt-construction-validation-review.md`. Ratification is recorded at `worlds/korvin-merrow/task-prompts/ratifications/task-prompt-construction-ratification.md`. Expected Output Architecture v1 is LOCKED under `worlds/korvin-merrow/expected-output-architecture/locked/`. Ratification is recorded at `worlds/korvin-merrow/expected-output-architecture/ratifications/expected-output-architecture-ratification.md`. Expected Output Construction is LOCKED under `worlds/korvin-merrow/expected-outputs/locked/`, with EO-KM01 through EO-KM06 and `expected-output-construction-validation-review.md` locked. Ratification is recorded at `worlds/korvin-merrow/expected-outputs/ratifications/expected-output-construction-ratification.md`. FI-T07 remains addendum support for EO-KM01 only; no EO-KM07 was created.
+Task Prompt Construction is LOCKED. Six task prompts (TP-KM01 through TP-KM06) are locked under `worlds/korvin-merrow/task-prompts/locked/` with `task-prompt-construction-validation-review.md`. Ratification is recorded at `worlds/korvin-merrow/task-prompts/ratifications/task-prompt-construction-ratification.md`. Expected Output Architecture v1 is LOCKED under `worlds/korvin-merrow/expected-output-architecture/locked/`. Ratification is recorded at `worlds/korvin-merrow/expected-output-architecture/ratifications/expected-output-architecture-ratification.md`. Expected Output Construction is LOCKED under `worlds/korvin-merrow/expected-outputs/locked/`, with EO-KM01 through EO-KM06 and `expected-output-construction-validation-review.md` locked. Ratification is recorded at `worlds/korvin-merrow/expected-outputs/ratifications/expected-output-construction-ratification.md`. FI-T07 remains addendum support for EO-KM01 only; no EO-KM07 was created. Golden Architecture v1 is now in candidate review at `worlds/korvin-merrow/golden-architecture/candidate-review/golden-architecture-v1.md`, with validation review at `worlds/korvin-merrow/golden-architecture/candidate-review/golden-architecture-validation-review.md`. No golden responses, grader guidance, rubrics, AutoQC responses, DOCX artifacts, submission artifacts, final medication decisions, final discharge decisions, or final risk conclusions were created.
 
 Source/reference note: Alexander added World Spec example source documents under `reference/word-spec-examples/`. This folder is intentionally local-only and gitignored because the example corpus is large and can confuse project-specific source-of-truth boundaries. Preserve it as source/reference material, not authored Korvin Merrow content.
 
@@ -40,19 +40,19 @@ Reviewer GO: Stacey S approved Brainstorm via Slack. Recorded in `worlds/korvin-
 
 ## Current Pass
 
-Expected Output Construction: LOCKED. Locked artifacts are under `worlds/korvin-merrow/expected-outputs/locked/`: EO-KM01 through EO-KM06 plus `expected-output-construction-validation-review.md`. Ratification is recorded at `worlds/korvin-merrow/expected-outputs/ratifications/expected-output-construction-ratification.md`.
+Golden Architecture: CANDIDATE REVIEW. Candidate artifacts are under `worlds/korvin-merrow/golden-architecture/candidate-review/`: `golden-architecture-v1.md` and `golden-architecture-validation-review.md`.
 
 ## Next Pass
 
-Next eligible phase: Golden Architecture. Golden responses, grader guidance, rubrics, AutoQC, DOCX population, Studio submission packaging, and RL Studio upload remain blocked until specifically authorized.
+Next eligible phase: Golden Architecture Review. Golden responses, grader guidance, rubrics, AutoQC, DOCX population, Studio submission packaging, and RL Studio upload remain blocked until specifically authorized.
 
 ## Active Blocker
 
-No active reviewer blocker. Entire File Ecosystem is complete and locked. Task Prompt Architecture v1 is locked and Task Prompt Architecture is complete. Task Prompt Construction is locked and Task Prompts are complete. Expected Output Architecture v1 is locked and Expected Output Architecture is complete. Expected Output Construction is locked and Expected Outputs are complete. Golden responses, grader guidance, rubrics, AutoQC, DOCX population, Studio submission packaging, and RL Studio upload remain blocked until specifically authorized.
+No active reviewer blocker. Entire File Ecosystem is complete and locked. Task Prompt Architecture v1 is locked and Task Prompt Architecture is complete. Task Prompt Construction is locked and Task Prompts are complete. Expected Output Architecture v1 is locked and Expected Output Architecture is complete. Expected Output Construction is locked and Expected Outputs are complete. Golden Architecture v1 is in candidate review. Golden responses, grader guidance, rubrics, AutoQC, DOCX population, Studio submission packaging, and RL Studio upload remain blocked until specifically authorized.
 
 ## Current Git Checkpoint
 
-checkpoint: ratify expected output construction
+checkpoint: create golden architecture v1
 
 ## Active Branch
 
@@ -68,10 +68,10 @@ Return to baseline commit if workflow becomes corrupted.
 
 ## Next Command For Codex
 
-Proceed with Golden Architecture only when Alexander authorizes that phase. Do not create golden responses, grader guidance, rubrics, AutoQC responses, DOCX submission artifacts, Studio submission packaging, or RL Studio uploads before Alexander explicitly authorizes the relevant phase.
+Proceed with Golden Architecture Review only when Alexander authorizes review. Do not create golden responses, grader guidance, rubrics, AutoQC responses, DOCX submission artifacts, Studio submission packaging, or RL Studio uploads before Alexander explicitly authorizes the relevant phase.
 
 At the end of any working session, apply the collaborator session-exit discipline before final reporting and commit completed process or construction work unless Alexander explicitly instructs not to commit.
 
 ## Scope Guardrails
 
-Do not proceed beyond Expected Output Construction lock into Golden Architecture, golden responses, grader guidelines, rubrics, AutoQC, DOCX packaging, submission artifacts, or failure analysis unless Alexander explicitly updates the project phase. Supplementary File Construction is locked, Supplementary Files are complete, Task Prompt Architecture is complete, Task Prompts are complete, Expected Output Architecture is complete, and Expected Outputs are complete.
+Do not proceed beyond Golden Architecture candidate review into Golden Architecture Review, Golden Architecture lock, golden responses, grader guidelines, rubrics, AutoQC, DOCX packaging, submission artifacts, or failure analysis unless Alexander explicitly updates the project phase. Supplementary File Construction is locked, Supplementary Files are complete, Task Prompt Architecture is complete, Task Prompts are complete, Expected Output Architecture is complete, Expected Outputs are complete, and Golden Architecture v1 is in candidate review.
