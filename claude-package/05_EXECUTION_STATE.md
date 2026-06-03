@@ -4,9 +4,9 @@ Purpose: compressed current state for Claude. Use `project/STATUS.md` and `docs/
 
 ## Project State
 
-Current phase: Expected Output Architecture v1 / CANDIDATE REVIEW.
+Current phase: Expected Output Architecture v1 / LOCKED.
 
-FI-W20 inventory row reconciliation is recorded at `worlds/korvin-merrow/file-inventory/reviews/fi-w20-inventory-row-reconciliation.md`. FI-S03 Trap #5 reconciliation is recorded at `worlds/korvin-merrow/file-inventory/reviews/supplementary-file-trap5-reconciliation.md`. World-Level Synthetic File Layer, Task-Level Context Files, Supplementary Files, the Entire File Ecosystem, Task Prompt Architecture, and Task Prompt Construction are complete and locked. Task Prompt Architecture v1 is locked at `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-v1.md`, with validation review at `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-validation-review.md` and ratification at `worlds/korvin-merrow/task-prompt-architecture/ratifications/task-prompt-architecture-ratification.md`. Task Prompt Construction is locked at `worlds/korvin-merrow/task-prompts/locked/`; TP-KM01 through TP-KM06 and `task-prompt-construction-validation-review.md` are locked, with ratification recorded at `worlds/korvin-merrow/task-prompts/ratifications/task-prompt-construction-ratification.md`. Expected Output Architecture v1 is in candidate review at `worlds/korvin-merrow/expected-output-architecture/candidate-review/`.
+FI-W20 inventory row reconciliation is recorded at `worlds/korvin-merrow/file-inventory/reviews/fi-w20-inventory-row-reconciliation.md`. FI-S03 Trap #5 reconciliation is recorded at `worlds/korvin-merrow/file-inventory/reviews/supplementary-file-trap5-reconciliation.md`. World-Level Synthetic File Layer, Task-Level Context Files, Supplementary Files, the Entire File Ecosystem, Task Prompt Architecture, Task Prompt Construction, and Expected Output Architecture are complete and locked. Task Prompt Architecture v1 is locked at `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-v1.md`, with validation review at `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-validation-review.md` and ratification at `worlds/korvin-merrow/task-prompt-architecture/ratifications/task-prompt-architecture-ratification.md`. Task Prompt Construction is locked at `worlds/korvin-merrow/task-prompts/locked/`; TP-KM01 through TP-KM06 and `task-prompt-construction-validation-review.md` are locked, with ratification recorded at `worlds/korvin-merrow/task-prompts/ratifications/task-prompt-construction-ratification.md`. Expected Output Architecture v1 is locked at `worlds/korvin-merrow/expected-output-architecture/locked/`, with ratification recorded at `worlds/korvin-merrow/expected-output-architecture/ratifications/expected-output-architecture-ratification.md`.
 
 Brainstorm:
 
@@ -24,7 +24,7 @@ Brainstorm:
 
 Current blocker:
 
-- No reviewer blocker. Entire File Ecosystem is complete and locked. Task Prompt Architecture v1 is locked and Task Prompt Architecture is complete. Task Prompt Construction is locked and Task Prompts are complete. Expected Output Architecture v1 is in candidate review. Expected Output Architecture Review is the next eligible phase. Actual expected outputs, goldens, grader guidance, DOCX submission packaging, AutoQC, and RL Studio upload remain gated on explicit Alexander authorization for the relevant step.
+- No reviewer blocker. Entire File Ecosystem is complete and locked. Task Prompt Architecture v1 is locked and Task Prompt Architecture is complete. Task Prompt Construction is locked and Task Prompts are complete. Expected Output Architecture v1 is locked and Expected Output Architecture is complete. Expected Output Construction is the next eligible phase. Actual expected-output text, goldens, grader guidance, DOCX submission packaging, AutoQC, and RL Studio upload remain gated on explicit Alexander authorization for the relevant step.
 
 Next legal action:
 

@@ -1600,7 +1600,7 @@ Construction authorization:
 
 - Alexander authorized Task-Level Context File Construction after Task-Level Context File Architecture v1 lock.
 
-Candidate artifacts:
+Historical candidate artifacts before lock:
 
 - `worlds/korvin-merrow/task-context-files/candidate-review/FI-T01_discharge-medication-reconciliation-request-context.md`
 - `worlds/korvin-merrow/task-context-files/candidate-review/FI-T02_discharge-summary-drafting-request-context.md`
@@ -1620,7 +1620,7 @@ Validation:
 - No task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, RL Studio submission artifacts, FI-S files, supplementary files, or final task outputs were created.
 - FI-W01 through FI-W22 remain locked and unchanged.
 
-Next eligible phase:
+Historical next eligible phase at time of candidate construction:
 
 - Task-Level Context File Construction Review.
 
@@ -2093,3 +2093,53 @@ Boundary:
 Next eligible phase:
 
 - Expected Output Architecture Review.
+
+## Expected Output Architecture v1 Ratification Record
+
+Status:
+
+- Expected Output Architecture v1: LOCKED.
+- Expected Output Architecture: COMPLETE.
+
+Authorization:
+
+- Alexander authorized Expected Output Architecture v1 ratification and lock after candidate review completion.
+
+Review outcomes:
+
+- Reviewer A verdict: LOCK READY; Clinical Architecture Status: STRONG; Final Recommendation: GO.
+- Reviewer B verdict: LOCK READY; Clinical Architecture Status: STRONG; Final Recommendation: GO.
+- True defects: NONE.
+- Governance / metadata inconsistencies: NONE.
+- Canon conflicts: NONE.
+- Open reconciliations: NONE.
+
+Locked artifacts:
+
+- `worlds/korvin-merrow/expected-output-architecture/locked/expected-output-architecture-v1.md`
+- `worlds/korvin-merrow/expected-output-architecture/locked/expected-output-architecture-validation-review.md`
+
+Ratification:
+
+- `worlds/korvin-merrow/expected-output-architecture/ratifications/expected-output-architecture-ratification.md`
+
+Ratified decisions:
+
+- Six expected-output architecture slots approved.
+- EO-KM01 through EO-KM06 approved.
+- One-to-one relationship with TP-KM01 through TP-KM06 preserved.
+- FI-T07 addendum relationship preserved; FI-T07 remains support for medication-safety architecture and does not create a seventh expected-output slot.
+- Workflow fidelity verified.
+- Trap protection verified.
+- Friction protection verified.
+- Hierarchy protection verified.
+- Anti-overanswer protections verified.
+- Anti-underanswer protections verified.
+
+Boundary:
+
+- This does not authorize actual expected-output text, golden responses, grader guidance, AutoQC responses, DOCX artifacts, submission artifacts, RL Studio materials, or downstream task-output construction.
+
+Next eligible phase:
+
+- Expected Output Construction.
