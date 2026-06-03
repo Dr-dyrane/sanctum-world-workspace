@@ -1,6 +1,6 @@
 # Korvin Merrow World Spec Kickoff
 
-Status: Golden Construction / LOCKED.
+Status: Grader Guidance Architecture / CANDIDATE REVIEW.
 
 Purpose: active cockpit for the transition from approved Brainstorm through World Spec construction while preserving phase boundaries around template population, file inventory, tasks, and downstream deliverables.
 
@@ -657,3 +657,29 @@ Stop before:
 - RL Studio upload/submission without explicit authorization.
 
 If any requested step appears to cross these boundaries, pause and ask Alexander.
+
+## 8. Current Downstream Construction State
+
+Grader Guidance Architecture v1 is in candidate review.
+
+Candidate artifacts:
+
+- `worlds/korvin-merrow/grader-guidance-architecture/candidate-review/grader-guidance-architecture-v1.md`.
+- `worlds/korvin-merrow/grader-guidance-architecture/candidate-review/grader-guidance-architecture-validation-review.md`.
+
+Locked upstream chain:
+
+- World Spec v1.
+- File Inventory v1.
+- FI-W01 through FI-W22.
+- FI-T01 through FI-T07.
+- FI-S01 through FI-S04.
+- TP-KM01 through TP-KM06.
+- EO-KM01 through EO-KM06.
+- Golden-KM01 through Golden-KM06.
+
+Boundary:
+
+- Grader Guidance Architecture is architecture only.
+- No GG-KM files, actual grader guidance, scoring rubrics, scoring thresholds, AutoQC responses, DOCX artifacts, submission artifacts, or RL Studio materials have been created.
+- Next eligible phase is Grader Guidance Architecture Review.

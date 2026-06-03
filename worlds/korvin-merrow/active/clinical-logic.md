@@ -423,8 +423,9 @@ File Inventory Architecture v1:
 - Golden Architecture status is COMPLETE.
 - Golden Construction status is LOCKED at `worlds/korvin-merrow/goldens/locked/`.
 - Goldens status is COMPLETE.
-- Next eligible phase is Grader Guidance Architecture.
-- Grader guidance, rubrics, AutoQC responses, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
+- Grader Guidance Architecture v1 is in candidate review at `worlds/korvin-merrow/grader-guidance-architecture/candidate-review/`.
+- Next eligible phase is Grader Guidance Architecture Review.
+- Actual grader guidance, scoring rubrics, scoring thresholds, AutoQC responses, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
 
 ## Key Milestones Calendar Skeleton v1
 
@@ -951,7 +952,11 @@ Task-Level Context File Architecture v1:
 - Ratification: `worlds/korvin-merrow/goldens/ratifications/golden-construction-ratification.md`.
 - Goldens status: COMPLETE.
 - Golden Construction preserves medication algorithm nuance, Cardiology vs Nephrology tension, prednisone hierarchy, FI-W22 visible-but-incomplete status, FI-S supporting/background status, no invented follow-up facts, and no retrospective outcome invention.
-- Next eligible phase: Grader Guidance Architecture.
+- Grader Guidance Architecture v1 is in candidate review at `worlds/korvin-merrow/grader-guidance-architecture/candidate-review/`.
+- Grader Guidance Architecture v1 preserves the principle that future grader guidance should reward strong physician reasoning rather than verbatim matching to the golden.
+- Architecture guardrails: no GG-KM07, FI-T07 remains addendum support for GG-KM01 only, FI-W22 remains visible but incomplete, FI-S files remain background/supporting only, hierarchy remains reasoning rather than shortcut logic, and frictions remain defensible disagreements rather than automatic winner selection.
+- No grader guidance, scoring rubrics, scoring thresholds, AutoQC responses, DOCX artifacts, submission materials, or RL Studio activity have been created.
+- Next eligible phase: Grader Guidance Architecture Review.
 
 ## Major Clinical Friction Themes
 

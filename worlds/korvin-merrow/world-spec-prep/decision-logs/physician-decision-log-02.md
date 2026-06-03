@@ -2469,3 +2469,52 @@ Boundary:
 Next eligible phase:
 
 - Grader Guidance Architecture.
+
+## Grader Guidance Architecture Candidate Record
+
+Date: 2026-06-03
+
+Status:
+
+- Grader Guidance Architecture v1: CANDIDATE REVIEW.
+
+Authorization:
+
+- Alexander authorized Grader Guidance Architecture v1 construction after Golden Construction ratification and lock.
+- Construction scope was limited to architecture and validation review.
+
+Candidate artifacts:
+
+- `worlds/korvin-merrow/grader-guidance-architecture/candidate-review/grader-guidance-architecture-v1.md`
+- `worlds/korvin-merrow/grader-guidance-architecture/candidate-review/grader-guidance-architecture-validation-review.md`
+
+Architectural decisions recorded:
+
+- Future grader guidance should reward strong physician reasoning rather than verbatim matching to the golden.
+- GG-KM01 through GG-KM06 map one-to-one to TP-KM01 through TP-KM06, EO-KM01 through EO-KM06, and Golden-KM01 through Golden-KM06.
+- FI-T07 remains addendum support for GG-KM01 only.
+- No GG-KM07 is created.
+- Golden-KM01 is protected from becoming a rigid medication answer key.
+- Golden-KM03 is protected from becoming a discharge authorization key.
+- Golden-KM05 is protected from permitting invented follow-up facts.
+- Golden-KM06 is protected from becoming RCA or outcome scoring.
+- FI-W22 remains visible but incomplete.
+- FI-S files remain optional/background and cannot carry sole critical evidence.
+- Hierarchy remains reasoning support, not shortcut answer logic.
+- Frictions remain defensible disagreements, not automatic winner selection.
+
+Boundary:
+
+- No grader guidance was created.
+- No scoring rubrics were created.
+- No scoring thresholds were created.
+- No pass/fail criteria were created.
+- No AutoQC responses were created.
+- No DOCX artifacts were created.
+- No submission artifacts were created.
+- No RL Studio materials were created.
+- No locked canonical artifacts were modified.
+
+Next eligible phase:
+
+- Grader Guidance Architecture Review.
