@@ -413,8 +413,12 @@ File Inventory Architecture v1:
 - Locked files: `expected-output-architecture-v1.md` and `expected-output-architecture-validation-review.md`.
 - Ratification is recorded at `worlds/korvin-merrow/expected-output-architecture/ratifications/expected-output-architecture-ratification.md`.
 - Expected Output Architecture status is complete.
-- Next eligible phase is Expected Output Construction.
-- Actual expected-output text, goldens, grader guidance, AutoQC responses, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
+- Expected Output Construction status is CANDIDATE REVIEW.
+- Candidate files are under `worlds/korvin-merrow/expected-outputs/candidate-review/`.
+- Files constructed: EO-KM01 through EO-KM06 plus `expected-output-construction-validation-review.md`.
+- FI-T07 remains addendum support for EO-KM01 only; no EO-KM07 exists.
+- Next eligible phase is Expected Output Construction Review.
+- Goldens, grader guidance, rubrics, AutoQC responses, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
 
 ## Key Milestones Calendar Skeleton v1
 
@@ -888,7 +892,7 @@ Batch 5 clinical logic:
 
 Boundary:
 
-- FI-W22 is locked and the world-level synthetic file layer is complete. Task-Level Context File Architecture v1 is locked and complete. FI-T01 through FI-T07 are locked at `worlds/korvin-merrow/task-context-files/locked/`, with ratification recorded at `worlds/korvin-merrow/task-context-files/ratifications/task-level-context-file-construction-ratification.md`. FI-S01 through FI-S04 are locked at `worlds/korvin-merrow/supplementary-files/locked/`, with ratification recorded at `worlds/korvin-merrow/supplementary-files/ratifications/supplementary-file-construction-ratification.md`. Entire File Ecosystem is complete. Task Prompt Architecture v1 is locked and complete. Task Prompt Construction is locked at `worlds/korvin-merrow/task-prompts/locked/` with TP-KM01 through TP-KM06 locked. Task Prompt Construction ratification is recorded at `worlds/korvin-merrow/task-prompts/ratifications/task-prompt-construction-ratification.md`. Expected Output Architecture v1 is locked and creates no actual expected outputs. Expected Output Architecture is complete. Do not create actual expected-output text, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission materials, or RL Studio activity until explicitly authorized.
+- FI-W22 is locked and the world-level synthetic file layer is complete. Task-Level Context File Architecture v1 is locked and complete. FI-T01 through FI-T07 are locked at `worlds/korvin-merrow/task-context-files/locked/`, with ratification recorded at `worlds/korvin-merrow/task-context-files/ratifications/task-level-context-file-construction-ratification.md`. FI-S01 through FI-S04 are locked at `worlds/korvin-merrow/supplementary-files/locked/`, with ratification recorded at `worlds/korvin-merrow/supplementary-files/ratifications/supplementary-file-construction-ratification.md`. Entire File Ecosystem is complete. Task Prompt Architecture v1 is locked and complete. Task Prompt Construction is locked at `worlds/korvin-merrow/task-prompts/locked/` with TP-KM01 through TP-KM06 locked. Task Prompt Construction ratification is recorded at `worlds/korvin-merrow/task-prompts/ratifications/task-prompt-construction-ratification.md`. Expected Output Architecture v1 is locked. Expected Output Construction is in candidate review with EO-KM01 through EO-KM06 under `worlds/korvin-merrow/expected-outputs/candidate-review/`. Do not create goldens, grader guidance, rubrics, AutoQC responses, DOCX artifacts, submission materials, or RL Studio activity until explicitly authorized.
 
 Task-Level Context File Architecture v1:
 
@@ -930,7 +934,9 @@ Task-Level Context File Architecture v1:
 - Locked files: `worlds/korvin-merrow/expected-output-architecture/locked/`.
 - Ratification: `worlds/korvin-merrow/expected-output-architecture/ratifications/expected-output-architecture-ratification.md`.
 - Expected Output Architecture: COMPLETE.
-- Next eligible phase: Expected Output Construction.
+- Expected Output Construction: CANDIDATE REVIEW.
+- Candidate files: EO-KM01 through EO-KM06 plus `expected-output-construction-validation-review.md` at `worlds/korvin-merrow/expected-outputs/candidate-review/`.
+- Next eligible phase: Expected Output Construction Review.
 
 ## Major Clinical Friction Themes
 

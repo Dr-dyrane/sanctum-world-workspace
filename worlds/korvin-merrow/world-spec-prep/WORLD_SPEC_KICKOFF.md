@@ -1,6 +1,6 @@
 # Korvin Merrow World Spec Kickoff
 
-Status: Expected Output Architecture v1 / LOCKED.
+Status: Expected Output Construction / CANDIDATE REVIEW.
 
 Purpose: active cockpit for the transition from approved Brainstorm through World Spec construction while preserving phase boundaries around template population, file inventory, tasks, and downstream deliverables.
 
@@ -86,8 +86,12 @@ Purpose: active cockpit for the transition from approved Brainstorm through Worl
 - Locked files: `expected-output-architecture-v1.md` and `expected-output-architecture-validation-review.md`.
 - Ratification: `worlds/korvin-merrow/expected-output-architecture/ratifications/expected-output-architecture-ratification.md`.
 - Expected Output Architecture status: COMPLETE.
-- Next eligible phase: Expected Output Construction.
-- Expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission packaging, RL Studio upload, and submission materials have not started.
+- Expected Output Construction status: CANDIDATE REVIEW.
+- Expected Output candidate files: `worlds/korvin-merrow/expected-outputs/candidate-review/`.
+- Files constructed: EO-KM01 through EO-KM06 plus `expected-output-construction-validation-review.md`.
+- FI-T07 remains addendum support for EO-KM01 only; no EO-KM07 exists.
+- Next eligible phase: Expected Output Construction Review.
+- Goldens, grader guidance, rubrics, AutoQC responses, DOCX submission packaging, RL Studio upload, and submission materials have not started.
 - Clinical Story Skeleton v1 is locked and ratified.
 - Clinical Story Skeleton review completed with GO recommendation.
 - Clinical Story Skeleton ratification completed after Claude hostile review minor findings.
@@ -121,7 +125,7 @@ Purpose: active cockpit for the transition from approved Brainstorm through Worl
 - Daily Hospital Course Framework v1: `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md`.
 - Daily Hospital Course Framework ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md`.
 - Preparation Layer status: COMPLETE.
-- Next eligible phase: Expected Output Construction. Actual expected-output text, goldens, grader guidance, AutoQC responses, DOCX submission packaging, RL Studio upload, and RL Studio activity remain blocked until explicitly authorized.
+- Next eligible phase: Expected Output Construction Review. Goldens, grader guidance, rubrics, AutoQC responses, DOCX submission packaging, RL Studio upload, and RL Studio activity remain blocked until explicitly authorized.
 
 ## Workspace Bloat And Doctrine Audit
 
@@ -139,8 +143,8 @@ Doctrine check:
 - World Spec v1 has been locked and ratified.
 - No official World Spec template has been populated.
 - File Inventory v1 planned inventory table has been locked, and all world-level synthetic chart files FI-W01 through FI-W22 are locked.
-- Task-Level Context File Architecture v1 is locked. FI-T01 through FI-T07 have been locked as request-framing files only. FI-S01 through FI-S04 have been locked as supplementary files only. Entire File Ecosystem is complete. No prompts, goldens, grader guidance, AutoQC responses, DOCX artifacts, or submission materials have been created. P0/P1/P2 labels are tracker-provenance metadata only, not governing workflow architecture.
-- No final task prompts, golden responses, grader guidelines, or failure analysis have been created.
+- Task-Level Context File Architecture v1 is locked. FI-T01 through FI-T07 have been locked as request-framing files only. FI-S01 through FI-S04 have been locked as supplementary files only. Entire File Ecosystem is complete. TP-KM01 through TP-KM06 have been locked as task prompts. Expected-output drafts EO-KM01 through EO-KM06 are in candidate review only. No goldens, grader guidance, rubrics, AutoQC responses, DOCX artifacts, or submission materials have been created. P0/P1/P2 labels are tracker-provenance metadata only, not governing workflow architecture.
+- No golden responses, grader guidelines, rubrics, AutoQC responses, DOCX artifacts, submission artifacts, or failure analysis have been created.
 - Clinical decisions remain physician-originated and Brainstorm-locked.
 - Claude remains an official drafting assistant, not the clinical source of truth.
 
@@ -432,7 +436,7 @@ Preparation Layer:
 - Status: COMPLETE.
 - Completed artifacts: Brainstorm, Temporal Architecture, Clinical Story Skeleton, Identity Package, Governance Package, Key Milestones Calendar Skeleton, Baseline Anchor Package, Clinical Story Timeline Package, Task Architecture Package, Medication Expansion Package, Comorbidity Expansion Package, Provider Roster Package, Surgical History Package, and Daily Hospital Course Framework.
 - World Spec Construction status: COMPLETE.
-- Boundary: World Spec v1 is locked. File Inventory Architecture v1 is locked, Phase 3 File Inventory Architecture is complete, File Inventory v1 is locked with FI-W20, FI-T, and FI-S03 Trap #5 metadata reconciliations recorded, File Inventory Planning is complete, Synthetic World-Level File Construction Plan v1 is locked, Synthetic File Construction Governance is complete, Batch 1 FI-W01 through FI-W07 are locked, Batch 2 FI-W08 through FI-W13 are locked, Batch 3 FI-W14 through FI-W16 are locked, Batch 4 FI-W17 through FI-W21 are locked, Batch 5 FI-W22 is locked, the World-Level Synthetic File Layer is complete, Task-Level Context File Architecture v1 is locked, Task-Level Context File Construction is locked, Supplementary File Architecture v1 is locked, Supplementary File Construction is locked, and Task Prompt Architecture v1 is locked. Entire File Ecosystem and Task Prompt Architecture are complete. Expected outputs, goldens, grader guidance, AutoQC responses, DOCX submission packaging, RL Studio upload, and RL Studio activity remain unstarted until Alexander explicitly authorizes the relevant next step.
+- Boundary: World Spec v1 is locked. File Inventory Architecture v1 is locked, Phase 3 File Inventory Architecture is complete, File Inventory v1 is locked with FI-W20, FI-T, and FI-S03 Trap #5 metadata reconciliations recorded, File Inventory Planning is complete, Synthetic World-Level File Construction Plan v1 is locked, Synthetic File Construction Governance is complete, Batch 1 FI-W01 through FI-W07 are locked, Batch 2 FI-W08 through FI-W13 are locked, Batch 3 FI-W14 through FI-W16 are locked, Batch 4 FI-W17 through FI-W21 are locked, Batch 5 FI-W22 is locked, the World-Level Synthetic File Layer is complete, Task-Level Context File Architecture v1 is locked, Task-Level Context File Construction is locked, Supplementary File Architecture v1 is locked, Supplementary File Construction is locked, Task Prompt Architecture v1 is locked, Task Prompt Construction is locked, and Expected Output Architecture v1 is locked. Entire File Ecosystem, Task Prompt Architecture, Task Prompts, and Expected Output Architecture are complete. Expected Output Construction is candidate review only. Goldens, grader guidance, rubrics, AutoQC responses, DOCX submission packaging, RL Studio upload, and RL Studio activity remain unstarted until Alexander explicitly authorizes the relevant next step.
 
 File Inventory Architecture v1:
 
@@ -441,7 +445,7 @@ File Inventory Architecture v1:
 - Ratification: `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-architecture-ratification.md`.
 - Purpose: define the planned file ecosystem for the locked World Spec without creating final Section 3 rows, filenames, synthetic files, notes, labs, vitals, medication lists, task prompts, expected outputs, goldens, or grader guidance.
 - It preserves the world close at 05/23/2026 18:00, classifies post-world anchors as task/post-world context only, maps all five traps and three frictions to planned file-source categories, and records future AutoQC v6.3 8-column file-plan readiness.
-- Next eligible phase: Expected Output Construction.
+- Next eligible phase: Expected Output Construction Review.
 - File Inventory v1 locked table: `worlds/korvin-merrow/file-inventory/locked/file-inventory-v1.md`.
 - File Inventory v1 ratification: `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-v1-ratification.md`.
 - FI-T metadata reconciliation: `worlds/korvin-merrow/file-inventory/reviews/fi-t-inventory-task-layer-architecture-reconciliation.md`.
@@ -509,7 +513,7 @@ Synthetic World-Level File Construction Plan v1:
 - Ratification: `worlds/korvin-merrow/supplementary-files/ratifications/supplementary-file-construction-ratification.md`.
 - Supplementary Files status: COMPLETE.
 - Entire File Ecosystem status: COMPLETE.
-- Next eligible phase: Expected Output Construction.
+- Next eligible phase: Expected Output Construction Review.
 
 Fetched World Spec source examples:
 

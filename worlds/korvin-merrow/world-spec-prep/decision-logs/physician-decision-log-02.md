@@ -2143,3 +2143,44 @@ Boundary:
 Next eligible phase:
 
 - Expected Output Construction.
+
+## Expected Output Construction Candidate Record
+
+Status:
+
+- Expected Output Construction: CANDIDATE REVIEW.
+
+Authorization:
+
+- Alexander authorized Expected Output Construction after Expected Output Architecture v1 lock.
+
+Candidate artifacts:
+
+- `worlds/korvin-merrow/expected-outputs/candidate-review/EO-KM01.md`
+- `worlds/korvin-merrow/expected-outputs/candidate-review/EO-KM02.md`
+- `worlds/korvin-merrow/expected-outputs/candidate-review/EO-KM03.md`
+- `worlds/korvin-merrow/expected-outputs/candidate-review/EO-KM04.md`
+- `worlds/korvin-merrow/expected-outputs/candidate-review/EO-KM05.md`
+- `worlds/korvin-merrow/expected-outputs/candidate-review/EO-KM06.md`
+- `worlds/korvin-merrow/expected-outputs/candidate-review/expected-output-construction-validation-review.md`
+
+Construction decisions:
+
+- EO-KM01 through EO-KM06 map one-to-one to TP-KM01 through TP-KM06.
+- FI-T07 remains medication-safety addendum support for EO-KM01 only.
+- No EO-KM07 was created.
+- Candidate expected outputs are physician-facing, chart-grounded, and aligned with locked Expected Output Architecture v1.
+
+Boundary:
+
+- No golden responses were created.
+- No grader guidance was created.
+- No rubrics were created.
+- No AutoQC responses were created.
+- No DOCX artifacts were created.
+- No submission artifacts or RL Studio materials were created.
+- Locked artifacts were not modified.
+
+Next eligible phase:
+
+- Expected Output Construction Review.

@@ -4,7 +4,7 @@ Purpose: local repository hygiene map to prevent duplicate working files and acc
 
 Generated from local workspace file listing excluding `.git`, caches, and Python bytecode.
 
-Current status: Expected Output Architecture v1 / LOCKED. Locked and complete layers include World Spec v1, File Inventory Architecture v1, File Inventory v1, World-Level Synthetic File Layer FI-W01 through FI-W22, Task-Level Context Files FI-T01 through FI-T07, Supplementary Files FI-S01 through FI-S04, the Entire File Ecosystem, Task Prompt Architecture v1, Task Prompts TP-KM01 through TP-KM06, and Expected Output Architecture v1. Task Prompt Construction is locked at `worlds/korvin-merrow/task-prompts/locked/`, with ratification at `worlds/korvin-merrow/task-prompts/ratifications/task-prompt-construction-ratification.md`. Expected Output Architecture v1 locked artifacts are under `worlds/korvin-merrow/expected-output-architecture/locked/`, with ratification at `worlds/korvin-merrow/expected-output-architecture/ratifications/expected-output-architecture-ratification.md`. Next eligible phase is Expected Output Construction. Actual expected-output text, goldens, grader guidance, DOCX submission packaging, AutoQC, and RL Studio upload have not started.
+Current status: Expected Output Construction / CANDIDATE REVIEW. Locked and complete layers include World Spec v1, File Inventory Architecture v1, File Inventory v1, World-Level Synthetic File Layer FI-W01 through FI-W22, Task-Level Context Files FI-T01 through FI-T07, Supplementary Files FI-S01 through FI-S04, the Entire File Ecosystem, Task Prompt Architecture v1, Task Prompts TP-KM01 through TP-KM06, and Expected Output Architecture v1. Task Prompt Construction is locked at `worlds/korvin-merrow/task-prompts/locked/`, with ratification at `worlds/korvin-merrow/task-prompts/ratifications/task-prompt-construction-ratification.md`. Expected Output Architecture v1 locked artifacts are under `worlds/korvin-merrow/expected-output-architecture/locked/`, with ratification at `worlds/korvin-merrow/expected-output-architecture/ratifications/expected-output-architecture-ratification.md`. Expected Output Construction candidate artifacts are under `worlds/korvin-merrow/expected-outputs/candidate-review/`: EO-KM01 through EO-KM06 plus `expected-output-construction-validation-review.md`. Next eligible phase is Expected Output Construction Review. Goldens, grader guidance, rubrics, DOCX submission packaging, AutoQC, and RL Studio upload have not started.
 
 ## Navigation Rule
 
@@ -81,9 +81,11 @@ For a new collaborator or new AI session, read in this order:
 69. `worlds/korvin-merrow/expected-output-architecture/locked/expected-output-architecture-v1.md` for locked Expected Output Architecture v1.
 70. `worlds/korvin-merrow/expected-output-architecture/locked/expected-output-architecture-validation-review.md` for locked Expected Output Architecture validation.
 71. `worlds/korvin-merrow/expected-output-architecture/ratifications/expected-output-architecture-ratification.md` for Expected Output Architecture v1 lock record.
-72. `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md` for historical interview basis.
-73. `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions and construction-lock status.
-74. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
+72. `worlds/korvin-merrow/expected-outputs/candidate-review/EO-KM01.md` through `EO-KM06.md` for active expected-output candidate drafts.
+73. `worlds/korvin-merrow/expected-outputs/candidate-review/expected-output-construction-validation-review.md` for Expected Output Construction validation.
+74. `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md` for historical interview basis.
+75. `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions and construction-lock status.
+76. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
 
 Do not start by opening every prep file. Most prep files are supporting memory, not active instructions.
 
@@ -516,6 +518,25 @@ Lifecycle clustering:
 | `worlds/korvin-merrow/expected-output-architecture/locked/expected-output-architecture-v1.md` | Locked expected-output architecture. | Defines EO-KM01 through EO-KM06 structure, deliverable surfaces, reasoning domains, source dependencies, trap/friction/hierarchy handling, and boundaries. Does not create actual expected-output text, goldens, grader guidance, AutoQC responses, DOCX artifacts, or submission artifacts. |
 | `worlds/korvin-merrow/expected-output-architecture/locked/expected-output-architecture-validation-review.md` | Locked validation review for Expected Output Architecture v1. | Verifies locked-source alignment, one-to-one prompt mapping, file dependency preservation, hierarchy preservation, and absence of actual expected outputs/goldens/grader guidance/downstream artifacts. |
 | `worlds/korvin-merrow/expected-output-architecture/ratifications/expected-output-architecture-ratification.md` | Ratification record for Expected Output Architecture v1. | Records Reviewer A/B LOCK READY / GO, STRONG clinical architecture, six EO-KM slots approved, FI-T07 addendum preservation, no true/governance/canon defects, Expected Output Architecture lock, Expected Output Architecture completion, and next eligible Expected Output Construction phase. |
+
+## Korvin Merrow Expected Outputs
+
+Lifecycle clustering:
+
+- `candidate-review/`: active expected-output drafts awaiting review or lock. EO-KM01 through EO-KM06 are currently here.
+- `locked/`: future locked expected-output drafts after ratification. Do not create until Alexander authorizes lock.
+- `ratifications/`: future ratification records for expected-output construction.
+- This area must not contain golden responses, grader guidance, rubrics, AutoQC responses, DOCX artifacts, RL Studio submission artifacts, or submission materials unless Alexander explicitly authorizes those later phases.
+
+| File | Role | Duplication note |
+| --- | --- | --- |
+| `worlds/korvin-merrow/expected-outputs/candidate-review/EO-KM01.md` | Candidate expected output for TP-KM01. | Expected-output draft only; not a golden response, grader guidance, rubric, AutoQC response, DOCX artifact, or submission artifact. FI-T07 remains addendum support for this EO only. |
+| `worlds/korvin-merrow/expected-outputs/candidate-review/EO-KM02.md` | Candidate expected output for TP-KM02. | Expected-output draft only; not a golden response, grader guidance, rubric, AutoQC response, DOCX artifact, or submission artifact. |
+| `worlds/korvin-merrow/expected-outputs/candidate-review/EO-KM03.md` | Candidate expected output for TP-KM03. | Expected-output draft only; not a golden response, grader guidance, rubric, AutoQC response, DOCX artifact, or submission artifact. |
+| `worlds/korvin-merrow/expected-outputs/candidate-review/EO-KM04.md` | Candidate expected output for TP-KM04. | Expected-output draft only; not a golden response, grader guidance, rubric, AutoQC response, DOCX artifact, or submission artifact. |
+| `worlds/korvin-merrow/expected-outputs/candidate-review/EO-KM05.md` | Candidate expected output for TP-KM05. | Expected-output draft only; not a golden response, grader guidance, rubric, AutoQC response, DOCX artifact, or submission artifact. |
+| `worlds/korvin-merrow/expected-outputs/candidate-review/EO-KM06.md` | Candidate expected output for TP-KM06. | Expected-output draft only; not a golden response, grader guidance, rubric, AutoQC response, DOCX artifact, or submission artifact. |
+| `worlds/korvin-merrow/expected-outputs/candidate-review/expected-output-construction-validation-review.md` | Candidate validation review for EO-KM01 through EO-KM06. | Confirms construction alignment and prohibited-artifact boundaries; not a ratification, golden response, grader guidance, rubric, AutoQC response, DOCX artifact, or submission artifact. |
 
 ## Korvin Merrow Supplementary File Architecture
 

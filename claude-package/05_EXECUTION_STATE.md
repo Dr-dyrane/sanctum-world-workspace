@@ -4,9 +4,9 @@ Purpose: compressed current state for Claude. Use `project/STATUS.md` and `docs/
 
 ## Project State
 
-Current phase: Expected Output Architecture v1 / LOCKED.
+Current phase: Expected Output Construction / CANDIDATE REVIEW.
 
-FI-W20 inventory row reconciliation is recorded at `worlds/korvin-merrow/file-inventory/reviews/fi-w20-inventory-row-reconciliation.md`. FI-S03 Trap #5 reconciliation is recorded at `worlds/korvin-merrow/file-inventory/reviews/supplementary-file-trap5-reconciliation.md`. World-Level Synthetic File Layer, Task-Level Context Files, Supplementary Files, the Entire File Ecosystem, Task Prompt Architecture, Task Prompt Construction, and Expected Output Architecture are complete and locked. Task Prompt Architecture v1 is locked at `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-v1.md`, with validation review at `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-validation-review.md` and ratification at `worlds/korvin-merrow/task-prompt-architecture/ratifications/task-prompt-architecture-ratification.md`. Task Prompt Construction is locked at `worlds/korvin-merrow/task-prompts/locked/`; TP-KM01 through TP-KM06 and `task-prompt-construction-validation-review.md` are locked, with ratification recorded at `worlds/korvin-merrow/task-prompts/ratifications/task-prompt-construction-ratification.md`. Expected Output Architecture v1 is locked at `worlds/korvin-merrow/expected-output-architecture/locked/`, with ratification recorded at `worlds/korvin-merrow/expected-output-architecture/ratifications/expected-output-architecture-ratification.md`.
+FI-W20 inventory row reconciliation is recorded at `worlds/korvin-merrow/file-inventory/reviews/fi-w20-inventory-row-reconciliation.md`. FI-S03 Trap #5 reconciliation is recorded at `worlds/korvin-merrow/file-inventory/reviews/supplementary-file-trap5-reconciliation.md`. World-Level Synthetic File Layer, Task-Level Context Files, Supplementary Files, the Entire File Ecosystem, Task Prompt Architecture, Task Prompt Construction, and Expected Output Architecture are complete and locked. Task Prompt Architecture v1 is locked at `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-v1.md`, with validation review at `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-validation-review.md` and ratification at `worlds/korvin-merrow/task-prompt-architecture/ratifications/task-prompt-architecture-ratification.md`. Task Prompt Construction is locked at `worlds/korvin-merrow/task-prompts/locked/`; TP-KM01 through TP-KM06 and `task-prompt-construction-validation-review.md` are locked, with ratification recorded at `worlds/korvin-merrow/task-prompts/ratifications/task-prompt-construction-ratification.md`. Expected Output Architecture v1 is locked at `worlds/korvin-merrow/expected-output-architecture/locked/`, with ratification recorded at `worlds/korvin-merrow/expected-output-architecture/ratifications/expected-output-architecture-ratification.md`. Expected Output Construction is in candidate review under `worlds/korvin-merrow/expected-outputs/candidate-review/`; EO-KM01 through EO-KM06 and `expected-output-construction-validation-review.md` have been constructed. FI-T07 remains addendum support for EO-KM01 only; no EO-KM07 exists.
 
 Brainstorm:
 
@@ -24,7 +24,7 @@ Brainstorm:
 
 Current blocker:
 
-- No reviewer blocker. Entire File Ecosystem is complete and locked. Task Prompt Architecture v1 is locked and Task Prompt Architecture is complete. Task Prompt Construction is locked and Task Prompts are complete. Expected Output Architecture v1 is locked and Expected Output Architecture is complete. Expected Output Construction is the next eligible phase. Actual expected-output text, goldens, grader guidance, DOCX submission packaging, AutoQC, and RL Studio upload remain gated on explicit Alexander authorization for the relevant step.
+- No reviewer blocker. Entire File Ecosystem is complete and locked. Task Prompt Architecture v1 is locked and Task Prompt Architecture is complete. Task Prompt Construction is locked and Task Prompts are complete. Expected Output Architecture v1 is locked and Expected Output Architecture is complete. Expected Output Construction is in candidate review. Expected Output Construction Review is the next eligible phase. Golden responses, grader guidance, rubrics, DOCX submission packaging, AutoQC, and RL Studio upload remain gated on explicit Alexander authorization for the relevant step.
 
 Next legal action:
 
@@ -164,6 +164,12 @@ Next legal action:
 - World-Level Layer Closure Audit passed at `worlds/korvin-merrow/reviews/world-level-layer-closure-audit.md`.
 - Task-Level Context File Architecture v1 ratified and locked at `worlds/korvin-merrow/task-layer-architecture/locked/task-level-context-file-architecture-v1.md`.
 - Task-Level Context File Architecture v1 ratification recorded at `worlds/korvin-merrow/task-layer-architecture/ratifications/task-level-context-file-architecture-v1-ratification.md`.
+- Task-Level Context Files locked: FI-T01 through FI-T07.
+- Supplementary Files locked: FI-S01 through FI-S04.
+- Task Prompt Architecture v1 locked.
+- Task Prompt Construction locked: TP-KM01 through TP-KM06.
+- Expected Output Architecture v1 locked.
+- Expected Output Construction candidate files created: EO-KM01 through EO-KM06 plus `worlds/korvin-merrow/expected-outputs/candidate-review/expected-output-construction-validation-review.md`.
 
 ## Latest Git Checkpoints
 
@@ -191,7 +197,7 @@ Next legal action:
 - Reviewer-risk analysis.
 - Claude package refresh.
 - Local documentation updates that preserve phase boundaries.
-- Task Prompt Construction when explicitly authorized.
+- Expected Output Construction Review when explicitly authorized.
 - Applying the Medicine Team Lead physician-perspective guidance later during authorized task design, task prompts, expected outputs, goldens, and grader guidance. This guidance is future task-layer framing only; it does not reopen Governance Package v1 or change source-of-truth hierarchy.
 - Applying collaborator session-exit discipline at the end of every working session.
 
@@ -207,9 +213,11 @@ Next legal action:
 - Creating milestones before Alexander authorizes that step.
 - Creating medication schedules, medication reconciliation outputs, hospital medication changes, admission medication lists, or discharge medication lists before Alexander authorizes those steps.
 - Creating additional synthetic patient files beyond locked Batch 1 before explicit authorization.
-- Creating final task prompts.
+- Revising locked task prompts without explicit authorization.
+- Locking expected outputs before review/ratification authorization.
 - Creating golden responses.
 - Creating grader guidelines.
+- Creating rubrics.
 - Creating failure analysis.
 - Redesigning the world, reopening Governance Package v1, or changing source-of-truth hierarchy because of the Medicine Team Lead task-design guidance.
 - Changing Brainstorm clinical content beyond the approved reviewer remediation.
