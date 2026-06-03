@@ -435,7 +435,8 @@ File Inventory Architecture v1:
 - AutoQC Construction is LOCKED at `worlds/korvin-merrow/autoqc/locked/`.
 - AutoQC Construction ratification is recorded at `worlds/korvin-merrow/autoqc/ratifications/autoqc-construction-ratification.md`.
 - AutoQC status is COMPLETE.
-- Next eligible phase is Packaging Architecture.
+- Packaging Architecture v1 is in CANDIDATE REVIEW at `worlds/korvin-merrow/packaging-architecture/candidate-review/`.
+- Next eligible phase is Packaging Architecture Review.
 - AutoQC runs, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
 
 ## Key Milestones Calendar Skeleton v1
@@ -973,7 +974,8 @@ Task-Level Context File Architecture v1:
 - AutoQC Architecture v1 is LOCKED at `worlds/korvin-merrow/autoqc-architecture/locked/`.
 - AutoQC Construction is LOCKED at `worlds/korvin-merrow/autoqc/locked/`.
 - AutoQC status is COMPLETE.
-- Next eligible phase: Packaging Architecture.
+- Packaging Architecture v1 is in CANDIDATE REVIEW at `worlds/korvin-merrow/packaging-architecture/candidate-review/`.
+- Next eligible phase: Packaging Architecture Review.
 
 ## Major Clinical Friction Themes
 

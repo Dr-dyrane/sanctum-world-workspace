@@ -2841,6 +2841,60 @@ Boundary preserved:
 - No DOCX leakage.
 - No submission leakage.
 
+## Packaging Architecture v1 Candidate Record
+
+Date recorded: 2026-06-03
+
+Status:
+
+- Packaging Architecture v1: CANDIDATE REVIEW.
+- AutoQC Construction: LOCKED.
+- AutoQC: COMPLETE.
+- Next eligible phase: Packaging Architecture Review.
+
+Authorization:
+
+- Alexander authorized Packaging Architecture v1 construction after AutoQC Construction ratification and lock.
+- This phase defines future packaging strategy only.
+- It does not create packaging artifacts.
+
+Candidate artifacts:
+
+- `worlds/korvin-merrow/packaging-architecture/candidate-review/packaging-architecture-v1.md`
+- `worlds/korvin-merrow/packaging-architecture/candidate-review/packaging-architecture-validation-review.md`
+
+Architecture scope recorded:
+
+- Packaging scope and PKG-KM01 through PKG-KM08.
+- Relationship to future AutoQC outputs.
+- Relationship to World Spec AutoQC v6.3 packaging checks.
+- Relationship to source-derived submission requirements.
+- Single-DOCX strategy.
+- Upload sequencing strategy.
+- Manifest strategy.
+- Transcript strategy.
+- Reference/template handling strategy.
+- Reconciliation handling strategy.
+- Packaging authorization boundaries.
+
+Carry-forward ambiguities:
+
+- Transcript requirement and formatting ambiguity.
+- Goldens/grader guidance submission-scope ambiguity.
+- Missing official prompts.
+- Packaging readiness checks.
+- Submission manifest dependency.
+- DOCX population dependency.
+
+Boundary preserved:
+
+- No DOCX populated.
+- No manifest created.
+- No submission package created.
+- No upload performed.
+- No AutoQC run.
+- No AutoQC responses or scoring artifacts created.
+
 ## AutoQC Construction Candidate Record
 
 Date recorded: 2026-06-03
