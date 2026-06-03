@@ -2246,9 +2246,11 @@ Next eligible phase:
 
 ## Golden Architecture Candidate And Audit Reconciliation Record
 
+Historical note: this section records the candidate/audit stage before ratification. The canonical locked artifacts are recorded in the ratification and lock record below.
+
 Status:
 
-- Golden Architecture v1: CANDIDATE REVIEW.
+- Golden Architecture v1: CANDIDATE REVIEW at the time of construction and audit reconciliation.
 - Golden Architecture Audit Reconciliation: COMPLETE.
 
 Authorization:
@@ -2256,11 +2258,11 @@ Authorization:
 - Alexander authorized Golden Architecture v1 construction after Expected Output Construction lock.
 - Alexander authorized Golden Architecture Audit Reconciliation after independent cold audit findings.
 
-Candidate artifacts:
+Historical candidate artifacts before lock:
 
-- `worlds/korvin-merrow/golden-architecture/candidate-review/golden-architecture-v1.md`
-- `worlds/korvin-merrow/golden-architecture/candidate-review/golden-architecture-validation-review.md`
-- `worlds/korvin-merrow/golden-architecture/candidate-review/golden-architecture-audit-reconciliation.md`
+- `worlds/korvin-merrow/golden-architecture/locked/golden-architecture-v1.md`
+- `worlds/korvin-merrow/golden-architecture/locked/golden-architecture-validation-review.md`
+- `worlds/korvin-merrow/golden-architecture/locked/golden-architecture-audit-reconciliation.md`
 
 Audit reconciliation findings:
 
@@ -2284,4 +2286,71 @@ Verification:
 
 Next eligible phase:
 
-- Golden Architecture Review.
+- Historical next phase at candidate/audit-reconciliation stage: Golden Architecture Review. Superseded by Golden Construction after ratification and lock.
+
+## Golden Architecture v1 Ratification And Lock Record
+
+Status:
+
+- Golden Architecture v1: LOCKED.
+- Golden Architecture: COMPLETE.
+
+Authorization:
+
+- Alexander authorized Golden Architecture v1 ratification and lock after candidate review completion, independent review LOCK READY / GO, audit completion, and audit reconciliation completion.
+
+Locked artifacts:
+
+- `worlds/korvin-merrow/golden-architecture/locked/golden-architecture-v1.md`
+- `worlds/korvin-merrow/golden-architecture/locked/golden-architecture-validation-review.md`
+- `worlds/korvin-merrow/golden-architecture/locked/golden-architecture-audit-reconciliation.md`
+
+Ratification:
+
+- `worlds/korvin-merrow/golden-architecture/ratifications/golden-architecture-ratification.md`
+
+Review outcome:
+
+- Independent review completed.
+- Audit completed.
+- Audit reconciliation completed.
+- Independent review verdict: LOCK READY.
+- Clinical Architecture Status: STRONG.
+- Golden Construction Readiness: HIGH.
+- Final Recommendation: GO.
+- No outstanding true defects.
+- No governance / metadata inconsistencies.
+- No canon conflicts.
+- No open reconciliations.
+
+Ratified findings:
+
+- Golden-KM01 through Golden-KM06 approved.
+- Six-golden architecture approved.
+- One-to-one TP -> EO -> Golden mapping verified.
+- FI-T07 addendum relationship preserved.
+- Workflow fidelity verified.
+- Hierarchy fidelity verified.
+- Friction fidelity verified.
+- Information-problem coverage verified.
+- Uncertainty preservation verified.
+- Multi-path physician-answer principle verified.
+- Golden-leakage boundary verified.
+- FI-W22 visible-but-incomplete rule preserved.
+- FI-S background/supporting role preserved.
+
+Boundary:
+
+- No golden responses were created.
+- No grader guidance was created.
+- No scoring rubrics were created.
+- No AutoQC responses were created.
+- No DOCX artifacts were created.
+- No submission artifacts were created.
+- No final medication decisions were created.
+- No final discharge decisions were created.
+- No final risk conclusions were created.
+
+Next eligible phase:
+
+- Golden Construction.
