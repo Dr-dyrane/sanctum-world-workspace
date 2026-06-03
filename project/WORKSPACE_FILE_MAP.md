@@ -4,7 +4,7 @@ Purpose: local repository hygiene map to prevent duplicate working files and acc
 
 Generated from local workspace file listing excluding `.git`, caches, and Python bytecode.
 
-Current status: Packaging Architecture / LOCKED. Locked and complete layers include World Spec v1, File Inventory Architecture v1, File Inventory v1, World-Level Synthetic File Layer FI-W01 through FI-W22, Task-Level Context Files FI-T01 through FI-T07, Supplementary Files FI-S01 through FI-S04, the Entire File Ecosystem, Task Prompt Architecture v1, Task Prompts TP-KM01 through TP-KM06, Expected Output Architecture v1, Expected Outputs EO-KM01 through EO-KM06, Golden Architecture v1, Golden-KM01 through Golden-KM06, Grader Guidance Architecture v1, GG-KM01 through GG-KM06, AutoQC Architecture v1, AutoQC Construction v1, and Packaging Architecture v1. AutoQC Architecture v1 locked artifacts are under `worlds/korvin-merrow/autoqc-architecture/locked/`: `autoqc-architecture-v1.md` and `autoqc-architecture-validation-review.md`, with ratification at `worlds/korvin-merrow/autoqc-architecture/ratifications/autoqc-architecture-ratification.md`. AutoQC Construction locked artifacts are under `worlds/korvin-merrow/autoqc/locked/`: `autoqc-construction-v1.md` and `autoqc-construction-validation-review.md`, with ratification at `worlds/korvin-merrow/autoqc/ratifications/autoqc-construction-ratification.md`. AutoQC is complete. Packaging Architecture locked artifacts are under `worlds/korvin-merrow/packaging-architecture/locked/`: `packaging-architecture-v1.md` and `packaging-architecture-validation-review.md`, with ratification at `worlds/korvin-merrow/packaging-architecture/ratifications/packaging-architecture-ratification.md`. Packaging Architecture is complete. Next eligible phase is Packaging Construction. AutoQC runs, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX submission packaging, manifests, final submission packages, submission artifacts, and RL Studio upload have not started.
+Current status: Packaging Construction / CANDIDATE REVIEW. Locked and complete layers include World Spec v1, File Inventory Architecture v1, File Inventory v1, World-Level Synthetic File Layer FI-W01 through FI-W22, Task-Level Context Files FI-T01 through FI-T07, Supplementary Files FI-S01 through FI-S04, the Entire File Ecosystem, Task Prompt Architecture v1, Task Prompts TP-KM01 through TP-KM06, Expected Output Architecture v1, Expected Outputs EO-KM01 through EO-KM06, Golden Architecture v1, Golden-KM01 through Golden-KM06, Grader Guidance Architecture v1, GG-KM01 through GG-KM06, AutoQC Architecture v1, AutoQC Construction v1, and Packaging Architecture v1. AutoQC Architecture v1 locked artifacts are under `worlds/korvin-merrow/autoqc-architecture/locked/`: `autoqc-architecture-v1.md` and `autoqc-architecture-validation-review.md`, with ratification at `worlds/korvin-merrow/autoqc-architecture/ratifications/autoqc-architecture-ratification.md`. AutoQC Construction locked artifacts are under `worlds/korvin-merrow/autoqc/locked/`: `autoqc-construction-v1.md` and `autoqc-construction-validation-review.md`, with ratification at `worlds/korvin-merrow/autoqc/ratifications/autoqc-construction-ratification.md`. AutoQC is complete. Packaging Architecture locked artifacts are under `worlds/korvin-merrow/packaging-architecture/locked/`: `packaging-architecture-v1.md` and `packaging-architecture-validation-review.md`, with ratification at `worlds/korvin-merrow/packaging-architecture/ratifications/packaging-architecture-ratification.md`. Packaging Architecture is complete. Packaging Construction candidate artifacts are under `worlds/korvin-merrow/packaging/candidate-review/`: `packaging-construction-v1.md` and `packaging-construction-validation-review.md`. Next eligible phase is Packaging Construction Review. AutoQC runs, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX submission packaging, manifests, final submission packages, submission artifacts, and RL Studio upload have not started.
 
 ## Navigation Rule
 
@@ -116,9 +116,11 @@ For a new collaborator or new AI session, read in this order:
 104. `worlds/korvin-merrow/packaging-architecture/locked/packaging-architecture-v1.md` for locked Packaging Architecture v1 package.
 105. `worlds/korvin-merrow/packaging-architecture/locked/packaging-architecture-validation-review.md` for locked Packaging Architecture validation review.
 106. `worlds/korvin-merrow/packaging-architecture/ratifications/packaging-architecture-ratification.md` for Packaging Architecture ratification and completion.
-107. `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md` for historical interview basis.
-108. `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions and construction-lock status.
-109. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
+107. `worlds/korvin-merrow/packaging/candidate-review/packaging-construction-v1.md` for Packaging Construction v1 candidate package.
+108. `worlds/korvin-merrow/packaging/candidate-review/packaging-construction-validation-review.md` for Packaging Construction validation review.
+109. `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md` for historical interview basis.
+110. `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions and construction-lock status.
+111. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
 
 Do not start by opening every prep file. Most prep files are supporting memory, not active instructions.
 
@@ -140,7 +142,7 @@ Findings:
 - `worlds/korvin-merrow/task-context-files/` is now a lifecycle folder for FI-T task-context file construction. FI-T01 through FI-T07 are locked and Task-Level Context Files are complete; no FI-S files, prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, or submission artifacts exist in this folder.
 - `worlds/korvin-merrow/supplementary-file-architecture/` is now a lifecycle folder for FI-S architecture only. Supplementary File Architecture v1 is locked and ratified; no constructed FI-S files belong in the architecture folder.
 - `worlds/korvin-merrow/supplementary-files/` is now a lifecycle folder for FI-S file construction. FI-S01 through FI-S04 are locked and Supplementary Files are complete.
-- `candidate-review/` is reserved for active candidate artifacts only. Inactive candidate-review folders should be absent from the visible tree and recreated on demand when a new candidate artifact exists. There is no active candidate-review folder after Packaging Architecture lock until Packaging Construction creates one.
+- `candidate-review/` is reserved for active candidate artifacts only. Inactive candidate-review folders should be absent from the visible tree and recreated on demand when a new candidate artifact exists. The current active candidate-review folder is `worlds/korvin-merrow/packaging/candidate-review/`.
 - Several files intentionally overlap by lifecycle stage, especially Brainstorm history/reviews and World Spec prep/checklist material.
 - Do not add new audit or navigation docs unless an existing map/status file cannot carry the information.
 
@@ -688,6 +690,20 @@ Lifecycle clustering:
 | `worlds/korvin-merrow/packaging-architecture/locked/packaging-architecture-v1.md` | Locked packaging architecture package. | Defines packaging scope, PKG-KM01 through PKG-KM08, DOCX strategy, upload sequencing strategy, manifest strategy, transcript strategy, reference/template handling, reconciliation handling, and authorization boundaries. It does not create packaging artifacts. |
 | `worlds/korvin-merrow/packaging-architecture/locked/packaging-architecture-validation-review.md` | Locked validation review for Packaging Architecture v1. | Verifies alignment with locked AutoQC Construction, source-derived submission requirements, transcript ambiguity handling, and prohibited artifact boundaries. |
 | `worlds/korvin-merrow/packaging-architecture/ratifications/packaging-architecture-ratification.md` | Ratification record for Packaging Architecture v1. | Records template fidelity, official template/source structure preservation, Source/Tool separation, single-DOCX requirement, transcript and AutoQC boundaries, reconciliation routing, lock, Packaging Architecture completion, and next eligible Packaging Construction phase. |
+
+## Korvin Merrow Packaging
+
+Lifecycle clustering:
+
+- `candidate-review/`: active Packaging Construction v1 candidate artifacts.
+- `locked/`: future locked Packaging Construction artifacts after ratification.
+- `ratifications/`: future ratification records for Packaging Construction.
+- This area is packaging preparation only. It must not contain populated DOCX artifacts, manifests, final submission packages, AutoQC responses, scoring artifacts, RL Studio upload records, or submission materials unless Alexander explicitly authorizes those later phases.
+
+| File | Role | Duplication note |
+| --- | --- | --- |
+| `worlds/korvin-merrow/packaging/candidate-review/packaging-construction-v1.md` | Candidate Packaging Construction package. | Maps PKG-KM01 through PKG-KM08, execution order, dependency order, blocked dependencies, required inputs, future output targets, transcript/DOCX/manifest/upload/reconciliation workflows, authorization gates, and stop points. It does not create packaging artifacts. |
+| `worlds/korvin-merrow/packaging/candidate-review/packaging-construction-validation-review.md` | Candidate validation review for Packaging Construction v1. | Verifies alignment with locked Packaging Architecture, locked sources, submission-reference materials, transcript boundary, DOCX boundary, manifest boundary, upload boundary, AutoQC boundary, and locked-artifact protection. |
 
 ## Korvin Merrow Supplementary File Architecture
 

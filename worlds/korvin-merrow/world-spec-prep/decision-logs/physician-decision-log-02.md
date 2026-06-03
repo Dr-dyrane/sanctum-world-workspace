@@ -2805,7 +2805,7 @@ Status:
 
 - AutoQC Construction: LOCKED.
 - AutoQC: COMPLETE.
-- Next eligible phase: Packaging Construction.
+- Historical next eligible phase after AutoQC Construction lock: Packaging Architecture. Current next eligible phase: Packaging Construction Review.
 
 Authorization:
 
@@ -2851,7 +2851,7 @@ Status:
 - AutoQC Construction: LOCKED.
 - AutoQC: COMPLETE.
 - Packaging Architecture: COMPLETE.
-- Next eligible phase: Packaging Construction.
+- Historical next eligible phase after Packaging Architecture lock: Packaging Construction. Current next eligible phase: Packaging Construction Review.
 
 Authorization:
 
@@ -2898,6 +2898,57 @@ Carry-forward ambiguities:
 - Packaging readiness checks.
 - Submission manifest dependency.
 - DOCX population dependency.
+
+## Packaging Construction v1 Candidate Record
+
+Date recorded: 2026-06-03
+
+Status:
+
+- Packaging Construction v1: CANDIDATE REVIEW.
+- Packaging Architecture v1: LOCKED.
+- Packaging Architecture: COMPLETE.
+- Next eligible phase: Packaging Construction Review.
+
+Authorization:
+
+- Alexander authorized Packaging Construction v1 after Packaging Architecture v1 ratification and lock.
+- This phase constructs the Packaging Preparation Package only.
+- It does not populate the final World Spec DOCX.
+- It does not create a submission manifest.
+- It does not create a final submission package.
+- It does not perform upload or submission.
+
+Candidate artifacts:
+
+- `worlds/korvin-merrow/packaging/candidate-review/packaging-construction-v1.md`
+- `worlds/korvin-merrow/packaging/candidate-review/packaging-construction-validation-review.md`
+
+Construction scope recorded:
+
+- PKG-KM01 through PKG-KM08 mapping.
+- Execution order.
+- Dependency order.
+- Blocked dependencies.
+- Required inputs.
+- Future output targets.
+- Transcript decision workflow.
+- DOCX population workflow.
+- Manifest workflow.
+- Upload workflow.
+- Reconciliation workflow.
+- Authorization gates.
+- Stop points.
+
+Boundary preserved:
+
+- No DOCX populated.
+- No manifest created.
+- No final submission package created.
+- No upload or submission performed.
+- No AutoQC run.
+- No AutoQC responses created.
+- No scoring artifacts created.
 
 Boundary preserved:
 
