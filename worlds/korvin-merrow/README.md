@@ -1,6 +1,6 @@
 # Korvin Merrow World
 
-Current state: Grader Guidance Construction / CANDIDATE REVIEW.
+Current state: Grader Guidance Construction / LOCKED.
 
 Start here only after reading `project/STATUS.md`.
 
@@ -27,7 +27,7 @@ Start here only after reading `project/STATUS.md`.
 - `golden-architecture/`: Golden Architecture lifecycle area. Locked artifacts define future golden-response architecture only; they do not create golden responses, grader guidance, rubrics, AutoQC responses, DOCX artifacts, or submission materials.
 - `goldens/`: golden construction lifecycle area. Golden-KM01 through Golden-KM06 are locked golden responses; they are not grader guidance, rubrics, AutoQC responses, DOCX artifacts, or submission materials.
 - `grader-guidance-architecture/`: grader-guidance architecture lifecycle area. Locked artifacts define future grader guidance structure only; they do not create grader guidance, scoring rubrics, scoring thresholds, AutoQC responses, DOCX artifacts, or submission materials.
-- `grader-guidance/`: grader-guidance construction lifecycle area. GG-KM01 through GG-KM06 are candidate-review drafts only; they are not scoring rubrics, scoring thresholds, pass/fail bands, AutoQC responses, DOCX artifacts, or submission materials.
+- `grader-guidance/`: grader-guidance construction lifecycle area. GG-KM01 through GG-KM06 are locked grader guidance files; they are not scoring rubrics, scoring thresholds, pass/fail bands, point allocations, AutoQC responses, DOCX artifacts, or submission materials.
 
 ## Active Entry Points
 
@@ -103,13 +103,14 @@ Start here only after reading `project/STATUS.md`.
 - `grader-guidance-architecture/locked/grader-guidance-architecture-v1.md`
 - `grader-guidance-architecture/locked/grader-guidance-architecture-validation-review.md`
 - `grader-guidance-architecture/ratifications/grader-guidance-architecture-ratification.md`
-- `grader-guidance/candidate-review/GG-KM01.md`
-- `grader-guidance/candidate-review/GG-KM02.md`
-- `grader-guidance/candidate-review/GG-KM03.md`
-- `grader-guidance/candidate-review/GG-KM04.md`
-- `grader-guidance/candidate-review/GG-KM05.md`
-- `grader-guidance/candidate-review/GG-KM06.md`
-- `grader-guidance/candidate-review/grader-guidance-construction-validation-review.md`
+- `grader-guidance/locked/GG-KM01.md`
+- `grader-guidance/locked/GG-KM02.md`
+- `grader-guidance/locked/GG-KM03.md`
+- `grader-guidance/locked/GG-KM04.md`
+- `grader-guidance/locked/GG-KM05.md`
+- `grader-guidance/locked/GG-KM06.md`
+- `grader-guidance/locked/grader-guidance-construction-validation-review.md`
+- `grader-guidance/ratifications/grader-guidance-construction-ratification.md`
 - `supplementary-files/locked/FI-S01_remote-pci-coronary-stent-provenance-summary.md`
 - `supplementary-files/locked/FI-S02_remote-sleep-study-osa-provenance-summary.md`
 - `supplementary-files/locked/FI-S03_home-support-equipment-logistics-reference.md`
@@ -142,7 +143,7 @@ Start here only after reading `project/STATUS.md`.
 - `world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`
 - `active/brainstorm.md`
 
-World Spec v1 is locked. File Inventory Architecture v1 is locked. File Inventory v1 is locked with FI-W20, FI-T, and FI-S03 reconciliations recorded. FI-W01 through FI-W22, FI-T01 through FI-T07, FI-S01 through FI-S04, Task Prompt Architecture v1, TP-KM01 through TP-KM06, Expected Output Architecture v1, EO-KM01 through EO-KM06, Golden Architecture v1, Golden-KM01 through Golden-KM06, and Grader Guidance Architecture v1 are locked. Entire File Ecosystem, Task Prompt Architecture, Task Prompts, Expected Output Architecture, Expected Outputs, Golden Architecture, Goldens, and Grader Guidance Architecture are complete. Golden Construction is locked at `goldens/locked/` with ratification at `goldens/ratifications/golden-construction-ratification.md`. Grader Guidance Architecture v1 is locked at `grader-guidance-architecture/locked/` with ratification at `grader-guidance-architecture/ratifications/grader-guidance-architecture-ratification.md`. Grader Guidance Construction is in candidate review at `grader-guidance/candidate-review/` with GG-KM01 through GG-KM06 plus `grader-guidance-construction-validation-review.md`. Task Prompt Architecture v1 is locked at `task-prompt-architecture/locked/task-prompt-architecture-v1.md`, with validation at `task-prompt-architecture/locked/task-prompt-architecture-validation-review.md` and ratification at `task-prompt-architecture/ratifications/task-prompt-architecture-ratification.md`. Task Prompt Construction is locked at `task-prompts/locked/`; ratification is recorded at `task-prompts/ratifications/task-prompt-construction-ratification.md`. Expected Output Architecture v1 is locked at `expected-output-architecture/locked/`; ratification is recorded at `expected-output-architecture/ratifications/expected-output-architecture-ratification.md`. Expected Output Construction is locked at `expected-outputs/locked/`; ratification is recorded at `expected-outputs/ratifications/expected-output-construction-ratification.md`. Golden Architecture v1 is locked at `golden-architecture/locked/`; ratification is recorded at `golden-architecture/ratifications/golden-architecture-ratification.md`. Next eligible phase is Grader Guidance Construction Review. Do not lock grader guidance, create rubrics, scoring thresholds, AutoQC responses, DOCX submission artifacts, RL Studio uploads, templates, or reference files until Alexander explicitly authorizes the relevant step.
+World Spec v1 is locked. File Inventory Architecture v1 is locked. File Inventory v1 is locked with FI-W20, FI-T, and FI-S03 reconciliations recorded. FI-W01 through FI-W22, FI-T01 through FI-T07, FI-S01 through FI-S04, Task Prompt Architecture v1, TP-KM01 through TP-KM06, Expected Output Architecture v1, EO-KM01 through EO-KM06, Golden Architecture v1, Golden-KM01 through Golden-KM06, Grader Guidance Architecture v1, and GG-KM01 through GG-KM06 are locked. Entire File Ecosystem, Task Prompt Architecture, Task Prompts, Expected Output Architecture, Expected Outputs, Golden Architecture, Goldens, Grader Guidance Architecture, and Grader Guidance are complete. Golden Construction is locked at `goldens/locked/` with ratification at `goldens/ratifications/golden-construction-ratification.md`. Grader Guidance Architecture v1 is locked at `grader-guidance-architecture/locked/` with ratification at `grader-guidance-architecture/ratifications/grader-guidance-architecture-ratification.md`. Grader Guidance Construction is locked at `grader-guidance/locked/` with GG-KM01 through GG-KM06 plus `grader-guidance-construction-validation-review.md`; ratification is recorded at `grader-guidance/ratifications/grader-guidance-construction-ratification.md`. Task Prompt Architecture v1 is locked at `task-prompt-architecture/locked/task-prompt-architecture-v1.md`, with validation at `task-prompt-architecture/locked/task-prompt-architecture-validation-review.md` and ratification at `task-prompt-architecture/ratifications/task-prompt-architecture-ratification.md`. Task Prompt Construction is locked at `task-prompts/locked/`; ratification is recorded at `task-prompts/ratifications/task-prompt-construction-ratification.md`. Expected Output Architecture v1 is locked at `expected-output-architecture/locked/`; ratification is recorded at `expected-output-architecture/ratifications/expected-output-architecture-ratification.md`. Expected Output Construction is locked at `expected-outputs/locked/`; ratification is recorded at `expected-outputs/ratifications/expected-output-construction-ratification.md`. Golden Architecture v1 is locked at `golden-architecture/locked/`; ratification is recorded at `golden-architecture/ratifications/golden-architecture-ratification.md`. Next eligible phase is AutoQC / Packaging Preparation. Do not create scoring rubrics, scoring thresholds, pass/fail bands, point allocations, AutoQC responses, DOCX submission artifacts, RL Studio uploads, templates, or reference files until Alexander explicitly authorizes the relevant step.
 
 Task-design guidance: future task prompts and deliverables must be framed from the physician perspective or physician voice, even when supporting sources come from pharmacy, nursing, PT/OT, case management, social work, family, or administrative sources. This is a task-layer rule only; it does not reopen Governance Package v1 or change source-of-truth hierarchy.
 

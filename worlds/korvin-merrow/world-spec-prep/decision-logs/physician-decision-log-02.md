@@ -2588,22 +2588,23 @@ Date recorded: 2026-06-03
 
 Status:
 
-- Grader Guidance Construction: CANDIDATE REVIEW.
+- Historical candidate-review record.
+- Current Grader Guidance Construction status is LOCKED as of the ratification record below.
 
 Authorization:
 
 - Alexander authorized Grader Guidance Construction after Grader Guidance Architecture v1 ratification and lock.
 - Construction scope was limited to candidate GG-KM01 through GG-KM06 and a construction validation review.
 
-Candidate artifacts:
+Candidate artifacts, now moved unchanged to locked paths:
 
-- `worlds/korvin-merrow/grader-guidance/candidate-review/GG-KM01.md`
-- `worlds/korvin-merrow/grader-guidance/candidate-review/GG-KM02.md`
-- `worlds/korvin-merrow/grader-guidance/candidate-review/GG-KM03.md`
-- `worlds/korvin-merrow/grader-guidance/candidate-review/GG-KM04.md`
-- `worlds/korvin-merrow/grader-guidance/candidate-review/GG-KM05.md`
-- `worlds/korvin-merrow/grader-guidance/candidate-review/GG-KM06.md`
-- `worlds/korvin-merrow/grader-guidance/candidate-review/grader-guidance-construction-validation-review.md`
+- `worlds/korvin-merrow/grader-guidance/locked/GG-KM01.md`
+- `worlds/korvin-merrow/grader-guidance/locked/GG-KM02.md`
+- `worlds/korvin-merrow/grader-guidance/locked/GG-KM03.md`
+- `worlds/korvin-merrow/grader-guidance/locked/GG-KM04.md`
+- `worlds/korvin-merrow/grader-guidance/locked/GG-KM05.md`
+- `worlds/korvin-merrow/grader-guidance/locked/GG-KM06.md`
+- `worlds/korvin-merrow/grader-guidance/locked/grader-guidance-construction-validation-review.md`
 
 Mapping preserved:
 
@@ -2622,9 +2623,64 @@ Construction principles:
 - Golden responses remain benchmarks, not rigid answer keys.
 - Multi-path defensibility, uncertainty handling, hierarchy reasoning, friction preservation, and physician-perspective judgment remain protected.
 
+Boundary preserved at candidate construction:
+
+- Candidate construction stopped before lock/ratification.
+- No scoring rubrics were created.
+- No scoring thresholds were created.
+- No point allocations or pass/fail bands were created.
+- No AutoQC responses were created.
+- No DOCX artifacts were created.
+- No submission artifacts were created.
+- No RL Studio materials were created.
+
+Historical next eligible phase at candidate construction:
+
+- Review, since completed before ratification.
+
+## Grader Guidance Construction Ratification and Lock Record
+
+Date recorded: 2026-06-03
+
+Status:
+
+- Grader Guidance Construction: LOCKED.
+- Grader Guidance: COMPLETE.
+
+Authorization:
+
+- Alexander authorized Grader Guidance Construction ratification and lock after Reviewer A and Reviewer B returned LOCK READY / GO.
+- Reviewer A guidance quality was STRONG and benchmark integrity was HIGH.
+- Reviewer B guidance quality was STRONG and benchmark integrity was HIGH.
+
+Locked artifacts:
+
+- `worlds/korvin-merrow/grader-guidance/locked/GG-KM01.md`
+- `worlds/korvin-merrow/grader-guidance/locked/GG-KM02.md`
+- `worlds/korvin-merrow/grader-guidance/locked/GG-KM03.md`
+- `worlds/korvin-merrow/grader-guidance/locked/GG-KM04.md`
+- `worlds/korvin-merrow/grader-guidance/locked/GG-KM05.md`
+- `worlds/korvin-merrow/grader-guidance/locked/GG-KM06.md`
+- `worlds/korvin-merrow/grader-guidance/locked/grader-guidance-construction-validation-review.md`
+- `worlds/korvin-merrow/grader-guidance/ratifications/grader-guidance-construction-ratification.md`
+
+Ratification findings:
+
+- GG-KM01 through GG-KM06 reviewed.
+- Six grader-guidance files approved.
+- No GG-KM07 created.
+- TP -> EO -> Golden -> GG chain verified.
+- FI-T07 addendum relationship preserved.
+- Anti-verbatim-matching principle verified.
+- Multi-path defensibility verified.
+- Hierarchy fidelity, friction fidelity, and source fidelity verified.
+- FI-W22 visible-but-incomplete rule preserved.
+- FI-S background/supporting role preserved.
+- No scoring leakage.
+- No true defects, governance defects, or canon conflicts.
+
 Boundary preserved:
 
-- No grader guidance lock or ratification was created.
 - No scoring rubrics were created.
 - No scoring thresholds were created.
 - No point allocations or pass/fail bands were created.
@@ -2635,4 +2691,4 @@ Boundary preserved:
 
 Next eligible phase:
 
-- Grader Guidance Construction Review.
+- AutoQC / Packaging Preparation.
