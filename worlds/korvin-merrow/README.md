@@ -1,6 +1,6 @@
 # Korvin Merrow World
 
-Current state: Golden Architecture / COMPLETE.
+Current state: Golden Construction / CANDIDATE REVIEW.
 
 Start here only after reading `project/STATUS.md`.
 
@@ -25,6 +25,7 @@ Start here only after reading `project/STATUS.md`.
 - `expected-output-architecture/`: expected-output architecture lifecycle area. Locked Expected Output Architecture v1 defines EO-KM01 through EO-KM06 structure only; it does not create actual expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, or submission materials.
 - `expected-outputs/`: expected-output construction lifecycle area. EO-KM01 through EO-KM06 are locked expected outputs under `locked/`; they are not golden responses, grader guidance, rubrics, AutoQC responses, DOCX artifacts, or submission materials.
 - `golden-architecture/`: Golden Architecture lifecycle area. Locked artifacts define future golden-response architecture only; they do not create golden responses, grader guidance, rubrics, AutoQC responses, DOCX artifacts, or submission materials.
+- `goldens/`: golden construction lifecycle area. Golden-KM01 through Golden-KM06 are candidate-review artifacts only; they are not locked, ratified, grader guidance, rubrics, AutoQC responses, DOCX artifacts, or submission materials.
 
 ## Active Entry Points
 
@@ -89,6 +90,13 @@ Start here only after reading `project/STATUS.md`.
 - `golden-architecture/locked/golden-architecture-validation-review.md`
 - `golden-architecture/locked/golden-architecture-audit-reconciliation.md`
 - `golden-architecture/ratifications/golden-architecture-ratification.md`
+- `goldens/candidate-review/Golden-KM01.md`
+- `goldens/candidate-review/Golden-KM02.md`
+- `goldens/candidate-review/Golden-KM03.md`
+- `goldens/candidate-review/Golden-KM04.md`
+- `goldens/candidate-review/Golden-KM05.md`
+- `goldens/candidate-review/Golden-KM06.md`
+- `goldens/candidate-review/golden-construction-validation-review.md`
 - `supplementary-files/locked/FI-S01_remote-pci-coronary-stent-provenance-summary.md`
 - `supplementary-files/locked/FI-S02_remote-sleep-study-osa-provenance-summary.md`
 - `supplementary-files/locked/FI-S03_home-support-equipment-logistics-reference.md`
@@ -121,7 +129,7 @@ Start here only after reading `project/STATUS.md`.
 - `world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`
 - `active/brainstorm.md`
 
-World Spec v1 is locked. File Inventory Architecture v1 is locked. File Inventory v1 is locked with FI-W20, FI-T, and FI-S03 reconciliations recorded. FI-W01 through FI-W22, FI-T01 through FI-T07, FI-S01 through FI-S04, Task Prompt Architecture v1, TP-KM01 through TP-KM06, Expected Output Architecture v1, EO-KM01 through EO-KM06, and Golden Architecture v1 are locked. Entire File Ecosystem, Task Prompt Architecture, Task Prompts, Expected Output Architecture, Expected Outputs, and Golden Architecture are complete. Task Prompt Architecture v1 is locked at `task-prompt-architecture/locked/task-prompt-architecture-v1.md`, with validation at `task-prompt-architecture/locked/task-prompt-architecture-validation-review.md` and ratification at `task-prompt-architecture/ratifications/task-prompt-architecture-ratification.md`. Task Prompt Construction is locked at `task-prompts/locked/`; ratification is recorded at `task-prompts/ratifications/task-prompt-construction-ratification.md`. Expected Output Architecture v1 is locked at `expected-output-architecture/locked/`; ratification is recorded at `expected-output-architecture/ratifications/expected-output-architecture-ratification.md`. Expected Output Construction is locked at `expected-outputs/locked/`; ratification is recorded at `expected-outputs/ratifications/expected-output-construction-ratification.md`. Golden Architecture v1 is locked at `golden-architecture/locked/`; ratification is recorded at `golden-architecture/ratifications/golden-architecture-ratification.md`. Next eligible phase is Golden Construction. Do not create golden responses, grader guidance, rubrics, AutoQC responses, DOCX submission artifacts, RL Studio uploads, templates, or reference files until Alexander explicitly authorizes the relevant step.
+World Spec v1 is locked. File Inventory Architecture v1 is locked. File Inventory v1 is locked with FI-W20, FI-T, and FI-S03 reconciliations recorded. FI-W01 through FI-W22, FI-T01 through FI-T07, FI-S01 through FI-S04, Task Prompt Architecture v1, TP-KM01 through TP-KM06, Expected Output Architecture v1, EO-KM01 through EO-KM06, and Golden Architecture v1 are locked. Entire File Ecosystem, Task Prompt Architecture, Task Prompts, Expected Output Architecture, Expected Outputs, and Golden Architecture are complete. Golden Construction is in candidate review at `goldens/candidate-review/` with Golden-KM01 through Golden-KM06 and `golden-construction-validation-review.md`. Task Prompt Architecture v1 is locked at `task-prompt-architecture/locked/task-prompt-architecture-v1.md`, with validation at `task-prompt-architecture/locked/task-prompt-architecture-validation-review.md` and ratification at `task-prompt-architecture/ratifications/task-prompt-architecture-ratification.md`. Task Prompt Construction is locked at `task-prompts/locked/`; ratification is recorded at `task-prompts/ratifications/task-prompt-construction-ratification.md`. Expected Output Architecture v1 is locked at `expected-output-architecture/locked/`; ratification is recorded at `expected-output-architecture/ratifications/expected-output-architecture-ratification.md`. Expected Output Construction is locked at `expected-outputs/locked/`; ratification is recorded at `expected-outputs/ratifications/expected-output-construction-ratification.md`. Golden Architecture v1 is locked at `golden-architecture/locked/`; ratification is recorded at `golden-architecture/ratifications/golden-architecture-ratification.md`. Next eligible phase is Golden Construction Review. Do not ratify or lock goldens, create grader guidance, rubrics, AutoQC responses, DOCX submission artifacts, RL Studio uploads, templates, or reference files until Alexander explicitly authorizes the relevant step.
 
 Task-design guidance: future task prompts and deliverables must be framed from the physician perspective or physician voice, even when supporting sources come from pharmacy, nursing, PT/OT, case management, social work, family, or administrative sources. This is a task-layer rule only; it does not reopen Governance Package v1 or change source-of-truth hierarchy.
 

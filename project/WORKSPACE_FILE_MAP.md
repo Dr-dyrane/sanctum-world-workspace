@@ -4,7 +4,7 @@ Purpose: local repository hygiene map to prevent duplicate working files and acc
 
 Generated from local workspace file listing excluding `.git`, caches, and Python bytecode.
 
-Current status: Golden Architecture / COMPLETE. Locked and complete layers include World Spec v1, File Inventory Architecture v1, File Inventory v1, World-Level Synthetic File Layer FI-W01 through FI-W22, Task-Level Context Files FI-T01 through FI-T07, Supplementary Files FI-S01 through FI-S04, the Entire File Ecosystem, Task Prompt Architecture v1, Task Prompts TP-KM01 through TP-KM06, Expected Output Architecture v1, Expected Outputs EO-KM01 through EO-KM06, and Golden Architecture v1. Task Prompt Construction is locked at `worlds/korvin-merrow/task-prompts/locked/`, with ratification at `worlds/korvin-merrow/task-prompts/ratifications/task-prompt-construction-ratification.md`. Expected Output Architecture v1 locked artifacts are under `worlds/korvin-merrow/expected-output-architecture/locked/`, with ratification at `worlds/korvin-merrow/expected-output-architecture/ratifications/expected-output-architecture-ratification.md`. Expected Output Construction locked artifacts are under `worlds/korvin-merrow/expected-outputs/locked/`: EO-KM01 through EO-KM06 plus `expected-output-construction-validation-review.md`, with ratification at `worlds/korvin-merrow/expected-outputs/ratifications/expected-output-construction-ratification.md`. Golden Architecture v1 locked artifacts are under `worlds/korvin-merrow/golden-architecture/locked/`: `golden-architecture-v1.md`, `golden-architecture-validation-review.md`, and `golden-architecture-audit-reconciliation.md`, with ratification at `worlds/korvin-merrow/golden-architecture/ratifications/golden-architecture-ratification.md`. Next eligible phase is Golden Construction. Golden responses, grader guidance, rubrics, DOCX submission packaging, AutoQC, and RL Studio upload have not started.
+Current status: Golden Construction / CANDIDATE REVIEW. Locked and complete layers include World Spec v1, File Inventory Architecture v1, File Inventory v1, World-Level Synthetic File Layer FI-W01 through FI-W22, Task-Level Context Files FI-T01 through FI-T07, Supplementary Files FI-S01 through FI-S04, the Entire File Ecosystem, Task Prompt Architecture v1, Task Prompts TP-KM01 through TP-KM06, Expected Output Architecture v1, Expected Outputs EO-KM01 through EO-KM06, and Golden Architecture v1. Task Prompt Construction is locked at `worlds/korvin-merrow/task-prompts/locked/`, with ratification at `worlds/korvin-merrow/task-prompts/ratifications/task-prompt-construction-ratification.md`. Expected Output Architecture v1 locked artifacts are under `worlds/korvin-merrow/expected-output-architecture/locked/`, with ratification at `worlds/korvin-merrow/expected-output-architecture/ratifications/expected-output-architecture-ratification.md`. Expected Output Construction locked artifacts are under `worlds/korvin-merrow/expected-outputs/locked/`: EO-KM01 through EO-KM06 plus `expected-output-construction-validation-review.md`, with ratification at `worlds/korvin-merrow/expected-outputs/ratifications/expected-output-construction-ratification.md`. Golden Architecture v1 locked artifacts are under `worlds/korvin-merrow/golden-architecture/locked/`: `golden-architecture-v1.md`, `golden-architecture-validation-review.md`, and `golden-architecture-audit-reconciliation.md`, with ratification at `worlds/korvin-merrow/golden-architecture/ratifications/golden-architecture-ratification.md`. Golden Construction candidate artifacts are under `worlds/korvin-merrow/goldens/candidate-review/`: Golden-KM01 through Golden-KM06 plus `golden-construction-validation-review.md`. Next eligible phase is Golden Construction Review. Golden ratification/lock, grader guidance, rubrics, DOCX submission packaging, AutoQC, and RL Studio upload have not started.
 
 ## Navigation Rule
 
@@ -88,9 +88,16 @@ For a new collaborator or new AI session, read in this order:
 76. `worlds/korvin-merrow/golden-architecture/locked/golden-architecture-validation-review.md` for locked Golden Architecture validation review.
 77. `worlds/korvin-merrow/golden-architecture/locked/golden-architecture-audit-reconciliation.md` for Golden Architecture audit reconciliation findings and corrections.
 78. `worlds/korvin-merrow/golden-architecture/ratifications/golden-architecture-ratification.md` for Golden Architecture v1 ratification and lock record.
-79. `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md` for historical interview basis.
-80. `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions and construction-lock status.
-81. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
+79. `worlds/korvin-merrow/goldens/candidate-review/Golden-KM01.md` for candidate Golden-KM01.
+80. `worlds/korvin-merrow/goldens/candidate-review/Golden-KM02.md` for candidate Golden-KM02.
+81. `worlds/korvin-merrow/goldens/candidate-review/Golden-KM03.md` for candidate Golden-KM03.
+82. `worlds/korvin-merrow/goldens/candidate-review/Golden-KM04.md` for candidate Golden-KM04.
+83. `worlds/korvin-merrow/goldens/candidate-review/Golden-KM05.md` for candidate Golden-KM05.
+84. `worlds/korvin-merrow/goldens/candidate-review/Golden-KM06.md` for candidate Golden-KM06.
+85. `worlds/korvin-merrow/goldens/candidate-review/golden-construction-validation-review.md` for Golden Construction validation review.
+86. `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md` for historical interview basis.
+87. `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions and construction-lock status.
+88. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
 
 Do not start by opening every prep file. Most prep files are supporting memory, not active instructions.
 
@@ -112,7 +119,7 @@ Findings:
 - `worlds/korvin-merrow/task-context-files/` is now a lifecycle folder for FI-T task-context file construction. FI-T01 through FI-T07 are locked and Task-Level Context Files are complete; no FI-S files, prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, or submission artifacts exist in this folder.
 - `worlds/korvin-merrow/supplementary-file-architecture/` is now a lifecycle folder for FI-S architecture only. Supplementary File Architecture v1 is locked and ratified; no constructed FI-S files belong in the architecture folder.
 - `worlds/korvin-merrow/supplementary-files/` is now a lifecycle folder for FI-S file construction. FI-S01 through FI-S04 are locked and Supplementary Files are complete.
-- `candidate-review/` is reserved for active candidate artifacts only. Inactive candidate-review folders should be absent from the visible tree and recreated on demand when a new candidate artifact exists. There is currently no active expected-output architecture candidate-review folder after Expected Output Architecture v1 lock.
+- `candidate-review/` is reserved for active candidate artifacts only. Inactive candidate-review folders should be absent from the visible tree and recreated on demand when a new candidate artifact exists. The active candidate-review folder is currently `worlds/korvin-merrow/goldens/candidate-review/`.
 - Several files intentionally overlap by lifecycle stage, especially Brainstorm history/reviews and World Spec prep/checklist material.
 - Do not add new audit or navigation docs unless an existing map/status file cannot carry the information.
 
@@ -559,6 +566,25 @@ Lifecycle clustering:
 | `worlds/korvin-merrow/golden-architecture/locked/golden-architecture-validation-review.md` | Locked validation review for Golden Architecture v1. | Confirms alignment with locked prompts, expected outputs, governance, file dependencies, hierarchy rules, watch items, and prohibited-artifact boundaries. It is not a golden response, grader document, rubric, AutoQC response, DOCX artifact, or submission artifact. |
 | `worlds/korvin-merrow/golden-architecture/locked/golden-architecture-audit-reconciliation.md` | Audit reconciliation review for Golden Architecture v1. | Resolves independent cold-audit findings, records classifications and canon-supported corrections, and confirms no golden response, grader guidance, rubric, AutoQC response, DOCX artifact, or submission artifact was created. |
 | `worlds/korvin-merrow/golden-architecture/ratifications/golden-architecture-ratification.md` | Ratification record for Golden Architecture v1. | Records LOCK READY / GO review outcome, Golden-KM01 through Golden-KM06 approval, six-golden architecture approval, one-to-one TP -> EO -> Golden mapping, FI-T07 addendum preservation, workflow/hierarchy/friction/information-problem fidelity, uncertainty preservation, multi-path physician-answer principle, golden-leakage boundary, FI-W22 and FI-S guardrails, Golden Architecture lock, Golden Architecture completion, and next eligible Golden Construction phase. |
+
+## Korvin Merrow Goldens
+
+Lifecycle clustering:
+
+- `candidate-review/`: active candidate Golden Construction artifacts awaiting review or lock.
+- `locked/`: future locked golden artifacts after explicit ratification and lock.
+- `ratifications/`: future ratification records for Golden Construction.
+- This area must not contain grader guidance, scoring rubrics, AutoQC responses, DOCX artifacts, RL Studio submission artifacts, or submission materials unless Alexander explicitly authorizes those later phases.
+
+| File | Role | Duplication note |
+| --- | --- | --- |
+| `worlds/korvin-merrow/goldens/candidate-review/Golden-KM01.md` | Candidate golden response for TP-KM01 / EO-KM01. | Medication reconciliation recommendation only; preserves FI-T07 as addendum support for Golden-KM01 and does not create a final signed discharge medication list, grader guidance, rubric, AutoQC response, DOCX artifact, or submission artifact. |
+| `worlds/korvin-merrow/goldens/candidate-review/Golden-KM02.md` | Candidate golden response for TP-KM02 / EO-KM02. | Discharge summary synthesis only; does not invent culture data, final steroid diagnosis, final medication plan, completed discharge outcome, grader guidance, rubric, AutoQC response, DOCX artifact, or submission artifact. |
+| `worlds/korvin-merrow/goldens/candidate-review/Golden-KM03.md` | Candidate golden response for TP-KM03 / EO-KM03. | Discharge-readiness assessment only; preserves FI-W22 as incomplete and does not create a discharge order, final disposition decision, services authorization, grader guidance, rubric, AutoQC response, DOCX artifact, or submission artifact. |
+| `worlds/korvin-merrow/goldens/candidate-review/Golden-KM04.md` | Candidate golden response for TP-KM04 / EO-KM04. | Interdisciplinary care plan only; preserves consultant tensions and does not create a new workflow, final medication list, grader guidance, rubric, AutoQC response, DOCX artifact, or submission artifact. |
+| `worlds/korvin-merrow/goldens/candidate-review/Golden-KM05.md` | Candidate golden response for TP-KM05 / EO-KM05. | Early follow-up assessment only; does not invent post-discharge facts, services, labs, adherence, outcomes, grader guidance, rubric, AutoQC response, DOCX artifact, or submission artifact. |
+| `worlds/korvin-merrow/goldens/candidate-review/Golden-KM06.md` | Candidate golden response for TP-KM06 / EO-KM06. | Safety/readmission-risk review only; does not create an RCA conclusion, blame finding, readmission event, post-discharge outcome, grader guidance, rubric, AutoQC response, DOCX artifact, or submission artifact. |
+| `worlds/korvin-merrow/goldens/candidate-review/golden-construction-validation-review.md` | Candidate validation review for Golden Construction. | Confirms mapping, source alignment, hierarchy preservation, boundary protection, and prohibited-artifact checks; not a grader document, scoring rubric, AutoQC response, DOCX artifact, or submission artifact. |
 
 ## Korvin Merrow Supplementary File Architecture
 

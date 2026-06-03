@@ -421,8 +421,9 @@ File Inventory Architecture v1:
 - FI-T07 remains addendum support for EO-KM01 only; no EO-KM07 exists.
 - Golden Architecture v1 is locked at `worlds/korvin-merrow/golden-architecture/locked/`, with ratification recorded at `worlds/korvin-merrow/golden-architecture/ratifications/golden-architecture-ratification.md`.
 - Golden Architecture status is COMPLETE.
-- Next eligible phase is Golden Construction.
-- Goldens, grader guidance, rubrics, AutoQC responses, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
+- Golden Construction status is CANDIDATE REVIEW at `worlds/korvin-merrow/goldens/candidate-review/`.
+- Next eligible phase is Golden Construction Review.
+- Golden ratification/lock, grader guidance, rubrics, AutoQC responses, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
 
 ## Key Milestones Calendar Skeleton v1
 
@@ -896,7 +897,7 @@ Batch 5 clinical logic:
 
 Boundary:
 
-- FI-W22 is locked and the world-level synthetic file layer is complete. Task-Level Context File Architecture v1 is locked and complete. FI-T01 through FI-T07 are locked at `worlds/korvin-merrow/task-context-files/locked/`, with ratification recorded at `worlds/korvin-merrow/task-context-files/ratifications/task-level-context-file-construction-ratification.md`. FI-S01 through FI-S04 are locked at `worlds/korvin-merrow/supplementary-files/locked/`, with ratification recorded at `worlds/korvin-merrow/supplementary-files/ratifications/supplementary-file-construction-ratification.md`. Entire File Ecosystem is complete. Task Prompt Architecture v1 is locked and complete. Task Prompt Construction is locked at `worlds/korvin-merrow/task-prompts/locked/` with TP-KM01 through TP-KM06 locked. Task Prompt Construction ratification is recorded at `worlds/korvin-merrow/task-prompts/ratifications/task-prompt-construction-ratification.md`. Expected Output Architecture v1 is locked. Expected Output Construction is locked at `worlds/korvin-merrow/expected-outputs/locked/` with EO-KM01 through EO-KM06 locked. Do not create goldens, grader guidance, rubrics, AutoQC responses, DOCX artifacts, submission materials, or RL Studio activity until explicitly authorized.
+- FI-W22 is locked and the world-level synthetic file layer is complete. Task-Level Context File Architecture v1 is locked and complete. FI-T01 through FI-T07 are locked at `worlds/korvin-merrow/task-context-files/locked/`, with ratification recorded at `worlds/korvin-merrow/task-context-files/ratifications/task-level-context-file-construction-ratification.md`. FI-S01 through FI-S04 are locked at `worlds/korvin-merrow/supplementary-files/locked/`, with ratification recorded at `worlds/korvin-merrow/supplementary-files/ratifications/supplementary-file-construction-ratification.md`. Entire File Ecosystem is complete. Task Prompt Architecture v1 is locked and complete. Task Prompt Construction is locked at `worlds/korvin-merrow/task-prompts/locked/` with TP-KM01 through TP-KM06 locked. Task Prompt Construction ratification is recorded at `worlds/korvin-merrow/task-prompts/ratifications/task-prompt-construction-ratification.md`. Expected Output Architecture v1 is locked. Expected Output Construction is locked at `worlds/korvin-merrow/expected-outputs/locked/` with EO-KM01 through EO-KM06 locked. Golden Construction candidate artifacts are created at `worlds/korvin-merrow/goldens/candidate-review/`. Do not ratify or lock goldens, create grader guidance, rubrics, AutoQC responses, DOCX artifacts, submission materials, or RL Studio activity until explicitly authorized.
 
 Task-Level Context File Architecture v1:
 
@@ -944,7 +945,10 @@ Task-Level Context File Architecture v1:
 - Expected Outputs: COMPLETE.
 - Golden Architecture v1 is locked at `worlds/korvin-merrow/golden-architecture/locked/`, with audit reconciliation preserved there and ratification recorded at `worlds/korvin-merrow/golden-architecture/ratifications/golden-architecture-ratification.md`.
 - Golden Architecture status: COMPLETE.
-- Next eligible phase: Golden Construction.
+- Golden Construction status: CANDIDATE REVIEW.
+- Candidate files: Golden-KM01 through Golden-KM06 plus `golden-construction-validation-review.md` at `worlds/korvin-merrow/goldens/candidate-review/`.
+- Golden Construction preserves medication algorithm nuance, Cardiology vs Nephrology tension, prednisone hierarchy, FI-W22 visible-but-incomplete status, FI-S supporting/background status, no invented follow-up facts, and no retrospective outcome invention.
+- Next eligible phase: Golden Construction Review.
 
 ## Major Clinical Friction Themes
 

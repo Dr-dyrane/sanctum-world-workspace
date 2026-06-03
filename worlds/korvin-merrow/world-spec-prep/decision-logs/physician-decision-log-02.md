@@ -2354,3 +2354,52 @@ Boundary:
 Next eligible phase:
 
 - Golden Construction.
+
+## Golden Construction Candidate Record
+
+Date: 2026-06-03
+
+Status:
+
+- Golden Construction: CANDIDATE REVIEW.
+
+Authorization:
+
+- Alexander authorized Golden Construction after Golden Architecture v1 ratification and lock.
+- Construction scope was limited to candidate golden responses and a construction validation review.
+
+Constructed candidate artifacts:
+
+- `worlds/korvin-merrow/goldens/candidate-review/Golden-KM01.md`
+- `worlds/korvin-merrow/goldens/candidate-review/Golden-KM02.md`
+- `worlds/korvin-merrow/goldens/candidate-review/Golden-KM03.md`
+- `worlds/korvin-merrow/goldens/candidate-review/Golden-KM04.md`
+- `worlds/korvin-merrow/goldens/candidate-review/Golden-KM05.md`
+- `worlds/korvin-merrow/goldens/candidate-review/Golden-KM06.md`
+- `worlds/korvin-merrow/goldens/candidate-review/golden-construction-validation-review.md`
+
+Mapping preserved:
+
+- Golden-KM01 maps to TP-KM01 and EO-KM01.
+- Golden-KM02 maps to TP-KM02 and EO-KM02.
+- Golden-KM03 maps to TP-KM03 and EO-KM03.
+- Golden-KM04 maps to TP-KM04 and EO-KM04.
+- Golden-KM05 maps to TP-KM05 and EO-KM05.
+- Golden-KM06 maps to TP-KM06 and EO-KM06.
+- FI-T07 remains addendum support for Golden-KM01 only.
+- No Golden-KM07 was created.
+
+Boundary preserved:
+
+- No golden ratification or lock was created.
+- No grader guidance was created.
+- No scoring rubric was created.
+- No AutoQC response was created.
+- No DOCX artifact was created.
+- No submission artifact was created.
+- No RL Studio material was created.
+- No locked canonical artifact was edited during construction.
+
+Next eligible phase:
+
+- Golden Construction Review.
