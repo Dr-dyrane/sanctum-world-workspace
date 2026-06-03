@@ -2056,3 +2056,40 @@ Next eligible phase:
 Boundary:
 
 - Expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission artifacts, and RL Studio activity remain blocked until Alexander explicitly authorizes the relevant phase.
+
+## Expected Output Architecture v1 Candidate Record
+
+Status:
+
+- Expected Output Architecture v1: CANDIDATE REVIEW.
+
+Authorization:
+
+- Alexander authorized Expected Output Architecture v1 construction after Task Prompt Construction lock.
+
+Candidate artifacts:
+
+- `worlds/korvin-merrow/expected-output-architecture/candidate-review/expected-output-architecture-v1.md`
+- `worlds/korvin-merrow/expected-output-architecture/candidate-review/expected-output-architecture-validation-review.md`
+
+Architecture decisions:
+
+- Expected output architecture count: 6.
+- Expected output IDs: EO-KM01 through EO-KM06.
+- Mapping: one expected-output architecture slot per locked task prompt TP-KM01 through TP-KM06.
+- FI-T07 remains an addendum source for TP-KM01 / EO-KM01, not a seventh expected output.
+- Expected-output architecture defines output shape and reasoning expectations only.
+
+Boundary:
+
+- No actual expected-output text was created.
+- No golden responses were created.
+- No grader guidance was created.
+- No AutoQC responses were created.
+- No DOCX artifacts were created.
+- No submission artifacts or RL Studio materials were created.
+- Locked artifacts were not modified.
+
+Next eligible phase:
+
+- Expected Output Architecture Review.

@@ -4,7 +4,7 @@ Purpose: local repository hygiene map to prevent duplicate working files and acc
 
 Generated from local workspace file listing excluding `.git`, caches, and Python bytecode.
 
-Current status: Task Prompt Construction / LOCKED. Locked and complete layers include World Spec v1, File Inventory Architecture v1, File Inventory v1, World-Level Synthetic File Layer FI-W01 through FI-W22, Task-Level Context Files FI-T01 through FI-T07, Supplementary Files FI-S01 through FI-S04, the Entire File Ecosystem, Task Prompt Architecture v1, and Task Prompts TP-KM01 through TP-KM06. Task Prompt Architecture v1 is locked at `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-v1.md`, with validation review at `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-validation-review.md` and ratification at `worlds/korvin-merrow/task-prompt-architecture/ratifications/task-prompt-architecture-ratification.md`. Task Prompt Construction is locked at `worlds/korvin-merrow/task-prompts/locked/`, with ratification at `worlds/korvin-merrow/task-prompts/ratifications/task-prompt-construction-ratification.md`. Next eligible phase is Expected Output Architecture. Expected outputs, goldens, grader guidance, DOCX submission packaging, AutoQC, and RL Studio upload have not started.
+Current status: Expected Output Architecture v1 / CANDIDATE REVIEW. Locked and complete layers include World Spec v1, File Inventory Architecture v1, File Inventory v1, World-Level Synthetic File Layer FI-W01 through FI-W22, Task-Level Context Files FI-T01 through FI-T07, Supplementary Files FI-S01 through FI-S04, the Entire File Ecosystem, Task Prompt Architecture v1, and Task Prompts TP-KM01 through TP-KM06. Task Prompt Construction is locked at `worlds/korvin-merrow/task-prompts/locked/`, with ratification at `worlds/korvin-merrow/task-prompts/ratifications/task-prompt-construction-ratification.md`. Expected Output Architecture v1 candidate artifacts are under `worlds/korvin-merrow/expected-output-architecture/candidate-review/`. Next eligible phase is Expected Output Architecture Review. Actual expected outputs, goldens, grader guidance, DOCX submission packaging, AutoQC, and RL Studio upload have not started.
 
 ## Navigation Rule
 
@@ -78,9 +78,11 @@ For a new collaborator or new AI session, read in this order:
 66. `worlds/korvin-merrow/task-prompts/locked/task-prompt-construction-validation-review.md` for locked TP-KM construction validation.
 67. `worlds/korvin-merrow/task-prompts/locked/` for locked TP-KM01 through TP-KM06 prompts.
 68. `worlds/korvin-merrow/task-prompts/ratifications/task-prompt-construction-ratification.md` for Task Prompt Construction lock record.
-69. `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md` for historical interview basis.
-70. `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions and construction-lock status.
-71. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
+69. `worlds/korvin-merrow/expected-output-architecture/candidate-review/expected-output-architecture-v1.md` for Expected Output Architecture v1 candidate.
+70. `worlds/korvin-merrow/expected-output-architecture/candidate-review/expected-output-architecture-validation-review.md` for Expected Output Architecture candidate validation.
+71. `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md` for historical interview basis.
+72. `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions and construction-lock status.
+73. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
 
 Do not start by opening every prep file. Most prep files are supporting memory, not active instructions.
 
@@ -102,7 +104,7 @@ Findings:
 - `worlds/korvin-merrow/task-context-files/` is now a lifecycle folder for FI-T task-context file construction. FI-T01 through FI-T07 are locked and Task-Level Context Files are complete; no FI-S files, prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, or submission artifacts exist in this folder.
 - `worlds/korvin-merrow/supplementary-file-architecture/` is now a lifecycle folder for FI-S architecture only. Supplementary File Architecture v1 is locked and ratified; no constructed FI-S files belong in the architecture folder.
 - `worlds/korvin-merrow/supplementary-files/` is now a lifecycle folder for FI-S file construction. FI-S01 through FI-S04 are locked and Supplementary Files are complete.
-- `candidate-review/` is reserved for active candidate artifacts only. Inactive candidate-review folders should be absent from the visible tree and recreated on demand when a new candidate artifact exists. There are no active candidate-review folders after Task Prompt Construction lock.
+- `candidate-review/` is reserved for active candidate artifacts only. Inactive candidate-review folders should be absent from the visible tree and recreated on demand when a new candidate artifact exists. The active candidate-review folder is currently `worlds/korvin-merrow/expected-output-architecture/candidate-review/`.
 - Several files intentionally overlap by lifecycle stage, especially Brainstorm history/reviews and World Spec prep/checklist material.
 - Do not add new audit or navigation docs unless an existing map/status file cannot carry the information.
 
@@ -498,6 +500,19 @@ Lifecycle clustering:
 | `worlds/korvin-merrow/task-prompts/locked/TP-KM06.md` | Locked task prompt TP-KM06. | Locked prompt only; not an expected output, golden, grader guidance, AutoQC response, DOCX artifact, or submission artifact. |
 | `worlds/korvin-merrow/task-prompts/locked/task-prompt-construction-validation-review.md` | Locked validation review for TP-KM01 through TP-KM06. | Review artifact only; not an expected output, golden, grader guidance, AutoQC response, DOCX artifact, or submission artifact. |
 | `worlds/korvin-merrow/task-prompts/ratifications/task-prompt-construction-ratification.md` | Ratification record for Task Prompt Construction. | Records Reviewer A/B LOCK READY / GO, STRONG clinical prompt quality, contributor validation PASS, no true/governance/canon defects, prompt lock, Task Prompts completion, and next eligible Expected Output Architecture phase. |
+
+## Korvin Merrow Expected Output Architecture
+
+Lifecycle clustering:
+
+- `candidate-review/`: active expected-output architecture artifacts awaiting review or lock.
+- Future `locked/` and `ratifications/` folders may be created only when Expected Output Architecture lock is explicitly authorized.
+- This area is architecture only and must not contain actual expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, RL Studio submission artifacts, or submission materials unless Alexander explicitly authorizes those later phases.
+
+| File | Role | Duplication note |
+| --- | --- | --- |
+| `worlds/korvin-merrow/expected-output-architecture/candidate-review/expected-output-architecture-v1.md` | Candidate expected-output architecture. | Defines EO-KM01 through EO-KM06 structure, deliverable surfaces, reasoning domains, source dependencies, trap/friction/hierarchy handling, and boundaries. Does not create actual expected-output text, goldens, grader guidance, AutoQC responses, DOCX artifacts, or submission artifacts. |
+| `worlds/korvin-merrow/expected-output-architecture/candidate-review/expected-output-architecture-validation-review.md` | Candidate validation review for Expected Output Architecture v1. | Verifies locked-source alignment, one-to-one prompt mapping, file dependency preservation, hierarchy preservation, and absence of actual expected outputs/goldens/grader guidance/downstream artifacts. |
 
 ## Korvin Merrow Supplementary File Architecture
 

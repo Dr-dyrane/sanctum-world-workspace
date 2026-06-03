@@ -18,9 +18,9 @@ RL Studio:
 - Approval source: Slack / Stacey S
 - Reviewer message: "great job! I approved your brainstorm. Next steps are to move forward with world spec and file template development."
 
-Current state: Task Prompt Construction / LOCKED. Entire File Ecosystem is complete and locked. Task Prompt Architecture is complete. TP-KM01 through TP-KM06 are locked and Task Prompts are complete. Expected Output Architecture is next eligible. Expected outputs, goldens, grader guidance, DOCX submission packaging, AutoQC, and RL Studio upload remain gated on explicit Alexander authorization for the relevant step.
+Current state: Expected Output Architecture v1 / CANDIDATE REVIEW. Entire File Ecosystem is complete and locked. Task Prompt Architecture is complete. TP-KM01 through TP-KM06 are locked and Task Prompts are complete. Expected Output Architecture v1 candidate artifacts are located at `worlds/korvin-merrow/expected-output-architecture/candidate-review/expected-output-architecture-v1.md` and `worlds/korvin-merrow/expected-output-architecture/candidate-review/expected-output-architecture-validation-review.md`. Expected Output Architecture Review is the next eligible phase. Actual expected outputs, goldens, grader guidance, DOCX submission packaging, AutoQC, and RL Studio upload remain gated on explicit Alexander authorization for the relevant step.
 
-Repository collaboration readiness note: a new Codex session reconstructed the repository state from repository files alone. The repository is collaboration-ready because `project/STATUS.md`, `docs/status-dashboard.md`, `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`, `project/WORKSPACE_FILE_MAP.md`, and this handoff converge on Task Prompt Construction locked / Expected Output Architecture next eligible. The canonical file map is `project/WORKSPACE_FILE_MAP.md`.
+Repository collaboration readiness note: a new Codex session reconstructed the repository state from repository files alone. The repository is collaboration-ready because `project/STATUS.md`, `docs/status-dashboard.md`, `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`, `project/WORKSPACE_FILE_MAP.md`, and this handoff converge on Expected Output Architecture v1 candidate review / Expected Output Architecture Review next eligible. The canonical file map is `project/WORKSPACE_FILE_MAP.md`.
 
 Cross-artifact consistency verification is a standing governance rule. Before creating, modifying, ratifying, or locking architecture, inventory, matrix, mapping, coverage table, workflow table, trap table, friction table, hierarchy table, or governance artifacts, cross-check applicable locked canonical sources and document any expansion, narrowing, redistribution, reprioritization, relabeling, or reclassification before ratification or lock. Do not silently promote historical, planning, superseded, tracker, or provenance metadata into governing architecture.
 
@@ -330,13 +330,13 @@ Use these as future World Spec priorities only after Brainstorm GO:
 
 Use `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`, `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-skeleton-ratification.md`, `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md`, `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/identity-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/reviews/identity-package-review-addendum.md`, `worlds/korvin-merrow/world-spec-prep/locked/governance-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/reviews/governance-package-clarification.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/governance-package-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/key-milestones-calendar-skeleton-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/key-milestones-calendar-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/baseline-anchor-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/locked/clinical-story-timeline-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-timeline-ratification.md`, `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md`, `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/medication-expansion-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/locked/comorbidity-expansion-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/comorbidity-expansion-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/provider-roster-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/provider-roster-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/surgical-history-package-v1.md`, `worlds/korvin-merrow/world-spec-prep/ratifications/surgical-history-ratification.md`, `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md`, and `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md` for orientation.
 
-Next eligible phase is Expected Output Architecture.
+Next eligible phase is Expected Output Architecture Review.
 
 For the next preparation step:
 
-1. Review `worlds/korvin-merrow/task-prompts/locked/TP-KM01.md` through `TP-KM06.md` and `worlds/korvin-merrow/task-prompts/locked/task-prompt-construction-validation-review.md`.
-2. Cross-check against locked Governance Package, File Inventory, Task Architecture Package, Task-Level Context File Architecture, Supplementary File Architecture, ratifications, and reconciliation records.
-3. Do not create expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, or submission artifacts before explicit authorization.
+1. Review `worlds/korvin-merrow/expected-output-architecture/candidate-review/expected-output-architecture-v1.md` and `worlds/korvin-merrow/expected-output-architecture/candidate-review/expected-output-architecture-validation-review.md`.
+2. Cross-check against locked Task Prompts, Governance Package, File Inventory, Task Architecture Package, Task-Level Context File Architecture, Supplementary File Architecture, ratifications, and reconciliation records.
+3. Do not create actual expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, or submission artifacts before explicit authorization.
 
 Until Alexander authorizes the next construction unit:
 
@@ -384,7 +384,7 @@ If asked to help now, Claude should only support preparation:
 
 - summarize current state;
 - audit against AutoQC v6.3;
-- prepare for Expected Output Architecture only if Alexander authorizes that phase.
+- prepare for Expected Output Architecture Review only if Alexander authorizes that phase.
 - help maintain consistency with the approved Brainstorm.
 
 ## Workspace Doctrine Note
