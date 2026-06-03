@@ -4,7 +4,7 @@ World: Korvin Merrow
 
 Date created: 2026-06-03
 
-Status: CANDIDATE REVIEW
+Status: LOCKED
 
 Purpose: define the architecture for future grader guidance for the six locked Korvin Merrow task prompts, expected outputs, and golden responses.
 
@@ -359,4 +359,4 @@ CANDIDATE REVIEW
 
 Next Eligible Phase:
 
-Grader Guidance Architecture Review
+Grader Guidance Construction

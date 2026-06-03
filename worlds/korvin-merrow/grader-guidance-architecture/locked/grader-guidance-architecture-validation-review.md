@@ -4,7 +4,7 @@ World: Korvin Merrow
 
 Date created: 2026-06-03
 
-Status: CANDIDATE REVIEW
+Status: LOCKED
 
 Purpose: validate Grader Guidance Architecture v1 against locked canonical sources and phase boundaries.
 
@@ -247,8 +247,8 @@ Grader Guidance Architecture v1
 
 Status:
 
-CANDIDATE REVIEW
+CANDIDATE REVIEW COMPLETED / LOCKED
 
 Next Eligible Phase:
 
-Grader Guidance Architecture Review
+Grader Guidance Construction

@@ -1,6 +1,6 @@
 # Korvin Merrow World Spec Kickoff
 
-Status: Grader Guidance Architecture / CANDIDATE REVIEW.
+Status: Grader Guidance Architecture / LOCKED.
 
 Purpose: active cockpit for the transition from approved Brainstorm through World Spec construction while preserving phase boundaries around template population, file inventory, tasks, and downstream deliverables.
 
@@ -102,8 +102,10 @@ Purpose: active cockpit for the transition from approved Brainstorm through Worl
 - Golden Construction ratification: `worlds/korvin-merrow/goldens/ratifications/golden-construction-ratification.md`.
 - Goldens status: COMPLETE.
 - FI-T07 relationship: preserved as addendum support for Golden-KM01 only; no Golden-KM07 exists.
-- Next eligible phase: Grader Guidance Architecture.
-- Grader guidance, rubrics, AutoQC responses, DOCX submission packaging, RL Studio upload, and submission materials have not started.
+- Grader Guidance Architecture v1 is locked at `worlds/korvin-merrow/grader-guidance-architecture/locked/`.
+- Grader Guidance Architecture ratification: `worlds/korvin-merrow/grader-guidance-architecture/ratifications/grader-guidance-architecture-ratification.md`.
+- Next eligible phase: Grader Guidance Construction.
+- Grader guidance construction has not started. Rubrics, scoring thresholds, AutoQC responses, DOCX submission packaging, RL Studio upload, and submission materials have not started.
 - Clinical Story Skeleton v1 is locked and ratified.
 - Clinical Story Skeleton review completed with GO recommendation.
 - Clinical Story Skeleton ratification completed after Claude hostile review minor findings.
@@ -137,7 +139,7 @@ Purpose: active cockpit for the transition from approved Brainstorm through Worl
 - Daily Hospital Course Framework v1: `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md`.
 - Daily Hospital Course Framework ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md`.
 - Preparation Layer status: COMPLETE.
-- Next eligible phase: Grader Guidance Architecture. Grader guidance, rubrics, AutoQC responses, DOCX submission packaging, RL Studio upload, and RL Studio activity remain blocked until explicitly authorized.
+- Next eligible phase: Grader Guidance Construction. Rubrics, scoring thresholds, AutoQC responses, DOCX submission packaging, RL Studio upload, and RL Studio activity remain blocked until explicitly authorized.
 
 ## Workspace Bloat And Doctrine Audit
 
@@ -660,12 +662,13 @@ If any requested step appears to cross these boundaries, pause and ask Alexander
 
 ## 8. Current Downstream Construction State
 
-Grader Guidance Architecture v1 is in candidate review.
+Grader Guidance Architecture v1 is locked.
 
-Candidate artifacts:
+Locked artifacts:
 
-- `worlds/korvin-merrow/grader-guidance-architecture/candidate-review/grader-guidance-architecture-v1.md`.
-- `worlds/korvin-merrow/grader-guidance-architecture/candidate-review/grader-guidance-architecture-validation-review.md`.
+- `worlds/korvin-merrow/grader-guidance-architecture/locked/grader-guidance-architecture-v1.md`.
+- `worlds/korvin-merrow/grader-guidance-architecture/locked/grader-guidance-architecture-validation-review.md`.
+- `worlds/korvin-merrow/grader-guidance-architecture/ratifications/grader-guidance-architecture-ratification.md`.
 
 Locked upstream chain:
 
@@ -682,4 +685,4 @@ Boundary:
 
 - Grader Guidance Architecture is architecture only.
 - No GG-KM files, actual grader guidance, scoring rubrics, scoring thresholds, AutoQC responses, DOCX artifacts, submission artifacts, or RL Studio materials have been created.
-- Next eligible phase is Grader Guidance Architecture Review.
+- Next eligible phase is Grader Guidance Construction.

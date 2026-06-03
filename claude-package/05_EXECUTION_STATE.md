@@ -4,9 +4,9 @@ Purpose: compressed current state for Claude. Use `project/STATUS.md` and `docs/
 
 ## Project State
 
-Current phase: Grader Guidance Architecture / CANDIDATE REVIEW.
+Current phase: Grader Guidance Architecture / LOCKED.
 
-FI-W20 inventory row reconciliation is recorded at `worlds/korvin-merrow/file-inventory/reviews/fi-w20-inventory-row-reconciliation.md`. FI-S03 Trap #5 reconciliation is recorded at `worlds/korvin-merrow/file-inventory/reviews/supplementary-file-trap5-reconciliation.md`. World-Level Synthetic File Layer, Task-Level Context Files, Supplementary Files, the Entire File Ecosystem, Task Prompt Architecture, Task Prompt Construction, Expected Output Architecture, Expected Output Construction, Golden Architecture, and Golden Construction are complete and locked. Task Prompt Architecture v1 is locked at `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-v1.md`, with validation review at `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-validation-review.md` and ratification at `worlds/korvin-merrow/task-prompt-architecture/ratifications/task-prompt-architecture-ratification.md`. Task Prompt Construction is locked at `worlds/korvin-merrow/task-prompts/locked/`; TP-KM01 through TP-KM06 and `task-prompt-construction-validation-review.md` are locked, with ratification recorded at `worlds/korvin-merrow/task-prompts/ratifications/task-prompt-construction-ratification.md`. Expected Output Architecture v1 is locked at `worlds/korvin-merrow/expected-output-architecture/locked/`, with ratification recorded at `worlds/korvin-merrow/expected-output-architecture/ratifications/expected-output-architecture-ratification.md`. Expected Output Construction is locked under `worlds/korvin-merrow/expected-outputs/locked/`; EO-KM01 through EO-KM06 and `expected-output-construction-validation-review.md` are locked, with ratification recorded at `worlds/korvin-merrow/expected-outputs/ratifications/expected-output-construction-ratification.md`. FI-T07 remains addendum support for EO-KM01 only; no EO-KM07 exists. Golden Architecture v1 is locked at `worlds/korvin-merrow/golden-architecture/locked/`, with audit reconciliation preserved at `worlds/korvin-merrow/golden-architecture/locked/golden-architecture-audit-reconciliation.md` and ratification recorded at `worlds/korvin-merrow/golden-architecture/ratifications/golden-architecture-ratification.md`. Golden Construction is locked at `worlds/korvin-merrow/goldens/locked/`: Golden-KM01 through Golden-KM06 plus `golden-construction-validation-review.md`. Ratification is recorded at `worlds/korvin-merrow/goldens/ratifications/golden-construction-ratification.md`. Goldens are complete. No Golden-KM07 exists. Grader Guidance Architecture v1 candidate artifacts are under `worlds/korvin-merrow/grader-guidance-architecture/candidate-review/`: `grader-guidance-architecture-v1.md` and `grader-guidance-architecture-validation-review.md`. They define GG-KM01 through GG-KM06 architecture only; no grader guidance, scoring rubric, scoring threshold, AutoQC response, DOCX artifact, or submission artifact has been created.
+FI-W20 inventory row reconciliation is recorded at `worlds/korvin-merrow/file-inventory/reviews/fi-w20-inventory-row-reconciliation.md`. FI-S03 Trap #5 reconciliation is recorded at `worlds/korvin-merrow/file-inventory/reviews/supplementary-file-trap5-reconciliation.md`. World-Level Synthetic File Layer, Task-Level Context Files, Supplementary Files, the Entire File Ecosystem, Task Prompt Architecture, Task Prompt Construction, Expected Output Architecture, Expected Output Construction, Golden Architecture, Golden Construction, and Grader Guidance Architecture are complete and locked. Task Prompt Architecture v1 is locked at `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-v1.md`, with validation review at `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-validation-review.md` and ratification at `worlds/korvin-merrow/task-prompt-architecture/ratifications/task-prompt-architecture-ratification.md`. Task Prompt Construction is locked at `worlds/korvin-merrow/task-prompts/locked/`; TP-KM01 through TP-KM06 and `task-prompt-construction-validation-review.md` are locked, with ratification recorded at `worlds/korvin-merrow/task-prompts/ratifications/task-prompt-construction-ratification.md`. Expected Output Architecture v1 is locked at `worlds/korvin-merrow/expected-output-architecture/locked/`, with ratification recorded at `worlds/korvin-merrow/expected-output-architecture/ratifications/expected-output-architecture-ratification.md`. Expected Output Construction is locked under `worlds/korvin-merrow/expected-outputs/locked/`; EO-KM01 through EO-KM06 and `expected-output-construction-validation-review.md` are locked, with ratification recorded at `worlds/korvin-merrow/expected-outputs/ratifications/expected-output-construction-ratification.md`. FI-T07 remains addendum support for EO-KM01 only; no EO-KM07 exists. Golden Architecture v1 is locked at `worlds/korvin-merrow/golden-architecture/locked/`, with audit reconciliation preserved at `worlds/korvin-merrow/golden-architecture/locked/golden-architecture-audit-reconciliation.md` and ratification recorded at `worlds/korvin-merrow/golden-architecture/ratifications/golden-architecture-ratification.md`. Golden Construction is locked at `worlds/korvin-merrow/goldens/locked/`: Golden-KM01 through Golden-KM06 plus `golden-construction-validation-review.md`. Ratification is recorded at `worlds/korvin-merrow/goldens/ratifications/golden-construction-ratification.md`. Goldens are complete. No Golden-KM07 exists. Grader Guidance Architecture v1 locked artifacts are under `worlds/korvin-merrow/grader-guidance-architecture/locked/`: `grader-guidance-architecture-v1.md` and `grader-guidance-architecture-validation-review.md`, with ratification recorded at `worlds/korvin-merrow/grader-guidance-architecture/ratifications/grader-guidance-architecture-ratification.md`. No GG-KM files, grader guidance, scoring rubric, scoring threshold, AutoQC response, DOCX artifact, or submission artifact has been created.
 
 Brainstorm:
 
@@ -24,7 +24,7 @@ Brainstorm:
 
 Current blocker:
 
-- No reviewer blocker. Golden Construction is locked and Goldens are complete. Entire File Ecosystem is complete and locked. Task Prompt Architecture v1 is locked and Task Prompt Architecture is complete. Task Prompt Construction is locked and Task Prompts are complete. Expected Output Architecture v1 is locked and Expected Output Architecture is complete. Expected Output Construction is locked and Expected Outputs are complete. Golden Architecture v1 is locked and Golden Architecture is complete. Grader Guidance Architecture v1 is in candidate review. Actual grader guidance, rubrics, scoring thresholds, DOCX submission packaging, AutoQC, and RL Studio upload remain gated on explicit Alexander authorization for the relevant step.
+- No reviewer blocker. Golden Construction is locked and Goldens are complete. Entire File Ecosystem is complete and locked. Task Prompt Architecture v1 is locked and Task Prompt Architecture is complete. Task Prompt Construction is locked and Task Prompts are complete. Expected Output Architecture v1 is locked and Expected Output Architecture is complete. Expected Output Construction is locked and Expected Outputs are complete. Golden Architecture v1 is locked and Golden Architecture is complete. Grader Guidance Architecture v1 is locked and complete. Grader Guidance Construction is the next eligible phase. Rubrics, scoring thresholds, DOCX submission packaging, AutoQC, and RL Studio upload remain gated on explicit Alexander authorization for the relevant step.
 
 Next legal action:
 
@@ -173,8 +173,9 @@ Next legal action:
 - Expected Output Construction ratification recorded at `worlds/korvin-merrow/expected-outputs/ratifications/expected-output-construction-ratification.md`.
 - Golden Architecture v1 locked.
 - Golden Construction ratified and locked: Golden-KM01 through Golden-KM06 plus `worlds/korvin-merrow/goldens/locked/golden-construction-validation-review.md`.
-- Grader Guidance Architecture v1 candidate created: `worlds/korvin-merrow/grader-guidance-architecture/candidate-review/grader-guidance-architecture-v1.md`.
-- Grader Guidance Architecture validation review created: `worlds/korvin-merrow/grader-guidance-architecture/candidate-review/grader-guidance-architecture-validation-review.md`.
+- Grader Guidance Architecture v1 ratified and locked: `worlds/korvin-merrow/grader-guidance-architecture/locked/grader-guidance-architecture-v1.md`.
+- Grader Guidance Architecture validation review locked: `worlds/korvin-merrow/grader-guidance-architecture/locked/grader-guidance-architecture-validation-review.md`.
+- Grader Guidance Architecture ratification recorded: `worlds/korvin-merrow/grader-guidance-architecture/ratifications/grader-guidance-architecture-ratification.md`.
 
 ## Latest Git Checkpoints
 
@@ -202,8 +203,7 @@ Next legal action:
 - Reviewer-risk analysis.
 - Claude package refresh.
 - Local documentation updates that preserve phase boundaries.
-- Grader Guidance Architecture preparation only when explicitly authorized.
-- Grader Guidance Architecture Review when explicitly authorized.
+- Grader Guidance Construction when explicitly authorized.
 - Applying the Medicine Team Lead physician-perspective guidance later during authorized task design, task prompts, expected outputs, goldens, and grader guidance. This guidance is future task-layer framing only; it does not reopen Governance Package v1 or change source-of-truth hierarchy.
 - Applying collaborator session-exit discipline at the end of every working session.
 
@@ -222,7 +222,7 @@ Next legal action:
 - Revising locked task prompts without explicit authorization.
 - Reopening or modifying locked expected outputs without explicit authorization.
 - Creating additional golden responses or revising candidate goldens without explicit authorization.
-- Creating actual grader guidance.
+- Creating actual grader guidance before the authorized construction phase.
 - Creating scoring rubrics.
 - Creating scoring thresholds.
 - Creating failure analysis.
@@ -303,8 +303,9 @@ Claude must not replace physician judgment or originate clinical design.
 - `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md`
 - `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`
 - `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-skeleton-ratification.md`
-- `worlds/korvin-merrow/grader-guidance-architecture/candidate-review/grader-guidance-architecture-v1.md`
-- `worlds/korvin-merrow/grader-guidance-architecture/candidate-review/grader-guidance-architecture-validation-review.md`
+- `worlds/korvin-merrow/grader-guidance-architecture/locked/grader-guidance-architecture-v1.md`
+- `worlds/korvin-merrow/grader-guidance-architecture/locked/grader-guidance-architecture-validation-review.md`
+- `worlds/korvin-merrow/grader-guidance-architecture/ratifications/grader-guidance-architecture-ratification.md`
 - `reference/world-spec-guidelines/08_autoqc_master_index.md`
 - `reference/world-spec-guidelines/09_world_spec_writer_playbook.md`
 - `project/WORKSPACE_FILE_MAP.md`
