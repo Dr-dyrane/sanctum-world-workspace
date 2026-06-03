@@ -419,7 +419,8 @@ File Inventory Architecture v1:
 - Ratification is recorded at `worlds/korvin-merrow/expected-outputs/ratifications/expected-output-construction-ratification.md`.
 - Expected Outputs status is complete.
 - FI-T07 remains addendum support for EO-KM01 only; no EO-KM07 exists.
-- Next eligible phase is Golden Architecture.
+- Golden Architecture v1 is in candidate review with audit reconciliation complete.
+- Next eligible phase is Golden Architecture Review.
 - Goldens, grader guidance, rubrics, AutoQC responses, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
 
 ## Key Milestones Calendar Skeleton v1
@@ -940,7 +941,8 @@ Task-Level Context File Architecture v1:
 - Locked files: EO-KM01 through EO-KM06 plus `expected-output-construction-validation-review.md` at `worlds/korvin-merrow/expected-outputs/locked/`.
 - Ratification: `worlds/korvin-merrow/expected-outputs/ratifications/expected-output-construction-ratification.md`.
 - Expected Outputs: COMPLETE.
-- Next eligible phase: Golden Architecture.
+- Golden Architecture v1 is in candidate review at `worlds/korvin-merrow/golden-architecture/candidate-review/`, with audit reconciliation complete.
+- Next eligible phase: Golden Architecture Review.
 
 ## Major Clinical Friction Themes
 

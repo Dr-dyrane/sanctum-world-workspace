@@ -29,7 +29,7 @@ Authoritative locked sources checked:
 - Expected Output Construction ratification.
 - FI-W20 inventory-row reconciliation.
 - FI-T inventory / task-layer architecture reconciliation.
-- FI-S03 discharge-source reconciliation.
+- FI-S03 Trap #5 reconciliation.
 - Standing physician-perspective task-layer rule.
 - Standing Cross-Artifact Consistency Verification rule.
 
@@ -103,13 +103,13 @@ Workflow preservation:
 
 ## 5. File Dependency Mapping
 
-Required means a future golden must demonstrate synthesis from those sources when the evidence is relevant to the task. Optional/supporting means the source may add background texture but may not carry sole critical evidence.
+Required means a future golden must demonstrate synthesis from those sources when the evidence is relevant to the task. Optional/supporting FI-S means the source may add background, provenance, or logistics texture only. FI-S files may not carry sole critical evidence, resolve a friction, complete FI-W22, or become an answer source.
 
 | Golden ID | Required FI-T | Required FI-W files | Optional/supporting FI-S files |
 | --- | --- | --- | --- |
-| Golden-KM01 | FI-T01, FI-T07 | FI-W03, FI-W04, FI-W05, FI-W06, FI-W11, FI-W12, FI-W13, FI-W14, FI-W15, FI-W16, FI-W19, FI-W22 | FI-S01, FI-S04 |
-| Golden-KM02 | FI-T02 | FI-W01, FI-W02, FI-W03, FI-W07, FI-W08, FI-W09, FI-W10, FI-W11, FI-W12, FI-W14, FI-W15, FI-W16, FI-W17, FI-W18, FI-W19, FI-W20, FI-W22 | FI-S01, FI-S02, FI-S04 |
-| Golden-KM03 | FI-T03 | FI-W01, FI-W07, FI-W09, FI-W11, FI-W12, FI-W17, FI-W18, FI-W19, FI-W20, FI-W21, FI-W22 | FI-S02, FI-S03 |
+| Golden-KM01 | FI-T01, FI-T07 | FI-W03, FI-W04, FI-W05, FI-W06, FI-W11, FI-W12, FI-W13, FI-W14, FI-W15, FI-W16, FI-W19, FI-W22 | FI-S01 and FI-S04 as background/provenance texture only |
+| Golden-KM02 | FI-T02 | FI-W01, FI-W02, FI-W03, FI-W07, FI-W08, FI-W09, FI-W10, FI-W11, FI-W12, FI-W14, FI-W15, FI-W16, FI-W17, FI-W18, FI-W19, FI-W20, FI-W22 | FI-S01, FI-S02, and FI-S04 as background texture only |
+| Golden-KM03 | FI-T03 | FI-W01, FI-W07, FI-W09, FI-W11, FI-W12, FI-W17, FI-W18, FI-W19, FI-W20, FI-W21, FI-W22 | FI-S02 and FI-S03 as background/logistics texture only |
 | Golden-KM04 | FI-T04 | FI-W02, FI-W03, FI-W08, FI-W10, FI-W11, FI-W12, FI-W13, FI-W14, FI-W15, FI-W16, FI-W17, FI-W18, FI-W19, FI-W20, FI-W21, FI-W22 | FI-S01, FI-S03, FI-S04 as background only if packaging requires |
 | Golden-KM05 | FI-T05 | FI-W01 through FI-W22 | FI-S01, FI-S02, FI-S03, FI-S04 as background only |
 | Golden-KM06 | FI-T06 | FI-W01 through FI-W22 | FI-S02, FI-S03, FI-S04 as background only |
@@ -119,7 +119,7 @@ File dependency safeguards:
 - FI-T files frame the task and must not replace chart review.
 - FI-T07 is an addendum for Golden-KM01 only.
 - FI-W22 must remain visible but incomplete.
-- FI-S files must never carry sole critical evidence.
+- FI-S files must never carry sole critical evidence, resolve a friction, complete FI-W22, or become answer files.
 - No golden may depend on future artifacts not already locked.
 
 ## 6. Required Reasoning Domains
@@ -212,7 +212,7 @@ Future goldens must preserve frictions as reasonable perspective conflicts.
 | Friction domain | Golden IDs where active | Required handling |
 | --- | --- | --- |
 | Cardiology vs Nephrology medication timing | Golden-KM01, Golden-KM04; secondary in Golden-KM05 and Golden-KM06 | Preserve both HFrEF/CAD protection and renal/potassium/BP/intake/monitoring safety. Require sequencing and monitoring logic instead of consultant-winner logic. |
-| Endocrinology vs Primary Team steroid interpretation | Golden-KM01, Golden-KM04, Golden-KM05; secondary in Golden-KM02 and Golden-KM06 | Preserve endocrine concern without proving steroid causality; preserve primary-team improvement framing without dismissing steroid risk. Apply prednisone hierarchy. |
+| Endocrinology vs Primary Team steroid interpretation | Golden-KM01, Golden-KM04, Golden-KM05; secondary in Golden-KM02; background steroid-source / endocrine-risk context only in Golden-KM06 | Preserve endocrine concern without proving steroid causality; preserve primary-team improvement framing without dismissing steroid risk. Apply prednisone hierarchy. For Golden-KM06, include steroid-source and endocrine-risk signals only as background source-hierarchy risk and do not expand the friction beyond FI-T06. |
 | Family vs Primary Team discharge readiness | Golden-KM03, Golden-KM05, Golden-KM06; secondary in Golden-KM02 and Golden-KM04 | Treat family concern as baseline-informed evidence while preserving that primary-team discharge planning is clinically plausible given improvement. |
 
 ## 11. Trap-Handling Requirements
@@ -299,7 +299,7 @@ Verification findings:
 - The four locked workflows are preserved without adding or renaming workflows.
 - File dependency mapping matches locked Task Prompt Architecture v1 and Expected Output Architecture v1.
 - FI-W01 through FI-W22, FI-T01 through FI-T07, and FI-S01 through FI-S04 are represented according to locked inventory roles.
-- FI-S files remain optional/supporting and do not carry sole critical evidence.
+- FI-S files remain optional/supporting background, provenance, or logistics texture only and do not carry sole critical evidence, resolve frictions, complete FI-W22, or become answer files.
 - The five locked information-problem domains are preserved without exposing internal labels or numbers in future golden response expectations.
 - The three friction domains remain active and defensible.
 - Authority hierarchy, master source-of-truth hierarchy, prednisone hierarchy, and physician-perspective rule are preserved.

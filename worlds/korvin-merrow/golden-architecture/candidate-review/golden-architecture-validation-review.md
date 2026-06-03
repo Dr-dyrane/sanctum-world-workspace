@@ -26,11 +26,13 @@ Locked canonical sources checked:
 - FI-W20, FI-T, and FI-S reconciliation records
 - Standing cross-artifact consistency and physician-perspective rules
 
+Audit reconciliation note: the independent cold audit found that this source-basis statement was overbroad relative to the original pre-construction review activity. Full FI-W, FI-T, FI-S, prompt, expected-output, governance, inventory, architecture, ratification, and reconciliation review was completed during Golden Architecture Audit Reconciliation. The corrections are recorded in `worlds/korvin-merrow/golden-architecture/candidate-review/golden-architecture-audit-reconciliation.md`.
+
 ## Validation Summary
 
-Golden Architecture v1 is structurally aligned with locked prerequisites and remains within the authorized Golden Architecture boundary.
+Golden Architecture v1 is structurally aligned with locked prerequisites and remains within the authorized Golden Architecture boundary after the audit-reconciliation corrections recorded in `golden-architecture-audit-reconciliation.md`.
 
-Assessment: READY FOR HUMAN / REVIEWER CANDIDATE REVIEW.
+Assessment: CANDIDATE REVIEW; ready for Golden Architecture Review when Alexander authorizes that review phase.
 
 No golden responses, grader guidance, scoring rubrics, AutoQC responses, DOCX artifacts, submission artifacts, final medication decisions, final discharge decisions, final risk conclusions, new clinical facts, or new workflows were created.
 
@@ -97,7 +99,7 @@ The file dependency table matches the locked Task Prompt Architecture v1 and Exp
 - Golden-KM05 uses FI-T05 with FI-W01 through FI-W22.
 - Golden-KM06 uses FI-T06 with FI-W01 through FI-W22.
 
-FI-S dependencies remain optional/supporting. FI-T07 remains addendum support for Golden-KM01 only.
+FI-S dependencies remain optional/supporting background, provenance, or logistics texture only. They may not carry sole critical evidence, resolve frictions, complete FI-W22, or become answer sources. FI-T07 remains addendum support for Golden-KM01 only.
 
 Impact: FI-W01 through FI-W22, FI-T01 through FI-T07, and FI-S01 through FI-S04 are represented without changing locked file responsibilities.
 
@@ -134,13 +136,13 @@ Impact: coverage is preserved without exposing internal trap labels or numbers a
 
 Finding: VERIFIED.
 
-The architecture preserves the three locked friction domains:
+The architecture preserves the three locked friction domains with task-specific scope:
 
 - Cardiology vs Nephrology medication timing.
 - Endocrinology vs Primary Team steroid interpretation.
 - Family vs Primary Team discharge readiness.
 
-Impact: frictions remain defensible human/perspective conflicts and are not converted into hidden defects or single correct authorities.
+Impact: frictions remain defensible human/perspective conflicts and are not converted into hidden defects or single correct authorities. Golden-KM06 is narrowed to background steroid-source / endocrine-risk context only, consistent with FI-T06 and EO-KM06; it does not expand Endocrinology vs Primary Team beyond locked FI-T06 architecture.
 
 ## 8. Special Watch Item Validation
 
@@ -200,11 +202,11 @@ Explicit cross-check result:
 - Expected-output responsibilities were not broadened beyond EO-KM01 through EO-KM06.
 - Hierarchy rules were preserved without reinterpretation.
 - Information-problem coverage was preserved without visible label exposure in future golden expectations.
-- Friction coverage was preserved without resolution-by-architecture.
-- Source dependencies were preserved from locked prompt and expected-output architecture.
+- Friction coverage was preserved without resolution-by-architecture after narrowing Golden-KM06 endocrine/steroid language to background context.
+- Source dependencies were preserved from locked prompt and expected-output architecture after clarifying FI-S03 and FI-S04 as background/supporting sources only.
 - Historical, planning, tracker, and provenance metadata were not promoted into governing architecture.
 
-No discrepancies requiring reconciliation were identified.
+Golden Architecture Audit Reconciliation identified four findings and resolved them without ratification, lock, new workflow creation, task responsibility changes, expected-output changes, prompt changes, golden responses, grader guidance, rubrics, AutoQC responses, DOCX artifacts, or submission artifacts.
 
 ## 11. Candidate Review Recommendation
 

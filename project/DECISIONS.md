@@ -2,6 +2,38 @@
 
 Record confirmed project decisions here.
 
+## 2026-06-03 - Golden Architecture Audit Reconciliation Complete
+
+Decision: Golden Architecture Audit Reconciliation is complete. Golden Architecture v1 remains in candidate review and is not ratified or locked.
+
+Artifacts:
+
+- `worlds/korvin-merrow/golden-architecture/candidate-review/golden-architecture-v1.md`
+- `worlds/korvin-merrow/golden-architecture/candidate-review/golden-architecture-validation-review.md`
+- `worlds/korvin-merrow/golden-architecture/candidate-review/golden-architecture-audit-reconciliation.md`
+
+Findings:
+
+- Finding A: TRUE INCONSISTENCY; validation review source-check claim required reconciliation.
+- Finding B: TRUE INCONSISTENCY; stale current-facing continuity surfaces required synchronization.
+- Finding C: TRUE INCONSISTENCY; Golden-KM06 Endocrinology vs Primary Team handling required narrowing to background steroid-source / endocrine-risk context only.
+- Finding D: CLARIFICATION ONLY; FI-S03 and FI-S04 dependency language required stronger background/supporting-source constraints.
+
+Boundaries:
+
+- No Golden Architecture ratification or lock.
+- No golden responses.
+- No grader guidance.
+- No scoring rubrics.
+- No AutoQC responses.
+- No DOCX artifacts.
+- No submission artifacts.
+- No new workflows, prompt changes, expected-output changes, or task-responsibility changes.
+
+Next eligible phase:
+
+- Golden Architecture Review.
+
 ## 2026-05-31 - Clinical Story Skeleton v1 Ratified
 
 Decision: Clinical Story Skeleton v1 for Korvin Merrow is locked and ratified after Codex GO review and Claude hostile review minor findings.

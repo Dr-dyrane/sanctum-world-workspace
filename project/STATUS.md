@@ -12,7 +12,7 @@ Working title: Korvin Merrow World
 
 Brainstorm Human Review returned GO from Stacey S after SEND BACK remediation. Reviewer approved the Korvin Merrow Brainstorm and indicated next steps are World Spec and file template development. Preparation Layer, World Spec v1, File Inventory Architecture v1, File Inventory v1, Synthetic World-Level File Construction Plan v1, FI-W01 through FI-W22, Task-Level Context File Architecture v1, FI-T01 through FI-T07, Supplementary File Architecture v1, FI-S01 through FI-S04, Task Prompt Architecture v1, Task Prompt Construction, and Expected Output Architecture v1 are locked and complete. Entire File Ecosystem is complete: FI-W01 through FI-W22, FI-T01 through FI-T07, and FI-S01 through FI-S04. Task Prompt Architecture v1 is locked at `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-v1.md`, with validation review at `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-validation-review.md` and ratification at `worlds/korvin-merrow/task-prompt-architecture/ratifications/task-prompt-architecture-ratification.md`.
 
-Task Prompt Construction is LOCKED. Six task prompts (TP-KM01 through TP-KM06) are locked under `worlds/korvin-merrow/task-prompts/locked/` with `task-prompt-construction-validation-review.md`. Ratification is recorded at `worlds/korvin-merrow/task-prompts/ratifications/task-prompt-construction-ratification.md`. Expected Output Architecture v1 is LOCKED under `worlds/korvin-merrow/expected-output-architecture/locked/`. Ratification is recorded at `worlds/korvin-merrow/expected-output-architecture/ratifications/expected-output-architecture-ratification.md`. Expected Output Construction is LOCKED under `worlds/korvin-merrow/expected-outputs/locked/`, with EO-KM01 through EO-KM06 and `expected-output-construction-validation-review.md` locked. Ratification is recorded at `worlds/korvin-merrow/expected-outputs/ratifications/expected-output-construction-ratification.md`. FI-T07 remains addendum support for EO-KM01 only; no EO-KM07 was created. Golden Architecture v1 is now in candidate review at `worlds/korvin-merrow/golden-architecture/candidate-review/golden-architecture-v1.md`, with validation review at `worlds/korvin-merrow/golden-architecture/candidate-review/golden-architecture-validation-review.md`. No golden responses, grader guidance, rubrics, AutoQC responses, DOCX artifacts, submission artifacts, final medication decisions, final discharge decisions, or final risk conclusions were created.
+Task Prompt Construction is LOCKED. Six task prompts (TP-KM01 through TP-KM06) are locked under `worlds/korvin-merrow/task-prompts/locked/` with `task-prompt-construction-validation-review.md`. Ratification is recorded at `worlds/korvin-merrow/task-prompts/ratifications/task-prompt-construction-ratification.md`. Expected Output Architecture v1 is LOCKED under `worlds/korvin-merrow/expected-output-architecture/locked/`. Ratification is recorded at `worlds/korvin-merrow/expected-output-architecture/ratifications/expected-output-architecture-ratification.md`. Expected Output Construction is LOCKED under `worlds/korvin-merrow/expected-outputs/locked/`, with EO-KM01 through EO-KM06 and `expected-output-construction-validation-review.md` locked. Ratification is recorded at `worlds/korvin-merrow/expected-outputs/ratifications/expected-output-construction-ratification.md`. FI-T07 remains addendum support for EO-KM01 only; no EO-KM07 was created. Golden Architecture v1 is now in candidate review at `worlds/korvin-merrow/golden-architecture/candidate-review/golden-architecture-v1.md`, with validation review at `worlds/korvin-merrow/golden-architecture/candidate-review/golden-architecture-validation-review.md` and audit reconciliation at `worlds/korvin-merrow/golden-architecture/candidate-review/golden-architecture-audit-reconciliation.md`. No golden responses, grader guidance, rubrics, AutoQC responses, DOCX artifacts, submission artifacts, final medication decisions, final discharge decisions, or final risk conclusions were created.
 
 Source/reference note: Alexander added World Spec example source documents under `reference/word-spec-examples/`. This folder is intentionally local-only and gitignored because the example corpus is large and can confuse project-specific source-of-truth boundaries. Preserve it as source/reference material, not authored Korvin Merrow content.
 
@@ -40,7 +40,7 @@ Reviewer GO: Stacey S approved Brainstorm via Slack. Recorded in `worlds/korvin-
 
 ## Current Pass
 
-Golden Architecture: CANDIDATE REVIEW. Candidate artifacts are under `worlds/korvin-merrow/golden-architecture/candidate-review/`: `golden-architecture-v1.md` and `golden-architecture-validation-review.md`.
+Golden Architecture: CANDIDATE REVIEW. Candidate artifacts are under `worlds/korvin-merrow/golden-architecture/candidate-review/`: `golden-architecture-v1.md`, `golden-architecture-validation-review.md`, and `golden-architecture-audit-reconciliation.md`.
 
 ## Next Pass
 
@@ -52,7 +52,7 @@ No active reviewer blocker. Entire File Ecosystem is complete and locked. Task P
 
 ## Current Git Checkpoint
 
-checkpoint: create golden architecture v1
+checkpoint: reconcile golden architecture audit findings
 
 ## Active Branch
 
