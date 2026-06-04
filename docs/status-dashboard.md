@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-World Spec SUBMITTED-READY. Execution Artifact Generation COMPLETE / CANONICALIZED. RL Studio upload and Spec AutoQC are complete under Alexander's direct authorization; final board is 108/109 with prednisone dose/frequency preserved as the sole intentional, note-justified flag. Next step is Alexander confirming the Submit Spec for Review click, then Human World Spec Review.
+World Spec APPROVED. Execution Artifact Generation COMPLETE / CANONICALIZED. RL Studio upload and Spec AutoQC are complete under Alexander's direct authorization; final board is 108/109 with prednisone dose/frequency preserved as the sole intentional, note-justified flag. Human World Spec Review is approved by Stacey S; the requested Reference File Origin routing correction was resolved and re-uploaded. Next external stage is engineering pipeline run / synthetic generation.
 
 ## Brainstorm
 
@@ -155,8 +155,10 @@ World Spec SUBMITTED-READY. Execution Artifact Generation COMPLETE / CANONICALIZ
 - Final Submission Resolution locked artifacts: `worlds/korvin-merrow/final-submission-resolution/locked/final-submission-resolution-v1.md` and `worlds/korvin-merrow/final-submission-resolution/locked/final-submission-resolution-validation-review.md`; ratification at `worlds/korvin-merrow/final-submission-resolution/ratifications/final-submission-resolution-ratification.md`
 - Execution Artifact Generation: COMPLETE / CANONICALIZED; generated one canonical spec DOCX, one canonical 33-file reference/task upload set, and sanitized transcript DOCX/PDF. No AutoQC response, scoring artifact, manifest, final package, or zip was created in the repository.
 - Spec AutoQC: COMPLETE at 108/109; sole remaining prednisone warning is intentional and note-justified
+- Human World Spec Review: APPROVED by Stacey S; approval record `worlds/korvin-merrow/reviews/reviewer-spec-approval-01.md`
+- Reviewer routing correction: Reference File Origin labels corrected to the template-canonical `Custom Made` token and re-uploaded
 - No GG-KM07 exists
-- Next eligible phase: Alexander confirms Submit Spec for Review, then Human World Spec Review
+- Next eligible phase: engineering pipeline run / synthetic generation, then writer Step 9 file review after generated files are available
 - Claude transcript: `docs/claude-transcript-formatted.md` is the authoritative transcript upload artifact. `docs/claude-transcript.md` remains raw historical/provenance evidence. Supporting Claude share URL: `https://claude.ai/share/d5129364-5d6c-4a2c-acb3-282f367a0040`.
 - Task-design physician-perspective guidance: recorded as a future task-layer rule only. It does not change source-of-truth hierarchy or Governance Package v1; future task prompts and deliverables must remain physician-centered even when supporting sources are pharmacy, nursing, PT/OT, case management, social work, family, or administrative sources.
 - Collaborator session-exit discipline: standing process / handoff rule. Every future session must leave the repository clean or explicitly documented, update phase and next-phase surfaces, preserve locked artifacts unless explicitly authorized, label candidate artifacts, move newly locked artifacts to locked paths with ratification references, update continuity and Claude handoff files, record carry-forward watch items and future task-layer guidance, commit completed work unless explicitly told not to, and report what changed, what did not change, current status, next eligible phase, and whether the repository is safe for another collaborator.
@@ -215,7 +217,7 @@ World Spec SUBMITTED-READY. Execution Artifact Generation COMPLETE / CANONICALIZ
 - Fetched World Spec example source documents: `reference/word-spec-examples/` (local-only / gitignored)
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 - World Spec prep folder structure: reorganized by lifecycle buckets (`candidate-review/`, `locked/`, `ratifications/`, `reviews/`, `decision-logs/`, `planning-scaffolds/`)
-- Next eligible phase: Alexander confirms Submit Spec for Review if not already clicked, then Human World Spec Review. Do not run additional AutoQC, create platform responses, create AutoQC responses, create scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifests, final submission packages, additional uploads, additional submissions, or access RL Studio again until explicitly authorized.
+- Next eligible phase: engineering pipeline run / synthetic generation, then writer Step 9 file review after generated files are available. Do not run additional AutoQC, create platform responses, create AutoQC responses, create scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifests, final submission packages, additional uploads, additional submissions, or access RL Studio again until explicitly authorized.
 
 ## Tooling
 
@@ -237,7 +239,7 @@ World Spec SUBMITTED-READY. Execution Artifact Generation COMPLETE / CANONICALIZ
 - Do not treat fetched World Spec examples as authored Korvin Merrow content or source-of-truth material.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
 - Do not modify clinical content beyond reviewer-required remediation without Alexander approval.
-- Do not proceed beyond the submitted-ready World Spec state into additional AutoQC runs, platform responses, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifest creation, final submission packaging, additional uploads, additional submission actions, or failure analysis without explicit authorization.
+- Do not proceed beyond the approved World Spec / engineering-pipeline-pending state into additional AutoQC runs, platform responses, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifest creation, final submission packaging, additional uploads, additional submission actions, or failure analysis without explicit authorization.
 - Do not access RL Studio again without explicit authorization.
 - Do not end a working session without applying collaborator session-exit discipline.
 ## Execution Artifact Generation Outputs

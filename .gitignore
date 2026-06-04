@@ -37,6 +37,9 @@ cap_sid
 
 # Browser/session exports
 .browser/
+.playwright-mcp/
+playwright-report/
+test-results/
 browser-exports/
 chrome-exports/
 browser-profiles/
