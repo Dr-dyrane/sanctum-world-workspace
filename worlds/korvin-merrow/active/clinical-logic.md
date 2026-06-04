@@ -440,7 +440,7 @@ File Inventory Architecture v1:
 - Packaging Construction is LOCKED at `worlds/korvin-merrow/packaging/locked/`.
 - Submission Preparation is LOCKED at `worlds/korvin-merrow/submission-preparation/locked/` with ratification at `worlds/korvin-merrow/submission-preparation/ratifications/submission-preparation-ratification.md`.
 - Execution Preparation v1 is LOCKED at `worlds/korvin-merrow/execution-preparation/locked/`.
-- Next eligible phase is Transcript Resolution Review.
+- Transcript Resolution is locked; Execution Artifact Generation is authorized for submission-facing artifacts only.
 - AutoQC runs, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
 
 ## Key Milestones Calendar Skeleton v1
@@ -1039,12 +1039,12 @@ Next eligible phase: Transcript Resolution Review.
 
 Date: 2026-06-03
 
-- Final Submission Resolution v1 is in candidate review at `worlds/korvin-merrow/final-submission-resolution/candidate-review/final-submission-resolution-v1.md`.
-- Validation review is at `worlds/korvin-merrow/final-submission-resolution/candidate-review/final-submission-resolution-validation-review.md`.
+- Final Submission Resolution v1 is locked at `worlds/korvin-merrow/final-submission-resolution/locked/final-submission-resolution-v1.md`.
+- Validation review is locked at `worlds/korvin-merrow/final-submission-resolution/locked/final-submission-resolution-validation-review.md`; ratification is at `worlds/korvin-merrow/final-submission-resolution/ratifications/final-submission-resolution-ratification.md`.
 - Transcript Resolution v1 remains locked. `docs/claude-transcript-formatted.md` remains the authoritative transcript upload source, and the Claude share URL remains supporting provenance.
 - Current execution decision: Markdown remains workspace source format. Future submission-facing document artifacts should be exported to DOCX unless official evidence explicitly requires otherwise; original binary is reserved for media or non-document artifacts.
 - Current required pre-AutoQC execution outputs, once separately authorized, are a populated World Spec DOCX, FI-W/FI-S template-reference exports, and a transcript DOCX.
 - FI-T files are optional/later task-level hold materials unless RL Studio explicitly requests them during current upload.
 - Task prompts, expected outputs, goldens, and grader guidance remain locked downstream artifacts and are not current required World Spec upload materials.
 - No AutoQC was run, no DOCX/PDF was generated, no manifest was created, no package was created, no upload/submission occurred, and no locked clinical artifact was modified.
-- Next eligible phase after Final Submission Resolution review: Execution and Artifact Generation.
+- Next eligible phase after artifact generation: Pre-AutoQC Artifact Review / RL Studio Upload Authorization.

@@ -3162,8 +3162,8 @@ Authorization:
 
 Created candidate artifacts:
 
-- `worlds/korvin-merrow/final-submission-resolution/candidate-review/final-submission-resolution-v1.md`
-- `worlds/korvin-merrow/final-submission-resolution/candidate-review/final-submission-resolution-validation-review.md`
+- `worlds/korvin-merrow/final-submission-resolution/locked/final-submission-resolution-v1.md`
+- `worlds/korvin-merrow/final-submission-resolution/locked/final-submission-resolution-validation-review.md`
 
 Resolved execution architecture:
 
@@ -3186,7 +3186,7 @@ Boundary preserved:
 
 Status:
 
-- Final Submission Resolution v1: CANDIDATE REVIEW.
+- Final Submission Resolution v1: LOCKED.
 
 Next eligible phase:
 
