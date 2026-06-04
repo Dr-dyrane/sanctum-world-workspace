@@ -3151,3 +3151,43 @@ Status:
 Next eligible phase:
 
 - Transcript Resolution Review.
+
+## Final Submission Resolution Candidate Record
+
+Date: 2026-06-03
+
+Authorization:
+
+- Alexander authorized Final Submission Dependency Resolution and Export Architecture after Execution Preparation lock and Transcript Resolution resolution.
+
+Created candidate artifacts:
+
+- `worlds/korvin-merrow/final-submission-resolution/candidate-review/final-submission-resolution-v1.md`
+- `worlds/korvin-merrow/final-submission-resolution/candidate-review/final-submission-resolution-validation-review.md`
+
+Resolved execution architecture:
+
+- Required current upload set: final World Spec DOCX, FI-W/FI-S template-reference exports, and transcript DOCX.
+- Optional current support: approved Brainstorm DOCX as QC supplemental input, transcript PDF companion, Claude share URL provenance.
+- Current hold/not-upload: task prompts, expected outputs, goldens, grader guidance, governance records, ratifications, reconciliations, AutoQC/Packaging/Submission/Execution prep records, raw transcript, candidate-review artifacts from prior phases, scoring artifacts, AutoQC responses, manifests, packages, uploads, and submissions.
+- Markdown remains workspace source format, not preferred final submission format unless official evidence explicitly requires it.
+- FI-T01 through FI-T07 remain optional/later task-level hold materials unless RL Studio explicitly requests task-level context files during current upload.
+
+Boundary preserved:
+
+- No DOCX or PDF generated.
+- No manifest created.
+- No final package created.
+- No AutoQC run.
+- No AutoQC response created.
+- No upload or submission performed.
+- No locked artifact modified.
+- No scoring rubric, threshold, pass/fail band, or point allocation created.
+
+Status:
+
+- Final Submission Resolution v1: CANDIDATE REVIEW.
+
+Next eligible phase:
+
+- Execution and Artifact Generation.

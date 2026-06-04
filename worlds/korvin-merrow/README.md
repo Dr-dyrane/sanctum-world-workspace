@@ -1,6 +1,6 @@
 # Korvin Merrow World
 
-Current state: Transcript Resolution / CANDIDATE REVIEW.
+Current state: Final Submission Resolution / CANDIDATE REVIEW.
 
 Start here only after reading `project/STATUS.md`.
 
@@ -33,11 +33,13 @@ Start here only after reading `project/STATUS.md`.
 - `packaging-architecture/`: packaging architecture lifecycle area. Locked artifacts define future DOCX, manifest, transcript, reference/template, reconciliation, and upload sequencing strategy only; they do not create package artifacts or submit anything.
 - `packaging/`: packaging construction lifecycle area. Locked artifacts prepare future packaging execution only; they do not populate DOCX, create manifests, create final submission packages, upload, submit, run AutoQC, create AutoQC responses, or create scoring artifacts.
 - `submission-preparation/`: submission preparation lifecycle area. Locked artifacts organize final execution decisions and stop points only; they do not populate DOCX, create manifests, create submission packages, run AutoQC, upload, or submit.
+- `final-submission-resolution/`: final submission dependency resolution lifecycle area. Active candidate artifacts determine upload set, export targets, folder mapping, DOCX blueprint, transcript export requirements, and FI-W/FI-T/FI-S transformation boundaries only; they do not generate DOCX/PDF artifacts, create manifests, package, upload, submit, run AutoQC, or create scoring artifacts.
 
 ## Active Entry Points
 
 - `world-spec-prep/WORLD_SPEC_KICKOFF.md`
 - `world-spec-construction/locked/world-spec-v1.md`
+- `final-submission-resolution/candidate-review/final-submission-resolution-v1.md`
 - `world-spec-construction/ratifications/world-spec-v1-ratification.md`
 - `file-inventory/locked/file-inventory-v1.md`
 - `file-inventory/ratifications/file-inventory-v1-ratification.md`

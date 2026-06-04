@@ -4,7 +4,7 @@ Purpose: compressed current state for Claude. Use `project/STATUS.md` and `docs/
 
 ## Project State
 
-Current phase: Transcript Resolution / LOCKED.
+Current phase: Final Submission Resolution / CANDIDATE REVIEW.
 
 Transcript resolution: `docs/claude-transcript-formatted.md` is the authoritative transcript upload artifact. The Claude share URL `https://claude.ai/share/d5129364-5d6c-4a2c-acb3-282f367a0040` is supporting provenance and reviewer-access support. `docs/claude-transcript.md` remains raw historical/provenance evidence only. Historical James Carter references and export encoding artifacts inside it are expected provenance, not current identity defects.
 
@@ -26,7 +26,7 @@ Brainstorm:
 
 Current blocker:
 
-- No reviewer blocker. Transcript Resolution v1 is locked. Execution Preparation v1 is locked. Packaging Construction is locked. Packaging Architecture is locked and complete. Golden Construction is locked and Goldens are complete. Entire File Ecosystem is complete and locked. Task Prompt Architecture v1 is locked and Task Prompt Architecture is complete. Task Prompt Construction is locked and Task Prompts are complete. Expected Output Architecture v1 is locked and Expected Output Architecture is complete. Expected Output Construction is locked and Expected Outputs are complete. Golden Architecture v1 is locked and Golden Architecture is complete. Grader Guidance Architecture v1 is locked and complete. Grader Guidance Construction is locked and Grader Guidance is complete. AutoQC Architecture v1 is locked and AutoQC Architecture is complete. AutoQC Construction is locked and AutoQC is complete. Reference File Resolution is the next eligible phase. AutoQC runs, AutoQC responses, rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX submission packaging, manifest creation, final submission packages, uploads, submissions, and RL Studio upload remain gated on explicit Alexander authorization for the relevant step.
+- No reviewer blocker. Transcript Resolution v1 is locked. Execution Preparation v1 is locked. Packaging Construction is locked. Packaging Architecture is locked and complete. Golden Construction is locked and Goldens are complete. Entire File Ecosystem is complete and locked. Task Prompt Architecture v1 is locked and Task Prompt Architecture is complete. Task Prompt Construction is locked and Task Prompts are complete. Expected Output Architecture v1 is locked and Expected Output Architecture is complete. Expected Output Construction is locked and Expected Outputs are complete. Golden Architecture v1 is locked and Golden Architecture is complete. Grader Guidance Architecture v1 is locked and complete. Grader Guidance Construction is locked and Grader Guidance is complete. AutoQC Architecture v1 is locked and AutoQC Architecture is complete. AutoQC Construction is locked and AutoQC is complete. Execution and Artifact Generation is the next eligible phase after Final Submission Resolution review. AutoQC runs, AutoQC responses, rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX submission packaging, manifest creation, final submission packages, uploads, submissions, and RL Studio upload remain gated on explicit Alexander authorization for the relevant step.
 
 Next legal action:
 

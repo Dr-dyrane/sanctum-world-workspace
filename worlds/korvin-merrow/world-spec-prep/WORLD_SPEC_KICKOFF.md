@@ -1,6 +1,6 @@
 # Korvin Merrow World Spec Kickoff
 
-Status: Transcript Resolution / CANDIDATE REVIEW.
+Status: Final Submission Resolution / CANDIDATE REVIEW.
 
 Purpose: active cockpit for the transition from approved Brainstorm through World Spec construction while preserving phase boundaries around template population, file inventory, tasks, and downstream deliverables.
 
@@ -129,8 +129,11 @@ Purpose: active cockpit for the transition from approved Brainstorm through Worl
 - Execution Preparation status: LOCKED.
 - Execution Preparation locked artifacts: `worlds/korvin-merrow/execution-preparation/locked/execution-preparation-v1.md` and `worlds/korvin-merrow/execution-preparation/locked/execution-preparation-validation-review.md`.
 - Execution Preparation boundary: preparation only; no AutoQC run, no DOCX population, no manifest creation, no upload, no submission, no locked-artifact edit, and no scoring artifact.
+- Final Submission Resolution status: CANDIDATE REVIEW.
+- Final Submission Resolution candidate artifacts: `worlds/korvin-merrow/final-submission-resolution/candidate-review/final-submission-resolution-v1.md` and `worlds/korvin-merrow/final-submission-resolution/candidate-review/final-submission-resolution-validation-review.md`.
+- Final Submission Resolution boundary: resolution/export architecture only; no DOCX/PDF generated, no manifest, no package, no AutoQC run, no upload, no submission, and no locked-artifact edit.
 - Packaging status: COMPLETE.
-- Next eligible phase: Transcript Resolution Review.
+- Next eligible phase: Execution and Artifact Generation after Final Submission Resolution review.
 - AutoQC runs, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX submission packaging, RL Studio upload, and submission materials have not started.
 - Clinical Story Skeleton v1 is locked and ratified.
 - Clinical Story Skeleton review completed with GO recommendation.
