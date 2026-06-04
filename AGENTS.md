@@ -200,3 +200,17 @@ Never ask for passwords or credentials.
 Access only documents Alexander authorizes.
 
 Copy or reference external documents locally only when permitted.
+
+## Google Drive And Google Docs Workflow
+
+Use this workflow whenever Alexander authorizes Google Drive, Google Docs, or browser-based document access.
+
+1. Confirm the operation scope first: list, search, fetch, export, upload, import, move, rename, edit, delete, or share. Do not treat permission to inspect Drive as permission to mutate Drive.
+2. Use the Google Drive connector first for discovery, folder listing, metadata, fetch/export, and verification. Prefer stable Drive URLs or raw file IDs over file names alone.
+3. Ground the target before any mutation: verify the parent folder, existing contents, target file name, file type, and whether a duplicate already exists.
+4. For folder-specific uploads, place files directly into the intended Drive folder. If the connector cannot set the target parent for an upload/import, use the authorized authenticated browser session to upload through the folder UI, then verify with the connector.
+5. Preserve source format unless Alexander asks for conversion. Submission DOCX artifacts should stay as DOCX uploads by default, not silently converted to native Google Docs.
+6. For Google Doc content mutation, fetch current metadata/content first, make the narrowest possible edit, preserve parents/sharing, and verify by reading the document or metadata after the write.
+7. Never delete, replace, move, share broadly, upload submission packages, run AutoQC, access RL Studio, or submit anything unless Alexander explicitly authorizes that exact action.
+8. Treat the local repository as canonical unless Alexander explicitly promotes a Drive document to source-of-truth status. If external source material is imported locally, keep it under `reference/` and record it in `project/WORKSPACE_FILE_MAP.md`.
+9. After any Drive mutation, report the exact file or folder changed, the URL observed from Drive, what was not changed, and whether local repository files were modified.
