@@ -1,6 +1,6 @@
 # Korvin Merrow World Spec Kickoff
 
-Status: Final Submission Resolution / LOCKED; Execution Artifact Generation authorized.
+Status: Final Submission Resolution / LOCKED; Execution Artifact Generation COMPLETE / CANDIDATE REVIEW.
 
 Purpose: active cockpit for the transition from approved Brainstorm through World Spec construction while preserving phase boundaries around template population, file inventory, tasks, and downstream deliverables.
 

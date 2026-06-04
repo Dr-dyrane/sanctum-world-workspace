@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-Final Submission Resolution / LOCKED. Execution Artifact Generation authorized.
+Final Submission Resolution / LOCKED. Execution Artifact Generation COMPLETE / CANDIDATE REVIEW.
 
 ## Brainstorm
 
@@ -153,9 +153,9 @@ Final Submission Resolution / LOCKED. Execution Artifact Generation authorized.
 - Execution status: preparation only; no AutoQC run, no DOCX population, no manifest, no upload, no submission
 - Final Submission Resolution: LOCKED
 - Final Submission Resolution locked artifacts: `worlds/korvin-merrow/final-submission-resolution/locked/final-submission-resolution-v1.md` and `worlds/korvin-merrow/final-submission-resolution/locked/final-submission-resolution-validation-review.md`; ratification at `worlds/korvin-merrow/final-submission-resolution/ratifications/final-submission-resolution-ratification.md`
-- Execution Artifact Generation scope: generate submission-facing DOCX/PDF artifacts only; no AutoQC run, no AutoQC response, no scoring artifact, no upload, no submission, no manifest, and no zip
+- Execution Artifact Generation: COMPLETE / CANDIDATE REVIEW; generated submission-facing DOCX/PDF artifacts only; no AutoQC run, no AutoQC response, no scoring artifact, no upload, no submission, no manifest, and no zip
 - No GG-KM07 exists
-- Next eligible phase: Execution and Artifact Generation
+- Next eligible phase: Pre-AutoQC Artifact Review / RL Studio Upload Authorization
 - Claude transcript: `docs/claude-transcript-formatted.md` is the authoritative transcript upload artifact. `docs/claude-transcript.md` remains raw historical/provenance evidence. Supporting Claude share URL: `https://claude.ai/share/d5129364-5d6c-4a2c-acb3-282f367a0040`.
 - Task-design physician-perspective guidance: recorded as a future task-layer rule only. It does not change source-of-truth hierarchy or Governance Package v1; future task prompts and deliverables must remain physician-centered even when supporting sources are pharmacy, nursing, PT/OT, case management, social work, family, or administrative sources.
 - Collaborator session-exit discipline: standing process / handoff rule. Every future session must leave the repository clean or explicitly documented, update phase and next-phase surfaces, preserve locked artifacts unless explicitly authorized, label candidate artifacts, move newly locked artifacts to locked paths with ratification references, update continuity and Claude handoff files, record carry-forward watch items and future task-layer guidance, commit completed work unless explicitly told not to, and report what changed, what did not change, current status, next eligible phase, and whether the repository is safe for another collaborator.
@@ -214,7 +214,7 @@ Final Submission Resolution / LOCKED. Execution Artifact Generation authorized.
 - Fetched World Spec example source documents: `reference/word-spec-examples/` (local-only / gitignored)
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 - World Spec prep folder structure: reorganized by lifecycle buckets (`candidate-review/`, `locked/`, `ratifications/`, `reviews/`, `decision-logs/`, `planning-scaffolds/`)
-- Next eligible phase: Execution and Artifact Generation. Do not run AutoQC, create AutoQC responses, create scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX submission artifacts, manifests, final submission packages, uploads, submissions, or RL Studio access until explicitly authorized.
+- Next eligible phase: Pre-AutoQC Artifact Review / RL Studio Upload Authorization. Do not run AutoQC, create AutoQC responses, create scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX submission artifacts, manifests, final submission packages, uploads, submissions, or RL Studio access until explicitly authorized.
 
 ## Tooling
 
@@ -239,3 +239,11 @@ Final Submission Resolution / LOCKED. Execution Artifact Generation authorized.
 - Do not proceed beyond authorized Execution Artifact Generation into AutoQC runs, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX packaging, manifest creation, final submission packaging, upload, submission, or failure analysis without explicit authorization.
 - Do not access RL Studio without explicit authorization.
 - Do not end a working session without applying collaborator session-exit discipline.
+## Execution Artifact Generation Outputs
+- Staging root: korvin-merrow-final-submission-staging/
+- World Spec DOCX: korvin-merrow-final-submission-staging/01_spec-document/Korvin_Merrow_World_Spec.docx
+- FI-W DOCX exports: korvin-merrow-final-submission-staging/02_template-reference-files/world-level/ (22 files)
+- FI-S DOCX exports: korvin-merrow-final-submission-staging/02_template-reference-files/supplementary/ (4 files)
+- Claude Transcript DOCX/PDF: korvin-merrow-final-submission-staging/03_claude-transcript/
+- Optional Brainstorm copy: korvin-merrow-final-submission-staging/04_optional-qc-inputs/Korvin_Merrow_Brainstorm.docx
+- Hold-not-upload folder: korvin-merrow-final-submission-staging/05_hold-not-upload/ (empty)

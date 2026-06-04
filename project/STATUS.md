@@ -2,11 +2,11 @@
 
 ## Current Phase
 
-Final Submission Resolution / LOCKED. Execution Artifact Generation authorized and IN PROGRESS (submission-facing artifacts only; no AutoQC, no upload, no scoring).
+Final Submission Resolution / LOCKED. Execution Artifact Generation COMPLETE / CANDIDATE REVIEW (submission-facing artifacts only; no AutoQC, no upload, no scoring).
 
 Ratification: `worlds/korvin-merrow/final-submission-resolution/ratifications/final-submission-resolution-ratification.md`. Locked artifacts under `worlds/korvin-merrow/final-submission-resolution/locked/`.
 
-Git note: ratification + artifact commits are PENDING clearance of a stale `.git/index.lock` (sandbox cannot unlink inside `.git`). See `worlds/korvin-merrow/final-submission-resolution/EXECUTION_PROGRESS.md` and `apply-checkpoints.sh` for the exact commit/cleanup sequence to run in the git environment.
+Artifact staging note: generated submission-facing artifacts are under `korvin-merrow-final-submission-staging/`. No AutoQC was run, no manifest or zip was created, no upload/submission was performed, and locked canon was not substantively modified.
 
 ## Current World
 
@@ -50,17 +50,17 @@ Final Submission Resolution v1: LOCKED. Locked artifacts are under `worlds/korvi
 
 ## Next Pass
 
-Next eligible phase: Execution and Artifact Generation. AutoQC runs, platform responses, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifest creation, final submission packaging, upload, submission, and RL Studio access remain blocked unless explicitly authorized by a later phase. DOCX/PDF generation is authorized only for the submission-facing artifacts named in Execution Artifact Generation.
+Next eligible phase: Pre-AutoQC Artifact Review / RL Studio Upload Authorization. AutoQC runs, platform responses, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifest creation, final submission packaging, upload, submission, and RL Studio access remain blocked unless explicitly authorized by a later phase.
 
 ## Active Blocker
 
-No active reviewer blocker. Final Submission Resolution v1 is locked. Transcript Resolution v1 is locked. Execution Preparation v1 is locked. Submission Preparation is locked and complete. Packaging Construction is locked and Packaging is complete. Packaging Architecture is locked and complete. AutoQC Construction is locked and AutoQC is complete. AutoQC Architecture v1 is locked and AutoQC Architecture is complete. Grader Guidance Architecture v1 is locked and complete. Grader Guidance Construction is locked with GG-KM01 through GG-KM06 preserved under `worlds/korvin-merrow/grader-guidance/locked/`. Grader Guidance is complete. Golden Construction is locked and Goldens are complete. Entire File Ecosystem is complete and locked. Task Prompt Architecture v1 is locked and Task Prompt Architecture is complete. Task Prompt Construction is locked and Task Prompts are complete. Expected Output Architecture v1 is locked and Expected Output Architecture is complete. Expected Output Construction is locked and Expected Outputs are complete. Golden Architecture v1 is locked and Golden Architecture is complete. Execution Artifact Generation is authorized after Final Submission Resolution lock. AutoQC runs, AutoQC responses, rubrics, scoring thresholds, pass/fail bands, point allocations, manifest creation, final submission packaging, RL Studio upload, and final submission remain blocked until specifically authorized. DOCX/PDF generation is authorized only for the submission-facing artifacts named in Execution Artifact Generation.
+No active reviewer blocker. Final Submission Resolution v1 is locked. Transcript Resolution v1 is locked. Execution Preparation v1 is locked. Submission Preparation is locked and complete. Packaging Construction is locked and Packaging is complete. Packaging Architecture is locked and complete. AutoQC Construction is locked and AutoQC is complete. AutoQC Architecture v1 is locked and AutoQC Architecture is complete. Grader Guidance Architecture v1 is locked and complete. Grader Guidance Construction is locked with GG-KM01 through GG-KM06 preserved under `worlds/korvin-merrow/grader-guidance/locked/`. Grader Guidance is complete. Golden Construction is locked and Goldens are complete. Entire File Ecosystem is complete and locked. Task Prompt Architecture v1 is locked and Task Prompt Architecture is complete. Task Prompt Construction is locked and Task Prompts are complete. Expected Output Architecture v1 is locked and Expected Output Architecture is complete. Expected Output Construction is locked and Expected Outputs are complete. Golden Architecture v1 is locked and Golden Architecture is complete. Execution Artifact Generation is complete/candidate review. AutoQC runs, AutoQC responses, rubrics, scoring thresholds, pass/fail bands, point allocations, manifest creation, final submission packaging, RL Studio upload, and final submission remain blocked until specifically authorized.
 
 ## Current Git Checkpoint
 
-cf384d4 checkpoint: capture execution-prep review transcript and submission-readiness audit (latest committed)
+checkpoint: generate submission artifacts (latest committed)
 
-Pending (blocked by stale .git/index.lock): checkpoint: ratify final submission resolution; checkpoint: clean workspace before artifact generation; checkpoint: generate submission artifacts
+Previous checkpoint: beaa174 checkpoint: clean workspace before artifact generation
 
 ## Active Branch
 
@@ -76,10 +76,22 @@ Return to baseline commit if workflow becomes corrupted.
 
 ## Next Command For Codex
 
-Proceed with Execution and Artifact Generation only when Alexander authorizes that phase. Do not advance to AutoQC, manifest creation, final packaging, upload, or submission without explicit authorization. Do not run AutoQC, create platform responses, create scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifests, final submission packages, upload, submit, or access RL Studio before Alexander explicitly authorizes the relevant phase. Do not generate DOCX/PDF artifacts until Execution and Artifact Generation is explicitly authorized.
+Proceed to Pre-AutoQC Artifact Review / RL Studio Upload Authorization only when Alexander authorizes that phase. Do not advance to AutoQC, manifest creation, final packaging, upload, or submission without explicit authorization. Do not run AutoQC, create platform responses, create scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifests, final submission packages, upload, submit, or access RL Studio before Alexander explicitly authorizes the relevant phase.
 
 At the end of any working session, apply the collaborator session-exit discipline before final reporting and commit completed process or construction work unless Alexander explicitly instructs not to commit.
 
 ## Scope Guardrails
 
 Do not proceed beyond authorized Execution Artifact Generation into AutoQC runs, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifest creation, final submission packaging, upload, submission, or failure analysis unless Alexander explicitly updates the project phase. AutoQC Architecture v1 is locked architecture only. AutoQC Construction v1 is locked preparation only. Packaging Architecture v1 is locked architecture only. Packaging Construction is locked preparation only. Submission Preparation is locked preparation only. Execution Preparation v1 is locked preparation only. Transcript Resolution v1 is locked. GG-KM01 through GG-KM06 are locked artifacts. Golden-KM01 through Golden-KM06 are locked artifacts; Grader Guidance Architecture v1 is locked and complete; Grader Guidance is complete; Supplementary File Construction is locked, Supplementary Files are complete, Task Prompt Architecture is complete, Task Prompts are complete, Expected Output Architecture is complete, Expected Outputs are complete, Golden Architecture v1 is locked, Golden Architecture is complete, Goldens are complete, AutoQC is complete, Packaging Architecture is complete, Packaging is complete, and Submission Preparation is complete.
+## Execution Artifact Generation Outputs
+Status: COMPLETE / CANDIDATE REVIEW.
+Generated staging root: korvin-merrow-final-submission-staging/.
+Generated artifacts:
+- korvin-merrow-final-submission-staging/01_spec-document/Korvin_Merrow_World_Spec.docx
+- korvin-merrow-final-submission-staging/02_template-reference-files/world-level/ with FI-W01 through FI-W22 DOCX exports
+- korvin-merrow-final-submission-staging/02_template-reference-files/supplementary/ with FI-S01 through FI-S04 DOCX exports
+- korvin-merrow-final-submission-staging/03_claude-transcript/Korvin_Merrow_Claude_Transcript.docx
+- korvin-merrow-final-submission-staging/03_claude-transcript/Korvin_Merrow_Claude_Transcript.pdf
+- korvin-merrow-final-submission-staging/04_optional-qc-inputs/Korvin_Merrow_Brainstorm.docx
+Hold folder: korvin-merrow-final-submission-staging/05_hold-not-upload/ exists and is empty. TP/EO/Golden/GG artifacts were not exported.
+Verification: 22 FI-W DOCX exports and 4 FI-S DOCX exports are present; all generated DOCX files are non-empty and LibreOffice-renderable. Transcript export retains Claude share URL provenance and omits internal repository path metadata from the generated upload artifact.

@@ -1,6 +1,6 @@
 # Korvin Merrow World
 
-Current state: Final Submission Resolution / LOCKED; Execution Artifact Generation authorized.
+Current state: Final Submission Resolution / LOCKED; Execution Artifact Generation COMPLETE / CANDIDATE REVIEW.
 
 Start here only after reading `project/STATUS.md`.
 
