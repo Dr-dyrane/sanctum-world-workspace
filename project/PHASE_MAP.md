@@ -19,7 +19,7 @@ Onboarding scope:
 
 Current Korvin status: Step 5 World Spec AutoQC is complete at 108/109, with the sole open prednisone dose/frequency warning preserved as intentional design and justified in notes. Step 6 Human Review: World Spec is APPROVED by Stacey S. The requested Reference File Origin routing correction was resolved and re-uploaded.
 
-Onboarding approval condition has been met. The next external stage is engineering pipeline run / synthetic generation; the next writer-facing stage is Step 9 file review after generated files are available.
+Onboarding approval condition has been met. Engineering pipeline run / synthetic generation is in progress externally. The workspace is awaiting the platform stage "Ready for Pipeline Fixes"; the next writer-facing stage is Step 9 file review after generated files are available.
 
 ### Phase 2: Build Your Files And Tasks
 

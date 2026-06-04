@@ -4,14 +4,14 @@ Date: 2026-06-04. Written at Korvin Merrow spec-submission (108/109, prednisone-
 
 ## A. Korvin: forward pipeline (stages 7-17)
 
-Current position: Step 5 complete (Spec AutoQC), Step 6 pending (Human Spec Review by reviewer/Stacey).
+Current position: Step 5 complete (Spec AutoQC), Step 6 complete (Human Spec Review APPROVED by Stacey S). The engineering pipeline run / synthetic generation is in progress externally; the workspace is awaiting the platform stage "Ready for Pipeline Fixes."
 
 | Stage | What happens | Workspace surface | Our head start |
 |---|---|---|---|
 | 6 Human Spec Review | GO or SEND BACK | reviews/ + remediation/ if needed | reviewer-response-protocol.md exists; remediation pattern proven |
 | 7 Synthetic Generation | Engineering builds world files from spec + our 33 templates | QA Folder (Drive) | Templates are content-complete, not just boilerplate |
 | 8 World AutoQC | Automated file integrity check | QA Folder/AutoQC | - |
-| 9 Writer Reviews Files | Verify traps survived generation: prednisone ambiguity intact, EW22 reassuring-but-incomplete, buried EW17-EW19 evidence, consultant note DATES correct | new: worlds/korvin-merrow/file-review/ | Trap-substrate map = file-inventory matrices + Failure Design anchors |
+| 9 Writer Reviews Files (platform stage: "Ready for Pipeline Fixes" - writer reviews AND edits generated files directly) | Verify traps survived generation: prednisone ambiguity intact, EW22 reassuring-but-incomplete, buried EW17-EW19 evidence, consultant note DATES correct; minor issues edited in place, major issues sent back for regeneration. BILLABLE: log Insightful time from this stage onward. | new: worlds/korvin-merrow/file-review/ | Trap-substrate map = file-inventory matrices + Failure Design anchors |
 | 10 Task Setup in RLS | Upload task prompts, goldens, grader guidelines | Task-level Folder subfolders (already created) | TP-KM01-06, EO-KM01-06, Golden-KM01-06, GG-KM01-06 ALREADY DRAFTED AND LOCKED under worlds/korvin-merrow/{task-prompts,expected-outputs,goldens,grader-guidance}/locked/ - need only: ID translation (FI->EW/E#-T#), de-hinting pass per preflight checklist, DOCX export in house style |
 | 11 Run Agent | ~1 hr platform run | - | - |
 | 12-13 Task AutoQC + Taiga QC | Iterate | QA Folder | Use "rerun failing only" discipline |

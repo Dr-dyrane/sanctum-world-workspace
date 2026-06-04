@@ -2,7 +2,7 @@
 
 ## Current Phase
 
-World Spec APPROVED (2026-06-04). Execution Artifact Generation COMPLETE; RL Studio upload and Spec AutoQC COMPLETE under Alexander's direct authorization and operation. Final AutoQC board: 108/109 pass; the sole open flag is Home Medications (prednisone dose/frequency), the world's intentional central source-of-truth design, justified in Spec AutoQC Notes (field 2.5). Uploaded artifacts: spec `Alexander_World_Merrow_latest_6_4.docx` (2.1), 33 date-stamped reference files (2.2), sanitized Claude transcript DOCX (2.3). Remediation trajectory 26 -> 4 -> 3 -> 2 -> 1-intentional across five spec revisions; records under `worlds/korvin-merrow/autoqc-remediation/`. Human World Spec Review is APPROVED by Stacey S; approval record is `worlds/korvin-merrow/reviews/reviewer-spec-approval-01.md`. The requested Reference File Origin routing correction was resolved and re-uploaded. Next external stage: reviewer launches the engineering pipeline run for synthetic generation. Next writer-facing stage: Step 9 file review after generated files are available.
+World Spec APPROVED (2026-06-04). Execution Artifact Generation COMPLETE; RL Studio upload and Spec AutoQC COMPLETE under Alexander's direct authorization and operation. Final AutoQC board: 108/109 pass; the sole open flag is Home Medications (prednisone dose/frequency), the world's intentional central source-of-truth design, justified in Spec AutoQC Notes (field 2.5). Uploaded artifacts: spec `Alexander_World_Merrow_latest_6_4.docx` (2.1), 33 date-stamped reference files (2.2), sanitized Claude transcript DOCX (2.3). Remediation trajectory 26 -> 4 -> 3 -> 2 -> 1-intentional across five spec revisions; records under `worlds/korvin-merrow/autoqc-remediation/`. Human World Spec Review is APPROVED by Stacey S; approval record is `worlds/korvin-merrow/reviews/reviewer-spec-approval-01.md`. The requested Reference File Origin routing correction was resolved and re-uploaded. Current external state: engineering pipeline run / synthetic generation is in progress. The workspace is awaiting the platform stage "Ready for Pipeline Fixes"; next writer-facing stage is Step 9 file review after generated files are available.
 
 Ratification: `worlds/korvin-merrow/final-submission-resolution/ratifications/final-submission-resolution-ratification.md`. Locked artifacts under `worlds/korvin-merrow/final-submission-resolution/locked/`.
 
@@ -50,7 +50,7 @@ Final Submission Resolution v1: LOCKED. Locked artifacts are under `worlds/korvi
 
 ## Next Pass
 
-Next eligible phase: engineering pipeline run / synthetic generation by the project team, then writer Step 9 file review after generated files are available. Additional AutoQC runs, platform responses, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifest creation, final submission packaging, additional upload, additional submission actions, and RL Studio access remain blocked unless explicitly authorized by a later phase.
+Next eligible phase: wait for the external engineering pipeline run to reach "Ready for Pipeline Fixes," then perform authorized writer Step 9 file review after generated files are available. Additional AutoQC runs, platform responses, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifest creation, final submission packaging, additional upload, additional submission actions, and RL Studio access remain blocked unless explicitly authorized by a later phase.
 
 ## Active Blocker
 
@@ -58,7 +58,7 @@ No active reviewer blocker. World Spec Human Review is approved; only the Refere
 
 ## Current Git Checkpoint
 
-checkpoint: record spec approval and browser-artifact ignore
+checkpoint: spec approved and pipeline running - approval record, origin labels, method docs
 
 Previous checkpoint: beaa174 checkpoint: clean workspace before artifact generation
 
@@ -76,13 +76,13 @@ Return to baseline commit if workflow becomes corrupted.
 
 ## Next Command For Codex
 
-Wait for the engineering pipeline run and generated files. After files are available, proceed only to authorized Step 9 file review / trap-fidelity review. Do not create platform responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifests, final submission packages, additional uploads, additional submissions, or access RL Studio again before Alexander explicitly authorizes the relevant phase.
+Wait for the external engineering pipeline run to reach "Ready for Pipeline Fixes" and for generated files to be available. After files are available, proceed only to authorized Step 9 file review / trap-fidelity review. Do not create platform responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifests, final submission packages, additional uploads, additional submissions, or access RL Studio again before Alexander explicitly authorizes the relevant phase.
 
 At the end of any working session, apply the collaborator session-exit discipline before final reporting and commit completed process or construction work unless Alexander explicitly instructs not to commit.
 
 ## Scope Guardrails
 
-Do not proceed beyond the current approved World Spec / engineering-pipeline-pending state into AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifest creation, final submission packaging, additional uploads, additional submission actions, or failure analysis unless Alexander explicitly updates the project phase. AutoQC Architecture v1 is locked architecture only. AutoQC Construction v1 is locked preparation only. Packaging Architecture v1 is locked architecture only. Packaging Construction is locked preparation only. Submission Preparation is locked preparation only. Execution Preparation v1 is locked preparation only. Transcript Resolution v1 is locked. GG-KM01 through GG-KM06 are locked artifacts. Golden-KM01 through Golden-KM06 are locked artifacts; Grader Guidance Architecture v1 is locked and complete; Grader Guidance is complete; Supplementary File Construction is locked, Supplementary Files are complete, Task Prompt Architecture is complete, Task Prompts are complete, Expected Output Architecture is complete, Expected Outputs are complete, Golden Architecture v1 is locked, Golden Architecture is complete, Goldens are complete, AutoQC is complete, Packaging Architecture is complete, Packaging is complete, and Submission Preparation is complete.
+Do not proceed beyond the current approved World Spec / pipeline-running / awaiting "Ready for Pipeline Fixes" state into AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifest creation, final submission packaging, additional uploads, additional submission actions, or failure analysis unless Alexander explicitly updates the project phase. AutoQC Architecture v1 is locked architecture only. AutoQC Construction v1 is locked preparation only. Packaging Architecture v1 is locked architecture only. Packaging Construction is locked preparation only. Submission Preparation is locked preparation only. Execution Preparation v1 is locked preparation only. Transcript Resolution v1 is locked. GG-KM01 through GG-KM06 are locked artifacts. Golden-KM01 through Golden-KM06 are locked artifacts; Grader Guidance Architecture v1 is locked and complete; Grader Guidance is complete; Supplementary File Construction is locked, Supplementary Files are complete, Task Prompt Architecture is complete, Task Prompts are complete, Expected Output Architecture is complete, Expected Outputs are complete, Golden Architecture v1 is locked, Golden Architecture is complete, Goldens are complete, AutoQC is complete, Packaging Architecture is complete, Packaging is complete, and Submission Preparation is complete.
 ## Execution Artifact Generation Outputs
 Status: COMPLETE / CANONICALIZED.
 Generated staging root: korvin-merrow-final-submission-staging/.
