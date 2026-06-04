@@ -2,7 +2,7 @@
 
 ## Current Phase
 
-Execution Preparation / LOCKED.
+Transcript Resolution / CANDIDATE REVIEW.
 
 ## Current World
 
@@ -42,19 +42,19 @@ Reviewer GO: Stacey S approved Brainstorm via Slack. Recorded in `worlds/korvin-
 
 ## Current Pass
 
-Execution Preparation v1: LOCKED. Locked artifacts are under `worlds/korvin-merrow/execution-preparation/locked/`: `execution-preparation-v1.md` and `execution-preparation-validation-review.md`. Ratification is recorded at `worlds/korvin-merrow/execution-preparation/ratifications/execution-preparation-ratification.md`. Execution Preparation is COMPLETE. Submission Preparation remains LOCKED under `worlds/korvin-merrow/submission-preparation/locked/`, with ratification at `worlds/korvin-merrow/submission-preparation/ratifications/submission-preparation-ratification.md`.
+Transcript Resolution v1: CANDIDATE REVIEW. Candidate artifacts are under `worlds/korvin-merrow/transcript-resolution/candidate-review/`: `transcript-resolution-v1.md` and `transcript-resolution-validation-review.md`. Execution Preparation remains LOCKED under `worlds/korvin-merrow/execution-preparation/locked/`, with ratification at `worlds/korvin-merrow/execution-preparation/ratifications/execution-preparation-ratification.md`.
 
 ## Next Pass
 
-Next eligible phase: Transcript Resolution. AutoQC runs, platform responses, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX population, manifest creation, final submission packaging, upload, submission, and RL Studio access remain blocked unless explicitly authorized by a later phase.
+Next eligible phase: Transcript Resolution Review. AutoQC runs, platform responses, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX population, manifest creation, final submission packaging, upload, submission, and RL Studio access remain blocked unless explicitly authorized by a later phase.
 
 ## Active Blocker
 
-No active reviewer blocker. Execution Preparation v1 is locked. Submission Preparation is locked and complete. Packaging Construction is locked and Packaging is complete. Packaging Architecture is locked and complete. AutoQC Construction is locked and AutoQC is complete. AutoQC Architecture v1 is locked and AutoQC Architecture is complete. Grader Guidance Architecture v1 is locked and complete. Grader Guidance Construction is locked with GG-KM01 through GG-KM06 preserved under `worlds/korvin-merrow/grader-guidance/locked/`. Grader Guidance is complete. Golden Construction is locked and Goldens are complete. Entire File Ecosystem is complete and locked. Task Prompt Architecture v1 is locked and Task Prompt Architecture is complete. Task Prompt Construction is locked and Task Prompts are complete. Expected Output Architecture v1 is locked and Expected Output Architecture is complete. Expected Output Construction is locked and Expected Outputs are complete. Golden Architecture v1 is locked and Golden Architecture is complete. Transcript Resolution is the next eligible phase. AutoQC runs, AutoQC responses, rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX population, manifest creation, final submission packaging, RL Studio upload, and final submission remain blocked until specifically authorized.
+No active reviewer blocker. Transcript Resolution v1 is in candidate review. Execution Preparation v1 is locked. Submission Preparation is locked and complete. Packaging Construction is locked and Packaging is complete. Packaging Architecture is locked and complete. AutoQC Construction is locked and AutoQC is complete. AutoQC Architecture v1 is locked and AutoQC Architecture is complete. Grader Guidance Architecture v1 is locked and complete. Grader Guidance Construction is locked with GG-KM01 through GG-KM06 preserved under `worlds/korvin-merrow/grader-guidance/locked/`. Grader Guidance is complete. Golden Construction is locked and Goldens are complete. Entire File Ecosystem is complete and locked. Task Prompt Architecture v1 is locked and Task Prompt Architecture is complete. Task Prompt Construction is locked and Task Prompts are complete. Expected Output Architecture v1 is locked and Expected Output Architecture is complete. Expected Output Construction is locked and Expected Outputs are complete. Golden Architecture v1 is locked and Golden Architecture is complete. Transcript Resolution Review is the next eligible phase. AutoQC runs, AutoQC responses, rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX population, manifest creation, final submission packaging, RL Studio upload, and final submission remain blocked until specifically authorized.
 
 ## Current Git Checkpoint
 
-checkpoint: ratify execution preparation v1
+checkpoint: resolve transcript requirements
 
 ## Active Branch
 
@@ -70,10 +70,10 @@ Return to baseline commit if workflow becomes corrupted.
 
 ## Next Command For Codex
 
-Proceed with Transcript Resolution only under the current explicit authorization, and do not advance beyond Transcript Resolution Review without Alexander authorization. Do not run AutoQC, create platform responses, create scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX submission artifacts, manifests, final submission packages, upload, submit, or access RL Studio before Alexander explicitly authorizes the relevant phase.
+Proceed with Transcript Resolution Review only when Alexander authorizes that phase. Do not advance to reference-file resolution, DOCX population, AutoQC, manifest creation, upload, or submission without explicit authorization. Do not run AutoQC, create platform responses, create scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX submission artifacts, manifests, final submission packages, upload, submit, or access RL Studio before Alexander explicitly authorizes the relevant phase.
 
 At the end of any working session, apply the collaborator session-exit discipline before final reporting and commit completed process or construction work unless Alexander explicitly instructs not to commit.
 
 ## Scope Guardrails
 
-Do not proceed beyond Execution Preparation candidate review into execution review, AutoQC runs, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX packaging, manifest creation, final submission packaging, upload, submission, or failure analysis unless Alexander explicitly updates the project phase. AutoQC Architecture v1 is locked architecture only. AutoQC Construction v1 is locked preparation only. Packaging Architecture v1 is locked architecture only. Packaging Construction is locked preparation only. Submission Preparation is locked preparation only. Execution Preparation v1 is candidate-review preparation only. GG-KM01 through GG-KM06 are locked artifacts. Golden-KM01 through Golden-KM06 are locked artifacts; Grader Guidance Architecture v1 is locked and complete; Grader Guidance is complete; Supplementary File Construction is locked, Supplementary Files are complete, Task Prompt Architecture is complete, Task Prompts are complete, Expected Output Architecture is complete, Expected Outputs are complete, Golden Architecture v1 is locked, Golden Architecture is complete, Goldens are complete, AutoQC is complete, Packaging Architecture is complete, Packaging is complete, and Submission Preparation is complete.
+Do not proceed beyond Transcript Resolution Review into reference-file resolution, DOCX packaging, AutoQC runs, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifest creation, final submission packaging, upload, submission, or failure analysis unless Alexander explicitly updates the project phase. AutoQC Architecture v1 is locked architecture only. AutoQC Construction v1 is locked preparation only. Packaging Architecture v1 is locked architecture only. Packaging Construction is locked preparation only. Submission Preparation is locked preparation only. Execution Preparation v1 is locked preparation only. Transcript Resolution v1 is candidate-review preparation only. GG-KM01 through GG-KM06 are locked artifacts. Golden-KM01 through Golden-KM06 are locked artifacts; Grader Guidance Architecture v1 is locked and complete; Grader Guidance is complete; Supplementary File Construction is locked, Supplementary Files are complete, Task Prompt Architecture is complete, Task Prompts are complete, Expected Output Architecture is complete, Expected Outputs are complete, Golden Architecture v1 is locked, Golden Architecture is complete, Goldens are complete, AutoQC is complete, Packaging Architecture is complete, Packaging is complete, and Submission Preparation is complete.

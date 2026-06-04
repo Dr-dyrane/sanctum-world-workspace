@@ -440,7 +440,7 @@ File Inventory Architecture v1:
 - Packaging Construction is LOCKED at `worlds/korvin-merrow/packaging/locked/`.
 - Submission Preparation is LOCKED at `worlds/korvin-merrow/submission-preparation/locked/` with ratification at `worlds/korvin-merrow/submission-preparation/ratifications/submission-preparation-ratification.md`.
 - Execution Preparation v1 is LOCKED at `worlds/korvin-merrow/execution-preparation/locked/`.
-- Next eligible phase is Transcript Resolution.
+- Next eligible phase is Transcript Resolution Review.
 - AutoQC runs, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX artifacts, and RL Studio submission remain blocked pending explicit Alexander authorization.
 
 ## Key Milestones Calendar Skeleton v1
@@ -983,7 +983,7 @@ Task-Level Context File Architecture v1:
 - Packaging Construction is LOCKED at `worlds/korvin-merrow/packaging/locked/`.
 - Submission Preparation is LOCKED at `worlds/korvin-merrow/submission-preparation/locked/` with ratification at `worlds/korvin-merrow/submission-preparation/ratifications/submission-preparation-ratification.md`.
 - Execution Preparation v1 is LOCKED at `worlds/korvin-merrow/execution-preparation/locked/`.
-- Next eligible phase: Transcript Resolution.
+- Next eligible phase: Transcript Resolution Review.
 
 ## Major Clinical Friction Themes
 
@@ -1033,4 +1033,4 @@ Ratification is recorded at `worlds/korvin-merrow/execution-preparation/ratifica
 
 This phase prepares execution only. It does not run AutoQC, create AutoQC responses, populate DOCX, create a manifest, create a submission package, upload, submit, modify locked artifacts, or create scoring artifacts.
 
-Next eligible phase: Transcript Resolution.
+Next eligible phase: Transcript Resolution Review.

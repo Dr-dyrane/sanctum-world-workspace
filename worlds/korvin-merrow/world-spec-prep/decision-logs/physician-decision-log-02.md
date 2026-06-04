@@ -3105,3 +3105,49 @@ Review result:
 - Governance issues: NONE.
 - Canon conflicts: NONE.
 - Open reconciliations: NONE.
+
+## Transcript Resolution Candidate Record
+
+Date: 2026-06-03
+
+Authorization:
+
+- Alexander authorized Transcript Resolution after Execution Preparation lock.
+
+Candidate artifacts:
+
+- `worlds/korvin-merrow/transcript-resolution/candidate-review/transcript-resolution-v1.md`
+- `worlds/korvin-merrow/transcript-resolution/candidate-review/transcript-resolution-validation-review.md`
+
+Recorded evidence:
+
+- Current Studio screenshot for task `cyau8803` shows `2.3) UPLOAD CLAUDE TRANSCRIPTS` with an `Upload File` control.
+- Alexander clarified that the stale tutorial video no longer reflects current Studio mechanics because current Studio has no transcript text field.
+- The older local video is retained as stale historical evidence only.
+- `docs/claude-transcript.md` remains raw transcript/provenance evidence.
+
+Recorded resolution:
+
+- Current Studio transcript handling is file-upload based.
+- Accepted file type, transcript scope, and whether raw markdown is acceptable remain unresolved.
+- No transcript was formatted, cleaned, converted, packaged, uploaded, or submitted.
+
+Boundary preserved:
+
+- No AutoQC was run.
+- No AutoQC responses were created.
+- No DOCX was populated.
+- No manifest was created.
+- No submission package was created.
+- No upload or submission occurred.
+- No locked artifacts were modified.
+- No scoring artifacts were created.
+
+Status:
+
+- Execution Preparation: LOCKED.
+- Transcript Resolution v1: CANDIDATE REVIEW.
+
+Next eligible phase:
+
+- Transcript Resolution Review.

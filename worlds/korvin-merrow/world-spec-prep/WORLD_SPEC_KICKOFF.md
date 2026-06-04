@@ -1,6 +1,6 @@
 # Korvin Merrow World Spec Kickoff
 
-Status: Execution Preparation / LOCKED.
+Status: Transcript Resolution / CANDIDATE REVIEW.
 
 Purpose: active cockpit for the transition from approved Brainstorm through World Spec construction while preserving phase boundaries around template population, file inventory, tasks, and downstream deliverables.
 
@@ -130,7 +130,7 @@ Purpose: active cockpit for the transition from approved Brainstorm through Worl
 - Execution Preparation locked artifacts: `worlds/korvin-merrow/execution-preparation/locked/execution-preparation-v1.md` and `worlds/korvin-merrow/execution-preparation/locked/execution-preparation-validation-review.md`.
 - Execution Preparation boundary: preparation only; no AutoQC run, no DOCX population, no manifest creation, no upload, no submission, no locked-artifact edit, and no scoring artifact.
 - Packaging status: COMPLETE.
-- Next eligible phase: Transcript Resolution.
+- Next eligible phase: Transcript Resolution Review.
 - AutoQC runs, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX submission packaging, RL Studio upload, and submission materials have not started.
 - Clinical Story Skeleton v1 is locked and ratified.
 - Clinical Story Skeleton review completed with GO recommendation.
@@ -165,7 +165,7 @@ Purpose: active cockpit for the transition from approved Brainstorm through Worl
 - Daily Hospital Course Framework v1: `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md`.
 - Daily Hospital Course Framework ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md`.
 - Preparation Layer status: COMPLETE.
-- Next eligible phase: Transcript Resolution. AutoQC runs, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX submission packaging, manifest creation, final submission packaging, RL Studio upload, RL Studio activity, upload, and submission remain blocked until explicitly authorized.
+- Next eligible phase: Transcript Resolution Review. AutoQC runs, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX submission packaging, manifest creation, final submission packaging, RL Studio upload, RL Studio activity, upload, and submission remain blocked until explicitly authorized.
 
 ## Workspace Bloat And Doctrine Audit
 
@@ -987,7 +987,7 @@ Ratification findings:
 - Canon conflicts: NONE.
 - Open reconciliations: NONE.
 - Execution Preparation v1 files preserved unchanged.
-- Transcript Resolution is the next eligible phase.
+- Transcript Resolution Review is the next eligible phase.
 - Reconciliation routing preserved.
 - Packaging scope verified.
 - No true defects, governance issues, canon conflicts, or open reconciliations remain.
