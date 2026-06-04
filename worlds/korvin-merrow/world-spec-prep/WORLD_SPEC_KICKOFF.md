@@ -1,6 +1,6 @@
 # Korvin Merrow World Spec Kickoff
 
-Status: Execution Preparation / CANDIDATE REVIEW.
+Status: Execution Preparation / LOCKED.
 
 Purpose: active cockpit for the transition from approved Brainstorm through World Spec construction while preserving phase boundaries around template population, file inventory, tasks, and downstream deliverables.
 
@@ -126,11 +126,11 @@ Purpose: active cockpit for the transition from approved Brainstorm through Worl
 - Submission Preparation locked artifacts: `worlds/korvin-merrow/submission-preparation/locked/submission-preparation-v1.md` and `worlds/korvin-merrow/submission-preparation/locked/submission-preparation-validation-review.md`.
 - Submission Preparation ratification: `worlds/korvin-merrow/submission-preparation/ratifications/submission-preparation-ratification.md`.
 - Submission Preparation status: COMPLETE.
-- Execution Preparation status: CANDIDATE REVIEW.
-- Execution Preparation candidate artifacts: `worlds/korvin-merrow/execution-preparation/candidate-review/execution-preparation-v1.md` and `worlds/korvin-merrow/execution-preparation/candidate-review/execution-preparation-validation-review.md`.
+- Execution Preparation status: LOCKED.
+- Execution Preparation locked artifacts: `worlds/korvin-merrow/execution-preparation/locked/execution-preparation-v1.md` and `worlds/korvin-merrow/execution-preparation/locked/execution-preparation-validation-review.md`.
 - Execution Preparation boundary: preparation only; no AutoQC run, no DOCX population, no manifest creation, no upload, no submission, no locked-artifact edit, and no scoring artifact.
 - Packaging status: COMPLETE.
-- Next eligible phase: Execution Preparation Review.
+- Next eligible phase: Transcript Resolution.
 - AutoQC runs, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX submission packaging, RL Studio upload, and submission materials have not started.
 - Clinical Story Skeleton v1 is locked and ratified.
 - Clinical Story Skeleton review completed with GO recommendation.
@@ -165,7 +165,7 @@ Purpose: active cockpit for the transition from approved Brainstorm through Worl
 - Daily Hospital Course Framework v1: `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md`.
 - Daily Hospital Course Framework ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md`.
 - Preparation Layer status: COMPLETE.
-- Next eligible phase: Execution Preparation Review. AutoQC runs, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX submission packaging, manifest creation, final submission packaging, RL Studio upload, RL Studio activity, upload, and submission remain blocked until explicitly authorized.
+- Next eligible phase: Transcript Resolution. AutoQC runs, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX submission packaging, manifest creation, final submission packaging, RL Studio upload, RL Studio activity, upload, and submission remain blocked until explicitly authorized.
 
 ## Workspace Bloat And Doctrine Audit
 
@@ -935,19 +935,21 @@ Next eligible phase:
 
 - Submission Preparation.
 
-## Execution Preparation v1 Candidate Record
+## Execution Preparation v1 Ratification Record
 
 Date recorded: 2026-06-03.
 
 Status:
 
 - Submission Preparation remains LOCKED.
-- Execution Preparation v1 is in CANDIDATE REVIEW.
+- Execution Preparation v1 is LOCKED.
+- Execution Preparation is COMPLETE.
 
-Candidate artifacts:
+Locked artifacts:
 
-- `worlds/korvin-merrow/execution-preparation/candidate-review/execution-preparation-v1.md`
-- `worlds/korvin-merrow/execution-preparation/candidate-review/execution-preparation-validation-review.md`
+- `worlds/korvin-merrow/execution-preparation/locked/execution-preparation-v1.md`
+- `worlds/korvin-merrow/execution-preparation/locked/execution-preparation-validation-review.md`
+- `worlds/korvin-merrow/execution-preparation/ratifications/execution-preparation-ratification.md`
 
 Preparation scope:
 
@@ -967,27 +969,25 @@ Boundary:
 - No manifest was created.
 - No submission package was created.
 - No upload or submission occurred.
-- No locked artifacts were modified.
+- No locked artifact contents were modified beyond the authorized content-preserving move.
 - No scoring artifacts were created.
 
 Next eligible phase:
 
-- Execution Preparation Review.
+- Transcript Resolution.
 
 Ratification findings:
 
-- Independent Review A and Review B returned LOCK READY / GO.
-- Architecture Quality was STRONG.
-- Template Fidelity Protection was HIGH.
-- Submission Readiness Protection was HIGH.
-- Template fidelity verified.
-- Official template treated as source-of-truth.
-- Official section structure preserved.
-- Official file-plan structure preserved.
-- Source/Tool separation preserved.
-- Single-DOCX requirement preserved.
-- Transcript boundaries preserved.
-- AutoQC boundaries preserved.
+- Independent reviews returned LOCK READY / GO.
+- Preparation Quality was STRONG.
+- Execution Readiness Governance was HIGH.
+- Risk Control Quality was HIGH.
+- True defects: NONE.
+- Governance issues: NONE.
+- Canon conflicts: NONE.
+- Open reconciliations: NONE.
+- Execution Preparation v1 files preserved unchanged.
+- Transcript Resolution is the next eligible phase.
 - Reconciliation routing preserved.
 - Packaging scope verified.
 - No true defects, governance issues, canon conflicts, or open reconciliations remain.
