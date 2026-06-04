@@ -110,3 +110,6 @@ build/
 coverage/
 *.sqlite-shm
 *.sqlite-wal
+
+# Local Google Drive/package mirrors
+korvin-merrow-drive-package/
