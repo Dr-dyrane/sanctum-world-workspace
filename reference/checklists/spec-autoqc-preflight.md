@@ -43,6 +43,11 @@ Run this BEFORE the first AutoQC of any future world. Korvin went 26 fails -> 10
 - [ ] Notes (2.5): quote exact flag text, then reasoned response. Keep only live-flag notes + a one-paragraph resolution history.
 - [ ] Auditor false positives happen (extraction artifacts, confabulated locations) - but verify against the FULL document (all table cells, not just paragraphs) before claiming the auditor is wrong. Korvin lesson: the "letter-O PO" was real, just mislocated.
 
+## Reference File Origin semantics (reviewer-confirmed 6/4; vocabulary verified against official template)
+- [ ] The Origin column is an ENGINEERING ROUTING INSTRUCTION, not authorship credit. Use the template's EXACT four tokens: "Public Domain" / "Databank Template" / "Custom Made" / "Writer Produced File, not a template".
+- [ ] Routing: Databank Template and Custom Made = engineering GENERATES the synthetic file from your template. Writer Produced = engineering must NOT build it (final media only: photos, audio, EKGs, handwritten artifacts). Labeling text templates "writer produced" blocks the entire pipeline run.
+- [ ] Default for writer-drafted document templates: "Custom Made" (guide line 2024: "Mark the row as custom-made"). Parentheticals only for specifics, e.g. "Public Domain (FMLA Form: Dept. of Labor)". Never put the word "writer" in a Custom Made cell.
+
 ## Design-stage choices that prevent flags entirely
 - [ ] Decide intentional ambiguities (like prednisone) at brainstorm; write the 2.5 defense the same day.
 - [ ] Use the EW/E#-T#/WS convention and date-stamped filenames from file-inventory day one.
