@@ -830,9 +830,9 @@ Purpose: generated local staging structure for submission-facing artifacts. This
 Status: Execution Artifact Generation COMPLETE / CANDIDATE REVIEW.
 Path: korvin-merrow-final-submission-staging/.
 Subfolders:
--  1_spec-document/: contains Korvin_Merrow_World_Spec.docx generated from locked World Spec source with official template styling.
--  2_template-reference-files/world-level/: contains FI-W01 through FI-W22 DOCX exports.
--  2_template-reference-files/supplementary/: contains FI-S01 through FI-S04 DOCX exports.
--  3_claude-transcript/: contains Korvin_Merrow_Claude_Transcript.docx and optional Korvin_Merrow_Claude_Transcript.pdf.
--  4_optional-qc-inputs/: contains copied approved Brainstorm DOCX when present.
--  5_hold-not-upload/: empty by design; TP/EO/Golden/GG artifacts were not exported.
+- 01_spec-document/: contains Korvin_Merrow_World_Spec.docx and Korvin_Merrow_World_Spec.pdf generated from the official World Spec template.
+- 02_template-reference-files/world-level/: contains FI-W01 through FI-W22 DOCX exports.
+- 02_template-reference-files/supplementary/: contains FI-S01 through FI-S04 DOCX exports.
+- 03_claude-transcript/: contains Korvin_Merrow_Claude_Transcript.docx and optional Korvin_Merrow_Claude_Transcript.pdf.
+- 04_optional-qc-inputs/: contains copied approved Brainstorm DOCX when present.
+- 05_hold-not-upload/: empty by design; TP/EO/Golden/GG artifacts were not exported.

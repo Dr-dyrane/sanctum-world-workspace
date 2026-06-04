@@ -242,6 +242,7 @@ Final Submission Resolution / LOCKED. Execution Artifact Generation COMPLETE / C
 ## Execution Artifact Generation Outputs
 - Staging root: korvin-merrow-final-submission-staging/
 - World Spec DOCX: korvin-merrow-final-submission-staging/01_spec-document/Korvin_Merrow_World_Spec.docx
+- World Spec PDF: korvin-merrow-final-submission-staging/01_spec-document/Korvin_Merrow_World_Spec.pdf
 - FI-W DOCX exports: korvin-merrow-final-submission-staging/02_template-reference-files/world-level/ (22 files)
 - FI-S DOCX exports: korvin-merrow-final-submission-staging/02_template-reference-files/supplementary/ (4 files)
 - Claude Transcript DOCX/PDF: korvin-merrow-final-submission-staging/03_claude-transcript/

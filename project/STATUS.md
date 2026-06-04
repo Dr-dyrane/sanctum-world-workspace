@@ -88,10 +88,11 @@ Status: COMPLETE / CANDIDATE REVIEW.
 Generated staging root: korvin-merrow-final-submission-staging/.
 Generated artifacts:
 - korvin-merrow-final-submission-staging/01_spec-document/Korvin_Merrow_World_Spec.docx
+- korvin-merrow-final-submission-staging/01_spec-document/Korvin_Merrow_World_Spec.pdf
 - korvin-merrow-final-submission-staging/02_template-reference-files/world-level/ with FI-W01 through FI-W22 DOCX exports
 - korvin-merrow-final-submission-staging/02_template-reference-files/supplementary/ with FI-S01 through FI-S04 DOCX exports
 - korvin-merrow-final-submission-staging/03_claude-transcript/Korvin_Merrow_Claude_Transcript.docx
 - korvin-merrow-final-submission-staging/03_claude-transcript/Korvin_Merrow_Claude_Transcript.pdf
 - korvin-merrow-final-submission-staging/04_optional-qc-inputs/Korvin_Merrow_Brainstorm.docx
 Hold folder: korvin-merrow-final-submission-staging/05_hold-not-upload/ exists and is empty. TP/EO/Golden/GG artifacts were not exported.
-Verification: 22 FI-W DOCX exports and 4 FI-S DOCX exports are present; all generated DOCX files are non-empty and LibreOffice-renderable. Transcript export retains Claude share URL provenance and omits internal repository path metadata from the generated upload artifact.
+Verification: 22 FI-W DOCX exports and 4 FI-S DOCX exports are present; all generated DOCX files are non-empty and LibreOffice-renderable. Final World Spec DOCX was regenerated from the official template and verified with required Word package parts plus rendered PDF. Transcript export retains Claude share URL provenance and omits internal repository path metadata from the generated upload artifact.
