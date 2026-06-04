@@ -68,7 +68,7 @@ Current after cleanup: korvin-merrow-brainstorm
 
 Previous branch: james-carter-brainstorm
 
-Branch rename status: execute during this cleanup. The old branch name is superseded by the Korvin-specific branch name. If remote retirement fails due permissions, keep the local branch clean and report the remote-retirement failure explicitly.
+Branch rename status: local branch renamed and pushed to `origin/korvin-merrow-brainstorm`; tag `korvin-spec-submitted` created for the final cleanup checkpoint. Remote retirement of `origin/james-carter-brainstorm` is deferred because GitHub rejected deletion while that branch is the remote current/default branch. Next repository-admin step: switch the remote default/current branch away from `james-carter-brainstorm`, then delete the old remote branch.
 
 ## Rollback Strategy
 
