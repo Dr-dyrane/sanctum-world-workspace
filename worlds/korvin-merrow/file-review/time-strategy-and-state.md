@@ -1,6 +1,6 @@
 # Step 9 Time Strategy (6 hrs/week cap) + Current State + Claude Kickoff Prompt
 
-Date: 2026-06-04.
+Date: 2026-06-04. **UPDATE 6/5: ONBOARDING COMPLETE - PROMOTED.** Removed from #new-writers-pod by IT admin (graduation, confirmed). Awaiting new pod channel assignment; update RL Studio Pod Selection field from "New/Onboarding" once pod name is known. World finalization still pending platform fixes (see file-review-log.md BLOCKED section).
 
 ## 1. Current state (single source of truth)
 

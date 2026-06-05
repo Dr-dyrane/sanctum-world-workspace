@@ -8,6 +8,8 @@ Ratification: `worlds/korvin-merrow/final-submission-resolution/ratifications/fi
 
 Artifact staging note: generated submission-facing artifacts are under `korvin-merrow-final-submission-staging/`. The active canonical staging set is `01_spec-document/Alexander_World_Merrow_latest_6_4.docx`, `02_template-reference-files/final/` with 33 date-stamped DOCX files, and the sanitized Claude transcript DOCX/PDF. The local Drive mirror `korvin-merrow-drive-package/` is gitignored reviewer-convenience sync material, not repository canon. No manifest, zip, scoring artifact, AutoQC response, or final submission package has been created.
 
+Drive sync note: do not refresh the Google Drive mirror for Step 9 revisions until the revised 26-file world-level upload set is accepted/finalized in RL Studio, unless Alexander explicitly needs a Drive collaboration package earlier. If synced before acceptance, label it clearly as `Step 9 candidate - not final` and keep the repository as canonical.
+
 ## Current World
 
 Working title: Korvin Merrow World
@@ -58,7 +60,7 @@ No active reviewer blocker. World Spec Human Review is approved; only the Refere
 
 ## Current Git Checkpoint
 
-checkpoint: add step 9 reference and self-qc materials
+checkpoint: record step 9 revision two and platform apply lesson
 
 Previous checkpoint: beaa174 checkpoint: clean workspace before artifact generation
 

@@ -864,6 +864,7 @@ Status: infrastructure only; contains `.gitkeep` placeholders and no clinical, t
 Purpose: local mirror of the reviewer-convenience Google Drive package.
 Path: `korvin-merrow-drive-package/`.
 Status: gitignored and non-canonical. Use it for Drive sync verification only; do not treat it as repository source of truth.
+Step 9 sync rule: wait to refresh Google Drive until the revised 26-file world-level upload set is accepted/finalized in RL Studio, unless Alexander explicitly requests an earlier Drive collaboration package. Any early sync must be labeled `Step 9 candidate - not final`.
 
 ## Korvin Merrow File Review
 Purpose: Step 9 generated-file review / "Ready for Pipeline Fixes" working area after engineering pipeline run #1.

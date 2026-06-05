@@ -78,6 +78,13 @@ Confirms our executed process step-for-step (download -> edit in place -> remove
 - **Accepted alternative per workflow:** the reviewer can accept the run-page World Files AutoQC pass on the revised files in lieu of a revision-scoped 4.2 rerun.
 - World #2 lesson: after Apply to Task, expect stale 4.2 results; go straight to the Diagnostics revision-scoped rerun instead of rerunning the card (Korvin burned 3 card reruns: 24/78, 14/78, 5/78, all phantom).
 
+## 4e. ROOT CAUSE PROVEN (6/5, API payloads): two Apply-to-Task buttons, two different snapshots
+
+- **Run-page Actions row "Apply to Task"** sends `POST /pipelines/{run}/apply-to-task` with `{"snapshot_type":"output"}` and copies the run's ORIGINAL output (returned `files_copied: 33`). It IGNORES revisions and reverts the task snapshot to pre-revision state. The official "How to Edit" doc Step 7 points writers at this button - a documentation trap.
+- **Revision-page "Apply to Task"** (open the revision under Revisions, button at the bottom of the revision detail page) applies the revision correctly (returned `files_copied: 26`, snap_b1afd9089a9e44818a32aac55deecfb8).
+- RULE: after uploading a revision, ALWAYS apply from the REVISION PAGE, never the run-page Actions row. If the Actions-row button is ever clicked, 4.1 reverts to the full original set and must be restored by re-applying from the revision page. Verify by 4.1 file count after every apply.
+- This was the root cause of all stale 4.2 Final Files AutoQC results (audits read the last-applied task snapshot). Reported to engineering with both payloads on 6/5.
+
 ## 5. Edit and revision workflow
 
 - Minor FIX items: edit the generated docx directly (object model, content locators, integrity gate after every save - docs/docx-generation-method.md). Keep last-valid copies.
