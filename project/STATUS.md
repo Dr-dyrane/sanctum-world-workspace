@@ -58,7 +58,7 @@ No active reviewer blocker. World Spec Human Review is approved; only the Refere
 
 ## Current Git Checkpoint
 
-checkpoint: track step 9 file review with claude triage
+checkpoint: add step 9 reference and self-qc materials
 
 Previous checkpoint: beaa174 checkpoint: clean workspace before artifact generation
 

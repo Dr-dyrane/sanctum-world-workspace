@@ -42,7 +42,8 @@ DO DIFFERENTLY (cost us rounds):
 STRUCTURE for worlds/<new-world>/: copy korvin-merrow's folder skeleton (active/, world-spec-prep/{locked,ratifications,planning-scaffolds,reviews,decision-logs}, file-inventory/, synthetic-files/, task-context-files/, supplementary-files/, task-prompts/, expected-outputs/, goldens/, grader-guidance/, autoqc-remediation/, reviews/, remediation/, submission/). Reuse: brainstorm template, design system (reference-file-design/epic-note-design-system.md - swap facility/patient), tools/generate_reference_files.py, transcript design, Drive tree pattern.
 
 ## C. Standing infrastructure (do not lose)
-- docs/workspace-guardrails-lessons.md - the 11 operational guardrails.
+- docs/workspace-guardrails-lessons.md - the operational guardrails (now 12, incl. mojibake/dash discipline).
+- docs/clinical-voice-lessons.md - 10 clinical-voice patterns mined from the run #1 paired corpus (writer templates vs pipeline rewrite, .meta/references/ vs filesystem/); apply at template-authoring time for World #2 so generation has less to "fix" and less occasion to over-help.
 - reference/checklists/spec-autoqc-preflight.md - the 109-dimension distillation.
 - worlds/korvin-merrow/reference-file-design/ - design system + approved FI-W01 sample.
 - worlds/korvin-merrow/autoqc-remediation/ - remediation pattern + notes language.

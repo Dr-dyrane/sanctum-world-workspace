@@ -212,6 +212,7 @@ Reviewed for duplicate-purpose files:
 | `docs/reviewer-response-protocol.md` | GO/SEND BACK response workflow. | Use for reviewer feedback handling. |
 | `docs/security-and-privacy.md` | Privacy and confidentiality guidance. | Security policy only. |
 | `docs/status-dashboard.md` | Human-readable status summary. | Mirrors key `STATUS.md` items for dashboard use. |
+| `docs/clinical-voice-lessons.md` | Clinical voice/style lessons mined from the Korvin pipeline paired corpus. | Reusable guidance for future file-template authoring; not Korvin canon, not a source-of-truth hierarchy, and not a generated file. |
 | `docs/claude-transcript-formatted.md` | Authoritative Claude transcript upload artifact. | Current transcript artifact for RL Studio file-upload handling; preserves phase chronology, decisions, ratifications, evidence trail, and Claude share URL provenance. |
 | `docs/claude-transcript.md` | Raw Claude conversation transcript for the Korvin Merrow build. | Historical/provenance evidence only. Historical James Carter references and export encoding artifacts are expected. |
 | `docs/tooling-audit.md` | Tool availability audit before install. | Historical audit. |
@@ -240,6 +241,7 @@ Reviewed for duplicate-purpose files:
 | --- | --- | --- |
 | `reference/source/New Writers Version - Instruction Guide (05_24).docx` | Official instruction guide source DOCX. | Preserve unchanged. |
 | `reference/source/New Writers Version - Instruction Guide (05_24).md` | Markdown extraction of official guide. | Operational reading copy; DOCX remains source artifact. |
+| `reference/source/[EXP] Project Sanctum Instruction Document (06_02).docx` | Newer experimental/source instruction document imported for reference. | Preserve unchanged as source evidence; do not silently supersede existing operating rules without explicit review. |
 | `reference/source/_Task Selection Categories For Team.xlsx` | Official task tracker. | Preserve unchanged. |
 | `reference/source/How to Upload Your Clod Transcript.mp4` | Reference/source video for Claude transcript upload handling. | Preserve as source evidence only; do not convert, summarize into governing rules, package, or submit until transcript/upload scope is explicitly authorized. |
 | `reference/source/README.md` | Source material policy. | No proprietary source edits here. |
@@ -269,6 +271,8 @@ These are fetched source/reference examples, not authored Korvin Merrow content 
 | `reference/templates/brainstorm.md` | Markdown template/helper version. | Secondary working reference. |
 | `reference/templates/World_Spec_Template_05_06.docx` | Official World Spec template. | Preserve unchanged; use as base only after GO. |
 | `reference/templates/AutoQC_Section_2_World_Spec_v6.3_writer.docx` | Official World Spec AutoQC prompt/checks. | Preserve unchanged; v6.3 source for 113 checks. |
+| `reference/templates/AutoQC_Section_3_World_Files_v6.6_writer.docx` | Official/writer-facing AutoQC prompt for Section 3 world files. | Preserve unchanged; reference/self-QC source for current Step 9 generated-file review. |
+| `reference/templates/AutoQC_Section_4_Task_Prompts_v6.6_writer.docx` | Official/writer-facing AutoQC prompt for Section 4 task prompts. | Preserve unchanged; future task-level self-QC reference, not current authorization to start task setup. |
 | `reference/templates/template-links.md` | Official template links. | Link registry. |
 
 ## World Spec Guidelines
@@ -870,6 +874,7 @@ Key files:
 - `worlds/korvin-merrow/file-review/file-review-protocol.md`: review protocol, trap-fidelity checklist, platform-verbatim requirements, and revision workflow.
 - `worlds/korvin-merrow/file-review/findings-triage.md`: active Claude-assisted B2 triage packet. Items marked `[A]` require Alexander ruling before edits.
 - `worlds/korvin-merrow/file-review/file-review-log.md`: candidate revision log for pipeline run #1, including Alexander rulings, object-model edit notes, integrity/render checks, and remaining platform steps.
+- `worlds/korvin-merrow/file-review/cold-audit-result.md`: independent Claude cold-audit result for the 26-file upload candidate; records 8/8 PASS and no corrective suggestions.
 - `worlds/korvin-merrow/file-review/pipeline-output/`: downloaded pipeline run #1 output, including 33 generated DOCX files under `filesystem/` plus metadata under `.meta/`.
 - `worlds/korvin-merrow/file-review/revision/`: working revision snapshot when candidate edits are prepared. Do not upload or treat as final without Alexander authorization.
 - `worlds/korvin-merrow/file-review/upload/filesystem/`: candidate 26-file world-level upload set prepared from the revised files. Do not upload without Alexander authorization.

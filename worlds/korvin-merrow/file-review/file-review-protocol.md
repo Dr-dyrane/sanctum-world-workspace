@@ -60,6 +60,24 @@ Red-team findings (13): these probe trap integrity and leakage. Expect a mix: so
 8. **4.4 confirmation, verbatim:** "I've looked through and completed the Final Files instructions". (Platform boilerplate mentions "10 tasks" - ours is 6 per the approved spec; the confirmation text above is the only required string.)
 9. **Mark World as Finalized** does NOT create the world - continue to Section 5.0 Creating World afterward.
 
+## 4c. OFFICIAL "How to Edit Your World-Level Files" doc (synced 6/5; full text in reference/source/ instruction doc 06_02)
+
+Confirms our executed process step-for-step (download -> edit in place -> remove task-level files and store elsewhere -> upload entire `filesystem` folder via Add folder -> per-file comments -> Save revision -> Apply to Task -> verify 4.1). New facts it adds:
+
+1. **NEVER Re-run Pipeline** - a new run takes ~46 hours; if a run is broken, contact the reviewer instead.
+2. **Final Files AutoQC = four checks** (Integrity, Clinical, Consistency, Standards), described as "the same AutoQCs the pipeline run generated."
+3. **Notes path is officially sanctioned:** "Address every flag, or note clearly why a flag is a false positive" in 4.3 - validates the false-positive note strategy for the stale-snapshot flags.
+4. **Step 11 (after finalize): Part 5 -> 5.1 Run Automation -> Run**, name the world per the instruction-document conventions, Run again -> task moves to World Created stage -> pod assignment for tasking.
+5. Writer self-AutoQC prompt docs now at reference/templates/ (Section 3 World Files + Section 4 Task Prompts, v6.6) - run locally before platform AutoQC on future iterations.
+
+## 4d. PLATFORM MECHANISM (Aribot-confirmed 6/5): revision vs run-snapshot scoping
+
+- The task-page **4.2 Final Files AutoQC card audits the pipeline run's ORIGINAL stored output**, not the applied revision. "Apply to Task" updates the task's working files (4.1 Golden World Files) but NOT the run's stored snapshot. Rerunning the 4.2 card re-audits the original output forever.
+- The **run-page World Files AutoQC**, rerun after a revision is applied, DOES read the revised files (passed 76/76 for Korvin).
+- **Fix path:** run page -> Diagnostics -> Run the Final Files/pipeline AutoQC check -> set Revision = applied revision ID in the popup -> run (~8-15 min). If no Revision picker exists, an EPM must rerun it (newer AutoQC card path may not support revision targeting).
+- **Accepted alternative per workflow:** the reviewer can accept the run-page World Files AutoQC pass on the revised files in lieu of a revision-scoped 4.2 rerun.
+- World #2 lesson: after Apply to Task, expect stale 4.2 results; go straight to the Diagnostics revision-scoped rerun instead of rerunning the card (Korvin burned 3 card reruns: 24/78, 14/78, 5/78, all phantom).
+
 ## 5. Edit and revision workflow
 
 - Minor FIX items: edit the generated docx directly (object model, content locators, integrity gate after every save - docs/docx-generation-method.md). Keep last-valid copies.
