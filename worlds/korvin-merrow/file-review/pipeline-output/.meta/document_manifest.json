@@ -1,0 +1,243 @@
+{
+  "generated_at": "2026-06-04T21:13:31Z",
+  "files": [
+    {
+      "path": "/filesystem/00_admin/key_facts.docx",
+      "document_type": "00_admin/docx",
+      "sha256": "371e8c3274f30a5a68740f6fcd522cfc724f818b4ee02f05288cdd6ebc8f4685",
+      "byte_size": 44859,
+      "last_modified": "2026-06-04T21:13:15Z"
+    },
+    {
+      "path": "/filesystem/admission_history_and_physical_05182026.docx",
+      "document_type": "root/docx",
+      "sha256": "b3a903745805d9ff827928254481acfb1613a5e131370a5c0c772b788ebbccb3",
+      "byte_size": 48081,
+      "last_modified": "2026-06-04T20:24:32Z"
+    },
+    {
+      "path": "/filesystem/cardiology_consultation_05212026.docx",
+      "document_type": "root/docx",
+      "sha256": "05a275258d30c3864ae32b65e29f9f8f047e3a2e8aaa825b6281547523107263",
+      "byte_size": 44805,
+      "last_modified": "2026-06-04T20:51:42Z"
+    },
+    {
+      "path": "/filesystem/case_management_social_work_discharge_note_05222026.docx",
+      "document_type": "root/docx",
+      "sha256": "1bcd2a822a392af643a036517987ccb4ad4fa1b49dbd41b1bfb2c5f8ed18cd9a",
+      "byte_size": 43735,
+      "last_modified": "2026-06-04T20:38:27Z"
+    },
+    {
+      "path": "/filesystem/consultant_synthesis_care_plan_request_05242026.docx",
+      "document_type": "root/docx",
+      "sha256": "488cee3f9c8da99379b2ade20b2ef79eee9d716c8ecb66cf95b04a4430e30058",
+      "byte_size": 41845,
+      "last_modified": "2026-06-04T20:38:28Z"
+    },
+    {
+      "path": "/filesystem/discharge_facing_plan_snapshot_05232026.docx",
+      "document_type": "root/docx",
+      "sha256": "976b2740f5622bba48a538407c4a8aa1b0ac4dcc0229226d19b6b0d00543bd21",
+      "byte_size": 42508,
+      "last_modified": "2026-06-04T20:51:52Z"
+    },
+    {
+      "path": "/filesystem/discharge_medication_reconciliation_request_05242026.docx",
+      "document_type": "root/docx",
+      "sha256": "543c4006c2a84bfd7cf5fc1085ef80edfc216e4692b28078e90a5e36c1f9a0b9",
+      "byte_size": 42078,
+      "last_modified": "2026-06-04T20:38:28Z"
+    },
+    {
+      "path": "/filesystem/discharge_readiness_care_coordination_request_05242026.docx",
+      "document_type": "root/docx",
+      "sha256": "72fed4522cc3e24cfa7f7ca46e75fd921d07ca0da462a983beeb48785ee0ecca",
+      "byte_size": 42308,
+      "last_modified": "2026-06-04T20:51:29Z"
+    },
+    {
+      "path": "/filesystem/discharge_summary_request_05242026.docx",
+      "document_type": "root/docx",
+      "sha256": "bde2351a533c5fc70cc1df5480042d0b9542d271f6dd39b38c76a5be7e06d335",
+      "byte_size": 41832,
+      "last_modified": "2026-06-04T20:38:27Z"
+    },
+    {
+      "path": "/filesystem/ed_provider_assessment_05182026.docx",
+      "document_type": "root/docx",
+      "sha256": "bbca1ff6d777f76c46d6b41463fe0cd7f12f824cb63ced1c6e669dc84e1237b8",
+      "byte_size": 44090,
+      "last_modified": "2026-06-04T20:24:50Z"
+    },
+    {
+      "path": "/filesystem/ed_triage_initial_intake_05182026.docx",
+      "document_type": "root/docx",
+      "sha256": "25b3c6ddf14cb6f38ceb62f72105d77665fafb5c2a978d3c41a8092956a669a4",
+      "byte_size": 44950,
+      "last_modified": "2026-06-04T19:01:46Z"
+    },
+    {
+      "path": "/filesystem/endocrinology_consultation_05212026.docx",
+      "document_type": "root/docx",
+      "sha256": "6fbbaabf28129b0ad527ce4d8c0a7ee54005c4ab7850e633c4a50eae6c396edd",
+      "byte_size": 43738,
+      "last_modified": "2026-06-04T20:39:02Z"
+    },
+    {
+      "path": "/filesystem/family_communication_care_conference_05222026.docx",
+      "document_type": "root/docx",
+      "sha256": "479b9f9ce18e8848d4cc147770203238bbb798be421aac8e85b42629fe9207be",
+      "byte_size": 44706,
+      "last_modified": "2026-06-04T20:24:50Z"
+    },
+    {
+      "path": "/filesystem/home_support_equipment_reference_05222026.docx",
+      "document_type": "root/docx",
+      "sha256": "f6ffa5f46748f8e450c0ceb364ee312c4437ea16c942d60beb9976bef743baab",
+      "byte_size": 42850,
+      "last_modified": "2026-06-04T20:51:29Z"
+    },
+    {
+      "path": "/filesystem/hospitalist_discharge_planning_progress_hd5_hd6_05232026.docx",
+      "document_type": "root/docx",
+      "sha256": "23833bc4594232417436e68ba5f90f9b3d5e2d3c80a0e4bab997e82bdb3312a0",
+      "byte_size": 44088,
+      "last_modified": "2026-06-04T20:10:18Z"
+    },
+    {
+      "path": "/filesystem/hospitalist_progress_hd1_hd2_05192026.docx",
+      "document_type": "root/docx",
+      "sha256": "9a316d42c372f8cc6ded073613f37fe21cc51ea4054ffc0100e12625e5a1eadb",
+      "byte_size": 45082,
+      "last_modified": "2026-06-04T20:24:32Z"
+    },
+    {
+      "path": "/filesystem/hospitalist_progress_hd3_05202026.docx",
+      "document_type": "root/docx",
+      "sha256": "f9496d4878682533a8962e2de98191833dc675239cac583cdb4646f21ad17ba8",
+      "byte_size": 43750,
+      "last_modified": "2026-06-04T20:11:43Z"
+    },
+    {
+      "path": "/filesystem/hospitalist_progress_hd4_05212026.docx",
+      "document_type": "root/docx",
+      "sha256": "86f7042e722856aee7db8b7b40218ae20c7a42e4eceb7ebda81b87bda872a65e",
+      "byte_size": 44765,
+      "last_modified": "2026-06-04T20:09:15Z"
+    },
+    {
+      "path": "/filesystem/initial_medication_reconciliation_note_05182026.docx",
+      "document_type": "root/docx",
+      "sha256": "d846fc436840a40b06620f9eb7cdc800aa94c32937d0c302464988c3102c544c",
+      "byte_size": 47310,
+      "last_modified": "2026-06-04T20:09:14Z"
+    },
+    {
+      "path": "/filesystem/medication_administration_record_05232026.docx",
+      "document_type": "root/docx",
+      "sha256": "a48fee7c7118a00d69047ad15d80523017063a06e7b257af9c39785586106519",
+      "byte_size": 48167,
+      "last_modified": "2026-06-04T20:11:42Z"
+    },
+    {
+      "path": "/filesystem/medication_safety_handoff_addendum_05242026.docx",
+      "document_type": "root/docx",
+      "sha256": "93baa2186b5606dbe68639da7d118dc1a0cedf144b00c9ee78642d9ac3d3cee0",
+      "byte_size": 42394,
+      "last_modified": "2026-06-04T19:42:29Z"
+    },
+    {
+      "path": "/filesystem/nephrology_consultation_05212026.docx",
+      "document_type": "root/docx",
+      "sha256": "153a63af858afd39c3ab8ac7e59acdc76f86de4a121d5d45f90a840316512a30",
+      "byte_size": 44275,
+      "last_modified": "2026-06-04T20:39:02Z"
+    },
+    {
+      "path": "/filesystem/nursing_observation_flowsheet_summary_05232026.docx",
+      "document_type": "root/docx",
+      "sha256": "e527993369f065cbdb0daa7acccfd8ae289c98f75fa5eaf2d0c27d50f2d51ecc",
+      "byte_size": 44193,
+      "last_modified": "2026-06-04T20:52:00Z"
+    },
+    {
+      "path": "/filesystem/occupational_therapy_assessment_05202026.docx",
+      "document_type": "root/docx",
+      "sha256": "fca03d44f22175bba35fcdc9500ed650b37d253cc3f0b89e88d3aa52bae82c77",
+      "byte_size": 43058,
+      "last_modified": "2026-06-04T20:10:37Z"
+    },
+    {
+      "path": "/filesystem/outpatient_rheumatology_prednisone_provenance_05212026.docx",
+      "document_type": "root/docx",
+      "sha256": "3e66c6209c4e979d05bc47f50abf10f79fbda084c8b2fd1642f4c73137e389ff",
+      "byte_size": 42186,
+      "last_modified": "2026-06-04T20:38:27Z"
+    },
+    {
+      "path": "/filesystem/pci_stent_history_summary_05182026.docx",
+      "document_type": "root/docx",
+      "sha256": "de8ab1d832b7699730f42111d968c8fe47c7557888861e897184157a7147403b",
+      "byte_size": 41983,
+      "last_modified": "2026-06-04T19:43:02Z"
+    },
+    {
+      "path": "/filesystem/pharmacy_refill_history_report_05182026.docx",
+      "document_type": "root/docx",
+      "sha256": "a1fa7f0b89393f6f3d6ac7bd6854fc984c92e8852779b259b04eed302e5e24a2",
+      "byte_size": 46644,
+      "last_modified": "2026-06-04T19:01:46Z"
+    },
+    {
+      "path": "/filesystem/physical_therapy_assessment_05202026.docx",
+      "document_type": "root/docx",
+      "sha256": "6df117220c474bf95958f9a4f9260418abf490659d509015be9ae10cf2151322",
+      "byte_size": 43210,
+      "last_modified": "2026-06-04T20:10:37Z"
+    },
+    {
+      "path": "/filesystem/post_discharge_followup_request_05312026.docx",
+      "document_type": "root/docx",
+      "sha256": "82e6a148268aeddfd0c17b44b5882ca69aaef369ca7180f0b35b2adc9027b988",
+      "byte_size": 41837,
+      "last_modified": "2026-06-04T19:42:29Z"
+    },
+    {
+      "path": "/filesystem/primary_care_outpatient_baseline_summary_05182026.docx",
+      "document_type": "root/docx",
+      "sha256": "da884cb822df2a40c1613ced6e6c8cb2b6df5cf11c1fe8cd59903635ed353b9e",
+      "byte_size": 43434,
+      "last_modified": "2026-06-04T20:38:28Z"
+    },
+    {
+      "path": "/filesystem/problem_list_history_snapshot_05182026.docx",
+      "document_type": "root/docx",
+      "sha256": "22c331d1f7df9248a0d6add3c0b6a0fbf22eee9bde6dc1f6476a14f2dca1fa6f",
+      "byte_size": 45053,
+      "last_modified": "2026-06-04T20:38:27Z"
+    },
+    {
+      "path": "/filesystem/readmission_risk_review_request_06232026.docx",
+      "document_type": "root/docx",
+      "sha256": "03088aac40f5e0a005542cd886191733a6bf846e6d0450f5cdcde83af24fad5e",
+      "byte_size": 42302,
+      "last_modified": "2026-06-04T20:10:18Z"
+    },
+    {
+      "path": "/filesystem/renal_infection_hemodynamic_trend_summary_05232026.docx",
+      "document_type": "root/docx",
+      "sha256": "6679267fcffdb6c986185b71677601e3edc3c90c069c799ff93574d1e0e6e303",
+      "byte_size": 44088,
+      "last_modified": "2026-06-04T19:25:22Z"
+    },
+    {
+      "path": "/filesystem/sleep_study_osa_history_summary_05182026.docx",
+      "document_type": "root/docx",
+      "sha256": "d4974aff879ad2668d90edb56f1a9e31a82b354659ffd3cce93ba52788ea794b",
+      "byte_size": 41069,
+      "last_modified": "2026-06-04T20:38:27Z"
+    }
+  ]
+}

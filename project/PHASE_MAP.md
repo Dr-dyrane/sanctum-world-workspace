@@ -19,7 +19,7 @@ Onboarding scope:
 
 Current Korvin status: Step 5 World Spec AutoQC is complete at 108/109, with the sole open prednisone dose/frequency warning preserved as intentional design and justified in notes. Step 6 Human Review: World Spec is APPROVED by Stacey S. The requested Reference File Origin routing correction was resolved and re-uploaded.
 
-Onboarding approval condition has been met. Engineering pipeline run / synthetic generation is in progress externally. The workspace is awaiting the platform stage "Ready for Pipeline Fixes"; the next writer-facing stage is Step 9 file review after generated files are available.
+Onboarding approval condition has been met. Official production pipeline position: World-level Files / synthetic file generation. V1 file generation is complete and V1 writer review is in progress under the platform stage "Ready for Pipeline Fixes." Pipeline output is ingested locally under `worlds/korvin-merrow/file-review/pipeline-output/`; Alexander is reviewing generated files with Claude assistance.
 
 ### Phase 2: Build Your Files And Tasks
 
@@ -33,18 +33,18 @@ Korvin Merrow current exception: Alexander has explicitly authorized local, batc
 
 Goal: Address Task AutoQC findings and complete trajectory/grading audit.
 
-Status: Out of scope until approval and phase update.
+Status: Out of scope until Step 9 generated-file review is completed and Alexander explicitly authorizes task setup / QA work.
 
 ### Phase 4: Evaluate The Agent
 
 Goal: Failure analysis, preference labeling, AutoQC, and final reviewer review.
 
-Status: Out of scope until approval and phase update.
+Status: Out of scope until generated-file review, task setup, trajectory runs, and QA gates are complete and Alexander explicitly authorizes evaluation work.
 
 ## Explicitly Out Of Scope Until Approval
 
 - Scoring rubrics, scoring thresholds, pass/fail bands, point allocations, AutoQC responses, or later task-layer output generation unless explicitly authorized by Alexander
-- World file review
+- World file review beyond the current authorized Step 9 generated-file review
 - Production task setup
 - Production task prompts
 - Additional golden responses

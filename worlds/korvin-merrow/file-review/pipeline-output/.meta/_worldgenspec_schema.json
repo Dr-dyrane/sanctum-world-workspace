@@ -1,0 +1,1360 @@
+{
+  "$defs": {
+    "AuthoritativeRule": {
+      "description": "A domain rule the pipeline (and downstream graders) must treat\nas ground truth. Examples: 'final radiology overrides preliminary',\n'apixaban dose reduction requires \u22652 of age\u226580, weight\u226460, Cr\u22651.5'.",
+      "properties": {
+        "rule_id": {
+          "description": "Stable short name, e.g. 'final-radiology-overrides-preliminary'.",
+          "title": "Rule Id",
+          "type": "string"
+        },
+        "statement": {
+          "description": "The rule itself, as a single declarative sentence.",
+          "title": "Statement",
+          "type": "string"
+        },
+        "applies_to": {
+          "description": "Optional scope: task IDs or document categories the rule binds. Empty = applies globally.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Applies To",
+          "type": "array"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        }
+      },
+      "required": [
+        "rule_id",
+        "statement"
+      ],
+      "title": "AuthoritativeRule",
+      "type": "object"
+    },
+    "CanonicalFacts": {
+      "description": "Core facts the expert fixed in stone. Downstream generation must\npreserve these verbatim. Domain-specific sub-fields are all optional\n\u2014 fill only what your domain needs; use `domain_specific` for anything\nnot covered.",
+      "properties": {
+        "medications": {
+          "description": "Medical only: canonical med list with any designed discrepancies.",
+          "items": {
+            "$ref": "#/$defs/MedicationFact"
+          },
+          "title": "Medications",
+          "type": "array"
+        },
+        "lab_values": {
+          "description": "Medical only: lab / vital values with reference ranges.",
+          "items": {
+            "$ref": "#/$defs/LabValueFact"
+          },
+          "title": "Lab Values",
+          "type": "array"
+        },
+        "specialist_conflicts": {
+          "description": "Interpersonal disagreements with attending/judge decisions. Medical: specialist-vs-specialist. Legal: State-vs-Defense.",
+          "items": {
+            "$ref": "#/$defs/SpecialistConflict"
+          },
+          "title": "Specialist Conflicts",
+          "type": "array"
+        },
+        "embedded_conflicts": {
+          "description": "Source-document contradictions with a ground-truth resolution. E.g. 'ED prelim CT 4.8 cm vs final radiology 5.2 cm; final authoritative'.",
+          "items": {
+            "$ref": "#/$defs/EmbeddedConflict"
+          },
+          "title": "Embedded Conflicts",
+          "type": "array"
+        },
+        "case_law": {
+          "description": "Legal only: statutes + case law that apply to the scenario.",
+          "items": {
+            "$ref": "#/$defs/CaseLawCitation"
+          },
+          "title": "Case Law",
+          "type": "array"
+        },
+        "domain_specific": {
+          "additionalProperties": true,
+          "description": "Escape hatch for anything not covered above. Any domain-specific facts the expert wants the pipeline to respect. Free-form JSON.",
+          "title": "Domain Specific",
+          "type": "object"
+        }
+      },
+      "title": "CanonicalFacts",
+      "type": "object"
+    },
+    "CaseLawCitation": {
+      "properties": {
+        "citation": {
+          "description": "e.g. 'Fla. Stat. 776.012', 'Williams v. State'.",
+          "title": "Citation",
+          "type": "string"
+        },
+        "holding": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "What the case/statute established (legal only).",
+          "title": "Holding"
+        },
+        "applicability": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "How this applies to the world's scenario.",
+          "title": "Applicability"
+        },
+        "source_document": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Document"
+        }
+      },
+      "required": [
+        "citation"
+      ],
+      "title": "CaseLawCitation",
+      "type": "object"
+    },
+    "EmbeddedConflict": {
+      "description": "Contradiction between two source documents (or two passages\nwithin the same document) with a ground-truth resolution. Distinct\nfrom SpecialistConflict \u2014 this is about *documentation* inconsistency,\nnot interpersonal disagreement. Example: ED prelim CT reads 4.8 cm\nvs final radiology reads 5.2 cm; final is authoritative.",
+      "properties": {
+        "issue": {
+          "title": "Issue",
+          "type": "string"
+        },
+        "source_a": {
+          "description": "Filename or passage identifier.",
+          "title": "Source A",
+          "type": "string"
+        },
+        "value_a": {
+          "title": "Value A",
+          "type": "string"
+        },
+        "source_b": {
+          "title": "Source B",
+          "type": "string"
+        },
+        "value_b": {
+          "title": "Value B",
+          "type": "string"
+        },
+        "authoritative": {
+          "description": "Which source is ground truth (e.g. 'source_b \u2014 final radiology authoritative').",
+          "title": "Authoritative",
+          "type": "string"
+        },
+        "trap_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Trap Id"
+        }
+      },
+      "required": [
+        "issue",
+        "source_a",
+        "value_a",
+        "source_b",
+        "value_b",
+        "authoritative"
+      ],
+      "title": "EmbeddedConflict",
+      "type": "object"
+    },
+    "FileManifestEntry": {
+      "description": "A single document in the world.",
+      "properties": {
+        "filename": {
+          "description": "e.g. 'discharge_summary_04_22_2026.pdf'",
+          "title": "Filename",
+          "type": "string"
+        },
+        "category": {
+          "description": "e.g. 'physician_notes', 'discharge', 'evidence', 'case_law'",
+          "title": "Category",
+          "type": "string"
+        },
+        "format": {
+          "default": "pdf",
+          "description": "File format the pipeline should render / emit.",
+          "enum": [
+            "pdf",
+            "docx",
+            "xlsx",
+            "jpg",
+            "png",
+            "txt",
+            "rtf",
+            "csv",
+            "html"
+          ],
+          "title": "Format",
+          "type": "string"
+        },
+        "author": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Party name authoring this doc, if any.",
+          "title": "Author"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "What the document establishes (clinical/factual content).",
+          "title": "Description"
+        },
+        "trap_content": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "What deliberate distortion this file carries, if any. Kept separate from description so the pipeline can distinguish the trap mechanism from the clinical/factual surface.",
+          "title": "Trap Content"
+        },
+        "reference_docs": {
+          "description": "Authored exemplars the formatter should mirror. A file may cite multiple references \u2014 e.g. a template PDF plus prose modifications, or a sample URL plus a backup file. Each entry can be a URL, an uploaded file, or prose-only guidance when no template exists.",
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/$defs/URLRef"
+              },
+              {
+                "$ref": "#/$defs/FileRef"
+              },
+              {
+                "$ref": "#/$defs/ProseRef"
+              }
+            ]
+          },
+          "title": "Reference Docs",
+          "type": "array"
+        },
+        "for_tasks": {
+          "description": "Task IDs that use this file, e.g. ['T1', 'T2'].",
+          "items": {
+            "type": "string"
+          },
+          "title": "For Tasks",
+          "type": "array"
+        },
+        "label": {
+          "default": "key",
+          "description": "Key = relevant to at least one task or carries a trap. Supplementary = included for realism / completeness only. Mirrors the Label column in the expert File Inventory.",
+          "enum": [
+            "key",
+            "supplementary"
+          ],
+          "title": "Label",
+          "type": "string"
+        }
+      },
+      "required": [
+        "filename",
+        "category"
+      ],
+      "title": "FileManifestEntry",
+      "type": "object"
+    },
+    "FileRef": {
+      "properties": {
+        "kind": {
+          "const": "file",
+          "default": "file",
+          "title": "Kind",
+          "type": "string"
+        },
+        "s3_key": {
+          "title": "S3 Key",
+          "type": "string"
+        },
+        "filename": {
+          "title": "Filename",
+          "type": "string"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Description"
+        }
+      },
+      "required": [
+        "s3_key",
+        "filename"
+      ],
+      "title": "FileRef",
+      "type": "object"
+    },
+    "HiddenFinding": {
+      "description": "A conclusion no single document in the world correctly states \u2014\nthe model under test must synthesize it across files. Mirrors the\n'Hidden Clinical Findings' pattern in medical specs (Elena \u00a71.6)\nand the 'Key Factual Tensions' pattern in legal specs (World 1 \u00a71.4).",
+      "properties": {
+        "finding": {
+          "description": "The correct conclusion the model should reach.",
+          "title": "Finding",
+          "type": "string"
+        },
+        "evidence_chain": {
+          "description": "The cross-document path to the conclusion \u2014 names the specific files / rows / notes that must be combined.",
+          "title": "Evidence Chain",
+          "type": "string"
+        }
+      },
+      "required": [
+        "finding",
+        "evidence_chain"
+      ],
+      "title": "HiddenFinding",
+      "type": "object"
+    },
+    "InventedFactsPolicy": {
+      "description": "Rules governing what the pipeline can fabricate vs. what must\ncome verbatim from source references. Medical worlds typically\nallow demographics/admin fabrication but forbid clinical-value\nfabrication; legal worlds allow party-backstory fabrication but\nforbid statute or case-law fabrication.",
+      "properties": {
+        "allowed": {
+          "description": "Categories the pipeline MAY invent. One per line. E.g. 'patient_demographics', 'address_details', 'witness_backstory', 'transaction_dates'.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Allowed",
+          "type": "array"
+        },
+        "prohibited": {
+          "description": "Categories the pipeline MUST NOT invent \u2014 must come from canonical_facts or referenced source docs. E.g. 'lab_values', 'medication_doses', 'statute_text', 'case_law_holdings'.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Prohibited",
+          "type": "array"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Free-form policy guidance (e.g. 'never fabricate clinical values; always fail loud on contradiction').",
+          "title": "Notes"
+        }
+      },
+      "title": "InventedFactsPolicy",
+      "type": "object"
+    },
+    "LabValueFact": {
+      "properties": {
+        "test": {
+          "description": "e.g. 'Creatinine', 'Hemoglobin'.",
+          "title": "Test",
+          "type": "string"
+        },
+        "value": {
+          "description": "Raw value as written.",
+          "title": "Value",
+          "type": "string"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unit"
+        },
+        "reference_range": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reference Range"
+        },
+        "date": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Date"
+        },
+        "source_document": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Document"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        }
+      },
+      "required": [
+        "test",
+        "value"
+      ],
+      "title": "LabValueFact",
+      "type": "object"
+    },
+    "MedicationFact": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "dose": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Dose"
+        },
+        "route": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Route"
+        },
+        "frequency": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Frequency"
+        },
+        "prescriber": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Prescriber"
+        },
+        "start_date": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Start Date"
+        },
+        "status": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "e.g. 'active', 'held', 'discontinued', 'home_med'.",
+          "title": "Status"
+        },
+        "designed_discrepancy": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "If this entry encodes a trap, note what's deliberately wrong and why.",
+          "title": "Designed Discrepancy"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "MedicationFact",
+      "type": "object"
+    },
+    "Party": {
+      "description": "A character / persona / entity in the world (provider, attorney,\npatient, opposing counsel, etc.).",
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "role": {
+          "description": "e.g. 'PCP', 'Vascular Surgery', 'State Attorney'",
+          "title": "Role",
+          "type": "string"
+        },
+        "organization": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Hospital / firm / agency this party belongs to.",
+          "title": "Organization"
+        },
+        "representation": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Legal-only: whose side this party represents (e.g. 'State', 'Defense', 'Neutral'). Leave blank outside legal.",
+          "title": "Representation"
+        },
+        "style_guide": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Per-party voice/formatting conventions for their docs.",
+          "title": "Style Guide"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        }
+      },
+      "required": [
+        "name",
+        "role"
+      ],
+      "title": "Party",
+      "type": "object"
+    },
+    "ProseRef": {
+      "description": "Prose-only reference \u2014 guidance for the formatter without a\nspecific template file or URL. Matches expert specs that say\n'use standard Orange County arrest report layout' or 'include\nmeasurements showing window position at time of shooting' without\npointing at any template.",
+      "properties": {
+        "kind": {
+          "const": "prose",
+          "default": "prose",
+          "title": "Kind",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        }
+      },
+      "required": [
+        "description"
+      ],
+      "title": "ProseRef",
+      "type": "object"
+    },
+    "SpecialistConflict": {
+      "description": "Interpersonal disagreement between two parties \u2014 medical:\nspecialist-vs-specialist with attending decision. Legal: State-vs-\nDefense with judge ruling. For source-document contradictions\n(e.g. preliminary radiology vs final), use EmbeddedConflict instead.",
+      "properties": {
+        "issue": {
+          "title": "Issue",
+          "type": "string"
+        },
+        "party_a": {
+          "description": "Name of first party (matches Party.name).",
+          "title": "Party A",
+          "type": "string"
+        },
+        "party_a_position": {
+          "title": "Party A Position",
+          "type": "string"
+        },
+        "party_b": {
+          "title": "Party B",
+          "type": "string"
+        },
+        "party_b_position": {
+          "title": "Party B Position",
+          "type": "string"
+        },
+        "resolution": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Attending decision / judge ruling / 'unresolved'.",
+          "title": "Resolution"
+        },
+        "trap_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Trap this conflict encodes, if any.",
+          "title": "Trap Id"
+        }
+      },
+      "required": [
+        "issue",
+        "party_a",
+        "party_a_position",
+        "party_b",
+        "party_b_position"
+      ],
+      "title": "SpecialistConflict",
+      "type": "object"
+    },
+    "Task": {
+      "description": "A reasoning task the model under test must solve. Every world\nthat ships as a benchmark should have at least one. Simple worlds\nthat exist for content generation only may leave this empty.",
+      "properties": {
+        "id": {
+          "description": "Short ID, e.g. 'T1', 'T2'.",
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "workflow_type": {
+          "description": "e.g. 'medication_reconciliation', 'document_review', 'motion_drafting', 'imaging_review'.",
+          "title": "Workflow Type",
+          "type": "string"
+        },
+        "anchor_point": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Temporal grounding \u2014 when in the case does this task occur? Medical: e.g. 'Day 8', 'Post-discharge'. Legal: e.g. 'Pre-trial', 'After discovery cutoff'. Constrains which files the agent may see.",
+          "title": "Anchor Point"
+        },
+        "capabilities_tested": {
+          "description": "Benchmark skill tags, e.g. 'Medication Safety', 'Synthesis', 'Temporal Reasoning'. Used by downstream graders to categorize.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Capabilities Tested",
+          "type": "array"
+        },
+        "primary_files": {
+          "description": "Filenames the task depends on.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Primary Files",
+          "type": "array"
+        },
+        "file_access_limit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional constraint on which files the agent may access. E.g. 'No post-discharge files', 'Only files dated before 2024-01-01'.",
+          "title": "File Access Limit"
+        },
+        "design_purpose": {
+          "description": "The correct reasoning path stated plainly \u2014 what the agent SHOULD do. Keep separate from the trap so graders see intent.",
+          "title": "Design Purpose",
+          "type": "string"
+        },
+        "expected_output": {
+          "description": "Concrete deliverable format + structure.",
+          "title": "Expected Output",
+          "type": "string"
+        },
+        "trap_summary": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Which trap(s) this task surfaces, and how failure looks.",
+          "title": "Trap Summary"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "workflow_type",
+        "design_purpose",
+        "expected_output"
+      ],
+      "title": "Task",
+      "type": "object"
+    },
+    "TimelineEvent": {
+      "description": "A dated event in the world's history. Medical: clinical-event\ntimeline. Legal: discovery / filing / hearing calendar.",
+      "properties": {
+        "date": {
+          "description": "ISO 8601 or relative label (e.g. '2026-04-14', 'Day 0', '-14 days'). Use absolute when possible.",
+          "title": "Date",
+          "type": "string"
+        },
+        "label": {
+          "description": "Short name, e.g. 'EVAR', 'Arrest', 'Discovery filed'.",
+          "title": "Label",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "source_document": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Filename (from file_manifest) that documents this event.",
+          "title": "Source Document"
+        },
+        "trap_marker": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Trap ID activated or anchored on this date, if any.",
+          "title": "Trap Marker"
+        }
+      },
+      "required": [
+        "date",
+        "label",
+        "description"
+      ],
+      "title": "TimelineEvent",
+      "type": "object"
+    },
+    "Trap": {
+      "description": "A deliberate flaw / ambiguity / contradiction the model under\ntest is supposed to catch. Mirrors the expert's Trap Activation\nMatrix: a first-class declaration, cross-referenced by files\n(FileManifestEntry.trap_content) and medications\n(MedicationFact.designed_discrepancy) that carry it.",
+      "properties": {
+        "id": {
+          "description": "Stable short name, e.g. 'apixaban-dose-error'. Same ID used as cross-reference elsewhere.",
+          "title": "Id",
+          "type": "string"
+        },
+        "description": {
+          "description": "The trap mechanism, captured in the expert's own words. Multi-sentence prose is expected and correct \u2014 preserve verbatim from the spec, do NOT compress to a one-liner. For prose-shaped traps (multi-step logical, authority-hierarchy, cross-document inference) this is the source of truth that downstream agents (generator, cert checkers, repair) read directly. For phrase-shaped traps a one-line summary is fine if that's what the expert wrote, but never truncate richer explanations.",
+          "title": "Description",
+          "type": "string"
+        },
+        "severity": {
+          "default": "high",
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "breaking"
+          ],
+          "title": "Severity",
+          "type": "string"
+        },
+        "carrier_files": {
+          "description": "Filenames of the documents that manifest the trap. Pointer list \u2014 tells downstream agents WHERE to look for the trap while `description` tells them WHAT it is. Should match FileManifestEntry.filename values.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Carrier Files",
+          "type": "array"
+        },
+        "affected_doc_types": {
+          "description": "e.g. ['discharge_med_list', 'discharge_summary']",
+          "items": {
+            "type": "string"
+          },
+          "title": "Affected Doc Types",
+          "type": "array"
+        },
+        "affected_tasks": {
+          "description": "Task IDs the trap affects, e.g. ['T1', 'T3']. Cheap pointer list \u2014 use this for prose-only traps where you don't want to enumerate per-task misleads/fails/remediation. If you ALSO populate per_task_behavior, the task_ids should agree.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Affected Tasks",
+          "type": "array"
+        },
+        "per_task_behavior": {
+          "description": "OPTIONAL structured per-task breakdown. Only populate when the expert provided per-task content explicitly (e.g. legacy Task N Traps tab). For prose-shaped traps, leave this empty and rely on `description` + `affected_tasks` \u2014 downstream agents read the prose. Each entry ties this trap to a task with its own misleads / failure / remediation.",
+          "items": {
+            "$ref": "#/$defs/TrapTaskBehavior"
+          },
+          "title": "Per Task Behavior",
+          "type": "array"
+        },
+        "must_contain": {
+          "description": "OPTIONAL phrase list. Only populate when the trap is genuinely phrase-shaped (e.g. 'doc A must say 9mm') AND the expert wrote those phrases. Leave empty for logical / multi-step / authority-hierarchy traps \u2014 the description carries the meaning and the generator interprets it directly.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Must Contain",
+          "type": "array"
+        },
+        "must_not_contain": {
+          "description": "OPTIONAL phrase list \u2014 same caveat as must_contain. Phrases that would defuse a phrase-shaped trap. Leave empty for prose-shaped traps.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Must Not Contain",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "description"
+      ],
+      "title": "Trap",
+      "type": "object"
+    },
+    "TrapTaskBehavior": {
+      "description": "Per-task breakdown of how a trap manifests. Matches the Task N\nTraps tab layout in the expert companion spreadsheet.",
+      "properties": {
+        "task_id": {
+          "description": "Task ID, e.g. 'T1'.",
+          "title": "Task Id",
+          "type": "string"
+        },
+        "what_misleads": {
+          "description": "What the document surface suggests that sends agents down the wrong path.",
+          "title": "What Misleads",
+          "type": "string"
+        },
+        "how_agent_fails": {
+          "description": "The wrong conclusion an unprepared agent reaches.",
+          "title": "How Agent Fails",
+          "type": "string"
+        },
+        "remediation_path": {
+          "description": "The correct reasoning path that catches the trap.",
+          "title": "Remediation Path",
+          "type": "string"
+        }
+      },
+      "required": [
+        "task_id",
+        "what_misleads",
+        "how_agent_fails",
+        "remediation_path"
+      ],
+      "title": "TrapTaskBehavior",
+      "type": "object"
+    },
+    "URLRef": {
+      "properties": {
+        "kind": {
+          "const": "url",
+          "default": "url",
+          "title": "Kind",
+          "type": "string"
+        },
+        "url": {
+          "title": "Url",
+          "type": "string"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Description"
+        }
+      },
+      "required": [
+        "url"
+      ],
+      "title": "URLRef",
+      "type": "object"
+    }
+  },
+  "description": "Expert-authored world specification. Persistent \u2014 edit and\nrerun keep the same spec (and its notes). Stored on the\nPipelineRun as a snapshot at submit-time.",
+  "properties": {
+    "title": {
+      "title": "Title",
+      "type": "string"
+    },
+    "domain": {
+      "enum": [
+        "medical",
+        "legal",
+        "finance",
+        "other"
+      ],
+      "title": "Domain",
+      "type": "string"
+    },
+    "expert_reviewer": {
+      "description": "SPL author handle.",
+      "title": "Expert Reviewer",
+      "type": "string"
+    },
+    "target_app": {
+      "description": "Which app converter runs after generation. Required per SPL_GUIDE.md \u2014 never inferred for production worlds. openemr = medical EHR conversion; clio = legal case mgmt conversion; none = ship raw documents only, skip app conversion.",
+      "enum": [
+        "openemr",
+        "clio",
+        "none"
+      ],
+      "title": "Target App",
+      "type": "string"
+    },
+    "summary": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "One-paragraph narrative overview of the case.",
+      "title": "Summary"
+    },
+    "parties": {
+      "items": {
+        "$ref": "#/$defs/Party"
+      },
+      "title": "Parties",
+      "type": "array"
+    },
+    "traps": {
+      "items": {
+        "$ref": "#/$defs/Trap"
+      },
+      "title": "Traps",
+      "type": "array"
+    },
+    "file_manifest": {
+      "items": {
+        "$ref": "#/$defs/FileManifestEntry"
+      },
+      "title": "File Manifest",
+      "type": "array"
+    },
+    "tasks": {
+      "description": "Task inventory. Required for benchmarks; optional for content-only worlds.",
+      "items": {
+        "$ref": "#/$defs/Task"
+      },
+      "title": "Tasks",
+      "type": "array"
+    },
+    "timeline": {
+      "description": "Dated events with trap markers.",
+      "items": {
+        "$ref": "#/$defs/TimelineEvent"
+      },
+      "title": "Timeline",
+      "type": "array"
+    },
+    "canonical_facts": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/CanonicalFacts"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Domain-shaped canonical-fact tables (medications, labs, case law, etc.)."
+    },
+    "authoritative_rules": {
+      "description": "Domain rules the pipeline and graders must enforce as ground truth (e.g. 'final radiology overrides preliminary', 'apixaban dose reduction requires \u22652 of age\u226580, weight\u226460, Cr\u22651.5').",
+      "items": {
+        "$ref": "#/$defs/AuthoritativeRule"
+      },
+      "title": "Authoritative Rules",
+      "type": "array"
+    },
+    "invented_facts_policy": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/InventedFactsPolicy"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Rules for what the pipeline may/may not fabricate."
+    },
+    "invented_facts_seed": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Optional seed facts the pipeline should invent around (one fact per line).",
+      "title": "Invented Facts Seed"
+    },
+    "global_style_guide": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Formatting conventions that apply to all documents.",
+      "title": "Global Style Guide"
+    },
+    "pre_flight_notes": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Free-text guidance for the pipeline \u2014 constraints, known gotchas, non-obvious invariants. Persists across reruns.",
+      "title": "Pre Flight Notes"
+    },
+    "builder_decisions": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "What the pipeline is free to invent vs. what the spec fixes. Mirrors the 'Builder Decisions Required' section in expert legal specs \u2014 names the degrees of freedom (dates, names, measurements, identifiers) so generation doesn't drift.",
+      "title": "Builder Decisions"
+    },
+    "practice_area": {
+      "anyOf": [
+        {
+          "enum": [
+            "criminal",
+            "civil_litigation",
+            "transactional",
+            "regulatory",
+            "other"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Legal only: determines document universe and procedural rules.",
+      "title": "Practice Area"
+    },
+    "procedural_stage": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Legal only, e.g. 'discovery', 'pre_trial_motions', 'trial', 'sentencing', 'appeal'. Changes which tasks are live.",
+      "title": "Procedural Stage"
+    },
+    "reference_laws": {
+      "description": "Legal only: statutes + case law (URLs or uploaded files).",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/$defs/URLRef"
+          },
+          {
+            "$ref": "#/$defs/FileRef"
+          },
+          {
+            "$ref": "#/$defs/ProseRef"
+          }
+        ]
+      },
+      "title": "Reference Laws",
+      "type": "array"
+    },
+    "patient": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Medical only: narrative patient identity + PMH + baseline labs + allergies + code status + POA. Prose, not JSON \u2014 this mirrors how experts write the Patient Profile section in real specs and the pipeline expands it into the PMH sections of every generated document.",
+      "title": "Patient"
+    },
+    "care_team": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Medical only: narrative provider roster (name, role, service, credentials). Cross-referenced when generating notes so authorship stays consistent.",
+      "title": "Care Team"
+    },
+    "specialist_friction": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Medical only: points of disagreement between services \u2014 consults that declined, recommendations that got overruled, plans that persisted without cancellation.",
+      "title": "Specialist Friction"
+    },
+    "clinical_course": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Medical only: day-by-day narrative of what happens in the world. Anchor events to dates or hospital-day numbers \u2014 timeline QC relies on internal consistency here.",
+      "title": "Clinical Course"
+    },
+    "clinical_settings": {
+      "description": "Medical only: orgs involved (ED, ICU, clinic, floor, etc.).",
+      "items": {
+        "type": "string"
+      },
+      "title": "Clinical Settings",
+      "type": "array"
+    },
+    "case_summary": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Legal only: narrative of the matter \u2014 charges, parties, procedural posture, what's in dispute. Grounds every generated filing.",
+      "title": "Case Summary"
+    },
+    "factual_tensions": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Legal only: points of factual dispute between parties \u2014 the conflicting-document stuff the model must reason across.",
+      "title": "Factual Tensions"
+    },
+    "hidden_findings": {
+      "description": "Conclusions no single document in the world correctly states \u2014 the model must synthesize them across files. Each item is the correct conclusion plus the cross-document evidence chain.",
+      "items": {
+        "$ref": "#/$defs/HiddenFinding"
+      },
+      "title": "Hidden Findings",
+      "type": "array"
+    }
+  },
+  "required": [
+    "title",
+    "domain",
+    "expert_reviewer",
+    "target_app"
+  ],
+  "title": "WorldGenSpec",
+  "type": "object"
+}

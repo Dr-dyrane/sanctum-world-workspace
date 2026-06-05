@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-World Spec APPROVED. Execution Artifact Generation COMPLETE / CANONICALIZED. RL Studio upload and Spec AutoQC are complete under Alexander's direct authorization; final board is 108/109 with prednisone dose/frequency preserved as the sole intentional, note-justified flag. Human World Spec Review is approved by Stacey S; the requested Reference File Origin routing correction was resolved and re-uploaded. Engineering pipeline run / synthetic generation is in progress externally; the workspace is awaiting the platform stage "Ready for Pipeline Fixes."
+World Spec APPROVED. Execution Artifact Generation COMPLETE / CANONICALIZED. RL Studio upload and Spec AutoQC are complete under Alexander's direct authorization; final board is 108/109 with prednisone dose/frequency preserved as the sole intentional, note-justified flag. Human World Spec Review is approved by Stacey S; the requested Reference File Origin routing correction was resolved and re-uploaded. Engineering pipeline run #1 completed, and Step 9 generated-file review / "Ready for Pipeline Fixes" is active. Pipeline output is ingested under `worlds/korvin-merrow/file-review/pipeline-output/`; Claude-assisted triage and candidate revision preparation are recorded under `worlds/korvin-merrow/file-review/`.
 
 ## Brainstorm
 
@@ -158,7 +158,11 @@ World Spec APPROVED. Execution Artifact Generation COMPLETE / CANONICALIZED. RL 
 - Human World Spec Review: APPROVED by Stacey S; approval record `worlds/korvin-merrow/reviews/reviewer-spec-approval-01.md`
 - Reviewer routing correction: Reference File Origin labels corrected to the template-canonical `Custom Made` token and re-uploaded
 - No GG-KM07 exists
-- Next eligible phase: wait for "Ready for Pipeline Fixes," then writer Step 9 file review after generated files are available
+- Current phase: Step 9 generated-file review / "Ready for Pipeline Fixes"
+- Active file-review protocol: `worlds/korvin-merrow/file-review/file-review-protocol.md`
+- Active Claude-assisted triage: `worlds/korvin-merrow/file-review/findings-triage.md`
+- Candidate revision log: `worlds/korvin-merrow/file-review/file-review-log.md`
+- Candidate upload set: `worlds/korvin-merrow/file-review/upload/filesystem/` with 26 world files; task files held out under `worlds/korvin-merrow/file-review/task-files-holdback/`
 - Claude transcript: `docs/claude-transcript-formatted.md` is the authoritative transcript upload artifact. `docs/claude-transcript.md` remains raw historical/provenance evidence. Supporting Claude share URL: `https://claude.ai/share/d5129364-5d6c-4a2c-acb3-282f367a0040`.
 - Task-design physician-perspective guidance: recorded as a future task-layer rule only. It does not change source-of-truth hierarchy or Governance Package v1; future task prompts and deliverables must remain physician-centered even when supporting sources are pharmacy, nursing, PT/OT, case management, social work, family, or administrative sources.
 - Collaborator session-exit discipline: standing process / handoff rule. Every future session must leave the repository clean or explicitly documented, update phase and next-phase surfaces, preserve locked artifacts unless explicitly authorized, label candidate artifacts, move newly locked artifacts to locked paths with ratification references, update continuity and Claude handoff files, record carry-forward watch items and future task-layer guidance, commit completed work unless explicitly told not to, and report what changed, what did not change, current status, next eligible phase, and whether the repository is safe for another collaborator.
@@ -217,7 +221,7 @@ World Spec APPROVED. Execution Artifact Generation COMPLETE / CANONICALIZED. RL 
 - Fetched World Spec example source documents: `reference/word-spec-examples/` (local-only / gitignored)
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 - World Spec prep folder structure: reorganized by lifecycle buckets (`candidate-review/`, `locked/`, `ratifications/`, `reviews/`, `decision-logs/`, `planning-scaffolds/`)
-- Next eligible phase: wait for "Ready for Pipeline Fixes," then writer Step 9 file review after generated files are available. Do not run additional AutoQC, create platform responses, create AutoQC responses, create scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifests, final submission packages, additional uploads, additional submissions, or access RL Studio again until explicitly authorized.
+- Current phase: Step 9 generated-file review / "Ready for Pipeline Fixes." Candidate revision set is prepared locally, but do not run Final Files AutoQC, upload revisions, Apply to Task, create platform responses, create AutoQC responses, create scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifests, final submission packages, additional uploads, additional submissions, or access RL Studio again until explicitly authorized.
 
 ## Tooling
 
@@ -239,7 +243,7 @@ World Spec APPROVED. Execution Artifact Generation COMPLETE / CANONICALIZED. RL 
 - Do not treat fetched World Spec examples as authored Korvin Merrow content or source-of-truth material.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
 - Do not modify clinical content beyond reviewer-required remediation without Alexander approval.
-- Do not proceed beyond the approved World Spec / pipeline-running / awaiting "Ready for Pipeline Fixes" state into additional AutoQC runs, platform responses, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifest creation, final submission packaging, additional uploads, additional submission actions, or failure analysis without explicit authorization.
+- Do not proceed beyond Step 9 generated-file review / "Ready for Pipeline Fixes" into Final Files AutoQC, task setup, platform responses, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifest creation, final submission packaging, additional uploads, additional submission actions, or failure analysis without explicit authorization.
 - Do not access RL Studio again without explicit authorization.
 - Do not end a working session without applying collaborator session-exit discipline.
 ## Execution Artifact Generation Outputs

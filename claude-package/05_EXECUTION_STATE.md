@@ -4,7 +4,22 @@ Purpose: compressed current state for Claude. Use `project/STATUS.md` and `docs/
 
 ## Project State
 
-Current phase: Final Submission Resolution / LOCKED; Execution Artifact Generation COMPLETE / CANDIDATE REVIEW.
+Current phase: Step 9 generated-file review / "Ready for Pipeline Fixes." World Spec approval is complete, onboarding has ended, engineering pipeline run #1 completed, and Alexander is reviewing the generated V1 world files with Claude assistance. Local review surface: `worlds/korvin-merrow/file-review/`.
+
+Pipeline run #1 state:
+
+- Output ingested at `worlds/korvin-merrow/file-review/pipeline-output/`.
+- Generated files: 33 DOCX files under `pipeline-output/filesystem/`.
+- Metadata: 134 `.meta` files under `pipeline-output/.meta/`.
+- World Files AutoQC: 74/76 pass; the two fails are access/routing failures, not inspected-content failures.
+- Active protocol: `worlds/korvin-merrow/file-review/file-review-protocol.md`.
+- Active Claude-assisted triage: `worlds/korvin-merrow/file-review/findings-triage.md`.
+- Candidate revision log: `worlds/korvin-merrow/file-review/file-review-log.md`.
+- Revised 33-file working snapshot: `worlds/korvin-merrow/file-review/revision/filesystem/`.
+- Candidate 26-file world-level upload set: `worlds/korvin-merrow/file-review/upload/filesystem/`.
+- Seven task-level files are held out at `worlds/korvin-merrow/file-review/task-files-holdback/` for later task setup handling.
+- Items marked `[A]` required Alexander physician ruling before edits; rulings and candidate edits are recorded in the file-review log.
+- Do not run Final Files AutoQC, upload revisions, Apply to Task, create AutoQC responses, create task setup materials, or access RL Studio unless Alexander explicitly authorizes the exact step.
 
 Transcript resolution: `docs/claude-transcript-formatted.md` is the authoritative transcript upload artifact. The Claude share URL `https://claude.ai/share/d5129364-5d6c-4a2c-acb3-282f367a0040` is supporting provenance and reviewer-access support. `docs/claude-transcript.md` remains raw historical/provenance evidence only. Historical James Carter references and export encoding artifacts inside it are expected provenance, not current identity defects.
 
@@ -26,40 +41,15 @@ Brainstorm:
 
 Current blocker:
 
-- No reviewer blocker. Transcript Resolution v1 is locked. Execution Preparation v1 is locked. Packaging Construction is locked. Packaging Architecture is locked and complete. Golden Construction is locked and Goldens are complete. Entire File Ecosystem is complete and locked. Task Prompt Architecture v1 is locked and Task Prompt Architecture is complete. Task Prompt Construction is locked and Task Prompts are complete. Expected Output Architecture v1 is locked and Expected Output Architecture is complete. Expected Output Construction is locked and Expected Outputs are complete. Golden Architecture v1 is locked and Golden Architecture is complete. Grader Guidance Architecture v1 is locked and complete. Grader Guidance Construction is locked and Grader Guidance is complete. AutoQC Architecture v1 is locked and AutoQC Architecture is complete. AutoQC Construction is locked and AutoQC is complete. Execution Artifact Generation is authorized for submission-facing artifacts only. AutoQC runs, AutoQC responses, rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX submission packaging, manifest creation, final submission packages, uploads, submissions, and RL Studio upload remain gated on explicit Alexander authorization for the relevant step.
+- No reviewer blocker. Step 9 generated-file review is active after engineering pipeline run #1. Candidate revised files and a 26-file upload set have been prepared locally, but platform upload, Apply to Task, Final Files AutoQC, task setup, AutoQC responses, and RL Studio actions remain gated on explicit Alexander authorization for the exact step. Transcript Resolution v1 is locked. Execution Preparation v1 is locked. Packaging Construction is locked. Packaging Architecture is locked and complete. Golden Construction is locked and Goldens are complete. Entire File Ecosystem is complete and locked. Task Prompt Architecture v1 is locked and Task Prompt Architecture is complete. Task Prompt Construction is locked and Task Prompts are complete. Expected Output Architecture v1 is locked and Expected Output Architecture is complete. Expected Output Construction is locked and Expected Outputs are complete. Golden Architecture v1 is locked and Golden Architecture is complete. Grader Guidance Architecture v1 is locked and complete. Grader Guidance Construction is locked and Grader Guidance is complete. AutoQC Architecture v1 is locked and AutoQC Architecture is complete. AutoQC Construction is locked and AutoQC is complete.
 
 Next legal action:
 
-- Use `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md` and `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-01.md` for orientation.
-- Use `worlds/korvin-merrow/world-spec-prep/reviews/clinical-story-skeleton-review.md` and `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` as the locked Clinical Story Skeleton v1 record.
-- Use `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-skeleton-ratification.md` for ratified governance/story-logic guardrails.
-- Use `worlds/korvin-merrow/world-spec-prep/locked/identity-package-v1.md` as the locked identity source.
-- Use `worlds/korvin-merrow/world-spec-prep/reviews/identity-package-review-addendum.md` for carry-forward implementation notes only; do not reopen locked identity values.
-- Use `worlds/korvin-merrow/world-spec-prep/locked/governance-package-v1.md` as the ratified governance source.
-- Use `worlds/korvin-merrow/world-spec-prep/reviews/governance-package-clarification.md` for accepted governance clarifications.
-- Use `worlds/korvin-merrow/world-spec-prep/ratifications/governance-package-ratification.md` for governance ratification status.
-- Use `worlds/korvin-merrow/world-spec-prep/locked/key-milestones-calendar-skeleton-v1.md` for the canonical date framework and `worlds/korvin-merrow/world-spec-prep/ratifications/key-milestones-calendar-ratification.md` for the locked +7/+30-from-discharge doctrine.
-- Use `worlds/korvin-merrow/world-spec-prep/locked/baseline-anchor-package-v1.md` for locked baseline anchors and `worlds/korvin-merrow/world-spec-prep/ratifications/baseline-anchor-ratification.md` for physician sign-off.
-- Use `worlds/korvin-merrow/world-spec-prep/locked/clinical-story-timeline-package-v1.md` as the locked story-evolution framework.
-- Use `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-timeline-ratification.md` for ratification and carry-forward trap-distinction notes.
-- Use `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md` only as historical task-architecture interview scaffold; `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md` is authoritative.
-- Use `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md` as the locked task-architecture package.
-- Use `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md` for task architecture ratification, 2.108 contingency, and workflow-supersession notes.
-- Use `worlds/korvin-merrow/world-spec-prep/locked/medication-expansion-package-v1.md` as the locked medication architecture package.
-- Use `worlds/korvin-merrow/world-spec-prep/ratifications/medication-expansion-ratification.md` for the medication expansion ratification record.
-- Use `worlds/korvin-merrow/world-spec-prep/reviews/medication-expansion-decision-addendum.md` for the accepted physician decision removing insulin lispro from baseline architecture and reserving it as future inpatient-only candidate logic.
-- Use `worlds/korvin-merrow/world-spec-prep/locked/comorbidity-expansion-package-v1.md` as the locked baseline comorbidity architecture.
-- Use `worlds/korvin-merrow/world-spec-prep/ratifications/comorbidity-expansion-ratification.md` for comorbidity ratification and carry-forward watch items.
-- Use `worlds/korvin-merrow/world-spec-prep/locked/provider-roster-package-v1.md` as the locked provider/care-team roster architecture.
-- Use `worlds/korvin-merrow/world-spec-prep/ratifications/provider-roster-ratification.md` for provider roster ratification and naming guardrails.
-- Use `worlds/korvin-merrow/world-spec-prep/locked/surgical-history-package-v1.md` as the locked surgical/procedural history architecture.
-- Use `worlds/korvin-merrow/world-spec-prep/ratifications/surgical-history-ratification.md` for surgical-history ratification and noise-control guardrails.
-- Use `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md` as the locked HD1-HD6 daily evolution framework.
-- Use `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md` for preparation-layer completion and daily framework ratification.
-- Use `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md` as the locked World Spec Skeleton.
-- Use `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-skeleton-ratification.md` for World Spec Skeleton ratification and watch items.
-- Do not revise the locked Clinical Story Skeleton or locked Identity Package, draft new World Spec content, create milestones, revise locked file inventory, or create task-level/supplementary artifacts until Alexander explicitly starts/authorizes the relevant phase.
-- Do not modify Brainstorm unless new reviewer feedback arrives.
+- Use `worlds/korvin-merrow/file-review/file-review-protocol.md`, `worlds/korvin-merrow/file-review/time-strategy-and-state.md`, `worlds/korvin-merrow/file-review/findings-triage.md`, and `worlds/korvin-merrow/file-review/file-review-log.md` for the active Step 9 review.
+- Treat `worlds/korvin-merrow/file-review/pipeline-output/filesystem/` as the downloaded V1 output, `worlds/korvin-merrow/file-review/revision/filesystem/` as the local revised 33-file working set, and `worlds/korvin-merrow/file-review/upload/filesystem/` as the candidate 26-file world-level upload set.
+- Treat `worlds/korvin-merrow/file-review/task-files-holdback/` as the seven task-level files intentionally held out of the world-level upload set for later task setup handling.
+- Do not run Final Files AutoQC, upload revisions, Apply to Task, create task setup materials, create AutoQC responses, or access RL Studio unless Alexander explicitly authorizes the exact step.
+- Do not revise locked architecture, locked canon, original final submission staging, or the original pipeline output while Step 9 candidate review remains active.
 
 ## Completed
 
@@ -213,15 +203,12 @@ Next legal action:
 
 ## Authorized Right Now
 
-- State synchronization and preparation.
-- World Spec Construction activities explicitly authorized by Alexander, one step at a time.
-- Auditing.
-- Checklist building.
-- Reviewer-risk analysis.
-- Claude package refresh.
+- Step 9 generated-file review / "Ready for Pipeline Fixes."
+- Claude-assisted inventory, metadata extraction, trap-fidelity review, and findings triage under `worlds/korvin-merrow/file-review/`.
+- Physician review of `[A]` items in `worlds/korvin-merrow/file-review/findings-triage.md`.
+- Candidate edit planning for FIX items after Alexander's rulings.
 - Local documentation updates that preserve phase boundaries.
-- Transcript Resolution under Alexander's current explicit authorization.
-- Applying the Medicine Team Lead physician-perspective guidance later during authorized task design, task prompts, expected outputs, goldens, and grader guidance. This guidance is future task-layer framing only; it does not reopen Governance Package v1 or change source-of-truth hierarchy.
+- Claude package refresh.
 - Applying collaborator session-exit discipline at the end of every working session.
 
 ## Not Authorized Right Now
@@ -230,9 +217,13 @@ Next legal action:
 - Revising Identity Package v1 without explicit Alexander approval.
 - Treating the Identity Package review addendum as permission to reopen MRN, DOB, age, anthropometrics, allergy, or code status.
 - Changing Governance Package v1 without Alexander approval.
-- World Spec drafting before explicit Alexander authorization for drafting.
-- Populating the World Spec template before explicit Alexander authorization for template population.
-- Creating additional supplementary files, later synthetic file contents, chart notes, or downstream file/task outputs before explicit authorization.
+- Running Final Files AutoQC before explicit authorization.
+- Uploading revisions, using Apply to Task, or accessing RL Studio before explicit authorization.
+- Applying edits labeled PROTECT.
+- Editing generated DOCX files before Alexander rules on affected `[A]` items.
+- Creating task setup materials before explicit authorization.
+- Creating AutoQC responses before explicit authorization.
+- Creating additional supplementary files, chart notes, or downstream task outputs before explicit authorization.
 - Creating milestones before Alexander authorizes that step.
 - Creating medication schedules, medication reconciliation outputs, hospital medication changes, admission medication lists, or discharge medication lists before Alexander authorizes those steps.
 - Creating additional synthetic patient files beyond locked Batch 1 before explicit authorization.

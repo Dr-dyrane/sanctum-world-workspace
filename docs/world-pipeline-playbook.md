@@ -4,7 +4,7 @@ Date: 2026-06-04. Written at Korvin Merrow spec-submission (108/109, prednisone-
 
 ## A. Korvin: forward pipeline (stages 7-17)
 
-Current position: Step 5 complete (Spec AutoQC), Step 6 complete (Human Spec Review APPROVED by Stacey S). The engineering pipeline run / synthetic generation is in progress externally; the workspace is awaiting the platform stage "Ready for Pipeline Fixes."
+Current position: Step 5 complete (Spec AutoQC), Step 6 complete (Human Spec Review APPROVED by Stacey S), Step 7 V1 synthetic generation complete. The project is now in Step 9 generated-file review / "Ready for Pipeline Fixes"; Alexander is reviewing pipeline output with Claude assistance.
 
 | Stage | What happens | Workspace surface | Our head start |
 |---|---|---|---|

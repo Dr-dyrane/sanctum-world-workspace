@@ -1,0 +1,593 @@
+{
+  "path": "/filesystem/pci_stent_history_summary_05182026.docx",
+  "started_at": 1780598024.9558675,
+  "finished_at": 1780598134.3406522,
+  "cost_usd": 0.48406024999999997,
+  "num_turns": 11,
+  "is_error": false,
+  "errors": [],
+  "permission_denials": [],
+  "rate_limit_events": [],
+  "stop_reason": "end_turn",
+  "success": true,
+  "quality_check": {
+    "passed": true,
+    "checks": {
+      "exists": true,
+      "file_size": 39011,
+      "size_ok": true,
+      "paragraph_count": 17,
+      "format_valid": true,
+      "has_custom_formatting": true,
+      "no_markdown_artifacts": true
+    }
+  },
+  "retry_count": 0,
+  "messages": [
+    {
+      "type": "SystemMessage"
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ThinkingBlock"
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 2323,
+        "cache_read_input_tokens": 16376,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2323,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 0,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ToolUseBlock",
+          "tool_name": "Read",
+          "input": {
+            "file_path": "/tmp/worldgen_fmt_2ry0idht/pci_stent_history_summary_05182026.docx.md"
+          }
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 2323,
+        "cache_read_input_tokens": 16376,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2323,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 0,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "UserMessage",
+      "content": [
+        {
+          "type": "ToolResultBlock",
+          "content": "1\t**SYNTHETIC TRAINING DOCUMENT | FICTIONAL PATIENT | NOT A REAL MEDICAL RECORD**\n2\t\n3\t---\n4\t\n5\t**MERCY VALE REGIONAL MEDICAL CENTER \u2014 Cardiology Records (Legacy Archive Extract)**\n6\t5 Harbor Crest Way, Bridgehollow, PA 15211 | (412) 555-0143\n7\tConfidential\n8\t\n9\t| Patient | Korvin Merrow |\n10\t|---|---|\n11\t| DOB | 02/18/1964 (Age 62) |\n12\t| Sex | Male |\n13\t| MRN | KM-6427819 |\n14\t| Allergy | Lisinopril (cough) |\n15\t| Document | Remote PCI / coronary stent provenance summary |\n16\t| Anchor | Pre-admission provenance, available 2026-05-18 |\n17\t| Source | Cardiology records archive (pre-Caldrane era legacy chart) |\n18\t| Status | Signed background summary \u2014 supplementary |\n19\t\n20\t---\n21\t\n22\t## REMOTE PCI / CORONARY STENT PROVENANCE SUMMARY\n23\t\n24\t### Procedural background\n25\t\n26\tKorvin Merrow has a documented history of percutaneous coronary intervention with drug-eluting coronary stent placement performed on **2018-09-12** at Mercy Vale Regional Medical Center. The legacy catheterization re",
+          "is_error": null
+        }
+      ]
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ToolUseBlock",
+          "tool_name": "Bash",
+          "input": {
+            "command": "ls /.meta/references/",
+            "description": "List reference files"
+          }
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 2323,
+        "cache_read_input_tokens": 16376,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2323,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 0,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "UserMessage",
+      "content": [
+        {
+          "type": "ToolResultBlock",
+          "content": "Alexander_World_Merrow_latest_6_4.docx\nadmission_history_and_physical_05182026.docx\ncardiology_consultation_05212026.docx\ncase_management_social_work_discharge_note_05222026.docx\nconsultant_synthesis_care_plan_request_05242026.docx\ndischarge_facing_plan_snapshot_05232026.docx\ndischarge_medication_reconciliation_request_05242026.docx\ndischarge_readiness_care_coordination_request_05242026.docx\ndischarge_summary_request_05242026.docx\ned_provider_assessment_05182026.docx\ned_triage_initial_intake_05182026.docx\nendocrinology_consultation_05212026.docx\nfamily_communication_care_conference_05222026.docx\nhome_support_equipment_reference_05222026.docx\nhospitalist_discharge_planning_progress_hd5_hd6_05232026.docx\nhospitalist_progress_hd1_hd2_05192026.docx\nhospitalist_progress_hd3_05202026.docx\nhospitalist_progress_hd4_05212026.docx\ninitial_medication_reconciliation_note_05182026.docx\nmedication_administration_record_05232026.docx\nmedication_safety_handoff_addendum_05242026.docx\nnephrology_consult",
+          "is_error": false
+        }
+      ]
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ToolUseBlock",
+          "tool_name": "Read",
+          "input": {
+            "file_path": "/.meta/references/pci_stent_history_summary_05182026.docx"
+          }
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 2379,
+        "cache_read_input_tokens": 18699,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2379,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 39,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "UserMessage",
+      "content": [
+        {
+          "type": "ToolResultBlock",
+          "content": "<tool_use_error>This tool cannot read binary files. The file appears to be a binary .docx file. Please use appropriate tools for binary file analysis.</tool_use_error>",
+          "is_error": true
+        }
+      ]
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ToolUseBlock",
+          "tool_name": "Bash",
+          "input": {
+            "command": "cd /tmp && python3 -c \"\nfrom docx import Document\ndoc = Document('/.meta/references/pci_stent_history_summary_05182026.docx')\nfor i, p in enumerate(doc.paragraphs):\n    style = p.style.name if p.style else 'None'\n    runs_info = []\n    for r in p.runs:\n        font = r.font\n        runs_info.append(f'text={r.text!r} bold={r.bold} italic={r.italic} font={font.name} size={font.size}')\n    print(f'[{i}] style={style} | text={p.text!r}')\n    for ri in runs_info:\n        print(f'    run: {ri}')\nprint",
+            "description": "Inspect reference docx"
+          }
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 203,
+        "cache_read_input_tokens": 21078,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 203,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 64,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "UserMessage",
+      "content": [
+        {
+          "type": "ToolResultBlock",
+          "content": "[0] style=Normal | text=''\n[1] style=Normal | text='REMOTE PCI / CORONARY STENT PROVENANCE SUMMARY'\n    run: text='REMOTE PCI / CORONARY STENT PROVENANCE SUMMARY' bold=True italic=False font=Arial size=177800\n[2] style=Normal | text='Author: Cardiology or PCP history source  |  Department: Cardiology Records  |  Pre-admission provenance  |  Status: Signed'\n    run: text='Author: Cardiology or PCP history source  |  Department: Cardiology Records  |  Pre-admission provenance  |  Status: Signed' bold=False italic=False font=Arial size=101600\n[3] style=Normal | text='REMOTE CARDIOVASCULAR PROCEDURE PROVENANCE'\n    run: text='REMOTE CARDIOVASCULAR PROCEDURE PROVENANCE' bold=True italic=False font=Arial size=127000\n[4] style=Normal | text='Patient: Korvin Merrow'\n    run: text='Patient: Korvin Merrow' bold=False italic=False font=Arial size=120650\n[5] style=Normal | text='Source type: historical cardiology / primary care provenance summary'\n    run: text='Source type: historical cardiology ",
+          "is_error": false
+        }
+      ]
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ThinkingBlock"
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 5237,
+        "cache_read_input_tokens": 21281,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 5237,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 47,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ToolUseBlock",
+          "tool_name": "Bash",
+          "input": {
+            "command": "cd /tmp && python3 -c \"\nfrom docx import Document\nfrom docx.shared import RGBColor\ndoc = Document('/.meta/references/pci_stent_history_summary_05182026.docx')\n# inspect table cell shading and alignment\nfor ti, t in enumerate(doc.tables):\n    print(f'Table {ti}')\n    for ri, row in enumerate(t.rows):\n        for ci, cell in enumerate(row.cells):\n            tcpr = cell._tc.tcPr\n            shd = None\n            if tcpr is not None:\n                shd_elems = tcpr.findall('{http://schemas.openxm",
+            "description": "Inspect cell formatting"
+          }
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 5237,
+        "cache_read_input_tokens": 21281,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 5237,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 47,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "UserMessage",
+      "content": [
+        {
+          "type": "ToolResultBlock",
+          "content": "Table 0\n  [0][0] align=CENTER (1) bold=True font=Arial size=101600 color=9A6000 shd={'{http://schemas.openxmlformats.org/wordprocessingml/2006/main}val': 'clear', '{http://schemas.openxmlformats.org/wordprocessingml/2006/main}fill': 'FFF8E1'} text='SYNTHETIC TRAINING DOCUMENT  |  FICTIONAL PATIENT  |  NOT A REAL MEDICAL RECORD'\nTable 1\n  [0][0] align=None bold=True font=Arial size=139700 color=1F3864 shd=None text='MERCY VALE REGIONAL MEDICAL CENTER'\n  [0][0] align=None bold=False font=Arial size=101600 color=5E6670 shd=None text='Cardiology Records'\n  [0][1] align=RIGHT (2) bold=True font=Arial size=107950 color=4472C4 shd=None text='Confidential'\nTable 2\nTable 3\n  [0][0] align=None bold=True font=Arial size=165100 color=FFFFFF shd={'{http://schemas.openxmlformats.org/wordprocessingml/2006/main}val': 'clear', '{http://schemas.openxmlformats.org/wordprocessingml/2006/main}fill': '4472C4'} text='  KORVIN MERROW'\n  [0][0] align=None bold=False font=Arial size=114300 color=FFFFFF shd={'{h",
+          "is_error": false
+        }
+      ]
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ThinkingBlock"
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 3147,
+        "cache_read_input_tokens": 26518,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 3147,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 39,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ToolUseBlock",
+          "tool_name": "Write",
+          "input": {
+            "file_path": "/tmp/build_pci.py",
+            "content": "import datetime\nfrom docx import Document\nfrom docx.shared import Pt, RGBColor, Cm, Inches, Emu\nfrom docx.enum.text import WD_ALIGN_PARAGRAPH\nfrom docx.enum.table import WD_ALIGN_VERTICAL\nfrom docx.oxml.ns import qn, nsmap\nfrom docx.oxml import OxmlElement\n\nOUT = \"/filesystem/pci_stent_history_summary_05182026.docx\"\n\ndoc = Document()\n\n# Page margins\nfor section in doc.sections:\n    section.top_margin = Cm(1.6)\n    section.bottom_margin = Cm(1.6)\n    section.left_margin = Cm(1.8)\n    section.righ"
+          }
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 3147,
+        "cache_read_input_tokens": 26518,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 3147,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 39,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "UserMessage",
+      "content": [
+        {
+          "type": "ToolResultBlock",
+          "content": "File created successfully at: /tmp/build_pci.py (file state is current in your context \u2014 no need to Read it back)",
+          "is_error": null
+        }
+      ]
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ToolUseBlock",
+          "tool_name": "Bash",
+          "input": {
+            "command": "cd /tmp && python3 build_pci.py && soffice --headless --convert-to pdf --outdir /tmp /filesystem/pci_stent_history_summary_05182026.docx 2>&1 | tail -5",
+            "description": "Build docx and convert to PDF"
+          }
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 5441,
+        "cache_read_input_tokens": 29665,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 5441,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 68,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "UserMessage",
+      "content": [
+        {
+          "type": "ToolResultBlock",
+          "content": "Saved: /filesystem/pci_stent_history_summary_05182026.docx\n/bin/bash: line 1: soffice: command not found\nShell cwd was reset to /root",
+          "is_error": false
+        }
+      ]
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ToolUseBlock",
+          "tool_name": "Bash",
+          "input": {
+            "command": "which libreoffice lowriter 2>&1; ls /usr/bin/ | grep -i -E 'office|writer|soffice' 2>&1",
+            "description": "Check for libreoffice installs"
+          }
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 276,
+        "cache_read_input_tokens": 35106,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 276,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 60,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "UserMessage",
+      "content": [
+        {
+          "type": "ToolResultBlock",
+          "content": "(Bash completed with no output)",
+          "is_error": false
+        }
+      ]
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ThinkingBlock"
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 202,
+        "cache_read_input_tokens": 35382,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 202,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 61,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "TextBlock",
+          "text": "LibreOffice isn't installed \u2014 I'll verify the docx by reading back its structure to confirm content preservation."
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 202,
+        "cache_read_input_tokens": 35382,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 202,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 61,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ToolUseBlock",
+          "tool_name": "Bash",
+          "input": {
+            "command": "python3 -c \"\nfrom docx import Document\ndoc = Document('/filesystem/pci_stent_history_summary_05182026.docx')\nprint('=== PARAGRAPHS ===')\nfor i, p in enumerate(doc.paragraphs):\n    if p.text.strip():\n        print(f'[{i}] {p.text}')\nprint('=== TABLES ===')\nfor ti, t in enumerate(doc.tables):\n    for ri, row in enumerate(t.rows):\n        for ci, cell in enumerate(row.cells):\n            if cell.text.strip():\n                print(f'T{ti}[{ri}][{ci}]: {cell.text}')\nprint('=== CORE PROPS ===')\ncp = ",
+            "description": "Inspect created docx"
+          }
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 202,
+        "cache_read_input_tokens": 35382,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 202,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 61,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "UserMessage",
+      "content": [
+        {
+          "type": "ToolResultBlock",
+          "content": "=== PARAGRAPHS ===\n[3] REMOTE PCI / CORONARY STENT PROVENANCE SUMMARY\n[4] Author: Cardiology Records archive  |  Department: Cardiology  |  Pre-admission provenance (available 2026-05-18)  |  Status: Signed \u2014 supplementary\n[5] PROCEDURAL BACKGROUND\n[6] Korvin Merrow has a documented history of percutaneous coronary intervention with drug-eluting coronary stent placement performed on 2018-09-12 at Mercy Vale Regional Medical Center. The legacy catheterization record describes single-vessel intervention to the mid-LAD for symptomatic obstructive coronary artery disease identified on diagnostic angiography during the same encounter. A single drug-eluting stent was deployed; the case was operated by the cardiology team in service at the time (pre-Caldrane era), and the original operator and cath lab records remain in the legacy archive rather than the current Cardiology consult chart.\n[7] The post-procedure course was uncomplicated, with successful angiographic result, no peri-procedural m",
+          "is_error": false
+        }
+      ]
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ThinkingBlock"
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 2327,
+        "cache_read_input_tokens": 35584,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2327,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 60,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ToolUseBlock",
+          "tool_name": "Bash",
+          "input": {
+            "command": "rm -f /tmp/build_pci.py && ls -la /filesystem/pci_stent_history_summary_05182026.docx",
+            "description": "Clean up script"
+          }
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 2327,
+        "cache_read_input_tokens": 35584,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2327,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 60,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "UserMessage",
+      "content": [
+        {
+          "type": "ToolResultBlock",
+          "content": "-rw-r--r-- 1 root root 39011 Jun  4 18:35 /filesystem/pci_stent_history_summary_05182026.docx",
+          "is_error": false
+        }
+      ]
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "TextBlock",
+          "text": "The formatted .docx has been created at `/filesystem/pci_stent_history_summary_05182026.docx`.\n\n**Formatting approach** \u2014 followed the expert reference template (`/.meta/references/pci_stent_history_summary_05182026.docx`) which uses:\n- Amber \"SYNTHETIC TRAINING DOCUMENT\" banners at top and bottom (color #FFF8E1 / #9A6000)\n- Hospital header with navy \"MERCY VALE REGIONAL MEDICAL CENTER\" + gray sub-line, \"Confidential\" tag on right\n- Blue (#4472C4) patient banner with white text showing name/age/sex/DOB and MRN\n- Light-blue (#EDF2FA) 4-column metadata strip: Date/Anchor, Source, Allergies, Document\n- Navy section headers in Arial bold for PROCEDURAL BACKGROUND, SUBSEQUENT CORONARY COURSE, LONG-TERM SECONDARY PREVENTION STATUS, RELATIONSHIP TO CURRENT HOSPITALIZATION\n- Bolded key facts (date 2018-09-12, mid-LAD, aspirin, supplementary)\n- Italic gray electronic signature line\n\n**Content verification** \u2014 all four body sections, all bolded terms, and both synthetic-document banners are present. Core properties were set to a Cardiology Records archive author with 2026-05-18 timestamps consistent with pre-admission availability. LibreOffice was not available so visual PNG verification was skipped per instructions; the docx was inspected programmatically and content + formatting attributes match the spec."
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 274,
+        "cache_read_input_tokens": 37911,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 274,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "ResultMessage",
+      "usage": {
+        "input_tokens": 15,
+        "cache_creation_input_tokens": 21809,
+        "cache_read_input_tokens": 277600,
+        "output_tokens": 8324,
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 21809
+        },
+        "inference_geo": "",
+        "iterations": [
+          {
+            "input_tokens": 1,
+            "output_tokens": 552,
+            "cache_read_input_tokens": 37911,
+            "cache_creation_input_tokens": 274,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 274,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "stop_reason": "end_turn",
+      "total_cost_usd": 0.48406024999999997,
+      "num_turns": 11,
+      "is_error": false,
+      "duration_ms": 106412
+    }
+  ]
+}
