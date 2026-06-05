@@ -1,6 +1,8 @@
 # Step 9 Time Strategy (6 hrs/week cap) + Current State + Claude Kickoff Prompt
 
-Date: 2026-06-04. **UPDATE 6/5: ONBOARDING COMPLETE - PROMOTED.** Removed from #new-writers-pod by IT admin (graduation, confirmed). Awaiting new pod channel assignment; update RL Studio Pod Selection field from "New/Onboarding" once pod name is known. World finalization still pending platform fixes (see file-review-log.md BLOCKED section).
+Date: 2026-06-04. **UPDATE 6/5: ONBOARDING COMPLETE - PROMOTED.** Removed from #new-writers-pod by IT admin (graduation, confirmed). Awaiting new pod channel assignment; update RL Studio Pod Selection field from "New/Onboarding" once pod name is known.
+
+**UPDATE 6/5 11:20 AM PDT: WORLD CREATED - Healthcare_247_Merrow.** Final Files AutoQC 78/78 after 3 revisions, finalized, 5.1 automation run, 26 files synced (world_d50c832ac6474a68ba982a77e28a6bbe). Task 1 auto-created in Task Writing stage. Step 9 CLOSED; Step 10 (task setup) is the active stage - verbatim requirements distilled in docs/world-pipeline-playbook.md section A2. Contract context: offer letter on file confirms $150.00/hr, Internal Medicine, signed 5/29/2026, at-will independent contractor; rate is contractual, weekly caps are stage-based.
 
 ## 1. Current state (single source of truth)
 

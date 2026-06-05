@@ -1,6 +1,6 @@
 # Korvin Merrow World
 
-Current state: Final Submission Resolution / LOCKED; Execution Artifact Generation COMPLETE / CANDIDATE REVIEW.
+Current state: World created as `Healthcare_247_Merrow`; Step 9 generated-file review COMPLETE; Step 10 task setup preparation ACTIVE.
 
 Start here only after reading `project/STATUS.md`.
 
@@ -12,6 +12,7 @@ Start here only after reading `project/STATUS.md`.
 - `remediation/`: reviewer SEND BACK remediation decision briefs and compliance review.
 - `reviews/`: external/human/AutoQC review artifacts and reviewer feedback history.
 - `submission/`: RL Studio submission artifacts.
+- `task-setup/`: Step 10 task setup preparation packet. Holds local review/de-hinting maps and Alexander-ruling prompts only; it is not an RL Studio upload record and does not mutate locked task artifacts.
 - `world-spec-prep/`: World Spec preparation cockpit plus lifecycle subfolders for locked decisions, locked, ratifications, reviews, decision logs, and planning scaffolds.
 - `world-spec-construction/`: World Spec construction lifecycle folders for candidate review artifacts, locked construction artifacts, and ratifications.
 - `file-inventory/`: file inventory lifecycle area. Locked architecture defines planned file ecosystem, and locked File Inventory v1 defines the planned inventory rows; neither creates synthetic files or chart contents.
@@ -38,6 +39,7 @@ Start here only after reading `project/STATUS.md`.
 ## Active Entry Points
 
 - `world-spec-prep/WORLD_SPEC_KICKOFF.md`
+- `task-setup/step10-review-packet.md`
 - `world-spec-construction/locked/world-spec-v1.md`
 - `final-submission-resolution/locked/final-submission-resolution-v1.md`
 - `world-spec-construction/ratifications/world-spec-v1-ratification.md`

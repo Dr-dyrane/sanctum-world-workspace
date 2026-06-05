@@ -2,7 +2,14 @@
 
 ## Current Gate
 
-World Spec APPROVED. Execution Artifact Generation COMPLETE / CANONICALIZED. RL Studio upload and Spec AutoQC are complete under Alexander's direct authorization; final board is 108/109 with prednisone dose/frequency preserved as the sole intentional, note-justified flag. Human World Spec Review is approved by Stacey S; the requested Reference File Origin routing correction was resolved and re-uploaded. Engineering pipeline run #1 completed, and Step 9 generated-file review / "Ready for Pipeline Fixes" is active. Pipeline output is ingested under `worlds/korvin-merrow/file-review/pipeline-output/`; Claude-assisted triage and candidate revision preparation are recorded under `worlds/korvin-merrow/file-review/`.
+**WORLD CREATED (6/5/2026, 11:20 AM PDT): Healthcare_247_Merrow is live. Step 9 COMPLETE. Current stage: Step 10 task setup (Task 1 auto-created in Task Writing, assigned Alexander).**
+
+- Final Files AutoQC: PASS 78/78 (after 3 revisions; full chain in `worlds/korvin-merrow/file-review/file-review-log.md`).
+- World ID: `world_d50c832ac6474a68ba982a77e28a6bbe`; synced snapshot `snap_0fb032e95b324710b12a7432cf7da6c1`, 26 files, sync complete.
+- World name convention used: `Healthcare_Number_PatientName` per the 5.0 platform card (supersedes instruction doc ordering); 247 = next after Healthcare_246_Gutey.
+- Resources: External Fetcher Agent + Prometheus Stream Agent; model anthropic/claude-opus-4-6; judge anthropic/claude-sonnet-4-5. No rubric items or checkpoints yet.
+- Onboarding history: Spec AutoQC 108/109 (prednisone by design), Stacey approval 6/4, pipeline run #1, 179-finding triage, 11 content edits + 2 de-bold passes, 7 task files held back, two platform bugs diagnosed (two Apply-to-Task buttons; org AutoQC quota outage) and escalated with engineering.
+- Step 10 source of truth: instruction doc 06_02 sections "How to Set up Your Task in RLS", Golden Response, Grader Guidelines (see `docs/world-pipeline-playbook.md` section A2 for the distilled requirements).
 
 ## Brainstorm
 
@@ -158,11 +165,12 @@ World Spec APPROVED. Execution Artifact Generation COMPLETE / CANONICALIZED. RL 
 - Human World Spec Review: APPROVED by Stacey S; approval record `worlds/korvin-merrow/reviews/reviewer-spec-approval-01.md`
 - Reviewer routing correction: Reference File Origin labels corrected to the template-canonical `Custom Made` token and re-uploaded
 - No GG-KM07 exists
-- Current phase: Step 9 generated-file review / "Ready for Pipeline Fixes"
+- Current phase: Step 10 task setup / Task Writing
+- Active Step 10 prep packet: `worlds/korvin-merrow/task-setup/step10-review-packet.md`
 - Active file-review protocol: `worlds/korvin-merrow/file-review/file-review-protocol.md`
 - Active Claude-assisted triage: `worlds/korvin-merrow/file-review/findings-triage.md`
 - Candidate revision log: `worlds/korvin-merrow/file-review/file-review-log.md`
-- Candidate upload set: `worlds/korvin-merrow/file-review/upload/filesystem/` with 26 world files; task files held out under `worlds/korvin-merrow/file-review/task-files-holdback/`
+- Final upload set used for world creation: `worlds/korvin-merrow/file-review/upload/filesystem/` with 26 world files; task files held out under `worlds/korvin-merrow/file-review/task-files-holdback/`
 - Claude transcript: `docs/claude-transcript-formatted.md` is the authoritative transcript upload artifact. `docs/claude-transcript.md` remains raw historical/provenance evidence. Supporting Claude share URL: `https://claude.ai/share/d5129364-5d6c-4a2c-acb3-282f367a0040`.
 - Task-design physician-perspective guidance: recorded as a future task-layer rule only. It does not change source-of-truth hierarchy or Governance Package v1; future task prompts and deliverables must remain physician-centered even when supporting sources are pharmacy, nursing, PT/OT, case management, social work, family, or administrative sources.
 - Collaborator session-exit discipline: standing process / handoff rule. Every future session must leave the repository clean or explicitly documented, update phase and next-phase surfaces, preserve locked artifacts unless explicitly authorized, label candidate artifacts, move newly locked artifacts to locked paths with ratification references, update continuity and Claude handoff files, record carry-forward watch items and future task-layer guidance, commit completed work unless explicitly told not to, and report what changed, what did not change, current status, next eligible phase, and whether the repository is safe for another collaborator.
@@ -221,7 +229,7 @@ World Spec APPROVED. Execution Artifact Generation COMPLETE / CANONICALIZED. RL 
 - Fetched World Spec example source documents: `reference/word-spec-examples/` (local-only / gitignored)
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 - World Spec prep folder structure: reorganized by lifecycle buckets (`candidate-review/`, `locked/`, `ratifications/`, `reviews/`, `decision-logs/`, `planning-scaffolds/`)
-- Current phase: Step 9 generated-file review / "Ready for Pipeline Fixes." Candidate revision set is prepared locally, but do not run Final Files AutoQC, upload revisions, Apply to Task, create platform responses, create AutoQC responses, create scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifests, final submission packages, additional uploads, additional submissions, or access RL Studio again until explicitly authorized.
+- Current phase: Step 10 task setup / Task Writing. Step 9 generated-file review is complete, Final Files AutoQC passed 78/78, and `Healthcare_247_Merrow` is live. Do not access RL Studio, upload task prompts/goldens/grader guidelines, run agents, run QA, create platform responses, create AutoQC responses, create scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifests, final submission packages, additional uploads, or additional submissions until explicitly authorized.
 
 ## Tooling
 
@@ -243,7 +251,7 @@ World Spec APPROVED. Execution Artifact Generation COMPLETE / CANONICALIZED. RL 
 - Do not treat fetched World Spec examples as authored Korvin Merrow content or source-of-truth material.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
 - Do not modify clinical content beyond reviewer-required remediation without Alexander approval.
-- Do not proceed beyond Step 9 generated-file review / "Ready for Pipeline Fixes" into Final Files AutoQC, task setup, platform responses, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifest creation, final submission packaging, additional uploads, additional submission actions, or failure analysis without explicit authorization.
+- Do not proceed beyond Step 10 task setup preparation into RL Studio task mutation, agent runs, QA runs, platform responses, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifest creation, final submission packaging, additional uploads, additional submission actions, failure analysis, or preference labeling without explicit authorization.
 - Do not access RL Studio again without explicit authorization.
 - Do not end a working session without applying collaborator session-exit discipline.
 ## Execution Artifact Generation Outputs

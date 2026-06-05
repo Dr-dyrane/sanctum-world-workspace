@@ -67,33 +67,50 @@ Confirms our executed process step-for-step (download -> edit in place -> remove
 1. **NEVER Re-run Pipeline** - a new run takes ~46 hours; if a run is broken, contact the reviewer instead.
 2. **Final Files AutoQC = four checks** (Integrity, Clinical, Consistency, Standards), described as "the same AutoQCs the pipeline run generated."
 3. **Notes path is officially sanctioned:** "Address every flag, or note clearly why a flag is a false positive" in 4.3 - validates the false-positive note strategy for the stale-snapshot flags.
-4. **Step 11 (after finalize): Part 5 -> 5.1 Run Automation -> Run**, name the world per the instruction-document conventions, Run again -> task moves to World Created stage -> pod assignment for tasking.
-5. Writer self-AutoQC prompt docs now at reference/templates/ (Section 3 World Files + Section 4 Task Prompts, v6.6) - run locally before platform AutoQC on future iterations.
+4. **Step 11 (after finalize): Part 5 -> 5.1 Run Automation -> Run**, name the world per the instruction-document conventions, Run again -> task moves to World Created stage -> pod assignment for tasking. RESOLVED 6/5: the live 5.0 platform card uses `Healthcare_Number_PatientName` (e.g. Healthcare_000_Thomas), which supersedes the instruction doc's `Healthcare_[LastName]_[###]` ordering. Number = max existing in the Worlds list + 1. Korvin shipped as **Healthcare_247_Merrow** (after Healthcare_246_Gutey).
 
 ## 4d. PLATFORM MECHANISM (Aribot-confirmed 6/5): revision vs run-snapshot scoping
 
-- The task-page **4.2 Final Files AutoQC card audits the pipeline run's ORIGINAL stored output**, not the applied revision. "Apply to Task" updates the task's working files (4.1 Golden World Files) but NOT the run's stored snapshot. Rerunning the 4.2 card re-audits the original output forever.
-- The **run-page World Files AutoQC**, rerun after a revision is applied, DOES read the revised files (passed 76/76 for Korvin).
-- **Fix path:** run page -> Diagnostics -> Run the Final Files/pipeline AutoQC check -> set Revision = applied revision ID in the popup -> run (~8-15 min). If no Revision picker exists, an EPM must rerun it (newer AutoQC card path may not support revision targeting).
-- **Accepted alternative per workflow:** the reviewer can accept the run-page World Files AutoQC pass on the revised files in lieu of a revision-scoped 4.2 rerun.
-- World #2 lesson: after Apply to Task, expect stale 4.2 results; go straight to the Diagnostics revision-scoped rerun instead of rerunning the card (Korvin burned 3 card reruns: 24/78, 14/78, 5/78, all phantom).
+The task-page 4.2 Final Files AutoQC card can audit the original stored output instead of the applied revision. Applying a revision to the task updates the task working files, but does not necessarily update the run's stored snapshot. Rerunning the same 4.2 card may therefore re-audit the original output forever.
+
+The run-page World Files AutoQC after revision can read the revised files. It passed on the revised 26-file set before the final correct-snapshot path was resolved.
+
+Correct rerun path:
+
+1. Run page.
+2. Diagnostics.
+3. Run Final Files / pipeline AutoQC.
+4. Select the applied revision ID in the popup when available.
+5. If no revision picker exists, EPM/engineering must rerun the right snapshot.
+
+Accepted alternative when the task card is stale: reviewer may accept a run-page World Files AutoQC pass on revised files in lieu of a stale task-card rerun.
+
+World #2 lesson: after Apply to Task, do not assume the visible 4.2 card is revision-scoped. Verify the snapshot source before treating a persistent flag as content-real.
 
 ## 4e. ROOT CAUSE PROVEN (6/5, API payloads): two Apply-to-Task buttons, two different snapshots
 
-- **Run-page Actions row "Apply to Task"** sends `POST /pipelines/{run}/apply-to-task` with `{"snapshot_type":"output"}` and copies the run's ORIGINAL output (returned `files_copied: 33`). It IGNORES revisions and reverts the task snapshot to pre-revision state. The official "How to Edit" doc Step 7 points writers at this button - a documentation trap.
-- **Revision-page "Apply to Task"** (open the revision under Revisions, button at the bottom of the revision detail page) applies the revision correctly (returned `files_copied: 26`, snap_b1afd9089a9e44818a32aac55deecfb8).
-- RULE: after uploading a revision, ALWAYS apply from the REVISION PAGE, never the run-page Actions row. If the Actions-row button is ever clicked, 4.1 reverts to the full original set and must be restored by re-applying from the revision page. Verify by 4.1 file count after every apply.
-- This was the root cause of all stale 4.2 Final Files AutoQC results (audits read the last-applied task snapshot). Reported to engineering with both payloads on 6/5.
+There are two Apply-to-Task paths with different behavior:
+
+- Run-page Actions-row Apply to Task sends `snapshot_type=output`, copies the original output, ignores revisions, and can revert the task snapshot. The official docs initially pointed writers toward this button, which makes it a documentation/platform trap.
+- Revision-page Apply to Task applies the selected revision correctly.
+
+Rule: after uploading a revision, always apply from the revision page, never the run-page Actions row. If the run-page Actions row is clicked and 4.1 reverts, restore by applying from the revision page. Verify 4.1 file count and spot-check file content after every apply.
+
+This issue was reported to engineering with payloads.
 
 ## 5. Edit and revision workflow
 
-- Minor FIX items: edit the generated docx directly (object model, content locators, integrity gate after every save - docs/docx-generation-method.md). Keep last-valid copies.
-- Major FIX items (structural, many-file, or trap-destroying): list for "Re-run Pipeline" / send back rather than hand-patching.
-- When edits are complete: use the run page's **Upload revision** ("Upload a revised snapshot to start a chain of edits on this run's output"), then "Rerun 2 failing" on AutoQC, then Apply to Task.
-- Record every edit in `file-review-log.md` (file, finding ID, label, change, integrity-gate result).
+Minor FIX findings can be edited directly with object-model DOCX tools, content-based locators, and integrity gates. Major FIX findings that require structural regeneration, many-file rewrite, or trap-destroying changes should be sent back for regeneration rather than patched ad hoc.
 
-## 6. Outputs of this stage
+When edits are complete:
 
-1. `findings-triage.md` - all 95+13+71 findings, each labeled FIX/PROTECT/NOTE with disposition.
-2. `file-review-log.md` - per-edit record.
-3. Revised snapshot uploaded; AutoQC rerun green (or remaining fails note-justified); task moved forward.
+1. Upload the entire folder named exactly `filesystem`.
+2. Save the revision.
+3. Apply from the revision page.
+4. Verify 4.1 reflects the revision.
+5. Run the correct revision-scoped Final Files AutoQC path.
+6. Record every edit, integrity check, platform action, and unresolved note in `file-review-log.md`.
+
+## 6. Step 9 closeout state
+
+Status: COMPLETE. Revision #3 passed Final Files AutoQC 78/78, notes were filed, 4.4 confirmation was submitted, the world was finalized, and 5.1 automation created `Healthcare_247_Merrow` at 2026-06-05 11:20 AM PDT. Task 1 auto-created in Task Writing. Step 10 task setup is the active stage; see `docs/world-pipeline-playbook.md` section A2.

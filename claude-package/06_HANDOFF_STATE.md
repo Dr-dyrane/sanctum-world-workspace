@@ -4,21 +4,23 @@ Purpose: enable a brand-new Claude session to resume accurately without stale as
 
 ## Where We Are
 
-Project Sanctum onboarding is complete for Korvin Merrow. World Spec approval is complete, engineering pipeline run #1 completed, and the project is now in Step 9 generated-file review / "Ready for Pipeline Fixes." Alexander is reviewing the V1 generated files with Claude assistance. The active review surface is `worlds/korvin-merrow/file-review/`, especially `file-review-protocol.md`, `time-strategy-and-state.md`, and `findings-triage.md`.
+Project Sanctum onboarding is complete for Korvin Merrow. World Spec approval is complete, engineering pipeline run #1 completed, Step 9 generated-file review is closed, Final Files AutoQC passed 78/78 after three revisions, and the world was created as `Healthcare_247_Merrow` on 2026-06-05 at 11:20 AM PDT. Task 1 auto-created in Task Writing and is assigned to Alexander. Current active stage is Step 10 task setup preparation. The Step 9 audit trail remains in `worlds/korvin-merrow/file-review/`, especially `file-review-protocol.md`, `time-strategy-and-state.md`, `findings-triage.md`, and `file-review-log.md`.
 
-Pipeline run #1 state:
+Pipeline run #1 / Step 9 closeout state:
 
 - Output ingested at `worlds/korvin-merrow/file-review/pipeline-output/`.
 - Generated DOCX files: 33 under `pipeline-output/filesystem/`.
 - Metadata files: 134 under `pipeline-output/.meta/`.
-- World Files AutoQC: 74/76 pass. The two fails are access/routing failures because the auditor sandbox could not inspect the files, not evidence of content defects.
+- Initial World Files AutoQC: 74/76 pass. The two fails were access/routing failures because the auditor sandbox could not inspect the files, not evidence of content defects.
+- Final Files AutoQC: 78/78 pass after revision #3.
+- World created: `Healthcare_247_Merrow`, world ID `world_d50c832ac6474a68ba982a77e28a6bbe`, snapshot `snap_0fb032e95b324710b12a7432cf7da6c1`, 26 files synced.
 - Active Claude-assisted triage packet: `worlds/korvin-merrow/file-review/findings-triage.md`.
 - Candidate revision log: `worlds/korvin-merrow/file-review/file-review-log.md`.
 - Revised 33-file working snapshot: `worlds/korvin-merrow/file-review/revision/filesystem/`.
-- Candidate 26-file world-level upload set: `worlds/korvin-merrow/file-review/upload/filesystem/`.
+- Final 26-file world-level upload set: `worlds/korvin-merrow/file-review/upload/filesystem/`.
 - Seven task-level request files are held out at `worlds/korvin-merrow/file-review/task-files-holdback/` per platform rule; preserve locally for Step 10 task setup.
 - Items marked `[A]` needed Alexander physician ruling before edits; rulings and candidate edits are recorded in the file-review log.
-- Do not run Final Files AutoQC, upload revisions, Apply to Task, create AutoQC responses, create task setup materials, or access RL Studio unless Alexander explicitly authorizes the exact step.
+- Do not access RL Studio, upload task prompts/goldens/grader guidelines, run agents, run QA, create AutoQC responses, create task setup materials, or mutate platform state unless Alexander explicitly authorizes the exact step.
 
 Historical locked layers remain complete: Batch 1 through Batch 5 are locked. World-Level Synthetic File Layer is complete with FI-W01 through FI-W22 locked. FI-T01 through FI-T07 are locked task-context files. FI-S01 through FI-S04 are locked supplementary files. Entire File Ecosystem is complete. Task Prompt Architecture, Task Prompt Construction, Expected Output Architecture, Expected Output Construction, Golden Architecture, Golden Construction, Grader Guidance Architecture, Grader Guidance Construction, AutoQC Architecture, AutoQC Construction, Packaging Architecture, Packaging Construction, Submission Preparation, Execution Preparation, Transcript Resolution, and Final Submission Resolution are complete/locked unless Alexander explicitly reopens a later phase.
 
@@ -36,9 +38,9 @@ RL Studio:
 - Approval source: Slack / Stacey S
 - Reviewer message: "great job! I approved your brainstorm. Next steps are to move forward with world spec and file template development."
 
-Current state: Step 9 generated-file review / "Ready for Pipeline Fixes." Pipeline run #1 output is ingested under `worlds/korvin-merrow/file-review/pipeline-output/`; Claude-assisted triage is active in `worlds/korvin-merrow/file-review/findings-triage.md`; candidate edits, integrity checks, and the upload/holdback split are recorded in `worlds/korvin-merrow/file-review/file-review-log.md`. Candidate revised files are local only until Alexander authorizes the platform step. Historical locked artifacts remain complete; do not reopen them unless Alexander explicitly authorizes it. Final Files AutoQC runs, AutoQC responses, rubrics, scoring thresholds, pass/fail bands, point allocations, task setup, DOCX submission packaging, manifest creation, final submission packages, upload, submission, and RL Studio access remain gated on explicit Alexander authorization for the relevant step.
+Current state: Step 10 task setup / Task Writing. Pipeline run #1 output and the Step 9 audit trail are preserved under `worlds/korvin-merrow/file-review/`; final edits, integrity checks, platform lessons, and the upload/holdback split are recorded in `worlds/korvin-merrow/file-review/file-review-log.md`. Historical locked artifacts remain complete; do not reopen them unless Alexander explicitly authorizes it. RL Studio task mutation, task-material uploads, agent runs, QA runs, AutoQC responses, rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX submission packaging, manifest creation, final submission packages, upload, submission, and RL Studio access remain gated on explicit Alexander authorization for the relevant step.
 
-Repository collaboration readiness note: a new Codex or Claude session can reconstruct the repository state from repository files alone. The repository is collaboration-ready because `project/STATUS.md`, `docs/status-dashboard.md`, `project/PHASE_MAP.md`, `project/WORKSPACE_FILE_MAP.md`, `worlds/korvin-merrow/file-review/`, and this handoff converge on Step 9 generated-file review / "Ready for Pipeline Fixes." The canonical file map is `project/WORKSPACE_FILE_MAP.md`.
+Repository collaboration readiness note: a new Codex or Claude session can reconstruct the repository state from repository files alone. The repository is collaboration-ready because `project/STATUS.md`, `docs/status-dashboard.md`, `project/PHASE_MAP.md`, `project/WORKSPACE_FILE_MAP.md`, `docs/world-pipeline-playbook.md`, `worlds/korvin-merrow/file-review/`, and this handoff converge on Step 10 task setup / Task Writing. The canonical file map is `project/WORKSPACE_FILE_MAP.md`.
 
 Cross-artifact consistency verification is a standing governance rule. Before creating, modifying, ratifying, or locking architecture, inventory, matrix, mapping, coverage table, workflow table, trap table, friction table, hierarchy table, or governance artifacts, cross-check applicable locked canonical sources and document any expansion, narrowing, redistribution, reprioritization, relabeling, or reclassification before ratification or lock. Do not silently promote historical, planning, superseded, tracker, or provenance metadata into governing architecture.
 
@@ -346,7 +348,7 @@ Use these as future World Spec priorities only after Brainstorm GO:
 
 ## Next Legal Action
 
-Use `worlds/korvin-merrow/file-review/file-review-protocol.md`, `worlds/korvin-merrow/file-review/time-strategy-and-state.md`, `worlds/korvin-merrow/file-review/findings-triage.md`, and `worlds/korvin-merrow/file-review/file-review-log.md` for the active Step 9 review. The next legal action is Alexander-authorized platform handling of the prepared candidate upload set, or further local review if Alexander continues reviewing with Claude. Do not run Final Files AutoQC, upload revisions, Apply to Task, create task setup materials, create AutoQC responses, or access RL Studio unless Alexander explicitly authorizes the exact step.
+Use `docs/world-pipeline-playbook.md` section A2 and the locked task prompt/golden/grader-guidance artifacts for Step 10 preparation. Use `worlds/korvin-merrow/file-review/file-review-protocol.md`, `worlds/korvin-merrow/file-review/time-strategy-and-state.md`, `worlds/korvin-merrow/file-review/findings-triage.md`, and `worlds/korvin-merrow/file-review/file-review-log.md` as the closed Step 9 audit trail. The next legal action is Alexander-authorized task setup handling, or further local review/de-hinting if Alexander continues reviewing with Claude. Do not access RL Studio, upload task setup materials, run agents, run QA, create AutoQC responses, or mutate platform state unless Alexander explicitly authorizes the exact step.
 
 Before ending any working session:
 
@@ -383,14 +385,13 @@ Do not:
 
 ## Current Best Claude Task
 
-If asked to help now, Claude should support Step 9 generated-file review:
+If asked to help now, Claude should support Step 10 task setup preparation:
 
-- inventory pipeline output and metadata;
-- maintain `findings-triage.md` as the active B2 review packet;
-- distinguish FIX / PROTECT / NOTE findings;
+- review/de-hint task prompts against final generated files and the physician-perspective rule;
+- verify goldens against the final 26-file world and held-back task files before any platform upload;
+- verify grader guidelines use the A/B/C structure and do not become rigid golden-matching keys;
 - preserve trap fidelity, especially prednisone ambiguity, EW22 incompleteness, buried functional evidence, and consultant-friction balance;
-- draft candidate edits only after Alexander's rulings;
-- keep phase-specific Claude provenance in `worlds/korvin-merrow/file-review/`, not in the original onboarding transcript.
+- keep Step 9 file-review provenance in `worlds/korvin-merrow/file-review/`, not in the original onboarding transcript.
 
 ## Workspace Doctrine Note
 

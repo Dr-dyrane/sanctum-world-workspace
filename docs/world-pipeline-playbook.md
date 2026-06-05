@@ -4,7 +4,37 @@ Date: 2026-06-04. Written at Korvin Merrow spec-submission (108/109, prednisone-
 
 ## A. Korvin: forward pipeline (stages 7-17)
 
-Current position: Step 5 complete (Spec AutoQC), Step 6 complete (Human Spec Review APPROVED by Stacey S), Step 7 V1 synthetic generation complete. The project is now in Step 9 generated-file review / "Ready for Pipeline Fixes"; Alexander is reviewing pipeline output with Claude assistance.
+Current position: Steps 1-9 COMPLETE. World created 6/5/2026 as **Healthcare_247_Merrow** (world_d50c832ac6474a68ba982a77e28a6bbe, 26 files synced, snap_0fb032e95b324710b12a7432cf7da6c1). Task 1 auto-created in Task Writing stage. Active stage: Step 10 task setup.
+
+## A2. Step 10 verbatim requirements (instruction doc 06_02, "How to Set up Your Task in RLS" + Golden Response + Grader Guidelines sections; read 6/5)
+
+Pre-conditions before RLS entry: golden response, grader guidelines, and world spec confirmed final; world files uploaded (done - world is live).
+
+Per-task RLS flow: open world -> Create Task, one task at a time -> task name in the problem statement field -> Add Files (task-specific E#-T# files) -> paste prompt into prompt field -> paste grader guidelines into their field -> **golden response is UPLOADED as a file, not pasted**. **SAVE AFTER EVERY SINGLE STEP** - navigating away unsaved loses everything; after all tasks, save again and verify content before running.
+
+Run the agent: select correct version -> latest model -> Run (~1 hr for all tasks; set up remaining tasks while first runs). After a run: Task Submission History -> latest version -> Run All QA -> wait 10-20 min -> Fetch QC Report. Default 10 trajectories per run.
+
+Golden response rules: writer-authored, sequential to the prompt's requests; sets the ceiling (if any agent trajectory beats it on any point, improve the golden before proceeding); placeholders over fabrication ("[No documented baseline weight available]"); unambiguous calculations (rounding convention in prompt, units throughout); must score full marks under your own grader guidelines.
+
+Grader guidelines: labeled A/B/C structure. Section A = clinical accuracy non-negotiables; Section B = scope/format/what legitimately varies + explicit fabrication clause (answers outside pre-authorized alternatives = fabrication even if defensibly argued); Section C = common failure modes from OBSERVED trajectories, not anticipated in advance, opening line verbatim "These are patterns to reason about, not items to tick off." Name what varies and what does not; task-specific direction, not generic permissions; a bad golden is worse than no golden.
+
+Scoring calibration: <70% trajectory score = decent stumping; >70% = task may be too easy. Clinical judgment overrides the number.
+
+QC discipline (Phase 3): resolve or dispute every finding before the next step (gated). Error-level: must fix. Warning: fix or dispute with specific justification (thumbs up to accept, thumbs down + brief note to dispute). Fix now = materially affects evaluation validity; fix later = cosmetic, document and move on. Do not accumulate unaddressed findings across runs.
+
+Self-QC before upload (optional per doc, mandatory for us): writer prompt docs at reference/templates/ - AutoQC_Section_4_Task_Prompts_v6.6 for prompts; same flow for goldens and grader guidelines ("walk through every check, Blockers first, then Majors, then Minors").
+
+Note: task prompts must be writer-authored (doc line 876, non-negotiable: "the actual task prompt has to come from the writer, not the LLM"). Ours are - all 6 TP locked under Alexander's authorship; Claude's role is de-hinting and format translation only.
+
+## A3. Later-phase reminders from instruction doc 06_02
+
+After task setup and trajectories, preserve a local backup record of QA / AutoQC responses before platform submission when the guide asks for documentation in Google Docs or Drive. Do not rely on platform cards as the only memory surface.
+
+Failure analysis / grader analysis is later-phase work only. When authorized, read the full lowest-scoring trajectory output for each task rather than summarizing from scores alone. Grader analysis should be concrete and short enough to act on: identify the real failure pattern, explain whether the failure is prompt-side, file-side, golden-side, grader-side, or model-side, and propose specific edits to the A/B/C grader sections when needed.
+
+Preference labeling is later-phase work only. Keep it separate from Step 10 task setup, QA response notes, and grader-guideline editing. Follow the official preference-labeling dimensions and do not pre-create labels from expected failures.
+
+Drive sync note for the current state: Step 9 is finalized, so the world-level 26-file set may be mirrored to Drive if Alexander explicitly authorizes Drive mutation. Step 10 task setup materials should remain a separate sync package because prompts, goldens, and grader guidelines have different review/upload semantics than world-level files.
 
 | Stage | What happens | Workspace surface | Our head start |
 |---|---|---|---|

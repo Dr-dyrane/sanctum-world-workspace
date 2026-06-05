@@ -19,7 +19,7 @@ Onboarding scope:
 
 Current Korvin status: Step 5 World Spec AutoQC is complete at 108/109, with the sole open prednisone dose/frequency warning preserved as intentional design and justified in notes. Step 6 Human Review: World Spec is APPROVED by Stacey S. The requested Reference File Origin routing correction was resolved and re-uploaded.
 
-Onboarding approval condition has been met. Official production pipeline position: World-level Files / synthetic file generation. V1 file generation is complete and V1 writer review is in progress under the platform stage "Ready for Pipeline Fixes." Pipeline output is ingested locally under `worlds/korvin-merrow/file-review/pipeline-output/`; Alexander is reviewing generated files with Claude assistance.
+Onboarding approval condition has been met. Official production pipeline position: Task-Level Materials / Task Setup. World-level Files are complete: Step 9 generated-file review closed, Final Files AutoQC passed 78/78 after three revisions, and `Healthcare_247_Merrow` was created on 2026-06-05 with 26 world files synced. Active stage is Step 10 task setup / Task Writing; local preparation packet lives at `worlds/korvin-merrow/task-setup/step10-review-packet.md`.
 
 ### Phase 2: Build Your Files And Tasks
 
@@ -33,7 +33,7 @@ Korvin Merrow current exception: Alexander has explicitly authorized local, batc
 
 Goal: Address Task AutoQC findings and complete trajectory/grading audit.
 
-Status: Out of scope until Step 9 generated-file review is completed and Alexander explicitly authorizes task setup / QA work.
+Status: Task setup is active for local preparation only. QA remains out of scope until Alexander explicitly authorizes RL Studio task mutation, agent runs, Run All QA, and QC response handling.
 
 ### Phase 4: Evaluate The Agent
 
@@ -44,8 +44,8 @@ Status: Out of scope until generated-file review, task setup, trajectory runs, a
 ## Explicitly Out Of Scope Until Approval
 
 - Scoring rubrics, scoring thresholds, pass/fail bands, point allocations, AutoQC responses, or later task-layer output generation unless explicitly authorized by Alexander
-- World file review beyond the current authorized Step 9 generated-file review
-- Production task setup
+- Rerunning world file review / Final Files AutoQC without an explicit corrective authorization
+- RL Studio task mutation, task upload, agent runs, or QA runs without explicit authorization
 - Production task prompts
 - Additional golden responses
 - Grader guideline reopening or expansion beyond the locked GG-KM01 through GG-KM06 files
