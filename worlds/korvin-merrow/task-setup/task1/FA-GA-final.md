@@ -1,8 +1,8 @@
 # Task 1 Failure Analysis & Grader Analysis - FINAL (SUBMITTED)
 
-STATUS (6/6): SUBMITTED on platform, batch v2, run aef58074. FA finding saved (Details = full text below; title/severity = physician metadata, polish optional). GA saved, rated GREAT. Only remaining platform action: Run Failure Analysis & Grader Analysis AutoQC. The calibration line (below) is an OPTIONAL physician enhancement, NOT a blocker; the GA is complete without it. This file is FINAL - do not treat as pending.
+STATUS (6/6): ROUND-2 SUBMITTED on platform after Abi send-back, batch v3, run 8 / db617c58. GA rated GREAT. Current platform state: submitted and awaiting Abi round-2 review / hardening ruling. The earlier batch v2 FA/GA is preserved below as historical submitted wording, but it is superseded by the Round 2 section.
 
-Date: 2026-06-06. Physician-authored (Alexander), chart-register voice, NO em dashes (project rule). Converged across working-Claude draft + independent claude.ai review + physician edit. Evidence basis: batch v2 (job 476e281a); grading transcripts for runs 564d568d (0.72) and aef58074 (0.78); local output greps in trajectories/low-runs/.
+Date: 2026-06-06. Physician-authored (Alexander), chart-register voice, NO em dashes (project rule). Converged across working-Claude draft + independent claude.ai review + physician edit. Current evidence basis: batch v3 (job 2d926969), run 8 / db617c58 (0.90). Historical batch v2 evidence is preserved below for audit trail only.
 
 ## Headline finding (the discriminator)
 Score separation tracks plain medication-list completeness, NOT trap reasoning. All 10 runs handled the designed traps (prednisone provenance, cardio/nephro staging, buried OT/nursing evidence, inpatient-only separation, snapshot reconciliation). The two low runs (0.72, 0.78) silently dropped METFORMIN (a held diabetes agent the golden carries with its own restart line) from the 19-item list and both still wrote "eighteen of nineteen verified, prednisone the sole unverified item" without catching the miss. Verified in outputs: 564d568d (0.72) = 0 metformin mentions; 5037a531 (90s cluster) = 4 metformin + 4 gabapentin. 0.78 run also under-dispositioned gabapentin.
@@ -18,6 +18,32 @@ The real failure mode here is a coverage and self-check miss on a long list, sep
 The grading is solid and it is catching something real. On both low runs the grader went into the chart, confirmed metformin is a verified home med held HD1 through HD6, saw it is in the golden as a held agent, saw it is missing from the answer, and even caught that the note claims eighteen of nineteen while leaving one out. Then it scored an otherwise strong note down for a real omission. That is a correct call, not the grader being harsh, and it caught something I missed on my own first read. It also treated the chart-sourced numbers like the creatinine and potassium trends as supported rather than made up, which is exactly what I want. The golden is not in the run container and nothing looks gamed.
 
 Optional physician calibration line (Alexander's discretion, not required for submission): whether 0.72-0.78 is fair or slightly generous for fully omitting a held medication. If added: "If anything I would dock a full omission of a held medication harder, since that is the miss that actually reaches the patient, but the score is defensible."
+
+## ROUND 2 (batch v3, run 8 / db617c58, score 0.90) - FA/GA per Abi's single-run format
+Context: task files deleted, golden v3 (chart format), guidelines v5 (mechanism-agnostic). v3 scores 90-97 (mean ~94); metformin omission did not recur; the lowest run (0.90) lost its point on the prednisone bridging-dose edge.
+
+### Failure Analysis (AS SUBMITTED - Alexander's final wording)
+What the model did well:
+- Reconciled the full home regimen by disposition with per-medication rationale; including metformin and gabapentin
+- held the cardiology/nephrology staged-restart tension without picking a winner, and kept correctional lispro off the home list.
+- It turned the buried functional/cognitive findings into a concrete safety plan and flagged the unresolved decisions as open items rather than inventing them.
+What the model failed:
+- The weak point was prednisone.
+- Having correctly established that no verified home dose exists in the record, it still proposed an explicit bridge (~2.5-5 mg, e.g. 5 mg daily) anchored to the most recent 5 mg dispense.
+- It defers the exact mg to the prescriber, so it doesn't fully fall into the trap, but it commits to a number further than the chart supports.
+
+### Grader Analysis (AS SUBMITTED - Alexander's final wording) - Rating: Great
+What the grader got right:
+- It correctly credited per-medication reasoning, the prednisone source hierarchy, both consultant positions without a winner,
+- the inpatient-only separation, and the functional/cognitive risk.
+- The answer sits at the strong end, so a score in this band is defensible.
+What the grader got wrong or could improve:
+- It treated the prednisone bridging-dose suggestion as only a minor concern.
+- The deferral to the prescriber makes that defensible but arguably lenient,
+- anchoring a specific 5 mg bridge to the most recent dispense edges into the dispensing-equals-current-dose inference the trap is meant to discourage, and a stricter reading weights it more.
+
+### Writer Note (submitted)
+Flags that deleting the task files raised+tightened scores (90-97, mean ~94), metformin omission did not recur, prednisone trap is the consistent discriminator, task is realistic+clean but tractable; offers to harden or proceed - Abi's call.
 
 ## Lessons for Tasks 2-6 FA/GA
 1. PULL THE GRADING TRANSCRIPTS for the low runs before writing GA. Do not infer the failure mode from the output alone (working-draft guessed 4 wrong failure modes; the real miss was metformin only). The transcript shows exactly what the grader docked.

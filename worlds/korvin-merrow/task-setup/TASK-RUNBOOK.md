@@ -4,6 +4,14 @@ Derived from Task 1 (KM01) lived 6/5-6/6/2026: AutoQC setup failures, Taiga reru
 
 GOVERNING PRINCIPLE: docs/reasoning-discipline.md (the verification gate). At every one-way door (expensive/irreversible commit) or any claim about WHY a system behaved a certain way, read the ground truth (config/transcript/output) BEFORE committing; state verified vs inferred. Stay fast everywhere else. Most of this runbook's "expected residual / justify vs fix" calls ARE one-way doors - verify first.
 
+## A0. Reviewer-driven defaults (Abi first review, Task 1) - bake these in from the START, do not rediscover
+- TASK FILES: a task file earns its place ONLY if it carries evidence required for the task that does NOT exist in any world file. A "request memo" or "handoff" that just enumerates/structures what the chart already holds = answer leakage; it inflates scores and gets deleted. Default to NO task files unless a real gap exists. If a task file IS needed: realistic clinical doc, signed by the one plausible author, minimal info, dated to the task date (not after), no "Date/Anchor" or "anchor" project artifacts.
+- GOLDEN: build as a FULL chart document from the first draft - letterhead, demographics (DOB/MRN/allergies/code status), a date matching the task date, and a signature block. Then the clinical body in committed register. (Task 1 lost a round because the golden was body-only.)
+- GRADER GUIDELINES: mechanism-agnostic, judged against the golden (A0/A3). Self-Contained + No Weight Distribution warnings may recur in this pattern; read the exact flag text, rerun variance-like failures once, and justify only when the same evidence supports it.
+- FA/GA: single lowest run only, Abi's format (D2). Never "the two lowest"; never "what I missed"; never "grader went into the chart."
+- VARIANCE flags (No Formatting Leakage, No Weight Distribution): "Rerun N failing" ONCE before justifying; they often clear (same file/structure that passed a prior run).
+- WORLD-FILE FORMATTING: do not use alert-color or emphasis highlighting in any file carrying trap-relevant content (invites No Formatting Leakage variance). Reserve color/bold for uniform document chrome only.
+
 ## A. Off-clock prep (Claude builds, physician rules)
 - [ ] Decide whether task-context files are truly needed. They must frame the task, not teach the answer. Delete or avoid any file that tells the model step-by-step how to complete the deliverable.
 - [ ] If task files are used, de-hint them per task-setup/step10-review-packet.md section 3 and run a realism scan: correct task date/anchor in every location, no "date/anchor" or "discharge anchor" project artifacts, realistic author/signature, no architecture/trap/source-package language, and no duplicate answer scaffolding. Integrity-gate every docx (EOCD + styles.xml + opens). Keep last-valid copies.

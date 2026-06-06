@@ -19,7 +19,7 @@ Onboarding scope:
 
 Current Korvin status: Step 5 World Spec AutoQC is complete at 108/109, with the sole open prednisone dose/frequency warning preserved as intentional design and justified in notes. Step 6 Human Review: World Spec is APPROVED by Stacey S. The requested Reference File Origin routing correction was resolved and re-uploaded.
 
-Onboarding approval condition has been met. Official production pipeline position: Task-Level Materials / Task 1 AO Review Rework. World-level Files are complete: Step 9 generated-file review closed, Final Files AutoQC passed 78/78 after three revisions, and `Healthcare_247_Merrow` was created on 2026-06-05 with 26 world files synced. Abi first human review returned SEND BACK / rework required. Task 1 RLS rework entry and Task AutoQC rerun are complete: both task files deleted, prompt/golden/grader guidelines replaced with v2/v3/v5, Task AutoQC at 2/68 justified, next batch v3 Taiga trajectories/QA. Governing review record is `worlds/korvin-merrow/task-setup/reviews/task1-first-human-review-ao-2026-06-05.md`; canonical lifecycle log is `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`. Do not enter Tasks 2-6 until Task 1 rework is accepted or Alexander explicitly authorizes bounded parallel prep.
+Onboarding approval condition has been met. Official production pipeline position: Task-Level Materials / Task 1 AO Review Rework. World-level Files are complete: Step 9 generated-file review closed, Final Files AutoQC passed 78/78 after three revisions, and `Healthcare_247_Merrow` was created on 2026-06-05 with 26 world files synced. Abi first human review returned SEND BACK / rework required. Task 1 RLS rework entry, Task AutoQC rerun, batch v3 Taiga trajectories/QA, and round-2 FA/GA submission are complete: both task files deleted, prompt/golden/grader guidelines replaced with v2/v3/v5, Task AutoQC at 2/68 justified, v3 scores 90-97 with lowest run 8 / db617c58, and Writer Note disclosed the higher/tighter scores. Governing review record is `worlds/korvin-merrow/task-setup/reviews/task1-first-human-review-ao-2026-06-05.md`; canonical lifecycle log is `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`. Do not enter Tasks 2-6 until Task 1 rework is accepted or Alexander explicitly authorizes bounded parallel prep.
 
 ### Phase 2: Build Your Files And Tasks
 
@@ -33,7 +33,7 @@ Korvin Merrow current exception: Alexander has explicitly authorized local, batc
 
 Goal: Address Task AutoQC findings and complete trajectory/grading audit.
 
-Status: Task 1 first human review returned SEND BACK / rework required. RLS rework entry and Task AutoQC rerun are complete at 2/68 justified. Next step is batch v3 Taiga trajectories/QA, followed by rewritten Failure Analysis / Grader Analysis on the new single lowest run. Task uploads for Tasks 2-6, extra agent runs outside batch v3, extra QA outside batch v3, platform responses, preference labeling, and reviewer-stage actions remain gated on explicit Alexander authorization for the exact action.
+Status: Task 1 first human review returned SEND BACK / rework required. RLS rework entry, Task AutoQC rerun, batch v3 Taiga trajectories/QA, and round-2 Failure Analysis / Grader Analysis submission are complete. Next step is Abi round-2 review / hardening ruling. Task uploads for Tasks 2-6, extra agent runs, extra QA, platform responses, preference labeling, and reviewer-stage actions remain gated on explicit Alexander authorization for the exact action.
 
 ### Phase 4: Evaluate The Agent
 
