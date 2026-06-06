@@ -4,7 +4,7 @@ Date: 2026-06-04. Written at Korvin Merrow spec-submission (108/109, prednisone-
 
 ## A. Korvin: forward pipeline (stages 7-17)
 
-Current position: Steps 1-9 COMPLETE. World created 6/5/2026 as **Healthcare_247_Merrow** (world_d50c832ac6474a68ba982a77e28a6bbe, 26 files synced, snap_0fb032e95b324710b12a7432cf7da6c1). Task 1 setup completed, corrective v4 Task Writing rerun completed, Task AutoQC was submitted at 2/68 with both warnings justified, batch v2 Taiga trajectories ran, and Task 1 FA/GA was submitted on batch v2, run `aef58074` with GA rated Great. Active work is Task 1 FA/GA AutoQC: run Failure Analysis & Grader Analysis AutoQC, then move Task 1 to reviewer hands if clean. Canonical Task 1 lifecycle source: `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`.
+Current position: Steps 1-9 COMPLETE. World created 6/5/2026 as **Healthcare_247_Merrow** (world_d50c832ac6474a68ba982a77e28a6bbe, 26 files synced, snap_0fb032e95b324710b12a7432cf7da6c1). Task 1 setup completed, corrective v4 Task Writing rerun completed, Task AutoQC was submitted at 2/68 with both warnings justified, batch v2 Taiga trajectories ran, and Task 1 FA/GA was submitted on batch v2, run `aef58074` with GA rated Great. FA/GA AutoQC was submitted at 1/14 with the single Human-Written Grader Analysis false positive justified. Active state: Task 1 is writer-complete and in reviewer hands. Canonical Task 1 lifecycle source: `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`.
 
 ## A2. Step 10 verbatim requirements (instruction doc 06_02, "How to Set up Your Task in RLS" + Golden Response + Grader Guidelines sections; read 6/5)
 
