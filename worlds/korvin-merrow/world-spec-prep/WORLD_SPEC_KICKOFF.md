@@ -1,6 +1,6 @@
 # Korvin Merrow World Spec Kickoff
 
-Status: Historical World Spec cockpit. Final Submission Resolution is LOCKED; Execution Artifact Generation is COMPLETE / CANONICALIZED; Step 9 is COMPLETE; current live work is Task 1 Taiga QA feedback / pre-FA-GA.
+Status: Historical World Spec cockpit. Final Submission Resolution is LOCKED; Execution Artifact Generation is COMPLETE / CANONICALIZED; Step 9 is COMPLETE; current live work is Task 1 FA/GA submitted / FA/GA AutoQC pending.
 
 Purpose: historical cockpit for the transition from approved Brainstorm through World Spec construction while preserving phase boundaries around template population, file inventory, tasks, and downstream deliverables. For current live state, read `project/STATUS.md`, `docs/status-dashboard.md`, and `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`.
 
@@ -8,10 +8,10 @@ Purpose: historical cockpit for the transition from approved Brainstorm through 
 
 - `Healthcare_247_Merrow` is live with 26 world files synced.
 - Step 9 generated-file review is complete; Final Files AutoQC passed 78/78 after three revisions.
-- Current active work is Task 1 Taiga QA feedback / pre-FA-GA: corrective v4 rerun completed, Task AutoQC submitted at 2/68 with both warnings justified, batch v2 trajectories ran under job `476e281a`, Env Linter V2 is clean, and Data Quality has only the recurring `enable_anthropic_api` false positive. Grading transcripts for the 0.72 and 0.78 runs show real metformin ER omission failures, not a grader-underscore problem. Next platform sequence is save DQ-1 as `tech issue`, run 5.1 Taiga QA Feedback AutoQC, clear 5.2, then start Failure Analysis / Grader Analysis.
+- Current active work is Task 1 FA/GA AutoQC: corrective v4 rerun completed, Task AutoQC submitted at 2/68 with both warnings justified, batch v2 trajectories ran under job `476e281a`, Env Linter V2 is clean, Data Quality has only the recurring `enable_anthropic_api` false positive, and FA/GA was saved on platform batch v2 run `aef58074` with GA rated Great. Grading transcripts for the 0.72 and 0.78 runs show real metformin ER omission failures, not a grader-underscore problem. Next platform sequence is run Failure Analysis & Grader Analysis AutoQC, then move Task 1 to reviewer hands if clean.
 - Canonical Task 1 lifecycle source: `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`.
 - Task 1 platform provenance: `worlds/korvin-merrow/task-setup/platform/task1/`.
-- Task 1 FA/GA prep: `worlds/korvin-merrow/task-setup/task1/FA-GA-independent-review-brief.md`; batch trajectory exports under `worlds/korvin-merrow/task-setup/task1/trajectories/`.
+- Task 1 FA/GA final submitted wording: `worlds/korvin-merrow/task-setup/task1/FA-GA-final.md`; independent review prep remains preserved at `worlds/korvin-merrow/task-setup/task1/FA-GA-independent-review-brief.md`; batch trajectory exports under `worlds/korvin-merrow/task-setup/task1/trajectories/`.
 - Tasks 2-6 planning/de-hinting packet: `worlds/korvin-merrow/task-setup/step10-review-packet.md`.
 
 ## 1. Current State

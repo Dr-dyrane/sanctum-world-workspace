@@ -69,7 +69,7 @@ After Go Back to Task Writing: shipped grader-guidelines-task1-v4.txt (/docs-awa
 - GRADER ANALYSIS verdict: Good/Great (grader caught a genuine omission via chart verification; did not false-flag accurate specifics). Physician judgment call to surface in GA: is a full omission of a HELD med adequately penalized at 0.78, or slightly generous (defensible it warrants a steeper deduction)?
 - FAILURE ANALYSIS anchor: under 19-item load the model covered high-salience agents (HFrEF holds, prednisone, lispro) and dropped a "quiet" held oral antidiabetic (metformin) + under-dispositioned gabapentin = completeness failure, the real-world med-rec safety risk this task is built to surface.
 - SUPERSEDES the FA-GA-independent-review-brief.md "candidate underscore" hypothesis (now disproven by transcripts). Update that brief before any three-way.
-- NEXT: save `tech issue` on DQ-1 -> run 5.1 Taiga QA Feedback AutoQC -> clear 5.2 -> Start Failure Analysis & Grader Analysis (rate grader Good/Great + metformin-omission explanation; FA = completeness-under-load failure mode).
+- SUPERSEDED NEXT: save `tech issue` on DQ-1 -> run 5.1 Taiga QA Feedback AutoQC -> clear 5.2 -> Start Failure Analysis & Grader Analysis. This sequence is now complete through submitted FA/GA; current remaining platform action is FA/GA AutoQC.
 
 ## METFORMIN DISCRIMINATOR VERIFIED (6/6, independent claude.ai pass + local grep)
 Independently confirmed the metformin-coverage discriminator across saved trajectory outputs (task1/trajectories/low-runs/):
@@ -80,6 +80,16 @@ So coverage cleanly separates 70s (dropped metformin) from 90s (covered it). The
 - FINAL FA lead (physician-owned): designed traps tractable for all 10 runs; discriminator = silent omission of a held agent (metformin) from a 19-item reconciliation + a self-count error ("18 of 19" while one missing); reproducible coverage/self-audit lapse downstream of trap reasoning. Honest re tractability (no sub-70) without underselling (real clinical-completeness discrimination + useful training signal).
 - FINAL GA lead (physician-owned): grading reliable + clinically discriminating; grader independently established metformin = verified home med, held HD1-HD6, in golden, absent from answer, and flagged the internal-count inconsistency, then scored "strong with significant omission" (0.72-0.78) = CORRECT, not underscore. Also correctly treated chart-sourced specifics as supported not fabricated = v4 /docs clause validated live. Golden absent from rollout; no reward hacking. Rating: Good/Great (recommend Great).
 - OPTIONAL residual to fully close calibration consistency: pull a 90s-run GRADING TRANSCRIPT (e.g. 5037a531) and confirm the grader credited metformin coverage there (covered->90s applied consistently). Output side already confirmed; only the 90s grading rationale remains unpulled.
+
+## FA/GA SUBMITTED (6/6) - final wording in task1/FA-GA-final.md (STATUS: SUBMITTED, not pending)
+- Platform state: FA finding + GA both SAVED on batch v2 / run aef58074. GA rated GREAT. FA finding Details = full text; title/severity polish optional. Calibration line optional, not a blocker.
+- Only remaining platform action this stage: Run Failure Analysis & Grader Analysis AutoQC, then Submission Checklist -> next stage (reviewer hands: First Reviewer through FA/GA, Final Reviewer for Preference Labels).
+- CODEX decision resolved: FA-GA-final.md is FINAL. Add it to WORKSPACE_FILE_MAP.md; update status surface from "pre-FA/GA" to "FA/GA submitted on batch v2, FA/GA AutoQC pending"; then commit.
+- FA (task-level field): leads with "traps handled by all 10, completeness is the discriminator, metformin dropped + self-count error." Physician chart-register voice, no em dashes.
+- GA (per-trajectory): rated GREAT; grader did independent chart verification, caught the metformin omission a human read missed, validated chart-sourced specifics as supported (v4 /docs clause working live). Physician to add the fair-vs-generous calibration line.
+- Provenance trio for FA/GA: working-Claude draft -> independent claude.ai review (overturned 3 claims: near-perfect, underscore, guessed failure modes) -> physician final. Brief at task1/FA-GA-independent-review-brief.md; final at task1/FA-GA-final.md.
+- Saved evidence: task1/trajectories/v1, v2, low-runs/ (run_564d568d_0.72.docx, run_5037a531_90s-cluster.docx).
+- CODEX: propagate the D2 FA/GA lessons (TASK-RUNBOOK.md) + this batch-v2 outcome into playbook A2/A3 as needed.
 
 ## Tasks 2-6 status
 Prepped in task-setup/step10-review-packet.md (de-hint edits + draft prompts pending [A] rulings). Build each grader guideline from `grader-guidelines-task1-v4.txt`, not v3: use the native Task context / Golden reference / Must be present and correct / Acceptable variation / Penalize for structure, but preserve `/docs`-aware fabrication logic because the grader receives `/docs/filesystem/`. Expect and justify the Self-Contained warning when the guideline intentionally references chart cross-checking. Cadence target 1-2/day.

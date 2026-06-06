@@ -19,7 +19,7 @@ Onboarding scope:
 
 Current Korvin status: Step 5 World Spec AutoQC is complete at 108/109, with the sole open prednisone dose/frequency warning preserved as intentional design and justified in notes. Step 6 Human Review: World Spec is APPROVED by Stacey S. The requested Reference File Origin routing correction was resolved and re-uploaded.
 
-Onboarding approval condition has been met. Official production pipeline position: Task-Level Materials / Task 1 Taiga QA feedback / pre-FA-GA. World-level Files are complete: Step 9 generated-file review closed, Final Files AutoQC passed 78/78 after three revisions, and `Healthcare_247_Merrow` was created on 2026-06-05 with 26 world files synced. Task 1 setup completed, corrective v4 Task Writing rerun completed, Task AutoQC was submitted at 2/68 with both warnings justified, and batch v2 trajectories ran with scores 78, 72, 92, 95, 93, 92, 92, 92, 90, 94. Grading transcripts show the lower runs had real metformin ER omission failures rather than mere grader underscoring. Env Linter V2 is clean; Data Quality has only the recurring `enable_anthropic_api` false positive. The immediate next platform sequence is save DQ-1 as `tech issue`, run 5.1 Taiga QA Feedback AutoQC, clear 5.2, then start Failure Analysis / Grader Analysis. The canonical Task 1 lifecycle log is `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`; Tasks 2-6 planning remains in `worlds/korvin-merrow/task-setup/step10-review-packet.md`.
+Onboarding approval condition has been met. Official production pipeline position: Task-Level Materials / Task 1 FA/GA submitted / FA/GA AutoQC pending. World-level Files are complete: Step 9 generated-file review closed, Final Files AutoQC passed 78/78 after three revisions, and `Healthcare_247_Merrow` was created on 2026-06-05 with 26 world files synced. Task 1 setup completed, corrective v4 Task Writing rerun completed, Task AutoQC was submitted at 2/68 with both warnings justified, and batch v2 trajectories ran with scores 78, 72, 92, 95, 93, 92, 92, 92, 90, 94. Grading transcripts show the lower runs had real metformin ER omission failures rather than mere grader underscoring. Env Linter V2 is clean; Data Quality has only the recurring `enable_anthropic_api` false positive. FA/GA was saved on platform batch v2, run `aef58074`; GA rated Great. The immediate next platform sequence is run Failure Analysis & Grader Analysis AutoQC, then move Task 1 to reviewer hands if clean. The canonical Task 1 lifecycle log is `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`; final submitted FA/GA wording is `worlds/korvin-merrow/task-setup/task1/FA-GA-final.md`; Tasks 2-6 planning remains in `worlds/korvin-merrow/task-setup/step10-review-packet.md`.
 
 ### Phase 2: Build Your Files And Tasks
 
@@ -33,7 +33,7 @@ Korvin Merrow current exception: Alexander has explicitly authorized local, batc
 
 Goal: Address Task AutoQC findings and complete trajectory/grading audit.
 
-Status: Task 1 corrective v4 rerun is complete and the project is at Taiga QA feedback / pre-FA-GA. Further task uploads beyond Task 1, additional agent runs, additional QA runs, platform responses, Failure Analysis / Grader Analysis, and preference labeling remain gated on explicit Alexander authorization for the exact action.
+Status: Task 1 corrective v4 rerun is complete, FA/GA is submitted on batch v2 run `aef58074`, and the project is at the FA/GA AutoQC gate. Further task uploads beyond Task 1, additional agent runs, additional QA runs, platform responses, additional Failure Analysis / Grader Analysis edits, preference labeling, and reviewer-stage actions remain gated on explicit Alexander authorization for the exact action.
 
 ### Phase 4: Evaluate The Agent
 
@@ -53,7 +53,7 @@ Status: Out of scope until generated-file review, task setup, trajectory runs, a
 - Additional Task AutoQC
 - Additional trajectory review beyond the active Task 1 review gate
 - Taiga QC outside the active Task 1 Section 4/5 review gate
-- Failure analysis
+- Additional failure analysis beyond the submitted Task 1 FA/GA
 - Preference labeling
 - Final delivery review
 
