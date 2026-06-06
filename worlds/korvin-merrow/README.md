@@ -1,6 +1,6 @@
 # Korvin Merrow World
 
-Current state: World created as `Healthcare_247_Merrow`; Step 9 generated-file review COMPLETE; Step 10 task setup preparation ACTIVE.
+Current state: World created as `Healthcare_247_Merrow`; Step 9 generated-file review COMPLETE; Task 1 final human review COMPLETE / APPROVED. Next task or platform action requires explicit Alexander authorization.
 
 Start here only after reading `project/STATUS.md`.
 
@@ -12,7 +12,7 @@ Start here only after reading `project/STATUS.md`.
 - `remediation/`: reviewer SEND BACK remediation decision briefs and compliance review.
 - `reviews/`: external/human/AutoQC review artifacts and reviewer feedback history.
 - `submission/`: RL Studio submission artifacts.
-- `task-setup/`: Step 10 task setup preparation packet. Holds local review/de-hinting maps and Alexander-ruling prompts only; it is not an RL Studio upload record and does not mutate locked task artifacts.
+- `task-setup/`: Task setup, trajectory, QA, FA/GA, PL, review, and runbook provenance after world creation. Task 1 is approved; Task 2 seed materials are local prep only until Alexander authorizes the next task step.
 - `world-spec-prep/`: World Spec preparation cockpit plus lifecycle subfolders for locked decisions, locked, ratifications, reviews, decision logs, and planning scaffolds.
 - `world-spec-construction/`: World Spec construction lifecycle folders for candidate review artifacts, locked construction artifacts, and ratifications.
 - `file-inventory/`: file inventory lifecycle area. Locked architecture defines planned file ecosystem, and locked File Inventory v1 defines the planned inventory rows; neither creates synthetic files or chart contents.
@@ -34,11 +34,16 @@ Start here only after reading `project/STATUS.md`.
 - `packaging-architecture/`: packaging architecture lifecycle area. Locked artifacts define future DOCX, manifest, transcript, reference/template, reconciliation, and upload sequencing strategy only; they do not create package artifacts or submit anything.
 - `packaging/`: packaging construction lifecycle area. Locked artifacts prepare future packaging execution only; they do not populate DOCX, create manifests, create final submission packages, upload, submit, run AutoQC, create AutoQC responses, or create scoring artifacts.
 - `submission-preparation/`: submission preparation lifecycle area. Locked artifacts organize final execution decisions and stop points only; they do not populate DOCX, create manifests, create submission packages, run AutoQC, upload, or submit.
-- `final-submission-resolution/`: final submission dependency resolution lifecycle area. Active candidate artifacts determine upload set, export targets, folder mapping, DOCX blueprint, transcript export requirements, and FI-W/FI-T/FI-S transformation boundaries only; they do not generate DOCX/PDF artifacts, create manifests, package, upload, submit, run AutoQC, or create scoring artifacts.
+- `final-submission-resolution/`: final submission dependency resolution lifecycle area. Locked artifacts resolved upload set, export targets, folder mapping, DOCX blueprint, transcript export requirements, and FI-W/FI-T/FI-S transformation boundaries only; they did not generate DOCX/PDF artifacts, create manifests, package, upload, submit, run AutoQC, or create scoring artifacts.
 
 ## Active Entry Points
 
+- `00-MASTER-NARRATIVE.md`
 - `world-spec-prep/WORLD_SPEC_KICKOFF.md`
+- `task-setup/task1-lifecycle-log.md`
+- `task-setup/TASK-RUNBOOK.md`
+- `task-setup/CHECKPOINT-AUDIT-pre-task2.md`
+- `task-setup/reviews/task1-final-review-ao-2026-06-06.md`
 - `task-setup/step10-review-packet.md`
 - `world-spec-construction/locked/world-spec-v1.md`
 - `final-submission-resolution/locked/final-submission-resolution-v1.md`

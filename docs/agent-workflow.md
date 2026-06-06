@@ -53,7 +53,8 @@ Any ChatGPT output should be treated as advisory, not authoritative.
 
 - Brainstorm Human Review must return GO before World Spec drafting.
 - World Spec must clear AutoQC and Human Review before onboarding completion.
-- Do not proceed to steps 7-17 without explicit phase update.
+- Steps 7-17 require explicit phase update or direct Alexander authorization.
+- For Korvin specifically, Steps 1-17 have advanced through Task 1 final human review. Use `project/STATUS.md` for the current gate instead of this historical onboarding summary.
 
 ## Authorship And Good Faith Compliance
 

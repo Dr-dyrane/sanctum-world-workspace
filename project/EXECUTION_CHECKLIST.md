@@ -2,7 +2,7 @@
 
 Source of truth: `reference/source/New Writers Version - Instruction Guide (05_24).md`
 
-Current onboarding scope: Steps 1-6 only.
+Historical onboarding scope: Steps 1-6 only. Korvin has since completed onboarding, world creation, Step 9 generated-file review, and Task 1 final human review. Keep this checklist as the original onboarding checklist; use `project/STATUS.md`, `project/PHASE_MAP.md`, and `docs/world-pipeline-playbook.md` for the live phase.
 
 ## Setup Verification
 
@@ -257,4 +257,3 @@ Current onboarding scope: Steps 1-6 only.
   - Expected output: No work begins on synthetic file generation, production task setup, golden responses, grader guidelines, or failure analysis
   - Stop condition: Alexander explicitly updates project phase after approval
   - Reviewer: Alexander
-

@@ -14,11 +14,13 @@ Scope: full active/current project identity migration. Historical reviewer and a
 
 ## Current Status
 
+Historical note: this status reflected the repository on 2026-05-30. It is not the live project phase. Use `project/STATUS.md` for current state.
+
 - Identity migration is complete.
 - Brainstorm SEND BACK remediation was completed.
 - Revised Korvin Merrow Brainstorm was reuploaded, passed AutoQC, and received reviewer GO.
 - Clinical Story Skeleton v1 is ratified.
-- World Spec drafting has not started and remains blocked until Alexander explicitly authorizes drafting.
+- At that time, the project had not yet entered World Spec drafting.
 
 ## Files And Paths Changed
 

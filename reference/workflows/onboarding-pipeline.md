@@ -2,9 +2,9 @@
 
 Source indexed: `reference/source/New Writers Version - Instruction Guide (05_24).md`
 
-This workflow captures the onboarding scope and operational gates.
+This workflow captures the original onboarding scope and operational gates. It is preserved as historical/source-derived workflow guidance. For Korvin's live phase after onboarding, use `project/STATUS.md`, `project/PHASE_MAP.md`, `docs/status-dashboard.md`, and `docs/world-pipeline-playbook.md`.
 
-## Current Onboarding Boundary
+## Historical Onboarding Boundary
 
 Onboarding includes Steps 1-6 only.
 
@@ -17,7 +17,7 @@ Onboarding includes Steps 1-6 only.
 
 Onboarding ends after Step 6 approval.
 
-Do not continue to Steps 7-17 until explicitly approved by project leadership and the project phase is updated.
+For Korvin, approval occurred and later steps proceeded under explicit authorization. For any new world, do not continue to Steps 7-17 until explicitly approved by project leadership and the project phase is updated.
 
 ## Phase Boundaries
 
@@ -93,4 +93,3 @@ Phase 4: Evaluate the Agent
 - The physician expert must double-check and validate AI-assisted output.
 - Task prompts, golden responses, and grader guidelines are 100% human-written.
 - AI may QC human-written task prompts, golden responses, or grader guidelines after they exist, but may not write them from scratch.
-

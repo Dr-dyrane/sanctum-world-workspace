@@ -186,7 +186,7 @@ Reviewed for duplicate-purpose files:
 | --- | --- | --- |
 | `.gitignore` | Git hygiene and local-secret protection. | Single root ignore file. |
 | `AGENTS.md` | Codex operating instructions. | Root behavior source; includes current Korvin Merrow active project and locked Clinical Story Skeleton state. |
-| `README.md` | Repository overview and usage guide. | Root orientation only. |
+| `README.md` | Repository overview and usage guide. | Root orientation only; points to live status rather than historical onboarding state. |
 
 ## Project Tracking
 
@@ -242,7 +242,8 @@ Reviewed for duplicate-purpose files:
 | --- | --- | --- |
 | `reference/source/New Writers Version - Instruction Guide (05_24).docx` | Official instruction guide source DOCX. | Preserve unchanged. |
 | `reference/source/New Writers Version - Instruction Guide (05_24).md` | Markdown extraction of official guide. | Operational reading copy; DOCX remains source artifact. |
-| `reference/source/[EXP] Project Sanctum Instruction Document (06_02).docx` | Newer experimental/source instruction document imported for reference. | Preserve unchanged as source evidence; do not silently supersede existing operating rules without explicit review. |
+| `reference/source/[EXP] Project Sanctum Instruction Document (06_02).docx` | Newer experimental/source instruction document imported for reference. | Preserve unchanged as source evidence; reconcile against lived platform gates before changing operating rules. |
+| `reference/source/World 004 QA + Failure + Grader Analysis.docx` | Source/reference example for QA, Failure Analysis, and Grader Analysis workflows. | Preserve unchanged as source evidence; derive rules into runbooks only after explicit review. |
 | `reference/source/_Task Selection Categories For Team.xlsx` | Official task tracker. | Preserve unchanged. |
 | `reference/source/How to Upload Your Clod Transcript.mp4` | Reference/source video for Claude transcript upload handling. | Preserve as source evidence only; do not convert, summarize into governing rules, package, or submit until transcript/upload scope is explicitly authorized. |
 | `reference/source/README.md` | Source material policy. | No proprietary source edits here. |
@@ -262,7 +263,7 @@ These are fetched source/reference examples, not authored Korvin Merrow content 
 | `reference/checklists/brainstorm-checklist.md` | Brainstorm checklist. | Derived operational guidance. |
 | `reference/checklists/reviewer-failure-patterns.md` | Reviewer failure patterns. | General onboarding risks. |
 | `reference/checklists/world-spec-checklist.md` | World Spec checklist. | Older/summary checklist; use v6.3 index for exact checks. |
-| `reference/workflows/onboarding-pipeline.md` | Onboarding workflow summary. | Process reference. |
+| `reference/workflows/onboarding-pipeline.md` | Historical onboarding workflow summary. | Preserved for Steps 1-6 / new-world onboarding; not the live Korvin phase source. |
 
 ## Reference Templates
 
@@ -298,7 +299,8 @@ These are fetched source/reference examples, not authored Korvin Merrow content 
 
 | File | Role | Duplication note |
 | --- | --- | --- |
-| `worlds/korvin-merrow/README.md` | World folder index. | Single junction file; points to active/history/planning/remediation/reviews/submission/prep/construction/file-inventory folders. |
+| `worlds/korvin-merrow/README.md` | World folder index. | Single junction file; points to current task/pipeline entry points and historical lifecycle folders. |
+| `worlds/korvin-merrow/00-MASTER-NARRATIVE.md` | Readable end-to-end account of Korvin build, Task 1 review rounds, major mistakes, and carry-forward lessons. | Orientation artifact only; canonical details remain in status, maps, lifecycle logs, locked artifacts, and review records. |
 
 ## Korvin Merrow Active Files
 
@@ -899,6 +901,7 @@ Current contents:
 - `worlds/korvin-merrow/task-setup/reviews/task1-second-human-review-ao-2026-06-06.md`: formal Abi round-2 review learning record. Records that the corrected v3 task was too easy because all trajectories scored >=90, the need for a significant clinical failure, and FA/GA prose-format requirements.
 - `worlds/korvin-merrow/task-setup/reviews/task1-final-review-ao-2026-06-06.md`: formal Abi final-review record. Records Task 1 final review complete / approved, the golden header-placement note, and the no-QC-rerun reviewer decision.
 - `worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md`: repeatable per-task RLS runbook distilled from Task 1 setup, AutoQC, trajectory, and QA lessons.
+- `worlds/korvin-merrow/task-setup/CHECKPOINT-AUDIT-pre-task2.md`: pre-Task 2 checkpoint audit. Consolidates Task 1 error ledger, 06/02 alignment, and the resolved native grader-format rule for Task 2 preparation.
 - `worlds/korvin-merrow/task-setup/step10-review-packet.md`: Step 10 review packet mapping six tasks to held-back task files, drafting de-hinted platform prompt candidates, listing candidate holdback-file edits requiring Alexander rulings, and mapping FI IDs to platform filenames for later GG/EO translation.
 - `worlds/korvin-merrow/task-setup/platform/task1/`: Task 1 platform provenance and hardening draft folder. Contains uploaded/superseded task files, prompt v2-v5, golden-response v1-v6 DOCX files, grader-guideline v1-v10 TXT files, and the hardening handoff `medication_safety_handoff_pharmacy_05232026.docx` plus PDF render. The final Task 1 platform set passed through pilot runs, FA/GA, PL, and final human review; earlier v3/v5 rework files are historical after Abi round-2 send-back.
 - `worlds/korvin-merrow/task-setup/platform/task1/preference-label-task1-A-vs-B.md`: Task 1 Step 15 Preference Labeling backup. Records the selected A/B pair, B1 decision, guardrails, and paste-ready justification.

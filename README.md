@@ -12,24 +12,17 @@ Project Sanctum Worlds are realistic clinical environments that test frontier AI
 
 - Active world: Korvin Merrow World
 - RL Studio task ID: `cyau8803`
-- Brainstorm status: approved after SEND BACK remediation
-- Brainstorm AutoQC: revised pass achieved, `0 failed / 51 passed`
-- Human review: GO from Stacey S
-- Current gate: Identity Package v1 locked / ready for Governance Package
-- World Spec: preparation packet exists, but drafting has not started and remains blocked until Alexander explicitly authorizes drafting
+- World Spec: approved by Stacey S after RL Studio upload and Spec AutoQC.
+- World created: `Healthcare_247_Merrow`, with Final Files AutoQC 78/78 after three revisions.
+- Task 1: final human review complete / approved by Abi Osagie on 2026-06-06.
+- Current gate: await Alexander-authorized next task/pipeline step, likely Task 2 setup.
+- Live state source: `project/STATUS.md`. This README is only the front door.
 
-## Onboarding Scope
+## Current Boundary
 
-Current scope is Project Sanctum Phase 1 World Building onboarding, steps 1-6 only:
+Onboarding Steps 1-6 are complete for Korvin. Later production-pipeline work has begun under explicit authorization, but every new RL Studio action, task upload, agent run, QA run, AutoQC response, scoring artifact, package, upload, or submission still requires exact Alexander authorization before execution.
 
-1. Brainstorm
-2. Brainstorm AutoQC
-3. Human Brainstorm Review
-4. World Spec Document
-5. World Spec AutoQC
-6. Human World Spec Review
-
-Do not move into synthetic file generation, production task creation, golden responses, grader guidelines, failure analysis, preference labeling, or downstream evaluation unless Alexander explicitly updates the project phase.
+Historical onboarding-only checklists are preserved under `project/` and `reference/`, but `project/STATUS.md`, `project/PHASE_MAP.md`, `docs/status-dashboard.md`, `docs/world-pipeline-playbook.md`, and `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md` now govern the live phase.
 
 ## Active World
 
@@ -39,12 +32,9 @@ The clinical design principle is realistic hospital complexity, not a rare disea
 
 ## Workflow Phases
 
-- Brainstorm: concept pitch with World Setup, Frictions, Traps, and Rough Task Ideas.
-- Brainstorm AutoQC: automated RL Studio check.
-- Human Brainstorm Review: reviewer returns `GO` or `SEND BACK`.
-- World Spec preparation: allowed after Brainstorm GO, including identity/governance/story readiness work.
-- World Spec drafting: begins only after Alexander explicitly authorizes drafting.
-- World Spec AutoQC and Human Review: onboarding ends after Step 6 approval.
+- Brainstorm, World Spec, file ecosystem, submission preparation, execution artifact generation, Step 9 file review, and Task 1 setup/evaluation are historical for Korvin.
+- Current repeatable operating layer is task-pipeline support: task setup, agent runs, QA, FA/GA, PL, and final review, one authorized step at a time.
+- Do not infer permission to continue from completed history; use the current phase in `project/STATUS.md`.
 
 ## Folder Structure
 
@@ -101,8 +91,10 @@ For a new collaborator or a future AI session, use this order:
 
 1. [project/STATUS.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/project/STATUS.md>) for live state.
 2. [project/WORKSPACE_FILE_MAP.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/project/WORKSPACE_FILE_MAP.md>) for where things live and what not to duplicate.
-3. [worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md>) for the current World Spec cockpit.
-4. [worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md>) for the ratified Clinical Story Skeleton.
+3. [docs/status-dashboard.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/docs/status-dashboard.md>) for the quick dashboard.
+4. [worlds/korvin-merrow/00-MASTER-NARRATIVE.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/00-MASTER-NARRATIVE.md>) for the readable end-to-end story.
+5. [worlds/korvin-merrow/task-setup/task1-lifecycle-log.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/task-setup/task1-lifecycle-log.md>) for Task 1 history and lessons.
+6. [worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md>) before any future task setup.
 
 Do not start by browsing every prep file. Most prep files are supporting memory, not active instructions.
 
@@ -123,7 +115,7 @@ Do not start by browsing every prep file. Most prep files are supporting memory,
 - Keep official source and templates under `reference/`.
 - Keep current project state under `project/`.
 - Keep durable documentation under `docs/`.
-- Keep world-specific authored work under `worlds/korvin-merrow/active/`.
+- Keep world-specific authored/canonical work under `worlds/korvin-merrow/` lifecycle folders; `active/` is historical/current-authored context, not the only active surface.
 - Keep world-specific historical artifacts under `worlds/korvin-merrow/history/`.
 - Keep reviewer remediation briefs under `worlds/korvin-merrow/remediation/`.
 - Keep review artifacts in `worlds/korvin-merrow/reviews/`.
@@ -138,7 +130,7 @@ Do not start by browsing every prep file. Most prep files are supporting memory,
 - Claude: official Sanctum drafting assistant for structure, formatting, consistency, and template-heavy drafting after the guide recommends it.
 - ChatGPT: ad hoc reasoning/review support if used, subject to the same source-of-truth and authorship boundaries.
 
-AI may organize, critique, audit, and format. AI must not originate final clinical decisions, task prompts, golden responses, grader guidelines, or downstream evaluation content outside the authorized phase.
+AI may organize, critique, audit, and format. AI must not originate final clinical decisions, task prompts, golden responses, grader guidelines, or downstream evaluation content outside the authorized phase. Task prompts, goldens, grader guidance, FA/GA, and PL remain physician-owned even when AI helps review or de-risk them.
 
 ## Source-Of-Truth Policy
 
