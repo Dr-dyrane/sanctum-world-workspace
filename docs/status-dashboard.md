@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-**WORLD CREATED (6/5/2026, 11:20 AM PDT): Healthcare_247_Merrow is live. Step 9 COMPLETE. Current stage: Task 1 Task Writing / trajectory QA.**
+**WORLD CREATED (6/5/2026, 11:20 AM PDT): Healthcare_247_Merrow is live. Step 9 COMPLETE. Current stage: Task 1 corrective Task Writing revision.**
 
 - Final Files AutoQC: PASS 78/78 (after 3 revisions; full chain in `worlds/korvin-merrow/file-review/file-review-log.md`).
 - World ID: `world_d50c832ac6474a68ba982a77e28a6bbe`; synced snapshot `snap_0fb032e95b324710b12a7432cf7da6c1`, 26 files, sync complete.
@@ -12,7 +12,7 @@
 - Pod: `#vaguspod`; EPM Rose; pod leads Abi O and Larry E. Pod welcome thread is the home base for world/task communications.
 - Task 1 source of truth: `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`.
 - Task runbook: `worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md`.
-- Task 1 state: platform setup completed; Task AutoQC passed 64/64 after remediation; ten Taiga trajectories ran; active work is Section 4 Taiga QA plus Section 5 Feedback Review before Failure Analysis / Grader Analysis.
+- Task 1 state: platform setup completed; Task AutoQC passed 64/64 after remediation; ten Taiga trajectories ran; Taiga EL-2/DQ-2 showed grader access to `/docs/filesystem` via `include_input_files=true`; active work is Go Back to Task Writing with v4 `/docs`-aware grader guidelines and revised medication-reconciliation request memo, then rerun Task AutoQC and trajectories.
 - Local trajectory export: one Task 1 trajectory captured under `worlds/korvin-merrow/task-setup/task1/trajectories/v1/`; the other nine are not yet exported locally.
 - Step 10/11 source guidance: instruction doc 06_02 sections "How to Set up Your Task in RLS", Golden Response, Grader Guidelines, plus lived Task 1 lessons in `docs/world-pipeline-playbook.md` sections A2-A4.
 
@@ -170,9 +170,9 @@
 - Human World Spec Review: APPROVED by Stacey S; approval record `worlds/korvin-merrow/reviews/reviewer-spec-approval-01.md`
 - Reviewer routing correction: Reference File Origin labels corrected to the template-canonical `Custom Made` token and re-uploaded
 - No GG-KM07 exists
-- Current phase: Task 1 Task Writing / trajectory QA
+- Current phase: Task 1 corrective Task Writing revision
 - Active Task 1 lifecycle log: `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`
-- Task 1 platform provenance: `worlds/korvin-merrow/task-setup/platform/task1/`
+- Task 1 platform provenance: `worlds/korvin-merrow/task-setup/platform/task1/` (`grader-guidelines-task1-v4.txt` is the current template; v3 is superseded)
 - Tasks 2-6 prep packet: `worlds/korvin-merrow/task-setup/step10-review-packet.md`
 - Active file-review protocol: `worlds/korvin-merrow/file-review/file-review-protocol.md`
 - Active Claude-assisted triage: `worlds/korvin-merrow/file-review/findings-triage.md`
@@ -236,7 +236,7 @@
 - Fetched World Spec example source documents: `reference/word-spec-examples/` (local-only / gitignored)
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 - World Spec prep folder structure: reorganized by lifecycle buckets (`candidate-review/`, `locked/`, `ratifications/`, `reviews/`, `decision-logs/`, `planning-scaffolds/`)
-- Current phase: Task 1 Task Writing / trajectory QA. Step 9 generated-file review is complete, Final Files AutoQC passed 78/78, and `Healthcare_247_Merrow` is live. Task 1 platform setup, Task AutoQC, and trajectory run have occurred under Alexander's operation; the next work is Section 4/5 QA feedback review, then Failure Analysis / Grader Analysis only after the platform gate. Do not access RL Studio, upload additional task prompts/goldens/grader guidelines, run additional agents, run additional QA, create platform responses, create AutoQC responses, create scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifests, final submission packages, additional uploads, or additional submissions until explicitly authorized.
+- Current phase: Task 1 corrective Task Writing revision. Step 9 generated-file review is complete, Final Files AutoQC passed 78/78, and `Healthcare_247_Merrow` is live. Task 1 platform setup, Task AutoQC, and trajectory run have occurred under Alexander's operation; Taiga QA triggered a Go Back decision to correct the grader-guideline fabrication clause and memo word-target language before rerun. Do not access RL Studio, upload additional task prompts/goldens/grader guidelines, run additional agents, run additional QA, create platform responses, create AutoQC responses, create scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifests, final submission packages, additional uploads, or additional submissions until explicitly authorized.
 
 ## Tooling
 
@@ -258,7 +258,7 @@
 - Do not treat fetched World Spec examples as authored Korvin Merrow content or source-of-truth material.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
 - Do not modify clinical content beyond reviewer-required remediation without Alexander approval.
-- Do not proceed beyond the current Task 1 trajectory QA / feedback-review state into Failure Analysis, Grader Analysis, preference labeling, additional task uploads, additional agent runs, additional QA runs, platform responses, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifest creation, final submission packaging, additional uploads, or additional submission actions without explicit authorization.
+- Do not proceed beyond the current Task 1 corrective Task Writing revision into Failure Analysis, Grader Analysis, preference labeling, additional task uploads, additional agent runs, additional QA runs, platform responses, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifest creation, final submission packaging, additional uploads, or additional submission actions without explicit authorization.
 - Do not access RL Studio again without explicit authorization.
 - Do not end a working session without applying collaborator session-exit discipline.
 ## Execution Artifact Generation Outputs

@@ -6,7 +6,7 @@ Derived from Task 1 (KM01) lived 6/5/2026: 9 AutoQC fails on first pass, all pre
 - [ ] De-hint the task's request file(s) per task-setup/step10-review-packet.md section 3. Integrity-gate every docx (EOCD + styles.xml + opens). Keep last-valid copies.
 - [ ] Confirm task files DO NOT duplicate any of the 26 world files (collision = blank trajectories). Check by filename against the synced world set.
 - [ ] Draft the platform prompt in clinician voice (short; scoping lives in the attached memo, not the prompt). Physician edits + owns it - prompts must be writer-authored.
-- [ ] Build grader guidelines GOLDEN-ONLY from grader-guidelines-task1-v3.txt template. Required structure, in this order: (1) Task context paragraph; (2) Golden reference - name the EXACT uploaded golden filename; (3) Must be present and correct; (4) Acceptable variation; (5) Penalize for. NO A/B/C labels, NO "Non-negotiables"/weighting/classification language, varied prose (not uniform bullet openings). Fabrication + copy-forward checks anchored to the GOLDEN, never "the source documents."
+- [ ] Build grader guidelines from grader-guidelines-task1-v4.txt template (the /docs-aware version). Required structure, in this order: (1) Task context paragraph; (2) Golden reference - name the EXACT uploaded golden filename; (3) Must be present and correct; (4) Acceptable variation; (5) Penalize for. NO A/B/C labels, NO "Non-negotiables"/weighting/classification language, varied prose (not uniform bullet openings). Fabrication check: chart-sourced specifics (the grader has /docs/filesystem/) are CORRECT, not fabrication; penalize only specifics unsupported by the chart and not derivable from the golden. Copy-forward check: framed as per-medication reasoning vs reproduced list (golden-assessable). Expect the AutoQC Self-Contained warning and JUSTIFY it with the include_input_files evidence (see gotcha 5).
 - [ ] Build the golden upload docx in committed chart register (clinical-voice-lessons.md): terse, first-person dispositions ("I would defer X; the AKI is too recent"), numbered by disposition to mirror the requested deliverable, ZERO meta-commentary paragraph, break parallel "should be X unless" stacks, drop coined modifiers. Physician reads + owns the committed calls. Keep golden v1 (locked-content) + v2 (shipped) side by side for the diff.
 
 ## B. On-clock RLS entry (1.1-1.4) - SAVE AFTER EVERY STEP
@@ -18,7 +18,7 @@ Derived from Task 1 (KM01) lived 6/5/2026: 9 AutoQC fails on first pass, all pre
 
 ## C. Task AutoQC (2.x)
 - [ ] Run Task AutoQC. Rerun N failing ONLY (never full reruns).
-- [ ] Expected residual = "Self-Contained Guidelines" warning ONLY IF guidelines reach into the chart. With golden-anchored checks (step A) it should not fire. If any guideline/golden/prompt flag fires, fix per A3 - do not justify structural flags, rebuild them.
+- [ ] Expected residual = "Self-Contained Guidelines" warning (the /docs-aware fabrication check intentionally references the chart). JUSTIFY it in 2.2 with the include_input_files evidence - do not fix to golden-only (that mis-fires the fabrication check, per Taiga EL-2). Other structural guideline/golden/prompt flags: rebuild per A3, do not justify.
 - [ ] 2.2 Notes (required even on pass): short resolution summary.
 - [ ] Mark reviewed -> Run Taiga Trajectories & QA. CLOCK OFF during the run.
 
@@ -36,6 +36,6 @@ Derived from Task 1 (KM01) lived 6/5/2026: 9 AutoQC fails on first pass, all pre
 2. Grader-guideline gate wants native structure, NOT the golden-response A/B/C format. A/B/C trips No Weight Distribution + Human-Written.
 3. Golden reads LLM if it has parallel modal stacks, coined modifiers, or a self-reviewing closing paragraph. Chart register fixes it.
 4. Golden filename in GG must match the uploaded file exactly (v2, not v1).
-5. Self-Contained warning = FIX (golden-anchor the checks), not justify. The Taiga grader grades golden-primary (instruction doc ~line 2387), it is not handed the chart.
+5. CORRECTED 6/5 (Taiga EL-2 evidence): the Taiga grader IS handed the chart - include_input_files=true mounts /docs/filesystem/ with all source files (confirmed in grader transcripts). So write the fabrication + copy-forward checks to CROSS-CHECK /docs (chart-sourced specifics are correct, not fabrication), and JUSTIFY the AutoQC "Self-Contained Guidelines" warning with the include_input_files evidence rather than fixing to golden-only. Golden-only anchoring is factually wrong here and mis-fires the fabrication check on legitimate chart specifics (the low-detail golden contains none of them). Build Tasks 2-6 guidance from grader-guidelines-task1-v4.txt (the /docs-aware version), NOT v3.
 6. Control chars can hide in source text - scan and sanitize before DOCX build.
 7. On any contested QC disposition that turns on platform behavior, run a cold-context Claude pass before deciding (A4).

@@ -4,7 +4,7 @@ Purpose: enable a brand-new Claude session to resume accurately without stale as
 
 ## Where We Are
 
-Project Sanctum onboarding is complete for Korvin Merrow. World Spec approval is complete, engineering pipeline run #1 completed, Step 9 generated-file review is closed, Final Files AutoQC passed 78/78 after three revisions, and the world was created as `Healthcare_247_Merrow` on 2026-06-05 at 11:20 AM PDT. Pod assignment is `#vaguspod`; EPM Rose; pod leads Abi O and Larry E. Task 1 setup completed in Task Writing, Task AutoQC passed 64/64 after remediation, ten Taiga trajectories ran, and the active stage is Task 1 trajectory QA / feedback review. The Step 9 audit trail remains in `worlds/korvin-merrow/file-review/`, especially `file-review-protocol.md`, `time-strategy-and-state.md`, `findings-triage.md`, and `file-review-log.md`. The canonical Task 1 lifecycle record is `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`.
+Project Sanctum onboarding is complete for Korvin Merrow. World Spec approval is complete, engineering pipeline run #1 completed, Step 9 generated-file review is closed, Final Files AutoQC passed 78/78 after three revisions, and the world was created as `Healthcare_247_Merrow` on 2026-06-05 at 11:20 AM PDT. Pod assignment is `#vaguspod`; EPM Rose; pod leads Abi O and Larry E. Task 1 setup completed in Task Writing, Task AutoQC passed 64/64 after remediation, ten Taiga trajectories ran, and Taiga QA triggered a corrective Go Back decision after showing the grader has `/docs/filesystem` via `include_input_files=true`. The active stage is Task 1 corrective Task Writing revision. The Step 9 audit trail remains in `worlds/korvin-merrow/file-review/`, especially `file-review-protocol.md`, `time-strategy-and-state.md`, `findings-triage.md`, and `file-review-log.md`. The canonical Task 1 lifecycle record is `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`.
 
 Pipeline run #1 / Step 9 closeout state:
 
@@ -38,9 +38,9 @@ RL Studio:
 - Approval source: Slack / Stacey S
 - Reviewer message: "great job! I approved your brainstorm. Next steps are to move forward with world spec and file template development."
 
-Current state: Task 1 Task Writing / trajectory QA. Pipeline run #1 output and the Step 9 audit trail are preserved under `worlds/korvin-merrow/file-review/`; final edits, integrity checks, platform lessons, and the upload/holdback split are recorded in `worlds/korvin-merrow/file-review/file-review-log.md`. Task 1 platform provenance and current action sequence are preserved under `worlds/korvin-merrow/task-setup/`, with `task1-lifecycle-log.md` winning over scattered summaries. Historical locked artifacts remain complete; do not reopen them unless Alexander explicitly authorizes it. Additional RL Studio task mutation, task-material uploads, agent runs, QA runs, AutoQC responses, rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX submission packaging, manifest creation, final submission packages, upload, submission, and RL Studio access remain gated on explicit Alexander authorization for the relevant step.
+Current state: Task 1 corrective Task Writing revision. Pipeline run #1 output and the Step 9 audit trail are preserved under `worlds/korvin-merrow/file-review/`; final edits, integrity checks, platform lessons, and the upload/holdback split are recorded in `worlds/korvin-merrow/file-review/file-review-log.md`. Task 1 platform provenance and current action sequence are preserved under `worlds/korvin-merrow/task-setup/`, with `task1-lifecycle-log.md` winning over scattered summaries. Current Task 1 replacement artifacts are `grader-guidelines-task1-v4.txt` and the revised discharge medication reconciliation request memo. Historical locked artifacts remain complete; do not reopen them unless Alexander explicitly authorizes it. Additional RL Studio task mutation, task-material uploads, agent runs, QA runs, AutoQC responses, rubrics, scoring thresholds, pass/fail bands, point allocations, DOCX submission packaging, manifest creation, final submission packages, upload, submission, and RL Studio access remain gated on explicit Alexander authorization for the relevant step.
 
-Repository collaboration readiness note: a new Codex or Claude session can reconstruct the repository state from repository files alone. The repository is collaboration-ready because `project/STATUS.md`, `docs/status-dashboard.md`, `project/PHASE_MAP.md`, `project/WORKSPACE_FILE_MAP.md`, `docs/world-pipeline-playbook.md`, `worlds/korvin-merrow/file-review/`, `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`, and this handoff converge on Task 1 Task Writing / trajectory QA. The canonical file map is `project/WORKSPACE_FILE_MAP.md`.
+Repository collaboration readiness note: a new Codex or Claude session can reconstruct the repository state from repository files alone. The repository is collaboration-ready because `project/STATUS.md`, `docs/status-dashboard.md`, `project/PHASE_MAP.md`, `project/WORKSPACE_FILE_MAP.md`, `docs/world-pipeline-playbook.md`, `worlds/korvin-merrow/file-review/`, `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`, and this handoff converge on Task 1 corrective Task Writing revision. The canonical file map is `project/WORKSPACE_FILE_MAP.md`.
 
 Cross-artifact consistency verification is a standing governance rule. Before creating, modifying, ratifying, or locking architecture, inventory, matrix, mapping, coverage table, workflow table, trap table, friction table, hierarchy table, or governance artifacts, cross-check applicable locked canonical sources and document any expansion, narrowing, redistribution, reprioritization, relabeling, or reclassification before ratification or lock. Do not silently promote historical, planning, superseded, tracker, or provenance metadata into governing architecture.
 
@@ -385,14 +385,14 @@ Do not:
 
 ## Current Best Claude Task
 
-If asked to help now, Claude should support Task 1 trajectory QA / feedback review and Tasks 2-6 setup preparation:
+If asked to help now, Claude should support Task 1 corrective Task Writing revision and Tasks 2-6 setup preparation:
 
 - use `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md` as the canonical Task 1 state source;
-- help read trajectory outputs for trap handling, fabrication checks, consultant-friction preservation, and source-hierarchy behavior;
-- support Section 4/5 QA-feedback response drafting only after Alexander supplies the exact platform flags;
-- do not start Failure Analysis / Grader Analysis until the platform gate has been clicked;
+- preserve the v4 `/docs`-aware guideline correction: the grader has `/docs/filesystem`; chart-sourced specifics are not fabrication;
+- support replacement of Task 1 grader guidance with `grader-guidelines-task1-v4.txt` and the revised request memo when Alexander authorizes/executes the platform Go Back;
+- do not start Failure Analysis / Grader Analysis until the corrected Task AutoQC/trajectory rerun completes and Alexander authorizes that gate;
 - for Tasks 2-6, review/de-hint task prompts against final generated files and the physician-perspective rule;
-- for Tasks 2-6, build from Task 1's golden-only grader guideline structure rather than the older A/B/C pattern;
+- for Tasks 2-6, build from Task 1's v4 `/docs`-aware grader guideline structure rather than v3/golden-only or the older A/B/C pattern;
 - preserve trap fidelity, especially prednisone ambiguity, EW22 incompleteness, buried functional evidence, and consultant-friction balance;
 - keep Step 9 file-review provenance in `worlds/korvin-merrow/file-review/`, not in the original onboarding transcript.
 

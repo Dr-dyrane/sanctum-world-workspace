@@ -19,7 +19,7 @@ Onboarding scope:
 
 Current Korvin status: Step 5 World Spec AutoQC is complete at 108/109, with the sole open prednisone dose/frequency warning preserved as intentional design and justified in notes. Step 6 Human Review: World Spec is APPROVED by Stacey S. The requested Reference File Origin routing correction was resolved and re-uploaded.
 
-Onboarding approval condition has been met. Official production pipeline position: Task-Level Materials / Task Writing / trajectory QA. World-level Files are complete: Step 9 generated-file review closed, Final Files AutoQC passed 78/78 after three revisions, and `Healthcare_247_Merrow` was created on 2026-06-05 with 26 world files synced. Task 1 setup completed, Task AutoQC passed 64/64 after remediation, ten Taiga trajectories ran, and active work is Section 4 Taiga QA plus Section 5 Feedback Review before Failure Analysis / Grader Analysis. The canonical Task 1 lifecycle log is `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`; Tasks 2-6 planning remains in `worlds/korvin-merrow/task-setup/step10-review-packet.md`.
+Onboarding approval condition has been met. Official production pipeline position: Task-Level Materials / corrective Task Writing revision. World-level Files are complete: Step 9 generated-file review closed, Final Files AutoQC passed 78/78 after three revisions, and `Healthcare_247_Merrow` was created on 2026-06-05 with 26 world files synced. Task 1 setup completed, Task AutoQC passed 64/64 after remediation, ten Taiga trajectories ran, and Taiga QA triggered a Go Back decision: replace grader guidance with `grader-guidelines-task1-v4.txt`, replace the revised request memo, rerun Task AutoQC, justify the expected Self-Contained warning using `include_input_files=true` / `/docs/filesystem` evidence, and rerun trajectories before Failure Analysis / Grader Analysis. The canonical Task 1 lifecycle log is `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`; Tasks 2-6 planning remains in `worlds/korvin-merrow/task-setup/step10-review-packet.md`.
 
 ### Phase 2: Build Your Files And Tasks
 
@@ -33,7 +33,7 @@ Korvin Merrow current exception: Alexander has explicitly authorized local, batc
 
 Goal: Address Task AutoQC findings and complete trajectory/grading audit.
 
-Status: Task 1 has entered trajectory QA under Alexander's platform operation. Section 4 Taiga QA and Section 5 Feedback Review are active for Task 1. Further task uploads, additional agent runs, additional QA runs, platform responses, Failure Analysis / Grader Analysis, and preference labeling remain gated on explicit Alexander authorization for the exact action.
+Status: Task 1 has entered corrective Task Writing revision under Alexander's platform operation after Taiga QA. Further task uploads beyond the Task 1 corrective replacement, additional agent runs, additional QA runs, platform responses, Failure Analysis / Grader Analysis, and preference labeling remain gated on explicit Alexander authorization for the exact action.
 
 ### Phase 4: Evaluate The Agent
 
