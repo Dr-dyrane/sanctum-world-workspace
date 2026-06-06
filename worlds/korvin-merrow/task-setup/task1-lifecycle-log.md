@@ -130,9 +130,18 @@ SUPERSEDED NEXT: mark reviewed + submit 2/68 -> Run Taiga Trajectories & QA (bat
 - WRITER NOTE to Abi submitted: removing task files raised+tightened scores (mean 94, lowest 90); metformin omission did not recur; the prednisone trap is the consistent discriminator; task is realistic+clean but tractable - offer to harden or accept, her call.
 - FA/GA AutoQC (7.1) ROUND 2 = PASS 14/14 (qcaud_a8). The "Human-Written (Grader Analysis)" false positive that fired last round (qcaud_f5, 1/14) did NOT recur this round - clean board, no justification needed. 7.2 notes = clean-pass summary. Marked reviewed + submitted. Task 1 now back to Abi for SECOND human review.
 
+## ABI ROUND-2 REVIEW (6/6, SEND BACK - harden task)
+Reviewer: Abimbola O / Abi. First quick check: golden header hospital/location issue already resolved - she verified "we are all good" on the header realism point.
+
+Main verdict: FA/GA improved, responsiveness appreciated, but Task 1 still cannot clear because all 10 v3 trajectories scored at least 90. Abi's rule for clearance: the task needs a significant clinical failure and at least one trajectory below 90, with a preference for below 70 when possible, though not a hard rule.
+
+Required next direction: redo / harden Task 1 so the model has a real chance to fail clinically. Abi suggested asking Claude for hardening ideas and potentially adding back a med-safety handoff with a trap or red herring, as long as dates are accurate and realism defects do not return. Do not simply restore the old answer-giving handoff; any hardening file must create difficulty without becoming an answer file.
+
+FA/GA formatting note: content is much better, but future/resubmitted FA and GA should be natural prose with complete sentences, not bullets, and should remove section headers. Abi supplied sample FA/GA prose. She offered to review the next version before submission to protect the bonus.
+
 ## RESUME HERE (next session)
-- Task 1: Abi first human review returned SEND BACK / rework required. RLS rework entry, Task AutoQC rerun, batch v3 Taiga trajectories/QA, and single-run FA/GA rewrite are complete.
-- Immediate Task 1 path: wait for Abi round-2 review / hardening ruling. Do not redesign Task 1, enter Tasks 2-6, or run additional platform steps unless Alexander explicitly authorizes the exact action.
+- Task 1: Abi round-2 review returned SEND BACK / hardening required. RLS rework entry, Task AutoQC rerun, batch v3 Taiga trajectories/QA, and single-run FA/GA rewrite are complete, but v3 was too easy with all trajectories >=90.
+- Immediate Task 1 path: harden/redesign Task 1 under physician control, then pre-check with Abi before resubmission. Do not enter Tasks 2-6 or run additional platform steps unless Alexander explicitly authorizes the exact action.
 - Open threads when ready: (1) any residual world-level inline-bold de-leak in the LIVE world files (same selective-emphasis pattern); (2) Tasks 2-6 = wait until Task 1 pattern is stable, then run TASK-RUNBOOK top to bottom using the post-Abi realism gate, mechanism-agnostic grader language, and clinical-register/chart-format goldens.
 - Admin: update RL Studio Pod Selection to Vagus; check earnings for the $2,000 milestone (Rachel: today or by Fri 6/12); keep all pod comms in the #vaguspod welcome thread.
 
