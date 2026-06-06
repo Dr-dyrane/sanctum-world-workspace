@@ -4,7 +4,7 @@ Date: 2026-06-04. Written at Korvin Merrow spec-submission (108/109, prednisone-
 
 ## A. Korvin: forward pipeline (stages 7-17)
 
-Current position: Steps 1-9 COMPLETE. World created 6/5/2026 as **Healthcare_247_Merrow** (world_d50c832ac6474a68ba982a77e28a6bbe, 26 files synced, snap_0fb032e95b324710b12a7432cf7da6c1). Task 1 auto-created in Task Writing stage. Active stage: Step 10 task setup.
+Current position: Steps 1-9 COMPLETE. World created 6/5/2026 as **Healthcare_247_Merrow** (world_d50c832ac6474a68ba982a77e28a6bbe, 26 files synced, snap_0fb032e95b324710b12a7432cf7da6c1). Task 1 setup completed, Task AutoQC passed 64/64 after remediation, ten Taiga trajectories ran, and active work is Section 4 Taiga QA plus Section 5 Feedback Review before Failure Analysis / Grader Analysis. Canonical Task 1 lifecycle source: `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`.
 
 ## A2. Step 10 verbatim requirements (instruction doc 06_02, "How to Set up Your Task in RLS" + Golden Response + Grader Guidelines sections; read 6/5)
 
@@ -26,7 +26,37 @@ Self-QC before upload (optional per doc, mandatory for us): writer prompt docs a
 
 Note: task prompts must be writer-authored (doc line 876, non-negotiable: "the actual task prompt has to come from the writer, not the LLM"). Ours are - all 6 TP locked under Alexander's authorship; Claude's role is de-hinting and format translation only.
 
-## A3. Later-phase reminders from instruction doc 06_02
+## A3. Task AutoQC lessons from Task 1 (Step 11, lived 6/5) - apply to Tasks 2-6
+
+Task 1 went 9/68 fail -> 1/68 (warning) in one rerun. The 9 fails clustered, and every cluster is preventable on the next tasks:
+
+1. ATTACHMENT PERSISTENCE (3 fails: No Missing Files, Prompt Self-Contained, References Only Available Resources). Cause: task files staged but not saved - "Save File Changes" in 1.3 is separate from the top "Save Changes". The prompt promised attachments the auditor could not see. FIX: after 1.3, click Save File Changes, refresh, confirm files show as uploaded (not "staged for upload") BEFORE running AutoQC. Any prompt that says "attached" hard-requires this.
+
+2. GRADER GUIDELINE STRUCTURE (4 fails: Task Context Section, Golden Answer Referenced, No Weight Distribution, Human-Written Guidelines). Cause: I first built GG in the doc's golden-response A/B/C structure - WRONG for the grader-guideline gate. The Task AutoQC wants: (a) an opening Task Context paragraph (patient, scenario, sources, deliverable); (b) the golden named by its exact uploaded filename; (c) native sections "Must be present and correct" + "Acceptable variation" + "Penalize for" (NOT labeled A/B/C, NOT "Non-negotiables", NOT classification/weighting language - those trip No Weight Distribution); (d) varied prose, not uniform participial bullet openings (trips Human-Written). Template saved as grader-guidelines-task1-v2.txt - clone its structure for KM02-06.
+
+3. GOLDEN VOICE (2 fails: Golden Answer Human-Written + the formatting-leakage echo). Cause: locked goldens read as LLM essays - parallel modal stacks ("should be X unless/if/until" x6), coined compound modifiers ("source-aware, staged reconciliation"), and a closing meta-paragraph reviewing the answer's own epistemology. FIX per docs/clinical-voice-lessons.md: terse chart register, committed first-person dispositions ("I would defer spironolactone; the AKI is too recent"), numbered by disposition to mirror the requested deliverable, DELETE any meta-commentary paragraph. Drop "should be" count to ~0. Physician must read and own the committed calls before upload.
+
+4. GOLDEN FILENAME SYNC: if you upload golden-...-v2.docx, the GG "Use [filename] as the benchmark" sentence must name v2 exactly, or Golden Answer Referenced fails on filename match.
+
+5. "Self-Contained Guidelines" warning - FIX, do not justify. Initially mis-called this a false positive (assumed the grader has world_fs at grading time). The instruction doc's own example grader guidance grades GOLDEN-PRIMARY: "Use the golden as your reference for what's supported by the source files... the grader has no independent way to verify the underlying clinical claim" (doc ~line 2387). The Task AutoQC AUDITOR reads world_fs, but the Taiga GRADER works from the golden as the verifiability proxy. So any guideline check that reaches into the chart (fabrication "nor the source documents"; copy-forward against home list/MAR/snapshot) trips this. FIX without weakening: (a) fabrication -> anchor to the golden only ("not present in or directly supported by the golden"), drop "nor the source documents"; (b) copy-forward -> reframe as "reason about each medication rather than reproduce a list... the golden illustrates the expected per-medication reasoning" (presence/absence of per-med reasoning is golden-assessable). Both checks survive at full strength; clears to 0/68. Template: grader-guidelines-task1-v3.txt. Build KM02-06 guidelines golden-only from the start so this never re-fires.
+
+6. RERUN DISCIPLINE held: "Rerun N failing" only, never full reruns.
+
+## A4. Method lesson from the independent claude.ai review (how the Self-Contained fix was reached)
+
+My first instinct on the warning was to JUSTIFY it as a false positive. An independent claude.ai review (fresh context, fed the same flag) argued FIX instead, and was right. Worth keeping because the reasoning method beats the specific answer:
+
+1. It made the call ride on ONE empirical fact and named it: "does the grader receive world_fs/ at grading time?" Instead of asserting, it routed both branches - if grader has the chart, justify; if golden-only, fix - so the decision could not be wrong, only the premise.
+2. It resolved the premise from EVIDENCE, not assumption. The instruction doc's own example grader guidance (~line 2387) reads "use the golden as your reference for what's supported by the source files... the grader has no independent way to verify the underlying clinical claim" = golden-primary grading. My justify-recommendation had silently assumed the opposite. Lesson: when a flag's disposition depends on platform behavior, find where the doc DEMONSTRATES that behavior before deciding.
+3. It caught an INTERNAL INCONSISTENCY in our own artifact: the fabrication clause said "no independent way to verify" (golden-only logic) AND "nor the source documents" (chart-access logic) in the same sentence. A flag is often pointing at a real contradiction you shipped, not just a checkbox. Read the flagged text for self-consistency first.
+4. It distinguished "permissible" from "robust." A justified warning can pass, but a self-contained guideline is the stronger artifact and removes a standing assumption. Default to the version that doesn't depend on a premise you cannot control.
+5. Boundary held throughout: grader-standard wording stayed physician-owned; the reviewer drafted candidates, Alexander finalized. Same rule we use.
+
+Operating takeaway: a second cold-context Claude pass on a contested flag is cheap and catches premise errors the working context is anchored to. Use it on any QC disposition that turns on "how does the platform actually behave."
+
+Provenance pattern that worked: keep golden v1 (locked-content upload) AND v2 (shipped rewrite) side by side in task-setup/platform/taskN/ so the diff documents exactly what was changed and why. If the platform-facing rewrite should become the canonical clinical standard, get explicit Alexander authorization before editing the locked source. Golden-KM01 received that authorized chart-register wording cleanup on 2026-06-05; no control-character issue remains in the source.
+
+## A5. Later-phase reminders from instruction doc 06_02
 
 After task setup and trajectories, preserve a local backup record of QA / AutoQC responses before platform submission when the guide asks for documentation in Google Docs or Drive. Do not rely on platform cards as the only memory surface.
 

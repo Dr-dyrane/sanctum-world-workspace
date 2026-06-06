@@ -1,8 +1,17 @@
 # Korvin Merrow World Spec Kickoff
 
-Status: Final Submission Resolution / LOCKED; Execution Artifact Generation COMPLETE / CANDIDATE REVIEW.
+Status: Historical World Spec cockpit. Final Submission Resolution is LOCKED; Execution Artifact Generation is COMPLETE / CANONICALIZED; Step 9 is COMPLETE; current live work is Task 1 Task Writing / trajectory QA.
 
-Purpose: active cockpit for the transition from approved Brainstorm through World Spec construction while preserving phase boundaries around template population, file inventory, tasks, and downstream deliverables.
+Purpose: historical cockpit for the transition from approved Brainstorm through World Spec construction while preserving phase boundaries around template population, file inventory, tasks, and downstream deliverables. For current live state, read `project/STATUS.md`, `docs/status-dashboard.md`, and `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`.
+
+## Current Live Override - 2026-06-05
+
+- `Healthcare_247_Merrow` is live with 26 world files synced.
+- Step 9 generated-file review is complete; Final Files AutoQC passed 78/78 after three revisions.
+- Current active work is Task 1 Task Writing / trajectory QA: Task AutoQC passed 64/64, ten Taiga trajectories ran, and Section 4/5 QA feedback review is active before Failure Analysis / Grader Analysis.
+- Canonical Task 1 lifecycle source: `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`.
+- Task 1 platform provenance: `worlds/korvin-merrow/task-setup/platform/task1/`.
+- Tasks 2-6 planning/de-hinting packet: `worlds/korvin-merrow/task-setup/step10-review-packet.md`.
 
 ## 1. Current State
 

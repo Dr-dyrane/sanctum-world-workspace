@@ -4,7 +4,7 @@ Purpose: compressed current state for Claude. Use `project/STATUS.md` and `docs/
 
 ## Project State
 
-Current phase: Step 10 task setup / Task Writing. World Spec approval is complete, onboarding has ended, engineering pipeline run #1 completed, Step 9 generated-file review is closed, Final Files AutoQC passed 78/78 after three revisions, and the world was created as `Healthcare_247_Merrow` on 2026-06-05 at 11:20 AM PDT. Task 1 auto-created in Task Writing and is assigned to Alexander. Step 9 audit trail remains at `worlds/korvin-merrow/file-review/`; Step 10 requirements are distilled in `docs/world-pipeline-playbook.md` section A2.
+Current phase: Task 1 Task Writing / trajectory QA. World Spec approval is complete, onboarding has ended, engineering pipeline run #1 completed, Step 9 generated-file review is closed, Final Files AutoQC passed 78/78 after three revisions, and the world was created as `Healthcare_247_Merrow` on 2026-06-05 at 11:20 AM PDT. Pod assignment is `#vaguspod`; EPM Rose; pod leads Abi O and Larry E. Task 1 setup completed, Task AutoQC passed 64/64 after remediation, ten Taiga trajectories ran, and active work is Section 4 Taiga QA plus Section 5 Feedback Review before Failure Analysis / Grader Analysis. Step 9 audit trail remains at `worlds/korvin-merrow/file-review/`; Task 1 canonical lifecycle state is `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`; Step 10/11 requirements and lived Task 1 lessons are distilled in `docs/world-pipeline-playbook.md` sections A2-A4.
 
 Pipeline run #1 / Step 9 closeout state:
 
@@ -21,7 +21,7 @@ Pipeline run #1 / Step 9 closeout state:
 - Final 26-file world-level upload set: `worlds/korvin-merrow/file-review/upload/filesystem/`.
 - Seven task-level files are held out at `worlds/korvin-merrow/file-review/task-files-holdback/` for later task setup handling.
 - Items marked `[A]` required Alexander physician ruling before edits; rulings and candidate edits are recorded in the file-review log.
-- Do not access RL Studio, upload task prompts/goldens/grader guidelines, run agents, run QA, create AutoQC responses, create task setup materials, or mutate platform state unless Alexander explicitly authorizes the exact step.
+- Do not access RL Studio, upload additional task prompts/goldens/grader guidelines, run additional agents, run additional QA, create AutoQC responses, create task setup materials, start Failure Analysis / Grader Analysis, start preference labeling, or mutate platform state unless Alexander explicitly authorizes the exact step.
 
 Transcript resolution: `docs/claude-transcript-formatted.md` is the authoritative transcript upload artifact. The Claude share URL `https://claude.ai/share/d5129364-5d6c-4a2c-acb3-282f367a0040` is supporting provenance and reviewer-access support. `docs/claude-transcript.md` remains raw historical/provenance evidence only. Historical James Carter references and export encoding artifacts inside it are expected provenance, not current identity defects.
 
@@ -43,15 +43,16 @@ Brainstorm:
 
 Current blocker:
 
-- No reviewer blocker. Step 9 generated-file review is complete and Step 10 task setup is active. Task prompt, golden, and grader-guideline preparation/review may continue locally, but RL Studio task mutation, task uploads, agent runs, QA runs, AutoQC responses, and platform actions remain gated on explicit Alexander authorization for the exact step. Transcript Resolution v1 is locked. Execution Preparation v1 is locked. Packaging Construction is locked. Packaging Architecture is locked and complete. Golden Construction is locked and Goldens are complete. Entire File Ecosystem is complete and locked. Task Prompt Architecture v1 is locked and Task Prompt Architecture is complete. Task Prompt Construction is locked and Task Prompts are complete. Expected Output Architecture v1 is locked and Expected Output Architecture is complete. Expected Output Construction is locked and Expected Outputs are complete. Golden Architecture v1 is locked and Golden Architecture is complete. Grader Guidance Architecture v1 is locked and complete. Grader Guidance Construction is locked and Grader Guidance is complete. AutoQC Architecture v1 is locked and AutoQC Architecture is complete. AutoQC Construction is locked and AutoQC is complete.
+- No reviewer blocker. Step 9 generated-file review is complete. Task 1 is in trajectory QA / feedback review after Task AutoQC pass and trajectory run. The live blocker is process sequencing: complete Section 4 Env Linter / Data Quality responses, run Taiga QA Feedback AutoQC, address Section 5 notes, and only then start Failure Analysis / Grader Analysis. Task prompt, golden, and grader-guideline preparation/review for Tasks 2-6 may continue locally, but additional RL Studio task mutation, task uploads, agent runs, QA runs, AutoQC responses, and platform actions remain gated on explicit Alexander authorization for the exact step. Transcript Resolution v1 is locked. Execution Preparation v1 is locked. Packaging Construction is locked. Packaging Architecture is locked and complete. Golden Construction is locked and Goldens are complete. Entire File Ecosystem is complete and locked. Task Prompt Architecture v1 is locked and Task Prompt Architecture is complete. Task Prompt Construction is locked and Task Prompts are complete. Expected Output Architecture v1 is locked and Expected Output Architecture is complete. Expected Output Construction is locked and Expected Outputs are complete. Golden Architecture v1 is locked and Golden Architecture is complete. Grader Guidance Architecture v1 is locked and complete. Grader Guidance Construction is locked and Grader Guidance is complete. AutoQC Architecture v1 is locked and AutoQC Architecture is complete. AutoQC Construction is locked and AutoQC is complete.
 
 Next legal action:
 
-- Use `docs/world-pipeline-playbook.md` section A2 and the locked task prompt/golden/grader-guidance artifacts for Step 10 preparation.
+- Use `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md` as the canonical Task 1 source of truth.
+- Use `docs/world-pipeline-playbook.md` sections A2-A4 and the locked task prompt/golden/grader-guidance artifacts for Step 10/11 preparation.
 - Use `worlds/korvin-merrow/file-review/file-review-protocol.md`, `worlds/korvin-merrow/file-review/time-strategy-and-state.md`, `worlds/korvin-merrow/file-review/findings-triage.md`, and `worlds/korvin-merrow/file-review/file-review-log.md` as the closed Step 9 audit trail.
 - Treat `worlds/korvin-merrow/file-review/pipeline-output/filesystem/` as the downloaded V1 output, `worlds/korvin-merrow/file-review/revision/filesystem/` as the final revised 33-file working set, and `worlds/korvin-merrow/file-review/upload/filesystem/` as the final 26-file world-level upload set used for world creation.
 - Treat `worlds/korvin-merrow/file-review/task-files-holdback/` as the seven task-level files intentionally held out of the world-level upload set for later task setup handling.
-- Do not access RL Studio, upload task setup materials, run agents, run QA, create AutoQC responses, or mutate platform state unless Alexander explicitly authorizes the exact step.
+- Do not access RL Studio, upload task setup materials, run agents, run QA, create AutoQC responses, start Failure Analysis / Grader Analysis, start preference labeling, or mutate platform state unless Alexander explicitly authorizes the exact step.
 - Do not revise locked architecture, locked canon, original final submission staging, or the original pipeline output unless Alexander explicitly authorizes reopening.
 
 ## Completed
@@ -206,8 +207,8 @@ Next legal action:
 
 ## Authorized Right Now
 
-- Step 10 task setup preparation / Task Writing.
-- Claude-assisted review/de-hinting of task prompts, goldens, and grader guidelines against final generated files and the 06/02 instruction guide.
+- Task 1 trajectory QA / feedback review support.
+- Claude-assisted review/de-hinting of Tasks 2-6 task prompts, goldens, and grader guidelines against final generated files, Task 1 lessons, and the 06/02 instruction guide.
 - Local documentation updates that preserve phase boundaries.
 - Drive sync planning notes only; do not mutate Drive unless explicitly authorized.
 - Local documentation updates that preserve phase boundaries.
@@ -220,7 +221,7 @@ Next legal action:
 - Revising Identity Package v1 without explicit Alexander approval.
 - Treating the Identity Package review addendum as permission to reopen MRN, DOB, age, anthropometrics, allergy, or code status.
 - Changing Governance Package v1 without Alexander approval.
-- Accessing RL Studio, uploading task materials, running agents, running QA, or mutating platform state before explicit authorization.
+- Additional RL Studio access, task-material uploads, agent runs, QA runs, Failure Analysis / Grader Analysis, preference labeling, or platform mutation before explicit authorization for the exact action.
 - Rerunning Final Files AutoQC, uploading revisions, or using Apply to Task unless explicitly authorized for a corrective platform action.
 - Applying edits labeled PROTECT.
 - Editing generated DOCX files or locked task-layer artifacts before Alexander authorizes the exact change.

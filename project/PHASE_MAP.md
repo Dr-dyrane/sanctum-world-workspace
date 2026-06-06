@@ -19,7 +19,7 @@ Onboarding scope:
 
 Current Korvin status: Step 5 World Spec AutoQC is complete at 108/109, with the sole open prednisone dose/frequency warning preserved as intentional design and justified in notes. Step 6 Human Review: World Spec is APPROVED by Stacey S. The requested Reference File Origin routing correction was resolved and re-uploaded.
 
-Onboarding approval condition has been met. Official production pipeline position: Task-Level Materials / Task Setup. World-level Files are complete: Step 9 generated-file review closed, Final Files AutoQC passed 78/78 after three revisions, and `Healthcare_247_Merrow` was created on 2026-06-05 with 26 world files synced. Active stage is Step 10 task setup / Task Writing; local preparation packet lives at `worlds/korvin-merrow/task-setup/step10-review-packet.md`.
+Onboarding approval condition has been met. Official production pipeline position: Task-Level Materials / Task Writing / trajectory QA. World-level Files are complete: Step 9 generated-file review closed, Final Files AutoQC passed 78/78 after three revisions, and `Healthcare_247_Merrow` was created on 2026-06-05 with 26 world files synced. Task 1 setup completed, Task AutoQC passed 64/64 after remediation, ten Taiga trajectories ran, and active work is Section 4 Taiga QA plus Section 5 Feedback Review before Failure Analysis / Grader Analysis. The canonical Task 1 lifecycle log is `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`; Tasks 2-6 planning remains in `worlds/korvin-merrow/task-setup/step10-review-packet.md`.
 
 ### Phase 2: Build Your Files And Tasks
 
@@ -33,7 +33,7 @@ Korvin Merrow current exception: Alexander has explicitly authorized local, batc
 
 Goal: Address Task AutoQC findings and complete trajectory/grading audit.
 
-Status: Task setup is active for local preparation only. QA remains out of scope until Alexander explicitly authorizes RL Studio task mutation, agent runs, Run All QA, and QC response handling.
+Status: Task 1 has entered trajectory QA under Alexander's platform operation. Section 4 Taiga QA and Section 5 Feedback Review are active for Task 1. Further task uploads, additional agent runs, additional QA runs, platform responses, Failure Analysis / Grader Analysis, and preference labeling remain gated on explicit Alexander authorization for the exact action.
 
 ### Phase 4: Evaluate The Agent
 
@@ -45,14 +45,14 @@ Status: Out of scope until generated-file review, task setup, trajectory runs, a
 
 - Scoring rubrics, scoring thresholds, pass/fail bands, point allocations, AutoQC responses, or later task-layer output generation unless explicitly authorized by Alexander
 - Rerunning world file review / Final Files AutoQC without an explicit corrective authorization
-- RL Studio task mutation, task upload, agent runs, or QA runs without explicit authorization
+- Additional RL Studio task mutation, task upload, agent runs, or QA runs without explicit authorization
 - Production task prompts
 - Additional golden responses
 - Grader guideline reopening or expansion beyond the locked GG-KM01 through GG-KM06 files
-- Agent runs
-- Task AutoQC
-- Trajectory review
-- Taiga QC
+- Additional agent runs
+- Additional Task AutoQC
+- Additional trajectory review beyond the active Task 1 review gate
+- Taiga QC outside the active Task 1 Section 4/5 review gate
 - Failure analysis
 - Preference labeling
 - Final delivery review

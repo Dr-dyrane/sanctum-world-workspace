@@ -2,14 +2,19 @@
 
 ## Current Gate
 
-**WORLD CREATED (6/5/2026, 11:20 AM PDT): Healthcare_247_Merrow is live. Step 9 COMPLETE. Current stage: Step 10 task setup (Task 1 auto-created in Task Writing, assigned Alexander).**
+**WORLD CREATED (6/5/2026, 11:20 AM PDT): Healthcare_247_Merrow is live. Step 9 COMPLETE. Current stage: Task 1 Task Writing / trajectory QA.**
 
 - Final Files AutoQC: PASS 78/78 (after 3 revisions; full chain in `worlds/korvin-merrow/file-review/file-review-log.md`).
 - World ID: `world_d50c832ac6474a68ba982a77e28a6bbe`; synced snapshot `snap_0fb032e95b324710b12a7432cf7da6c1`, 26 files, sync complete.
 - World name convention used: `Healthcare_Number_PatientName` per the 5.0 platform card (supersedes instruction doc ordering); 247 = next after Healthcare_246_Gutey.
 - Resources: External Fetcher Agent + Prometheus Stream Agent; model anthropic/claude-opus-4-6; judge anthropic/claude-sonnet-4-5. No rubric items or checkpoints yet.
 - Onboarding history: Spec AutoQC 108/109 (prednisone by design), Stacey approval 6/4, pipeline run #1, 179-finding triage, 11 content edits + 2 de-bold passes, 7 task files held back, two platform bugs diagnosed (two Apply-to-Task buttons; org AutoQC quota outage) and escalated with engineering.
-- Step 10 source of truth: instruction doc 06_02 sections "How to Set up Your Task in RLS", Golden Response, Grader Guidelines (see `docs/world-pipeline-playbook.md` section A2 for the distilled requirements).
+- Pod: `#vaguspod`; EPM Rose; pod leads Abi O and Larry E. Pod welcome thread is the home base for world/task communications.
+- Task 1 source of truth: `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`.
+- Task runbook: `worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md`.
+- Task 1 state: platform setup completed; Task AutoQC passed 64/64 after remediation; ten Taiga trajectories ran; active work is Section 4 Taiga QA plus Section 5 Feedback Review before Failure Analysis / Grader Analysis.
+- Local trajectory export: one Task 1 trajectory captured under `worlds/korvin-merrow/task-setup/task1/trajectories/v1/`; the other nine are not yet exported locally.
+- Step 10/11 source guidance: instruction doc 06_02 sections "How to Set up Your Task in RLS", Golden Response, Grader Guidelines, plus lived Task 1 lessons in `docs/world-pipeline-playbook.md` sections A2-A4.
 
 ## Brainstorm
 
@@ -165,8 +170,10 @@
 - Human World Spec Review: APPROVED by Stacey S; approval record `worlds/korvin-merrow/reviews/reviewer-spec-approval-01.md`
 - Reviewer routing correction: Reference File Origin labels corrected to the template-canonical `Custom Made` token and re-uploaded
 - No GG-KM07 exists
-- Current phase: Step 10 task setup / Task Writing
-- Active Step 10 prep packet: `worlds/korvin-merrow/task-setup/step10-review-packet.md`
+- Current phase: Task 1 Task Writing / trajectory QA
+- Active Task 1 lifecycle log: `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`
+- Task 1 platform provenance: `worlds/korvin-merrow/task-setup/platform/task1/`
+- Tasks 2-6 prep packet: `worlds/korvin-merrow/task-setup/step10-review-packet.md`
 - Active file-review protocol: `worlds/korvin-merrow/file-review/file-review-protocol.md`
 - Active Claude-assisted triage: `worlds/korvin-merrow/file-review/findings-triage.md`
 - Candidate revision log: `worlds/korvin-merrow/file-review/file-review-log.md`
@@ -229,7 +236,7 @@
 - Fetched World Spec example source documents: `reference/word-spec-examples/` (local-only / gitignored)
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 - World Spec prep folder structure: reorganized by lifecycle buckets (`candidate-review/`, `locked/`, `ratifications/`, `reviews/`, `decision-logs/`, `planning-scaffolds/`)
-- Current phase: Step 10 task setup / Task Writing. Step 9 generated-file review is complete, Final Files AutoQC passed 78/78, and `Healthcare_247_Merrow` is live. Do not access RL Studio, upload task prompts/goldens/grader guidelines, run agents, run QA, create platform responses, create AutoQC responses, create scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifests, final submission packages, additional uploads, or additional submissions until explicitly authorized.
+- Current phase: Task 1 Task Writing / trajectory QA. Step 9 generated-file review is complete, Final Files AutoQC passed 78/78, and `Healthcare_247_Merrow` is live. Task 1 platform setup, Task AutoQC, and trajectory run have occurred under Alexander's operation; the next work is Section 4/5 QA feedback review, then Failure Analysis / Grader Analysis only after the platform gate. Do not access RL Studio, upload additional task prompts/goldens/grader guidelines, run additional agents, run additional QA, create platform responses, create AutoQC responses, create scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifests, final submission packages, additional uploads, or additional submissions until explicitly authorized.
 
 ## Tooling
 
@@ -251,7 +258,7 @@
 - Do not treat fetched World Spec examples as authored Korvin Merrow content or source-of-truth material.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
 - Do not modify clinical content beyond reviewer-required remediation without Alexander approval.
-- Do not proceed beyond Step 10 task setup preparation into RL Studio task mutation, agent runs, QA runs, platform responses, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifest creation, final submission packaging, additional uploads, additional submission actions, failure analysis, or preference labeling without explicit authorization.
+- Do not proceed beyond the current Task 1 trajectory QA / feedback-review state into Failure Analysis, Grader Analysis, preference labeling, additional task uploads, additional agent runs, additional QA runs, platform responses, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifest creation, final submission packaging, additional uploads, or additional submission actions without explicit authorization.
 - Do not access RL Studio again without explicit authorization.
 - Do not end a working session without applying collaborator session-exit discipline.
 ## Execution Artifact Generation Outputs
