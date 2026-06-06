@@ -4,7 +4,7 @@ Date: 2026-06-04. Written at Korvin Merrow spec-submission (108/109, prednisone-
 
 ## A. Korvin: forward pipeline (stages 7-17)
 
-Current position: Steps 1-9 COMPLETE. World created 6/5/2026 as **Healthcare_247_Merrow** (world_d50c832ac6474a68ba982a77e28a6bbe, 26 files synced, snap_0fb032e95b324710b12a7432cf7da6c1). Task 1 setup completed, corrective v4 Task Writing rerun completed, Task AutoQC was submitted at 2/68 with both warnings justified, batch v2 Taiga trajectories ran, and Task 1 FA/GA was submitted on batch v2, run `aef58074` with GA rated Great. FA/GA AutoQC was submitted at 1/14 with the single Human-Written Grader Analysis false positive justified. Active state: Task 1 is writer-complete and in reviewer hands. Canonical Task 1 lifecycle source: `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`.
+Current position: Steps 1-9 COMPLETE. World created 6/5/2026 as **Healthcare_247_Merrow** (world_d50c832ac6474a68ba982a77e28a6bbe, 26 files synced, snap_0fb032e95b324710b12a7432cf7da6c1). Task 1 setup completed, corrective v4 Task Writing rerun completed, Task AutoQC was submitted at 2/68 with both warnings justified, batch v2 Taiga trajectories ran, and Task 1 FA/GA was submitted on batch v2, run `aef58074` with GA rated Great. FA/GA AutoQC was submitted at 1/14 with the single Human-Written Grader Analysis false positive justified. Active state: Task 1 is In First Human Review, picked up by Abimbola O / Abi; wait for her feedback before entering Tasks 2-6. Canonical Task 1 lifecycle source: `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`.
 
 ## A2. Step 10 verbatim requirements (instruction doc 06_02, "How to Set up Your Task in RLS" + Golden Response + Grader Guidelines sections; read 6/5)
 
@@ -58,6 +58,8 @@ Operating takeaway: a second cold-context Claude pass on a contested flag is che
 
 Provenance pattern that worked: keep golden v1 (locked-content upload) AND v2 (shipped rewrite), plus grader-guideline versions, side by side in `task-setup/platform/taskN/` so the diff documents exactly what changed and why. If the platform-facing rewrite should become the canonical clinical standard, get explicit Alexander authorization before editing the locked source. Golden-KM01 received that authorized chart-register wording cleanup on 2026-06-05; no control-character issue remains in the source.
 
+The cross-world backbone version of this lesson is `docs/reasoning-discipline.md`: verify the ground truth before one-way-door commitments and before causal claims about platform behavior; stay fast for reversible work.
+
 ## A5. Later-phase reminders from instruction doc 06_02
 
 After task setup and trajectories, preserve a local backup record of QA / AutoQC responses before platform submission when the guide asks for documentation in Google Docs or Drive. Do not rely on platform cards as the only memory surface.
@@ -106,6 +108,7 @@ STRUCTURE for worlds/<new-world>/: copy korvin-merrow's folder skeleton (active/
 ## C. Standing infrastructure (do not lose)
 - docs/workspace-guardrails-lessons.md - the operational guardrails (now 12, incl. mojibake/dash discipline).
 - docs/clinical-voice-lessons.md - 10 clinical-voice patterns mined from the run #1 paired corpus (writer templates vs pipeline rewrite, .meta/references/ vs filesystem/); apply at template-authoring time for World #2 so generation has less to "fix" and less occasion to over-help.
+- docs/reasoning-discipline.md - cross-world verification gate: verify ground truth at one-way doors and platform-causality claims; stay fast elsewhere.
 - reference/checklists/spec-autoqc-preflight.md - the 109-dimension distillation.
 - worlds/korvin-merrow/reference-file-design/ - design system + approved FI-W01 sample.
 - worlds/korvin-merrow/autoqc-remediation/ - remediation pattern + notes language.

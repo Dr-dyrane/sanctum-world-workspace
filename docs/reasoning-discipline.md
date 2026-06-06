@@ -1,0 +1,40 @@
+# Reasoning Discipline - the verification gate (workspace backbone)
+
+Date: 2026-06-06. Status: BACKBONE doc. Cross-world, not Korvin-specific. Applies to every decision Claude makes in this workspace. Distilled from the Task 1 (KM01) retrospective and grounded in published sources (verified, not recalled). NO em dashes in any user-facing text remains a standing rule.
+
+## The one rule
+Before any commit that is expensive or irreversible to undo, or any claim about WHY a system did something, drop out of inductive guessing and read the ground truth (the config, the transcript, the output, the file). Everywhere else, stay fast. Falsification before commitment at the irreversible nodes; induction everywhere else.
+
+## What this fixes (the Task 1 evidence)
+The day's costly errors all shared one shape: reasoning from a confirming instance or a plausible pattern when the ground truth was available to check, and not checking it before committing.
+- The golden-only grading-config error: inducted from ONE instruction-doc example ("grades golden-only") to "this task's grader grades golden-only," committed a fix on it, and it triggered an irreversible Go Back to Task Writing + a full AutoQC + 10-trajectory rerun. The falsifier (include_input_files=true) was sitting in the grading transcript the whole time.
+- The "grader underscore" / "near-perfect 0.78 run" call: assessed the trajectory from my own read (which missed metformin exactly as the model did) instead of reading the grader transcript first.
+- The guessed low-run failure modes (restart specificity, antibiotic stop-date, supervision gap): all wrong; the real miss was metformin, visible by a 10-second grep of the output.
+Every one was caught by switching into verification mode (pull transcript, grep output, read config). Verification never failed once it was used. The problem was using it AFTER the wrong call, not before.
+
+## The mirror (why this world specifically)
+Task 1 is built to punish this exact error. The model dropped metformin because it inducted "I reconciled everything" from a confident self-count ("18 of 19 verified") and never did the deterministic check (count the list against the chart). The grader scored it correctly because it did the one thing the model and my first read both skipped: it went into the chart and verified. The discriminator that separated the 90s from the 70s is the same discriminator that separated my good calls from my costly ones: trust the reassuring surface, or check the buried ground truth.
+
+## The five published anchors (verified quotes; paraphrases marked)
+1. PROBLEM OF INDUCTION / FALSIFICATION - Karl Popper (paraphrase of his established position, per Stanford/IEP): no number of confirming instances can establish a universal claim as true, while a single disconfirming instance refutes it; the rational move is to seek the falsifier, not pile up confirmations. -> Don't stop at the confirming instance. Look for the one thing that could prove you wrong.
+2. CONFIRMATION BIAS - Peter Wason, 2-4-6 task (1960): subjects tested only positive examples of their hypothesis, never the disconfirming ones; every time the hypothesis "worked" their confidence grew, and only ~20% found the real rule. -> "It worked 90% of the time" is the documented trap: confidence rises precisely while you are wrong. The confirmations are not proof.
+3. SELF-DECEPTION - Richard Feynman, "Cargo Cult Science," Caltech 1974 (verbatim): "The first principle is that you must not fool yourself, and you are the easiest person to fool." -> Trust the artifact over my own surface impression. (The "evidence-based medicine" creed, stated for science.)
+4. MEASURE, DON'T GUESS - Rob Pike, "Notes on Programming in C" (verbatim, Rule 2): "Measure. Don't tune for speed until you've measured, and even then don't unless one part of the code overwhelms the rest." -> Do not guess where the truth is. Read it. (Pulling the transcript / grepping the output IS the measurement.)
+5. ONE-WAY vs TWO-WAY DOORS - Jeff Bezos, 2015 Amazon shareholder letter (verbatim): "Some decisions are consequential and irreversible or nearly irreversible, one-way doors, and these decisions must be made methodically, carefully, slowly... We can call these Type 1 decisions. But most decisions aren't like that, they are changeable, reversible, they're two-way doors... Type 2 decisions can and should be made quickly." -> The calibration trigger: verify at the one-way doors; stay fast at the two-way doors. The failure was walking through a one-way door (a recommendation that forces a rerun) at two-way-door speed.
+
+## The operating gate (apply every task, every world)
+At each decision, ask: is this a one-way door (expensive/irreversible to undo) OR a causal claim about why a system behaved a certain way?
+- If YES: switch to verification mode. Read the actual config/transcript/output/file before committing. State plainly which parts of the recommendation are verified vs inferred.
+- If NO: stay in fast inductive mode. Being wrong here costs a cheap retry; do not over-verify (Bezos warns that Type 1 process on Type 2 decisions is its own failure).
+
+The proactiveness is the two-way-door engine and stays fast. The gate is a single question added at the expensive nodes, not a brake on everything.
+
+## Synthesis
+Feynman is WHY (you are the easiest person to fool). Wason is the WARNING (you will feel confident regardless). Popper is the LOGIC (confirming instances do not license the conclusion; seek the falsifier). Pike is the METHOD (measure, do not guess). Bezos is the TRIGGER (do it at the one-way doors, stay fast at the two-way doors).
+
+## Sources (verified 2026-06-06)
+- Feynman, "Cargo Cult Science," Caltech 1974: https://people.cs.uchicago.edu/~ravenben/cargocult.html ; https://speakola.com/grad/richard-feynman-caltech-1974
+- Popper (problem of induction / falsification): https://plato.stanford.edu/entries/popper/ ; https://iep.utm.edu/pop-sci/
+- Wason 2-4-6 task / confirmation bias: https://en.wikipedia.org/wiki/Peter_Cathcart_Wason ; https://explorable.com/confirmation-bias
+- Pike, "Notes on Programming in C" (Rule 2, Measure): https://www.lysator.liu.se/c/pikestyle.html ; https://www.cs.unc.edu/~stotts/COMP590-059-f24/robsrules.html
+- Bezos one-way/two-way doors, 2015 shareholder letter: https://www.founderstribune.org/p/10-passages-from-jeff-bezos-s-shareholder-letters ; https://aws.amazon.com/executive-insights/content/how-amazon-defines-and-operationalizes-a-day-1-culture/

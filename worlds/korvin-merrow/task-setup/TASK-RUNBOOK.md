@@ -2,6 +2,8 @@
 
 Derived from Task 1 (KM01) lived 6/5/2026: 9 AutoQC fails on first pass, all preventable. Follow in order; each checkbox is a place Task 1 broke. CANONICAL procedure - CODEX keep in sync with playbook A2/A3/A4. Per-task working files live in task-setup/platform/taskN/.
 
+GOVERNING PRINCIPLE: docs/reasoning-discipline.md (the verification gate). At every one-way door (expensive/irreversible commit) or any claim about WHY a system behaved a certain way, read the ground truth (config/transcript/output) BEFORE committing; state verified vs inferred. Stay fast everywhere else. Most of this runbook's "expected residual / justify vs fix" calls ARE one-way doors - verify first.
+
 ## A. Off-clock prep (Claude builds, physician rules)
 - [ ] De-hint the task's request file(s) per task-setup/step10-review-packet.md section 3. Integrity-gate every docx (EOCD + styles.xml + opens). Keep last-valid copies.
 - [ ] Confirm task files DO NOT duplicate any of the 26 world files (collision = blank trajectories). Check by filename against the synced world set.
