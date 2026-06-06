@@ -221,9 +221,9 @@ ANCHORING-CHECK (re-dated task file): the handoff is dated 05/23/2026 (world clo
 
 PLATFORM ENTRY SEQUENCE (Alexander's clock, AFTER sign-off + Abi pre-check): 1.3 re-add the handoff as the ONE task file (click Save File Changes) -> 1.2 swap prompt-task1-v3.txt -> 1.4 upload golden-response-task1-v4.docx + paste grader-guidelines-task1-v6.txt (confirm v4=v4 filename) -> re-run Task AutoQC (rerun N failing only) -> re-run Taiga trajectories (TARGET: >=1 run <90, ideally <70, low run fails for ADOPTING the handoff) -> pull lowest-run grading transcript -> draft FA + GA in PROSE form per Abi's samples -> send Abi the spread for pre-check -> submit.
 
-## RESUME HERE (next session)
-- Task 1: Preference Labeling is active by Alexander's current platform report. The hardening package, Abi pre-check, revised platform entry, pilot runs, and FA/GA are now provenance rather than the current gate. Use actual selected Response A / Response B from RL Studio/Taiga before drafting or editing any PL text.
-- Immediate Task 1 path: support PL only from the real A/B pair, select on the A4-B4 scale, and justify across the seven-section format. Do not run FA+PL AutoQC, final review, Tasks 2-6, or additional platform steps unless Alexander explicitly authorizes the exact action.
+## HISTORICAL RESUME POINT (superseded by PL + final review)
+- Task 1 had reached Preference Labeling by Alexander's platform report. The hardening package, Abi pre-check, revised platform entry, pilot runs, and FA/GA were provenance rather than the active gate. That state was later superseded by the completed PL and final human review entries below.
+- Historical immediate path at that moment: support PL only from the real A/B pair, select on the A4-B4 scale, and justify across the seven-section format. This is now complete and preserved in `platform/task1/preference-label-task1-A-vs-B.md`.
 - Open threads when ready: (1) any residual world-level inline-bold de-leak in the LIVE world files (same selective-emphasis pattern); (2) Tasks 2-6 = wait until Task 1 pattern is stable, then run TASK-RUNBOOK top to bottom using the post-Abi realism gate, mechanism-agnostic grader language, and clinical-register/chart-format goldens.
 - Admin: update RL Studio Pod Selection to Vagus; check earnings for the $2,000 milestone (Rachel: today or by Fri 6/12); keep all pod comms in the #vaguspod welcome thread.
 
@@ -273,7 +273,33 @@ We did NOT chase a sub-70 we had no realistic way to force. We used Abi's pre-ch
 - USE THE PRE-CHECK. When the only open question is a reviewer's subjective judgment ("is this failure significant"), ask - do not gamble a formal round or burn batches.
 
 ### The human reality (recorded on purpose)
-This was ~5 hours on a single task, much of it off-clock, across two formal bounces and several of my own dead ends (coached spironolactone trap, the ARNI pipeline bug, TMP-SMX not airtight, hand-built chrome, grader weighting flags). It felt like a lot for one task, and that feeling was fair. But it was not five hours for one deliverable - it was the whole world's task-design tuition, paid once: the engineered-failure rule, the verify-against-live discipline, the grader-language gates, the build-method, the forced-choice insight, and Abi's format and bar. Tasks 2-6 inherit all of it and should be a fraction of this. Alexander steered every correction to the right answer and held the physician-authorship and verify-before-commit lines under fatigue. Task 1 is in for approval.
+This was ~5 hours on a single task, much of it off-clock, across two formal bounces and several of my own dead ends (coached spironolactone trap, the ARNI pipeline bug, TMP-SMX not airtight, hand-built chrome, grader weighting flags). It felt like a lot for one task, and that feeling was fair. But it was not five hours for one deliverable - it was the whole world's task-design tuition, paid once: the engineered-failure rule, the verify-against-live discipline, the grader-language gates, the build-method, the forced-choice insight, and Abi's format and bar. Tasks 2-6 inherit all of it and should be a fraction of this. Alexander steered every correction to the right answer and held the physician-authorship and verify-before-commit lines under fatigue. At that point, Task 1 was in for approval; it later cleared final human review.
 
-## PREFERENCE LABELING ACTIVE (6/6)
-Alexander reports the current platform stage is now Preference Labeling for Task 1. Source-of-truth check: the 05/24 guide and 06/02 instruction document place PL after FA/GA and before FA+PL AutoQC / final reviewer review. PL compares two platform-selected attempts, Response A and Response B, against the golden response, selects on the A4-B4 preference scale, and requires a seven-section justification. No local PL content is tracked yet; do not invent A/B facts or draft PL text without the actual selected responses and explicit Alexander authorization.
+## PREFERENCE LABELING ACTIVE (6/6) - historical state, now complete
+Alexander reported the platform stage was Preference Labeling for Task 1. Source-of-truth check: the 05/24 guide and 06/02 instruction document place PL after FA/GA and before FA+PL AutoQC / final reviewer review. PL compares two platform-selected attempts, Response A and Response B, against the golden response, selects on the A4-B4 preference scale, and requires a seven-section justification. This state is now complete; the PL backup is saved at `platform/task1/preference-label-task1-A-vs-B.md`.
+
+## PREFERENCE LABELING (Step 15, 6/6) - completed historical record
+First human review: Abi APPROVED. She cleared the prednisone discriminator explicitly: "we'd consider this a failure based on your instructions in the grader and golden - you specifically said a dose must not be written. The model should not manufacture a medication dose based on prior fills." The deliberately strict golden-v6 line ("do not write a specific home dose from the fill") is what made the failure gradeable and significant. She also had one cosmetic golden fix: move the patient demographics table from under the signature to the TOP of the page (done; filename kept golden-response-task1-v6.docx so the grader reference holds; header now at body position 3, above body+signature).
+
+PL stage: Studio-selected pair A=0.900 (run a9881c8c) vs B=0.970 (run a1c6c072). Both deliverables read IN FULL against golden v6.
+FINDING: both attempts are clinically correct on every high-risk decision; NEITHER falls for a planted trap. Both decline nitrofurantoin (keep cefpodoxime), decline the salt substitute, defer the home-dose ARNI restart, keep all held cardiorenal agents (no dropped metformin), fabricate no culture, and BOTH correctly refuse to write prednisone 5 mg as a verified dose. PREDNISONE IS NOT THE DIFFERENTIATOR HERE (that was the 0.78 run in the FA, a different trajectory) - both pass it. The 0.90 vs 0.97 gap is polish/clarity, not clinical correctness; no error in A.
+VERDICT: B1 (B slightly better) = plain "B" button (no plus). NOT B+ (=B2, overstates the gap). Initially drafted B2 leaning on completeness items (day-7 antibiotic arithmetic, inpatient-only section, summary table); an independent cold-context review correctly downgraded to B1 because those are organization/polish, not findings A missed, and the scale tier must match the gap (final reviewer checks this). Two independent passes converged on B1.
+Justification + guardrails saved to platform/task1/preference-label-task1-A-vs-B.md (workspace backup; no Google Doc needed, the workspace persists). Guardrails that must survive any edit: (1) no sentence names a clinical error in A; (2) prednisone stated as handled correctly by BOTH; (3) gap word stays "marginally"/"slightly" (B1 not B2).
+Historical next at that moment: select plain B -> paste justification -> Submit Preference -> confirm submission history -> run Preference Labels AutoQC -> Final Reviewer Review (Step 17). This sequence is now complete; see final human review record below.
+
+## LESSON FOR TASKS 2-6 (PL stage)
+- PL tier MUST match the gap. If both runs are clinically correct and neither makes an error, the tier is a "1" (slightly better), no matter the raw score delta. Reserve B2/B3/B4 for a real caught-finding, avoided-error, or trap-fall difference. The final reviewer flags tier-vs-prose mismatch.
+- Read BOTH shipped docs in full against the golden before labeling; do not infer from scores or build logs. A regex hit on "prednisone 5 mg" was each doc QUOTING the pharmacy rec to decline it, not its own disposition - verify by reading the passage.
+- Do not carry the FA's failure framing into the PL if the PL pair handled that item correctly; they are different trajectories.
+- Workspace has a persistent folder; save PL backups as files in platform/taskN/, not external Google Docs (that tip is for writers without a workspace).
+
+## FINAL HUMAN REVIEW COMPLETE (6/6) - Task 1 APPROVED
+Abi Osagie completed Task 1 final human review on 2026-06-06. Final checklist outcome: prompt natural, task-level files realistic, grader guidelines appropriate in length/content, golden realistic, Task AutoQC reviewed, at least one trajectory below 90, Env Linter/Data Quality/responses reviewed, artifact/document realism fixed, and FA/GA passed. Rahul technical escalation and non-technical fix justification were N/A.
+
+Reviewer note: the golden-response patient-demographics header had been placed at the bottom of the page and looked unrealistic. The writer edited the golden and Abi uploaded the new golden; no other changes were required, so no QC rerun was needed.
+
+Final review record: `reviews/task1-final-review-ao-2026-06-06.md`.
+
+CURRENT TASK 1 STATUS: FINAL REVIEW COMPLETE / APPROVED.
+
+NEXT: Do not start Task 2 setup, additional task uploads, additional agent runs, QA, AutoQC responses, scoring artifacts, or platform mutations unless Alexander explicitly authorizes the exact step.

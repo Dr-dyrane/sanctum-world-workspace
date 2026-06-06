@@ -2,7 +2,7 @@
 
 ## Current Phase
 
-World Spec APPROVED (2026-06-04). Execution Artifact Generation COMPLETE; RL Studio upload and Spec AutoQC COMPLETE under Alexander's direct authorization and operation. Final AutoQC board: 108/109 pass; the sole open flag is Home Medications (prednisone dose/frequency), the world's intentional central source-of-truth design, justified in Spec AutoQC Notes (field 2.5). Human World Spec Review is APPROVED by Stacey S. Engineering pipeline run #1 completed; Step 9 / "Ready for Pipeline Fixes" is CLOSED. Final Files AutoQC passed 78/78 after three revisions; world creation completed 2026-06-05 11:20 AM PDT as `Healthcare_247_Merrow` (`world_d50c832ac6474a68ba982a77e28a6bbe`, snapshot `snap_0fb032e95b324710b12a7432cf7da6c1`, 26 files synced). Pod assignment is `#vaguspod` with EPM Rose and pod leads Abi O / Larry E. Task 1 has advanced through AO rework, hardening, Abi pre-check, revised platform entry, pilot runs, and FA/GA. Alexander reports the current platform stage is Preference Labeling for Task 1. Source-of-truth sequence from the 06/02 instruction document: Step 14 FA/GA, Step 15 Preference Labeling, Step 16 AutoQC on FA + PL, Step 17 final reviewer review. No local Preference Labeling content is tracked yet unless Alexander adds or authorizes it.
+World Spec APPROVED (2026-06-04). Execution Artifact Generation COMPLETE; RL Studio upload and Spec AutoQC COMPLETE under Alexander's direct authorization and operation. Final AutoQC board: 108/109 pass; the sole open flag is Home Medications (prednisone dose/frequency), the world's intentional central source-of-truth design, justified in Spec AutoQC Notes (field 2.5). Human World Spec Review is APPROVED by Stacey S. Engineering pipeline run #1 completed; Step 9 / "Ready for Pipeline Fixes" is CLOSED. Final Files AutoQC passed 78/78 after three revisions; world creation completed 2026-06-05 11:20 AM PDT as `Healthcare_247_Merrow` (`world_d50c832ac6474a68ba982a77e28a6bbe`, snapshot `snap_0fb032e95b324710b12a7432cf7da6c1`, 26 files synced). Pod assignment is `#vaguspod` with EPM Rose and pod leads Abi O / Larry E. Task 1 has advanced through AO rework, hardening, Abi pre-check, revised platform entry, pilot runs, FA/GA, Preference Labeling, and final human review. Abi Osagie completed Task 1 final review on 2026-06-06 with all applicable checklist items marked Yes or N/A. Task 1 status: FINAL REVIEW COMPLETE / APPROVED.
 
 Ratification: `worlds/korvin-merrow/final-submission-resolution/ratifications/final-submission-resolution-ratification.md`. Locked artifacts under `worlds/korvin-merrow/final-submission-resolution/locked/`.
 
@@ -50,21 +50,21 @@ Reviewer GO: Stacey S approved Brainstorm via Slack. Recorded in `worlds/korvin-
 
 ## Current Pass
 
-Task 1 Preference Labeling: ACTIVE. Step 9 generated-file review is closed and preserved under `worlds/korvin-merrow/file-review/`. Task 1 platform artifacts, trajectory records, FA/GA records, Abi review records, hardening drafts, and lifecycle record are preserved under `worlds/korvin-merrow/task-setup/`. Current action is PL work in RL Studio/Taiga: compare the two selected attempts against the golden, choose the A4-B4 preference scale, and write the seven-section justification. Do not create PL text locally unless Alexander explicitly asks.
+Task 1 Final Review: COMPLETE / APPROVED. Step 9 generated-file review is closed and preserved under `worlds/korvin-merrow/file-review/`. Task 1 platform artifacts, trajectory records, FA/GA records, Abi review records, hardening drafts, and lifecycle record are preserved under `worlds/korvin-merrow/task-setup/`. Final review record: `worlds/korvin-merrow/task-setup/reviews/task1-final-review-ao-2026-06-06.md`.
 
 ## Next Pass
 
-Current phase: Task 1 Preference Labeling. Source docs checked: 05/24 guide and 06/02 instruction document both place PL after FA/GA and before AutoQC on FA + PL / final review. `docs/reasoning-discipline.md` is the verification gate for future expensive decisions and platform-behavior claims. Further RL Studio actions beyond the currently authorized PL work, FA+PL AutoQC, final reviewer review, additional task uploads, additional agent runs, additional QA runs, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifest creation, final submission packaging, additional uploads, and additional submission actions remain blocked unless explicitly authorized by Alexander for the exact step.
+Current phase: Task 1 complete after final human review. Source docs checked: 05/24 guide and 06/02 instruction document place final reviewer review after FA/GA, Preference Labeling, and FA+PL AutoQC. `docs/reasoning-discipline.md` is the verification gate for future expensive decisions and platform-behavior claims. Next eligible work is whatever Alexander authorizes next in the task pipeline, likely Task 2 setup or the next pod-directed task step. Additional RL Studio actions, task uploads, agent runs, QA runs, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifest creation, final submission packaging, additional uploads, and additional submission actions remain blocked unless explicitly authorized by Alexander for the exact step.
 
 Task 1 canonical lifecycle log: `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`. It wins over scattered summaries for Task 1 status. Task 1 platform provenance lives under `worlds/korvin-merrow/task-setup/platform/task1/`, including superseded task files, golden-response v1/v2/v3, grader-guideline v1-v5, and prompt/task memo variants. The repeatable per-task runbook is `worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md`; it now uses the post-Abi realism gate and `grader-guidelines-task1-v5.txt` mechanism-agnostic structure as the current Task 1 rework model. Task 1 trajectory exports are preserved under `worlds/korvin-merrow/task-setup/task1/trajectories/v1/`, `worlds/korvin-merrow/task-setup/task1/trajectories/v2/`, and `worlds/korvin-merrow/task-setup/task1/trajectories/low-runs/`; batch v2 findings are historical after the task-file deletion, while batch v3 findings are current for the submitted round-2 FA/GA. The independent FA/GA prompt brief is `worlds/korvin-merrow/task-setup/task1/FA-GA-independent-review-brief.md`; `worlds/korvin-merrow/task-setup/task1/FA-GA-final.md` preserves historical batch v2 wording and current round-2 submitted FA/GA. The older Step 10 preparation packet remains at `worlds/korvin-merrow/task-setup/step10-review-packet.md` for Tasks 2-6 planning and de-hinting.
 
 ## Active Blocker
 
-Active blocker: no repository blocker. Current platform work is Task 1 Preference Labeling. Await Alexander-provided PL details or explicit authorization before writing, editing, uploading, or submitting PL content, running FA+PL AutoQC, or moving to final reviewer review.
+Active blocker: no repository blocker. Task 1 final human review is complete. Await Alexander's next authorized platform step before starting Task 2, additional task uploads, additional agent runs, QA, AutoQC responses, or new platform mutations.
 
 ## Current Git Checkpoint
 
-checkpoint: track task hardening drafts and task 2 seed
+checkpoint: record task 1 final review approval
 
 Previous checkpoint: beaa174 checkpoint: clean workspace before artifact generation
 
@@ -82,13 +82,13 @@ Return to baseline commit if workflow becomes corrupted.
 
 ## Next Command For Codex
 
-Support Alexander's active Preference Labeling state. Source-of-truth docs say PL compares two selected attempts A vs B against the golden, selects the A4-B4 preference scale, and writes a seven-section justification. Do not invent A/B facts or draft PL content without the actual platform-selected responses and explicit Alexander authorization. Use `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md` as the canonical Task 1 history source.
+Support Alexander from Task 1 final-review-complete state. Use `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md` and `worlds/korvin-merrow/task-setup/reviews/task1-final-review-ao-2026-06-06.md` as the canonical Task 1 history and final review sources. Do not start the next platform step without explicit authorization.
 
 At the end of any working session, apply the collaborator session-exit discipline before final reporting and commit completed process or construction work unless Alexander explicitly instructs not to commit.
 
 ## Scope Guardrails
 
-Preference Labeling is now the active authorized stage for Task 1 by Alexander's report. Do not create PL text without the actual selected A/B responses. Do not proceed to FA+PL AutoQC, final reviewer review, additional task uploads, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifest creation, final submission packaging, additional uploads, or additional submission actions unless Alexander explicitly authorizes the exact phase/action.
+Task 1 final human review is complete. Do not proceed to Task 2 setup, additional task uploads, additional agent runs, QA, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifest creation, final submission packaging, additional uploads, or additional submission actions unless Alexander explicitly authorizes the exact phase/action.
 ## Execution Artifact Generation Outputs
 Status: COMPLETE / CANONICALIZED.
 Generated staging root: korvin-merrow-final-submission-staging/.

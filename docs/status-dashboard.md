@@ -2,7 +2,7 @@
 
 ## Current Gate
 
-**WORLD CREATED (6/5/2026, 11:20 AM PDT): Healthcare_247_Merrow is live. Step 9 COMPLETE. Current stage: Task 1 Preference Labeling.**
+**WORLD CREATED (6/5/2026, 11:20 AM PDT): Healthcare_247_Merrow is live. Step 9 COMPLETE. Current stage: Task 1 FINAL REVIEW COMPLETE / APPROVED.**
 
 - Final Files AutoQC: PASS 78/78 (after 3 revisions; full chain in `worlds/korvin-merrow/file-review/file-review-log.md`).
 - World ID: `world_d50c832ac6474a68ba982a77e28a6bbe`; synced snapshot `snap_0fb032e95b324710b12a7432cf7da6c1`, 26 files, sync complete.
@@ -13,13 +13,13 @@
 - Task 1 source of truth: `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`.
 - Task runbook: `worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md`.
 - Reasoning discipline: `docs/reasoning-discipline.md` is the workspace verification gate for one-way-door decisions and causal platform-behavior claims.
-- Task 1 state: AO rework, hardening, Abi pre-check, revised platform entry, pilot runs, and FA/GA are complete. Alexander reports the current platform stage is Preference Labeling.
+- Task 1 state: AO rework, hardening, Abi pre-check, revised platform entry, pilot runs, FA/GA, Preference Labeling, and final human review are complete. Abi Osagie completed the final review checklist on 2026-06-06 with applicable items marked Yes or N/A.
 - Task 1 scores: 78, 72, 92, 95, 93, 92, 92, 92, 90, 94 (mean 89%, zero below 70). Current read after grading transcripts and saved-output comparison: well-built and clinically discriminating but not deeply stumping; the 0.72 and 0.78 runs omitted metformin ER from the medication disposition, the 0.78 run also under-dispositioned gabapentin, and a 90s-cluster comparator covered metformin.
-- Grader read: Good/Great candidate. It caught real held-med omissions through chart verification and did not false-flag accurate chart-sourced specifics as fabrication, validating the v4 `/docs`-aware guideline approach.
+- Grader read: Good/Great candidate. Abi later corrected the mechanism: the grader should be described as scoring the model output against the golden and grader guidelines, not as independently going into the chart. Preserve the mechanism-agnostic wording in future FA/GA and grader analysis.
 - Local trajectory exports: Task 1 trajectory outputs captured under `worlds/korvin-merrow/task-setup/task1/trajectories/v1/` and `worlds/korvin-merrow/task-setup/task1/trajectories/v2/`.
 - FA/GA status: round-2 FA/GA submitted on batch v3, run 8 / `db617c58`; GA rated Great. Final local copy is `worlds/korvin-merrow/task-setup/task1/FA-GA-final.md`, preserving historical batch v2 text and current round-2 submitted text.
 - FA/GA AutoQC status: batch v2 FA/GA AutoQC history is preserved; Abi first human review returned SEND BACK / rework required; governing review record is `worlds/korvin-merrow/task-setup/reviews/task1-first-human-review-ao-2026-06-05.md`.
-- Preference Labeling rule: per the 06/02 instruction document, compare the two selected attempts (Response A vs Response B) against the golden response, select the A4-B4 preference scale, and write the seven-section justification. No local PL content is tracked yet unless Alexander adds or authorizes it.
+- Final review record: `worlds/korvin-merrow/task-setup/reviews/task1-final-review-ao-2026-06-06.md`. Reviewer note: golden demographics header placement was unrealistic; writer edited and reviewer uploaded the new golden, with no QC rerun needed because no other changes were required.
 - Step 10/11 source guidance: instruction doc 06_02 sections "How to Set up Your Task in RLS", Golden Response, Grader Guidelines, plus lived Task 1 lessons in `docs/world-pipeline-playbook.md` sections A2-A5.
 
 ## Brainstorm
@@ -242,7 +242,7 @@
 - Fetched World Spec example source documents: `reference/word-spec-examples/` (local-only / gitignored)
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 - World Spec prep folder structure: reorganized by lifecycle buckets (`candidate-review/`, `locked/`, `ratifications/`, `reviews/`, `decision-logs/`, `planning-scaffolds/`)
-- Current phase: Task 1 Preference Labeling. Step 9 generated-file review is complete, Final Files AutoQC passed 78/78, and `Healthcare_247_Merrow` is live. Do not create PL text without the actual platform-selected A/B responses and explicit Alexander authorization. Do not run FA+PL AutoQC, final reviewer review actions, additional task prompts/goldens/grader guidelines, additional agents, additional QA, platform responses, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifests, final submission packages, additional uploads, or additional submissions until explicitly authorized.
+- Current phase: Task 1 final human review complete. Step 9 generated-file review is complete, Final Files AutoQC passed 78/78, and `Healthcare_247_Merrow` is live. Do not start Task 2 setup, additional task prompts/goldens/grader guidelines, additional agents, additional QA, platform responses, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifests, final submission packages, additional uploads, or additional submissions until explicitly authorized.
 
 ## Tooling
 
@@ -264,7 +264,7 @@
 - Do not treat fetched World Spec examples as authored Korvin Merrow content or source-of-truth material.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
 - Do not modify clinical content beyond reviewer-required remediation without Alexander approval.
-- Preference Labeling is the current authorized stage for Task 1 by Alexander's report. Do not proceed beyond PL into FA+PL AutoQC, final review, additional task uploads, additional agent runs, additional QA runs, platform responses, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifest creation, final submission packaging, additional uploads, or additional submission actions without explicit authorization.
+- Task 1 final human review is complete. Do not proceed to Task 2 setup, additional task uploads, additional agent runs, additional QA runs, platform responses, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifest creation, final submission packaging, additional uploads, or additional submission actions without explicit authorization.
 - Do not access RL Studio again without explicit authorization.
 - Do not end a working session without applying collaborator session-exit discipline.
 ## Execution Artifact Generation Outputs

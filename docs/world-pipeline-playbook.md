@@ -4,7 +4,7 @@ Date: 2026-06-04. Written at Korvin Merrow spec-submission (108/109, prednisone-
 
 ## A. Korvin: forward pipeline (stages 7-17)
 
-Current position: Steps 1-13 COMPLETE for Task 1, with Task 1 now in Step 15 Preference Labeling by Alexander's current platform report. World created 6/5/2026 as **Healthcare_247_Merrow** (world_d50c832ac6474a68ba982a77e28a6bbe, 26 files synced, snap_0fb032e95b324710b12a7432cf7da6c1). Task 1 setup, corrective rework, hardening, Abi pre-check, revised platform entry, pilot runs, and FA/GA are complete. Canonical Task 1 lifecycle source: `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`. For PL, use the 06/02 instruction document: compare Response A vs Response B against the golden response, select on the A4-B4 preference scale, and write the seven-section justification. Do not pre-create labels from expected failures.
+Current position: Task 1 final human review COMPLETE / APPROVED. World created 6/5/2026 as **Healthcare_247_Merrow** (world_d50c832ac6474a68ba982a77e28a6bbe, 26 files synced, snap_0fb032e95b324710b12a7432cf7da6c1). Task 1 setup, corrective rework, hardening, Abi pre-check, revised platform entry, pilot runs, FA/GA, Preference Labeling, and final review are complete. Canonical Task 1 lifecycle source: `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`; final review record: `worlds/korvin-merrow/task-setup/reviews/task1-final-review-ao-2026-06-06.md`. Next task work remains gated on explicit Alexander authorization.
 
 ## A2. Step 10 verbatim requirements (instruction doc 06_02, "How to Set up Your Task in RLS" + Golden Response + Grader Guidelines sections; read 6/5)
 

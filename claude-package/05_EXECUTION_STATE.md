@@ -4,7 +4,7 @@ Purpose: compressed current state for Claude. Use `project/STATUS.md` and `docs/
 
 ## Project State
 
-Current phase: Task 1 Preference Labeling. World Spec approval is complete, onboarding has ended, engineering pipeline run #1 completed, Step 9 generated-file review is closed, Final Files AutoQC passed 78/78 after three revisions, and the world was created as `Healthcare_247_Merrow` on 2026-06-05 at 11:20 AM PDT. Pod assignment is `#vaguspod`; EPM Rose; pod leads Abi O and Larry E. Task 1 advanced through AO rework, hardening, Abi pre-check, revised platform entry, pilot runs, and FA/GA. Alexander reports the current platform state is Preference Labeling. Source-of-truth: 06/02 instruction document, Step 15. PL compares two selected attempts (Response A vs Response B) against the golden response, selects the A4-B4 preference scale, and writes the seven-section justification. Step 9 audit trail remains at `worlds/korvin-merrow/file-review/`; Task 1 canonical lifecycle state is `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`; governing review records are under `worlds/korvin-merrow/task-setup/reviews/`. Reasoning discipline lives at `docs/reasoning-discipline.md`.
+Current phase: Task 1 final human review complete / approved. World Spec approval is complete, onboarding has ended, engineering pipeline run #1 completed, Step 9 generated-file review is closed, Final Files AutoQC passed 78/78 after three revisions, and the world was created as `Healthcare_247_Merrow` on 2026-06-05 at 11:20 AM PDT. Pod assignment is `#vaguspod`; EPM Rose; pod leads Abi O and Larry E. Task 1 advanced through AO rework, hardening, Abi pre-check, revised platform entry, pilot runs, FA/GA, Preference Labeling, and final human review. Abi Osagie completed the final review checklist on 2026-06-06 with applicable items marked Yes or N/A. Step 9 audit trail remains at `worlds/korvin-merrow/file-review/`; Task 1 canonical lifecycle state is `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`; final review record is `worlds/korvin-merrow/task-setup/reviews/task1-final-review-ao-2026-06-06.md`. Reasoning discipline lives at `docs/reasoning-discipline.md`.
 
 Pipeline run #1 / Step 9 closeout state:
 
@@ -21,7 +21,7 @@ Pipeline run #1 / Step 9 closeout state:
 - Final 26-file world-level upload set: `worlds/korvin-merrow/file-review/upload/filesystem/`.
 - Seven task-level files are held out at `worlds/korvin-merrow/file-review/task-files-holdback/` for later task setup handling.
 - Items marked `[A]` required Alexander physician ruling before edits; rulings and candidate edits are recorded in the file-review log.
-- Do not access RL Studio, upload additional task prompts/goldens/grader guidelines, run additional agents, run additional QA, create AutoQC responses, create task setup materials, edit the submitted Failure Analysis / Grader Analysis, create Preference Labeling text, run FA+PL AutoQC, or mutate platform state beyond Alexander-authorized PL work unless Alexander explicitly authorizes the exact step.
+- Do not access RL Studio, upload additional task prompts/goldens/grader guidelines, run additional agents, run additional QA, create AutoQC responses, create task setup materials, edit submitted Failure Analysis / Grader Analysis or Preference Labeling records, or mutate platform state unless Alexander explicitly authorizes the exact step.
 
 Transcript resolution: `docs/claude-transcript-formatted.md` is the authoritative transcript upload artifact. The Claude share URL `https://claude.ai/share/d5129364-5d6c-4a2c-acb3-282f367a0040` is supporting provenance and reviewer-access support. `docs/claude-transcript.md` remains raw historical/provenance evidence only. Historical James Carter references and export encoding artifacts inside it are expected provenance, not current identity defects.
 
@@ -43,16 +43,16 @@ Brainstorm:
 
 Current blocker:
 
-- Active blocker: no repository blocker. Current platform work is Task 1 Preference Labeling. Do not invent A/B details or draft PL text without the actual selected responses and explicit Alexander authorization. Task 2 has a local seed draft folder only; Tasks 2-6 may continue locally only if Alexander explicitly authorizes bounded parallel prep. Additional platform actions beyond the current PL gate remain gated on explicit Alexander authorization for the exact step.
+- Active blocker: no repository blocker. Task 1 final human review is complete. Task 2 has a local seed draft folder only; Tasks 2-6 may continue locally only if Alexander explicitly authorizes bounded parallel prep. Additional platform actions remain gated on explicit Alexander authorization for the exact step.
 
 Next legal action:
 
 - Use `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md` as the canonical Task 1 source of truth.
-- Use the 06/02 instruction document PL section, `docs/world-pipeline-playbook.md` section A5, `TASK-RUNBOOK.md`, and `docs/reasoning-discipline.md` for Task 1 Preference Labeling support.
+- Use `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`, `worlds/korvin-merrow/task-setup/reviews/task1-final-review-ao-2026-06-06.md`, `TASK-RUNBOOK.md`, and `docs/reasoning-discipline.md` for Task 1 provenance and future task continuation.
 - Use `worlds/korvin-merrow/file-review/file-review-protocol.md`, `worlds/korvin-merrow/file-review/time-strategy-and-state.md`, `worlds/korvin-merrow/file-review/findings-triage.md`, and `worlds/korvin-merrow/file-review/file-review-log.md` as the closed Step 9 audit trail.
 - Treat `worlds/korvin-merrow/file-review/pipeline-output/filesystem/` as the downloaded V1 output, `worlds/korvin-merrow/file-review/revision/filesystem/` as the final revised 33-file working set, and `worlds/korvin-merrow/file-review/upload/filesystem/` as the final 26-file world-level upload set used for world creation.
 - Treat `worlds/korvin-merrow/file-review/task-files-holdback/` as the seven task-level files intentionally held out of the world-level upload set for later task setup handling.
-- Do not access RL Studio, upload task setup materials, run agents, run QA, create AutoQC responses, edit the submitted Failure Analysis / Grader Analysis, create PL text, run FA+PL AutoQC, or mutate platform state beyond the authorized PL work unless Alexander explicitly authorizes the exact step.
+- Do not access RL Studio, upload task setup materials, run agents, run QA, create AutoQC responses, edit submitted Failure Analysis / Grader Analysis or Preference Labeling records, or mutate platform state unless Alexander explicitly authorizes the exact step.
 - Do not revise locked architecture, locked canon, original final submission staging, or the original pipeline output unless Alexander explicitly authorizes reopening.
 
 ## Completed
