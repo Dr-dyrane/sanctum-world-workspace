@@ -7,6 +7,19 @@ Question: does the grader read the chart? My history on it: (1) said "golden-onl
 THE REAL LESSON (harder than the original): the failure was not "trusting the linter" or "trusting Abi." It was failing to anchor on the PRIMARY ARTIFACT (the transcript) I already possessed, and instead treating each new authoritative-sounding claim as ground truth. When a factual claim about system behavior is contested, go to the primary artifact, not the most recent authority. The transcript was the falsifier all along; I kept not reading it as the arbiter.
 NOTE on deliverables: this changes none. For the GA, narrowing to the 0.72 run (per Abi) makes "scored from the golden + model transcript" both accurate and Abi-compliant - no "went into the chart" needed. The v5 grader guidelines are MECHANISM-AGNOSTIC (judge vs the golden; do not instruct the grader on how it verifies), which is correct regardless of chart access. Keep the chart-access fact in the back pocket only for any future Self-Contained-gate question; it does not belong in GA text.
 
+## PROVISIONAL / STILL LEARNING (6/6) - not backbone yet; promote only if it holds across more tasks
+Working hypothesis from the Task 1 round-2 retrospective. Flagged provisional on purpose: it comes from ONE task bouncing once for difficulty, n=1, so treat it as a lead to test on Tasks 2-6, not a settled rule. Do not let it harden into doctrine until the pattern repeats.
+
+The observation: we sailed through brainstorm and world build, then the task "failed" at human review for being too easy (all 10 runs >=90). The likely cause is an OBJECTIVE-FUNCTION SHIFT we did not notice at the stage boundary. World stage grades realism (consistent, faithful, no leakage, reads like a real chart) and we are good at it. Task stage grades the opposite-ish thing: does a frontier model actually fail here. Cleaner and more realistic often means EASIER, so the two stages pull against each other in one place, and we carried world-stage momentum (make it clean and correct) into a stage that rewards making a strong model stumble.
+
+The receipt: in round 1 we deleted the leaking task files and scores went UP (72-95 to 90-97). Those files were doing two jobs, leaking the answer AND giving the model surface to trip on, and we removed both as if they were one problem. Leakage and difficulty are different axes. A task file can be adversarial without leaking (the handoff-trap). We over-corrected cleanliness and stripped difficulty out with the leakage.
+
+The deeper miscalibration: prednisone provenance, cardio/nephro staging, buried evidence are hard for a tired resident, not for a model that reads all 26 docs perfectly and never fatigues. We were designing HUMAN-traps. The model fails on different things: an authoritative voice telling it to do the wrong thing, rewards for over-helpfulness, ambiguity it should resist resolving. The handoff is the first real MODEL-trap.
+
+The candidate rule to test (NOT yet adopted): design the failure FIRST. Decide what a strong model should get wrong and why it would genuinely fall for it, then wrap realism around that, instead of building realism first and hoping difficulty emerges. Invert the build order for tasks.
+
+Structural caveat that makes this hard to catch early: AutoQC grades form (green/red), never difficulty. The first difficulty signal is a human running trajectories. So "too easy" is only knowable at human review, which is also why holding Tasks 2-6 until Task 1's pattern settles was correct. Watch whether Tasks 2-6 confirm or break this before promoting it above this line.
+
 ## The one rule
 Before any commit that is expensive or irreversible to undo, or any claim about WHY a system did something, drop out of inductive guessing and read the ground truth (the config, the transcript, the output, the file). Everywhere else, stay fast. Falsification before commitment at the irreversible nodes; induction everywhere else.
 
