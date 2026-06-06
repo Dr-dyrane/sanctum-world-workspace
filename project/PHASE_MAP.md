@@ -19,7 +19,7 @@ Onboarding scope:
 
 Current Korvin status: Step 5 World Spec AutoQC is complete at 108/109, with the sole open prednisone dose/frequency warning preserved as intentional design and justified in notes. Step 6 Human Review: World Spec is APPROVED by Stacey S. The requested Reference File Origin routing correction was resolved and re-uploaded.
 
-Onboarding approval condition has been met. Official production pipeline position: Task-Level Materials / Task 1 AO Review Rework. World-level Files are complete: Step 9 generated-file review closed, Final Files AutoQC passed 78/78 after three revisions, and `Healthcare_247_Merrow` was created on 2026-06-05 with 26 world files synced. Abi first and round-2 human reviews returned SEND BACK / rework required. Task 1 RLS rework entry, Task AutoQC rerun, batch v3 Taiga trajectories/QA, and round-2 FA/GA submission are complete: both task files deleted, prompt/golden/grader guidelines replaced with v2/v3/v5, Task AutoQC at 2/68 justified, v3 scores 90-97 with lowest run 8 / db617c58, and Writer Note disclosed the higher/tighter scores. Round-2 blocker: task too easy because all trajectories scored >=90. A local hardening package is built under `worlds/korvin-merrow/task-setup/platform/task1/` with prompt v5, golden v6, grader-guidelines v10, and the pharmacy handoff trap; it remains gated on physician sign-off / Abi pre-check / explicit platform-entry authorization. Governing review records are under `worlds/korvin-merrow/task-setup/reviews/`; canonical lifecycle log is `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`. Do not enter Tasks 2-6 until Task 1 rework is accepted or Alexander explicitly authorizes bounded parallel prep.
+Onboarding approval condition has been met. Official production pipeline position: Phase 4 Evaluate the Agent / Task 1 Preference Labeling. World-level Files are complete: Step 9 generated-file review closed, Final Files AutoQC passed 78/78 after three revisions, and `Healthcare_247_Merrow` was created on 2026-06-05 with 26 world files synced. Task 1 went through Abi first review, round-2 send-back, local hardening, Abi pre-check, revised platform entry, pilot runs, and FA/GA. Alexander reports the current platform state is Preference Labeling for Task 1. Per the 06/02 instruction document, Preference Labeling compares two selected agent attempts (Response A vs Response B), selects the A4-B4 preference scale, and writes the seven-section justification. No local PL content is tracked yet unless Alexander adds or authorizes it. Canonical lifecycle log is `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`.
 
 ### Phase 2: Build Your Files And Tasks
 
@@ -33,13 +33,13 @@ Korvin Merrow current exception: Alexander has explicitly authorized local, batc
 
 Goal: Address Task AutoQC findings and complete trajectory/grading audit.
 
-Status: Task 1 first and round-2 human reviews returned SEND BACK / rework required. RLS rework entry, Task AutoQC rerun, batch v3 Taiga trajectories/QA, and round-2 Failure Analysis / Grader Analysis submission are complete. A local Task 1 hardening package is built and awaits physician sign-off / Abi pre-check / explicit platform-entry authorization. Task uploads for Tasks 2-6, extra agent runs, extra QA, platform responses, preference labeling, and reviewer-stage actions remain gated on explicit Alexander authorization for the exact action.
+Status: Task 1 has advanced past hardening and FA/GA into Preference Labeling per Alexander's current platform report. Preserve source-of-truth sequence: Step 14 FA/GA precedes Step 15 Preference Labeling, then Step 16 AutoQC on FA + PL, then Step 17 final reviewer review. Do not create PL text, run FA+PL AutoQC, start final review actions, or mutate RL Studio unless Alexander explicitly authorizes that exact action.
 
 ### Phase 4: Evaluate The Agent
 
 Goal: Failure analysis, preference labeling, AutoQC, and final reviewer review.
 
-Status: Out of scope until generated-file review, task setup, trajectory runs, and QA gates are complete and Alexander explicitly authorizes evaluation work.
+Status: ACTIVE for Task 1 Preference Labeling. Source-of-truth: 06/02 instruction document, Phase 4 / Step 15. PL compares two RL Studio/Taiga-selected attempts against the golden response, selects the A4-B4 preference scale, and justifies the choice across the seven-section format. No PL content should be pre-created from expected failures.
 
 ## Explicitly Out Of Scope Until Approval
 
