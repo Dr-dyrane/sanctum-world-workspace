@@ -4,7 +4,7 @@ Date: 2026-06-04. Written at Korvin Merrow spec-submission (108/109, prednisone-
 
 ## A. Korvin: forward pipeline (stages 7-17)
 
-Current position: Steps 1-9 COMPLETE. World created 6/5/2026 as **Healthcare_247_Merrow** (world_d50c832ac6474a68ba982a77e28a6bbe, 26 files synced, snap_0fb032e95b324710b12a7432cf7da6c1). Task 1 setup completed, Task AutoQC passed 64/64 after remediation, ten Taiga trajectories ran, and Taiga QA produced a corrective Go Back decision. Active work is Task 1 corrective Task Writing revision: replace grader guidance with `grader-guidelines-task1-v4.txt`, replace the medication-reconciliation request memo with the revised word-target version, rerun Task AutoQC, justify the expected Self-Contained warning with `include_input_files=true` evidence, then rerun trajectories. Canonical Task 1 lifecycle source: `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`.
+Current position: Steps 1-9 COMPLETE. World created 6/5/2026 as **Healthcare_247_Merrow** (world_d50c832ac6474a68ba982a77e28a6bbe, 26 files synced, snap_0fb032e95b324710b12a7432cf7da6c1). Task 1 setup completed, corrective v4 Task Writing rerun completed, Task AutoQC was submitted at 2/68 with both warnings justified, and batch v2 Taiga trajectories ran. Active work is Task 1 Taiga QA feedback / pre-FA-GA: save the recurring `enable_anthropic_api` Data Quality false positive as `tech issue`, run 5.1 Taiga QA Feedback AutoQC, clear 5.2, then start Failure Analysis / Grader Analysis. Canonical Task 1 lifecycle source: `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`.
 
 ## A2. Step 10 verbatim requirements (instruction doc 06_02, "How to Set up Your Task in RLS" + Golden Response + Grader Guidelines sections; read 6/5)
 
@@ -40,7 +40,9 @@ Task 1 went 9/68 fail -> 1/68 (warning) in one rerun. The 9 fails clustered, and
 
 5. SELF-CONTAINED GUIDELINES WARNING - CORRECTED 6/5. The v3/golden-only fix was wrong for this task. Taiga EL-2/DQ-2 showed the grader receives the chart: `include_input_files=true` mounts `/docs/filesystem/` with all source files. Therefore chart-sourced specifics are correct, not fabrication, even if the low-detail golden does not mention them. Use `grader-guidelines-task1-v4.txt`: fabrication checks should cross-check `/docs` and penalize only specifics unsupported by the chart and not derivable from the golden. Expect the AutoQC Self-Contained warning and justify it in 2.2 with the live `include_input_files` evidence; do not collapse back to golden-only.
 
-6. RERUN DISCIPLINE held: "Rerun N failing" only, never full reruns.
+6. NO WEIGHT DISTRIBUTION VARIANCE - TASK 1 v4 SPECIFIC. The corrected v4 rerun produced a second warning even though the same native three-section structure had recently passed and companion checks for the platform-required sections passed. Treat this as a variance/misfire only when (a) no numeric weights are present, (b) "Must be present and correct" / "Acceptable variation" / "Penalize for" are present, and (c) the challenged wording protects multi-path defensibility. Do not remove useful acceptable-variation language merely to chase a clean board.
+
+7. RERUN DISCIPLINE held: "Rerun N failing" only, never full reruns.
 
 ## A4. Method lesson from independent Claude reviews and Taiga evidence
 
@@ -60,7 +62,7 @@ Provenance pattern that worked: keep golden v1 (locked-content upload) AND v2 (s
 
 After task setup and trajectories, preserve a local backup record of QA / AutoQC responses before platform submission when the guide asks for documentation in Google Docs or Drive. Do not rely on platform cards as the only memory surface.
 
-Failure analysis / grader analysis is later-phase work only. When authorized, read the full lowest-scoring trajectory output for each task rather than summarizing from scores alone. Grader analysis should be concrete and short enough to act on: identify the real failure pattern, explain whether the failure is prompt-side, file-side, golden-side, grader-side, or model-side, and propose specific edits to the A/B/C grader sections when needed.
+Failure analysis / grader analysis is later-phase work only. When authorized, read the full lowest-scoring trajectory output and grading transcript for each task rather than summarizing from scores alone. Grader analysis should be concrete and short enough to act on: identify the real failure pattern, explain whether the failure is prompt-side, file-side, golden-side, grader-side, or model-side, and propose specific edits to the grader sections when needed. Task 1 current calibration note: batch v2 scored high overall (mean 89%, zero below 70), but grading transcripts plus saved-output comparison show meaningful discrimination: the 0.72 and 0.78 runs omitted metformin ER from the medication disposition, the 0.78 run also under-dispositioned gabapentin, and a 90s-cluster comparator covered metformin. FA frame: completeness/self-audit failure under 19-medication reconciliation load after high-salience traps were handled. GA frame: Good/Great grader candidate because it caught true omissions and correctly accepted chart-sourced specifics under the v4 `/docs`-aware rule.
 
 Preference labeling is later-phase work only. Keep it separate from Step 10 task setup, QA response notes, and grader-guideline editing. Follow the official preference-labeling dimensions and do not pre-create labels from expected failures.
 

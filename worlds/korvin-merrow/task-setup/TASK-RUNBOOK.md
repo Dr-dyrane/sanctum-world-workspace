@@ -18,7 +18,7 @@ Derived from Task 1 (KM01) lived 6/5/2026: 9 AutoQC fails on first pass, all pre
 
 ## C. Task AutoQC (2.x)
 - [ ] Run Task AutoQC. Rerun N failing ONLY (never full reruns).
-- [ ] Expected residual = "Self-Contained Guidelines" warning (the /docs-aware fabrication check intentionally references the chart). JUSTIFY it in 2.2 with the include_input_files evidence - do not fix to golden-only (that mis-fires the fabrication check, per Taiga EL-2). Other structural guideline/golden/prompt flags: rebuild per A3, do not justify.
+- [ ] Expected residual = "Self-Contained Guidelines" warning (the /docs-aware fabrication check intentionally references the chart). JUSTIFY it in 2.2 with the include_input_files evidence - do not fix to golden-only (that mis-fires the fabrication check, per Taiga EL-2). If "No Weight Distribution" recurs despite no numeric weights and the native required sections passing, treat it as a variance/misfire only after checking the exact language; do not remove multi-path-defensibility language just to chase a clean board. Other structural guideline/golden/prompt flags: rebuild per A3, do not justify.
 - [ ] 2.2 Notes (required even on pass): short resolution summary.
 - [ ] Mark reviewed -> Run Taiga Trajectories & QA. CLOCK OFF during the run.
 
@@ -26,8 +26,9 @@ Derived from Task 1 (KM01) lived 6/5/2026: 9 AutoQC fails on first pass, all pre
 - [ ] 3.1 Confirm batch has 10 completed trajectories, each with a %. Record the spread. Calibration: <70% = good stumping, >70% = maybe too easy; the number is not the verdict - read the outputs.
 - [ ] Export trajectory outputs into task-setup/taskN/trajectories/vX/ + README with trap-by-trap read.
 - [ ] 3.2 Trajectory AutoQC - expect pass.
-- [ ] 4 Taiga QA: Fetch QC Report -> respond to EVERY Env Linter + Data Quality flag. Tech issue -> thumbs down + exactly `tech issue`. Substantive -> thumbs down + thorough professional rebuttal (client-visible). NEVER thumbs up (= go back and fix). Save each (paper-airplane) -> refresh to confirm.
+- [ ] 4 Taiga QA: Fetch QC Report -> respond to EVERY Env Linter + Data Quality flag. Tech issue -> thumbs down + exactly `tech issue` (Task 1 recurring example: `enable_anthropic_api`). Substantive -> thumbs down + thorough professional rebuttal (client-visible). NEVER thumbs up (= go back and fix). Save each (paper-airplane) -> refresh to confirm.
 - [ ] 5 Run Taiga QA Feedback AutoQC; address flags in 5.2 (copy exact line, then response).
+- [ ] Pull/read the grading transcript for low-scoring trajectories before FA/GA; do not infer failure mode from trajectory prose alone. Task 1 receipt: the apparent 0.78 "underscore" became a true metformin-omission finding once transcripts were read.
 - [ ] Verify fabrication-candidate specifics in trajectories against the 26 world files BEFORE FA.
 - [ ] THEN Start Failure Analysis & Grader Analysis (never write FA/GA before clicking that button).
 
@@ -39,3 +40,4 @@ Derived from Task 1 (KM01) lived 6/5/2026: 9 AutoQC fails on first pass, all pre
 5. CORRECTED 6/5 (Taiga EL-2 evidence): the Taiga grader IS handed the chart - include_input_files=true mounts /docs/filesystem/ with all source files (confirmed in grader transcripts). So write the fabrication + copy-forward checks to CROSS-CHECK /docs (chart-sourced specifics are correct, not fabrication), and JUSTIFY the AutoQC "Self-Contained Guidelines" warning with the include_input_files evidence rather than fixing to golden-only. Golden-only anchoring is factually wrong here and mis-fires the fabrication check on legitimate chart specifics (the low-detail golden contains none of them). Build Tasks 2-6 guidance from grader-guidelines-task1-v4.txt (the /docs-aware version), NOT v3.
 6. Control chars can hide in source text - scan and sanitize before DOCX build.
 7. On any contested QC disposition that turns on platform behavior, run a cold-context Claude pass before deciding (A4).
+8. No Weight Distribution can variance-misfire. If the guideline has no numeric weights, preserves the platform's native sections, and the companion structure checks pass, justify rather than flattening clinically useful acceptable-variation language.
