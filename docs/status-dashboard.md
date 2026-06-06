@@ -13,13 +13,13 @@
 - Task 1 source of truth: `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`.
 - Task runbook: `worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md`.
 - Reasoning discipline: `docs/reasoning-discipline.md` is the workspace verification gate for one-way-door decisions and causal platform-behavior claims.
-- Task 1 state: corrective v4 rerun completed; Task AutoQC submitted at 2/68 with both warnings justified (expected Self-Contained Guidelines plus likely No Weight Distribution variance misfire); batch v2 trajectories ran under job `476e281a`; Env Linter V2 found no issues; Data Quality has only the recurring `enable_anthropic_api` false positive.
+- Task 1 state: AO rework entered RLS. Both task files deleted, prompt/golden/grader guidelines replaced with v2/v3/v5, Task AutoQC reran to 2/68 justified. No Formatting Leakage cleared as variance on rerun; remaining Self-Contained Guidelines and No Weight Distribution were justified.
 - Task 1 scores: 78, 72, 92, 95, 93, 92, 92, 92, 90, 94 (mean 89%, zero below 70). Current read after grading transcripts and saved-output comparison: well-built and clinically discriminating but not deeply stumping; the 0.72 and 0.78 runs omitted metformin ER from the medication disposition, the 0.78 run also under-dispositioned gabapentin, and a 90s-cluster comparator covered metformin.
 - Grader read: Good/Great candidate. It caught real held-med omissions through chart verification and did not false-flag accurate chart-sourced specifics as fabrication, validating the v4 `/docs`-aware guideline approach.
 - Local trajectory exports: Task 1 trajectory outputs captured under `worlds/korvin-merrow/task-setup/task1/trajectories/v1/` and `worlds/korvin-merrow/task-setup/task1/trajectories/v2/`.
 - FA/GA status: written and submitted on batch v2, run `aef58074`; GA rated Great. Final local copy is `worlds/korvin-merrow/task-setup/task1/FA-GA-final.md`.
 - FA/GA AutoQC status: submitted at 1/14 with the single Human-Written Grader Analysis false positive justified. Abi first human review returned SEND BACK / rework required; governing review record is `worlds/korvin-merrow/task-setup/reviews/task1-first-human-review-ao-2026-06-05.md`.
-- Task 1 rework direction: delete both task files, replace prompt/golden/grader guidelines with local v2/v3/v5 drafts, rerun Task AutoQC and trajectories, then rewrite FA/GA on the new single lowest run. Do not enter Tasks 2-6 until this pattern is accepted or Alexander explicitly authorizes bounded parallel prep.
+- Task 1 rework direction: next run batch v3 Taiga trajectories/QA against the cleaned task, then rewrite FA/GA on the new single lowest run. Do not enter Tasks 2-6 until this pattern is accepted or Alexander explicitly authorizes bounded parallel prep.
 - Step 10/11 source guidance: instruction doc 06_02 sections "How to Set up Your Task in RLS", Golden Response, Grader Guidelines, plus lived Task 1 lessons in `docs/world-pipeline-playbook.md` sections A2-A5.
 
 ## Brainstorm
@@ -242,7 +242,7 @@
 - Fetched World Spec example source documents: `reference/word-spec-examples/` (local-only / gitignored)
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 - World Spec prep folder structure: reorganized by lifecycle buckets (`candidate-review/`, `locked/`, `ratifications/`, `reviews/`, `decision-logs/`, `planning-scaffolds/`)
-- Current phase: Task 1 AO Review Rework. Step 9 generated-file review is complete, Final Files AutoQC passed 78/78, and `Healthcare_247_Merrow` is live. Task 1 FA/GA was saved on platform batch v2, run `aef58074`; GA rated Great. FA/GA AutoQC was submitted at 1/14 with the single Human-Written Grader Analysis false positive justified. Abi first human review returned SEND BACK / rework required. Do not access RL Studio, upload additional task prompts/goldens/grader guidelines, run additional agents, run additional QA, create platform responses, create AutoQC responses, create scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifests, final submission packages, additional uploads, or additional submissions until explicitly authorized.
+- Current phase: Task 1 AO Review Rework. Step 9 generated-file review is complete, Final Files AutoQC passed 78/78, and `Healthcare_247_Merrow` is live. Abi first human review returned SEND BACK / rework required. RLS entry and Task AutoQC rerun are complete at 2/68 justified; next is batch v3 Taiga trajectories/QA. Do not access RL Studio, upload additional task prompts/goldens/grader guidelines, run additional agents outside batch v3, run additional QA outside batch v3, create platform responses, create AutoQC responses, create scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifests, final submission packages, additional uploads, or additional submissions until explicitly authorized.
 
 ## Tooling
 
