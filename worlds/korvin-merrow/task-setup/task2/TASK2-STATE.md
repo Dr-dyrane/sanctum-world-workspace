@@ -1,6 +1,6 @@
 # TASK2-STATE
 
-Status: KM02 v3 complete locally and on platform; ready for Preference Labels with local PL prep packet.
+Status: KM02 complete through writer workflow; Preference Labels submitted with verdict B / B++; Awaiting Final Review.
 
 Task: KM02 - Hospital Discharge Summary Generation.
 
@@ -22,7 +22,8 @@ The clean prompt is superseded and preserved under `platform/task2/hold/`.
 - Escalation v3: all 10 trajectories scored; spread 45, 92, 82, 82, 60, 62, 40, 30, 45, 55; mean 59.3.
 - Final FA/GA candidate: Attempt 8, score 0.30, job `8f393839`.
 - Task AutoQC / Taiga gates passed: `qcaud_5e`, `qcaud_4a`, `qcaud_ef`.
-- Preference Labeling prep packet created locally under `preference-labeling/`: A = 0.40 propagation run, B = 0.82 catch run, recommended draft verdict B3. The `preference-labeling/inputs/` folder preserves hash-matching copies of the KM02 v3 prompt, golden, grader, and mounted draft from `platform/task2/current/`. No PL platform submission or PL AutoQC result is recorded in the repository.
+- Preference Labeling submitted with verdict B / B++. The local `preference-labeling/` packet preserves A = 0.40 propagation run, B = 0.82 catch run, the draft/review text, byte evidence, and `inputs/` hash-matching copies of the KM02 v3 prompt, golden, grader, and mounted draft from `platform/task2/current/`.
+- Current external state: Awaiting Final Review.
 
 ## Folder Map
 
@@ -33,13 +34,13 @@ The clean prompt is superseded and preserved under `platform/task2/hold/`.
 - `runs/escalation-v3/`: current v3 run evidence and FA/GA support.
 - `qa/`: Taiga / AutoQC / QA log.
 - `fa-ga/`: current prepared FA/GA text.
-- `preference-labeling/`: local PL evidence, hash-matching v3 input copies, and draft recommended verdict. Draft/prep only unless Alexander confirms platform submission.
+- `preference-labeling/`: submitted PL verdict backup, local PL evidence, hash-matching v3 input copies, and draft/review text. Evidence only unless Alexander authorizes a resubmission or reviewer-directed edit.
 - `learnings/`: task-level retrospective and lessons.
 - `bundles/`: ignored local convenience bundles only.
 - `archive/`: future retired material only.
 
 ## Boundaries
 
-Do not run additional platform steps, QA, AutoQC responses, preference-label submission, uploads, submissions, or RLS mutations without Alexander explicitly authorizing the exact step.
+Do not run additional platform steps, QA, AutoQC responses, preference-label resubmission, uploads, submissions, or RLS mutations without Alexander explicitly authorizing the exact step.
 
 If Abi reseeds or changes the platform state, update this file, `project/STATUS.md`, `docs/status-dashboard.md`, the Claude handoff files, and `project/WORKSPACE_FILE_MAP.md`.

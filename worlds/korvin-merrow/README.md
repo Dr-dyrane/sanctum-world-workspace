@@ -1,6 +1,6 @@
 # Korvin Merrow World
 
-Current state: World created as `Healthcare_247_Merrow`; Step 9 generated-file review COMPLETE; Task 1 final human review COMPLETE / APPROVED. Task 2 / KM02 v3 is in local PL-prep state after the reseed/date fix: golden `golden-KM02-v5.docx` is re-dated to 05/24/2026 with sha256 prefix `2dd3e0ad`, Task AutoQC / Taiga gates passed qcaud_5e, qcaud_4a, and qcaud_ef, final FA/GA candidate uses Attempt 8 at 0.30 from v3 job `8f393839`, and local PL prep compares A 0.40 versus B 0.82 with draft B3 recommendation. Platform PL submission / PL AutoQC is not recorded in repo.
+Current state: World created as `Healthcare_247_Merrow`; Step 9 generated-file review COMPLETE; Task 1 final human review COMPLETE / APPROVED. Task 2 / KM02 is complete through writer workflow and Awaiting Final Review: golden `golden-KM02-v5.docx` is re-dated to 05/24/2026 with sha256 prefix `2dd3e0ad`, Task AutoQC / Taiga gates passed qcaud_5e, qcaud_4a, and qcaud_ef, final FA/GA uses Attempt 8 at 0.30 from v3 job `8f393839`, and Preference Labels were submitted with verdict B / B++.
 
 Start here only after reading `project/STATUS.md`.
 
@@ -12,7 +12,7 @@ Start here only after reading `project/STATUS.md`.
 - `remediation/`: reviewer SEND BACK remediation decision briefs and compliance review.
 - `reviews/`: external/human/AutoQC review artifacts and reviewer feedback history.
 - `submission/`: RL Studio submission artifacts.
-- `task-setup/`: Task setup, trajectory, QA, FA/GA, PL, review, runbook, and bounded pre-build study provenance after world creation. Task 1 is approved. Task 2 starts at `task-setup/task2/TASK2-STATE.md`; clean-pilot evidence lives under `task-setup/task2/runs/clean-pilot/`, v2 escalation evidence under `task-setup/task2/runs/escalation-v2/`, v3 evidence under `task-setup/task2/runs/escalation-v3/`, local PL prep under `task-setup/task2/preference-labeling/`, and the active platform set under `task-setup/platform/task2/current/`.
+- `task-setup/`: Task setup, trajectory, QA, FA/GA, PL, review, runbook, and bounded pre-build study provenance after world creation. Task 1 is approved. Task 2 starts at `task-setup/task2/TASK2-STATE.md`; clean-pilot evidence lives under `task-setup/task2/runs/clean-pilot/`, v2 escalation evidence under `task-setup/task2/runs/escalation-v2/`, v3 evidence under `task-setup/task2/runs/escalation-v3/`, submitted PL evidence under `task-setup/task2/preference-labeling/`, and the active platform set under `task-setup/platform/task2/current/`.
 - `world-spec-prep/`: World Spec preparation cockpit plus lifecycle subfolders for locked decisions, locked, ratifications, reviews, decision logs, and planning scaffolds.
 - `world-spec-construction/`: World Spec construction lifecycle folders for candidate review artifacts, locked construction artifacts, and ratifications.
 - `file-inventory/`: file inventory lifecycle area. Locked architecture defines planned file ecosystem, and locked File Inventory v1 defines the planned inventory rows; neither creates synthetic files or chart contents.
