@@ -176,9 +176,9 @@
 - Human World Spec Review: APPROVED by Stacey S; approval record `worlds/korvin-merrow/reviews/reviewer-spec-approval-01.md`
 - Reviewer routing correction: Reference File Origin labels corrected to the template-canonical `Custom Made` token and re-uploaded
 - No GG-KM07 exists
-- Current phase: Task 1 AO Review Rework
+- Current phase: Task 1 final human review COMPLETE / APPROVED
 - Active Task 1 lifecycle log: `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`
-- Task 1 platform provenance: `worlds/korvin-merrow/task-setup/platform/task1/` (`prompt-task1-v2.txt`, `golden-response-task1-v3.docx`, and `grader-guidelines-task1-v5.txt` are current post-Abi local rework drafts; v4 is superseded for platform-facing rework)
+- Task 1 platform provenance: `worlds/korvin-merrow/task-setup/platform/task1/`; active/live folder contains only `prompt-task1-v5.txt`, `golden-response-task1-v6.docx`, `grader-guidelines-task1-v10.txt`, `medication_safety_handoff_pharmacy_05232026.docx`, and README. Superseded prompt/golden/grader/task-file iterations live under `platform/task1/archive/` as historical evidence only.
 - Tasks 2-6 prep packet: `worlds/korvin-merrow/task-setup/step10-review-packet.md`
 - Active file-review protocol: `worlds/korvin-merrow/file-review/file-review-protocol.md`
 - Active Claude-assisted triage: `worlds/korvin-merrow/file-review/findings-triage.md`

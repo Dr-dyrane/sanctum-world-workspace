@@ -2,6 +2,8 @@
 
 Derived from Task 1 (KM01) lived 6/5-6/6/2026: AutoQC setup failures, Taiga rerun lessons, and Abi's first human review. Follow in order; each checkbox is a place Task 1 broke. CANONICAL procedure - CODEX keep in sync with playbook A2/A3/A4/A5 and `worlds/korvin-merrow/task-setup/reviews/task1-first-human-review-ao-2026-06-05.md`. Per-task working files live in task-setup/platform/taskN/.
 
+THE LAW (read FIRST, before any step): docs/reasoning-discipline.md "THE LAW" section. Four lines, one law: (1) build it real, no watering down; (2) build the task with the world's per-artifact micro-step rigor, the task deserves more rigor than the world; (3) read every file in full and reason from the full context to OUTSMART the model, not feed it, we know its exact information set; (4) difficulty is empirical and adversarial, not architectural, discover the discriminator by running the model and exploiting where its competence forces an error, a complete task is not an adversarial one. KM01 cleared only after we stopped building a complete task ON the world and built one to BEAT the model.
+
 GOVERNING PRINCIPLE: docs/reasoning-discipline.md (the verification gate). At every one-way door (expensive/irreversible commit) or any claim about WHY a system behaved a certain way, read the ground truth (config/transcript/output) BEFORE committing; state verified vs inferred. Stay fast everywhere else. Most of this runbook's "expected residual / justify vs fix" calls ARE one-way doors - verify first.
 
 ## A0. Reviewer-driven defaults (Abi first + second review, Task 1) - bake these in from the START, do not rediscover

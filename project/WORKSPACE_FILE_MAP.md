@@ -128,9 +128,13 @@ For a new collaborator or new AI session, read in this order:
 116. `worlds/korvin-merrow/final-submission-resolution/locked/final-submission-resolution-validation-review.md` for locked Final Submission Resolution validation review.
 117. `korvin-merrow-final-submission-staging/` for generated submission-facing artifact staging. Canonical active contents are `01_spec-document/Alexander_World_Merrow_latest_6_4.docx`, `02_template-reference-files/final/` with 33 date-stamped DOCX files, Claude transcript DOCX/PDF, optional Brainstorm copy, and empty hold-not-upload folder. This is staging only; it is not a manifest, zip, AutoQC response, or scoring artifact.
 118. `worlds/korvin-merrow/reviews/reviewer-spec-approval-01.md` for Stacey S World Spec approval and Reference File Origin routing correction record.
-119. `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md` for historical interview basis.
-120. `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions and construction-lock status.
-121. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
+119. `worlds/korvin-merrow/task-setup/platform/task1/` for Task 1 live platform artifacts. Active folder contains only `prompt-task1-v5.txt`, `golden-response-task1-v6.docx`, `grader-guidelines-task1-v10.txt`, `medication_safety_handoff_pharmacy_05232026.docx`, and README.
+120. `worlds/korvin-merrow/task-setup/platform/task1/archive/` for superseded Task 1 prompt, golden, grader, round-1 task-file, render-PDF, and scratch/proof artifacts. Historical evidence only; never upload from this folder without explicit review.
+121. `worlds/korvin-merrow/task-setup/platform/_templates/` for reusable platform artifact shells, including `golden-template-worldstyle.docx`; copy per task, then run DOCX integrity/render checks before use.
+122. `worlds/korvin-merrow/task-setup/task1/FA-GA-current.md`, `FA-GA-final.md`, and `preference-label-task1-A-vs-B.md` for Task 1 evaluation-stage backups and submitted wording records.
+123. `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md` for historical interview basis.
+124. `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions and construction-lock status.
+125. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
 
 Do not start by opening every prep file. Most prep files are supporting memory, not active instructions.
 
@@ -904,7 +908,7 @@ Current contents:
 - `worlds/korvin-merrow/task-setup/CHECKPOINT-AUDIT-pre-task2.md`: pre-Task 2 checkpoint audit. Consolidates Task 1 error ledger, 06/02 alignment, and the resolved native grader-format rule for Task 2 preparation.
 - `worlds/korvin-merrow/task-setup/step10-review-packet.md`: Step 10 review packet mapping six tasks to held-back task files, drafting de-hinted platform prompt candidates, listing candidate holdback-file edits requiring Alexander rulings, and mapping FI IDs to platform filenames for later GG/EO translation.
 - `worlds/korvin-merrow/task-setup/platform/task1/`: Task 1 platform provenance and hardening draft folder. Contains uploaded/superseded task files, prompt v2-v5, golden-response v1-v6 DOCX files, grader-guideline v1-v10 TXT files, and the hardening handoff `medication_safety_handoff_pharmacy_05232026.docx` plus PDF render. The final Task 1 platform set passed through pilot runs, FA/GA, PL, and final human review; earlier v3/v5 rework files are historical after Abi round-2 send-back.
-- `worlds/korvin-merrow/task-setup/platform/task1/preference-label-task1-A-vs-B.md`: Task 1 Step 15 Preference Labeling backup. Records the selected A/B pair, B1 decision, guardrails, and paste-ready justification.
+- `worlds/korvin-merrow/task-setup/task1/preference-label-task1-A-vs-B.md`: Task 1 Step 15 Preference Labeling backup. Records the selected A/B pair, B1 decision, guardrails, and paste-ready justification.
 - `worlds/korvin-merrow/task-setup/platform/task2/`: Task 2 local seed draft folder. Contains `prompt-task2-v1.txt`, `golden-response-task2-v1.docx`, and `grader-guidelines-task2-v1.txt`. These are bounded local prep artifacts only; Task 2 platform entry remains held until Task 1 pattern is accepted or Alexander explicitly authorizes bounded parallel prep.
 - `worlds/korvin-merrow/task-setup/task1/trajectories/v1/`: Task 1 trajectory export area. Currently contains one captured trajectory output (`discharge_med_rec_note` as MD/DOCX/PDF) plus README; the other nine trajectory outputs are not yet exported locally.
 - `worlds/korvin-merrow/task-setup/task1/trajectories/v2/`: Task 1 batch v2 trajectory export area. Currently contains one representative v2 response as DOCX/PDF for FA/GA calibration after the corrective v4 rerun.

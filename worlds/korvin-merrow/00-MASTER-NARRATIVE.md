@@ -61,7 +61,7 @@ How it cleared. The decisive finding was that the model caught every planted tra
 
 ## 3. The evaluation stage (FA, GA, PL)
 
-Detail: `task-setup/task1/FA-GA-final.md`, `task-setup/platform/task1/preference-label-task1-A-vs-B.md`.
+Detail: `task-setup/task1/FA-GA-final.md`, `task-setup/task1/preference-label-task1-A-vs-B.md`.
 
 The Failure Analysis and Grader Analysis were written on the single lowest run (trajectory 5, 0.78), in Abi's prose form, after two format corrections (single paragraph tripped a length check; they had to be two short paragraphs, no headers). Preference Labeling compared two strong runs (A 0.90, B 0.97); both were clinically correct and both declined every trap, so the honest verdict was B1, slightly better on clarity, not a clinical gap. The preference writeup used the labeled-plus-Summary format the appendix example actually shows. It did not import the FA failure into PL, did not invent a major gap, and did not use plus-sign notation. The preference AutoQC cleared after fixing a tech-issue dismissal field with both the required response and a brief reason. Task 1 then passed final review.
 
