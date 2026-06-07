@@ -33,7 +33,7 @@ Korvin Merrow current exception: Alexander has explicitly authorized local, batc
 
 Goal: Address Task AutoQC findings and complete trajectory/grading audit.
 
-Status: Task 1 has completed final human review. Do not start Task 2 setup, additional task uploads, additional agent runs, additional QA, platform responses, or reviewer-stage actions unless Alexander explicitly authorizes the exact action.
+Status: Task 1 has completed final human review. Task 2 / KM02 clean-pilot platform set is staged locally after claude.ai/Codex gates and Task AutoQC pass; clean pilot uses no mounted task file and the hold draft is escalation-only. Do not run additional task uploads, agent runs, additional QA, platform responses, or reviewer-stage actions unless Alexander explicitly authorizes the exact action.
 
 ### Phase 4: Evaluate The Agent
 

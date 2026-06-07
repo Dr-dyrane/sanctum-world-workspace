@@ -4,6 +4,10 @@ Status: PRE-BUILD design. No prompt, golden, or grader written yet. This is the 
 
 Note: old drafts in platform/task2/ predate the law and are SUPERSEDED. We build from this read, not from them.
 
+## CURRENT ROUND-2 STATUS (6/6 evening) - v5 and platform/task2 win
+
+Current canonical KM02 review/prep surface is no longer this plan alone. Use `worlds/korvin-merrow/task-setup/platform/task2/README.md` for the clean-pilot platform set, `RED-TEAM-BRIEF-KM02.md` for the latest red-team packet, `golden-KM02-v5.docx` as the current ceiling, `grader-guidance-KM02-v1.md` for the task-specific grader draft, and `colleague-draft-KM02.md` only as escalation rationale. Historical passages below that say the chart has no culture status, no antibiotic, or that v4 is current are superseded by the agent-read DOCX verification and v5 update.
+
 ## CORRECTION (6/6) - the culture AND the antibiotic ARE in the agent-read world; earlier "absent" claims were wrong
 This block supersedes every statement below that says the chart contains no culture status or no antibiotic. Those claims came from grepping the FI-W markdown and the .meta/references docx copy, NOT the agent-read upload/filesystem set. Codex caught it with hashes; verified against the bytes with python-docx (tables included):
 - The agent-read MAR (file-review/upload/filesystem/medication_administration_record_05232026.docx, sha256 cf90ceb0...) names "Ceftriaxone 1 g IV q24h" HD1-HD3, "Oral step-down: cefpodoxime 200 mg PO BID" HD4-HD6, note "Completion vs continuation to be reconciled at discharge."
@@ -12,7 +16,7 @@ This block supersedes every statement below that says the chart contains no cult
 
 CORRECTED DISCRIMINATOR: not "any culture statement is fabrication." The chart documents an OPEN culture status (preliminary growth, speciation/sensitivities pending, never narrowed). Reporting that is CORRECT and creditable. The fabrication that bites = a FINALIZED organism, a sensitivity profile, a no-growth / "cultures negative" closure, or NARROWING antibiotics by culture. The antibiotic "completion vs continuation to be reconciled at discharge" is a chart-given openness anchor.
 CORRECTED ANTIBIOTIC GRADER SCOPE: ceftriaxone-to-cefpodoxime is a CORRECT world fact; credit it, do not penalize, do not require. Penalize only an invented different agent, or narrowing by culture, or a finalized culture closure.
-The golden (golden-KM02-v4.docx / golden-KM02-source.md) states the culture and antibiotic exactly as the chart does.
+The golden (golden-KM02-v5.docx / golden-KM02-source.md) states the culture and antibiotic exactly as the chart does.
 
 ## VERIFIED AGAINST FILES (6/6, after claude.ai red-team)
 claude.ai red-teamed v1 of this plan and flagged two factual claims as load-bearing. Both checked against the live world; the reviewer is right on both, and the discriminator is revised accordingly. claude.ai should still verify independently from the attached files.
@@ -143,7 +147,7 @@ If the clean run scores all >=90, the colleague-draft escalation remains the bes
 
 The older platform `golden-response-task2-v1.docx` is less elegant clinically, but it is safer on the culture issue because it says no culture details are asserted. The v2 golden should inherit that restraint while keeping the stronger narrative shape.
 
-UI correction after reviewing the pipeline/design docs (superseded by the later template-provenance section below): do not require the cream `SYNTHETIC TRAINING DOCUMENT | FICTIONAL PATIENT | NOT A REAL MEDICAL RECORD` banner on the KM02 golden. The current v4 ruling is narrower and stronger: match the agent-read uploaded world files, which are bannerless but use blue/navy Epic-style chrome, storyboard fields, Arial, and clinical section outlines. The earlier soft-shell `golden-template-worldstyle.docx` approach was acceptable but visually weaker than the v4 builder route.
+UI correction after reviewing the pipeline/design docs (superseded by the later template-provenance section below): do not require the cream `SYNTHETIC TRAINING DOCUMENT | FICTIONAL PATIENT | NOT A REAL MEDICAL RECORD` banner on the KM02 golden. The current v5 ruling is narrower and stronger: match the agent-read uploaded world files, which are bannerless but use blue/navy Epic-style chrome, storyboard fields, Arial, and clinical section outlines. The earlier soft-shell `golden-template-worldstyle.docx` approach was acceptable but visually weaker than the builder route.
 
 ### Grader review
 
@@ -189,16 +193,16 @@ A reviewer flagged that golden-KM02-v2.docx (built on task-setup/platform/_templ
 
 CORRECTED after checking the AGENT-READ uploaded set (file-review/upload/filesystem/, the 26 files cleared for upload per file-review-log.md + cold-audit-result.md):
 - AGENT-READ world files = blue/navy chrome, NO synthetic banner. ALL 26 uploaded files are banner=False. Most carry the rich palette (#1F3864 navy ruled UPPERCASE section headers, #4472C4 storyboard, #232830 Arial 9.5 body); a minority render plainer (black/gray), so the world is internally mixed, but NONE has the cream "SYNTHETIC TRAINING DOCUMENT" banner. The banner exists ONLY in the human-delivery copies (korvin-merrow-final-submission-staging/.../final/ and drive-package/.../Custom Made/ and .meta/references/), not in what the agent reads.
-- So matching the AGENT-READ world = blue/navy chrome, NO banner, and Epic clinical section outline. The v4 golden keeps a plain "Date" label for the ceiling document while preserving the rest of the world chrome; this avoids reintroducing project-style anchor language into the platform-facing golden.
+- So matching the AGENT-READ world = blue/navy chrome, NO banner, and Epic clinical section outline. The v5 golden keeps a plain "Date" label for the ceiling document while preserving the rest of the world chrome; this avoids reintroducing project-style anchor language into the platform-facing golden.
 
 How the chrome is built: tools/generate_reference_files.py (parametric python-docx builder; design spec reference-file-design/epic-note-design-system.md). Parses a locked-FI-style markdown (metadata header + ## sections + bullets/tables) and emits the Epic DOCX. Palette: NAVY #1F3864, BLUE #4472C4, INK #232830, CARD #EDF2FA, RULE #C9D4EA. The builder ADDS the banner via band(); for the golden we strip both banner tables post-build to match the bannerless world.
 
 Submission-time corrections folded into the golden (from file-review-log.md):
 - De-bold pass (Final Files AutoQC "No Formatting Leakage", revisions #2/#3): remove mid-sentence emphasis bold; KEEP structural bold only (banners, field labels, MAR status vocabulary, problem-list/recommendation lead-ins). Golden complies: bold is only on navy section headers and problem-list lead-ins.
-- No em dashes / en dashes / arrows anywhere (verified absent in v4).
-- "Date / Anchor + World close" anchor vocabulary was scrubbed where it carried "world close" wording. For the v4 golden, the visible label is simplified to plain "Date" while the source metadata may still carry an internal Date/Anchor field for builder compatibility.
+- No em dashes / en dashes / arrows anywhere (verified absent in v5).
+- "Date / Anchor + World close" anchor vocabulary was scrubbed where it carried "world close" wording. For the v5 golden, the visible label is simplified to plain "Date" while the source metadata may still carry an internal Date/Anchor field for builder compatibility.
 
-Consequence for the golden (DONE): golden-KM02-v4.docx is generated through the builder from golden-KM02-source.md, then banner-stripped, so it matches the agent-read world: blue/navy chrome, no banner, Epic clinical outline (Reason for Admission / History of Present Illness / Hospital Course / Active Problems / Discharge Planning and Follow-Up), with the date label kept as plain "Date." Soft-template v2/v3 docx variants are superseded. Added one DEPT mapping ("discharge summary" -> Hospital Medicine) to the builder. NOTE: the bash mount serves a TRUNCATED copy of the builder .py (per the spec's own warning); generate from a /tmp copy, not the bash-mounted file.
+Consequence for the golden (DONE): golden-KM02-v5.docx is generated through the builder from golden-KM02-source.md, then banner-stripped, so it matches the agent-read world: blue/navy chrome, no banner, Epic clinical outline (Reason for Admission / History of Present Illness / Hospital Course / Active Problems / Discharge Planning and Follow-Up), with the date label kept as plain "Date." Soft-template v2/v3/v4 docx variants are superseded. Added one DEPT mapping ("discharge summary" -> Hospital Medicine) to the builder. NOTE: the bash mount serves a TRUNCATED copy of the builder .py (per the spec's own warning); generate from a /tmp copy, not the bash-mounted file.
 
 ## 1. The task (locked canon)
 KM02 = Hospital Discharge Summary Generation. Deliverable: a clinical-narrative discharge summary synthesizing Korvin Merrow's hospitalization (admit 05/18, discharge anchor 05/24), course by evolution not copied problem list. Sources: full 26-file world chart. Locked canon read: TP-KM02, Golden-KM02, GG-KM02, EO-KM02, FI-T02.

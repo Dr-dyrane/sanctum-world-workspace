@@ -43,12 +43,13 @@ Brainstorm:
 
 Current blocker:
 
-- Active blocker: no repository blocker. Task 1 final human review is complete. Task 2 has a local seed draft folder only; Tasks 2-6 may continue locally only if Alexander explicitly authorizes bounded parallel prep. Additional platform actions remain gated on explicit Alexander authorization for the exact step.
+- Active blocker: no repository blocker. Task 1 final human review is complete. Task 2 / KM02 clean-pilot platform set is staged at `worlds/korvin-merrow/task-setup/platform/task2/` after claude.ai/Codex gates and Task AutoQC pass; the clean pilot uses no mounted task file, with the hold draft reserved for escalation only. Tasks 3-6 may continue locally only if Alexander explicitly authorizes bounded parallel prep. Additional platform actions remain gated on explicit Alexander authorization for the exact step.
 
 Next legal action:
 
 - Use `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md` as the canonical Task 1 source of truth.
 - Use `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`, `worlds/korvin-merrow/task-setup/reviews/task1-final-review-ao-2026-06-06.md`, `TASK-RUNBOOK.md`, and `docs/reasoning-discipline.md` for Task 1 provenance and future task continuation.
+- Use `worlds/korvin-merrow/task-setup/platform/task2/README.md` as the current Task 2 platform-prep handoff, with `worlds/korvin-merrow/task-setup/task2/` preserved as red-team/rationale provenance.
 - Use `worlds/korvin-merrow/file-review/file-review-protocol.md`, `worlds/korvin-merrow/file-review/time-strategy-and-state.md`, `worlds/korvin-merrow/file-review/findings-triage.md`, and `worlds/korvin-merrow/file-review/file-review-log.md` as the closed Step 9 audit trail.
 - Treat `worlds/korvin-merrow/file-review/pipeline-output/filesystem/` as the downloaded V1 output, `worlds/korvin-merrow/file-review/revision/filesystem/` as the final revised 33-file working set, and `worlds/korvin-merrow/file-review/upload/filesystem/` as the final 26-file world-level upload set used for world creation.
 - Treat `worlds/korvin-merrow/file-review/task-files-holdback/` as the seven task-level files intentionally held out of the world-level upload set for later task setup handling.

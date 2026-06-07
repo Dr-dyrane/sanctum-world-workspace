@@ -4,7 +4,7 @@ Author / Source: Elian Vossmere, MD
 
 ## Reason for Admission
 
-Korvin Merrow is a 62-year-old man with HFrEF, CAD with remote PCI and stent, CKD stage 3, type 2 diabetes, hypertension, hyperlipidemia, diabetic peripheral neuropathy, OSA, anemia of CKD, chronic-steroid-related osteoporosis, and polymyalgia rheumatica on long-term prednisone with an unclear recent taper. He was admitted 05/18/2026 with suspected urinary-source infection and sepsis physiology on a background of mixed physiology; discharge is anticipated 05/24/2026.
+Korvin Merrow is a 62-year-old man with HFrEF, CAD with remote PCI and stent, CKD stage 3, type 2 diabetes, hypertension, hyperlipidemia, diabetic peripheral neuropathy, OSA, anemia of CKD, chronic-steroid-related osteoporosis, class I obesity, GERD, chronic constipation tendency, and polymyalgia rheumatica on long-term prednisone with an unclear recent taper. He was admitted 05/18/2026 with suspected urinary-source infection and sepsis physiology on a background of mixed physiology; discharge is anticipated 05/24/2026.
 
 ## History of Present Illness
 
