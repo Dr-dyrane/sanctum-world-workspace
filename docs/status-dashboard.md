@@ -242,7 +242,7 @@
 - Fetched World Spec example source documents: `reference/word-spec-examples/` (local-only / gitignored)
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 - World Spec prep folder structure: reorganized by lifecycle buckets (`candidate-review/`, `locked/`, `ratifications/`, `reviews/`, `decision-logs/`, `planning-scaffolds/`)
-- Current phase: Task 1 final human review complete. Step 9 generated-file review is complete, Final Files AutoQC passed 78/78, and `Healthcare_247_Merrow` is live. Do not start Task 2 setup, additional task prompts/goldens/grader guidelines, additional agents, additional QA, platform responses, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifests, final submission packages, additional uploads, or additional submissions until explicitly authorized.
+- Current phase: Task 1 final human review complete. Step 9 generated-file review is complete, Final Files AutoQC passed 78/78, and `Healthcare_247_Merrow` is live. Task 2 pre-build study material exists at `worlds/korvin-merrow/task-setup/task2/` for KM02 red-team/review only. Do not start Task 2 construction, additional task prompts/goldens/grader guidelines, additional agents, additional QA, platform responses, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifests, final submission packages, additional uploads, or additional submissions until explicitly authorized.
 
 ## Tooling
 
