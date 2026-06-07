@@ -8,135 +8,41 @@ Current status: World Spec APPROVED after RL Studio upload, Spec AutoQC, and Sta
 
 ## Navigation Rule
 
-For a new collaborator or new AI session, read in this order:
+For a new collaborator or new AI session, read by ladder, not by full archive.
 
-1. `project/STATUS.md` for live state and phase gate.
-2. `project/WORKSPACE_FILE_MAP.md` for file locations and duplication risks.
-3. `worlds/korvin-merrow/world-spec-prep/WORLD_SPEC_KICKOFF.md` for the active World Spec cockpit.
-4. `worlds/korvin-merrow/world-spec-prep/locked/identity-package-v1.md` for locked identity values.
-5. `worlds/korvin-merrow/world-spec-prep/reviews/identity-package-review-addendum.md` for identity implementation notes that do not reopen Identity Package v1.
-6. `worlds/korvin-merrow/world-spec-prep/locked/governance-package-v1.md` for ratified governance architecture.
-7. `worlds/korvin-merrow/world-spec-prep/reviews/governance-package-clarification.md` for accepted governance clarifications.
-8. `worlds/korvin-merrow/world-spec-prep/ratifications/governance-package-ratification.md` for governance ratification and completed architecture layer status.
-9. `worlds/korvin-merrow/world-spec-prep/locked/key-milestones-calendar-skeleton-v1.md` for the locked canonical date framework.
-10. `worlds/korvin-merrow/world-spec-prep/ratifications/key-milestones-calendar-ratification.md` for calendar ratification and +7/+30 doctrine.
-11. `worlds/korvin-merrow/world-spec-prep/locked/baseline-anchor-package-v1.md` for locked baseline anchors.
-12. `worlds/korvin-merrow/world-spec-prep/ratifications/baseline-anchor-ratification.md` for baseline physician sign-off and BP carry-forward note.
-13. `worlds/korvin-merrow/world-spec-prep/locked/clinical-story-timeline-package-v1.md` for the locked story-evolution framework.
-14. `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-timeline-ratification.md` for timeline ratification and Trap #3 vs Trap #5 carry-forward note.
-15. `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md` for the locked task-architecture package.
-16. `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md` for task architecture ratification and carry-forward watch items.
-17. `worlds/korvin-merrow/active/task-map.md` for reconciled current vs historical workflow mapping.
-18. `worlds/korvin-merrow/world-spec-prep/locked/medication-expansion-package-v1.md` for the locked medication architecture.
-19. `worlds/korvin-merrow/world-spec-prep/ratifications/medication-expansion-ratification.md` for medication architecture ratification.
-20. `worlds/korvin-merrow/world-spec-prep/reviews/medication-expansion-decision-addendum.md` for accepted physician decision resolution.
-21. `worlds/korvin-merrow/world-spec-prep/locked/comorbidity-expansion-package-v1.md` for the locked comorbidity architecture.
-22. `worlds/korvin-merrow/world-spec-prep/ratifications/comorbidity-expansion-ratification.md` for comorbidity ratification and carry-forward watch items.
-23. `worlds/korvin-merrow/world-spec-prep/locked/provider-roster-package-v1.md` for the locked provider/care-team roster architecture.
-24. `worlds/korvin-merrow/world-spec-prep/ratifications/provider-roster-ratification.md` for provider roster ratification and naming guardrails.
-25. `worlds/korvin-merrow/world-spec-prep/locked/surgical-history-package-v1.md` for the locked surgical/procedural history architecture.
-26. `worlds/korvin-merrow/world-spec-prep/ratifications/surgical-history-ratification.md` for surgical-history ratification and noise-control guardrails.
-27. `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md` for the locked HD1-HD6 daily evolution framework.
-28. `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md` for preparation-layer completion.
-29. `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md` for the locked World Spec Skeleton.
-30. `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-skeleton-ratification.md` for World Spec Skeleton ratification.
-31. `worlds/korvin-merrow/world-spec-construction/locked/world-spec-v1.md` for the locked World Spec.
-32. `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-v1-ratification.md` for World Spec v1 ratification and watch items.
-33. `worlds/korvin-merrow/file-inventory/locked/file-inventory-architecture-v1.md` for the locked file inventory architecture.
-34. `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-architecture-ratification.md` for the lock record and downstream watch items.
-35. `worlds/korvin-merrow/file-inventory/locked/file-inventory-v1.md` for the locked planned inventory table.
-36. `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-v1-ratification.md` for the File Inventory v1 lock record and carry-forward items.
-37. `worlds/korvin-merrow/file-inventory/reviews/fi-t-inventory-task-layer-architecture-reconciliation.md` for FI-T metadata reconciliation and P0/P1/P2 provenance clarification.
-38. `worlds/korvin-merrow/file-inventory/reviews/supplementary-file-trap5-reconciliation.md` for FI-S03 Trap #5 reconciliation.
-39. `worlds/korvin-merrow/synthetic-files/locked/synthetic-world-file-construction-plan-v1.md` for locked construction governance before synthetic world-level file construction.
-40. `worlds/korvin-merrow/synthetic-files/ratifications/synthetic-world-file-construction-plan-v1-ratification.md` for the lock record and next-phase boundaries.
-41. `worlds/korvin-merrow/synthetic-files/locked/batch-1/batch-1-validation-review.md` for locked Batch 1 validation.
-42. `worlds/korvin-merrow/synthetic-files/ratifications/batch-1-ratification.md` for Batch 1 lock record.
-43. `worlds/korvin-merrow/synthetic-files/locked/batch-2/batch-2-validation-review.md` for locked Batch 2 validation.
-44. `worlds/korvin-merrow/synthetic-files/ratifications/batch-2-ratification.md` for Batch 2 lock record.
-45. `worlds/korvin-merrow/synthetic-files/locked/batch-3/batch-3-validation-review.md` for locked Batch 3 validation.
-46. `worlds/korvin-merrow/synthetic-files/ratifications/batch-3-ratification.md` for Batch 3 lock record.
-47. `worlds/korvin-merrow/synthetic-files/locked/batch-4/batch-4-validation-review.md` for locked Batch 4 validation.
-48. `worlds/korvin-merrow/synthetic-files/ratifications/batch-4-ratification.md` for Batch 4 lock record.
-49. `worlds/korvin-merrow/synthetic-files/locked/batch-5/batch-5-validation-review.md` for locked Batch 5 validation.
-50. `worlds/korvin-merrow/synthetic-files/ratifications/batch-5-ratification.md` for Batch 5 lock record and world-level layer completion.
-51. `worlds/korvin-merrow/reviews/world-level-layer-closure-audit.md` for world-level closure audit result.
-52. `worlds/korvin-merrow/task-layer-architecture/locked/task-level-context-file-architecture-v1.md` for locked task-layer context file architecture.
-53. `worlds/korvin-merrow/task-layer-architecture/ratifications/task-level-context-file-architecture-v1-ratification.md` for architecture ratification and next-phase boundaries.
-54. `worlds/korvin-merrow/task-context-files/locked/task-context-files-validation-review.md` for locked FI-T construction validation and carry-forward watch items.
-55. `worlds/korvin-merrow/task-context-files/ratifications/task-level-context-file-construction-ratification.md` for Task-Level Context File Construction lock record.
-56. `worlds/korvin-merrow/task-context-files/locked/` for locked FI-T01 through FI-T07 request-framing files.
-57. `worlds/korvin-merrow/supplementary-file-architecture/locked/supplementary-file-architecture-v1.md` for locked FI-S architecture.
-58. `worlds/korvin-merrow/supplementary-file-architecture/locked/supplementary-file-architecture-validation-review.md` for locked FI-S architecture validation.
-59. `worlds/korvin-merrow/supplementary-file-architecture/ratifications/supplementary-file-architecture-v1-ratification.md` for Supplementary File Architecture v1 lock record.
-60. `worlds/korvin-merrow/supplementary-files/locked/supplementary-file-construction-validation-review.md` for locked FI-S construction validation.
-61. `worlds/korvin-merrow/supplementary-files/locked/` for locked FI-S01 through FI-S04 files.
-62. `worlds/korvin-merrow/supplementary-files/ratifications/supplementary-file-construction-ratification.md` for Supplementary File Construction lock record.
-63. `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-v1.md` for locked task-prompt architecture.
-64. `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-validation-review.md` for locked architecture validation.
-65. `worlds/korvin-merrow/task-prompt-architecture/ratifications/task-prompt-architecture-ratification.md` for Task Prompt Architecture v1 ratification.
-66. `worlds/korvin-merrow/task-prompts/locked/task-prompt-construction-validation-review.md` for locked TP-KM construction validation.
-67. `worlds/korvin-merrow/task-prompts/locked/` for locked TP-KM01 through TP-KM06 prompts.
-68. `worlds/korvin-merrow/task-prompts/ratifications/task-prompt-construction-ratification.md` for Task Prompt Construction lock record.
-69. `worlds/korvin-merrow/expected-output-architecture/locked/expected-output-architecture-v1.md` for locked Expected Output Architecture v1.
-70. `worlds/korvin-merrow/expected-output-architecture/locked/expected-output-architecture-validation-review.md` for locked Expected Output Architecture validation.
-71. `worlds/korvin-merrow/expected-output-architecture/ratifications/expected-output-architecture-ratification.md` for Expected Output Architecture v1 lock record.
-72. `worlds/korvin-merrow/expected-outputs/locked/EO-KM01.md` through `EO-KM06.md` for locked expected outputs.
-73. `worlds/korvin-merrow/expected-outputs/locked/expected-output-construction-validation-review.md` for locked Expected Output Construction validation.
-74. `worlds/korvin-merrow/expected-outputs/ratifications/expected-output-construction-ratification.md` for Expected Output Construction lock record.
-75. `worlds/korvin-merrow/golden-architecture/locked/golden-architecture-v1.md` for locked Golden Architecture v1.
-76. `worlds/korvin-merrow/golden-architecture/locked/golden-architecture-validation-review.md` for locked Golden Architecture validation review.
-77. `worlds/korvin-merrow/golden-architecture/locked/golden-architecture-audit-reconciliation.md` for Golden Architecture audit reconciliation findings and corrections.
-78. `worlds/korvin-merrow/golden-architecture/ratifications/golden-architecture-ratification.md` for Golden Architecture v1 ratification and lock record.
-79. `worlds/korvin-merrow/goldens/locked/Golden-KM01.md` for locked Golden-KM01.
-80. `worlds/korvin-merrow/goldens/locked/Golden-KM02.md` for locked Golden-KM02.
-81. `worlds/korvin-merrow/goldens/locked/Golden-KM03.md` for locked Golden-KM03.
-82. `worlds/korvin-merrow/goldens/locked/Golden-KM04.md` for locked Golden-KM04.
-83. `worlds/korvin-merrow/goldens/locked/Golden-KM05.md` for locked Golden-KM05.
-84. `worlds/korvin-merrow/goldens/locked/Golden-KM06.md` for locked Golden-KM06.
-85. `worlds/korvin-merrow/goldens/locked/golden-construction-validation-review.md` for locked Golden Construction validation review.
-86. `worlds/korvin-merrow/goldens/ratifications/golden-construction-ratification.md` for Golden Construction ratification and lock record.
-87. `worlds/korvin-merrow/grader-guidance-architecture/locked/grader-guidance-architecture-v1.md` for locked Grader Guidance Architecture.
-88. `worlds/korvin-merrow/grader-guidance-architecture/locked/grader-guidance-architecture-validation-review.md` for locked Grader Guidance Architecture validation review.
-89. `worlds/korvin-merrow/grader-guidance-architecture/ratifications/grader-guidance-architecture-ratification.md` for Grader Guidance Architecture lock record.
-90. `worlds/korvin-merrow/grader-guidance/locked/GG-KM01.md` for locked Grader Guidance KM01.
-91. `worlds/korvin-merrow/grader-guidance/locked/GG-KM02.md` for locked Grader Guidance KM02.
-92. `worlds/korvin-merrow/grader-guidance/locked/GG-KM03.md` for locked Grader Guidance KM03.
-93. `worlds/korvin-merrow/grader-guidance/locked/GG-KM04.md` for locked Grader Guidance KM04.
-94. `worlds/korvin-merrow/grader-guidance/locked/GG-KM05.md` for locked Grader Guidance KM05.
-95. `worlds/korvin-merrow/grader-guidance/locked/GG-KM06.md` for locked Grader Guidance KM06.
-96. `worlds/korvin-merrow/grader-guidance/locked/grader-guidance-construction-validation-review.md` for locked Grader Guidance Construction validation review.
-97. `worlds/korvin-merrow/grader-guidance/ratifications/grader-guidance-construction-ratification.md` for Grader Guidance Construction ratification and lock record.
-98. `worlds/korvin-merrow/autoqc-architecture/locked/autoqc-architecture-v1.md` for locked AutoQC Architecture v1.
-99. `worlds/korvin-merrow/autoqc-architecture/locked/autoqc-architecture-validation-review.md` for locked AutoQC Architecture v1 validation review.
-100. `worlds/korvin-merrow/autoqc-architecture/ratifications/autoqc-architecture-ratification.md` for AutoQC Architecture v1 ratification and lock record.
-101. `worlds/korvin-merrow/autoqc/locked/autoqc-construction-v1.md` for locked AutoQC Construction v1 package.
-102. `worlds/korvin-merrow/autoqc/locked/autoqc-construction-validation-review.md` for locked AutoQC Construction validation review.
-103. `worlds/korvin-merrow/autoqc/ratifications/autoqc-construction-ratification.md` for AutoQC Construction ratification and AutoQC completion.
-104. `worlds/korvin-merrow/packaging-architecture/locked/packaging-architecture-v1.md` for locked Packaging Architecture v1 package.
-105. `worlds/korvin-merrow/packaging-architecture/locked/packaging-architecture-validation-review.md` for locked Packaging Architecture validation review.
-106. `worlds/korvin-merrow/packaging-architecture/ratifications/packaging-architecture-ratification.md` for Packaging Architecture ratification and completion.
-107. `worlds/korvin-merrow/packaging/locked/packaging-construction-v1.md` for locked Packaging Construction package.
-108. `worlds/korvin-merrow/packaging/locked/packaging-construction-validation-review.md` for locked Packaging Construction validation review.
-109. `worlds/korvin-merrow/packaging/ratifications/packaging-construction-ratification.md` for Packaging Construction ratification and Packaging completion.
-110. `worlds/korvin-merrow/submission-preparation/locked/submission-preparation-v1.md` for locked Submission Preparation v1.
-111. `worlds/korvin-merrow/submission-preparation/locked/submission-preparation-validation-review.md` for locked Submission Preparation validation.
-112. `worlds/korvin-merrow/submission-preparation/ratifications/submission-preparation-ratification.md` for Submission Preparation ratification and completion.
-113. `worlds/korvin-merrow/execution-preparation/locked/execution-preparation-v1.md` for locked Execution Preparation v1.
-114. `worlds/korvin-merrow/execution-preparation/locked/execution-preparation-validation-review.md` for locked Execution Preparation validation review.
-115. `worlds/korvin-merrow/final-submission-resolution/locked/final-submission-resolution-v1.md` for locked Final Submission Resolution decisions.
-116. `worlds/korvin-merrow/final-submission-resolution/locked/final-submission-resolution-validation-review.md` for locked Final Submission Resolution validation review.
-117. `korvin-merrow-final-submission-staging/` for generated submission-facing artifact staging. Canonical active contents are `01_spec-document/Alexander_World_Merrow_latest_6_4.docx`, `02_template-reference-files/final/` with 33 date-stamped DOCX files, Claude transcript DOCX/PDF, optional Brainstorm copy, and empty hold-not-upload folder. This is staging only; it is not a manifest, zip, AutoQC response, or scoring artifact.
-118. `worlds/korvin-merrow/reviews/reviewer-spec-approval-01.md` for Stacey S World Spec approval and Reference File Origin routing correction record.
-119. `worlds/korvin-merrow/task-setup/platform/task1/` for Task 1 live platform artifacts. Active folder contains only `prompt-task1-v5.txt`, `golden-response-task1-v6.docx`, `grader-guidelines-task1-v10.txt`, `medication_safety_handoff_pharmacy_05232026.docx`, and README.
-120. `worlds/korvin-merrow/task-setup/platform/task1/archive/` for superseded Task 1 prompt, golden, grader, round-1 task-file, render-PDF, and scratch/proof artifacts. Historical evidence only; never upload from this folder without explicit review.
-121. `worlds/korvin-merrow/task-setup/platform/_templates/` for reusable platform artifact shells, including `golden-template-worldstyle.docx`; copy per task, then run DOCX integrity/render checks before use.
-122. `worlds/korvin-merrow/task-setup/task1/FA-GA-current.md`, `FA-GA-final.md`, and `preference-label-task1-A-vs-B.md` for Task 1 evaluation-stage backups and submitted wording records.
-123. `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md` for historical interview basis.
-124. `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md` for ratified Clinical Story Skeleton decisions and construction-lock status.
-125. `reference/world-spec-guidelines/08_autoqc_master_index.md` only when exact AutoQC checks are needed.
+Current operating ladder:
 
-Do not start by opening every prep file. Most prep files are supporting memory, not active instructions.
+1. `project/STATUS.md` for live state, phase gate, blocker, and forbidden actions.
+2. `worlds/korvin-merrow/00-MASTER-NARRATIVE.md` for the readable story of how the world and Task 1 got here.
+3. `docs/status-dashboard.md` for a compact current-state dashboard.
+4. `worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md` before any task-stage work.
+5. `worlds/korvin-merrow/task-setup/CHECKPOINT-AUDIT-pre-task2.md` before Task 2 or later task setup.
+6. This file only when you need exact locations, duplication checks, or placement rules.
+
+Current task ladder:
+
+1. `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md` for Task 1 canonical history and lessons.
+2. `worlds/korvin-merrow/task-setup/reviews/task1-final-review-ao-2026-06-06.md` for Task 1 final approval.
+3. `worlds/korvin-merrow/task-setup/task2/KM02-design-plan-for-review.md` for Task 2 pre-build study only.
+4. `worlds/korvin-merrow/task-setup/platform/task1/` for live Task 1 platform artifacts.
+5. `worlds/korvin-merrow/task-setup/platform/task1/archive/` only for historical Task 1 iterations.
+
+Clinical canon lookup ladder:
+
+1. `worlds/korvin-merrow/world-spec-construction/locked/world-spec-v1.md` for canonical world description.
+2. `worlds/korvin-merrow/file-inventory/locked/file-inventory-v1.md` for planned file responsibilities.
+3. `worlds/korvin-merrow/world-spec-prep/locked/` plus matching `ratifications/` only when a specific clinical-canon question requires the original locked package.
+4. `worlds/korvin-merrow/task-context-files/locked/`, `supplementary-files/locked/`, and `synthetic-files/locked/` only when checking the constructed chart substrate.
+
+Template/method ladder:
+
+1. `docs/docx-generation-method.md` before any DOCX generation or editing task.
+2. `reference/templates/` for official Sanctum templates.
+3. `worlds/korvin-merrow/reference-file-design/epic-note-design-system.md` and `tools/generate_reference_files.py` for reference-file design/generation.
+4. `worlds/korvin-merrow/task-setup/platform/_templates/` for task-stage platform shells.
+5. `reference/checklists/` for preflight and review checklists.
+
+Do not start by opening every prep file. Most prep files are supporting memory, not active instructions. The detailed entries below are an index for lookup after the current ladder tells you what question you are answering.
 
 ## Hygiene Audit 2026-05-31
 
