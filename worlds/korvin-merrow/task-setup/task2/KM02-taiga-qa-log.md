@@ -22,3 +22,12 @@ Response (field, thumbs down, client-visible): explained that the mounted workin
 
 ## Outcome
 Both saved (thumbs down + paper airplane), page refreshed to confirm. Next per runbook: run Taiga QA Feedback AutoQC (5.1), clear 5.2 notes, then Start Failure Analysis and Grader Analysis (FA subject = single lowest run, run 7 = 0.35, propagation failure).
+
+## 6/7 First human review (AO) and reseed
+Review verdict: "Good task, great failure. No significant errors." Two items:
+1. Reseed: "Duplicate task level file found among world level files." Investigated before any deletion: live world holds exactly the 26 world files (Abi reconfirmed in pipeline, "properly synced"); the 7 FI-T request renders were held back pre-creation and never uploaded; the 2 task inputs (handoff_pharmacy, draft_incomplete) are mounted at task level in 1.3, not in the world. Nothing was deleted. Task sent back; rerun required per reseed regardless.
+2. Minor fix, APPLIED: golden date was 05/23/2026, but the escalation prompt's in-world today is 05/24 ("goes home today, 5/24... sign-out today") and the mounted draft is dated 05/24/2026. The 05/23 was carried from the clean-pilot framing. Fixed golden-KM02-v5.docx by surgical run-level edit (2 replacements: header line and Date cell; zero 05/23/2026 remaining; all other bytes preserved). Source anchor in golden-KM02-source.md updated to match. New sha256 prefix both copies: 2dd3e0adb903. Filename kept v5 (grader guidelines name it; Task 1 precedent: keep name, update logs).
+Next: re-upload golden in 1.4 (replace, same name), rerun Task AutoQC, rerun trajectories.
+
+## 6/7 Task AutoQC after golden date fix (qcaud_5e, pass 340)
+Reseed rerun re-triggered Task AutoQC; latest run qcaud_5e passed 340, no flags. The 2.2 Task AutoQC Notes field was stale (still described qcaud_e1 and did not mention the date change), so it was updated to record: golden-KM02-v5.docx date corrected 05/23 to 05/24/2026 (header line + storyboard Date cell), matching the escalation in-world today and the mounted draft; filename unchanged; prompt/grader/task file unchanged. AutoQC history now: qcaud_30 (fail 1/36, footer meta-language) -> qcaud_36 (pass) -> qcaud_e1 (pass, finish-my-draft framing + draft task file) -> qcaud_5e (pass, date fix). Lesson applied: when an artifact changes and AutoQC re-passes, update the stage Notes field in the same motion (it is the human-readable change log reviewers read).

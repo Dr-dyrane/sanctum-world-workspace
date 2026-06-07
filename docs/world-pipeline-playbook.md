@@ -114,5 +114,5 @@ STRUCTURE for worlds/<new-world>/: copy korvin-merrow's folder skeleton (active/
 - reference/checklists/spec-autoqc-preflight.md - the 109-dimension distillation.
 - worlds/korvin-merrow/reference-file-design/ - design system + approved FI-W01 sample.
 - worlds/korvin-merrow/autoqc-remediation/ - remediation pattern + notes language.
-- tools/generate_reference_files.py - reference-file generator (regenerate-able from design system if lost).
+- tools/generate_reference_files.py - reference-file generator (regenerate-able from design system if lost). DATE WARNING: the source markdown's 'Approximate Date / Anchor' line drives the rendered document date (header line + Date cell). On any task framing change, re-set it deliberately and re-verify the rendered dates; a stale anchor ships a stale date (KM02 golden, 6/7).
 - Environment truths: sandbox = create/overwrite only (no delete, no git); Codex = git + deletes; user = Drive binaries + RL Studio; Drive connector = folders/text/search only.
