@@ -215,6 +215,7 @@ These are fetched source/reference examples, not authored Korvin Merrow content 
 | `reference/world-spec-guidelines/11_transcript_requirements.md` | Source-cited transcript requirement search results. | Records that detailed Claude transcript requirements were not found in local text source. |
 | `reference/world-spec-guidelines/12_required_upload_inventory.md` | Source-cited upload inventory manifest. | Not a Korvin Merrow file inventory; use only for package preparation. |
 | `reference/world-spec-guidelines/13_claude_workflow_audit.md` | Source-cited Claude workflow and transcript audit. | Use with `project/CLAUDE_COMPLIANCE_MAP.md` before World Spec drafting. |
+| `reference/world-spec-guidelines/POLICY-2026-06-07-selfcontainment-and-file-separation.md` | Pod policy captured 2026-06-07. | Governs self-containment against post-July-2025 public knowledge and world/task file separation. |
 
 ## Korvin Merrow Junction
 
