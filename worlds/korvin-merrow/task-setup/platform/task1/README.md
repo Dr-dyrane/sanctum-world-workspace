@@ -1,6 +1,9 @@
-# platform/task1 - LIVE platform artifacts (what is in RLS for Task 1)
+# platform/task1 - Task 1 platform artifacts
 
-These four are the live, delivered Task 1 package, the only files here:
+Task 1 is final human review COMPLETE / APPROVED.
+
+The live, delivered Task 1 package is in `current/`:
+
 - medication_safety_handoff_pharmacy_05232026.docx  (the single task file)
 - prompt-task1-v5.txt
 - golden-response-task1-v6.docx

@@ -1,6 +1,6 @@
 # Korvin Merrow World
 
-Current state: World created as `Healthcare_247_Merrow`; Step 9 generated-file review COMPLETE; Task 1 final human review COMPLETE / APPROVED. Task 2 / KM02 clean pilot completed and was too easy (92-97, mean about 94.4, no true failure mode). Task 2 colleague-draft escalation run completed and produced a usable discriminator (9 scored trajectories, mean about 65.1; run 7 score 0.35; run 8 caught the plant but had no grader score). Current gate is Taiga QA Feedback AutoQC / QA handling, then FA/GA if cleared.
+Current state: World created as `Healthcare_247_Merrow`; Step 9 generated-file review COMPLETE; Task 1 final human review COMPLETE / APPROVED. Task 2 / KM02 v3 is in Abi review after the reseed/date fix: golden `golden-KM02-v5.docx` is re-dated to 05/24/2026 with sha256 prefix `2dd3e0ad`, Task AutoQC / Taiga gates passed qcaud_5e, qcaud_4a, and qcaud_ef, and final FA/GA candidate uses Attempt 8 at 0.30 from v3 job `8f393839`.
 
 Start here only after reading `project/STATUS.md`.
 
@@ -12,7 +12,7 @@ Start here only after reading `project/STATUS.md`.
 - `remediation/`: reviewer SEND BACK remediation decision briefs and compliance review.
 - `reviews/`: external/human/AutoQC review artifacts and reviewer feedback history.
 - `submission/`: RL Studio submission artifacts.
-- `task-setup/`: Task setup, trajectory, QA, FA/GA, PL, review, runbook, and bounded pre-build study provenance after world creation. Task 1 is approved; Task 2 / KM02 clean-pilot evidence lives under `task-setup/task2/pilot-run-clean/`, escalation-run evidence lives under `task-setup/task2/escalation-run/`, and the escalation platform set lives under `task-setup/platform/task2/escalation/`. Golden and grader remain unchanged from the clean-pilot set.
+- `task-setup/`: Task setup, trajectory, QA, FA/GA, PL, review, runbook, and bounded pre-build study provenance after world creation. Task 1 is approved. Task 2 starts at `task-setup/task2/TASK2-STATE.md`; clean-pilot evidence lives under `task-setup/task2/runs/clean-pilot/`, v2 escalation evidence under `task-setup/task2/runs/escalation-v2/`, v3 evidence under `task-setup/task2/runs/escalation-v3/`, and the active platform set under `task-setup/platform/task2/current/`.
 - `world-spec-prep/`: World Spec preparation cockpit plus lifecycle subfolders for locked decisions, locked, ratifications, reviews, decision logs, and planning scaffolds.
 - `world-spec-construction/`: World Spec construction lifecycle folders for candidate review artifacts, locked construction artifacts, and ratifications.
 - `file-inventory/`: file inventory lifecycle area. Locked architecture defines planned file ecosystem, and locked File Inventory v1 defines the planned inventory rows; neither creates synthetic files or chart contents.
@@ -43,21 +43,19 @@ Start here only after reading `project/STATUS.md`.
 - `task-setup/task1-lifecycle-log.md`
 - `task-setup/TASK-RUNBOOK.md`
 - `task-setup/CHECKPOINT-AUDIT-pre-task2.md`
-- `task-setup/task2/KM02-design-plan-for-review.md`
-- `task-setup/task2/RED-TEAM-BRIEF-KM02.md`
-- `task-setup/task2/golden-KM02-source.md`
-- `task-setup/task2/golden-KM02-v5.docx`
-- `task-setup/task2/grader-guidance-KM02-v1.md`
-- `task-setup/task2/colleague-draft-KM02.md`
-- `task-setup/task2/KM02-pilot-failure-analysis.md`
-- `task-setup/task2/KM02-escalation-results.md`
-- `task-setup/task2/KM02-learnings.md`
-- `task-setup/task2/KM02-taiga-qa-log.md`
-- `task-setup/task2/FA-GA-current.md`
-- `task-setup/task2/escalation-run/`
-- `task-setup/task2/pilot-run-clean/`
+- `task-setup/task2/TASK2-STATE.md`
+- `task-setup/task2/design/`
+- `task-setup/task2/build/`
+- `task-setup/task2/runs/clean-pilot/`
+- `task-setup/task2/runs/escalation-v2/`
+- `task-setup/task2/runs/escalation-v3/`
+- `task-setup/task2/qa/KM02-taiga-qa-log.md`
+- `task-setup/task2/fa-ga/FA-GA-current.md`
+- `task-setup/task2/learnings/KM02-learnings.md`
+- `task-setup/task3/TASK3-STATE.md`
+- `task-setup/task3/design/KM03-design-plan-for-review.md`
 - `task-setup/platform/task2/README.md`
-- `task-setup/platform/task2/escalation/README.md`
+- `task-setup/platform/task2/current/`
 - `task-setup/reviews/task1-final-review-ao-2026-06-06.md`
 - `task-setup/step10-review-packet.md`
 - `world-spec-construction/locked/world-spec-v1.md`

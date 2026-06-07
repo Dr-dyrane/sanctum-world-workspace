@@ -1,4 +1,4 @@
-# platform/task2/escalation - the colleague-draft run (target ~85% avg with documented failures)
+# platform/task2/current - KM02 v3 colleague-draft run
 
 Decision (6/7): a clean discharge summary on this chart cannot fairly reach sub-70% (red-team verified: no forced slot, openness coached in 8+ files, chart internally consistent). Target revised to ~85% avg with a cluster of real propagation failures (KM01-shaped: high mean, documented teeth). The escalation is the lever.
 
