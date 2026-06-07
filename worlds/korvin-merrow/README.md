@@ -12,7 +12,7 @@ Start here only after reading `project/STATUS.md`.
 - `remediation/`: reviewer SEND BACK remediation decision briefs and compliance review.
 - `reviews/`: external/human/AutoQC review artifacts and reviewer feedback history.
 - `submission/`: RL Studio submission artifacts.
-- `task-setup/`: Task setup, trajectory, QA, FA/GA, PL, review, runbook, and bounded pre-build study provenance after world creation. Task 1 is approved; Task 2 seed and KM02 red-team review materials are local prep only until Alexander authorizes the next task step.
+- `task-setup/`: Task setup, trajectory, QA, FA/GA, PL, review, runbook, and bounded pre-build study provenance after world creation. Task 1 is approved; Task 2 seed and KM02 red-team review materials, including the v4 golden candidate and red-team bundle, are local prep only until Alexander authorizes the next task step.
 - `world-spec-prep/`: World Spec preparation cockpit plus lifecycle subfolders for locked decisions, locked, ratifications, reviews, decision logs, and planning scaffolds.
 - `world-spec-construction/`: World Spec construction lifecycle folders for candidate review artifacts, locked construction artifacts, and ratifications.
 - `file-inventory/`: file inventory lifecycle area. Locked architecture defines planned file ecosystem, and locked File Inventory v1 defines the planned inventory rows; neither creates synthetic files or chart contents.
@@ -44,6 +44,8 @@ Start here only after reading `project/STATUS.md`.
 - `task-setup/TASK-RUNBOOK.md`
 - `task-setup/CHECKPOINT-AUDIT-pre-task2.md`
 - `task-setup/task2/KM02-design-plan-for-review.md`
+- `task-setup/task2/RED-TEAM-BRIEF-KM02.md`
+- `task-setup/task2/golden-KM02-source.md`
 - `task-setup/reviews/task1-final-review-ao-2026-06-06.md`
 - `task-setup/step10-review-packet.md`
 - `world-spec-construction/locked/world-spec-v1.md`

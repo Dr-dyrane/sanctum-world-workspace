@@ -36,7 +36,7 @@ DEPT=[("triage","Emergency Department"),("ed ","Emergency Department"),("hospita
  ("refill","Pharmacy"),("medication administration","Pharmacy"),("nursing","Nursing"),
  ("physical therapy","Rehabilitation Services"),("occupational","Rehabilitation Services"),
  ("case management","Care Management"),("family communication","Care Management"),
- ("discharge-facing","Hospital Medicine"),("trend summary","Clinical Data / Laboratory"),
+ ("discharge summary","Hospital Medicine"),("discharge-facing","Hospital Medicine"),("trend summary","Clinical Data / Laboratory"),
  ("problem list","Medical Records"),("pci","Cardiology Records"),("sleep","Sleep Medicine Records"),
  ("home support","Care Management"),("request context","Care Coordination"),("addendum","Pharmacy")]
 NEW_IDS={}  # e.g. {"FI-W01":"EW1", ...} - fill per world's spec convention
