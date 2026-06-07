@@ -1,21 +1,26 @@
 # platform/task2 - paste-ready KM02 set for RLS Studio
 
-KM02 = Hospital Discharge Summary Generation. These are the live, platform-ready artifacts. Codex gate (6/6): golden v5 PASSED (identity band, comorbidities, culture/antibiotic, DOCX integrity, render). Grader and mounted draft cleaned of meta per Codex's holds.
+KM02 = Hospital Discharge Summary Generation. These are the Task 2 platform-prep artifacts. Codex gate (6/6): golden v5 PASSED (identity band, comorbidities, culture/antibiotic, DOCX integrity, render). Grader and mounted draft cleaned of meta per Codex's holds. Clean pilot completed and was too easy: 10 trajectories scored 92-97, mean about 94.4, no true failure mode.
 
-## CLEAN PILOT set (use these three; NO task file)
+## CLEAN PILOT set (completed; historical baseline)
 - prompt-task2.txt - paste into the prompt field (1.2). Pure clinician-voice body.
 - golden-KM02-v5.docx - UPLOAD as the golden file (1.4), do not paste.
 - grader-guidelines-task2.txt - paste into Grading Guidelines (1.4). Native structure (Task context / Golden reference / Must be present and correct / Acceptable variation / Penalize for), names golden-KM02-v5.docx, no weights or score bands, meta stripped.
 
-The clean pilot runs with NO mounted task file (FI-T02 is un-mountable; it names the trap structure). Expect the clean run to land high (~80-85%) because the chart coaches openness from three directions.
+The clean pilot ran with NO mounted task file (FI-T02 is un-mountable; it names the trap structure). Result: 92-97, mean about 94.4, no true penalties, no culture/disposition fabrication. Evidence: ../../task2/pilot-run-clean/ and ../../task2/KM02-pilot-failure-analysis.md.
 
-## HOLD (escalation only - do not mount for the clean pilot)
-- hold/discharge_summary_draft_incomplete.md - the colleague-draft, clinical-only (meta split out). Mount this ONLY if the clean pilot confirms it is needed to reach the difficulty target, and render it to docx first (clinical-note style). It plants airtight snapshot-silent closures (finalized E. coli culture, culture-directed de-escalation, infection "resolved", accomplished home disposition); a run that propagates them fails, a run that corrects them to the record passes. Full rationale + prompt variant: ../../task2/colleague-draft-KM02.md.
+## CURRENT NEXT SET: escalation
+- escalation/prompt-task2-escalation.txt - replace the clean prompt.
+- escalation/discharge_summary_draft_incomplete_05242026.docx - mount as the task file.
+- Golden and grader stay unchanged: golden-KM02-v5.docx + grader-guidelines-task2.txt.
+- escalation/README.md - current run instructions and fairness guardrail.
+
+The older hold/discharge_summary_draft_incomplete.md remains the markdown extraction of the colleague draft. Use the DOCX in escalation/ for the platform run.
 
 ## RLS entry order (per TASK-RUNBOOK section B; SAVE AFTER EVERY STEP)
 1.1 Pod = Vagus; Workflow = Hospital Discharge Summary Generation; Synthetic task base = No.
-1.2 Paste prompt-task2.txt. Save.
-1.3 Clean pilot: add NO task file. (Skip; the clean run has no mounted file.)
+1.2 Clean pilot used prompt-task2.txt and is complete. Escalation: replace with escalation/prompt-task2-escalation.txt. Save.
+1.3 Escalation: add escalation/discharge_summary_draft_incomplete_05242026.docx and click Save File Changes. Refresh and confirm uploaded.
 1.4 Paste grader-guidelines-task2.txt; UPLOAD golden-KM02-v5.docx as a file (not pasted); confirm the grader names the exact uploaded golden filename. Top Save Changes, refresh, eyeball all sections.
 2.x Run Task AutoQC. Rerun N failing ONCE before justifying (No Weight / No Formatting are often variance). 2.2 Notes even on pass.
 3-5 Trajectories + Taiga QA per runbook.

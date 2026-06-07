@@ -242,7 +242,7 @@
 - Fetched World Spec example source documents: `reference/word-spec-examples/` (local-only / gitignored)
 - Latest physician decision log: `worlds/korvin-merrow/world-spec-prep/decision-logs/physician-decision-log-02.md`
 - World Spec prep folder structure: reorganized by lifecycle buckets (`candidate-review/`, `locked/`, `ratifications/`, `reviews/`, `decision-logs/`, `planning-scaffolds/`)
-- Current phase: Task 1 final human review complete. Step 9 generated-file review is complete, Final Files AutoQC passed 78/78, and `Healthcare_247_Merrow` is live. Task 2 / KM02 has a gated clean-pilot platform set at `worlds/korvin-merrow/task-setup/platform/task2/`: `prompt-task2.txt`, `golden-KM02-v5.docx`, `grader-guidelines-task2.txt`, and `README.md`, with `hold/discharge_summary_draft_incomplete.md` reserved for escalation only. The review/rationale material remains under `worlds/korvin-merrow/task-setup/task2/`. Golden v5 passed claude.ai/Codex gates and Task AutoQC after a golden-only footer-meta fix; the live world files were not changed. Further RL Studio/platform actions remain under Alexander's explicit/direct operation.
+- Current phase: Task 1 final human review complete. Step 9 generated-file review is complete, Final Files AutoQC passed 78/78, and `Healthcare_247_Merrow` is live. Task 2 / KM02 clean pilot completed and was too easy: 10 trajectories scored 92-97, mean about 94.4, with no true clinical failure. The clean-pilot evidence is preserved under `worlds/korvin-merrow/task-setup/task2/pilot-run-clean/`, and the analysis is `worlds/korvin-merrow/task-setup/task2/KM02-pilot-failure-analysis.md`. The current Task 2 escalation set is staged at `worlds/korvin-merrow/task-setup/platform/task2/escalation/`; golden and grader remain unchanged. Further RL Studio/platform actions remain under Alexander's explicit/direct operation.
 
 ## Tooling
 
@@ -264,7 +264,7 @@
 - Do not treat fetched World Spec examples as authored Korvin Merrow content or source-of-truth material.
 - Do not modify Brainstorm unless new reviewer feedback arrives.
 - Do not modify clinical content beyond reviewer-required remediation without Alexander approval.
-- Task 1 final human review is complete. Task 2 clean-pilot materials are staged locally; do not run additional task uploads, agent runs, QA runs, platform responses, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifest creation, final submission packaging, additional uploads, or additional submission actions without explicit Alexander authorization for the exact step.
+- Task 1 final human review is complete. Task 2 clean pilot was too easy and escalation materials are staged locally; do not run additional task uploads, agent runs, QA runs, platform responses, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifest creation, final submission packaging, additional uploads, or additional submission actions without explicit Alexander authorization for the exact step.
 - Do not access RL Studio again without explicit authorization.
 - Do not end a working session without applying collaborator session-exit discipline.
 ## Execution Artifact Generation Outputs
