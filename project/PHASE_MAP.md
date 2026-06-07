@@ -33,7 +33,7 @@ Korvin Merrow current exception: Alexander has explicitly authorized local, batc
 
 Goal: Address Task AutoQC findings and complete trajectory/grading audit.
 
-Status: Task 1 has completed final human review. Task 2 / KM02 clean pilot completed but was too easy: 10 trajectories scored 92-97 with no true failure mode. Task 2 escalation package is staged locally; next exact step is an Alexander-operated Task-Writing Go-Back using the escalation prompt and mounted colleague draft while keeping golden and grader unchanged. Do not run additional task uploads, agent runs, additional QA, platform responses, or reviewer-stage actions unless Alexander explicitly authorizes the exact action.
+Status: Task 1 has completed final human review. Task 2 / KM02 clean pilot completed but was too easy: 10 trajectories scored 92-97 with no true failure mode. Task 2 colleague-draft escalation run completed and produced a usable discriminator: 9 scored trajectories averaged about 65.1, with run 7 as the clean 0.35 propagation-failure subject and run 8 as a catch-run with no grader score. Current exact gate is Taiga QA Feedback AutoQC / QA handling, then FA/GA if cleared. The first QA feedback attempt failed because the annotation field for the static `enable_anthropic_api` warning must contain exactly `tech issue`; narrative belongs only in Slack or the dedicated dismissal-reasoning field. Do not run additional task uploads, agent runs, additional QA, platform responses, or reviewer-stage actions unless Alexander explicitly authorizes the exact action.
 
 ### Phase 4: Evaluate The Agent
 

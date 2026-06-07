@@ -55,6 +55,8 @@ The candidate rule to test (NOT yet adopted): design the failure FIRST. Decide w
 
 Structural caveat that makes this hard to catch early: AutoQC grades form (green/red), never difficulty. The first difficulty signal is a human running trajectories. So "too easy" is only knowable at human review, which is also why holding Tasks 2-6 until Task 1's pattern settles was correct. Watch whether Tasks 2-6 confirm or break this before promoting it above this line.
 
+TASK 2 CONFIRMS (6/7, n=2, promote toward backbone): KM02's clean discharge summary ran 94% (too easy); the escalation ran 65% (good stumping). The deciding variable is the FORCED SLOT. KM01 bit because a medication reconciliation forces a value (the prednisone row) the model can get wrong; KM02's discharge summary let the model defer everything, so it could not bite until we mounted an adversarial input (the colleague-draft) that forces a propagate-or-verify choice. So: difficulty = a forced move the model's competence plays wrong, not completeness; when a task genre permits deferral, manufacture the forced slot with a mounted adversarial input; and discover the number by running it, then ship the calibrated result rather than softening. "Design the failure first" is now confirmed at n=2. Full retrospective: worlds/korvin-merrow/task-setup/task2/KM02-learnings.md.
+
 ## The one rule
 Before any commit that is expensive or irreversible to undo, or any claim about WHY a system did something, drop out of inductive guessing and read the ground truth (the config, the transcript, the output, the file). Everywhere else, stay fast. Falsification before commitment at the irreversible nodes; induction everywhere else.
 

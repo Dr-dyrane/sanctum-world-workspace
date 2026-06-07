@@ -1,6 +1,6 @@
 # Korvin Merrow World
 
-Current state: World created as `Healthcare_247_Merrow`; Step 9 generated-file review COMPLETE; Task 1 final human review COMPLETE / APPROVED. Task 2 / KM02 clean pilot completed and was too easy (92-97, mean about 94.4, no true failure mode). Task 2 escalation package is staged locally for Alexander-operated Task-Writing Go-Back.
+Current state: World created as `Healthcare_247_Merrow`; Step 9 generated-file review COMPLETE; Task 1 final human review COMPLETE / APPROVED. Task 2 / KM02 clean pilot completed and was too easy (92-97, mean about 94.4, no true failure mode). Task 2 colleague-draft escalation run completed and produced a usable discriminator (9 scored trajectories, mean about 65.1; run 7 score 0.35; run 8 caught the plant but had no grader score). Current gate is Taiga QA Feedback AutoQC / QA handling, then FA/GA if cleared.
 
 Start here only after reading `project/STATUS.md`.
 
@@ -12,7 +12,7 @@ Start here only after reading `project/STATUS.md`.
 - `remediation/`: reviewer SEND BACK remediation decision briefs and compliance review.
 - `reviews/`: external/human/AutoQC review artifacts and reviewer feedback history.
 - `submission/`: RL Studio submission artifacts.
-- `task-setup/`: Task setup, trajectory, QA, FA/GA, PL, review, runbook, and bounded pre-build study provenance after world creation. Task 1 is approved; Task 2 / KM02 clean-pilot evidence lives under `task-setup/task2/pilot-run-clean/`, and the current escalation platform set lives under `task-setup/platform/task2/escalation/`. Golden and grader remain unchanged from the clean-pilot set.
+- `task-setup/`: Task setup, trajectory, QA, FA/GA, PL, review, runbook, and bounded pre-build study provenance after world creation. Task 1 is approved; Task 2 / KM02 clean-pilot evidence lives under `task-setup/task2/pilot-run-clean/`, escalation-run evidence lives under `task-setup/task2/escalation-run/`, and the escalation platform set lives under `task-setup/platform/task2/escalation/`. Golden and grader remain unchanged from the clean-pilot set.
 - `world-spec-prep/`: World Spec preparation cockpit plus lifecycle subfolders for locked decisions, locked, ratifications, reviews, decision logs, and planning scaffolds.
 - `world-spec-construction/`: World Spec construction lifecycle folders for candidate review artifacts, locked construction artifacts, and ratifications.
 - `file-inventory/`: file inventory lifecycle area. Locked architecture defines planned file ecosystem, and locked File Inventory v1 defines the planned inventory rows; neither creates synthetic files or chart contents.
@@ -50,6 +50,11 @@ Start here only after reading `project/STATUS.md`.
 - `task-setup/task2/grader-guidance-KM02-v1.md`
 - `task-setup/task2/colleague-draft-KM02.md`
 - `task-setup/task2/KM02-pilot-failure-analysis.md`
+- `task-setup/task2/KM02-escalation-results.md`
+- `task-setup/task2/KM02-learnings.md`
+- `task-setup/task2/KM02-taiga-qa-log.md`
+- `task-setup/task2/FA-GA-current.md`
+- `task-setup/task2/escalation-run/`
 - `task-setup/task2/pilot-run-clean/`
 - `task-setup/platform/task2/README.md`
 - `task-setup/platform/task2/escalation/README.md`
