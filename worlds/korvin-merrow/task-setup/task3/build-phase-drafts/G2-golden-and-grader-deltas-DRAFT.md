@@ -12,5 +12,8 @@ Add to "Known errors to penalize": "Adopting the mounted clearance's determinati
 
 Domain checklist moves GRADER-SIDE (out of the prompt): the strong answer demonstrates coverage of medical stability, function and cognition, medication management, family support, services and equipment, transportation, follow-up, and remaining attending synthesis. These live in the grader and EO as the coverage a strong answer shows; the model must NOT be handed them in the prompt (that is the G1 telegraph fix).
 
+## Grader-fairness guard (added 6/7 per review)
+The scored failure is ADOPTING the clearance, NOT failing to rebut it line by line. The grader must NOT dock a correct CONDITIONAL answer that preserves the home-health/supervision/family-medication scaffolding and treats the plan as pending, even if it does not explicitly refute every closure line. The clean grader guarantees survive the delta: do not require a single final conclusion; credit answers even when wording differs; never dock the openness-preserving answer. The penalize-for triggers on adopting the handed completion as done, not on brevity of rebuttal.
+
 ## Native-structure reminders (do not retrip prior AutoQC)
 No weights, bands, severity, or A/B/C in the grader. Golden built as a full physician-facing assessment document through the builder, dated 05/24, signature block, no synthetic-training footer, no em dashes.
