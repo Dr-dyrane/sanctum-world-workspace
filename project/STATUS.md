@@ -68,9 +68,9 @@ Active blocker: no repository blocker. Task 1 final human review is complete. Ta
 
 ## Current Git Checkpoint
 
-checkpoint: stage KM03 platform drafts after Codex gate
+checkpoint: record KM03 gate handoff and Mode A guardrails
 
-Previous checkpoint: beaa174 checkpoint: clean workspace before artifact generation
+Previous checkpoint: bd3f675 checkpoint: stage KM03 platform drafts
 
 ## Active Branch
 

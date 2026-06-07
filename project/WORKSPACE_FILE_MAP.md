@@ -778,6 +778,7 @@ Files:
 - `docs/world-pipeline-playbook.md`: future-stage and future-world pipeline recipe.
 - `reference/checklists/spec-autoqc-preflight.md`: Spec AutoQC preflight checklist.
 - `tools/generate_reference_files.py`: reference-file generation utility.
+- `tools/mode_a_clone.py`: Mode A DOCX clone/fingerprint verifier for task artifacts; use for task files and goldens that must preserve the approved Epic UI without the regressed synthetic footer.
 - `worlds/korvin-merrow/autoqc-remediation/`: AutoQC remediation notes, response language, and world-spec DOCX bring-home plan.
 - `worlds/korvin-merrow/reference-file-design/`: Epic-style reference-file design system and approved sample artifacts.
 - `worlds/korvin-merrow/reviews/stacey-corrections-recovery-report.md`: recovered reviewer-correction audit.
