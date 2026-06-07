@@ -831,7 +831,7 @@ Current contents:
 - `worlds/korvin-merrow/task-setup/task2/runs/escalation-v3/`: v3 reseed run evidence, including Attempt 8 support, v3 summary, and run-specific copies. Evidence only; do not upload from this folder.
 - `worlds/korvin-merrow/task-setup/task2/qa/KM02-taiga-qa-log.md`: Taiga QA log for KM02, including qcaud_5e, qcaud_4a, qcaud_ef, and the exact `tech issue` annotation rule.
 - `worlds/korvin-merrow/task-setup/task2/fa-ga/FA-GA-current.md`: current KM02 FA/GA candidate using Attempt 8 / score 0.30 from v3.
-- `worlds/korvin-merrow/task-setup/task2/preference-labeling/`: local Task 2 Preference Labeling prep packet. Contains A 0.40 vs B 0.82 transcript evidence, byte evidence, RLS PL instruction excerpt, Task 1 house-format reference, and draft B3 recommendation. Draft/prep only unless Alexander confirms platform submission.
+- `worlds/korvin-merrow/task-setup/task2/preference-labeling/`: local Task 2 Preference Labeling prep packet. Contains A 0.40 vs B 0.82 transcript evidence, byte evidence, RLS PL instruction excerpt, Task 1 house-format reference, draft B3 recommendation, and `inputs/` copies of the KM02 v3 prompt/golden/grader/mounted draft matching `platform/task2/current/` by hash. Draft/prep only unless Alexander confirms platform submission.
 - `worlds/korvin-merrow/task-setup/task2/learnings/KM02-learnings.md`: Task 2 retrospective and cross-task lesson record.
 - `worlds/korvin-merrow/task-setup/task2/bundles/`: ignored local KM02 convenience bundles only. Not repository canon, not submission packages, and not upload artifacts.
 - `worlds/korvin-merrow/task-setup/task3/TASK3-STATE.md`: Task 3 bounded inheritance cockpit. Task 3 is not active on platform.

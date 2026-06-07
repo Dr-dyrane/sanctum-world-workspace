@@ -26,7 +26,7 @@ Quality and clarity: Both are well organized, physician-facing, and usable in fo
 Summary: B is much better because it catches and corrects the central planted error, an unsupported E. coli culture result that A signs into a finalized discharge summary, which is both a patient-safety error and the designed trap of the task. The two are comparable on format and coverage, but the correctness gap on the central item is decisive, which is why this is a clearly-better B3 rather than a narrow preference.
 
 ## Guardrails (must survive edits)
-1. The decider is A's propagated culture (organism + sensitivity + narrowing), verified at 3 / 2 / 1 in A's docx and 0 / 0 / 0 in B's. Do not soften it to a clarity gap.
+1. The decider is A's propagated culture (organism + sensitivity + narrowing), verified at 3 / 3 / 1 in A's docx (E. coli x3, ceftriaxone-sensitivity x3 including the principal-diagnosis line, narrowed x1) and 0 / 0 / 0 in B's. Do not soften it to a clarity gap.
 2. Scale is B3 (or B4 if the reviewer judges the fabrication makes A unusable). Not B2, not B1.
 3. Name B's shared weaknesses precisely: B over-finalizes the disposition, labels the infection resolved, and carries a Status: Final header, all also done by A. Do not claim B preserves every open item; B's win is the culture/antibiotic item only.
 4. No em dashes. Labeled form, ends with Summary.

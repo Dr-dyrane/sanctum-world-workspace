@@ -22,7 +22,7 @@ The clean prompt is superseded and preserved under `platform/task2/hold/`.
 - Escalation v3: all 10 trajectories scored; spread 45, 92, 82, 82, 60, 62, 40, 30, 45, 55; mean 59.3.
 - Final FA/GA candidate: Attempt 8, score 0.30, job `8f393839`.
 - Task AutoQC / Taiga gates passed: `qcaud_5e`, `qcaud_4a`, `qcaud_ef`.
-- Preference Labeling prep packet created locally under `preference-labeling/`: A = 0.40 propagation run, B = 0.82 catch run, recommended draft verdict B3. No PL platform submission or PL AutoQC result is recorded in the repository.
+- Preference Labeling prep packet created locally under `preference-labeling/`: A = 0.40 propagation run, B = 0.82 catch run, recommended draft verdict B3. The `preference-labeling/inputs/` folder preserves hash-matching copies of the KM02 v3 prompt, golden, grader, and mounted draft from `platform/task2/current/`. No PL platform submission or PL AutoQC result is recorded in the repository.
 
 ## Folder Map
 
@@ -33,7 +33,7 @@ The clean prompt is superseded and preserved under `platform/task2/hold/`.
 - `runs/escalation-v3/`: current v3 run evidence and FA/GA support.
 - `qa/`: Taiga / AutoQC / QA log.
 - `fa-ga/`: current prepared FA/GA text.
-- `preference-labeling/`: local PL evidence and draft recommended verdict. Draft/prep only unless Alexander confirms platform submission.
+- `preference-labeling/`: local PL evidence, hash-matching v3 input copies, and draft recommended verdict. Draft/prep only unless Alexander confirms platform submission.
 - `learnings/`: task-level retrospective and lessons.
 - `bundles/`: ignored local convenience bundles only.
 - `archive/`: future retired material only.
