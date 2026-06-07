@@ -31,8 +31,10 @@ Current task ladder:
 8. `worlds/korvin-merrow/task-setup/platform/task2/README.md` and `platform/task2/current/RUN-INSTRUCTIONS.md` for platform artifact provenance.
 9. `worlds/korvin-merrow/task-setup/task2/design/KM02-design-plan-for-review.md` for Task 2 red-team study and discriminator history.
 10. `worlds/korvin-merrow/task-setup/task3/TASK3-STATE.md` for Task 3 bounded inheritance state.
-9. `worlds/korvin-merrow/task-setup/platform/task1/` for live Task 1 platform artifacts.
-10. `worlds/korvin-merrow/task-setup/platform/task1/archive/` only for historical Task 1 iterations.
+11. `worlds/korvin-merrow/task-setup/task3/KM03-3rd-reader-review-and-build-gates.md` before any Task 3 build; it records that KM03 is not build-ready until G1-G3 close.
+12. `worlds/korvin-merrow/task-setup/task3/build-phase-drafts/` for draft G1-G3 closure review material only; not platform-ready artifacts.
+13. `worlds/korvin-merrow/task-setup/platform/task1/` for live Task 1 platform artifacts.
+14. `worlds/korvin-merrow/task-setup/platform/task1/archive/` only for historical Task 1 iterations.
 
 Clinical canon lookup ladder:
 
@@ -835,7 +837,9 @@ Current contents:
 - `worlds/korvin-merrow/task-setup/task2/preference-labeling/`: Task 2 Preference Labeling evidence packet. Contains A 0.40 vs B 0.82 transcript evidence, byte evidence, RLS PL instruction excerpt, Task 1 house-format reference, submitted B / B++ verdict backup, and `inputs/` copies of the KM02 v3 prompt/golden/grader/mounted draft matching `platform/task2/current/` by hash. Evidence only unless Alexander authorizes resubmission or reviewer-directed edits.
 - `worlds/korvin-merrow/task-setup/task2/learnings/KM02-learnings.md`: Task 2 retrospective and cross-task lesson record.
 - `worlds/korvin-merrow/task-setup/task2/bundles/`: ignored local KM02 convenience bundles only. Not repository canon, not submission packages, and not upload artifacts.
-- `worlds/korvin-merrow/task-setup/task3/TASK3-STATE.md`: Task 3 bounded inheritance cockpit. Task 3 is not active on platform.
+- `worlds/korvin-merrow/task-setup/task3/TASK3-STATE.md`: Task 3 bounded inheritance and build-phase draft cockpit. Task 3 is not active on platform and is not build-ready until the third-reader G1-G3 gates close.
+- `worlds/korvin-merrow/task-setup/task3/KM03-3rd-reader-review-and-build-gates.md`: Task 3 third-reader review and build gates. Confirms the KM03 design direction but blocks build/upload until G1 de-telegraphs the escalation prompt, G2 extends the golden/grader for mounted clearance, and G3 authors/verifies exactly one committed-clearance mounted note. Latest byte verification says FI-S03 and the existing FI-T03 rendering are clean.
+- `worlds/korvin-merrow/task-setup/task3/build-phase-drafts/`: Task 3 draft G1-G3 closure packet for review only. Tracks source drafts, mount manifests, pilot preregistration, and copied inputs; ZIP bundles in this folder are ignored.
 - `worlds/korvin-merrow/task-setup/task3/design/KM03-design-plan-for-review.md`: Task 3 inheritance/design plan; no platform work authorized.
 - `worlds/korvin-merrow/task-setup/step10-review-packet.md`: Step 10 review packet mapping six tasks to held-back task files, drafting de-hinted platform prompt candidates, listing candidate holdback-file edits requiring Alexander rulings, and mapping FI IDs to platform filenames for later GG/EO translation.
 - `worlds/korvin-merrow/task-setup/platform/task1/`: Task 1 platform provenance folder. Upload-ready artifacts live in `current/`; historical material lives in `archive/`.

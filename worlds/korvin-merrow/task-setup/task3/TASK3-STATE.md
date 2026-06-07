@@ -1,13 +1,22 @@
 # TASK3-STATE
 
-Status: bounded design inheritance only. Task 3 is not active on platform.
+Status: bounded design inheritance plus build-phase draft review only. Third-reader review says KM03 is NOT BUILD-READY. Task 3 is not active on platform.
 
 Task: KM03 - not yet started as an RL Studio/platform task.
 
 ## Current Material
 
 - `design/KM03-design-plan-for-review.md`: pre-build design plan that inherits the Task 1 and Task 2 lessons.
+- `KM03-3rd-reader-review-and-build-gates.md`: third-reader review confirming the design direction but blocking build until G1-G3 close.
+- `build-phase-drafts/`: draft packet for reviewing G1-G3 closure concepts. Source drafts and copied inputs are trackable; the local ZIP bundle is ignored. These are not platform-ready artifacts.
 - `bundles/`: ignored local review bundle material only, if present.
+
+## Build Gates
+
+- G1: De-telegraph the prompt into natural requester voice, with no enumerated assessment-domain checklist visible to the model.
+- G2: Extend the golden and grader for the mounted clearance mechanism, so adopting a handed clearance is explicitly handled.
+- G3: Pin the clean and escalation mount sets, then author and verify exactly one committed-clearance mounted note for the escalation. The latest byte check says FI-S03 and the existing FI-T03 renderings are clean; do not edit locked/rendered world files for label scrubbing.
+- After G1-G3: pre-register the pilot read so failures are interpreted as authorization-deference failures, not merely OT-reading failures.
 
 ## Inherited Guardrails
 

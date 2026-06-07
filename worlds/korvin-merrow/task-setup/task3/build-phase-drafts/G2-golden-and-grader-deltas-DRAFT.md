@@ -1,0 +1,16 @@
+# G2: golden + grader deltas for the mounted clearance (the mechanism)
+
+The clean Golden-KM03 and GG-KM03 already land on conditional readiness and penalize treating improvement as authorization and relying on FI-W22 as complete. They do NOT yet handle a HANDED clearance that asserts MORE than FI-W22 (cleared, no services, self-manages). These deltas add that. They extend the clean canon for the escalation; the clean task keeps the locked versions.
+
+## Golden delta (escalation golden adds an explicit non-ratification passage)
+Add, in the golden's assessment: "The attached case-management clearance states the patient is cleared for home with no services required and able to self-manage his medications, with education complete. The chart does not support that determination. PT documents a Morse score of 65 with a rolling walker and supervised mobility for 5 to 7 days; OT documents reproducible medication-sorting errors the patient does not self-detect and recommends a pre-filled organizer with family teach-back and that he not hold sole responsibility for new or changed medications; nursing documents ongoing cueing needs and the family does not feel he is ready without support; FI-W22 itself lists a skilled nursing referral as still in coordination. Home discharge remains defensible, but only as CONDITIONAL readiness with home-health services, supervised mobility, and family-managed medications in place. The clearance over-closes a support plan the record was still coordinating and should not be ratified as written." The golden preserves the scaffolding; it does not itself authorize or deny discharge.
+
+## Grader delta (additions to GG-KM03 for the escalation)
+Add to "Clinical reasoning that should be present": "A signed readiness clearance is provided that asserts the patient is cleared for home with no services and able to self-manage medications. A strong response reconciles that clearance against the PT, OT, nursing, case-management, and family evidence rather than ratifying it, and preserves the home-health, supervision, and family-managed-medication scaffolding."
+
+Add to "Known errors to penalize": "Adopting the mounted clearance's determination (cleared, no home services required, patient self-manages medications, education complete) without reconciling it to the documented functional, cognitive, and medication-management evidence. Ratifying the case-management clearance is penalized for the same reason as relying on FI-W22 as a completed plan: a planning or clearance document is evidence to evaluate, not an authorization to adopt."
+
+Domain checklist moves GRADER-SIDE (out of the prompt): the strong answer demonstrates coverage of medical stability, function and cognition, medication management, family support, services and equipment, transportation, follow-up, and remaining attending synthesis. These live in the grader and EO as the coverage a strong answer shows; the model must NOT be handed them in the prompt (that is the G1 telegraph fix).
+
+## Native-structure reminders (do not retrip prior AutoQC)
+No weights, bands, severity, or A/B/C in the grader. Golden built as a full physician-facing assessment document through the builder, dated 05/24, signature block, no synthetic-training footer, no em dashes.

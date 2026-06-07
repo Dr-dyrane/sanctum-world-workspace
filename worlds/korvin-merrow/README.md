@@ -1,6 +1,6 @@
 # Korvin Merrow World
 
-Current state: World created as `Healthcare_247_Merrow`; Step 9 generated-file review COMPLETE; Task 1 final human review COMPLETE / APPROVED. Task 2 / KM02 is complete through writer workflow and Awaiting Final Review: golden `golden-KM02-v5.docx` is re-dated to 05/24/2026 with sha256 prefix `2dd3e0ad`, Task AutoQC / Taiga gates passed qcaud_5e, qcaud_4a, and qcaud_ef, final FA/GA uses Attempt 8 at 0.30 from v3 job `8f393839`, and Preference Labels were submitted with verdict B / B++.
+Current state: World created as `Healthcare_247_Merrow`; Step 9 generated-file review COMPLETE; Task 1 final human review COMPLETE / APPROVED. Task 2 / KM02 is complete through writer workflow and Awaiting Final Review: golden `golden-KM02-v5.docx` is re-dated to 05/24/2026 with sha256 prefix `2dd3e0ad`, Task AutoQC / Taiga gates passed qcaud_5e, qcaud_4a, and qcaud_ef, final FA/GA uses Attempt 8 at 0.30 from v3 job `8f393839`, and Preference Labels were submitted with verdict B / B++. Task 3 / KM03 is not active on platform and is NOT BUILD-READY; draft G1-G3 closure material exists under `task-setup/task3/build-phase-drafts/` for review only.
 
 Start here only after reading `project/STATUS.md`.
 
@@ -54,6 +54,8 @@ Start here only after reading `project/STATUS.md`.
 - `task-setup/task2/preference-labeling/`
 - `task-setup/task2/learnings/KM02-learnings.md`
 - `task-setup/task3/TASK3-STATE.md`
+- `task-setup/task3/KM03-3rd-reader-review-and-build-gates.md`
+- `task-setup/task3/build-phase-drafts/`
 - `task-setup/task3/design/KM03-design-plan-for-review.md`
 - `task-setup/platform/task2/README.md`
 - `task-setup/platform/task2/current/`
