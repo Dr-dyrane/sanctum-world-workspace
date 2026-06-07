@@ -1,16 +1,17 @@
 # TASK3-STATE
 
-Status: KM03 build-phase gate passed locally and platform draft staging is complete. The staged escalation uses the COMPLETION-overclaim frame. Task 3 is not uploaded, not AutoQC-run, not trajectory-run, and not active on platform until Alexander finalizes the prompt, signs off the golden, and Abi greenlights tasking.
+Status: KM03 build-phase gate passed locally, platform files were uploaded under Alexander operation, Task AutoQC passed 36/36 (`qcaud_6b`), and Taiga Trajectories & QA are running. The escalation uses the COMPLETION-overclaim frame. Open item: Alexander physician sign-off on the golden clinical content.
 
-Task: KM03 - not yet started as an RL Studio/platform task.
+Task: KM03 - active platform task in trajectory/QA phase.
 
 ## Current Material
 
 - `design/KM03-design-plan-for-review.md`: pre-build design plan that inherits the Task 1 and Task 2 lessons.
 - `KM03-3rd-reader-review-and-build-gates.md`: third-reader review confirming the design direction but blocking build until G1-G3 close.
 - `build-phase-drafts/`: draft packet for reviewing G1-G3 closure concepts. Source drafts and copied inputs are trackable; the local ZIP bundle is ignored.
-- `build-phase-drafts/01-build-phase-review-responses.md`: build-phase review response record. Captures the frame decision from STRIP to COMPLETION and says the next step is Codex gate, then pod-lead tasking clearance, then build.
-- `../platform/task3/current/`: staged KM03 escalation platform drafts for Alexander sign-off only. Contains `prompt-task3-escalation.txt`, `case_management_discharge_readiness_clearance_05242026.docx`, `golden-KM03-v1.docx`, `grader-guidelines-task3.txt`, and a local `RUN-INSTRUCTIONS.md` hold note.
+- `build-phase-drafts/01-build-phase-review-responses.md`: build-phase review response record. Captures the frame decision from STRIP to COMPLETION and the now-completed Codex gate path.
+- `KM03-state-log.md`: live event log for KM03 after staging, including Task AutoQC pass and trajectory/QA state.
+- `../platform/task3/current/`: active KM03 escalation platform set. Contains `prompt-task3-escalation.txt`, `case_management_discharge_readiness_clearance_05242026.docx` (`95f6affb`), `golden-KM03-v1.docx` (`5feb3227`), `grader-guidelines-task3.txt`, and a local `RUN-INSTRUCTIONS.md` note.
 - `bundles/`: ignored local review bundle material only, if present.
 
 ## Build Gates
@@ -29,6 +30,15 @@ Task: KM03 - not yet started as an RL Studio/platform task.
 - Byte findings: the eight KM03 source files were rechecked on the agent-read DOCX layer under `file-review/upload/filesystem/`; source hashes match the design packet and the pending-versus-completed support-plan findings hold.
 - Rendering: LibreOffice/Poppler render produced a one-page mounted note and a two-page golden with no obvious clipping or overlap in visual sample.
 
+## Platform / AutoQC State 2026-06-07 Late PM
+
+- Platform upload: completed under Alexander operation.
+- Task AutoQC: PASS 36/36 (`qcaud_6b`).
+- Metadata scrub: python-docx core metadata leak was cleared in the golden and mounted note. Current shas are `golden-KM03-v1.docx` = `5feb3227` and `case_management_discharge_readiness_clearance_05242026.docx` = `95f6affb`; earlier `dc5c4833` and `b9f7a1a3` were pre-scrub.
+- Current run state: Taiga Trajectories & QA running.
+- Known set-aside: the "Synthetic Training Document" footer in six finalized world files is a world-level item intentionally set aside because reopening the world would force redo of KM01/KM02.
+- Open: Alexander physician sign-off on the golden clinical content.
+
 ## Inherited Guardrails
 
 - Apply the Task 1 realism lessons before building task files.
@@ -38,4 +48,4 @@ Task: KM03 - not yet started as an RL Studio/platform task.
 
 ## Boundaries
 
-No task upload, agent run, QA run, AutoQC response, preference-label action, or RL Studio mutation is authorized for Task 3 until Alexander explicitly authorizes that exact step. Current next step: Alexander confirms/finalizes the writer-owned prompt wording and signs off the golden clinical content, then Abi greenlights tasking before any upload.
+Do not rerun AutoQC, rerun agents, rerun QA, upload additional files, create AutoQC responses, create preference-label artifacts, or mutate RL Studio unless Alexander explicitly authorizes that exact step. Current next step: observe/record Taiga Trajectories & QA results when Alexander provides them, then respond only to the next authorized platform gate.

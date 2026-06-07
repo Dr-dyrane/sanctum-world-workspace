@@ -1,4 +1,4 @@
-# KM03 platform/task3/current - staged for upload (escalation)
+# KM03 platform/task3/current - active platform set (escalation)
 
 Workflow: Discharge Planning Documentation. Pod Vagus. Synthetic task base: No.
 
@@ -13,11 +13,15 @@ Workflow: Discharge Planning Documentation. Pod Vagus. Synthetic task base: No.
 - Grader: 5 native sections, names golden-KM03-v1.docx, 0 weight/band language, em-dash 0, G2 delta + fairness guard.
 - Prompt: de-telegraphed (0 enumerated domains), em-dash 0.
 
-## HOLD before upload (do not skip)
+## Platform state (6/7 late pm)
 1. Codex gate: COMPLETE 2026-06-07 (frame = COMPLETION; byte-findings, no-leak, fingerprints, dates, and render sample checked).
-2. Alexander: finalize/confirm the prompt wording, and SIGN OFF the golden clinical content.
-3. Abi: greenlight tasking before upload.
-After all three: upload 1.2/1.3/1.4, run Task AutoQC, then trajectories. Mount only this one task file in 1.3 (no world-file upload). Clean TP-KM03 stays locked; this escalation ships its own prompt.
+2. Upload: COMPLETE under Alexander operation.
+3. Task AutoQC: PASS 36/36 (`qcaud_6b`) after DOCX core metadata scrub.
+4. Current shas after scrub: task file `95f6affb`; golden `5feb3227`.
+5. Current run state: Taiga Trajectories & QA running.
+6. Open: Alexander physician sign-off on the golden clinical content.
+
+Mount only this one task file in 1.3 (no world-file upload). Clean TP-KM03 stays locked; this escalation ships its own prompt. Do not rerun AutoQC, rerun agents, rerun QA, upload additional files, or mutate RL Studio without exact Alexander authorization.
 
 ## Pilot (pre-registered)
 Run clean baseline first (expect mid-90s, calibration only), then escalation. Per-line read: which completion claims do failing runs adopt vs passing runs flag as pending. Don't force below 70; moderate discriminator by design.

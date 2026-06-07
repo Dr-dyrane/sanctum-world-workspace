@@ -1,6 +1,6 @@
 # Korvin Merrow World
 
-Current state: World created as `Healthcare_247_Merrow`; Step 9 generated-file review COMPLETE; Task 1 final human review COMPLETE / APPROVED. Task 2 / KM02 is complete through writer workflow and Awaiting Final Review: golden `golden-KM02-v5.docx` is re-dated to 05/24/2026 with sha256 prefix `2dd3e0ad`, Task AutoQC / Taiga gates passed qcaud_5e, qcaud_4a, and qcaud_ef, final FA/GA uses Attempt 8 at 0.30 from v3 job `8f393839`, and Preference Labels were submitted with verdict B / B++. Task 3 / KM03 is not active on platform; local Codex gate passed on 2026-06-07 and platform draft staging is complete under `task-setup/platform/task3/current/`. Upload remains held until Alexander finalizes the prompt, signs off the golden, and Abi greenlights tasking.
+Current state: World created as `Healthcare_247_Merrow`; Step 9 generated-file review COMPLETE; Task 1 final human review COMPLETE / APPROVED. Task 2 / KM02 is complete through writer workflow and Awaiting Final Review: golden `golden-KM02-v5.docx` is re-dated to 05/24/2026 with sha256 prefix `2dd3e0ad`, Task AutoQC / Taiga gates passed qcaud_5e, qcaud_4a, and qcaud_ef, final FA/GA uses Attempt 8 at 0.30 from v3 job `8f393839`, and Preference Labels were submitted with verdict B / B++. Task 3 / KM03 is active in Taiga Trajectories & QA after platform upload and Task AutoQC PASS 36/36 (`qcaud_6b`). Current scrubbed shas: golden `golden-KM03-v1.docx` = `5feb3227`; mounted note `case_management_discharge_readiness_clearance_05242026.docx` = `95f6affb`. Open: Alexander physician sign-off on the KM03 golden clinical content; no further platform mutation without exact authorization.
 
 Start here only after reading `project/STATUS.md`.
 
@@ -12,7 +12,7 @@ Start here only after reading `project/STATUS.md`.
 - `remediation/`: reviewer SEND BACK remediation decision briefs and compliance review.
 - `reviews/`: external/human/AutoQC review artifacts and reviewer feedback history.
 - `submission/`: RL Studio submission artifacts.
-- `task-setup/`: Task setup, trajectory, QA, FA/GA, PL, review, runbook, and bounded pre-build study provenance after world creation. Task 1 is approved. Task 2 starts at `task-setup/task2/TASK2-STATE.md`; clean-pilot evidence lives under `task-setup/task2/runs/clean-pilot/`, v2 escalation evidence under `task-setup/task2/runs/escalation-v2/`, v3 evidence under `task-setup/task2/runs/escalation-v3/`, submitted PL evidence under `task-setup/task2/preference-labeling/`, and the active platform set under `task-setup/platform/task2/current/`. Task 3 starts at `task-setup/task3/TASK3-STATE.md`; staged platform drafts are under `task-setup/platform/task3/current/` but are held pending Alexander and Abi sign-off.
+- `task-setup/`: Task setup, trajectory, QA, FA/GA, PL, review, runbook, and bounded pre-build study provenance after world creation. Task 1 is approved. Task 2 starts at `task-setup/task2/TASK2-STATE.md`; clean-pilot evidence lives under `task-setup/task2/runs/clean-pilot/`, v2 escalation evidence under `task-setup/task2/runs/escalation-v2/`, v3 evidence under `task-setup/task2/runs/escalation-v3/`, submitted PL evidence under `task-setup/task2/preference-labeling/`, and the active platform set under `task-setup/platform/task2/current/`. Task 3 starts at `task-setup/task3/TASK3-STATE.md` and `task-setup/task3/KM03-state-log.md`; platform files are under `task-setup/platform/task3/current/`, Task AutoQC passed qcaud_6b, and Taiga Trajectories & QA are running.
 - `world-spec-prep/`: World Spec preparation cockpit plus lifecycle subfolders for locked decisions, locked, ratifications, reviews, decision logs, and planning scaffolds.
 - `world-spec-construction/`: World Spec construction lifecycle folders for candidate review artifacts, locked construction artifacts, and ratifications.
 - `file-inventory/`: file inventory lifecycle area. Locked architecture defines planned file ecosystem, and locked File Inventory v1 defines the planned inventory rows; neither creates synthetic files or chart contents.
@@ -54,6 +54,7 @@ Start here only after reading `project/STATUS.md`.
 - `task-setup/task2/preference-labeling/`
 - `task-setup/task2/learnings/KM02-learnings.md`
 - `task-setup/task3/TASK3-STATE.md`
+- `task-setup/task3/KM03-state-log.md`
 - `task-setup/task3/KM03-3rd-reader-review-and-build-gates.md`
 - `task-setup/task3/build-phase-drafts/`
 - `task-setup/task3/design/KM03-design-plan-for-review.md`
