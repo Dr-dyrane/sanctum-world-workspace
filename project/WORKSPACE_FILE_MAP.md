@@ -8,7 +8,7 @@ Current status: World Spec APPROVED after RL Studio upload, Spec AutoQC, and Sta
 
 ## Navigation Rule
 
-For a new collaborator or new AI session, read by ladder, not by full archive.
+This section is the repository's doc spine. For a new collaborator or new AI session, read by ladder, not by full archive. The spine is active instruction, not a passive index: task-stage work must begin from this ladder, then the active task cockpit, before any archive dive or draft edit.
 
 Current operating ladder:
 
@@ -17,9 +17,11 @@ Current operating ladder:
 3. `docs/status-dashboard.md` for a compact current-state dashboard.
 4. `worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md` before any task-stage work.
 5. `worlds/korvin-merrow/task-setup/CHECKPOINT-AUDIT-pre-task2.md` before Task 2 or later task setup.
-6. This file only when you need exact locations, duplication checks, or placement rules.
+6. Return to this file when you need exact locations, duplication checks, placement rules, or the next task-specific ladder.
 
 Current task ladder:
+
+For task-stage work, pair this ladder with a short read receipt: files read, active task state, forbidden actions, and three no-repeat lessons from prior tasks.
 
 1. `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md` for Task 1 canonical history and lessons.
 2. `worlds/korvin-merrow/task-setup/reviews/task1-final-review-ao-2026-06-06.md` for Task 1 final approval.
@@ -852,7 +854,7 @@ Current contents:
 - `worlds/korvin-merrow/task-setup/platform/task3/current/`: KM03 active platform set after Codex gate, upload, and Task AutoQC pass. Contains writer-owned prompt `prompt-task3-escalation.txt`, mounted note `case_management_discharge_readiness_clearance_05242026.docx` (`95f6affb`), golden `golden-KM03-v1.docx` (`5feb3227`), grader `grader-guidelines-task3.txt`, and local `RUN-INSTRUCTIONS.md`. Taiga Trajectories & QA are running; do not rerun AutoQC, rerun agents, rerun QA, upload additional files, or mutate RL Studio without exact Alexander authorization.
 - `worlds/korvin-merrow/task-setup/task4/TASK4-STATE.md`: Task 4 prebuild review-packet cockpit. Records deterministic source chain, current consultant-consensus overclaim design direction, and no-build/no-platform boundaries.
 - `worlds/korvin-merrow/task-setup/task4/design/KM04-design-plan-for-review.md`: Task 4 design review packet. Treats locked KM04 task identity as settled and focuses on build mechanism, source findings, discriminator, fairness, and future build sequence.
-- `worlds/korvin-merrow/task-setup/task4/KM04-prebuild-review-and-build-gates.md`: Task 4 gate checklist for G1 prompt, G2 golden/grader deltas, G3 mounted draft, G4 mount manifest, G5 Mode A hygiene, and G6 pilot preregistration. Review only.
+- `worlds/korvin-merrow/task-setup/task4/KM04-prebuild-review-and-build-gates.md`: Task 4 gate checklist for G0 spine read receipt / KM03 dependency, G1 prompt, G2 golden/grader deltas, G3 mounted draft and hypothesis kill-chain, G4 mount manifest, G5 Mode A hygiene, G6 pilot preregistration, G7 clinical-register scan, and G8 difficulty prediction. Review only.
 - `worlds/korvin-merrow/task-setup/task4/build-phase-drafts/`: Task 4 draft review packet. Contains byte/source audit, de-telegraphed prompt draft, golden/grader deltas, mounted synthesis source draft, mount manifests, pilot preregistration, and `inputs/` copies of locked KM04 canon plus the held-back consultant-synthesis request DOCX. Not platform-current artifacts.
 - `worlds/korvin-merrow/task-setup/step10-review-packet.md`: Step 10 review packet mapping six tasks to held-back task files, drafting de-hinted platform prompt candidates, listing candidate holdback-file edits requiring Alexander rulings, and mapping FI IDs to platform filenames for later GG/EO translation.
 - `worlds/korvin-merrow/task-setup/platform/task1/`: Task 1 platform provenance folder. Upload-ready artifacts live in `current/`; historical material lives in `archive/`.
