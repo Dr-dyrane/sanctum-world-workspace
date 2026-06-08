@@ -1,8 +1,10 @@
 # TASK4-STATE
 
-Status: KM04 v1 TAIGA-COMPLETE / DIFFICULTY FAILED. Alexander-operated Run All QA evidence for job `55ee209f-c9fa-4a64-8071-70d8917508da` completed 2026-06-08 with 10 trajectories scoring 0.87-0.95, mean 0.912, and zero sub-70 runs. The mounted resident-draft mechanism did not produce a significant clinical failure. Durable local record: `runs/KM04-taiga-results-55ee209f.md`. Do not proceed to FA/GA, Preference Labeling, or final review from KM04 v1 unless Alexander explicitly overrides the difficulty gate.
+Status: KM04 v2 TAIGA-COMPLETE / DIFFICULTY CLEARED. Alexander-operated Run All QA evidence for v2 job `709be0e8-2358-40c7-ab69-1ddb44010564` completed 2026-06-08 with scores 0.88, 0.15, 0.95, 0.92, 0.15, 0.97, 0.15, 0.85, 0.95, 0.92; mean 0.689; three sub-70 runs; tail 0.15. Durable records: `runs/KM04-v2-taiga-results-709be0e8.md` and `runs/KM04-v2-grading-transcripts-709be0e8.md`. The local FA/GA current draft is `fa-ga/FA-GA-current.md`, subject Attempt 5 at 0.15 with Attempt 6 at 0.97 as the GA comparator. It is physician-owned and not platform-entered. Next platform step is KM04 FA/GA entry on Attempt 5 if Alexander explicitly authorizes it.
 
-KM04 v2 update 6/8: review-only redesign material now exists at `build-phase-drafts/KM04-v2-plan.md`, `build-phase-drafts/KM04-v2-review-request-for-claude-ai.md`, and `build-phase-drafts/KM04-v2-build-proposal.md`. The v2 proposal now ports the proven KM02/KM03 completion-genre fabricated-objective-result mechanism onto an anemia-of-CKD / absent iron-workup axis; nutrition/oral-intake is backup / not recommended after review. Claude Code created raw local v2 build files under `build-v2/` and staged the v2 prompt, mounted draft, cleaned golden, grader, and RUN-INSTRUCTIONS in `platform/task4/current/`; v1 evidence moved to `platform/task4/archive/2026-06-08-pre-clean/`. Platform-current golden v2 has no bracketed placeholder and no DOCX core-metadata leak on read-only check, but still needs Alexander physician review/sign-off before upload. No v2 upload, AutoQC, Taiga run, FA/GA, PL, final review, locked-canon edit, or live-world edit exists.
+KM04 v1 status: TAIGA-COMPLETE / DIFFICULTY FAILED. Alexander-operated Run All QA evidence for job `55ee209f-c9fa-4a64-8071-70d8917508da` completed 2026-06-08 with 10 trajectories scoring 0.87-0.95, mean 0.912, and zero sub-70 runs. The mounted resident-draft mechanism did not produce a significant clinical failure. Durable local record: `runs/KM04-taiga-results-55ee209f.md`. Do not proceed to FA/GA, Preference Labeling, or final review from KM04 v1 unless Alexander explicitly overrides the difficulty gate.
+
+KM04 v2 update 6/8: redesign material exists at `build-phase-drafts/KM04-v2-plan.md`, `build-phase-drafts/KM04-v2-review-request-for-claude-ai.md`, and `build-phase-drafts/KM04-v2-build-proposal.md`. The v2 proposal ports the proven KM02/KM03 completion-genre fabricated-objective-result mechanism onto an anemia-of-CKD / absent iron-workup axis; nutrition/oral-intake is backup / not recommended after review. Claude Code created raw local v2 build files under `build-v2/` and staged the v2 prompt, mounted draft, cleaned golden, grader, and RUN-INSTRUCTIONS in `platform/task4/current/`; v1 evidence moved to `platform/task4/archive/2026-06-08-pre-clean/`. Alexander-operated v2 trajectory evidence then cleared the difficulty gate. The local repo does not yet record a KM04 v2 Task AutoQC ID or platform FA/GA submission. No KM04 v2 PL, final review, locked-canon edit, or live-world edit exists.
 
 V1 files archived as evidence in platform/task4/archive/2026-06-08-pre-clean/:
 - prompt-task4-escalation.txt (G1 verbatim authoring-posture prompt)
@@ -66,7 +68,7 @@ Before any KM04 drafting, build, or platform staging, read:
 11. `build-phase-drafts/KM04-v2-build-proposal.md`
 12. `build-v2/`
 
-Required read receipt for any future KM04 iteration: state files read, current task states, forbidden actions, three no-repeat lessons, and whether KM03 trajectory/QA results have returned. Current KM04 v1 status is no longer prebuild-only or merely staged; it has completed a trajectory run and failed the difficulty gate. Current KM04 v2 status is local platform-current staging; golden v2 has no bracketed placeholder and no DOCX core-metadata leak on read-only check, but still needs Alexander physician review/sign-off and explicit upload authorization.
+Required read receipt for any future KM04 iteration: state files read, current task states, forbidden actions, three no-repeat lessons, and whether KM03 trajectory/QA results have returned. Current KM04 v1 status is no longer prebuild-only or merely staged; it has completed a trajectory run and failed the difficulty gate. Current KM04 v2 status is difficulty-cleared with local run evidence and a verified local FA/GA draft; next platform step is FA/GA entry on Attempt 5 only if Alexander explicitly authorizes it.
 
 ## Current Material
 
@@ -77,8 +79,11 @@ Required read receipt for any future KM04 iteration: state files read, current t
 - `build-phase-drafts/KM04-v2-review-request-for-claude-ai.md`: self-contained Claude.ai red-team request for the v2 redesign plan.
 - `build-phase-drafts/KM04-v2-build-proposal.md`: draft/proposal-only KM04 v2 build package with prompt/mounted-body/golden/grader concepts and Alexander gates; not a final artifact or build authorization.
 - `build-v2/`: raw local KM04 v2 build set. Contains prompt, mounted draft, golden, grader, and RUN-INSTRUCTIONS. Do not upload from this folder; the raw golden copy may preserve the earlier placeholder for provenance.
-- `platform/task4/current/`: local platform-current staging folder now contains the v2 staged files only. RUN-INSTRUCTIONS selects v2, but upload remains blocked until Alexander physician sign-off and explicit platform authorization.
+- `platform/task4/current/`: local platform-current staging folder contains the v2 staged files used for the v2 trajectory evidence unless Alexander later replaces them.
 - `platform/task4/archive/2026-06-08-pre-clean/`: historical pre-clean archive preserving v1 evidence and transitional v2 files. Do not upload from this folder.
+- `runs/KM04-v2-taiga-results-709be0e8.md`: durable KM04 v2 trajectory result record showing difficulty cleared.
+- `runs/KM04-v2-grading-transcripts-709be0e8.md`: durable KM04 v2 grading-transcript verification record showing all 0.15 failures are anemia-propagation and the 0.97 catch is rewarded.
+- `fa-ga/FA-GA-current.md`: verified local KM04 v2 FA/GA current draft for Attempt 5 (0.15), with Attempt 6 (0.97) as the GA comparator. It is physician-owned and not platform-entered.
 
 ## Deterministic Source Chain
 
@@ -94,11 +99,13 @@ Required read receipt for any future KM04 iteration: state files read, current t
 
 KM04 remains the planned consultant-synthesis task identity, but v1 does not ship.
 
-Current v2 planning direction: switch from v1's evaluation/ratification posture to a completion document of record, with one cold fabricated objective result on anemia-of-CKD / absent iron-workup status. The planned rebuttal is that the agent-read chart has zero iron studies, H&P frames anemia as open trend/reconciliation work, baseline hemoglobin remains in the chronic CKD-anemia range, and ferrous sulfate is outpatient continuation rather than proof of completed inpatient workup. Nutrition/oral intake is backup / not recommended because the chart gives a warm fair-out and overlaps with the AKI/nephrology lane. This remains a proposal until Alexander explicitly authorizes build.
+Current v2 mechanism: v1's evaluation/ratification posture was replaced by a completion document of record with one cold fabricated objective result on anemia-of-CKD / absent iron-workup status. The rebuttal is that the agent-read chart has zero iron studies, H&P frames anemia as open trend/reconciliation work, baseline hemoglobin remains in the chronic CKD-anemia range, and ferrous sulfate is outpatient continuation rather than proof of completed inpatient workup. Nutrition/oral intake is backup / not recommended because the chart gives a warm fair-out and overlaps with the AKI/nephrology lane.
 
 The proposed escalation mechanism is a consultant-consensus overclaim: a plausible hospitalist synthesis draft says the consultant tensions have been reconciled and the interdisciplinary plan is ready to proceed. The correct response revises or refuses that over-closure and preserves staged cardiorenal sequencing, steroid-source uncertainty, functional/caregiver evidence, and pending transition logistics. The scored failure is adopting the handed synthesis as if consultant alignment and readiness are complete.
 
-Run result: the mounted synthesis draft did not become a loud medication-restart error hunt, but the quiet KM04-native discriminator was still too easy. Strong runs over-rode the polished draft and rebuilt the staged hospitalist-owned plan.
+V1 run result: the mounted synthesis draft did not become a loud medication-restart error hunt, but the quiet KM04-native discriminator was still too easy. Strong runs over-rode the polished draft and rebuilt the staged hospitalist-owned plan.
+
+V2 run result: the anemia cold fabricated-objective-result discriminated near-binary. Catch runs scored 0.85-0.97 and corrected the anemia line; propagation runs scored 0.15 and carried forward the draft-only claim that iron studies were within target / anemia was closed / no further workup was indicated. The grader was symmetric: Attempt 6 corrected the line and scored 0.97, while Attempts 2, 5, and 7 propagated it and scored 0.15. Attempt 5 is the FA/GA subject because it is the sharpest self-audit-yet-propagated signature.
 
 ## Open Gates
 
@@ -108,10 +115,10 @@ Run result: the mounted synthesis draft did not become a loud medication-restart
 - G3: Mounted synthesis draft. It must be fair, in-canon, realistic on its face, no trap/meta leakage, and not a head-on contradiction that only tests chart-reading.
 - G4: Mount manifest. Clean and escalation mount sets must be explicit, and raw FI-T04 architecture text must not be mounted.
 - G5: Build hygiene. Future DOCX build must be Mode A clone, date-audited to 05/24/2026, metadata-scrubbed, rendered, and fingerprint-verified.
-- G6: FAILED for v1. The predicted tail did not appear; all runs were 0.87-0.95.
+- G6: FAILED for v1, PASSED for v2. V1 all runs were 0.87-0.95. V2 job `709be0e8` produced mean 0.689, three sub-70 runs, and tail 0.15.
 - G7: Clinical-register scan. Platform-facing prose must sound like a real hospitalist request, chart note, golden, or grader guideline, not internal architecture.
-- G8: FAILED for v1. The intended wrong move was adoption of the resident-draft over-closure; representative transcripts show the model declined that wrong move.
+- G8: FAILED for v1, PASSED for v2. The intended v2 wrong move was propagation of a draft-only closed-anemia / iron-studies-within-target claim; grading transcripts confirm all 0.15 runs failed on that axis and the 0.97 catch was rewarded.
 
 ## Boundaries
 
-Do not run additional KM04 uploads, AutoQC, agents, QA, FA/GA, Preference Labeling, final review, platform mutations, staged-file edits, DOCX rebuilds, locked-canon edits, or live-world edits without explicit Alexander authorization for that exact step. The retained v1 files in `platform/task4/archive/2026-06-08-pre-clean/` are evidence only and should not be treated as a shipping candidate after the 6/8 difficulty failure. The v2 files are local draft/staging only and do not authorize upload, AutoQC, Taiga, FA/GA, PL, or final review; platform-current golden v2 still needs Alexander physician review/sign-off before any upload.
+Do not run additional KM04 uploads, AutoQC, agents, QA, FA/GA AutoQC, Preference Labeling, final review, platform mutations, staged-file edits, DOCX rebuilds, locked-canon edits, or live-world edits without explicit Alexander authorization for that exact step. The retained v1 files in `platform/task4/archive/2026-06-08-pre-clean/` are evidence only and should not be treated as a shipping candidate after the 6/8 difficulty failure. The v2 files now have Taiga difficulty evidence, but the local FA/GA draft is not platform-entered and does not authorize FA/GA submission, FA/GA AutoQC, PL, final review, additional upload, or any RL Studio mutation without exact authorization.
