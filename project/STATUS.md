@@ -86,9 +86,9 @@ Active blocker: no repository blocker. Task 1 final human review is complete. Ta
 
 ## Current Git Checkpoint
 
-checkpoint: record KM03 v2.2 tuned CPAP plan
+checkpoint: record KM03 v2.2 AutoQC hold state
 
-Previous checkpoint: checkpoint: record KM05 review convergence
+Previous checkpoint: checkpoint: record KM03 v2.2 tuned CPAP plan
 
 ## Active Branch
 
@@ -129,4 +129,4 @@ CURRENT STATE 6/8: KM02 COMPLETE / RFD (Ready for Delivery) after Janette's 6/8 
 
 
 ---
-6/7 late: KM03 v2.1 ACTIVE AFTER ALEXANDER UPLOAD. v2.1 current set is platform/task3/current/ (prompt-task3-v2.txt, care_coordination_handoff_draft_05242026.docx, golden-KM03-v2.docx, grader-guidelines-task3-v2.txt, RUN-INSTRUCTIONS.md). v1 preserved unchanged at platform/task3/archive/v1-retired-after-task-writing-reset/ (uploaded, AutoQC qcaud_6b pass, later job 58b5f3e3 returned too easy, retired after task-writing reset; historical only). Mechanism: authoring posture over a de-authorized unsigned care-coordination handoff DRAFT; fair failure = promoting the draft unverified completion into a signed physician addendum. Build authority = KM03-v2.1-LOCKED-build-plan.md. NOT performed by Claude Code: RL Studio upload or Task AutoQC / pre-Taiga QC. CURRENT: Alexander uploaded the v2.1 files and Task AutoQC passed with no non-pass flags (`qcaud_fc`); job `58b5f3e3` is recorded as the difficulty-failed trajectory run.
+6/7 late plus 6/8 archive correction: KM03 v2.1 WAS ACTIVE AFTER ALEXANDER UPLOAD, then difficulty-failed and was archived at platform/task3/archive/v2.1-difficulty-failed-after-58b5f3e3/ (prompt-task3-v2.txt, care_coordination_handoff_draft_05242026.docx, golden-KM03-v2.docx, grader-guidelines-task3-v2.txt, RUN-INSTRUCTIONS.md). v1 remains preserved at platform/task3/archive/v1-retired-after-task-writing-reset/ (uploaded, AutoQC qcaud_6b pass, later job 58b5f3e3 returned too easy, retired after task-writing reset; historical only). Mechanism history: authoring posture over a de-authorized unsigned care-coordination handoff DRAFT; fair failure = promoting the draft unverified completion into a signed physician addendum. Build authority history = KM03-v2.1-LOCKED-build-plan.md. CURRENT: active KM03 v2.2 pre-Taiga set is platform/task3/current/ (prompt-task3-v2.2.txt, discharge_planning_summary_draft_05242026.docx, golden-KM03-v2.2.docx, grader-guidelines-task3-v2.2.txt, RUN-INSTRUCTIONS.md). Task AutoQC passed 36/36 (`qcaud_fc`); Taiga is intentionally held; no KM03 v2.2 Taiga run, FA/GA, Preference Labels, final review, additional upload, or AutoQC response exists.
