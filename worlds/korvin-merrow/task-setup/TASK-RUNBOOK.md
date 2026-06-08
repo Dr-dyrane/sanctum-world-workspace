@@ -71,6 +71,7 @@ DOC SPINE / READ RECEIPT: the workspace already has a connected read spine in `p
 - [ ] FA/GA AutoQC can fire a false-positive "Human-Written (Grader Analysis)" flag when it reads the agentic grader's machine-generated transcript instead of the writer's GA. That is not automatically a content defect. Verify the primary artifact and dispute/justify only if the writer-authored GA is human prose; Task 1 later passed cleanly after the round-2 rewrite.
 
 ## D3. Preference Labeling (Step 15)
+- [ ] POD GUIDANCE UPDATE (Abi O, pinned 6/7): writers now do THREE Preference Labels per task, each on a DIFFERENT trajectory (three separate A/B comparisons), not a single PL per task. Complete and submit all three before the PL step is considered done; run Preference Labels AutoQC after each. Applies to every task from KM03 onward (KM01/KM02 already submitted under the prior single-PL rule).
 - [ ] Use the 06/02 instruction document as source of truth. Preference Labeling compares the two platform-selected attempts, Response A and Response B, against the golden response.
 - [ ] Read both responses end to end before choosing. Do not decide from score alone or from expected failure patterns.
 - [ ] Select on the A4-B4 preference scale and justify the concrete clinical or administrative difference that decides the preference.

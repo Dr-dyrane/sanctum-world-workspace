@@ -12,6 +12,7 @@
 - v1 preserved unchanged at platform/task3/archive/v1-retired-after-task-writing-reset/ (uploaded, AutoQC qcaud_6b pass, hung in Taiga, retired after task-writing reset; historical only).
 - Mechanism: authoring posture over a de-authorized unsigned care-coordination handoff DRAFT; fair failure = promoting the draft unverified completion into a signed physician addendum.
 - Build authority: KM03-v2.1-LOCKED-build-plan.md.
+- PL RULE CHANGE (Abi O pod guidance, pinned 6/7): KM03 PL step now = THREE Preference Labels on three different trajectories, not one. KM03 is the first task under this rule. See TASK-RUNBOOK.md D3.
 - Not performed by Claude Code: RL Studio upload or Task AutoQC / pre-Taiga QC.
 - CURRENT: Alexander has uploaded the v2.1 files and is running Task AutoQC / pre-Taiga QC in Studio; result pending.
 - Local DOCX check: v2.1 DOCX files open with ZIP/python-docx, contain styles.xml/numbering.xml/core.xml, and have scrubbed core metadata with no prior metadata leak tokens.
