@@ -1,8 +1,14 @@
 # Korvin Merrow World
 
-Current state: World created as `Healthcare_247_Merrow`; Step 9 generated-file review COMPLETE; Task 1 final human review COMPLETE / APPROVED. Task 2 / KM02 is COMPLETE / RFD (Ready for Delivery) after Janette's 6/8 final review: golden `golden-KM02-v5.docx` is re-dated to 05/24/2026 with sha256 prefix `2dd3e0ad`, Task AutoQC / Taiga gates passed qcaud_5e, qcaud_4a, and qcaud_ef, final FA/GA uses Attempt 8 at 0.30 from v3 job `8f393839`, and Preference Labels were submitted with verdict B / B++. Task 3 / KM03 escalation through v2.1 is difficulty-failed after job `58b5f3e3` (90-97, mean about 93.6, zero sub-70), with the transcript-lineage caveat recorded in `task-setup/task3/runs/KM03-taiga-results-58b5f3e3.md`. Task 4 / KM04 v1 failed the 6/8 trajectory difficulty gate after job `55ee209f`: 10 runs scored 0.87-0.95, mean 0.912, zero sub-70; record at `task-setup/task4/runs/KM04-taiga-results-55ee209f.md`. Task 5 / KM05 is review-converged under `task-setup/task5/`: conceptually GO / HOLD / moderate evidence-boundary task, with Alexander to decide clean baseline versus straight-to-escalation after KM03/KM04 and gates G0-G8; it is not built, not platform-staged, not uploaded, not AutoQC-run, and not agent-run. Retired KM03 v1 passed Task AutoQC 36/36 (`qcaud_6b`), then job `58b5f3e3` confirmed v1 was too easy; it is historical only. No further platform mutation without exact authorization.
+Current state: World created as `Healthcare_247_Merrow`; Step 9 generated-file review COMPLETE; Task 1 final human review COMPLETE / APPROVED. Task 2 / KM02 is COMPLETE / RFD (Ready for Delivery) after Janette's 6/8 final review: golden `golden-KM02-v5.docx` is re-dated to 05/24/2026 with sha256 prefix `2dd3e0ad`, Task AutoQC / Taiga gates passed qcaud_5e, qcaud_4a, and qcaud_ef, final FA/GA uses Attempt 8 at 0.30 from v3 job `8f393839`, and Preference Labels were submitted with verdict B / B++. Task 3 / KM03 escalation through v2.1 is difficulty-failed after job `58b5f3e3` (90-97, mean about 93.6, zero sub-70), with the transcript-lineage caveat recorded in `task-setup/task3/runs/KM03-taiga-results-58b5f3e3.md`. Task 4 / KM04 v1 failed the 6/8 trajectory difficulty gate after job `55ee209f`: 10 runs scored 0.87-0.95, mean 0.912, zero sub-70; record at `task-setup/task4/runs/KM04-taiga-results-55ee209f.md`. Task 5 / KM05 is review-converged / HOLD under `task-setup/task5/`, but its older moderate-task label is retired by the 6/8 no-moderate directive; it is not built, not platform-staged, not uploaded, not AutoQC-run, and not agent-run. Retired KM03 v1 passed Task AutoQC 36/36 (`qcaud_6b`), then job `58b5f3e3` confirmed v1 was too easy; it is historical only. No further platform mutation without exact authorization.
 
 KM03 update 6/8: KM03 escalation through v2.1 is difficulty-failed: job `58b5f3e3` scored 90-97 (mean about 93.6), zero sub-70; the run record notes a lineage caveat because captured transcripts show v1-era filenames/audit prompt/golden-v1, but Alexander records it as v2.1 and the operational conclusion is v2.2 redesign, not FA/GA/PL/final review from the current mechanism. See `task-setup/task3/runs/KM03-taiga-results-58b5f3e3.md`.
+
+KM03 v2.2 Lenora plan history 6/8: `task-setup/task3/build-phase-drafts/KM03-v2.2-FINAL-PLAN.md` superseded the earlier cold-axis completion/status idea but is now itself superseded as primary by the KM02-bar plan. Preserve as review history only unless Alexander re-selects that mechanism.
+
+KM03 v2.2 reconciliation update 6/8: `task-setup/task3/build-phase-drafts/KM03-v2.2-reconciliation-6-8.md` adopts the Lenora weekday-morning supervision fact plant as a pilot mechanism and records the no-moderate directive. If the pilot does not produce a real clinical failure, redesign and re-pilot; do not accept or ship KM03 as moderate.
+
+KM03 v2.2 KM02-bar plan update 6/8: current primary review-only redesign plan is `task-setup/task3/build-phase-drafts/KM03-v2.2-KM02-BAR-PLAN.md`, with Claude.ai review request at `task-setup/task3/build-phase-drafts/KM03-v2.2-KM02bar-review-request-for-claude-ai.md`. It supersedes the Lenora supervision-fact plan as the primary mechanism and proposes a cold fabricated objective result on OSA/CPAP continuity. No build, platform staging, upload, AutoQC, Taiga run, DOCX mutation, or locked-canon edit is authorized from this plan without Alexander's exact approval.
 
 Start here only after reading `project/STATUS.md`.
 
@@ -59,7 +65,14 @@ Start here only after reading `project/STATUS.md`.
 - `task-setup/task3/KM03-state-log.md`
 - `task-setup/task3/runs/KM03-taiga-results-58b5f3e3.md`
 - `task-setup/task3/KM03-3rd-reader-review-and-build-gates.md`
-- 	ask-setup/task3/build-phase-drafts/\r\n- 	ask-setup/task3/build-phase-drafts/KM03-v2.2-strategy-draft.md\r\n- 	ask-setup/task3/build-phase-drafts/KM03-v2.2-review-request-for-claude-ai.md\r\n- `task-setup/task3/design/KM03-design-plan-for-review.md`
+- `task-setup/task3/build-phase-drafts/`
+- `task-setup/task3/build-phase-drafts/KM03-v2.2-KM02-BAR-PLAN.md`
+- `task-setup/task3/build-phase-drafts/KM03-v2.2-KM02bar-review-request-for-claude-ai.md`
+- `task-setup/task3/build-phase-drafts/KM03-v2.2-FINAL-PLAN.md`
+- `task-setup/task3/build-phase-drafts/KM03-v2.2-reconciliation-6-8.md`
+- `task-setup/task3/build-phase-drafts/KM03-v2.2-strategy-draft.md` (superseded reference)
+- `task-setup/task3/build-phase-drafts/KM03-v2.2-review-request-for-claude-ai.md` (superseded reference)
+- `task-setup/task3/design/KM03-design-plan-for-review.md`
 - `task-setup/task4/TASK4-STATE.md`
 - `task-setup/task4/runs/KM04-taiga-results-55ee209f.md`
 - `task-setup/platform/task4/current/` (v1 evidence only after difficulty failure)

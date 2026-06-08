@@ -4,7 +4,9 @@ Status: KM03 escalation FAILED through v2.1; redesign to v2.2 needed. Per Alexan
 
 ROOT CAUSE: KM03/KM04 are caution-genre tasks; the model's trained default (be cautious, preserve conditionality, do not rubber-stamp) IS the correct answer, so caution is free and there is no forced wrong commitment. Source-authority tweaks do not fix this.
 
-v2.2 DIRECTION (the only mechanism that ever produced a Korvin sub-70 = KM02 completion-propagation): flip the genre from "evaluate readiness" to "finalize/file the discharge-planning document of record"; plant a finding-like false completed-coordination OUTCOME on a COLD axis (e.g. in-home safety eval completed / agency start-of-care completed - NOT prednisone/cardiorenal, which the model hunts); grader scores propagation of that finding into the filed document, not "preserved conditional readiness". Full strategy + cross-agent review questions: `build-phase-drafts/KM03-v2.2-strategy-draft.md`. Same medicine likely applies to KM04. DRAFT only; no build/stage/upload; pending Alexander + cross-agent (Claude.ai/Codex) review then build authorization.
+v2.2 CURRENT DIRECTION (review only): `build-phase-drafts/KM03-v2.2-KM02-BAR-PLAN.md` is the current primary KM03 v2.2 plan. It supersedes the Lenora supervision-fact plan as the primary mechanism and tries to reproduce the KM02 regime: completion genre + fabricated objective result + cold/unprimed axis + 3+ document rebuttal. Proposed primary plant is a fabricated recent CPAP titration / objective adherence result inside a discharge-planning / transition-of-care summary. DRAFT only; no build/stage/upload/AutoQC/Taiga; pending Alexander + cross-agent review then explicit build authorization.
+
+v2.2 PRIOR PLAN HISTORY (6/8): `build-phase-drafts/KM03-v2.2-FINAL-PLAN.md` and `build-phase-drafts/KM03-v2.2-reconciliation-6-8.md` preserve the Lenora weekday-morning supervision-fact mechanism and no-moderate correction, but they are no longer the primary plan after `KM03-v2.2-KM02-BAR-PLAN.md`. Preserve as review history; do not build from them unless Alexander explicitly re-selects that mechanism.
 
 Task: KM03 - discharge planning documentation escalation. Status: failed through v2.1 and awaiting v2.2 redesign authorization.
 
@@ -49,9 +51,9 @@ Task: KM03 - discharge planning documentation escalation. Status: failed through
 - Platform upload: completed under Alexander operation.
 - Active files: `prompt-task3-v2.txt`, `care_coordination_handoff_draft_05242026.docx` (`f3b7bcdf`), `golden-KM03-v2.docx` (`3da7386f`), `grader-guidelines-task3-v2.txt`, and `RUN-INSTRUCTIONS.md`.
 - Task AutoQC / pre-Taiga QC: PASS with no non-pass flags (`qcaud_fc`). Notes field records no errors and says the prior DOCX core-metadata flag was fixed by scrubbing core properties.
-- Current run decision: do not proceed to FA/GA, Preference Labeling, final review, or another Taiga run from v2.1; review/authorize v2.2 redesign first.
+- Current run decision: do not proceed to FA/GA, Preference Labeling, final review, or another Taiga run from v2.1; review/authorize the v2.2 final plan first.
 - Local DOCX check: current v2.1 DOCX files open as ZIP and with python-docx, contain required Word package parts, and have scrubbed core metadata with no `python-docx`, local path, Codex/Claude, trap, source-of-truth, synthetic-banner, or signed-clearance leakage.
-- Open: v2.2 redesign review/authorization, with the transcript-lineage caveat preserved in the run record.
+- Open: v2.2 final-plan review/authorization, with the transcript-lineage caveat preserved in the run record.
 
 ## Inherited Guardrails
 
@@ -62,7 +64,7 @@ Task: KM03 - discharge planning documentation escalation. Status: failed through
 
 ## Boundaries
 
-Do not rerun AutoQC, rerun agents, rerun QA, upload additional files, create AutoQC responses, create preference-label artifacts, write FA/GA or PL from v2.1, redesign v2.2, or mutate RL Studio unless Alexander explicitly authorizes that exact step. Current next step: review the v2.2 strategy, not another v2.1 platform action.
+Do not rerun AutoQC, rerun agents, rerun QA, upload additional files, create AutoQC responses, create preference-label artifacts, write FA/GA or PL from v2.1, build the v2.2 files, or mutate RL Studio unless Alexander explicitly authorizes that exact step. Current next step: review `build-phase-drafts/KM03-v2.2-FINAL-PLAN.md`, not another v2.1 platform action.
 
 
 ## 6/7 late: KM03 v2.1 ACTIVE PLATFORM SET

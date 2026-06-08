@@ -22,3 +22,13 @@
 - Byte caveat: captured transcripts carry v1-era mounted filename, audit-style prompt, and `golden-KM03-v1.docx`; the run record preserves this verification flag and recommends a short artifact-set confirmation. The caveat does not change the operational conclusion.
 - Operational conclusion: the evaluate/reconcile-a-handed-discharge-document family is too easy. v2.1 should not advance to FA/GA, Preference Labeling, or final review; next direction is v2.2 redesign around a different forced-slot mechanism.
 - Full record: `runs/KM03-taiga-results-58b5f3e3.md`.
+
+## 6/8: KM03 v2.2 Lenora plan and reconciliation added
+- Prior review-only Lenora redesign plan: `build-phase-drafts/KM03-v2.2-FINAL-PLAN.md`. It superseded the earlier cold-axis completion/status v2.2 drafts and proposed a specific Lenora weekday-morning medication-supervision factual-propagation trap before the KM02-bar plan superseded it as primary.
+- Reconciliation: `build-phase-drafts/KM03-v2.2-reconciliation-6-8.md`. It adopts the Lenora plant as a pilot mechanism and records the no-moderate directive. If the pilot does not produce a real clinical failure, redesign and re-pilot; do not accept or ship KM03 as moderate.
+- Boundaries: nothing built, staged, uploaded, AutoQC-run, Taiga-run, or mutated in locked canon. Any build requires Alexander's exact authorization after the listed Codex confirmations.
+
+## 6/8: KM03 v2.2 KM02-bar plan added
+- Current primary review-only plan: `build-phase-drafts/KM03-v2.2-KM02-BAR-PLAN.md`. It supersedes the Lenora supervision-fact plan as the primary mechanism and proposes a KM02-regime cold fabricated-result plant on OSA/CPAP continuity: a false recent CPAP titration / objective adherence result in a transition-of-care discharge-planning summary.
+- Prior Lenora files remain review history only: `KM03-v2.2-FINAL-PLAN.md` and `KM03-v2.2-reconciliation-6-8.md`.
+- Boundaries unchanged: nothing built, staged, uploaded, AutoQC-run, Taiga-run, or mutated in locked canon. Any build requires Alexander's exact authorization plus cross-agent review.
