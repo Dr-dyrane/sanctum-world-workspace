@@ -133,6 +133,4 @@ World:
 Tasks:
 
 - Realistic clinician workflows performed inside or against the World.
-- Each task should produce a concrete, evaluable output.
-- Tasks are independent encounters and do not depend on one another.
-- Tasks should be anchored after the World snapshot.
+- Each task should produce a concrete,

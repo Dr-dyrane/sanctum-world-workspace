@@ -34,18 +34,4 @@ Task: KM03 - active platform task in trajectory/QA phase.
 
 - Platform upload: completed under Alexander operation.
 - Task AutoQC: PASS 36/36 (`qcaud_6b`).
-- Metadata scrub: python-docx core metadata leak was cleared in the golden and mounted note. Current shas are `golden-KM03-v1.docx` = `5feb3227` and `case_management_discharge_readiness_clearance_05242026.docx` = `95f6affb`; earlier `dc5c4833` and `b9f7a1a3` were pre-scrub.
-- Current run state: Taiga Trajectories & QA running.
-- Known set-aside: the "Synthetic Training Document" footer in six finalized world files is a world-level item intentionally set aside because reopening the world would force redo of KM01/KM02.
-- Open: Alexander physician sign-off on the golden clinical content.
-
-## Inherited Guardrails
-
-- Apply the Task 1 realism lessons before building task files.
-- Apply the Task 2 forced-slot / discriminator lesson before any pilot.
-- Do not trust a previously verified artifact after a framing change without re-auditing dates, anchors, prompt framing, task files, golden, and grader.
-- Verify world facts from the agent-read DOCX layer at `worlds/korvin-merrow/file-review/upload/filesystem/`, not from markdown summaries or convenience bundles.
-
-## Boundaries
-
-Do not rerun AutoQC, rerun agents, rerun QA, upload additional files, create AutoQC responses, create preference-label artifacts, or mutate RL Studio unless Alexander explicitly authorizes that exact step. Current next step: observe/record Taiga Trajectories & QA results when Alexander provides them, then respond only to the next authorized platform gate.
+- Metadata scrub: python-docx core metadata leak was cleared in the golden and mounted note. Current shas are `golden-KM03-v1.docx` = `

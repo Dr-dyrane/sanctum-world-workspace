@@ -161,11 +161,4 @@ if __name__ == "__main__":
     set_text(paras[1], "<NEW TITLE>")
     set_text(paras[2], "Author: <name>  |  Department: <dept>  |  05/24/2026  |  Status: Signed")
     sig = paras[<n>]; delete_paragraphs(paras[<a>:<b>])
-    for like, txt in <content>: insert_before(sig, like, txt)
-    edit_band_cell(d, "Service", "Care Management", "Hospital Medicine")
-    edit_footer(d, "Discharge Summary - Working Draft", "<new doc type>")
-    d.save("/tmp/work.docx")
-    integrity_gate("/tmp/work.docx")
-    import shutil; shutil.copy("/tmp/work.docx", OUT)
-    verify_against_base(OUT, BASE)
-    ''')
+    for like, txt in <content>: insert_

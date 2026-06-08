@@ -280,3 +280,8 @@
 
 ---
 CURRENT STATE 6/7 late pm: KM02 COMPLETE through writer workflow and Awaiting Final Review. Both human reviews passed (Abi 6/7), all recorded KM02 checks are green, and Preference Labels were submitted with verdict B / B++. Golden sha 2dd3e0ad. KM03 has advanced past staging: platform files uploaded, Task AutoQC PASSED 36/36 (`qcaud_6b`) after core metadata scrub, and Taiga Trajectories & QA are RUNNING. Corrected shas: golden `5feb3227`; mounted note `95f6affb`. Open: physician sign-off on the KM03 golden clinical content; no further platform mutation by Codex without explicit authorization. KM04 is critique/prebuild-only and is blocked behind doc-spine read receipt, KM03 inheritance check, hypothesis kill-chain, clinical-register scan, and difficulty prediction before any build.
+
+
+---
+6/7 late: KM03 v2.1 STAGED FOR PLATFORM UPLOAD (local shipping pass, no Studio action). v2.1 promoted to platform/task3/current/ (prompt-task3-v2.txt, care_coordination_handoff_draft_05242026.docx, golden-KM03-v2.docx DRAFT sign-off-pending, grader-guidelines-task3-v2.txt, RUN-INSTRUCTIONS.md). v1 preserved unchanged at platform/task3/archive/v1-retired-after-task-writing-reset/ (uploaded, AutoQC qcaud_6b pass, hung in Taiga, retired after task-writing reset; historical only). Mechanism: authoring posture over a de-authorized unsigned care-coordination handoff DRAFT; fair failure = promoting the draft unverified completion into a signed physician addendum. Build authority = KM03-v2.1-LOCKED-build-plan.md. NOT performed by Claude Code: RL Studio upload, Task AutoQC / pre-Taiga QC. NEXT: Alexander uploads the four v2.1 files and runs Task AutoQC / pre-Taiga QC.
+                                                                                           

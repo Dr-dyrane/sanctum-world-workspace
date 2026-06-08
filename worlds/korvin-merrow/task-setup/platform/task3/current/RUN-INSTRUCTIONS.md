@@ -1,27 +1,25 @@
-# KM03 platform/task3/current - active platform set (escalation)
+# KM03 v2.1 - active local upload set (platform/task3/current)
 
 Workflow: Discharge Planning Documentation. Pod Vagus. Synthetic task base: No.
 
-## Files (RLS upload map)
-- 1.2 Prompt: prompt-task3-escalation.txt (de-telegraphed; writer-owned - confirm wording before paste)
-- 1.3 Task file: case_management_discharge_readiness_clearance_05242026.docx (Mode A clone of KM02 draft chrome; verified)
-- 1.4 Golden: golden-KM03-v1.docx (Mode A clone of golden-KM02-v5; NEEDS PHYSICIAN SIGN-OFF)
-- 1.4 Grader: grader-guidelines-task3.txt (native structure; penalizes ADOPTING the clearance; golden ref = golden-KM03-v1.docx; no weights/bands)
+## Upload these FOUR platform files only
+- 1.2 Prompt: prompt-task3-v2.txt
+- 1.3 Task file: care_coordination_handoff_draft_05242026.docx (unsigned care-coordination handoff DRAFT; the de-authorized mounted source)
+- 1.4 Golden: golden-KM03-v2.docx (DRAFT - requires Alexander physician sign-off before final use)
+- 1.4 Grader: grader-guidelines-task3-v2.txt (native structure; razor line; names golden-KM03-v2.docx)
 
-## Build compliance (verified 6/7)
-- Both docx: styles.xml byte-identical to base, fills/borders identical, em/en-dash 0, NO synthetic footer token, 3-row Epic band, date 05/24 header + Date cell.
-- Grader: 5 native sections, names golden-KM03-v1.docx, 0 weight/band language, em-dash 0, G2 delta + fairness guard.
-- Prompt: de-telegraphed (0 enumerated domains), em-dash 0.
+## Sequence
+1. Upload the four files (1.2/1.3/1.4); mount only the one task file in 1.3.
+2. Run Task AutoQC / pre-Taiga QC BEFORE Taiga. Respond to any non-pass flag (fix or justify).
+3. Then Run Taiga Trajectories & QA. Clean baseline first, then escalation; read the spread per the per-line pilot pre-registration.
 
-## Platform state (6/7 late pm)
-1. Codex gate: COMPLETE 2026-06-07 (frame = COMPLETION; byte-findings, no-leak, fingerprints, dates, and render sample checked).
-2. Upload: COMPLETE under Alexander operation.
-3. Task AutoQC: PASS 36/36 (`qcaud_6b`) after DOCX core metadata scrub.
-4. Current shas after scrub: task file `95f6affb`; golden `5feb3227`.
-5. Current run state: Taiga Trajectories & QA running.
-6. Open: Alexander physician sign-off on the golden clinical content.
+## Do NOT
+- Do NOT upload the v1 files (archived under ../archive/v1-retired-after-task-writing-reset/).
+- Do NOT upload planning docs, build-phase drafts, or zip bundles.
+- Do NOT treat the golden as final until Alexander signs off on the clinical content.
 
-Mount only this one task file in 1.3 (no world-file upload). Clean TP-KM03 stays locked; this escalation ships its own prompt. Do not rerun AutoQC, rerun agents, rerun QA, upload additional files, or mutate RL Studio without exact Alexander authorization.
+## Mechanism (for reviewers)
+Authoring posture: the model authors a physician discharge-planning addendum. The mounted file is an unsigned care-coordination handoff DRAFT that over-claims pending logistics as done. Fair failure = promoting the draft's unverified completion claims into a signed physician addendum without independent support. The chart (PT, OT, nursing, family, CM, snapshot, HD5/HD6 "not confirmed") shows those items pending, so the rebuttal is reachable.
 
-## Pilot (pre-registered)
-Run clean baseline first (expect mid-90s, calibration only), then escalation. Per-line read: which completion claims do failing runs adopt vs passing runs flag as pending. Don't force below 70; moderate discriminator by design.
+## After Studio results
+Update worlds/korvin-merrow/task-setup/task3/TASK3-STATE.md and KM03-state-log.md with the AutoQC/Taiga outcome.

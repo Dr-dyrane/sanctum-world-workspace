@@ -323,10 +323,4 @@ Claude must not replace physician judgment or originate clinical design.
 - `worlds/korvin-merrow/grader-guidance-architecture/locked/grader-guidance-architecture-v1.md`
 - `worlds/korvin-merrow/grader-guidance-architecture/locked/grader-guidance-architecture-validation-review.md`
 - `worlds/korvin-merrow/grader-guidance-architecture/ratifications/grader-guidance-architecture-ratification.md`
-- `reference/world-spec-guidelines/08_autoqc_master_index.md`
-- `reference/world-spec-guidelines/09_world_spec_writer_playbook.md`
-- `project/WORKSPACE_FILE_MAP.md`
-
-
----
-CURRENT STATE 6/7 late pm: KM02 COMPLETE through writer workflow and Awaiting Final Review. Both human reviews passed (Abi 6/7), all recorded KM02 checks are green, and Preference Labels were submitted with verdict B / B++. Golden sha 2dd3e0ad. KM03 uses the COMPLETION-overclaim frame, has advanced past staging, and is in Taiga Trajectories & QA after Task AutoQC PASS 36/36 (`qcaud_6b`). Corrected shas after core metadata scrub: golden `5feb3227`, mounted note `95f6affb`. Open: physician sign-off on the KM03 golden clinical content; no further platform mutation without exact Alexander authorization.
+- `reference/world-spec-guidelines
