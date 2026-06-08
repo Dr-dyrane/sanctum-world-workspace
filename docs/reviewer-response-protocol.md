@@ -62,6 +62,15 @@ If two sources conflict:
 - Ask Alexander to decide clinical issues.
 - Ask reviewer/Slack only when official workflow ambiguity remains.
 
+## Grader Guidelines: structure and length
+
+When a task's grader guidelines come back from review, see `docs/grader-guidelines-lessons.md`. Two standing rules from the Trigeminus pod (Sang):
+
+1. Structure is fixed: Preamble, Register Note, Section A (must be present and correct), Section B (acceptable variation, with the verbatim two-failure-mode clause), Section C (patterns to reason about, opening verbatim, central planted failure first, plus a credit-correct-restraint pattern). Preamble names the golden file verbatim.
+2. Length is capped at about one page (1.25 max), body ratio ~A 40 / B 20 / C 40. Inside the structure, compress to signal: Section C patterns are "watch for X + one-line why," never a review document with inline file walkthroughs. The grader is guidance, not a case file.
+
+Related: the physician prompt stays a short first-person in-role instruction; meta-guidance about how to do the task belongs in the grader, not the prompt.
+
 ## Resubmission Process
 
 Before resubmission:

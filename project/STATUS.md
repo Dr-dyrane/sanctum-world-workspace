@@ -90,9 +90,9 @@ Active blocker: no repository blocker. Task 1 final human review is complete. Ta
 
 ## Current Git Checkpoint
 
-checkpoint: record KM05 v2 cold home-health review request
+checkpoint: record KM03 KM04 grader-golden rerun gate
 
-Previous checkpoint: checkpoint: track KM04 v2 preference-label draft
+Previous checkpoint: checkpoint: record KM05 v2 cold home-health review request
 
 ## Active Branch
 
@@ -136,3 +136,6 @@ CURRENT STATE 6/8: KM02 COMPLETE / RFD (Ready for Delivery) after Janette's 6/8 
 
 ---
 6/7 late plus 6/8 archive correction: KM03 v2.1 WAS ACTIVE AFTER ALEXANDER UPLOAD, then difficulty-failed and was archived at platform/task3/archive/v2.1-difficulty-failed-after-58b5f3e3/ (prompt-task3-v2.txt, care_coordination_handoff_draft_05242026.docx, golden-KM03-v2.docx, grader-guidelines-task3-v2.txt, RUN-INSTRUCTIONS.md). v1 remains preserved at platform/task3/archive/v1-retired-after-task-writing-reset/ (uploaded, AutoQC qcaud_6b pass, later job 58b5f3e3 returned too easy, retired after task-writing reset; historical only). Mechanism history: authoring posture over a de-authorized unsigned care-coordination handoff DRAFT; fair failure = promoting the draft unverified completion into a signed physician addendum. Build authority history = KM03-v2.1-LOCKED-build-plan.md. CURRENT: active KM03 v2.2 set is platform/task3/current/ (prompt-task3-v2.2.txt, discharge_planning_summary_draft_05242026.docx, golden-KM03-v2.2.docx, grader-guidelines-task3-v2.2.txt, RUN-INSTRUCTIONS.md). Task AutoQC passed 36/36 (`qcaud_fc`); Taiga job `877aa204` cleared the difficulty gate; grading transcripts are verified clean; local FA/GA drafting packet and local FA/GA current draft exist; no KM03 v2.2 platform FA/GA submission, Preference Labels, final review, additional upload, or AutoQC response exists.
+
+---
+6/8 late Sang grader/golden review fix: this is the current live task gate. Sang's Trigeminus review created a new grader-guidelines doctrine and required KM03/KM04 grader/golden revisions before continuing. KM03 and KM04 are now AT TAIGA TRAJECTORY RERUN, not ready for FA/GA entry from the old runs. The prior successful spreads (`877aa204` for KM03, `709be0e8` for KM04) remain difficulty evidence only. After the reruns land, re-derive FA + GA from the new lowest run before any platform FA/GA entry, FA/GA AutoQC, Preference Labels, or final review. The reusable lesson is `docs/grader-guidelines-lessons.md`; related checklist updates are in `docs/reviewer-response-protocol.md` and `reference/checklists/reviewer-failure-patterns.md`. Active platform/DOCX artifacts remain Alexander-controlled; do not stage, upload, rerun, or mutate them without exact authorization.

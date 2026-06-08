@@ -4,6 +4,19 @@ Source indexed: `reference/source/New Writers Version - Instruction Guide (05_24
 
 Use this as a pre-review audit list.
 
+## Grader Guidelines Failures (Trigeminus pod / Sang, 2026-06-08)
+
+See `docs/grader-guidelines-lessons.md` for the full lessons and checklist.
+
+- Grader not in the required five-block structure (Preamble, Register Note, Section A, Section B, Section C).
+- Preamble does not name the golden file verbatim with extension.
+- Section B missing the verbatim two-failure-mode clause.
+- Section C missing the verbatim "patterns to reason about, not items to tick off" opener.
+- Section C missing a "correct restraint, credit not penalize" pattern (kills grader symmetry).
+- Grader runs longer than ~1 page (1.25 max), or Section C reads like a review document - lengthy per-pattern explanations and inline file walkthroughs instead of "watch for X + one-line why."
+- Body ratio off ~A 40 / B 20 / C 40.
+- Prompt carries meta-guidance telling the model how to do the task (belongs in the grader, not the first-person prompt).
+
 ## Phase And Scope Failures
 
 - Continuing past onboarding Step 6 without explicit approval.
