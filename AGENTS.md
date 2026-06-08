@@ -38,6 +38,8 @@ KM04 Preference Labeling prep update: local draft `worlds/korvin-merrow/task-set
 
 Sang grader/golden review fix 6/8: KM03 and KM04 are now AT TAIGA TRAJECTORY RERUN after grader/golden revisions. Prior successful spreads (`877aa204` for KM03, `709be0e8` for KM04) remain difficulty evidence, but their FA/GA drafts are provisional until the reruns land. Do not enter old-run FA/GA, create PL, or final-review either task from the pre-fix runs.
 
+KM03 post-fix rerun update 6/8 late: KM03 rerun job `8e97cdd7` against the restructured grader + elevated golden is complete: scores 80, 62, 90, 30, 90, 88, 82, 87, 85, 70; mean 76.4; single lowest Attempt 4 / run `c2eea662` at 0.30. `worlds/korvin-merrow/task-setup/task3/fa-ga/FA-GA-current.md` now supersedes the pre-fix `877aa204` Attempt 9 draft. Next KM03 eligible platform step is FA/GA entry on Attempt 4 only with exact Alexander authorization. KM04 remains at post-Sang rerun gate.
+
 Workspace reasoning backbone: `docs/reasoning-discipline.md` is the cross-world verification gate. Before any expensive/irreversible commitment or any claim about why a system behaved a certain way, read the ground truth artifact first (config, transcript, output, or file) and state what is verified versus inferred. Stay fast for reversible work. This is operating doctrine, not Korvin clinical canon.
 
 1. Brainstorm

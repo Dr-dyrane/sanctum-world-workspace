@@ -90,9 +90,9 @@ Active blocker: no repository blocker. Task 1 final human review is complete. Ta
 
 ## Current Git Checkpoint
 
-checkpoint: record KM03 KM04 grader-golden rerun gate
+checkpoint: record KM03 post-fix rerun FA-GA draft
 
-Previous checkpoint: checkpoint: record KM05 v2 cold home-health review request
+Previous checkpoint: checkpoint: record KM03 KM04 grader-golden rerun gate
 
 ## Active Branch
 
@@ -139,3 +139,6 @@ CURRENT STATE 6/8: KM02 COMPLETE / RFD (Ready for Delivery) after Janette's 6/8 
 
 ---
 6/8 late Sang grader/golden review fix: this is the current live task gate. Sang's Trigeminus review created a new grader-guidelines doctrine and required KM03/KM04 grader/golden revisions before continuing. KM03 and KM04 are now AT TAIGA TRAJECTORY RERUN, not ready for FA/GA entry from the old runs. The prior successful spreads (`877aa204` for KM03, `709be0e8` for KM04) remain difficulty evidence only. After the reruns land, re-derive FA + GA from the new lowest run before any platform FA/GA entry, FA/GA AutoQC, Preference Labels, or final review. The reusable lesson is `docs/grader-guidelines-lessons.md`; related checklist updates are in `docs/reviewer-response-protocol.md` and `reference/checklists/reviewer-failure-patterns.md`. Active platform/DOCX artifacts remain Alexander-controlled; do not stage, upload, rerun, or mutate them without exact authorization.
+
+---
+6/8 late KM03 post-fix rerun update: KM03 rerun against the restructured grader + elevated golden is complete. Job `8e97cdd7` scored 80, 62, 90, 30, 90, 88, 82, 87, 85, 70; mean 76.4; all ten scored; single lowest Attempt 4 / run `c2eea662` at 0.30; second-lowest Attempt 2 at 0.62; two sub-70 and three sub-90. The local `worlds/korvin-merrow/task-setup/task3/fa-ga/FA-GA-current.md` now supersedes the old `877aa204` Attempt 9 draft and is re-derived on Attempt 4. Next KM03 eligible step is platform FA/GA entry for Attempt 4 only if Alexander explicitly authorizes it. KM04 remains at the post-Sang Taiga rerun gate.
