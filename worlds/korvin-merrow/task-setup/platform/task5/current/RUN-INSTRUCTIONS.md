@@ -1,5 +1,9 @@
 # KM05 v3 RUN-INSTRUCTIONS (NSAID unsafe-recommendation at the +7 transition clinic)
 
+Workflow: Discharge Planning Documentation. Pod Vagus. Synthetic task base: No.
+
+Status: STAGED / DOCX BUILD PENDING / not uploaded / not AutoQC-run / not agent-run. Built per `../../task5/design/KM05-v3-NSAID-build-proposal-6-8.md`. Mechanism: NSAID unsafe-recommendation (KM01 family with distinct hazard and workflow). Honest difficulty: low-to-mid 80s mean, gate-clearer, not sub-60.
+
 UPLOAD THIS SET (KM05 v3) - DOCX BUILD PENDING:
 - prompt-task5-v2.txt
 - transition_clinic_followup_note_draft_05312026.docx   (mounted draft; carries the buried ibuprofen order in problem 3) - MODE A BUILD PENDING
