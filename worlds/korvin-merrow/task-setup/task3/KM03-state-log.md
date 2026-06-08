@@ -32,3 +32,15 @@
 - Current primary review-only plan: `build-phase-drafts/KM03-v2.2-KM02-BAR-PLAN.md`. It supersedes the Lenora supervision-fact plan as the primary mechanism and proposes a KM02-regime cold fabricated-result plant on OSA/CPAP continuity: a false recent CPAP titration / objective adherence result in a transition-of-care discharge-planning summary.
 - Prior Lenora files remain review history only: `KM03-v2.2-FINAL-PLAN.md` and `KM03-v2.2-reconciliation-6-8.md`.
 - Boundaries unchanged: nothing built, staged, uploaded, AutoQC-run, Taiga-run, or mutated in locked canon. Any build requires Alexander's exact authorization plus cross-agent review.
+
+## 6/8: Claude.ai red-team tuning adopted in KM03 v2.2 KM02-bar plan
+- `build-phase-drafts/KM03-v2.2-KM02-BAR-PLAN.md` now carries the Claude.ai red-team verdict and tuned build-ready wording.
+- Tuned central plant: "Obstructive sleep apnea: continued on home CPAP; settings recently reviewed and adherence adequate on device, no additional sleep follow-up arranged for this transition."
+- Decision: CPAP over Lenora; one central plant only; do not co-mount the Lenora supervision item. Backup cold slot remains anemia-of-CKD if CPAP is reliably caught.
+- Boundary unchanged: plan is ready for Alexander approval, but nothing is built, staged, uploaded, AutoQC-run, Taiga-run, or mutated in locked canon.
+
+## 6/8: KM03 v2.2 active platform set + Task AutoQC PASS
+- Active v2.2 platform files are now in `platform/task3/current/`: `prompt-task3-v2.2.txt`, `discharge_planning_summary_draft_05242026.docx`, `golden-KM03-v2.2.docx`, and `grader-guidelines-task3-v2.2.txt`.
+- Task AutoQC passed 36/36 (`qcaud_fc`). Alexander's notes field says no errors and records that the prior DOCX metadata flag on the golden/task file was fixed by scrubbing core properties.
+- Local read-only DOCX check: mounted draft and golden are valid ZIP/DOCX packages, open with python-docx, include `styles.xml`, `numbering.xml`, and `docProps/core.xml`, have scrubbed/empty core metadata fields, and contain no `Synthetic` token or em/en dash in extracted text.
+- Boundary: Taiga trajectories are intentionally held. No v2.2 Taiga run, FA/GA, Preference Label, final review, additional upload, or AutoQC response has been created.

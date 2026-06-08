@@ -1,14 +1,14 @@
 # TASK3-STATE
 
-Status: KM03 escalation FAILED through v2.1; redesign to v2.2 needed. Per Alexander, v2.1 is too easy (Taiga job 58b5f3e3, 10 trajectories 90-97, mean ~93.6, zero sub-70, fails the difficulty gate). Lineage: v1 too easy -> v2.1 -> v2.1 also too easy. (Byte note: the captured transcripts carry v1-era naming/audit prompt/golden-v1; recorded as v2.1 per Alexander, worth a 30-sec confirm of which set executed - does not change the conclusion.) KM04 v1 failed the same gate (job 55ee209f, mean 0.912), so the whole "evaluate/reconcile a handed discharge document" family is too easy for this model.
+Status: KM03 v2.2 is ACTIVE / pre-Taiga hold after Task AutoQC pass. Prior v2.1 is difficulty-failed (Taiga job 58b5f3e3, 10 trajectories 90-97, mean ~93.6, zero sub-70, fails the difficulty gate). Lineage: v1 too easy -> v2.1 -> v2.1 also too easy -> v2.2 CPAP/OSA fabricated-objective-result mechanism built and AutoQC-passed. (Byte note: the captured `58b5f3e3` transcripts carry v1-era naming/audit prompt/golden-v1; recorded as v2.1 per Alexander, worth preserving but does not change the conclusion.) KM04 v1 failed the same gate (job 55ee209f, mean 0.912), so the whole "evaluate/reconcile a handed discharge document" family is too easy for this model.
 
 ROOT CAUSE: KM03/KM04 are caution-genre tasks; the model's trained default (be cautious, preserve conditionality, do not rubber-stamp) IS the correct answer, so caution is free and there is no forced wrong commitment. Source-authority tweaks do not fix this.
 
-v2.2 CURRENT DIRECTION (review only): `build-phase-drafts/KM03-v2.2-KM02-BAR-PLAN.md` is the current primary KM03 v2.2 plan. It supersedes the Lenora supervision-fact plan as the primary mechanism and tries to reproduce the KM02 regime: completion genre + fabricated objective result + cold/unprimed axis + 3+ document rebuttal. Proposed primary plant is a fabricated recent CPAP titration / objective adherence result inside a discharge-planning / transition-of-care summary. DRAFT only; no build/stage/upload/AutoQC/Taiga; pending Alexander + cross-agent review then explicit build authorization.
+v2.2 CURRENT PLATFORM SET (active, pre-Taiga hold): `../platform/task3/current/prompt-task3-v2.2.txt`, `../platform/task3/current/discharge_planning_summary_draft_05242026.docx`, `../platform/task3/current/golden-KM03-v2.2.docx`, and `../platform/task3/current/grader-guidelines-task3-v2.2.txt`. Mechanism source is `build-phase-drafts/KM03-v2.2-KM02-BAR-PLAN.md`: completion genre + fabricated objective result + cold/unprimed OSA/CPAP axis + 3+ document rebuttal. Claude.ai red-team (6/8) adopted CPAP over Lenora and tuned the plant to a home-DME continuity line: "settings recently reviewed and adherence adequate on device, no additional sleep follow-up arranged for this transition." One central CPAP/OSA plant only; do not co-mount Lenora. Alexander ran Task AutoQC and it passed 36/36 (`qcaud_fc`). Taiga is intentionally held; no v2.2 trajectory, FA/GA, Preference Label, final review, or AutoQC response exists.
 
 v2.2 PRIOR PLAN HISTORY (6/8): `build-phase-drafts/KM03-v2.2-FINAL-PLAN.md` and `build-phase-drafts/KM03-v2.2-reconciliation-6-8.md` preserve the Lenora weekday-morning supervision-fact mechanism and no-moderate correction, but they are no longer the primary plan after `KM03-v2.2-KM02-BAR-PLAN.md`. Preserve as review history; do not build from them unless Alexander explicitly re-selects that mechanism.
 
-Task: KM03 - discharge planning documentation escalation. Status: failed through v2.1 and awaiting v2.2 redesign authorization.
+Task: KM03 - discharge planning documentation escalation. Status: v2.2 active / Task AutoQC passed / Taiga hold.
 
 ## Current Material
 
@@ -16,8 +16,9 @@ Task: KM03 - discharge planning documentation escalation. Status: failed through
 - `KM03-3rd-reader-review-and-build-gates.md`: third-reader review confirming the design direction but blocking build until G1-G3 close.
 - `build-phase-drafts/`: draft packet for reviewing G1-G3 closure concepts. Source drafts and copied inputs are trackable; the local ZIP bundle is ignored.
 - `build-phase-drafts/01-build-phase-review-responses.md`: build-phase review response record. Captures the frame decision from STRIP to COMPLETION and the v2.1 source-authority correction.
-- `KM03-state-log.md`: live event log for KM03 after staging, including Task AutoQC pass and trajectory/QA state.
-- `../platform/task3/current/`: prior KM03 v2.1 platform set. It is evidence only after the difficulty failure, not a shipping candidate.
+- `KM03-state-log.md`: live event log for KM03 after staging, including v1/v2.1 difficulty failures, v2.2 build, Task AutoQC pass, and trajectory/QA state.
+- `../platform/task3/current/`: current folder contains only the active v2.2 platform set plus `RUN-INSTRUCTIONS.md`. Active files are `prompt-task3-v2.2.txt`, `discharge_planning_summary_draft_05242026.docx`, `golden-KM03-v2.2.docx`, and `grader-guidelines-task3-v2.2.txt`.
+- `../platform/task3/archive/v2.1-difficulty-failed-after-58b5f3e3/`: retired v2.1 platform evidence after the difficulty failure. Historical evidence only.
 - `../platform/task3/archive/v1-retired-after-task-writing-reset/`: retired v1 platform set. Historical evidence only.
 - `bundles/`: ignored local review bundle material only, if present.
 
@@ -53,7 +54,15 @@ Task: KM03 - discharge planning documentation escalation. Status: failed through
 - Task AutoQC / pre-Taiga QC: PASS with no non-pass flags (`qcaud_fc`). Notes field records no errors and says the prior DOCX core-metadata flag was fixed by scrubbing core properties.
 - Current run decision: do not proceed to FA/GA, Preference Labeling, final review, or another Taiga run from v2.1; review/authorize the v2.2 final plan first.
 - Local DOCX check: current v2.1 DOCX files open as ZIP and with python-docx, contain required Word package parts, and have scrubbed core metadata with no `python-docx`, local path, Codex/Claude, trap, source-of-truth, synthetic-banner, or signed-clearance leakage.
-- Open: v2.2 final-plan review/authorization, with the transcript-lineage caveat preserved in the run record.
+- Open: v2.2 Taiga decision is held by Alexander; transcript-lineage caveat from `58b5f3e3` remains preserved in the run record.
+
+## Active v2.2 Platform / AutoQC State 2026-06-08
+
+- Platform set: `prompt-task3-v2.2.txt`, `discharge_planning_summary_draft_05242026.docx`, `golden-KM03-v2.2.docx`, and `grader-guidelines-task3-v2.2.txt`.
+- Mechanism: tuned KM02-bar CPAP/OSA fabricated objective-result plant from `build-phase-drafts/KM03-v2.2-KM02-BAR-PLAN.md`.
+- Task AutoQC / pre-Taiga QC: PASS 36/36 (`qcaud_fc`). Notes field records no errors and says the prior DOCX metadata flag on the golden/task file was fixed by core-property scrubbing.
+- Local DOCX check: v2.2 mounted draft and golden open as ZIP and with python-docx, contain `styles.xml`, `numbering.xml`, and `docProps/core.xml`, have empty/scrubbed core metadata fields, and have no `Synthetic` token or em/en dash in extracted text.
+- Current run decision: Taiga trajectories are intentionally held; do not proceed to FA/GA, Preference Labeling, final review, another upload, or another AutoQC run without explicit Alexander authorization.
 
 ## Inherited Guardrails
 
@@ -64,7 +73,7 @@ Task: KM03 - discharge planning documentation escalation. Status: failed through
 
 ## Boundaries
 
-Do not rerun AutoQC, rerun agents, rerun QA, upload additional files, create AutoQC responses, create preference-label artifacts, write FA/GA or PL from v2.1, build the v2.2 files, or mutate RL Studio unless Alexander explicitly authorizes that exact step. Current next step: review `build-phase-drafts/KM03-v2.2-FINAL-PLAN.md`, not another v2.1 platform action.
+Do not rerun AutoQC, rerun agents, rerun QA, upload additional files, create AutoQC responses, create preference-label artifacts, write FA/GA or PL from v2.1/v2.2, run KM03 v2.2 Taiga, or mutate RL Studio unless Alexander explicitly authorizes that exact step. Current next step: Alexander decides whether/when to run Taiga from the v2.2 active set.
 
 
 ## 6/7 late: KM03 v2.1 ACTIVE PLATFORM SET
