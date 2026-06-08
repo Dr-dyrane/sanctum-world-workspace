@@ -91,6 +91,7 @@ Required read receipt for any future KM04 iteration: state files read, current t
 - `preference-labeling/KM04-PL-recommended-verdicts-DRAFT.md`: local draft-only Preference Labeling recommendations for three separate comparisons after KM04 FA/GA. Not platform-submitted.
 - `preference-labeling/KM04-PL1-A-vs-B.md`: local PL #1 draft for A 0.400 vs B 0.350, verdict A1 / plain A. Draft only until Alexander submits it.
 - `preference-labeling/KM04-PL2-A-vs-B.md`: local PL #2 draft for A 0.780 vs B 0.900, verdict B1 / plain B. Draft only until Alexander submits it.
+- `preference-labeling/KM04-PL3-A-vs-B.md`: local PL #3 draft for A 0.900 vs B 0.950, verdict B1 / plain B. Draft only until Alexander submits it.
 
 ## Deterministic Source Chain
 
@@ -128,4 +129,4 @@ V2 run result: the anemia cold fabricated-objective-result discriminated near-bi
 
 ## Boundaries
 
-Do not run additional KM04 uploads, AutoQC, agents, QA, final review, platform mutations, staged-file edits, DOCX rebuilds, locked-canon edits, or live-world edits without explicit Alexander authorization for that exact step. FA/GA entered and FA/GA AutoQC PASSED. PL is now the active step: three Preference Labels required (Abi 6/7 rule), PL AutoQC after each, then final review (Sang). PL #1-#2 drafted locally; one more PL draft/submission still needed. Do not proceed to final review without Alexander authorization.
+Do not run additional KM04 uploads, AutoQC, agents, QA, final review, platform mutations, staged-file edits, DOCX rebuilds, locked-canon edits, or live-world edits without explicit Alexander authorization for that exact step. FA/GA entered and FA/GA AutoQC PASSED. PL is now the active step: three Preference Labels required (Abi 6/7 rule), PL AutoQC after each, then final review (Sang). PL #1-#3 all drafted locally (verdicts: A1, B1, B1). Next: submit all three PLs, run PL AutoQC after each, then final review (Sang). Do not proceed to final review without Alexander authorization.
