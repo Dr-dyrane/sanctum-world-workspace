@@ -4,7 +4,7 @@ Prepared 2026-06-07 by Claude Code. REVIEW ONLY. Bounded prep: no platform files
 
 ## 1. Current lifecycle context
 - Task 1 (KM01): final human review complete, APPROVED.
-- Task 2 (KM02): complete through writer workflow; Awaiting Final Review (passed AutoQC and Preference Labeling, verdict B/B++).
+- Task 2 (KM02): COMPLETE / RFD (Ready for Delivery) after Janette's 6/8 final review (passed AutoQC and Preference Labeling, verdict B/B++).
 - Task 3 (KM03 v2.1): passed Task AutoQC (`qcaud_fc`, no non-pass flags); Taiga trajectories intentionally held; golden physician sign-off open.
 - Task 4 (KM04): built and STAGED at `platform/task4/current/` with the Claude.ai-review fixes applied; both independent reviews (Claude.ai GO-with-fixes, Codex simulation ~62-68 feasible) agree; pending Alexander golden sign-off and upload. Not yet uploaded.
 - Task 5 (KM05): BOUNDED PREBUILD PREP ONLY. Not active, not staged, not uploaded. This packet exists so Claude.ai can independently judge the mechanism before any build.
