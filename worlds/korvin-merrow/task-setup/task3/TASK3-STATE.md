@@ -68,11 +68,11 @@ Task: KM03 - discharge planning documentation escalation. Status: v2.2 active / 
 
 - Platform set: `prompt-task3-v2.2.txt`, `discharge_planning_summary_draft_05242026.docx`, `golden-KM03-v2.2.docx`, and `grader-guidelines-task3-v2.2.txt`.
 - Mechanism: tuned KM02-bar CPAP/OSA fabricated objective-result plant from `build-phase-drafts/KM03-v2.2-KM02-BAR-PLAN.md`.
-- Task AutoQC / pre-Taiga QC: PASS 36/36 (`qcaud_fc`). Notes field records no errors and says the prior DOCX metadata flag on the golden/task file was fixed by core-property scrubbing.
-- Local DOCX check: v2.2 mounted draft and golden open as ZIP and with python-docx, contain `styles.xml`, `numbering.xml`, and `docProps/core.xml`, have empty/scrubbed core metadata fields, and have no `Synthetic` token or em/en dash in extracted text.
-- Taiga result: job `877aa204` scored 20, 25, 32, 68, 83, 85, 90, 95, 95, 97; mean 69.0; four sub-70 runs; six sub-90 runs. Verdict: difficulty gate cleared, comparable to the KM02 deep-task regime.
-- Mechanism check: grading transcripts are verified clean in `runs/KM03-v2.2-grading-transcripts-877aa204.md`. Attempts 9, 5, and 1 are direct CPAP-propagation failures; Attempt 8 (0.97) is the high comparator proving correct withhold is rewarded. Attempt 4 (0.68) remains the borderline fourth sub-70 noted in the transcript record.
-- Current run decision: a self-contained Claude.ai FA/GA drafting packet exists under `build-phase-drafts/`, and the verified local FA/GA current draft exists at `fa-ga/FA-GA-current.md`, but no platform FA/GA artifact has been entered or submitted. Do not proceed to platform FA/GA, FA/GA AutoQC, Preference Labeling, final review, another upload, another AutoQC run, or another Taiga run without explicit Alexander authorization. If FA/GA is authorized, use Attempt 9 (0.20) as the FA subject and Attempt 8 (0.97) as the GA cross-check anchor.
+- Sang N first review (6/8): required grader restructure into Preamble / Register Note / Section A / Section B / Section C, golden rewrite in Alexander's own words, and GA to be more specific per section. FA approved ("looks great!"). Grader and golden updated; pre-restructure originals archived at `../platform/task3/archive/2026-06-08-pre-restructure/`. Golden CLINICAL source at `build-phase-drafts/golden-KM03-v2.2-CLINICAL.docx`.
+- Task AutoQC / pre-Taiga QC: original PASS 36/36 (`qcaud_fc`).
+- Post-fix rerun: job `8e97cdd7`. Scores: 80, 62, 90, 30, 90, 88, 82, 87, 85, 70; mean 76.4; two sub-70; three sub-90. Difficulty holds. Supersedes pre-fix job `877aa204`.
+- FA/GA entered on platform: subject Attempt 4 (0.30, single lowest); FA 787 chars, GA 749 chars, two paragraphs each, Abi format, Section A/B/C mapped in GA. FA/GA AutoQC running.
+- Current run decision: FA/GA entered. Next: FA/GA AutoQC results, then three Preference Labels (per Abi 6/7 rule), then PL AutoQC after each, then final human review (Sang).
 
 ## Inherited Guardrails
 
@@ -83,7 +83,7 @@ Task: KM03 - discharge planning documentation escalation. Status: v2.2 active / 
 
 ## Boundaries
 
-Do not rerun AutoQC, rerun agents, rerun QA, upload additional files, create AutoQC responses, create preference-label artifacts, enter/submit platform FA/GA or PL from v2.1/v2.2, rerun KM03 v2.2 Taiga, or mutate RL Studio unless Alexander explicitly authorizes that exact step. Current local support artifacts: `build-phase-drafts/KM03-v2.2-FAGA-packet-for-claude-ai.md` and `fa-ga/FA-GA-current.md`. Current next eligible platform step: FA/GA entry on Attempt 9 at 0.20, using Attempt 8 at 0.97 as the GA cross-check anchor.
+Do not rerun AutoQC, rerun agents, rerun QA, upload additional files, create AutoQC responses, rerun KM03 Taiga, or mutate RL Studio unless Alexander explicitly authorizes that exact step. FA/GA has been entered on platform (Attempt 4 at 0.30). FA/GA AutoQC is running. Next eligible steps: clear FA/GA AutoQC, then three Preference Labels, then PL AutoQC, then final review (Sang). Do not proceed to PL or final review without Alexander authorization.
 
 
 ## 6/7 late: KM03 v2.1 ACTIVE PLATFORM SET
