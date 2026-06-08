@@ -64,3 +64,9 @@
 - Durable record: `build-phase-drafts/KM03-v2.2-FAGA-packet-for-claude-ai.md`.
 - Purpose: self-contained Claude.ai drafting brief for FA/GA prose using Attempt 9 (0.20) as the single lowest-run subject and Attempt 8 (0.97) as the GA fairness comparator.
 - Boundary: this is a local drafting packet only. It is not a platform FA/GA artifact, Preference Label, final review, upload, AutoQC response, or RL Studio mutation.
+
+## 6/8: KM03 v2.2 local FA/GA current draft added
+- Durable record: `fa-ga/FA-GA-current.md`.
+- Subject: Attempt 9 at 0.20 from job `877aa204`; GA fairness comparator is Attempt 8 at 0.97.
+- Verification: draft header records verification against Attempt 9 trajectory bytes and the grading transcript; language follows the corrected Abi format, with the grader described as scoring output against the golden and guidelines rather than independently reading the chart.
+- Boundary: local verified draft only. It is physician-owned and not platform-entered. No platform FA/GA submission, FA/GA AutoQC, Preference Label, final review, upload, AutoQC response, or RL Studio mutation has been created in the repository.
