@@ -1,5 +1,7 @@
 # Korvin Merrow World
 
+KM04 v2 update 6/8: current v2 material is planning/review only at `task-setup/task4/build-phase-drafts/KM04-v2-plan.md` and `task-setup/task4/build-phase-drafts/KM04-v2-review-request-for-claude-ai.md`. There is no v2 build, platform-current replacement, upload, AutoQC, Taiga run, FA/GA, PL, final review, locked-canon edit, or live-world edit.
+
 Current state: World created as `Healthcare_247_Merrow`; Step 9 generated-file review COMPLETE; Task 1 final human review COMPLETE / APPROVED. Task 2 / KM02 is COMPLETE / RFD (Ready for Delivery) after Janette's 6/8 final review: golden `golden-KM02-v5.docx` is re-dated to 05/24/2026 with sha256 prefix `2dd3e0ad`, Task AutoQC / Taiga gates passed qcaud_5e, qcaud_4a, and qcaud_ef, final FA/GA uses Attempt 8 at 0.30 from v3 job `8f393839`, and Preference Labels were submitted with verdict B / B++. Task 3 / KM03 escalation through v2.1 is difficulty-failed after job `58b5f3e3` (90-97, mean about 93.6, zero sub-70), with the transcript-lineage caveat recorded in `task-setup/task3/runs/KM03-taiga-results-58b5f3e3.md`. Task 3 / KM03 v2.2 then cleared the Taiga difficulty gate after job `877aa204`: mean 69.0, four sub-70 runs, six sub-90 runs, tail 0.20; record at `task-setup/task3/runs/KM03-v2.2-taiga-results-877aa204.md`. Task 4 / KM04 v1 failed the 6/8 trajectory difficulty gate after job `55ee209f`: 10 runs scored 0.87-0.95, mean 0.912, zero sub-70; record at `task-setup/task4/runs/KM04-taiga-results-55ee209f.md`. Task 5 / KM05 is review-converged / HOLD under `task-setup/task5/`, but its older moderate-task label is retired by the 6/8 no-moderate directive; it is not built, not platform-staged, not uploaded, not AutoQC-run, and not agent-run. Retired KM03 v1 passed Task AutoQC 36/36 (`qcaud_6b`), then job `58b5f3e3` confirmed v1 was too easy; it is historical only. KM03 grading transcripts are verified clean, a local FA/GA drafting packet exists, and the verified local FA/GA current draft is `task-setup/task3/fa-ga/FA-GA-current.md`; next KM03 platform step is FA/GA entry on Attempt 9 (0.20), if explicitly authorized. No further platform mutation without exact authorization.
 
 KM03 update 6/8: KM03 escalation through v2.1 is difficulty-failed: job `58b5f3e3` scored 90-97 (mean about 93.6), zero sub-70; the run record notes a lineage caveat because captured transcripts show v1-era filenames/audit prompt/golden-v1, but Alexander records it as v2.1 and the operational conclusion is v2.2 redesign, not FA/GA/PL/final review from the current mechanism. See `task-setup/task3/runs/KM03-taiga-results-58b5f3e3.md`.
@@ -80,6 +82,8 @@ Start here only after reading `project/STATUS.md`.
 - `task-setup/task4/TASK4-STATE.md`
 - `task-setup/task4/runs/KM04-taiga-results-55ee209f.md`
 - `task-setup/platform/task4/current/` (v1 evidence only after difficulty failure)
+- `task-setup/task4/build-phase-drafts/KM04-v2-plan.md` (v2 planning/review only)
+- `task-setup/task4/build-phase-drafts/KM04-v2-review-request-for-claude-ai.md` (v2 Claude.ai review request only)
 - `task-setup/task4/build-phase-drafts/KM04-codex-black-team-review-6-7.md`
 - `task-setup/task5/TASK5-STATE.md`
 - `task-setup/task5/design/KM05-design-plan-for-review.md`

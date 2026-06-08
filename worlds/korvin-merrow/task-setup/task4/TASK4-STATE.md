@@ -2,6 +2,8 @@
 
 Status: KM04 v1 TAIGA-COMPLETE / DIFFICULTY FAILED. Alexander-operated Run All QA evidence for job `55ee209f-c9fa-4a64-8071-70d8917508da` completed 2026-06-08 with 10 trajectories scoring 0.87-0.95, mean 0.912, and zero sub-70 runs. The mounted resident-draft mechanism did not produce a significant clinical failure. Durable local record: `runs/KM04-taiga-results-55ee209f.md`. Do not proceed to FA/GA, Preference Labeling, or final review from KM04 v1 unless Alexander explicitly overrides the difficulty gate.
 
+KM04 v2 planning update 6/8: review-only redesign material now exists at `build-phase-drafts/KM04-v2-plan.md` and `build-phase-drafts/KM04-v2-review-request-for-claude-ai.md`. The v2 proposal ports the proven KM02/KM03 completion-genre fabricated-objective-result mechanism onto a cold nutrition/oral-intake axis, but it is not built or platform-staged. No v2 prompt, mounted DOCX, golden, grader, platform-current replacement, upload, AutoQC, Taiga run, FA/GA, PL, final review, locked-canon edit, or live-world edit exists.
+
 V1 platform set tested / staged (platform/task4/current/):
 - prompt-task4-escalation.txt (G1 verbatim authoring-posture prompt)
 - interdisciplinary_consultant_synthesis_draft_05242026.docx (mounted resident DRAFT for attending review; Mode A clone of KM02 task base; cardiorenal paragraph QUIETED per fix 1; fingerprint diff empty; metadata scrubbed; em-dash 0; no leak tokens; author Ines Travyn MD PGY-2 for Elian Vossmere MD, both in-roster)
@@ -59,14 +61,18 @@ Before any KM04 drafting, build, or platform staging, read:
 6. `worlds/korvin-merrow/task-setup/task3/KM03-state-log.md`
 7. this file
 8. `KM04-prebuild-review-and-build-gates.md`
+9. `build-phase-drafts/KM04-v2-plan.md`
+10. `build-phase-drafts/KM04-v2-review-request-for-claude-ai.md`
 
-Required read receipt for any future KM04 iteration: state files read, current task states, forbidden actions, three no-repeat lessons, and whether KM03 trajectory/QA results have returned. Current KM04 v1 status is no longer prebuild-only or merely staged; it has completed a trajectory run and failed the difficulty gate.
+Required read receipt for any future KM04 iteration: state files read, current task states, forbidden actions, three no-repeat lessons, and whether KM03 trajectory/QA results have returned. Current KM04 v1 status is no longer prebuild-only or merely staged; it has completed a trajectory run and failed the difficulty gate. Current KM04 v2 status is planning/review only.
 
 ## Current Material
 
 - `design/KM04-design-plan-for-review.md`: prebuild design plan. It treats the locked world-planning task selection as settled and focuses on the build mechanism.
 - `KM04-prebuild-review-and-build-gates.md`: gate checklist for reviewers before any prompt, mounted note, golden, grader, or platform-current file is created.
-- `build-phase-drafts/`: draft packet for review only. It contains source audit, prompt draft, golden/grader deltas, mounted-draft source concept, mount manifests, pilot preregistration, the Claude.ai review request, the Claude.ai GO-with-fixes review, and copied locked inputs.
+- `build-phase-drafts/`: draft packet for review only. It contains source audit, prompt draft, golden/grader deltas, mounted-draft source concept, mount manifests, pilot preregistration, the Claude.ai review request, the Claude.ai GO-with-fixes review, copied locked inputs, and the current v2 planning/review packet.
+- `build-phase-drafts/KM04-v2-plan.md`: current v2 redesign plan for Claude.ai/Alexander/Codex review only.
+- `build-phase-drafts/KM04-v2-review-request-for-claude-ai.md`: self-contained Claude.ai red-team request for the v2 redesign plan.
 
 ## Deterministic Source Chain
 
@@ -81,6 +87,8 @@ Required read receipt for any future KM04 iteration: state files read, current t
 ## Current Design Direction
 
 KM04 remains the planned consultant-synthesis task identity, but v1 does not ship.
+
+Current v2 planning direction: switch from v1's evaluation/ratification posture to a completion document of record, with one cold fabricated objective result on nutrition/oral-intake status. The planned rebuttal is the nursing flowsheet, renal/hemodynamic trend summary, nephrology consultation, and absence of dietitian/nutrition consult. This remains a proposal until Alexander explicitly authorizes build.
 
 The proposed escalation mechanism is a consultant-consensus overclaim: a plausible hospitalist synthesis draft says the consultant tensions have been reconciled and the interdisciplinary plan is ready to proceed. The correct response revises or refuses that over-closure and preserves staged cardiorenal sequencing, steroid-source uncertainty, functional/caregiver evidence, and pending transition logistics. The scored failure is adopting the handed synthesis as if consultant alignment and readiness are complete.
 
@@ -100,4 +108,4 @@ Run result: the mounted synthesis draft did not become a loud medication-restart
 
 ## Boundaries
 
-Do not run additional KM04 uploads, AutoQC, agents, QA, FA/GA, Preference Labeling, final review, platform mutations, staged-file edits, DOCX rebuilds, locked-canon edits, or live-world edits without explicit Alexander authorization for that exact step. The current `platform/task4/current/` set is KM04 v1 evidence and should not be treated as a shipping candidate after the 6/8 difficulty failure.
+Do not run additional KM04 uploads, AutoQC, agents, QA, FA/GA, Preference Labeling, final review, platform mutations, staged-file edits, DOCX rebuilds, locked-canon edits, or live-world edits without explicit Alexander authorization for that exact step. The current `platform/task4/current/` set is KM04 v1 evidence and should not be treated as a shipping candidate after the 6/8 difficulty failure. The v2 files are planning/review only and do not authorize build, platform staging, upload, AutoQC, Taiga, FA/GA, PL, or final review.
