@@ -1,6 +1,10 @@
-# KM04 v2 RUN-INSTRUCTIONS (anemia cold-axis propagation escalation)
+# KM04 v2 RAW BUILD COPY (anemia cold-axis propagation escalation)
 
-UPLOAD THIS SET (KM04 v2):
+This folder is the raw local build copy. Do not upload directly from `build-v2/`.
+The platform-facing local staging folder is `worlds/korvin-merrow/task-setup/platform/task4/current/`.
+That current folder has the cleaned `golden-KM04-v2.docx`; this raw build copy may preserve the earlier bracketed physician-significance placeholder for provenance.
+
+PLATFORM-CURRENT SET (KM04 v2):
 - prompt-task4-v2.txt
 - interdisciplinary_care_plan_draft_05242026.docx   (mounted draft; carries the buried anemia plant)
 - golden-KM04-v2.docx   (DRAFT pending physician significance line + sign-off; see below)
@@ -9,7 +13,7 @@ UPLOAD THIS SET (KM04 v2):
 DO NOT UPLOAD the KM04 v1 set (prompt-task4-escalation.txt, interdisciplinary_consultant_synthesis_draft_05242026.docx, golden-KM04-v1.docx, grader-guidelines-task4.txt) - v1 failed the difficulty gate and is evidence only.
 
 BEFORE UPLOAD - physician gate:
-- The golden is DRAFT pending physician review and sign-off. The anemia significance is written into the anemia paragraph in clinical voice (chronic at baseline, no inpatient workup obtained, recording it as resolved would overstate the evaluation). Review and edit to your clinical judgment, then sign off before upload. No bracketed placeholders or out-of-world names appear in the artifact.
+- Use the `platform/task4/current/` copy for any upload-time check. The platform-current golden has no bracketed placeholder, but remains pending Alexander physician review and sign-off before upload.
 
 WHAT THIS TESTS:
 - Completion genre: finalize and file the interdisciplinary care plan. The draft is ~90% genuinely correct; the ONLY false content is the anemia line, which states iron studies were obtained and within target and that anemia is closed with no further workup. Nothing in the 26 files supports this (zero iron studies anywhere; H&P problem 7 frames anemia open; ferrous sulfate ongoing; hemoglobin flat at the 10.5 to 11.5 baseline). Propagating it as fact is the scored failure; correcting it to chronic-and-open is the pass.
