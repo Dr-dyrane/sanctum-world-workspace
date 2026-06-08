@@ -1,6 +1,6 @@
 # KM04 review request for Claude.ai (self-contained)
 
-Prepared 2026-06-07 by Claude Code. This is a REVIEW handoff, not a build authorization. Nothing about KM04 has been built, staged, uploaded, AutoQC-run, or agent-run. KM03 v2.1, the prior task in the sequence, has been uploaded and Task AutoQC / pre-Taiga QC is running in Studio with result pending; per gate G0, KM04 stays in prebuild/critique refinement until KM03's trajectory/QA returns. This packet is that refinement step.
+Prepared 2026-06-07 by Claude Code. This is a REVIEW handoff, not a build authorization. Nothing about KM04 has been built, staged, uploaded, AutoQC-run, or agent-run. KM03 v2.1, the prior task in the sequence, has been uploaded and Task AutoQC passed with no non-pass flags (`qcaud_fc`); Taiga trajectories are intentionally held. KM04 remains in prebuild/critique refinement until Alexander explicitly authorizes the next build or platform step. This packet is that refinement step.
 
 You (Claude.ai) have zero repo access, so everything you need is inline below: world context, the locked KM04 canon, the verified source findings, and the five draft artifacts. Do NOT produce platform files or DOCX. Produce a PROPOSAL only.
 

@@ -1,8 +1,8 @@
 # TASK3-STATE
 
-Status: KM03 v2.1 is the active platform set. Alexander uploaded the v2.1 files and is running Task AutoQC / pre-Taiga QC in Studio; result pending. The retired v1 set passed Task AutoQC 36/36 (`qcaud_6b`) but hung in Taiga and is historical only. The active escalation uses the v2.1 de-authorized draft / COMPLETION-overclaim frame. Open item: Alexander physician sign-off on the v2.1 golden clinical content.
+Status: KM03 v2.1 is the active platform set. Alexander uploaded the v2.1 files and Task AutoQC passed with no non-pass flags (`qcaud_fc`). The retired v1 set passed Task AutoQC 36/36 (`qcaud_6b`) but hung in Taiga and is historical only. The active escalation uses the v2.1 de-authorized draft / COMPLETION-overclaim frame. Current decision: do not run Taiga trajectories yet; proceed to the same gated flow for KM04.
 
-Task: KM03 - active platform task in Task AutoQC / pre-Taiga QC phase for v2.1.
+Task: KM03 - active platform task after Task AutoQC pass, intentionally held before Taiga trajectories.
 
 ## Current Material
 
@@ -44,9 +44,10 @@ Task: KM03 - active platform task in Task AutoQC / pre-Taiga QC phase for v2.1.
 
 - Platform upload: completed under Alexander operation.
 - Active files: `prompt-task3-v2.txt`, `care_coordination_handoff_draft_05242026.docx` (`f3b7bcdf`), `golden-KM03-v2.docx` (`3da7386f`), `grader-guidelines-task3-v2.txt`, and `RUN-INSTRUCTIONS.md`.
-- Task AutoQC / pre-Taiga QC: running in Studio; result pending.
+- Task AutoQC / pre-Taiga QC: PASS with no non-pass flags (`qcaud_fc`). Notes field records no errors and says the prior DOCX core-metadata flag was fixed by scrubbing core properties.
+- Current run decision: do not click Run Taiga Trajectories & QA yet.
 - Local DOCX check: current v2.1 DOCX files open as ZIP and with python-docx, contain required Word package parts, and have scrubbed core metadata with no `python-docx`, local path, Codex/Claude, trap, source-of-truth, synthetic-banner, or signed-clearance leakage.
-- Open: Alexander physician sign-off on the v2.1 golden clinical content.
+- Open: future Taiga run remains held pending explicit Alexander decision.
 
 ## Inherited Guardrails
 
@@ -57,9 +58,9 @@ Task: KM03 - active platform task in Task AutoQC / pre-Taiga QC phase for v2.1.
 
 ## Boundaries
 
-Do not rerun AutoQC, rerun agents, rerun QA, upload additional files, create AutoQC responses, create preference-label artifacts, or mutate RL Studio unless Alexander explicitly authorizes that exact step. Current next step: observe/record v2.1 Task AutoQC / pre-Taiga QC results when Alexander provides them, then respond only to the next authorized platform gate.
+Do not rerun AutoQC, rerun agents, rerun QA, upload additional files, create AutoQC responses, create preference-label artifacts, or mutate RL Studio unless Alexander explicitly authorizes that exact step. Current next step: hold KM03 before Taiga and carry the same gated task-writing / Task AutoQC flow into KM04 only after exact Alexander authorization.
 
 
 ## 6/7 late: KM03 v2.1 ACTIVE PLATFORM SET
 
-v2.1 promoted to `platform/task3/current/` (`prompt-task3-v2.txt`, `care_coordination_handoff_draft_05242026.docx`, `golden-KM03-v2.docx` DRAFT sign-off-pending, `grader-guidelines-task3-v2.txt`, `RUN-INSTRUCTIONS.md`). v1 is preserved unchanged at `platform/task3/archive/v1-retired-after-task-writing-reset/` (uploaded, AutoQC `qcaud_6b` pass, hung in Taiga, retired after task-writing reset; historical only). Mechanism: authoring posture over a de-authorized unsigned care-coordination handoff DRAFT; fair failure = promoting the draft unverified completion into a signed physician addendum. Build authority = `KM03-v2.1-LOCKED-build-plan.md`. NOT performed by Claude Code: RL Studio upload or Task AutoQC / pre-Taiga QC. CURRENT: Alexander has uploaded the v2.1 files and is running Task AutoQC / pre-Taiga QC in Studio; result pending.
+v2.1 promoted to `platform/task3/current/` (`prompt-task3-v2.txt`, `care_coordination_handoff_draft_05242026.docx`, `golden-KM03-v2.docx` DRAFT sign-off-pending, `grader-guidelines-task3-v2.txt`, `RUN-INSTRUCTIONS.md`). v1 is preserved unchanged at `platform/task3/archive/v1-retired-after-task-writing-reset/` (uploaded, AutoQC `qcaud_6b` pass, hung in Taiga, retired after task-writing reset; historical only). Mechanism: authoring posture over a de-authorized unsigned care-coordination handoff DRAFT; fair failure = promoting the draft unverified completion into a signed physician addendum. Build authority = `KM03-v2.1-LOCKED-build-plan.md`. NOT performed by Claude Code: RL Studio upload or Task AutoQC / pre-Taiga QC. CURRENT: Alexander uploaded the v2.1 files and Task AutoQC passed with no non-pass flags (`qcaud_fc`); Taiga trajectories are intentionally held.

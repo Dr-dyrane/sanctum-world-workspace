@@ -14,5 +14,5 @@
 - Build authority: KM03-v2.1-LOCKED-build-plan.md.
 - PL RULE CHANGE (Abi O pod guidance, pinned 6/7): KM03 PL step now = THREE Preference Labels on three different trajectories, not one. KM03 is the first task under this rule. See TASK-RUNBOOK.md D3.
 - Not performed by Claude Code: RL Studio upload or Task AutoQC / pre-Taiga QC.
-- CURRENT: Alexander has uploaded the v2.1 files and is running Task AutoQC / pre-Taiga QC in Studio; result pending.
+- CURRENT: Alexander uploaded the v2.1 files and Task AutoQC passed with no non-pass flags (`qcaud_fc`). Notes field records no errors and the prior DOCX metadata flag as fixed. Taiga trajectories are intentionally held; next intended work is the same gated flow for KM04.
 - Local DOCX check: v2.1 DOCX files open with ZIP/python-docx, contain styles.xml/numbering.xml/core.xml, and have scrubbed core metadata with no prior metadata leak tokens.
