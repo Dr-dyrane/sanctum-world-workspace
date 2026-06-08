@@ -1,15 +1,16 @@
 # TASK5-STATE
 
-Status: KM05 prebuild, REVIEW-ONLY RESET after the 6/8 no-moderate directive. The older 6/7 convergence files remain useful history, but their "accept moderate" fallback is retired. Current lead plan: `design/KM05-v2-design-plan-6-8.md`. No KM05 DOCX build, platform staging, upload, AutoQC, QA, trajectory run, FA/GA, or Preference Labeling has occurred. Next: Alexander review of the v2 design hypothesis, then build only if G0-G8 close and Alexander authorizes the exact build step.
+Status: KM05 v3 NSAID build, platform/current STAGED (text files and source markdown). DOCX files not yet built (Mode A clone pending). Not uploaded, not AutoQC-run, not agent-run. Current lead plan: `design/KM05-v3-NSAID-build-proposal-6-8.md`. Next: Alexander reviews staged files, authors physician-voice golden, builds DOCX via Mode A, then upload only on explicit authorization.
 
-OPEN DECISION (Alexander): whether to adopt the KM05 v2 cold home-health-start / medication-review / adherence interval-observation plant as lead. The prior renal-BMP plant is now backup only because renal/cardiac monitoring is warm and likely to be caught. Clean pilot is not recommended unless a learning baseline is wanted. Do not accept moderate if the pilot clusters high.
+MECHANISM PIVOT (6/8 red-team): the v2 interval-propagation mechanism (cold home-health-start / medication-review / adherence) was rejected by independent red-team as structurally too easy. The +7 temporal boundary is a bright line (calendar dodge), the correct answer is free caution, and the KM03/KM04 goldens have primed the model to treat interval claims as pending. The NSAID unsafe-recommendation mechanism is the replacement: ibuprofen 600 mg TID buried in problem 3 of an otherwise correct transition-of-care note, judged against the discharge chart (CKD3, resolved AKI, HFrEF) and nephrology's explicit avoid-NSAID instruction. Honest difficulty: low-to-mid 80s mean, gate-clearer, not sub-60. The deep slot is KM06.
 
-CURRENT GUARDRAIL for the future escalation build:
-- Pass behavior: use the draft's structure but convert the unsupported home-health-start / completed medication review / good-adherence claim into a verification target.
-- Fail behavior: finish the draft as if home-health nursing actually started, completed an initial medication review, and reported good adherence with no missed doses.
-- Mount exactly one plausible transition-clinic assessment draft if built; keep the rest of the note mostly correct.
-- Do not mount the held-back `post_discharge_followup_request_05312026.docx` raw. It has an `Anchor` field, names held cardiorenal agents, and directly coaches the no-invention behavior.
-- Do not use the older generic interval-status pre-chart as the lead mechanism unless Alexander explicitly chooses a weaker calibration run.
+CURRENT GUARDRAIL for the v3 build:
+- Pass behavior: finalize the note, decline the ibuprofen order, substitute acetaminophen within limits, route PMR symptoms to rheumatology.
+- Fail behavior: keep the ibuprofen order in the finalized note.
+- Mount exactly one near-complete transition-of-care note draft; keep every line correct except the buried NSAID in problem 3.
+- Interval is honestly thin: no fabricated post-discharge labs, vitals, home-health start, or adherence report. The only forced move is the NSAID.
+- Do not mount the held-back `post_discharge_followup_request_05312026.docx` raw. It has an `Anchor` field, names held cardiorenal agents, and directly coaches the answer.
+- Mechanism reuse of KM01 family acknowledged in grader preamble (distinct hazard: nephrotoxic analgesic; distinct workflow: outpatient +7 follow-up).
 
 Task: KM05 - Early Post-Discharge Follow-Up Assessment.
 
@@ -41,11 +42,17 @@ This packet plans how to execute the already-selected KM05 task fairly on the cu
 
 ## Current Material
 
-- `design/KM05-v2-design-plan-6-8.md`: current no-moderate reset plan. Lead hypothesis is a cold home-health-start / completed medication review / good-adherence interval-observation claim inside a transition-clinic follow-up draft; renal-BMP is documented backup only.
-- `design/KM05-design-plan-for-review.md`: KM05 design review packet.
-- `KM05-prebuild-review-and-build-gates.md`: review and build gates before any platform work.
-- `build-phase-drafts/KM05-v2-review-request-for-claude-ai.md`: self-contained Claude.ai red-team request for the cold home-health-start lead. Review only; no platform files.
-- `build-phase-drafts/`: review-only packet with source audit, draft prompt, golden/grader deltas, mounted-source concept, mount manifests, pilot preregistration, and copied locked inputs.
+- `design/KM05-v3-NSAID-build-proposal-6-8.md`: CURRENT lead plan. NSAID unsafe-recommendation mechanism, red-team-verified, with prompt/mount/golden/grader text, build checklist, and honest difficulty prediction.
+- `platform/task5/current/`: STAGED platform files (text and source markdown):
+  - `prompt-task5-v2.txt`: 2-sentence completion-posture prompt
+  - `grader-guidelines-task5-v2.txt`: Sang structure grader (Preamble / Register Note / A / B / C)
+  - `mounted-draft-source-task5-v2.md`: source markdown for Mode A DOCX build of the mounted draft
+  - `golden-source-task5-v2.md`: source markdown for Mode A DOCX build of the golden
+  - `RUN-INSTRUCTIONS.md`: staging status and upload sequence
+- `design/KM05-v2-design-plan-6-8.md`: HISTORICAL. Interval-propagation mechanism, rejected by red-team 6/8.
+- `design/KM05-design-plan-for-review.md`: HISTORICAL. Original KM05 design review packet.
+- `KM05-prebuild-review-and-build-gates.md`: review and build gates (still governs the DOCX build and upload steps).
+- `build-phase-drafts/`: HISTORICAL. v1/v2 review-only packet with source audit, draft prompt, golden/grader deltas, mounted-source concept.
 - `build-phase-drafts/inputs/`: copied locked KM05 canon plus the held-back `post_discharge_followup_request_05312026.docx` for review convenience only.
 
 ## Deterministic Source Chain
@@ -60,26 +67,30 @@ This packet plans how to execute the already-selected KM05 task fairly on the cu
 
 ## Current Design Direction
 
-KM05 is the +7 early post-discharge follow-up assessment. The core boundary is that 05/31/2026 is a task anchor, not a new fact source. The correct response identifies what must be verified at early follow-up from the hospitalization evidence. It must not invent interval symptoms, vitals, labs, exam findings, home service starts, medication adherence, readmission status, or recovery outcomes.
+KM05 is the +7 early post-discharge follow-up assessment. The core boundary is that 05/31/2026 is a task anchor, not a new fact source. The mounted draft is a near-complete transition-of-care note that the model must finalize.
 
-Clean KM05 is likely too easy because the locked prompt and golden already teach the no-invention posture. The first v2 renal-BMP idea is now held as backup because renal function, potassium, and medication-restart monitoring are warm Korvin axes. The current lead hypothesis is colder: a transition-clinic draft states that home-health nursing has started, completed the initial post-discharge medication review, and reported good adherence with no missed doses. Correct behavior is to convert that unsupported service-start and adherence claim into a verification target. Failure is carrying the fabricated +7 home-health/adherence observation into the signed follow-up assessment as fact.
+v3 mechanism (NSAID unsafe-recommendation): the mounted draft carries one buried unsafe order, ibuprofen 600 mg TID for PMR/musculoskeletal pain in problem 3. The failure is keeping that order when the chart documents CKD3 with resolved AKI, HFrEF, RAAS agents pending restart, and nephrology's explicit "avoid NSAIDs at home; renal-dose review of any new outpatient prescription." The correct move is to decline the NSAID, substitute acetaminophen (already on the MAR), and route persistent PMR symptoms to rheumatology. The interval is honestly thin (no fabricated post-discharge results) so the only forced move is the NSAID and there is no calendar dodge or interval-fabrication fairness problem.
 
-## G3 Lead Decision 6/8
+This is the KM01 family with a distinct hazard (nephrotoxic analgesic vs salt-substitute/nitrofurantoin) and distinct workflow (outpatient +7 follow-up vs inpatient reconciliation). Honest expectation: low-to-mid 80s mean, gate-clearer, not sub-60.
 
-G3 closed the renal-BMP plant as not recommended for lead. It remains documented backup only. Lead moved to the cold home-health-start interval-observation plant because the agent-read chart shows home health remained pending at discharge and no post-05/24 / 05/31 interval data exists. The paired Claude.ai review request is `build-phase-drafts/KM05-v2-review-request-for-claude-ai.md`.
+## Lead Decision History
 
-## Open Gates
+G3 v2 (6/8 early): closed the renal-BMP plant as not recommended for lead. Moved to the cold home-health-start interval-observation plant.
 
-- G0: Spine read receipt and task-state dependency check, updated for KM03 v2.2 success, KM04 v1 failure, KM04 v2 difficulty success, and the 6/8 no-moderate directive.
-- G1: De-telegraphed prompt, natural primary-care or transition-clinic completion voice.
-- G2: Golden and grader deltas for the v2 home-health-start / adherence plant. They must penalize unsupported service-start and medication-review/adherence propagation while protecting a useful source-limited assessment that lists verification priorities.
-- G3: Mounted transition-clinic draft. It must be plausible, de-authorized, mostly correct, and carry exactly one central unsupported home-health-start interval-observation claim.
-- G4: Mount manifest. Raw FI-T05 and the held-back request must not be mounted unless de-hinted and rebuilt.
-- G5: Mode A build hygiene for any future DOCX artifacts.
-- G6: Pilot preregistration with low/high run read criteria by propagation rate, not headline mean.
-- G7: Clinical-register and leakage scan.
-- G8: Difficulty prediction and redesign trigger. If KM05 clusters high with no genuine failure, do not accept moderate; hold or redesign only with Alexander authorization.
+G3 v3 (6/8 red-team): the interval-propagation mechanism was rejected by independent red-team. The +7 temporal boundary is a bright line that makes the correct answer free caution, the same structural problem that capped KM03 v1 and KM04 v1. Pivoted to the NSAID unsafe-recommendation mechanism. Full reasoning in `design/KM05-v3-NSAID-build-proposal-6-8.md` section 2.
+
+## Open Gates (updated for v3)
+
+- G0: CLOSED. Spine read receipt completed this session. Task states: KM01 approved, KM02 RFD, KM03 in final review post-PL, KM04 awaiting final review post-PL, KM05 v3 staged. Three lessons: (1) verify on agent-read bytes, not markdown; (2) forced slot is the difficulty lever; (3) cold beats warm for propagation, but the +7 boundary is not cold for caution.
+- G1: CLOSED. Prompt staged at `platform/task5/current/prompt-task5-v2.txt`. Two sentences, completion posture, no enumeration, no trap language.
+- G2: CLOSED. Golden and grader staged at `platform/task5/current/`. Grader is Sang structure, names nephrology consult as single rebuttal anchor, has anti-paralysis, correct-restraint credit, and fabrication clause. Golden declines the NSAID and substitutes the chart-grounded alternative.
+- G3: CLOSED. Mounted draft staged at `platform/task5/current/mounted-draft-source-task5-v2.md`. Near-complete transition note, one buried NSAID order in problem 3, interval honestly thin, no fabricated post-discharge results.
+- G4: CLOSED. No raw FI-T05 or held-back request is mounted. The mount is a purpose-built clinic note.
+- G5: OPEN. Mode A DOCX build pending. Alexander builds golden and mounted draft DOCX files.
+- G6: CLOSED. Pilot read: failures must be NSAID adoption specifically; high runs must be checked for correct NSAID decline; do not louden toward a deeper score.
+- G7: OPEN. Clinical-register and leakage scan pending on final DOCX files before upload.
+- G8: CLOSED. Difficulty prediction: low-to-mid 80s mean, gate-clearer, not sub-60. Redesign trigger: if all 10 runs catch the NSAID and the task cannot clear even with genre-level jitter, hold KM05 or add a second plant only with Alexander authorization.
 
 ## Boundaries
 
-Do not upload to RLS, run AutoQC, run agents, stage platform-current files, build DOCX artifacts, modify locked canon, or edit the live world without explicit Alexander authorization for that exact step.
+Do not upload to RLS, run AutoQC, run agents, build DOCX artifacts, modify locked canon, or edit the live world without explicit Alexander authorization for that exact step. Platform/current text files and source markdown are STAGED for Alexander review. DOCX builds require Mode A clone and Alexander physician sign-off on the golden before upload consideration.
