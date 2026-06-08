@@ -1,14 +1,14 @@
 # TASK3-STATE
 
-Status: KM03 v2.2 is ACTIVE / pre-Taiga hold after Task AutoQC pass. Prior v2.1 is difficulty-failed (Taiga job 58b5f3e3, 10 trajectories 90-97, mean ~93.6, zero sub-70, fails the difficulty gate). Lineage: v1 too easy -> v2.1 -> v2.1 also too easy -> v2.2 CPAP/OSA fabricated-objective-result mechanism built and AutoQC-passed. (Byte note: the captured `58b5f3e3` transcripts carry v1-era naming/audit prompt/golden-v1; recorded as v2.1 per Alexander, worth preserving but does not change the conclusion.) KM04 v1 failed the same gate (job 55ee209f, mean 0.912), so the whole "evaluate/reconcile a handed discharge document" family is too easy for this model.
+Status: KM03 v2.2 cleared the Taiga difficulty gate after Task AutoQC pass and grading-transcript verification. Job `877aa204` scored 20, 25, 32, 68, 83, 85, 90, 95, 95, 97 with mean 69.0, four sub-70 runs, six sub-90 runs, and tail to 0.20. Grading transcripts are verified clean in `runs/KM03-v2.2-grading-transcripts-877aa204.md`: all reviewed sub-70 failures are intended CPAP-propagation failures, and the 0.97 comparator confirms correct CPAP withhold is rewarded. FA/GA subject: Attempt 9 at 0.20; GA cross-check anchor: Attempt 8 at 0.97. Prior v2.1 is difficulty-failed (Taiga job 58b5f3e3, 10 trajectories 90-97, mean ~93.6, zero sub-70, fails the difficulty gate). Lineage: v1 too easy -> v2.1 -> v2.1 also too easy -> v2.2 CPAP/OSA fabricated-objective-result mechanism built, AutoQC-passed, empirically cleared difficulty, and transcript-verified. (Byte note: the captured `58b5f3e3` transcripts carry v1-era naming/audit prompt/golden-v1; recorded as v2.1 per Alexander, worth preserving but does not change the conclusion.) KM04 v1 failed the same gate (job 55ee209f, mean 0.912), so the whole "evaluate/reconcile a handed discharge document" family is too easy for this model.
 
 ROOT CAUSE: KM03/KM04 are caution-genre tasks; the model's trained default (be cautious, preserve conditionality, do not rubber-stamp) IS the correct answer, so caution is free and there is no forced wrong commitment. Source-authority tweaks do not fix this.
 
-v2.2 CURRENT PLATFORM SET (active, pre-Taiga hold): `../platform/task3/current/prompt-task3-v2.2.txt`, `../platform/task3/current/discharge_planning_summary_draft_05242026.docx`, `../platform/task3/current/golden-KM03-v2.2.docx`, and `../platform/task3/current/grader-guidelines-task3-v2.2.txt`. Mechanism source is `build-phase-drafts/KM03-v2.2-KM02-BAR-PLAN.md`: completion genre + fabricated objective result + cold/unprimed OSA/CPAP axis + 3+ document rebuttal. Claude.ai red-team (6/8) adopted CPAP over Lenora and tuned the plant to a home-DME continuity line: "settings recently reviewed and adherence adequate on device, no additional sleep follow-up arranged for this transition." One central CPAP/OSA plant only; do not co-mount Lenora. Alexander ran Task AutoQC and it passed 36/36 (`qcaud_fc`). Taiga is intentionally held; no v2.2 trajectory, FA/GA, Preference Label, final review, or AutoQC response exists.
+v2.2 CURRENT PLATFORM SET: `../platform/task3/current/prompt-task3-v2.2.txt`, `../platform/task3/current/discharge_planning_summary_draft_05242026.docx`, `../platform/task3/current/golden-KM03-v2.2.docx`, and `../platform/task3/current/grader-guidelines-task3-v2.2.txt`. Mechanism source is `build-phase-drafts/KM03-v2.2-KM02-BAR-PLAN.md`: completion genre + fabricated objective result + cold/unprimed OSA/CPAP axis + 3+ document rebuttal. Claude.ai red-team (6/8) adopted CPAP over Lenora and tuned the plant to a home-DME continuity line: "settings recently reviewed and adherence adequate on device, no additional sleep follow-up arranged for this transition." One central CPAP/OSA plant only; do not co-mount Lenora. Alexander ran Task AutoQC and it passed 36/36 (`qcaud_fc`). Alexander then ran Taiga job `877aa204`, which cleared the difficulty gate. Grading transcripts are verified clean in `runs/KM03-v2.2-grading-transcripts-877aa204.md`. No FA/GA, Preference Label, final review, or AutoQC response exists from v2.2 yet. Next authorized-stage action, if Alexander approves, is FA/GA on Attempt 9 (0.20), with Attempt 8 (0.97) as GA cross-check anchor.
 
 v2.2 PRIOR PLAN HISTORY (6/8): `build-phase-drafts/KM03-v2.2-FINAL-PLAN.md` and `build-phase-drafts/KM03-v2.2-reconciliation-6-8.md` preserve the Lenora weekday-morning supervision-fact mechanism and no-moderate correction, but they are no longer the primary plan after `KM03-v2.2-KM02-BAR-PLAN.md`. Preserve as review history; do not build from them unless Alexander explicitly re-selects that mechanism.
 
-Task: KM03 - discharge planning documentation escalation. Status: v2.2 active / Task AutoQC passed / Taiga hold.
+Task: KM03 - discharge planning documentation escalation. Status: v2.2 active / Task AutoQC passed / Taiga difficulty cleared / grading transcripts verified.
 
 ## Current Material
 
@@ -16,8 +16,11 @@ Task: KM03 - discharge planning documentation escalation. Status: v2.2 active / 
 - `KM03-3rd-reader-review-and-build-gates.md`: third-reader review confirming the design direction but blocking build until G1-G3 close.
 - `build-phase-drafts/`: draft packet for reviewing G1-G3 closure concepts. Source drafts and copied inputs are trackable; the local ZIP bundle is ignored.
 - `build-phase-drafts/01-build-phase-review-responses.md`: build-phase review response record. Captures the frame decision from STRIP to COMPLETION and the v2.1 source-authority correction.
+- `build-phase-drafts/KM03-v2.2-FAGA-packet-for-claude-ai.md`: self-contained FA/GA drafting packet for Claude.ai after transcript verification. It is not a platform FA/GA artifact and does not submit anything.
 - `KM03-state-log.md`: live event log for KM03 after staging, including v1/v2.1 difficulty failures, v2.2 build, Task AutoQC pass, and trajectory/QA state.
 - `../platform/task3/current/`: current folder contains only the active v2.2 platform set plus `RUN-INSTRUCTIONS.md`. Active files are `prompt-task3-v2.2.txt`, `discharge_planning_summary_draft_05242026.docx`, `golden-KM03-v2.2.docx`, and `grader-guidelines-task3-v2.2.txt`.
+- `runs/KM03-v2.2-taiga-results-877aa204.md`: durable v2.2 trajectory result record. Job `877aa204` cleared the difficulty gate with mean 69.0 and four sub-70 runs.
+- `runs/KM03-v2.2-grading-transcripts-877aa204.md`: durable grading-transcript verification record. It confirms the sub-70 failures are CPAP-propagation failures, the 0.97 comparator rewards correct withhold, and Attempt 9 (0.20) is the FA/GA subject.
 - `../platform/task3/archive/v2.1-difficulty-failed-after-58b5f3e3/`: retired v2.1 platform evidence after the difficulty failure. Historical evidence only.
 - `../platform/task3/archive/v1-retired-after-task-writing-reset/`: retired v1 platform set. Historical evidence only.
 - `bundles/`: ignored local review bundle material only, if present.
@@ -56,13 +59,15 @@ Task: KM03 - discharge planning documentation escalation. Status: v2.2 active / 
 - Local DOCX check: current v2.1 DOCX files open as ZIP and with python-docx, contain required Word package parts, and have scrubbed core metadata with no `python-docx`, local path, Codex/Claude, trap, source-of-truth, synthetic-banner, or signed-clearance leakage.
 - Open: v2.2 Taiga decision is held by Alexander; transcript-lineage caveat from `58b5f3e3` remains preserved in the run record.
 
-## Active v2.2 Platform / AutoQC State 2026-06-08
+## Active v2.2 Platform / AutoQC / Taiga State 2026-06-08
 
 - Platform set: `prompt-task3-v2.2.txt`, `discharge_planning_summary_draft_05242026.docx`, `golden-KM03-v2.2.docx`, and `grader-guidelines-task3-v2.2.txt`.
 - Mechanism: tuned KM02-bar CPAP/OSA fabricated objective-result plant from `build-phase-drafts/KM03-v2.2-KM02-BAR-PLAN.md`.
 - Task AutoQC / pre-Taiga QC: PASS 36/36 (`qcaud_fc`). Notes field records no errors and says the prior DOCX metadata flag on the golden/task file was fixed by core-property scrubbing.
 - Local DOCX check: v2.2 mounted draft and golden open as ZIP and with python-docx, contain `styles.xml`, `numbering.xml`, and `docProps/core.xml`, have empty/scrubbed core metadata fields, and have no `Synthetic` token or em/en dash in extracted text.
-- Current run decision: Taiga trajectories are intentionally held; do not proceed to FA/GA, Preference Labeling, final review, another upload, or another AutoQC run without explicit Alexander authorization.
+- Taiga result: job `877aa204` scored 20, 25, 32, 68, 83, 85, 90, 95, 95, 97; mean 69.0; four sub-70 runs; six sub-90 runs. Verdict: difficulty gate cleared, comparable to the KM02 deep-task regime.
+- Mechanism check: grading transcripts are verified clean in `runs/KM03-v2.2-grading-transcripts-877aa204.md`. Attempts 9, 5, and 1 are direct CPAP-propagation failures; Attempt 8 (0.97) is the high comparator proving correct withhold is rewarded. Attempt 4 (0.68) remains the borderline fourth sub-70 noted in the transcript record.
+- Current run decision: a self-contained Claude.ai FA/GA drafting packet exists under `build-phase-drafts/`, but no platform FA/GA artifact has been created. Do not proceed to platform FA/GA, Preference Labeling, final review, another upload, another AutoQC run, or another Taiga run without explicit Alexander authorization. If FA/GA is authorized, use Attempt 9 (0.20) as the FA subject and Attempt 8 (0.97) as the GA cross-check anchor.
 
 ## Inherited Guardrails
 
@@ -73,7 +78,7 @@ Task: KM03 - discharge planning documentation escalation. Status: v2.2 active / 
 
 ## Boundaries
 
-Do not rerun AutoQC, rerun agents, rerun QA, upload additional files, create AutoQC responses, create preference-label artifacts, write FA/GA or PL from v2.1/v2.2, run KM03 v2.2 Taiga, or mutate RL Studio unless Alexander explicitly authorizes that exact step. Current next step: Alexander decides whether/when to run Taiga from the v2.2 active set.
+Do not rerun AutoQC, rerun agents, rerun QA, upload additional files, create AutoQC responses, create preference-label artifacts, write platform FA/GA or PL from v2.1/v2.2, rerun KM03 v2.2 Taiga, or mutate RL Studio unless Alexander explicitly authorizes that exact step. Current local support artifact: `build-phase-drafts/KM03-v2.2-FAGA-packet-for-claude-ai.md`. Current next eligible platform step: FA/GA on Attempt 9 at 0.20, using Attempt 8 at 0.97 as the GA cross-check anchor.
 
 
 ## 6/7 late: KM03 v2.1 ACTIVE PLATFORM SET
