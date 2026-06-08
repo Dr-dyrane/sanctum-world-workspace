@@ -100,4 +100,17 @@ Status: COMPLETE / CANONICALIZED.
 Generated staging root: korvin-merrow-final-submission-staging/.
 Generated artifacts:
 - korvin-merrow-final-submission-staging/01_spec-document/Alexander_World_Merrow_latest_6_4.docx (canonical submitted spec)
-- kor
+- korvin-merrow-final-submission-staging/02_template-reference-files/final/ with 33 date-stamped DOCX files (canonical reference/task-file upload set)
+- korvin-merrow-final-submission-staging/03_claude-transcript/Korvin_Merrow_Claude_Transcript.docx
+- korvin-merrow-final-submission-staging/03_claude-transcript/Korvin_Merrow_Claude_Transcript.pdf
+- korvin-merrow-final-submission-staging/04_optional-qc-inputs/Korvin_Merrow_Brainstorm.docx
+Hold folder: korvin-merrow-final-submission-staging/05_hold-not-upload/ exists and is empty. TP/EO/Golden/GG artifacts were not exported. The previous `world-level/`, `supplementary/`, and `pretty/` staging variants are superseded by `final/`.
+Verification: 33 final DOCX files are present and match the ignored Drive mirror by filename/hash. Final World Spec DOCX was regenerated from the official template and verified with required Word package parts plus rendered PDF. Transcript export retains Claude share URL provenance and omits internal repository path metadata from the generated upload artifact. The transcript PDF is aligned to the Drive mirror; byte differences between regenerated PDFs are timestamp/render artifacts, not content differences.
+
+
+---
+CURRENT STATE 6/7 late pm: KM02 COMPLETE through writer workflow and Awaiting Final Review. Both human reviews passed (Abi 6/7), all recorded KM02 checks are green, and Preference Labels were submitted with verdict B / B++. Golden sha 2dd3e0ad. KM03 v2.1 is the active platform set: Alexander uploaded the v2.1 files and Task AutoQC passed with no non-pass flags (`qcaud_fc`); Taiga trajectories are intentionally held. Active shas: mounted draft `care_coordination_handoff_draft_05242026.docx` = f3b7bcdf; golden `golden-KM03-v2.docx` = 3da7386f. Retired v1 passed Task AutoQC 36/36 (`qcaud_6b`) after clearing a python-docx core-metadata leak but hung in Taiga and is historical only. Note: Abi is NOT a start gate; she reviews KM03 at first human review after submission. Open: physician sign-off on the v2.1 golden clinical content. The "Synthetic Training Document" footer in 6 finalized WORLD files is a known world-level item set aside. METHOD: task DOCX files are Mode A clones of proven KM02 artifacts, not `tools/generate_reference_files.py`; "matches template" = empty fingerprint diff; core metadata scrubbed after every python-docx save. KM04 is locally staged under `task-setup/platform/task4/current/`, black-team passed, and remains not uploaded / not AutoQC-run / not agent-run.
+
+
+---
+6/7 late: KM03 v2.1 ACTIVE AFTER ALEXANDER UPLOAD. v2.1 current set is platform/task3/current/ (prompt-task3-v2.txt, care_coordination_handoff_draft_05242026.docx, golden-KM03-v2.docx DRAFT sign-off-pending, grader-guidelines-task3-v2.txt, RUN-INSTRUCTIONS.md). v1 preserved unchanged at platform/task3/archive/v1-retired-after-task-writing-reset/ (uploaded, AutoQC qcaud_6b pass, hung in Taiga, retired after task-writing reset; historical only). Mechanism: authoring posture over a de-authorized unsigned care-coordination handoff DRAFT; fair failure = promoting the draft unverified completion into a signed physician addendum. Build authority = KM03-v2.1-LOCKED-build-plan.md. NOT performed by Claude Code: RL Studio upload or Task AutoQC / pre-Taiga QC. CURRENT: Alexander uploaded the v2.1 files and Task AutoQC passed with no non-pass flags (`qcaud_fc`); Taiga trajectories are intentionally held.
