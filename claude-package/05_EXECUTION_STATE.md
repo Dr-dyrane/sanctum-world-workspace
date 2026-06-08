@@ -24,6 +24,8 @@ KM03 v2.2 platform / Taiga update 6/8: active files are `worlds/korvin-merrow/ta
 
 KM04 update 6/8: v1 failed the difficulty gate after job `55ee209f` (10 runs 0.87-0.95, mean 0.912, zero sub-70). V2 cleared the difficulty gate after job `709be0e8` (mean 0.689, three sub-70, tail 0.15) on the anemia-of-CKD / absent iron-workup propagation axis. Durable records are `worlds/korvin-merrow/task-setup/task4/runs/KM04-v2-taiga-results-709be0e8.md` and `worlds/korvin-merrow/task-setup/task4/runs/KM04-v2-grading-transcripts-709be0e8.md`; local FA/GA current draft is `worlds/korvin-merrow/task-setup/task4/fa-ga/FA-GA-current.md`, subject Attempt 5 (0.15), comparator Attempt 6 (0.97). Do not enter/submit FA/GA, run FA/GA AutoQC, create PL, start final review, rerun Taiga, or mutate platform state without exact Alexander authorization.
 
+KM04 PL prep update 6/8: local draft `worlds/korvin-merrow/task-setup/task4/preference-labeling/KM04-PL-recommended-verdicts-DRAFT.md` exists for three separate PL comparisons. It is not platform-submitted; no PL AutoQC has been run.
+
 Pipeline run #1 / Step 9 closeout state:
 
 - Output ingested at `worlds/korvin-merrow/file-review/pipeline-output/`.

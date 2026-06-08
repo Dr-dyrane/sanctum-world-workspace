@@ -8,6 +8,8 @@ Current status: World Spec APPROVED after RL Studio upload, Spec AutoQC, and Sta
 
 KM04 update 6/8: v1 difficulty failure remains canonical run evidence, and v2 cleared the difficulty gate after job `709be0e8` (mean 0.689, three sub-70, tail 0.15). Durable v2 records are `worlds/korvin-merrow/task-setup/task4/runs/KM04-v2-taiga-results-709be0e8.md`, `worlds/korvin-merrow/task-setup/task4/runs/KM04-v2-grading-transcripts-709be0e8.md`, and `worlds/korvin-merrow/task-setup/task4/fa-ga/FA-GA-current.md`. Current lead axis is anemia-of-CKD / absent iron-workup propagation. No platform FA/GA submission, PL, final review, locked-canon edit, or live-world edit exists.
 
+KM04 PL prep update 6/8: local draft `worlds/korvin-merrow/task-setup/task4/preference-labeling/KM04-PL-recommended-verdicts-DRAFT.md` exists for three separate PL comparisons after FA/GA. It is not platform-submitted, no PL AutoQC has been run, and it does not change the blocked platform state.
+
 KM05 update 6/8: prebuild review is reset under the no-moderate directive. Start from `worlds/korvin-merrow/task-setup/task5/TASK5-STATE.md` and `task5/design/KM05-v2-design-plan-6-8.md`. The older 6/7 Claude/Codex convergence files remain review history only because their moderate fallback is retired. The v2 lead hypothesis is a single unsupported post-discharge BMP / stable renal-potassium monitoring claim inside a transition-clinic draft. No KM05 DOCX build, platform-current staging, RL Studio upload, Task AutoQC, Taiga trajectories, QA, or platform mutation has occurred.
 
 KM03 update 6/8: job `58b5f3e3` is recorded by Alexander as the KM03 v2.1 difficulty failure (10 trajectories 90-97, mean about 93.6, zero sub-70), with a transcript-lineage caveat because captured outputs show v1-era filenames/prompt/golden-v1. Track the markdown result at `worlds/korvin-merrow/task-setup/task3/runs/KM03-taiga-results-58b5f3e3.md`; transcript tarballs in the same folder are ignored by `.gitignore` and preserved locally. Next path is Alexander's held Taiga decision for v2.2.
@@ -65,21 +67,22 @@ For task-stage work, pair this ladder with a short read receipt: files read, act
 26. `worlds/korvin-merrow/task-setup/task4/runs/KM04-v2-taiga-results-709be0e8.md` for the KM04 v2 trajectory result showing difficulty cleared.
 27. `worlds/korvin-merrow/task-setup/task4/runs/KM04-v2-grading-transcripts-709be0e8.md` for KM04 v2 grading transcript verification and FA/GA subject selection.
 28. `worlds/korvin-merrow/task-setup/task4/fa-ga/FA-GA-current.md` for the local KM04 v2 FA/GA current draft; not platform-entered.
-29. `worlds/korvin-merrow/task-setup/platform/task4/current/` for the KM04 v2 current platform-material folder used for local evidence unless Alexander later replaces it.
-30. `worlds/korvin-merrow/task-setup/task4/build-phase-drafts/KM04-v2-plan.md` for the current review-only KM04 v2 redesign plan.
-31. `worlds/korvin-merrow/task-setup/task4/build-phase-drafts/KM04-v2-review-request-for-claude-ai.md` for the paired self-contained Claude.ai red-team request.
-32. `worlds/korvin-merrow/task-setup/task4/build-phase-drafts/KM04-v2-build-proposal.md` for the review-only draft build proposal. It is not a final platform artifact or build authorization.
-33. `worlds/korvin-merrow/task-setup/task4/build-v2/` for the raw local KM04 v2 build set. Do not upload from this folder; use `platform/task4/current/` after Alexander sign-off.
-34. `worlds/korvin-merrow/task-setup/task4/build-phase-drafts/KM04-codex-black-team-review-6-7.md` for the Codex black-team verdict before trajectory evidence superseded the difficulty prediction.
-35. `worlds/korvin-merrow/task-setup/task4/design/KM04-design-plan-for-review.md` plus `task4/KM04-prebuild-review-and-build-gates.md` for KM04 mechanism history.
-36. `worlds/korvin-merrow/task-setup/task4/build-phase-drafts/` for KM04 draft review material, Claude.ai review, Codex review, copied inputs, and v2 planning only.
-37. `worlds/korvin-merrow/task-setup/task5/TASK5-STATE.md` for KM05 review-only state, source chain, boundaries, and next gates.
-38. `worlds/korvin-merrow/task-setup/task5/design/KM05-v2-design-plan-6-8.md` for the current no-moderate reset plan and v2 lead hypothesis.
-39. `worlds/korvin-merrow/task-setup/task5/design/KM05-design-plan-for-review.md` plus `task5/KM05-prebuild-review-and-build-gates.md` for KM05 mechanism history and gate checklist.
-40. `worlds/korvin-merrow/task-setup/task5/design/KM05-claude-ai-proposal-6-7.md` and `worlds/korvin-merrow/task-setup/task5/design/KM05-codex-black-team-6-7.md` for historical KM05 review convergence and clean-baseline-versus-escalation discussion. Their moderate fallback is retired.
-41. `worlds/korvin-merrow/task-setup/task5/build-phase-drafts/` for KM05 copied inputs, byte/source audit, draft prompt, golden/grader deltas, mounted-source draft, manifest plan, pilot preregistration, and Claude review request only.
-42. `worlds/korvin-merrow/task-setup/platform/task1/` for live Task 1 platform artifacts.
-43. `worlds/korvin-merrow/task-setup/platform/task1/archive/` only for historical Task 1 iterations.
+29. `worlds/korvin-merrow/task-setup/task4/preference-labeling/KM04-PL-recommended-verdicts-DRAFT.md` for local draft-only KM04 v2 PL recommendations; not platform-submitted.
+30. `worlds/korvin-merrow/task-setup/platform/task4/current/` for the KM04 v2 current platform-material folder used for local evidence unless Alexander later replaces it.
+31. `worlds/korvin-merrow/task-setup/task4/build-phase-drafts/KM04-v2-plan.md` for the current review-only KM04 v2 redesign plan.
+32. `worlds/korvin-merrow/task-setup/task4/build-phase-drafts/KM04-v2-review-request-for-claude-ai.md` for the paired self-contained Claude.ai red-team request.
+33. `worlds/korvin-merrow/task-setup/task4/build-phase-drafts/KM04-v2-build-proposal.md` for the review-only draft build proposal. It is not a final platform artifact or build authorization.
+34. `worlds/korvin-merrow/task-setup/task4/build-v2/` for the raw local KM04 v2 build set. Do not upload from this folder; use `platform/task4/current/` after Alexander sign-off.
+35. `worlds/korvin-merrow/task-setup/task4/build-phase-drafts/KM04-codex-black-team-review-6-7.md` for the Codex black-team verdict before trajectory evidence superseded the difficulty prediction.
+36. `worlds/korvin-merrow/task-setup/task4/design/KM04-design-plan-for-review.md` plus `task4/KM04-prebuild-review-and-build-gates.md` for KM04 mechanism history.
+37. `worlds/korvin-merrow/task-setup/task4/build-phase-drafts/` for KM04 draft review material, Claude.ai review, Codex review, copied inputs, and v2 planning only.
+38. `worlds/korvin-merrow/task-setup/task5/TASK5-STATE.md` for KM05 review-only state, source chain, boundaries, and next gates.
+39. `worlds/korvin-merrow/task-setup/task5/design/KM05-v2-design-plan-6-8.md` for the current no-moderate reset plan and v2 lead hypothesis.
+40. `worlds/korvin-merrow/task-setup/task5/design/KM05-design-plan-for-review.md` plus `task5/KM05-prebuild-review-and-build-gates.md` for KM05 mechanism history and gate checklist.
+41. `worlds/korvin-merrow/task-setup/task5/design/KM05-claude-ai-proposal-6-7.md` and `worlds/korvin-merrow/task-setup/task5/design/KM05-codex-black-team-6-7.md` for historical KM05 review convergence and clean-baseline-versus-escalation discussion. Their moderate fallback is retired.
+42. `worlds/korvin-merrow/task-setup/task5/build-phase-drafts/` for KM05 copied inputs, byte/source audit, draft prompt, golden/grader deltas, mounted-source draft, manifest plan, pilot preregistration, and Claude review request only.
+43. `worlds/korvin-merrow/task-setup/platform/task1/` for live Task 1 platform artifacts.
+44. `worlds/korvin-merrow/task-setup/platform/task1/archive/` only for historical Task 1 iterations.
 
 Clinical canon lookup ladder:
 
@@ -907,6 +910,7 @@ Current contents:
 - `worlds/korvin-merrow/task-setup/task4/runs/KM04-v2-taiga-results-709be0e8.md`: Durable KM04 v2 trajectory result record. Job `709be0e8`, completed 2026-06-08, mean 0.689, three sub-70 runs, tail 0.15. Verdict: difficulty cleared on the anemia-of-CKD / absent iron-workup propagation axis.
 - `worlds/korvin-merrow/task-setup/task4/runs/KM04-v2-grading-transcripts-709be0e8.md`: Durable KM04 v2 grading transcript verification record. Confirms all 0.15 failures are anemia-propagation, the 0.97 catch is rewarded, and Attempt 5 is the FA/GA subject with Attempt 6 as comparator.
 - `worlds/korvin-merrow/task-setup/task4/fa-ga/FA-GA-current.md`: Local KM04 v2 FA/GA current draft. Physician-owned and not platform-entered; no FA/GA AutoQC, PL, final review, upload, or RL Studio mutation is implied.
+- `worlds/korvin-merrow/task-setup/task4/preference-labeling/KM04-PL-recommended-verdicts-DRAFT.md`: Local KM04 v2 Preference Labeling draft recommendations for three separate comparisons after FA/GA. Draft only; not platform-submitted and no PL AutoQC has run.
 - `worlds/korvin-merrow/task-setup/task4/design/KM04-design-plan-for-review.md`: Task 4 design review packet. Treats locked KM04 task identity as settled and focuses on build mechanism, source findings, discriminator, fairness, and future build sequence.
 - `worlds/korvin-merrow/task-setup/task4/KM04-prebuild-review-and-build-gates.md`: Task 4 gate checklist for G0 spine read receipt / KM03 dependency, G1 prompt, G2 golden/grader deltas, G3 mounted draft and hypothesis kill-chain, G4 mount manifest, G5 Mode A hygiene, G6 pilot preregistration, G7 clinical-register scan, and G8 difficulty prediction. Review only.
 - `worlds/korvin-merrow/task-setup/task4/build-phase-drafts/`: Task 4 draft/review packet. Contains byte/source audit, de-telegraphed prompt draft, golden/grader deltas, mounted synthesis source draft, mount manifests, pilot preregistration, `KM04-review-request-for-claude-ai.md`, `KM04-claude-ai-review-6-7.md`, `KM04-codex-black-team-review-6-7.md`, current v2 planning/review/build-proposal files, and `inputs/` copies of locked KM04 canon plus the held-back consultant-synthesis request DOCX. Not platform-current artifacts.
