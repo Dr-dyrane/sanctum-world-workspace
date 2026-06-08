@@ -17,6 +17,8 @@ Task: KM03 - discharge planning documentation escalation. Status: v2.2 active / 
 - `build-phase-drafts/`: draft packet for reviewing G1-G3 closure concepts. Source drafts and copied inputs are trackable; the local ZIP bundle is ignored.
 - `build-phase-drafts/01-build-phase-review-responses.md`: build-phase review response record. Captures the frame decision from STRIP to COMPLETION and the v2.1 source-authority correction.
 - `build-phase-drafts/KM03-v2.2-FAGA-packet-for-claude-ai.md`: self-contained FA/GA drafting packet for Claude.ai after transcript verification. It is not a platform FA/GA artifact and does not submit anything.
+- `build-phase-drafts/KM03-golden-clinical-register-guide.md`: local clinical-register guide for Alexander's future golden wording polish. Support only; not golden text, not a DOCX build, and not platform-entered.
+- `build-phase-drafts/grader-guidelines-task3-RESTRUCTURED.txt`: local section-mapped grader helper for FA/GA reasoning against the active v2.2 grader. Draft/support only; not a platform-current grader replacement and not upload-ready.
 - `fa-ga/FA-GA-current.md`: verified local FA/GA current draft for Attempt 9 (0.20), with Attempt 8 (0.97) as GA comparator. It is physician-owned, local-only, and not platform-entered.
 - `KM03-state-log.md`: live event log for KM03 after staging, including v1/v2.1 difficulty failures, v2.2 build, Task AutoQC pass, and trajectory/QA state.
 - `../platform/task3/current/`: current folder contains only the active v2.2 platform set plus `RUN-INSTRUCTIONS.md`. Active files are `prompt-task3-v2.2.txt`, `discharge_planning_summary_draft_05242026.docx`, `golden-KM03-v2.2.docx`, and `grader-guidelines-task3-v2.2.txt`.

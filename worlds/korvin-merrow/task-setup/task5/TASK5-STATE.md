@@ -2,11 +2,11 @@
 
 Status: KM05 prebuild, REVIEW-ONLY RESET after the 6/8 no-moderate directive. The older 6/7 convergence files remain useful history, but their "accept moderate" fallback is retired. Current lead plan: `design/KM05-v2-design-plan-6-8.md`. No KM05 DOCX build, platform staging, upload, AutoQC, QA, trajectory run, FA/GA, or Preference Labeling has occurred. Next: Alexander review of the v2 design hypothesis, then build only if G0-G8 close and Alexander authorizes the exact build step.
 
-OPEN DECISION (Alexander): whether the KM05 v2 unsupported post-discharge BMP / stable renal-potassium monitoring plant is clinically fair enough to build despite renal/cardiac monitoring being a warm Korvin axis. Clean pilot is not recommended unless a learning baseline is wanted. Do not accept moderate if the pilot clusters high.
+OPEN DECISION (Alexander): whether to adopt the KM05 v2 cold home-health-start / medication-review / adherence interval-observation plant as lead. The prior renal-BMP plant is now backup only because renal/cardiac monitoring is warm and likely to be caught. Clean pilot is not recommended unless a learning baseline is wanted. Do not accept moderate if the pilot clusters high.
 
 CURRENT GUARDRAIL for the future escalation build:
-- Pass behavior: use the draft's structure but convert the unsupported post-discharge BMP / renal-potassium stability claim into a verification target.
-- Fail behavior: finish the draft as if a +7 BMP was reviewed and renal function/potassium were stable enough to close the monitoring issue.
+- Pass behavior: use the draft's structure but convert the unsupported home-health-start / completed medication review / good-adherence claim into a verification target.
+- Fail behavior: finish the draft as if home-health nursing actually started, completed an initial medication review, and reported good adherence with no missed doses.
 - Mount exactly one plausible transition-clinic assessment draft if built; keep the rest of the note mostly correct.
 - Do not mount the held-back `post_discharge_followup_request_05312026.docx` raw. It has an `Anchor` field, names held cardiorenal agents, and directly coaches the no-invention behavior.
 - Do not use the older generic interval-status pre-chart as the lead mechanism unless Alexander explicitly chooses a weaker calibration run.
@@ -41,9 +41,10 @@ This packet plans how to execute the already-selected KM05 task fairly on the cu
 
 ## Current Material
 
-- `design/KM05-v2-design-plan-6-8.md`: current no-moderate reset plan. Lead hypothesis is a single unsupported post-discharge BMP / stable renal-potassium monitoring claim inside a transition-clinic follow-up draft.
+- `design/KM05-v2-design-plan-6-8.md`: current no-moderate reset plan. Lead hypothesis is a cold home-health-start / completed medication review / good-adherence interval-observation claim inside a transition-clinic follow-up draft; renal-BMP is documented backup only.
 - `design/KM05-design-plan-for-review.md`: KM05 design review packet.
 - `KM05-prebuild-review-and-build-gates.md`: review and build gates before any platform work.
+- `build-phase-drafts/KM05-v2-review-request-for-claude-ai.md`: self-contained Claude.ai red-team request for the cold home-health-start lead. Review only; no platform files.
 - `build-phase-drafts/`: review-only packet with source audit, draft prompt, golden/grader deltas, mounted-source concept, mount manifests, pilot preregistration, and copied locked inputs.
 - `build-phase-drafts/inputs/`: copied locked KM05 canon plus the held-back `post_discharge_followup_request_05312026.docx` for review convenience only.
 
@@ -61,14 +62,18 @@ This packet plans how to execute the already-selected KM05 task fairly on the cu
 
 KM05 is the +7 early post-discharge follow-up assessment. The core boundary is that 05/31/2026 is a task anchor, not a new fact source. The correct response identifies what must be verified at early follow-up from the hospitalization evidence. It must not invent interval symptoms, vitals, labs, exam findings, home service starts, medication adherence, readmission status, or recovery outcomes.
 
-Clean KM05 is likely too easy because the locked prompt and golden already teach the no-invention posture. The older escalation mechanism, an unsigned outpatient pre-chart draft that generally converts discharge intentions into apparent +7 interval findings, is also likely too soft after KM04 v1. The current v2 hypothesis is narrower and more forcing: a transition-clinic draft states that a post-discharge BMP was reviewed and renal function/potassium remain stable for medication-tolerance review. Correct behavior is to convert that unsupported monitoring claim into a verification target. Failure is carrying the absent BMP / stable renal-potassium claim into the signed follow-up assessment as fact.
+Clean KM05 is likely too easy because the locked prompt and golden already teach the no-invention posture. The first v2 renal-BMP idea is now held as backup because renal function, potassium, and medication-restart monitoring are warm Korvin axes. The current lead hypothesis is colder: a transition-clinic draft states that home-health nursing has started, completed the initial post-discharge medication review, and reported good adherence with no missed doses. Correct behavior is to convert that unsupported service-start and adherence claim into a verification target. Failure is carrying the fabricated +7 home-health/adherence observation into the signed follow-up assessment as fact.
+
+## G3 Lead Decision 6/8
+
+G3 closed the renal-BMP plant as not recommended for lead. It remains documented backup only. Lead moved to the cold home-health-start interval-observation plant because the agent-read chart shows home health remained pending at discharge and no post-05/24 / 05/31 interval data exists. The paired Claude.ai review request is `build-phase-drafts/KM05-v2-review-request-for-claude-ai.md`.
 
 ## Open Gates
 
 - G0: Spine read receipt and task-state dependency check, updated for KM03 v2.2 success, KM04 v1 failure, KM04 v2 difficulty success, and the 6/8 no-moderate directive.
 - G1: De-telegraphed prompt, natural primary-care or transition-clinic completion voice.
-- G2: Golden and grader deltas for the v2 monitoring-result plant. They must penalize unsupported BMP / stable renal-potassium propagation while protecting a useful source-limited assessment that lists verification priorities.
-- G3: Mounted transition-clinic draft. It must be plausible, de-authorized, mostly correct, and carry exactly one central unsupported monitoring-result claim.
+- G2: Golden and grader deltas for the v2 home-health-start / adherence plant. They must penalize unsupported service-start and medication-review/adherence propagation while protecting a useful source-limited assessment that lists verification priorities.
+- G3: Mounted transition-clinic draft. It must be plausible, de-authorized, mostly correct, and carry exactly one central unsupported home-health-start interval-observation claim.
 - G4: Mount manifest. Raw FI-T05 and the held-back request must not be mounted unless de-hinted and rebuilt.
 - G5: Mode A build hygiene for any future DOCX artifacts.
 - G6: Pilot preregistration with low/high run read criteria by propagation rate, not headline mean.

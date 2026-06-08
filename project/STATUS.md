@@ -8,7 +8,7 @@ KM04 v2 update 6/8: Claude Code created the v2 redesign/build packet at `worlds/
 
 KM04 preference-labeling prep update 6/8: local draft `worlds/korvin-merrow/task-setup/task4/preference-labeling/KM04-PL-recommended-verdicts-DRAFT.md` exists for three required PL comparisons from job `709be0e8`. It recommends B3/B/B3 across three distinct A propagator runs (Attempts 5, 2, and 7) versus B catch runs, with anemia-propagation as the central decider. Draft only; no KM04 PL has been platform-submitted and no PL AutoQC has been run.
 
-KM05 prebuild review has been reset locally at `worlds/korvin-merrow/task-setup/task5/` under the 6/8 no-moderate directive in `worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md`. The older "moderate evidence-boundary task" classification is retired. Current review-only plan: `worlds/korvin-merrow/task-setup/task5/design/KM05-v2-design-plan-6-8.md`, with lead hypothesis = a single unsupported post-discharge BMP / stable renal-potassium monitoring claim inside a transition-clinic draft. KM05 remains HOLD / not built; any future KM05 path must become a genuine difficulty discriminator with a real clinical failure, not a moderate fallback. No KM05 DOCX build, platform-current staging, upload, AutoQC run, agent run, QA, or locked-canon edit has been performed.
+KM05 prebuild review has been reset locally at `worlds/korvin-merrow/task-setup/task5/` under the 6/8 no-moderate directive in `worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md`. The older "moderate evidence-boundary task" classification is retired. Current review-only plan: `worlds/korvin-merrow/task-setup/task5/design/KM05-v2-design-plan-6-8.md`, with lead hypothesis = a cold home-health-start / completed medication-review / good-adherence interval-observation claim inside a transition-clinic draft; renal-BMP is backup only. Paired Claude.ai review request: `worlds/korvin-merrow/task-setup/task5/build-phase-drafts/KM05-v2-review-request-for-claude-ai.md`. KM05 remains HOLD / not built; any future KM05 path must become a genuine difficulty discriminator with a real clinical failure, not a moderate fallback. No KM05 DOCX build, platform-current staging, upload, AutoQC run, agent run, QA, or locked-canon edit has been performed.
 
 KM03 update 6/8: job `58b5f3e3` is recorded by Alexander as the KM03 v2.1 difficulty failure (10 trajectories 90-97, mean about 93.6, zero sub-70), with a transcript-lineage caveat because captured outputs show v1-era filenames/prompt/golden-v1. Full local record is `worlds/korvin-merrow/task-setup/task3/runs/KM03-taiga-results-58b5f3e3.md`; transcript tarballs remain ignored/local per `.gitignore`. Next path is Alexander's held Taiga decision for v2.2, not FA/GA/PL/final review from v2.1.
 
@@ -90,9 +90,9 @@ Active blocker: no repository blocker. Task 1 final human review is complete. Ta
 
 ## Current Git Checkpoint
 
-checkpoint: track KM04 v2 preference-label draft
+checkpoint: record KM05 v2 cold home-health review request
 
-Previous checkpoint: checkpoint: record KM04 v2 difficulty clearance and KM05 v2 reset plan
+Previous checkpoint: checkpoint: track KM04 v2 preference-label draft
 
 ## Active Branch
 
