@@ -1,8 +1,8 @@
 # TASK4-STATE
 
-Status: KM04 STAGED FOR PLATFORM UPLOAD (per Alexander 6/7 "prepare platform current, I am ready to upload"). Four platform artifacts plus local run instructions are staged at `platform/task4/current/` with all four Claude.ai-review fixes applied. Codex black-team review passed with no blocker (see `build-phase-drafts/KM04-codex-black-team-review-6-7.md`). NOT uploaded by Claude Code, NOT AutoQC-run, NOT agent-run. Golden requires Alexander physician sign-off before final platform use. KM03 v2.1 Task AutoQC passed (`qcaud_fc`); KM03 Taiga is intentionally held.
+Status: KM04 v1 TAIGA-COMPLETE / DIFFICULTY FAILED. Alexander-operated Run All QA evidence for job `55ee209f-c9fa-4a64-8071-70d8917508da` completed 2026-06-08 with 10 trajectories scoring 0.87-0.95, mean 0.912, and zero sub-70 runs. The mounted resident-draft mechanism did not produce a significant clinical failure. Durable local record: `runs/KM04-taiga-results-55ee209f.md`. Do not proceed to FA/GA, Preference Labeling, or final review from KM04 v1 unless Alexander explicitly overrides the difficulty gate.
 
-Staged set (platform/task4/current/):
+V1 platform set tested / staged (platform/task4/current/):
 - prompt-task4-escalation.txt (G1 verbatim authoring-posture prompt)
 - interdisciplinary_consultant_synthesis_draft_05242026.docx (mounted resident DRAFT for attending review; Mode A clone of KM02 task base; cardiorenal paragraph QUIETED per fix 1; fingerprint diff empty; metadata scrubbed; em-dash 0; no leak tokens; author Ines Travyn MD PGY-2 for Elian Vossmere MD, both in-roster)
 - golden-KM04-v1.docx (DRAFT, physician sign-off pending; Mode A clone of golden-KM02-v5; worked attribute-and-revise non-ratification passage per fixes 2/4; staged hospitalist-owned plan; fingerprint diff empty; metadata scrubbed)
@@ -13,6 +13,22 @@ Staged set (platform/task4/current/):
 Build verification: both DOCX pass verify_against_base (styles.xml byte-identical, fills/borders identical, palette subset, em/en/arrow 0, no synthetic token, no banner, core metadata scrubbed); leak scan clean (no FI IDs, trap/friction/architecture words); dates only 05/24/2026 + DOB 02/18/1964.
 
 Standing guard carried into RUN-INSTRUCTIONS: do NOT mount the rendered FI-T04 request (still carries "friction", not de-hinted) in either set.
+
+## Taiga Result (6/8)
+
+Job: `55ee209f-c9fa-4a64-8071-70d8917508da`.
+
+Scores: 0.92, 0.87, 0.92, 0.92, 0.92, 0.95, 0.92, 0.90, 0.92, 0.88.
+
+Mean: 0.912. Range: 0.87-0.95. Sub-70: 0/10. Below 0.90: 2/10.
+
+Representative low-visible run: Attempt 10 / `c3765ab8-617f-42e9-a8e5-14ba6a2e6e79` scored 0.88. The grader found the output strong: it declined the resident draft's over-closure, preserved Cardiology and Nephrology as reasonable, used MAR/trend data, preserved steroid uncertainty, integrated PT/OT/nursing/family/case-management evidence, and delivered a staged plan. Its issues were minor style or conditionality concerns, not the intended adoption failure.
+
+Representative high run: Attempt 6 / `aebbfc8e-8c6e-47ef-a06a-2a486473b34d` scored 0.95. The grader called it near-perfect and credited the same core catches.
+
+Interpretation: KM04 v1 is clinically coherent but empirically too easy. The model reliably caught the polished resident draft's consensus/ready-for-signoff overclaim after reading the chart. The failure mode was not sticky enough.
+
+Next default: retire or redesign KM04 v1 before any additional platform work. Do not write FA/GA for KM04 v1 as a shipping candidate unless Alexander explicitly decides to proceed despite the difficulty failure.
 
 Previously: Claude.ai build-phase independent review returned 6/7 GO WITH FIXES (see `build-phase-drafts/KM04-claude-ai-review-6-7.md`); the four fixes below are now applied in the staged set.
 
@@ -44,7 +60,7 @@ Before any KM04 drafting, build, or platform staging, read:
 7. this file
 8. `KM04-prebuild-review-and-build-gates.md`
 
-Required read receipt for any future KM04 iteration: state files read, current task states, forbidden actions, three no-repeat lessons, and whether KM03 trajectory/QA results have returned. Current KM04 status is no longer prebuild-only; it is locally staged but not uploaded, AutoQC-run, or agent-run.
+Required read receipt for any future KM04 iteration: state files read, current task states, forbidden actions, three no-repeat lessons, and whether KM03 trajectory/QA results have returned. Current KM04 v1 status is no longer prebuild-only or merely staged; it has completed a trajectory run and failed the difficulty gate.
 
 ## Current Material
 
@@ -64,24 +80,24 @@ Required read receipt for any future KM04 iteration: state files read, current t
 
 ## Current Design Direction
 
-KM04 remains the planned consultant-synthesis task. The review packet does not reopen the task choice.
+KM04 remains the planned consultant-synthesis task identity, but v1 does not ship.
 
 The proposed escalation mechanism is a consultant-consensus overclaim: a plausible hospitalist synthesis draft says the consultant tensions have been reconciled and the interdisciplinary plan is ready to proceed. The correct response revises or refuses that over-closure and preserves staged cardiorenal sequencing, steroid-source uncertainty, functional/caregiver evidence, and pending transition logistics. The scored failure is adopting the handed synthesis as if consultant alignment and readiness are complete.
 
-Current watch: the mounted synthesis draft must not become a loud medication-restart error hunt. The quiet KM04-native discriminator is over-ratifying a polished consultant synthesis as ready for sign-off when the chart still requires staged hospitalist ownership.
+Run result: the mounted synthesis draft did not become a loud medication-restart error hunt, but the quiet KM04-native discriminator was still too easy. Strong runs over-rode the polished draft and rebuilt the staged hospitalist-owned plan.
 
 ## Open Gates
 
-- G0: Spine read receipt and KM03 dependency. The builder/reviewer must prove current-state awareness before drafting or building.
+- G0: CLOSED for v1; reopen for any redesign with the new Taiga evidence included.
 - G1: De-telegraphed escalation prompt. It must be natural clinician voice and must not enumerate the answer domains.
 - G2: Escalation golden and grader deltas. They must make adopting the handed synthesis the scored failure while preserving the correct hospitalist-led conditional synthesis.
 - G3: Mounted synthesis draft. It must be fair, in-canon, realistic on its face, no trap/meta leakage, and not a head-on contradiction that only tests chart-reading.
 - G4: Mount manifest. Clean and escalation mount sets must be explicit, and raw FI-T04 architecture text must not be mounted.
 - G5: Build hygiene. Future DOCX build must be Mode A clone, date-audited to 05/24/2026, metadata-scrubbed, rendered, and fingerprint-verified.
-- G6: Pilot preregistration. The packet must say what low and high runs should be read for before trajectories are interpreted.
+- G6: FAILED for v1. The predicted tail did not appear; all runs were 0.87-0.95.
 - G7: Clinical-register scan. Platform-facing prose must sound like a real hospitalist request, chart note, golden, or grader guideline, not internal architecture.
-- G8: Difficulty prediction. The packet must say what wrong move should produce a true clinical failure, why a strong model might make it, and what result would force redesign.
+- G8: FAILED for v1. The intended wrong move was adoption of the resident-draft over-closure; representative transcripts show the model declined that wrong move.
 
 ## Boundaries
 
-Do not upload to RLS, run AutoQC, run agents, alter staged platform-current files, rebuild DOCX artifacts, modify locked canon, or edit the live world without explicit Alexander authorization for that exact step. The current `platform/task4/current/` set is locally staged only and still requires Alexander physician sign-off on the golden before final platform use.
+Do not run additional KM04 uploads, AutoQC, agents, QA, FA/GA, Preference Labeling, final review, platform mutations, staged-file edits, DOCX rebuilds, locked-canon edits, or live-world edits without explicit Alexander authorization for that exact step. The current `platform/task4/current/` set is KM04 v1 evidence and should not be treated as a shipping candidate after the 6/8 difficulty failure.

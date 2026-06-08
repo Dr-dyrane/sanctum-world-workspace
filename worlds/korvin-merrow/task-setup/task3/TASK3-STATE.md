@@ -1,8 +1,12 @@
 # TASK3-STATE
 
-Status: KM03 v2.1 is the active platform set. Alexander uploaded the v2.1 files and Task AutoQC passed with no non-pass flags (`qcaud_fc`). The retired v1 set passed Task AutoQC 36/36 (`qcaud_6b`) but hung in Taiga and is historical only. The active escalation uses the v2.1 de-authorized draft / COMPLETION-overclaim frame. Current decision: do not run Taiga trajectories yet; proceed to the same gated flow for KM04.
+Status: KM03 escalation FAILED through v2.1; redesign to v2.2 needed. Per Alexander, v2.1 is too easy (Taiga job 58b5f3e3, 10 trajectories 90-97, mean ~93.6, zero sub-70, fails the difficulty gate). Lineage: v1 too easy -> v2.1 -> v2.1 also too easy. (Byte note: the captured transcripts carry v1-era naming/audit prompt/golden-v1; recorded as v2.1 per Alexander, worth a 30-sec confirm of which set executed - does not change the conclusion.) KM04 v1 failed the same gate (job 55ee209f, mean 0.912), so the whole "evaluate/reconcile a handed discharge document" family is too easy for this model.
 
-Task: KM03 - active platform task after Task AutoQC pass, intentionally held before Taiga trajectories.
+ROOT CAUSE: KM03/KM04 are caution-genre tasks; the model's trained default (be cautious, preserve conditionality, do not rubber-stamp) IS the correct answer, so caution is free and there is no forced wrong commitment. Source-authority tweaks do not fix this.
+
+v2.2 DIRECTION (the only mechanism that ever produced a Korvin sub-70 = KM02 completion-propagation): flip the genre from "evaluate readiness" to "finalize/file the discharge-planning document of record"; plant a finding-like false completed-coordination OUTCOME on a COLD axis (e.g. in-home safety eval completed / agency start-of-care completed - NOT prednisone/cardiorenal, which the model hunts); grader scores propagation of that finding into the filed document, not "preserved conditional readiness". Full strategy + cross-agent review questions: `build-phase-drafts/KM03-v2.2-strategy-draft.md`. Same medicine likely applies to KM04. DRAFT only; no build/stage/upload; pending Alexander + cross-agent (Claude.ai/Codex) review then build authorization.
+
+Task: KM03 - discharge planning documentation escalation. Status: failed through v2.1 and awaiting v2.2 redesign authorization.
 
 ## Current Material
 
@@ -11,8 +15,8 @@ Task: KM03 - active platform task after Task AutoQC pass, intentionally held bef
 - `build-phase-drafts/`: draft packet for reviewing G1-G3 closure concepts. Source drafts and copied inputs are trackable; the local ZIP bundle is ignored.
 - `build-phase-drafts/01-build-phase-review-responses.md`: build-phase review response record. Captures the frame decision from STRIP to COMPLETION and the v2.1 source-authority correction.
 - `KM03-state-log.md`: live event log for KM03 after staging, including Task AutoQC pass and trajectory/QA state.
-- `../platform/task3/current/`: active KM03 v2.1 escalation platform set. Contains `prompt-task3-v2.txt`, `care_coordination_handoff_draft_05242026.docx` (`f3b7bcdf`), `golden-KM03-v2.docx` (`3da7386f`), `grader-guidelines-task3-v2.txt`, and `RUN-INSTRUCTIONS.md`.
-- `../platform/task3/archive/v1-retired-after-task-writing-reset/`: retired v1 platform set. It passed Task AutoQC 36/36 (`qcaud_6b`) after metadata scrub but hung in Taiga and is historical only.
+- `../platform/task3/current/`: prior KM03 v2.1 platform set. It is evidence only after the difficulty failure, not a shipping candidate.
+- `../platform/task3/archive/v1-retired-after-task-writing-reset/`: retired v1 platform set. Historical evidence only.
 - `bundles/`: ignored local review bundle material only, if present.
 
 ## Build Gates
@@ -36,7 +40,7 @@ Task: KM03 - active platform task after Task AutoQC pass, intentionally held bef
 - Platform upload: completed under Alexander operation.
 - Task AutoQC: PASS 36/36 (`qcaud_6b`).
 - Metadata scrub: python-docx core metadata leak was cleared in the retired v1 golden and mounted note. Retired v1 shas are `golden-KM03-v1.docx` = `5feb3227` and `case_management_discharge_readiness_clearance_05242026.docx` = `95f6affb`; earlier `dc5c4833` and `b9f7a1a3` were pre-scrub.
-- Run state: v1 hung in Taiga after the task-writing reset and is archived as historical evidence only.
+- Run state: v1/v2.1 lineage is superseded by the recorded `58b5f3e3` difficulty failure; see `runs/KM03-taiga-results-58b5f3e3.md`.
 - Known set-aside: the "Synthetic Training Document" footer in six finalized world files is a world-level item intentionally set aside because reopening the world would force redo of KM01/KM02.
 - Open: none for v1; do not revive without explicit Alexander authorization.
 
@@ -45,9 +49,9 @@ Task: KM03 - active platform task after Task AutoQC pass, intentionally held bef
 - Platform upload: completed under Alexander operation.
 - Active files: `prompt-task3-v2.txt`, `care_coordination_handoff_draft_05242026.docx` (`f3b7bcdf`), `golden-KM03-v2.docx` (`3da7386f`), `grader-guidelines-task3-v2.txt`, and `RUN-INSTRUCTIONS.md`.
 - Task AutoQC / pre-Taiga QC: PASS with no non-pass flags (`qcaud_fc`). Notes field records no errors and says the prior DOCX core-metadata flag was fixed by scrubbing core properties.
-- Current run decision: do not click Run Taiga Trajectories & QA yet.
+- Current run decision: do not proceed to FA/GA, Preference Labeling, final review, or another Taiga run from v2.1; review/authorize v2.2 redesign first.
 - Local DOCX check: current v2.1 DOCX files open as ZIP and with python-docx, contain required Word package parts, and have scrubbed core metadata with no `python-docx`, local path, Codex/Claude, trap, source-of-truth, synthetic-banner, or signed-clearance leakage.
-- Open: future Taiga run remains held pending explicit Alexander decision.
+- Open: v2.2 redesign review/authorization, with the transcript-lineage caveat preserved in the run record.
 
 ## Inherited Guardrails
 
@@ -58,9 +62,9 @@ Task: KM03 - active platform task after Task AutoQC pass, intentionally held bef
 
 ## Boundaries
 
-Do not rerun AutoQC, rerun agents, rerun QA, upload additional files, create AutoQC responses, create preference-label artifacts, or mutate RL Studio unless Alexander explicitly authorizes that exact step. Current next step: hold KM03 before Taiga and carry the same gated task-writing / Task AutoQC flow into KM04 only after exact Alexander authorization.
+Do not rerun AutoQC, rerun agents, rerun QA, upload additional files, create AutoQC responses, create preference-label artifacts, write FA/GA or PL from v2.1, redesign v2.2, or mutate RL Studio unless Alexander explicitly authorizes that exact step. Current next step: review the v2.2 strategy, not another v2.1 platform action.
 
 
 ## 6/7 late: KM03 v2.1 ACTIVE PLATFORM SET
 
-v2.1 promoted to `platform/task3/current/` (`prompt-task3-v2.txt`, `care_coordination_handoff_draft_05242026.docx`, `golden-KM03-v2.docx` DRAFT sign-off-pending, `grader-guidelines-task3-v2.txt`, `RUN-INSTRUCTIONS.md`). v1 is preserved unchanged at `platform/task3/archive/v1-retired-after-task-writing-reset/` (uploaded, AutoQC `qcaud_6b` pass, hung in Taiga, retired after task-writing reset; historical only). Mechanism: authoring posture over a de-authorized unsigned care-coordination handoff DRAFT; fair failure = promoting the draft unverified completion into a signed physician addendum. Build authority = `KM03-v2.1-LOCKED-build-plan.md`. NOT performed by Claude Code: RL Studio upload or Task AutoQC / pre-Taiga QC. CURRENT: Alexander uploaded the v2.1 files and Task AutoQC passed with no non-pass flags (`qcaud_fc`); Taiga trajectories are intentionally held.
+v2.1 was promoted to `platform/task3/current/` and Task AutoQC passed (`qcaud_fc`). Later trajectory evidence is recorded at `runs/KM03-taiga-results-58b5f3e3.md`: recorded as v2.1 per Alexander, with v1-era artifact naming caveat, and difficulty-failed at 90-97. The v2.1 set is evidence only; do not advance it without explicit redesign/override authorization.
