@@ -68,6 +68,19 @@ Latest remediation submission: revised Korvin Merrow Brainstorm uploaded; AutoQC
 
 Reviewer GO: Stacey S approved Brainstorm via Slack. Recorded in `worlds/korvin-merrow/reviews/reviewer-go-01.md`.
 
+## Repo Health Sync 2026-06-09
+
+Current task frontier is newer than the older KM03/KM04/KM05 summary blocks above. Treat this sync as the live task-stage entry point unless a newer `TASKN-STATE.md` supersedes it.
+
+- KM01 through KM04: Ready for Delivery / complete according to the current dashboard continuity update.
+- KM05: all three Preference Labels submitted; status is awaiting / in final review depending on the live platform board. Do not mutate platform state without exact Alexander authorization.
+- KM06: Abi approved first human review at 8:56 AM on 2026-06-09: "Approved. Ready for PL." KM06 is in Preference Labeling. Three local PL drafts exist under `worlds/korvin-merrow/task-setup/task6/preference-labeling/`; PL submission and PL AutoQC remain Alexander-operated steps.
+- Task 7 / KM07: nephrology referral-letter packet is staged under `worlds/korvin-merrow/task-setup/platform/task7/current/` with `TASK7-STATE.md` as the live cockpit. It is a variety-first, from-scratch referral-letter task with no mounted draft. Upload / AutoQC / pilot require exact Alexander authorization.
+- Task 8 / KM08: inpatient-vs-observation status determination v3 was piloted and found too easy, job `04270757`, mean about 96.4 with zero sub-90. `worlds/korvin-merrow/task-setup/task8/TASK8-STATE.md` records the diagnosis and next-decision options. Do not ship v3 as-is.
+- Abi's 2026-06-09 standing guidance is now recorded: FA/GA should be failure-only, self-contained, and avoid naming grader Section A/B/C; EnvLinter / Taiga QA annotations must state the actual rationale rather than citing a reviewer.
+
+Working-tree hygiene note: Task 6 PL files and Task 7/8 task/platform folders are intentional task-stage materials, not locked world-canon changes. The ignored `files.zip` under Task 8 guidance remains local only.
+
 ## Current Pass
 
 Task 1 Final Review: COMPLETE / APPROVED. Step 9 generated-file review is closed and preserved under `worlds/korvin-merrow/file-review/`. Task 1 platform artifacts, trajectory records, FA/GA records, Abi review records, hardening drafts, and lifecycle record are preserved under `worlds/korvin-merrow/task-setup/`. Final review record: `worlds/korvin-merrow/task-setup/reviews/task1-final-review-ao-2026-06-06.md`. Task 2 state starts at `worlds/korvin-merrow/task-setup/task2/TASK2-STATE.md`. Clean pilot evidence is preserved under `worlds/korvin-merrow/task-setup/task2/runs/clean-pilot/`; it was too easy and generated no true clinical failure. Task 2 v2 escalation evidence is preserved under `worlds/korvin-merrow/task-setup/task2/runs/escalation-v2/`. Task 2 v3 reseed evidence is preserved under `worlds/korvin-merrow/task-setup/task2/runs/escalation-v3/`; the submitted / Abi-approved FA/GA local copy is `worlds/korvin-merrow/task-setup/task2/fa-ga/FA-GA-current.md`. Local Task 2 Preference Labeling prep lives under `worlds/korvin-merrow/task-setup/task2/preference-labeling/`.
@@ -86,11 +99,11 @@ KM05 state starts at `worlds/korvin-merrow/task-setup/task5/TASK5-STATE.md`. Cur
 
 ## Active Blocker
 
-Active blocker: no repository blocker. KM03 and KM04 FA/GA entered on platform; FA/GA AutoQC passed for both. Next for both: active PL phase. KM03 PL #1-#3 are drafted locally; KM03 needs their platform submission, and KM04 PL #1-#2 are drafted locally while KM04 still needs one more PL draft/submission. Run PL AutoQC after each, then final review (Sang). KM05 remains HOLD / review-only reset. Do not proceed to final review, additional uploads, agent runs, QA, AutoQC responses, KM05 build/platform staging, or RL Studio mutations without Alexander explicitly authorizing the exact step.
+Active blocker: platform-side task advancement requires exact Alexander authorization. Current known local frontier: KM06 PL drafts are ready locally but not submitted by Codex; KM07 is staged locally but not uploaded by Codex; KM08 v3 is too easy and requires a depth-versus-variety decision before any next build. Do not proceed to PL submission, PL AutoQC, final review, additional uploads, agent runs, QA, AutoQC responses, KM07/KM08 platform mutation, or RL Studio mutation without Alexander explicitly authorizing the exact step.
 
 ## Current Git Checkpoint
 
-checkpoint: record KM03 KM04 PL draft progress
+checkpoint: repo health hygiene update
 
 Previous checkpoint: clarify KM03 KM04 FA-GA platform entry state
 
@@ -108,9 +121,13 @@ Return to baseline commit if workflow becomes corrupted.
 
 ## Next Command For Codex
 
-KM05 live override: start with `worlds/korvin-merrow/task-setup/task5/TASK5-STATE.md` and `worlds/korvin-merrow/task-setup/task5/design/KM05-v2-design-plan-6-8.md` before the older KM05 review files. The older `KM05-claude-ai-proposal-6-7.md` and `KM05-codex-black-team-6-7.md` are historical because their moderate fallback is retired.
+Start with the active task cockpit for the target task before acting:
 
-Support Alexander from Task 1 approved, Task 2 COMPLETE / RFD (Janette 6/8), KM03 FA/GA entered / FA-GA AutoQC passed, KM04 FA/GA entered / FA-GA AutoQC passed, and KM05 review-only-reset / hold state. Both KM03 and KM04 next: active PL phase. KM03 PL #1-#3 are drafted locally; KM03 needs their platform submission, and KM04 PL #1-#2 are drafted locally while KM04 still needs one more PL draft/submission. Run PL AutoQC after each, then final review (Sang). Do not proceed to final review, additional uploads, agent runs, KM05 build/platform staging, or RL Studio mutations without Alexander explicitly authorizing the exact step.
+- KM06: `worlds/korvin-merrow/task-setup/task6/TASK6-STATE.md` plus `worlds/korvin-merrow/task-setup/task6/preference-labeling/`.
+- KM07: `worlds/korvin-merrow/task-setup/task7/TASK7-STATE.md` plus `worlds/korvin-merrow/task-setup/platform/task7/current/`.
+- KM08: `worlds/korvin-merrow/task-setup/task8/TASK8-STATE.md` plus `worlds/korvin-merrow/task-setup/task8/design/`.
+
+Support Alexander from the current frontier: KM06 PL, KM07 staged upload decision, and KM08 depth-versus-variety decision after the inpatient-vs-observation pilot failed to bite. Do not proceed to final review, additional uploads, agent runs, KM07/KM08 build/platform staging, or RL Studio mutations without Alexander explicitly authorizing the exact step.
 
 At the end of any working session, apply the collaborator session-exit discipline before final reporting and commit completed process or construction work unless Alexander explicitly instructs not to commit.
 

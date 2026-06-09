@@ -53,7 +53,7 @@ KM03 v2.2 KM02-bar plan update 6/8: current primary mechanism source is `worlds/
 
 Goal: Failure analysis, preference labeling, AutoQC, and final reviewer review.
 
-Status: Task 1 final human review COMPLETE / APPROVED. Source-of-truth: 06/02 instruction document, Phase 4 sequence through final reviewer review. Next eligible work is Alexander-authorized continuation to the next platform task step.
+Status: Task 1 final human review COMPLETE / APPROVED. KM02 through KM04 are Ready for Delivery / complete according to current dashboard continuity. KM05 has all three Preference Labels submitted and is in the final-review lane. KM06 was approved by Abi on 2026-06-09 and is now in Preference Labeling, with local PL drafts under `worlds/korvin-merrow/task-setup/task6/preference-labeling/`. KM07 is staged locally as a nephrology referral-letter task under `worlds/korvin-merrow/task-setup/platform/task7/current/`, pending Alexander-operated upload / AutoQC / pilot authorization. KM08 inpatient-vs-observation v3 piloted too easy, job `04270757`, mean about 96.4 with zero sub-90; do not ship v3 as-is. Source-of-truth: 06/02 instruction document, Phase 4 sequence through final reviewer review, plus task-specific state files. Next eligible work is Alexander-authorized continuation to the exact next platform task step.
 
 ## Explicitly Out Of Scope Until Approval
 

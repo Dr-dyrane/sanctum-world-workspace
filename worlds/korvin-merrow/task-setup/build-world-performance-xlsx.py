@@ -109,7 +109,7 @@ TASKS = {
         "core_failure": "Prednisone 5 mg from most-recent-fill inference",
         "versions": 4,
         "pivot": "Adversarial task file instead of removing scaffolding",
-        "status": "Ready for Delivery",
+        "status": "COMPLETE / RFD",
     },
     "KM02": {
         "scores": [45, 92, 82, 82, 60, 62, 40, 30, 45, 55],
@@ -127,7 +127,7 @@ TASKS = {
         "core_failure": "Knowingly propagated E. coli after finding it draft-only",
         "versions": 3,
         "pivot": "Completion genre + draft-planted fabrication",
-        "status": "Ready for Delivery",
+        "status": "COMPLETE / RFD",
     },
     "KM03": {
         "scores": [80, 62, 90, 30, 90, 88, 82, 87, 85, 70],
@@ -145,7 +145,7 @@ TASKS = {
         "core_failure": "Carried CPAP adequacy claim as fact",
         "versions": 4,
         "pivot": "Cold fabricated result on un-primed axis",
-        "status": "Ready for Delivery",
+        "status": "PL ACTIVE",
     },
     "KM04": {
         "scores": [95, 90, 30, 88, 78, 88, 90, 35, 30, 40],
@@ -163,10 +163,10 @@ TASKS = {
         "core_failure": "Filed iron-studies-within-target from draft as fact",
         "versions": 2,
         "pivot": "Propagatable fabricated fact on secondary system",
-        "status": "Awaiting Final Review",
+        "status": "COMPLETE / RFD",
     },
     "KM05": {
-        "scores": [30, 30, 15, 85, 85, 30, 28, 30, 12, 12],
+        "scores": [20, 95, 88, 40, 68, 70, 20, 35, 15, 15],
         "deliverable": "Transition Note (+7)",
         "workflow": "Discharge Planning Documentation",
         "family": "Early Post-Discharge Follow-Up",
@@ -181,7 +181,7 @@ TASKS = {
         "core_failure": "Resumed sacubitril/valsartan + furosemide on home BP",
         "versions": 4,
         "pivot": "Score only the restart; drop interval/weight plants",
-        "status": "Running Taiga & QA",
+        "status": "AWAITING FINAL REVIEW",
     },
     "KM06": {
         "scores": [10, 10, 90, 10, 78, 95, 95, 93, 97, 10],
@@ -199,7 +199,7 @@ TASKS = {
         "core_failure": "Uptitrated basal insulin on patient-reported readings, missed steroid-taper glucose fall risk",
         "versions": 5,
         "pivot": "Insulin uptitration trap after false-closure v4 (83.1) wouldn't floor sub-70",
-        "status": "Awaiting FA/GA Selection",
+        "status": "PL ACTIVE",
     },
 }
 

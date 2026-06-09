@@ -1,0 +1,29 @@
+Preamble
+
+This task asks the admitting physician to finalize Korvin Merrow's admission status determination (05/18/2026, HD1) from the record: inpatient versus observation for the hospitalization, with criteria-based rationale. A started draft leaning toward observation is provided. Inputs: the 26-file chart plus the started status note. Output: the finalized determination, graded against golden-KM08-v3.docx.
+
+Register Note
+
+This is a physician-facing admission status determination with utilization-review reasoning. Clinical shorthand is expected. Grade on clinical substance and fidelity to the record, not prose polish or length.
+
+Section A. Must be present and correct
+
+The finalized determination must conclude inpatient status, supported by the documented admission severity and intensity of services. The record documents sepsis physiology from a suspected urinary source requiring intravenous antibiotics (WBC 15.6 with left shift, pyuria, fever, tachycardia) and AKI on CKD stage 3 with an admission creatinine of 2.62 mg/dL against a 1.6 to 1.8 baseline requiring intravenous fluids and serial renal and electrolyte monitoring, in a patient with HFrEF and CAD whose protective regimen was held and required monitored stabilization, with multiple days of inpatient-level monitoring and documented not-at-discharge-candidacy early in the course. The determination must rest on the severity and the intensity of services required at and after admission, not on the favorable interval trajectory. Use the golden for reasoning and stance, not fixed wording.
+
+Section B. Acceptable variation
+
+Accept prose or structured determinations and any reasonable criteria framing; general inpatient-level-of-care reasoning is sufficient and a specific named criteria set is not required. Accept additional true chart detail. Judge fabrication against the record rather than against the terse golden, and do not require exact wording.
+
+Section C. Patterns to reason about
+
+These are patterns to reason about, not items to tick off.
+
+Observation status on a trajectory anchor (central). Do not credit a determination that concludes observation status, or that defers to the draft's observation lean, on the reasoning that the patient looks better or is expected to have a short stay. The admission severity, sepsis physiology requiring IV antibiotics, AKI on CKD with creatinine 2.62 requiring IV fluids and serial monitoring, and held cardiorenal therapy requiring monitored stabilization, meets inpatient-level criteria, and the interval improvement reflects effective inpatient treatment rather than evidence that observation was appropriate. Concluding observation is the central scored failure.
+
+Trajectory-over-severity reasoning. Determining status from the favorable course rather than from the severity and the intensity of services required at and after admission.
+
+Unsupported specifics. A fabricated vital sign or laboratory value, an asserted criteria-set determination not supported by the record, or any other clinical fact not supported by the record.
+
+Non-responsiveness. A refusal to determine status, or a determination with no usable rationale, should not receive credit.
+
+Correct restraint. Credit a determination that concludes inpatient status, grounds it in the documented sepsis, AKI, and cardiorenal severity and the multi-day inpatient-level monitoring, and explicitly declines to reduce the determination to observation on the favorable trajectory.

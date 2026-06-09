@@ -71,3 +71,14 @@ The grader is **guidance, not a review document.** Write the minimum that lets a
 ## Prompt note (same review, KM04)
 
 Sang also deleted the last sentence of the KM04 prompt ("Work from the record and make sure the plan is complete and internally consistent...") as "unnecessary details for the prompt." Lesson: the physician prompt is a short, first-person, in-role instruction. Do not append meta-guidance that tells the model how to do the task - that belongs in the grader, not the prompt. The prompt sets the scene and asks for the deliverable; it stops there.
+
+## ABI UPDATE 2026-06-09 - FA/GA failure-only + no section names (SUPERSEDES prior "did well" guidance)
+
+Source: Abi O (Pod Lead/Writer), Slack 11:15 AM, "UPDATE TO FAILURE ANALYSIS AND GRADER ANALYSIS". New guidance, different from the current workflow. Applies to every FA and GA from here; SUPERSEDES the runbook D2 and dashboard "2-3 sentences on what failed AND what it did well" and the prior two-paragraph FA/GA format.
+
+1. FAILURE-ONLY. Remove "what the model did well" from the Failure Analysis and "what the grader got right" from the Grader Analysis. We only document what the MODEL did poorly (FA) and what the GRADER did poorly (GA). No credit/praise paragraph.
+2. NO SECTION NAMES (self-containment). Do NOT reference "Section A / B / C" of the grader guidelines by name in the FA or GA. State the actual CONTENT of the section explicitly instead (e.g. write "the requirement to hold insulin glargine at the home 18 units and defer any change to endocrinology" rather than "Section A / the Section C central pattern"), so a reader knows exactly what is meant without the grader in hand.
+3. GRADER LENGTH: ideally 1 page (reaffirms Sang's <= 1 page / 1.25 max).
+4. ENVLINTER / TAIGA QA ANNOTATIONS: descriptive. Explain the ACTUAL rationale for the thumbs-down (the substantive reason the flag is wrong, or the concrete tech-issue cause). NEVER "Rahul/reviewer said it's okay" or any appeal to a reviewer's say-so as the justification.
+
+IMPACT ON EXISTING DRAFTS (must revise before any re-entry): KM06 FA/GA (task6/fa-ga/FA-GA-current.md) and KM05 FA/GA (task5/fa-ga/FA-GA-current.md) were written in the OLD format - each opens with a "what the model did well" paragraph and the GA names Section A/B/C. Revise to failure-only + no-section-names. KM05 is already submitted; flag to Abi whether retroactive revision is wanted. The KM06 PLs (task6/preference-labeling) also name "Section A/C" - PLs are a separate artifact (seven-section PL justification), but apply the no-section-names self-containment spirit there too if re-touched.

@@ -91,3 +91,6 @@ After resubmission:
 - [ ] Save AutoQC output if rerun.
 - [ ] Wait for next reviewer decision.
 
+
+## ABI UPDATE 2026-06-09 - EnvLinter / Taiga QA annotations must be descriptive
+EnvLinter (Taiga QA) thumbs-down annotations must EXPLAIN THE ACTUAL RATIONALE for thumbing down - the substantive reason the flag is wrong, or the concrete cause if it is a tech issue. Do NOT write "Rahul/reviewer said it's okay" or otherwise appeal to a reviewer's say-so as the justification. (These annotations are client-visible; they must stand on their own reasoning.) Pairs with the FA/GA failure-only + no-section-names update in docs/grader-guidelines-lessons.md.

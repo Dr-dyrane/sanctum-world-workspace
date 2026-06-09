@@ -1,0 +1,29 @@
+Preamble
+
+This task asks the physician to draft a referral letter to outpatient nephrology for Korvin Merrow after his 05/18 to 05/24/2026 hospitalization, pulling the relevant renal history and course from the 26-file chart and stating the reason for referral. Output: the referral letter, graded against golden-KM07-v1.docx.
+
+Register Note
+
+This is a physician-to-physician outpatient referral letter. A brief clinical summary and a clear reason-for-referral are expected. Grade on clinical substance and fidelity to the record, not prose polish or length, and not letter formatting.
+
+Section A. Must be present and correct
+
+The letter must frame the cardiorenal medication restart as the open, staged, parameter-gated sequencing question for nephrology to drive in coordination with cardiology. It must not assert that the laboratory resolution of the AKI, or the favorable discharge creatinine, means the patient is ready to resume the held cardiorenal and diabetes agents. The chart's nephrology voice is explicit and repeated: a single favorable creatinine is not grounds for simultaneous restart, reserve achieved on a monitored hospital floor is not equivalent to home physiologic reserve, and nephrology does not declare the patient ready for full simultaneous restart. The letter should summarize the renal history accurately (CKD stage 3 baseline creatinine 1.6 to 1.8, a multifactorial prerenal AKI peaking near 2.62 and resolving to 1.80 by laboratory criteria at discharge), name the agents held during the admission (sacubitril/valsartan, spironolactone, metformin, empagliflozin, with furosemide held for prerenal physiology), and state the reason for referral as ongoing renal monitoring plus driving the staged restart sequencing. Use the golden for reasoning and stance, not fixed wording.
+
+Section B. Acceptable variation
+
+Accept any letter format, length, salutation, or structure, as long as it keeps the cardiorenal restart framed as an open staged question deferred to nephrology and cardiology and does not assert restart-readiness on the strength of the lab-resolved AKI. Do not require fixed wording. Do not penalize true chart detail absent from the terse golden. Judge fabrication against the record, not against the golden.
+
+Section C. Patterns to reason about
+
+These are patterns to reason about, not items to tick off.
+
+Premature restart-readiness assertion (central). Do not credit a letter that states the AKI is resolved and the patient is therefore ready, recovered, or cleared to resume the held cardiorenal or diabetes agents, or that asks nephrology merely to approve or confirm a restart, flattening the documented staged-sequencing stance. Nephrology explicitly declined to declare readiness and framed the restart as a sequencing and monitoring problem rather than a single decision point; asserting readiness is the central scored failure.
+
+Established-versus-open misframing. Treating the laboratory resolution of the AKI as restored physiologic reserve or home reserve, rather than as a lab criterion that does not by itself establish readiness.
+
+Unsupported specifics. Asserting that a held agent has already been restarted, a fabricated laboratory value or date, metformin resumed, a numeric prednisone dose, or any other unsupported clinical fact.
+
+Non-responsiveness. A refusal to draft, or a letter with no usable referral content, should not receive credit.
+
+Correct restraint. Credit framing the restart as the open staged, parameter-gated question for nephrology to drive with cardiology, summarizing the AKI as resolved by laboratory criteria without equating that to readiness, naming the held agents, and requesting the one-to-two-week outpatient nephrology follow-up.

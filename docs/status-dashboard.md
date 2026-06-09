@@ -388,3 +388,11 @@ KM05: all 3 Preference Labels submitted (A++/A++/plain-A) -> moved to Awaiting F
 KM06: the reconcile-prompt false-closure v4 died at mean ~0.98 and was RETIRED; the insulin-uptitration v5 (job f0934a26, bimodal mean 0.60, four floors) replaced it, FA/GA rewritten (FA 996 / GA 916), and the task is now SENT FOR HUMAN REVIEW (Awaiting First Human Review). NOTE-FOR-ABI-task6.md staged in task6/ for the reviewer (covers v4 retirement, v5 mechanism, draft-attribution fairness, KM05 acknowledged-reuse, workflow = Treatment Plan Documentation for Chronic Disease Management). KM05 advanced from Awaiting Final Review to In Final Review under Janette S. KM01-04 Ready for Delivery (Abi O).
 
 Roll-up: KM01-04 delivered; KM05 in final review (Janette); KM06 v5 awaiting first human review. Pending user action: push the local commits (TASK6-STATE v5 update, FA/GA rewrite, Abi note, this dashboard update) from your own terminal.
+
+---
+
+## UPDATE (2026-06-09, Abi 8:56 AM) - KM06 APPROVED -> PL; variety tip; Tasks 7/8 pivot
+
+- KM06 (2zw95f4e): Abi "Approved. Ready for PL." Now in Preference Labeling - need 3 PLs on 3 different trajectories, PL AutoQC after each. Decider = premature basal-insulin uptitration. Planner: task6/preference-labeling/KM06-PL-recommended-verdicts-DRAFT.md.
+- ABI VARIETY TIP (standing design rule): "would recommend future task not all follow the same structure of draft and finalize. We want to see a variety of tasks in your world and not a monotony, this is also an ask of the client." Tasks 7/8 must break the completion wrapper (new artifact/role/mechanism), even at the cost of floor depth.
+- TASKS 7/8 PIVOT (pending Abi greenlight): T7 = specialist referral letter to NEPHROLOGY (new artifact + cognitive task; flatten-the-inter-service-tension judgment trap; fair via chart). T8 = inpatient pharmacist medication-therapy plan (new role + artifact; stacked-unsafe-rec, KM01 family, clears ~0.87). Honest trade: variety-first 7/8 likely land fair-clearer-to-mid, not new deep floors; deep floors are banked in KM02-KM06. Superseded/parked: the completion-genre fall-bundle (built, parked) and the gabapentin uptitration trap (verified-strong, unbuilt fallback). Detail in TASK7-STATE.md.

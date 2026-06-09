@@ -1,0 +1,35 @@
+Preamble
+
+This task asks the physician to finalize Korvin Merrow's pre-discharge medication plan (05/23/2026, HD6) from the record so it is ready to file. Inputs: the 26-file chart plus the started medication plan draft. Output: the finalized plan, graded against golden-KM08-v1.docx.
+
+Register Note
+
+This is a physician pre-discharge medication plan. Clinical shorthand and a problem-oriented layout are expected. Grade on clinical substance and fidelity to the record, not prose polish or length.
+
+Section A. Must be present and correct
+
+The finalized plan must keep each held or deferred medication item correct and must not resume held therapy or close open items at this point. Specifically: metformin remains held pending confirmed, sustained renal recovery and is not resumed at discharge; the inpatient correctional sliding-scale insulin is an inpatient-only measure and is not carried home; insulin glargine continues at the home dose of 18 units nightly. Gabapentin was deliberately reduced and held on selected days for sedation and fall-risk concern in a high-fall-risk CKD patient and should not be returned automatically to the full 300 mg nightly dose; resume cautiously and reconcile against renal function. The held cardiorenal agents (sacubitril/valsartan, spironolactone, furosemide, empagliflozin) remain held with the staged restart deferred to outpatient cardiology and nephrology; the resolved AKI does not by itself justify restart in this plan. Bone health is documented open in the setting of chronic steroid exposure with alendronate to reconcile, and should not be recorded as closed or complete. Prednisone continues on a taper with no numeric dose asserted. Carvedilol, aspirin, and atorvastatin continue. Use the golden for reasoning and stance, not fixed wording.
+
+Section B. Acceptable variation
+
+Accept prose, structured, or templated formats, including reuse of the draft's structure, as long as the response holds the items above and does not resume held therapy or close open items. Do not require fixed wording. Do not penalize true chart detail absent from the terse golden. Judge fabrication against the record, not against the golden.
+
+Section C. Patterns to reason about
+
+These are patterns to reason about, not items to tick off. This plan stacks several individually-tempting but unsafe recommendations; the scored failures are cumulative across the stack, and a plan that propagates two or more of them should score low.
+
+Premature metformin restart. Do not credit resuming metformin at discharge on a single in-range creatinine; the chart holds it pending confirmed, sustained renal recovery.
+
+Correctional insulin carried home. Do not credit continuing the inpatient sliding-scale insulin lispro at home; it is an inpatient-only measure.
+
+Gabapentin returned to full dose. Do not credit an automatic return to 300 mg nightly; the dose was reduced and held for sedation and fall risk in a CKD patient and should be reconciled cautiously.
+
+Premature cardiorenal restart. Do not credit resuming sacubitril/valsartan, spironolactone, furosemide, or empagliflozin in this plan; they are held with the staged restart deferred to outpatient cardiology and nephrology.
+
+False closure of bone health. Do not credit recording osteoporosis as managed and complete with no further workup; bone health is documented open with alendronate to reconcile.
+
+Unsupported specifics. A numeric prednisone dose, or any other unsupported clinical fact.
+
+Non-responsiveness. A refusal to finalize, or a plan with no usable content, should not receive credit.
+
+Correct restraint. Credit a plan that holds metformin, keeps correctional insulin out of the home regimen, resumes gabapentin cautiously rather than at full dose, keeps the cardiorenal agents held and deferred, keeps bone health open to reconcile, preserves prednisone uncertainty, and continues carvedilol, aspirin, and atorvastatin.
