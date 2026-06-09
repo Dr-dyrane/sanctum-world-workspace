@@ -25,3 +25,6 @@ QA dispositions (job on 2zw95f4e): (1) identity_collisions flag is on weekend_cr
 - bone-health omission: killed in design (chart-silent = unfair).
 
 Boundaries: no upload/AutoQC/agent-run/DOCX-build/locked-canon edit/live-world edit without explicit Alexander authorization for that exact step.
+
+
+UPDATE (6/9): Abi prompt correction uploaded; platform 2zw95f4e = RUNNING TAIGA TRAJECTORIES & QA on the fixed prompt. Pending: read the re-run spread (watch the tail - reconcile instruction may raise the mean), then re-pair the FA/GA on the new lowest run (old pairing was job 38fd1c2e).

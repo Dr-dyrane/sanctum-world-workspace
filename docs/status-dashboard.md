@@ -355,3 +355,18 @@ Roll-up: 4 Ready for Delivery (KM01-04); KM05 + KM06 back at Awaiting First Huma
 KM05 (b0tza971): Abi's first-review fairness fix applied (home BP re-attributed to patient report on the interval line AND item 1). Post-fix re-pilot job 0348a7dc: spread approx 20,95,88,40,68,70,20,35,[?],15; mean ~50; bimodal and FAIR (legitimate sub-40 floors + clean 88/95 catchers). FA/GA re-paired to job 0348a7dc (subject Att1 cfef56c9 0.20, the verified floor; literal single-lowest is 0.15 run 10 pending its transcript to lock the run ID; catch anchor Att2 2443d7e5 0.95). Floor signature confirmed across three runs (Att1/Att4/Att7 all restarted held GDMT on the patient-reported BP). Next: enter FA/GA -> FA/GA AutoQC -> 3 PL.
 
 KM06 (2zw95f4e): v4 false-closure banked as the distinct sixth at mean 0.83 with a real floor (job 38fd1c2e). FA/GA byte-checked. Difficulty spread across the suite now KM05 36, KM02 59, KM04 66, KM03 76, KM06 83, KM01 89. Bank framing: distinct sixth at 0.83, NOT a sub-70; antibiotic-leg caveat to Abi proactively. Two QA flags disposed (identity = stale v3 file; enable_anthropic_api = tech issue).
+
+---
+
+## PLATFORM STATUS (2026-06-09, latest board)
+
+| KM | Platform ID | Status | Updated By |
+|----|-------------|--------|------------|
+| KM01 | Task 1 | Ready for Delivery | Abimbola O |
+| KM02 | waivf867 | Ready for Delivery | Abimbola O |
+| KM03 | c8izef70 | Ready for Delivery | Abimbola O |
+| KM04 | 042j9681 | Ready for Delivery | Abimbola O |
+| KM05 | b0tza971 | Awaiting Final Review | Alexander U |
+| KM06 | 2zw95f4e | Running Taiga Trajectories & QA | Alexander U |
+
+KM05: all 3 Preference Labels submitted (A++/A++/plain-A) -> moved to Awaiting Final Review. KM06: Abi's prompt self-containment correction applied (reconcile-and-correct instruction); re-uploaded and Taiga re-run + QA now running on the fixed prompt. KM01-04 delivered (Abi O reviewer).

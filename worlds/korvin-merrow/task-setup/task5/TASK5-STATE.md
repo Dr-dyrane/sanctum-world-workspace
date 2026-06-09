@@ -47,3 +47,5 @@ Honest difficulty call: KM05 is the STRUCTURALLY WEAKEST discriminator of the se
 Deprecated 6/7 build recommendation: HOLD, then staged clean pilot then escalation. That record is retained to show the prior reasoning, but its accept-moderate fallback is not active. Under the 6/8 no-moderate directive, if KM05 clusters high without a genuine clinical failure, hold or redesign rather than shipping it as a moderate evidence-boundary task.
 
 Draft artifacts in the proposal (not built): G1 prompt (authoring posture, de-authorized pre-chart, no enumerated domains, no no-fabrication instruction); EO shape; golden direction
+
+UPDATE (6/9): all 3 Preference Labels submitted (PL1 A++ 0.68v0.35, PL2 A++ 0.95v0.35, PL3 plain-A 0.20v0.15; backups in preference-labeling/). Platform b0tza971 = AWAITING FINAL REVIEW. Done pending final reviewer sign-off.
