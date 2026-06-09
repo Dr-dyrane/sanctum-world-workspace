@@ -1,15 +1,28 @@
-# KM06 v5 (premature basal-insulin uptitration on an unverified home-glucose log) - platform/current upload set
+# KM06 v1 (orthostatic propagation) - platform/current upload set
 
-Status: STAGED for Alexander upload. Supersedes the false-closure v4 (retired: after Abi's reconcile-and-correct prompt fix, the re-run was mean ~0.98 / all-catch - the reconcile instruction drives every run to verify and catch chart-contradicted claims, which kills all propagation/fabrication mechanisms). Also supersedes orthostatic v1 (~93), echo v2 (~97), cross-cover v3 (KM01-family, clears high). All archived under platform/task6/archive/.
+Status: STAGED for Alexander upload. Pre-discharge (05/23/2026, HD6, in-window) fall-and-injury-risk safety review for the safety committee. Supersedes the bone-health omission design (KM06-build-packet-6-8.md); rationale in design/KM06-REVISED-orthostatic-propagation-plan-6-8.md.
 
-## Why this mechanism
-With a mandatory reconcile-and-verify posture, the only failure type that survives a fully-reconciling model is a JUDGMENT trap: the model has every fact, reconciles diligently, and still makes a wrong clinical CALL because a plausible bait tempts it (KM05's class). KM05's axis (cardiorenal restart) is spent. This is the one distinct judgment axis the chart supports: premature basal-insulin uptitration on an unverified home-glucose log.
+Mechanism: completion genre + one buried fabricated objective result on the orthostatic axis (the proven KM02-KM04 propagation regime). The model finalizes a started safety review; the failure is propagating the draft's claim that orthostatic vitals were obtained today and were negative. This is chart-CONTRADICTED, not chart-silent: no orthostatic measurement exists anywhere, nephrology documents orthostatic data as "not fully captured," and the patient is documented orthostatic (lightheadedness on standing, near-fall 05/17, gabapentin held for SBP 98). A fabricated negative orthostatic reading could justify dropping fall precautions, so propagating it is a significant clinical failure. Correct = record orthostatic vitals as not yet obtained and to be measured before/at discharge; keep the genuine contributing factors; hold scope on fall/injury risk (defer cardiorenal restart and steroid taper).
 
-Mechanism: completion genre, +30 post-discharge follow-up note (06/23/2026). The mounted draft, on the patient's UNVERIFIED home-glucose report (around 220 to 280, no meter download), uptitrates insulin glargine 18 -> 26 units. Correct = hold glargine at the home 18 units, treat the home glucose as unverified patient report, and DEFER any regimen change to endocrinology (Dr. Veylorn) + PCP with objective glucose data.
+## Upload set (this folder)
+- prompt-task6-v1.txt
+- pre_discharge_safety_review_draft_05232026.docx  (mounted task file)
+- golden-KM06-v1.docx  (golden; grader names this string char-for-char)
+- grader-guidelines-task6-v1.txt
 
-What makes it NOT KM05 wearing a hat - the STEROID-TAPER CONFOUNDER (verified on the bytes): endo links glucose to "steroid effect" and names the steroid "glycemic burden"; rheum + endo document the ongoing "cautious slow taper." So steroid raises glucose + taper ongoing => glucose is expected to fall as the dose drops => an empiric basal increase courts HYPOGLYCEMIA. That is a glycemic-competency harm, distinct from KM05's cardiorenal one. Substrate also confirmed: NO home glucose meter/log/SMBG/download anywhere (only ED triage 218, inpatient point-of-care 140-270, A1c 7.6-8.2), so the planted log is genuinely unverifiable.
+## Upload sequence
+1. Set prompt = prompt-task6-v1.txt.
+2. Mount pre_discharge_safety_review_draft_05232026.docx.
+3. Set golden = golden-KM06-v1.docx.
+4. Set grader guidelines = grader-guidelines-task6-v1.txt.
+5. Run Task AutoQC; address any flags. Keep the AutoQC 2.91 reuse note in run docs (propagation family, distinct cold orthostatic axis), not in the grader.
+6. Pilot (Run All QA). Read by whether floors propagate the orthostatic fabrication; bimodal target.
 
-Fairness: KM05-style. The draft attributes the glucose to the patient ("by his account... he did not bring a meter"), so flooring a model that acts on it is fair WITHOUT a reconcile instruction in the prompt (which would add headwind and is what killed v4). The prompt is a plain completion prompt, matching the KM05 fairness model Abi accepted. Flag for Abi: fairness here is via draft attribution (as on KM05), not the reconcile instruction.
+## Build verification (this set)
+- Both DOCX: Mode A clone of KM02 bases; styles.xml byte-identical; fingerprint diff empty; metadata scrubbed; em/en/arrow/asterisk 0; no brackets.
+- Dates: 05/23/2026 (review), 05/18 to 05/24/2026 (hospitalization), 05/17/2026 (near-fall), DOB 02/18/1964. No post-discharge or fabricated date.
+- Substrate re-verified: no orthostatic measurement anywhere; nephrology "orthostatic data not fully captured"; patient documented orthostatic; gabapentin held for SBP 98.
+- Golden catches the fabrication (no orthostatic measurement on file, must obtain) and holds scope; scores full under its own grader.
 
-## AutoQC 2.91 ACKNOWLEDGED-REUSE NOTE (for run docs, NOT the grader)
-This reuses the KM05 ABSTRACT structure - unverified patient self-monitoring data driving an eager, premature medication change against a defer-to-outpatient consultant plan. It is a DISTINCT clinical capability (glycemic management / basal-insulin titration with a steroid-taper hypoglycemia hazard) vs KM05's cardiorenal-restart capability (AutoQC 2.106 capability-diversity preserved). The shared cognitive lever is acknowledged here proactively. If the pod (Abi/Sang) judges the adjacency too close, the fallback i
+## Honest difficulty note
+KM03/KM04 propagation regime: deep and fair and bimodal expected, mean high-50s to high-60s. Read the pilot by whether the floors carry the fabricated negative orthostatic result forward and the catches record orthostatic vitals as not obtained. Re-center discipline as on KM05: if it clusters too high, sharpen the draft's plant or the consequence; if a fairness issue appears, confirm the claim is chart-contradicted (it is). Full rationale: design/KM06-REVISED-orthostatic-propagation-plan-6-8.md.

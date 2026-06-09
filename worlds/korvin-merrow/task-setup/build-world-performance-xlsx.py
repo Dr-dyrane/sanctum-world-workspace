@@ -658,3 +658,32 @@ def build_distribution(wb):
 
     # Highlight the dominant band per task — monochrome scale
     ws.conditional_formatting.add(
+        "H7:L11",
+        ColorScaleRule(
+            start_type="num", start_value=0, start_color=WHITE,
+            end_type="num", end_value=8, end_color=DARK_GRAY,
+        )
+    )
+
+    ws.cell(row=32, column=2, value="Source: 50 trajectory runs across 5 scored tasks").font = font_metric_label()
+
+
+# === MAIN ===
+def main():
+    wb = Workbook()
+
+    build_overview(wb)
+    build_performance(wb)
+    build_architecture(wb)
+    build_mechanism(wb)
+    build_stories(wb)
+    build_distribution(wb)
+
+    output_path = r"c:\Users\Dyrane\Documents\sanctum-world-workspace\worlds\korvin-merrow\task-setup\KM-World-Performance.xlsx"
+    wb.save(output_path)
+    print(f"Saved: {output_path}")
+    print(f"Sheets: {wb.sheetnames}")
+
+
+if __name__ == "__main__":
+    main()

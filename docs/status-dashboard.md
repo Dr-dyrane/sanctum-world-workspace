@@ -370,3 +370,21 @@ KM06 (2zw95f4e): v4 false-closure banked as the distinct sixth at mean 0.83 with
 | KM06 | 2zw95f4e | Running Taiga Trajectories & QA | Alexander U |
 
 KM05: all 3 Preference Labels submitted (A++/A++/plain-A) -> moved to Awaiting Final Review. KM06: Abi's prompt self-containment correction applied (reconcile-and-correct instruction); re-uploaded and Taiga re-run + QA now running on the fixed prompt. KM01-04 delivered (Abi O reviewer).
+
+---
+
+## PLATFORM STATUS (2026-06-09, latest board) - KM06 v5 SENT FOR HUMAN REVIEW
+
+| KM | Platform ID | Status | Updated By | Needs Attention |
+|----|-------------|--------|------------|-----------------|
+| KM01 | Task 1 | Ready for Delivery | Abimbola O | - |
+| KM02 | waivf867 | Ready for Delivery | Abimbola O | - |
+| KM03 | c8izef70 | Ready for Delivery | Abimbola O | - |
+| KM04 | 042j9681 | Ready for Delivery | Abimbola O | - |
+| KM05 | b0tza971 | In Final Review | Janette S | Janette S |
+| KM06 | 2zw95f4e | Awaiting First Human Review | Alexander U | - |
+| (KM06 AQC-EVAL) | [AQC-EVAL] 2zw95f4e | Task Writing | Dhruv Ahuja | Dhruv Ahuja |
+
+KM06: the reconcile-prompt false-closure v4 died at mean ~0.98 and was RETIRED; the insulin-uptitration v5 (job f0934a26, bimodal mean 0.60, four floors) replaced it, FA/GA rewritten (FA 996 / GA 916), and the task is now SENT FOR HUMAN REVIEW (Awaiting First Human Review). NOTE-FOR-ABI-task6.md staged in task6/ for the reviewer (covers v4 retirement, v5 mechanism, draft-attribution fairness, KM05 acknowledged-reuse, workflow = Treatment Plan Documentation for Chronic Disease Management). KM05 advanced from Awaiting Final Review to In Final Review under Janette S. KM01-04 Ready for Delivery (Abi O).
+
+Roll-up: KM01-04 delivered; KM05 in final review (Janette); KM06 v5 awaiting first human review. Pending user action: push the local commits (TASK6-STATE v5 update, FA/GA rewrite, Abi note, this dashboard update) from your own terminal.
