@@ -1,7 +1,8 @@
 """
 KM World Performance Report — .xlsx Generator
-Design language: Apple progressive, black/white/muted + single emotion accent per story.
-Rounded chart shapes, donut for proportions, clean bars for comparison.
+Design language: Apple HIG-quality, borderless, fluid — aligned with KM World Dashboard.
+Purple-only accent (#7C3AED), pure black/white base, liquid glass aesthetic in spreadsheet form.
+Clean bars for difficulty comparison, spread visualization as data bars.
 """
 
 import openpyxl
@@ -17,21 +18,22 @@ from copy import copy
 import os
 
 # === DESIGN TOKENS ===
-# Monochrome base (black & white with grays)
-BLACK = "1D1D1F"
-NEAR_BLACK = "2C2C2E"
-DARK_GRAY = "48484A"
-MID_GRAY = "8E8E93"
-LIGHT_GRAY = "E5E5EA"
-PALE_GRAY = "F2F2F7"
-WHITE = "FFFFFF"
+# Dashboard-aligned monochrome base (pure black/white, minimal grays)
+BLACK = "000000"           # pure black (dashboard dark bg)
+NEAR_BLACK = "1D1D1F"      # Apple's near-black for text
+DARK_GRAY = "48484A"       # body text
+MID_GRAY = "8E8E93"        # muted labels
+LIGHT_GRAY = "E5E5EA"      # dividers
+PALE_GRAY = "F2F2F7"       # subtle fills
+WHITE = "FFFFFF"           # pure white (dashboard light bg)
 OFF_WHITE = "FAFAFA"
 
-# Single accent — used ONLY on the one focal data point per sheet
-# Everything else stays grayscale
-ACCENT = "1D1D1F"          # default: black (no color)
-ACCENT_FOCAL = "FF3B30"    # the ONE red accent for the single most important number
-ACCENT_MUTED = "C7C7CC"    # for secondary emphasis (still gray family)
+# Purple accent ONLY — matches KM World Dashboard design system
+# Base: pure black/white, Accent: single purple gradient
+ACCENT = "7C3AED"          # purple-600 (default accent)
+ACCENT_FOCAL = "7C3AED"    # purple-600 for focal numbers (was red, now purple)
+ACCENT_MUTED = "A78BFA"    # purple-400 for secondary emphasis
+ACCENT_DEEP = "8B5CF6"     # purple-500 for dark mode accents
 
 # Fonts — Inter (cross-platform, Apple-adjacent geometric sans)
 FONT_DISPLAY = "Inter"
