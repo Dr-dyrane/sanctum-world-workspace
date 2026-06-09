@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+  <title>KM World Suite — Performance Dashboard</title>
+  <meta name="description" content="Korvin Merrow KM01–KM06 task suite performance. Apple HIG-quality, liquid-glass, purple-accent dashboard." />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['-apple-system','BlinkMacSystemFont','"SF Pro Display"','"SF Pro Text"','system-ui','Segoe UI','Roboto','Helvetica','Arial','sans-serif'],
+            mono: ['"SF Mono"','ui-monospace','SFMono-Regular','Menlo','Monaco','Consolas','"Liberation Mono"','monospace'],
+          },
+          colors: {
+            // Purple accent only
+            accent: {
+              300: '#C4B5FD',
+              400: '#A78BFA',
+              500: '#8B5CF6',
+              600: '#7C3AED',
+            },
+          },
+          transitionTimingFunction: {
+            fluid: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Lucide icons CDN -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #000000;
+      --fg-soft: rgba(0,0,0,0.55);
+      --fg-faint: rgba(0,0,0,0.38);
+      --glass-bg: rgba(255,255,255,0.55);
+      --glass-stroke: rgba(0,0,0,0.06);
+      --accent-a: #7C3AED;
+      --accent-b: #A78BFA;
+      --shadow-rest: 0 4px 24px rgba(124,58,237,0.08);
+      --shadow-hover: 0 12px 48px rgba(124,58,237,0.16);
+    }
+    html.dark {
+      --bg: #000000;
+      --fg: #ffffff;
+      --fg-soft: rgba(255,255,255,0.62);
+      --fg-faint: rgba(255,255,255,0.40);
+      --glass-bg: rgba(255,255,255,0.04);
+      --glass-stroke: rgba(255,255,255,0.08);
+      --accent-a: #8B5CF6;
+      --accent-b: #C4B5FD;
+      --shadow-rest: 0 4px 24px rgba(139,92,246,0.10);
+      --shadow-hover: 0 12px 48px rgba(139,92,246,0.22);
+    }
+
+    html, body { background: var(--bg); color: var(--fg); }
+    body {
+      margin: 0;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      letter-spacing: -0.011em;
+      overflow-x: hidden;
+    }
+    h1,h2,h3 { letter-spacing: -0.022em; }
+
+    /* Fluid type helpers */
+    .t-hero   { font-size: clamp(2.6rem, 7vw, 5.5rem); line-height: 0.98; }
+    .t-h2     { font-size: clamp(1.5rem, 3.4vw, 2.6rem); line-height: 1.04; }
+    .t-id     { font-size: clamp(2.2rem, 6vw, 4.2rem); line-height: 0.9; }
+    .t-score  { font-size: clamp(3rem, 8vw, 4.6rem); line-height: 0.9; }
+
+    /* Liquid glass */
+    .glass {
+      background: var(--glass-bg);
+      -webkit-backdrop-filter: blur(20px) saturate(140%);
+      backdrop-filter: blur(20px) saturate(140%);
+      box-shadow: inset 0 0 0 1px var(--glass-stroke), var(--shadow-rest);
+      position: relative;
+      overflow: hidden;
+    }
+    .glass::after {
+      content: "";
+      position: absolute; inset: 0;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      opacity: 0.02;
+      mix-blend-mode: overlay;
+    }
+
+    .accent-text {
+      background: linear-gradient(120deg, var(--accent-a), var(--accent-b));
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; color: transparent;
+    }
+
+    /* Card motion */
+    .card {
+      transform: translateY(40px); opacity: 0;
+      transition: transform .7s var(--tw-ease, cubic-bezier(0.16,1,0.3,1)),
+                  opacity .7s ease, box-shadow .3s cubic-bezier(0.25,0.46,0.45,0.94);
+      will-change: transform, opacity;
+    }
+    .card.in     { transform: translateY(0); opacity: 1; }
+    .card.dim    { opacity: 0.32; }
+    .card:hover  { box-shadow: inset 0 0 0 1px var(--glass-stroke), var(--shadow-hover); transform: translateY(-4px); }
+
+    .hover-lift { transition: transform .3s cubic-bezier(0.25,0.46,0.45,0.94); }
+    .hover-lift:hover { transform: scale(1.02); }
+
+    /* Dots */
+    .dot { transition: opacity .4s ease, transform .3s ease; }
+    .dot.pulse { animation: pulse 2.4s ease-in-out infinite; }
+    @keyframes pulse { 0%,100%{opacity:.20} 50%{opacity:.42} }
+
+    /* Reveal disclosure */
+    .reveal { max-height: 0; opacity: 0; overflow: hidden;
+      transition: max-height .5s var(--tw-ease, cubic-bezier(0.16,1,0.3,1)), opacity .4s ease, margin .4s ease; }
+    .reveal.open { max-height: 420px; opacity: 1; }
+
+    /* Focus ring */
+    :focus-visible { outline: 2px solid var(--accent-a); outline-offset: 2px; border-radius: 14px;
+      box-shadow: 0 0 0 4px rgba(124,58,237,0.30); }
+
+    /* Hero bloom for radial nodes */
+    .node { transform-box: fill-box; transform-origin: center; }
+    .node-anim { transform: scale(0); animation: bloom .6s cubic-bezier(0.16,1,0.3,1) forwards; }
+    @keyframes bloom { to { transform: scale(1); } }
+    .arc-anim { stroke-dasharray: 1200; stroke-dashoffset: 1200; animation: draw .9s ease forwards .2s; }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+
+    .type-char { opacity: 0; display: inline-block; animation: charin .35s ease forwards; }
+    @keyframes charin { to { opacity: 1; } }
+
+    /* Progress + FAB */
+    #progress { background: linear-gradient(90deg, var(--accent-a), var(--accent-b)); }
+
+    @media (prefers-reduced-motion: reduce) {
+      .card, .reveal, .node-anim, .arc-anim, .type-char, .dot.pulse, .hover-lift { animation: none !important; transition: opacity .3s ease !important; transform: none !important; }
+      .card { opacity: 1; }
+      html { scroll-behavior: auto !important; }
+    }
+    html { scroll-behavior: smooth; }
+    ::selection { background: rgba(124,58,237,0.30); }
+  </style>
+</head>
+
+<body class="font-sans antialiased">
+  <!-- Scroll progress -->
+  <div class="fixed top-0 left-0 right-0 h-[2px] z-50">
+    <div id="progress" class="h-full w-0 origin-left"></div>
+  </div>
+
+  <!-- Top chrome -->
+  <header class="fixed top-3 left-0 right-0 z-40 flex justify-center px-4">
+    <div class="glass rounded-full px-3 py-2 flex items-center gap-3" style="border-radius:9999px">
+      <span class="pl-2 pr-1 text-[13px] font-semibold tracking-tight">KM World Suite</span>
+      <span class="hidden sm:block w-px h-4" style="background:var(--glass-stroke)"></span>
+      <span id="clock" class="hidden sm:block font-mono text-[12px]" style="color:var(--fg-soft)">--:--:--</span>
+      <button id="themeToggle" aria-label="Toggle color theme"
+        class="hover-lift glass rounded-full w-9 h-9 grid place-items-center" style="border-radius:9999px">
+        <i data-lucide="sun" class="block dark:hidden" style="width:18px;height:18px"></i>
+        <i data-lucide="moon" class="hidden dark:block" style="width:18px;height:18px"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="min-h-[100svh] flex flex-col items-center justify-center px-6 pt-24 pb-10 text-center">
+      <p class="font-mono text-[12px] uppercase tracking-[0.28em] mb-5" style="color:var(--fg-faint)">Korvin Merrow · Task Suite</p>
+      <h1 id="heroTitle" class="t-hero font-semibold text-balance max-w-[14ch]">Performance Across the Suite</h1>
+      <p class="mt-5 max-w-[52ch] text-[15px] leading-relaxed" style="color:var(--fg-soft)">
+        Six discharge-workflow tasks, scored across ten runs each. Node size encodes failure depth; the arc sweeps from strongest to weakest.
+      </p>
+
+      <!-- Radial chart -->
+      <div class="mt-10 w-full max-w-[560px] aspect-square">
+        <svg id="radial" viewBox="0 0 560 560" class="w-full h-full" role="img" aria-label="Radial chart of KM01 through KM06 mean scores"></svg>
+      </div>
+
+      <button id="scrollHint" class="mt-2 hover-lift glass rounded-full px-4 py-2 flex items-center gap-2 text-[13px]" style="border-radius:9999px;color:var(--fg-soft)">
+        Scroll to detail <i data-lucide="chevron-down" style="width:16px;height:16px"></i>
+      </button>
+    </section>
+
+    <!-- CARDS -->
+    <div id="cards" class="px-4 sm:px-6 max-w-5xl mx-auto"></div>
+
+    <!-- SUMMARY FOOTER -->
+    <section id="summary" class="px-4 sm:px-6 max-w-5xl mx-auto py-20">
+      <div class="glass rounded-[28px] p-8 sm:p-12">
+        <p class="font-mono text-[12px] uppercase tracking-[0.24em] mb-8" style="color:var(--fg-faint)">Suite Summary</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div>
+            <div class="t-score font-bold accent-text" id="meanOfMeans">—</div>
+            <div class="mt-2 text-[13px]" style="color:var(--fg-soft)">Mean of means</div>
+          </div>
+          <div>
+            <div class="t-score font-bold" id="completeCount">—</div>
+            <div class="mt-2 text-[13px]" style="color:var(--fg-soft)">Complete / RFD</div>
+          </div>
+          <div>
+            <div class="t-score font-bold" id="pendingCount">—</div>
+            <div class="mt-2 text-[13px]" style="color:var(--fg-soft)">In review / pending</div>
+          </div>
+          <div>
+            <div class="t-score font-bold" id="spreadRange">—</div>
+            <div class="mt-2 text-[13px]" style="color:var(--fg-soft)">Mean range</div>
+          </div>
+        </div>
+        <p class="mt-10 text-[12px]" style="color:var(--fg-faint)">Data exported from Excel · KM01–KM06 suite</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Quick-jump FAB -->
+  <div class="fixed bottom-5 right-5 z-40 flex flex-col items-end gap-2">
+    <div id="fabMenu" class="flex flex-col items-end gap-2 origin-bottom-right scale-90 opacity-0 pointer-events-none transition-all duration-300 ease-fluid"></div>
+    <button id="fab" aria-expanded="false" aria-label="Quick jump to a task"
+      class="hover-lift glass rounded-full w-14 h-14 grid place-items-center" style="border-radius:9999px">
+      <i data-lucide="navigation" id="fabIcon" style="width:22px;height:22px"></i>
+    </button>
+  </div>
+
+  <!-- Accessible data table (screen-reader alternative) -->
+  <table class="sr-only" aria-label="KM suite full spread data">
+    <thead><tr><th>Task</th><th>Name</th><th>Mean</th><th>Run scores</th><th>Status</th></tr></thead>
+    <tbody id="srTable"></tbody>
+  </table>
+
+  <script>
+    const tasks = [
+      { id:"KM01", name:"Discharge Medication Reconciliation", status:"COMPLETE / RFD", mean:89, spread:[78,72,92,95,93,92,92,92,90,94], workflow:"Medication Reconciliation Documentation", reviewer:"Janette S", mechanism:"Salt substitute / nitrofurantoin / ARNI restart / prednisone dose", position:1 },
+      { id:"KM02", name:"Hospital Discharge Summary Generation", status:"COMPLETE / RFD", mean:59.3, spread:[45,92,82,82,60,62,40,30,45,55], workflow:"Discharge Summary Generation", reviewer:"Janette S", mechanism:"Furosemide escalation / fabricated interval data", position:2 },
+      { id:"KM03", name:"Discharge Planning Documentation", status:"AWAITING FINAL REVIEW", mean:76.4, spread:[80,62,90,30,90,88,82,87,85,70], workflow:"Discharge Planning Documentation", reviewer:"Sang N / Paolo S", mechanism:"CPAP fabricated objective result", position:3 },
+      { id:"KM04", name:"Interdisciplinary Care Plan Development", status:"AWAITING FINAL REVIEW", mean:66.4, spread:[95,90,30,88,78,88,90,35,30,40], workflow:"Consultant Synthesis / Care Plan", reviewer:"Sang N / Rahul Pai", mechanism:"Anemia-of-CKD fabricated closed status", position:4 },
+      { id:"KM05", name:"Early Post-Discharge Follow-Up Assessment", status:"TAIGA RUNNING / FA-GA PENDING", mean:50, spread:[20,95,88,40,68,70,20,35,15,15], workflow:"Post-Discharge Follow-Up", reviewer:"TBD", mechanism:"Cardiorenal restart on unverified home BP", position:5 },
+      { id:"KM06", name:"Weekend Bridging Order Set / Disposition Summary", status:"AWAITING FIRST HUMAN REVIEW", mean:83.1, spread:[15,95,95,97,95,97,55,97,95,90], workflow:"Discharge Planning Documentation", reviewer:"TBD", mechanism:"False closure of unresolved discharge logistics", position:6 }
+    ];
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* ---------- Theme ---------- */
+    const root = document.documentElement;
+    const stored = localStorage.getItem('km-theme');
+    const sysDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (stored ? stored === 'dark' : sysDark) root.classList.add('dark');
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      root.classList.toggle('dark');
+      localStorage.setItem('km-theme', root.classList.contains('dark') ? 'dark' : 'light');
+    });
+
+    /* ---------- Clock ---------- */
+    const clock = document.getElementById('clock');
+    function tick(){ clock.textContent = new Date().toLocaleTimeString([], {hour12:false}); }
+    tick(); setInterval(tick, 1000);
+
+    /* ---------- Hero title type-in ---------- */
+    (function(){
+      const el = document.getElementById('heroTitle');
+      if (reduceMotion) return;
+      const text = el.textContent; el.textContent = '';
+      [...text].forEach((ch, i) => {
+        const s = document.createElement('span');
+        s.className = 'type-char'; s.style.animationDelay = (i*30)+'ms';
+        s.textContent = ch === ' ' ? '\u00A0' : ch;
+        el.appendChild(s);
+      });
+    })();
+
+    /* ---------- Dot opacity encoding ---------- */
+    function dotClass(v){
+      if (v >= 90) return {op:1, pulse:false};
+      if (v >= 70) return {op:0.6, pulse:false};
+      return {op:0.2, pulse:true};
+    }
+    function statusComplete(s){ return /COMPLETE/.test(s); }
+
+    /* ---------- Radial chart ---------- */
+    (function(){
+      const svg = document.getElementById('radial');
+      const NS = 'http://www.w3.org/2000/svg';
+      const cx = 280, cy = 280, R = 190;
+      const sorted = [...tasks].sort((a,b)=>b.mean-a.mean); // strongest first, sweep clockwise
+      const pts = sorted.map((t,i)=>{
+        const ang = (-90 + i*(360/sorted.length)) * Math.PI/180; // start at 12 o'clock
+        return { t, x: cx + R*Math.cos(ang), y: cy + R*Math.sin(ang) };
+      });
+
+      // gradient def
+      const defs = document.createElementNS(NS,'defs');
+      defs.innerHTML = `<linearGradient id="arcGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="var(--accent-a)"/>
+          <stop offset="100%" stop-color="var(--accent-b)"/>
+        </linearGradient>`;
+      svg.appendChild(defs);
+
+      // connecting arc (closed loop)
+      const d = pts.map((p,i)=> (i===0?'M':'L')+p.x.toFixed(1)+' '+p.y.toFixed(1)).join(' ') + ' Z';
+      const arc = document.createElementNS(NS,'path');
+      arc.setAttribute('d', d);
+      arc.setAttribute('fill','none');
+      arc.setAttribute('stroke','url(#arcGrad)');
+      arc.setAttribute('stroke-width','1.5');
+      arc.setAttribute('opacity','0.5');
+      arc.setAttribute('stroke-linejoin','round');
+      if(!reduceMotion) arc.classList.add('arc-anim');
+      svg.appendChild(arc);
+
+      // center label
+      const ctl = document.createElementNS(NS,'text');
+      ctl.setAttribute('x',cx); ctl.setAttribute('y',cy-6);
+      ctl.setAttribute('text-anchor','middle'); ctl.setAttribute('fill','var(--fg)');
+      ctl.setAttribute('font-size','13'); ctl.setAttribute('font-family','var(--font-mono, monospace)');
+      ctl.setAttribute('opacity','0.5'); ctl.setAttribute('letter-spacing','2');
+      ctl.textContent = 'KM SUITE';
+      const ctl2 = document.createElementNS(NS,'text');
+      ctl2.setAttribute('x',cx); ctl2.setAttribute('y',cy+22);
+      ctl2.setAttribute('text-anchor','middle'); ctl2.setAttribute('fill','var(--fg)');
+      ctl2.setAttribute('font-size','26'); ctl2.setAttribute('font-weight','700');
+      const mom = (tasks.reduce((s,t)=>s+t.mean,0)/tasks.length);
+      ctl2.textContent = mom.toFixed(1)+'%';
+      svg.appendChild(ctl); svg.appendChild(ctl2);
+
+      // nodes
+      pts.forEach((p,i)=>{
+        const failure = 100 - p.t.mean;
+        const r = 14 + failure*0.34;            // size ~ failure depth
+        const intensity = 0.30 + (failure/100)*0.70;
+
+        const g = document.createElementNS(NS,'g');
+        g.setAttribute('class','node');
+        g.style.cursor = 'pointer';
+        g.setAttribute('tabindex','0');
+        g.setAttribute('role','button');
+        g.setAttribute('aria-label', `${p.t.id}, ${p.t.name}, mean ${p.t.mean} percent`);
+
+        const halo = document.createElementNS(NS,'circle');
+        halo.setAttribute('cx',p.x); halo.setAttribute('cy',p.y); halo.setAttribute('r',r+10);
+        halo.setAttribute('fill','var(--accent-a)'); halo.setAttribute('opacity', (intensity*0.12).toFixed(3));
+
+        const c = document.createElementNS(NS,'circle');
+        c.setAttribute('cx',p.x); c.setAttribute('cy',p.y); c.setAttribute('r',r);
+        c.setAttribute('fill','var(--accent-a)'); c.setAttribute('opacity', intensity.toFixed(3));
+        if(!reduceMotion){ c.classList.add('node-anim'); halo.classList.add('node-anim');
+          c.style.animationDelay = (i*100)+'ms'; halo.style.animationDelay = (i*100)+'ms'; }
+
+        const lbl = document.createElementNS(NS,'text');
+        lbl.setAttribute('x',p.x); lbl.setAttribute('y',p.y+4);
+        lbl.setAttribute('text-anchor','middle'); lbl.setAttribute('fill','#fff');
+        lbl.setAttribute('font-size','11'); lbl.setAttribute('font-weight','700');
+        lbl.setAttribute('pointer-events','none');
+        lbl.textContent = p.t.id.replace('KM','');
+
+        // tooltip
+        const tip = document.createElementNS(NS,'text');
+        tip.setAttribute('x',p.x); tip.setAttribute('y',p.y - r - 12);
+        tip.setAttribute('text-anchor','middle'); tip.setAttribute('fill','var(--fg)');
+        tip.setAttribute('font-size','12'); tip.setAttribute('font-weight','600');
+        tip.setAttribute('opacity','0'); tip.style.transition='opacity .25s ease';
+        tip.textContent = `${p.t.id} · ${p.t.mean}%`;
+
+        const expand = ()=>{ c.setAttribute('r', r+5); tip.setAttribute('opacity','1'); };
+        const reset  = ()=>{ c.setAttribute('r', r);  tip.setAttribute('opacity','0'); };
+        g.addEventListener('mouseenter', expand);
+        g.addEventListener('mouseleave', reset);
+        g.addEventListener('focus', expand);
+        g.addEventListener('blur', reset);
+        const go = ()=> document.getElementById('card-'+p.t.id)?.scrollIntoView({behavior:'smooth', block:'center'});
+        g.addEventListener('click', go);
+        g.addEventListener('keydown', e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); go(); }});
+
+        g.appendChild(halo); g.appendChild(c); g.appendChild(lbl); g.appendChild(tip);
+        svg.appendChild(g);
+      });
+    })();
+
+    /* ---------- Cards ---------- */
+    (function(){
+      const wrap = document.getElementById('cards');
+      tasks.forEach(t=>{
+        const dots = t.spread.map((v,i)=>{
+          const {op,pulse} = dotClass(v);
+          return `<span class="dot ${pulse?'pulse':''}" title="Run ${i+1}: ${v}%"
+            style="width:13px;height:13px;border-radius:9999px;display:inline-block;background:var(--accent-a);opacity:${op}"></span>`;
+        }).join('');
+
+        const sec = document.createElement('section');
+        sec.id = 'card-'+t.id;
+        sec.className = 'min-h-[60vh] flex items-center py-8';
+        sec.innerHTML = `
+          <article class="card glass rounded-[28px] p-7 sm:p-10 w-full">
+            <div class="flex items-start justify-between gap-4 flex-wrap">
+              <div>
+                <div class="t-id font-bold accent-text leading-none">${t.id}</div>
+                <h2 class="t-h2 font-semibold mt-3 max-w-[20ch] text-balance">${t.name}</h2>
+              </div>
+              <span class="glass rounded-full px-4 py-2 text-[11px] font-mono uppercase tracking-[0.12em] whitespace-nowrap" style="border-radius:9999px;color:var(--fg-soft)">${t.status}</span>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mt-9 items-start">
+              <div>
+                <div class="font-mono text-[11px] uppercase tracking-[0.18em] mb-2" style="color:var(--fg-faint)">Mean score</div>
+                <div class="t-score font-bold accent-text">${t.mean}<span class="text-[0.4em] align-top">%</span></div>
+              </div>
+              <div>
+                <div class="font-mono text-[11px] uppercase tracking-[0.18em] mb-3" style="color:var(--fg-faint)">Spread · runs 1–10</div>
+                <div class="flex flex-wrap gap-2 max-w-[220px]">${dots}</div>
+              </div>
+              <div>
+                <div class="font-mono text-[11px] uppercase tracking-[0.18em] mb-2" style="color:var(--fg-faint)">Workflow</div>
+                <div class="text-[15px] font-medium leading-snug">${t.workflow}</div>
+                <div class="font-mono text-[11px] uppercase tracking-[0.18em] mb-2 mt-5" style="color:var(--fg-faint)">Reviewer</div>
+                <div class="text-[15px] font-medium">${t.reviewer}</div>
+              </div>
+            </div>
+
+            <div class="mt-8 h-px w-full" style="background:var(--glass-stroke)"></div>
+
+            <div class="mt-6 flex items-start justify-between gap-4 flex-wrap">
+              <p class="text-[15px] leading-relaxed max-w-[60ch]" style="color:var(--fg-soft)">
+                <span class="font-medium" style="color:var(--fg)">Mechanism · </span>${t.mechanism}
+              </p>
+              <button class="expandBtn hover-lift glass rounded-full px-4 py-2 flex items-center gap-2 text-[13px]" style="border-radius:9999px" aria-expanded="false">
+                <span>Run detail</span><i data-lucide="chevron-down" class="chev" style="width:16px;height:16px;transition:transform .3s ease"></i>
+              </button>
+            </div>
+
+            <div class="reveal mt-0">
+              <div class="grid grid-cols-5 sm:grid-cols-10 gap-3 pt-6">
+                ${t.spread.map((v,i)=>`
+                  <div class="glass rounded-2xl py-3 text-center">
+                    <div class="font-mono text-[10px]" style="color:var(--fg-faint)">R${i+1}</div>
+                    <div class="font-mono text-[16px] font-bold ${v<70?'':'accent-text'}" ${v<70?'style="color:var(--fg-soft)"':''}>${v}</div>
+                  </div>`).join('')}
+              </div>
+            </div>
+          </article>`;
+        wrap.appendChild(sec);
+
+        // SR table row
+        document.getElementById('srTable').insertAdjacentHTML('beforeend',
+          `<tr><td>${t.id}</td><td>${t.name}</td><td>${t.mean}%</td><td>${t.spread.join(', ')}</td><td>${t.status}</td></tr>`);
+      });
+
+      // disclosure
+      wrap.querySelectorAll('.expandBtn').forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+          const card = btn.closest('article');
+          const rev = card.querySelector('.reveal');
+          const open = rev.classList.toggle('open');
+          btn.setAttribute('aria-expanded', open);
+          btn.querySelector('.chev').style.transform = open ? 'rotate(180deg)' : 'rotate(0)';
+        });
+      });
+    })();
+
+    /* ---------- Intersection reveal + dim ---------- */
+    (function(){
+      const cards = document.querySelectorAll('.card');
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+          if (e.isIntersecting){ e.target.classList.add('in'); e.target.classList.remove('dim'); }
+          else if (e.target.classList.contains('in')){ e.target.classList.add('dim'); }
+        });
+      }, { threshold: 0.35 });
+      cards.forEach(c=> io.observe(c));
+    })();
+
+    /* ---------- Scroll progress ---------- */
+    (function(){
+      const bar = document.getElementById('progress');
+      const onScroll = ()=>{
+        const h = document.documentElement;
+        const p = h.scrollTop / (h.scrollHeight - h.clientHeight);
+        bar.style.transform = `scaleX(${Math.min(1,Math.max(0,p))})`;
+        bar.style.width = '100%';
+      };
+      window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+    })();
+
+    document.getElementById('scrollHint').addEventListener('click', ()=>{
+      document.getElementById('card-KM01').scrollIntoView({behavior:'smooth', block:'center'});
+    });
+
+    /* ---------- Summary stats ---------- */
+    (function(){
+      const mom = tasks.reduce((s,t)=>s+t.mean,0)/tasks.length;
+      const complete = tasks.filter(t=>statusComplete(t.status)).length;
+      const means = tasks.map(t=>t.mean);
+      document.getElementById('meanOfMeans').textContent = mom.toFixed(1)+'%';
+      document.getElementById('completeCount').textContent = complete;
+      document.getElementById('pendingCount').textContent = tasks.length - complete;
+      document.getElementById('spreadRange').textContent = Math.min(...means)+'–'+Math.max(...means);
+    })();
+
+    /* ---------- Quick-jump FAB ---------- */
+    (function(){
+      const fab = document.getElementById('fab');
+      const menu = document.getElementById('fabMenu');
+      const icon = document.getElementById('fabIcon');
+      tasks.forEach(t=>{
+        const b = document.createElement('button');
+        b.className = 'hover-lift glass rounded-full px-4 py-2 text-[13px] font-mono font-semibold';
+        b.style.borderRadius = '9999px';
+        b.textContent = t.id;
+        b.addEventListener('click', ()=>{
+          document.getElementById('card-'+t.id).scrollIntoView({behavior:'smooth', block:'center'});
+          close();
+        });
+        menu.appendChild(b);
+      });
+      let open = false;
+      function setOpen(v){
+        open = v; fab.setAttribute('aria-expanded', v);
+        menu.style.opacity = v?'1':'0';
+        menu.style.transform = v?'scale(1)':'scale(0.9)';
+        menu.style.pointerEvents = v?'auto':'none';
+        icon.setAttribute('data-lucide', v?'x':'navigation');
+        lucide.createIcons();
+      }
+      function close(){ setOpen(false); }
+      fab.addEventListener('click', ()=> setOpen(!open));
+    })();
+
+    /* ---------- Keyboard nav between cards ---------- */
+    (function(){
+      const ids = tasks.map(t=>'card-'+t.id);
+      let idx = -1;
+      document.addEventListener('keydown', e=>{
+        if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
+        if (['INPUT','TEXTAREA'].includes(document.activeElement.tagName)) return;
+        e.preventDefault();
+        idx = Math.min(ids.length-1, Math.max(0, idx + (e.key==='ArrowDown'?1:-1)));
+        const el = document.getElementById(ids[idx]);
+        el.scrollIntoView({behavior:'smooth', block:'center'});
+        el.querySelector('article').focus?.();
+      });
+    })();
+
+    lucide.createIcons();
+  </script>
+</body>
+</html>
