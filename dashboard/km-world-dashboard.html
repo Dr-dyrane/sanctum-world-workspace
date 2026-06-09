@@ -196,8 +196,23 @@
       </button>
     </section>
 
+    <!-- CONTROLS -->
+    <div class="sticky top-16 z-30 px-4 sm:px-6 max-w-5xl mx-auto">
+      <div class="glass rounded-[20px] px-3 py-3 sm:px-4 flex flex-wrap items-center gap-x-5 gap-y-3 justify-between">
+        <div class="flex items-center gap-2 flex-wrap" role="group" aria-label="Filter tasks by status">
+          <span class="font-mono text-[10px] uppercase tracking-[0.18em] pl-1 pr-1 hidden sm:block" style="color:var(--fg-faint)">Filter</span>
+          <div id="filterChips" class="flex items-center gap-2 flex-wrap"></div>
+        </div>
+        <div class="flex items-center gap-2" role="group" aria-label="Sort tasks">
+          <span class="font-mono text-[10px] uppercase tracking-[0.18em] hidden sm:block" style="color:var(--fg-faint)">Sort</span>
+          <div id="sortChips" class="flex items-center gap-2"></div>
+        </div>
+      </div>
+    </div>
+
     <!-- CARDS -->
     <div id="cards" class="px-4 sm:px-6 max-w-5xl mx-auto"></div>
+    <p id="emptyState" class="hidden text-center py-20 text-[15px]" style="color:var(--fg-soft)">No tasks match this filter.</p>
 
     <!-- SUMMARY FOOTER -->
     <section id="summary" class="px-4 sm:px-6 max-w-5xl mx-auto py-20">
@@ -289,6 +304,18 @@
     }
     function statusComplete(s){ return /COMPLETE/.test(s); }
 
+    /* ---------- Status categorisation ---------- */
+    function statusCat(s){
+      if (/COMPLETE/.test(s)) return 'complete';
+      if (/PENDING|RUNNING/.test(s)) return 'pending';
+      return 'review'; // awaiting review
+    }
+    const CATS = {
+      complete: { label:'Complete' },
+      review:   { label:'In review' },
+      pending:  { label:'Pending' },
+    };
+
     /* ---------- Radial chart ---------- */
     (function(){
       const svg = document.getElementById('radial');
@@ -379,7 +406,10 @@
         g.addEventListener('mouseleave', reset);
         g.addEventListener('focus', expand);
         g.addEventListener('blur', reset);
-        const go = ()=> document.getElementById('card-'+p.t.id)?.scrollIntoView({behavior:'smooth', block:'center'});
+        const go = ()=>{
+          document.getElementById('card-'+p.t.id)?.scrollIntoView({behavior:'smooth', block:'center'});
+          history.replaceState(null,'','#'+p.t.id);
+        };
         g.addEventListener('click', go);
         g.addEventListener('keydown', e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); go(); }});
 
@@ -400,7 +430,11 @@
 
         const sec = document.createElement('section');
         sec.id = 'card-'+t.id;
-        sec.className = 'min-h-[60vh] flex items-center py-8';
+        sec.dataset.id = t.id;
+        sec.dataset.status = statusCat(t.status);
+        sec.dataset.mean = t.mean;
+        sec.dataset.pos = t.position;
+        sec.className = 'km-card min-h-[60vh] flex items-center py-8';
         sec.innerHTML = `
           <article class="card glass rounded-[28px] p-7 sm:p-10 w-full">
             <div class="flex items-start justify-between gap-4 flex-wrap">
@@ -468,6 +502,108 @@
       });
     })();
 
+    /* ---------- Filter, sort & deep-link controller ---------- */
+    const view = (function(){
+      const cardsWrap = document.getElementById('cards');
+      const empty = document.getElementById('emptyState');
+      const filterWrap = document.getElementById('filterChips');
+      const sortWrap = document.getElementById('sortChips');
+      const SORTS = {
+        position: { label:'Order', fn:(a,b)=> a.position-b.position },
+        high:     { label:'Highest', fn:(a,b)=> b.mean-a.mean },
+        low:      { label:'Lowest',  fn:(a,b)=> a.mean-b.mean },
+      };
+      const state = { filter:'all', sort:'position' };
+
+      function makeChip(label, active){
+        const b = document.createElement('button');
+        b.className = 'chip hover-lift glass rounded-full px-3.5 py-1.5 text-[12px] font-mono font-semibold transition-colors';
+        b.style.borderRadius = '9999px';
+        b.textContent = label;
+        b.setAttribute('aria-pressed', active ? 'true' : 'false');
+        if (active) b.style.color = 'var(--accent-a)';
+        return b;
+      }
+      function paintChips(wrap, current, group){
+        [...wrap.children].forEach(c=>{
+          const on = c.dataset.val === current;
+          c.setAttribute('aria-pressed', on ? 'true':'false');
+          c.style.color = on ? 'var(--accent-a)' : '';
+          c.style.boxShadow = on
+            ? 'inset 0 0 0 1px var(--accent-a), var(--shadow-rest)' : '';
+        });
+      }
+
+      // build filter chips: All + present categories
+      const presentCats = [...new Set(tasks.map(t=>statusCat(t.status)))];
+      [['all','All'], ...presentCats.map(c=>[c, CATS[c].label])].forEach(([val,label])=>{
+        const chip = makeChip(label, val==='all');
+        chip.dataset.val = val;
+        chip.addEventListener('click', ()=> setState({filter:val}));
+        filterWrap.appendChild(chip);
+      });
+      // build sort chips
+      Object.entries(SORTS).forEach(([val,{label}])=>{
+        const chip = makeChip(label, val==='position');
+        chip.dataset.val = val;
+        chip.addEventListener('click', ()=> setState({sort:val}));
+        sortWrap.appendChild(chip);
+      });
+
+      function apply(){
+        // order
+        const ordered = [...tasks].sort(SORTS[state.sort].fn);
+        ordered.forEach(t=>{
+          const el = document.getElementById('card-'+t.id);
+          if (el) cardsWrap.appendChild(el); // reorder in DOM
+        });
+        // filter visibility
+        let visible = 0;
+        document.querySelectorAll('.km-card').forEach(el=>{
+          const show = state.filter==='all' || el.dataset.status===state.filter;
+          el.style.display = show ? '' : 'none';
+          if (show) visible++;
+        });
+        empty.classList.toggle('hidden', visible>0);
+        paintChips(filterWrap, state.filter);
+        paintChips(sortWrap, state.sort);
+      }
+
+      function syncHash(){
+        const parts = [];
+        if (state.filter!=='all') parts.push('filter='+state.filter);
+        if (state.sort!=='position') parts.push('sort='+state.sort);
+        const hash = parts.join('&');
+        history.replaceState(null,'', hash ? '#'+hash : location.pathname+location.search);
+      }
+      function setState(patch, opts={}){
+        Object.assign(state, patch);
+        apply();
+        if (!opts.silent) syncHash();
+      }
+      function readHash(){
+        const h = location.hash.replace(/^#/,'');
+        if (!h) return;
+        // deep link to a specific card: #KM03
+        const m = h.match(/^(KM0[1-6])$/i);
+        if (m){
+          const el = document.getElementById('card-'+m[1].toUpperCase());
+          el?.scrollIntoView({behavior: reduceMotion?'auto':'smooth', block:'center'});
+          return;
+        }
+        const params = new URLSearchParams(h);
+        const f = params.get('filter'), s = params.get('sort');
+        const patch = {};
+        if (f && (f==='all' || CATS[f])) patch.filter = f;
+        if (s && SORTS[s]) patch.sort = s;
+        if (Object.keys(patch).length) setState(patch, {silent:true});
+      }
+
+      apply();
+      readHash();
+      return { jumpTo(id){ history.replaceState(null,'','#'+id); }, get state(){ return state; } };
+    })();
+
     /* ---------- Intersection reveal + dim ---------- */
     (function(){
       const cards = document.querySelectorAll('.card');
@@ -519,6 +655,7 @@
         b.textContent = t.id;
         b.addEventListener('click', ()=>{
           document.getElementById('card-'+t.id).scrollIntoView({behavior:'smooth', block:'center'});
+          history.replaceState(null,'','#'+t.id);
           close();
         });
         menu.appendChild(b);
@@ -538,15 +675,25 @@
 
     /* ---------- Keyboard nav between cards ---------- */
     (function(){
-      const ids = tasks.map(t=>'card-'+t.id);
-      let idx = -1;
       document.addEventListener('keydown', e=>{
         if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
         if (['INPUT','TEXTAREA'].includes(document.activeElement.tagName)) return;
         e.preventDefault();
-        idx = Math.min(ids.length-1, Math.max(0, idx + (e.key==='ArrowDown'?1:-1)));
-        const el = document.getElementById(ids[idx]);
-        el.scrollIntoView({behavior:'smooth', block:'center'});
+        // only visible cards, in current DOM order
+        const cards = [...document.querySelectorAll('.km-card')].filter(c=> c.style.display !== 'none');
+        if (!cards.length) return;
+        const mid = window.innerHeight/2;
+        // find card nearest viewport center
+        let cur = 0, best = Infinity;
+        cards.forEach((c,i)=>{
+          const r = c.getBoundingClientRect();
+          const d = Math.abs((r.top + r.height/2) - mid);
+          if (d < best){ best = d; cur = i; }
+        });
+        const next = Math.min(cards.length-1, Math.max(0, cur + (e.key==='ArrowDown'?1:-1)));
+        const el = cards[next];
+        el.scrollIntoView({behavior: reduceMotion?'auto':'smooth', block:'center'});
+        history.replaceState(null,'','#'+el.dataset.id);
         el.querySelector('article').focus?.();
       });
     })();

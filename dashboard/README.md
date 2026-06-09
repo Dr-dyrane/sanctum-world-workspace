@@ -8,7 +8,19 @@ or served as a static file.
 
 - `km-world-dashboard.html` — Korvin Merrow (KM01–KM06) task overview dashboard.
   Renders failure-depth as a radial node chart, run-spread dot matrices, and
-  per-task detail cards. No build step, no install.
+  per-task detail cards. Includes status filtering, sorting (order / highest /
+  lowest mean), and shareable deep links via the URL hash. No build step, no
+  install.
+
+## Deep links
+
+The hash drives view state, so any filtered/sorted view is shareable:
+
+- `#KM03` — scroll directly to a specific task card.
+- `#filter=complete` — show only tasks in a status category
+  (`complete`, `review`, `pending`).
+- `#sort=low` — order cards by mean (`position`, `high`, `low`).
+- Combine with `&`, e.g. `#filter=review&sort=low`.
 
 ## Conventions
 
