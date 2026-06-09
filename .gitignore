@@ -1,0 +1,119 @@
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+*.env
+*.pem
+*.key
+*.pub
+*.p12
+*.pfx
+*.cer
+*.crt
+*.der
+*.jks
+*.keystore
+id_rsa*
+id_ed25519*
+*_secret*
+*_secrets*
+*credentials*
+*token*
+auth.json
+oauth*.json
+service-account*.json
+*.secret
+*.token
+secrets/
+credentials/
+
+# Local Codex/MCP/browser state that may contain credentials
+.codex/
+.mcp/
+mcp.config.json
+mcp*.json
+mcp-secrets/
+cap_sid
+
+# Browser/session exports
+.browser/
+.playwright-mcp/
+playwright-report/
+test-results/
+browser-exports/
+chrome-exports/
+browser-profiles/
+chrome-profiles/
+chrome-profile/
+Chrome/User Data/
+Default/Cookies
+Default/Network/
+cookies*.txt
+cookies*.json
+session*.json
+local-storage*.json
+Login Data
+History
+Web Data
+
+# Raw/proprietary downloads that are not intentionally promoted to reference
+downloads/
+installers/
+raw-downloads/
+reference/source/raw/
+reference/source/downloads/
+reference/word-spec-examples/
+reference/world-spec-examples/
+
+# Installers and downloaded archives
+*.exe
+*.msi
+*.zip
+*.7z
+*.tar
+*.gz
+*.tgz
+*.rar
+
+# Temporary files
+tmp/
+temp/
+*.cache
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+~$*
+.~lock.*#
+~WRL*.tmp
+*.crdownload
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Logs and generated caches
+*.log
+logs/
+.cache/
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+dist/
+build/
+coverage/
+*.sqlite-shm
+*.sqlite-wal
+
+# Local Google Drive/package mirrors
+korvin-merrow-drive-package/
+worlds/korvin-merrow/file-review/claude-package/zi*

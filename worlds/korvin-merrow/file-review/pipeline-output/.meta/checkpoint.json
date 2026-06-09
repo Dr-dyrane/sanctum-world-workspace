@@ -1,0 +1,2528 @@
+{
+  "spine": {
+    "world": {
+      "title": "Korvin Merrow World",
+      "world_number": "RL Studio cyau8803",
+      "world_type": "Typical Clinical World",
+      "project": "Project Sanctum",
+      "version": "latest 6/4",
+      "domain": "medical",
+      "clinical_domain": "acute hospital medicine, medication reconciliation, consultant synthesis, discharge planning",
+      "specialty_workflow": "Hospital Medicine (EM/IM): discharge, medication reconciliation, consultant synthesis, transition of care",
+      "setting": "ED presentation, then acute inpatient hospitalization, then discharge / transition of care",
+      "snapshot": {
+        "label": "HD6 / world close",
+        "date": "2026-05-23",
+        "time": "18:00",
+        "timezone": "America/New_York",
+        "note": "World-level files stop at or before this timestamp."
+      },
+      "expert_reviewer": "RL Studio cyau8803",
+      "target_app": "openemr",
+      "total_tasks": 6,
+      "file_counts": {
+        "essential_world_level": 22,
+        "essential_task_level": 7,
+        "supplementary": 4,
+        "total_unique": 33
+      },
+      "synthetic_marker": "SYNTHETIC TRAINING DOCUMENT | FICTIONAL PATIENT | NOT A REAL MEDICAL RECORD"
+    },
+    "facility": {
+      "name": "Mercy Vale Regional Medical Center",
+      "short_name": "Mercy Vale Regional",
+      "street_address": "5 Harbor Crest Way",
+      "city": "Bridgehollow",
+      "state": "PA",
+      "zip": "15211",
+      "main_phone": "(412) 555-0143",
+      "fax": "(412) 555-0144",
+      "ed_phone": "(412) 555-0150",
+      "pharmacy_phone": "(412) 555-0170",
+      "medical_records_phone": "(412) 555-0188",
+      "case_management_phone": "(412) 555-0162",
+      "npi": "1437295860",
+      "ein": "47-3219085",
+      "departments": {
+        "emergency": "Emergency Department",
+        "hospital_medicine": "Hospital Medicine",
+        "pharmacy": "Pharmacy",
+        "nursing": "Nursing",
+        "clinical_data": "Clinical Data / Laboratory",
+        "care_management": "Care Management",
+        "medical_records": "Medical Records",
+        "cardiology": "Cardiology",
+        "nephrology": "Nephrology",
+        "endocrinology": "Endocrinology",
+        "rheumatology_outpatient": "Outpatient Rheumatology",
+        "primary_care_outpatient": "Primary Care"
+      },
+      "unit_locations": {
+        "general_medicine_floor": "5 West Medical",
+        "patient_room": "Room 5W-318"
+      }
+    },
+    "patient": {
+      "name": "Korvin Merrow",
+      "first_name": "Korvin",
+      "last_name": "Merrow",
+      "preferred_name": "Korvin",
+      "salutation": "Mr. Merrow",
+      "dob": "1964-02-18",
+      "age_at_admission": 62,
+      "sex": "Male",
+      "mrn": "KM-6427819",
+      "ssn_last4": "4216",
+      "fin_account": "KM-2026-051877",
+      "code_status": "Full Code",
+      "code_status_confirmed_on": "2026-05-18",
+      "height_cm": 178,
+      "height_imperial": "5'10\"",
+      "weight_kg": 97,
+      "weight_lb": 214,
+      "bmi": 30.6,
+      "bmi_class": "Class I obesity",
+      "dry_weight_kg_baseline": 97,
+      "allergy": {
+        "agent": "Lisinopril",
+        "reaction": "cough",
+        "interpretation": "ACE-inhibitor intolerance"
+      },
+      "no_known_food_or_environmental_allergies": true,
+      "address": {
+        "street": "1842 Larchmere Lane",
+        "city": "Bridgehollow",
+        "state": "PA",
+        "zip": "15214",
+        "phone_home": "(412) 555-0227",
+        "phone_mobile": "(412) 555-0228"
+      },
+      "preferred_language": "English",
+      "marital_status": "Married",
+      "religion": "(not specified)",
+      "employment_status": "Retired (former machinist)",
+      "insurance": {
+        "primary": {
+          "plan_name": "Medicare Part A & B",
+          "member_id": "1ABC-DE4-F562",
+          "effective_date": "2024-03-01"
+        },
+        "secondary": {
+          "plan_name": "Keystone Senior Supplement Plan G",
+          "member_id": "KSS-77419266",
+          "group": "GRP-00481"
+        },
+        "pharmacy_benefit": {
+          "plan_name": "Medicare Part D - Keystone Rx",
+          "bin": "017920",
+          "pcn": "MEDDPRIME"
+        }
+      },
+      "living_situation": {
+        "lives_with": "Family (wife Mara Merrow and adult daughter intermittently)",
+        "home_setting": "Single-story home with three exterior steps to front entry; one half-bath on main level",
+        "stairs_to_bedroom": "No interior stairs; bedroom on main level",
+        "baseline_assistive_device": "Cane (occasional, for longer distances or bad days)"
+      },
+      "baseline_function_and_cognition": {
+        "adl_independence": "Independent with basic activities of daily living, slowed by chronic illness",
+        "iadl_status": "Participates in medication routines with family oversight",
+        "cognition": "Mild age-related forgetfulness only; usually oriented and conversational",
+        "ambulation": "Independent indoors; cane intermittently for longer distances",
+        "medication_management_baseline": "Participates with family oversight; complex regimen creates risk if cognition or stamina decline"
+      },
+      "baseline_clinical_anchors": {
+        "creatinine_mgdl_range": [
+          1.6,
+          1.8
+        ],
+        "egfr_mlmin_173m2_range": [
+          40,
+          50
+        ],
+        "hemoglobin_gdl_range": [
+          10.5,
+          11.5
+        ],
+        "a1c_percent_range": [
+          7.6,
+          8.2
+        ],
+        "dry_weight_kg": 97,
+        "note": "Baseline comparators only; not admission or hospital-course values."
+      }
+    },
+    "family": [
+      {
+        "name": "Mara Merrow",
+        "relationship": "Wife / primary caregiver / historian",
+        "role": "Family caregiver",
+        "phone": "(412) 555-0229",
+        "email": "mara.merrow@example.org",
+        "designation": "Healthcare proxy / primary contact",
+        "notes": "Knows baseline function and medication routines; documented voice on home-safety and medication-management concerns; not oppositional, focused on safe transition."
+      },
+      {
+        "name": "Lenora Merrow-Halsey",
+        "relationship": "Adult daughter",
+        "phone": "(412) 555-0231",
+        "role": "Intermittent caregiving support",
+        "designation": "Secondary contact",
+        "notes": "Lives nearby; helps with transportation and weekend supervision when available."
+      }
+    ],
+    "care_team": [
+      {
+        "name": "Elian Vossmere",
+        "credentials": "MD",
+        "role": "Attending hospitalist",
+        "service": "Hospital Medicine",
+        "facility": "Mercy Vale Regional Medical Center",
+        "npi": "1528374960",
+        "pager": "(412) 555-0301",
+        "office_phone": "(412) 555-0302",
+        "style_guide": "Hospitalist attending voice; balanced synthesis; preserves open questions and avoids premature closure."
+      },
+      {
+        "name": "Maris Caldrane",
+        "credentials": "MD",
+        "role": "Consulting attending Cardiology",
+        "service": "Cardiology",
+        "facility": "Mercy Vale Regional Medical Center",
+        "npi": "1639485071",
+        "pager": "(412) 555-0311",
+        "office_phone": "(412) 555-0312",
+        "style_guide": "Cardiology consult voice; emphasizes HFrEF/CAD protective therapy and restart-sequencing stakes; conditions on renal recovery and hemodynamics."
+      },
+      {
+        "name": "Iven Solthar",
+        "credentials": "MD",
+        "role": "Consulting attending Nephrology",
+        "service": "Nephrology",
+        "facility": "Mercy Vale Regional Medical Center",
+        "npi": "1740596182",
+        "pager": "(412) 555-0321",
+        "office_phone": "(412) 555-0322",
+        "style_guide": "Nephrology consult voice; AKI-on-CKD framing; renal-sensitive medication guidance; volume and hypotension caution; time-qualified recommendations."
+      },
+      {
+        "name": "Nerea Veylorn",
+        "credentials": "MD",
+        "role": "Consulting attending Endocrinology",
+        "service": "Endocrinology",
+        "facility": "Mercy Vale Regional Medical Center",
+        "npi": "1851607293",
+        "pager": "(412) 555-0331",
+        "office_phone": "(412) 555-0332",
+        "style_guide": "Endocrinology consult voice; steroid-exposure risk interpretation; taper-uncertainty implications; does not assert adrenal insufficiency."
+      },
+      {
+        "name": "Talia Quenor",
+        "credentials": "MD",
+        "role": "Primary care physician",
+        "service": "Outpatient Primary Care",
+        "facility": "Mercy Vale Primary Care - Harbor Crest Clinic",
+        "clinic_address": "215 Harbor Crest Way, Suite 220, Bridgehollow, PA 15211",
+        "clinic_phone": "(412) 555-0410",
+        "fax": "(412) 555-0411",
+        "npi": "1962718304",
+        "style_guide": "Outpatient primary care voice; baseline comparator anchors; chronic-disease continuity."
+      },
+      {
+        "name": "Soren Halvek",
+        "credentials": "MD",
+        "role": "Outpatient rheumatologist",
+        "service": "Rheumatology (Outpatient)",
+        "facility": "Riverbend Rheumatology Associates",
+        "clinic_address": "402 Mill Ridge Road, Suite 105, Bridgehollow, PA 15213",
+        "clinic_phone": "(412) 555-0520",
+        "fax": "(412) 555-0521",
+        "npi": "1073829415",
+        "style_guide": "Rheumatology outpatient voice; multi-year PMR course; cautious-taper intent with monitoring guidance; explicit non-verification of home adherence; no numeric dose."
+      },
+      {
+        "name": "Bedside nursing team",
+        "role": "Nursing (HD1-HD6)",
+        "named_charge_nurses": [
+          {
+            "name": "Aila Rensby, RN",
+            "shift": "Day shift, 5W Medical"
+          },
+          {
+            "name": "Toren Pelvik, RN",
+            "shift": "Night shift, 5W Medical"
+          }
+        ],
+        "style_guide": "Time-stamped routine observations; no synthesis."
+      },
+      {
+        "name": "Physical Therapy team",
+        "role": "Physical Therapy",
+        "named_clinician": "Renna Volkos, DPT",
+        "phone": "(412) 555-0181"
+      },
+      {
+        "name": "Occupational Therapy team",
+        "role": "Occupational Therapy",
+        "named_clinician": "Brennan Sayre, OTR/L",
+        "phone": "(412) 555-0182"
+      },
+      {
+        "name": "Case Management / Social Work",
+        "role": "Care coordination and discharge planning",
+        "named_case_manager": "Priya Ostroff, RN, BSN, CCM",
+        "named_social_worker": "Devra Aimes, LCSW",
+        "phone": "(412) 555-0162"
+      },
+      {
+        "name": "Pharmacy / medication reconciliation pharmacist",
+        "role": "Inpatient pharmacy reconciliation",
+        "named_clinician": "Ezekiel Marlott, PharmD, BCPS",
+        "phone": "(412) 555-0170"
+      },
+      {
+        "name": "Hospitalist resident (rotating)",
+        "role": "Hospitalist resident",
+        "named_clinician": "Ines Travyn, MD (PGY-2)"
+      },
+      {
+        "name": "Emergency Medicine provider",
+        "role": "ED attending",
+        "named_clinician": "Calder Brensmuth, MD",
+        "npi": "1184930526"
+      }
+    ],
+    "external_outpatient_resources": {
+      "primary_pharmacy": {
+        "name": "Harbor Crest Community Pharmacy",
+        "address": "318 Mill Ridge Road, Bridgehollow, PA 15213",
+        "phone": "(412) 555-0490",
+        "fax": "(412) 555-0491",
+        "ncpdp": "3947182"
+      },
+      "home_health_agency_referral_candidate": {
+        "name": "Keystone HomeCare Services",
+        "phone": "(412) 555-0631",
+        "fax": "(412) 555-0632"
+      },
+      "outpatient_lab": {
+        "name": "Mercy Vale Outpatient Laboratory - Harbor Crest",
+        "address": "215 Harbor Crest Way, Suite 110, Bridgehollow, PA 15211",
+        "phone": "(412) 555-0455"
+      }
+    },
+    "timeline": {
+      "hospital_day_anchor_date": "2026-05-18",
+      "key_dates": [
+        {
+          "date": "2026-04-27",
+          "label": "Approximate start of 3-week decline",
+          "description": "Reduced stamina, activity, appetite, fluid intake, increasing family dependence."
+        },
+        {
+          "date": "2026-05-11",
+          "label": "Final pre-admission week begins",
+          "description": "Weakness, unsteadiness, possible urinary symptoms, cognitive slowing, medication mistakes more concerning."
+        },
+        {
+          "date": "2026-05-17",
+          "label": "Near-fall at home",
+          "description": "Near-fall/lightheadedness drives decision to seek care; family prevented impact, no head strike, no LOC."
+        },
+        {
+          "date": "2026-05-18",
+          "hd": 1,
+          "label": "ED presentation and admission",
+          "description": "Suspected urinary-source sepsis, dehydration/volume risk, altered baseline mental status, functional decline, AKI-on-CKD risk."
+        },
+        {
+          "date": "2026-05-19",
+          "hd": 2,
+          "label": "Early treatment response",
+          "description": "Partial improvement after stabilization; consultant involvement begins (initial Cardiology and Nephrology consults)."
+        },
+        {
+          "date": "2026-05-20",
+          "hd": 3,
+          "label": "PT/OT pivot",
+          "description": "Functional and cognitive recovery becomes central to discharge readiness; PT and OT initial assessments."
+        },
+        {
+          "date": "2026-05-21",
+          "hd": 4,
+          "label": "Consultant tensions peak / Rheumatology provenance available",
+          "description": "Cardiology vs Nephrology friction explicit; Endocrinology consult; outpatient rheumatology prednisone provenance reviewed."
+        },
+        {
+          "date": "2026-05-22",
+          "hd": 5,
+          "label": "Discharge planning becomes plausible",
+          "description": "Family care conference; Case Management / Social Work discharge note; medical improvement continues."
+        },
+        {
+          "date": "2026-05-23",
+          "hd": 6,
+          "label": "World-close day",
+          "description": "Patient appears medically improved; discharge safety depends on synthesis across chart sources. World snapshot closes 18:00."
+        },
+        {
+          "date": "2026-05-23T18:00",
+          "label": "World snapshot closes",
+          "description": "World-level files stop at or before this timestamp."
+        },
+        {
+          "date": "2026-05-24",
+          "label": "Discharge anchor (Tasks 1-4)",
+          "description": "Planned discharge day; task context anchors for medication reconciliation, discharge summary, care coordination, consultant synthesis."
+        },
+        {
+          "date": "2026-05-31",
+          "label": "+7 day anchor (Task 5)",
+          "description": "Early post-discharge follow-up review anchor. No new clinical findings exist in the world; review-only anchor."
+        },
+        {
+          "date": "2026-06-23",
+          "label": "+30 day anchor (Task 6)",
+          "description": "Retrospective safety/readmission-risk review anchor. World record ends at EW22 (05/23/2026 18:00); no post-discharge file exists."
+        }
+      ],
+      "discharge_planned_date": "2026-05-24",
+      "discharge_actual_status": "PLANNED \u2014 no final discharge order entered as of world close 2026-05-23 18:00"
+    },
+    "admission_details": {
+      "admission_date": "2026-05-18",
+      "admission_time": "approximately 11:42 (ED arrival); admitted to Hospital Medicine same day",
+      "ed_arrival_mode": "Family vehicle, assisted into triage",
+      "ed_triage_acuity": "ELEVATED",
+      "admitting_service": "Hospital Medicine",
+      "admitting_attending": "Dr. Elian Vossmere",
+      "admitting_unit": "5 West Medical, Room 5W-318",
+      "reason_for_admission": "Suspected urinary-source infection / sepsis physiology with altered baseline mental status, progressive weakness, poor oral intake, near-fall/lightheadedness, and AKI-on-CKD risk in a medically complex patient (HFrEF/CAD, CKD stage 3, T2DM, PMR with unclear prednisone taper, polypharmacy)."
+    },
+    "comorbidities": [
+      {
+        "n": 1,
+        "condition": "Heart failure with reduced ejection fraction (HFrEF)",
+        "icd10": "I50.22",
+        "clinical_role": "Creates long-term cardioprotective therapy and cardiorenal medication timing tension."
+      },
+      {
+        "n": 2,
+        "condition": "Coronary artery disease with remote PCI/stent",
+        "icd10": "I25.10",
+        "clinical_role": "Supports secondary prevention and Cardiology involvement; risk if protective therapy is lost."
+      },
+      {
+        "n": 3,
+        "condition": "Essential (primary) hypertension",
+        "icd10": "I10",
+        "clinical_role": "Fits CKD/CAD/HFrEF; hemodynamic caution during acute illness."
+      },
+      {
+        "n": 4,
+        "condition": "Mixed hyperlipidemia",
+        "icd10": "E78.2",
+        "clinical_role": "Supports chronic CAD risk reduction and medication continuity."
+      },
+      {
+        "n": 5,
+        "condition": "Chronic kidney disease, stage 3",
+        "icd10": "N18.30",
+        "clinical_role": "Makes AKI recovery, renal-sensitive medications, and Nephrology input clinically important."
+      },
+      {
+        "n": 6,
+        "condition": "Type 2 diabetes mellitus",
+        "icd10": "E11.9",
+        "clinical_role": "Supports infection vulnerability, medication complexity, renal medication safety, and neuropathy."
+      },
+      {
+        "n": 7,
+        "condition": "Diabetic peripheral neuropathy",
+        "icd10": "E11.42",
+        "clinical_role": "Contributes to baseline mobility vulnerability and the multi-factorial near-fall."
+      },
+      {
+        "n": 8,
+        "condition": "Obstructive sleep apnea",
+        "icd10": "G47.33",
+        "clinical_role": "Adds chronic reserve burden without explaining the acute presentation by itself."
+      },
+      {
+        "n": 9,
+        "condition": "Polymyalgia rheumatica",
+        "icd10": "M35.3",
+        "clinical_role": "Provides chronic prednisone exposure and taper-history uncertainty."
+      },
+      {
+        "n": 10,
+        "condition": "Anemia of chronic kidney disease",
+        "icd10": "D63.1",
+        "clinical_role": "Adds fatigue and reduced reserve without becoming an acute anemia story."
+      },
+      {
+        "n": 11,
+        "condition": "Osteoporosis / osteopenia from chronic steroid exposure",
+        "icd10": "M81.0",
+        "clinical_role": "Corroborates cumulative steroid exposure without proving current adrenal suppression."
+      },
+      {
+        "n": 12,
+        "condition": "Class I obesity by BMI",
+        "icd10": "E66.9",
+        "clinical_role": "Fits OSA, cardiometabolic disease, mobility reserve, discharge planning."
+      },
+      {
+        "n": 13,
+        "condition": "Chronic gastroesophageal reflux disease",
+        "icd10": "K21.9",
+        "clinical_role": "Supports pantoprazole and chronic supportive-medication burden."
+      },
+      {
+        "n": 14,
+        "condition": "Chronic constipation tendency",
+        "icd10": "K59.00",
+        "clinical_role": "Fits iron, reduced mobility, neuropathy medication, bowel-regimen complexity."
+      }
+    ],
+    "procedural_history": [
+      {
+        "procedure": "PCI with drug-eluting coronary stent placement (single vessel, mid-LAD)",
+        "date": "2018-09-12",
+        "facility": "Mercy Vale Regional Medical Center",
+        "operator": "Cardiology (pre-Caldrane era; legacy record)",
+        "notes": "Remote PCI/stent; ongoing dual prevention shifted to aspirin monotherapy years later. Captured as supplementary background (WS1)."
+      },
+      {
+        "procedure": "Diagnostic polysomnography",
+        "date": "2019-04-22",
+        "facility": "Mercy Vale Sleep Center",
+        "result": "Confirmed obstructive sleep apnea; CPAP prescribed; adherence variable. Captured as supplementary background (WS2)."
+      }
+    ],
+    "procedural_history_negatives_explicit": [
+      "No ICD",
+      "No CRT",
+      "No pacemaker",
+      "No CABG",
+      "No dialysis access",
+      "No major orthopedic repair",
+      "No amputation",
+      "No temporal artery biopsy",
+      "No major rheumatologic procedure"
+    ],
+    "baseline_home_medication_list": [
+      {
+        "n": 1,
+        "name": "Aspirin",
+        "dose": "81 mg",
+        "route": "Oral",
+        "frequency": "Daily",
+        "indication": "CAD secondary prevention",
+        "category": "CAD prevention",
+        "ndc_example": "00904-6253-46"
+      },
+      {
+        "n": 2,
+        "name": "Atorvastatin",
+        "dose": "40 mg",
+        "route": "Oral",
+        "frequency": "Nightly",
+        "indication": "CAD / hyperlipidemia",
+        "category": "CAD prevention",
+        "ndc_example": "00071-0157-23"
+      },
+      {
+        "n": 3,
+        "name": "Sacubitril/valsartan",
+        "dose": "24/26 mg",
+        "route": "Oral",
+        "frequency": "BID",
+        "indication": "HFrEF guideline-directed therapy after ACE-inhibitor intolerance",
+        "category": "HFrEF / cardiorenal",
+        "ndc_example": "00078-0659-20"
+      },
+      {
+        "n": 4,
+        "name": "Carvedilol",
+        "dose": "12.5 mg",
+        "route": "Oral",
+        "frequency": "BID",
+        "indication": "HFrEF / CAD; hemodynamic-sensitive therapy",
+        "category": "HFrEF / cardiorenal",
+        "ndc_example": "00078-0464-15"
+      },
+      {
+        "n": 5,
+        "name": "Furosemide",
+        "dose": "40 mg",
+        "route": "Oral",
+        "frequency": "Daily",
+        "indication": "HFrEF volume management",
+        "category": "HFrEF / cardiorenal",
+        "ndc_example": "00603-3739-21"
+      },
+      {
+        "n": 6,
+        "name": "Spironolactone",
+        "dose": "25 mg",
+        "route": "Oral",
+        "frequency": "Daily",
+        "indication": "HFrEF mineralocorticoid antagonist; renal and potassium safety relevant",
+        "category": "HFrEF / cardiorenal",
+        "ndc_example": "00781-1308-01"
+      },
+      {
+        "n": 7,
+        "name": "Empagliflozin",
+        "dose": "10 mg",
+        "route": "Oral",
+        "frequency": "Daily",
+        "indication": "HFrEF / type 2 diabetes; acute-illness hold and restart reasoning",
+        "category": "Diabetes / HFrEF / CKD",
+        "ndc_example": "00597-0152-30"
+      },
+      {
+        "n": 8,
+        "name": "Metformin ER",
+        "dose": "500 mg",
+        "route": "Oral",
+        "frequency": "BID",
+        "indication": "Type 2 diabetes; renal and acute-illness safety relevant",
+        "category": "Diabetes",
+        "ndc_example": "00378-2475-93"
+      },
+      {
+        "n": 9,
+        "name": "Insulin glargine",
+        "dose": "18 units",
+        "route": "Subcutaneous",
+        "frequency": "Nightly",
+        "indication": "Type 2 diabetes basal insulin",
+        "category": "Diabetes",
+        "ndc_example": "00088-2220-33"
+      },
+      {
+        "n": 10,
+        "name": "Gabapentin",
+        "dose": "300 mg",
+        "route": "Oral",
+        "frequency": "Nightly",
+        "indication": "Diabetic neuropathy; functional/cognitive safety context",
+        "category": "Neuropathy / supportive",
+        "ndc_example": "00093-1029-01"
+      },
+      {
+        "n": 11,
+        "name": "Ferrous sulfate",
+        "dose": "325 mg",
+        "route": "Oral",
+        "frequency": "Every other day",
+        "indication": "Anemia of CKD; constipation burden relevant",
+        "category": "Supportive / hematology",
+        "ndc_example": "00904-7873-60"
+      },
+      {
+        "n": 12,
+        "name": "Alendronate",
+        "dose": "70 mg",
+        "route": "Oral",
+        "frequency": "Weekly",
+        "indication": "Steroid-related osteoporosis / osteopenia",
+        "category": "Bone health",
+        "ndc_example": "00006-0926-31"
+      },
+      {
+        "n": 13,
+        "name": "Prednisone",
+        "dose": "NO FIXED DOSE ASSIGNED",
+        "route": "Oral",
+        "frequency": "Reported tapering schedule unclear",
+        "indication": "PMR; recent taper/dose varies across chart sources",
+        "category": "PMR / steroid",
+        "ndc_example": "(varies across fills - 5 mg and 10 mg tablets historically dispensed)",
+        "intentional_non_fixed": true
+      },
+      {
+        "n": 14,
+        "name": "Calcium carbonate / vitamin D",
+        "dose": "600 mg / 400 IU",
+        "route": "Oral",
+        "frequency": "BID",
+        "indication": "Bone health support with chronic steroid exposure",
+        "category": "Bone health / supplement",
+        "ndc_example": "00904-5908-60"
+      },
+      {
+        "n": 15,
+        "name": "Nitroglycerin",
+        "dose": "0.4 mg",
+        "route": "Sublingual",
+        "frequency": "PRN chest pain",
+        "indication": "CAD angina rescue medication",
+        "category": "CAD rescue",
+        "ndc_example": "00071-0418-13"
+      },
+      {
+        "n": 16,
+        "name": "Acetaminophen",
+        "dose": "650 mg",
+        "route": "Oral",
+        "frequency": "q6h PRN",
+        "indication": "Pain / musculoskeletal symptom support",
+        "category": "Supportive / analgesic",
+        "ndc_example": "50580-449-01"
+      },
+      {
+        "n": 17,
+        "name": "Pantoprazole",
+        "dose": "40 mg",
+        "route": "Oral",
+        "frequency": "Daily",
+        "indication": "GERD / acid-suppression indication",
+        "category": "GI / supportive",
+        "ndc_example": "00008-0841-81"
+      },
+      {
+        "n": 18,
+        "name": "PEG 3350",
+        "dose": "17 g",
+        "route": "Oral",
+        "frequency": "Daily PRN",
+        "indication": "Constipation tendency / bowel regimen support",
+        "category": "Bowel regimen",
+        "ndc_example": "00149-0144-65"
+      },
+      {
+        "n": 19,
+        "name": "Senna",
+        "dose": "8.6 mg",
+        "route": "Oral",
+        "frequency": "Nightly PRN",
+        "indication": "Constipation tendency / bowel regimen support",
+        "category": "Bowel regimen",
+        "ndc_example": "00904-6580-59"
+      }
+    ],
+    "prednisone_intentional_uncertainty": {
+      "status": "DELIBERATELY NON-FIXED in the world",
+      "rationale": "Chart sources disagree about the recent taper/dose and adherence. Task is to reconstruct risk and safe handling from source hierarchy, not to assume a single hidden dose.",
+      "source_hierarchy_for_prednisone": [
+        "Rheumatology attending recommendation (Dr. Soren Halvek; EW6) - intended taper",
+        "Verified medication reconciliation (EW4)",
+        "Pharmacy/refill history (EW5)",
+        "Family report (EW20)",
+        "Patient recollection"
+      ],
+      "documented_inconsistencies": [
+        "Patient at triage: 'still on a little prednisone' / 'might have been tapering off'",
+        "Family: bottle directions and what he was actually taking may not match",
+        "Pharmacy refill history: multiple fills over time with directions changed across fills; recent fills include lower-strength tablets and taper-style directions; cannot prove what was actually taken in days before admission",
+        "Rheumatology (Dr. Halvek): documented cautious-taper intent with monitoring, avoid abrupt discontinuation, no numeric dose stated"
+      ],
+      "must_not_invent_a_fixed_dose": true,
+      "must_not_state_verified_prednisone_dose_in_initial_med_rec_EW4": true,
+      "no_numeric_dose_in_rheumatology_provenance_EW6": true
+    },
+    "inpatient_only_actions_explicitly_separate": {
+      "insulin_lispro_correctional": {
+        "description": "Inpatient correctional / sliding-scale coverage for glycemic management during acute illness; NOT a home medication",
+        "must_not_drift_to_outpatient_regimen": true
+      },
+      "iv_fluids": "Cautious volume strategy due to HFrEF/CKD; recorded on MAR but not a discharge medication",
+      "empiric_antibiotics_for_suspected_uti_sepsis": "Inpatient empiric coverage initiated HD1 for suspected urinary-source infection; oral step-down or completion to be reconciled at discharge"
+    },
+    "decision_frictions": [
+      {
+        "id": "F1",
+        "name": "Cardiology vs Nephrology",
+        "topic": "Medication restart timing (sacubitril/valsartan, spironolactone, empagliflozin, furosemide, carvedilol)",
+        "cardiology_position": "Preserve HFrEF/CAD protection; decompensation/readmission risk if protective therapy is lost.",
+        "nephrology_position": "Renal recovery, potassium, blood pressure reserve, intake, and volume status remain fragile.",
+        "balance": "Both clinically defensible; correct path defines monitored sequencing with parameters that gate each restart (creatinine/eGFR trajectory, potassium, BP, intake/weight)."
+      },
+      {
+        "id": "F2",
+        "name": "Family vs Primary Team",
+        "topic": "Discharge readiness",
+        "family_position": "Baseline-informed observation that 'better than Monday' is not the same as ready to manage without support.",
+        "primary_team_position": "Objective improvement and plausible discharge planning.",
+        "balance": "Correct pathway integrates both; family observations are baseline-informed collateral, not anxiety to reassure away."
+      },
+      {
+        "id": "F3",
+        "name": "Endocrinology vs Primary Team",
+        "topic": "Steroid interpretation and risk",
+        "endocrinology_position": "Chronic steroid exposure and taper uncertainty are clinically relevant; monitoring and teaching priority.",
+        "primary_team_position": "Cautious about over-attributing improvement-lag to steroids after sepsis-oriented treatment helps.",
+        "balance": "Endocrine concern is real but adrenal insufficiency is NOT established; do not over-call."
+      }
+    ],
+    "authority_and_source_hierarchy": {
+      "authority_hierarchy": [
+        "Attending hospitalist",
+        "Consulting attending specialists",
+        "PT/OT functional assessments",
+        "Case Management / Social Work",
+        "Family reports",
+        "Patient recollection"
+      ],
+      "clinical_fact_hierarchy": [
+        "Attending documentation",
+        "Verified medication reconciliation",
+        "Pharmacy history",
+        "Consultant documentation",
+        "Primary care documentation",
+        "Family report",
+        "Patient recollection"
+      ],
+      "prednisone_hierarchy": [
+        "Rheumatology attending recommendation",
+        "Verified medication reconciliation",
+        "Pharmacy/refill history",
+        "Family report",
+        "Patient recollection"
+      ]
+    },
+    "objective_trends": {
+      "baseline_comparator": {
+        "creatinine_mgdl": "1.6-1.8",
+        "egfr_ml_min_173m2": "40-50",
+        "hemoglobin_gdl": "10.5-11.5",
+        "a1c_percent": "7.6-8.2",
+        "dry_weight_kg": 97
+      },
+      "daily_trend_table": [
+        {
+          "date": "2026-05-18",
+          "hd": 1,
+          "anchor": "Admission / acute stabilization",
+          "temperature_pattern": "Febrile earlier in course, improving after treatment started",
+          "bp_hemodynamic_pattern": "Borderline low-normal pressures with lightheadedness history; systolic 96-110 mmHg range, diastolic 56-68 mmHg",
+          "creatinine_mgdl": 2.62,
+          "bun_mgdl": 48,
+          "potassium_mmol_l": 5.1,
+          "wbc_kul": 15.6,
+          "glucose_mgdl_range": "180-260",
+          "intake_volume_observations": "Poor intake; clinically volume vulnerable"
+        },
+        {
+          "date": "2026-05-19",
+          "hd": 2,
+          "anchor": "Early response",
+          "temperature_pattern": "Lower fever burden",
+          "bp_hemodynamic_pattern": "Still low-normal, improved from presentation but not robust; systolic 100-118 mmHg",
+          "creatinine_mgdl": 2.38,
+          "bun_mgdl": 45,
+          "potassium_mmol_l": 4.9,
+          "wbc_kul": 13.8,
+          "glucose_mgdl_range": "170-250",
+          "intake_volume_observations": "Oral intake slightly improved"
+        },
+        {
+          "date": "2026-05-20",
+          "hd": 3,
+          "anchor": "Functional concerns emerge",
+          "temperature_pattern": "Afebrile or near-afebrile trend",
+          "bp_hemodynamic_pattern": "Less symptomatic but not clearly at baseline reserve; systolic 106-124 mmHg",
+          "creatinine_mgdl": 2.12,
+          "bun_mgdl": 39,
+          "potassium_mmol_l": 4.7,
+          "wbc_kul": 11.9,
+          "glucose_mgdl_range": "160-240",
+          "intake_volume_observations": "Intake improving; fatigue persists"
+        },
+        {
+          "date": "2026-05-21",
+          "hd": 4,
+          "anchor": "Consultant tension / source reconstruction",
+          "temperature_pattern": "Afebrile trend",
+          "bp_hemodynamic_pattern": "More stable but still vulnerable to medication effects; systolic 110-128 mmHg",
+          "creatinine_mgdl": 1.98,
+          "bun_mgdl": 35,
+          "potassium_mmol_l": 4.6,
+          "wbc_kul": 10.8,
+          "glucose_mgdl_range": "160-270",
+          "intake_volume_observations": "Intake inconsistent across shifts"
+        },
+        {
+          "date": "2026-05-22",
+          "hd": 5,
+          "anchor": "Discharge planning becomes plausible",
+          "temperature_pattern": "Afebrile",
+          "bp_hemodynamic_pattern": "Stable enough for reassessment, not enough to ignore renal/HF context; systolic 112-128 mmHg",
+          "creatinine_mgdl": 1.86,
+          "bun_mgdl": 31,
+          "potassium_mmol_l": 4.5,
+          "wbc_kul": 9.9,
+          "glucose_mgdl_range": "150-260",
+          "intake_volume_observations": "Improved intake; still below usual strength"
+        },
+        {
+          "date": "2026-05-23",
+          "hd": 6,
+          "anchor": "World-close day / discharge planning",
+          "temperature_pattern": "Afebrile",
+          "bp_hemodynamic_pattern": "Stable on floor checks; orthostatic reserve not fully captured by this table; systolic 114-130 mmHg",
+          "creatinine_mgdl": 1.8,
+          "bun_mgdl": 29,
+          "potassium_mmol_l": 4.4,
+          "wbc_kul": 9.4,
+          "glucose_mgdl_range": "140-250",
+          "intake_volume_observations": "Intake improved; mobility reserve requires separate sources"
+        }
+      ],
+      "trends_caveats": [
+        "EW12 is a trend source, not an answer file.",
+        "A creatinine near baseline does not by itself determine readiness for HFrEF medication restart.",
+        "Potassium and BP trends must be reconciled with actual medication actions and consultant timing.",
+        "Dry weight is a baseline comparator, not a complete inpatient volume assessment.",
+        "Culture/source interpretation is NOT summarized here as a definitive single-cause answer.",
+        "No scheduled post-discharge monitoring plan exists (Task 5 monitoring-gap substrate)."
+      ]
+    },
+    "inpatient_medication_actions_summary": {
+      "held_during_AKI_hemodynamic_vulnerability": [
+        "Sacubitril/valsartan (held early; reassessment as renal/hemodynamic trend improved)",
+        "Spironolactone (held during AKI/hyperkalemia-risk period; later reassessment not finalized)",
+        "Furosemide (held early with poor intake/volume concern)",
+        "Empagliflozin (held during acute illness and poor intake)",
+        "Metformin ER (held during AKI/acute illness)"
+      ],
+      "cautiously_administered_or_temporarily_held": [
+        "Carvedilol (temporarily held or cautiously administered depending on hemodynamic status)"
+      ],
+      "continued_unless_contraindicated": [
+        "Aspirin",
+        "Atorvastatin",
+        "Pantoprazole",
+        "Calcium carbonate/vitamin D (if available/tolerated)"
+      ],
+      "inpatient_glycemic_management": {
+        "insulin_glargine": "Continued with inpatient adjustment/monitoring; not copied exactly from home routine",
+        "insulin_lispro_correctional": "Inpatient correctional coverage only; NOT a baseline outpatient medication"
+      },
+      "prednisone_inpatient_handling": "Administered under interim inpatient plan while source reconstruction continued; home taper truth remains unresolved by MAR alone",
+      "gabapentin_action": "Reassessed during altered mentation/weakness; may be held or reduced depending on sedation/fall-risk concern",
+      "alendronate_action": "Not administered as a routine inpatient priority; remains outpatient chronic therapy to reconcile",
+      "ferrous_sulfate_action": "Continued or temporarily deferred around acute intake/tolerance",
+      "bowel_regimen_action": "PEG / senna used as needed or continued based on bowel pattern",
+      "nitroglycerin": "Available as rescue; not routine daily therapy"
+    },
+    "consultant_chronology": {
+      "principle": "Each addendum is TIME-QUALIFIED. The date of each consultant note governs applicability. 'Most recent' does NOT equal 'most authoritative.'",
+      "nephrology": {
+        "consultant": "Iven Solthar, MD",
+        "initial_note_date": "2026-05-19",
+        "addenda_dates": [
+          "2026-05-20",
+          "2026-05-21",
+          "2026-05-22",
+          "2026-05-23"
+        ],
+        "focus": "AKI-on-CKD assessment against baseline anchors; volume and hypotension caution; renal-sensitive medication guidance that evolves with renal recovery."
+      },
+      "cardiology": {
+        "consultant": "Maris Caldrane, MD",
+        "initial_note_date": "2026-05-19",
+        "addenda_dates": [
+          "2026-05-20",
+          "2026-05-21",
+          "2026-05-22",
+          "2026-05-23"
+        ],
+        "focus": "HFrEF/CAD protective-therapy stakes; restart-sequencing conditioned on renal recovery and hemodynamics; decompensation/readmission risk framing."
+      },
+      "endocrinology": {
+        "consultant": "Nerea Veylorn, MD",
+        "initial_note_date": "2026-05-21",
+        "addenda_dates": [
+          "2026-05-22",
+          "2026-05-23"
+        ],
+        "focus": "Steroid-exposure risk interpretation; taper-uncertainty implications; monitoring and teaching recommendations; safe taper planning. Does NOT declare adrenal insufficiency established."
+      }
+    },
+    "rheumatology_provenance": {
+      "source": "Outpatient rheumatology (Dr. Soren Halvek), Riverbend Rheumatology Associates",
+      "availability": "Pre-admission provenance, reviewed in hospital and available by HD4 (2026-05-21)",
+      "key_facts": [
+        "Several-year history of PMR with chronic prednisone exposure",
+        "Multiple prior symptom flares and taper attempts",
+        "Bone-health therapy consistent with chronic steroid exposure and cumulative risk",
+        "Most recent intent: cautious slow taper because PMR symptoms appeared controlled",
+        "Plan: 'Continue slow taper if symptoms remain controlled; avoid abrupt discontinuation; contact rheumatology or primary care if PMR symptoms flare or systemic symptoms emerge; medication list should be reconciled because prior taper instructions may remain visible in older records.'",
+        "INTENTIONALLY no numeric dose stated"
+      ],
+      "what_it_does_NOT_establish": [
+        "Actual recent home adherence",
+        "Inpatient steroid plan",
+        "That current symptoms are primarily caused by adrenal suppression",
+        "That the early sepsis frame was wrong"
+      ]
+    },
+    "functional_evidence": {
+      "physical_therapy": {
+        "clinician": "Renna Volkos, DPT",
+        "initial_assessment_date": "2026-05-20",
+        "later_update_date": "2026-05-22",
+        "findings": {
+          "bed_mobility": "Modified independent with bed mobility; slow",
+          "sit_to_stand": "Minimum assist x1 with cueing; improved to supervision by HD5-HD6 but not back to baseline",
+          "ambulation_hd3": "10-15 feet with rolling walker and standby assist",
+          "ambulation_hd5_hd6": "100-150 feet with rolling walker and supervision; endurance limited",
+          "endurance": "Tires after clustered activity; needs rest periods",
+          "fall_risk": "Elevated (Morse Fall Scale 65, high risk)",
+          "assistive_device_recommendation": "Transition to rolling walker for early post-discharge period; cane insufficient given current endurance and orthostatic vulnerability",
+          "home_safety_recommendations": [
+            "Rolling walker at minimum for ambulation",
+            "Bedside commode initially if bathroom distance is challenging at night",
+            "Grab bars in bathroom",
+            "Remove loose rugs in walking paths",
+            "Supervised mobility for first 5-7 days post-discharge"
+          ]
+        }
+      },
+      "occupational_therapy": {
+        "clinician": "Brennan Sayre, OTR/L",
+        "initial_assessment_date": "2026-05-20",
+        "later_update_date": "2026-05-22",
+        "findings": {
+          "adl": "Modified independent with bathing and dressing with seated rest; improved to supervision",
+          "iadl_medication_management": "Significant gaps under fatigue and complexity; unable to organize 19-item regimen reliably during seated assessment; recurrent errors with timing of BID and PRN medications when fatigued",
+          "iadl_cooking_finance": "Not formally tested during inpatient stay; baseline reported intact per family",
+          "cognition_in_function": "Mild executive slowing under complexity; intact for basic single-step tasks; declines accuracy with multi-step or interruption",
+          "recommendations": [
+            "Pre-filled weekly pill organizer with supervision for first weeks at home",
+            "Teach-back medication education with family present",
+            "Daily check-in by family during medication times for first 5-7 days",
+            "Outpatient OT for IADL retraining if not progressed by +30 days",
+            "Avoid sole responsibility for new or changed medications without family verification"
+          ]
+        }
+      },
+      "nursing_observations": {
+        "summary_window": "HD1-HD6 through 2026-05-23 18:00",
+        "intake_percentages_by_day": {
+          "HD1": "Poor; estimated 25-40% of meals",
+          "HD2": "Slightly improved; 40-55%",
+          "HD3": "Improving; 55-70%",
+          "HD4": "Inconsistent across shifts; 50-75%",
+          "HD5": "Improved; 70-85%",
+          "HD6": "Improved; 75-90%"
+        },
+        "ambulation_observations": "HD1-HD2: required assistance with transfers; HD3: short-distance ambulation with staff supervision; HD4: chair-sitting for parts of the day, bathroom transfer with supervision; HD5-HD6: ambulated short distances with staff nearby, supervision and cues",
+        "evening_confusion": "Intermittent evening confusion noted HD1-HD4; less prominent HD5-HD6 but still slower with complex medication or timeline questions",
+        "medication_teaching_observations": "Repeatedly noted that patient could recount some home medications but became less reliable when asked about recent dose changes or prednisone taper; sometimes unsure conversationally whether he had already taken a medication",
+        "family_interactions": "Family present daily; Mara consistently engaged and asking baseline-relevant questions; nursing noted family clarifications and reassurances"
+      }
+    },
+    "family_communication_record": {
+      "primary_family_contact": "Mara Merrow",
+      "documented_touchpoints": [
+        {
+          "date": "2026-05-20",
+          "hd": 3,
+          "topic": "Family update",
+          "key_content": "Korvin looks better but not back to usual self; needs more prompting; tires quickly; less organized with medications; worries about improvement-equals-readiness."
+        },
+        {
+          "date": "2026-05-21",
+          "hd": 4,
+          "topic": "Steroid history clarification",
+          "key_content": "Mara asked about steroid history; unsure whether Korvin followed intended prednisone taper at home; reports bottles and patient recollection may not fully explain pre-admission decline. Asked whether weakness could be from 'more than the infection.'"
+        },
+        {
+          "date": "2026-05-22",
+          "hd": 5,
+          "topic": "Care conference / discharge planning",
+          "key_content": "Improved but still not at baseline stamina; worried about medication changes; Korvin may say he understands but forget timing; family available but supervision needs unclear; wants follow-up and services explained clearly."
+        },
+        {
+          "date": "2026-05-23",
+          "hd": 6,
+          "topic": "Pre-discharge questions (before 18:00 world close)",
+          "key_content": "Wants Korvin home when safe and understands he has improved. 'Better than Monday is not the same as ready to manage the next steps without support.' Documented questions about final medication review, heart and kidney medication explanation, prednisone reconciliation with rheumatology history, supervision needs, and warning signs."
+        }
+      ],
+      "family_quotes_canonical": [
+        "This is not his normal. He is usually slow, but he knows what he is doing. \u2014 Mara at triage 2026-05-18",
+        "Better than Monday is not the same as ready to manage the next steps without support. \u2014 Mara, HD6 communication"
+      ],
+      "family_authority_limits": [
+        "Lower authority than rheumatology for prednisone intent",
+        "Lower authority than verified med rec and pharmacy history for medication-source conflicts",
+        "Important and valued for baseline function and home context"
+      ]
+    },
+    "case_management_social_work_summary": {
+      "engaged_on": "2026-05-22 (HD5)",
+      "case_manager": "Priya Ostroff, RN, BSN, CCM",
+      "social_worker": "Devra Aimes, LCSW",
+      "items_under_discussion": [
+        "Home health nursing for medication review or early monitoring (eligibility and acceptance pending)",
+        "Home PT/OT or outpatient therapy depending on final functional plan",
+        "Assistive device consistency (cane vs rolling walker per PT)",
+        "Family education around medication changes and warning signs",
+        "Follow-up appointment feasibility (PCP and relevant specialists)",
+        "Transportation for follow-up",
+        "Pharmacy access and medication pickup logistics"
+      ],
+      "items_NOT_finalized_at_world_close": [
+        "No service plan documented as complete, accepted, authorized, or sufficient",
+        "Level of family supervision not finalized",
+        "Home health acceptance not confirmed",
+        "Equipment delivery not confirmed",
+        "Transportation arrangement not confirmed"
+      ],
+      "guardrail": "Explicitly NOT sole safety evidence. Cross-role disposition integration substrate."
+    },
+    "follow_up_plan_state_at_world_close": {
+      "appointments_being_arranged": [
+        {
+          "service": "Primary care (Dr. Talia Quenor)",
+          "anchor": "2026-05-31 (+7 day, used as Task 5 review anchor)",
+          "status": "Being arranged; status-neutral in world record"
+        },
+        {
+          "service": "Nephrology (Dr. Iven Solthar)",
+          "anchor": "Within 1-2 weeks of discharge",
+          "status": "Discussed in EW11/EW22; not confirmed"
+        },
+        {
+          "service": "Cardiology (Dr. Maris Caldrane)",
+          "anchor": "Within 2 weeks of discharge",
+          "status": "Discussed in EW11/EW22; not confirmed"
+        },
+        {
+          "service": "Endocrinology (Dr. Nerea Veylorn) - taper/steroid follow-up coordination",
+          "anchor": "Within 2-4 weeks",
+          "status": "Discussed; coordination with Rheumatology pending"
+        },
+        {
+          "service": "Rheumatology (Dr. Soren Halvek)",
+          "anchor": "Within 2-4 weeks for prednisone taper clarification",
+          "status": "Recommended; not confirmed"
+        }
+      ],
+      "note": "World record ends 2026-05-23 18:00. The +7 (2026-05-31) and +30 (2026-06-23) anchors are REVIEW anchors only. No post-discharge file exists; no follow-up clinical findings exist."
+    },
+    "traps": [
+      {
+        "id": "visible-discharge-snapshot-overtrust",
+        "name": "Visible discharge snapshot overtrust / Visible-but-incomplete plan",
+        "severity": "breaking",
+        "conceal_surface": "EW22 (discharge_facing_plan_snapshot_05232026.docx) is a one-page reassuring summary: improvement narrative, anticipated 2026-05-24 discharge, follow-up list, simplified medication framing. Coherent and professional.",
+        "reveal_surface": "EW22 DELIBERATELY OMITS: unresolved restart decisions, functional and cognitive concerns from EW17-EW19, family-baseline observations from EW20, prednisone reconciliation. Correct posture is to use EW22 as a source to reconcile, NOT as the synthesis.",
+        "carrier_files": [
+          "discharge_facing_plan_snapshot_05232026.docx"
+        ],
+        "affected_tasks": [
+          "T1",
+          "T2",
+          "T3",
+          "T5",
+          "T6"
+        ]
+      },
+      {
+        "id": "premature-or-delayed-cardiorenal-restart",
+        "name": "Premature or delayed HF/AKI restart",
+        "severity": "high",
+        "conceal_surface": "Cardiology and Nephrology each have time-qualified positions across dated addenda 2026-05-19 through 2026-05-23.",
+        "reveal_surface": "Correct path balances both positions and defines monitored sequencing with parameters (creatinine/eGFR, potassium, BP, intake/weight) gating each restart.",
+        "carrier_files": [
+          "cardiology_consultation_05212026.docx",
+          "nephrology_consultation_05212026.docx",
+          "medication_administration_record_05232026.docx",
+          "renal_infection_hemodynamic_trend_summary_05232026.docx"
+        ],
+        "affected_tasks": [
+          "T1",
+          "T4",
+          "T6"
+        ]
+      },
+      {
+        "id": "prednisone-source-error",
+        "name": "Prednisone source error",
+        "severity": "high",
+        "conceal_surface": "Multiple disagreeing sources: patient, family, medication bag/label, pharmacy fills, rheumatology intent.",
+        "reveal_surface": "Use rheumatology (EW6) as highest outpatient taper-intent source while integrating med rec, pharmacy, family, and patient recollection. Keep dose/taper uncertainty EXPLICIT. NO numeric dose anywhere.",
+        "carrier_files": [
+          "initial_medication_reconciliation_note_05182026.docx",
+          "pharmacy_refill_history_report_05182026.docx",
+          "outpatient_rheumatology_prednisone_provenance_05212026.docx"
+        ],
+        "affected_tasks": [
+          "T1",
+          "T4",
+          "T5"
+        ]
+      },
+      {
+        "id": "inpatient-only-therapy-drift",
+        "name": "Inpatient-only therapy drift",
+        "severity": "high",
+        "conceal_surface": "MAR (EW13) shows inpatient correctional insulin lispro and other inpatient-only actions on the same grid as continued chronic therapy.",
+        "reveal_surface": "Do NOT convert inpatient correctional insulin (or other inpatient-only MAR actions) into outpatient medications on the discharge list without independent discharge justification.",
+        "carrier_files": [
+          "medication_administration_record_05232026.docx"
+        ],
+        "affected_tasks": [
+          "T1"
+        ]
+      },
+      {
+        "id": "buried-medication-management-capacity-evidence",
+        "name": "Buried medication-management capacity evidence",
+        "severity": "high",
+        "conceal_surface": "OT (EW19), nursing (EW17), family (EW20) findings are buried in routine notes and not synthesized anywhere.",
+        "reveal_surface": "Integrate OT, nursing, and family findings into teach-back and supervision planning, not just the medication list.",
+        "carrier_files": [
+          "occupational_therapy_assessment_05202026.docx",
+          "nursing_observation_flowsheet_summary_05232026.docx",
+          "family_communication_care_conference_05222026.docx"
+        ],
+        "affected_tasks": [
+          "T1",
+          "T3",
+          "T6"
+        ]
+      },
+      {
+        "id": "sepsis-anchor-carry-forward",
+        "name": "Sepsis-anchor carry-forward / Copy-forward diagnosis closure",
+        "severity": "high",
+        "conceal_surface": "EW2 (ED provider) and EW3 (admission H&P) reasonably frame suspected urinary-source sepsis. EW12 shows improvement of infection markers.",
+        "reveal_surface": "Preserve reasonable initial frame while showing why later weakness, medication decisions, steroid history, and disposition still mattered. Do NOT let infection frame narrate full course.",
+        "carrier_files": [
+          "ed_provider_assessment_05182026.docx",
+          "admission_history_and_physical_05182026.docx",
+          "renal_infection_hemodynamic_trend_summary_05232026.docx"
+        ],
+        "affected_tasks": [
+          "T1",
+          "T2",
+          "T5"
+        ]
+      },
+      {
+        "id": "consultant-chronology-flattening-and-latest-note-bias",
+        "name": "Consultant chronology flattening / Latest-note authority bias",
+        "severity": "high",
+        "conceal_surface": "Cardiology, Nephrology, Endocrinology consult addenda span 2026-05-19 through 2026-05-23.",
+        "reveal_surface": "Summarize consultant input by TIMING and clinical context. Each recommendation is time-qualified. Most recent does NOT equal most authoritative.",
+        "carrier_files": [
+          "cardiology_consultation_05212026.docx",
+          "nephrology_consultation_05212026.docx",
+          "endocrinology_consultation_05212026.docx"
+        ],
+        "affected_tasks": [
+          "T2",
+          "T4",
+          "T6"
+        ]
+      },
+      {
+        "id": "functional-evidence-omission",
+        "name": "Functional evidence omission",
+        "severity": "high",
+        "conceal_surface": "Functional and cognitive evidence sits in PT, OT, nursing, family observations \u2014 easy to skip in favor of physician summaries.",
+        "reveal_surface": "Include these observational sources when describing course, readiness, follow-up, and safety risk.",
+        "carrier_files": [
+          "physical_therapy_assessment_05202026.docx",
+          "occupational_therapy_assessment_05202026.docx",
+          "nursing_observation_flowsheet_summary_05232026.docx",
+          "family_communication_care_conference_05222026.docx"
+        ],
+        "affected_tasks": [
+          "T2",
+          "T3",
+          "T5",
+          "T6"
+        ]
+      },
+      {
+        "id": "medical-stability-equals-readiness",
+        "name": "Medical stability equals readiness",
+        "severity": "high",
+        "conceal_surface": "Improved infection markers, renal trajectory toward baseline, intake recovery, mental-status improvement (EW12) imply readiness.",
+        "reveal_surface": "Reconcile trajectory with PT/OT gaps (EW18, EW19), nursing evening confusion (EW17), family baseline-informed concerns (EW20), CM/SW service requirements (EW21).",
+        "carrier_files": [
+          "renal_infection_hemodynamic_trend_summary_05232026.docx",
+          "discharge_facing_plan_snapshot_05232026.docx",
+          "physical_therapy_assessment_05202026.docx",
+          "occupational_therapy_assessment_05202026.docx",
+          "nursing_observation_flowsheet_summary_05232026.docx"
+        ],
+        "affected_tasks": [
+          "T3",
+          "T5"
+        ]
+      },
+      {
+        "id": "family-concern-dismissal",
+        "name": "Family-concern dismissal / minimization",
+        "severity": "high",
+        "conceal_surface": "Family voice can be characterized as generic resistance or anxiety.",
+        "reveal_surface": "Treat Mara Merrow's observations as baseline-informed longitudinal collateral; weighed against the visible plan, not minimized.",
+        "carrier_files": [
+          "family_communication_care_conference_05222026.docx",
+          "discharge_facing_plan_snapshot_05232026.docx"
+        ],
+        "affected_tasks": [
+          "T3",
+          "T6"
+        ]
+      },
+      {
+        "id": "service-plan-overconfidence-disposition-siloing",
+        "name": "Service-plan overconfidence and disposition siloing",
+        "severity": "medium",
+        "conceal_surface": "Case management note lists services and equipment options.",
+        "reveal_surface": "Equipment, home health, education, transportation, caregiver capacity must be CONFIRMED rather than assumed. Integrate with medical plan.",
+        "carrier_files": [
+          "case_management_social_work_discharge_note_05222026.docx",
+          "home_support_equipment_reference_05222026.docx",
+          "discharge_facing_plan_snapshot_05232026.docx"
+        ],
+        "affected_tasks": [
+          "T3",
+          "T4"
+        ]
+      },
+      {
+        "id": "consultant-winner-selection",
+        "name": "Consultant winner selection",
+        "severity": "high",
+        "conceal_surface": "Cardiology, Nephrology, Endocrinology each have authoritative voices.",
+        "reveal_surface": "Do NOT automatically defer to any one service; synthesize timing, trends, patient status.",
+        "carrier_files": [
+          "nephrology_consultation_05212026.docx",
+          "cardiology_consultation_05212026.docx",
+          "endocrinology_consultation_05212026.docx"
+        ],
+        "affected_tasks": [
+          "T4"
+        ]
+      },
+      {
+        "id": "steroid-overcall",
+        "name": "Steroid overcall (adrenal insufficiency as hidden answer)",
+        "severity": "medium",
+        "conceal_surface": "Endocrinology identifies steroid exposure and taper-uncertainty as relevant.",
+        "reveal_surface": "Endocrinology explicitly does NOT declare adrenal insufficiency established. Rheumatology documents intended taper without verifying adherence. Do NOT make adrenal insufficiency the hidden single explanation.",
+        "carrier_files": [
+          "endocrinology_consultation_05212026.docx",
+          "outpatient_rheumatology_prednisone_provenance_05212026.docx"
+        ],
+        "affected_tasks": [
+          "T4"
+        ]
+      },
+      {
+        "id": "invented-follow-up-or-outcome-facts",
+        "name": "Invented follow-up or outcome facts (Tasks 5 and 6)",
+        "severity": "breaking",
+        "conceal_surface": "Tasks 5 (2026-05-31, +7) and 6 (2026-06-23, +30) use post-discharge anchors as review points.",
+        "reveal_surface": "World record ends EW22 on 2026-05-23 18:00. NO post-discharge file exists. Do NOT invent: new symptoms, labs, vitals, visits, recovery, deterioration, readmission, non-readmission, adverse events, or blame narrative.",
+        "carrier_files": [
+          "post_discharge_followup_request_05312026.docx",
+          "readmission_risk_review_request_06232026.docx",
+          "discharge_facing_plan_snapshot_05232026.docx"
+        ],
+        "affected_tasks": [
+          "T5",
+          "T6"
+        ]
+      },
+      {
+        "id": "medication-monitoring-gap",
+        "name": "Medication monitoring gap",
+        "severity": "medium",
+        "conceal_surface": "Trend flowsheet (EW12) shows trends without a scheduled post-discharge monitoring plan.",
+        "reveal_surface": "Identify renal function, potassium, BP symptoms, volume, intake, diabetes therapy, HF/CAD sequencing as follow-up priorities at +7.",
+        "carrier_files": [
+          "renal_infection_hemodynamic_trend_summary_05232026.docx"
+        ],
+        "affected_tasks": [
+          "T5"
+        ]
+      },
+      {
+        "id": "friction-collapse",
+        "name": "Friction collapse (Task 6)",
+        "severity": "high",
+        "conceal_surface": "Friction can be 'resolved' by picking a winner or pretending all agreed.",
+        "reveal_surface": "Preserve defensible positions from family, primary team, Cardiology, Nephrology, Endocrinology; identify safety implications of each unresolved friction.",
+        "carrier_files": [
+          "cardiology_consultation_05212026.docx",
+          "nephrology_consultation_05212026.docx",
+          "endocrinology_consultation_05212026.docx",
+          "family_communication_care_conference_05222026.docx"
+        ],
+        "affected_tasks": [
+          "T6"
+        ]
+      }
+    ],
+    "tasks": [
+      {
+        "id": "T1",
+        "name": "Discharge Medication Reconciliation / Medication Safety Review",
+        "workflow": "Discharge Medication Reconciliation",
+        "requester": "Attending hospitalist with discharge pharmacist",
+        "anchor_date": "2026-05-24",
+        "priority": "P0",
+        "difficulty": "Hard",
+        "time_estimate_minutes": "30-45",
+        "capability": "Medication-safety synthesis, source-of-truth hierarchy, cardiorenal sequencing",
+        "format": "Headed reconciliation note with disposition-by-medication structure",
+        "register": "Pharmacist/hospitalist professional",
+        "length_words": "450-700",
+        "task_files": [
+          "E1-T1 (discharge_medication_reconciliation_request_05242026.docx)",
+          "E2-T1 (medication_safety_handoff_addendum_05242026.docx)"
+        ]
+      },
+      {
+        "id": "T2",
+        "name": "Hospital Discharge Summary Generation",
+        "workflow": "Hospital Discharge Summary Generation",
+        "requester": "Attending hospitalist",
+        "anchor_date": "2026-05-24",
+        "priority": "P0",
+        "difficulty": "Medium-Hard",
+        "time_estimate_minutes": "30-45",
+        "capability": "Narrative fidelity and temporal synthesis without copy-forward",
+        "format": "Standard discharge summary sections (reason for admission, hospital course, consultants, medications, follow-up)",
+        "register": "Attending physician",
+        "length_words": "500-800",
+        "task_files": [
+          "E1-T2 (discharge_summary_request_05242026.docx)"
+        ]
+      },
+      {
+        "id": "T3",
+        "name": "Discharge Readiness / Care Coordination Documentation",
+        "workflow": "Discharge Planning Documentation",
+        "requester": "Hospital discharge-planning team (case management with hospitalist)",
+        "anchor_date": "2026-05-24",
+        "priority": "P0",
+        "difficulty": "Medium",
+        "time_estimate_minutes": "25-40",
+        "capability": "Disposition-safety judgment and functional-evidence integration",
+        "format": "Discharge-readiness and care-coordination assessment with headed sections",
+        "register": "Interdisciplinary clinical",
+        "length_words": "400-650",
+        "task_files": [
+          "E1-T3 (discharge_readiness_care_coordination_request_05242026.docx)"
+        ]
+      },
+      {
+        "id": "T4",
+        "name": "Consultant Synthesis / Interdisciplinary Care Plan",
+        "workflow": "Interdisciplinary Care Plan Development and Documentation",
+        "requester": "Attending hospitalist leading the interdisciplinary team",
+        "anchor_date": "2026-05-24",
+        "priority": "P1",
+        "difficulty": "Hard",
+        "time_estimate_minutes": "30-45",
+        "capability": "Consultant-conflict synthesis and priority arbitration",
+        "format": "Interdisciplinary care plan organized by problem and owning service",
+        "register": "Attending synthesis",
+        "length_words": "450-700",
+        "task_files": [
+          "E1-T4 (consultant_synthesis_care_plan_request_05242026.docx)"
+        ]
+      },
+      {
+        "id": "T5",
+        "name": "Early Post-Discharge Follow-Up Assessment",
+        "workflow": "Transitional Care Management Documentation (TCM)",
+        "requester": "Primary care physician (Dr. Talia Quenor)",
+        "anchor_date": "2026-05-31",
+        "priority": "P1",
+        "difficulty": "Medium",
+        "time_estimate_minutes": "25-35",
+        "capability": "Post-transition reassessment under uncertainty",
+        "format": "Outpatient follow-up assessment note (interval status, medications, plan)",
+        "register": "Primary care physician",
+        "length_words": "350-600",
+        "task_files": [
+          "E1-T5 (post_discharge_followup_request_05312026.docx)"
+        ]
+      },
+      {
+        "id": "T6",
+        "name": "Patient-Safety / Readmission-Risk Review",
+        "workflow": "Patient Risk Stratification Assessment",
+        "requester": "Physician quality and transition reviewer",
+        "anchor_date": "2026-06-23",
+        "priority": "P1",
+        "difficulty": "Medium-Hard",
+        "time_estimate_minutes": "25-40",
+        "capability": "Retrospective risk stratification with outcome discipline",
+        "format": "Quality/safety review memo organized by risk domain with mitigations",
+        "register": "Physician reviewer",
+        "length_words": "400-650",
+        "task_files": [
+          "E1-T6 (readmission_risk_review_request_06232026.docx)"
+        ]
+      }
+    ],
+    "file_manifest_summary": [
+      {
+        "id": "EW1",
+        "filename": "ed_triage_initial_intake_05182026.docx",
+        "date": "2026-05-18",
+        "label": "ED triage nursing intake",
+        "key": true
+      },
+      {
+        "id": "EW2",
+        "filename": "ed_provider_assessment_05182026.docx",
+        "date": "2026-05-18",
+        "label": "ED provider assessment",
+        "key": true
+      },
+      {
+        "id": "EW3",
+        "filename": "admission_history_and_physical_05182026.docx",
+        "date": "2026-05-18",
+        "label": "Hospitalist admission H&P (Dr. Vossmere)",
+        "key": true
+      },
+      {
+        "id": "EW4",
+        "filename": "initial_medication_reconciliation_note_05182026.docx",
+        "date": "2026-05-18",
+        "label": "Pharmacy-led initial med rec (no verified prednisone dose)",
+        "key": true
+      },
+      {
+        "id": "EW5",
+        "filename": "pharmacy_refill_history_report_05182026.docx",
+        "date": "2026-05-18",
+        "label": "Outpatient pharmacy refill history",
+        "key": true
+      },
+      {
+        "id": "EW6",
+        "filename": "outpatient_rheumatology_prednisone_provenance_05212026.docx",
+        "date": "2026-05-21",
+        "label": "Outpatient rheumatology prednisone provenance (Dr. Halvek, no dose)",
+        "key": true
+      },
+      {
+        "id": "EW7",
+        "filename": "primary_care_outpatient_baseline_summary_05182026.docx",
+        "date": "2026-05-18",
+        "label": "Primary care baseline summary (Dr. Quenor)",
+        "key": true
+      },
+      {
+        "id": "EW8",
+        "filename": "hospitalist_progress_hd1_hd2_05192026.docx",
+        "date": "2026-05-19",
+        "label": "Hospitalist progress HD1-HD2",
+        "key": true
+      },
+      {
+        "id": "EW9",
+        "filename": "hospitalist_progress_hd3_05202026.docx",
+        "date": "2026-05-20",
+        "label": "Hospitalist progress HD3",
+        "key": true
+      },
+      {
+        "id": "EW10",
+        "filename": "hospitalist_progress_hd4_05212026.docx",
+        "date": "2026-05-21",
+        "label": "Hospitalist progress HD4 (consultant tensions explicit)",
+        "key": true
+      },
+      {
+        "id": "EW11",
+        "filename": "hospitalist_discharge_planning_progress_hd5_hd6_05232026.docx",
+        "date": "2026-05-23",
+        "label": "Hospitalist discharge-planning progress HD5-HD6",
+        "key": true
+      },
+      {
+        "id": "EW12",
+        "filename": "renal_infection_hemodynamic_trend_summary_05232026.docx",
+        "date": "2026-05-23",
+        "label": "Objective trend flowsheet HD1-HD6",
+        "key": true
+      },
+      {
+        "id": "EW13",
+        "filename": "medication_administration_record_05232026.docx",
+        "date": "2026-05-23",
+        "label": "MAR HD1-HD6 (held/resumed, inpatient correctional insulin separate)",
+        "key": true
+      },
+      {
+        "id": "EW14",
+        "filename": "nephrology_consultation_05212026.docx",
+        "date": "2026-05-19 to 2026-05-23",
+        "label": "Nephrology consult with dated addenda (Dr. Solthar)",
+        "key": true
+      },
+      {
+        "id": "EW15",
+        "filename": "cardiology_consultation_05212026.docx",
+        "date": "2026-05-19 to 2026-05-23",
+        "label": "Cardiology consult with dated addenda (Dr. Caldrane)",
+        "key": true
+      },
+      {
+        "id": "EW16",
+        "filename": "endocrinology_consultation_05212026.docx",
+        "date": "2026-05-21 to 2026-05-23",
+        "label": "Endocrinology consult with follow-up (Dr. Veylorn)",
+        "key": true
+      },
+      {
+        "id": "EW17",
+        "filename": "nursing_observation_flowsheet_summary_05232026.docx",
+        "date": "2026-05-23",
+        "label": "Bedside nursing observation flowsheet summary",
+        "key": true
+      },
+      {
+        "id": "EW18",
+        "filename": "physical_therapy_assessment_05202026.docx",
+        "date": "2026-05-20 (updated 05-22)",
+        "label": "PT assessment (Renna Volkos, DPT)",
+        "key": true
+      },
+      {
+        "id": "EW19",
+        "filename": "occupational_therapy_assessment_05202026.docx",
+        "date": "2026-05-20 (updated 05-22)",
+        "label": "OT assessment (Brennan Sayre, OTR/L)",
+        "key": true
+      },
+      {
+        "id": "EW20",
+        "filename": "family_communication_care_conference_05222026.docx",
+        "date": "2026-05-22",
+        "label": "Family communication / care conference (Mara Merrow)",
+        "key": true
+      },
+      {
+        "id": "EW21",
+        "filename": "case_management_social_work_discharge_note_05222026.docx",
+        "date": "2026-05-22 (updated HD6)",
+        "label": "Case Management / Social Work discharge note",
+        "key": true
+      },
+      {
+        "id": "EW22",
+        "filename": "discharge_facing_plan_snapshot_05232026.docx",
+        "date": "2026-05-23 before 18:00",
+        "label": "Discharge-facing plan snapshot (visible, deliberately incomplete)",
+        "key": true
+      },
+      {
+        "id": "E1-T1",
+        "filename": "discharge_medication_reconciliation_request_05242026.docx",
+        "date": "2026-05-24",
+        "label": "Task 1 request context",
+        "task_level": true
+      },
+      {
+        "id": "E1-T2",
+        "filename": "discharge_summary_request_05242026.docx",
+        "date": "2026-05-24",
+        "label": "Task 2 request context",
+        "task_level": true
+      },
+      {
+        "id": "E1-T3",
+        "filename": "discharge_readiness_care_coordination_request_05242026.docx",
+        "date": "2026-05-24",
+        "label": "Task 3 request context",
+        "task_level": true
+      },
+      {
+        "id": "E1-T4",
+        "filename": "consultant_synthesis_care_plan_request_05242026.docx",
+        "date": "2026-05-24",
+        "label": "Task 4 request context",
+        "task_level": true
+      },
+      {
+        "id": "E1-T5",
+        "filename": "post_discharge_followup_request_05312026.docx",
+        "date": "2026-05-31",
+        "label": "Task 5 request context (+7 anchor)",
+        "task_level": true
+      },
+      {
+        "id": "E1-T6",
+        "filename": "readmission_risk_review_request_06232026.docx",
+        "date": "2026-06-23",
+        "label": "Task 6 request context (+30 anchor)",
+        "task_level": true
+      },
+      {
+        "id": "E2-T1",
+        "filename": "medication_safety_handoff_addendum_05242026.docx",
+        "date": "2026-05-24",
+        "label": "Task 1 addendum: medication-safety handoff focus list",
+        "task_level": true
+      },
+      {
+        "id": "WS1",
+        "filename": "pci_stent_history_summary_05182026.docx",
+        "date": "Pre-admission",
+        "label": "PCI/stent background (supplementary)",
+        "supplementary": true
+      },
+      {
+        "id": "WS2",
+        "filename": "sleep_study_osa_history_summary_05182026.docx",
+        "date": "Pre-admission",
+        "label": "Sleep study / OSA background (supplementary)",
+        "supplementary": true
+      },
+      {
+        "id": "WS3",
+        "filename": "home_support_equipment_reference_05222026.docx",
+        "date": "2026-05-22",
+        "label": "Home support / equipment reference (supplementary)",
+        "supplementary": true
+      },
+      {
+        "id": "WS4",
+        "filename": "problem_list_history_snapshot_05182026.docx",
+        "date": "2026-05-18",
+        "label": "Chart problem-list snapshot (supplementary)",
+        "supplementary": true
+      }
+    ],
+    "self_containment_principle": "Every claim in a task's correct answer must be traceable to the task prompt + task-level files + world-level files. If a clinical fact, date, diagnosis, or regulatory finding cannot be accounted for by those sources, it is either fabrication (if asserted as fact) or must be acknowledged as uncertain. Supplementary files add realism and background but never carry sole critical evidence.",
+    "world_summary": "Korvin Merrow presents a familiar but unforgiving inpatient transition: an older, medically complex patient improves after admission, yet safe discharge remains genuinely uncertain. The world tests whether a reviewer can separate medical stabilization from discharge readiness by synthesizing source reliability, consultant timing, medication actions, objective trends, bedside function, and family baseline knowledge. The trap architecture works because the most visible documents are the most reassuring, while decisive evidence sits in less prominent sources: a polished discharge snapshot, evolving consultant addenda, an unresolved prednisone record, and buried nursing and therapy observations."
+  },
+  "manifest": [
+    {
+      "path": "ed_triage_initial_intake_05182026.docx",
+      "doc_type": "narrative",
+      "format": ".docx",
+      "instructions": "Generate the ED triage nursing intake note for Korvin Merrow, MRN KM-6427819, dated 2026-05-18 at approximately 11:42, Mercy Vale Regional Medical Center Emergency Department. Use the reference file at /.meta/references/ed_triage_initial_intake_05182026.docx as a stylistic and structural template \u2014 match the form fields, level of detail, and triage nursing voice. The note is written by ED triage nurse and documents arrival mode (family vehicle, assisted into triage with cane), initial vitals reflecting hemodynamic vulnerability (low-normal BP, mild tachycardia, low-grade temp), chief complaint as relayed by family (3 weeks progressive weakness, poor intake, lightheadedness with near-fall 2026-05-17, possible urinary symptoms, family-noticed confusion), ESI triage acuity ELEVATED, allergy to Lisinopril (cough), patient orientation, accompanying family (wife Mara Merrow as primary historian), and Mara's canonical quote at triage: 'This is not his normal. He is usually slow, but he knows what he is doing.' Mention home medication list will be reviewed by pharmacy (no detailed med list here). Include synthetic marker 'SYNTHETIC TRAINING DOCUMENT | FICTIONAL PATIENT | NOT A REAL MEDICAL RECORD' in header or footer. Keep ED triage nursing voice \u2014 observation only, no synthesis. Length appropriate for a triage intake (~300-450 words).",
+      "depends_on": [],
+      "must_contain": [
+        "Korvin Merrow",
+        "KM-6427819",
+        "2026-05-18",
+        "Lisinopril",
+        "cough",
+        "Mara Merrow",
+        "This is not his normal",
+        "near-fall",
+        "ELEVATED",
+        "SYNTHETIC TRAINING DOCUMENT"
+      ],
+      "must_not_contain": [
+        "adrenal insufficiency",
+        "prednisone 10 mg",
+        "prednisone 5 mg",
+        "verified prednisone dose"
+      ]
+    },
+    {
+      "path": "ed_provider_assessment_05182026.docx",
+      "doc_type": "narrative",
+      "format": ".docx",
+      "instructions": "Generate the ED provider assessment for Korvin Merrow dated 2026-05-18, authored by Dr. Calder Brensmuth (ED attending, NPI 1184930526), Mercy Vale Regional ED. Use /.meta/references/ed_provider_assessment_05182026.docx as a stylistic template. Document the ED workup: HPI (3 weeks decline, near-fall 2026-05-17, possible UTI symptoms, family-noticed confusion, poor PO), pertinent comorbidities (HFrEF, CAD with remote PCI, CKD stage 3, T2DM, PMR with chronic prednisone exposure of unclear current dose, OSA, neuropathy), ED exam findings (mildly altered, weak, dry mucous membranes, soft abdomen), ED labs reflecting HD1 anchors (Cr 2.62 mg/dL, BUN 48, K 5.1, WBC 15.6, glucose 180-260 range), urinalysis with pyuria/bacteriuria suggestive of UTI, ED diagnostic impression as 'Suspected urinary-source infection / sepsis physiology with AKI-on-CKD, dehydration, altered baseline mental status in a medically complex patient', empiric antibiotic initiation, cautious IV fluid plan given HFrEF, hold of home cardiorenal medications pending admission reconciliation, and disposition to Hospital Medicine admission (Dr. Vossmere). Mention that home prednisone status is uncertain and will need source reconstruction (do not assert a dose). Include the synthetic marker. ED attending voice, professional, ~500-700 words.",
+      "depends_on": [
+        "ed_triage_initial_intake_05182026.docx"
+      ],
+      "must_contain": [
+        "Korvin Merrow",
+        "Calder Brensmuth",
+        "Suspected urinary-source",
+        "AKI-on-CKD",
+        "2.62",
+        "HFrEF",
+        "empiric",
+        "Hospital Medicine",
+        "Vossmere",
+        "SYNTHETIC TRAINING DOCUMENT"
+      ],
+      "must_not_contain": [
+        "adrenal insufficiency established",
+        "prednisone 10 mg daily",
+        "prednisone 5 mg daily",
+        "verified home prednisone dose"
+      ]
+    },
+    {
+      "path": "admission_history_and_physical_05182026.docx",
+      "doc_type": "narrative",
+      "format": ".docx",
+      "instructions": "Generate the hospitalist admission History and Physical for Korvin Merrow dated 2026-05-18, authored by Dr. Elian Vossmere (attending hospitalist, NPI 1528374960), admitted to 5 West Medical Room 5W-318. Use /.meta/references/admission_history_and_physical_05182026.docx as a structural template. Include all standard H&P sections: Chief Complaint, HPI (full 3-week decline narrative with near-fall, family-observed cognitive slowing, poor PO, possible UTI symptoms, medication-management mistakes at home), Past Medical History (all 14 comorbidities from spine with ICD-10), Past Surgical History (remote PCI 2018-09-12 mid-LAD DES, polysomnography 2019-04-22; explicit negatives: no ICD/CRT/pacemaker/CABG/dialysis access/major orthopedic repair), Medications (reference home medication list will be reconciled by pharmacy \u2014 note prednisone for PMR with taper history that needs reconstruction, do NOT state a numeric prednisone dose), Allergies (Lisinopril/cough/ACE-inhibitor intolerance; no food or environmental), Social History (married, lives with wife Mara, retired machinist, single-story home, baseline cane use, no tobacco/alcohol), Family History (brief), ROS, Physical Exam (vitals reflecting HD1 \u2014 low-normal BP, low-grade temp, mild tachycardia, weak, dry MM), Diagnostic data (Cr 2.62, BUN 48, K 5.1, WBC 15.6, glucose elevated, UA with pyuria), Assessment and Plan organized by problem (urinary-source sepsis suspected, AKI-on-CKD vs baseline 1.6-1.8, HFrEF/CAD with home protective therapy held, T2DM with home oral agents held during acute illness, PMR with prednisone provenance pending, OSA, anemia of CKD). Code status: Full Code, confirmed 2026-05-18. Admitting attending: Dr. Vossmere. Hospitalist resident: Dr. Ines Travyn (PGY-2). Include synthetic marker. Length 900-1200 words. Hospitalist attending voice \u2014 balanced, preserves open questions, avoids premature closure.",
+      "depends_on": [
+        "ed_provider_assessment_05182026.docx"
+      ],
+      "must_contain": [
+        "Korvin Merrow",
+        "Elian Vossmere",
+        "5W-318",
+        "Full Code",
+        "Lisinopril",
+        "HFrEF",
+        "CKD stage 3",
+        "PMR",
+        "2.62",
+        "Mara Merrow",
+        "Ines Travyn",
+        "SYNTHETIC TRAINING DOCUMENT"
+      ],
+      "must_not_contain": [
+        "prednisone 10 mg daily verified",
+        "prednisone 5 mg daily verified",
+        "adrenal insufficiency confirmed",
+        "no ACE-inhibitor allergy"
+      ]
+    },
+    {
+      "path": "initial_medication_reconciliation_note_05182026.docx",
+      "doc_type": "tabular",
+      "format": ".docx",
+      "instructions": "Generate the pharmacy-led initial medication reconciliation note dated 2026-05-18 for Korvin Merrow, authored by Ezekiel Marlott, PharmD, BCPS (inpatient pharmacy). Use /.meta/references/initial_medication_reconciliation_note_05182026.docx as a structural template. Format as a tabular reconciliation with columns: Medication | Dose | Route | Frequency | Indication | Source verified (Y/N) | Source(s) used | Notes. Include all 19 baseline home medications from spine in order (aspirin 81 mg daily, atorvastatin 40 mg nightly, sacubitril/valsartan 24/26 mg BID, carvedilol 12.5 mg BID, furosemide 40 mg daily, spironolactone 25 mg daily, empagliflozin 10 mg daily, metformin ER 500 mg BID, insulin glargine 18 units nightly SC, gabapentin 300 mg nightly, ferrous sulfate 325 mg every other day, alendronate 70 mg weekly, prednisone \u2014 see below, calcium carbonate/vitamin D 600/400 BID, nitroglycerin 0.4 mg SL PRN, acetaminophen 650 mg q6h PRN, pantoprazole 40 mg daily, PEG 3350 17 g daily PRN, senna 8.6 mg nightly PRN). For each, mark sources reviewed (patient, family, pharmacy refill history, primary care record). CRITICAL: for prednisone, the entry MUST explicitly state 'Dose NOT VERIFIED at this time. Patient reports tapering, family unsure if bottle directions match actual use, pharmacy fill history shows multiple strengths and changing directions across recent fills. Outpatient rheumatology (Dr. Halvek) review pending. Inpatient interim plan deferred pending source reconstruction.' Do NOT assign a numeric prednisone dose anywhere in this note. End with pharmacist summary: discrepancies pending resolution, prednisone provenance flagged as highest-priority reconciliation item, family caregiver oversight noted. Include synthetic marker. Length ~700-900 words (mostly table content).",
+      "depends_on": [
+        "admission_history_and_physical_05182026.docx"
+      ],
+      "must_contain": [
+        "Ezekiel Marlott",
+        "Aspirin 81 mg",
+        "Atorvastatin 40 mg",
+        "Sacubitril/valsartan",
+        "Carvedilol 12.5 mg",
+        "Furosemide 40 mg",
+        "Spironolactone 25 mg",
+        "Empagliflozin 10 mg",
+        "Metformin ER 500 mg",
+        "Insulin glargine 18 units",
+        "Gabapentin 300 mg",
+        "Prednisone",
+        "NOT VERIFIED",
+        "Halvek",
+        "SYNTHETIC TRAINING DOCUMENT"
+      ],
+      "must_not_contain": [
+        "Prednisone 5 mg daily",
+        "Prednisone 10 mg daily",
+        "verified prednisone dose",
+        "confirmed prednisone taper schedule"
+      ]
+    },
+    {
+      "path": "pharmacy_refill_history_report_05182026.docx",
+      "doc_type": "tabular",
+      "format": ".docx",
+      "instructions": "Generate the outpatient pharmacy refill history report dated 2026-05-18 for Korvin Merrow from Harbor Crest Community Pharmacy (NCPDP 3947182, 318 Mill Ridge Road, Bridgehollow, PA 15213, phone (412) 555-0490). Use /.meta/references/pharmacy_refill_history_report_05182026.docx as a template. Format as a chronological refill history table with columns: Fill date | Medication | Strength | Quantity | Days supply | Directions | Prescriber | Refills remaining. Cover approximately the last 6 months of fills for the 19 home medications. The prednisone entries are the critical content: show multiple fills over time with CHANGING strengths (some 10 mg tablets, some 5 mg tablets) and CHANGING directions across fills ('1 tablet daily', 'taper per provider instructions', '1 tablet daily then decrease per schedule', '\u00bd tablet daily'). Most recent prednisone fill should be lower-strength (5 mg) with taper-style directions but the report MUST note 'directions reflect prescriber instructions at time of fill; pharmacy cannot verify actual home administration.' Other medications show consistent refill patterns. End with pharmacy disclaimer that refill history reflects what was dispensed and prescribed, not what was actually consumed. Include synthetic marker. Length ~600-800 words.",
+      "depends_on": [],
+      "must_contain": [
+        "Harbor Crest Community Pharmacy",
+        "Korvin Merrow",
+        "Prednisone",
+        "5 mg",
+        "10 mg",
+        "taper",
+        "cannot verify actual home administration",
+        "Halvek",
+        "SYNTHETIC TRAINING DOCUMENT"
+      ],
+      "must_not_contain": [
+        "current verified prednisone dose",
+        "patient confirmed taking prednisone 5 mg daily",
+        "adherence verified"
+      ]
+    },
+    {
+      "path": "outpatient_rheumatology_prednisone_provenance_05212026.docx",
+      "doc_type": "narrative",
+      "format": ".docx",
+      "instructions": "Generate the outpatient rheumatology prednisone provenance note for Korvin Merrow, authored by Dr. Soren Halvek (Outpatient Rheumatologist, Riverbend Rheumatology Associates, 402 Mill Ridge Road Suite 105, Bridgehollow PA 15213, NPI 1073829415, phone (412) 555-0520), dated 2026-05-21 (reviewed in-hospital and available by HD4). Use /.meta/references/outpatient_rheumatology_prednisone_provenance_05212026.docx as a template. Content: Several-year history of PMR with chronic prednisone exposure, multiple prior symptom flares and taper attempts, bone-health therapy (alendronate, calcium/vitamin D) consistent with cumulative steroid risk. Most recent rheumatology intent: cautious slow taper because PMR symptoms appeared controlled at last visit. Standing plan as documented: 'Continue slow taper if symptoms remain controlled; avoid abrupt discontinuation; contact rheumatology or primary care if PMR symptoms flare or systemic symptoms emerge; medication list should be reconciled because prior taper instructions may remain visible in older records.' INTENTIONALLY do NOT state any numeric prednisone dose. Explicitly state: rheumatology cannot verify actual home adherence between visits; this note describes INTENDED outpatient plan, not inpatient management; does NOT establish that current symptoms are primarily caused by adrenal suppression; does NOT establish that the inpatient sepsis frame is wrong. Rheumatology voice \u2014 cautious-taper intent with monitoring guidance. Include synthetic marker. Length ~450-650 words.",
+      "depends_on": [],
+      "must_contain": [
+        "Soren Halvek",
+        "Riverbend Rheumatology",
+        "polymyalgia rheumatica",
+        "cautious slow taper",
+        "avoid abrupt discontinuation",
+        "cannot verify actual home adherence",
+        "SYNTHETIC TRAINING DOCUMENT"
+      ],
+      "must_not_contain": [
+        "prednisone 5 mg",
+        "prednisone 10 mg",
+        "prednisone 20 mg",
+        "current dose is",
+        "adrenal insufficiency established",
+        "adherence verified"
+      ]
+    },
+    {
+      "path": "primary_care_outpatient_baseline_summary_05182026.docx",
+      "doc_type": "narrative",
+      "format": ".docx",
+      "instructions": "Generate the primary care outpatient baseline summary for Korvin Merrow, authored by Dr. Talia Quenor (PCP, Mercy Vale Primary Care - Harbor Crest Clinic, 215 Harbor Crest Way Suite 220, Bridgehollow PA 15211, NPI 1962718304, phone (412) 555-0410), dated 2026-05-18 (forwarded to inpatient team at admission). Use /.meta/references/primary_care_outpatient_baseline_summary_05182026.docx as a template. Provide the patient's outpatient baseline picture as comparator (NOT inpatient values): baseline creatinine 1.6-1.8 mg/dL with eGFR 40-50 (CKD stage 3), baseline hemoglobin 10.5-11.5 g/dL (anemia of CKD), A1c trend 7.6-8.2%, dry weight 97 kg, BP usually low-normal on cardiorenal therapy. Baseline function: independent with basic ADLs, slowed by chronic illness, occasional cane for longer distances, participates in medication routines with family oversight, mild age-related forgetfulness only. Reference the home medication list and active problem list. Note ongoing co-management with Cardiology, Nephrology, Endocrinology (HbA1c), and Rheumatology (PMR \u2014 defer prednisone management to rheumatology, do NOT assert a current dose). End with PCP note that 'pre-admission baseline anchors are comparators, not admission or hospital-course values.' Include synthetic marker. Outpatient PCP voice. Length ~500-650 words.",
+      "depends_on": [],
+      "must_contain": [
+        "Talia Quenor",
+        "Mercy Vale Primary Care",
+        "Korvin Merrow",
+        "1.6",
+        "1.8",
+        "10.5",
+        "11.5",
+        "97 kg",
+        "baseline",
+        "comparator",
+        "SYNTHETIC TRAINING DOCUMENT"
+      ],
+      "must_not_contain": [
+        "prednisone 5 mg daily",
+        "prednisone 10 mg daily",
+        "adrenal insufficiency",
+        "admission creatinine 2.62"
+      ]
+    },
+    {
+      "path": "hospitalist_progress_hd1_hd2_05192026.docx",
+      "doc_type": "narrative",
+      "format": ".docx",
+      "instructions": "Generate the combined hospitalist progress note covering HD1-HD2 (2026-05-18 and 2026-05-19), authored by Dr. Elian Vossmere with Dr. Ines Travyn (PGY-2). Use /.meta/references/hospitalist_progress_hd1_hd2_05192026.docx as a template. Standard SOAP or problem-based progress format. Document HD1 stabilization: empiric antibiotics for suspected urinary-source sepsis, cautious IV fluids given HFrEF, holds on sacubitril/valsartan, spironolactone, furosemide, empagliflozin, metformin; carvedilol cautiously administered or temporarily held; insulin glargine continued with adjustment; inpatient correctional insulin lispro initiated. HD2 partial response: fevers improving, BP still low-normal (systolic 100-118), Cr declining (2.62 \u2192 2.38), WBC 13.8, K 4.9, intake slightly improved. Initial Cardiology consult requested (Dr. Caldrane). Initial Nephrology consult requested (Dr. Solthar). Document open questions: prednisone provenance unresolved (no numeric dose stated), volume status fragile, restart timing of cardiorenal medications dependent on renal recovery. Hospitalist voice \u2014 balanced, preserves open questions, avoids premature closure. Include synthetic marker. Length ~700-900 words.",
+      "depends_on": [
+        "admission_history_and_physical_05182026.docx"
+      ],
+      "must_contain": [
+        "Elian Vossmere",
+        "HD1",
+        "HD2",
+        "2.62",
+        "2.38",
+        "Caldrane",
+        "Solthar",
+        "held",
+        "empiric",
+        "SYNTHETIC TRAINING DOCUMENT"
+      ],
+      "must_not_contain": [
+        "prednisone 5 mg daily",
+        "adrenal insufficiency established",
+        "ready for discharge"
+      ]
+    },
+    {
+      "path": "hospitalist_progress_hd3_05202026.docx",
+      "doc_type": "narrative",
+      "format": ".docx",
+      "instructions": "Generate the hospitalist progress note for HD3 (2026-05-20), authored by Dr. Elian Vossmere. Use /.meta/references/hospitalist_progress_hd3_05202026.docx as a template. Document functional concerns emerging: PT initial assessment by Renna Volkos, DPT (sit-to-stand minimum assist x1 with cueing, 10-15 feet ambulation with rolling walker and standby assist, Morse Fall Scale 65 high risk), OT initial assessment by Brennan Sayre, OTR/L (significant gaps with medication-management under fatigue, executive slowing under complexity). Labs: Cr 2.12, BUN 39, K 4.7, WBC 11.9, glucose 160-240, BP systolic 106-124. Afebrile or near-afebrile. Family update with Mara: 'Korvin looks better but not back to usual self.' Cardiology and Nephrology addenda available \u2014 restart timing still conditional. Prednisone provenance not yet fully reviewed; awaiting rheumatology source. Hospitalist voice. Include synthetic marker. Length ~550-700 words.",
+      "depends_on": [
+        "hospitalist_progress_hd1_hd2_05192026.docx"
+      ],
+      "must_contain": [
+        "Elian Vossmere",
+        "HD3",
+        "2.12",
+        "Renna Volkos",
+        "Brennan Sayre",
+        "Morse Fall Scale",
+        "Mara",
+        "SYNTHETIC TRAINING DOCUMENT"
+      ],
+      "must_not_contain": [
+        "prednisone 5 mg daily",
+        "ready for discharge",
+        "adrenal insufficiency confirmed"
+      ]
+    },
+    {
+      "path": "hospitalist_progress_hd4_05212026.docx",
+      "doc_type": "narrative",
+      "format": ".docx",
+      "instructions": "Generate the hospitalist progress note for HD4 (2026-05-21), authored by Dr. Elian Vossmere. Use /.meta/references/hospitalist_progress_hd4_05212026.docx as a template. Critical day \u2014 document explicit consultant tensions (F1 Cardiology vs Nephrology on restart timing for sacubitril/valsartan, spironolactone, empagliflozin, furosemide, carvedilol; F3 Endocrinology vs primary team on steroid interpretation). Note: outpatient rheumatology prednisone provenance (Dr. Halvek) is now available and reviewed \u2014 describe the cautious-taper intent without stating any numeric dose. Endocrinology consult initiated (Dr. Veylorn). Mara asked about steroid history during family update \u2014 documents her observation that bottles and patient recollection may not fully explain pre-admission decline. Labs: Cr 1.98, BUN 35, K 4.6, WBC 10.8, BP systolic 110-128. Document that the case is broader than infection alone; medication restart sequencing must gate on creatinine/eGFR trajectory, potassium, BP, intake/weight; do not let infection frame narrate full course. Include synthetic marker. Length ~700-900 words.",
+      "depends_on": [
+        "hospitalist_progress_hd3_05202026.docx"
+      ],
+      "must_contain": [
+        "Elian Vossmere",
+        "HD4",
+        "1.98",
+        "Caldrane",
+        "Solthar",
+        "Veylorn",
+        "Halvek",
+        "consultant tensions",
+        "Mara",
+        "SYNTHETIC TRAINING DOCUMENT"
+      ],
+      "must_not_contain": [
+        "prednisone 5 mg daily",
+        "prednisone 10 mg daily",
+        "adrenal insufficiency established",
+        "ready for discharge today"
+      ]
+    },
+    {
+      "path": "hospitalist_discharge_planning_progress_hd5_hd6_05232026.docx",
+      "doc_type": "narrative",
+      "format": ".docx",
+      "instructions": "Generate the hospitalist discharge-planning progress note covering HD5-HD6 (2026-05-22 and 2026-05-23), authored by Dr. Elian Vossmere, closing at or before 18:00 on 2026-05-23 (world close). Use /.meta/references/hospitalist_discharge_planning_progress_hd5_hd6_05232026.docx as a template. Document HD5: family care conference with Mara Merrow (planned discharge 2026-05-24 discussed), Case Management/Social Work engagement begins (Priya Ostroff, RN, BSN, CCM and Devra Aimes, LCSW), PT update by Renna Volkos (now 100-150 feet with rolling walker and supervision, endurance limited), OT update by Brennan Sayre (modified independent ADLs with seated rest, IADL medication-management gaps persist). Labs HD5: Cr 1.86, BUN 31, K 4.5, BP systolic 112-128. HD6: Cr 1.8, BUN 29, K 4.4, BP systolic 114-130, afebrile, intake 75-90%. Patient appears medically improved but functional and cognitive reserve not back to baseline. Mara HD6 quote: 'Better than Monday is not the same as ready to manage the next steps without support.' Discharge planning IN PROGRESS \u2014 explicitly state no final discharge order entered as of world close 2026-05-23 18:00. Multiple items unresolved at world close: cardiorenal restart sequencing not finalized, prednisone reconciliation pending coordination between rheumatology and endocrinology (no numeric dose stated anywhere), home health acceptance not confirmed, equipment delivery not confirmed, transportation not arranged, supervision level not finalized. Hospitalist voice \u2014 balanced, preserves open questions. Include synthetic marker. Length ~800-1000 words.",
+      "depends_on": [
+        "hospitalist_progress_hd4_05212026.docx"
+      ],
+      "must_contain": [
+        "Elian Vossmere",
+        "HD5",
+        "HD6",
+        "1.86",
+        "1.8",
+        "Better than Monday is not the same as ready to manage",
+        "Priya Ostroff",
+        "Devra Aimes",
+        "no final discharge order",
+        "2026-05-24",
+        "SYNTHETIC TRAINING DOCUMENT"
+      ],
+      "must_not_contain": [
+        "prednisone 5 mg daily",
+        "prednisone 10 mg daily",
+        "discharge order entered",
+        "all services confirmed"
+      ]
+    },
+    {
+      "path": "renal_infection_hemodynamic_trend_summary_05232026.docx",
+      "doc_type": "tabular",
+      "format": ".docx",
+      "instructions": "Generate the objective trend flowsheet HD1-HD6 dated 2026-05-23, prepared by Clinical Data / Laboratory for Korvin Merrow. Use /.meta/references/renal_infection_hemodynamic_trend_summary_05232026.docx as a template. Present as a daily trend table HD1-HD6 with columns: Date | HD | Anchor | Temperature pattern | BP systolic range | BP diastolic range | Creatinine (mg/dL) | BUN (mg/dL) | Potassium (mmol/L) | WBC (k/uL) | Glucose range (mg/dL) | Intake observation. Use spine objective_trends.daily_trend_table values exactly: HD1 Cr 2.62, BUN 48, K 5.1, WBC 15.6, glucose 180-260, BP 96-110/56-68; HD2 Cr 2.38, BUN 45, K 4.9, WBC 13.8, glucose 170-250, BP 100-118; HD3 Cr 2.12, BUN 39, K 4.7, WBC 11.9, glucose 160-240, BP 106-124; HD4 Cr 1.98, BUN 35, K 4.6, WBC 10.8, glucose 160-270, BP 110-128; HD5 Cr 1.86, BUN 31, K 4.5, WBC 9.9, glucose 150-260, BP 112-128; HD6 Cr 1.8, BUN 29, K 4.4, WBC 9.4, glucose 140-250, BP 114-130. Above the table include baseline comparator anchors (Cr 1.6-1.8, eGFR 40-50, Hb 10.5-11.5, A1c 7.6-8.2, dry weight 97 kg). Below the table include explicit caveats: 'This flowsheet is a trend source, not an answer file. A creatinine near baseline does not by itself determine readiness for HFrEF medication restart. Potassium and BP trends must be reconciled with actual medication actions and consultant timing. Dry weight is a baseline comparator, not a complete inpatient volume assessment. Culture/source interpretation is not summarized here as a definitive single-cause answer. No scheduled post-discharge monitoring plan exists at this time.' Include synthetic marker. Length ~600-800 words (mostly tabular).",
+      "depends_on": [],
+      "must_contain": [
+        "2.62",
+        "2.38",
+        "2.12",
+        "1.98",
+        "1.86",
+        "1.8",
+        "Baseline",
+        "trend source, not an answer file",
+        "No scheduled post-discharge monitoring plan",
+        "SYNTHETIC TRAINING DOCUMENT"
+      ],
+      "must_not_contain": [
+        "patient is ready for restart",
+        "all medications safe to resume",
+        "monitoring plan in place"
+      ]
+    },
+    {
+      "path": "medication_administration_record_05232026.docx",
+      "doc_type": "tabular",
+      "format": ".docx",
+      "instructions": "Generate the Medication Administration Record (MAR) HD1-HD6 through 2026-05-23 for Korvin Merrow, prepared by Nursing. Use /.meta/references/medication_administration_record_05232026.docx as a template. Present as tabular MAR with medication rows and HD1-HD6 columns showing Given / Held / Not ordered states with times. Show: Aspirin 81 mg daily \u2014 continued; Atorvastatin 40 mg nightly \u2014 continued; Sacubitril/valsartan \u2014 HELD HD1-HD6 (renal/hemodynamic vulnerability); Carvedilol 12.5 mg BID \u2014 HELD or cautiously administered depending on hemodynamic status, document daily disposition; Furosemide 40 mg daily \u2014 HELD HD1-HD3, reassessment HD4-HD6 (not restarted); Spironolactone 25 mg daily \u2014 HELD HD1-HD6 (AKI/hyperkalemia risk); Empagliflozin 10 mg daily \u2014 HELD HD1-HD6 (acute illness, poor intake); Metformin ER 500 mg BID \u2014 HELD HD1-HD6 (AKI/acute illness); Insulin glargine 18 units SC nightly \u2014 continued with inpatient adjustment (varying doses noted); Insulin lispro correctional sliding scale \u2014 INPATIENT CORRECTIONAL ONLY (must be flagged as NOT a home medication, NOT to be carried forward to discharge list); IV fluids \u2014 recorded with cautious volume strategy; Empiric IV antibiotics for suspected UTI/sepsis HD1-HD3 with oral step-down HD4-HD6 (note: completion vs continuation to be reconciled at discharge); Gabapentin 300 mg nightly \u2014 held or reduced on selected days due to sedation/fall-risk concern; Ferrous sulfate every other day \u2014 continued or deferred around acute intake; Alendronate weekly \u2014 NOT administered inpatient (outpatient chronic, reconcile); Prednisone \u2014 administered under interim inpatient plan while source reconstruction continued (do NOT show a specific home dose; describe as 'interim inpatient steroid coverage per attending plan'); Calcium carbonate/vitamin D BID \u2014 continued where tolerated; Pantoprazole 40 mg daily \u2014 continued; Nitroglycerin \u2014 available PRN, no doses given; Acetaminophen PRN \u2014 sparing use; PEG / senna PRN \u2014 used as needed. Document nursing initials and times throughout. End with bolded warning note: 'MAR includes inpatient-only actions (correctional insulin lispro, IV fluids, IV empiric antibiotics, interim inpatient steroid coverage) which are NOT outpatient medications and must not be carried forward to the discharge medication list without independent discharge justification.' Include synthetic marker. Length ~900-1200 words (heavy tabular content).",
+      "depends_on": [
+        "initial_medication_reconciliation_note_05182026.docx"
+      ],
+      "must_contain": [
+        "Sacubitril/valsartan",
+        "HELD",
+        "Insulin lispro",
+        "correctional",
+        "NOT a home medication",
+        "interim inpatient steroid coverage",
+        "Aila Rensby",
+        "Toren Pelvik",
+        "SYNTHETIC TRAINING DOCUMENT"
+      ],
+      "must_not_contain": [
+        "Prednisone 5 mg daily home dose verified",
+        "Prednisone 10 mg daily home dose verified",
+        "Insulin lispro to be continued at home",
+        "Insulin lispro discharge medication"
+      ]
+    },
+    {
+      "path": "nephrology_consultation_05212026.docx",
+      "doc_type": "narrative",
+      "format": ".docx",
+      "instructions": "Generate the Nephrology consultation with dated addenda for Korvin Merrow, authored by Dr. Iven Solthar (Nephrology, NPI 1740596182). Use /.meta/references/nephrology_consultation_05212026.docx as a template. Structure as initial consult note dated 2026-05-19 followed by addenda dated 2026-05-20, 2026-05-21, 2026-05-22, 2026-05-23 \u2014 each addendum is TIME-QUALIFIED and reflects the renal/hemodynamic context of that day. Initial 05-19: AKI-on-CKD assessment against baseline 1.6-1.8 mg/dL (admission Cr 2.62); recommend hold of nephrotoxic and renally cleared agents (sacubitril/valsartan, spironolactone, metformin, empagliflozin, NSAIDs); cautious IV fluids; recheck BMP daily. 05-20 addendum: Cr 2.12; renal recovery underway but volume and BP still fragile; continue holds; do not restart RAAS until renal/BP further improve. 05-21 addendum: Cr 1.98; explicit nephrology position vs cardiology \u2014 renal recovery, potassium, BP reserve, intake, volume status remain fragile; restart sequencing should be staged and parameter-gated. 05-22 addendum: Cr 1.86; reasonable to consider low-dose sacubitril/valsartan reintroduction soon IF BP reserve and potassium remain favorable AND intake stable for 24-48h; spironolactone restart NOT recommended until further potassium and BP data; empagliflozin can be considered once steady intake. 05-23 addendum: Cr 1.8 (back to baseline range); recommends outpatient nephrology follow-up within 1-2 weeks; specifies parameters for outpatient monitoring (creatinine, K, BP, weight, intake); explicitly does NOT declare patient ready for full simultaneous restart. Nephrology voice \u2014 time-qualified recommendations, renal-sensitive medication guidance, volume and hypotension caution. Include synthetic marker. Length ~900-1200 words across all addenda.",
+      "depends_on": [],
+      "must_contain": [
+        "Iven Solthar",
+        "AKI-on-CKD",
+        "2026-05-19",
+        "2026-05-20",
+        "2026-05-21",
+        "2026-05-22",
+        "2026-05-23",
+        "addendum",
+        "parameter-gated",
+        "SYNTHETIC TRAINING DOCUMENT"
+      ],
+      "must_not_contain": [
+        "all medications safe to restart now",
+        "no further monitoring needed",
+        "dialysis required"
+      ]
+    },
+    {
+      "path": "cardiology_consultation_05212026.docx",
+      "doc_type": "narrative",
+      "format": ".docx",
+      "instructions": "Generate the Cardiology consultation with dated addenda for Korvin Merrow, authored by Dr. Maris Caldrane (Cardiology, NPI 1639485071). Use /.meta/references/cardiology_consultation_05212026.docx as a template. Structure as initial consult note dated 2026-05-19 followed by addenda dated 2026-05-20, 2026-05-21, 2026-05-22, 2026-05-23. Each addendum TIME-QUALIFIED. Initial 05-19: HFrEF/CAD context with remote PCI/stent (single vessel mid-LAD DES, 2018); emphasize that loss of GDMT (sacubitril/valsartan, beta-blocker, MRA, SGLT2) creates decompensation/readmission risk; acknowledges current hemodynamic and renal vulnerability requires temporary holds; recommend restart sequencing as renal recovery and BP allow. 05-20 addendum: stresses carvedilol should be cautiously reintroduced if tolerated (avoid prolonged absence in CAD/HFrEF); aspirin and atorvastatin continued. 05-21 addendum: explicit cardiology position \u2014 preserve HFrEF/CAD protection; decompensation/readmission risk if protective therapy is lost; recommends starting to plan restart sequence even while renal still recovering. 05-22 addendum: recommends carvedilol resumed at lower dose if BP tolerates; sacubitril/valsartan can be reintroduced at lower dose once Cr stable near baseline and K acceptable; spironolactone deferred until K and renal trajectory stable; empagliflozin restart can follow steady intake. 05-23 addendum: outpatient cardiology follow-up within 2 weeks; explicit acknowledgment that final restart sequencing requires coordination with Nephrology and depends on parameter trajectory \u2014 does NOT declare unilateral restart safe. Note documented friction (F1) with nephrology on restart timing \u2014 both clinically defensible, correct path is monitored sequencing with parameters. Cardiology voice \u2014 emphasizes HFrEF/CAD protective therapy and restart-sequencing stakes; conditions on renal recovery and hemodynamics. Include synthetic marker. Length ~900-1200 words.",
+      "depends_on": [],
+      "must_contain": [
+        "Maris Caldrane",
+        "HFrEF",
+        "GDMT",
+        "decompensation",
+        "2026-05-19",
+        "2026-05-20",
+        "2026-05-21",
+        "2026-05-22",
+        "2026-05-23",
+        "addendum",
+        "coordination with Nephrology",
+        "SYNTHETIC TRAINING DOCUMENT"
+      ],
+      "must_not_contain": [
+        "restart all GDMT immediately",
+        "ignore renal status",
+        "no nephrology input needed"
+      ]
+    },
+    {
+      "path": "endocrinology_consultation_05212026.docx",
+      "doc_type": "narrative",
+      "format": ".docx",
+      "instructions": "Generate the Endocrinology consultation with follow-up addenda for Korvin Merrow, authored by Dr. Nerea Veylorn (Endocrinology, NPI 1851607293). Use /.meta/references/endocrinology_consultation_05212026.docx as a template. Initial consult dated 2026-05-21 (HD4), addenda 2026-05-22 and 2026-05-23. Initial: assesses chronic steroid exposure from PMR (years), taper-uncertainty implications, current adrenal axis cannot be confidently characterized without further outpatient testing; identifies steroid-exposure risk as clinically relevant (bone health, glycemic burden, infection vulnerability, possible relative adrenal insufficiency under stress but NOT established); explicitly does NOT declare adrenal insufficiency established; recommends interim steroid coverage during acute illness, outpatient coordination with rheumatology, and structured outpatient taper instructions; provides monitoring and teaching recommendations. Glycemic recommendations: continue insulin glargine with inpatient adjustment; metformin held during AKI; empagliflozin held during acute illness, restart per renal/cardiac team coordination; HbA1c trend supports outpatient regimen review with PCP/Endocrinology. 05-22 addendum: continues to recommend coordinated outpatient taper plan with rheumatology; reiterates that steroid concern is real but adrenal insufficiency is NOT established. 05-23 addendum: outpatient endocrinology follow-up within 2-4 weeks coordinated with rheumatology; structured taper instructions to be finalized at discharge; safe-handling reminders for stress dosing if illness recurs; explicitly cautions against over-attributing improvement-lag to steroids when sepsis-oriented treatment is also helping. INTENTIONALLY do NOT state a numeric prednisone dose. Document friction F3 with primary team in balanced way. Endocrinology voice. Include synthetic marker. Length ~700-900 words.",
+      "depends_on": [],
+      "must_contain": [
+        "Nerea Veylorn",
+        "steroid exposure",
+        "adrenal insufficiency",
+        "NOT established",
+        "2026-05-21",
+        "2026-05-22",
+        "2026-05-23",
+        "rheumatology",
+        "stress dosing",
+        "SYNTHETIC TRAINING DOCUMENT"
+      ],
+      "must_not_contain": [
+        "adrenal insufficiency established",
+        "adrenal insufficiency confirmed",
+        "prednisone 5 mg daily",
+        "prednisone 10 mg daily"
+      ]
+    },
+    {
+      "path": "nursing_observation_flowsheet_summary_05232026.docx",
+      "doc_type": "tabular",
+      "format": ".docx",
+      "instructions": "Generate the bedside nursing observation flowsheet summary HD1-HD6 through 2026-05-23 18:00 for Korvin Merrow, room 5W-318, 5 West Medical. Compiled from named charge nurses Aila Rensby, RN (day shift) and Toren Pelvik, RN (night shift). Use /.meta/references/nursing_observation_flowsheet_summary_05232026.docx as a template. Present in mixed tabular and narrative format covering: Intake percentages by day (HD1 25-40%, HD2 40-55%, HD3 55-70%, HD4 50-75%, HD5 70-85%, HD6 75-90%); Ambulation observations (HD1-HD2 required assistance with transfers, HD3 short-distance with staff supervision, HD4 chair-sitting and bathroom transfer with supervision, HD5-HD6 short distances with staff nearby, supervision and cues); Evening confusion noted HD1-HD4 intermittently, less prominent HD5-HD6 but still slower with complex medication or timeline questions; Medication-teaching observations \u2014 patient could recount some home medications but became less reliable with recent dose changes or prednisone taper; sometimes unsure conversationally whether he had already taken a medication; Family interactions \u2014 Mara present daily, consistently engaged, asking baseline-relevant questions; nursing noted family clarifications and reassurances. Document time-stamped routine observations only \u2014 no synthesis. Buried within the routine details should be the evidence of medication-management capacity gaps (so reviewers must integrate this with OT and family observations). Include synthetic marker. Length ~700-900 words.",
+      "depends_on": [],
+      "must_contain": [
+        "Aila Rensby",
+        "Toren Pelvik",
+        "evening confusion",
+        "Mara",
+        "intake",
+        "prednisone taper",
+        "less reliable",
+        "SYNTHETIC TRAINING DOCUMENT"
+      ],
+      "must_not_contain": [
+        "patient fully oriented at all times",
+        "no concerns with medication management",
+        "ready for discharge"
+      ]
+    },
+    {
+      "path": "physical_therapy_assessment_05202026.docx",
+      "doc_type": "narrative",
+      "format": ".docx",
+      "instructions": "Generate the Physical Therapy assessment for Korvin Merrow, authored by Renna Volkos, DPT, initial assessment dated 2026-05-20 with update dated 2026-05-22. Use /.meta/references/physical_therapy_assessment_05202026.docx as a template. Initial 05-20: bed mobility modified independent (slow); sit-to-stand minimum assist x1 with cueing; ambulation 10-15 feet with rolling walker and standby assist; endurance limited (tires after clustered activity, needs rest periods); Morse Fall Scale 65 (high risk); recommends rolling walker (cane insufficient given current endurance and orthostatic vulnerability), bedside commode initially, grab bars, remove loose rugs, supervised mobility for first 5-7 days post-discharge. Update 05-22: sit-to-stand improved to supervision but not back to baseline; ambulation 100-150 feet with rolling walker and supervision; endurance still limited; same fall-risk and home-safety recommendations stand. Document baseline context: usually independent indoors with occasional cane for longer distances. Explicitly note that this is bedside functional evidence that must be integrated with nursing and OT observations rather than displaced by physician summaries. PT voice. Include synthetic marker. Length ~600-800 words.",
+      "depends_on": [],
+      "must_contain": [
+        "Renna Volkos",
+        "Morse Fall Scale 65",
+        "rolling walker",
+        "supervised mobility",
+        "2026-05-20",
+        "2026-05-22",
+        "endurance",
+        "SYNTHETIC TRAINING DOCUMENT"
+      ],
+      "must_not_contain": [
+        "back to baseline",
+        "no fall risk",
+        "no assistive device needed",
+        "discharge home alone safe"
+      ]
+    },
+    {
+      "path": "occupational_therapy_assessment_05202026.docx",
+      "doc_type": "narrative",
+      "format": ".docx",
+      "instructions": "Generate the Occupational Therapy assessment for Korvin Merrow, authored by Brennan Sayre, OTR/L, initial assessment dated 2026-05-20 with update dated 2026-05-22. Use /.meta/references/occupational_therapy_assessment_05202026.docx as a template. Initial: ADL modified independent with bathing and dressing with seated rest; IADL medication-management evaluation shows significant gaps under fatigue and complexity \u2014 unable to organize the 19-item regimen reliably during seated assessment; recurrent errors with timing of BID and PRN medications when fatigued; IADL cooking/finance not formally tested (baseline reported intact per family); cognition in function \u2014 mild executive slowing under complexity, intact for basic single-step tasks, declines accuracy with multi-step or interruption. Update 05-22: ADL improved to supervision; IADL medication-management gaps persist; recommendations: pre-filled weekly pill organizer with supervision for first weeks at home, teach-back medication education with family present, daily check-in by family during medication times for first 5-7 days, outpatient OT for IADL retraining if not progressed by +30 days, avoid sole responsibility for new or changed medications without family verification. Document that this finding is buried in routine OT note and must be integrated with nursing and family observations for accurate disposition planning. OT voice. Include synthetic marker. Length ~600-800 words.",
+      "depends_on": [],
+      "must_contain": [
+        "Brennan Sayre",
+        "medication-management",
+        "pre-filled weekly pill organizer",
+        "teach-back",
+        "executive slowing",
+        "family verification",
+        "2026-05-20",
+        "2026-05-22",
+        "SYNTHETIC TRAINING DOCUMENT"
+      ],
+      "must_not_contain": [
+        "no medication management concerns",
+        "ready for independent medication management",
+        "back to baseline cognition"
+      ]
+    },
+    {
+      "path": "family_communication_care_conference_05222026.docx",
+      "doc_type": "narrative",
+      "format": ".docx",
+      "instructions": "Generate the family communication / care conference note dated 2026-05-22 (HD5) for Korvin Merrow with addendum HD6 documented questions. Use /.meta/references/family_communication_care_conference_05222026.docx as a template. Primary family contact: Mara Merrow (wife, healthcare proxy, primary historian, phone (412) 555-0229, email mara.merrow@example.org). Secondary contact: Lenora Merrow-Halsey (adult daughter, (412) 555-0231). Documented touchpoints: 05-20 family update (Korvin looks better but not back to usual self; needs more prompting; tires quickly; less organized with medications; worries about improvement-equals-readiness); 05-21 steroid history clarification (Mara unsure whether Korvin followed intended prednisone taper at home; bottles and patient recollection may not fully explain pre-admission decline; asked whether weakness could be from 'more than the infection'); 05-22 care conference (improved but still not at baseline stamina; worried about medication changes; Korvin may say he understands but forget timing; family available but supervision needs unclear; wants follow-up and services explained clearly); 05-23 pre-discharge questions (wants Korvin home when safe and understands he has improved; canonical quote: 'Better than Monday is not the same as ready to manage the next steps without support'; questions about final medication review, heart and kidney medication explanation, prednisone reconciliation with rheumatology history, supervision needs, warning signs). Include canonical triage quote: 'This is not his normal. He is usually slow, but he knows what he is doing.' Document family authority limits: lower than rheumatology for prednisone intent, lower than verified med rec and pharmacy history for medication-source conflicts; important and valued for baseline function and home context. Frame Mara's input as baseline-informed longitudinal collateral, NOT as anxiety to reassure away. Documented by Devra Aimes, LCSW with hospitalist attestation. Include synthetic marker. Length ~700-900 words.",
+      "depends_on": [],
+      "must_contain": [
+        "Mara Merrow",
+        "Lenora Merrow-Halsey",
+        "Better than Monday is not the same as ready to manage",
+        "This is not his normal",
+        "prednisone",
+        "baseline",
+        "Devra Aimes",
+        "2026-05-22",
+        "SYNTHETIC TRAINING DOCUMENT"
+      ],
+      "must_not_contain": [
+        "family is overly anxious",
+        "family concerns dismissed",
+        "all concerns addressed",
+        "prednisone 5 mg daily verified"
+      ]
+    },
+    {
+      "path": "case_management_social_work_discharge_note_05222026.docx",
+      "doc_type": "narrative",
+      "format": ".docx",
+      "instructions": "Generate the Case Management / Social Work discharge note dated 2026-05-22 (HD5) with HD6 update, for Korvin Merrow, authored by Priya Ostroff, RN, BSN, CCM (case manager) and Devra Aimes, LCSW (social worker), phone (412) 555-0162. Use /.meta/references/case_management_social_work_discharge_note_05222026.docx as a template. Document items UNDER DISCUSSION but EXPLICITLY NOT FINALIZED at world close: home health nursing for medication review or early monitoring (eligibility and acceptance pending \u2014 candidate: Keystone HomeCare Services (412) 555-0631); home PT/OT or outpatient therapy depending on final functional plan; assistive device consistency (cane vs rolling walker per PT \u2014 rolling walker recommended); family education around medication changes and warning signs; follow-up appointment feasibility (PCP Dr. Quenor +7, Nephrology Dr. Solthar 1-2 weeks, Cardiology Dr. Caldrane 2 weeks, Endocrinology Dr. Veylorn 2-4 weeks, Rheumatology Dr. Halvek 2-4 weeks); transportation for follow-up; pharmacy access (Harbor Crest Community Pharmacy, (412) 555-0490) and medication pickup logistics. Items NOT finalized: no service plan documented as complete/accepted/authorized/sufficient; level of family supervision not finalized; home health acceptance not confirmed; equipment delivery not confirmed; transportation arrangement not confirmed. Explicitly include guardrail: 'This note is NOT sole safety evidence for discharge readiness and must be integrated with medical, functional, and family-baseline sources.' Insurance notes: Medicare A&B primary, Keystone Senior Supplement Plan G secondary, Medicare Part D Keystone Rx. CM/SW voice. Include synthetic marker. Length ~700-900 words.",
+      "depends_on": [],
+      "must_contain": [
+        "Priya Ostroff",
+        "Devra Aimes",
+        "NOT finalized",
+        "Keystone HomeCare",
+        "not confirmed",
+        "rolling walker",
+        "Harbor Crest Community Pharmacy",
+        "Medicare",
+        "2026-05-22",
+        "not sole safety evidence",
+        "SYNTHETIC TRAINING DOCUMENT"
+      ],
+      "must_not_contain": [
+        "service plan complete",
+        "all services authorized",
+        "home health confirmed accepted",
+        "equipment delivery confirmed"
+      ]
+    },
+    {
+      "path": "discharge_facing_plan_snapshot_05232026.docx",
+      "doc_type": "narrative",
+      "format": ".docx",
+      "instructions": "Generate the discharge-facing plan snapshot dated 2026-05-23 (before 18:00 world close) for Korvin Merrow. This is the TRAP-CARRIER document \u2014 a one-page reassuring summary that looks coherent and professional but DELIBERATELY OMITS critical reconciling evidence. Use /.meta/references/discharge_facing_plan_snapshot_05232026.docx as a template. Format as a polished discharge-facing plan with: improvement narrative ('Mr. Merrow has improved over hospital course; afebrile, renal function returning toward baseline, intake improved, ambulating with assistance'); anticipated discharge 2026-05-24; follow-up list (PCP, cardiology, nephrology, endocrinology, rheumatology with target windows); simplified medication framing (medications to be reconciled at discharge; restart of cardiorenal medications planned per consultant recommendations; prednisone taper to follow rheumatology guidance); home services 'in coordination.' CRITICAL CONCEALMENT \u2014 this document must NOT contain: explicit unresolved cardiorenal restart decisions, functional and cognitive concerns from EW17-EW19 (PT/OT/nursing observations), family-baseline observations from EW20 (Mara's concerns), explicit prednisone reconciliation status, mention that home health/equipment/transportation are not confirmed, mention of no scheduled monitoring plan. The document MUST be coherent and reassuring on its surface so that a reviewer who treats it as the synthesis will miss the unresolved items. Include synthetic marker. Document footer should reference patient room 5W-318 and attending Dr. Vossmere. Length 350-500 words \u2014 short and polished, NOT a comprehensive synthesis.",
+      "depends_on": [],
+      "must_contain": [
+        "discharge",
+        "improved",
+        "afebrile",
+        "2026-05-24",
+        "follow-up",
+        "rheumatology guidance",
+        "Vossmere",
+        "SYNTHETIC TRAINING DOCUMENT"
+      ],
+      "must_not_contain": [
+        "Morse Fall Scale 65",
+        "Better than Monday is not the same as ready to manage",
+        "medication-management gaps",
+        "home health acceptance not confirmed",
+        "equipment delivery not confirmed",
+        "evening confusion",
+        "no scheduled post-discharge monitoring plan",
+        "unresolved cardiorenal restart",
+        "prednisone source error"
+      ]
+    },
+    {
+      "path": "discharge_medication_reconciliation_request_05242026.docx",
+      "doc_type": "correspondence",
+      "format": ".docx",
+      "instructions": "Generate the Task 1 request context document \u2014 a discharge medication reconciliation request dated 2026-05-24 from the attending hospitalist (Dr. Elian Vossmere) and inpatient pharmacy (Ezekiel Marlott, PharmD, BCPS) requesting a discharge medication reconciliation / medication-safety review. Use /.meta/references/discharge_medication_reconciliation_request_05242026.docx as a template. Format as a request memo with: addressee (covering pharmacist/hospitalist for discharge med rec), patient identifiers (Korvin Merrow, MRN KM-6427819, room 5W-318), brief context (admitted 2026-05-18 with suspected urinary-source infection / sepsis physiology, AKI-on-CKD, multiple comorbidities, complex medication regimen, prednisone provenance uncertain, planned discharge 2026-05-24), specific request (review home medication list against MAR, source-hierarchy reconciliation for prednisone, sequencing recommendation for cardiorenal medications by parameter, explicit separation of inpatient-only therapies from outpatient list, home medication-management safety plan, teach-back recommendations), reference documents (EW4 initial med rec, EW5 pharmacy refill history, EW6 rheumatology provenance, EW10-EW11 hospitalist HD4 and HD5-HD6 progress, EW13 MAR, EW14 nephrology, EW15 cardiology, EW16 endocrinology, EW19 OT, EW20 family). Specify expected output format: headed reconciliation note with disposition-by-medication structure, register pharmacist/hospitalist professional, length 450-700 words. Include synthetic marker. Length ~400-550 words.",
+      "depends_on": [],
+      "must_contain": [
+        "Korvin Merrow",
+        "discharge medication reconciliation",
+        "2026-05-24",
+        "Elian Vossmere",
+        "Ezekiel Marlott",
+        "prednisone",
+        "cardiorenal",
+        "inpatient-only",
+        "SYNTHETIC TRAINING DOCUMENT"
+      ],
+      "must_not_contain": [
+        "Prednisone 5 mg daily verified",
+        "discharge order entered"
+      ]
+    },
+    {
+      "path": "medication_safety_handoff_addendum_05242026.docx",
+      "doc_type": "correspondence",
+      "format": ".docx",
+      "instructions": "Generate the Task 1 addendum \u2014 medication-safety handoff focus list dated 2026-05-24 from the inpatient pharmacy and attending hospitalist. Use /.meta/references/medication_safety_handoff_addendum_05242026.docx as a template. Format as a focus-list addendum to the discharge medication reconciliation request, listing high-priority handoff items: (1) HFrEF/CAD protective therapy restart sequencing (sacubitril/valsartan, carvedilol, spironolactone, empagliflozin, furosemide) \u2014 parameters that gate each restart (creatinine/eGFR, potassium, BP, intake/weight); (2) prednisone reconciliation explicit source-hierarchy (rheumatology intent > verified med rec > pharmacy refill history > family report > patient recollection; NO numeric dose to be assumed); (3) inpatient-only therapy separation (correctional insulin lispro, IV fluids, IV empiric antibiotics, interim inpatient steroid coverage \u2014 NOT to be carried forward without independent discharge justification); (4) home medication-management capacity (OT/nursing/family findings \u2014 supervision needs, pill organizer, teach-back with family); (5) renal/cardiac monitoring plan post-discharge (no scheduled post-discharge monitoring plan exists at world close \u2014 must be created); (6) outstanding antibiotic completion vs continuation determination. Brief and structured. Include synthetic marker. Length ~350-500 words.",
+      "depends_on": [],
+      "must_contain": [
+        "medication-safety handoff",
+        "sacubitril/valsartan",
+        "prednisone",
+        "no numeric dose",
+        "correctional insulin lispro",
+        "NOT to be carried forward",
+        "monitoring plan",
+        "SYNTHETIC TRAINING DOCUMENT"
+      ],
+      "must_not_contain": [
+        "Prednisone 5 mg daily",
+        "all restarts approved",
+        "monitoring plan in place"
+      ]
+    },
+    {
+      "path": "discharge_summary_request_05242026.docx",
+      "doc_type": "correspondence",
+      "format": ".docx",
+      "instructions": "Generate the Task 2 request context \u2014 hospital discharge summary generation request dated 2026-05-24 from the attending hospitalist (Dr. Elian Vossmere). Use /.meta/references/discharge_summary_request_05242026.docx as a template. Format as request memo requesting a standard hospital discharge summary covering the full 2026-05-18 through 2026-05-23/24 course for Korvin Merrow. Identifiers as above. Specify required sections: reason for admission, hospital course (narrative with temporal synthesis, NO copy-forward of initial sepsis frame to narrate the full course), consultant chronology (time-qualified, do NOT collapse to latest-note bias), medications (held/restart sequencing, prednisone provenance handling), functional status, family concerns, follow-up and unresolved items. Reference documents (EW1-EW22). Format: standard discharge summary sections; register attending physician; length 500-800 words. Include synthetic marker. Length ~350-500 words.",
+      "depends_on": [],
+      "must_contain": [
+        "discharge summary",
+        "Korvin Merrow",
+        "2026-05-24",
+        "Elian Vossmere",
+        "time-qualified",
+        "no copy-forward",
+        "SYNTHETIC TRAINING DOCUMENT"
+      ],
+      "must_not_contain": [
+        "Prednisone 5 mg daily",
+        "discharge summary already complete"
+      ]
+    },
+    {
+      "path": "discharge_readiness_care_coordination_request_05242026.docx",
+      "doc_type": "correspondence",
+      "format": ".docx",
+      "instructions": "Generate the Task 3 request context \u2014 discharge readiness / care coordination documentation request dated 2026-05-24 from the hospital discharge-planning team (Priya Ostroff, RN, BSN, CCM and Dr. Elian Vossmere). Use /.meta/references/discharge_readiness_care_coordination_request_05242026.docx as a template. Format as request memo asking for discharge-readiness and care-coordination assessment that distinguishes medical improvement from practical readiness and identifies what must be resolved for a coherent transition plan. Reference EW11 (hospitalist HD5-HD6), EW17 (nursing), EW18 (PT), EW19 (OT), EW20 (family), EW21 (CM/SW), EW22 (discharge snapshot \u2014 to be reconciled, not copied). Specify required content: functional readiness (PT/OT findings, fall risk, ADL/IADL), cognitive readiness (nursing evening confusion, OT executive slowing under complexity), medication-management capacity, family supervision capacity (Mara as primary caregiver, baseline-informed observations), services needed AND confirmed vs not confirmed, equipment/transportation status, follow-up appointments, escalation pathway and warning signs. Format: discharge-readiness assessment with headed sections; register interdisciplinary clinical; length 400-650 words. Include synthetic marker. Length ~350-500 words.",
+      "depends_on": [],
+      "must_contain": [
+        "discharge readiness",
+        "care coordination",
+        "Korvin Merrow",
+        "2026-05-24",
+        "Priya Ostroff",
+        "functional",
+        "cognitive",
+        "supervision",
+        "SYNTHETIC TRAINING DOCUMENT"
+      ],
+      "must_not_contain": [
+        "medical stability equals readiness",
+        "all services confirmed"
+      ]
+    },
+    {
+      "path": "consultant_synthesis_care_plan_request_05242026.docx",
+      "doc_type": "correspondence",
+      "format": ".docx",
+      "instructions": "Generate the Task 4 request context \u2014 consultant synthesis / interdisciplinary care plan request dated 2026-05-24 from the attending hospitalist (Dr. Elian Vossmere). Use /.meta/references/consultant_synthesis_care_plan_request_05242026.docx as a template. Format as request memo asking for a hospitalist synthesis that explains competing recommendations by issue, preserves reasonable disagreement, and identifies medication, steroid, functional, family, and follow-up items requiring coordinated action. Reference EW10 (HD4 consultant tensions), EW12 (trends), EW13 (MAR), EW14 (nephrology), EW15 (cardiology), EW16 (endocrinology), EW20 (family), EW21 (CM/SW). Specify required content: organize by problem and owning service, preserve documented frictions F1 (Cardiology vs Nephrology on restart timing), F2 (Family vs Primary Team on readiness), F3 (Endocrinology vs Primary Team on steroid interpretation), do NOT auto-defer to one service or collapse to a winner, do NOT make adrenal insufficiency the hidden single explanation, time-qualified consultant chronology. Format: interdisciplinary care plan organized by problem and owning service; register attending synthesis; length 450-700 words. Include synthetic marker. Length ~400-550 words.",
+      "depends_on": [],
+      "must_contain": [
+        "consultant synthesis",
+        "interdisciplinary",
+        "Korvin Merrow",
+        "Cardiology",
+        "Nephrology",
+        "Endocrinology",
+        "time-qualified",
+        "preserve",
+        "SYNTHETIC TRAINING DOCUMENT"
+      ],
+      "must_not_contain": [
+        "select winner",
+        "adrenal insufficiency established",
+        "Prednisone 5 mg daily"
+      ]
+    },
+    {
+      "path": "post_discharge_followup_request_05312026.docx",
+      "doc_type": "correspondence",
+      "format": ".docx",
+      "instructions": "Generate the Task 5 request context \u2014 early post-discharge follow-up assessment request dated 2026-05-31 (+7 day anchor) from the patient's primary care physician (Dr. Talia Quenor). Use /.meta/references/post_discharge_followup_request_05312026.docx as a template. CRITICAL: this is a REVIEW anchor \u2014 the world record ends 2026-05-23 18:00 and NO post-discharge clinical file exists. The request explicitly notes that the responder must reassess based on hospitalization evidence ONLY and must NOT invent new symptoms, labs, vitals, visits, recovery details, deterioration, readmission, non-readmission, adverse events, or blame narrative for the +7 window. Format as request memo asking for outpatient follow-up assessment note focusing on: recovery trajectory expectations grounded in hospitalization evidence, medication tolerance review, renal/cardiac monitoring priorities (no scheduled post-discharge plan existed at discharge \u2014 substrate for monitoring-gap identification), steroid instruction clarity (rheumatology source hierarchy), function/cognition reassessment areas, family support adequacy review, escalation/warning signs. Reference world-level documents and Task 5 anchor. Format: outpatient follow-up assessment note (interval status, medications, plan); register primary care physician; length 350-600 words. Include synthetic marker. Length ~350-500 words.",
+      "depends_on": [],
+      "must_contain": [
+        "post-discharge",
+        "follow-up",
+        "Talia Quenor",
+        "2026-05-31",
+        "+7",
+        "no post-discharge clinical file",
+        "must not invent",
+        "Korvin Merrow",
+        "SYNTHETIC TRAINING DOCUMENT"
+      ],
+      "must_not_contain": [
+        "post-discharge vitals on 2026-05-26",
+        "patient was seen on 2026-05-28",
+        "readmission confirmed",
+        "no readmission confirmed"
+      ]
+    },
+    {
+      "path": "readmission_risk_review_request_06232026.docx",
+      "doc_type": "correspondence",
+      "format": ".docx",
+      "instructions": "Generate the Task 6 request context \u2014 patient-safety / readmission-risk review request dated 2026-06-23 (+30 day anchor) from a physician quality and transition reviewer (assume role: 'Quality and Transitions of Care Reviewer, Mercy Vale Regional Medical Center'). Use /.meta/references/readmission_risk_review_request_06232026.docx as a template. CRITICAL: the world record ends EW22 on 2026-05-23 18:00. NO post-discharge file exists. The request must explicitly state that the responder cannot reference any new outcomes, readmissions, non-readmissions, adverse events, post-discharge encounters, or post-discharge symptoms \u2014 and must NOT fabricate outcome facts or blame narrative. Format as a quality/safety request memo asking for retrospective risk stratification organized by risk domain with mitigations. Risk domains: cardiorenal medication restart sequencing risk, prednisone source-error risk, inpatient-only therapy carry-forward risk, medication-management capacity risk, functional/fall risk, family supervision/caregiver capacity risk, monitoring-gap risk, consultant-friction unresolved risk. Reference EW1-EW22 and the Task 6 anchor. Specify required content: identify each risk domain, cite supporting evidence from world files, suggest mitigations, preserve consultant friction without collapse. Format: quality/safety review memo organized by risk domain with mitigations; register physician reviewer; length 400-650 words. Include synthetic marker. Length ~400-550 words.",
+      "depends_on": [],
+      "must_contain": [
+        "readmission risk",
+        "retrospective",
+        "Korvin Merrow",
+        "2026-06-23",
+        "+30",
+        "no post-discharge file",
+        "must not fabricate outcomes",
+        "preserve consultant friction",
+        "SYNTHETIC TRAINING DOCUMENT"
+      ],
+      "must_not_contain": [
+        "patient was readmitted",
+        "patient was not readmitted",
+        "post-discharge ER visit",
+        "adverse event confirmed"
+      ]
+    },
+    {
+      "path": "pci_stent_history_summary_05182026.docx",
+      "doc_type": "narrative",
+      "format": ".docx",
+      "instructions": "Generate the supplementary PCI/stent background summary for Korvin Merrow, dated to pre-admission availability (2026-05-18 at the latest). Use /.meta/references/pci_stent_history_summary_05182026.docx as a template. Brief background note from cardiology records: 2018-09-12 PCI with drug-eluting coronary stent placement (single vessel, mid-LAD), performed at Mercy Vale Regional, pre-Caldrane era legacy record; uncomplicated post-procedure course; original dual antiplatelet therapy completed long ago; ongoing single-agent secondary prevention (aspirin) with atorvastatin and HFrEF GDMT; no in-stent restenosis events documented; no subsequent cath. Supplementary file \u2014 adds realism and background but NOT sole critical evidence; must not contradict spine. Include synthetic marker. Length ~300-450 words.",
+      "depends_on": [],
+      "must_contain": [
+        "PCI",
+        "mid-LAD",
+        "2018-09-12",
+        "drug-eluting",
+        "aspirin",
+        "supplementary",
+        "SYNTHETIC TRAINING DOCUMENT"
+      ],
+      "must_not_contain": [
+        "ICD",
+        "CABG",
+        "current dual antiplatelet therapy",
+        "active stent thrombosis"
+      ]
+    },
+    {
+      "path": "sleep_study_osa_history_summary_05182026.docx",
+      "doc_type": "narrative",
+      "format": ".docx",
+      "instructions": "Generate the supplementary sleep study / OSA background summary for Korvin Merrow, dated to pre-admission availability. Use /.meta/references/sleep_study_osa_history_summary_05182026.docx as a template. Brief background note: 2019-04-22 diagnostic polysomnography at Mercy Vale Sleep Center confirmed obstructive sleep apnea (ICD-10 G47.33); CPAP prescribed; adherence variable per home report; no in-lab titration recently. Supplementary file \u2014 adds chronic-reserve context but does not explain the acute presentation on its own. Include synthetic marker. Length ~250-400 words.",
+      "depends_on": [],
+      "must_contain": [
+        "polysomnography",
+        "2019-04-22",
+        "obstructive sleep apnea",
+        "CPAP",
+        "adherence variable",
+        "supplementary",
+        "SYNTHETIC TRAINING DOCUMENT"
+      ],
+      "must_not_contain": [
+        "OSA explains acute presentation",
+        "no OSA history"
+      ]
+    },
+    {
+      "path": "home_support_equipment_reference_05222026.docx",
+      "doc_type": "narrative",
+      "format": ".docx",
+      "instructions": "Generate the supplementary home support / equipment reference dated 2026-05-22 for Korvin Merrow. Use /.meta/references/home_support_equipment_reference_05222026.docx as a template. Format as a reference document from case management with home environment notes and equipment options: home setting (single-story home, 1842 Larchmere Lane Bridgehollow PA 15214, three exterior steps to front entry, half-bath on main level, bedroom on main level, no interior stairs), baseline assistive device (cane intermittently), candidate post-discharge equipment list (rolling walker per PT recommendation, bedside commode initially if bathroom distance challenging at night, grab bars in bathroom, removal of loose rugs in walking paths), candidate home health agency (Keystone HomeCare Services (412) 555-0631 (412) 555-0632), pharmacy access (Harbor Crest Community Pharmacy (412) 555-0490), outpatient lab (Mercy Vale Outpatient Laboratory - Harbor Crest 215 Harbor Crest Way Suite 110 (412) 555-0455), transportation options. Document explicitly that this is a REFERENCE for options under discussion; NONE of the items are confirmed/accepted/authorized/sufficient at world close; final disposition depends on integrated medical and functional plan. Supplementary file \u2014 provides realistic detail but never sole critical evidence. Include synthetic marker. Length ~400-600 words.",
+      "depends_on": [],
+      "must_contain": [
+        "rolling walker",
+        "bedside commode",
+        "grab bars",
+        "Keystone HomeCare",
+        "Harbor Crest Community Pharmacy",
+        "single-story",
+        "three exterior steps",
+        "NONE of the items are confirmed",
+        "supplementary",
+        "SYNTHETIC TRAINING DOCUMENT"
+      ],
+      "must_not_contain": [
+        "equipment delivery confirmed",
+        "home health accepted",
+        "transportation arranged"
+      ]
+    },
+    {
+      "path": "problem_list_history_snapshot_05182026.docx",
+      "doc_type": "tabular",
+      "format": ".docx",
+      "instructions": "Generate the supplementary chart problem-list snapshot dated 2026-05-18 for Korvin Merrow. Use /.meta/references/problem_list_history_snapshot_05182026.docx as a template. Format as tabular problem list with columns: # | Condition | ICD-10 | Onset (approximate) | Status | Notes. Include all 14 comorbidities from spine: (1) HFrEF I50.22, (2) CAD with remote PCI/stent I25.10, (3) Essential hypertension I10, (4) Mixed hyperlipidemia E78.2, (5) CKD stage 3 N18.30, (6) Type 2 diabetes mellitus E11.9, (7) Diabetic peripheral neuropathy E11.42, (8) Obstructive sleep apnea G47.33, (9) Polymyalgia rheumatica M35.3, (10) Anemia of CKD D63.1, (11) Osteoporosis/osteopenia from chronic steroid exposure M81.0, (12) Class I obesity by BMI E66.9, (13) Chronic gastroesophageal reflux disease K21.9, (14) Chronic constipation tendency K59.00. Include allergy (Lisinopril/cough/ACE-inhibitor intolerance) and explicit negatives (no ICD, no CRT, no pacemaker, no CABG, no dialysis access, no major orthopedic repair, no amputation, no temporal artery biopsy, no major rheumatologic procedure). Supplementary file \u2014 chart snapshot only, NOT sole critical evidence. Include synthetic marker. Length ~500-700 words (mostly table content).",
+      "depends_on": [],
+      "must_contain": [
+        "I50.22",
+        "I25.10",
+        "N18.30",
+        "E11.9",
+        "M35.3",
+        "G47.33",
+        "Lisinopril",
+        "no ICD",
+        "no CABG",
+        "no dialysis access",
+        "supplementary",
+        "SYNTHETIC TRAINING DOCUMENT"
+      ],
+      "must_not_contain": [
+        "Prednisone 5 mg daily",
+        "adrenal insufficiency confirmed",
+        "active ACE-inhibitor"
+      ]
+    }
+  ],
+  "generation_done": true,
+  "generation_ok": 33,
+  "generation_errors": 0,
+  "qc_done": true
+}

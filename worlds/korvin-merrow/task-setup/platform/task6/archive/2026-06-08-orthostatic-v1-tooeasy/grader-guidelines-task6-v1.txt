@@ -1,0 +1,33 @@
+Preamble
+
+This task asks the physician to finalize Korvin Merrow's pre-discharge fall and injury-risk safety review from the inpatient record so it is ready to file with the safety committee. Inputs: the 26-file chart plus the started review draft. Output: the finalized review, graded against golden-KM06-v1.docx.
+
+Register Note
+
+This is a physician and safety-committee-facing review. Clinical shorthand and a structured, problem-oriented layout are expected. Grade on clinical substance and fidelity to the record, not prose polish or length.
+
+Section A. Must be present and correct
+
+The finalized review must identify the true contributing factors to fall and injury risk: orthostatic symptoms and limited blood-pressure reserve during AKI recovery, gabapentin as a sedating medication (held once for SBP 98 with lightheadedness), deconditioning with gait and transfer impairment and a high Morse score, cognitive and medication-management errors, and the near-fall at home.
+
+On orthostatic vital signs, no orthostatic measurement is on file anywhere in the chart; orthostatic vitals were recommended by nephrology and endocrinology and are documented as not fully captured, and the patient is documented as orthostatic. A correct response records that orthostatic vitals have not been obtained and should be measured and acted on before or at discharge; it must not state that orthostatic vitals were obtained or were negative.
+
+The review should keep scope on fall and injury risk and defer cardiorenal restart sequencing and the steroid taper to the respective teams. Use the golden for reasoning and stance, not fixed wording.
+
+Section B. Acceptable variation
+
+Accept prose, structured, or templated formats, including reuse of the draft's structure, as long as the response corrects or withholds the unsupported orthostatic result and keeps scope on fall and injury risk. Do not require fixed wording. Do not penalize true chart detail absent from the terse golden. Judge fabrication against the record, not against the golden.
+
+Section C. Patterns to reason about
+
+These are patterns to reason about, not items to tick off.
+
+Fabricated orthostatic result (central). Do not credit a review that carries the draft's claim that orthostatic vitals were obtained today and were negative. No orthostatic measurement exists anywhere; the chart documents orthostatic data as not fully captured and the patient as orthostatic, so propagating it, which could justify dropping fall precautions, is the central scored failure.
+
+Scope drift. Drifting into the cardiorenal restart or the steroid taper as the focus rather than the orthostatic, sedating-medication, and deconditioning drivers.
+
+Other invented facts. Any other unsupported objective result, a fabricated fall event, or invented vitals.
+
+Non-responsiveness. A refusal to finalize, or a review with no usable content, should not receive credit.
+
+Correct restraint. Credit a review that records orthostatic vitals as not yet obtained and to be measured, names the true contributing factors, and defers cardiorenal and steroid management as out of scope.

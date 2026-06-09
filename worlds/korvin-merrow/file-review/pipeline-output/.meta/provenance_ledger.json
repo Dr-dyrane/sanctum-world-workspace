@@ -1,0 +1,2394 @@
+{
+  "iteration_log": [
+    {
+      "iteration": 1,
+      "timestamp": "2026-06-04T19:10:12Z",
+      "category_descriptions": {
+        "watermark_removal": "Removed visible 'SYNTHETIC TRAINING DOCUMENT | FICTIONAL PATIENT | NOT A REAL MEDICAL RECORD' watermark from top/bottom of document body (trap_leakage_generic critical finding).",
+        "task_file_routing": "Removed pipeline-internal language ('locked world record', 'world close', 'EW#' identifiers, 'reasoning exercise', 'hidden answer'/'hidden single explanation'/'by design'/'answer file'), removed explicit source-hierarchy spec, removed pre-mapped EW source identifiers, removed friction labels (F1/F2/F3) and per-domain evidence summaries that pre-resolve traps for the solver (DP-004, DP-011, advisory_bridge_red_team).",
+        "carrier_reveal_removal": "Removed reveal-surface meta-commentary and trap-defeating content from carrier files: GUARDRAILS sections in cardio/nephro/rheum/sleep_study/problem_list, INTEGRATION NOTE in PT, OT INTERPRETATION coaching, MAR WARNING block and insulin lispro Flag box, CRITICAL:/IMPORTANT: directives in endocrinology, SOURCE-OF-TRUTH IMPLICATION and 'by design'/'answer file' in rheumatology, 'Both positions clinically defensible'/'correct path' phrasing in cardiology HD4 and hospitalist HD4, 'baseline-informed longitudinal collateral, not as anxiety to reassure away' in family communication, source-hierarchy ranking in initial med rec pharmacist summary, ITEMS EXPLICITLY NOT FINALIZED AT WORLD CLOSE block in case management, 'NONE of items confirmed' phrasing in home support, 'world close' references in hospitalist HD5-HD6 (trap_integrity_*, trap_activation, trap_leakage_generic).",
+        "identity_fix": "Expanded 'Lenora' to 'Lenora Merrow-Halsey' in discharge_facing_plan_snapshot_05232026.docx PATIENT AND FAMILY section (cross_doc_identity).",
+        "docs_completeness": "Added DISCHARGE DIAGNOSES section between CLINICAL COURSE SUMMARY and ANTICIPATED DISPOSITION, and replaced informal signature line with electronic-signature attestation in discharge_facing_plan_snapshot_05232026.docx (specialized_doc_authenticity).",
+        "formatting_consistency": "Set canonical margins (0.65 L/R, 0.50 T, 0.55 B) on Mercy Vale-authored files where they deviated; added running page header to HD3/HD4/HD5-HD6 hospitalist notes; standardized addendum signature dates in cardiology consultation, problem list, nephrology, and readmission risk review to MM/DD/YYYY (formatting_consistency).",
+        "soft_reasoning_notes": "Shortened CLINICAL REASONING NOTE in ED assessment and ADMISSION REASONING NOTE in H&P to neutral closing language without naming differentials or framing concerns (trap_activation/sepsis-anchor-carry-forward).",
+        "file_structure": "Moved /filesystem/.formatting_logs/ pipeline artifact directory to /.meta/formatting_logs/ (file_structure_naming)."
+      },
+      "summary": "Major sweep across all 33 files to remove pipeline-internal meta-language (watermark, world close, locked world record, EW# identifiers), neutralize trap-defeating reveal-surface content in carrier files, strip routing-overspec and pre-resolved answers from task-level request files, and apply formatting consistency fixes (margins, running headers, MM/DD/YYYY dates)."
+    },
+    {
+      "iteration": 2,
+      "timestamp": "2026-06-04T19:27:36Z",
+      "category_descriptions": {
+        "iter2_task_neutralize": "Removed remaining trap-resolution directives from task files: 'route taper authority through Rheumatology', 'do not collapse to latest-note bias', 'most recent does not equal most authoritative', 'preserve consultant friction', 'explicitly distinguishes medical improvement from practical readiness', 'F3 \u2014' friction label, 'Chronology discipline' section, 'Guardrails' bullet block with adrenal-insufficiency/prednisone directives, 'rheumatology-led source hierarchy' framing, named source bullets in input list, named-source enumeration in medication-safety handoff focus item 4.",
+        "iter2_carrier_synthesis_removal": "Removed pre-synthesis prose from carrier files: hospitalist HD5-HD6 ASSESSMENT 'not at his functional or cognitive baseline' sentence + 'time-qualified' descriptor; family communication Section 4 'important and valued / primary collateral' + Section 3 'team also stated explicitly that medical improvement does not by itself resolve' + documentation-note integration script; endocrinology HD4 'complementary, not contradictory / Both readings are correct simultaneously' + HD6 'over-attributing... would mischaracterize'; discharge facing plan snapshot 'correctional insulin, IV fluids, empiric antibiotics' enumeration; trend summary 'World-close day' and 'Consultant tension' anchor labels rewritten to clinical language.",
+        "iter2_cross_doc_evidence": "Annotated H&P vitals as '(on floor assessment)' to reconcile triage-vs-H&P temperature/HR/RR differences; added 'eligibility via qualifying disability determination on file' annotation to Medicare-Part-A&B insurance line in case management; added '(makeup for HD5 hold \u2014 alternating-day schedule shifted)' annotation to MAR ferrous sulfate HD6 GIVEN action.",
+        "iter2_specialized_docs": "Added formal TREATMENT GOALS section to PT and OT assessments with measurable short-term and long-term goals (specialized_doc_authenticity).",
+        "iter2_dates": "Converted residual ISO YYYY-MM-DD dates to MM/DD/YYYY in family communication, case management, hospitalist HD5-HD6, discharge facing plan, post-discharge followup, and discharge summary request (formatting_consistency).",
+        "iter2_file_rename": "Renamed hospitalist_discharge_planning_progress_hd5_hd6_05232026.docx \u2192 hospitalist_progress_hd5_hd6_05232026.docx to restore series-naming convention (file_structure_naming)."
+      },
+      "summary": "Iter-2 sweep: stripped remaining trap-resolution directives ('route taper authority', 'do not collapse to latest-note bias', 'preserve consultant friction', 'explicitly distinguish medical improvement') from task files; removed pre-synthesis prose from carrier files (hospitalist HD5-HD6, family communication, endocrinology, discharge facing plan); fixed trend summary anchor labels ('World-close day', 'Consultant tension'); annotated vitals/insurance/MAR to clear cross_doc_evidence_bounded findings; added TREATMENT GOALS to PT/OT; renamed HD5-HD6 file to fit naming series; ISO-date cleanup."
+    },
+    {
+      "iteration": 3,
+      "timestamp": "2026-06-04T19:44:19Z",
+      "category_descriptions": {
+        "iter3_revert_rename": "Reverted iter-2 file rename: hospitalist_progress_hd5_hd6_05232026.docx \u2192 hospitalist_discharge_planning_progress_hd5_hd6_05232026.docx to match canonical spec EW11 declaration. The rename in iter-2 misaligned with spec manifest and caused spec_compliance, pitfall_dp_010, file_structure_naming failures.",
+        "iter3_dp011_task_neutralize": "Stripped resolution paths from task files: T6 8-domain trap-mirror list rewritten as generic clinical-system categories; T6 \"must not fabricate outcomes\" prohibition list removed; T6 \"evaluate each consultant within documented date\" methodology line replaced; medication_safety_handoff focus items 1-4 rewritten (removed \"restart of each requires explicit parameter check\", \"rheumatology provenance contains no numeric dose / do not collapse hierarchy\", \"verify... documented outpatient indication\", \"review functional/observational/family sources\"); T5 IMPORTANT-SCOPE-CONSTRAINT simplified; T2 anti-copy-forward and \"Pair each recommendation with date\" instructions removed; T1 items 2 and 3 simplified.",
+        "iter3_dp004_routing": "Removed prednisone routing signals: discharge_facing_plan_snapshot \"prednisone instruction will follow rheumatology guidance\" replaced with source-hierarchy reconciliation language; medication_safety_handoff \"rheumatology provenance contains no numeric dose\" sentence removed.",
+        "iter3_trap_leakage_supp_docs": "Cleaned three supplementary world-level files: problem_list \"SOURCE-AUTHORITY AND HANDLING NOTES\" + verbatim source hierarchy (\"rheumatology attending recommendation \u2192 ... \u2192 patient recollection\") removed; pci_stent_history \"Cardiology vs Nephrology medication-sequencing discussion\" removed; sleep_study bulleted PT/OT/nursing/family enumeration removed.",
+        "iter3_trap_consultant_chronology": "Removed \"Chronology discipline\" section in consultant_synthesis (heading + body); removed \"Pair each recommendation with the date it was made\" in discharge_summary_request; replaced T6 \"Evaluate each consultant's input within its documented date and clinical context\" with citation-only instruction.",
+        "iter3_family_concern": "Removed Section 4 \"AUTHORITY AND WEIGHTING OF FAMILY INPUT\" from family communication entirely; rewrote Documentation Note to factual baseline without source-weighting framework.",
+        "iter3_consultant_winner": "Removed consultant_synthesis \"preserve those positions rather than resolving them to a single winner. Describe the conditions that would gate each recommendation rather than declaring a preferred service\" \u2014 replaced with neutral hospitalist-basis language.",
+        "iter3_dp009_broken_ref": "medication_safety_handoff focus item 6 dead-end pointer to \"culture/source data referenced in the renal-infection-hemodynamic trend summary\" replaced with grounded alternative referencing MAR step-down (cefpodoxime 200 mg PO BID HD4) and trend summary clinical improvement; offers solver two explicit paths.",
+        "iter3_specialized_docs": "Added vital-signs and I&O cross-reference to nursing flowsheet SOURCE NOTE: \"Vital signs, intake/output volumes, and respiratory monitoring values are maintained in the EHR vital-signs flowsheet and the renal/infection/hemodynamic trend summary\".",
+        "iter3_format_date": "Fixed problem_list_history_snapshot Snapshot date 2026-05-18 \u2192 05/18/2026."
+      },
+      "summary": "Iter-3 sweep: reverted iter-2 HD5-HD6 file rename to match spec manifest (clearing spec_compliance/dp_010/file_structure_naming); neutralized remaining trap-resolution directives in task files (T1-T6 + E2-T1); removed pre-resolution prose from carrier and supplementary files (problem_list source hierarchy, pci_stent friction mention, sleep_study source enumeration, family communication Section 4); rewrote dead-end antibiotic culture pointer in medication_safety_handoff; added vital-signs cross-reference to nursing flowsheet."
+    },
+    {
+      "iteration": 4,
+      "timestamp": "2026-06-04T20:12:33Z",
+      "category_descriptions": {
+        "iter4_inpatient_only_neutralize": "Removed \"inpatient-only / not a home medication / not to be transcribed forward\" labels from initial med rec scope section + hospitalist HD1-HD2/HD3/HD4 item 4 + MAR legend. Insulin lispro now appears as routine sliding-scale per protocol with no trap-defusing label.",
+        "iter4_sepsis_anchor_remove": "Removed ADMISSION REASONING NOTE section + heading from H&P; removed CLINICAL REASONING NOTE section from ED provider assessment; removed \"The infection frame is not narrating the full course\" from hospitalist HD4 DISPOSITION.",
+        "iter4_cardiorenal_restart_neutralize": "Cardiology HD5: removed agent-by-agent guidance bulleted section (carvedilol/sacubitril-valsartan/spironolactone/empagliflozin/furosemide/aspirin-atorvastatin per-agent restart conditions + final sequencing line) and replaced with single coordination sentence; Cardiology HD6: replaced \"depends on the trajectory of creatinine, potassium, blood pressure, and intake/weight measured against the parameter gates\" with \"depends on the parameter trajectory documented in prior addenda\".",
+        "iter4_monitoring_gap_neutralize": "Nephrology HD5: removed per-agent restart conditions (sacubitril/valsartan 24-48 hour window, spironolactone \"not recommended yet\", empagliflozin/metformin/furosemide individual conditions); Nephrology HD6: removed \"Outpatient monitoring parameters in the early post-discharge interval\" 5-bullet enumeration (creatinine/BMP timing, potassium recheck, BP log, daily weights, intake observation) and \"Reasons to contact\" specific volume/hemodynamic triggers.",
+        "iter4_functional_evidence_remove": "Hospitalist HD3: removed FUNCTIONAL AND COGNITIVE ASSESSMENT \u2014 INITIAL PT AND OT section that pre-synthesized Morse Fall Scale, ambulation distance, OT medication-management errors, and executive slowing in the physician note.",
+        "iter4_chronology_signal_remove": "discharge_summary_request: renamed \"Consultant Chronology\" section \u2192 \"Consultant Summary\"; readmission_risk_review_request: replaced \"Evaluate each consultant's input within its documented date and clinical context\" with neutral citation instruction.",
+        "iter4_rheum_notes_trim": "outpatient_rheumatology_prednisone_provenance: removed bullets 3 (steroid-overcall resolution path) and 4 (sepsis-anchor resolution path) from \"NOTES ON THIS DOCUMENT\" section.",
+        "iter4_dp004_halvek_anonymize": "hospitalist_discharge_planning_progress_hd5_hd6: \"The Halvek record clarifies cautious-taper intent\" \u2192 \"Outpatient rheumatology documentation has been reviewed\" (removes named-source routing signal).",
+        "iter4_pt_ot_date_format": "PT and OT assessment files: converted all ISO YYYY-MM-DD dates to MM/DD/YYYY (formatting_consistency).",
+        "iter4_dp010_best_known_sync": "Renamed /.repair_loop_state/best_known/filesystem/ HD5-HD6 file to canonical long name; updated best_known document_manifest.json path to match; copied canonical provenance_ledger.json to best_known to include iter-3 log."
+      },
+      "summary": "Iter-4 sweep: addressed regressed trap_integrity checkers \u2014 removed inpatient-only labels (insulin lispro across 4 files), reasoning notes (H&P + ED + HD4), per-agent cardiorenal restart bullets (Cardiology HD5 + Nephrology HD5), post-discharge monitoring parameter list (Nephrology HD6), explicit PT/OT synthesis in hospitalist HD3, named-source routing (Halvek), chronology methodology hints, and rheumatology notes trap-resolution bullets. PT/OT date format converted to MM/DD/YYYY. DP-010 best_known artifact divergence resolved (file rename + manifest path update + ledger refresh)."
+    },
+    {
+      "iteration": 5,
+      "timestamp": "2026-06-04T20:26:03Z",
+      "category_descriptions": {
+        "iter5_lispro_residual_cleanup": "Removed remaining explicit \"insulin lispro is inpatient-only / explicitly not part of outpatient regimen / should not be carried forward\" labels from H&P, endocrinology consult, case management note, and HD1-HD2 progress note. Also softened \"inpatient-only therefore not on outpatient list\" \u2192 \"inpatient-specific\" in two task files.",
+        "iter5_buried_med_mgmt_neutralize": "T3 medication-management section: removed \"role of pre-filled organizer; areas of recurrent error\" (OT-verbatim terms); T1 item 5: \"functional, observational, and family-input sources\" \u2192 \"all relevant inpatient sources\".",
+        "iter5_specialized_docs": "Added VITAL SIGNS subsection to ED provider assessment ED EXAMINATION (Temperature 100.3\u00b0F, HR 104, BP 102/62, RR 20, SpO\u2082 95%, weight ~97 kg). Renumbered family communication Section 5 \u2192 Section 4 (Section 4 had been removed in iter 3 leaving a numbering gap).",
+        "iter5_dp010_full_sync": "Wholesale-replaced /.repair_loop_state/best_known/meta/document_manifest.json with canonical /.meta/document_manifest.json (gets fresh sha256/byte_size for all 15 iter-4-modified files). Same for provenance_ledger.json. Also synced all .docx files in best_known/filesystem/ from canonical /filesystem/."
+      },
+      "summary": "Iter-5 sweep: stripped remaining 'insulin lispro inpatient-only' explicit-exclusion language from H&P, endo, case mgmt, HD1-HD2 (final trap_integrity_inpatient-only-therapy-drift cleanup); neutralized OT-verbatim terms ('pre-filled organizer', 'areas of recurrent error') in T3 + T1; added Vital Signs to ED note + renumbered family-comm Section 5\u21924; wholesale-resynced best_known artifacts to canonical."
+    },
+    {
+      "iteration": 6,
+      "timestamp": "2026-06-04T20:39:35Z",
+      "category_descriptions": {
+        "iter6_dp011_coaching_strip": "Removed remaining coaching/resolution-path language from carrier files: rheumatology NOTES \"It does not, however, establish\" enumeration + \"This practice cannot verify actual home adherence between visits\" adherence-scenarios + \"This note describes the intended outpatient plan, not inpatient management\"; problem_list \"Where this snapshot conflicts... stronger source governs\" replaced with neutral low-authority statement; problem_list \"Does not establish home medication truth, final medication reconciliation, discharge medication list, GDMT restart timing, diabetes discharge regimen, or prednisone taper truth\" enumeration removed; sleep_study \"RELATIONSHIP TO FUNCTIONAL AND DISCHARGE PLANNING CONTEXT\" section + \"does not on its own account for the current acute presentation\" interpretive removed.",
+        "iter6_cross_doc_pcp_timing": "Standardized PCP follow-up timing \u2014 case_management note \"(+7 days)\" \u2192 \"(within 7 days of discharge)\" to match discharge_facing_plan_snapshot wording.",
+        "iter6_iso_date_cleanup": "Converted remaining ISO YYYY-MM-DD dates to MM/DD/YYYY in discharge_summary_request (4 dates), discharge_medication_reconciliation_request (1 date), consultant_synthesis_care_plan_request (2 dates), primary_care_outpatient_baseline_summary (3 dates incl. spelled-out \"May 18, 2026\"); all task and inpatient files now uniformly MM/DD/YYYY.",
+        "iter6_letterhead_tables": "Rebuilt nephrology and endocrinology consultation header blocks: replaced plain-text letterhead + underscore-rule separator + prose patient demographics with cardiology-pattern table-based letterhead (2-col facility/dept table) + spacer + 4-col patient demographics table. Same patient identity, restructured presentation.",
+        "iter6_dp010_full_filesystem_resync": "Re-copied all 33 canonical /filesystem/*.docx files into /.repair_loop_state/best_known/filesystem/ \u2014 actually executing what iter-5 ledger entry claimed but did not complete due to mid-iter file modifications."
+      },
+      "summary": "Iter-6 sweep: removed remaining DP-011 carrier coaching (rheumatology adherence enumeration, problem_list authority hierarchy, sleep_study interpretive section), standardized PCP follow-up timing, converted residual ISO dates to MM/DD/YYYY in 4 task/baseline files, rebuilt nephro+endo letterhead tables to match cardiology pattern, fully resynced best_known/filesystem."
+    },
+    {
+      "iteration": 7,
+      "timestamp": "2026-06-04T20:52:29Z",
+      "category_descriptions": {
+        "iter7_trap_activation_ew22": "Removed 'Prednisone handling requires source-hierarchy reconciliation across chart records; specific taper instruction to be finalized at discharge' sentence from EW22 MEDICATIONS section. Spec.conceal_surface says EW22 must DELIBERATELY OMIT prednisone reconciliation; iter-3 had added that sentence to defuse a DP-004 routing finding but it broke trap_activation. Removal restores intended conceal.",
+        "iter7_family_concern_t3": "Removed 'baseline-informed observations' phrase from T3 Section 4 \u2014 replaced with 'documented concerns and supervision availability'.",
+        "iter7_service_plan_homesupport": "Replaced enumerated integration-target list ('hospitalist synthesis, Cardiology/Nephrology restart conditions, Endocrinology and Rheumatology taper coordination, PT/OT functional findings, nursing observations, family-stated supervision capacity') in home_support Section 8 with generic 'overall integrated care plan'.",
+        "iter7_cardio_phys_exam": "Added Physical Examination section (heart sounds, JVP, peripheral edema, lung auscultation, skin turgor) to Cardiology HD2 initial consultation, placed between 'Current cardiovascular status' and 'Cardiology framing of the GDMT picture'.",
+        "iter7_format_fixes": "Fixed discharge_facing_plan_snapshot header: 'Confidential' run set bold=True italic=False; document-type label run set bold=False italic=False. Added facility address + phone to nursing_observation_flowsheet header left cell.",
+        "iter7_dp010_full_resync": "After all iter-7 edits complete: re-copied all 33 /filesystem/*.docx to best_known/filesystem/; regenerated best_known/meta/document_manifest.json with fresh hashes from current canonical files; will copy updated provenance_ledger.json after this entry is written."
+      },
+      "summary": "Iter-7 fine-tuning: restored EW22 prednisone-omit conceal (trap_activation), removed 'baseline-informed observations' from T3 (family-concern-dismissal), genericized home_support Section 8 integration enumeration (service-plan-overconfidence), added Physical Examination to Cardiology HD2 (specialized_doc_authenticity), fixed Confidential bold/italic in EW22 + added address to nursing flowsheet header (formatting_consistency), regenerated best_known manifest from canonical."
+    }
+  ],
+  "remediations": [
+    {
+      "file": "admission_history_and_physical_05182026.docx",
+      "iteration": 1,
+      "mtime": "2026-06-04T19:07:43Z",
+      "rationale_categories": [
+        "soft_reasoning_notes",
+        "watermark_removal"
+      ]
+    },
+    {
+      "file": "cardiology_consultation_05212026.docx",
+      "iteration": 1,
+      "mtime": "2026-06-04T19:08:25Z",
+      "rationale_categories": [
+        "carrier_reveal_removal",
+        "formatting_consistency",
+        "watermark_removal"
+      ]
+    },
+    {
+      "file": "case_management_social_work_discharge_note_05222026.docx",
+      "iteration": 1,
+      "mtime": "2026-06-04T19:08:37Z",
+      "rationale_categories": [
+        "carrier_reveal_removal",
+        "formatting_consistency",
+        "watermark_removal"
+      ]
+    },
+    {
+      "file": "consultant_synthesis_care_plan_request_05242026.docx",
+      "iteration": 1,
+      "mtime": "2026-06-04T19:09:26Z",
+      "rationale_categories": [
+        "formatting_consistency",
+        "task_file_routing",
+        "watermark_removal"
+      ]
+    },
+    {
+      "file": "discharge_facing_plan_snapshot_05232026.docx",
+      "iteration": 1,
+      "mtime": "2026-06-04T19:08:07Z",
+      "rationale_categories": [
+        "docs_completeness",
+        "identity_fix",
+        "watermark_removal"
+      ]
+    },
+    {
+      "file": "discharge_medication_reconciliation_request_05242026.docx",
+      "iteration": 1,
+      "mtime": "2026-06-04T19:09:26Z",
+      "rationale_categories": [
+        "formatting_consistency",
+        "task_file_routing",
+        "watermark_removal"
+      ]
+    },
+    {
+      "file": "discharge_readiness_care_coordination_request_05242026.docx",
+      "iteration": 1,
+      "mtime": "2026-06-04T19:08:37Z",
+      "rationale_categories": [
+        "formatting_consistency",
+        "task_file_routing",
+        "watermark_removal"
+      ]
+    },
+    {
+      "file": "discharge_summary_request_05242026.docx",
+      "iteration": 1,
+      "mtime": "2026-06-04T19:08:37Z",
+      "rationale_categories": [
+        "formatting_consistency",
+        "task_file_routing",
+        "watermark_removal"
+      ]
+    },
+    {
+      "file": "ed_provider_assessment_05182026.docx",
+      "iteration": 1,
+      "mtime": "2026-06-04T19:04:54Z",
+      "rationale_categories": [
+        "soft_reasoning_notes",
+        "watermark_removal"
+      ]
+    },
+    {
+      "file": "ed_triage_initial_intake_05182026.docx",
+      "iteration": 1,
+      "mtime": "2026-06-04T19:01:46Z",
+      "rationale_categories": [
+        "watermark_removal"
+      ]
+    },
+    {
+      "file": "endocrinology_consultation_05212026.docx",
+      "iteration": 1,
+      "mtime": "2026-06-04T19:08:37Z",
+      "rationale_categories": [
+        "carrier_reveal_removal",
+        "formatting_consistency",
+        "watermark_removal"
+      ]
+    },
+    {
+      "file": "family_communication_care_conference_05222026.docx",
+      "iteration": 1,
+      "mtime": "2026-06-04T19:03:59Z",
+      "rationale_categories": [
+        "carrier_reveal_removal",
+        "watermark_removal"
+      ]
+    },
+    {
+      "file": "home_support_equipment_reference_05222026.docx",
+      "iteration": 1,
+      "mtime": "2026-06-04T19:08:07Z",
+      "rationale_categories": [
+        "carrier_reveal_removal",
+        "watermark_removal"
+      ]
+    },
+    {
+      "file": "hospitalist_discharge_planning_progress_hd5_hd6_05232026.docx",
+      "iteration": 1,
+      "mtime": "2026-06-04T19:08:37Z",
+      "rationale_categories": [
+        "carrier_reveal_removal",
+        "formatting_consistency",
+        "watermark_removal"
+      ]
+    },
+    {
+      "file": "hospitalist_progress_hd1_hd2_05192026.docx",
+      "iteration": 1,
+      "mtime": "2026-06-04T19:01:46Z",
+      "rationale_categories": [
+        "watermark_removal"
+      ]
+    },
+    {
+      "file": "hospitalist_progress_hd3_05202026.docx",
+      "iteration": 1,
+      "mtime": "2026-06-04T19:08:37Z",
+      "rationale_categories": [
+        "formatting_consistency",
+        "watermark_removal"
+      ]
+    },
+    {
+      "file": "hospitalist_progress_hd4_05212026.docx",
+      "iteration": 1,
+      "mtime": "2026-06-04T19:08:37Z",
+      "rationale_categories": [
+        "carrier_reveal_removal",
+        "formatting_consistency",
+        "watermark_removal"
+      ]
+    },
+    {
+      "file": "initial_medication_reconciliation_note_05182026.docx",
+      "iteration": 1,
+      "mtime": "2026-06-04T19:03:59Z",
+      "rationale_categories": [
+        "carrier_reveal_removal",
+        "watermark_removal"
+      ]
+    },
+    {
+      "file": "medication_administration_record_05232026.docx",
+      "iteration": 1,
+      "mtime": "2026-06-04T19:06:58Z",
+      "rationale_categories": [
+        "carrier_reveal_removal",
+        "watermark_removal"
+      ]
+    },
+    {
+      "file": "medication_safety_handoff_addendum_05242026.docx",
+      "iteration": 1,
+      "mtime": "2026-06-04T19:09:26Z",
+      "rationale_categories": [
+        "task_file_routing",
+        "watermark_removal"
+      ]
+    },
+    {
+      "file": "nephrology_consultation_05212026.docx",
+      "iteration": 1,
+      "mtime": "2026-06-04T19:08:37Z",
+      "rationale_categories": [
+        "carrier_reveal_removal",
+        "formatting_consistency",
+        "watermark_removal"
+      ]
+    },
+    {
+      "file": "nursing_observation_flowsheet_summary_05232026.docx",
+      "iteration": 1,
+      "mtime": "2026-06-04T19:01:46Z",
+      "rationale_categories": [
+        "watermark_removal"
+      ]
+    },
+    {
+      "file": "occupational_therapy_assessment_05202026.docx",
+      "iteration": 1,
+      "mtime": "2026-06-04T19:08:37Z",
+      "rationale_categories": [
+        "carrier_reveal_removal",
+        "formatting_consistency",
+        "watermark_removal"
+      ]
+    },
+    {
+      "file": "outpatient_rheumatology_prednisone_provenance_05212026.docx",
+      "iteration": 1,
+      "mtime": "2026-06-04T19:04:54Z",
+      "rationale_categories": [
+        "carrier_reveal_removal",
+        "watermark_removal"
+      ]
+    },
+    {
+      "file": "pci_stent_history_summary_05182026.docx",
+      "iteration": 1,
+      "mtime": "2026-06-04T19:01:46Z",
+      "rationale_categories": [
+        "watermark_removal"
+      ]
+    },
+    {
+      "file": "pharmacy_refill_history_report_05182026.docx",
+      "iteration": 1,
+      "mtime": "2026-06-04T19:01:46Z",
+      "rationale_categories": [
+        "watermark_removal"
+      ]
+    },
+    {
+      "file": "physical_therapy_assessment_05202026.docx",
+      "iteration": 1,
+      "mtime": "2026-06-04T19:04:54Z",
+      "rationale_categories": [
+        "carrier_reveal_removal",
+        "watermark_removal"
+      ]
+    },
+    {
+      "file": "post_discharge_followup_request_05312026.docx",
+      "iteration": 1,
+      "mtime": "2026-06-04T19:03:06Z",
+      "rationale_categories": [
+        "task_file_routing",
+        "watermark_removal"
+      ]
+    },
+    {
+      "file": "primary_care_outpatient_baseline_summary_05182026.docx",
+      "iteration": 1,
+      "mtime": "2026-06-04T19:01:46Z",
+      "rationale_categories": [
+        "watermark_removal"
+      ]
+    },
+    {
+      "file": "problem_list_history_snapshot_05182026.docx",
+      "iteration": 1,
+      "mtime": "2026-06-04T19:08:25Z",
+      "rationale_categories": [
+        "carrier_reveal_removal",
+        "formatting_consistency",
+        "watermark_removal"
+      ]
+    },
+    {
+      "file": "readmission_risk_review_request_06232026.docx",
+      "iteration": 1,
+      "mtime": "2026-06-04T19:08:25Z",
+      "rationale_categories": [
+        "formatting_consistency",
+        "task_file_routing",
+        "watermark_removal"
+      ]
+    },
+    {
+      "file": "renal_infection_hemodynamic_trend_summary_05232026.docx",
+      "iteration": 1,
+      "mtime": "2026-06-04T19:07:11Z",
+      "rationale_categories": [
+        "carrier_reveal_removal",
+        "watermark_removal"
+      ]
+    },
+    {
+      "file": "sleep_study_osa_history_summary_05182026.docx",
+      "iteration": 1,
+      "mtime": "2026-06-04T19:04:54Z",
+      "rationale_categories": [
+        "carrier_reveal_removal",
+        "watermark_removal"
+      ]
+    },
+    {
+      "file": "admission_history_and_physical_05182026.docx",
+      "iteration": 2,
+      "mtime": "2026-06-04T19:25:51Z",
+      "rationale_categories": [
+        "iter2_carrier_synthesis_removal",
+        "iter2_cross_doc_evidence",
+        "iter2_dates",
+        "iter2_file_rename",
+        "iter2_specialized_docs",
+        "iter2_task_neutralize"
+      ]
+    },
+    {
+      "file": "case_management_social_work_discharge_note_05222026.docx",
+      "iteration": 2,
+      "mtime": "2026-06-04T19:25:51Z",
+      "rationale_categories": [
+        "iter2_carrier_synthesis_removal",
+        "iter2_cross_doc_evidence",
+        "iter2_dates",
+        "iter2_file_rename",
+        "iter2_specialized_docs",
+        "iter2_task_neutralize"
+      ]
+    },
+    {
+      "file": "consultant_synthesis_care_plan_request_05242026.docx",
+      "iteration": 2,
+      "mtime": "2026-06-04T19:24:35Z",
+      "rationale_categories": [
+        "iter2_carrier_synthesis_removal",
+        "iter2_cross_doc_evidence",
+        "iter2_dates",
+        "iter2_file_rename",
+        "iter2_specialized_docs",
+        "iter2_task_neutralize"
+      ]
+    },
+    {
+      "file": "discharge_facing_plan_snapshot_05232026.docx",
+      "iteration": 2,
+      "mtime": "2026-06-04T19:25:22Z",
+      "rationale_categories": [
+        "iter2_carrier_synthesis_removal",
+        "iter2_cross_doc_evidence",
+        "iter2_dates",
+        "iter2_file_rename",
+        "iter2_specialized_docs",
+        "iter2_task_neutralize"
+      ]
+    },
+    {
+      "file": "discharge_medication_reconciliation_request_05242026.docx",
+      "iteration": 2,
+      "mtime": "2026-06-04T19:09:26Z",
+      "rationale_categories": [
+        "iter2_carrier_synthesis_removal",
+        "iter2_cross_doc_evidence",
+        "iter2_dates",
+        "iter2_file_rename",
+        "iter2_specialized_docs",
+        "iter2_task_neutralize"
+      ]
+    },
+    {
+      "file": "discharge_readiness_care_coordination_request_05242026.docx",
+      "iteration": 2,
+      "mtime": "2026-06-04T19:24:35Z",
+      "rationale_categories": [
+        "iter2_carrier_synthesis_removal",
+        "iter2_cross_doc_evidence",
+        "iter2_dates",
+        "iter2_file_rename",
+        "iter2_specialized_docs",
+        "iter2_task_neutralize"
+      ]
+    },
+    {
+      "file": "discharge_summary_request_05242026.docx",
+      "iteration": 2,
+      "mtime": "2026-06-04T19:26:55Z",
+      "rationale_categories": [
+        "iter2_carrier_synthesis_removal",
+        "iter2_cross_doc_evidence",
+        "iter2_dates",
+        "iter2_file_rename",
+        "iter2_specialized_docs",
+        "iter2_task_neutralize"
+      ]
+    },
+    {
+      "file": "endocrinology_consultation_05212026.docx",
+      "iteration": 2,
+      "mtime": "2026-06-04T19:25:22Z",
+      "rationale_categories": [
+        "iter2_carrier_synthesis_removal",
+        "iter2_cross_doc_evidence",
+        "iter2_dates",
+        "iter2_file_rename",
+        "iter2_specialized_docs",
+        "iter2_task_neutralize"
+      ]
+    },
+    {
+      "file": "family_communication_care_conference_05222026.docx",
+      "iteration": 2,
+      "mtime": "2026-06-04T19:26:55Z",
+      "rationale_categories": [
+        "iter2_carrier_synthesis_removal",
+        "iter2_cross_doc_evidence",
+        "iter2_dates",
+        "iter2_file_rename",
+        "iter2_specialized_docs",
+        "iter2_task_neutralize"
+      ]
+    },
+    {
+      "file": "hospitalist_progress_hd3_05202026.docx",
+      "iteration": 2,
+      "mtime": "2026-06-04T19:26:55Z",
+      "rationale_categories": [
+        "iter2_carrier_synthesis_removal",
+        "iter2_cross_doc_evidence",
+        "iter2_dates",
+        "iter2_file_rename",
+        "iter2_specialized_docs",
+        "iter2_task_neutralize"
+      ]
+    },
+    {
+      "file": "hospitalist_progress_hd4_05212026.docx",
+      "iteration": 2,
+      "mtime": "2026-06-04T19:26:55Z",
+      "rationale_categories": [
+        "iter2_carrier_synthesis_removal",
+        "iter2_cross_doc_evidence",
+        "iter2_dates",
+        "iter2_file_rename",
+        "iter2_specialized_docs",
+        "iter2_task_neutralize"
+      ]
+    },
+    {
+      "file": "hospitalist_progress_hd5_hd6_05232026.docx",
+      "iteration": 2,
+      "mtime": "2026-06-04T19:25:22Z",
+      "rationale_categories": [
+        "iter2_carrier_synthesis_removal",
+        "iter2_cross_doc_evidence",
+        "iter2_dates",
+        "iter2_file_rename",
+        "iter2_specialized_docs",
+        "iter2_task_neutralize"
+      ]
+    },
+    {
+      "file": "medication_administration_record_05232026.docx",
+      "iteration": 2,
+      "mtime": "2026-06-04T19:25:51Z",
+      "rationale_categories": [
+        "iter2_carrier_synthesis_removal",
+        "iter2_cross_doc_evidence",
+        "iter2_dates",
+        "iter2_file_rename",
+        "iter2_specialized_docs",
+        "iter2_task_neutralize"
+      ]
+    },
+    {
+      "file": "medication_safety_handoff_addendum_05242026.docx",
+      "iteration": 2,
+      "mtime": "2026-06-04T19:26:55Z",
+      "rationale_categories": [
+        "iter2_carrier_synthesis_removal",
+        "iter2_cross_doc_evidence",
+        "iter2_dates",
+        "iter2_file_rename",
+        "iter2_specialized_docs",
+        "iter2_task_neutralize"
+      ]
+    },
+    {
+      "file": "occupational_therapy_assessment_05202026.docx",
+      "iteration": 2,
+      "mtime": "2026-06-04T19:25:51Z",
+      "rationale_categories": [
+        "iter2_carrier_synthesis_removal",
+        "iter2_cross_doc_evidence",
+        "iter2_dates",
+        "iter2_file_rename",
+        "iter2_specialized_docs",
+        "iter2_task_neutralize"
+      ]
+    },
+    {
+      "file": "physical_therapy_assessment_05202026.docx",
+      "iteration": 2,
+      "mtime": "2026-06-04T19:25:51Z",
+      "rationale_categories": [
+        "iter2_carrier_synthesis_removal",
+        "iter2_cross_doc_evidence",
+        "iter2_dates",
+        "iter2_file_rename",
+        "iter2_specialized_docs",
+        "iter2_task_neutralize"
+      ]
+    },
+    {
+      "file": "post_discharge_followup_request_05312026.docx",
+      "iteration": 2,
+      "mtime": "2026-06-04T19:24:35Z",
+      "rationale_categories": [
+        "iter2_carrier_synthesis_removal",
+        "iter2_cross_doc_evidence",
+        "iter2_dates",
+        "iter2_file_rename",
+        "iter2_specialized_docs",
+        "iter2_task_neutralize"
+      ]
+    },
+    {
+      "file": "readmission_risk_review_request_06232026.docx",
+      "iteration": 2,
+      "mtime": "2026-06-04T19:24:35Z",
+      "rationale_categories": [
+        "iter2_carrier_synthesis_removal",
+        "iter2_cross_doc_evidence",
+        "iter2_dates",
+        "iter2_file_rename",
+        "iter2_specialized_docs",
+        "iter2_task_neutralize"
+      ]
+    },
+    {
+      "file": "renal_infection_hemodynamic_trend_summary_05232026.docx",
+      "iteration": 2,
+      "mtime": "2026-06-04T19:25:22Z",
+      "rationale_categories": [
+        "iter2_carrier_synthesis_removal",
+        "iter2_cross_doc_evidence",
+        "iter2_dates",
+        "iter2_file_rename",
+        "iter2_specialized_docs",
+        "iter2_task_neutralize"
+      ]
+    },
+    {
+      "file": "consultant_synthesis_care_plan_request_05242026.docx",
+      "iteration": 3,
+      "mtime": "2026-06-04T19:43:02Z",
+      "rationale_categories": [
+        "iter3_consultant_winner",
+        "iter3_dp004_routing",
+        "iter3_dp009_broken_ref",
+        "iter3_dp011_task_neutralize",
+        "iter3_family_concern",
+        "iter3_format_date",
+        "iter3_revert_rename",
+        "iter3_specialized_docs",
+        "iter3_trap_consultant_chronology",
+        "iter3_trap_leakage_supp_docs"
+      ]
+    },
+    {
+      "file": "discharge_facing_plan_snapshot_05232026.docx",
+      "iteration": 3,
+      "mtime": "2026-06-04T19:43:02Z",
+      "rationale_categories": [
+        "iter3_consultant_winner",
+        "iter3_dp004_routing",
+        "iter3_dp009_broken_ref",
+        "iter3_dp011_task_neutralize",
+        "iter3_family_concern",
+        "iter3_format_date",
+        "iter3_revert_rename",
+        "iter3_specialized_docs",
+        "iter3_trap_consultant_chronology",
+        "iter3_trap_leakage_supp_docs"
+      ]
+    },
+    {
+      "file": "discharge_medication_reconciliation_request_05242026.docx",
+      "iteration": 3,
+      "mtime": "2026-06-04T19:43:47Z",
+      "rationale_categories": [
+        "iter3_consultant_winner",
+        "iter3_dp004_routing",
+        "iter3_dp009_broken_ref",
+        "iter3_dp011_task_neutralize",
+        "iter3_family_concern",
+        "iter3_format_date",
+        "iter3_revert_rename",
+        "iter3_specialized_docs",
+        "iter3_trap_consultant_chronology",
+        "iter3_trap_leakage_supp_docs"
+      ]
+    },
+    {
+      "file": "discharge_summary_request_05242026.docx",
+      "iteration": 3,
+      "mtime": "2026-06-04T19:42:29Z",
+      "rationale_categories": [
+        "iter3_consultant_winner",
+        "iter3_dp004_routing",
+        "iter3_dp009_broken_ref",
+        "iter3_dp011_task_neutralize",
+        "iter3_family_concern",
+        "iter3_format_date",
+        "iter3_revert_rename",
+        "iter3_specialized_docs",
+        "iter3_trap_consultant_chronology",
+        "iter3_trap_leakage_supp_docs"
+      ]
+    },
+    {
+      "file": "family_communication_care_conference_05222026.docx",
+      "iteration": 3,
+      "mtime": "2026-06-04T19:43:02Z",
+      "rationale_categories": [
+        "iter3_consultant_winner",
+        "iter3_dp004_routing",
+        "iter3_dp009_broken_ref",
+        "iter3_dp011_task_neutralize",
+        "iter3_family_concern",
+        "iter3_format_date",
+        "iter3_revert_rename",
+        "iter3_specialized_docs",
+        "iter3_trap_consultant_chronology",
+        "iter3_trap_leakage_supp_docs"
+      ]
+    },
+    {
+      "file": "hospitalist_discharge_planning_progress_hd5_hd6_05232026.docx",
+      "iteration": 3,
+      "mtime": "2026-06-04T19:25:22Z",
+      "rationale_categories": [
+        "iter3_consultant_winner",
+        "iter3_dp004_routing",
+        "iter3_dp009_broken_ref",
+        "iter3_dp011_task_neutralize",
+        "iter3_family_concern",
+        "iter3_format_date",
+        "iter3_revert_rename",
+        "iter3_specialized_docs",
+        "iter3_trap_consultant_chronology",
+        "iter3_trap_leakage_supp_docs"
+      ]
+    },
+    {
+      "file": "medication_safety_handoff_addendum_05242026.docx",
+      "iteration": 3,
+      "mtime": "2026-06-04T19:42:29Z",
+      "rationale_categories": [
+        "iter3_consultant_winner",
+        "iter3_dp004_routing",
+        "iter3_dp009_broken_ref",
+        "iter3_dp011_task_neutralize",
+        "iter3_family_concern",
+        "iter3_format_date",
+        "iter3_revert_rename",
+        "iter3_specialized_docs",
+        "iter3_trap_consultant_chronology",
+        "iter3_trap_leakage_supp_docs"
+      ]
+    },
+    {
+      "file": "nursing_observation_flowsheet_summary_05232026.docx",
+      "iteration": 3,
+      "mtime": "2026-06-04T19:43:17Z",
+      "rationale_categories": [
+        "iter3_consultant_winner",
+        "iter3_dp004_routing",
+        "iter3_dp009_broken_ref",
+        "iter3_dp011_task_neutralize",
+        "iter3_family_concern",
+        "iter3_format_date",
+        "iter3_revert_rename",
+        "iter3_specialized_docs",
+        "iter3_trap_consultant_chronology",
+        "iter3_trap_leakage_supp_docs"
+      ]
+    },
+    {
+      "file": "pci_stent_history_summary_05182026.docx",
+      "iteration": 3,
+      "mtime": "2026-06-04T19:43:02Z",
+      "rationale_categories": [
+        "iter3_consultant_winner",
+        "iter3_dp004_routing",
+        "iter3_dp009_broken_ref",
+        "iter3_dp011_task_neutralize",
+        "iter3_family_concern",
+        "iter3_format_date",
+        "iter3_revert_rename",
+        "iter3_specialized_docs",
+        "iter3_trap_consultant_chronology",
+        "iter3_trap_leakage_supp_docs"
+      ]
+    },
+    {
+      "file": "post_discharge_followup_request_05312026.docx",
+      "iteration": 3,
+      "mtime": "2026-06-04T19:42:29Z",
+      "rationale_categories": [
+        "iter3_consultant_winner",
+        "iter3_dp004_routing",
+        "iter3_dp009_broken_ref",
+        "iter3_dp011_task_neutralize",
+        "iter3_family_concern",
+        "iter3_format_date",
+        "iter3_revert_rename",
+        "iter3_specialized_docs",
+        "iter3_trap_consultant_chronology",
+        "iter3_trap_leakage_supp_docs"
+      ]
+    },
+    {
+      "file": "problem_list_history_snapshot_05182026.docx",
+      "iteration": 3,
+      "mtime": "2026-06-04T19:43:02Z",
+      "rationale_categories": [
+        "iter3_consultant_winner",
+        "iter3_dp004_routing",
+        "iter3_dp009_broken_ref",
+        "iter3_dp011_task_neutralize",
+        "iter3_family_concern",
+        "iter3_format_date",
+        "iter3_revert_rename",
+        "iter3_specialized_docs",
+        "iter3_trap_consultant_chronology",
+        "iter3_trap_leakage_supp_docs"
+      ]
+    },
+    {
+      "file": "readmission_risk_review_request_06232026.docx",
+      "iteration": 3,
+      "mtime": "2026-06-04T19:42:29Z",
+      "rationale_categories": [
+        "iter3_consultant_winner",
+        "iter3_dp004_routing",
+        "iter3_dp009_broken_ref",
+        "iter3_dp011_task_neutralize",
+        "iter3_family_concern",
+        "iter3_format_date",
+        "iter3_revert_rename",
+        "iter3_specialized_docs",
+        "iter3_trap_consultant_chronology",
+        "iter3_trap_leakage_supp_docs"
+      ]
+    },
+    {
+      "file": "sleep_study_osa_history_summary_05182026.docx",
+      "iteration": 3,
+      "mtime": "2026-06-04T19:43:02Z",
+      "rationale_categories": [
+        "iter3_consultant_winner",
+        "iter3_dp004_routing",
+        "iter3_dp009_broken_ref",
+        "iter3_dp011_task_neutralize",
+        "iter3_family_concern",
+        "iter3_format_date",
+        "iter3_revert_rename",
+        "iter3_specialized_docs",
+        "iter3_trap_consultant_chronology",
+        "iter3_trap_leakage_supp_docs"
+      ]
+    },
+    {
+      "file": "admission_history_and_physical_05182026.docx",
+      "iteration": 4,
+      "mtime": "2026-06-04T20:09:15Z",
+      "rationale_categories": [
+        "iter4_cardiorenal_restart_neutralize",
+        "iter4_chronology_signal_remove",
+        "iter4_dp004_halvek_anonymize",
+        "iter4_dp010_best_known_sync",
+        "iter4_functional_evidence_remove",
+        "iter4_inpatient_only_neutralize",
+        "iter4_monitoring_gap_neutralize",
+        "iter4_pt_ot_date_format",
+        "iter4_rheum_notes_trim",
+        "iter4_sepsis_anchor_remove"
+      ]
+    },
+    {
+      "file": "cardiology_consultation_05212026.docx",
+      "iteration": 4,
+      "mtime": "2026-06-04T20:10:18Z",
+      "rationale_categories": [
+        "iter4_cardiorenal_restart_neutralize",
+        "iter4_chronology_signal_remove",
+        "iter4_dp004_halvek_anonymize",
+        "iter4_dp010_best_known_sync",
+        "iter4_functional_evidence_remove",
+        "iter4_inpatient_only_neutralize",
+        "iter4_monitoring_gap_neutralize",
+        "iter4_pt_ot_date_format",
+        "iter4_rheum_notes_trim",
+        "iter4_sepsis_anchor_remove"
+      ]
+    },
+    {
+      "file": "discharge_summary_request_05242026.docx",
+      "iteration": 4,
+      "mtime": "2026-06-04T20:10:18Z",
+      "rationale_categories": [
+        "iter4_cardiorenal_restart_neutralize",
+        "iter4_chronology_signal_remove",
+        "iter4_dp004_halvek_anonymize",
+        "iter4_dp010_best_known_sync",
+        "iter4_functional_evidence_remove",
+        "iter4_inpatient_only_neutralize",
+        "iter4_monitoring_gap_neutralize",
+        "iter4_pt_ot_date_format",
+        "iter4_rheum_notes_trim",
+        "iter4_sepsis_anchor_remove"
+      ]
+    },
+    {
+      "file": "ed_provider_assessment_05182026.docx",
+      "iteration": 4,
+      "mtime": "2026-06-04T20:09:15Z",
+      "rationale_categories": [
+        "iter4_cardiorenal_restart_neutralize",
+        "iter4_chronology_signal_remove",
+        "iter4_dp004_halvek_anonymize",
+        "iter4_dp010_best_known_sync",
+        "iter4_functional_evidence_remove",
+        "iter4_inpatient_only_neutralize",
+        "iter4_monitoring_gap_neutralize",
+        "iter4_pt_ot_date_format",
+        "iter4_rheum_notes_trim",
+        "iter4_sepsis_anchor_remove"
+      ]
+    },
+    {
+      "file": "hospitalist_discharge_planning_progress_hd5_hd6_05232026.docx",
+      "iteration": 4,
+      "mtime": "2026-06-04T20:10:18Z",
+      "rationale_categories": [
+        "iter4_cardiorenal_restart_neutralize",
+        "iter4_chronology_signal_remove",
+        "iter4_dp004_halvek_anonymize",
+        "iter4_dp010_best_known_sync",
+        "iter4_functional_evidence_remove",
+        "iter4_inpatient_only_neutralize",
+        "iter4_monitoring_gap_neutralize",
+        "iter4_pt_ot_date_format",
+        "iter4_rheum_notes_trim",
+        "iter4_sepsis_anchor_remove"
+      ]
+    },
+    {
+      "file": "hospitalist_progress_hd1_hd2_05192026.docx",
+      "iteration": 4,
+      "mtime": "2026-06-04T20:09:15Z",
+      "rationale_categories": [
+        "iter4_cardiorenal_restart_neutralize",
+        "iter4_chronology_signal_remove",
+        "iter4_dp004_halvek_anonymize",
+        "iter4_dp010_best_known_sync",
+        "iter4_functional_evidence_remove",
+        "iter4_inpatient_only_neutralize",
+        "iter4_monitoring_gap_neutralize",
+        "iter4_pt_ot_date_format",
+        "iter4_rheum_notes_trim",
+        "iter4_sepsis_anchor_remove"
+      ]
+    },
+    {
+      "file": "hospitalist_progress_hd3_05202026.docx",
+      "iteration": 4,
+      "mtime": "2026-06-04T20:11:43Z",
+      "rationale_categories": [
+        "iter4_cardiorenal_restart_neutralize",
+        "iter4_chronology_signal_remove",
+        "iter4_dp004_halvek_anonymize",
+        "iter4_dp010_best_known_sync",
+        "iter4_functional_evidence_remove",
+        "iter4_inpatient_only_neutralize",
+        "iter4_monitoring_gap_neutralize",
+        "iter4_pt_ot_date_format",
+        "iter4_rheum_notes_trim",
+        "iter4_sepsis_anchor_remove"
+      ]
+    },
+    {
+      "file": "hospitalist_progress_hd4_05212026.docx",
+      "iteration": 4,
+      "mtime": "2026-06-04T20:09:15Z",
+      "rationale_categories": [
+        "iter4_cardiorenal_restart_neutralize",
+        "iter4_chronology_signal_remove",
+        "iter4_dp004_halvek_anonymize",
+        "iter4_dp010_best_known_sync",
+        "iter4_functional_evidence_remove",
+        "iter4_inpatient_only_neutralize",
+        "iter4_monitoring_gap_neutralize",
+        "iter4_pt_ot_date_format",
+        "iter4_rheum_notes_trim",
+        "iter4_sepsis_anchor_remove"
+      ]
+    },
+    {
+      "file": "initial_medication_reconciliation_note_05182026.docx",
+      "iteration": 4,
+      "mtime": "2026-06-04T20:09:14Z",
+      "rationale_categories": [
+        "iter4_cardiorenal_restart_neutralize",
+        "iter4_chronology_signal_remove",
+        "iter4_dp004_halvek_anonymize",
+        "iter4_dp010_best_known_sync",
+        "iter4_functional_evidence_remove",
+        "iter4_inpatient_only_neutralize",
+        "iter4_monitoring_gap_neutralize",
+        "iter4_pt_ot_date_format",
+        "iter4_rheum_notes_trim",
+        "iter4_sepsis_anchor_remove"
+      ]
+    },
+    {
+      "file": "medication_administration_record_05232026.docx",
+      "iteration": 4,
+      "mtime": "2026-06-04T20:11:42Z",
+      "rationale_categories": [
+        "iter4_cardiorenal_restart_neutralize",
+        "iter4_chronology_signal_remove",
+        "iter4_dp004_halvek_anonymize",
+        "iter4_dp010_best_known_sync",
+        "iter4_functional_evidence_remove",
+        "iter4_inpatient_only_neutralize",
+        "iter4_monitoring_gap_neutralize",
+        "iter4_pt_ot_date_format",
+        "iter4_rheum_notes_trim",
+        "iter4_sepsis_anchor_remove"
+      ]
+    },
+    {
+      "file": "nephrology_consultation_05212026.docx",
+      "iteration": 4,
+      "mtime": "2026-06-04T20:11:43Z",
+      "rationale_categories": [
+        "iter4_cardiorenal_restart_neutralize",
+        "iter4_chronology_signal_remove",
+        "iter4_dp004_halvek_anonymize",
+        "iter4_dp010_best_known_sync",
+        "iter4_functional_evidence_remove",
+        "iter4_inpatient_only_neutralize",
+        "iter4_monitoring_gap_neutralize",
+        "iter4_pt_ot_date_format",
+        "iter4_rheum_notes_trim",
+        "iter4_sepsis_anchor_remove"
+      ]
+    },
+    {
+      "file": "occupational_therapy_assessment_05202026.docx",
+      "iteration": 4,
+      "mtime": "2026-06-04T20:10:37Z",
+      "rationale_categories": [
+        "iter4_cardiorenal_restart_neutralize",
+        "iter4_chronology_signal_remove",
+        "iter4_dp004_halvek_anonymize",
+        "iter4_dp010_best_known_sync",
+        "iter4_functional_evidence_remove",
+        "iter4_inpatient_only_neutralize",
+        "iter4_monitoring_gap_neutralize",
+        "iter4_pt_ot_date_format",
+        "iter4_rheum_notes_trim",
+        "iter4_sepsis_anchor_remove"
+      ]
+    },
+    {
+      "file": "outpatient_rheumatology_prednisone_provenance_05212026.docx",
+      "iteration": 4,
+      "mtime": "2026-06-04T20:10:18Z",
+      "rationale_categories": [
+        "iter4_cardiorenal_restart_neutralize",
+        "iter4_chronology_signal_remove",
+        "iter4_dp004_halvek_anonymize",
+        "iter4_dp010_best_known_sync",
+        "iter4_functional_evidence_remove",
+        "iter4_inpatient_only_neutralize",
+        "iter4_monitoring_gap_neutralize",
+        "iter4_pt_ot_date_format",
+        "iter4_rheum_notes_trim",
+        "iter4_sepsis_anchor_remove"
+      ]
+    },
+    {
+      "file": "physical_therapy_assessment_05202026.docx",
+      "iteration": 4,
+      "mtime": "2026-06-04T20:10:37Z",
+      "rationale_categories": [
+        "iter4_cardiorenal_restart_neutralize",
+        "iter4_chronology_signal_remove",
+        "iter4_dp004_halvek_anonymize",
+        "iter4_dp010_best_known_sync",
+        "iter4_functional_evidence_remove",
+        "iter4_inpatient_only_neutralize",
+        "iter4_monitoring_gap_neutralize",
+        "iter4_pt_ot_date_format",
+        "iter4_rheum_notes_trim",
+        "iter4_sepsis_anchor_remove"
+      ]
+    },
+    {
+      "file": "readmission_risk_review_request_06232026.docx",
+      "iteration": 4,
+      "mtime": "2026-06-04T20:10:18Z",
+      "rationale_categories": [
+        "iter4_cardiorenal_restart_neutralize",
+        "iter4_chronology_signal_remove",
+        "iter4_dp004_halvek_anonymize",
+        "iter4_dp010_best_known_sync",
+        "iter4_functional_evidence_remove",
+        "iter4_inpatient_only_neutralize",
+        "iter4_monitoring_gap_neutralize",
+        "iter4_pt_ot_date_format",
+        "iter4_rheum_notes_trim",
+        "iter4_sepsis_anchor_remove"
+      ]
+    },
+    {
+      "file": "admission_history_and_physical_05182026.docx",
+      "iteration": 5,
+      "mtime": "2026-06-04T20:24:32Z",
+      "rationale_categories": [
+        "iter5_buried_med_mgmt_neutralize",
+        "iter5_dp010_full_sync",
+        "iter5_lispro_residual_cleanup",
+        "iter5_specialized_docs"
+      ]
+    },
+    {
+      "file": "case_management_social_work_discharge_note_05222026.docx",
+      "iteration": 5,
+      "mtime": "2026-06-04T20:24:32Z",
+      "rationale_categories": [
+        "iter5_buried_med_mgmt_neutralize",
+        "iter5_dp010_full_sync",
+        "iter5_lispro_residual_cleanup",
+        "iter5_specialized_docs"
+      ]
+    },
+    {
+      "file": "discharge_medication_reconciliation_request_05242026.docx",
+      "iteration": 5,
+      "mtime": "2026-06-04T20:25:42Z",
+      "rationale_categories": [
+        "iter5_buried_med_mgmt_neutralize",
+        "iter5_dp010_full_sync",
+        "iter5_lispro_residual_cleanup",
+        "iter5_specialized_docs"
+      ]
+    },
+    {
+      "file": "discharge_readiness_care_coordination_request_05242026.docx",
+      "iteration": 5,
+      "mtime": "2026-06-04T20:24:32Z",
+      "rationale_categories": [
+        "iter5_buried_med_mgmt_neutralize",
+        "iter5_dp010_full_sync",
+        "iter5_lispro_residual_cleanup",
+        "iter5_specialized_docs"
+      ]
+    },
+    {
+      "file": "discharge_summary_request_05242026.docx",
+      "iteration": 5,
+      "mtime": "2026-06-04T20:25:42Z",
+      "rationale_categories": [
+        "iter5_buried_med_mgmt_neutralize",
+        "iter5_dp010_full_sync",
+        "iter5_lispro_residual_cleanup",
+        "iter5_specialized_docs"
+      ]
+    },
+    {
+      "file": "ed_provider_assessment_05182026.docx",
+      "iteration": 5,
+      "mtime": "2026-06-04T20:24:50Z",
+      "rationale_categories": [
+        "iter5_buried_med_mgmt_neutralize",
+        "iter5_dp010_full_sync",
+        "iter5_lispro_residual_cleanup",
+        "iter5_specialized_docs"
+      ]
+    },
+    {
+      "file": "endocrinology_consultation_05212026.docx",
+      "iteration": 5,
+      "mtime": "2026-06-04T20:24:32Z",
+      "rationale_categories": [
+        "iter5_buried_med_mgmt_neutralize",
+        "iter5_dp010_full_sync",
+        "iter5_lispro_residual_cleanup",
+        "iter5_specialized_docs"
+      ]
+    },
+    {
+      "file": "family_communication_care_conference_05222026.docx",
+      "iteration": 5,
+      "mtime": "2026-06-04T20:24:50Z",
+      "rationale_categories": [
+        "iter5_buried_med_mgmt_neutralize",
+        "iter5_dp010_full_sync",
+        "iter5_lispro_residual_cleanup",
+        "iter5_specialized_docs"
+      ]
+    },
+    {
+      "file": "hospitalist_progress_hd1_hd2_05192026.docx",
+      "iteration": 5,
+      "mtime": "2026-06-04T20:24:32Z",
+      "rationale_categories": [
+        "iter5_buried_med_mgmt_neutralize",
+        "iter5_dp010_full_sync",
+        "iter5_lispro_residual_cleanup",
+        "iter5_specialized_docs"
+      ]
+    },
+    {
+      "file": "case_management_social_work_discharge_note_05222026.docx",
+      "iteration": 6,
+      "mtime": "2026-06-04T20:38:27Z",
+      "rationale_categories": [
+        "iter6_cross_doc_pcp_timing",
+        "iter6_dp010_full_filesystem_resync",
+        "iter6_dp011_coaching_strip",
+        "iter6_iso_date_cleanup",
+        "iter6_letterhead_tables"
+      ]
+    },
+    {
+      "file": "consultant_synthesis_care_plan_request_05242026.docx",
+      "iteration": 6,
+      "mtime": "2026-06-04T20:38:28Z",
+      "rationale_categories": [
+        "iter6_cross_doc_pcp_timing",
+        "iter6_dp010_full_filesystem_resync",
+        "iter6_dp011_coaching_strip",
+        "iter6_iso_date_cleanup",
+        "iter6_letterhead_tables"
+      ]
+    },
+    {
+      "file": "discharge_medication_reconciliation_request_05242026.docx",
+      "iteration": 6,
+      "mtime": "2026-06-04T20:38:28Z",
+      "rationale_categories": [
+        "iter6_cross_doc_pcp_timing",
+        "iter6_dp010_full_filesystem_resync",
+        "iter6_dp011_coaching_strip",
+        "iter6_iso_date_cleanup",
+        "iter6_letterhead_tables"
+      ]
+    },
+    {
+      "file": "discharge_summary_request_05242026.docx",
+      "iteration": 6,
+      "mtime": "2026-06-04T20:38:27Z",
+      "rationale_categories": [
+        "iter6_cross_doc_pcp_timing",
+        "iter6_dp010_full_filesystem_resync",
+        "iter6_dp011_coaching_strip",
+        "iter6_iso_date_cleanup",
+        "iter6_letterhead_tables"
+      ]
+    },
+    {
+      "file": "endocrinology_consultation_05212026.docx",
+      "iteration": 6,
+      "mtime": "2026-06-04T20:39:02Z",
+      "rationale_categories": [
+        "iter6_cross_doc_pcp_timing",
+        "iter6_dp010_full_filesystem_resync",
+        "iter6_dp011_coaching_strip",
+        "iter6_iso_date_cleanup",
+        "iter6_letterhead_tables"
+      ]
+    },
+    {
+      "file": "nephrology_consultation_05212026.docx",
+      "iteration": 6,
+      "mtime": "2026-06-04T20:39:02Z",
+      "rationale_categories": [
+        "iter6_cross_doc_pcp_timing",
+        "iter6_dp010_full_filesystem_resync",
+        "iter6_dp011_coaching_strip",
+        "iter6_iso_date_cleanup",
+        "iter6_letterhead_tables"
+      ]
+    },
+    {
+      "file": "outpatient_rheumatology_prednisone_provenance_05212026.docx",
+      "iteration": 6,
+      "mtime": "2026-06-04T20:38:27Z",
+      "rationale_categories": [
+        "iter6_cross_doc_pcp_timing",
+        "iter6_dp010_full_filesystem_resync",
+        "iter6_dp011_coaching_strip",
+        "iter6_iso_date_cleanup",
+        "iter6_letterhead_tables"
+      ]
+    },
+    {
+      "file": "primary_care_outpatient_baseline_summary_05182026.docx",
+      "iteration": 6,
+      "mtime": "2026-06-04T20:38:28Z",
+      "rationale_categories": [
+        "iter6_cross_doc_pcp_timing",
+        "iter6_dp010_full_filesystem_resync",
+        "iter6_dp011_coaching_strip",
+        "iter6_iso_date_cleanup",
+        "iter6_letterhead_tables"
+      ]
+    },
+    {
+      "file": "problem_list_history_snapshot_05182026.docx",
+      "iteration": 6,
+      "mtime": "2026-06-04T20:38:27Z",
+      "rationale_categories": [
+        "iter6_cross_doc_pcp_timing",
+        "iter6_dp010_full_filesystem_resync",
+        "iter6_dp011_coaching_strip",
+        "iter6_iso_date_cleanup",
+        "iter6_letterhead_tables"
+      ]
+    },
+    {
+      "file": "sleep_study_osa_history_summary_05182026.docx",
+      "iteration": 6,
+      "mtime": "2026-06-04T20:38:27Z",
+      "rationale_categories": [
+        "iter6_cross_doc_pcp_timing",
+        "iter6_dp010_full_filesystem_resync",
+        "iter6_dp011_coaching_strip",
+        "iter6_iso_date_cleanup",
+        "iter6_letterhead_tables"
+      ]
+    },
+    {
+      "file": "cardiology_consultation_05212026.docx",
+      "iteration": 7,
+      "mtime": "2026-06-04T20:51:42Z",
+      "rationale_categories": [
+        "iter7_cardio_phys_exam",
+        "iter7_dp010_full_resync",
+        "iter7_family_concern_t3",
+        "iter7_format_fixes",
+        "iter7_service_plan_homesupport",
+        "iter7_trap_activation_ew22"
+      ]
+    },
+    {
+      "file": "discharge_facing_plan_snapshot_05232026.docx",
+      "iteration": 7,
+      "mtime": "2026-06-04T20:51:52Z",
+      "rationale_categories": [
+        "iter7_cardio_phys_exam",
+        "iter7_dp010_full_resync",
+        "iter7_family_concern_t3",
+        "iter7_format_fixes",
+        "iter7_service_plan_homesupport",
+        "iter7_trap_activation_ew22"
+      ]
+    },
+    {
+      "file": "discharge_readiness_care_coordination_request_05242026.docx",
+      "iteration": 7,
+      "mtime": "2026-06-04T20:51:29Z",
+      "rationale_categories": [
+        "iter7_cardio_phys_exam",
+        "iter7_dp010_full_resync",
+        "iter7_family_concern_t3",
+        "iter7_format_fixes",
+        "iter7_service_plan_homesupport",
+        "iter7_trap_activation_ew22"
+      ]
+    },
+    {
+      "file": "home_support_equipment_reference_05222026.docx",
+      "iteration": 7,
+      "mtime": "2026-06-04T20:51:29Z",
+      "rationale_categories": [
+        "iter7_cardio_phys_exam",
+        "iter7_dp010_full_resync",
+        "iter7_family_concern_t3",
+        "iter7_format_fixes",
+        "iter7_service_plan_homesupport",
+        "iter7_trap_activation_ew22"
+      ]
+    },
+    {
+      "file": "nursing_observation_flowsheet_summary_05232026.docx",
+      "iteration": 7,
+      "mtime": "2026-06-04T20:52:00Z",
+      "rationale_categories": [
+        "iter7_cardio_phys_exam",
+        "iter7_dp010_full_resync",
+        "iter7_family_concern_t3",
+        "iter7_format_fixes",
+        "iter7_service_plan_homesupport",
+        "iter7_trap_activation_ew22"
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "file": "/filesystem/admission_history_and_physical_05182026.docx",
+      "sha256": "01163b42d7d8a4b50c456fcd4a8ecd15a1200ce2f5bd0b4d190f974084dff9e0",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/cardiology_consultation_05212026.docx",
+      "sha256": "faeaea464c63e265d3e1a77215581d6deb3503649a3f1dd12d1e70072894dc52",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/case_management_social_work_discharge_note_05222026.docx",
+      "sha256": "a6f02861a10bcf0537a31b54ddcf7e24451dac57b9f818cee63d2d989500dea2",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/consultant_synthesis_care_plan_request_05242026.docx",
+      "sha256": "a630dd50f71f157626ec6e66196c8d2cbedeee3fc4943a4c5f4ea0d77e88b3f7",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/discharge_facing_plan_snapshot_05232026.docx",
+      "sha256": "2c616a29230b4540cd3d47080cc94eebef3414b22a2be03709f6cfbb899b4364",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/discharge_medication_reconciliation_request_05242026.docx",
+      "sha256": "123e3f032c5c7f7aeda8379087c8b1bbca4bfef91e46e5ef2bbf7ec359ca22fa",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/discharge_readiness_care_coordination_request_05242026.docx",
+      "sha256": "ceeef4c1309576914d59f8f277b8d653b9fa5dbcdf13823225c06a38af7eb9dc",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/discharge_summary_request_05242026.docx",
+      "sha256": "e1cd56b41389387d61e5bae1bad3b2b5043411da9e7913bac5c6c69fa5d4df65",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/ed_provider_assessment_05182026.docx",
+      "sha256": "c79104803fe4f3cc5975018f8a1db5c4a8669c07172663ec02b4499a87ebec77",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/ed_triage_initial_intake_05182026.docx",
+      "sha256": "25b3c6ddf14cb6f38ceb62f72105d77665fafb5c2a978d3c41a8092956a669a4",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/endocrinology_consultation_05212026.docx",
+      "sha256": "265c4508c3b4001ac917fd99fded99220e84498bb19ef18cc2bb06679aefc62e",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/family_communication_care_conference_05222026.docx",
+      "sha256": "bdbcf62139c9928af06f7e6451ee9c1050c281a4e9184be06cf4339c53cabcd4",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/home_support_equipment_reference_05222026.docx",
+      "sha256": "3cacbd96568ee2e596628b5284d948ed0067865c77b039d339be78d7ed127a7e",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/hospitalist_discharge_planning_progress_hd5_hd6_05232026.docx",
+      "sha256": "baa36ea78fdda1f9e225386e88c3bc63db44cc8ea78c146be8955ebf4b2db8c7",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/hospitalist_progress_hd1_hd2_05192026.docx",
+      "sha256": "ad878d4f97846b88e4ff4794cae24e74d7e0b44de773131ef4966243269373dd",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/hospitalist_progress_hd3_05202026.docx",
+      "sha256": "d9e548c6c794c3735c0141c36d1187b170862b5104bdb09a45e48e5118ce04d2",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/hospitalist_progress_hd4_05212026.docx",
+      "sha256": "5f7fed5563078e0497cabdd5a50d82ca1d03f4ac08eb10816b7b1543e323e613",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/initial_medication_reconciliation_note_05182026.docx",
+      "sha256": "09bf4677b8c62a107f598ae661a0a6d39925524804557e3fe466492e4589afa7",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/medication_administration_record_05232026.docx",
+      "sha256": "fbfdc40f063b4946a7bb563d9dbd939d7726fa8f6f6360a4a6b4df5490c80b83",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/medication_safety_handoff_addendum_05242026.docx",
+      "sha256": "6c82127ed9bdcbdfa679a0b44cb7d84703d7d0d65b3860583905a232c33e2edf",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/nephrology_consultation_05212026.docx",
+      "sha256": "27a1833f52e0a8a07104160c863af011d4d344dc640b4eb7a7cd583ab23030f3",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/nursing_observation_flowsheet_summary_05232026.docx",
+      "sha256": "85474b1d36e9ecfaf4a14392e8d559c6cee07a1fa745047d741e862f9d16821c",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/occupational_therapy_assessment_05202026.docx",
+      "sha256": "9d4fe68ba865e2c30d145ea0f4e4bbf4fafa154021e9c7e1c3039686eecfe6e8",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/outpatient_rheumatology_prednisone_provenance_05212026.docx",
+      "sha256": "0746716eaf6a30f25efd46a6a3e4b19b340b6d4dc7cf68b46580967b55e66f5f",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/pci_stent_history_summary_05182026.docx",
+      "sha256": "bd3215de4d8ee655a76824b697d8381d605e6eb51b03b5c50f3f119510a211da",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/pharmacy_refill_history_report_05182026.docx",
+      "sha256": "a1fa7f0b89393f6f3d6ac7bd6854fc984c92e8852779b259b04eed302e5e24a2",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/physical_therapy_assessment_05202026.docx",
+      "sha256": "14f3f78d4048a12a1f72785d9ee0aaa878d147376e2612416cac5e811d053b21",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/post_discharge_followup_request_05312026.docx",
+      "sha256": "a1d83214c1c9b7bcd173069e54ba045ca2c6cf729bb8a58f87cb98a7b5e965e4",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/primary_care_outpatient_baseline_summary_05182026.docx",
+      "sha256": "33b79eb33477547f7058dd2c15cb6846a83074cd6a2b944b1e6ea0930c5bf65f",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/problem_list_history_snapshot_05182026.docx",
+      "sha256": "d93c438eb4259706e8e7b59838e2bf61cd0eb607eb15916e41bae216d6c842ac",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/readmission_risk_review_request_06232026.docx",
+      "sha256": "914e952e323c4653bf351cfec4a6b867add12b8496607b79e14acb7d84baec85",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/renal_infection_hemodynamic_trend_summary_05232026.docx",
+      "sha256": "b312ec6301bfd0896cf786aef92680b3eae0dc8db7d7257780d88221fac42aec",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/sleep_study_osa_history_summary_05182026.docx",
+      "sha256": "41137b1f6409dfe256b536604db7df72c615bafe274e85ff76f746bf249cecb5",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_admission_history_and_physical_05182026.docx.json",
+      "sha256": "e9601539bc821c2f194e61001425df99cb6d2d5666b19969bfc24991068b0f32",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_cardiology_consultation_05212026.docx.json",
+      "sha256": "cc1f12bb74aaccd004002f0fcf08c7c550994cc9eddbc8c8549e7c812413f31a",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_case_management_social_work_discharge_note_05222026.docx.json",
+      "sha256": "74a7f0ca6e53699d3f76523af14a2796b63de74ed922916fb669538d08530d7a",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_consultant_synthesis_care_plan_request_05242026.docx.json",
+      "sha256": "cc736b0dc9224cd8af53f78dc8805c1ba844e1db40fa414abb9839cc0cfa894d",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_discharge_facing_plan_snapshot_05232026.docx.json",
+      "sha256": "82cca82b3a0c7af8517b567e5caae61329b776bb538cdc2b5390ef9c37071471",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_discharge_medication_reconciliation_request_05242026.docx.json",
+      "sha256": "513cc3548d79d0bef7ead3b50e9448cd59831c6a4ee43fa093e713cab1fac7ca",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_discharge_readiness_care_coordination_request_05242026.docx.json",
+      "sha256": "289e5c20d1b17dbdba8564c6b67546bd87e184a72b72e95a8fa2da23a7e3d22b",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_discharge_summary_request_05242026.docx.json",
+      "sha256": "6f5b28577b9dd3de25ebbfa9e816fe9190204e73ede5303d9b2828cdf2936c9e",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_ed_provider_assessment_05182026.docx.json",
+      "sha256": "751bab5665938610bb5729e8c6ecc0c54951580f1e06ecfb3cfa335a5d46f8a2",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_ed_triage_initial_intake_05182026.docx.json",
+      "sha256": "0dd10147b4e864e0721f9f6e1a716616b1bc432265280b21468e4e098bda659c",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_endocrinology_consultation_05212026.docx.json",
+      "sha256": "a78ef6d7b21aaf803b0934ef84c9e4bbb7bfc6ba174ff9d4a4ce69768e13d5ce",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_family_communication_care_conference_05222026.docx.json",
+      "sha256": "1676eda048209293fd2854eb68328e853bf9cd711f7477abd500f0646b5e8276",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_home_support_equipment_reference_05222026.docx.json",
+      "sha256": "3312b9a6f0debee27760e45a14d887e60b336496c63959ca9f09133aa71c6064",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_hospitalist_discharge_planning_progress_hd5_hd6_05232026.docx.json",
+      "sha256": "99e233e3a968c7fec76aa2f5af4c5ebeddb9153c1fd8ee78c53aacad4680a51b",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_hospitalist_progress_hd1_hd2_05192026.docx.json",
+      "sha256": "401b1896e85e97a1178e09e73fbdd2374b8b8d6b280ed0854fea1c78676732ac",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_hospitalist_progress_hd3_05202026.docx.json",
+      "sha256": "c1460160743eff25b8bb049868629316d2ef9cb1e96b4a9634791a5ef1c0c0fb",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_hospitalist_progress_hd4_05212026.docx.json",
+      "sha256": "43410f69651738f8295c7fee035ead7211553d54965d3d575beac39aec1e57d3",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_initial_medication_reconciliation_note_05182026.docx.json",
+      "sha256": "f7a484e664cbcc8e7e5af4753c2bca2a5958e5433321d43237fb350f143d6f85",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_medication_administration_record_05232026.docx.json",
+      "sha256": "8e551376dfbc7256f769e2cffae2c3234d5466d8e87a24b2f35aeef5140f0e1f",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_medication_safety_handoff_addendum_05242026.docx.json",
+      "sha256": "b8653bf16f15221ce7c941ff69e62954da6dcb3a2902e67a53d9feedaca20e74",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_nephrology_consultation_05212026.docx.json",
+      "sha256": "fed42b9a528775e2c911206094a757ec661bb455636efb0378cf3554098dc879",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_nursing_observation_flowsheet_summary_05232026.docx.json",
+      "sha256": "69a32646520000385582b7aa37c2623e7657638dbcd0b22d1a139367c40f1bcc",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_occupational_therapy_assessment_05202026.docx.json",
+      "sha256": "7c0da3746708aa38b216163bfef1aaa358fc0590606125ce701e9b5bb348367b",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_outpatient_rheumatology_prednisone_provenance_05212026.docx.json",
+      "sha256": "077ed89cac149e6c427be56f5bf725665cc8e3ff8a9e6dd4db644635defda03f",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_pci_stent_history_summary_05182026.docx.json",
+      "sha256": "1da65d6716a17c4bf994eebd4897026373f8e45600ae80a340ae0502f008e672",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_pharmacy_refill_history_report_05182026.docx.json",
+      "sha256": "0e4f42ed9150632d135b8ea3900e2268196bb417bdce719522102bc3719e68cd",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_physical_therapy_assessment_05202026.docx.json",
+      "sha256": "6d4c0325986208d5376a748f6de7ca51fa751aa2caa3b3a4a7dc06c4caa701ff",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_post_discharge_followup_request_05312026.docx.json",
+      "sha256": "7022f84fb19ae1b74b715f13413e35b14e5e7b2efeaa663810ef86bbffe65521",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_primary_care_outpatient_baseline_summary_05182026.docx.json",
+      "sha256": "df54ee00bbbd11a5860d44cbef0477575688cec0e0b348bf9b81e3420c6f7b57",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_problem_list_history_snapshot_05182026.docx.json",
+      "sha256": "00af5d99554ad7997c45fcae9882a66731f48ef4e3a5d8977a88fa5bb7516e0e",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_readmission_risk_review_request_06232026.docx.json",
+      "sha256": "0964b637c73c2dc392afb3b6891241d4c8c46d14df8946184c5fe6264ceb0ce2",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_renal_infection_hemodynamic_trend_summary_05232026.docx.json",
+      "sha256": "d0f195dc9342e47f140ea685e4e31b550320f27f99e3df47e76474112f04d649",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_sleep_study_osa_history_summary_05182026.docx.json",
+      "sha256": "8debe1924acd76d773fd606775b58b25488afe8366565520b5a9caed0f75d27e",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_summary.json",
+      "sha256": "9a51708ad6d05aa1e8430423b2a5125f5fe386822bb2f65851b26efa9b19816c",
+      "last_modified": "2026-06-04T19:12:03Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/hospitalist_progress_hd5_hd6_05232026.docx",
+      "sha256": "ad8596f84559e568aa2ca3cf9a0b89ef965faee0938141d6bde5c8297e459d2d",
+      "last_modified": "2026-06-04T19:28:48Z",
+      "agent": "repair_iter_2",
+      "action": "created"
+    },
+    {
+      "file": "/filesystem/admission_history_and_physical_05182026.docx",
+      "sha256": "3df00e38bc24ae84f4f0c24d1c5e928b8680b62a5d3e9711746eb76367310a65",
+      "last_modified": "2026-06-04T19:28:48Z",
+      "agent": "repair_iter_2",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/case_management_social_work_discharge_note_05222026.docx",
+      "sha256": "125d4d8de937be97f03998737fae327bd7156f189ab07aa0eb7f3c3c35c66d2a",
+      "last_modified": "2026-06-04T19:28:48Z",
+      "agent": "repair_iter_2",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/consultant_synthesis_care_plan_request_05242026.docx",
+      "sha256": "e2659ab017ce31e6b5937dd7fe504084006d08a0ab3ba60cb70c7870a9dc8865",
+      "last_modified": "2026-06-04T19:28:48Z",
+      "agent": "repair_iter_2",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/discharge_facing_plan_snapshot_05232026.docx",
+      "sha256": "7bc2d2a3debc09e3fe4b619e73d1276c639b341f4bfbd37e12f195510f868ed1",
+      "last_modified": "2026-06-04T19:28:48Z",
+      "agent": "repair_iter_2",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/discharge_readiness_care_coordination_request_05242026.docx",
+      "sha256": "1223efe82071d3c3fd69548a4a0292ce5723a6f6ac18a37789484ef3c64d2fa4",
+      "last_modified": "2026-06-04T19:28:48Z",
+      "agent": "repair_iter_2",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/discharge_summary_request_05242026.docx",
+      "sha256": "a0f69f39b0131e51bb5d79ee8156aa4af200131a755e57c26a0052731c3d041a",
+      "last_modified": "2026-06-04T19:28:48Z",
+      "agent": "repair_iter_2",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/endocrinology_consultation_05212026.docx",
+      "sha256": "9d9f23baada697107d2469743e2dac76f5d7eb706e97d35e0559dce8d47cfb99",
+      "last_modified": "2026-06-04T19:28:48Z",
+      "agent": "repair_iter_2",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/family_communication_care_conference_05222026.docx",
+      "sha256": "12bf0ec9796f2c60ecc49e2b74b110832818ece06230452ee9c7fe7b4d35baa2",
+      "last_modified": "2026-06-04T19:28:48Z",
+      "agent": "repair_iter_2",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/hospitalist_progress_hd3_05202026.docx",
+      "sha256": "cf6bd3e11ba2e8ebb3a93c6ed020af8b029ba27bffc0d8145c894527e293e5d2",
+      "last_modified": "2026-06-04T19:28:48Z",
+      "agent": "repair_iter_2",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/hospitalist_progress_hd4_05212026.docx",
+      "sha256": "d7d362b5f2d5c593309c975e0da84a0fce68fd1e0ab53a30c1efe079ad4880e9",
+      "last_modified": "2026-06-04T19:28:48Z",
+      "agent": "repair_iter_2",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/medication_administration_record_05232026.docx",
+      "sha256": "74202e4130f60c44ea18f5b1825ade742c1890474e874b8dcfde766662552381",
+      "last_modified": "2026-06-04T19:28:48Z",
+      "agent": "repair_iter_2",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/medication_safety_handoff_addendum_05242026.docx",
+      "sha256": "81c6ebfb0f034378ebbd1ee04d3939bd12f2ed48c3b404e4f74d8b334c207d7f",
+      "last_modified": "2026-06-04T19:28:48Z",
+      "agent": "repair_iter_2",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/occupational_therapy_assessment_05202026.docx",
+      "sha256": "b6c2cb63b108f28b9b95b21060aeab59deace8ee4d1dda257f22d3cd8affa309",
+      "last_modified": "2026-06-04T19:28:48Z",
+      "agent": "repair_iter_2",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/physical_therapy_assessment_05202026.docx",
+      "sha256": "84ad19bc5f06bda3fb32098afb59ee9da195b6a1eb7224c68225bd9810b98638",
+      "last_modified": "2026-06-04T19:28:48Z",
+      "agent": "repair_iter_2",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/post_discharge_followup_request_05312026.docx",
+      "sha256": "2dd2b8fdad3ed5476ee4a77bd07f06162cc3f704f78edb5bf1a81b7754738bb0",
+      "last_modified": "2026-06-04T19:28:48Z",
+      "agent": "repair_iter_2",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/readmission_risk_review_request_06232026.docx",
+      "sha256": "ca608765bf3ab57cac5e838607d61c7706483de59ccd0b5b30220d9aabe2b76c",
+      "last_modified": "2026-06-04T19:28:48Z",
+      "agent": "repair_iter_2",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/renal_infection_hemodynamic_trend_summary_05232026.docx",
+      "sha256": "6679267fcffdb6c986185b71677601e3edc3c90c069c799ff93574d1e0e6e303",
+      "last_modified": "2026-06-04T19:28:48Z",
+      "agent": "repair_iter_2",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/hospitalist_discharge_planning_progress_hd5_hd6_05232026.docx",
+      "sha256": "baa36ea78fdda1f9e225386e88c3bc63db44cc8ea78c146be8955ebf4b2db8c7",
+      "last_modified": "2026-06-04T19:28:48Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/hospitalist_discharge_planning_progress_hd5_hd6_05232026.docx",
+      "sha256": "ad8596f84559e568aa2ca3cf9a0b89ef965faee0938141d6bde5c8297e459d2d",
+      "last_modified": "2026-06-04T19:45:30Z",
+      "agent": "repair_iter_3",
+      "action": "created"
+    },
+    {
+      "file": "/filesystem/consultant_synthesis_care_plan_request_05242026.docx",
+      "sha256": "7616b96c7d004b8f07328e8e91a664407d4c1401e1d9830a742206f98c89a8f0",
+      "last_modified": "2026-06-04T19:45:30Z",
+      "agent": "repair_iter_3",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/discharge_facing_plan_snapshot_05232026.docx",
+      "sha256": "87d5a2312dea1470e1a70b9bccea7612a90f5b3c40e7f79b4d71a990f7ddef81",
+      "last_modified": "2026-06-04T19:45:30Z",
+      "agent": "repair_iter_3",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/discharge_medication_reconciliation_request_05242026.docx",
+      "sha256": "ae871fe276081b02dbf1c44bad81a185f3dcd7f443f09b126a4175e7cbdbbb75",
+      "last_modified": "2026-06-04T19:45:30Z",
+      "agent": "repair_iter_3",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/discharge_summary_request_05242026.docx",
+      "sha256": "9ac29b165d2d70c16afb405ae3acfbe4ec4babbb37b90059083a9ad3e155783d",
+      "last_modified": "2026-06-04T19:45:30Z",
+      "agent": "repair_iter_3",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/family_communication_care_conference_05222026.docx",
+      "sha256": "ab3ece0c7294bdbd65bf5fce85dd72481c8088c8f1b2c3f1fd87c352aed9379f",
+      "last_modified": "2026-06-04T19:45:30Z",
+      "agent": "repair_iter_3",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/medication_safety_handoff_addendum_05242026.docx",
+      "sha256": "93baa2186b5606dbe68639da7d118dc1a0cedf144b00c9ee78642d9ac3d3cee0",
+      "last_modified": "2026-06-04T19:45:30Z",
+      "agent": "repair_iter_3",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/nursing_observation_flowsheet_summary_05232026.docx",
+      "sha256": "4fd4898ae46735de05e241963794bafc2a95ae40b96f81a9c7d320b7a703b8b2",
+      "last_modified": "2026-06-04T19:45:30Z",
+      "agent": "repair_iter_3",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/pci_stent_history_summary_05182026.docx",
+      "sha256": "de8ab1d832b7699730f42111d968c8fe47c7557888861e897184157a7147403b",
+      "last_modified": "2026-06-04T19:45:30Z",
+      "agent": "repair_iter_3",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/post_discharge_followup_request_05312026.docx",
+      "sha256": "82e6a148268aeddfd0c17b44b5882ca69aaef369ca7180f0b35b2adc9027b988",
+      "last_modified": "2026-06-04T19:45:30Z",
+      "agent": "repair_iter_3",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/problem_list_history_snapshot_05182026.docx",
+      "sha256": "cc4b4eae7fc56bb9fba0f71537fda56fdb5c4449e0d97937e1050864e80a9e3e",
+      "last_modified": "2026-06-04T19:45:30Z",
+      "agent": "repair_iter_3",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/readmission_risk_review_request_06232026.docx",
+      "sha256": "cce153c108c016760f5541378e76a5a5afb0398823fecf0b7443be2c7808af71",
+      "last_modified": "2026-06-04T19:45:30Z",
+      "agent": "repair_iter_3",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/sleep_study_osa_history_summary_05182026.docx",
+      "sha256": "bb7c6e52a637c08478b424c80d839dc221e378bc0530eb5c8da1f36117f13c90",
+      "last_modified": "2026-06-04T19:45:30Z",
+      "agent": "repair_iter_3",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/hospitalist_progress_hd5_hd6_05232026.docx",
+      "sha256": "ad8596f84559e568aa2ca3cf9a0b89ef965faee0938141d6bde5c8297e459d2d",
+      "last_modified": "2026-06-04T19:45:30Z",
+      "agent": "repair_iter_3",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/admission_history_and_physical_05182026.docx",
+      "sha256": "c8ded0b78e5505e1473ca5e1e52e357c56a8a58d29ae4b751260c608bfac2506",
+      "last_modified": "2026-06-04T20:13:45Z",
+      "agent": "repair_iter_4",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/cardiology_consultation_05212026.docx",
+      "sha256": "fc37aec389423efdaac9b81e49bd1a1c35330be8913aff943c586c3107c47810",
+      "last_modified": "2026-06-04T20:13:45Z",
+      "agent": "repair_iter_4",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/discharge_summary_request_05242026.docx",
+      "sha256": "84fc987829469f04e7ec0dd11b52bc6abfa5e1959f7f8e14339b56cce7f51232",
+      "last_modified": "2026-06-04T20:13:45Z",
+      "agent": "repair_iter_4",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/ed_provider_assessment_05182026.docx",
+      "sha256": "ebc6357232fca29609cbe5e892905a1eb6e3ef531a73d5017eb2ae77d9fc6a57",
+      "last_modified": "2026-06-04T20:13:45Z",
+      "agent": "repair_iter_4",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/hospitalist_discharge_planning_progress_hd5_hd6_05232026.docx",
+      "sha256": "23833bc4594232417436e68ba5f90f9b3d5e2d3c80a0e4bab997e82bdb3312a0",
+      "last_modified": "2026-06-04T20:13:45Z",
+      "agent": "repair_iter_4",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/hospitalist_progress_hd1_hd2_05192026.docx",
+      "sha256": "24df119e4772faa0eae79bbfa3d726bd75597c9880884d6aa2dc2733f814edf1",
+      "last_modified": "2026-06-04T20:13:45Z",
+      "agent": "repair_iter_4",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/hospitalist_progress_hd3_05202026.docx",
+      "sha256": "f9496d4878682533a8962e2de98191833dc675239cac583cdb4646f21ad17ba8",
+      "last_modified": "2026-06-04T20:13:45Z",
+      "agent": "repair_iter_4",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/hospitalist_progress_hd4_05212026.docx",
+      "sha256": "86f7042e722856aee7db8b7b40218ae20c7a42e4eceb7ebda81b87bda872a65e",
+      "last_modified": "2026-06-04T20:13:45Z",
+      "agent": "repair_iter_4",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/initial_medication_reconciliation_note_05182026.docx",
+      "sha256": "d846fc436840a40b06620f9eb7cdc800aa94c32937d0c302464988c3102c544c",
+      "last_modified": "2026-06-04T20:13:45Z",
+      "agent": "repair_iter_4",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/medication_administration_record_05232026.docx",
+      "sha256": "a48fee7c7118a00d69047ad15d80523017063a06e7b257af9c39785586106519",
+      "last_modified": "2026-06-04T20:13:45Z",
+      "agent": "repair_iter_4",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/nephrology_consultation_05212026.docx",
+      "sha256": "500edb3555cee7fd3bd0ccbe5a191d20c7355a46576b27377b2be2abe81e3b6a",
+      "last_modified": "2026-06-04T20:13:45Z",
+      "agent": "repair_iter_4",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/occupational_therapy_assessment_05202026.docx",
+      "sha256": "fca03d44f22175bba35fcdc9500ed650b37d253cc3f0b89e88d3aa52bae82c77",
+      "last_modified": "2026-06-04T20:13:45Z",
+      "agent": "repair_iter_4",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/outpatient_rheumatology_prednisone_provenance_05212026.docx",
+      "sha256": "7ab4b5891640b9abe292b9c66c0162d172fe7158e6d75deee9e407c50fa055b1",
+      "last_modified": "2026-06-04T20:13:45Z",
+      "agent": "repair_iter_4",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/physical_therapy_assessment_05202026.docx",
+      "sha256": "6df117220c474bf95958f9a4f9260418abf490659d509015be9ae10cf2151322",
+      "last_modified": "2026-06-04T20:13:45Z",
+      "agent": "repair_iter_4",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/readmission_risk_review_request_06232026.docx",
+      "sha256": "03088aac40f5e0a005542cd886191733a6bf846e6d0450f5cdcde83af24fad5e",
+      "last_modified": "2026-06-04T20:13:45Z",
+      "agent": "repair_iter_4",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/admission_history_and_physical_05182026.docx",
+      "sha256": "b3a903745805d9ff827928254481acfb1613a5e131370a5c0c772b788ebbccb3",
+      "last_modified": "2026-06-04T20:26:53Z",
+      "agent": "repair_iter_5",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/case_management_social_work_discharge_note_05222026.docx",
+      "sha256": "6b7cd2e72374a5d6266af347bbdf4cc4330e3d34364a295942cae10a80bfce18",
+      "last_modified": "2026-06-04T20:26:53Z",
+      "agent": "repair_iter_5",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/discharge_medication_reconciliation_request_05242026.docx",
+      "sha256": "584e174290e2e9bbcb83b4d0c88522499930b25bd50231a71cb7902b5c572aa6",
+      "last_modified": "2026-06-04T20:26:53Z",
+      "agent": "repair_iter_5",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/discharge_readiness_care_coordination_request_05242026.docx",
+      "sha256": "fe4fea665345aa5800b25a89b5cae2f1157a8346f6b8e4a781ec2756dc9e9253",
+      "last_modified": "2026-06-04T20:26:53Z",
+      "agent": "repair_iter_5",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/discharge_summary_request_05242026.docx",
+      "sha256": "5d20e1a24b20c9e2fa1164eb4b0fbeaf78fd2e73fe35ee7b6a1a6047bcde108d",
+      "last_modified": "2026-06-04T20:26:53Z",
+      "agent": "repair_iter_5",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/ed_provider_assessment_05182026.docx",
+      "sha256": "bbca1ff6d777f76c46d6b41463fe0cd7f12f824cb63ced1c6e669dc84e1237b8",
+      "last_modified": "2026-06-04T20:26:53Z",
+      "agent": "repair_iter_5",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/endocrinology_consultation_05212026.docx",
+      "sha256": "1fb224efad43eccc67f81290b3584021a8c0d071fd2231b1cd92aae53213a011",
+      "last_modified": "2026-06-04T20:26:53Z",
+      "agent": "repair_iter_5",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/family_communication_care_conference_05222026.docx",
+      "sha256": "479b9f9ce18e8848d4cc147770203238bbb798be421aac8e85b42629fe9207be",
+      "last_modified": "2026-06-04T20:26:53Z",
+      "agent": "repair_iter_5",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/hospitalist_progress_hd1_hd2_05192026.docx",
+      "sha256": "9a316d42c372f8cc6ded073613f37fe21cc51ea4054ffc0100e12625e5a1eadb",
+      "last_modified": "2026-06-04T20:26:53Z",
+      "agent": "repair_iter_5",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/case_management_social_work_discharge_note_05222026.docx",
+      "sha256": "1bcd2a822a392af643a036517987ccb4ad4fa1b49dbd41b1bfb2c5f8ed18cd9a",
+      "last_modified": "2026-06-04T20:40:32Z",
+      "agent": "repair_iter_6",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/consultant_synthesis_care_plan_request_05242026.docx",
+      "sha256": "488cee3f9c8da99379b2ade20b2ef79eee9d716c8ecb66cf95b04a4430e30058",
+      "last_modified": "2026-06-04T20:40:32Z",
+      "agent": "repair_iter_6",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/discharge_medication_reconciliation_request_05242026.docx",
+      "sha256": "543c4006c2a84bfd7cf5fc1085ef80edfc216e4692b28078e90a5e36c1f9a0b9",
+      "last_modified": "2026-06-04T20:40:32Z",
+      "agent": "repair_iter_6",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/discharge_summary_request_05242026.docx",
+      "sha256": "bde2351a533c5fc70cc1df5480042d0b9542d271f6dd39b38c76a5be7e06d335",
+      "last_modified": "2026-06-04T20:40:32Z",
+      "agent": "repair_iter_6",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/endocrinology_consultation_05212026.docx",
+      "sha256": "6fbbaabf28129b0ad527ce4d8c0a7ee54005c4ab7850e633c4a50eae6c396edd",
+      "last_modified": "2026-06-04T20:40:32Z",
+      "agent": "repair_iter_6",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/nephrology_consultation_05212026.docx",
+      "sha256": "153a63af858afd39c3ab8ac7e59acdc76f86de4a121d5d45f90a840316512a30",
+      "last_modified": "2026-06-04T20:40:32Z",
+      "agent": "repair_iter_6",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/outpatient_rheumatology_prednisone_provenance_05212026.docx",
+      "sha256": "3e66c6209c4e979d05bc47f50abf10f79fbda084c8b2fd1642f4c73137e389ff",
+      "last_modified": "2026-06-04T20:40:32Z",
+      "agent": "repair_iter_6",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/primary_care_outpatient_baseline_summary_05182026.docx",
+      "sha256": "da884cb822df2a40c1613ced6e6c8cb2b6df5cf11c1fe8cd59903635ed353b9e",
+      "last_modified": "2026-06-04T20:40:32Z",
+      "agent": "repair_iter_6",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/problem_list_history_snapshot_05182026.docx",
+      "sha256": "22c331d1f7df9248a0d6add3c0b6a0fbf22eee9bde6dc1f6476a14f2dca1fa6f",
+      "last_modified": "2026-06-04T20:40:32Z",
+      "agent": "repair_iter_6",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/sleep_study_osa_history_summary_05182026.docx",
+      "sha256": "d4974aff879ad2668d90edb56f1a9e31a82b354659ffd3cce93ba52788ea794b",
+      "last_modified": "2026-06-04T20:40:32Z",
+      "agent": "repair_iter_6",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/cardiology_consultation_05212026.docx",
+      "sha256": "05a275258d30c3864ae32b65e29f9f8f047e3a2e8aaa825b6281547523107263",
+      "last_modified": "2026-06-04T20:53:16Z",
+      "agent": "repair_iter_7",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/discharge_facing_plan_snapshot_05232026.docx",
+      "sha256": "976b2740f5622bba48a538407c4a8aa1b0ac4dcc0229226d19b6b0d00543bd21",
+      "last_modified": "2026-06-04T20:53:16Z",
+      "agent": "repair_iter_7",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/discharge_readiness_care_coordination_request_05242026.docx",
+      "sha256": "72fed4522cc3e24cfa7f7ca46e75fd921d07ca0da462a983beeb48785ee0ecca",
+      "last_modified": "2026-06-04T20:53:16Z",
+      "agent": "repair_iter_7",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/home_support_equipment_reference_05222026.docx",
+      "sha256": "f6ffa5f46748f8e450c0ceb364ee312c4437ea16c942d60beb9976bef743baab",
+      "last_modified": "2026-06-04T20:53:16Z",
+      "agent": "repair_iter_7",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/nursing_observation_flowsheet_summary_05232026.docx",
+      "sha256": "e527993369f065cbdb0daa7acccfd8ae289c98f75fa5eaf2d0c27d50f2d51ecc",
+      "last_modified": "2026-06-04T20:53:16Z",
+      "agent": "repair_iter_7",
+      "action": "edited"
+    }
+  ],
+  "last_updated": "2026-06-04T20:53:16Z",
+  "first_iteration": 1,
+  "iteration": 7
+}

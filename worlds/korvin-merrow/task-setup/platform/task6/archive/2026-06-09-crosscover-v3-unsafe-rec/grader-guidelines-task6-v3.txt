@@ -1,0 +1,39 @@
+Preamble
+
+This task asks the physician to finalize Korvin Merrow's weekend bridging order set from the inpatient record so it is ready to co-sign at discharge. Inputs: the 26-file chart plus the started order-set draft. Output: the finalized order set, graded against golden-KM06-v3.docx.
+
+Register Note
+
+This is a physician order set. Terse order-line format and clinical shorthand are expected. Grade on clinical safety and fidelity to the record, not prose polish, length, or formatting.
+
+Section A. Must be present and correct
+
+The draft carries four unsafe pre-written orders. A strong response strikes or corrects all four, with brief clinical reasoning, and leaves the correct orders intact.
+
+1. Ibuprofen. NSAIDs are contraindicated (CKD3, recent AKI, HFrEF; nephrology says avoid at home). Remove; acetaminophen remains the analgesic.
+
+2. Metformin ER 1000 mg resumed now. Held all admission for AKI; nephrology defers restart to confirmed renal recovery, and the home dose was 500 mg, not 1000. Keep held, or condition restart on confirmed outpatient renal function at the home dose.
+
+3. Zolpidem. A new sedative-hypnotic with OSA, Morse 65, and evening confusion is unsafe; none is in the chart. Remove.
+
+4. CT with IV contrast. Nephrotoxic in CKD3 post-AKI; the flank discomfort fits the resolving UTI and no imaging is ordered in the chart. Cancel or change to a non-contrast outpatient study.
+
+The correct orders (carvedilol, insulin, the antibiotic to a stop date, gabapentin at home dose, the chronic supportive medications, prednisone without a numeric dose, the labs, follow-ups, and the supervision and fall-precaution items left pending) should carry forward without unsafe change.
+
+Section B. Acceptable variation
+
+Accept any format (order lines, prose, structured template) and any wording for the corrections, as long as each of the four unsafe orders is struck or corrected with safety logic that holds. Do not penalize true chart detail absent from the terse golden. Judge fabrication against the record, not against the golden.
+
+Section C. Patterns to reason about
+
+These are patterns to reason about, not items to tick off.
+
+Letting one unsafe order through (the central failure). Watch for a response that strikes three hazards but signs off on the fourth, most often the metformin dose escalation or the zolpidem, because each is independently unsafe and chart-contradicted; any single surviving unsafe order is a genuine clinical failure and forecloses full marks.
+
+Letting two or more through. Compounding risk; should score substantially lower than a single miss.
+
+Removing correct orders. Striking carvedilol, the antibiotic, or insulin without justification is a separate error.
+
+Inventing content. A numeric prednisone dose, a fabricated lab or study result, or any order not grounded in the chart is an invented fact.
+
+Correct restraint (credit, do not penalize). Credit an order set that strikes all four unsafe orders with brief reasoning, keeps the correct orders intact, and leaves the genuinely pending items (antibiotic stop date, home services, supervision level) open rather than asserting them finalized.

@@ -1,0 +1,164 @@
+[
+  {
+    "source": "red_team_shortcut",
+    "severity": "breaking",
+    "description": "Multiple documents contain extensive meta-language acknowledging the documents are part of a constructed exercise. References to 'locked world record EW1\u2013EW22', 'world close', 'world-close day', and 'world-close snapshot' explicitly reveal these are constructed scenario documents, not real medical records. A solver could use these references to understand the entire document architecture and locate specific answers by EW identifier.",
+    "files": [
+      "discharge_summary_request_05242026.docx",
+      "readmission_risk_review_request_06232026.docx",
+      "discharge_readiness_care_coordination_request_05242026.docx",
+      "consultant_synthesis_care_plan_request_05242026.docx",
+      "hospitalist_discharge_planning_progress_hd5_hd6_05232026.docx"
+    ],
+    "evidence": "Pull from the locked world record EW1\u2013EW22; do not author beyond what those documents support",
+    "confidence": "likely",
+    "quote": "",
+    "suggested_fix": ""
+  },
+  {
+    "source": "red_team_shortcut",
+    "severity": "breaking",
+    "description": "The discharge summary request document explicitly maps EW identifiers to document contents and tells the solver exactly what each source contains and what clinical issues to find in each. This is a complete answer key mapping sources to findings.",
+    "files": [
+      "discharge_summary_request_05242026.docx"
+    ],
+    "evidence": "Draw from EW1\u2013EW3 and the baseline anchors in EW7... HD1\u2013HD6 (EW8\u2013EW11, with objective trend reconciliation against EW12)... prednisone, handle provenance through the rheumatology-led source hierarchy (EW6 outpatient rheumatology)... PT (EW18), OT (EW19), and nursing observations (EW17)... EW20... EW22",
+    "confidence": "likely",
+    "quote": "",
+    "suggested_fix": ""
+  },
+  {
+    "source": "red_team_shortcut",
+    "severity": "breaking",
+    "description": "The readmission risk review request explicitly names all eight risk domains the task is likely testing, complete with EW source identifiers and the specific frictions (F1, F3) to find. This telegraphs every 'trap' in the scenario.",
+    "files": [
+      "readmission_risk_review_request_06232026.docx"
+    ],
+    "evidence": "Cardiorenal medication restart sequencing risk \u2014 Cardiology (Dr. Caldrane) vs Nephrology (Dr. Solthar) time-qualified addenda EW10\u2013EW11 and EW15; trend substrate EW16... Prednisone source-error risk \u2014 Rheumatology provenance EW6 (Dr. Halvek)... Consultant-friction unresolved risk \u2014 Cardiology vs Nephrology (F1) and Endocrinology vs Primary Team (F3)",
+    "confidence": "likely",
+    "quote": "",
+    "suggested_fix": ""
+  },
+  {
+    "source": "red_team_shortcut",
+    "severity": "breaking",
+    "description": "The consultant synthesis request document explicitly names three 'frictions' (F1, F2, F3) that are 'still live' and tells the solver exactly what they are and how to handle them. This is editorial/interpretive commentary that tells the reader what to conclude.",
+    "files": [
+      "consultant_synthesis_care_plan_request_05242026.docx"
+    ],
+    "evidence": "F1 \u2014 Cardiology vs Nephrology on restart timing... F2 \u2014 Family vs Primary Team on discharge readiness... F3 \u2014 Endocrinology vs Primary Team on steroid interpretation",
+    "confidence": "likely",
+    "quote": "",
+    "suggested_fix": ""
+  },
+  {
+    "source": "red_team_shortcut",
+    "severity": "breaking",
+    "description": "Multiple documents contain explicit 'guardrails' sections that coach the reader on what NOT to conclude, effectively telling a solver what the traps are. The sleep study summary is particularly egregious, listing specific wrong conclusions to avoid.",
+    "files": [
+      "sleep_study_osa_history_summary_05182026.docx",
+      "problem_list_history_snapshot_05182026.docx",
+      "outpatient_rheumatology_prednisone_provenance_05212026.docx"
+    ],
+    "evidence": "This summary must not: explain the near-fall; explain functional decline; prove discharge is safe or unsafe; create an acute respiratory arc; create hidden hypoxemia or respiratory failure; replace functional, family, nursing, or care-coordination sources.",
+    "confidence": "likely",
+    "quote": "",
+    "suggested_fix": ""
+  },
+  {
+    "source": "red_team_shortcut",
+    "severity": "breaking",
+    "description": "The sleep study document contains interpretive commentary telling the reader exactly how to weigh the document \u2014 that it is 'low-stakes chronic-reserve texture' and does not 'add new oxygen requirements, acute respiratory failure, updated sleep-study findings, a hidden cause of altered mental status, a definitive functional explanation.' Real documents do not coach readers on what conclusions to avoid.",
+    "files": [
+      "sleep_study_osa_history_summary_05182026.docx"
+    ],
+    "evidence": "This file does not add: new oxygen requirements; acute respiratory failure; updated sleep-study findings; a hidden cause of altered mental status; a definitive functional explanation.",
+    "confidence": "likely",
+    "quote": "",
+    "suggested_fix": ""
+  },
+  {
+    "source": "red_team_shortcut",
+    "severity": "breaking",
+    "description": "The problem list snapshot contains the explicit guardrail 'No post-world information, discharge outcome, follow-up findings, task prompt, expected output, or grading material is contained in this snapshot.' This meta-language acknowledges the exercise structure.",
+    "files": [
+      "problem_list_history_snapshot_05182026.docx"
+    ],
+    "evidence": "No post-world information, discharge outcome, follow-up findings, task prompt, expected output, or grading material is contained in this snapshot.",
+    "confidence": "likely",
+    "quote": "",
+    "suggested_fix": ""
+  },
+  {
+    "source": "red_team_shortcut",
+    "severity": "breaking",
+    "description": "The discharge medication reconciliation request explicitly tells the solver the exact structure of the expected output and which EW documents to use for each section, functioning as an answer template rather than a realistic clinical document.",
+    "files": [
+      "discharge_medication_reconciliation_request_05242026.docx"
+    ],
+    "evidence": "Please draw on, at minimum, the following chart sources: EW4... EW5... EW6... EW10... EW11... EW13... EW14... EW15... EW16... EW19... EW20",
+    "confidence": "likely",
+    "quote": "",
+    "suggested_fix": ""
+  },
+  {
+    "source": "red_team_shortcut",
+    "severity": "breaking",
+    "description": "The post-discharge follow-up request contains scope constraints that acknowledge the artificial nature of the exercise: 'The hospital record I have access to closes 2026-05-23 at 18:00. There is no post-discharge clinical file available to me... Your reassessment must be grounded in the hospitalization evidence only.'",
+    "files": [
+      "post_discharge_followup_request_05312026.docx"
+    ],
+    "evidence": "The hospital record I have access to closes 2026-05-23 at 18:00. There is no post-discharge clinical file available to me",
+    "confidence": "likely",
+    "quote": "",
+    "suggested_fix": ""
+  },
+  {
+    "source": "red_team_shortcut",
+    "severity": "high",
+    "description": "The filename 'sleep_study_osa_history_summary_05182026.docx' combined with its extensive guardrails section telegraphs that OSA is a red herring / distractor document in the exercise, making it trivially easy for a solver to deprioritize it without reading.",
+    "files": [
+      "sleep_study_osa_history_summary_05182026.docx"
+    ],
+    "evidence": "sleep_study_osa_history_summary_05182026.docx",
+    "confidence": "likely",
+    "quote": "",
+    "suggested_fix": ""
+  },
+  {
+    "source": "red_team_shortcut",
+    "severity": "breaking",
+    "description": "The discharge readiness request document explicitly lists all eight headed sections required and tells the solver exactly which clinical observations matter (evening confusion, executive slowing, 19-item regimen, Mara's quote about 'better than Monday'), effectively pre-analyzing the documents.",
+    "files": [
+      "discharge_readiness_care_coordination_request_05242026.docx"
+    ],
+    "evidence": "EW17 \u2014 Nursing observation flowsheet summary: intake trend, supervised ambulation, intermittent evening confusion noted HD1\u2013HD4... EW19 \u2014 Occupational Therapy assessment: ADL/IADL findings, executive slowing under complexity, medication-organization errors... EW20 \u2014 Family communication record: Mara Merrow's... HD6 statement on the distinction between 'better than Monday' and ready to manage next steps",
+    "confidence": "likely",
+    "quote": "",
+    "suggested_fix": ""
+  },
+  {
+    "source": "red_team_shortcut",
+    "severity": "high",
+    "description": "The OT assessment contains explicit interpretive commentary coaching the reader on how to weigh the findings: 'The findings described above are subtle rather than dramatic and are easy to overlook... Reading any one of these sources in isolation is likely to understate the supervision need.' Real OT notes do not tell the reader that findings are 'easy to overlook.'",
+    "files": [
+      "occupational_therapy_assessment_05202026.docx"
+    ],
+    "evidence": "The findings described above are subtle rather than dramatic and are easy to overlook against the medical improvement trajectory... Reading any one of these sources in isolation is likely to understate the supervision need around the discharge medication list.",
+    "confidence": "likely",
+    "quote": "",
+    "suggested_fix": ""
+  },
+  {
+    "source": "red_team_shortcut",
+    "severity": "breaking",
+    "description": "The home support equipment reference document uses the phrase 'world close' \u2014 explicit meta-language acknowledging the constructed exercise.",
+    "files": [
+      "home_support_equipment_reference_05222026.docx"
+    ],
+    "evidence": "Date / Anchor: HD5\u2013HD6 through 05/22/2026 | World close 05/23/2026 18:00",
+    "confidence": "likely",
+    "quote": "",
+    "suggested_fix": ""
+  }
+]
