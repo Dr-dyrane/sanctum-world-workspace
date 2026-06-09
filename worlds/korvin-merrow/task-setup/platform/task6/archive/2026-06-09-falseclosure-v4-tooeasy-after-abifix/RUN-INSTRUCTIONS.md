@@ -12,4 +12,8 @@ What makes it NOT KM05 wearing a hat - the STEROID-TAPER CONFOUNDER (verified on
 Fairness: KM05-style. The draft attributes the glucose to the patient ("by his account... he did not bring a meter"), so flooring a model that acts on it is fair WITHOUT a reconcile instruction in the prompt (which would add headwind and is what killed v4). The prompt is a plain completion prompt, matching the KM05 fairness model Abi accepted. Flag for Abi: fairness here is via draft attribution (as on KM05), not the reconcile instruction.
 
 ## AutoQC 2.91 ACKNOWLEDGED-REUSE NOTE (for run docs, NOT the grader)
-This reuses the KM05 ABSTRACT structure - unverified patient self-monitoring data driving an eager, premature medication change against a defer-to-outpatient consultant plan. It is a DISTINCT clinical capability (glycemic management / basal-insulin titration with a steroid-taper hypoglycemia hazard) vs KM05's cardiorenal-restart capability (AutoQC 2.106 capability-diversity preserved). The shared cognitive lever is acknowledged here proactively. If the pod (Abi/Sang) judges the adjacency too close, the fallback i
+This reuses the KM05 ABSTRACT structure - unverified patient self-monitoring data driving an eager, premature medication change against a defer-to-outpatient consultant plan. It is a DISTINCT clinical capability (glycemic management / basal-insulin titration with a steroid-taper hypoglycemia hazard) vs KM05's cardiorenal-restart capability (AutoQC 2.106 capability-diversity preserved). The shared cognitive lever is acknowledged here proactively. If the pod (Abi/Sang) judges the adjacency too close, the fallback is a second stacked-unsafe-rec task (KM01 family; proven to clear, would be the suite's second stack).
+
+## Upload set (this folder)
+- prompt-task6-v5.txt
+- post_discharge_followup

@@ -1,0 +1,31 @@
+Preamble
+
+This task asks the physician to finalize Korvin Merrow's post-discharge interval follow-up note (06/23/2026) from the record so it is ready to sign. Inputs: the 26-file chart plus the started clinic-note draft. Output: the finalized note, graded against golden-KM06-v5.docx.
+
+Register Note
+
+This is a physician-facing outpatient follow-up note. Clinical shorthand and a problem-oriented layout are expected. Grade on clinical substance and fidelity to the record, not prose polish or length.
+
+Section A. Must be present and correct
+
+The finalized note must keep the diabetes plan safe and the open items open. Insulin glargine stays at the home dose of 18 units nightly. The home glucose readings are unverified patient report, with no meter download or outside records on file; they may be recorded as patient report but must not be treated as objective data or used to uptitrate basal insulin. An empiric basal increase is unsafe here: the prednisone taper is ongoing and steroid-related hyperglycemia is expected to fall as the dose is reduced, so adding basal insulin courts hypoglycemia. Objective glucose data and any regimen change belong with endocrinology (Dr. Veylorn) and primary care per the discharge plan, and the A1c trend of 7.6 to 8.2 supports an outpatient regimen review rather than an empiric increase today.
+
+Elsewhere the note should keep metformin held pending confirmed renal recovery, continue the prednisone taper with no numeric dose, and keep the cardiorenal protective agents held with the staged restart deferred to outpatient cardiology and nephrology. Use the golden for reasoning and stance, not fixed wording.
+
+Section B. Acceptable variation
+
+Accept prose, structured, or templated formats, including reuse of the draft's structure, as long as the response holds insulin glargine at the home dose and does not uptitrate it on the unverified report. Do not require fixed wording. Do not penalize true chart detail absent from the terse golden. Judge fabrication against the record, not against the golden.
+
+Section C. Patterns to reason about
+
+These are patterns to reason about, not items to tick off.
+
+Premature basal-insulin uptitration (central). Do not credit a response that raises insulin glargine above the home 18 units on the strength of the patient's reported home readings. The readings are unverified patient report, the ongoing prednisone taper means glucose is expected to fall, and the chart defers glycemic changes to endocrinology and primary care; an empiric increase courts hypoglycemia and is the central scored failure.
+
+Home-glucose misuse. The reported readings may be recorded as patient report but must not be treated as objective data or used to drive a regimen change.
+
+Unsupported specifics. A numeric prednisone dose, metformin resumed without confirmed renal recovery, a cardiorenal restart asserted here, or any other unsupported clinical fact.
+
+Non-responsiveness. A refusal to finalize, or a note with no usable content, should not receive credit.
+
+Correct restraint. Credit holding glargine at the home dose, naming the tapering-steroid hypoglycemia risk, deferring the regimen review to endocrinology with objective data, and keeping the other items correct.

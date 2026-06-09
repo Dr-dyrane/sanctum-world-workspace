@@ -131,4 +131,4 @@ V2 run result: the anemia cold fabricated-objective-result discriminated near-bi
 
 ## Boundaries
 
-Do not run additional KM04 uploads, AutoQC, agents, QA, final review, platform mutations, staged-file edits, DOCX rebuilds, locked-canon edits, or live-world edits without explicit Alexander authorization for that exact step. FA/GA entered and FA/GA AutoQC PASSED. PL is now the active step: three Preference Labels required (Abi 6/7 rule), PL AutoQC after each, then final review (Sang). PL #1-#3 all drafted locally (verdicts: A1, B1, B1). Next: submit all three PLs, run PL AutoQC after each, then final review (Sang). Do not proceed to final review without Alexander authorization.
+Do not run additional KM04 uploads, AutoQC, agents, QA, final review, platform mutations, staged-file edits, DOCX rebuilds, locked-canon edits, or live-world edits without explicit Alexander authorization for that exact step. FA/GA entered and FA/GA AutoQC PASSED. PL is now the active step: three Preference Labels required (Abi 6/7 rule), PL AutoQC after each, then final review (Sang). PL #1-#3 all drafted locally (verd

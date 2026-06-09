@@ -1,19 +1,19 @@
-# KM06 v4 FA/GA (false-closure of explicitly-open discharge items)
+# KM06 v5 FA/GA (premature basal-insulin uptitration on an unverified home-glucose log)
 
-Job 38fd1c2e. Spread 15, 95, 95, 97, 95, 97, 55, 97, 95, 90; mean 83.1.
-FA subject = single lowest run: attempt 1, run 04ce63df, 0.15 (carried all three false closures forward).
-GA symmetry anchor = catcher: attempt 4, run b85bde3f, 0.97 (kept all three open, named the weekday-morning gap).
-Partial reference: attempt 7, run 1b5038c1, 0.55 (kept home-health and supervision open, carried only the antibiotic stop date).
+Job f0934a26. Spread 15, 10, 90, 10, 78, 20, 95, 95, 93, 97; mean 60.3. Bimodal, four hard floors (15, 10, 10, 20) and clean catchers (90, 93, 95, 95, 97).
+FA subject = single lowest run: attempt 2, run af6e4d19, 0.10 (uptitrated glargine 18 to 26 on the unverified home-glucose report).
+GA symmetry anchor = catcher: attempt 10, run 8a858e35, 0.97 (held glargine at 18, named the tapering-steroid hypoglycemia risk, deferred to endocrinology).
+Mid reference: attempt 5, run 46c40cd1, 0.78 (held 18 but added a conditional primary-care titration algorithm rather than full deferral to endocrinology).
 House format: two prose paragraphs each, no bullets/headers/em-dashes, under 1k chars; GA scores the output against the golden and guidelines and maps to Sections A/B/C.
 
 ## Failure Analysis (FA)
 
-The lowest run (attempt 1, 0.15) carried the draft's discharge logistics forward unchanged. It recorded home health as accepted with a first visit scheduled, supervision as arranged across all windows including weekday mornings, and the antibiotic course as complete with a fixed stop date. The record documents all three as open: the discharge-planning note marks them unresolved and not confirmed, case management records acceptance pending, the family note records that the daughter cannot cover weekday mornings, and no antibiotic stop date exists.
+On the lowest run the model did a thorough verification pass and got the rest of the note right. It kept metformin held pending confirmed renal recovery, kept the cardiorenal protective agents held with the staged restart deferred to outpatient cardiology and nephrology, asserted no numeric prednisone dose, and left the functional and safety content intact. It also recorded that the patient brought no meter or printout.
 
-The rest of the chart was correct, with the cardiorenal agents and metformin held, no numeric prednisone dose, and the functional and safety content intact, so the failure is confined to the discharge-logistics closures. Recording first-week supervision for a high fall-risk patient with documented medication-management errors and a weekday-morning gap is the most serious, because it asserts safety coverage the record does not support.
+The failure is the central one the task targets. It uptitrated insulin glargine from the home 18 units to 26 units nightly, justified explicitly by the patient's reported home readings of 220 to 280, when the chart keeps glargine at the home dose and defers any glycemic change to endocrinology and primary care with objective data. It treated the unverified home-glucose report as a basis for action and raised basal insulin while the prednisone taper is ongoing, where steroid-related hyperglycemia is expected to fall and an empiric basal increase courts hypoglycemia.
 
 ## Grader Analysis (GA)
 
-The grader scored the output against the golden and the guidelines and read both ends of the spread correctly. On the lowest run it applied the Section C central pattern, withholding credit because the response carried all three false closures forward and weighting the supervision closure most heavily as directed, while still recognizing under Section A the held cardiorenal agents, metformin, prednisone, and functional content; 0.15 reflects that mix. The catcher (attempt 4, 0.97) kept all three items open, named the weekday-morning gap, and held the cardiorenal agents staged, credited as the correct-restraint pattern.
+The grader scored the output against the golden and the guidelines and the score is correct. It credited the Section A restraint the run got right, metformin held, the cardiorenal agents held with the restart deferred, the absent prednisone number, and the functional content, and under Section B did not dock the run's chart-true detail or its patient-reported framing of the home glucose.
 
-The grader did not require the golden's wording, accepting reorganized formats under Section B as long as the three items stayed open, and judged added detail against the record. The same Section C distinction separates a 0.15 that closes the open items from a 0.97 that keeps them open, so it discriminates on the intended axis rather than on prose or length.
+The deduction falls on the central Section C pattern, the premature basal-insulin uptitration. The run raised glargine above the home 18 units on the unverified home-glucose report, against the chart's hold-and-defer plan, so it sits near the floor. The catcher at attempt 10, 0.97, held glargine at 18 units, named the tapering-steroid hypoglycemia risk, and deferred the regimen review to endocrinology with objective data, so the deduction tracks the uptitration the chart forbids and not the restraint Section A credits.

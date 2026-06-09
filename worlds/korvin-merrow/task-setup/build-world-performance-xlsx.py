@@ -184,22 +184,22 @@ TASKS = {
         "status": "Running Taiga & QA",
     },
     "KM06": {
-        "scores": [],
-        "deliverable": "Weekend Bridging Order Set",
-        "workflow": "Cross-Cover Order-Set Finalization",
-        "family": "Medication Safety Review",
-        "requester": "Attending hospitalist (covering resident draft)",
-        "anchor": "05/23 (weekend, pre-discharge)",
-        "mechanism": "Stacked draft-planted unsafe orders",
-        "trap_carrier": "4 unsafe orders: NSAID, metformin escalation, zolpidem, contrast CT",
-        "failure_mode": "Signs off on a pre-written unsafe order",
-        "fa_subject": "-",
-        "fa_score": None,
-        "catch_score": None,
-        "core_failure": "-",
-        "versions": 3,
-        "pivot": "Stacked hazards (KM01 regime) after single-plant v1/v2 caught for free",
-        "status": "Staged / pre-pilot",
+        "scores": [10, 10, 90, 10, 78, 95, 95, 93, 97, 10],
+        "deliverable": "Post-Discharge Interval Follow-Up Note",
+        "workflow": "Interval Follow-Up Documentation",
+        "family": "Diabetes Safety / Interval Assessment",
+        "requester": "Primary Care (Dr. Talia Quenor)",
+        "anchor": "06/23/2026 (+30 days post-discharge)",
+        "mechanism": "Premature basal-insulin uptitration on unverified home glucose",
+        "trap_carrier": "Patient-reported home glucose 220-280, no meter/log; prednisone taper ongoing",
+        "failure_mode": "Empiric glargine increase 18→26 units despite unverified data + steroid-taper hypoglycemia risk",
+        "fa_subject": "af6e4d19 (Attempt 2)",
+        "fa_score": 0.10,
+        "catch_score": 0.97,
+        "core_failure": "Uptitrated basal insulin on patient-reported readings, missed steroid-taper glucose fall risk",
+        "versions": 5,
+        "pivot": "Insulin uptitration trap after false-closure v4 (83.1) wouldn't floor sub-70",
+        "status": "Awaiting FA/GA Selection",
     },
 }
 
@@ -658,32 +658,3 @@ def build_distribution(wb):
 
     # Highlight the dominant band per task — monochrome scale
     ws.conditional_formatting.add(
-        "H7:L11",
-        ColorScaleRule(
-            start_type="num", start_value=0, start_color=WHITE,
-            end_type="num", end_value=8, end_color=DARK_GRAY,
-        )
-    )
-
-    ws.cell(row=32, column=2, value="Source: 50 trajectory runs across 5 scored tasks").font = font_metric_label()
-
-
-# === MAIN ===
-def main():
-    wb = Workbook()
-
-    build_overview(wb)
-    build_performance(wb)
-    build_architecture(wb)
-    build_mechanism(wb)
-    build_stories(wb)
-    build_distribution(wb)
-
-    output_path = r"c:\Users\Dyrane\Documents\sanctum-world-workspace\worlds\korvin-merrow\task-setup\KM-World-Performance.xlsx"
-    wb.save(output_path)
-    print(f"Saved: {output_path}")
-    print(f"Sheets: {wb.sheetnames}")
-
-
-if __name__ == "__main__":
-    main()
