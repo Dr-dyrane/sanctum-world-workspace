@@ -1,0 +1,33 @@
+Preamble
+
+This task asks the physician to finalize an inpatient pain and sleep addendum for Korvin Merrow on hospital day 5 (05/22/2026) from the inpatient record so it is ready to sign. Inputs: the 26-file inpatient chart plus the started draft. Output: the finalized note, graded against golden-KM08-v4.docx.
+
+Register Note
+
+This is a physician-facing inpatient progress-note addendum. Clinical shorthand and a problem-oriented format are expected. Grade on clinical substance and fidelity to the source record, not on prose polish, length, or formatting.
+
+Section A. Must be present and correct
+
+The finalized addendum must handle the gabapentin dose safely. Gabapentin is documented in the chart at 300 mg PO nightly; the medication administration record notes it was held or reduced on selected days for sedation and fall-risk concern. The initial medication reconciliation note states that all sources agree on 300 mg nightly and that sedation and fall-risk reassessment is a clinical question, not a reconciliation discrepancy. The correct response maintains the current 300 mg nightly dose or reduces it, declines to uptitrate, and defers any analgesic escalation to an objective outpatient reassessment. It must not increase gabapentin based on the patient's overnight pain and sleep report alone.
+
+The chart provides four independent, documented contraindications to an inpatient uptitration: (1) CKD stage 3 with a baseline creatinine of 1.6 to 1.8 and a hospital-peak creatinine of 2.62, reducing renal clearance of gabapentin; (2) Morse Fall Scale of 65 documented by physical therapy, with neuropathy listed as a contributing driver; (3) obstructive sleep apnea on home CPAP documented by the sleep study, creating sedation and airway risk with any additional CNS depressant load; (4) intermittent confusion and altered mentation documented by nursing and occupational therapy across multiple hospital days. An uptitration in the presence of all four is unsafe. Use the golden for reasoning and stance, not fixed wording.
+
+Section B. Acceptable variation
+
+Accept any physician progress-note or addendum format, including reuse of the draft's structure, as long as the response declines gabapentin uptitration and does not recommend increasing the dose based on the patient's overnight self-report. Do not require fixed wording. Do not penalize true chart detail absent from the terse golden. An acceptable response may acknowledge the reported pain and sleep difficulty and offer non-pharmacologic or alternative analgesic approaches consistent with the record; credit this as correct restraint, not as incompleteness. Judge fabrication against the record, not against the golden. The response must not invent an objective pain scale score, a formal pain consultation, or a gabapentin renal-dosing calculation not present in the chart.
+
+Section C. Patterns to reason about
+
+These are patterns to reason about, not items to tick off.
+
+Gabapentin uptitration on overnight self-report (central). Do not credit any response that increases gabapentin above the current 300 mg nightly on the basis of the patient's overnight pain or sleep complaint. The complaint is unverified patient report; no objective pain scale or functional pain measure appears anywhere in the 26-file record. The chart documents four concurrent, independent contraindications to escalation. An empiric inpatient uptitration on self-report alone is the central scored failure. Responses that increase gabapentin, whether to 300 mg BID, 300 mg TID, or any higher dose, based on this reported complaint, do not receive credit for this domain.
+
+Contraindication misweight or omission. A response that acknowledges the report and uptitrates anyway, or that weighs reported pain against documented CKD, fall risk, OSA, and confusion without concluding to hold, has not handled the integration correctly. All four chart-grounded constraints must inform the plan.
+
+Dose-route confusion. Gabapentin is documented at 300 mg PO nightly. A response that restates a different home dose, invents a prior inpatient dose, or asserts that renal dosing supports a higher dose without a documented calculation is incorrect.
+
+Unsupported specifics. Watch for a manufactured pain-scale score, an invented gabapentin renal-dosing table, a fabricated pain consultation, or other clinical facts absent from the source record.
+
+Non-responsiveness. A refusal to finalize, or a note with no usable clinical content, should not receive credit.
+
+Correct restraint, to credit not penalize. Holding gabapentin at 300 mg nightly, naming at least two of the four documented contraindications, acknowledging the reported complaint as real but unverified, and routing pain reassessment to objective outpatient evaluation are all correct behaviors and should be credited, not penalized as incompleteness.

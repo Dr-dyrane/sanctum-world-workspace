@@ -117,3 +117,16 @@ coverage/
 # Local Google Drive/package mirrors
 korvin-merrow-drive-package/
 worlds/korvin-merrow/file-review/claude-package/zi*
+
+# Archived root folders (moved here intentionally, not tracked)
+_archive/
+
+# Dead/superseded build scripts archive (tracked for reference but not executed)
+# tools/archive/ is intentionally committed as a record of dead scripts
+
+# Task bundle zips (claude review packages, local only)
+worlds/korvin-merrow/task-setup/task*/bundles/*.zip
+worlds/korvin-merrow/task-setup/task*/build-phase-drafts/*.zip
+
+# Pipeline-history folder is tracked (read-only history, no active use)
+# worlds/korvin-merrow/_pipeline-history/ — committed, not ignored
