@@ -1,0 +1,31 @@
+Grader Guidelines - Discharge Medication Reconciliation and Medication Safety Review (Korvin Merrow)
+
+Task context
+
+Korvin Merrow is a 62-year-old man admitted 05/18/2026 with suspected urinary-source infection and sepsis physiology, acute kidney injury on CKD stage 3, HFrEF and CAD with protective therapy held on admission, type 2 diabetes, and polymyalgia rheumatica on chronic prednisone whose current dose is not verified anywhere in the chart. Discharge was planned for 05/24/2026. The agent was asked to produce a discharge medication reconciliation and medication-safety review from the inpatient record, organized by medication disposition, written so that pharmacy and the covering hospitalist could co-sign it. Available sources are the 26-document inpatient chart (admission documentation, medication reconciliation note, pharmacy refill history, rheumatology correspondence, daily hospitalist notes, the medication administration record, cardiology, nephrology, and endocrinology consultations with addenda, therapy and nursing assessments, a family care conference note, case management documentation, and a discharge-facing plan snapshot) together with two task attachments: the reconciliation request memo and the medication-safety handoff addendum.
+
+Golden reference
+
+Use golden-response-task1-v2.docx as the benchmark for a strong senior-physician answer. Treat it as a reference for reasoning and coverage rather than a script. An answer may use different wording, a different order, or a different final medication sequence and still score well if the safety logic holds.
+
+Must be present and correct
+
+The reconciliation must reason about each medication rather than reproduce a list. An answer that restates the home regimen, the inpatient MAR, or the discharge-facing plan snapshot without a per-medication disposition and rationale fails this requirement; the golden illustrates the expected per-medication reasoning. Each high-risk medication decision needs a stated rationale tied to renal recovery, potassium, blood pressure reserve, intake, volume status, glycemic pattern, steroid-source uncertainty, or home medication-management capacity.
+
+The cardiology and nephrology positions both deserve standing. Cardiology is worried about losing HFrEF and CAD protection; nephrology is worried about AKI recovery, potassium, hemodynamics, and monitoring. A correct answer proposes deliberate sequencing with monitoring instead of declaring one consultant the winner.
+
+Prednisone reasoning has to respect the source hierarchy. Rheumatology documentation is the strongest evidence for the intended outpatient taper. The reconciliation note, pharmacy fill history, family report, and the patient's own recollection give context but cannot outrank rheumatology intent. Abrupt discontinuation language is wrong, reliance on patient memory alone is wrong, and claiming adrenal insufficiency is proven is wrong.
+
+Outpatient baseline therapy and inpatient-only actions must be kept distinct. Correctional insulin lispro from the hospitalization is not a home regimen unless the answer builds an explicit outpatient insulin plan. Basal insulin, metformin, empagliflozin, and the other diabetes agents need reconciliation against intake, renal function, glucose pattern, and home support.
+
+Medication-management safety belongs in the answer. The nursing, occupational therapy, and family evidence supports written medication changes, teaching with family present where possible, and accountable follow-up covering renal function, potassium, blood pressure symptoms, glucose, steroid instructions, and the HFrEF/CAD restart pathway.
+
+Acceptable variation
+
+A table, a categorized list, or prose all work if the clinical rationale is explained. The deliverable is physician-facing. Continue, hold, stop, taper, restart, defer, and reassess concepts can be expressed in any reasonable arrangement; no single exact prescription sequence is required. The discharge-facing plan snapshot should be used as a planning snapshot only and reconciled against the rest of the record, including the medication-safety handoff addendum. Some answers will also separate low-risk chronic prevention drugs from renal- and hemodynamic-sensitive drugs, name monitoring owners and time windows, note that early inpatient holds were reasonable but should not persist by inertia, or include family teach-back. These are marks of a strong answer; their absence alone is not an error if the core safety logic is intact.
+
+Treat the golden as the reference for expected reasoning and coverage, not as an exhaustive list of acceptable specifics. The agent is expected to draw findings, lab trends, doses, and provider names from the inpatient chart, which is available to you at /docs/filesystem/; specifics that match the chart are correct and are not fabrication. Treat as fabrication only clinical specifics that are unsupported by the chart and not derivable from the golden's reasoning; verify a specific against the chart when it is in doubt, even when the surrounding reasoning sounds plausible.
+
+Penalize for
+
+Copying the golden or any single source as a fixed sequence without reasoning. Restarting every held medication at once without monitoring logic, or the mirror error of leaving all holds in place indefinitely with no reassessment plan. Converting inpatient correctional lispro into a home medication by default. Prednisone decisions grounded only in patient recollection, family report, the discharge-facing plan snapshot, or the handoff addendum. Statements that adrenal insufficiency is proven or that steroid physiology alone explains the hospitalization. Automatic deference to either cardiology or nephrology rather than a reconciled plan. Treating the discharge-facing plan snapshot as the completed reconciliation. An answer that ignores the documented functional and cognitive medication-management risk. Invented discharge prescriptions, doses, lab values, post-discharge adherence claims, or outcomes.

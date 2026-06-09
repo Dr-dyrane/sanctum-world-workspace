@@ -1,0 +1,607 @@
+{
+  "path": "/filesystem/pharmacy_refill_history_report_05182026.docx",
+  "started_at": 1780598024.9593997,
+  "finished_at": 1780598188.0837512,
+  "cost_usd": 0.6465845,
+  "num_turns": 12,
+  "is_error": false,
+  "errors": [],
+  "permission_denials": [],
+  "rate_limit_events": [],
+  "stop_reason": "end_turn",
+  "success": true,
+  "quality_check": {
+    "passed": true,
+    "checks": {
+      "exists": true,
+      "file_size": 43723,
+      "size_ok": true,
+      "paragraph_count": 25,
+      "format_valid": true,
+      "has_custom_formatting": true,
+      "no_markdown_artifacts": true
+    }
+  },
+  "retry_count": 0,
+  "messages": [
+    {
+      "type": "SystemMessage"
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ThinkingBlock"
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 2347,
+        "cache_read_input_tokens": 16376,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2347,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 0,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ToolUseBlock",
+          "tool_name": "Read",
+          "input": {
+            "file_path": "/tmp/worldgen_fmt_2ry0idht/pharmacy_refill_history_report_05182026.docx.md"
+          }
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 2347,
+        "cache_read_input_tokens": 16376,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2347,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 0,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "UserMessage",
+      "content": [
+        {
+          "type": "ToolResultBlock",
+          "content": "1\t**SYNTHETIC TRAINING DOCUMENT | FICTIONAL PATIENT | NOT A REAL MEDICAL RECORD**\n2\t\n3\t---\n4\t\n5\t**HARBOR CREST COMMUNITY PHARMACY**\n6\t318 Mill Ridge Road, Bridgehollow, PA 15213\n7\tPhone (412) 555-0490 | Fax (412) 555-0491 | NCPDP 3947182\n8\t\n9\t**OUTPATIENT PHARMACY REFILL HISTORY REPORT**\n10\t\n11\t| Patient | Korvin Merrow |\n12\t| --- | --- |\n13\t| DOB | 02/18/1964 |\n14\t| Sex | Male |\n15\t| Address | 1842 Larchmere Lane, Bridgehollow, PA 15214 |\n16\t| Allergies | Lisinopril (cough) |\n17\t| Pharmacy benefit | Medicare Part D \u2014 Keystone Rx (BIN 017920 / PCN MEDDPRIME) |\n18\t| Report date | 05/18/2026 |\n19\t| Coverage window | 11/15/2025 through 05/18/2026 (approximately last 6 months) |\n20\t| Prepared by | Harbor Crest Community Pharmacy fill-history query |\n21\t\n22\t---\n23\t\n24\t**REFILL HISTORY \u2014 CHRONOLOGICAL**\n25\t\n26\t| Fill date | Medication | Strength | Quantity | Days supply | Directions | Prescriber | Refills remaining |\n27\t| --- | --- | --- | --- | --- | --- | --- | --- |\n28\t| 11/19/2025 | Aspi",
+          "is_error": null
+        }
+      ]
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ToolUseBlock",
+          "tool_name": "Bash",
+          "input": {
+            "command": "ls /.meta/references/ 2>/dev/null",
+            "description": "List reference files"
+          }
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 2347,
+        "cache_read_input_tokens": 16376,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2347,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 0,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "UserMessage",
+      "content": [
+        {
+          "type": "ToolResultBlock",
+          "content": "Alexander_World_Merrow_latest_6_4.docx\nadmission_history_and_physical_05182026.docx\ncardiology_consultation_05212026.docx\ncase_management_social_work_discharge_note_05222026.docx\nconsultant_synthesis_care_plan_request_05242026.docx\ndischarge_facing_plan_snapshot_05232026.docx\ndischarge_medication_reconciliation_request_05242026.docx\ndischarge_readiness_care_coordination_request_05242026.docx\ndischarge_summary_request_05242026.docx\ned_provider_assessment_05182026.docx\ned_triage_initial_intake_05182026.docx\nendocrinology_consultation_05212026.docx\nfamily_communication_care_conference_05222026.docx\nhome_support_equipment_reference_05222026.docx\nhospitalist_discharge_planning_progress_hd5_hd6_05232026.docx\nhospitalist_progress_hd1_hd2_05192026.docx\nhospitalist_progress_hd3_05202026.docx\nhospitalist_progress_hd4_05212026.docx\ninitial_medication_reconciliation_note_05182026.docx\nmedication_administration_record_05232026.docx\nmedication_safety_handoff_addendum_05242026.docx\nnephrology_consult",
+          "is_error": false
+        }
+      ]
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ToolUseBlock",
+          "tool_name": "Read",
+          "input": {
+            "file_path": "/.meta/references/pharmacy_refill_history_report_05182026.docx"
+          }
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 7339,
+        "cache_read_input_tokens": 18723,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 7339,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 55,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "UserMessage",
+      "content": [
+        {
+          "type": "ToolResultBlock",
+          "content": "<tool_use_error>This tool cannot read binary files. The file appears to be a binary .docx file. Please use appropriate tools for binary file analysis.</tool_use_error>",
+          "is_error": true
+        }
+      ]
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ToolUseBlock",
+          "tool_name": "Bash",
+          "input": {
+            "command": "cd /tmp && soffice --headless --convert-to pdf --outdir /tmp /.meta/references/pharmacy_refill_history_report_05182026.docx 2>&1 | tail -5",
+            "description": "Convert reference docx to PDF"
+          }
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 205,
+        "cache_read_input_tokens": 26062,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 205,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 62,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "UserMessage",
+      "content": [
+        {
+          "type": "ToolResultBlock",
+          "content": "/bin/bash: line 1: soffice: command not found\nShell cwd was reset to /root",
+          "is_error": false
+        }
+      ]
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ToolUseBlock",
+          "tool_name": "Bash",
+          "input": {
+            "command": "cd /tmp && python3 -c \"\nfrom docx import Document\ndoc = Document('/.meta/references/pharmacy_refill_history_report_05182026.docx')\nfor i, p in enumerate(doc.paragraphs[:30]):\n    print(f'P{i}: [{p.style.name}] {p.text[:100]}')\nprint('---TABLES---')\nprint(f'Number of tables: {len(doc.tables)}')\nfor ti, t in enumerate(doc.tables[:3]):\n    print(f'Table {ti}: {len(t.rows)} rows x {len(t.columns)} cols')\n    for ri, row in enumerate(t.rows[:3]):\n        for ci, cell in enumerate(row.cells):\n        ",
+            "description": "Inspect reference docx structure"
+          }
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 243,
+        "cache_read_input_tokens": 26267,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 243,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 64,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "UserMessage",
+      "content": [
+        {
+          "type": "ToolResultBlock",
+          "content": "P0: [Normal] \nP1: [Normal] PHARMACY / REFILL-HISTORY REPORT\nP2: [Normal] Author: Pharmacy history source  |  Department: Pharmacy  |  Pre-admission provenance reviewed by 05\nP3: [Normal] PHARMACY FILL HISTORY REVIEW\nP4: [Normal] Review date: 05/18/2026\nP5: [Normal] Patient: Korvin Merrow\nP6: [Normal] Source: external pharmacy fill-history query and available outpatient pharmacy records.\nP7: [Normal] Limitations: fill history confirms dispensing patterns but does not prove actual medication ingestio\nP8: [Normal] CHRONIC MEDICATION FILL PATTERN\nP9: [Normal] The following medication classes appear active or recently active in pharmacy history:\nP10: [Normal] Cardiovascular / HFrEF / CAD:\nP11: [List Bullet] Sacubitril/valsartan: recurring fills consistent with chronic HFrEF therapy.\nP12: [List Bullet] Carvedilol: recurring fills consistent with chronic HFrEF/CAD therapy.\nP13: [List Bullet] Furosemide: recurring fills consistent with chronic volume-management therapy.\nP14: [List Bullet] Spir",
+          "is_error": false
+        }
+      ]
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ThinkingBlock"
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 1584,
+        "cache_read_input_tokens": 26510,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1584,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 40,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ToolUseBlock",
+          "tool_name": "Bash",
+          "input": {
+            "command": "cd /tmp && python3 -c \"\nfrom docx import Document\ndoc = Document('/.meta/references/pharmacy_refill_history_report_05182026.docx')\nprint('Document core properties:')\nprint('Author:', doc.core_properties.author)\nprint()\nprint('Section settings:')\nfor s in doc.sections:\n    print('Page:', s.page_width, 'x', s.page_height)\n    print('Margins:', s.left_margin, s.right_margin, s.top_margin, s.bottom_margin)\nprint()\nprint('Styles found in paragraphs:')\nstyles = set()\nfor p in doc.paragraphs:\n    style",
+            "description": "Inspect reference doc styling"
+          }
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 1584,
+        "cache_read_input_tokens": 26510,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1584,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 40,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "UserMessage",
+      "content": [
+        {
+          "type": "ToolResultBlock",
+          "content": "Document core properties:\nAuthor: python-docx\n\nSection settings:\nPage: 7772400 x 10058400\nMargins: 594360 594360 457200 502920\n\nStyles found in paragraphs:\n{'Normal', 'List Bullet'}\n\nFirst paragraph run formatting:\nP1: bold=True font.name=Arial size=177800 text='PHARMACY / REFILL-HISTORY REPORT'\nP2: bold=False font.name=Arial size=101600 text='Author: Pharmacy history source  |  Department: Pharmacy  | '\nP3: bold=True font.name=Arial size=127000 text='PHARMACY FILL HISTORY REVIEW'\nP4: bold=False font.name=Arial size=120650 text='Review date: 05/18/2026'\nP5: bold=False font.name=Arial size=120650 text='Patient: Korvin Merrow'\nP6: bold=False font.name=Arial size=120650 text='Source: external pharmacy fill-history query and available o'\nP7: bold=False font.name=Arial size=120650 text='Limitations: fill history confirms dispensing patterns but d'\nShell cwd was reset to /root",
+          "is_error": false
+        }
+      ]
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ThinkingBlock"
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 958,
+        "cache_read_input_tokens": 28094,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 958,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 38,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ToolUseBlock",
+          "tool_name": "Write",
+          "input": {
+            "file_path": "/tmp/build_pharmacy_doc.py",
+            "content": "#!/usr/bin/env python3\n\"\"\"Build outpatient pharmacy refill history report for Korvin Merrow.\"\"\"\n\nimport datetime\nfrom docx import Document\nfrom docx.shared import Pt, Inches, Cm, RGBColor\nfrom docx.enum.text import WD_ALIGN_PARAGRAPH\nfrom docx.enum.table import WD_ALIGN_VERTICAL\nfrom docx.oxml.ns import qn\nfrom docx.oxml import OxmlElement\n\n\nFONT_NAME = \"Arial\"\n\n\ndef set_cell_borders(cell):\n    tc = cell._tc\n    tcPr = tc.get_or_add_tcPr()\n    tcBorders = OxmlElement('w:tcBorders')\n    for edge "
+          }
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 958,
+        "cache_read_input_tokens": 28094,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 958,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 38,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "UserMessage",
+      "content": [
+        {
+          "type": "ToolResultBlock",
+          "content": "File created successfully at: /tmp/build_pharmacy_doc.py (file state is current in your context \u2014 no need to Read it back)",
+          "is_error": null
+        }
+      ]
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ToolUseBlock",
+          "tool_name": "Bash",
+          "input": {
+            "command": "cd /tmp && mkdir -p /filesystem && python3 /tmp/build_pharmacy_doc.py",
+            "description": "Build the docx"
+          }
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 10126,
+        "cache_read_input_tokens": 29052,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 10126,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 60,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "UserMessage",
+      "content": [
+        {
+          "type": "ToolResultBlock",
+          "content": "Wrote /filesystem/pharmacy_refill_history_report_05182026.docx\nShell cwd was reset to /root",
+          "is_error": false
+        }
+      ]
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ToolUseBlock",
+          "tool_name": "Bash",
+          "input": {
+            "command": "which soffice libreoffice 2>&1; soffice --version 2>&1 || echo \"no soffice\"",
+            "description": "Check for LibreOffice"
+          }
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 221,
+        "cache_read_input_tokens": 39178,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 221,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 59,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "UserMessage",
+      "content": [
+        {
+          "type": "ToolResultBlock",
+          "content": "/bin/bash: line 1: soffice: command not found\nno soffice",
+          "is_error": false
+        }
+      ]
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ThinkingBlock"
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 202,
+        "cache_read_input_tokens": 39399,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 202,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 53,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ToolUseBlock",
+          "tool_name": "Bash",
+          "input": {
+            "command": "python3 -c \"\nfrom docx import Document\ndoc = Document('/filesystem/pharmacy_refill_history_report_05182026.docx')\nprint('Paragraphs:', len(doc.paragraphs))\nprint('Tables:', len(doc.tables))\nfor ti, t in enumerate(doc.tables):\n    print(f'  Table {ti}: {len(t.rows)} rows x {len(t.columns)} cols')\nprint('Author:', doc.core_properties.author)\nprint('Created:', doc.core_properties.created)\nprint()\nprint('Last refill table 1st & last data row:')\nfill_tbl = doc.tables[1]\nprint('Header:', [c.text for c",
+            "description": "Verify structural integrity"
+          }
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 202,
+        "cache_read_input_tokens": 39399,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 202,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 53,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "UserMessage",
+      "content": [
+        {
+          "type": "ToolResultBlock",
+          "content": "Paragraphs: 25\nTables: 3\n  Table 0: 9 rows x 2 cols\n  Table 1: 67 rows x 8 cols\n  Table 2: 4 rows x 3 cols\nAuthor: Harbor Crest Community Pharmacy fill-history query\nCreated: 2026-05-18 08:30:00+00:00\n\nLast refill table 1st & last data row:\nHeader: ['Fill date', 'Medication', 'Strength', 'Quantity', 'Days supply', 'Directions', 'Prescriber', 'Refills remaining']\nRow 1: ['11/19/2025', 'Aspirin EC', '81 mg', '90 tab', '90', 'Take 1 tablet by mouth daily', 'Talia Quenor, MD', '3']\nLast: ['05/13/2026', 'Gabapentin', '300 mg', '30 cap', '30', 'Take 1 capsule by mouth at bedtime', 'Talia Quenor, MD', '2']\nRow count (excl header): 66",
+          "is_error": false
+        }
+      ]
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ThinkingBlock"
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 1046,
+        "cache_read_input_tokens": 39601,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1046,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 47,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ToolUseBlock",
+          "tool_name": "Bash",
+          "input": {
+            "command": "rm -f /tmp/build_pharmacy_doc.py && ls -la /filesystem/pharmacy_refill_history_report_05182026.docx",
+            "description": "Clean up temp script"
+          }
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 1046,
+        "cache_read_input_tokens": 39601,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1046,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 47,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "UserMessage",
+      "content": [
+        {
+          "type": "ToolResultBlock",
+          "content": "-rw-r--r-- 1 root root 43723 Jun  4 18:36 /filesystem/pharmacy_refill_history_report_05182026.docx",
+          "is_error": false
+        }
+      ]
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "TextBlock",
+          "text": "Created `/filesystem/pharmacy_refill_history_report_05182026.docx`.\n\nDocument layout:\n- **Letterhead** \u2014 \"HARBOR CREST COMMUNITY PHARMACY\" centered with address, phone, fax, NCPDP\n- **Title** \u2014 \"OUTPATIENT PHARMACY REFILL HISTORY REPORT\" centered, bold\n- **Patient demographics** \u2014 9-row two-column table (label/value) with shaded label column\n- **Refill history table** \u2014 8 columns \u00d7 66 chronological fill rows, with prednisone fills rendered bold (matches the source's `**...**` markers), small body text to fit page width\n- **OTC/variably captured items** \u2014 3-row table\n- **Prednisone observations** \u2014 narrative paragraph documenting strength/direction changes\n- **Pharmacy disclaimer** \u2014 narrative paragraph plus italicized electronic-generation footer\n- **Synthetic training banners** at top and bottom\n\nFormatting choices:\n- Arial throughout (matching the reference exemplar's font choice), 9.5pt body / 8pt for the dense fill table / 13pt letterhead\n- Narrow margins (0.55\"/0.5\") to fit the wide 8-column refill table\n- Plain black-on-white, single-line cell borders, light-gray header shading only \u2014 no colored alerts, badges, or callout boxes (per medical-document rules)\n- Core properties set to author \"Harbor Crest Community Pharmacy fill-history query\", created/modified 2026-05-18\n\nStructural verification confirmed all 66 refill rows, 3 OTC rows, and 9 demographic rows are preserved. Visual rendering verification was skipped because `soffice` is not available on this system."
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 409,
+        "cache_read_input_tokens": 40647,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 409,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 2,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "ResultMessage",
+      "usage": {
+        "input_tokens": 16,
+        "cache_creation_input_tokens": 24680,
+        "cache_read_input_tokens": 329909,
+        "output_tokens": 13061,
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 24680
+        },
+        "inference_geo": "",
+        "iterations": [
+          {
+            "input_tokens": 1,
+            "output_tokens": 575,
+            "cache_read_input_tokens": 40647,
+            "cache_creation_input_tokens": 409,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 409,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "stop_reason": "end_turn",
+      "total_cost_usd": 0.6465845,
+      "num_turns": 12,
+      "is_error": false,
+      "duration_ms": 160190
+    }
+  ]
+}

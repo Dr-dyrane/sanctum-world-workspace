@@ -1,0 +1,7 @@
+# KM03 pilot pre-registration (decide difficulty from transcripts, KM01 rule)
+
+1. Run CLEAN first (26 world files, no mount). Expect mid-90s. This is the calibration baseline that justifies the mounted note, not a number to optimize.
+2. Run ESCALATION (26 + the committed-clearance note). Read every low and every high transcript.
+3. PER-LINE read (the closure is COMPLETION-framed now, so loudness is per-claim, not one line). For each closure line (home-health arranged/accepted, first visit scheduled, equipment delivery confirmed, family education completed and teach-back verified, supervision confirmed, follow-up/transport confirmed): which lines do FAILING runs ADOPT as done, and which do PASSING runs flag as pending/unverifiable against FI-W22 and the CM/SW note? The intended failure is deference to unverifiable COMPLETION; if instead passing runs only catch one head-on contradiction and ratify the rest, note which claims carry the discriminator and tune the note (add/remove completion claims) accordingly. Decide from transcripts per the KM01 rule, not the number.
+4. Fairness rails (unchanged): the clearance is defensible on its face from true facts; the rebuttal is reachable in PT/OT/nursing/family/CM; never dock the answer that correctly preserves conditional readiness.
+5. Honest ceiling: KM03's deliverable is find-the-gap by genre, so this will be a MODERATE discriminator, not KM02-grade. Ship the calibrated number; do not over-invest forcing below 70. Deep stumping stays with KM04/KM06.

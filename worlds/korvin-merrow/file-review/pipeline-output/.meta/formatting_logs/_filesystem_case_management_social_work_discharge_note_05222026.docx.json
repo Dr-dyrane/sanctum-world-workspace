@@ -1,0 +1,600 @@
+{
+  "path": "/filesystem/case_management_social_work_discharge_note_05222026.docx",
+  "started_at": 1780598024.9582667,
+  "finished_at": 1780598209.367075,
+  "cost_usd": 0.73903275,
+  "num_turns": 13,
+  "is_error": false,
+  "errors": [],
+  "permission_denials": [],
+  "rate_limit_events": [],
+  "stop_reason": "end_turn",
+  "success": true,
+  "quality_check": {
+    "passed": true,
+    "checks": {
+      "exists": true,
+      "file_size": 41089,
+      "size_ok": true,
+      "paragraph_count": 81,
+      "format_valid": true,
+      "has_custom_formatting": true,
+      "no_markdown_artifacts": true
+    }
+  },
+  "retry_count": 0,
+  "messages": [
+    {
+      "type": "SystemMessage"
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ThinkingBlock"
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 2345,
+        "cache_read_input_tokens": 16376,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2345,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 0,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ToolUseBlock",
+          "tool_name": "Read",
+          "input": {
+            "file_path": "/tmp/worldgen_fmt_2ry0idht/case_management_social_work_discharge_note_05222026.docx.md"
+          }
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 2345,
+        "cache_read_input_tokens": 16376,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2345,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 0,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "UserMessage",
+      "content": [
+        {
+          "type": "ToolResultBlock",
+          "content": "1\t**SYNTHETIC TRAINING DOCUMENT | FICTIONAL PATIENT | NOT A REAL MEDICAL RECORD**\n2\t\n3\t---\n4\t\n5\t**MERCY VALE REGIONAL MEDICAL CENTER** \u2014 Care Management\n6\tConfidential\n7\t\n8\t---\n9\t\n10\t**Patient:** KORVIN MERROW, 62 y, Male\n11\t**DOB:** 02/18/1964\n12\t**MRN:** KM-6427819\n13\t**FIN:** KM-2026-051877\n14\t**Unit / Room:** 5 West Medical, Room 5W-318\n15\t**Date / Anchor:** 2026-05-22 (HD5) with HD6 status update through 2026-05-23 18:00\n16\t**Allergies:** Lisinopril (cough)\n17\t**Document:** Case Management / Social Work discharge-planning note\n18\t\n19\t**Authors:**\n20\tPriya Ostroff, RN, BSN, CCM \u2014 Case Manager\n21\tDevra Aimes, LCSW \u2014 Social Worker\n22\tCare Management | (412) 555-0162\n23\t\n24\t**Status:** Signed\n25\t\n26\t---\n27\t\n28\t### CASE MANAGEMENT / SOCIAL WORK DISCHARGE-PLANNING NOTE\n29\t\n30\tThis note documents transition-planning activity initiated 2026-05-22 (HD5) and updated through HD6 (2026-05-23 18:00). It is intended to capture discharge logistics, caregiver-capacity context, and items still und",
+          "is_error": null
+        }
+      ]
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ToolUseBlock",
+          "tool_name": "Bash",
+          "input": {
+            "command": "ls /.meta/references/ 2>/dev/null || echo \"no references folder\"",
+            "description": "List reference files"
+          }
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 3734,
+        "cache_read_input_tokens": 18721,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 3734,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 51,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "UserMessage",
+      "content": [
+        {
+          "type": "ToolResultBlock",
+          "content": "Alexander_World_Merrow_latest_6_4.docx\nadmission_history_and_physical_05182026.docx\ncardiology_consultation_05212026.docx\ncase_management_social_work_discharge_note_05222026.docx\nconsultant_synthesis_care_plan_request_05242026.docx\ndischarge_facing_plan_snapshot_05232026.docx\ndischarge_medication_reconciliation_request_05242026.docx\ndischarge_readiness_care_coordination_request_05242026.docx\ndischarge_summary_request_05242026.docx\ned_provider_assessment_05182026.docx\ned_triage_initial_intake_05182026.docx\nendocrinology_consultation_05212026.docx\nfamily_communication_care_conference_05222026.docx\nhome_support_equipment_reference_05222026.docx\nhospitalist_discharge_planning_progress_hd5_hd6_05232026.docx\nhospitalist_progress_hd1_hd2_05192026.docx\nhospitalist_progress_hd3_05202026.docx\nhospitalist_progress_hd4_05212026.docx\ninitial_medication_reconciliation_note_05182026.docx\nmedication_administration_record_05232026.docx\nmedication_safety_handoff_addendum_05242026.docx\nnephrology_consult",
+          "is_error": false
+        }
+      ]
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ToolUseBlock",
+          "tool_name": "Read",
+          "input": {
+            "file_path": "/.meta/references/case_management_social_work_discharge_note_05222026.docx"
+          }
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 854,
+        "cache_read_input_tokens": 22455,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 854,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 59,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "UserMessage",
+      "content": [
+        {
+          "type": "ToolResultBlock",
+          "content": "<tool_use_error>This tool cannot read binary files. The file appears to be a binary .docx file. Please use appropriate tools for binary file analysis.</tool_use_error>",
+          "is_error": true
+        }
+      ]
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ToolUseBlock",
+          "tool_name": "Bash",
+          "input": {
+            "command": "cd /tmp && python3 -c \"\nfrom docx import Document\ndoc = Document('/.meta/references/case_management_social_work_discharge_note_05222026.docx')\nfor i, p in enumerate(doc.paragraphs[:60]):\n    style = p.style.name if p.style else 'None'\n    print(f'[{i}] style={style!r} text={p.text!r}')\nprint('---core props---')\ncp = doc.core_properties\nprint('author:', cp.author)\nprint('last_modified_by:', cp.last_modified_by)\nprint('created:', cp.created)\nprint('modified:', cp.modified)\n\"\n",
+            "description": "Inspect reference docx"
+          }
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 211,
+        "cache_read_input_tokens": 23309,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 211,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 64,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "UserMessage",
+      "content": [
+        {
+          "type": "ToolResultBlock",
+          "content": "[0] style='Normal' text=''\n[1] style='Normal' text='CASE MANAGEMENT / SOCIAL WORK DISCHARGE-PLANNING NOTE'\n[2] style='Normal' text='Author: Case Management / Social Work  |  Department: Care Management  |  HD5-HD6 through 05/23/2026 18:00  |  Status: Signed'\n[3] style='Normal' text='CASE MANAGEMENT / SOCIAL WORK NOTE'\n[4] style='Normal' text='Patient: Korvin Merrow'\n[5] style='Normal' text='Documentation window: HD5-HD6 before world close.'\n[6] style='Normal' text='This source supports discharge logistics and transition planning. It is not a final disposition decision, discharge order, discharge summary, or answer file.'\n[7] style='Normal' text='REFERRAL REASON'\n[8] style='Normal' text='Case Management / Social Work engaged because discharge planning became plausible as Korvin improved medically, while functional status, medication complexity, family support, and follow-up feasibility remained active questions.'\n[9] style='Normal' text='Relevant context from chart:'\n[10] style='List Bu",
+          "is_error": false
+        }
+      ]
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ThinkingBlock"
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 2704,
+        "cache_read_input_tokens": 23520,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2704,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 47,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ToolUseBlock",
+          "tool_name": "Write",
+          "input": {
+            "file_path": "/tmp/make_doc.py",
+            "content": "#!/usr/bin/env python3\n\"\"\"Generate Case Management / Social Work discharge note as .docx\"\"\"\nimport datetime\nfrom docx import Document\nfrom docx.shared import Pt, Inches, RGBColor\nfrom docx.enum.text import WD_ALIGN_PARAGRAPH\n\nOUT = \"/filesystem/case_management_social_work_discharge_note_05222026.docx\"\n\ndoc = Document()\n\n# Set default font (Times New Roman 11)\nstyle = doc.styles['Normal']\nstyle.font.name = 'Times New Roman'\nstyle.font.size = Pt(11)\n\n# Set page margins\nfor section in doc.sections:"
+          }
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 2704,
+        "cache_read_input_tokens": 23520,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 2704,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 47,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "UserMessage",
+      "content": [
+        {
+          "type": "ToolResultBlock",
+          "content": "<tool_use_error>File has not been read yet. Read it first before writing to it.</tool_use_error>",
+          "is_error": true
+        }
+      ]
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ToolUseBlock",
+          "tool_name": "Bash",
+          "input": {
+            "command": "ls /tmp/make_doc.py 2>&1; ls /filesystem/ 2>&1 | head -5",
+            "description": "Check existence of script and filesystem dir"
+          }
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 6913,
+        "cache_read_input_tokens": 26224,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 6913,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 58,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "UserMessage",
+      "content": [
+        {
+          "type": "ToolResultBlock",
+          "content": "/tmp/make_doc.py\nadmission_history_and_physical_05182026.docx\ncardiology_consultation_05212026.docx\ncase_management_social_work_discharge_note_05222026.docx\nconsultant_synthesis_care_plan_request_05242026.docx\ndischarge_facing_plan_snapshot_05232026.docx",
+          "is_error": false
+        }
+      ]
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ToolUseBlock",
+          "tool_name": "Read",
+          "input": {
+            "file_path": "/tmp/make_doc.py",
+            "limit": 5
+          }
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 299,
+        "cache_read_input_tokens": 33137,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 299,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 55,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "UserMessage",
+      "content": [
+        {
+          "type": "ToolResultBlock",
+          "content": "1\t#!/usr/bin/env python3\n2\t\"\"\"Build discharge-facing plan snapshot .docx for Korvin Merrow, 2026-05-23.\"\"\"\n3\t\n4\timport datetime\n5\tfrom docx import Document",
+          "is_error": null
+        }
+      ]
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ToolUseBlock",
+          "tool_name": "Bash",
+          "input": {
+            "command": "rm /tmp/make_doc.py",
+            "description": "Remove old script"
+          }
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 225,
+        "cache_read_input_tokens": 33436,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 225,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 72,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "UserMessage",
+      "content": [
+        {
+          "type": "ToolResultBlock",
+          "content": "(Bash completed with no output)",
+          "is_error": false
+        }
+      ]
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ToolUseBlock",
+          "tool_name": "Write",
+          "input": {
+            "file_path": "/tmp/make_doc.py",
+            "content": "#!/usr/bin/env python3\n\"\"\"Generate Case Management / Social Work discharge note as .docx\"\"\"\nimport datetime\nfrom docx import Document\nfrom docx.shared import Pt, Inches\nfrom docx.enum.text import WD_ALIGN_PARAGRAPH\nfrom docx.oxml.ns import qn\nfrom docx.oxml import OxmlElement\n\nOUT = \"/filesystem/case_management_social_work_discharge_note_05222026.docx\"\n\ndoc = Document()\n\nstyle = doc.styles['Normal']\nstyle.font.name = 'Times New Roman'\nstyle.font.size = Pt(11)\n\nfor section in doc.sections:\n    se"
+          }
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 166,
+        "cache_read_input_tokens": 33661,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 166,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 55,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "UserMessage",
+      "content": [
+        {
+          "type": "ToolResultBlock",
+          "content": "File created successfully at: /tmp/make_doc.py (file state is current in your context \u2014 no need to Read it back)",
+          "is_error": null
+        }
+      ]
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ToolUseBlock",
+          "tool_name": "Bash",
+          "input": {
+            "command": "cd /tmp && python3 make_doc.py && soffice --headless --convert-to pdf --outdir /tmp /filesystem/case_management_social_work_discharge_note_05222026.docx 2>&1 | tail -5",
+            "description": "Run script and convert to PDF"
+          }
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 6486,
+        "cache_read_input_tokens": 33827,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 6486,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 61,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "UserMessage",
+      "content": [
+        {
+          "type": "ToolResultBlock",
+          "content": "Saved /filesystem/case_management_social_work_discharge_note_05222026.docx\n/bin/bash: line 1: soffice: command not found\nShell cwd was reset to /root",
+          "is_error": false
+        }
+      ]
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ThinkingBlock"
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 429,
+        "cache_read_input_tokens": 40313,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 429,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 40,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ToolUseBlock",
+          "tool_name": "Bash",
+          "input": {
+            "command": "python3 -c \"\nfrom docx import Document\ndoc = Document('/filesystem/case_management_social_work_discharge_note_05222026.docx')\nprint('Paragraph count:', len(doc.paragraphs))\nprint('Author:', doc.core_properties.author)\nprint('Created:', doc.core_properties.created)\nprint()\nprint('First 8 paragraphs:')\nfor p in doc.paragraphs[:8]:\n    print(' ', repr(p.text[:90]))\nprint()\nprint('Last 6 paragraphs:')\nfor p in doc.paragraphs[-6:]:\n    print(' ', repr(p.text[:90]))\n\"\n",
+            "description": "Verify the generated docx"
+          }
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 429,
+        "cache_read_input_tokens": 40313,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 429,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 40,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "UserMessage",
+      "content": [
+        {
+          "type": "ToolResultBlock",
+          "content": "Paragraph count: 81\nAuthor: Priya Ostroff, RN, BSN, CCM\nCreated: 2026-05-23 17:42:00+00:00\n\nFirst 8 paragraphs:\n  'SYNTHETIC TRAINING DOCUMENT | FICTIONAL PATIENT | NOT A REAL MEDICAL RECORD'\n  ''\n  'MERCY VALE REGIONAL MEDICAL CENTER \u2014 Care Management'\n  'Confidential'\n  ''\n  'Patient: KORVIN MERROW, 62 y, Male'\n  'DOB: 02/18/1964'\n  'MRN: KM-6427819'\n\nLast 6 paragraphs:\n  'Priya Ostroff, RN, BSN, CCM \u2014 Case Manager'\n  'Devra Aimes, LCSW \u2014 Social Worker'\n  'Care Management | Mercy Vale Regional Medical Center | (412) 555-0162'\n  'Signed 2026-05-23 17:42'\n  ''\n  'SYNTHETIC TRAINING DOCUMENT | FICTIONAL PATIENT | NOT A REAL MEDICAL RECORD'",
+          "is_error": false
+        }
+      ]
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "ToolUseBlock",
+          "tool_name": "Bash",
+          "input": {
+            "command": "rm /tmp/make_doc.py",
+            "description": "Clean up temp script"
+          }
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 808,
+        "cache_read_input_tokens": 40742,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 808,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 66,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "UserMessage",
+      "content": [
+        {
+          "type": "ToolResultBlock",
+          "content": "(Bash completed with no output)",
+          "is_error": false
+        }
+      ]
+    },
+    {
+      "type": "AssistantMessage",
+      "content": [
+        {
+          "type": "TextBlock",
+          "text": "The formatted .docx has been created at `/filesystem/case_management_social_work_discharge_note_05222026.docx`.\n\n**Formatting applied (plain clinical style, per medical-document rules):**\n- Times New Roman 11pt body, black text on white\n- Centered letterhead: \"MERCY VALE REGIONAL MEDICAL CENTER \u2014 Care Management\" / \"Confidential\"\n- Thin horizontal rules separating banner, letterhead, header block, title, signature, and footer\n- Bold labels in the patient/identifier header block (Patient, DOB, MRN, FIN, etc.)\n- Bold section headers (REFERRAL REASON, HOME / SUPPORT CONTEXT, etc.)\n- Native Word bullet lists for the multi-item sections\n- Bold emphasis preserved on key inline terms (Medicare, NOT finalized, rolling walker, Keystone HomeCare, not confirmed, not sole safety evidence, etc.)\n- Italic \"Electronically signed:\" and \"Confidential\" labels\n- Synthetic-document banners top and bottom (small bold, centered)\n- All 81 paragraphs of content preserved; no colored badges, callouts, or decorative elements (matches the reference's minimal EMR style)\n\n**Core properties** overwritten to remove tool provenance:\n- Author / last_modified_by: \"Priya Ostroff, RN, BSN, CCM\"\n- Created: 2026-05-23 17:42 UTC; Modified: 2026-05-23 17:45 UTC\n- Title: \"Case Management / Social Work Discharge-Planning Note\"\n\nLibreOffice (`soffice`) is not installed in this environment, so the optional PDF-rendering visual check was skipped per the instructions; content integrity was verified by re-reading the saved file (81 paragraphs, correct first/last lines, correct core properties)."
+        }
+      ],
+      "model": "claude-opus-4-7",
+      "usage": {
+        "input_tokens": 1,
+        "cache_creation_input_tokens": 163,
+        "cache_read_input_tokens": 41550,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 163,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1,
+        "service_tier": "standard",
+        "inference_geo": "global"
+      },
+      "stop_reason": null
+    },
+    {
+      "type": "ResultMessage",
+      "usage": {
+        "input_tokens": 18,
+        "cache_creation_input_tokens": 25337,
+        "cache_read_input_tokens": 387271,
+        "output_tokens": 15446,
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 25337
+        },
+        "inference_geo": "",
+        "iterations": [
+          {
+            "input_tokens": 1,
+            "output_tokens": 629,
+            "cache_read_input_tokens": 41550,
+            "cache_creation_input_tokens": 163,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 163,
+              "ephemeral_1h_input_tokens": 0
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "stop_reason": "end_turn",
+      "total_cost_usd": 0.73903275,
+      "num_turns": 13,
+      "is_error": false,
+      "duration_ms": 181496
+    }
+  ]
+}

@@ -1,0 +1,3193 @@
+# Physician Decision Log 02
+
+Date: 2026-05-31
+
+Purpose: durable record that Clinical Story Skeleton v1 is locked after physician review and Codex audit.
+
+Status: Clinical Story Skeleton v1 RATIFIED.
+
+Review artifact: `worlds/korvin-merrow/world-spec-prep/reviews/clinical-story-skeleton-review.md`
+
+Overall recommendation: GO to Identity Package and Governance Package preparation. World Spec drafting remains blocked until Alexander explicitly authorizes drafting.
+
+Ratification artifact: `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-skeleton-ratification.md`
+
+Identity Package v1 artifact: `worlds/korvin-merrow/world-spec-prep/locked/identity-package-v1.md`
+
+Identity Package review addendum: `worlds/korvin-merrow/world-spec-prep/reviews/identity-package-review-addendum.md`
+
+Governance Package v1 candidate: `worlds/korvin-merrow/world-spec-prep/locked/governance-package-v1.md`
+
+Governance Package clarification: `worlds/korvin-merrow/world-spec-prep/reviews/governance-package-clarification.md`
+
+Governance Package ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/governance-package-ratification.md`
+
+Key Milestones Calendar Skeleton v1: `worlds/korvin-merrow/world-spec-prep/locked/key-milestones-calendar-skeleton-v1.md`
+
+Key Milestones Calendar ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/key-milestones-calendar-ratification.md`
+
+Baseline Anchor Package v1: `worlds/korvin-merrow/world-spec-prep/locked/baseline-anchor-package-v1.md`
+
+Baseline Anchor Package ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/baseline-anchor-ratification.md`
+
+Clinical Story Timeline Package v1: `worlds/korvin-merrow/world-spec-prep/locked/clinical-story-timeline-package-v1.md`
+
+Clinical Story Timeline Package ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-timeline-ratification.md`
+
+Task Architecture Package v1: `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md`
+
+Task Architecture Package ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md`
+
+## Locked Clinical Story Skeleton v1
+
+Patient:
+
+- Korvin Merrow.
+- 62-year-old male.
+- World Type: Typical Clinical World.
+
+Baseline:
+
+- Lives with family.
+- Independent but slowed by chronic illness.
+- Occasional cane use.
+- Mild age-related forgetfulness only.
+- Chronic diseases generally stable before current decline.
+
+PMR / Prednisone History:
+
+- Several-year PMR history.
+- Chronic prednisone exposure.
+- Multiple prior flares and taper attempts.
+- Recent taper initiated because symptoms appeared controlled.
+- Prednisone history contains reconstructable source-of-truth inconsistencies across documentation, medication history, family understanding, and patient recollection.
+
+Three-Week Decline:
+
+- Reduced stamina.
+- Reduced activity.
+- Poor appetite.
+- Reduced fluid intake.
+- Increasing weakness.
+- Increasing family dependence.
+- Possible urinary symptoms.
+- Progressive unsteadiness.
+- Progressive cognitive slowing.
+
+Escalation:
+
+- Medication-management mistakes.
+- Increased dependence.
+- Lightheadedness.
+- Near-fall event.
+- Family recognizes meaningful deviation from baseline and seeks care.
+
+ED Presentation:
+
+- Suspected urinary-source infection.
+- Dehydration.
+- AKI risk.
+- Altered baseline mental status.
+- Functional decline.
+- Sepsis-oriented management is clinically reasonable.
+- Infection is a contributor, not the entire explanation.
+
+Hospital Course:
+
+- HD1: admission and stabilization.
+- HD2: partial improvement and consultant involvement begins.
+- HD3: PT/OT identify functional concerns.
+- HD4: consultant tensions emerge and steroid-history inconsistencies are recognized.
+- HD5: medical improvement continues and disposition questions become dominant.
+- HD6: patient appears medically improved but discharge remains debatable.
+
+Discharge State:
+
+- Infection improved.
+- AKI improving.
+- Hemodynamics stable.
+- Mental status improved.
+- Oral intake improved.
+
+Unresolved:
+
+- Functional reserve uncertain.
+- Medication restart strategy not fully settled.
+- Steroid interpretation imperfect.
+- Family concern persists.
+- Disposition risk remains meaningful.
+
+Core theme:
+
+- Medically improving.
+- Operationally dangerous.
+
+Primary failure target:
+
+- Disposition safety.
+- Functional decline recognition.
+- Discharge-readiness reasoning.
+
+Near-fall framework:
+
+- Multi-factorial.
+- Not attributable to a single cause.
+- Contributors include poor intake, volume depletion, medication effects, neuropathy, deconditioning, infection physiology, and steroid-related physiology.
+
+## Carry-Forward Requirements
+
+- Do not convert this skeleton into final World Spec prose until Alexander explicitly authorizes World Spec drafting.
+- Do not create a file inventory from this skeleton yet.
+- Use the skeleton to support Identity Package and Governance Package decisions.
+- Preserve steroid physiology as important but not dominant.
+- Preserve infection as real/reasonable initially but not the entire explanation.
+- Preserve discharge safety as the primary failure target.
+
+## Ratified Governance Guardrails
+
+### Friction Correction
+
+Locked wording: Endocrinology vs Primary Team.
+
+Do not use: Endocrinology vs Documentation.
+
+Rationale:
+
+- Documentation is evidence.
+- Documentation is not a friction participant.
+- The steroid-record discrepancy remains a trap.
+- The friction remains a human-to-human disagreement about steroid risk interpretation and management.
+
+### Prednisone Source-of-Truth Hierarchy
+
+Locked hierarchy:
+
+1. Rheumatology attending recommendation.
+2. Verified medication reconciliation.
+3. Pharmacy / refill history.
+4. Family report.
+5. Patient recollection.
+
+Purpose:
+
+- Resolve source-of-truth ambiguity before World Spec construction.
+- Establish authority ordering for steroid timeline interpretation.
+- Keep the prednisone discrepancy as a reconstructable trap rather than an arbitrary contradiction.
+
+### Family vs Team Friction Balance
+
+Both positions are defensible.
+
+Family position:
+
+- Not back to baseline.
+- Functional concerns remain.
+- Safety concerns remain.
+
+Primary team position:
+
+- Infection improved.
+- AKI improving.
+- Mental status improved.
+- Oral intake improving.
+- Follow-up available.
+- Discharge is clinically defensible.
+
+Purpose:
+
+- Prevent the friction from collapsing into a one-sided disposition decision.
+- Preserve realistic discharge-readiness judgment.
+
+### Near-Fall Guardrail
+
+The near-fall event is intentionally multi-factorial.
+
+No single contributor is intended to explain the event.
+
+Potential contributors include:
+
+- Poor intake.
+- Volume depletion.
+- Medication effects.
+- Neuropathy.
+- Deconditioning.
+- Infection physiology.
+- Steroid-related physiology.
+
+Purpose:
+
+- Preserve the disposition-safety world design.
+- Prevent reveal-drift toward a single-cause explanation.
+
+## Locked Identity Package v1
+
+Status: LOCKED.
+
+| Field | Locked value |
+| --- | --- |
+| Name | Korvin Merrow |
+| DOB | 1964-02-18 |
+| Age | 62 |
+| MRN | KM-6427819 |
+| Height | 178 cm (5'10") |
+| Weight | 97 kg (214 lb) |
+| BMI | 30.6 |
+| Allergy | Lisinopril (cough) |
+| Code Status | Full Code |
+
+Consistency checks:
+
+- Age is consistent with DOB for a 2026 encounter after 2026-02-18.
+- BMI is consistent with 97 kg and 178 cm.
+- Identity details do not conflict with the approved Brainstorm.
+- Identity details do not conflict with the ratified Clinical Story Skeleton.
+- Later calendar skeleton must preserve age-62 consistency unless Alexander explicitly reopens DOB or age.
+
+Carry-forward implementation notes:
+
+- Lisinopril cough should be treated as an ACE-inhibitor intolerance during World Spec construction.
+- ARNI therapy should eventually have a coherent prior ACE-inhibitor transition history.
+- Baseline function, baseline creatinine, dry weight, and similar baseline anchors should be explicitly placed during Patient Profile / Clinical History design.
+- These notes do not reopen Identity Package v1 and do not authorize Governance Package work or World Spec drafting.
+
+## Governance Package v1 Candidate
+
+Status: RATIFIED.
+
+Care team roster:
+
+- Primary Team: Hospitalist Service.
+- Consultants: Cardiology, Nephrology, Endocrinology.
+- Functional Team: Physical Therapy, Occupational Therapy.
+- Transition Team: Case Management, Social Work.
+- Stakeholders: Patient, Family/Caregiver, Primary Care Physician.
+
+Authority hierarchy:
+
+1. Attending Hospitalist.
+2. Consulting Attending Specialists.
+3. PT/OT Functional Assessments.
+4. Case Management / Social Work.
+5. Family Reports.
+6. Patient Recollection.
+
+Master source-of-truth hierarchy for clinical facts:
+
+1. Attending Documentation.
+2. Verified Medication Reconciliation.
+3. Pharmacy History.
+4. Consultant Documentation.
+5. Primary Care Documentation.
+6. Family Report.
+7. Patient Recollection.
+
+Preserve the previously ratified prednisone hierarchy:
+
+1. Rheumatology attending recommendation.
+2. Verified medication reconciliation.
+3. Pharmacy / refill history.
+4. Family report.
+5. Patient recollection.
+
+Confirmed conditions:
+
+- HFrEF.
+- CKD Stage 3.
+- Type 2 Diabetes.
+- CAD.
+- Hypertension.
+- Hyperlipidemia.
+- OSA.
+- Diabetic Neuropathy.
+- PMR.
+- Anemia of CKD.
+- Osteoporosis/Osteopenia.
+
+Presumed / active questions:
+
+- Current infection source.
+- Steroid contribution.
+- Adrenal suppression contribution.
+- Degree of dehydration.
+- Relative medication contribution.
+- Discharge readiness.
+
+Final friction table:
+
+- Cardiology vs Nephrology: medication restart timing.
+- Family vs Primary Team: discharge readiness.
+- Endocrinology vs Primary Team: steroid interpretation and risk.
+
+Administrative deliverable decision: YES. At least one future task should involve transition of care, discharge planning, care coordination, or follow-up planning.
+
+Workflow consolidation: use Acute Hospital Management as the single workflow umbrella, with subdomains of diagnosis, medication management, consultant synthesis, functional assessment, and disposition planning. Final task workflow lines must still use exact approved tracker names.
+
+Clarifications accepted before ratification review:
+
+- Authority hierarchy and source-of-truth hierarchy are distinct.
+- Authority Hierarchy is used for role-based governance, disposition interpretation, functional/discharge evidence, stakeholder input, and decision ownership.
+- Source-of-Truth Hierarchy is used for factual conflict resolution, especially medication history, outpatient records, consultant documentation, family reports, and patient recollection.
+- If both appear relevant, the World Spec must state which hierarchy governs the task or trap.
+- Authority hierarchy resolves factual/documentation conflicts; it does not resolve clinical recommendation disagreements.
+- Consultant disagreements must be reconciled through evidence synthesis, timing, trends, patient status, and discharge safety, not by automatically deferring to the highest-ranked authority.
+- Confirmed steroid-related osteoporosis/osteopenia reflects cumulative chronic steroid exposure but does not prove current symptoms are primarily caused by adrenal suppression.
+- Current adrenal/steroid contribution remains an active interpretive question.
+- AutoQC 2.107 workflow count and 2.108 administrative deliverable remain task-architecture watch items and are not resolved inside Governance Package v1.
+
+Ratification:
+
+- Claude closeout review determination: would ratify today, YES.
+- Claude final recommendation: GO.
+- Governance Package v1 Status: RATIFIED.
+- Physician Architecture Layer Status: COMPLETE.
+
+Completed Architecture Layers:
+
+- Brainstorm: APPROVED.
+- Temporal Architecture: LOCKED.
+- Clinical Story Skeleton: RATIFIED.
+- Identity Package: LOCKED.
+- Governance Package: RATIFIED.
+
+Active future watch items:
+
+- AutoQC 2.107 workflow-count resolution.
+- AutoQC 2.108 administrative-deliverable resolution.
+
+These are task-architecture concerns, not governance defects.
+
+## Key Milestones Calendar Skeleton v1
+
+Status: LOCKED.
+
+Purpose: canonical date framework for World Spec construction preparation.
+
+Calendar anchors:
+
+- Approximate decline begins: 04/27/2026.
+- Final pre-admission week begins: 05/11/2026.
+- Day before presentation: 05/17/2026.
+- Admission / HD1: 05/18/2026.
+- HD2: 05/19/2026.
+- HD3: 05/20/2026.
+- HD4: 05/21/2026.
+- HD5: 05/22/2026.
+- HD6: 05/23/2026.
+- World snapshot / world close: 05/23/2026 18:00.
+- Discharge anchor: 05/24/2026.
+- +7 day anchor: 05/31/2026.
+- +30 day anchor: 06/23/2026.
+
+Locked doctrine:
+
+- +7 and +30 anchors are measured from discharge anchor 05/24/2026.
+- They are not measured from HD6 world close.
+
+Boundary:
+
+- This is a date framework only.
+- It does not create final World Spec prose, task architecture, final file inventory, prompts, golden responses, grader guidance, or synthetic files.
+
+## Baseline Anchor Package v1
+
+Status: LOCKED.
+
+Purpose: define baseline comparator values and baseline function anchors for later World Spec construction after physician review.
+
+Locked anchors:
+
+- Baseline creatinine.
+- Baseline eGFR.
+- Baseline hemoglobin.
+- Baseline A1c.
+- Dry weight approximately 97 kg.
+- Baseline mobility.
+- Baseline cognition.
+- Baseline medication-management ability.
+- Baseline home support.
+
+Baseline functional status remains part of the approved baseline framework through mobility, cognition, medication-management ability, and home support.
+
+Physician sign-off:
+
+- Completed.
+- Dry weight approximately 97 kg: APPROVED.
+- Baseline anchor framework: APPROVED.
+
+Claude ratification review:
+
+- True defects: NONE.
+- Blockers: NONE.
+- Would lock today: YES.
+- Final recommendation: GO.
+
+Carry-forward note:
+
+- Baseline blood pressure may be considered as a future candidate anchor during construction.
+- Do not create a numeric baseline blood pressure value at this stage.
+
+Boundary:
+
+- These are baseline anchors, not admission labs or hospital-course trends.
+- This does not create file inventory, task architecture, World Spec prose, prompts, golden responses, grader guidance, templates, reference files, or synthetic files.
+
+## Clinical Story Timeline Package v1
+
+Status: LOCKED.
+
+Purpose: canonical story-evolution framework from pre-admission decline through HD1-HD6, discharge, +7, and +30 anchors.
+
+Ratification:
+
+- Cascade MCP Claude Review: Would lock today, YES. Status: LOCK READY. Final Recommendation: GO. True defects: none. Blockers: none.
+- Claude Code Review: Would lock today, YES. Status: LOCK READY. Final Recommendation: GO. True defects: none. Blockers: none.
+
+Completed construction-preparation chain:
+
+- Key Milestones Calendar Skeleton: LOCKED.
+- Baseline Anchor Package: LOCKED.
+- Clinical Story Timeline Package: LOCKED.
+
+Carry-forward file-construction note:
+
+- Trap #3 is buried functional/cognitive evidence; the issue is that important evidence exists but is easy to miss.
+- Trap #5 is a reassuring but incomplete discharge/source-hierarchy artifact; the issue is that a visible artifact appears sufficient if trusted alone.
+- This distinction is a future file-construction concern, not a timeline defect.
+
+Active future watch items:
+
+- Medication Expansion Package v1 is now locked; future watch item is medication reconciliation construction, not baseline medication expansion.
+- Comorbidity expansion to 12-15 conditions.
+- Named-provider roster.
+- Surgical-history documentation.
+- AutoQC 2.107 workflow consolidation.
+- AutoQC 2.108 administrative deliverable.
+- Trap #3 vs Trap #5 concrete distinction during file construction.
+
+Boundary:
+
+- This does not authorize World Spec drafting, labs, vitals, medication schedules, file inventory, task architecture, prompts, golden responses, grader guidance, templates, reference files, or synthetic documents.
+
+## Task Architecture Package v1
+
+Status: LOCKED.
+
+Purpose: formal task-architecture framework defining six task concepts across four exact approved catalog workflows before task drafting.
+
+Locked workflows:
+
+1. Discharge Medication Reconciliation.
+2. Hospital Discharge Summary Generation.
+3. Discharge Planning Documentation.
+4. Interdisciplinary Care Plan Development and Documentation.
+
+Physician decisions:
+
+- Target task count: 6.
+- Target workflow count: 4.
+- Administrative deliverable: Discharge Planning Documentation / Care Coordination.
+- TCM and readmission-risk reasoning remain embedded inside Discharge Planning Documentation rather than becoming standalone workflow categories.
+- Consultant synthesis remains distinct.
+- Coding, billing, and prior authorization are not preferred unless later required by source material.
+
+Completed construction-preparation chain:
+
+- Key Milestones Calendar Skeleton: LOCKED.
+- Baseline Anchor Package: LOCKED.
+- Clinical Story Timeline Package: LOCKED.
+- Task Architecture Package: LOCKED.
+
+Carry-forward watch items:
+
+- AutoQC 2.108 administrative-deliverable reviewer-risk contingency.
+- Differentiate three Discharge Planning Documentation task concepts later.
+- Medication Expansion Package v1 is now locked; future watch item is medication reconciliation construction, not baseline medication expansion.
+- Comorbidity expansion to 12-15 conditions.
+- Named-provider roster.
+- Surgical-history documentation.
+- Trap #3 vs Trap #5 concrete file distinction.
+- Exact task prompt / expected output / failure design still not created.
+
+Boundary:
+
+- This does not authorize task prompts, expected outputs, golden responses, grader guidance, file inventory, World Spec drafting, templates, reference files, or synthetic documents.
+
+## Medication Expansion Package v1
+
+Status: LOCKED.
+
+Purpose: baseline medication architecture for Korvin Merrow before admission medication lists, hospital-course medication changes, discharge medication lists, medication reconciliation outputs, file inventory, tasks, or World Spec drafting.
+
+Ratification:
+
+- Independent Review #1: LOCK READY / YES / GO.
+- Independent Review #2: LOCK READY / YES / GO.
+- No true defects identified.
+- No blockers identified.
+
+Accepted physician decisions:
+
+- Insulin lispro removed from baseline architecture.
+- Insulin lispro reserved for future inpatient-only candidate use.
+- Baseline medication count finalized at 20.
+- Nitroglycerin retained.
+- Polyethylene glycol retained.
+- Senna retained.
+- Cholecalciferol retained.
+
+Preserved architecture:
+
+- All other baseline medications preserved.
+- All medication categories preserved.
+- All trap architecture preserved.
+- All friction architecture preserved.
+- Baseline diabetes architecture remains aligned with locked baseline rationale: metformin plus basal insulin.
+- Future inpatient glycemic-management reasoning remains available for discharge and medication-reconciliation construction.
+
+Carry-forward watch items:
+
+- Future inpatient glycemic-management reasoning.
+- Future medication reconciliation construction.
+- Comorbidity Expansion Package v1 is now locked; future watch item is condition-to-file consistency during later file construction, not baseline condition expansion.
+- AutoQC 2.107 workflow-count discipline.
+- AutoQC 2.108 administrative-deliverable reviewer-risk contingency.
+
+Boundary:
+
+- This does not authorize medication doses, medication schedules, medication timelines, admission medication lists, discharge medication lists, medication reconciliation outputs, tasks, prompts, expected outputs, golden responses, grader guidance, file inventory, World Spec drafting, templates, reference files, or synthetic documents.
+
+## Comorbidity Expansion Package v1
+
+Status: LOCKED.
+
+Purpose: baseline chronic-condition architecture for Korvin Merrow before labs, vitals, hospital-course events, provider names, surgical history, file inventory, tasks, or World Spec drafting.
+
+Ratification:
+
+- Claude Code independent review: LOCK READY / YES / GO.
+- Cascade/Windsurf Claude independent review: LOCK READY / YES / GO.
+- Physician review: GO.
+- No blockers.
+- No clinical defects.
+- No new dominant disease arc.
+- No open clinical question answered.
+
+Accepted physician decisions:
+
+- Keep Class I obesity by locked BMI 30.6.
+- Keep chronic GERD / acid-suppression indication.
+- Keep chronic constipation tendency.
+- Final baseline comorbidity count finalized at 14.
+
+Clarification:
+
+- Medication Expansion Package v1 remains locked at 20 baseline medications.
+- Insulin lispro remains removed from baseline architecture and reserved for future inpatient-only logic.
+- Comorbidity Expansion Package v1 correctly references the 20-medication baseline architecture.
+
+Preserved architecture:
+
+- Mixed physiology preserved.
+- Trap architecture preserved.
+- Friction architecture preserved.
+- Medication architecture preserved.
+- No active clinical question is resolved by the comorbidity expansion.
+
+Carry-forward watch items:
+
+- Named-provider roster package.
+- Surgical-history package.
+- Daily hospital-course framework.
+- Future medication reconciliation construction.
+- File inventory architecture.
+- AutoQC 2.107 workflow-count discipline.
+- AutoQC 2.108 administrative-deliverable contingency.
+- Trap #3 vs Trap #5 concrete file distinction.
+
+Boundary:
+
+- This does not authorize labs, vitals, medication doses, medication schedules, hospital-course events, provider names, surgical history, tasks, prompts, expected outputs, golden responses, grader guidance, file inventory, World Spec drafting, templates, reference files, or synthetic documents.
+
+## Provider Roster Package v1
+
+Status: LOCKED.
+
+Purpose: provider/care-team and stakeholder architecture for Korvin Merrow before World Spec construction, file planning, note authorship, synthetic documents, task prompts, expected outputs, golden responses, or grader guidance.
+
+Ratification:
+
+- Claude Review: YES / LOCK READY / GO.
+- Claude Code Review: YES / LOCK READY / GO.
+- No true defects identified.
+- No blockers identified.
+- No hierarchy conflicts identified.
+- No friction collapse identified.
+- No trap degradation identified.
+- No governance incompatibilities identified.
+
+Accepted physician decisions:
+
+- Shared Merrow surname is intentional.
+- Korvin Merrow and Mara Merrow may share the Merrow surname.
+- Resident remains role-based.
+- Pharmacy remains role-based.
+- No additional provider naming is authorized.
+
+Approved named high-authority roles:
+
+- Attending hospitalist: Dr. Elian Vossmere.
+- Cardiology attending: Dr. Maris Caldrane.
+- Nephrology attending: Dr. Iven Solthar.
+- Endocrinology attending: Dr. Nerea Veylorn.
+- Primary care physician: Dr. Talia Quenor.
+- Outpatient rheumatology attending: Dr. Soren Halvek.
+- Family/caregiver stakeholder: Mara Merrow.
+
+Approved role-based contributors:
+
+- Hospitalist resident / covering clinician.
+- Bedside nursing team.
+- Physical Therapy.
+- Occupational Therapy.
+- Case Management.
+- Social Work.
+- Pharmacy / medication reconciliation pharmacist.
+
+Compatibility confirmed:
+
+- Authority hierarchy compatibility confirmed.
+- Master source-of-truth compatibility confirmed.
+- Prednisone hierarchy compatibility confirmed.
+- Friction architecture preserved.
+- Trap architecture preserved.
+- Governance compatibility confirmed.
+
+Carry-forward watch items:
+
+- Named-provider roster must not expand without Alexander approval.
+- Resident remains role-based unless future construction explicitly requires a named recurring covering clinician.
+- Pharmacy remains role-based unless future medication-reconciliation construction explicitly requires a named recurring pharmacist.
+- Surgical-history package.
+- Daily hospital-course framework.
+- Future medication reconciliation construction.
+- File inventory architecture.
+- Source-of-truth and document-provenance traceability.
+- AutoQC 2.107 workflow-count discipline.
+- AutoQC 2.108 administrative-deliverable contingency.
+- Trap #3 vs Trap #5 concrete file distinction.
+
+Boundary:
+
+- This does not authorize clinical notes, provider-authored documents, file inventory, task prompts, expected outputs, golden responses, grader guidance, medication schedules, hospital-course events, labs, vitals, World Spec drafting, templates, reference files, or synthetic documents.
+
+## Surgical History Package v1
+
+Status: LOCKED.
+
+Artifact: `worlds/korvin-merrow/world-spec-prep/locked/surgical-history-package-v1.md`
+
+Ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/surgical-history-ratification.md`
+
+Purpose:
+
+- Define pre-world surgical/procedural history architecture before Daily Hospital Course Framework, World Spec construction, file inventory planning, synthetic documents, task prompts, expected outputs, goldens, or grader guidance.
+
+Confirmed surgical/procedural anchors:
+
+- Remote percutaneous coronary intervention with coronary stent placement.
+- Remote diagnostic sleep study confirming obstructive sleep apnea.
+
+Excluded / noise-controlled procedures:
+
+- ICD / CRT / pacemaker.
+- Coronary artery bypass grafting.
+- Dialysis access creation or kidney procedure.
+- Major orthopedic fracture repair or joint replacement.
+- Limb amputation or major diabetic foot surgery.
+- Temporal artery biopsy or rheumatologic diagnostic procedure.
+- Screening colonoscopy for v1 purposes.
+
+Guardrails:
+
+- Surgical/procedural history should remain background realism and provenance support.
+- It should not create a new dominant disease arc.
+- It should not answer open clinical questions.
+- It should not collapse mixed physiology.
+- It should not weaken Trap #1, Trap #2, Trap #3, or Trap #5.
+- It should not create operative reports, procedure notes, hospital-course events, labs, vitals, file inventory, task prompts, expected outputs, goldens, grader guidance, synthetic files, World Spec prose, templates, or reference files.
+
+Carry-forward watch items:
+
+- Keep PCI remote so aspirin-only baseline remains consistent.
+- Decide procedural provenance during file inventory.
+- Daily Hospital Course Framework v1 is locked.
+- File Inventory Architecture v1 is locked; final table construction remains deferred.
+- World Spec construction is authorized, but downstream artifacts remain unstarted until specifically authorized.
+- Trap #3 vs Trap #5 concrete file distinction remains deferred.
+- AutoQC 2.107 workflow-count discipline remains preserved.
+- AutoQC 2.108 administrative-deliverable contingency remains preserved.
+
+## Daily Hospital Course Framework v1
+
+Status: LOCKED.
+
+Artifact: `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md`
+
+Ratification: `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md`
+
+Purpose:
+
+- Define canonical HD1-HD6 daily evolution before World Spec construction, file inventory architecture, synthetic file construction, task implementation, prompt construction, expected outputs, golden responses, or grader guidance.
+
+Locked framework scope:
+
+- HD1-HD6 primary clinical state.
+- What changed since prior day.
+- What improved.
+- What remains concerning.
+- Active frictions.
+- Active traps.
+- Relevant provider groups.
+- Disposition readiness status.
+- Improvement trajectory.
+- Friction activation timeline.
+- Trap activation timeline.
+- Provider involvement timeline.
+- Disposition-safety framework.
+
+Guardrails:
+
+- This is a major bridge artifact, not a small package.
+- Preserve mixed physiology.
+- Preserve no hidden single answer.
+- Preserve no reveal-drift.
+- Preserve improving but not safely solved.
+- Preserve medically improving but operationally dangerous discharge logic.
+- Preserve both sides of each friction as defensible.
+- Preserve Trap #3 as buried functional/cognitive evidence and Trap #5 as visible but incomplete discharge/source-hierarchy artifact.
+
+Boundary:
+
+- This does not authorize labs, lab trends, vitals, medication doses, medication schedules, medication orders, clinical notes, consultant notes, discharge summaries, operative reports, procedure notes, file inventory, tasks, prompts, expected outputs, goldens, grader guidance, synthetic files, World Spec prose, templates, or reference files.
+
+Ratification findings:
+
+- Daily progression realism verified.
+- Timeline consistency verified.
+- Friction architecture verified.
+- Trap architecture verified.
+- Provider involvement timeline verified.
+- Disposition-safety architecture verified.
+- Future workflow compatibility verified.
+- Preparation-layer completion verified.
+
+Preparation Layer:
+
+- Status: COMPLETE.
+
+World Spec Construction:
+
+- Status: AUTHORIZED.
+- Final file inventory table rows, synthetic files, tasks, prompts, expected outputs, goldens, grader guidance, notes, labs, vitals, and hospital-course documentation have not started.
+
+## World Spec Skeleton v1
+
+Status: LOCKED.
+
+Artifact: `worlds/korvin-merrow/world-spec-construction/locked/world-spec-skeleton-v1.md`
+
+Ratification: `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-skeleton-ratification.md`
+
+Review outcomes:
+
+- Windsurf Claude Review: YES / LOCK READY / GO.
+- Claude Code Review: YES / LOCK READY / GO.
+- No true defects.
+- No blockers.
+- No orphaned locked packages.
+- No template conflicts.
+- No hierarchy conflicts.
+- No timeline conflicts.
+- No friction or trap collapse.
+- No premature file inventory, task construction, prompt, golden, or grader creation.
+
+Watch items:
+
+- Future World File Plan construction must follow AutoQC v6.3 requirements, including the 8-column file-plan structure.
+- Transcript packaging remains a future submission-layer activity.
+- Administrative-deliverable watch item (AutoQC 2.108) remains preserved as a future-construction consideration.
+
+World Spec Skeleton Phase:
+
+- Status: COMPLETE.
+
+World Spec Construction:
+
+- Status: COMPLETE.
+
+## World Spec v1
+
+Status: LOCKED.
+
+Artifact: `worlds/korvin-merrow/world-spec-construction/locked/world-spec-v1.md`
+
+Ratification: `worlds/korvin-merrow/world-spec-construction/ratifications/world-spec-v1-ratification.md`
+
+Review outcome:
+
+- Windsurf Claude Review: YES / LOCK READY / GO.
+- Claude Code Review: YES / LOCK READY / GO.
+- No true defects identified.
+- No blockers identified.
+- Exact fidelity verified against all locked source packages.
+- No timeline, hierarchy, medication, comorbidity, or provider drift.
+- No friction collapse, trap collapse, reveal drift, or hidden-answer drift.
+- Mixed physiology preserved.
+- Task architecture support preserved.
+- Studio alignment preserved.
+
+Preserved future-construction watch items:
+
+- Section 3 World File Plan must use AutoQC v6.3 8-column structure.
+- Trap #3 vs Trap #5 distinction remains protected.
+- Insulin lispro remains inpatient-only candidate logic.
+- AutoQC 2.108 administrative deliverable watch item remains preserved.
+- Transcript packaging remains future submission-layer activity.
+- File Inventory Architecture v1 locked; File Inventory v1 Table Construction not yet started.
+- Synthetic world files not yet started.
+- Task Specifications not yet started.
+- Task prompts not yet started.
+- Expected outputs not yet started.
+- Goldens not yet started.
+- Grader guidance not yet started.
+- AutoQC not yet started.
+- DOCX population not yet started.
+- Studio submission packaging not yet started.
+
+## File Inventory Architecture v1
+
+Status: LOCKED.
+
+Artifact: `worlds/korvin-merrow/file-inventory/locked/file-inventory-architecture-v1.md`
+
+Ratification: `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-architecture-ratification.md`
+
+Review outcome:
+
+- Windsurf Claude Review: YES / LOCK READY / GO.
+- Claude Code Review: YES / LOCK READY / GO.
+- No true defects identified.
+- No blockers identified.
+- File ecosystem is faithful to locked World Spec v1.
+- All four locked workflows have file support.
+- All five traps have planned document substrates.
+- Trap #3 vs Trap #5 distinction is preserved.
+- All three frictions have two-sided file support.
+- Authority hierarchy, master source-of-truth hierarchy, and prednisone-specific hierarchy are covered.
+- Temporal boundary is preserved: no world-level file after 05/23/2026 18:00.
+
+Accepted watch items:
+
+- Future File Inventory v1 table must use AutoQC v6.3 8-column structure.
+- Source/Tool separation must be preserved.
+- Fact-to-file traceability must be enforced.
+- Essential/supplementary ratio should be checked during table construction.
+- Trap #3 and Trap #5 must be instantiated as distinct source patterns.
+- Objective trend and MAR values remain future synthetic-file construction.
+- Social Work and remote procedural provenance remain final-table judgment calls.
+- Transcript packaging remains future submission-layer work.
+
+Phase 3 File Inventory Architecture:
+
+- Status: COMPLETE.
+
+Next eligible phase:
+
+- File Inventory v1 Table Construction, pending explicit Alexander authorization.
+
+Boundary:
+
+- This does not authorize final Section 3 file rows, filenames, file IDs, synthetic files, clinical notes, labs, vitals, medication lists, discharge summaries, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, or submission materials.
+
+## File Inventory v1
+
+Status: LOCKED.
+
+Artifact: `worlds/korvin-merrow/file-inventory/locked/file-inventory-v1.md`
+
+Ratification: `worlds/korvin-merrow/file-inventory/ratifications/file-inventory-v1-ratification.md`
+
+Review outcome:
+
+- Claude Code Review: YES / LOCK READY / GO.
+- Windsurf Claude Review: YES / LOCK READY / GO.
+- No true defects identified.
+- No blockers identified.
+- World Spec fidelity verified.
+- File Inventory Architecture fidelity verified.
+- All 33 planned files validated.
+- ID integrity, count integrity, temporal integrity, workflow coverage, trap coverage, friction coverage, source-of-truth coverage, and AutoQC v6.3 structure verified.
+- Source vs Tool separation preserved.
+- Trap #3 vs Trap #5 distinction preserved.
+- No answer-file risk identified.
+- No post-world leakage identified.
+
+Locked counts:
+
+- World-Level files: 22.
+- Task-Level files: 7.
+- Supplementary files: 4.
+- Total planned files: 33.
+
+Accepted carry-forward items:
+
+- Per-file Tool / Origin values remain future synthetic-file construction work.
+- Two-track filename convention remains future synthetic-file construction work.
+- FI-W12 trend representation remains future synthetic-file construction work.
+- FI-W13 MAR representation remains future synthetic-file construction work.
+- Trap remediation paths remain future grader-guidance work.
+- Transcript packaging remains future submission-layer work.
+
+File Inventory Planning:
+
+- Status: COMPLETE.
+
+Next eligible phase:
+
+- Synthetic World-Level File Construction, pending explicit Alexander authorization.
+
+Boundary:
+
+- This does not authorize synthetic files, file contents, clinical notes, progress notes, discharge summaries, labs, vitals, medication lists, consultant recommendations, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission materials, or RL Studio activity.
+
+## Synthetic World-Level File Construction Plan v1
+
+Status: LOCKED.
+
+Artifact: `worlds/korvin-merrow/synthetic-files/locked/synthetic-world-file-construction-plan-v1.md`
+
+Ratification: `worlds/korvin-merrow/synthetic-files/ratifications/synthetic-world-file-construction-plan-v1-ratification.md`
+
+Review outcome:
+
+- Claude Code Review: YES / LOCK READY / GO.
+- Windsurf Claude Review: YES / LOCK READY / GO.
+- No true defects identified.
+- No blockers identified.
+- All 22 FI-W world-level rows accounted for.
+- No missing IDs, duplicated IDs, or invented IDs.
+- Dependency ordering and batch sequencing verified.
+- FI-W22 construction-last strategy endorsed.
+- Trap preservation, friction preservation, source-of-truth preservation, temporal preservation, construction governance, anti-answer-file doctrine, and closed-world discipline verified.
+- Batch 1 construction readiness verified.
+
+Accepted carry-forward items:
+
+- Batch 3 and Batch 4 may remain sequential or run in parallel after Batch 2.
+- Cross-file consistency checkpoint remains future construction governance.
+- Per-file Tool / Origin assignment remains future file-construction work.
+- FI-W12 trend representation remains future construction work.
+- FI-W13 MAR representation remains future construction work.
+- Synthetic file content remains future construction work.
+
+Synthetic File Construction Governance:
+
+- Status: COMPLETE.
+
+Next eligible phase:
+
+- Batch 1 Synthetic World-Level File Construction, pending explicit Alexander authorization.
+
+Boundary:
+
+- This does not authorize synthetic files, filenames, chart notes, admission notes, consultant notes, nursing notes, therapy notes, discharge summaries, labs, vitals, medication lists, medication schedules, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, or RL Studio activity.
+
+## Batch 1 Synthetic World-Level File Construction
+
+Status: LOCKED.
+
+Locked folder: `worlds/korvin-merrow/synthetic-files/locked/batch-1/`
+
+Validation review: `worlds/korvin-merrow/synthetic-files/locked/batch-1/batch-1-validation-review.md`
+
+Ratification: `worlds/korvin-merrow/synthetic-files/ratifications/batch-1-ratification.md`
+
+Authorized files constructed:
+
+- FI-W01: ED triage / initial intake documentation.
+- FI-W02: ED provider assessment.
+- FI-W03: Admission history and physical.
+- FI-W04: Initial medication reconciliation note.
+- FI-W05: Pharmacy / refill-history report.
+- FI-W06: Outpatient rheumatology prednisone provenance.
+- FI-W07: Primary care outpatient baseline summary.
+
+Construction governance:
+
+- Used locked File Inventory v1 row purposes.
+- Preserved closed-world discipline.
+- Preserved locked timeline and HD1 / pre-admission provenance boundaries.
+- Preserved locked diagnoses, medication architecture, provider roster, source-of-truth hierarchies, and active frictions.
+- Preserved Trap #1 as a reconstructable prednisone source hierarchy across rheumatology, med rec, pharmacy history, family report, and patient recollection.
+- Preserved Trap #2 substrate through HF/AKI medication complexity without creating final medication recommendations.
+- No answer file created.
+
+Validation result:
+
+- FI-W01 through FI-W07 exist.
+- All files map to locked inventory rows.
+- No unauthorized FI-W IDs created.
+- No temporal leakage identified.
+- Prednisone hierarchy preserved.
+- Source-of-truth hierarchy preserved.
+- Frictions preserved.
+
+Review outcome:
+
+- Claude Code Review: YES / LOCK READY / GO.
+- Windsurf Claude Review: YES / LOCK READY / GO.
+- No true defects identified.
+- No blockers identified.
+- All 7 Batch 1 files validated against locked File Inventory rows.
+- Cross-file identity, provider, medication, comorbidity, surgical-history, and baseline-anchor consistency verified.
+- Insulin lispro exclusion preserved.
+- Prednisone hierarchy preserved.
+- Source-of-truth hierarchies preserved.
+- Temporal integrity preserved.
+- No post-world leakage.
+- No answer-file drift.
+- Trap and friction preservation verified.
+
+Accepted carry-forward items:
+
+- FI-W06 availability remains governed by HD4 timing during future construction.
+- Batch 2 must preserve prednisone uncertainty.
+- Batch 2 must preserve infection-vs-mixed-physiology uncertainty.
+- Batch 2 must preserve medication-restart uncertainty.
+- Batch 2 must preserve baseline-vs-admission-value separation.
+- Batch 2 must preserve all hierarchy ordering.
+
+Final status:
+
+- Batch 1 Synthetic World-Level File Construction: LOCKED.
+- FI-W01 through FI-W07: LOCKED.
+- Batch 1 Construction: COMPLETE.
+
+Next eligible phase:
+
+- Batch 2 Synthetic World-Level File Construction.
+
+Boundary:
+
+- FI-W14 or later, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
+
+## Batch 2 Synthetic World-Level File Construction
+
+Status: LOCKED.
+
+Locked folder: `worlds/korvin-merrow/synthetic-files/locked/batch-2/`
+
+Validation review: `worlds/korvin-merrow/synthetic-files/locked/batch-2/batch-2-validation-review.md`
+
+Ratification: `worlds/korvin-merrow/synthetic-files/ratifications/batch-2-ratification.md`
+
+Authorized files constructed:
+
+- FI-W08: HD1-HD2 hospitalist progress documentation.
+- FI-W09: HD3 hospitalist progress documentation.
+- FI-W10: HD4 hospitalist progress documentation.
+- FI-W11: HD5-HD6 hospitalist discharge-planning progress documentation.
+- FI-W12: objective renal / infection / hemodynamic trend summary source.
+- FI-W13: medication administration / inpatient medication action source.
+
+Construction governance:
+
+- Used locked File Inventory v1 row purposes.
+- Preserved closed-world discipline through 05/23/2026 at 18:00.
+- Preserved locked diagnoses, medication architecture, provider roster, source-of-truth hierarchies, and active frictions.
+- Preserved FI-W06 HD4 availability timing.
+- Preserved insulin lispro as inpatient-only medication action logic, not baseline medication architecture.
+- Preserved baseline-versus-admission-value separation.
+- Preserved Trap #1, strengthened Trap #2 substrate, and preserved Trap #3 versus Trap #5 distinction.
+- No answer file created.
+
+Validation result:
+
+- FI-W08 through FI-W13 exist.
+- All files map to locked inventory rows.
+- No unauthorized FI-W IDs created.
+- No temporal leakage identified.
+- No discharge outcome, +7 information, or +30 information created.
+- Source-of-truth hierarchy preserved.
+- Frictions preserved.
+- Batch 1 consistency preserved.
+
+Ratification review outcome:
+
+- Claude Code Review: YES / LOCK READY / GO.
+- Windsurf Claude Review: YES / LOCK READY / GO.
+- No true defects identified.
+- No blockers identified.
+- Hospital-course spine verified.
+- FI-W12 objective trend values verified as clinically coherent.
+- FI-W13 MAR/action source verified as non-final and non-discharge-facing.
+- FI-W06 HD4 availability constraint preserved.
+- Baseline-versus-admission-value distinction preserved.
+- Insulin lispro remains inpatient-only.
+- Baseline medication count remains 20.
+- Trap #1 preserved.
+- Trap #2 strengthened without over-resolution.
+- Trap #3 and Trap #5 distinction preserved.
+- Trap #4 preserved without sepsis reversal.
+- All three frictions remain two-sided.
+- No answer-file drift identified.
+- No post-world leakage identified.
+
+Accepted carry-forward items:
+
+- Batch 3 consultants must respond to the Batch 1-2 clinical spine.
+- Nephrology and Cardiology must remain defensible and time-sensitive.
+- Endocrinology must remain interpretive, not a hidden single-diagnosis reveal.
+- Prednisone hierarchy must preserve rheumatology as highest outpatient taper authority.
+- FI-W12 values must not be overused by later files as if they settle medication restart or disposition.
+- FI-W13 actions must not become a final discharge medication plan.
+
+Final status:
+
+- Batch 2 Synthetic World-Level File Construction: LOCKED.
+- FI-W08 through FI-W13: LOCKED.
+- Batch 2 Construction: COMPLETE.
+
+Next eligible phase:
+
+- Batch 3 Synthetic World-Level File Construction.
+
+Boundary:
+
+- Historical Batch 2 lock boundary: FI-W14 through FI-W22, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity were blocked at that time until explicitly authorized.
+- Historical note: this was the Batch 2 lock boundary at the time of that ratification. It is superseded for FI-W14 through FI-W16 by the Batch 3 ratification, for FI-W17 through FI-W21 by the Batch 4 construction record below, and for FI-W22 by the Batch 5 candidate construction record below.
+
+## Task-Design Physician-Perspective Guidance
+
+Status: FUTURE TASK-LAYER RULE.
+
+Source: Medicine Team Lead Slack clarification.
+
+Classification:
+
+- Not a source-of-truth hierarchy rule.
+- Not a Governance Package v1 revision.
+- Not a reason to redesign the world or reopen locked clinical architecture.
+
+Distinction:
+
+- Source-of-truth hierarchy answers: "When sources disagree, which evidence source is authoritative?"
+- Task-design guidance answers: "Who is the final deliverable written by or for?"
+
+Future task-design rule:
+
+- All future task prompts and deliverables must be framed from the physician perspective or physician voice.
+- Supporting sources may come from pharmacy, nursing, PT/OT, case management, social work, family, or healthcare administration.
+- The final deliverable must remain physician-authored, physician-reviewed, physician-supervised, or physician-communicated.
+
+Current workflow compatibility:
+
+- Discharge Medication Reconciliation: compatible.
+- Hospital Discharge Summary Generation: compatible.
+- Discharge Planning Documentation: compatible.
+- Interdisciplinary Care Plan Development and Documentation: compatible.
+
+Carry-forward instruction:
+
+- Apply this rule later during authorized task design, task prompts, expected outputs, goldens, and grader guidance.
+- Do not modify source-of-truth hierarchies, Governance Package v1, locked clinical architecture, or locked synthetic files because of this guidance.
+
+## Batch 3 Synthetic World-Level File Construction Ratification
+
+Status: LOCKED.
+
+Files locked:
+
+- FI-W14 Nephrology Consultation.
+- FI-W15 Cardiology Consultation.
+- FI-W16 Endocrinology Consultation.
+
+Canonical locked path:
+
+- `worlds/korvin-merrow/synthetic-files/locked/batch-3/`
+
+Ratification record:
+
+- `worlds/korvin-merrow/synthetic-files/ratifications/batch-3-ratification.md`
+
+Validation review:
+
+- `worlds/korvin-merrow/synthetic-files/locked/batch-3/batch-3-validation-review.md`
+
+Review outcome:
+
+- Claude Code Review: YES / LOCK READY / GO.
+- Windsurf Claude Review: YES / LOCK READY / GO.
+- No true defects identified.
+- No blockers identified.
+
+Accepted findings:
+
+- FI-W14 through FI-W16 validate against locked File Inventory rows.
+- Nephrology consultation is clinically defensible.
+- Cardiology consultation is clinically defensible.
+- Endocrinology consultation is clinically defensible.
+- Cardiology vs Nephrology remains a timing and sequencing friction.
+- Neither Cardiology nor Nephrology is obviously correct or careless.
+- Neither consultant becomes the final medication-restart authority.
+- Endocrinology remains interpretive.
+- Adrenal insufficiency is not proven.
+- Steroid risk remains meaningful but not dominant.
+- Prednisone hierarchy is preserved with Rheumatology as highest outpatient taper authority.
+- Consultant notes remain interpretation sources, not source-of-truth overrides.
+- Hospitalist-synthesizes-not-defers governance is preserved.
+- FI-W12 values are cited consistently.
+- FI-W13 MAR/action source is not converted into a final medication plan.
+- Insulin lispro remains inpatient-only.
+- No answer-file drift identified.
+- No post-world leakage identified.
+- Batch 1 and Batch 2 consistency preserved.
+
+Accepted carry-forward items:
+
+- Batch 4 must carry buried functional and cognitive evidence.
+- Batch 4 must preserve Trap #3 as buried-but-discoverable evidence.
+- Batch 4 must preserve the Trap #3 vs Trap #5 distinction.
+- FI-W20 family communication must not make discharge obviously unsafe by itself.
+- FI-W22 later must remain visible-but-incomplete and must not duplicate or resolve all consultant caveats.
+- Later files must not let Endocrinology replace Rheumatology as prednisone-history source of truth.
+- Later files must not let either consultant become the final medication authority.
+
+Final status:
+
+- Batch 3 Synthetic World-Level File Construction: LOCKED.
+- FI-W14 through FI-W16: LOCKED.
+- Batch 3 Construction: COMPLETE.
+
+Next eligible phase:
+
+- Batch 4 Synthetic World-Level File Construction.
+
+Boundary:
+
+- Historical Batch 3 lock boundary: FI-W17 through FI-W22, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity were blocked at that time until explicitly authorized.
+- Historical note: this was the Batch 3 lock boundary at the time of that ratification. It is superseded for FI-W17 through FI-W21 by the Batch 4 construction record below and for FI-W22 by the Batch 5 candidate construction record below.
+
+## Batch 4 Synthetic World-Level File Construction Record
+
+Status: LOCKED.
+
+Files locked:
+
+- FI-W17 Nursing Documentation.
+- FI-W18 Physical Therapy Documentation.
+- FI-W19 Occupational Therapy Documentation.
+- FI-W20 Family Communication Documentation.
+- FI-W21 Case Management / Social Work Documentation.
+
+Locked path:
+
+- `worlds/korvin-merrow/synthetic-files/locked/batch-4/`
+
+Validation review:
+
+- `worlds/korvin-merrow/synthetic-files/locked/batch-4/batch-4-validation-review.md`
+
+Ratification:
+
+- `worlds/korvin-merrow/synthetic-files/ratifications/batch-4-ratification.md`
+
+Construction findings:
+
+- FI-W17 through FI-W21 were created within the authorized Batch 4 scope.
+- Trap #3 is carried as buried functional/cognitive evidence distributed across nursing, PT, OT, family, and case management/social work.
+- Trap #3 vs Trap #5 remains distinct; Batch 4 does not create FI-W22 or a visible discharge-facing artifact.
+- Family vs Primary Team friction remains balanced and two-sided.
+- Family concerns are clinically meaningful but not independently dispositive.
+- Primary-team medical-improvement reasoning remains defensible.
+- Medication-restart uncertainty remains active.
+- Prednisone uncertainty and the prednisone source hierarchy remain active.
+- Insulin lispro remains inpatient-only.
+- Batch 1, Batch 2, and Batch 3 consistency is preserved.
+
+Accepted carry-forward items:
+
+- Batch 4 is locked and complete.
+- FI-W22 later must remain visible-but-incomplete.
+- FI-W22 must not duplicate or resolve all Batch 4 functional/cognitive evidence.
+- FI-W22 must not resolve final disposition, final medication restart, final prednisone taper, or all consultant caveats.
+- Later files must preserve family concerns as meaningful but not independently dispositive.
+
+Final status:
+
+- Batch 4 Synthetic World-Level File Construction: LOCKED.
+- FI-W17 through FI-W21: LOCKED.
+- Batch 4 Construction: COMPLETE.
+
+Next eligible phase:
+
+- Historical next eligible phase after Batch 4 lock: Batch 5 Candidate Review and ratification decision, now completed by Batch 5 ratification and lock.
+
+## FI-W20 Inventory Row Reconciliation Record
+
+Status:
+
+- RECORDED.
+
+Context:
+
+- Batch 4 governance reconciliation resolved the FI-W20 supported-tags question by expanding the locked File Inventory v1 FI-W20 row rather than reducing the constructed FI-W20 candidate file.
+
+Resolution:
+
+- Canonical resolution: expand the locked FI-W20 row to record secondary/collateral Trap #1 and Endocrinology vs Primary Team support through lower-authority family report.
+- Reconciliation record: `worlds/korvin-merrow/file-inventory/reviews/fi-w20-inventory-row-reconciliation.md`.
+
+Preserved boundaries:
+
+- FI-W20 content unchanged.
+- Batch 4 content unchanged.
+- Batch 1 through Batch 3 content unchanged.
+- Source-of-truth hierarchy unchanged.
+- Prednisone hierarchy unchanged: rheumatology attending recommendation remains highest outpatient prednisone authority, followed by verified medication reconciliation, pharmacy/refill history, family report, and patient recollection.
+- Batch 4 is locked by the Batch 4 ratification record.
+
+Historical next eligible phase after FI-W20 reconciliation:
+
+- Task-Level Context File Architecture / Construction, now superseded by Task-Level Context File Architecture v1 ratification and lock.
+
+Boundary:
+
+- FI-T01 through FI-T07, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
+
+## Batch 4 Synthetic World-Level File Construction Ratification Record
+
+Status:
+
+- LOCKED.
+
+Files locked:
+
+- FI-W17 through FI-W21.
+
+Ratification:
+
+- `worlds/korvin-merrow/synthetic-files/ratifications/batch-4-ratification.md`.
+
+Locked folder:
+
+- `worlds/korvin-merrow/synthetic-files/locked/batch-4/`.
+
+Validation review:
+
+- `worlds/korvin-merrow/synthetic-files/locked/batch-4/batch-4-validation-review.md`.
+
+Review outcome:
+
+- Claude Code Review: YES / LOCK READY / GO.
+- Windsurf Claude Review: YES / LOCK READY / GO.
+- FI-W20 governance reconciliation completed.
+- No remaining OPEN items.
+- No remaining BLOCKERs.
+
+Accepted carry-forward items:
+
+- FI-W22 must remain visible-but-incomplete.
+- FI-W22 must not duplicate the distributed Batch 4 substrate.
+- FI-W22 must not resolve final disposition, medication restart timing, or prednisone history.
+- FI-W22 must not collapse Trap #3 into Trap #5.
+- Family concerns must remain meaningful but not dispositive.
+- Consultant caveats must remain partially absent from FI-W22.
+- FI-W22 must preserve the distinction between visible evidence and complete evidence.
+
+Status record:
+
+- Batch 4 Synthetic World-Level File Construction: LOCKED.
+- FI-W17 through FI-W21: LOCKED.
+- Batch 4 Construction: COMPLETE.
+- FI-W20 reconciliation: COMPLETE.
+
+Historical next eligible phase after Batch 4 lock:
+
+- Task-Level Context File Architecture / Construction, now superseded by Task-Level Context File Architecture v1 ratification and lock.
+
+Boundary:
+
+- FI-T01 through FI-T07, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
+
+## Batch 5 Synthetic World-Level File Construction Ratification Record
+
+Status:
+
+- LOCKED.
+
+Files locked:
+
+- FI-W22 Discharge-Facing Plan Snapshot Before World Close.
+
+Locked path:
+
+- `worlds/korvin-merrow/synthetic-files/locked/batch-5/`
+
+Validation review:
+
+- `worlds/korvin-merrow/synthetic-files/locked/batch-5/batch-5-validation-review.md`
+
+Ratification:
+
+- `worlds/korvin-merrow/synthetic-files/ratifications/batch-5-ratification.md`
+
+Review outcome:
+
+- Claude Review: YES / LOCK READY / GO.
+- Independent Review: YES / LOCK READY / GO.
+- World Necessity Test: PASS.
+- Trap #5 Validation: PASS.
+- Trap #3 vs Trap #5 Separation: PASS.
+- No true defects identified.
+- No blockers identified.
+
+Construction findings:
+
+- FI-W22 was created within the authorized Batch 5 scope.
+- FI-W22 implements Trap #5 as a visible, reassuring, but incomplete discharge-facing artifact.
+- FI-W22 preserves the Trap #3 vs Trap #5 distinction by not duplicating the distributed Batch 4 functional/cognitive substrate.
+- FI-W22 preserves Cardiology vs Nephrology as a timing and sequencing friction without choosing the final medication-restart answer.
+- FI-W22 preserves Endocrinology vs Primary Team as an interpretive steroid-risk friction without proving adrenal insufficiency.
+- FI-W22 preserves Family vs Primary Team as a balanced discharge-readiness friction.
+- FI-W22 preserves the prednisone source hierarchy with rheumatology as highest outpatient taper authority.
+- FI-W22 contains no discharge outcome, post-world follow-up, final medication list, final prednisone taper, task prompt, golden, grader guidance, AutoQC response, DOCX artifact, or submission material.
+- FI-W01 through FI-W22 now exist and are locked.
+- All five traps remain operational.
+- All three frictions remain operational.
+- All source hierarchies remain operational.
+- World-Level Synthetic File Layer is complete.
+
+Carry-forward items:
+
+- Future task-level context file architecture / construction must preserve FI-W22 as useful, visible, and reassuring but insufficient if trusted alone.
+- Future task files must not let FI-W22 resolve final disposition, medication restart timing, prednisone history, consultant disagreement, family concern, functional support level, or service sufficiency.
+- Future task files must not turn FI-W22 into the source-of-truth answer.
+- Future task prompts, expected outputs, goldens, and grader guidance remain blocked until explicitly authorized and must preserve physician-perspective task-design guidance.
+
+Final status:
+
+- Batch 5 Synthetic World-Level File Construction: LOCKED.
+- FI-W22: LOCKED.
+- Batch 5 Construction: COMPLETE.
+- World-Level Synthetic File Layer: COMPLETE.
+- Completed World-Level Files: FI-W01 through FI-W22.
+
+Historical next eligible phase after Batch 5 lock:
+
+- Task-Level Context File Architecture / Construction, now superseded by Task-Level Context File Architecture v1 ratification and lock.
+
+## Task-Level Context File Architecture v1 Candidate Review Record
+
+Status:
+
+- HISTORICAL / SUPERSEDED BY LOCK.
+
+Artifact:
+
+- `worlds/korvin-merrow/task-layer-architecture/candidate-review/task-level-context-file-architecture-v1.md`
+
+Authorization:
+
+- Alexander authorized Task-Level Context File Architecture as architecture and boundary-setting only.
+
+Purpose:
+
+- Define future FI-T01 through FI-T07 structure, responsibilities, constraints, trap/friction coverage, workflow mapping, world-necessity safeguards, source-of-truth safeguards, boundary conditions, and construction roadmap before any FI-T files are created.
+
+Preserved boundaries:
+
+- World-Level Synthetic File Layer remains complete with FI-W01 through FI-W22 locked.
+- Task-Level Context File Architecture v1 does not create FI-T files, FI-S files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, RL Studio submission artifacts, or final task outputs.
+- Locked clinical artifacts unchanged.
+- Locked synthetic files unchanged.
+- FI-W22 remains visible but incomplete and must not become an answer file.
+- Trap #3 remains buried functional/cognitive evidence.
+- Trap #5 remains over-trust of a visible but incomplete discharge-facing source.
+- Master source-of-truth hierarchy unchanged.
+- Authority hierarchy unchanged.
+- Prednisone hierarchy unchanged.
+- Medication-restart uncertainty preserved.
+- Physician-perspective task-layer guidance preserved.
+
+Next eligible phase:
+
+- Historical next eligible phase after candidate creation: Task-Level Context File Architecture Review, now superseded by Task-Level Context File Architecture v1 ratification and lock.
+
+Boundary:
+
+- Historical boundary after architecture candidate creation: FI-T01 through FI-T07 construction, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remained blocked until explicitly authorized. Superseded by the later Task-Level Context File Construction authorization and candidate construction record below.
+
+Boundary:
+
+- FI-T01 through FI-T07, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
+
+## Task-Level Context File Architecture v1 Ratification Record
+
+Status:
+
+- LOCKED.
+
+Locked artifact:
+
+- `worlds/korvin-merrow/task-layer-architecture/locked/task-level-context-file-architecture-v1.md`
+
+Ratification:
+
+- `worlds/korvin-merrow/task-layer-architecture/ratifications/task-level-context-file-architecture-v1-ratification.md`
+
+Reconciliation:
+
+- `worlds/korvin-merrow/file-inventory/reviews/fi-t-inventory-task-layer-architecture-reconciliation.md`
+
+Review outcome:
+
+- Reviewer B: LOCK READY / GO.
+- Reviewer A recertification: LOCK READY / GO.
+- Reconciliation completed.
+- True defects: NONE.
+- Architecture approved for lock.
+
+Final status:
+
+- Task-Level Context File Architecture v1: LOCKED.
+- Task-Level Context File Architecture: COMPLETE.
+
+Preserved boundaries:
+
+- No FI-T files created.
+- No FI-S files created.
+- No task prompts created.
+- No expected outputs created.
+- No goldens created.
+- No grader guidance created.
+- No AutoQC responses created.
+- No DOCX artifacts created.
+- No RL Studio submission artifacts created.
+- Locked world-level synthetic files unchanged.
+- Master source-of-truth hierarchy unchanged.
+- Authority hierarchy unchanged.
+- Prednisone hierarchy unchanged.
+- Medication-restart uncertainty preserved.
+- Locked four-workflow architecture preserved.
+
+Next eligible phase:
+
+- Task-Level Context File Construction.
+
+Boundary:
+
+- FI-T01 through FI-T07, FI-S01 through FI-S04, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
+
+## Task-Level Context File Construction Candidate Review Record
+
+Status:
+
+- Task-Level Context File Construction: CANDIDATE REVIEW.
+- FI-T01 through FI-T07: CANDIDATE REVIEW.
+
+Construction authorization:
+
+- Alexander authorized Task-Level Context File Construction after Task-Level Context File Architecture v1 lock.
+
+Historical candidate artifacts before lock:
+
+- `worlds/korvin-merrow/task-context-files/candidate-review/FI-T01_discharge-medication-reconciliation-request-context.md`
+- `worlds/korvin-merrow/task-context-files/candidate-review/FI-T02_discharge-summary-drafting-request-context.md`
+- `worlds/korvin-merrow/task-context-files/candidate-review/FI-T03_discharge-readiness-care-coordination-request-context.md`
+- `worlds/korvin-merrow/task-context-files/candidate-review/FI-T04_consultant-synthesis-interdisciplinary-care-plan-request-context.md`
+- `worlds/korvin-merrow/task-context-files/candidate-review/FI-T05_early-post-discharge-follow-up-assessment-request-context.md`
+- `worlds/korvin-merrow/task-context-files/candidate-review/FI-T06_patient-safety-readmission-risk-review-request-context.md`
+- `worlds/korvin-merrow/task-context-files/candidate-review/FI-T07_medication-safety-handoff-task-context-addendum.md`
+- `worlds/korvin-merrow/task-context-files/candidate-review/task-context-files-validation-review.md`
+
+Validation:
+
+- Cross-artifact consistency verification completed before construction.
+- FI-T rows match locked File Inventory v1 and locked Task-Level Context File Architecture v1.
+- P0/P1/P2 labels remain tracker-provenance metadata only.
+- FI-T files are request-framing / task-context files only.
+- No task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, RL Studio submission artifacts, FI-S files, supplementary files, or final task outputs were created.
+- FI-W01 through FI-W22 remain locked and unchanged.
+
+Historical next eligible phase at time of candidate construction:
+
+- Task-Level Context File Construction Review.
+
+Boundary:
+
+- Do not lock FI-T files without explicit Alexander authorization.
+- Do not create FI-S01 through FI-S04, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, or RL Studio activity until explicitly authorized.
+
+## Task-Level Context File Construction Ratification Record
+
+Status:
+
+- Task-Level Context File Construction: LOCKED.
+- FI-T01 through FI-T07: LOCKED.
+- Task-Level Context Files: COMPLETE.
+
+Ratification authorization:
+
+- Alexander authorized Task-Level Context File Construction ratification and lock after candidate review.
+
+Review outcome:
+
+- Reviewer A verdict: LOCK READY / GO.
+- Reviewer B clinical architecture status: STRONG.
+- Reviewer B final recommendation: GO WITH MINOR NOTES.
+- True defects: NONE.
+- Architecture defects: NONE.
+- Governance defects: NONE.
+
+Locked artifacts:
+
+- `worlds/korvin-merrow/task-context-files/locked/FI-T01_discharge-medication-reconciliation-request-context.md`
+- `worlds/korvin-merrow/task-context-files/locked/FI-T02_discharge-summary-drafting-request-context.md`
+- `worlds/korvin-merrow/task-context-files/locked/FI-T03_discharge-readiness-care-coordination-request-context.md`
+- `worlds/korvin-merrow/task-context-files/locked/FI-T04_consultant-synthesis-interdisciplinary-care-plan-request-context.md`
+- `worlds/korvin-merrow/task-context-files/locked/FI-T05_early-post-discharge-follow-up-assessment-request-context.md`
+- `worlds/korvin-merrow/task-context-files/locked/FI-T06_patient-safety-readmission-risk-review-request-context.md`
+- `worlds/korvin-merrow/task-context-files/locked/FI-T07_medication-safety-handoff-task-context-addendum.md`
+- `worlds/korvin-merrow/task-context-files/locked/task-context-files-validation-review.md`
+
+Ratification:
+
+- `worlds/korvin-merrow/task-context-files/ratifications/task-level-context-file-construction-ratification.md`
+
+Carry-forward:
+
+- Carry-forward / future prompt-layer watch items are preserved in `worlds/korvin-merrow/task-context-files/locked/task-context-files-validation-review.md`.
+- FI-T01 vs FI-T07 differentiation must be preserved during future prompt construction.
+- FI-T02 future discharge-summary prompt construction must preserve anti-transcription / synthesis-by-evolution emphasis.
+- FI-T03 and FI-T06 future deliverables must preserve physician-authored, physician-reviewed, physician-supervised, or physician-communicated framing.
+
+Next eligible phase:
+
+- Supplementary File Architecture / Construction.
+
+Boundary:
+
+- FI-S01 through FI-S04, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
+
+## Supplementary File Architecture Candidate Review Record
+
+Status:
+
+- Supplementary File Architecture v1: LOCK READY.
+
+Authorization:
+
+- Alexander authorized Supplementary File Architecture construction after World-Level Synthetic File Layer completion, Task-Level Context File Architecture completion, and Task-Level Context File Construction lock.
+
+Candidate artifacts:
+
+- `worlds/korvin-merrow/supplementary-file-architecture/candidate-review/supplementary-file-architecture-v1.md`
+- `worlds/korvin-merrow/supplementary-file-architecture/candidate-review/supplementary-file-architecture-validation-review.md`
+
+Architecture determinations:
+
+- Supplementary files are required because locked File Inventory v1 includes four FI-S rows and maps them into workflow, trap, friction, authority, and temporal coverage.
+- Exact FI-S count: 4.
+- Future FI-S files: FI-S01 through FI-S04.
+- FI-S files remain supplementary support only and must not carry sole critical evidence.
+
+Validation:
+
+- Cross-artifact consistency verification completed.
+- No new workflow, trap, friction, hierarchy, authority assignment, or source-of-truth rule introduced.
+- No FI-S files created.
+- No task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, RL Studio submission artifacts, or final task outputs created.
+- FI-S03 Trap #5 reconciliation completed and recorded at `worlds/korvin-merrow/file-inventory/reviews/supplementary-file-trap5-reconciliation.md`.
+- Reconciliation finding: CLOSED.
+
+Next eligible phase:
+
+- Supplementary File Architecture Ratification and Lock.
+
+Boundary:
+
+- Do not lock Supplementary File Architecture v1, create FI-S01 through FI-S04, create supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, or RL Studio activity until explicitly authorized.
+
+## Supplementary FI-S03 Trap #5 Reconciliation Record
+
+Status:
+
+- COMPLETE.
+
+Finding:
+
+- TRUE INCONSISTENCY.
+
+Issue:
+
+- FI-S03 inventory row explicitly carried Trap #5 secondary support.
+- File Inventory v1 Trap Coverage Matrix did not list FI-S03 under Trap #5 secondary support.
+
+Canonical resolution:
+
+- Treat the FI-S03 row as the authoritative per-file responsibility statement.
+- Treat the Trap Coverage Matrix as under-specified.
+- Update only the Trap #5 secondary supporting file list to include FI-S03.
+
+Reconciliation artifact:
+
+- `worlds/korvin-merrow/file-inventory/reviews/supplementary-file-trap5-reconciliation.md`
+
+Verification:
+
+- FI-S03 inventory row unchanged.
+- Supplementary File Architecture v1 unchanged.
+- No workflow coverage changed.
+- No friction coverage changed.
+- No hierarchy or source-of-truth rule changed.
+- No FI-S files, prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission artifacts, or RL Studio materials created.
+
+Next eligible phase:
+
+- Supplementary File Architecture Ratification and Lock.
+
+## Supplementary File Architecture Ratification Record
+
+Status:
+
+- Supplementary File Architecture v1: LOCKED.
+- Supplementary File Architecture: COMPLETE.
+
+Ratification authorization:
+
+- Alexander authorized Supplementary File Architecture v1 ratification and lock after review completion and FI-S03 Trap #5 reconciliation closure.
+
+Review outcome:
+
+- Independent reviews completed.
+- FI-S03 Trap #5 secondary support reconciliation completed.
+- Validation review updated.
+- True defects: NONE.
+- Governance defects: NONE.
+- Architecture defects: NONE.
+
+Locked artifacts:
+
+- `worlds/korvin-merrow/supplementary-file-architecture/locked/supplementary-file-architecture-v1.md`
+- `worlds/korvin-merrow/supplementary-file-architecture/locked/supplementary-file-architecture-validation-review.md`
+
+Ratification:
+
+- `worlds/korvin-merrow/supplementary-file-architecture/ratifications/supplementary-file-architecture-v1-ratification.md`
+
+Reconciliation:
+
+- `worlds/korvin-merrow/file-inventory/reviews/supplementary-file-trap5-reconciliation.md`
+
+Verification:
+
+- Candidate-review path is no longer active.
+- Locked path is canonical.
+- Reconciliation record is preserved.
+- No FI-S files, prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission artifacts, or RL Studio materials were created.
+
+Next eligible phase:
+
+- Supplementary File Construction.
+
+Boundary:
+
+- FI-S01 through FI-S04, supplementary files, task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
+
+## Supplementary File Construction Ratification Record
+
+Status:
+
+- Supplementary File Construction: LOCKED.
+- FI-S01 through FI-S04: LOCKED.
+- Supplementary Files: COMPLETE.
+- Entire File Ecosystem: COMPLETE.
+
+Ratification authorization:
+
+- Alexander authorized Supplementary File Construction ratification and lock after candidate review completion.
+
+Review outcome:
+
+- Reviewer A verdict: LOCK READY / GO.
+- Reviewer B verdict: LOCK READY / GO.
+- Clinical Architecture Status: STRONG.
+- True defects: NONE.
+- Governance / metadata inconsistencies: NONE.
+- Governance defects: NONE.
+- Architecture defects: NONE.
+- Open reconciliations: NONE.
+- FI-S03 Trap #5 reconciliation already closed.
+
+Locked artifacts:
+
+- `worlds/korvin-merrow/supplementary-files/locked/FI-S01_remote-pci-coronary-stent-provenance-summary.md`
+- `worlds/korvin-merrow/supplementary-files/locked/FI-S02_remote-sleep-study-osa-provenance-summary.md`
+- `worlds/korvin-merrow/supplementary-files/locked/FI-S03_home-support-equipment-logistics-reference.md`
+- `worlds/korvin-merrow/supplementary-files/locked/FI-S04_problem-list-past-history-snapshot.md`
+- `worlds/korvin-merrow/supplementary-files/locked/supplementary-file-construction-validation-review.md`
+
+Ratification:
+
+- `worlds/korvin-merrow/supplementary-files/ratifications/supplementary-file-construction-ratification.md`
+
+Completed File Ecosystem:
+
+- FI-W01 through FI-W22.
+- FI-T01 through FI-T07.
+- FI-S01 through FI-S04.
+
+Verification:
+
+- Candidate-review path is no longer active.
+- Locked path is canonical.
+- FI-S01 through FI-S04 and the validation review were moved without content changes.
+- No FI-S05 or unauthorized supplementary file was created.
+- No task prompts, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission artifacts, or RL Studio materials were created.
+
+Next eligible phase:
+
+- Task Prompt Architecture.
+
+Boundary:
+
+- Task prompts, expected outputs, goldens, grader guidance, AutoQC responses, submission artifacts, DOCX artifacts, and RL Studio activity remain blocked until explicitly authorized.
+
+## Task Prompt Architecture v1 Candidate Construction Record
+
+Historical note: this section records the original candidate construction step. The current canonical locked artifacts are recorded in the ratification and lock record below.
+
+Status:
+
+- Task Prompt Architecture v1: CANDIDATE REVIEW at the time of construction.
+- Task Prompt Architecture validation review: CANDIDATE REVIEW at the time of construction.
+
+Authorization:
+
+- Alexander authorized Task Prompt Architecture v1 construction after the Entire File Ecosystem was complete and locked.
+
+Artifacts created as candidates and now locked canonically:
+
+- `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-v1.md`
+- `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-validation-review.md`
+
+Key architecture decision:
+
+- Future task prompt count is six, consistent with locked Task Architecture Package v1.
+- FI-T07 remains medication-safety addendum support for TP-KM01 rather than a seventh near-duplicate medication reconciliation prompt.
+
+Verification:
+
+- No task prompts were created.
+- No expected outputs were created.
+- No goldens were created.
+- No grader guidance was created.
+- No AutoQC responses were created.
+- No DOCX artifacts were created.
+- No submission artifacts or RL Studio materials were created.
+- Locked FI-W, FI-T, and FI-S artifacts were not modified.
+
+Next phase at the time:
+
+- Architecture review, now completed before ratification and lock.
+
+Boundary:
+
+- Task prompt construction, expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission artifacts, and RL Studio activity remain blocked until explicitly authorized.
+
+## Task Prompt Architecture v1 Ratification And Lock Record
+
+Status:
+
+- Task Prompt Architecture v1: LOCKED.
+- Task Prompt Architecture: COMPLETE.
+
+Authorization:
+
+- Alexander authorized Task Prompt Architecture v1 ratification and lock after Independent Review A and Independent Review B both returned LOCK READY.
+
+Locked artifacts:
+
+- `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-v1.md`
+- `worlds/korvin-merrow/task-prompt-architecture/locked/task-prompt-architecture-validation-review.md`
+
+Ratification:
+
+- `worlds/korvin-merrow/task-prompt-architecture/ratifications/task-prompt-architecture-ratification.md`
+
+Review consensus:
+
+- Independent Review A: LOCK READY.
+- Independent Review B: LOCK READY.
+- Review consensus: UNANIMOUS.
+- True defects: NONE.
+- Governance inconsistencies: NONE.
+- Canon conflicts: NONE.
+- Open reconciliations: NONE.
+
+Ratified architecture decisions:
+
+- Six prompt-family architecture approved.
+- FI-T07 addendum architecture approved.
+- Workflow coverage verified.
+- Trap coverage verified.
+- Friction coverage verified.
+- Hierarchy preservation verified.
+- File dependency matrix verified.
+- Anti-answer-file protections verified.
+
+Verification:
+
+- Candidate-review path is no longer active.
+- Locked path is canonical.
+- Architecture content was preserved as a move.
+- Validation review content was preserved as a move.
+- No task prompt text was created.
+- No expected outputs were created.
+- No goldens were created.
+- No grader guidance was created.
+- No AutoQC responses were created.
+- No DOCX artifacts were created.
+- No submission artifacts or RL Studio materials were created.
+
+Next eligible phase:
+
+- Task Prompt Construction.
+
+Boundary:
+
+- Expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission artifacts, and RL Studio activity remain blocked until explicitly authorized.
+
+## Task Prompt Construction Candidate Record
+
+Status:
+
+- Historical candidate record, superseded by Task Prompt Construction Ratification And Lock Record below.
+
+Authorization:
+
+- Alexander authorized Task Prompt Construction candidate creation after Task Prompt Architecture v1 lock.
+
+Historical candidate artifacts before lock:
+
+- `worlds/korvin-merrow/task-prompts/candidate-review/TP-KM01.md`
+- `worlds/korvin-merrow/task-prompts/candidate-review/TP-KM02.md`
+- `worlds/korvin-merrow/task-prompts/candidate-review/TP-KM03.md`
+- `worlds/korvin-merrow/task-prompts/candidate-review/TP-KM04.md`
+- `worlds/korvin-merrow/task-prompts/candidate-review/TP-KM05.md`
+- `worlds/korvin-merrow/task-prompts/candidate-review/TP-KM06.md`
+- `worlds/korvin-merrow/task-prompts/candidate-review/task-prompt-construction-validation-review.md`
+
+Continuity decision:
+
+- TP-KM01 through TP-KM06 were candidate-review task prompts at this stage.
+- This candidate state is superseded by the later lock record below.
+- They do not create expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission artifacts, or RL Studio materials.
+
+Next eligible phase:
+
+- Historical next phase at the time: Task Prompt Construction Review.
+
+Boundary:
+
+- Historical boundary at the time: do not lock task prompts, create expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission artifacts, or RL Studio activity until Alexander explicitly authorizes the relevant phase.
+
+## Task Prompt Construction Ratification And Lock Record
+
+Status:
+
+- Task Prompt Construction: LOCKED.
+- Task Prompts: COMPLETE.
+
+Authorization:
+
+- Alexander authorized Task Prompt Construction ratification and lock after Reviewer A and Reviewer B both returned LOCK READY / GO with STRONG clinical prompt quality and PASS on contributor validation test.
+
+Locked artifacts:
+
+- `worlds/korvin-merrow/task-prompts/locked/TP-KM01.md`
+- `worlds/korvin-merrow/task-prompts/locked/TP-KM02.md`
+- `worlds/korvin-merrow/task-prompts/locked/TP-KM03.md`
+- `worlds/korvin-merrow/task-prompts/locked/TP-KM04.md`
+- `worlds/korvin-merrow/task-prompts/locked/TP-KM05.md`
+- `worlds/korvin-merrow/task-prompts/locked/TP-KM06.md`
+- `worlds/korvin-merrow/task-prompts/locked/task-prompt-construction-validation-review.md`
+
+Ratification:
+
+- `worlds/korvin-merrow/task-prompts/ratifications/task-prompt-construction-ratification.md`
+
+Review consensus:
+
+- Reviewer A: LOCK READY / GO.
+- Reviewer B: LOCK READY / GO.
+- Clinical Prompt Quality: STRONG.
+- Contributor Validation Test: PASS.
+- True defects: NONE.
+- Governance / metadata inconsistencies: NONE.
+- Canon conflicts: NONE.
+- Open reconciliations: NONE.
+
+Ratified findings:
+
+- Six prompts reviewed.
+- FI-T07 addendum relationship preserved.
+- Workflow fidelity verified.
+- Trap protection verified.
+- Friction protection verified.
+- Hierarchy protection verified.
+- Anti-answer-file protections verified.
+
+Next eligible phase:
+
+- Expected Output Architecture.
+
+Boundary:
+
+- Expected outputs, goldens, grader guidance, AutoQC responses, DOCX artifacts, submission artifacts, and RL Studio activity remain blocked until Alexander explicitly authorizes the relevant phase.
+
+## Expected Output Architecture v1 Candidate Record
+
+Status:
+
+- Expected Output Architecture v1: CANDIDATE REVIEW.
+
+Authorization:
+
+- Alexander authorized Expected Output Architecture v1 construction after Task Prompt Construction lock.
+
+Candidate artifacts:
+
+- `worlds/korvin-merrow/expected-output-architecture/candidate-review/expected-output-architecture-v1.md`
+- `worlds/korvin-merrow/expected-output-architecture/candidate-review/expected-output-architecture-validation-review.md`
+
+Architecture decisions:
+
+- Expected output architecture count: 6.
+- Expected output IDs: EO-KM01 through EO-KM06.
+- Mapping: one expected-output architecture slot per locked task prompt TP-KM01 through TP-KM06.
+- FI-T07 remains an addendum source for TP-KM01 / EO-KM01, not a seventh expected output.
+- Expected-output architecture defines output shape and reasoning expectations only.
+
+Boundary:
+
+- No actual expected-output text was created.
+- No golden responses were created.
+- No grader guidance was created.
+- No AutoQC responses were created.
+- No DOCX artifacts were created.
+- No submission artifacts or RL Studio materials were created.
+- Locked artifacts were not modified.
+
+Next eligible phase:
+
+- Expected Output Architecture Review.
+
+## Expected Output Architecture v1 Ratification Record
+
+Status:
+
+- Expected Output Architecture v1: LOCKED.
+- Expected Output Architecture: COMPLETE.
+
+Authorization:
+
+- Alexander authorized Expected Output Architecture v1 ratification and lock after candidate review completion.
+
+Review outcomes:
+
+- Reviewer A verdict: LOCK READY; Clinical Architecture Status: STRONG; Final Recommendation: GO.
+- Reviewer B verdict: LOCK READY; Clinical Architecture Status: STRONG; Final Recommendation: GO.
+- True defects: NONE.
+- Governance / metadata inconsistencies: NONE.
+- Canon conflicts: NONE.
+- Open reconciliations: NONE.
+
+Locked artifacts:
+
+- `worlds/korvin-merrow/expected-output-architecture/locked/expected-output-architecture-v1.md`
+- `worlds/korvin-merrow/expected-output-architecture/locked/expected-output-architecture-validation-review.md`
+
+Ratification:
+
+- `worlds/korvin-merrow/expected-output-architecture/ratifications/expected-output-architecture-ratification.md`
+
+Ratified decisions:
+
+- Six expected-output architecture slots approved.
+- EO-KM01 through EO-KM06 approved.
+- One-to-one relationship with TP-KM01 through TP-KM06 preserved.
+- FI-T07 addendum relationship preserved; FI-T07 remains support for medication-safety architecture and does not create a seventh expected-output slot.
+- Workflow fidelity verified.
+- Trap protection verified.
+- Friction protection verified.
+- Hierarchy protection verified.
+- Anti-overanswer protections verified.
+- Anti-underanswer protections verified.
+
+Boundary:
+
+- This does not authorize actual expected-output text, golden responses, grader guidance, AutoQC responses, DOCX artifacts, submission artifacts, RL Studio materials, or downstream task-output construction.
+
+Next eligible phase:
+
+- Expected Output Construction.
+
+## Expected Output Construction Candidate Record
+
+Status:
+
+- Expected Output Construction: CANDIDATE REVIEW.
+- Historical record only. Superseded by the later Expected Output Construction Ratification Record.
+
+Authorization:
+
+- Alexander authorized Expected Output Construction after Expected Output Architecture v1 lock.
+
+Historical candidate artifacts before lock:
+
+- EO-KM01 through EO-KM06.
+- `expected-output-construction-validation-review.md`.
+- These artifacts were originally created under the expected-output candidate-review lifecycle folder and were later moved unchanged to `worlds/korvin-merrow/expected-outputs/locked/`.
+
+Construction decisions:
+
+- EO-KM01 through EO-KM06 map one-to-one to TP-KM01 through TP-KM06.
+- FI-T07 remains medication-safety addendum support for EO-KM01 only.
+- No EO-KM07 was created.
+- Candidate expected outputs are physician-facing, chart-grounded, and aligned with locked Expected Output Architecture v1.
+
+Boundary:
+
+- No golden responses were created.
+- No grader guidance was created.
+- No rubrics were created.
+- No AutoQC responses were created.
+- No DOCX artifacts were created.
+- No submission artifacts or RL Studio materials were created.
+- Locked artifacts were not modified.
+
+Next eligible phase:
+
+- Expected Output Construction Review.
+- Historical next phase at candidate stage. Superseded by Golden Architecture after ratification.
+
+## Expected Output Construction Ratification Record
+
+Status:
+
+- Expected Output Construction: LOCKED.
+- Expected Outputs: COMPLETE.
+
+Authorization:
+
+- Alexander authorized Expected Output Construction ratification and lock after candidate review completion.
+
+Review outcomes:
+
+- Reviewer A verdict: LOCK READY; Clinical Expected Output Quality: STRONG; Final Recommendation: GO.
+- Reviewer B verdict: LOCK READY; Clinical Expected Output Quality: STRONG; Final Recommendation: GO.
+- True defects: NONE.
+- Governance / metadata inconsistencies: NONE.
+- Canon conflicts: NONE.
+- Open reconciliations: NONE.
+
+Locked artifacts:
+
+- `worlds/korvin-merrow/expected-outputs/locked/EO-KM01.md`
+- `worlds/korvin-merrow/expected-outputs/locked/EO-KM02.md`
+- `worlds/korvin-merrow/expected-outputs/locked/EO-KM03.md`
+- `worlds/korvin-merrow/expected-outputs/locked/EO-KM04.md`
+- `worlds/korvin-merrow/expected-outputs/locked/EO-KM05.md`
+- `worlds/korvin-merrow/expected-outputs/locked/EO-KM06.md`
+- `worlds/korvin-merrow/expected-outputs/locked/expected-output-construction-validation-review.md`
+
+Ratification:
+
+- `worlds/korvin-merrow/expected-outputs/ratifications/expected-output-construction-ratification.md`
+
+Ratified findings:
+
+- EO-KM01 through EO-KM06 reviewed and approved.
+- No EO-KM07 created.
+- FI-T07 addendum relationship preserved.
+- Workflow fidelity verified.
+- Trap protection verified.
+- Friction protection verified.
+- Hierarchy protection verified.
+- Source-synthesis fidelity verified.
+- Anti-overanswer protections verified.
+- Anti-underanswer protections verified.
+- Golden-leakage check passed.
+
+Boundary:
+
+- No golden responses were created.
+- No grader guidance was created.
+- No rubrics were created.
+- No AutoQC responses were created.
+- No DOCX artifacts were created.
+- No submission artifacts or RL Studio materials were created.
+
+Next eligible phase:
+
+- Golden Architecture.
+
+## Golden Architecture Candidate And Audit Reconciliation Record
+
+Historical note: this section records the candidate/audit stage before ratification. The canonical locked artifacts are recorded in the ratification and lock record below.
+
+Status:
+
+- Golden Architecture v1: CANDIDATE REVIEW at the time of construction and audit reconciliation.
+- Golden Architecture Audit Reconciliation: COMPLETE.
+
+Authorization:
+
+- Alexander authorized Golden Architecture v1 construction after Expected Output Construction lock.
+- Alexander authorized Golden Architecture Audit Reconciliation after independent cold audit findings.
+
+Historical candidate artifacts before lock:
+
+- `worlds/korvin-merrow/golden-architecture/locked/golden-architecture-v1.md`
+- `worlds/korvin-merrow/golden-architecture/locked/golden-architecture-validation-review.md`
+- `worlds/korvin-merrow/golden-architecture/locked/golden-architecture-audit-reconciliation.md`
+
+Audit reconciliation findings:
+
+- Finding A: TRUE INCONSISTENCY; validation review source-check claim required reconciliation.
+- Finding B: TRUE INCONSISTENCY; stale current-facing continuity surfaces required synchronization.
+- Finding C: TRUE INCONSISTENCY; Golden-KM06 Endocrinology vs Primary Team handling required narrowing to background steroid-source / endocrine-risk context only.
+- Finding D: CLARIFICATION ONLY; FI-S03 and FI-S04 dependency language required stronger background/supporting-source constraints.
+
+Verification:
+
+- No golden responses created.
+- No grader guidance created.
+- No scoring rubrics created.
+- No AutoQC responses created.
+- No DOCX artifacts created.
+- No submission artifacts created.
+- No new workflows introduced.
+- No task responsibilities changed.
+- No expected outputs changed.
+- No prompts changed.
+
+Next eligible phase:
+
+- Historical next phase at candidate/audit-reconciliation stage: Golden Architecture Review. Superseded by Golden Construction after ratification and lock.
+
+## Golden Architecture v1 Ratification And Lock Record
+
+Status:
+
+- Golden Architecture v1: LOCKED.
+- Golden Architecture: COMPLETE.
+
+Authorization:
+
+- Alexander authorized Golden Architecture v1 ratification and lock after candidate review completion, independent review LOCK READY / GO, audit completion, and audit reconciliation completion.
+
+Locked artifacts:
+
+- `worlds/korvin-merrow/golden-architecture/locked/golden-architecture-v1.md`
+- `worlds/korvin-merrow/golden-architecture/locked/golden-architecture-validation-review.md`
+- `worlds/korvin-merrow/golden-architecture/locked/golden-architecture-audit-reconciliation.md`
+
+Ratification:
+
+- `worlds/korvin-merrow/golden-architecture/ratifications/golden-architecture-ratification.md`
+
+Review outcome:
+
+- Independent review completed.
+- Audit completed.
+- Audit reconciliation completed.
+- Independent review verdict: LOCK READY.
+- Clinical Architecture Status: STRONG.
+- Golden Construction Readiness: HIGH.
+- Final Recommendation: GO.
+- No outstanding true defects.
+- No governance / metadata inconsistencies.
+- No canon conflicts.
+- No open reconciliations.
+
+Ratified findings:
+
+- Golden-KM01 through Golden-KM06 approved.
+- Six-golden architecture approved.
+- One-to-one TP -> EO -> Golden mapping verified.
+- FI-T07 addendum relationship preserved.
+- Workflow fidelity verified.
+- Hierarchy fidelity verified.
+- Friction fidelity verified.
+- Information-problem coverage verified.
+- Uncertainty preservation verified.
+- Multi-path physician-answer principle verified.
+- Golden-leakage boundary verified.
+- FI-W22 visible-but-incomplete rule preserved.
+- FI-S background/supporting role preserved.
+
+Boundary:
+
+- No golden responses were created.
+- No grader guidance was created.
+- No scoring rubrics were created.
+- No AutoQC responses were created.
+- No DOCX artifacts were created.
+- No submission artifacts were created.
+- No final medication decisions were created.
+- No final discharge decisions were created.
+- No final risk conclusions were created.
+
+Next eligible phase:
+
+- Golden Construction.
+
+## Golden Construction Candidate Record
+
+Date: 2026-06-03
+
+Status:
+
+- Golden Construction: CANDIDATE REVIEW.
+
+Authorization:
+
+- Alexander authorized Golden Construction after Golden Architecture v1 ratification and lock.
+- Construction scope was limited to candidate golden responses and a construction validation review.
+
+Historical candidate artifacts before lock:
+
+- `worlds/korvin-merrow/goldens/candidate-review/Golden-KM01.md`
+- `worlds/korvin-merrow/goldens/candidate-review/Golden-KM02.md`
+- `worlds/korvin-merrow/goldens/candidate-review/Golden-KM03.md`
+- `worlds/korvin-merrow/goldens/candidate-review/Golden-KM04.md`
+- `worlds/korvin-merrow/goldens/candidate-review/Golden-KM05.md`
+- `worlds/korvin-merrow/goldens/candidate-review/Golden-KM06.md`
+- `worlds/korvin-merrow/goldens/candidate-review/golden-construction-validation-review.md`
+
+These artifacts were moved unchanged to `worlds/korvin-merrow/goldens/locked/` during Golden Construction ratification and lock.
+
+Mapping preserved:
+
+- Golden-KM01 maps to TP-KM01 and EO-KM01.
+- Golden-KM02 maps to TP-KM02 and EO-KM02.
+- Golden-KM03 maps to TP-KM03 and EO-KM03.
+- Golden-KM04 maps to TP-KM04 and EO-KM04.
+- Golden-KM05 maps to TP-KM05 and EO-KM05.
+- Golden-KM06 maps to TP-KM06 and EO-KM06.
+- FI-T07 remains addendum support for Golden-KM01 only.
+- No Golden-KM07 was created.
+
+Boundary preserved:
+
+- No golden ratification or lock was created.
+- No grader guidance was created.
+- No scoring rubric was created.
+- No AutoQC response was created.
+- No DOCX artifact was created.
+- No submission artifact was created.
+- No RL Studio material was created.
+- No locked canonical artifact was edited during construction.
+
+Historical next eligible phase at candidate stage:
+
+- Golden Construction Review.
+
+Superseded by Golden Construction ratification and lock; current next eligible phase is Grader Guidance Architecture.
+
+## Golden Construction Ratification And Lock Record
+
+Date: 2026-06-03
+
+Status:
+
+- Golden Construction: LOCKED.
+- Goldens: COMPLETE.
+
+Authorization:
+
+- Alexander authorized Golden Construction ratification and lock after candidate review completion.
+- Reviewer A and Reviewer B both returned LOCK READY / GO with STRONG clinical golden quality and HIGH benchmark integrity.
+
+Locked artifacts:
+
+- `worlds/korvin-merrow/goldens/locked/Golden-KM01.md`
+- `worlds/korvin-merrow/goldens/locked/Golden-KM02.md`
+- `worlds/korvin-merrow/goldens/locked/Golden-KM03.md`
+- `worlds/korvin-merrow/goldens/locked/Golden-KM04.md`
+- `worlds/korvin-merrow/goldens/locked/Golden-KM05.md`
+- `worlds/korvin-merrow/goldens/locked/Golden-KM06.md`
+- `worlds/korvin-merrow/goldens/locked/golden-construction-validation-review.md`
+
+Ratification:
+
+- `worlds/korvin-merrow/goldens/ratifications/golden-construction-ratification.md`
+
+Ratified findings:
+
+- Reviewer A completed.
+- Reviewer B completed.
+- Golden-KM01 through Golden-KM06 reviewed.
+- Six goldens approved.
+- No Golden-KM07 created.
+- FI-T07 addendum relationship preserved.
+- Workflow fidelity verified.
+- Hierarchy fidelity verified.
+- Friction fidelity verified.
+- Information-problem coverage verified.
+- Uncertainty preservation verified.
+- Multi-path physician-answer principle verified.
+- Benchmark integrity verified.
+- Grading-leakage check passed.
+- No true defects.
+- No governance defects.
+- No canon conflicts.
+- No open reconciliations.
+
+Boundary:
+
+- No grader guidance created.
+- No scoring rubrics created.
+- No AutoQC responses created.
+- No DOCX artifacts created.
+- No submission artifacts created.
+- No RL Studio materials created.
+
+Next eligible phase:
+
+- Grader Guidance Architecture.
+
+## Grader Guidance Architecture Candidate Record
+
+Date: 2026-06-03
+
+Status:
+
+- Grader Guidance Architecture v1: CANDIDATE REVIEW.
+
+Authorization:
+
+- Alexander authorized Grader Guidance Architecture v1 construction after Golden Construction ratification and lock.
+- Construction scope was limited to architecture and validation review.
+
+Candidate artifacts:
+
+- `worlds/korvin-merrow/grader-guidance-architecture/candidate-review/grader-guidance-architecture-v1.md`
+- `worlds/korvin-merrow/grader-guidance-architecture/candidate-review/grader-guidance-architecture-validation-review.md`
+
+Architectural decisions recorded:
+
+- Future grader guidance should reward strong physician reasoning rather than verbatim matching to the golden.
+- GG-KM01 through GG-KM06 map one-to-one to TP-KM01 through TP-KM06, EO-KM01 through EO-KM06, and Golden-KM01 through Golden-KM06.
+- FI-T07 remains addendum support for GG-KM01 only.
+- No GG-KM07 is created.
+- Golden-KM01 is protected from becoming a rigid medication answer key.
+- Golden-KM03 is protected from becoming a discharge authorization key.
+- Golden-KM05 is protected from permitting invented follow-up facts.
+- Golden-KM06 is protected from becoming RCA or outcome scoring.
+- FI-W22 remains visible but incomplete.
+- FI-S files remain optional/background and cannot carry sole critical evidence.
+- Hierarchy remains reasoning support, not shortcut answer logic.
+- Frictions remain defensible disagreements, not automatic winner selection.
+
+Boundary:
+
+- No grader guidance was created.
+- No scoring rubrics were created.
+- No scoring thresholds were created.
+- No pass/fail criteria were created.
+- No AutoQC responses were created.
+- No DOCX artifacts were created.
+- No submission artifacts were created.
+- No RL Studio materials were created.
+- No locked canonical artifacts were modified.
+
+Next eligible phase:
+
+- Grader Guidance Architecture Review.
+
+## Grader Guidance Architecture Ratification Record
+
+Date recorded: 2026-06-03
+
+Status:
+
+- Grader Guidance Architecture v1: LOCKED.
+- Grader Guidance Architecture: COMPLETE.
+
+Authorization:
+
+- Alexander authorized Grader Guidance Architecture v1 ratification and lock after candidate review completion.
+
+Review outcome:
+
+- Independent review verdict: LOCK READY.
+- Architecture Quality: STRONG.
+- Benchmark Integrity Protection: HIGH.
+- Final Recommendation: GO.
+- True defects: NONE.
+- Governance / metadata inconsistencies: NONE.
+- Canon conflicts: NONE.
+- Open reconciliations: NONE.
+
+Locked artifacts:
+
+- `worlds/korvin-merrow/grader-guidance-architecture/locked/grader-guidance-architecture-v1.md`
+- `worlds/korvin-merrow/grader-guidance-architecture/locked/grader-guidance-architecture-validation-review.md`
+
+Ratification artifact:
+
+- `worlds/korvin-merrow/grader-guidance-architecture/ratifications/grader-guidance-architecture-ratification.md`
+
+Accepted findings:
+
+- GG-KM01 through GG-KM06 architecture approved.
+- Six-slot grader guidance architecture approved.
+- TP -> EO -> Golden -> GG chain verified.
+- FI-T07 addendum relationship preserved for GG-KM01 only.
+- Anti-verbatim-matching principle verified.
+- Multi-path defensibility verified.
+- Hierarchy fidelity verified.
+- Friction fidelity verified.
+- Source fidelity verified.
+- No grading leakage identified.
+- No true defects identified.
+- No governance defects identified.
+- No canon conflicts identified.
+
+Boundary verification:
+
+- No grader guidance created during ratification.
+- No scoring rubrics created.
+- No scoring thresholds created.
+- No pass/fail bands created.
+- No AutoQC responses created.
+- No DOCX artifacts created.
+- No submission artifacts created.
+
+Next eligible phase:
+
+- Grader Guidance Construction.
+
+## Grader Guidance Construction Candidate Record
+
+Date recorded: 2026-06-03
+
+Status:
+
+- Historical candidate-review record.
+- Current Grader Guidance Construction status is LOCKED as of the ratification record below.
+
+Authorization:
+
+- Alexander authorized Grader Guidance Construction after Grader Guidance Architecture v1 ratification and lock.
+- Construction scope was limited to candidate GG-KM01 through GG-KM06 and a construction validation review.
+
+Candidate artifacts, now moved unchanged to locked paths:
+
+- `worlds/korvin-merrow/grader-guidance/locked/GG-KM01.md`
+- `worlds/korvin-merrow/grader-guidance/locked/GG-KM02.md`
+- `worlds/korvin-merrow/grader-guidance/locked/GG-KM03.md`
+- `worlds/korvin-merrow/grader-guidance/locked/GG-KM04.md`
+- `worlds/korvin-merrow/grader-guidance/locked/GG-KM05.md`
+- `worlds/korvin-merrow/grader-guidance/locked/GG-KM06.md`
+- `worlds/korvin-merrow/grader-guidance/locked/grader-guidance-construction-validation-review.md`
+
+Mapping preserved:
+
+- GG-KM01 maps to TP-KM01, EO-KM01, and Golden-KM01.
+- GG-KM02 maps to TP-KM02, EO-KM02, and Golden-KM02.
+- GG-KM03 maps to TP-KM03, EO-KM03, and Golden-KM03.
+- GG-KM04 maps to TP-KM04, EO-KM04, and Golden-KM04.
+- GG-KM05 maps to TP-KM05, EO-KM05, and Golden-KM05.
+- GG-KM06 maps to TP-KM06, EO-KM06, and Golden-KM06.
+- FI-T07 remains addendum support for GG-KM01 only.
+- No GG-KM07 was created.
+
+Construction principles:
+
+- Candidate guidance rewards strong physician reasoning rather than verbatim matching to the golden.
+- Golden responses remain benchmarks, not rigid answer keys.
+- Multi-path defensibility, uncertainty handling, hierarchy reasoning, friction preservation, and physician-perspective judgment remain protected.
+
+Boundary preserved at candidate construction:
+
+- Candidate construction stopped before lock/ratification.
+- No scoring rubrics were created.
+- No scoring thresholds were created.
+- No point allocations or pass/fail bands were created.
+- No AutoQC responses were created.
+- No DOCX artifacts were created.
+- No submission artifacts were created.
+- No RL Studio materials were created.
+
+Historical next eligible phase at candidate construction:
+
+- Review, since completed before ratification.
+
+## Grader Guidance Construction Ratification and Lock Record
+
+Date recorded: 2026-06-03
+
+Status:
+
+- Grader Guidance Construction: LOCKED.
+- Grader Guidance: COMPLETE.
+
+Authorization:
+
+- Alexander authorized Grader Guidance Construction ratification and lock after Reviewer A and Reviewer B returned LOCK READY / GO.
+- Reviewer A guidance quality was STRONG and benchmark integrity was HIGH.
+- Reviewer B guidance quality was STRONG and benchmark integrity was HIGH.
+
+Locked artifacts:
+
+- `worlds/korvin-merrow/grader-guidance/locked/GG-KM01.md`
+- `worlds/korvin-merrow/grader-guidance/locked/GG-KM02.md`
+- `worlds/korvin-merrow/grader-guidance/locked/GG-KM03.md`
+- `worlds/korvin-merrow/grader-guidance/locked/GG-KM04.md`
+- `worlds/korvin-merrow/grader-guidance/locked/GG-KM05.md`
+- `worlds/korvin-merrow/grader-guidance/locked/GG-KM06.md`
+- `worlds/korvin-merrow/grader-guidance/locked/grader-guidance-construction-validation-review.md`
+- `worlds/korvin-merrow/grader-guidance/ratifications/grader-guidance-construction-ratification.md`
+
+Ratification findings:
+
+- GG-KM01 through GG-KM06 reviewed.
+- Six grader-guidance files approved.
+- No GG-KM07 created.
+- TP -> EO -> Golden -> GG chain verified.
+- FI-T07 addendum relationship preserved.
+- Anti-verbatim-matching principle verified.
+- Multi-path defensibility verified.
+- Hierarchy fidelity, friction fidelity, and source fidelity verified.
+- FI-W22 visible-but-incomplete rule preserved.
+- FI-S background/supporting role preserved.
+- No scoring leakage.
+- No true defects, governance defects, or canon conflicts.
+
+Boundary preserved:
+
+- No scoring rubrics were created.
+- No scoring thresholds were created.
+- No point allocations or pass/fail bands were created.
+- No AutoQC responses were created.
+- No DOCX artifacts were created.
+- No submission artifacts were created.
+- No RL Studio materials were created.
+
+Next eligible phase:
+
+- AutoQC Construction.
+
+## AutoQC Architecture v1 Candidate Record
+
+Date recorded: 2026-06-03
+
+Status:
+
+- Historical record: AutoQC Architecture v1 was in CANDIDATE REVIEW at candidate construction.
+- Current AutoQC Architecture v1 status is LOCKED as of the ratification record below.
+- Grader Guidance Construction remains LOCKED.
+- Grader Guidance remains COMPLETE.
+
+Authorization:
+
+- Alexander authorized AutoQC Architecture v1 construction after Grader Guidance Construction lock and ecosystem comparison audit commit.
+- This construction phase defines how future AutoQC will be organized.
+- This construction phase does not run AutoQC and does not create AutoQC responses.
+
+Locked artifacts after ratification:
+
+- `worlds/korvin-merrow/autoqc-architecture/locked/autoqc-architecture-v1.md`
+- `worlds/korvin-merrow/autoqc-architecture/locked/autoqc-architecture-validation-review.md`
+- `worlds/korvin-merrow/autoqc-architecture/ratifications/autoqc-architecture-ratification.md`
+
+Architecture scope recorded:
+
+- AutoQC scope.
+- AutoQC artifact IDs.
+- Relationship to locally available World Spec AutoQC v6.3.
+- Relationship boundary for future Section 6 Grader Guidelines AutoQC, whose official prompt is not yet locally available.
+- Task-layer, file-layer, prompt, expected-output, golden, grader-guidance, and packaging QC boundaries.
+- Carry-forward watch items from locked sources and the ecosystem comparison audit.
+
+Carry-forward watch items:
+
+- Official Section 6 Grader Guidelines AutoQC prompt is not yet locally available.
+- World Spec AutoQC v6.3 exists locally.
+- Packaging-layer checks remain pending.
+- Submission manifest remains pending.
+- DOCX population remains pending.
+- Transcript requirement remains ambiguous.
+- Goldens/grader guidance submission scope remains ambiguous.
+
+Boundary preserved:
+
+- No AutoQC was run.
+- No AutoQC responses were created.
+- No scoring rubrics were created.
+- No scoring thresholds were created.
+- No point allocations or pass/fail bands were created.
+- No DOCX artifacts were created.
+- No submission artifacts were created.
+- No RL Studio materials were created.
+
+Next eligible phase:
+
+- AutoQC Construction.
+
+## AutoQC Architecture v1 Ratification and Lock Record
+
+Date recorded: 2026-06-03
+
+Status:
+
+- AutoQC Architecture v1: LOCKED.
+- AutoQC Architecture: COMPLETE.
+
+Authorization:
+
+- Alexander authorized AutoQC Architecture v1 ratification and lock after independent review returned LOCK READY / GO.
+- Architecture Quality was STRONG.
+- Governance Fidelity was HIGH.
+- True defects, governance issues, and canon conflicts were NONE.
+
+Locked artifacts:
+
+- `worlds/korvin-merrow/autoqc-architecture/locked/autoqc-architecture-v1.md`
+- `worlds/korvin-merrow/autoqc-architecture/locked/autoqc-architecture-validation-review.md`
+- `worlds/korvin-merrow/autoqc-architecture/ratifications/autoqc-architecture-ratification.md`
+
+Ratification findings:
+
+- AutoQC Architecture v1 approved for lock.
+- AQC-KM01 through AQC-KM07 architecture approved.
+- World Spec AutoQC v6.3 relationship preserved.
+- Future Section 6 Grader Guidelines AutoQC boundary preserved without fabricating missing prompt content.
+- Task-layer, file-layer, prompt, expected-output, golden, grader-guidance, and packaging QC boundaries preserved.
+- Carry-forward watch items preserved.
+- Locked-artifact protection, no-fabrication rule, and import-not-inference rule preserved.
+
+Boundary preserved:
+
+- No AutoQC was run.
+- No platform responses or AutoQC responses were created.
+- No scoring rubrics were created.
+- No scoring thresholds were created.
+- No point allocations or pass/fail bands were created.
+- No DOCX artifacts were created.
+- No submission artifacts were created.
+- No Section 6 AutoQC prompt content was fabricated.
+
+Next eligible phase:
+
+- Packaging Construction.
+
+## AutoQC Construction Ratification and Lock Record
+
+Date recorded: 2026-06-03
+
+Status:
+
+- AutoQC Construction: LOCKED.
+- AutoQC: COMPLETE.
+- Historical next eligible phase after AutoQC Construction lock: Packaging Architecture. Current next eligible phase: Execution Preparation.
+
+Authorization:
+
+- Alexander authorized AutoQC Construction ratification and lock after independent Review A and Review B returned LOCK READY / GO.
+- Construction Quality was STRONG.
+- Governance Fidelity was HIGH.
+- True defects, governance issues, canon conflicts, and open reconciliations were NONE.
+
+Locked artifacts:
+
+- `worlds/korvin-merrow/autoqc/locked/autoqc-construction-v1.md`
+- `worlds/korvin-merrow/autoqc/locked/autoqc-construction-validation-review.md`
+- `worlds/korvin-merrow/autoqc/ratifications/autoqc-construction-ratification.md`
+
+Ratification findings:
+
+- AutoQC Construction independently reviewed.
+- AQC-KM01 through AQC-KM07 verified.
+- No AQC-KM08 created.
+- No-fabrication rule verified.
+- Import-not-inference rule verified.
+- Locked-artifact protection verified.
+- Response-routing paths verified.
+- Reconciliation-routing paths verified.
+- Packaging-routing paths verified.
+- Transcript carry-forward verified.
+
+Boundary preserved:
+
+- No AutoQC execution performed.
+- No AutoQC responses created.
+- No scoring leakage.
+- No DOCX leakage.
+- No submission leakage.
+
+## Packaging Architecture v1 Candidate And Ratification Record
+
+Date recorded: 2026-06-03
+
+Status:
+
+- Packaging Architecture v1: LOCKED.
+- AutoQC Construction: LOCKED.
+- AutoQC: COMPLETE.
+- Packaging Architecture: COMPLETE.
+- Historical next eligible phase after Packaging Architecture lock: Packaging Construction. Current next eligible phase: Execution Preparation.
+
+Authorization:
+
+- Alexander authorized Packaging Architecture v1 construction after AutoQC Construction ratification and lock.
+- Alexander authorized Packaging Architecture v1 ratification and lock after independent Review A and Review B returned LOCK READY / GO.
+- This phase defines future packaging strategy only.
+- It does not create packaging artifacts.
+
+Locked artifacts:
+
+- `worlds/korvin-merrow/packaging-architecture/locked/packaging-architecture-v1.md`
+- `worlds/korvin-merrow/packaging-architecture/locked/packaging-architecture-validation-review.md`
+- `worlds/korvin-merrow/packaging-architecture/ratifications/packaging-architecture-ratification.md`
+
+Architecture scope recorded:
+
+- Packaging scope and PKG-KM01 through PKG-KM08.
+- Relationship to future AutoQC outputs.
+- Relationship to World Spec AutoQC v6.3 packaging checks.
+- Relationship to source-derived submission requirements.
+- Single-DOCX strategy.
+- Upload sequencing strategy.
+- Manifest strategy.
+- Transcript strategy.
+- Reference/template handling strategy.
+- Reconciliation handling strategy.
+- Packaging authorization boundaries.
+- Template fidelity verified.
+- Official template treated as source-of-truth.
+- Official section structure preserved.
+- Official file-plan structure preserved.
+- Source/Tool separation preserved.
+- Single-DOCX requirement preserved.
+- Transcript boundaries preserved.
+- AutoQC boundaries preserved.
+- Reconciliation routing preserved.
+- Packaging scope verified.
+
+Carry-forward ambiguities:
+
+- Transcript requirement and formatting ambiguity.
+- Goldens/grader guidance submission-scope ambiguity.
+- Missing official prompts.
+- Packaging readiness checks.
+- Submission manifest dependency.
+- DOCX population dependency.
+
+## Packaging Construction v1 Candidate Record
+
+Date recorded: 2026-06-03
+
+Status:
+
+- Packaging Construction v1: CANDIDATE REVIEW.
+- Packaging Architecture v1: LOCKED.
+- Packaging Architecture: COMPLETE.
+- Historical next eligible phase at Packaging Construction candidate record: Packaging Construction Review.
+
+Authorization:
+
+- Alexander authorized Packaging Construction v1 after Packaging Architecture v1 ratification and lock.
+- This phase constructs the Packaging Preparation Package only.
+- It does not populate the final World Spec DOCX.
+- It does not create a submission manifest.
+- It does not create a final submission package.
+- It does not perform upload or submission.
+
+Candidate artifacts:
+
+- `worlds/korvin-merrow/packaging/candidate-review/packaging-construction-v1.md`
+- `worlds/korvin-merrow/packaging/candidate-review/packaging-construction-validation-review.md`
+
+Construction scope recorded:
+
+- PKG-KM01 through PKG-KM08 mapping.
+- Execution order.
+- Dependency order.
+- Blocked dependencies.
+- Required inputs.
+- Future output targets.
+- Transcript decision workflow.
+- DOCX population workflow.
+- Manifest workflow.
+- Upload workflow.
+- Reconciliation workflow.
+- Authorization gates.
+- Stop points.
+
+Boundary preserved:
+
+- No DOCX populated.
+- No manifest created.
+- No final submission package created.
+- No upload or submission performed.
+- No AutoQC run.
+- No AutoQC responses created.
+- No scoring artifacts created.
+
+Boundary preserved:
+
+- No DOCX populated.
+- No manifest created.
+- No submission package created.
+- No upload performed.
+- No AutoQC run.
+- No AutoQC responses or scoring artifacts created.
+
+## AutoQC Construction Candidate Record
+
+Date recorded: 2026-06-03
+
+Status:
+
+- AutoQC Construction: CANDIDATE REVIEW.
+- AutoQC Architecture v1: LOCKED.
+- AutoQC Architecture: COMPLETE.
+
+Authorization:
+
+- Alexander authorized AutoQC Construction after AutoQC Architecture v1 ratification and lock.
+- Construction is limited to preparation artifacts and does not run AutoQC.
+
+Candidate artifacts:
+
+- `worlds/korvin-merrow/autoqc/candidate-review/autoqc-construction-v1.md`
+- `worlds/korvin-merrow/autoqc/candidate-review/autoqc-construction-validation-review.md`
+
+Construction scope recorded:
+
+- Future AutoQC execution order.
+- AQC-KM01 through AQC-KM07 mapping.
+- Required inputs for each AQC surface.
+- Blocked dependencies and official prompt dependencies.
+- Future response-routing paths.
+- Reconciliation-routing paths.
+- Packaging-routing paths.
+- No-fabrication rule.
+- Locked-artifact protection.
+- Import-not-inference rule.
+
+Carry-forward watch items:
+
+- Official Section 6 Grader Guidelines AutoQC prompt is not locally available.
+- World Spec AutoQC v6.3 exists locally.
+- Packaging-layer checks remain pending.
+- Submission manifest remains pending.
+- DOCX population remains pending.
+- Transcript requirement remains ambiguous.
+- `docs/claude-transcript.md` exists as a submission-phase carry-forward item.
+- Goldens/grader guidance submission scope remains ambiguous.
+
+Boundary preserved:
+
+- No AutoQC was run.
+- No platform responses or AutoQC responses were created.
+- No scoring rubrics were created.
+- No scoring thresholds were created.
+- No point allocations or pass/fail bands were created.
+- No DOCX artifacts were created.
+- No submission artifacts were created.
+- No Section 6 prompt content was fabricated.
+
+Next eligible phase:
+
+- AutoQC Construction Review.
+## Submission Preparation Ratification Record
+
+Date: 2026-06-03
+
+Decision:
+
+- Submission Preparation v1 is ratified and locked.
+- Submission Preparation is complete.
+- Next eligible phase is Execution Preparation.
+
+Locked artifacts:
+
+- `worlds/korvin-merrow/submission-preparation/locked/submission-preparation-v1.md`
+- `worlds/korvin-merrow/submission-preparation/locked/submission-preparation-validation-review.md`
+
+Ratification:
+
+- `worlds/korvin-merrow/submission-preparation/ratifications/submission-preparation-ratification.md`
+
+Review findings:
+
+- Independent Review A: LOCK READY / GO.
+- Independent Review B: LOCK READY / GO.
+- Decision Register, Dependency Register, Evidence Register, Stop-Point Register, Execution Order, transcript handling, reference-file handling, template fidelity protection, RL Studio dependency handling, AutoQC dependency handling, and authorization gates were verified.
+- The 7-column vs 8-column discrepancy remains correctly blocked to future reconciliation before DOCX population.
+- No true defects, governance issues, canon conflicts, or open reconciliations were identified.
+
+Boundaries:
+
+- Do not begin Execution Preparation without explicit authorization.
+- Do not create execution artifacts, DOCX artifacts, manifests, submission packages, AutoQC responses, scoring artifacts, uploads, or submissions without explicit authorization.
+
+## Execution Preparation Ratification Record
+
+Date: 2026-06-03
+
+Authorization:
+
+- Alexander authorized Execution Preparation v1 ratification and lock after independent review.
+
+Locked artifacts:
+
+- `worlds/korvin-merrow/execution-preparation/locked/execution-preparation-v1.md`
+- `worlds/korvin-merrow/execution-preparation/locked/execution-preparation-validation-review.md`
+- `worlds/korvin-merrow/execution-preparation/ratifications/execution-preparation-ratification.md`
+
+Recorded scope:
+
+- Execution Readiness Register.
+- Execution Dependency Register.
+- External-System Register.
+- Authorization Register.
+- Stop-Point Register.
+- Final Execution Order.
+- Readiness review for transcript resolution, reference file resolution, goldens/GG scope, template version, 7-column vs 8-column reconciliation, official AutoQC prompt import, formal AutoQC execution, AutoQC reconciliation, DOCX population, manifest creation, upload preparation, and submission.
+
+Boundary preserved:
+
+- No AutoQC was run.
+- No AutoQC responses were created.
+- No DOCX was populated.
+- No manifest was created.
+- No submission package was created.
+- No upload or submission occurred.
+- No locked artifact contents were modified beyond the authorized content-preserving move.
+- No scoring artifacts were created.
+
+Status:
+
+- Submission Preparation: LOCKED.
+- Execution Preparation v1: LOCKED.
+- Execution Preparation: COMPLETE.
+
+Next eligible phase:
+
+- Transcript Resolution.
+
+Review result:
+
+- LOCK READY.
+- Preparation Quality: STRONG.
+- Execution Readiness Governance: HIGH.
+- Risk Control Quality: HIGH.
+- Recommendation: GO.
+- True defects: NONE.
+- Governance issues: NONE.
+- Canon conflicts: NONE.
+- Open reconciliations: NONE.
+
+## Transcript Resolution Candidate Record
+
+Date: 2026-06-03
+
+Authorization:
+
+- Alexander authorized Transcript Resolution after Execution Preparation lock.
+
+Candidate artifacts:
+
+- `worlds/korvin-merrow/transcript-resolution/candidate-review/transcript-resolution-v1.md`
+- `worlds/korvin-merrow/transcript-resolution/candidate-review/transcript-resolution-validation-review.md`
+
+Recorded evidence:
+
+- Current Studio screenshot for task `cyau8803` shows `2.3) UPLOAD CLAUDE TRANSCRIPTS` with an `Upload File` control.
+- Alexander clarified that the stale tutorial video no longer reflects current Studio mechanics because current Studio has no transcript text field.
+- The older local video is retained as stale historical evidence only.
+- `docs/claude-transcript.md` remains raw transcript/provenance evidence.
+
+Recorded resolution:
+
+- Current Studio transcript handling is file-upload based.
+- Accepted file type, transcript scope, and whether raw markdown is acceptable remain unresolved.
+- No transcript was formatted, cleaned, converted, packaged, uploaded, or submitted.
+
+Boundary preserved:
+
+- No AutoQC was run.
+- No AutoQC responses were created.
+- No DOCX was populated.
+- No manifest was created.
+- No submission package was created.
+- No upload or submission occurred.
+- No locked artifacts were modified.
+- No scoring artifacts were created.
+
+Status:
+
+- Execution Preparation: LOCKED.
+- Transcript Resolution v1: CANDIDATE REVIEW.
+
+Next eligible phase:
+
+- Transcript Resolution Review.
+
+## Final Submission Resolution Candidate Record
+
+Date: 2026-06-03
+
+Authorization:
+
+- Alexander authorized Final Submission Dependency Resolution and Export Architecture after Execution Preparation lock and Transcript Resolution resolution.
+
+Created candidate artifacts:
+
+- `worlds/korvin-merrow/final-submission-resolution/locked/final-submission-resolution-v1.md`
+- `worlds/korvin-merrow/final-submission-resolution/locked/final-submission-resolution-validation-review.md`
+
+Resolved execution architecture:
+
+- Required current upload set: final World Spec DOCX, FI-W/FI-S template-reference exports, and transcript DOCX.
+- Optional current support: approved Brainstorm DOCX as QC supplemental input, transcript PDF companion, Claude share URL provenance.
+- Current hold/not-upload: task prompts, expected outputs, goldens, grader guidance, governance records, ratifications, reconciliations, AutoQC/Packaging/Submission/Execution prep records, raw transcript, candidate-review artifacts from prior phases, scoring artifacts, AutoQC responses, manifests, packages, uploads, and submissions.
+- Markdown remains workspace source format, not preferred final submission format unless official evidence explicitly requires it.
+- FI-T01 through FI-T07 remain optional/later task-level hold materials unless RL Studio explicitly requests task-level context files during current upload.
+
+Boundary preserved:
+
+- No DOCX or PDF generated.
+- No manifest created.
+- No final package created.
+- No AutoQC run.
+- No AutoQC response created.
+- No upload or submission performed.
+- No locked artifact modified.
+- No scoring rubric, threshold, pass/fail band, or point allocation created.
+
+Status:
+
+- Final Submission Resolution v1: LOCKED.
+
+Next eligible phase:
+
+- Execution and Artifact Generation.

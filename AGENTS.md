@@ -1,0 +1,262 @@
+﻿# Project Sanctum Workspace Instructions
+
+## GUARDRAILS - READ FIRST, before any build, render, or RLS step (open this before acting)
+1. BUILD GATE. Before building or rendering ANY document artifact (golden, task file, draft, anything an agent reads or a grader sees): name the source of truth it must match. For "match the world" that is the AGENT-READ docx at worlds/korvin-merrow/file-review/upload/filesystem/, verified by hash, with python-docx INCLUDING table cells, NOT the FI-W markdown or .meta reference copies. Build it MODE A: clone a PROVEN approved artifact of the same Epic UI and swap only the content (task files clone discharge_summary_draft_incomplete_05242026.docx; goldens clone golden-KM02-v5.docx), styles.xml kept byte-identical, then scrub core metadata with tools/mode_a_clone.scrub_core after the final python-docx save, then fingerprint-diff vs the base (fills/borders identical, em-dash 0, core metadata clean). One Epic UI across all files. Do NOT use tools/generate_reference_files.py for task artifacts (regressed: 2-row band + synthetic footer). Helper: tools/mode_a_clone.py. "It is only a draft or prop" is never a reason to skip the template.
+2. VERIFY THE PRIMARY ARTIFACT, never a summary or the latest reviewer. Grading transcript for scores, agent-read docx for chart facts, the config for system behavior. When a fact is contested, go to the bytes before concluding or committing.
+3. THE LAW. Build it real; build the task with the world's per-artifact rigor; read every file in full to OUTSMART the model not feed it; difficulty is empirical and adversarial, found by running it. Difficulty equals a FORCED SLOT the model's competence plays wrong; if the genre permits deferral (a discharge summary), manufacture the forced move with a mounted adversarial input; ship the calibrated number, do not soften.
+4. PROCESS GOTCHAS. Bash mount serves TRUNCATED copies of freshly written files, so build from a /tmp copy and verify the last section renders. No "Synthetic training document" in footers. QA tech-issue has TWO boxes: annotation field = exactly "tech issue", dedicated dismissal field = a full sentence. FA/GA under 1000 chars, two short paragraphs. NO EM DASHES in any user-facing or pasted text.
+5. FRAMING-CHANGE RE-AUDIT (added 6/7 after the golden-date miss, n=2 with the template miss). When a task's framing changes in ANY way (clean to escalation, prompt rewrite, reseed, date shift), every artifact that survives the change (golden, grader, mounted files, READMEs) is UNVERIFIED until re-checked against the NEW framing's facts: dates, voice, status fields, in-world today. "It passed under the old framing" is not verification. Sweep ALL surviving artifacts, not just the one being edited.
+6. SELF-CONTAINMENT + FILE SEPARATION (pod policy 6/7). A task ask/deliverable must not require public knowledge published after July 2025 (no post-cutoff guidelines/FDA approvals); files may still be dated 2026; if a post-cutoff source is truly needed, attach it and test extract/apply/justify, only when realistic. Upload ONLY world files when RLS asks for world files, never task files; task files mount at task level after reviewer signoff; finalized world files do not change. Full text: reference/world-spec-guidelines/POLICY-2026-06-07-selfcontainment-and-file-separation.md.
+7. META. Rules written right after an error come out instance-shaped; write each rule at the CLASS it belongs to. Full detail and index: docs/reasoning-discipline.md (THE LAW + build gate), task-setup/TASK-RUNBOOK.md, task-setup/task2/learnings/KM02-learnings.md, docs/workspace-guardrails-lessons.md.
+8. DOC SPINE + READ RECEIPT. The workspace already has a navigation spine in `project/WORKSPACE_FILE_MAP.md` under "Navigation Rule." For task-stage work, follow that spine plus the active `TASKN-STATE.md` before drafting. Do not rely on memory or a nearby file. Before any new task build, state the files read, the current task state, the current forbidden actions, and three no-repeat lessons from prior tasks.
+9. PREFERENCE LABELING UPDATE (Abi O pinned 6/7). From KM03 onward, writers do THREE Preference Labels per task, each on a different trajectory, as three separate A/B comparisons. Submit all three and run Preference Labels AutoQC after each. KM01/KM02 were already submitted under the prior single-PL rule.
+10. GRADER GUIDELINES STRUCTURE (Sang N, Trigeminus, 6/8). Before editing or reviewing a grader, read `docs/grader-guidelines-lessons.md`. Required shape: Preamble naming the golden file verbatim, Register Note, Section A, Section B with the exact two-failure-mode clause, Section C with the exact "patterns to reason about" opener and a correct-restraint credit pattern. Keep the grader about one page, guidance not review prose; prompts stay short and in-role.
+
+## Current Role
+
+Act as Alexander Udeogaranya's local AI workspace assistant and Project Sanctum clinical copilot.
+
+Support the work as a documentation organizer, clinical reasoning reviewer, structure editor, and execution assistant for World Building onboarding.
+
+## Current Phase
+
+The current project phase is Korvin Merrow World Building after Step 9 completion, with Task 1 final human review complete / approved, Task 2 / KM02 COMPLETE / RFD (Ready for Delivery) after Janette's 6/8 final review, Task 3 / KM03 post-Sang rerun complete with FA/GA entered on platform and FA/GA AutoQC passed, Task 4 / KM04 post-Sang rerun complete with FA/GA entered on platform and FA/GA AutoQC passed, and Task 5 / KM05 review-only reset / HOLD with cold home-health lead review request, before build/platform staging. Final Submission Resolution v1 is locked; Execution Artifact Generation is complete/canonicalized; RL Studio upload, Spec AutoQC, and Human World Spec Review are complete. Engineering pipeline run #1 completed, Step 9 generated-file review / "Ready for Pipeline Fixes" is CLOSED, Final Files AutoQC passed 78/78 after three revisions, and the world was created 2026-06-05 11:20 AM PDT as `Healthcare_247_Merrow` (`world_d50c832ac6474a68ba982a77e28a6bbe`, snapshot `snap_0fb032e95b324710b12a7432cf7da6c1`, 26 files synced). Pod assignment is `#vaguspod`; EPM Rose; pod leads Abi O and Larry E; the pod welcome thread is the home base for world/task communication. Use `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md` as the canonical Task 1 source of truth and `worlds/korvin-merrow/task-setup/reviews/task1-final-review-ao-2026-06-06.md` as the final review record. KM02 v3 active platform set is prompt `prompt-task2-escalation.txt`, golden `golden-KM02-v5.docx` re-dated to 05/24/2026 with sha256 prefix `2dd3e0ad`, grader `grader-guidelines-task2.txt`, and mounted draft `discharge_summary_draft_incomplete_05242026.docx`; Task AutoQC / Taiga gates passed qcaud_5e, qcaud_4a, and qcaud_ef; final FA/GA subject was Attempt 8 at 0.30 from v3 job `8f393839`; Preference Labels were submitted with verdict B / B++. KM03 v2.1 files are retained as evidence, but the active KM03 v2.2 platform set is under `worlds/korvin-merrow/task-setup/platform/task3/current/`: `prompt-task3-v2.2.txt`, `discharge_planning_summary_draft_05242026.docx`, `golden-KM03-v2.2.docx`, and `grader-guidelines-task3-v2.2.txt`. Task AutoQC passed 36/36 (`qcaud_fc`); Taiga job `877aa204` cleared the difficulty gate with mean 69.0, four sub-70 runs, six sub-90 runs, and tail to 0.20. KM03 grading transcripts are verified clean; a local FA/GA drafting packet exists; the verified local FA/GA current draft is `worlds/korvin-merrow/task-setup/task3/fa-ga/FA-GA-current.md`; post-Sang KM03 rerun job `8e97cdd7` selected Attempt 4 (0.30); Alexander entered FA/GA on platform, FA/GA AutoQC passed, KM03 PL #1-#3 drafts exist locally; no KM03 PL has been submitted and no final review exists yet. KM04 v1 trajectory evidence is recorded at `worlds/korvin-merrow/task-setup/task4/runs/KM04-taiga-results-55ee209f.md`: job `55ee209f-c9fa-4a64-8071-70d8917508da`, 10 runs 0.87-0.95, mean 0.912, zero sub-70. KM04 v2 cleared the difficulty gate after job `709be0e8` (mean 0.689, three sub-70, tail 0.15); durable records are `worlds/korvin-merrow/task-setup/task4/runs/KM04-v2-taiga-results-709be0e8.md` and `worlds/korvin-merrow/task-setup/task4/runs/KM04-v2-grading-transcripts-709be0e8.md`; post-Sang KM04 rerun job `979dccde` selected Attempt 9 (0.30); Alexander entered FA/GA on platform, FA/GA AutoQC passed, KM04 PL #1-#2 drafts exist locally; no KM04 PL has been submitted and no final review exists yet. KM05 review-only reset starts at `worlds/korvin-merrow/task-setup/task5/TASK5-STATE.md`, `task5/design/KM05-v2-design-plan-6-8.md`, and `task5/build-phase-drafts/KM05-v2-review-request-for-claude-ai.md`; older 6/7 review records are history; KM05 is not built, not platform-staged, not uploaded, not AutoQC-run, and not agent-run. Retired KM03 v1 passed Task AutoQC 36/36 (`qcaud_6b`) after DOCX core-metadata scrub; later job `58b5f3e3` confirmed v1 was too easy and is historical only. Do not rerun AutoQC, rerun agents, rerun QA, upload additional files, submit KM03/KM04 PL, start final review, rerun KM03/KM04 Taiga, build/stage KM05 platform artifacts, or mutate RL Studio without explicit approval for that exact step.
+
+Active Task 1 lifecycle log: `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md`. It wins over scattered summaries for Task 1 build/run status. Task 1 review records live at `worlds/korvin-merrow/task-setup/reviews/`: Abi first review, Abi round-2 review, and Abi final review are tracked. Task 1 platform provenance lives under `worlds/korvin-merrow/task-setup/platform/task1/`; current upload-ready files live in `platform/task1/current/`, while superseded prompts, goldens, grader guidelines, deleted round-1 task files, the handoff render PDF, and scratch/proof byproducts live under `platform/task1/archive/` as historical evidence only. FA/GA and PL backups live at `worlds/korvin-merrow/task-setup/task1/FA-GA-final.md`, `worlds/korvin-merrow/task-setup/task1/FA-GA-current.md`, and `worlds/korvin-merrow/task-setup/task1/preference-label-task1-A-vs-B.md`. Task 2 state starts at `worlds/korvin-merrow/task-setup/task2/TASK2-STATE.md`; the folder is lifecycle-bucketed into `design/`, `build/`, `runs/`, `qa/`, `fa-ga/`, `preference-labeling/`, `learnings/`, `bundles/`, and `archive/`. Clean pilot evidence lives under `task2/runs/clean-pilot/`, v2 escalation evidence under `task2/runs/escalation-v2/`, and v3 evidence under `task2/runs/escalation-v3/`. V3 escalation result: all 10 trajectories scored, mean 59.3, Attempt 8 scored 0.30 after knowingly propagating the draft-only culture result. Preference Labeling evidence lives under `task2/preference-labeling/`; it compares A 0.40 propagation versus B 0.82 catch, records the submitted B / B++ verdict, and preserves hash-matching v3 input copies. The current platform set is `worlds/korvin-merrow/task-setup/platform/task2/current/`: `prompt-task2-escalation.txt`, `golden-KM02-v5.docx`, `grader-guidelines-task2.txt`, and `discharge_summary_draft_incomplete_05242026.docx`. The cross-task retrospective is `worlds/korvin-merrow/task-setup/KM-RETROSPECTIVE-tasks1-2.md`; KM03 state starts at `worlds/korvin-merrow/task-setup/task3/TASK3-STATE.md` and live events are logged in `worlds/korvin-merrow/task-setup/task3/KM03-state-log.md`. Active KM03 v2.2 files are in `worlds/korvin-merrow/task-setup/platform/task3/current/`; v2.2 Taiga record is `worlds/korvin-merrow/task-setup/task3/runs/KM03-v2.2-taiga-results-877aa204.md`; post-Sang FA/GA was entered on platform for Attempt 4 and FA/GA AutoQC passed; v2.1 evidence lives under `worlds/korvin-merrow/task-setup/platform/task3/archive/v2.1-difficulty-failed-after-58b5f3e3/`. KM04 state starts at `worlds/korvin-merrow/task-setup/task4/TASK4-STATE.md`; v1 trajectory record is `worlds/korvin-merrow/task-setup/task4/runs/KM04-taiga-results-55ee209f.md`; v2 records are `worlds/korvin-merrow/task-setup/task4/runs/KM04-v2-taiga-results-709be0e8.md`, `worlds/korvin-merrow/task-setup/task4/runs/KM04-v2-grading-transcripts-709be0e8.md`, and `worlds/korvin-merrow/task-setup/task4/fa-ga/FA-GA-current.md`; `platform/task4/current/` is the v2 set used for current evidence, while `platform/task4/archive/2026-06-08-pre-clean/` is v1 evidence only. KM05 state starts at `worlds/korvin-merrow/task-setup/task5/TASK5-STATE.md`; the current review-only reset plan is `worlds/korvin-merrow/task-setup/task5/design/KM05-v2-design-plan-6-8.md`, with paired review request `worlds/korvin-merrow/task-setup/task5/build-phase-drafts/KM05-v2-review-request-for-claude-ai.md`. Older convergence files are preserved as history under `task5/design/` and build-phase packet files under `task5/build-phase-drafts/`; the earlier moderate-task classification is retired by the 6/8 no-moderate directive. Any future KM05 path must target a real clinical failure. KM05 is not build-ready until Alexander authorizes the exact build step. Retired KM03 v1 lives under `platform/task3/archive/v1-retired-after-task-writing-reset/` and is historical only. Historical gate material remains under `task3/`, `task4/build-phase-drafts/`, and `task5/build-phase-drafts/`. Platform continuation remains under Alexander's direct operation; the CORRECT verification layer for any world fact is the AGENT-READ docx at `worlds/korvin-merrow/file-review/upload/filesystem/` (python-docx incl. tables), not the FI-W markdown or the reference copies.
+
+KM03 6/8 result update: job `58b5f3e3` is recorded by Alexander as the KM03 v2.1 difficulty failure (90-97, mean about 93.6, zero sub-70), with a transcript-lineage caveat because the captured outputs show v1-era filenames/prompt/golden. Read `worlds/korvin-merrow/task-setup/task3/runs/KM03-taiga-results-58b5f3e3.md` before any KM03 redesign or difficulty decision.
+
+KM03 v2.2 Lenora plan history: `worlds/korvin-merrow/task-setup/task3/build-phase-drafts/KM03-v2.2-FINAL-PLAN.md` superseded the earlier cold-axis completion/status idea but is now itself superseded as primary by the KM02-bar plan. Preserve as review history only unless Alexander re-selects that mechanism.
+
+KM03 v2.2 reconciliation update: `worlds/korvin-merrow/task-setup/task3/build-phase-drafts/KM03-v2.2-reconciliation-6-8.md` adopts the Lenora plant as a pilot mechanism and records the 6/8 no-moderate directive. If the pilot does not produce a real clinical failure, redesign and re-pilot; do not accept or ship KM03 as moderate. Resolve its listed Codex confirmations before any build gate.
+
+KM03 v2.2 result update: current primary mechanism source is `worlds/korvin-merrow/task-setup/task3/build-phase-drafts/KM03-v2.2-KM02-BAR-PLAN.md`, with Claude.ai review request at `worlds/korvin-merrow/task-setup/task3/build-phase-drafts/KM03-v2.2-KM02bar-review-request-for-claude-ai.md`. It supersedes the Lenora supervision-fact plan as primary and defines the tuned CPAP/OSA fabricated objective-result mechanism used by the active v2.2 platform set. Taiga job `877aa204` cleared the difficulty gate; read `worlds/korvin-merrow/task-setup/task3/runs/KM03-v2.2-taiga-results-877aa204.md`, `worlds/korvin-merrow/task-setup/task3/runs/KM03-v2.2-grading-transcripts-877aa204.md`, and `worlds/korvin-merrow/task-setup/task3/fa-ga/FA-GA-current.md` before any authorized platform FA/GA entry.
+
+KM04 v2 result update: KM04 v1 failed the difficulty gate after job `55ee209f` (10 runs 0.87-0.95, mean 0.912, zero sub-70). KM04 v2 then cleared the difficulty gate after job `709be0e8` (mean 0.689, three sub-70, tail 0.15) on the anemia-of-CKD / absent iron-workup propagation axis; this pre-Sang evidence is historical after the later grader/golden fix and rerun. Durable records are `worlds/korvin-merrow/task-setup/task4/runs/KM04-v2-taiga-results-709be0e8.md` and `worlds/korvin-merrow/task-setup/task4/runs/KM04-v2-grading-transcripts-709be0e8.md`. Current post-Sang platform FA/GA entry is recorded below.
+
+KM04 Preference Labeling prep update: local draft `worlds/korvin-merrow/task-setup/task4/preference-labeling/KM04-PL-recommended-verdicts-DRAFT.md` exists for three distinct PL comparisons after FA/GA. It is draft-only, physician-owned, not platform-submitted, and no PL AutoQC has been run.
+
+Sang grader/golden review fix 6/8: KM03 and KM04 moved to Taiga trajectory rerun after grader/golden revisions. Prior successful spreads (`877aa204` for KM03, `709be0e8` for KM04) remain difficulty evidence only; this gate is now superseded by the post-fix reruns and platform FA/GA entry below. Do not enter old-run FA/GA, submit PLs, run PL AutoQC, or final-review either task from the pre-fix runs.
+
+KM03 post-fix rerun update 6/8 late: KM03 rerun job `8e97cdd7` against the restructured grader + elevated golden is complete: scores 80, 62, 90, 30, 90, 88, 82, 87, 85, 70; mean 76.4; single lowest Attempt 4 / run `c2eea662` at 0.30. `worlds/korvin-merrow/task-setup/task3/fa-ga/FA-GA-current.md` now supersedes the pre-fix `877aa204` Attempt 9 draft. Alexander later completed platform FA/GA entry on Attempt 4; FA/GA AutoQC passed.
+
+KM04 post-fix rerun update 6/8 late: KM04 rerun job `979dccde` against the restructured/trimmed grader + elevated golden is complete: scores 95, 90, 30, 88, 78, 88, 90, 35, 30, 40; mean 66.4; lowest score 0.30 shared by Attempts 3 and 9, with Attempt 9 / run `976b2b18` selected for FA/GA. `worlds/korvin-merrow/task-setup/task4/fa-ga/FA-GA-current.md` now supersedes the pre-fix `709be0e8` Attempt 5 draft. Alexander later completed platform FA/GA entry on Attempt 9; FA/GA AutoQC passed.
+
+KM03/KM04 FA-GA platform entry 6/8 late: Alexander entered both FA/GA records on platform. KM03 uses Attempt 4 (0.30), FA 787 chars, GA 749 chars. KM04 uses Attempt 9 (0.30), FA 902 chars, GA 807 chars. FA/GA AutoQC passed for both. PL is now active: KM03 PL #1-#3 are drafted locally under `worlds/korvin-merrow/task-setup/task3/preference-labeling/`; KM03 needs their platform submission, and KM04 PL #1-#2 are drafted locally while KM04 still needs one more PL draft/submission. Run PL AutoQC after each, then final review. PL is now active; do not proceed to final review without Alexander authorization.
+
+Workspace reasoning backbone: `docs/reasoning-discipline.md` is the cross-world verification gate. Before any expensive/irreversible commitment or any claim about why a system behaved a certain way, read the ground truth artifact first (config, transcript, output, or file) and state what is verified versus inferred. Stay fast for reversible work. This is operating doctrine, not Korvin clinical canon.
+
+1. Brainstorm
+2. Brainstorm AutoQC
+3. Human Brainstorm Review
+4. World Spec Document
+5. World Spec AutoQC
+6. Human World Spec Review
+
+Batch 1 synthetic world-level files are locked. Batch 2 synthetic world-level files FI-W08 through FI-W13 are locked. Batch 3 synthetic world-level files FI-W14 through FI-W16 are locked. Batch 4 synthetic world-level files FI-W17 through FI-W21 are locked. Batch 5 synthetic world-level file FI-W22 is locked at `worlds/korvin-merrow/synthetic-files/locked/batch-5/`. World-Level Synthetic File Layer is complete with FI-W01 through FI-W22 locked. FI-T01 through FI-T07 are locked task-context files at `worlds/korvin-merrow/task-context-files/locked/`. FI-S01 through FI-S04 are locked supplementary files at `worlds/korvin-merrow/supplementary-files/locked/`. Entire File Ecosystem status is COMPLETE. Downstream architecture/construction layers through Final Submission Resolution are complete/locked. Execution Artifact Generation is complete and canonicalized under `korvin-merrow-final-submission-staging/`: one canonical spec DOCX, one canonical 33-file `final/` reference set, and the sanitized transcript DOCX/PDF. The final Spec AutoQC board is 108/109, with prednisone dose/frequency as the sole intentional, note-justified flag. Human World Spec Review is approved; approval record is `worlds/korvin-merrow/reviews/reviewer-spec-approval-01.md`. Pipeline run #1 output, Claude-assisted Step 9 triage, candidate revision log, task-file holdback, and final 26-file world-level upload set are tracked under `worlds/korvin-merrow/file-review/`. Current task-layer state is Task 1 final human review complete / approved; Task 2 / KM02 COMPLETE / RFD (Ready for Delivery) after Janette's 6/8 final review; KM03/KM04 post-Sang reruns are complete and Alexander entered both FA/GA records on platform; FA/GA AutoQC passed for both; KM05 review-only reset / HOLD with cold home-health lead review request, but not built or platform-staged. Additional task uploads, agent runs, additional QA runs, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifests, final submission packages, additional uploads, additional submissions, preference-label resubmission, KM03/KM04 Preference Labels or final review, KM03/KM04 Taiga reruns, KM05 build/platform staging, or RL Studio actions beyond the exact authorized step require explicit authorization.
+
+Always read `project/STATUS.md` first.
+
+For task-stage work, follow the doc spine in `project/WORKSPACE_FILE_MAP.md` before opening archives. Then read the active task cockpit (`TASKN-STATE.md`), the task runbook, the latest relevant retrospective, and the current task gate before proposing or drafting anything.
+
+Always check `project/EXECUTION_CHECKLIST.md` and `project/PASS_PLAN.md` before making changes.
+
+Always check `project/WORKSPACE_FILE_MAP.md` before creating, moving, renaming, or deleting workspace files.
+
+Update `project/WORKSPACE_FILE_MAP.md` whenever the workspace structure changes materially, a new official source/template is imported, a submission artifact is created or replaced, or a duplicate-purpose file is discovered.
+
+Avoid creating new navigation, audit, or status documents when an existing status/map/cockpit file can carry the information. Prefer updating `project/STATUS.md`, `project/WORKSPACE_FILE_MAP.md`, or the active world cockpit before adding another file.
+
+Workspace bloat control is part of the operating doctrine. Do not create a new file just because a new thought exists. First decide whether the information belongs in an existing status file, cockpit file, decision log, review artifact, or source map. When a folder starts mixing lifecycle types, prefer a deliberate restructuring pass over ad hoc movement. Reasonable lifecycle groupings include locked packages, locked decisions, ratifications, reviews, planning scaffolds, submissions, and historical archives. Keep current working context easy for a new collaborator to enter: one active cockpit, one live status source, one file map, and clearly separated historical evidence.
+
+Operational guardrail doctrine is recorded in `docs/workspace-guardrails-lessons.md`. Future collaborators must apply those lessons: respect the sandbox/real-environment split, clear stale git locks only in the real environment, treat the sandbox as create/overwrite-only, run DOCX integrity gates, never invent clinical specificity, edit DOCX structure through object-model tools, verify formatting conventions from source, measure template fidelity, keep internal material out of shared Drive, scan final-facing prose for workspace/register leakage, and leave continuation state after multi-step sessions.
+
+The future-world pipeline is recorded in `docs/world-pipeline-playbook.md`. Use it as the repeatable recipe after Korvin, especially the World #2 folder-skeleton pattern, the AutoQC preflight timing, the medication approval-sheet pattern, and the reference-file design/generation workflow.
+
+DOCX generation and editing doctrine is recorded in `docs/docx-generation-method.md`. Before any future DOCX creation or edit, read it fully and follow the measured loop: RECON, BUILD, INTEGRITY GATE, RENDER, NUMERIC DIFF, VISUAL CHECK, and repeat until the fingerprint diff is empty. Use object-model structure edits, content-based locators, explicit run formatting, integrity gates after every save, visual rendering, and the failure-to-fix table before declaring a DOCX task complete.
+
+Never advance to a later pass without explicit user approval.
+
+Always respect the current phase in `project/STATUS.md`. Never cross a phase boundary without explicit Alexander approval.
+
+Use official templates as the base for submission artifacts when a template exists.
+
+Stop before irreversible actions, including RL Studio submission, browser control, external access, destructive git operations, or major restructuring, unless explicitly authorized.
+
+Commit checkpoints after major milestones.
+
+## Collaborator Session Exit Discipline
+
+Every Codex, Claude, or writer session must leave the repository in a clean handoff state so the next collaborator can cold-start from repository files alone.
+
+Before ending a working session, ensure:
+
+1. Working tree is clean, or any uncommitted state is explicitly documented.
+2. Current phase is updated.
+3. Next eligible phase is updated.
+4. Locked artifacts are unchanged unless Alexander explicitly authorized reopening or editing them.
+5. Candidate artifacts are clearly located and status-labeled.
+6. Newly locked artifacts are moved to locked paths.
+7. Ratifications are created and referenced when a lock occurs.
+8. Continuity surfaces are updated.
+9. Claude handoff files are updated.
+10. No stale active candidate paths remain unless explicitly marked historical.
+11. No unauthorized files are created.
+12. Carry-forward watch items are recorded.
+13. Future task-layer guidance is preserved.
+14. A checkpoint commit is created for completed work unless Alexander explicitly instructs not to commit.
+15. Final report states exactly what changed, what did not change, current status, next eligible phase, and whether the repository is safe for another collaborator to continue.
+
+## Cross-Artifact Consistency Verification
+
+Before creating, modifying, ratifying, or locking any architecture, inventory, matrix, mapping, coverage table, workflow table, trap table, friction table, hierarchy table, or governance artifact, perform an explicit cross-check against all applicable locked canonical sources, including World Spec, Governance Package, File Inventory, Architecture Packages, ratified review decisions, and previously reconciled governance decisions.
+
+If a proposed artifact expands, narrows, redistributes, reprioritizes, relabels, or reclassifies trap coverage, friction coverage, workflow coverage, priority tiers, source-of-truth mappings, authority hierarchies, file responsibilities, inventory rows, or matrix entries, one of the following must happen before artifact creation, ratification, or lock:
+
+1. The change is already supported by a locked canonical source and explicitly cited.
+2. The discrepancy is surfaced and documented before artifact creation, ratification, or lock.
+
+Do not silently broaden coverage. Do not silently narrow coverage. Do not silently reinterpret inventory rows. Do not silently promote historical, planning, superseded, tracker, or provenance metadata into governing architecture.
+
+When multiple locked artifacts disagree, identify the conflict, identify the likely authoritative source, and create a reconciliation review if required before ratification or lock.
+
+## Clinical Authority
+
+Alexander is the clinical expert. Human physician judgment is the source of truth.
+
+AI assists, structures, audits, and accelerates, but does not replace physician judgment.
+
+Do not invent clinical decisions, final management plans, medication choices, discharge decisions, or diagnostic conclusions without physician confirmation.
+
+Preserve Alexander's clinical reasoning. Help structure, organize, format, stress-test, and audit it.
+
+Challenge weak clinical reasoning like a senior reviewer would. Ask focused questions when the clinical logic is vague, generic, unsafe, overcomplicated, or insufficiently realistic.
+
+## Codex And Claude Roles
+
+Codex is the local workspace manager, reviewer, navigator, and continuity system.
+
+Claude is the official Sanctum drafting assistant when the instruction guide recommends Claude usage.
+
+Do not bypass Claude stages when the instructions recommend using Claude. Instead:
+
+1. Interview Alexander and extract physician reasoning.
+2. Build Alexander's raw clinical decisions locally.
+3. Prepare Claude-ready inputs using the official Sanctum prompt/template sections.
+4. After Claude output returns, audit it against Alexander's original clinical intent, the Sanctum checklist, and realism standards.
+
+Never allow Claude to originate the scenario concept, traps, or task ideas. Those originate from Alexander as the physician expert.
+
+Claude may organize, draft structure, improve consistency, check formatting, and help with World Spec document volume.
+
+## Sanctum Design Principles
+
+Project Sanctum Worlds should test physician-level judgment in realistic clinical environments, including:
+
+- synthesis across messy documents
+- prioritization
+- clinical uncertainty handling
+- medication reasoning
+- specialist conflict resolution
+- safe decision-making
+
+Do not turn the World into a textbook question. Favor realistic hospital complexity over rare disease complexity.
+
+Prioritize realism over rare diseases. Complexity should come from clinical workflow, documents, competing priorities, noisy chart data, and real stakeholder conflicts.
+
+Brainstorming assistance is allowed, but the scenario concept, traps, and task ideas must originate from Alexander. AI may assist with boilerplate, drafting structure, consistency checks, critique, and operational organization.
+
+Task prompts, golden responses, and grader guidelines must remain human-created. Do not draft them unless Alexander explicitly provides human-authored text to review or QC, and do not move into those phases unless the project phase is explicitly updated.
+
+Medicine Team Lead task-design guidance is recorded as a future task-layer rule, not a source-of-truth hierarchy rule and not a reason to reopen Governance Package v1. Source-of-truth hierarchy answers: "When sources disagree, which evidence source is authoritative?" Task-design guidance answers: "Who is the final deliverable written by or for?" Future task prompts, expected outputs, goldens, and grader guidance must frame final deliverables from the physician perspective or physician voice, even when supporting sources come from pharmacy, nursing, PT/OT, case management, social work, family, or healthcare administration. The locked Korvin workflows remain compatible because they can be physician-authored, physician-reviewed, physician-supervised, or physician-communicated.
+
+Separate frictions from traps:
+
+- Frictions are people or perspective conflicts.
+- Traps are information problems.
+
+## Active Project: Korvin Merrow World
+
+Role perspective: this world is designed from Alexander's background as an Emergency Medicine and Internal Medicine physician managing undifferentiated adult patients in acute hospital settings and coordinating care across specialties.
+
+Core mental model: do not create isolated clinical questions. Design a complete clinical environment.
+
+Definitions:
+
+- Scenario = the patient story and clinical journey.
+- World = the complete clinical context, chart ecosystem, documentation history, competing perspectives, and information environment.
+- Tasks = realistic clinician workflows performed inside that environment.
+
+Purpose: expose the gap between information recall and true clinical judgment. The AI should not succeed by recognizing a diagnosis alone.
+
+The world should test prioritization, pattern recognition, synthesis across multiple documents, uncertainty handling, reconciliation of conflicting information, and safe decision-making when recommendations compete.
+
+Clinical environment: Emergency Medicine / Internal Medicine / acute hospital setting.
+
+Working patient: Korvin Merrow, a fictional 62-year-old male with type 2 diabetes mellitus, hypertension, CKD stage 3, HFrEF, CAD history, hyperlipidemia, anemia of CKD, osteoporosis/osteopenia from chronic steroid exposure, obstructive sleep apnea, diabetic peripheral neuropathy, polypharmacy, and PMR with unclear chronic prednisone taper history. He presents with altered mental status, progressive weakness, poor oral intake, near-fall/lightheadedness, family-noticed confusion, possible urinary symptoms, and borderline hypotension. Initial working diagnosis is suspected urinary-source sepsis, but the case evolves beyond the first impression.
+
+Competing clinical concerns include adrenal insufficiency from previous steroid exposure, acute kidney injury, electrolyte abnormalities, medication-related complications, possible cardiac involvement, and discharge safety concerns.
+
+World journey should follow emergency evaluation, inpatient admission, evolving diagnostic workup, consultant recommendations, medication changes, treatment decisions, and discharge planning.
+
+Current locked story state: Clinical Story Skeleton v1 is ratified. The world is a mixed physiology world where infection, steroid issues, CKD/HF physiology, polypharmacy, and functional decline interact across an approximately 3-week decline and a 6-day hospitalization ending at HD6 18:00. The core theme is medically improving but operationally dangerous. The primary failure target is disposition safety, functional decline recognition, and discharge-readiness reasoning.
+
+Current locked identity state: Identity Package v1 is locked. Claude Identity Package hostile-review observations are recorded only as carry-forward implementation notes in `worlds/korvin-merrow/world-spec-prep/reviews/identity-package-review-addendum.md`; do not reopen MRN, DOB, age, anthropometrics, allergy, or code status from those notes.
+
+Current governance state: Governance Package v1 is ratified at `worlds/korvin-merrow/world-spec-prep/locked/governance-package-v1.md`, with clarifications recorded at `worlds/korvin-merrow/world-spec-prep/reviews/governance-package-clarification.md` and ratification recorded at `worlds/korvin-merrow/world-spec-prep/ratifications/governance-package-ratification.md`. Use it for care team roster, authority hierarchy, source-of-truth hierarchy, confirmed vs presumed condition split, final friction table, administrative deliverable decision, and workflow umbrella. Do not treat it as a World Spec draft, milestone list, task spec, or file inventory. Authority hierarchy does not erase consultant disagreement; consultant disagreements require evidence synthesis, timing, trends, patient status, and discharge safety.
+
+Completed Architecture Layers: Brainstorm APPROVED; Temporal Architecture LOCKED; Clinical Story Skeleton RATIFIED; Identity Package LOCKED; Governance Package RATIFIED; World Spec v1 LOCKED; File Inventory v1 LOCKED; World-Level Synthetic File Layer COMPLETE; Task-Level Context Files COMPLETE; Supplementary Files COMPLETE; Entire File Ecosystem COMPLETE; Task Prompt Architecture COMPLETE; Task Prompt Construction LOCKED; Task Prompts COMPLETE; Expected Output Architecture COMPLETE; Expected Output Construction LOCKED; Expected Outputs COMPLETE; Golden Architecture v1 LOCKED; Golden Architecture COMPLETE; Golden Construction LOCKED; Goldens COMPLETE; Grader Guidance Architecture v1 LOCKED; Grader Guidance Architecture COMPLETE; Grader Guidance Construction LOCKED; Grader Guidance COMPLETE; AutoQC Architecture v1 LOCKED; AutoQC Architecture COMPLETE; AutoQC Construction LOCKED; AutoQC COMPLETE; Packaging Architecture v1 LOCKED; Packaging Architecture COMPLETE; Packaging Construction LOCKED; Packaging COMPLETE; Submission Preparation LOCKED; Submission Preparation COMPLETE; Execution Preparation v1 LOCKED; Execution Preparation COMPLETE; Transcript Resolution v1 LOCKED; Transcript Resolution COMPLETE; Final Submission Resolution v1 LOCKED. AutoQC Architecture v1 is locked at `worlds/korvin-merrow/autoqc-architecture/locked/` with ratification at `worlds/korvin-merrow/autoqc-architecture/ratifications/autoqc-architecture-ratification.md`. AutoQC Construction is locked at `worlds/korvin-merrow/autoqc/locked/` with ratification at `worlds/korvin-merrow/autoqc/ratifications/autoqc-construction-ratification.md`. Packaging Architecture v1 is locked at `worlds/korvin-merrow/packaging-architecture/locked/` with ratification at `worlds/korvin-merrow/packaging-architecture/ratifications/packaging-architecture-ratification.md`. Packaging Construction is locked at `worlds/korvin-merrow/packaging/locked/` with ratification at `worlds/korvin-merrow/packaging/ratifications/packaging-construction-ratification.md`. Execution Preparation v1 locked artifacts are under `worlds/korvin-merrow/execution-preparation/locked/`, with ratification at `worlds/korvin-merrow/execution-preparation/ratifications/execution-preparation-ratification.md`. Transcript Resolution v1 locked artifacts are under `worlds/korvin-merrow/transcript-resolution/locked/`. Later execution artifact generation, RL Studio upload, and Spec AutoQC were performed under Alexander's direct authorization and operation; additional AutoQC runs, AutoQC responses, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifests, final submission packages, additional uploads, additional submissions, and RL Studio activity require explicit Alexander authorization before work begins.
+
+FI-W20 File Inventory row reconciliation is recorded at `worlds/korvin-merrow/file-inventory/reviews/fi-w20-inventory-row-reconciliation.md`. It expands the FI-W20 row to explicitly include secondary/collateral Trap #1 and Endocrinology vs Primary Team support through lower-authority family report, while preserving FI-W20 content, Batch 4 content, source-of-truth hierarchy, prednisone hierarchy, and Batch 4 locked status.
+
+FI-T inventory / task-layer architecture reconciliation is recorded at `worlds/korvin-merrow/file-inventory/reviews/fi-t-inventory-task-layer-architecture-reconciliation.md`. It expands locked File Inventory metadata for FI-T02, FI-T04, FI-T05, and FI-T06 secondary trap/friction support where already supported by locked Task Architecture Package v1, and clarifies in Task-Level Context File Architecture v1 that P0/P1/P2 labels are tracker-provenance metadata only, not governing workflow architecture.
+
+Current construction-preparation state: Key Milestones Calendar Skeleton v1 is locked at `worlds/korvin-merrow/world-spec-prep/locked/key-milestones-calendar-skeleton-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-prep/ratifications/key-milestones-calendar-ratification.md`. Use it as the canonical date framework. +7 and +30 anchors are measured from the 05/24/2026 discharge anchor, not from the HD6 world close. Baseline Anchor Package v1 is locked at `worlds/korvin-merrow/world-spec-prep/locked/baseline-anchor-package-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-prep/ratifications/baseline-anchor-ratification.md`. Baseline blood pressure may be considered later only as a non-numeric future candidate anchor. Clinical Story Timeline Package v1 is locked at `worlds/korvin-merrow/world-spec-prep/locked/clinical-story-timeline-package-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-prep/ratifications/clinical-story-timeline-ratification.md`. Task Architecture Package v1 is locked at `worlds/korvin-merrow/world-spec-prep/locked/task-architecture-package-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-prep/ratifications/task-architecture-ratification.md`. Task Architecture Interview v1 is historical planning scaffold at `worlds/korvin-merrow/world-spec-prep/planning-scaffolds/task-architecture-interview-v1.md`; the locked package is authoritative. Medication Expansion Package v1 is locked at `worlds/korvin-merrow/world-spec-prep/locked/medication-expansion-package-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-prep/ratifications/medication-expansion-ratification.md` and decision addendum at `worlds/korvin-merrow/world-spec-prep/reviews/medication-expansion-decision-addendum.md`. Comorbidity Expansion Package v1 is locked at `worlds/korvin-merrow/world-spec-prep/locked/comorbidity-expansion-package-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-prep/ratifications/comorbidity-expansion-ratification.md`. Provider Roster Package v1 is locked at `worlds/korvin-merrow/world-spec-prep/locked/provider-roster-package-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-prep/ratifications/provider-roster-ratification.md`. Surgical History Package v1 is locked at `worlds/korvin-merrow/world-spec-prep/locked/surgical-history-package-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-prep/ratifications/surgical-history-ratification.md`. Daily Hospital Course Framework v1 is locked at `worlds/korvin-merrow/world-spec-prep/locked/daily-hospital-course-framework-v1.md`, with ratification recorded at `worlds/korvin-merrow/world-spec-prep/ratifications/daily-hospital-course-framework-ratification.md`. These artifacts are not a final task prompt, expected output, file inventory, medication reconciliation output, provider-authored document, procedure note, operative report, clinical note, lab trend, vital trend, synthetic file, or downstream deliverable.
+
+Major clinical friction themes: emergency/inpatient stabilization and sepsis management; endocrinology concern for adrenal crisis/adrenal insufficiency; nephrology concern for kidney injury and medication safety; cardiology balancing long-term protective medications; family/caregiver concern that the patient has not returned to baseline despite medical stability.
+
+Design principle: do not make this a rare disease puzzle. Complexity comes from realistic medicine: common diseases, messy documentation, competing priorities, and evolving information.
+
+AGENTS.md keeps operating context. Detailed evolving clinical design belongs under `worlds/korvin-merrow/active/` and active preparation decisions belong under `worlds/korvin-merrow/world-spec-prep/`.
+
+## Source And Authored Work Separation
+
+Keep external/reference material separated from authored project work.
+
+Use `reference/source/` for source documents, official guides, task trackers, or notes copied from authorized external materials.
+
+Use `worlds/` and `project/` for authored work, planning, status, decisions, and generated drafts.
+
+Preserve source documents separately from generated work. Do not blend copied source material into authored drafts without clear attribution or permission.
+
+When Alexander fetches additional World Spec source documents, examples, templates, or reference artifacts, record them in `project/WORKSPACE_FILE_MAP.md`, keep them under `reference/`, and do not treat them as authored Korvin Merrow content or as the Korvin Merrow World File Plan.
+
+`docs/claude-transcript-formatted.md` is the authoritative transcript upload artifact. The Claude share URL `https://claude.ai/share/d5129364-5d6c-4a2c-acb3-282f367a0040` is supporting provenance and reviewer-access support. `docs/claude-transcript.md` remains raw historical/provenance evidence only. Do not rewrite, convert to DOCX, package, upload, or submit transcript materials unless Alexander explicitly authorizes that later execution step. Historical James Carter references inside the raw transcript are expected pre-migration evidence; the current patient identity remains Korvin Merrow.
+
+Final submission staging canon: `korvin-merrow-final-submission-staging/01_spec-document/Alexander_World_Merrow_latest_6_4.docx` is the canonical submitted spec, `korvin-merrow-final-submission-staging/02_template-reference-files/final/` is the canonical 33-file reference/task upload set, and `korvin-merrow-final-submission-staging/03_claude-transcript/` holds the sanitized transcript DOCX/PDF. The ignored `korvin-merrow-drive-package/` mirror is reviewer-convenience sync material only; do not treat it as repository canon or source of truth.
+
+## Access And Submission Rules
+
+Ask before browser control, external access, document access, submissions, or major restructuring.
+
+Use only Alexander's existing authenticated browser session when browser access is authorized.
+
+Never ask for passwords or credentials.
+
+Access only documents Alexander authorizes.
+
+Copy or reference external documents locally only when permitted.
+
+## Google Drive And Google Docs Workflow
+
+Use this workflow whenever Alexander authorizes Google Drive, Google Docs, or browser-based document access.
+
+1. Confirm the operation scope first: list, search, fetch, export, upload, import, move, rename, edit, delete, or share. Do not treat permission to inspect Drive as permission to mutate Drive.
+2. Use the Google Drive connector first for discovery, folder listing, metadata, fetch/export, and verification. Prefer stable Drive URLs or raw file IDs over file names alone.
+3. Ground the target before any mutation: verify the parent folder, existing contents, target file name, file type, and whether a duplicate already exists.
+4. For folder-specific uploads, place files directly into the intended Drive folder. If the connector cannot set the target parent for an upload/import, use the authorized authenticated browser session to upload through the folder UI, then verify with the connector.
+5. Preserve source format unless Alexander asks for conversion. Submission DOCX artifacts should stay as DOCX uploads by default, not silently converted to native Google Docs.
+6. For Google Doc content mutation, fetch current metadata/content first, make the narrowest possible edit, preserve parents/sharing, and verify by reading the document or metadata after the write.
+7. Never delete, replace, move, share broadly, upload submission packages, run AutoQC, access RL Studio, or submit anything unless Alexander explicitly authorizes that exact action.
+8. Treat the local repository as canonical unless Alexander explicitly promotes a Drive document to source-of-truth status. If external source material is imported locally, keep it under `reference/` and record it in `project/WORKSPACE_FILE_MAP.md`.
+9. After any Drive mutation, report the exact file or folder changed, the URL observed from Drive, what was not changed, and whether local repository files were modified.

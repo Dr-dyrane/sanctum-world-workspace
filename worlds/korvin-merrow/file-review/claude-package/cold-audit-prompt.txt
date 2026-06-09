@@ -1,0 +1,14 @@
+Status sync: triage and edits are complete in my workspace session - findings-triage.md and file-review-log.md are final, all [A] rulings made, 11 edits applied (HD3 re-burial of PT/OT weighting, nephrology position-only softening x3 plus 2 vocabulary echoes in hospitalist notes, letterhead normalization x4, endocrinology PE insertion), and the shippable 26-file set is built (22 EW + 4 WS; the 7 task-request files are held back per platform rule). Do NOT generate a triage or edit list, and do not edit anything. Also note: your needs_action findings list predates the pipeline's internal repair loop - several findings (guardrails sections, world-close language, insurance qualifier, daughter name) were already fixed in the delivered DOCX and do not exist in this set.
+
+Instead, act as the independent cold auditor of the FINAL set. Attached is the revised 26-file filesystem zip (exactly what will be uploaded to RL Studio). Verify, against the docx only - no assumptions from earlier snapshots:
+
+1. Consultant dates: nephrology/cardiology/endocrinology consultations all dated 05/21/2026; rheumatology provenance available HD4.
+2. World-close discipline: no clinical content dated after 05/23/2026 18:00.
+3. No answer leakage: no file states medication-reconciliation dispositions, a discharge-readiness verdict, or risk-stratification conclusions.
+4. EW22 (discharge_facing_plan_snapshot) reads reassuring and omits the functional-decline specifics.
+5. EW17-EW19 evidence remains buried in detail; no physician summary calls PT/OT findings "central" or coaches the reader on their weight.
+6. Prednisone: zero regimen-form dose statements anywhere (dispensing strengths in the pharmacy refill table are by design).
+7. Endocrinology consult now contains a "Physical examination." section between Clinical context and Endocrine interpretation; confirm it introduces no new diagnostic findings and preserves adrenal-axis ambiguity.
+8. Per-file DOCX integrity (opens, styles present) and a quick render-sanity read of the four hospitalist notes' letterheads (should be uniform 2-column table style).
+
+Report findings only - PASS/FAIL per item with verbatim quotes and filenames. No edits, no rewrites, no suggestions unless a FAIL requires one.

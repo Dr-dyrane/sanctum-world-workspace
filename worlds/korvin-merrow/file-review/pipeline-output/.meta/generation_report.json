@@ -1,0 +1,167 @@
+[
+  {
+    "path": "sleep_study_osa_history_summary_05182026.docx",
+    "status": "ok",
+    "cost": 0.6287877500000001
+  },
+  {
+    "path": "primary_care_outpatient_baseline_summary_05182026.docx",
+    "status": "ok",
+    "cost": 0.67351175
+  },
+  {
+    "path": "endocrinology_consultation_05212026.docx",
+    "status": "ok",
+    "cost": 0.690494
+  },
+  {
+    "path": "discharge_facing_plan_snapshot_05232026.docx",
+    "status": "ok",
+    "cost": 0.79252725
+  },
+  {
+    "path": "medication_safety_handoff_addendum_05242026.docx",
+    "status": "ok",
+    "cost": 0.69997325
+  },
+  {
+    "path": "renal_infection_hemodynamic_trend_summary_05232026.docx",
+    "status": "ok",
+    "cost": 0.9418232500000001
+  },
+  {
+    "path": "family_communication_care_conference_05222026.docx",
+    "status": "ok",
+    "cost": 0.8680157500000001
+  },
+  {
+    "path": "discharge_summary_request_05242026.docx",
+    "status": "ok",
+    "cost": 0.8637127499999999
+  },
+  {
+    "path": "post_discharge_followup_request_05312026.docx",
+    "status": "ok",
+    "cost": 1.1098775
+  },
+  {
+    "path": "home_support_equipment_reference_05222026.docx",
+    "status": "ok",
+    "cost": 0.88517525
+  },
+  {
+    "path": "discharge_medication_reconciliation_request_05242026.docx",
+    "status": "ok",
+    "cost": 0.796684
+  },
+  {
+    "path": "pharmacy_refill_history_report_05182026.docx",
+    "status": "ok",
+    "cost": 1.128094
+  },
+  {
+    "path": "ed_triage_initial_intake_05182026.docx",
+    "status": "ok",
+    "cost": 0.81912675
+  },
+  {
+    "path": "nephrology_consultation_05212026.docx",
+    "status": "ok",
+    "cost": 0.8341222500000001
+  },
+  {
+    "path": "case_management_social_work_discharge_note_05222026.docx",
+    "status": "ok",
+    "cost": 0.9938870000000001
+  },
+  {
+    "path": "discharge_readiness_care_coordination_request_05242026.docx",
+    "status": "ok",
+    "cost": 1.06681625
+  },
+  {
+    "path": "occupational_therapy_assessment_05202026.docx",
+    "status": "ok",
+    "cost": 0.6322535
+  },
+  {
+    "path": "pci_stent_history_summary_05182026.docx",
+    "status": "ok",
+    "cost": 0.537821
+  },
+  {
+    "path": "readmission_risk_review_request_06232026.docx",
+    "status": "ok",
+    "cost": 0.6210045
+  },
+  {
+    "path": "cardiology_consultation_05212026.docx",
+    "status": "ok",
+    "cost": 1.2792225
+  },
+  {
+    "path": "nursing_observation_flowsheet_summary_05232026.docx",
+    "status": "ok",
+    "cost": 1.2377262500000001
+  },
+  {
+    "path": "problem_list_history_snapshot_05182026.docx",
+    "status": "ok",
+    "cost": 1.08099625
+  },
+  {
+    "path": "consultant_synthesis_care_plan_request_05242026.docx",
+    "status": "ok",
+    "cost": 0.7862985
+  },
+  {
+    "path": "outpatient_rheumatology_prednisone_provenance_05212026.docx",
+    "status": "ok",
+    "cost": 0.7286139999999999
+  },
+  {
+    "path": "physical_therapy_assessment_05202026.docx",
+    "status": "ok",
+    "cost": 0.65606375
+  },
+  {
+    "path": "ed_provider_assessment_05182026.docx",
+    "status": "ok",
+    "cost": 0.6063832499999999
+  },
+  {
+    "path": "admission_history_and_physical_05182026.docx",
+    "status": "ok",
+    "cost": 1.0351705
+  },
+  {
+    "path": "hospitalist_progress_hd1_hd2_05192026.docx",
+    "status": "ok",
+    "cost": 0.8981049999999999
+  },
+  {
+    "path": "initial_medication_reconciliation_note_05182026.docx",
+    "status": "ok",
+    "cost": 0.95103775
+  },
+  {
+    "path": "hospitalist_progress_hd3_05202026.docx",
+    "status": "ok",
+    "cost": 0.7529765000000002
+  },
+  {
+    "path": "medication_administration_record_05232026.docx",
+    "status": "ok",
+    "cost": 1.2223795
+  },
+  {
+    "path": "hospitalist_progress_hd4_05212026.docx",
+    "status": "ok",
+    "cost": 0.8896437500000001
+  },
+  {
+    "path": "hospitalist_discharge_planning_progress_hd5_hd6_05232026.docx",
+    "status": "ok",
+    "cost": 0.8454817499999998
+  }
+]
