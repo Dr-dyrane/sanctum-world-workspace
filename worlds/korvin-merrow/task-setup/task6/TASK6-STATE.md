@@ -1,6 +1,8 @@
 # TASK6-STATE
 
-Status (6/9, APPROVED -> PL): Abi APPROVED KM06 (8:56 AM) - "Approved. Ready for PL." KM06 v5 now in Preference Labeling. Need 3 PLs (three different trajectories), PL AutoQC after each. Decider = premature basal-insulin uptitration. PL planner: task6/preference-labeling/KM06-PL-recommended-verdicts-DRAFT.md. Abi tip recorded (see below): future tasks should NOT all be draft-and-finalize; client wants variety - drives the Task 7/8 pivot away from completion-genre (see TASK7-STATE / TASK8).
+Status (6/9, COMPLETE / RFD): KM06 is Ready for Delivery. Prior local state was Abi approved -> PL; the live frontier has advanced and Tasks 1-6 are now RFD. Preserve the PL planner/backups under `task6/preference-labeling/` as evidence, but do not treat KM06 as the active blocker unless the live platform board explicitly contradicts this.
+
+Status (6/9, prior APPROVED -> PL): Abi APPROVED KM06 (8:56 AM) - "Approved. Ready for PL." KM06 v5 moved into Preference Labeling. Decider = premature basal-insulin uptitration. PL planner: task6/preference-labeling/KM06-PL-recommended-verdicts-DRAFT.md. Abi tip recorded (see below): future tasks should NOT all be draft-and-finalize; client wants variety - drives the Task 7/8 pivot away from completion-genre (see TASK7-STATE / TASK8).
 
 Abi variety tip (6/9, standing design rule): "would recommend future task not all follow the same structure of draft and finalize. We want to see a variety of tasks in your world and not a monotony, this is also an ask of the client." => Tasks 7/8 must break the completion wrapper (new artifact, role, and/or mechanism), even at the cost of depth. Recorded in docs/status-dashboard.md and TASK7-STATE.md.
 

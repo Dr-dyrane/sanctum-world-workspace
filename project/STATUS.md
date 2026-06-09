@@ -72,11 +72,9 @@ Reviewer GO: Stacey S approved Brainstorm via Slack. Recorded in `worlds/korvin-
 
 Current task frontier is newer than the older KM03/KM04/KM05 summary blocks above. Treat this sync as the live task-stage entry point unless a newer `TASKN-STATE.md` supersedes it.
 
-- KM01 through KM04: Ready for Delivery / complete according to the current dashboard continuity update.
-- KM05: all three Preference Labels submitted; status is awaiting / in final review depending on the live platform board. Do not mutate platform state without exact Alexander authorization.
-- KM06: Abi approved first human review at 8:56 AM on 2026-06-09: "Approved. Ready for PL." KM06 is in Preference Labeling. Three local PL drafts exist under `worlds/korvin-merrow/task-setup/task6/preference-labeling/`; PL submission and PL AutoQC remain Alexander-operated steps.
-- Task 7 / KM07: nephrology referral-letter packet is staged under `worlds/korvin-merrow/task-setup/platform/task7/current/` with `TASK7-STATE.md` as the live cockpit. It is a variety-first, from-scratch referral-letter task with no mounted draft. Upload / AutoQC / pilot require exact Alexander authorization.
-- Task 8 / KM08: inpatient-vs-observation status determination v3 was piloted and found too easy, job `04270757`, mean about 96.4 with zero sub-90. `worlds/korvin-merrow/task-setup/task8/TASK8-STATE.md` records the diagnosis and next-decision options. Do not ship v3 as-is.
+- KM01 through KM06: Ready for Delivery. Treat Tasks 1-6 as complete / RFD for operating purposes unless the live platform board explicitly contradicts this.
+- Task 7 / KM07: blocked / stuck waiting on EDM input. The local nephrology referral-letter packet remains staged under `worlds/korvin-merrow/task-setup/platform/task7/current/`, but do not advance, upload, rerun, or revise it until the EDM wait clears or Alexander gives exact authorization.
+- Task 8 / KM08: brainstorming for a viable pass. Inpatient-vs-observation v3 was piloted and found too easy, job `04270757`, mean about 96.4 with zero sub-90. `worlds/korvin-merrow/task-setup/task8/TASK8-STATE.md` and `worlds/korvin-merrow/task-setup/task8/design/` record the current planning state. Do not build or ship a new KM08 version without exact authorization.
 - Abi's 2026-06-09 standing guidance is now recorded: FA/GA should be failure-only, self-contained, and avoid naming grader Section A/B/C; EnvLinter / Taiga QA annotations must state the actual rationale rather than citing a reviewer.
 
 Working-tree hygiene note: Task 6 PL files and Task 7/8 task/platform folders are intentional task-stage materials, not locked world-canon changes. The ignored `files.zip` under Task 8 guidance remains local only.
@@ -99,11 +97,11 @@ KM05 state starts at `worlds/korvin-merrow/task-setup/task5/TASK5-STATE.md`. Cur
 
 ## Active Blocker
 
-Active blocker: platform-side task advancement requires exact Alexander authorization. Current known local frontier: KM06 PL drafts are ready locally but not submitted by Codex; KM07 is staged locally but not uploaded by Codex; KM08 v3 is too easy and requires a depth-versus-variety decision before any next build. Do not proceed to PL submission, PL AutoQC, final review, additional uploads, agent runs, QA, AutoQC responses, KM07/KM08 platform mutation, or RL Studio mutation without Alexander explicitly authorizing the exact step.
+Active blocker: platform-side task advancement requires exact Alexander authorization. Current known local frontier: KM01-KM06 are Ready for Delivery; KM07 is stuck waiting on EDM input; KM08 is brainstorming for a viable pass after v3 proved too easy. Do not proceed to additional uploads, agent runs, QA, AutoQC responses, KM07/KM08 platform mutation, KM08 build work, or RL Studio mutation without Alexander explicitly authorizing the exact step.
 
 ## Current Git Checkpoint
 
-checkpoint: repo health hygiene update
+checkpoint: record task 1-6 RFD frontier
 
 Previous checkpoint: clarify KM03 KM04 FA-GA platform entry state
 
@@ -123,11 +121,10 @@ Return to baseline commit if workflow becomes corrupted.
 
 Start with the active task cockpit for the target task before acting:
 
-- KM06: `worlds/korvin-merrow/task-setup/task6/TASK6-STATE.md` plus `worlds/korvin-merrow/task-setup/task6/preference-labeling/`.
-- KM07: `worlds/korvin-merrow/task-setup/task7/TASK7-STATE.md` plus `worlds/korvin-merrow/task-setup/platform/task7/current/`.
-- KM08: `worlds/korvin-merrow/task-setup/task8/TASK8-STATE.md` plus `worlds/korvin-merrow/task-setup/task8/design/`.
+- KM07: `worlds/korvin-merrow/task-setup/task7/TASK7-STATE.md` plus `worlds/korvin-merrow/task-setup/platform/task7/current/`, but only after the EDM wait clears or Alexander gives exact authorization.
+- KM08: `worlds/korvin-merrow/task-setup/task8/TASK8-STATE.md` plus `worlds/korvin-merrow/task-setup/task8/design/` for brainstorming and pass design.
 
-Support Alexander from the current frontier: KM06 PL, KM07 staged upload decision, and KM08 depth-versus-variety decision after the inpatient-vs-observation pilot failed to bite. Do not proceed to final review, additional uploads, agent runs, KM07/KM08 build/platform staging, or RL Studio mutations without Alexander explicitly authorizing the exact step.
+Support Alexander from the current frontier: Tasks 1-6 RFD, KM07 waiting on EDM, and KM08 brainstorming for a pass. Do not proceed to final review, additional uploads, agent runs, KM07/KM08 build/platform staging, or RL Studio mutations without Alexander explicitly authorizing the exact step.
 
 At the end of any working session, apply the collaborator session-exit discipline before final reporting and commit completed process or construction work unless Alexander explicitly instructs not to commit.
 

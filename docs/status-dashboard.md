@@ -396,3 +396,11 @@ Roll-up: KM01-04 delivered; KM05 in final review (Janette); KM06 v5 awaiting fir
 - KM06 (2zw95f4e): Abi "Approved. Ready for PL." Now in Preference Labeling - need 3 PLs on 3 different trajectories, PL AutoQC after each. Decider = premature basal-insulin uptitration. Planner: task6/preference-labeling/KM06-PL-recommended-verdicts-DRAFT.md.
 - ABI VARIETY TIP (standing design rule): "would recommend future task not all follow the same structure of draft and finalize. We want to see a variety of tasks in your world and not a monotony, this is also an ask of the client." Tasks 7/8 must break the completion wrapper (new artifact/role/mechanism), even at the cost of floor depth.
 - TASKS 7/8 PIVOT (pending Abi greenlight): T7 = specialist referral letter to NEPHROLOGY (new artifact + cognitive task; flatten-the-inter-service-tension judgment trap; fair via chart). T8 = inpatient pharmacist medication-therapy plan (new role + artifact; stacked-unsafe-rec, KM01 family, clears ~0.87). Honest trade: variety-first 7/8 likely land fair-clearer-to-mid, not new deep floors; deep floors are banked in KM02-KM06. Superseded/parked: the completion-genre fall-bundle (built, parked) and the gabapentin uptitration trap (verified-strong, unbuilt fallback). Detail in TASK7-STATE.md.
+
+---
+
+## UPDATE (2026-06-09, live frontier) - Tasks 1-6 RFD; T7/T8 active frontier
+
+- KM01-KM06: Ready for Delivery.
+- KM07: stuck waiting on EDM input. Local staged packet exists, but no upload/revision/rerun should proceed until that wait clears or Alexander authorizes the exact step.
+- KM08: brainstorming for a viable pass. Current v3 inpatient-vs-observation design piloted too easy; use `task8/TASK8-STATE.md` and `task8/design/` as the active planning surface.
