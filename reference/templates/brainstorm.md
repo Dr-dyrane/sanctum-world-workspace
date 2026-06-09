@@ -1,28 +1,0 @@
-**Brainstorm Template** 
-
-*NOTE: Feel free to slightly modify as you see fit*
-
-| Element | What to bring | Examples |
-| :---- | :---- | :---- |
-| **1\. World setup** | Who the patient is and what clinical situation the world represents: •  Demographics and comorbidities •  Clinical environment (specialty, inpatient vs. outpatient vs. administrative oversight) •  Encounter type (admission, clinic visit, RCA review, peer review, coding audit, and so on) •  Shape of the timeline; what changes over the course of the world Enough to know the world is medically and contextually coherent. | *"This is an inpatient hospital medicine world: a \[N\]-day admission for \[presenting problem\] in a \[age\] \[sex\] with \[comorbidities\]."* *"This is an outpatient primary care world: a single clinic visit for \[chief complaint\] in a \[age\] \[sex\] with \[relevant chronic conditions\]."* *"This is a medical director world: an RCA review of \[event type\] involving a \[age\] \[sex\] who \[outcome\]; reviewer has access to chart and incident materials."* |
-| **2\. Major friction points** | Opposing forces, viewpoints, or stakeholder positions that complicate the scenario: •  Two specialists with conflicting recommendations •  Family wishes vs. medical recommendation •  Primary team vs. consultant disagreement Frictions are about people and perspectives. Traps (next row) are about information. | *"Cardiology and nephrology disagree on whether to hold the ACE inhibitor."* *"Family wants comfort care; the primary team is still pursuing aggressive workup."* *"PCP recommends one regimen at clinic; the inpatient team has a different plan at admission."*  |
-| **3\. Major traps** | Nuggets of information or specific incidents that complicate the clinician's job and can lead to incorrect decisions if not contextualized properly.  **Common trap types:** •  Contradictory EMR information •  Buried clinically significant information •  Insufficient or missing patient information •  Source-of-truth ambiguity •  Social determinants of health •  Temporal or sequencing complexity | *"Stale EMR med list contradicts a recently filled pill bottle photo. Source-of-truth ambiguity. Lives in the med rec task only."* *"Aspiration event documented mid-paragraph in a routine nursing note, never escalated. Buried significant information. World-level trap."* *"Caregiver burnout limits adherence and follow-up capacity. SDOH trap. World-level, affects every task that touches the discharge plan."* |
-| **4\. Rough task ideas** | The clinical workflows the writer is thinking about as task encounters. Each task is independent and lives temporally after the world. For each task: the deliverable type and which world elements, traps, or frictions it would test. **Reference the team's approved workflows tracker** for the full list of validated deliverable types. The categories below are a representative sample to encourage thinking beyond progress notes and discharge medication lists. •  Direct clinical documentation (H\&P, progress note, discharge summary, consult, SOAP, op note) •  Medication, coding, & billing (med rec, ICD-10/CPT crosswalk, prior auth, denial appeal) •  Care transitions & coordination (transfer note, post-discharge follow-up, home health plan, hospice/palliative) •  Quality, safety, & oversight (RCA, sentinel event, M\&M, peer review, OPPE/FPPE, utilization review) •  Administrative-clinical hybrid (FMLA, disability, ADA accommodation, return-to-work, workers' comp, SAP) •  Specialty evaluation & legal-medical (VA disability, SSDI, IME, pre-op clearance, school medical form) | *"Task 1 is a discharge medication reconciliation. Draws on the three-way med discrepancy and the buried dose change. Set at hospital day 7, which is the final day of the world."* *"Task 2 is a pre-operative clearance note. Draws on the cardiology/nephrology friction and the chronic disease profile. Set 2 weeks after the last day of the clinical timeline (discharge date)."* *"Task 3 is the RCA write-up itself (medical director world). Draws on every friction and trap. Set 4 weeks after the index event."* |
-
-## 
-
-## **What the lead evaluates**
-
-Walk through the checklist below, organized to mirror the writer's four elements. Send back if any item is a clear no.
-
-| World setup Patient and clinical situation are coherent. The patient/scenario could exist; specialty, environment, encounter type, and timeline are clear and internally consistent. Patient profile fits the encounter. Realistic in the sense that a domain expert has encountered this patient several times in their career. Major friction points Frictions realistically represent real-world clinical dilemmas. Writer can name the stakeholders involved and what each is advocating for. Major traps There are a variety of traps in the world that altogether create enough clinical complexity that can stump a physician under normal circumstances. Rough task ideas Each task maps to a deliverable type in the team's approved workflows tracker. Tasks also have their own “traps” that are distinct from the world-level traps.  Cross-cutting Writer has answers for potential issues of self-containment that can arise.  A seasoned clinician could solve every task from the intended files alone. Overall world design is representative of the daily activities of a physician in that domain.  |
-| :---- |
-
-# 
-
-## **Decision**
-
-| GO Foundation is viable. Writer proceeds to full spec drafting. | SEND BACK At least one viability check is a clear no. Lead notes which items need revisiting. Writer revises and re-presents. |
-| :---: | :---: |
-
-Sign-off is verbal or in a brief comment. No formal write-up required at this stage.  
