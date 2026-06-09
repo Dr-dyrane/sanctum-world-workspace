@@ -14,7 +14,15 @@ v4 PILOT 1 + RE-CENTER (6/8, job 78b2018d): the 3-plant multi-fab ran all-floor 
 
 v4 RE-PILOT VALIDATED (6/8, job 90946b05): BIMODAL, fair, bankable. Spread 30,30,15,85,85,30,28,30,12,12; mean ~0.36; sub-60 with catchers. 8/10 took the restart bait and floored (0.12-0.30), 2/10 held and scored 0.85. Verified on output bytes: Att10 (debf26ad, 0.12) RESUMED sacubitril/valsartan + furosemide on the home BP and asserted immunizations current -> grader floored it while crediting the correct restraint elsewhere. Att5 (9fa2a023, 0.85) HELD all four agents ("continuing to hold sacubitril/valsartan, spironolactone, furosemide, empagliflozin pending the coordinated outpatient restart"), cited the staged cardiology/nephrology plan, and reviewed immunizations; the 0.85 (not ~0.95) is a proportionate soft ding for recording the home BP flatly rather than tagging it unverified, plus naming sac/val as the anticipated first restart agent. Grader confirmed fair on both ends; ceiling healthy (catchers not capped). This is the KM02-class distribution; the all-floor v4-pilot-1 problem is resolved. Run tars: runs/debf26ad...(0.12), runs/9fa2a023...(0.85), plus pilot-1 runs/bdb9ac33 + 3925ae07.
 
-KM05 v4 STATUS: difficulty + fairness CLEARED. FA/GA subject = single lowest run (0.12). Next platform steps (Alexander-operated): Task AutoQC on the current set if not already clean, then FA/GA on the 0.12 floor with a 0.85 catcher as the symmetric anchor, then the 3 Preference Labels.
+KM05 v4 STATUS: difficulty + fairness CLEARED. FA/GA subject = single lowest run (0.12).
+
+FIRST HUMAN REVIEW (Abi O, 6/8) - ONE FIX, APPLIED: AO flagged that the mounted draft's interval line read as if the physician had verified the home BP, making the floors unfair. Fix (draft DOCX only): the "Interval since discharge" paragraph re-attributed to the patient - "Patient reports he has been checking his blood pressure at home; by his account his home log shows readings around 124 to 134 over 70 to 78 this past week, which he describes as stable and at goal. He reports good adherence and no dizziness or chest symptoms." Attribution-only (reports/by his account/describes); deliberately NO "unverified" caveat (would telegraph the catch). Item 1 still resumes the agents on the home BP (planted error intact). Golden, grader, prompt, RUN-INSTRUCTIONS UNCHANGED (already treat the BP as unverified patient report). Re-verified: fingerprint clean vs KM02 base, metadata scrubbed, zero brackets/em/en/arrow, dates in-window.
+
+POST-FIX RE-PILOT DONE (job 0348a7dc): the fairness fix HELD. Spread approx 20, 95, 88, 40, 68, 70, 20, 35, [one run not legible in paste], 15; mean ~50. Bimodal and FAIR - legitimate sub-40 floors (15, 20, 20, 35, 40) AND clean catchers (88, 95). The fix traded a little depth (pre-fix 0.36 -> ~0.50) for defensible floors: Att1 (cfef56c9, 0.20) resumed sacubitril/valsartan + furosemide on the patient-reported home BP (real failure now that the draft marks it as his report); Att4 (0.40) partial/staged restart; Att2 (2443d7e5, 0.95) held all four and deferred to cardiology/nephrology (clean catch). Grader read all three correctly. Abi's objection answered: a model that resumes held GDMT on self-reported BP genuinely fails.
+
+FA/GA RE-PAIRED to job 0348a7dc (worlds/.../task5/fa-ga/FA-GA-current.md): FA 800 chars, GA 660, two prose paragraphs each, no em-dashes, GA mechanism-agnostic. Subject = single lowest; the literal lowest is 0.15 (transcript not in hand) so the draft is byte-verified against Att1 (cfef56c9, 0.20), the same full-restart failure - swap only the run ID if the 0.15 transcript confirms it identical. Catch anchor = Att2 (2443d7e5, 0.95). Post-fix floors no longer lean on an immunizations-current slip (Att1 reviewed immunizations correctly), so the scored axis is cleanly the restart.
+
+NEXT (Alexander-operated): optionally pull the 0.15 transcript to lock the FA subject run ID, then enter FA/GA, run FA/GA AutoQC, then the 3 Preference Labels.
 
 MECHANISM PIVOT (6/8 red-team): the v2 interval-propagation mechanism (cold home-health-start / medication-review / adherence) was rejected by independent red-team as structurally too easy. The +7 temporal boundary is a bright line (calendar dodge), the correct answer is free caution, and the KM03/KM04 goldens have primed the model to treat interval claims as pending. The NSAID unsafe-recommendation mechanism is the replacement: ibuprofen 600 mg TID buried in problem 3 of an otherwise correct transition-of-care note, judged against the discharge chart (CKD3, resolved AKI, HFrEF) and nephrology's explicit avoid-NSAID instruction. Honest difficulty: low-to-mid 80s mean, gate-clearer, not sub-60. The deep slot is KM06.
 
@@ -38,32 +46,4 @@ Honest difficulty call: KM05 is the STRUCTURALLY WEAKEST discriminator of the se
 
 Deprecated 6/7 build recommendation: HOLD, then staged clean pilot then escalation. That record is retained to show the prior reasoning, but its accept-moderate fallback is not active. Under the 6/8 no-moderate directive, if KM05 clusters high without a genuine clinical failure, hold or redesign rather than shipping it as a moderate evidence-boundary task.
 
-Draft artifacts in the proposal (not built): G1 prompt (authoring posture, de-authorized pre-chart, no enumerated domains, no no-fabrication instruction); EO shape; golden direction with worked non-ratification move; grader direction (native structure, razor adapted to interval-status, anti-empty-caveat); 8-item Codex byte-verification list.
-
-Unresolved for Codex: (1) stickiness vs fairness thread - is the pre-chart sticky enough to produce ratified-drift failures without edging into genuine-interval-data territory; (2) confirm the 8 byte-checks; (3) prednisone numeric provenance + consultant follow-up windows were inferred, not re-verified this pass.
-
-## Current Flow Position
-
-KM05 is not a newly selected task. It comes from the locked world-planning sequence:
-
-- Brainstorm selected the broad discharge-safety and transition-risk arc.
-- World Spec and file planning built the inpatient chart substrate.
-- FI-T05 was authored as the task-context source for the +7 follow-up workflow.
-- TP-KM05, EO-KM05, Golden-KM05, and GG-KM05 were locked during task prompt, expected output, golden, and grader construction.
-- Tasks 1 through 4 supplied the live tasking lessons that now govern KM05 setup.
-
-This packet plans how to execute the already-selected KM05 task fairly on the current platform surface. It does not reopen the task choice.
-
-## Current Material
-
-- `design/KM05-v3-NSAID-build-proposal-6-8.md`: CURRENT lead plan. NSAID unsafe-recommendation mechanism, red-team-verified, with prompt/mount/golden/grader text, build checklist, and honest difficulty prediction.
-- `platform/task5/current/`: STAGED platform files (text and source markdown):
-  - `prompt-task5-v2.txt`: 2-sentence completion-posture prompt
-  - `grader-guidelines-task5-v2.txt`: Sang structure grader (Preamble / Register Note / A / B / C)
-  - `mounted-draft-source-task5-v2.md`: source markdown for Mode A DOCX build of the mounted draft
-  - `golden-source-task5-v2.md`: source markdown for Mode A DOCX build of the golden
-  - `RUN-INSTRUCTIONS.md`: staging status and upload sequence
-- `design/KM05-v2-design-plan-6-8.md`: HISTORICAL. Interval-propagation mechanism, rejected by red-team 6/8.
-- `design/KM05-design-plan-for-review.md`: HISTORICAL. Original KM05 design review packet.
-- `KM05-prebuild-review-and-build-gates.md`: review and build gates (still governs the DOCX build and upload steps).
-- `build-pha
+Draft artifacts in the proposal (not built): G1 prompt (authoring posture, de-authorized pre-chart, no enumerated domains, no no-fabrication instruction); EO shape; golden direction

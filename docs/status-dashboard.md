@@ -319,3 +319,39 @@ World-level: 4 distinct workflows across 6 tasks (Discharge Med Rec, Discharge S
 Knowledge docs current: docs/task-difficulty-lessons.md (idea>writing, 4-point trap test, cold/warm evidence table, fairness, pilot-reading), docs/grader-guidelines-lessons.md (Sang five-block + bloat fix), docs/clinical-voice-lessons.md (golden register). Performance report at task-setup/KM-WORLD-PERFORMANCE-REPORT.md (note: its sub-70 count is 19/38% but the true count is 21/42%; KM-World-Performance.xlsx computes the correct values).
 
 Standing build hygiene (all task DOCX): Mode A clone of KM02 bases (golden-KM02-v5.docx / discharge_summary_draft_incomplete_05242026.docx), styles.xml byte-identical, fingerprint diff empty, core metadata scrubbed, zero em/en/arrow/asterisk/brackets, only in-world dates, no off-world names. Verify-on-bytes before every stage.
+
+---
+
+## PLATFORM STATUS (2026-06-08 late, from Tasks board screenshot) - 6 tasks live
+
+All six tasks now exist in Healthcare_247_Merrow. ID -> task mapping (per KM-WORLD-PERFORMANCE-REPORT):
+- Task 1 (KM01): Ready for Delivery (Janette S).
+- waivf867 (KM02): Ready for Delivery (Janette S).
+- c8izef70 (KM03): Ready for Delivery (Paolo S).
+- 042j9681 (KM04): READY FOR DELIVERY (Rahul Pai) - CHANGED from Awaiting Final Review; final reviewer signed off.
+- b0tza971 (KM05): Running Taiga Trajectories & QA - the re-pilot after Abi's draft fix (BP attribution on interval + item 1).
+- 2zw95f4e (KM06): Running Task AutoQC - KM06 is now a created platform task (6th task slot filled).
+
+So: 4 tasks Ready for Delivery (KM01-04), KM05 re-running trajectories (fairness fix applied), KM06 in Task AutoQC.
+
+OPEN ITEM (KM06 difficulty): KM06 echo/LVEF v2 FAILED its difficulty pilot (job dc3e4c8a mean ~97, all-caught), as did orthostatic v1 (job 2eac7eca ~93). Both warm. The cold quiet-closure axes (culture/CPAP/iron) are spent in KM02-04; the remaining salient axes (orthostatic, echo) are warm. Proposed but not yet built/verified: a KM05-style JUDGMENT trap (undisprovable interval bait -> chart-contradicted action) on a fresh axis - lead candidate is de-escalating the first-week supervision / fall precautions on a plausible "wife reports he is back to baseline" interval bait (chart-contradicted by Morse 65 + documented med-management errors + supervision-required-first-5-7-days). Whatever is uploaded as 2zw95f4e must still clear the difficulty gate; if the staged echo v2 was uploaded, it will pass AutoQC (format) but is not difficulty-cleared.
+
+---
+
+## PLATFORM STATUS (2026-06-09, from Tasks board) - all 6 tasks + AQC-EVAL
+
+| KM | Platform ID | Status | Updated By |
+|----|-------------|--------|------------|
+| KM01 | Task 1 | Ready for Delivery | Janette S |
+| KM02 | waivf867 | Ready for Delivery | Janette S |
+| KM03 | c8izef70 | Ready for Delivery | Paolo S |
+| KM04 | 042j9681 | Ready for Delivery | Rahul Pai |
+| KM05 | b0tza971 | Awaiting First Human Review | Alexander U |
+| KM06 | 2zw95f4e | Awaiting First Human Review | Alexander U |
+| (KM06 AQC-EVAL) | [AQC-EVAL] 2zw95f4e | Task Writing | Dhruv Ahuja (Needs Attention From: Dhruv Ahuja) |
+
+Roll-up: 4 Ready for Delivery (KM01-04); KM05 + KM06 back at Awaiting First Human Review after their re-pilots and FA/GA.
+
+KM05 (b0tza971): Abi's first-review fairness fix applied (home BP re-attributed to patient report on the interval line AND item 1). Post-fix re-pilot job 0348a7dc: spread approx 20,95,88,40,68,70,20,35,[?],15; mean ~50; bimodal and FAIR (legitimate sub-40 floors + clean 88/95 catchers). FA/GA re-paired to job 0348a7dc (subject Att1 cfef56c9 0.20, the verified floor; literal single-lowest is 0.15 run 10 pending its transcript to lock the run ID; catch anchor Att2 2443d7e5 0.95). Floor signature confirmed across three runs (Att1/Att4/Att7 all restarted held GDMT on the patient-reported BP). Next: enter FA/GA -> FA/GA AutoQC -> 3 PL.
+
+KM06 (2zw95f4e): v4 false-closure banked as the distinct sixth at mean 0.83 with a real floor (job 38fd1c2e). FA/GA byte-checked. Difficulty spread across the suite now KM05 36, KM02 59, KM04 66, KM03 76, KM06 83, KM01 89. Bank framing: distinct sixth at 0.83, NOT a sub-70; antibiotic-leg caveat to Abi proactively. Two QA flags disposed (identity = stale v3 file; enable_anthropic_api = tech issue).
