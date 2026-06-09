@@ -21,6 +21,4 @@ Why this is the distinct sub-70 bet (not sub-40, and honestly not guaranteed): i
 
 ## Build verification
 - Both DOCX: Mode A clone of KM02 bases; fingerprint diff empty; metadata scrubbed; em/en/arrow/asterisk 0; no brackets.
-- Dates: 05/23 (summary), 05/24 (discharge), 05/26 (the draft's fabricated home-health/antibiotic dates - present ONLY in the draft as the false closures; the golden carries no 05/26), DOB. No other fabricated date.
-- Substrate verified verbatim: HD5-HD6 "UNRESOLVED... not confirmed... not finalized... None of these items is closed today"; CM "acceptance pending... no referral has been finalized"; family "cannot reliably be in the home on weekday mornings"; no antibiotic stop date anywhere.
-- Golden keeps all three open and holds the cardiorenal staged; scores full under its own grader. Cardiorenal handled correctly (no KM05 overlap).
+- Dates: 05/23 (summary), 05/24 (discharge), 05/26 (the draft's fabricated home-health/antibiotic dates - present ONLY in the draft as the false 

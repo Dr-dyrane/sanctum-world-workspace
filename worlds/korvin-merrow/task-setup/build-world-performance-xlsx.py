@@ -665,25 +665,4 @@ def build_distribution(wb):
         )
     )
 
-    ws.cell(row=32, column=2, value="Source: 50 trajectory runs across 5 scored tasks").font = font_metric_label()
-
-
-# === MAIN ===
-def main():
-    wb = Workbook()
-
-    build_overview(wb)
-    build_performance(wb)
-    build_architecture(wb)
-    build_mechanism(wb)
-    build_stories(wb)
-    build_distribution(wb)
-
-    output_path = r"c:\Users\Dyrane\Documents\sanctum-world-workspace\worlds\korvin-merrow\task-setup\KM-World-Performance.xlsx"
-    wb.save(output_path)
-    print(f"Saved: {output_path}")
-    print(f"Sheets: {wb.sheetnames}")
-
-
-if __name__ == "__main__":
-    main()
+    ws.cell(row=32, column=2, value="Source: 50 trajectory runs across 5 scored task
