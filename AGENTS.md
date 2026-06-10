@@ -56,17 +56,17 @@ Workspace reasoning backbone: `docs/reasoning-discipline.md` is the cross-world 
 
 Batch 1 synthetic world-level files are locked. Batch 2 synthetic world-level files FI-W08 through FI-W13 are locked. Batch 3 synthetic world-level files FI-W14 through FI-W16 are locked. Batch 4 synthetic world-level files FI-W17 through FI-W21 are locked. Batch 5 synthetic world-level file FI-W22 is locked at `worlds/korvin-merrow/synthetic-files/locked/batch-5/`. World-Level Synthetic File Layer is complete with FI-W01 through FI-W22 locked. FI-T01 through FI-T07 are locked task-context files at `worlds/korvin-merrow/task-context-files/locked/`. FI-S01 through FI-S04 are locked supplementary files at `worlds/korvin-merrow/supplementary-files/locked/`. Entire File Ecosystem status is COMPLETE. Downstream architecture/construction layers through Final Submission Resolution are complete/locked. Execution Artifact Generation is complete and canonicalized under `korvin-merrow-final-submission-staging/`: one canonical spec DOCX, one canonical 33-file `final/` reference set, and the sanitized transcript DOCX/PDF. The final Spec AutoQC board is 108/109, with prednisone dose/frequency as the sole intentional, note-justified flag. Human World Spec Review is approved; approval record is `worlds/korvin-merrow/reviews/reviewer-spec-approval-01.md`. Pipeline run #1 output, Claude-assisted Step 9 triage, candidate revision log, task-file holdback, and final 26-file world-level upload set are tracked under `worlds/korvin-merrow/file-review/`. Current task-layer state is Task 1 final human review complete / approved; Task 2 / KM02 COMPLETE / RFD (Ready for Delivery) after Janette's 6/8 final review; KM03/KM04 post-Sang reruns are complete and Alexander entered both FA/GA records on platform; FA/GA AutoQC passed for both; KM05 review-only reset / HOLD with cold home-health lead review request, but not built or platform-staged. Additional task uploads, agent runs, additional QA runs, scoring rubrics, scoring thresholds, pass/fail bands, point allocations, manifests, final submission packages, additional uploads, additional submissions, preference-label resubmission, KM03/KM04 Preference Labels or final review, KM03/KM04 Taiga reruns, KM05 build/platform staging, or RL Studio actions beyond the exact authorized step require explicit authorization.
 
-Always read `project/STATUS.md` first.
+Always read `AGENTS.md` and the root `WORKSPACE_FILE_MAP.md` first. The old `project/STATUS.md` and `project/WORKSPACE_FILE_MAP.md` paths are obsolete after the 6/9 hygiene restructure.
 
-For task-stage work, follow the doc spine in `project/WORKSPACE_FILE_MAP.md` before opening archives. Then read the active task cockpit (`TASKN-STATE.md`), the task runbook, the latest relevant retrospective, and the current task gate before proposing or drafting anything.
+For task-stage work, follow the doc spine in root `WORKSPACE_FILE_MAP.md` before opening archives. Then read the active task cockpit (`TASKN-STATE.md`), the task runbook, the latest relevant retrospective, and the current task gate before proposing or drafting anything.
 
-Always check `project/EXECUTION_CHECKLIST.md` and `project/PASS_PLAN.md` before making changes.
+Historical execution checklists are archived; use the active task cockpit, root `WORKSPACE_FILE_MAP.md`, `TASK-RUNBOOK.md`, and any task-specific plan as the current gate before making changes.
 
-Always check `project/WORKSPACE_FILE_MAP.md` before creating, moving, renaming, or deleting workspace files.
+Always check root `WORKSPACE_FILE_MAP.md` before creating, moving, renaming, or deleting workspace files.
 
-Update `project/WORKSPACE_FILE_MAP.md` whenever the workspace structure changes materially, a new official source/template is imported, a submission artifact is created or replaced, or a duplicate-purpose file is discovered.
+Update root `WORKSPACE_FILE_MAP.md` whenever the workspace structure changes materially, a new official source/template is imported, a submission artifact is created or replaced, or a duplicate-purpose file is discovered.
 
-Avoid creating new navigation, audit, or status documents when an existing status/map/cockpit file can carry the information. Prefer updating `project/STATUS.md`, `project/WORKSPACE_FILE_MAP.md`, or the active world cockpit before adding another file.
+Avoid creating new navigation, audit, or status documents when an existing status/map/cockpit file can carry the information. Prefer updating root `WORKSPACE_FILE_MAP.md`, the active task cockpit, the dashboard/performance report, or the relevant world/task README before adding another file.
 
 Workspace bloat control is part of the operating doctrine. Do not create a new file just because a new thought exists. First decide whether the information belongs in an existing status file, cockpit file, decision log, review artifact, or source map. When a folder starts mixing lifecycle types, prefer a deliberate restructuring pass over ad hoc movement. Reasonable lifecycle groupings include locked packages, locked decisions, ratifications, reviews, planning scaffolds, submissions, and historical archives. Keep current working context easy for a new collaborator to enter: one active cockpit, one live status source, one file map, and clearly separated historical evidence.
 
@@ -78,7 +78,7 @@ DOCX generation and editing doctrine is recorded in `docs/docx-generation-method
 
 Never advance to a later pass without explicit user approval.
 
-Always respect the current phase in `project/STATUS.md`. Never cross a phase boundary without explicit Alexander approval.
+Always respect the current phase in root `WORKSPACE_FILE_MAP.md` and the active `TASKN-STATE.md`. Never cross a phase boundary without explicit Alexander approval.
 
 Use official templates as the base for submission artifacts when a template exists.
 
@@ -230,7 +230,7 @@ Use `worlds/` and `project/` for authored work, planning, status, decisions, and
 
 Preserve source documents separately from generated work. Do not blend copied source material into authored drafts without clear attribution or permission.
 
-When Alexander fetches additional World Spec source documents, examples, templates, or reference artifacts, record them in `project/WORKSPACE_FILE_MAP.md`, keep them under `reference/`, and do not treat them as authored Korvin Merrow content or as the Korvin Merrow World File Plan.
+When Alexander fetches additional World Spec source documents, examples, templates, or reference artifacts, record them in root `WORKSPACE_FILE_MAP.md`, keep them under `reference/`, and do not treat them as authored Korvin Merrow content or as the Korvin Merrow World File Plan.
 
 `docs/claude-transcript-formatted.md` is the authoritative transcript upload artifact. The Claude share URL `https://claude.ai/share/d5129364-5d6c-4a2c-acb3-282f367a0040` is supporting provenance and reviewer-access support. `docs/claude-transcript.md` remains raw historical/provenance evidence only. Do not rewrite, convert to DOCX, package, upload, or submit transcript materials unless Alexander explicitly authorizes that later execution step. Historical James Carter references inside the raw transcript are expected pre-migration evidence; the current patient identity remains Korvin Merrow.
 
@@ -259,5 +259,5 @@ Use this workflow whenever Alexander authorizes Google Drive, Google Docs, or br
 5. Preserve source format unless Alexander asks for conversion. Submission DOCX artifacts should stay as DOCX uploads by default, not silently converted to native Google Docs.
 6. For Google Doc content mutation, fetch current metadata/content first, make the narrowest possible edit, preserve parents/sharing, and verify by reading the document or metadata after the write.
 7. Never delete, replace, move, share broadly, upload submission packages, run AutoQC, access RL Studio, or submit anything unless Alexander explicitly authorizes that exact action.
-8. Treat the local repository as canonical unless Alexander explicitly promotes a Drive document to source-of-truth status. If external source material is imported locally, keep it under `reference/` and record it in `project/WORKSPACE_FILE_MAP.md`.
+8. Treat the local repository as canonical unless Alexander explicitly promotes a Drive document to source-of-truth status. If external source material is imported locally, keep it under `reference/` and record it in root `WORKSPACE_FILE_MAP.md`.
 9. After any Drive mutation, report the exact file or folder changed, the URL observed from Drive, what was not changed, and whether local repository files were modified.

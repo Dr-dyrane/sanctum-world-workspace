@@ -14,36 +14,38 @@ Project Sanctum Worlds are realistic clinical environments that test frontier AI
 - RL Studio task ID: `cyau8803`
 - World Spec: approved by Stacey S after RL Studio upload and Spec AutoQC.
 - World created: `Healthcare_247_Merrow`, with Final Files AutoQC 78/78 after three revisions.
-- Task 1: final human review complete / approved by Abi Osagie on 2026-06-06.
-- Current gate: await Alexander-authorized next task/pipeline step, likely Task 2 setup.
-- Live state source: `project/STATUS.md`. This README is only the front door.
+- Tasks 1-6: RFD or effectively RFD per the active task frontier.
+- Task 7: v2 Taiga running, pilot result pending.
+- Task 8: v4.1 built and byte-verified, awaiting upload authorization.
+- Live state source: root `WORKSPACE_FILE_MAP.md` plus the active `TASKN-STATE.md`. This README is only the front door.
 
 ## Current Boundary
 
 Onboarding Steps 1-6 are complete for Korvin. Later production-pipeline work has begun under explicit authorization, but every new RL Studio action, task upload, agent run, QA run, AutoQC response, scoring artifact, package, upload, or submission still requires exact Alexander authorization before execution.
 
-Historical onboarding-only checklists are preserved under `project/` and `reference/`, but `project/STATUS.md`, `project/PHASE_MAP.md`, `docs/status-dashboard.md`, `docs/world-pipeline-playbook.md`, and `worlds/korvin-merrow/task-setup/task1-lifecycle-log.md` now govern the live phase.
+Historical onboarding-only checklists are archived. Root `WORKSPACE_FILE_MAP.md`, `AGENTS.md`, `worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md`, active `TASKN-STATE.md` files, the dashboard, and `worlds/korvin-merrow/task-setup/KM-WORLD-PERFORMANCE-REPORT.md` govern the live task phase.
 
 ## New Collaborator Quickstart
 
 Read this repo progressively. Do not try to absorb every locked package on the first pass.
 
-1. Read [project/STATUS.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/project/STATUS.md>) for the live phase, active blocker, next eligible step, and forbidden actions.
-2. Read [worlds/korvin-merrow/00-MASTER-NARRATIVE.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/00-MASTER-NARRATIVE.md>) to understand how the world was built and what Task 1 taught us.
-3. Read [worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md>) before touching any task-stage work.
-4. Read [worlds/korvin-merrow/task-setup/CHECKPOINT-AUDIT-pre-task2.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/task-setup/CHECKPOINT-AUDIT-pre-task2.md>) before resuming Task 2 or any later task.
-5. Use [project/WORKSPACE_FILE_MAP.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/project/WORKSPACE_FILE_MAP.md>) only after you know what you are looking for. It is the map, not the first textbook.
+1. Read [AGENTS.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/AGENTS.md>) for operating guardrails and current boundaries.
+2. Read [WORKSPACE_FILE_MAP.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/WORKSPACE_FILE_MAP.md>) for the live phase, active task frontier, and file placement rules.
+3. Read [worlds/korvin-merrow/00-MASTER-NARRATIVE.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/00-MASTER-NARRATIVE.md>) to understand how the world was built and what Task 1 taught us.
+4. Read [worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md>) before touching any task-stage work.
+5. Read the active `TASKN-STATE.md` before proposing, drafting, building, or uploading anything for that task.
 
-Current gate: Task 2 has pre-build study material, but Task 2 construction and RL Studio work still require exact Alexander authorization.
+Current gate: KM07 pilot result pending and KM08 upload awaits exact Alexander authorization. All RL Studio actions still require exact authorization.
 
 ## Source-Of-Truth Ladders
 
 Use the smallest ladder that answers your question.
 
 **Live phase and permissions:**
-- [project/STATUS.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/project/STATUS.md>)
-- [docs/status-dashboard.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/docs/status-dashboard.md>)
 - [AGENTS.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/AGENTS.md>)
+- [WORKSPACE_FILE_MAP.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/WORKSPACE_FILE_MAP.md>)
+- [dashboard/km-world-dashboard.html](</C:/Users/Dyrane/Documents/sanctum-world-workspace/dashboard/km-world-dashboard.html>)
+- [worlds/korvin-merrow/task-setup/KM-WORLD-PERFORMANCE-REPORT.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/task-setup/KM-WORLD-PERFORMANCE-REPORT.md>)
 
 **Readable continuity:**
 - [worlds/korvin-merrow/00-MASTER-NARRATIVE.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/00-MASTER-NARRATIVE.md>)
@@ -61,7 +63,7 @@ Use the smallest ladder that answers your question.
 - Locked packages and ratifications under `worlds/korvin-merrow/world-spec-prep/` only when a specific clinical-canon question requires them.
 
 **Workspace structure and duplication:**
-- [project/WORKSPACE_FILE_MAP.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/project/WORKSPACE_FILE_MAP.md>)
+- [WORKSPACE_FILE_MAP.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/WORKSPACE_FILE_MAP.md>)
 - [worlds/korvin-merrow/README.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/README.md>)
 
 ## Template And Method Index
@@ -88,7 +90,7 @@ The clinical design principle is realistic hospital complexity, not a rare disea
 
 - Brainstorm, World Spec, file ecosystem, submission preparation, execution artifact generation, Step 9 file review, and Task 1 setup/evaluation are historical for Korvin.
 - Current repeatable operating layer is task-pipeline support: task setup, agent runs, QA, FA/GA, PL, and final review, one authorized step at a time.
-- Do not infer permission to continue from completed history; use the current phase in `project/STATUS.md`.
+- Do not infer permission to continue from completed history; use root `WORKSPACE_FILE_MAP.md` and the active `TASKN-STATE.md`.
 
 ## Folder Structure
 
@@ -100,14 +102,10 @@ docs/
   agent-workflow.md
   git-workflow.md
   security-and-privacy.md
-  status-dashboard.md
   tooling-audit.md
-project/
-  STATUS.md
-  DECISIONS.md
-  EXECUTION_CHECKLIST.md
-  PASS_PLAN.md
-  PHASE_MAP.md
+dashboard/
+  km-world-dashboard.html
+WORKSPACE_FILE_MAP.md
 reference/
   source/
     New Writers Version - Instruction Guide (05_24).docx
@@ -143,20 +141,20 @@ worlds/
 
 For a new collaborator or a future AI session, use this order:
 
-1. [project/STATUS.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/project/STATUS.md>) for live state.
-2. [worlds/korvin-merrow/00-MASTER-NARRATIVE.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/00-MASTER-NARRATIVE.md>) for the readable end-to-end story.
-3. [docs/status-dashboard.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/docs/status-dashboard.md>) for the quick dashboard.
-4. [worlds/korvin-merrow/task-setup/task1-lifecycle-log.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/task-setup/task1-lifecycle-log.md>) for Task 1 history and lessons.
+1. [AGENTS.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/AGENTS.md>) for operating instructions.
+2. [WORKSPACE_FILE_MAP.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/WORKSPACE_FILE_MAP.md>) for live state, structure, and task frontier.
+3. [worlds/korvin-merrow/00-MASTER-NARRATIVE.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/00-MASTER-NARRATIVE.md>) for the readable end-to-end story.
+4. [dashboard/km-world-dashboard.html](</C:/Users/Dyrane/Documents/sanctum-world-workspace/dashboard/km-world-dashboard.html>) for the visual dashboard.
 5. [worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md>) before any future task setup.
-6. [project/WORKSPACE_FILE_MAP.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/project/WORKSPACE_FILE_MAP.md>) when you need exact file locations or duplication boundaries.
+6. The active `TASKN-STATE.md` for the task you are working.
 
 Do not start by browsing every prep file. Most prep files are supporting memory, not active instructions.
 
 ## How To Use This Repo
 
-1. Read [project/STATUS.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/project/STATUS.md>) first.
-2. Check [project/PASS_PLAN.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/project/PASS_PLAN.md>) and [project/EXECUTION_CHECKLIST.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/project/EXECUTION_CHECKLIST.md>) before acting.
-3. Check [project/WORKSPACE_FILE_MAP.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/project/WORKSPACE_FILE_MAP.md>) before creating, moving, renaming, or deleting files.
+1. Read [AGENTS.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/AGENTS.md>) and [WORKSPACE_FILE_MAP.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/WORKSPACE_FILE_MAP.md>) first.
+2. Check the active `TASKN-STATE.md`, `TASK-RUNBOOK.md`, and any task-specific plan before acting.
+3. Check [WORKSPACE_FILE_MAP.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/WORKSPACE_FILE_MAP.md>) before creating, moving, renaming, or deleting files.
 4. Confirm the current phase gate.
 5. Use official templates from `reference/templates/`.
 6. Keep source/reference material separate from authored work.
@@ -165,9 +163,9 @@ Do not start by browsing every prep file. Most prep files are supporting memory,
 
 ## Repository Hygiene
 
-- Keep root files limited to `README.md`, `AGENTS.md`, `.gitignore`, and unavoidable repository controls.
+- Keep root files limited to `README.md`, `AGENTS.md`, `WORKSPACE_FILE_MAP.md`, `.gitignore`, and unavoidable repository controls.
 - Keep official source and templates under `reference/`.
-- Keep current project state under `project/`.
+- Keep current project/task state in root `WORKSPACE_FILE_MAP.md`, active `TASKN-STATE.md` files, the dashboard, and the performance report.
 - Keep durable documentation under `docs/`.
 - Keep world-specific authored/canonical work under `worlds/korvin-merrow/` lifecycle folders; `active/` is historical/current-authored context, not the only active surface.
 - Keep world-specific historical artifacts under `worlds/korvin-merrow/history/`.
@@ -189,8 +187,7 @@ AI may organize, critique, audit, and format. AI must not originate final clinic
 ## Source-Of-Truth Policy
 
 - Official Sanctum instructions live under `reference/`.
-- Project state lives in `project/STATUS.md`.
-- Workspace structure and duplication tracking live in `project/WORKSPACE_FILE_MAP.md`.
+- Project state and workspace structure live in root `WORKSPACE_FILE_MAP.md`, active `TASKN-STATE.md` files, the dashboard, and the performance report.
 - Clinical authored work lives under `worlds/korvin-merrow/active/`.
 - Physician decisions come from Alexander.
 - Official templates are used as bases for submission artifacts.
