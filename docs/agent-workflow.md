@@ -24,6 +24,10 @@ Codex is the local workspace manager:
 
 Codex must stop before irreversible actions such as RL Studio submission, browser control, external access, or phase advancement unless explicitly authorized.
 
+## @data-analytics convention (standing rule, 2026-06-10)
+
+Mentioning `@data-analytics` in a request invokes the data-analytics flow: load the reusable Korvin semantic layer, read the relevant workspace sources (state files, run records, dashboards, performance xlsx), and answer with verified facts plus analysis, forecasts, tables, charts, or reports. Use it for concrete analytics questions, for example: predict KM07/KM08 scores, audit the dashboard against the performance report, summarize pending work by task, build a score distribution table. Ground rules: answers are source-backed from local files, not chat memory; verified numbers are cited from the banked run records; score forecasts made before a pilot are banked as preregistration files under `taskN/runs/` (pattern: KM07-v2 and KM08-v4.1 preregistrations, 6/10) and are not edited after the pilot lands.
+
 ## Claude Role
 
 Claude is the official Sanctum drafting assistant when the instruction guide recommends it.

@@ -26,7 +26,7 @@ Use tags only after the milestone has actually occurred.
 ## Checkpoint Commit Examples
 
 ```powershell
-git add project/STATUS.md worlds/korvin-merrow/reviews/brainstorm-autoqc-02.md
+git add WORKSPACE_FILE_MAP.md (root; Active task status section) worlds/korvin-merrow/reviews/brainstorm-autoqc-02.md
 git commit -m "checkpoint: record brainstorm autoqc pass"
 
 git add worlds/korvin-merrow/submission/Korvin_Merrow_Brainstorm.docx
@@ -78,7 +78,7 @@ Recommended rule:
 After upload or AutoQC:
 
 - Save results locally.
-- Update `project/STATUS.md`.
+- Update `WORKSPACE_FILE_MAP.md (root; Active task status section)`.
 - Commit a checkpoint.
 
 ## Collaborator Session Exit Discipline
@@ -88,7 +88,7 @@ Every Codex, Claude, or writer session must leave the repository in a clean hand
 Before ending a working session:
 
 1. Confirm the working tree is clean, or explicitly document any uncommitted state.
-2. Confirm `project/STATUS.md` and `docs/status-dashboard.md` reflect the current phase and next eligible phase.
+2. Confirm `WORKSPACE_FILE_MAP.md (root; Active task status section)` and `docs/status-dashboard.md` reflect the current phase and next eligible phase.
 3. Confirm locked artifacts were not changed unless Alexander explicitly authorized the change.
 4. Confirm candidate artifacts are clearly located and status-labeled.
 5. Confirm newly locked artifacts have been moved to locked paths and ratification records are created and referenced.

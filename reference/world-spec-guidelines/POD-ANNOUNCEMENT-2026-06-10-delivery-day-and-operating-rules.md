@@ -1,0 +1,24 @@
+# Pod announcement 2026-06-10: delivery-day stats + operating rules (Larry E, Vagus pod lead)
+
+Source: #vaguspod @channel, Larry E, 2:08 AM 6/10/2026 (Rahul Pai stats quoted within). Recorded verbatim below the distillation. Binding operating rules for this workspace are distilled first.
+
+## Binding rules distilled
+
+1. **Submit continuously, not batched.** Do not hold finished tasks for Sunday/Monday; submit each task the moment it is ready so reviews flow all week. Applies immediately to KM07 (running) and KM08 (staged): submit as each clears, do not pair them.
+2. **Channel discipline.** General channel stays clear; work happens in your own thread. Tech questions go to sanctum-rls-tech-issues / #sanctumhelp / taiga-envlinter-autoqc-clarifications. Post-world-creation file edits "should NOT be happening"; if truly needed, thread + tag the on-duty EPM or the tech channel.
+3. **Clinical questions:** first attempt via Claude or taiga-envlinter-autoqc-clarifications, THEN tag Abi O and Larry E in the individual thread.
+4. **Do not post task-submitted notices.** They already track it.
+5. **World task count: over 8, preferably 10, before requesting a new world.** Before submitting a World #2 brainstorm, RE-READ the project instructions document; the guidance has changed (verify the live doc against our tracked 06_08 copy before any brainstorm work).
+6. **EPMs are monitoring productivity and efficiency** across a pod that doubled in 3 days (180+ active members). Keep Insightful tracking clean; the timeboxing expectations (06_08, June 7) are the published baseline.
+
+## Alexander's standing decision (6/10, recorded)
+
+**Korvin Merrow target = 10 tasks** (up from 8) to carry divergence and variety: KM01-06 banked RFD, KM07 v2 running, KM08 v4.1 staged, **KM09 and KM10 to be designed from the underused structures in `docs/task-structure-dossier.md`** (S2 forced-inventory and S3 external ratify-or-refute lead the shortlist; both carry native forcing on a fixed chart and need no borderline redesign of the world).
+
+## Context stats (morale/record only)
+
+248 tasks delivered project-wide this week; 80 moved to RFD on delivery day; hour highs 4 days running; 50% of submitting writers were first-time submitters.
+
+## Verbatim announcement
+
+@channel Great job everyone on delivery day! We appreciate all of you for your hard work, especially the other pod leads for helping with reviewing and @Abi O for running the ship while I was working a 24 hour shift. Here is some amazing stats across all 4 pods: From @Rahul Pai: I am proud to announce that we reached 248 tasks for delivery this week, with a high of 80 tasks moving to ready for delivery today. This was truly an amazing feat. Some additional statistics: High in hours every day for the last 4 days; 180+ active members the last 2 days; 50% of writers who submitted a task this delivery had never submitted a task prior. We look forward to working with all of you for the rest of this project! A few points going forward, most of you probably have not noticed that our pod has DOUBLED x in size over the past 3 days (welcome to all of the new writers). Unfortunately, we cannot keep track of each individual writer. However, the EPMs will be monitoring productivity and efficiency: PLEASE, PLEASE (1) Keep this channel clear of questions and requests. You must only post in your channel or thread! This is the place for people to go for general information. (2) This means that the EPMs and your POD LEADS are busier than ever. We want to help you, but we need some help from you! (3) This means we CANNOT wait for everyone to submit their tasks on Sundays and Mondays. Please continue to submit ALL week long! This allows us to get reviews done in an efficient fashion. Do not wait to submit them all concurrently, if there is one ready. Please PLEASE submit it. (4) Technical questions need to go to the channels where they belong - use the videos and instructions; use sanctum-rls-tech-issues, #sanctumhelp, taiga-envlinter-autoqc-clarifications; if it is clearly a technical question or you need to edit your files once your world is created (this should NOT be happening), post in your thread and tag an EPM on duty or use sanctum-rls-tech-issues. (5) If it is a clinical question and you have already used Claude or taiga-envlinter-autoqc-clarifications to attempt to answer your question, please then tag @Abi O and @Larry E in your individual thread. We will get back to you. (6) Please do not post that you have submitted a task (we are glad that you did), but we already know that you did! (7) If you have done over 8 tasks (preferably 10) in your world and are ready for a new world. PLEASE read the project instructions document (the guidance has changed) and submit a brainstorm world building task. Happy Wednesday! Thanks again everyone!

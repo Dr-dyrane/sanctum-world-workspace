@@ -15,7 +15,7 @@ World Spec drafting remains blocked until Brainstorm receives `GO`.
 When reviewer returns `GO`:
 
 1. Capture the GO decision in `worlds/korvin-merrow/reviews/reviewer-feedback.md` or a dated file under `worlds/korvin-merrow/reviews/`.
-2. Update `project/STATUS.md`.
+2. Update `WORKSPACE_FILE_MAP.md (root; Active task status section)`.
 3. Commit a checkpoint.
 4. Move to World Spec Section 1 physician interview only after Alexander authorizes.
 5. Use the official World Spec template and preparation packet.
@@ -80,7 +80,7 @@ Before resubmission:
 - [ ] Clinical changes approved by Alexander.
 - [ ] Official template preserved.
 - [ ] AutoQC rerun if required.
-- [ ] `project/STATUS.md` updated.
+- [ ] `WORKSPACE_FILE_MAP.md (root; Active task status section)` updated.
 - [ ] Checkpoint commit created.
 - [ ] No phase boundary crossed.
 

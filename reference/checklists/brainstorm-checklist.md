@@ -45,13 +45,15 @@ Use this checklist before Brainstorm AutoQC and Human Brainstorm Review.
 
 ## Rough Task Ideas
 
-- Target 5-8 or more tasks for concept planning.
-- Each task should map to an approved workflow category.
+- Target 10 tasks for concept planning (pod rule 6/10: over 8, preferably 10, before a new world).
+- STRUCTURAL VARIETY IS A GATE (Abi mandate 6/10, client ask): read `docs/task-structure-dossier.md` BEFORE drafting task ideas. The slate must span at least 5 distinct structures; draft-and-finalize completion is capped at 1-2 tasks per world. Name each task's structure (S1-S8) and its native forcing function in the brainstorm.
+- Design the world substrate FOR the chosen structures at this stage (a borderline case if a determination task is wanted; an external adversarial document if a ratify-or-refute task is wanted; a quiet measure-disqualifier if an abstraction task is wanted). The Korvin lesson: substrate chosen after the world is fixed cannot floor variety structures.
+- Each task should map to an approved workflow category by its VERBATIM sheet string; check claim counts on the live Task Selection Categories sheet.
 - At least one task should use a P0 workflow.
 - Each task should name a concrete deliverable, not an open-ended question.
 - Each task should identify which world elements, frictions, or traps it tests.
 - Task-level traps should be distinct from world-level traps when possible.
-- Tasks must be independent encounters and should be anchored after the world snapshot.
+- TEMPORAL ANCHOR IS A NON-NEGOTIABLE (instruction doc 06_02 + 06_08, verbatim): every task encounter AND deliverable falls STRICTLY AFTER the world snapshot and at or before the present real-world date. A task anchored at or before the snapshot is not acceptable even if precisely stated; a late-entry note or addendum documenting a pre-snapshot encounter also fails; a future-dated task is not acceptable. Anchor tasks at varied post-snapshot timepoints. No world document may be dated after any task anchor.
 
 ## Lead Review Expectations
 

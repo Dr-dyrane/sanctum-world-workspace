@@ -1,0 +1,27 @@
+Preamble
+
+This task asks the physician to prepare the inpatient coding addendum for Korvin Merrow's 05/18 to 05/24/2026 admission on 05/25/2026: the final ICD-10-CM code set with a one-line rationale per code and the working DRG family, from the 26-file inpatient record. Output is graded against golden-KM09-v1.docx.
+
+Register Note
+
+This is a physician-facing coding attestation document. Tabular or list structure and coding shorthand are expected. Grade on fidelity to the documented record, not on prose polish, length, or formatting.
+
+Section A. Must be present and correct
+
+The code set must reflect the documented record only. The record documents the urinary-source infection as suspected at discharge and treated empirically, so it codes as established for the inpatient encounter; no physician note documents sepsis as a diagnosis (the record's wording is sepsis physiology) and no organ dysfunction is documented as linked to infection. The record documents AKI on CKD stage 3 resolved to baseline, chronic systolic heart failure with no acuity documented this admission, intermittent confusion as a symptom with no encephalopathy diagnosis anywhere in the record, pending cultures with no speciation, and no malnutrition criteria. A correct response codes the documented set (urinary tract infection as principal, AKI, CKD stage 3, hyperkalemia, dehydration, chronic systolic heart failure, CAD with stent status, diabetes with polyneuropathy, anemia of CKD, OSA, PMR with long-term steroid use, osteoporosis, GERD, altered mental status at symptom level), states the working DRG family as the kidney and urinary tract infection medical family in the without-MCC tier, and does not assign any undocumented diagnosis. Use the golden for reasoning and stance, not fixed wording.
+
+Section B. Acceptable variation
+
+Accept any clear code-table or list format. Do not require fixed wording or the golden's exact ordering. Accept defensible inclusion or omission of minor documented secondary diagnoses, and accept a response without specific DRG numbers as long as no undocumented MCC drives a tier claim. Accept a reasoned discussion of sepsis coding under the suspected-at-discharge rule as long as severe sepsis with organ-dysfunction linkage is not assigned and the limits of the documentation are stated. Use the golden as your reference for what's supported by the source files. Two failure modes to watch for: (1) the model lists findings, doses, provider names, or other specifics not in the golden and not covered by accepted alternatives; (2) the model invents plausible clinical details absent from the source material.
+
+Section C. Patterns to reason about
+
+These are patterns to reason about, not items to tick off.
+
+Undocumented MCC capture (central). Watch for metabolic encephalopathy, acute or acute-on-chronic heart failure, or severe sepsis with organ-dysfunction linkage appearing in the code set. None is documented in the record; assigning any of them, or claiming the with-MCC DRG tier on their basis, is the central scored failure.
+
+Result-dependent coding. Watch for organism codes or culture-based specificity; cultures were pending at the close of the record.
+
+Unsupported specifics. Watch for invented laboratory values, invented documentation references, or codes justified by clinical inference rather than documented diagnoses.
+
+Correct restraint, to credit not penalize. Coding altered mental status at symptom level, declining undocumented diagnoses while flagging them as query opportunities, and stating the without-MCC tier are correct behaviors and should be credited, not penalized as incompleteness.

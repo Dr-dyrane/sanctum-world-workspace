@@ -90,6 +90,15 @@ Key job at stage 10: the locked TP/EO/Golden/GG were written before the AutoQC v
 
 ## B. Recipe for World #2+ (what we'd repeat, what we'd skip)
 
+### B0. PRE-BRAINSTORM GATE (added 6/10 - run BEFORE any World #2 brainstorm line is written)
+
+1. **Re-read the LIVE instruction document first.** Pod announcement 6/10 (Larry): "the guidance has changed" for new-world brainstorms. Verify the live doc against the tracked copy at `reference/source/[EXP] Project Sanctum Instruction Document (06_08).md`; if it moved past 06_08, re-snapshot before proceeding.
+2. **Structures before scenario.** Read `docs/task-structure-dossier.md` and pick the 5+ structures (target 10 tasks, completion capped at 1-2) BEFORE designing the patient. Then design the world substrate to arm each chosen structure (borderline case for determinations, external adversarial documents for ratify-or-refute, measure substrate for abstraction, exactly one or two cold chart-contradicted axes reserved for the completion floors). The Korvin lesson, paid for across five burst pilots: substrate chosen after the world is fixed cannot floor variety structures.
+3. **Anchor plan at brainstorm time.** Declare the world snapshot date and a varied post-snapshot anchor for every task (strictly after snapshot, at or before the real present date, no late-entry framing). Check anchors against the real calendar so nothing goes future-dated mid-pipeline (the KM07 v1 06/23 golden failure).
+4. **Claim check.** Verify every intended workflow string verbatim against the live Task Selection Categories sheet (snapshot: `reference/source/task-selection-categories-snapshot-2026-06-10.csv`) and note claim counts.
+5. **Updated checklist.** `reference/checklists/brainstorm-checklist.md` now carries the variety gate and the temporal-anchor non-negotiables (updated 6/10); run it as written.
+6. **Carry the standing reviewer formats forward:** Sang five-block grader with verbatim strings, Abi failure-only FA/GA without section names, three PLs per task, Mode A build standard, mounted-set pre-pilot gate, pilot preregistration in `taskN/runs/`.
+
 REPEAT (worked):
 1. Brainstorm with hostile-review pass before submission (caught trap taxonomy issues pre-reviewer).
 2. Locked-package architecture (identity -> governance -> timeline -> meds/comorbidity -> providers -> tasks) with ratification gates - zero canon drift across 300+ files.

@@ -1,0 +1,9 @@
+# TASK9-STATE
+
+## CURRENT (6/10 late): v1 PACKET BUILT + STAGED at platform/task9/current/ under Alexander's "ready-to-go packets as Dr Alexander" direction - platform entry awaits his read-and-own pass + explicit authorization
+Staged: prompt-task9-v1.txt (today 5/25), golden-KM09-v1.docx (full code set + not-coded block + DRG family 689/690 without-MCC), grader-guidelines-task9-v1.txt (537 words, five-block, verbatim clauses), RUN-INSTRUCTIONS-v1.md (predecessor-error checklist embedded). NO mounted file. All gates: fingerprint empty, metadata scrubbed, zero banned chars, dates audited (05/25 everywhere), no collisions, rendered + visually verified. Preregistration locked at runs/KM09-v1-pilot-preregistration.md. Build script tools/build/build-docx-km09-km10-v1.py. Open for Alexander at entry: own the principal-dx stance (N39.0 principal, severe sepsis not supported), 2.106 rulings, DRG-family-only confirm.
+
+## (Superseded 6/10 early) DESIGN DRAFTED - awaiting Alexander trap sign-off
+KM09 = Inpatient Medical Coding and DRG Assignment (P0, unclaimed at snapshot). S2 forced-inventory structure from docs/task-structure-dossier.md; opened under the 10-task world target (pod rule 6/10). Canonical design: design/KM09-PLAN.md. Substrate byte-verified 6/10: sepsis never documented unqualified (always "suspected ... sepsis physiology"); cultures pending through chart close; encephalopathy zero occurrences; HF never acute this admission. Central trap candidate = unsupported CC/MCC capture (metabolic encephalopathy G93.41, acute-on-chronic HF I50.23); judgment slot = principal dx selection (Alexander adjudicates the golden verdict). Anchor 05/25. NOT built, NOT staged, NOT uploaded. Open decisions in the plan: principal-dx verdict, DRG estimate yes/no, guideline-excerpt task file yes/no.
+
+Boundaries: no build/stage/upload/AutoQC/agent-run without explicit Alexander authorization for that exact step.
