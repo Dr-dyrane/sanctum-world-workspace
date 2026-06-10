@@ -12,7 +12,7 @@ KM04 v2 update 6/8: v2 cleared the difficulty gate after job `709be0e8` (mean 0.
 
 KM04 PL prep update 6/8: local planning draft `task-setup/task4/preference-labeling/KM04-PL-recommended-verdicts-DRAFT.md` exists, and PL #1 backup `task-setup/task4/preference-labeling/KM04-PL1-A-vs-B.md` is drafted. Neither is platform-submitted; no PL AutoQC has been run.
 
-KM05 reset 6/8: start with `task-setup/task5/TASK5-STATE.md`, `task-setup/task5/design/KM05-v2-design-plan-6-8.md`, and `task-setup/task5/build-phase-drafts/KM05-v2-review-request-for-claude-ai.md`. Older 6/7 convergence files are historical; their moderate-task fallback is retired. Current lead hypothesis is a cold home-health-start / completed medication-review / good-adherence interval-observation claim inside a transition-clinic draft; renal-BMP is backup only. No KM05 build, platform staging, upload, AutoQC, Taiga, QA, FA/GA, or PL exists.
+KM05 reset 6/8: start with `task-setup/task5/TASK5-STATE.md`, `task-setup/task5/design/archive/KM05-v2-design-plan-6-8.md` (archived 6/10, superseded by v4), and `task-setup/task5/build-phase-drafts/KM05-v2-review-request-for-claude-ai.md`. Older 6/7 convergence files are historical; their moderate-task fallback is retired. Current lead hypothesis is a cold home-health-start / completed medication-review / good-adherence interval-observation claim inside a transition-clinic draft; renal-BMP is backup only. No KM05 build, platform staging, upload, AutoQC, Taiga, QA, FA/GA, or PL exists.
 
 Current state: World created as `Healthcare_247_Merrow`; Step 9 generated-file review COMPLETE; Task 1 final human review COMPLETE / APPROVED. Task 2 / KM02 is COMPLETE / RFD (Ready for Delivery) after Janette's 6/8 final review: golden `golden-KM02-v5.docx` is re-dated to 05/24/2026 with sha256 prefix `2dd3e0ad`, Task AutoQC / Taiga gates passed qcaud_5e, qcaud_4a, and qcaud_ef, final FA/GA uses Attempt 8 at 0.30 from v3 job `8f393839`, and Preference Labels were submitted with verdict B / B++. Task 3 / KM03 escalation through v2.1 is difficulty-failed after job `58b5f3e3` (90-97, mean about 93.6, zero sub-70), with the transcript-lineage caveat recorded in `task-setup/task3/runs/KM03-taiga-results-58b5f3e3.md`. Task 3 / KM03 v2.2 then cleared the Taiga difficulty gate after job `877aa204`: mean 69.0, four sub-70 runs, six sub-90 runs, tail 0.20; record at `task-setup/task3/runs/KM03-v2.2-taiga-results-877aa204.md`. Task 4 / KM04 v1 failed the 6/8 trajectory difficulty gate after job `55ee209f`: 10 runs scored 0.87-0.95, mean 0.912, zero sub-70; record at `task-setup/task4/runs/KM04-taiga-results-55ee209f.md`. Task 5 / KM05 is review-only reset / HOLD under `task-setup/task5/` with active cold home-health lead plan and Claude.ai review request; its older moderate-task label is retired by the 6/8 no-moderate directive; it is not built, not platform-staged, not uploaded, not AutoQC-run, and not agent-run. Retired KM03 v1 passed Task AutoQC 36/36 (`qcaud_6b`), then job `58b5f3e3` confirmed v1 was too easy; it is historical only. KM03/KM04 post-Sang reruns are complete and Alexander entered both FA/GA records on platform; FA/GA AutoQC passed for both. PL is now active: KM03 PL #1-#3 are drafted locally; KM03 needs their platform submission, and KM04 PL #1-#2 are drafted locally while KM04 still needs one more PL draft/submission. Run PL AutoQC after each, then final review. No further platform mutation without exact authorization.
 
@@ -30,7 +30,7 @@ Start here only after reading `project/STATUS.md`.
 
 ## Folder Guide
 
-- `active/`: current authored world-facing working files and placeholders.
+- `active/`: current authored world-facing working files (brainstorm, clinical-logic, task-map; stale placeholders moved to `_pipeline-history/active-placeholders/`).
 - `planning/`: world-specific pass and planning documents.
 - `history/`: historical development artifacts that preserve audit trail.
 - `remediation/`: reviewer SEND BACK remediation decision briefs and compliance review.
@@ -107,10 +107,10 @@ Start here only after reading `project/STATUS.md`.
 - `task-setup/platform/task4/archive/2026-06-08-pre-clean/` (v1 evidence and transitional pre-clean files)
 - `task-setup/task4/build-phase-drafts/KM04-codex-black-team-review-6-7.md`
 - `task-setup/task5/TASK5-STATE.md`
-- `task-setup/task5/design/KM05-v2-design-plan-6-8.md`
+- `task-setup/task5/design/archive/KM05-v2-design-plan-6-8.md` (superseded by v4)
 - `task-setup/task5/design/KM05-design-plan-for-review.md`
-- `task-setup/task5/design/KM05-claude-ai-proposal-6-7.md`
-- `task-setup/task5/design/KM05-codex-black-team-6-7.md`
+- `task-setup/task5/design/archive/KM05-claude-ai-proposal-6-7.md` (superseded by v4)
+- `task-setup/task5/design/archive/KM05-codex-black-team-6-7.md` (superseded by v4)
 - `task-setup/task5/KM05-prebuild-review-and-build-gates.md`
 - `task-setup/task5/build-phase-drafts/KM05-v2-review-request-for-claude-ai.md`
 - `task-setup/task5/build-phase-drafts/KM05-review-request-for-claude-ai.md` (older review packet)

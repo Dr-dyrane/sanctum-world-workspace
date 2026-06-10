@@ -1,5 +1,7 @@
 ﻿# Status Dashboard
 
+> **SUPERSEDED FOR LIVE STATUS (6/10/2026):** the live status surface is the root `WORKSPACE_FILE_MAP.md` "Active task status" table plus each `TASKN-STATE.md`. Everything below is a historical record of the world-build and Task 1 era; its `project/` path references are archived. Do not navigate from this file.
+
 ## Current Gate
 
 **WORLD CREATED (6/5/2026, 11:20 AM PDT): Healthcare_247_Merrow is live. Step 9 COMPLETE. Current stage: Task 1 FINAL REVIEW COMPLETE / APPROVED.**
@@ -385,7 +387,7 @@ KM05: all 3 Preference Labels submitted (A++/A++/plain-A) -> moved to Awaiting F
 | KM06 | 2zw95f4e | Awaiting First Human Review | Alexander U | - |
 | (KM06 AQC-EVAL) | [AQC-EVAL] 2zw95f4e | Task Writing | Dhruv Ahuja | Dhruv Ahuja |
 
-KM06: the reconcile-prompt false-closure v4 died at mean ~0.98 and was RETIRED; the insulin-uptitration v5 (job f0934a26, bimodal mean 0.60, four floors) replaced it, FA/GA rewritten (FA 996 / GA 916), and the task is now SENT FOR HUMAN REVIEW (Awaiting First Human Review). NOTE-FOR-ABI-task6.md staged in task6/ for the reviewer (covers v4 retirement, v5 mechanism, draft-attribution fairness, KM05 acknowledged-reuse, workflow = Treatment Plan Documentation for Chronic Disease Management). KM05 advanced from Awaiting Final Review to In Final Review under Janette S. KM01-04 Ready for Delivery (Abi O).
+KM06: the reconcile-prompt false-closure v4 died at mean ~0.98 and was RETIRED; the insulin-uptitration v5 (job f0934a26, bimodal mean 0.60, four floors) replaced it, FA/GA rewritten (FA 996 / GA 916), and the task is now SENT FOR HUMAN REVIEW (Awaiting First Human Review). NOTE-FOR-ABI-task6.md staged in task6/handoff/ for the reviewer (covers v4 retirement, v5 mechanism, draft-attribution fairness, KM05 acknowledged-reuse, workflow = Treatment Plan Documentation for Chronic Disease Management). KM05 advanced from Awaiting Final Review to In Final Review under Janette S. KM01-04 Ready for Delivery (Abi O).
 
 Roll-up: KM01-04 delivered; KM05 in final review (Janette); KM06 v5 awaiting first human review. Pending user action: push the local commits (TASK6-STATE v5 update, FA/GA rewrite, Abi note, this dashboard update) from your own terminal.
 

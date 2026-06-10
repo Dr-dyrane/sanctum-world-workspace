@@ -42,31 +42,46 @@
 
   <style>
     :root {
-      --bg: #ffffff;
-      --fg: #000000;
-      --fg-soft: rgba(0,0,0,0.55);
-      --fg-faint: rgba(0,0,0,0.38);
-      --glass-bg: rgba(255,255,255,0.55);
-      --glass-stroke: rgba(0,0,0,0.06);
+      /* Surface scale: L0 page → L1 card → L2 control → L3 float. Each step visibly lighter. */
+      --bg:       #ebe8f4;                  /* L0 — violet-tinted grouped page */
+      --bg-2:     #ffffff;                  /* L1 — card */
+      --bg-3:     rgba(255,255,255,0.78);   /* L2 — control pill */
+      --bg-hover: rgba(124,58,237,0.06);    /* hover tint */
+      --bg-press: rgba(124,58,237,0.12);    /* pressed tint */
+      --fg:       #0b0a10;
+      --fg-soft:  rgba(11,10,16,0.55);
+      --fg-faint: rgba(11,10,16,0.36);
       --accent-a: #7C3AED;
       --accent-b: #A78BFA;
-      --shadow-rest: 0 4px 24px rgba(124,58,237,0.08);
-      --shadow-hover: 0 12px 48px rgba(124,58,237,0.16);
+      --accent-fill: rgba(124,58,237,0.12);
+      --shadow-card:  0 1px 2px rgba(22,10,46,0.04), 0 6px 24px rgba(22,10,46,0.07), 0 16px 48px rgba(124,58,237,0.06);
+      --shadow-lift:  0 4px 12px rgba(22,10,46,0.08), 0 16px 48px rgba(22,10,46,0.10), 0 28px 72px rgba(124,58,237,0.14);
+      --shadow-pill:  0 1px 3px rgba(22,10,46,0.07), 0 4px 14px rgba(22,10,46,0.06);
+      --r-card:   28px;
+      --r-pill:   9999px;
+      --r-chip:   12px;
+      --blur:     blur(28px) saturate(170%);
     }
     html.dark {
-      --bg: #000000;
-      --fg: #ffffff;
-      --fg-soft: rgba(255,255,255,0.62);
-      --fg-faint: rgba(255,255,255,0.40);
-      --glass-bg: rgba(255,255,255,0.04);
-      --glass-stroke: rgba(255,255,255,0.08);
+      --bg:       #09080d;                  /* L0 — near-black with violet undertone */
+      --bg-2:     #18161f;                  /* L1 — card, clearly raised */
+      --bg-3:     rgba(42,39,54,0.85);      /* L2 — control, clearly raised again */
+      --bg-hover: rgba(139,92,246,0.10);
+      --bg-press: rgba(139,92,246,0.20);
+      --fg:       #f4f2fa;
+      --fg-soft:  rgba(244,242,250,0.60);
+      --fg-faint: rgba(244,242,250,0.36);
       --accent-a: #8B5CF6;
       --accent-b: #C4B5FD;
-      --shadow-rest: 0 4px 24px rgba(139,92,246,0.10);
-      --shadow-hover: 0 12px 48px rgba(139,92,246,0.22);
+      --accent-fill: rgba(139,92,246,0.18);
+      --shadow-card:  0 1px 2px rgba(0,0,0,0.50), 0 8px 28px rgba(0,0,0,0.45), 0 16px 56px rgba(139,92,246,0.09);
+      --shadow-lift:  0 4px 16px rgba(0,0,0,0.60), 0 20px 56px rgba(0,0,0,0.50), 0 32px 80px rgba(139,92,246,0.16);
+      --shadow-pill:  0 1px 3px rgba(0,0,0,0.45), 0 4px 14px rgba(0,0,0,0.40);
     }
 
-    html, body { background: var(--bg); color: var(--fg); }
+    /* Pass 9: smooth theme fade */
+    html { transition: background-color .15s ease, color .15s ease; }
+    html, body { background: var(--bg); color: var(--fg); min-height: 100%; }
     body {
       margin: 0;
       -webkit-font-smoothing: antialiased;
@@ -82,23 +97,31 @@
     .t-id     { font-size: clamp(2.2rem, 6vw, 4.2rem); line-height: 0.9; }
     .t-score  { font-size: clamp(3rem, 8vw, 4.6rem); line-height: 0.9; }
 
-    /* Liquid glass */
-    .glass {
-      background: var(--glass-bg);
-      -webkit-backdrop-filter: blur(20px) saturate(140%);
-      backdrop-filter: blur(20px) saturate(140%);
-      box-shadow: inset 0 0 0 1px var(--glass-stroke), var(--shadow-rest);
-      position: relative;
-      overflow: hidden;
+    /* ── Surface system: borderless depth ── */
+    /* Level 0 = --bg (page), Level 1 = .surf (card), Level 2 = .surf-2 (chip/pill), Level 3 = .surf-3 (nav float) */
+    .surf {
+      background: var(--bg-2);
+      -webkit-backdrop-filter: var(--blur);
+      backdrop-filter: var(--blur);
+      box-shadow: var(--shadow-card);
+      position: relative; overflow: hidden;
     }
-    .glass::after {
-      content: "";
-      position: absolute; inset: 0;
-      pointer-events: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-      opacity: 0.02;
-      mix-blend-mode: overlay;
+    .surf-2 {
+      background: var(--bg-3);
+      -webkit-backdrop-filter: var(--blur);
+      backdrop-filter: var(--blur);
+      box-shadow: var(--shadow-pill);
+      position: relative; overflow: hidden;
     }
+    /* Subtle noise grain — depth cue, no border */
+    .surf::after, .surf-2::after {
+      content: '';
+      position: absolute; inset: 0; pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      opacity: 0.025; mix-blend-mode: overlay; border-radius: inherit;
+    }
+    /* Keep .glass as alias so existing refs don't break */
+    .glass { background: var(--bg-3); -webkit-backdrop-filter: var(--blur); backdrop-filter: var(--blur); box-shadow: var(--shadow-pill); position: relative; overflow: hidden; }
 
     .accent-text {
       background: linear-gradient(120deg, var(--accent-a), var(--accent-b));
@@ -106,29 +129,114 @@
       -webkit-text-fill-color: transparent; color: transparent;
     }
 
-    /* Card motion */
+    /* ── Card motion ── */
     .card {
-      transform: translateY(40px); opacity: 0;
-      transition: transform .7s var(--tw-ease, cubic-bezier(0.16,1,0.3,1)),
-                  opacity .7s ease, box-shadow .3s cubic-bezier(0.25,0.46,0.45,0.94);
+      transform: translateY(36px) scale(0.98); opacity: 0;
+      transition:
+        transform .72s cubic-bezier(0.16,1,0.3,1),
+        opacity   .6s  ease,
+        box-shadow .4s cubic-bezier(0.16,1,0.3,1);
       will-change: transform, opacity;
     }
-    .card.in     { transform: translateY(0); opacity: 1; }
-    .card.dim    { opacity: 0.32; }
-    .card:hover  { box-shadow: inset 0 0 0 1px var(--glass-stroke), var(--shadow-hover); transform: translateY(-4px); }
+    .card.in  { transform: translateY(0) scale(1); opacity: 1; }
+    .card.dim { opacity: 0.28; transform: scale(0.99); }
+    .card:hover {
+      box-shadow: var(--shadow-lift);
+      transform: translateY(-5px) scale(1.002);
+    }
+    .card:active { transform: translateY(-2px) scale(0.998); transition-duration: .12s; }
 
-    .hover-lift { transition: transform .3s cubic-bezier(0.25,0.46,0.45,0.94); }
-    .hover-lift:hover { transform: scale(1.02); }
+    /* ════════════════════════════════════════════
+       COMPONENT STATE SYSTEM — each element owns its
+       5 states: rest → hover → focus → pressed → selected
+       ════════════════════════════════════════════ */
+
+    /* Icon button (nav: theme, mute) — small, quick, contained */
+    .btn-icon {
+      cursor: pointer; border: none;
+      transition: transform .22s cubic-bezier(0.34,1.56,0.64,1),
+                  background-color .18s ease, box-shadow .22s ease;
+    }
+    .btn-icon:hover         { background-color: var(--bg-hover); transform: scale(1.08); }
+    .btn-icon:focus-visible { outline: none; box-shadow: 0 0 0 3px var(--accent-fill), var(--shadow-pill); }
+    .btn-icon:active        { background-color: var(--bg-press); transform: scale(0.88); transition-duration: .08s; }
+    .btn-icon[aria-pressed="true"] { color: var(--accent-a); background-color: var(--accent-fill); }
+
+    /* Pill button (scroll hint, run detail, FAB menu) — text action, lifts */
+    .btn-pill {
+      cursor: pointer; border: none;
+      transition: transform .26s cubic-bezier(0.34,1.56,0.64,1),
+                  background-color .2s ease, box-shadow .26s ease, color .2s ease;
+    }
+    .btn-pill:hover         { background-color: var(--bg-hover); transform: translateY(-2px); box-shadow: var(--shadow-lift); }
+    .btn-pill:focus-visible { outline: none; box-shadow: 0 0 0 3px var(--accent-fill), var(--shadow-pill); }
+    .btn-pill:active        { background-color: var(--bg-press); transform: translateY(0) scale(0.96); transition-duration: .09s; }
+    .btn-pill[aria-expanded="true"] { color: var(--accent-a); }
+
+    /* FAB — primary floating action, the boldest interaction on the page */
+    .btn-fab {
+      cursor: pointer; border: none;
+      transition: transform .3s cubic-bezier(0.34,1.56,0.64,1),
+                  background-color .2s ease, box-shadow .3s ease;
+    }
+    .btn-fab:hover          { transform: scale(1.1) rotate(4deg); box-shadow: var(--shadow-lift); }
+    .btn-fab:focus-visible  { outline: none; box-shadow: 0 0 0 4px var(--accent-fill), var(--shadow-lift); }
+    .btn-fab:active         { transform: scale(0.88) rotate(0deg); transition-duration: .09s; }
+    .btn-fab[aria-expanded="true"] { background-color: var(--accent-fill); color: var(--accent-a); }
 
     /* Dots */
     .dot { transition: opacity .4s ease, transform .3s ease; }
     .dot.pulse { animation: pulse 2.4s ease-in-out infinite; }
     @keyframes pulse { 0%,100%{opacity:.20} 50%{opacity:.42} }
 
-    /* Reveal disclosure */
+    /* ── Progressive card reveal ── */
+    /* Card body: hidden by default, fades on hover */
+    .card-body {
+      opacity: 0; transform: translateY(6px);
+      transition: opacity .38s cubic-bezier(0.16,1,0.3,1) .05s,
+                  transform .38s cubic-bezier(0.16,1,0.3,1) .05s,
+                  max-height .5s cubic-bezier(0.16,1,0.3,1);
+      overflow: hidden;
+    }
+    /* Show body on card hover OR when card is expanded */
+    .card-inner:hover .card-body,
+    .card-inner.expanded .card-body { opacity: 1; transform: translateY(0); }
+
+    /* Run detail reveal: click only */
     .reveal { max-height: 0; opacity: 0; overflow: hidden;
-      transition: max-height .5s var(--tw-ease, cubic-bezier(0.16,1,0.3,1)), opacity .4s ease, margin .4s ease; }
-    .reveal.open { max-height: 420px; opacity: 1; }
+      transition: max-height .55s cubic-bezier(0.16,1,0.3,1), opacity .42s ease .06s; }
+    .reveal.open { max-height: 840px; opacity: 1; }
+
+    /* Chip — selectable filter/sort control, full state ladder */
+    .chip {
+      cursor: pointer; border: none;
+      transition: transform .18s cubic-bezier(0.34,1.56,0.64,1),
+                  background-color .18s ease, box-shadow .18s ease, color .18s ease;
+    }
+    .chip:hover                 { background-color: var(--bg-hover); transform: translateY(-1px); }
+    .chip:focus-visible         { outline: none; box-shadow: 0 0 0 3px var(--accent-fill), var(--shadow-pill); }
+    .chip:active                { background-color: var(--bg-press); transform: scale(0.91); transition-duration: .08s; }
+    .chip[aria-pressed="true"]  { color: var(--accent-a); background-color: var(--accent-fill); box-shadow: var(--shadow-lift); }
+    .chip[aria-pressed="true"]:hover { transform: none; }
+
+    /* ── Mobile-first container fixes ── */
+    @media (max-width: 639px) {
+      /* Tighter hero top padding on short phones */
+      .hero-section { padding-top: 5rem; }
+      /* Summary stat scores: smaller on phones so 2-col fits */
+      .t-score { font-size: clamp(1.9rem, 10vw, 3rem); }
+      /* Controls bar: stack filter and sort full-width */
+      .controls-inner { flex-direction: column; align-items: stretch; gap: 0.75rem; }
+      .controls-group { width: 100%; }
+      /* Card inner section: tighter padding */
+      .card-inner { padding: 1.1rem 1.25rem !important; }
+      /* Mechanism text: remove fixed ch width, let it flow */
+      .mechanism-text { max-width: 100% !important; }
+      /* Chip groups scroll horizontally rather than overflow */
+      .chip-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; flex-wrap: nowrap !important; padding-bottom: 2px; }
+      /* Card min-height: reduce on mobile so it doesn't feel locked */
+      .km-card { min-height: 0 !important; padding-top: 1.5rem; padding-bottom: 1.5rem; }
+    }
 
     /* Focus ring */
     :focus-visible { outline: 2px solid var(--accent-a); outline-offset: 2px; border-radius: 14px;
@@ -144,11 +252,91 @@
     .type-char { opacity: 0; display: inline-block; animation: charin .35s ease forwards; }
     @keyframes charin { to { opacity: 1; } }
 
+    /* ── Pass 2: Score ring ── */
+    .score-ring { display:inline-block; position:relative; }
+    .score-ring svg { display:block; }
+    .score-ring .ring-val {
+      position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+      flex-direction:column;
+    }
+    .ring-track { fill:none; stroke:var(--fg-faint); opacity:0.18; }
+    .ring-fill  { fill:none; stroke-linecap:round;
+      transition: stroke-dashoffset 1.1s cubic-bezier(0.16,1,0.3,1) .15s; }
+    .ring-fill.hard   { stroke: #f59e0b; }  /* amber  — sub-60  */
+    .ring-fill.mid    { stroke: #a78bfa; }  /* violet — 60-74   */
+    .ring-fill.soft   { stroke: var(--accent-a); } /* purple — 75+  */
+    .ring-fill.pending{ stroke: var(--fg-faint); stroke-dasharray:4 6; }
+    @media (prefers-reduced-motion: reduce) { .ring-fill { transition: none !important; } }
+
+    /* ── Card accent bar (borderless: no inset, left paint only) ── */
+    .card-inner::before {
+      content: '';
+      position: absolute; top: 20px; bottom: 20px; left: 0;
+      width: 3px; border-radius: 2px;
+      background: var(--card-bar, var(--accent-a));
+      opacity: 0.55;
+      transition: opacity .35s ease, height .35s ease;
+    }
+    .card-inner:hover::before { opacity: 0.9; }
+
+    /* ── Pass 4: Sparkline ── */
+    .sparkline { display:block; overflow:visible; }
+    .spark-line { fill:none; stroke:var(--accent-a); stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; opacity:0.7; }
+    .spark-dot  { fill:var(--accent-a); }
+    .spark-dot.low { fill:#f59e0b; }
+    .spark-pending { stroke:var(--fg-faint); stroke-dasharray:3 4; }
+
+    /* ── Radial tooltip: borderless floating surface ── */
+    #radialTip {
+      position: fixed; z-index: 60; pointer-events: none;
+      background: var(--bg-3);
+      -webkit-backdrop-filter: var(--blur);
+      backdrop-filter: var(--blur);
+      box-shadow: var(--shadow-lift);
+      border-radius: 14px; padding: 8px 14px;
+      font-family: ui-monospace, monospace; font-size: 12px; font-weight: 600;
+      color: var(--fg);
+      opacity: 0; transform: translateY(6px) scale(0.94);
+      transition: opacity .2s cubic-bezier(0.16,1,0.3,1), transform .2s cubic-bezier(0.16,1,0.3,1);
+      white-space: nowrap;
+    }
+    #radialTip.show { opacity: 1; transform: translateY(0) scale(1); }
+
+    /* ── Pass 1: Ambient orbs ── */
+    .orb {
+      position: fixed; border-radius: 50%; pointer-events: none; z-index: 0;
+      filter: blur(90px); will-change: transform;
+    }
+    .orb-a {
+      width: min(70vw, 600px); height: min(70vw, 600px);
+      top: -15%; left: -10%;
+      background: radial-gradient(circle, rgba(124,58,237,0.18) 0%, transparent 70%);
+      animation: orbDriftA 22s ease-in-out infinite alternate;
+    }
+    .orb-b {
+      width: min(60vw, 500px); height: min(60vw, 500px);
+      bottom: -10%; right: -8%;
+      background: radial-gradient(circle, rgba(167,139,250,0.14) 0%, transparent 70%);
+      animation: orbDriftB 28s ease-in-out infinite alternate;
+    }
+    @keyframes orbDriftA {
+      from { transform: translate(0, 0) scale(1); }
+      to   { transform: translate(6vw, 8vh) scale(1.08); }
+    }
+    @keyframes orbDriftB {
+      from { transform: translate(0, 0) scale(1); }
+      to   { transform: translate(-5vw, -6vh) scale(1.12); }
+    }
+    html.dark .orb-a { background: radial-gradient(circle, rgba(139,92,246,0.22) 0%, transparent 70%); }
+    html.dark .orb-b { background: radial-gradient(circle, rgba(196,181,253,0.12) 0%, transparent 70%); }
+    @media (prefers-reduced-motion: reduce) { .orb { animation: none !important; } }
+
     /* Progress + FAB */
     #progress { background: linear-gradient(90deg, var(--accent-a), var(--accent-b)); }
 
     @media (prefers-reduced-motion: reduce) {
-      .card, .reveal, .node-anim, .arc-anim, .type-char, .dot.pulse, .hover-lift { animation: none !important; transition: opacity .3s ease !important; transform: none !important; }
+      .card, .reveal, .node-anim, .arc-anim, .type-char, .dot.pulse,
+      .btn-icon, .btn-pill, .btn-fab, .chip, .card-body { animation: none !important; transition: opacity .3s ease !important; transform: none !important; }
       .card { opacity: 1; }
       html { scroll-behavior: auto !important; }
     }
@@ -158,6 +346,11 @@
 </head>
 
 <body class="font-sans antialiased">
+  <!-- Ambient orbs -->
+  <div class="orb orb-a" aria-hidden="true"></div>
+  <div class="orb orb-b" aria-hidden="true"></div>
+  <!-- Radial tooltip -->
+  <div id="radialTip" role="tooltip" aria-live="polite"></div>
   <!-- Scroll progress -->
   <div class="fixed top-0 left-0 right-0 h-[2px] z-50">
     <div id="progress" class="h-full w-0 origin-left"></div>
@@ -165,21 +358,31 @@
 
   <!-- Top chrome -->
   <header class="fixed top-3 left-0 right-0 z-40 flex justify-center px-4">
-    <div class="glass rounded-full px-3 py-2 flex items-center gap-3" style="border-radius:9999px">
-      <span class="pl-2 pr-1 text-[13px] font-semibold tracking-tight">KM World Suite</span>
-      <span class="hidden sm:block w-px h-4" style="background:var(--glass-stroke)"></span>
+    <div class="surf-2 flex items-center gap-2 px-3 py-2" style="border-radius:var(--r-pill)">
+      <span class="pl-1 pr-1 text-[13px] font-semibold tracking-tight">KM World Suite</span>
+      <span class="hidden sm:block w-px h-4" style="background:var(--fg-faint);opacity:0.2"></span>
       <span id="clock" class="hidden sm:block font-mono text-[12px]" style="color:var(--fg-soft)">--:--:--</span>
       <button id="themeToggle" aria-label="Toggle color theme"
-        class="hover-lift glass rounded-full w-9 h-9 grid place-items-center" style="border-radius:9999px">
-        <i data-lucide="sun" class="block dark:hidden" style="width:18px;height:18px"></i>
-        <i data-lucide="moon" class="hidden dark:block" style="width:18px;height:18px"></i>
+        class="btn-icon surf-2 w-9 h-9 grid place-items-center" style="border-radius:var(--r-pill)">
+        <i data-lucide="sun" class="block dark:hidden" style="width:17px;height:17px"></i>
+        <i data-lucide="moon" class="hidden dark:block" style="width:17px;height:17px"></i>
       </button>
+      <button id="muteToggle" aria-label="Toggle sounds" aria-pressed="false"
+        class="btn-icon surf-2 w-9 h-9 grid place-items-center" style="border-radius:var(--r-pill)">
+        <i data-lucide="volume-2" id="muteIcon" style="width:17px;height:17px"></i>
+      </button>
+      <a href="https://drive.google.com/drive/folders/1BtPk8hOuCc6LUdXPrUer5X8DOPaeFLen"
+        target="_blank" rel="noopener" aria-label="Open synced world files on Google Drive"
+        title="World files on Google Drive"
+        class="btn-icon surf-2 w-9 h-9 grid place-items-center" style="border-radius:var(--r-pill);color:var(--fg)">
+        <i data-lucide="folder-open" style="width:17px;height:17px"></i>
+      </a>
     </div>
   </header>
 
-  <main>
+  <main style="position:relative;z-index:1">
     <!-- HERO -->
-    <section class="min-h-[100svh] flex flex-col items-center justify-center px-6 pt-24 pb-10 text-center">
+    <section class="hero-section min-h-[100svh] flex flex-col items-center justify-center px-6 pt-24 pb-10 text-center">
       <p class="font-mono text-[12px] uppercase tracking-[0.28em] mb-5" style="color:var(--fg-faint)">Korvin Merrow · Task Suite</p>
       <h1 id="heroTitle" class="t-hero font-semibold text-balance max-w-[14ch]">Performance Across the Suite</h1>
       <p class="mt-5 max-w-[52ch] text-[15px] leading-relaxed" style="color:var(--fg-soft)">
@@ -191,34 +394,34 @@
         <svg id="radial" viewBox="0 0 560 560" class="w-full h-full" role="img" aria-label="Radial chart of KM01 through KM08 mean scores"></svg>
       </div>
 
-      <button id="scrollHint" class="mt-2 hover-lift glass rounded-full px-4 py-2 flex items-center gap-2 text-[13px]" style="border-radius:9999px;color:var(--fg-soft)">
+      <button id="scrollHint" class="mt-2 btn-pill surf-2 px-4 py-2 flex items-center gap-2 text-[13px]" style="border-radius:var(--r-pill);color:var(--fg-soft)">
         Scroll to detail <i data-lucide="chevron-down" style="width:16px;height:16px"></i>
       </button>
     </section>
 
     <!-- CONTROLS -->
-    <div class="sticky top-16 z-30 px-4 sm:px-6 max-w-5xl mx-auto">
-      <div class="glass rounded-[20px] px-3 py-3 sm:px-4 flex flex-wrap items-center gap-x-5 gap-y-3 justify-between">
-        <div class="flex items-center gap-2 flex-wrap" role="group" aria-label="Filter tasks by status">
-          <span class="font-mono text-[10px] uppercase tracking-[0.18em] pl-1 pr-1 hidden sm:block" style="color:var(--fg-faint)">Filter</span>
-          <div id="filterChips" class="flex items-center gap-2 flex-wrap"></div>
+    <div class="sticky top-16 z-30 px-3 sm:px-6 max-w-5xl mx-auto">
+      <div class="surf-2 px-4 py-3 controls-inner flex flex-wrap items-center gap-x-5 gap-y-2 sm:gap-y-3 justify-between" style="border-radius:20px">
+        <div class="controls-group flex items-center gap-2 flex-wrap" role="group" aria-label="Filter tasks by status">
+          <span class="font-mono text-[10px] uppercase tracking-[0.18em] pl-1" style="color:var(--fg-faint)">Filter</span>
+          <div id="filterChips" class="chip-scroll flex items-center gap-2 flex-wrap"></div>
         </div>
-        <div class="flex items-center gap-2" role="group" aria-label="Sort tasks">
-          <span class="font-mono text-[10px] uppercase tracking-[0.18em] hidden sm:block" style="color:var(--fg-faint)">Sort</span>
-          <div id="sortChips" class="flex items-center gap-2"></div>
+        <div class="controls-group flex items-center gap-2 flex-wrap" role="group" aria-label="Sort tasks">
+          <span class="font-mono text-[10px] uppercase tracking-[0.18em]" style="color:var(--fg-faint)">Sort</span>
+          <div id="sortChips" class="chip-scroll flex items-center gap-2 flex-wrap"></div>
         </div>
       </div>
     </div>
 
     <!-- CARDS -->
-    <div id="cards" class="px-4 sm:px-6 max-w-5xl mx-auto"></div>
+    <div id="cards" class="px-3 sm:px-6 max-w-5xl mx-auto"></div>
     <p id="emptyState" class="hidden text-center py-20 text-[15px]" style="color:var(--fg-soft)">No tasks match this filter.</p>
 
     <!-- SUMMARY FOOTER -->
-    <section id="summary" class="px-4 sm:px-6 max-w-5xl mx-auto py-20">
-      <div class="glass rounded-[28px] p-8 sm:p-12">
-        <p class="font-mono text-[12px] uppercase tracking-[0.24em] mb-8" style="color:var(--fg-faint)">Suite Summary</p>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+    <section id="summary" class="px-3 sm:px-6 max-w-5xl mx-auto py-16 sm:py-20">
+      <div class="surf p-6 sm:p-12" style="border-radius:var(--r-card)">
+        <p class="font-mono text-[12px] uppercase tracking-[0.24em] mb-6 sm:mb-8" style="color:var(--fg-faint)">Suite Summary</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-5 sm:gap-8">
           <div>
             <div class="t-score font-bold accent-text" id="meanOfMeans">—</div>
             <div class="mt-2 text-[13px]" style="color:var(--fg-soft)">Mean of means</div>
@@ -245,7 +448,7 @@
   <div class="fixed bottom-5 right-5 z-40 flex flex-col items-end gap-2">
     <div id="fabMenu" class="flex flex-col items-end gap-2 origin-bottom-right scale-90 opacity-0 pointer-events-none transition-all duration-300 ease-fluid"></div>
     <button id="fab" aria-expanded="false" aria-label="Quick jump to a task"
-      class="hover-lift glass rounded-full w-14 h-14 grid place-items-center" style="border-radius:9999px">
+      class="btn-fab surf-2 w-14 h-14 grid place-items-center" style="border-radius:var(--r-pill)">
       <i data-lucide="navigation" id="fabIcon" style="width:22px;height:22px"></i>
     </button>
   </div>
@@ -270,14 +473,50 @@
 
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    /* ---------- Theme ---------- */
+    /* ============================================================
+       KMState — single persisted state layer (localStorage, versioned)
+       Levels of state handled:
+         1. Component state  — aria-pressed / aria-expanded, CSS owns visuals
+         2. Session UI state — filter/sort/expanded, restored on reload
+         3. User preference  — theme/mute, persisted indefinitely
+         4. URL state        — deep links override session (hash wins)
+         5. System state     — prefers-color-scheme / reduced-motion fallback
+       ============================================================ */
+    const KMState = (function(){
+      const KEY = 'km-dash-v1';
+      const defaults = { theme:null, muted:null, filter:'all', sort:'position', expanded:[] };
+      let s;
+      try { s = { ...defaults, ...(JSON.parse(localStorage.getItem(KEY)) || {}) }; }
+      catch { s = { ...defaults }; }
+      /* migrate legacy keys once */
+      const legacyTheme = localStorage.getItem('km-theme');
+      const legacyMute  = localStorage.getItem('km-sfx-muted');
+      if (legacyTheme !== null && s.theme === null){ s.theme = legacyTheme; localStorage.removeItem('km-theme'); }
+      if (legacyMute  !== null && s.muted === null){ s.muted = legacyMute === 'true'; localStorage.removeItem('km-sfx-muted'); }
+      const subs = {};
+      function save(){ try { localStorage.setItem(KEY, JSON.stringify(s)); } catch {} }
+      save();
+      return {
+        get: k => s[k],
+        set(k, v){ s[k] = v; save(); (subs[k]||[]).forEach(fn=>fn(v)); },
+        on(k, fn){ (subs[k] = subs[k]||[]).push(fn); },
+      };
+    })();
+
+    /* ---------- Theme (preference level, system fallback) ---------- */
     const root = document.documentElement;
-    const stored = localStorage.getItem('km-theme');
+    const themeBtn = document.getElementById('themeToggle');
     const sysDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (stored ? stored === 'dark' : sysDark) root.classList.add('dark');
-    document.getElementById('themeToggle').addEventListener('click', () => {
-      root.classList.toggle('dark');
-      localStorage.setItem('km-theme', root.classList.contains('dark') ? 'dark' : 'light');
+    function applyTheme(){
+      const pref = KMState.get('theme');
+      const dark = pref ? pref === 'dark' : sysDark;
+      root.classList.toggle('dark', dark);
+      themeBtn.setAttribute('aria-pressed', dark ? 'true' : 'false');
+    }
+    applyTheme();
+    themeBtn.addEventListener('click', () => {
+      KMState.set('theme', root.classList.contains('dark') ? 'light' : 'dark');
+      applyTheme();
     });
 
     /* ---------- Clock ---------- */
@@ -319,6 +558,7 @@
     };
 
     /* ---------- Radial chart ---------- */
+    const radialTip = document.getElementById('radialTip');
     (function(){
       const svg = document.getElementById('radial');
       const NS = 'http://www.w3.org/2000/svg';
@@ -397,20 +637,40 @@
         lbl.setAttribute('pointer-events','none');
         lbl.textContent = p.t.id.replace('KM','');
 
-        // tooltip
-        const tip = document.createElementNS(NS,'text');
-        tip.setAttribute('x',p.x); tip.setAttribute('y',p.y - r - 12);
-        tip.setAttribute('text-anchor','middle'); tip.setAttribute('fill','var(--fg)');
-        tip.setAttribute('font-size','12'); tip.setAttribute('font-weight','600');
-        tip.setAttribute('opacity','0'); tip.style.transition='opacity .25s ease';
-        tip.textContent = `${p.t.id} · ${p.t.mean}%`;
+        const tipLabel = p.t.mean !== null
+          ? `${p.t.id} · ${p.t.mean}% · ${p.t.status}`
+          : `${p.t.id} · ${p.t.status}`;
 
-        const expand = ()=>{ c.setAttribute('r', r+5); tip.setAttribute('opacity','1'); };
-        const reset  = ()=>{ c.setAttribute('r', r);  tip.setAttribute('opacity','0'); };
-        g.addEventListener('mouseenter', expand);
+        const showTip = (mx, my)=>{
+          radialTip.textContent = tipLabel;
+          radialTip.classList.add('show');
+          const tw = radialTip.offsetWidth, th = radialTip.offsetHeight;
+          let tx = mx + 12, ty = my - th - 8;
+          if (tx + tw > window.innerWidth - 8) tx = mx - tw - 12;
+          if (ty < 8) ty = my + 16;
+          radialTip.style.left = tx+'px'; radialTip.style.top = ty+'px';
+        };
+        const hideTip = ()=> radialTip.classList.remove('show');
+
+        const expand = ()=>{ c.setAttribute('r', r+5); };
+        const reset  = ()=>{ c.setAttribute('r', r); hideTip(); };
+        g.addEventListener('mouseenter', e=>{ expand(); showTip(e.clientX, e.clientY); });
+        g.addEventListener('mousemove',  e=>{ showTip(e.clientX, e.clientY); });
         g.addEventListener('mouseleave', reset);
-        g.addEventListener('focus', expand);
+        g.addEventListener('focus', e=>{
+          expand();
+          const rect = g.getBoundingClientRect();
+          showTip(rect.left + rect.width/2, rect.top);
+        });
         g.addEventListener('blur', reset);
+        /* touch: show on tap, hide after 2s */
+        g.addEventListener('touchstart', e=>{
+          e.preventDefault();
+          expand();
+          const t0 = e.touches[0];
+          showTip(t0.clientX, t0.clientY);
+          setTimeout(()=>{ reset(); }, 2000);
+        }, {passive:false});
         const go = ()=>{
           document.getElementById('card-'+p.t.id)?.scrollIntoView({behavior:'smooth', block:'center'});
           history.replaceState(null,'','#'+p.t.id);
@@ -418,7 +678,7 @@
         g.addEventListener('click', go);
         g.addEventListener('keydown', e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); go(); }});
 
-        g.appendChild(halo); g.appendChild(c); g.appendChild(lbl); g.appendChild(tip);
+        g.appendChild(halo); g.appendChild(c); g.appendChild(lbl);
         svg.appendChild(g);
       });
     })();
@@ -434,19 +694,76 @@
             style="width:13px;height:13px;border-radius:9999px;display:inline-block;background:var(--accent-a);opacity:${op}"></span>`;
         }).join('') : `<span class="text-[13px]" style="color:var(--fg-faint)">Pilot not yet run</span>`;
 
-        const meanDisplay = hasPilot
-          ? `<div class="t-score font-bold accent-text">${t.mean}<span class="text-[0.4em] align-top">%</span></div>`
-          : `<div class="t-score font-bold" style="color:var(--fg-faint)">—</div>`;
+        /* Pass 2: score ring */
+        function scoreRing(mean){
+          if (mean === null){
+            return `<div class="score-ring">
+              <svg width="92" height="92" viewBox="0 0 92 92">
+                <circle class="ring-track" cx="46" cy="46" r="36" stroke-width="5"/>
+                <circle class="ring-fill pending" cx="46" cy="46" r="36" stroke-width="5"
+                  stroke-dasharray="226" stroke-dashoffset="0"
+                  transform="rotate(-90 46 46)"/>
+              </svg>
+              <div class="ring-val"><span class="font-mono font-bold text-[1.35rem]" style="color:var(--fg-faint)">—</span></div>
+            </div>`;
+          }
+          const circ = 2 * Math.PI * 36; // ~226
+          const offset = circ * (1 - mean/100);
+          const band = mean >= 75 ? 'soft' : mean >= 60 ? 'mid' : 'hard';
+          const valColor = mean >= 75 ? 'var(--accent-a)' : mean >= 60 ? '#a78bfa' : '#f59e0b';
+          return `<div class="score-ring">
+            <svg width="92" height="92" viewBox="0 0 92 92">
+              <circle class="ring-track" cx="46" cy="46" r="36" stroke-width="5"/>
+              <circle class="ring-fill ${band}" cx="46" cy="46" r="36" stroke-width="5"
+                stroke-dasharray="${circ.toFixed(1)}" stroke-dashoffset="${circ.toFixed(1)}"
+                data-target="${offset.toFixed(1)}"
+                transform="rotate(-90 46 46)"/>
+            </svg>
+            <div class="ring-val">
+              <span class="font-mono font-bold text-[1.35rem]" style="color:${valColor}">${mean}</span>
+              <span class="font-mono text-[0.6rem]" style="color:var(--fg-faint)">%</span>
+            </div>
+          </div>`;
+        }
+        const meanDisplay = scoreRing(hasPilot ? t.mean : null);
 
         const runDetail = hasPilot
-          ? `<div class="grid grid-cols-5 sm:grid-cols-10 gap-3 pt-6">
+          ? `<div class="grid grid-cols-5 sm:grid-cols-10 gap-2 pt-5">
               ${t.spread.map((v,i)=>`
-                <div class="glass rounded-2xl py-3 text-center">
+                <div class="surf-2 py-3 text-center" style="border-radius:14px">
                   <div class="font-mono text-[10px]" style="color:var(--fg-faint)">R${i+1}</div>
-                  <div class="font-mono text-[16px] font-bold ${v<70?'':'accent-text'}" ${v<70?'style="color:var(--fg-soft)"':''}>${v}</div>
+                  <div class="font-mono text-[15px] font-bold mt-0.5 ${v<70?'':'accent-text'}" ${v<70?`style="color:${v<50?'#f59e0b':'var(--fg-soft)'}"`:''}>${v}</div>
                 </div>`).join('')}
             </div>`
-          : `<p class="pt-6 text-[13px]" style="color:var(--fg-faint)">No run data yet · Taiga job: ${t.taigaJob}</p>`;
+          : `<p class="pt-5 text-[13px]" style="color:var(--fg-faint)">No run data yet · Taiga job: ${t.taigaJob}</p>`;
+
+        /* Pass 4: sparkline */
+        function buildSparkline(spread){
+          if (!spread.length) return `<svg class="sparkline" width="64" height="28" viewBox="0 0 64 28"><line class="spark-pending" x1="4" y1="14" x2="60" y2="14" stroke-width="1.5"/></svg>`;
+          const W=64, H=28, pad=3;
+          const mn=Math.min(...spread), mx=Math.max(...spread);
+          const range = mx - mn || 1;
+          const pts = spread.map((v,i)=>({
+            x: pad + i*(W-pad*2)/(spread.length-1),
+            y: H - pad - ((v-mn)/range)*(H-pad*2)
+          }));
+          const poly = pts.map(p=>`${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(' ');
+          const dots = pts.map((p,i)=>{
+            const isLow = spread[i] < 60;
+            return `<circle class="spark-dot${isLow?' low':''}" cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="2"/>`;
+          }).join('');
+          return `<svg class="sparkline" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
+            <polyline class="spark-line" points="${poly}"/>
+            ${dots}
+          </svg>`;
+        }
+
+        /* Pass 3: bar colour per status */
+        const barColor = statusCat(t.status) === 'complete'
+          ? 'var(--accent-a)'
+          : statusCat(t.status) === 'pending'
+            ? '#f59e0b'
+            : '#a78bfa';
 
         const sec = document.createElement('section');
         sec.id = 'card-'+t.id;
@@ -454,49 +771,67 @@
         sec.dataset.status = statusCat(t.status);
         sec.dataset.mean = t.mean ?? 999;
         sec.dataset.pos = t.position;
-        sec.className = 'km-card min-h-[60vh] flex items-center py-8';
+        sec.className = 'km-card min-h-[55vh] flex items-center py-5 sm:py-7';
         sec.innerHTML = `
-          <article class="card glass rounded-[28px] p-7 sm:p-10 w-full">
-            <div class="flex items-start justify-between gap-4 flex-wrap">
-              <div>
+          <article class="card-inner card surf w-full px-6 sm:px-8 md:px-10 py-7 sm:py-9" style="border-radius:var(--r-card);--card-bar:${barColor}">
+
+            <!-- Always-visible header -->
+            <div class="flex items-start justify-between gap-4">
+              <div class="min-w-0">
                 <div class="t-id font-bold accent-text leading-none">${t.id}</div>
-                <h2 class="t-h2 font-semibold mt-3 max-w-[20ch] text-balance">${t.name}</h2>
+                <h2 class="t-h2 font-semibold mt-2 text-balance" style="max-width:min(20ch,100%)">${t.name}</h2>
               </div>
-              <span class="glass rounded-full px-4 py-2 text-[11px] font-mono uppercase tracking-[0.12em] whitespace-nowrap" style="border-radius:9999px;color:var(--fg-soft)">${t.status}</span>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8 mt-9 items-start">
-              <div>
-                <div class="font-mono text-[11px] uppercase tracking-[0.18em] mb-2" style="color:var(--fg-faint)">Mean score</div>
-                ${meanDisplay}
-              </div>
-              <div>
-                <div class="font-mono text-[11px] uppercase tracking-[0.18em] mb-3" style="color:var(--fg-faint)">Spread · runs 1–10</div>
-                <div class="flex flex-wrap gap-2 max-w-[220px]">${dots}</div>
-              </div>
-              <div>
-                <div class="font-mono text-[11px] uppercase tracking-[0.18em] mb-2" style="color:var(--fg-faint)">Workflow</div>
-                <div class="text-[15px] font-medium leading-snug">${t.workflow}</div>
-                <div class="font-mono text-[11px] uppercase tracking-[0.18em] mb-2 mt-5" style="color:var(--fg-faint)">Reviewer</div>
-                <div class="text-[15px] font-medium">${t.reviewer}</div>
+              <div class="shrink-0 flex flex-col items-end gap-2 pt-1">
+                <span class="surf-2 px-3 py-1.5 text-[10px] font-mono uppercase tracking-[0.11em]" style="border-radius:var(--r-pill);color:var(--fg-soft)">${t.status}</span>
+                <div title="10-run spread">${buildSparkline(t.spread)}</div>
               </div>
             </div>
 
-            <div class="mt-8 h-px w-full" style="background:var(--glass-stroke)"></div>
+            <!-- Progressive body: fades in on hover / stays open when expanded -->
+            <div class="card-body mt-7">
+              <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-7 items-start">
+                <div>
+                  <div class="font-mono text-[10px] uppercase tracking-[0.18em] mb-3" style="color:var(--fg-faint)">Mean score</div>
+                  ${meanDisplay}
+                  ${(()=>{
+                    if (t.mean === null) return `<div class="font-mono text-[10px] mt-2 uppercase tracking-[0.14em]" style="color:var(--fg-faint)">PENDING</div>`;
+                    if (t.mean < 60)  return `<div class="font-mono text-[10px] mt-2 uppercase tracking-[0.14em]" style="color:#f59e0b">SUB-60 · HARD</div>`;
+                    if (t.mean < 75)  return `<div class="font-mono text-[10px] mt-2 uppercase tracking-[0.14em]" style="color:#a78bfa">60-74 · MID</div>`;
+                    return `<div class="font-mono text-[10px] mt-2 uppercase tracking-[0.14em]" style="color:var(--accent-a)">75+ · SOFT</div>`;
+                  })()}
+                </div>
+                <div>
+                  <div class="font-mono text-[10px] uppercase tracking-[0.18em] mb-3" style="color:var(--fg-faint)">Spread · runs 1–10</div>
+                  <div class="flex flex-wrap gap-2" style="max-width:220px">${dots}</div>
+                </div>
+                <div class="sm:col-span-2 md:col-span-1">
+                  <div class="font-mono text-[10px] uppercase tracking-[0.18em] mb-2" style="color:var(--fg-faint)">Workflow</div>
+                  <div class="text-[14px] font-medium leading-snug">${t.workflow}</div>
+                  <div class="font-mono text-[10px] uppercase tracking-[0.18em] mb-2 mt-5" style="color:var(--fg-faint)">Reviewer</div>
+                  <div class="text-[14px] font-medium">${t.reviewer}</div>
+                </div>
+              </div>
 
-            <div class="mt-6 flex items-start justify-between gap-4 flex-wrap">
-              <p class="text-[15px] leading-relaxed max-w-[60ch]" style="color:var(--fg-soft)">
-                <span class="font-medium" style="color:var(--fg)">Mechanism · </span>${t.mechanism}
+              <p class="mechanism-text mt-7 text-[14px] leading-relaxed" style="color:var(--fg-soft);max-width:min(60ch,100%)">
+                <span class="font-semibold" style="color:var(--fg)">Mechanism · </span>${t.mechanism}
               </p>
-              <button class="expandBtn hover-lift glass rounded-full px-4 py-2 flex items-center gap-2 text-[13px]" style="border-radius:9999px" aria-expanded="false">
-                <span>Run detail</span><i data-lucide="chevron-down" class="chev" style="width:16px;height:16px;transition:transform .3s ease"></i>
-              </button>
+
+              <div class="mt-6 flex justify-end">
+                <button class="expandBtn btn-pill surf-2 px-4 py-2 flex items-center gap-2 text-[12px] font-medium" style="border-radius:var(--r-pill)" aria-expanded="false">
+                  <span>Run detail</span>
+                  <i data-lucide="chevron-down" class="chev" style="width:14px;height:14px;transition:transform .32s cubic-bezier(0.34,1.56,0.64,1)"></i>
+                </button>
+              </div>
+
+              <div class="reveal">
+                ${runDetail}
+              </div>
             </div>
 
-            <div class="reveal mt-0">
-              ${runDetail}
-            </div>
           </article>`;
+        /* Pass 7: staggered entrance delay based on position */
+        sec.querySelector('article').style.transitionDelay = (t.position * 55) + 'ms';
+
         wrap.appendChild(sec);
 
         // SR table row
@@ -504,14 +839,36 @@
           `<tr><td>${t.id}</td><td>${t.name}</td><td>${t.mean !== null ? t.mean+'%' : 'pending'}</td><td>${t.spread.length ? t.spread.join(', ') : 'n/a'}</td><td>${t.status}</td></tr>`);
       });
 
-      // disclosure
+      // disclosure — toggle expanded on article so card-body stays visible;
+      // expanded set persists across reloads (session level)
+      function setCardOpen(card, btn, open){
+        card.querySelector('.reveal').classList.toggle('open', open);
+        card.classList.toggle('expanded', open);
+        btn.setAttribute('aria-expanded', open);
+        btn.querySelector('.chev').style.transform = open ? 'rotate(180deg)' : 'rotate(0)';
+      }
       wrap.querySelectorAll('.expandBtn').forEach(btn=>{
+        const card = btn.closest('article');
+        const id = card.closest('.km-card').dataset.id;
         btn.addEventListener('click', ()=>{
-          const card = btn.closest('article');
-          const rev = card.querySelector('.reveal');
-          const open = rev.classList.toggle('open');
-          btn.setAttribute('aria-expanded', open);
-          btn.querySelector('.chev').style.transform = open ? 'rotate(180deg)' : 'rotate(0)';
+          const open = !card.querySelector('.reveal').classList.contains('open');
+          setCardOpen(card, btn, open);
+          const ex = new Set(KMState.get('expanded'));
+          open ? ex.add(id) : ex.delete(id);
+          KMState.set('expanded', [...ex]);
+        });
+        /* restore persisted expanded state */
+        if (KMState.get('expanded').includes(id)) setCardOpen(card, btn, true);
+      });
+
+      /* Touch OR hover: hover previews the body (pointer devices);
+         clicking the header pins/unpins it open on every device. */
+      wrap.querySelectorAll('.card-inner').forEach(article=>{
+        const hdr = article.querySelector('.flex.items-start.justify-between');
+        if (!hdr) return;
+        hdr.style.cursor = 'pointer';
+        hdr.addEventListener('click', ()=>{
+          article.classList.toggle('expanded');
         });
       });
     })();
@@ -527,38 +884,37 @@
         high:     { label:'Highest', fn:(a,b)=> (b.mean??-1)-(a.mean??-1) },
         low:      { label:'Lowest',  fn:(a,b)=> (a.mean??999)-(b.mean??999) },
       };
-      const state = { filter:'all', sort:'position' };
+      /* session level: restore last filter/sort; URL hash overrides below */
+      const state = {
+        filter: KMState.get('filter') || 'all',
+        sort:   KMState.get('sort')   || 'position',
+      };
 
       function makeChip(label, active){
         const b = document.createElement('button');
-        b.className = 'chip hover-lift glass rounded-full px-3.5 py-1.5 text-[12px] font-mono font-semibold transition-colors';
-        b.style.borderRadius = '9999px';
+        b.className = 'chip surf-2';
+        b.style.cssText = 'border-radius:var(--r-pill);padding:5px 14px;font-size:12px;font-family:ui-monospace,monospace;font-weight:600;color:var(--fg-soft)';
         b.textContent = label;
         b.setAttribute('aria-pressed', active ? 'true' : 'false');
-        if (active) b.style.color = 'var(--accent-a)';
         return b;
       }
-      function paintChips(wrap, current, group){
-        [...wrap.children].forEach(c=>{
-          const on = c.dataset.val === current;
-          c.setAttribute('aria-pressed', on ? 'true':'false');
-          c.style.color = on ? 'var(--accent-a)' : '';
-          c.style.boxShadow = on
-            ? 'inset 0 0 0 1px var(--accent-a), var(--shadow-rest)' : '';
-        });
+      function paintChips(wrap, current){
+        /* state lives in aria-pressed; CSS owns all visual states */
+        [...wrap.children].forEach(c=>
+          c.setAttribute('aria-pressed', c.dataset.val === current ? 'true' : 'false'));
       }
 
       // build filter chips: All + present categories
       const presentCats = [...new Set(tasks.map(t=>statusCat(t.status)))];
       [['all','All'], ...presentCats.map(c=>[c, CATS[c].label])].forEach(([val,label])=>{
-        const chip = makeChip(label, val==='all');
+        const chip = makeChip(label, val===state.filter);
         chip.dataset.val = val;
         chip.addEventListener('click', ()=> setState({filter:val}));
         filterWrap.appendChild(chip);
       });
       // build sort chips
       Object.entries(SORTS).forEach(([val,{label}])=>{
-        const chip = makeChip(label, val==='position');
+        const chip = makeChip(label, val===state.sort);
         chip.dataset.val = val;
         chip.addEventListener('click', ()=> setState({sort:val}));
         sortWrap.appendChild(chip);
@@ -592,6 +948,8 @@
       }
       function setState(patch, opts={}){
         Object.assign(state, patch);
+        if ('filter' in patch) KMState.set('filter', state.filter);
+        if ('sort'   in patch) KMState.set('sort',   state.sort);
         apply();
         if (!opts.silent) syncHash();
       }
@@ -623,8 +981,16 @@
       const cards = document.querySelectorAll('.card');
       const io = new IntersectionObserver((entries)=>{
         entries.forEach(e=>{
-          if (e.isIntersecting){ e.target.classList.add('in'); e.target.classList.remove('dim'); }
-          else if (e.target.classList.contains('in')){ e.target.classList.add('dim'); }
+          if (e.isIntersecting){
+            e.target.classList.add('in'); e.target.classList.remove('dim');
+            /* Pass 2: animate ring fill on first reveal */
+            if (!e.target.dataset.ringFired){
+              e.target.dataset.ringFired = '1';
+              e.target.querySelectorAll('.ring-fill[data-target]').forEach(arc=>{
+                requestAnimationFrame(()=> arc.style.strokeDashoffset = arc.dataset.target);
+              });
+            }
+          } else if (e.target.classList.contains('in')){ e.target.classList.add('dim'); }
         });
       }, { threshold: 0.35 });
       cards.forEach(c=> io.observe(c));
@@ -665,8 +1031,8 @@
       const icon = document.getElementById('fabIcon');
       tasks.forEach(t=>{
         const b = document.createElement('button');
-        b.className = 'hover-lift glass rounded-full px-4 py-2 text-[13px] font-mono font-semibold';
-        b.style.borderRadius = '9999px';
+        b.className = 'btn-pill surf-2';
+        b.style.cssText = 'border-radius:var(--r-pill);padding:6px 16px;font-size:13px;font-family:ui-monospace,monospace;font-weight:600;color:var(--fg)';
         b.textContent = t.id;
         b.addEventListener('click', ()=>{
           document.getElementById('card-'+t.id).scrollIntoView({behavior:'smooth', block:'center'});
@@ -712,6 +1078,302 @@
         el.querySelector('article').focus?.();
       });
     })();
+
+    /* ============================================================
+       SOUND ENGINE  — Web Audio API, pure synthesis, no files
+       Respects: prefers-reduced-motion (muted by default),
+                 user mute toggle (persisted to localStorage)
+       ============================================================ */
+    const SFX = (function(){
+      let ctx = null;
+      /* preference level: stored choice wins; system reduced-motion is the fallback */
+      let muted = KMState.get('muted') !== null
+                  ? KMState.get('muted')
+                  : window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      function getCtx(){
+        if (!ctx) ctx = new (window.AudioContext || window.webkitAudioContext)();
+        if (ctx.state === 'suspended') ctx.resume();
+        return ctx;
+      }
+
+      /* ── master gain helper ── */
+      function master(vol = 0.18){
+        const g = getCtx().createGain();
+        g.gain.setValueAtTime(vol, getCtx().currentTime);
+        g.connect(getCtx().destination);
+        return g;
+      }
+
+      /* ── envelope helper: attack/sustain/release ── */
+      function env(gainNode, at, peak, holdEnd, rel, end){
+        const t = getCtx().currentTime;
+        gainNode.gain.cancelScheduledValues(t);
+        gainNode.gain.setValueAtTime(0, t);
+        gainNode.gain.linearRampToValueAtTime(peak, t + at);
+        gainNode.gain.setValueAtTime(peak, t + holdEnd);
+        gainNode.gain.exponentialRampToValueAtTime(0.0001, t + end);
+        gainNode.gain.setValueAtTime(0, t + end);
+      }
+
+      const sfx = {
+        /* 1. Page-load shimmer: high filtered noise sweep upward */
+        load(){
+          if (muted) return;
+          const c = getCtx(), t = c.currentTime;
+          const buf = c.createBuffer(1, c.sampleRate * 1.2, c.sampleRate);
+          const d = buf.getChannelData(0);
+          for (let i = 0; i < d.length; i++) d[i] = (Math.random()*2-1);
+          const src = c.createBufferSource(); src.buffer = buf;
+          const bpf = c.createBiquadFilter(); bpf.type = 'bandpass';
+          bpf.frequency.setValueAtTime(400, t);
+          bpf.frequency.exponentialRampToValueAtTime(3200, t + 1.0);
+          bpf.Q.value = 3.5;
+          const g = c.createGain();
+          g.gain.setValueAtTime(0, t);
+          g.gain.linearRampToValueAtTime(0.09, t + 0.08);
+          g.gain.exponentialRampToValueAtTime(0.0001, t + 1.1);
+          src.connect(bpf); bpf.connect(g); g.connect(c.destination);
+          src.start(t); src.stop(t + 1.2);
+        },
+
+        /* 2. Card reveal ping — pitch mapped to task mean (higher = higher note) */
+        cardReveal(mean){
+          if (muted) return;
+          const c = getCtx(), t = c.currentTime;
+          // mean 40-97 → freq 320-1100 Hz (pentatonic feel)
+          const pct = Math.max(0, Math.min(1, ((mean ?? 55) - 40) / 57));
+          const freq = 320 + pct * 780;
+          const osc = c.createOscillator(); osc.type = 'sine'; osc.frequency.value = freq;
+          const g = c.createGain();
+          env(g, 0.004, 0.10, 0.004, 0.28, 0.32);
+          // add gentle overtone
+          const osc2 = c.createOscillator(); osc2.type = 'sine'; osc2.frequency.value = freq * 2.01;
+          const g2 = c.createGain();
+          env(g2, 0.004, 0.028, 0.004, 0.18, 0.22);
+          osc.connect(g); g.connect(c.destination);
+          osc2.connect(g2); g2.connect(c.destination);
+          osc.start(t); osc.stop(t + 0.35);
+          osc2.start(t); osc2.stop(t + 0.25);
+        },
+
+        /* 3. Filter/sort chip click — crisp mechanical tick */
+        chip(){
+          if (muted) return;
+          const c = getCtx(), t = c.currentTime;
+          const osc = c.createOscillator(); osc.type = 'square'; osc.frequency.value = 1050;
+          osc.frequency.exponentialRampToValueAtTime(420, t + 0.025);
+          const g = c.createGain();
+          env(g, 0.001, 0.07, 0.001, 0.04, 0.06);
+          const lpf = c.createBiquadFilter(); lpf.type = 'lowpass'; lpf.frequency.value = 3000;
+          osc.connect(lpf); lpf.connect(g); g.connect(c.destination);
+          osc.start(t); osc.stop(t + 0.07);
+        },
+
+        /* 4. Expand "Run detail" — ascending whoosh */
+        expand(){
+          if (muted) return;
+          const c = getCtx(), t = c.currentTime;
+          const osc = c.createOscillator(); osc.type = 'sine';
+          osc.frequency.setValueAtTime(180, t);
+          osc.frequency.exponentialRampToValueAtTime(900, t + 0.38);
+          const g = c.createGain();
+          env(g, 0.01, 0.09, 0.01, 0.30, 0.42);
+          osc.connect(g); g.connect(c.destination);
+          osc.start(t); osc.stop(t + 0.44);
+        },
+
+        /* 5. Collapse "Run detail" — descending whoosh */
+        collapse(){
+          if (muted) return;
+          const c = getCtx(), t = c.currentTime;
+          const osc = c.createOscillator(); osc.type = 'sine';
+          osc.frequency.setValueAtTime(820, t);
+          osc.frequency.exponentialRampToValueAtTime(160, t + 0.32);
+          const g = c.createGain();
+          env(g, 0.01, 0.07, 0.01, 0.24, 0.36);
+          osc.connect(g); g.connect(c.destination);
+          osc.start(t); osc.stop(t + 0.38);
+        },
+
+        /* 6. FAB open — two-tone rise pop */
+        fabOpen(){
+          if (muted) return;
+          const c = getCtx(), t = c.currentTime;
+          [0, 0.07].forEach((delay, i) => {
+            const osc = c.createOscillator(); osc.type = 'sine';
+            osc.frequency.value = i === 0 ? 520 : 780;
+            const g = c.createGain();
+            env(g, 0.003, 0.08, 0.003, 0.08, 0.14);
+            osc.connect(g); g.connect(c.destination);
+            osc.start(t + delay); osc.stop(t + delay + 0.16);
+          });
+        },
+
+        /* 7. FAB close — two-tone fall pop */
+        fabClose(){
+          if (muted) return;
+          const c = getCtx(), t = c.currentTime;
+          [0, 0.07].forEach((delay, i) => {
+            const osc = c.createOscillator(); osc.type = 'sine';
+            osc.frequency.value = i === 0 ? 780 : 520;
+            const g = c.createGain();
+            env(g, 0.003, 0.06, 0.003, 0.07, 0.13);
+            osc.connect(g); g.connect(c.destination);
+            osc.start(t + delay); osc.stop(t + delay + 0.14);
+          });
+        },
+
+        /* 8. Theme toggle — shimmer sparkle */
+        theme(){
+          if (muted) return;
+          const c = getCtx(), t = c.currentTime;
+          const freqs = [880, 1108, 1320, 1760];
+          freqs.forEach((f, i) => {
+            const osc = c.createOscillator(); osc.type = 'sine'; osc.frequency.value = f;
+            const g = c.createGain();
+            const delay = i * 0.045;
+            g.gain.setValueAtTime(0, t + delay);
+            g.gain.linearRampToValueAtTime(0.055, t + delay + 0.015);
+            g.gain.exponentialRampToValueAtTime(0.0001, t + delay + 0.18);
+            osc.connect(g); g.connect(c.destination);
+            osc.start(t + delay); osc.stop(t + delay + 0.20);
+          });
+        },
+
+        /* 9. Keyboard arrow nav — soft directional tick */
+        navTick(dir){
+          if (muted) return;
+          const c = getCtx(), t = c.currentTime;
+          const osc = c.createOscillator(); osc.type = 'triangle';
+          osc.frequency.value = dir === 'down' ? 420 : 560;
+          const g = c.createGain();
+          env(g, 0.003, 0.055, 0.003, 0.05, 0.09);
+          osc.connect(g); g.connect(c.destination);
+          osc.start(t); osc.stop(t + 0.10);
+        },
+
+        /* 10. Scroll hint button — soft descending glide */
+        scrollHint(){
+          if (muted) return;
+          const c = getCtx(), t = c.currentTime;
+          const osc = c.createOscillator(); osc.type = 'sine';
+          osc.frequency.setValueAtTime(680, t);
+          osc.frequency.exponentialRampToValueAtTime(340, t + 0.28);
+          const g = c.createGain();
+          env(g, 0.008, 0.07, 0.008, 0.22, 0.32);
+          osc.connect(g); g.connect(c.destination);
+          osc.start(t); osc.stop(t + 0.34);
+        },
+
+        /* 11. Mute toggle feedback — always plays, ignores mute state */
+        muteOn(){
+          const c = getCtx(), t = c.currentTime;
+          const osc = c.createOscillator(); osc.type = 'sine'; osc.frequency.value = 660;
+          osc.frequency.exponentialRampToValueAtTime(330, t + 0.14);
+          const g = c.createGain();
+          env(g, 0.004, 0.07, 0.004, 0.10, 0.18);
+          osc.connect(g); g.connect(c.destination);
+          osc.start(t); osc.stop(t + 0.20);
+        },
+        muteOff(){
+          const c = getCtx(), t = c.currentTime;
+          const osc = c.createOscillator(); osc.type = 'sine'; osc.frequency.value = 330;
+          osc.frequency.exponentialRampToValueAtTime(660, t + 0.14);
+          const g = c.createGain();
+          env(g, 0.004, 0.07, 0.004, 0.10, 0.18);
+          osc.connect(g); g.connect(c.destination);
+          osc.start(t); osc.stop(t + 0.20);
+        },
+      };
+
+      /* ── Mute toggle wiring ── */
+      const muteBtn = document.getElementById('muteToggle');
+      const muteIcon = document.getElementById('muteIcon');
+      function applyMuteVisual(){
+        muteIcon.setAttribute('data-lucide', muted ? 'volume-x' : 'volume-2');
+        muteBtn.setAttribute('aria-pressed', muted ? 'true' : 'false');
+        lucide.createIcons();
+      }
+      applyMuteVisual();
+      muteBtn.addEventListener('click', ()=>{
+        muted = !muted;
+        KMState.set('muted', muted);
+        applyMuteVisual();
+        if (muted) sfx.muteOn(); else sfx.muteOff();
+      });
+
+      return { ...sfx, isMuted: () => muted };
+    })();
+
+    /* ── Wire sounds into existing interactions ── */
+
+    /* Load shimmer — after first user gesture (AudioContext policy) */
+    (function(){
+      let fired = false;
+      function onGesture(){
+        if (fired) return; fired = true;
+        SFX.load();
+        window.removeEventListener('pointerdown', onGesture);
+        window.removeEventListener('keydown', onGesture);
+      }
+      window.addEventListener('pointerdown', onGesture, {once:false});
+      window.addEventListener('keydown', onGesture, {once:false});
+    })();
+
+    /* Theme toggle shimmer */
+    document.getElementById('themeToggle').addEventListener('click', ()=> SFX.theme());
+
+    /* Scroll hint glide */
+    document.getElementById('scrollHint').addEventListener('click', ()=> SFX.scrollHint());
+
+    /* Filter + sort chip clicks */
+    document.getElementById('filterChips').addEventListener('click', ()=> SFX.chip());
+    document.getElementById('sortChips').addEventListener('click', ()=> SFX.chip());
+
+    /* Card intersection → card reveal ping */
+    (function(){
+      const io2 = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+          if (e.isIntersecting && !e.target.dataset.sfxFired){
+            e.target.dataset.sfxFired = '1';
+            const id = e.target.dataset.id;
+            const task = tasks.find(t=> t.id === id);
+            SFX.cardReveal(task?.mean);
+          }
+        });
+      }, { threshold: 0.5 });
+      document.querySelectorAll('.km-card').forEach(c=> io2.observe(c));
+    })();
+
+    /* Expand / collapse run detail */
+    document.getElementById('cards').addEventListener('click', e=>{
+      const btn = e.target.closest('.expandBtn');
+      if (!btn) return;
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      /* small delay to let the DOM toggle first */
+      setTimeout(()=> isOpen ? SFX.collapse() : SFX.expand(), 0);
+    });
+
+    /* FAB open/close */
+    (function(){
+      const fab = document.getElementById('fab');
+      let prevOpen = false;
+      const obs = new MutationObserver(()=>{
+        const nowOpen = fab.getAttribute('aria-expanded') === 'true';
+        if (nowOpen !== prevOpen){
+          prevOpen = nowOpen;
+          if (nowOpen) SFX.fabOpen(); else SFX.fabClose();
+        }
+      });
+      obs.observe(fab, { attributes: true, attributeFilter: ['aria-expanded'] });
+    })();
+
+    /* Keyboard nav ticks */
+    document.addEventListener('keydown', e=>{
+      if (e.key === 'ArrowDown') SFX.navTick('down');
+      else if (e.key === 'ArrowUp') SFX.navTick('up');
+    }, { capture: true });
 
     lucide.createIcons();
   </script>

@@ -1,5 +1,5 @@
 # Workspace File Map
-**Last updated: 2026-06-09 (post-hygiene audit)**
+**Last updated: 2026-06-10 (hygiene pass 2: loose-file sweep)**
 
 Single source of truth for repo structure, placement rules, and navigation.
 Read this + `AGENTS.md` at the start of any new session before touching files.
@@ -15,7 +15,7 @@ sanctum-world-workspace/
   WORKSPACE_FILE_MAP.md        ← this file
   .gitignore                   ← updated 6/9
   _archive/                    ← dead root folders (gitignored); do not read for active work
-  dashboard/                   ← km-world-dashboard.html (informational only)
+  dashboard/                   ← km-world-dashboard.html + KM-WORLD-DASHBOARD-PROMPT.md (informational only)
   docs/                        ← lessons, playbooks, domain knowledge
   reference/                   ← Sanctum source docs, templates, guidelines
   tools/                       ← all Python scripts (canonical home)
@@ -62,7 +62,9 @@ worlds/korvin-merrow/
   _pipeline-history/           ← all pre-task pipeline artifacts (read-only history)
                                  autoqc/, *-architecture/, execution-preparation/,
                                  submission-preparation/, remediation/, etc.
-  active/                      ← brainstorm.md, clinical-logic.md, task-map.md
+  active/                      ← brainstorm.md, clinical-logic.md, task-map.md (stale placeholders
+                                 → _pipeline-history/active-placeholders/, 6/10)
+  planning/                    ← KORVIN_MERROW_PASS_PLAN.md (pre-build pass plan, historical)
   file-inventory/              ← locked file inventory
   file-review/                 ← upload/filesystem/ = AGENT-READ chart DOCXs (26 files)
   final-submission-resolution/ ← locked submission artifacts
@@ -90,6 +92,8 @@ task-setup/
   TASK-RUNBOOK.md              ← READ FIRST before any task-stage work
   task1-lifecycle-log.md       ← canonical Task 1 history and lessons
   CHECKPOINT-AUDIT-pre-task2.md
+  KM-RETROSPECTIVE-tasks1-2.md ← tasks 1-2 error ledger (kept at root: cited by 10+ docs via this path)
+  step10-review-packet.md      ← tasks 2-6 planning packet (kept at root: cited by WORLD_SPEC_KICKOFF)
   KM-WORLD-PERFORMANCE-REPORT.md
   KM-World-Performance.xlsx
   platform/                    ← UPLOAD SETS (single source of truth per task)
@@ -105,27 +109,34 @@ task-setup/
   task1/                       ← fa-ga/, preference-labeling/, handoff/, trajectories/
   task2/                       ← TASK2-STATE.md + fa-ga/, runs/, learnings/, preference-labeling/
   task3/                       ← TASK3-STATE.md + fa-ga/, runs/, design/, preference-labeling/
-  task4/                       ← TASK4-STATE.md + fa-ga/, runs/, design/, preference-labeling/
-  task5/                       ← TASK5-STATE.md + fa-ga/, runs/, design/, preference-labeling/
-  task6/                       ← TASK6-STATE.md + fa-ga/, runs/, design/, preference-labeling/
+  task4/                       ← TASK4-STATE.md + KM04-prebuild-review-and-build-gates.md (kept at root:
+                                 cited by relative ../ paths in locked design docs) + fa-ga/, runs/, design/
+  task5/                       ← TASK5-STATE.md + KM05-prebuild-review-and-build-gates.md (same reason)
+                                 + fa-ga/, runs/, design/ (incl. KM05-LIFECYCLE-GUIDE.md), preference-labeling/;
+                                 superseded v2/v3 plans → design/archive/ (6/10)
+  task6/                       ← TASK6-STATE.md + fa-ga/ (FA-GA-current.md is canonical; conflicting
+                                 FA-GA-v5.md → fa-ga/archive/), runs/, design/ (retired v1/v3 plans →
+                                 design/archive/), preference-labeling/, handoff/ (NOTE-FOR-ABI-task6.md)
   task7/                       ← TASK7-STATE.md only (artifacts in platform/task7/current/)
   task8/                       ← TASK8-STATE.md + design/KM08-PLAN.md + fa-ga/, runs/
 ```
 
 ---
 
-## platform/task8/current/ — KM08 v4 (READY TO UPLOAD)
+## platform/task8/current/ — KM08 v4.1 (READY TO UPLOAD, 6/10 anchor-fix pass)
 
 ```
-prompt-task8-v4.txt                             ← one-sentence HD5 pain/sleep addendum prompt
-neuropathic_pain_sleep_addendum_draft_05222026.docx  ← Mode A clone, byte-verified
+prompt-task8-v4.txt                             ← discharge-day (5/24) pain/sleep addendum prompt
+neuropathic_pain_sleep_addendum_draft_05242026.docx  ← Mode A clone, de-telegraphed, byte-verified
 golden-KM08-v4.docx                            ← Mode A clone, byte-verified
-grader-guidelines-task8-v4.txt                 ← Sang five-block
-RUN-INSTRUCTIONS-v4.md                         ← workflow type at top, pilot read guide
+grader-guidelines-task8-v4.txt                 ← Sang five-block, verbatim clauses, ~520 words
+RUN-INSTRUCTIONS-v4.md                         ← workflow = Progress Note Daily Rounding Documentation
 ```
 
-Build script: `tools/build/build-docx-km08-v4.py`
-Design doc: `task8/design/KM08-PLAN.md` (single source of truth)
+Build script: `tools/build/build-docx-km08-v41.py` (supersedes build-docx-km08-v4.py: 05/22 pre-snapshot anchor + telegraphing draft)
+Design doc: `task8/design/KM08-PLAN.md` (single source of truth; gates 2-3 record the 6/10 fixes)
+KM07 v2 build script: `tools/build/build-docx-km07-v2.py` (genre-true PCP base)
+Pilot preregistrations: `task7/runs/KM07-v2-pilot-preregistration.md`, `task8/runs/KM08-v41-pilot-preregistration.md` (locked pre-pilot, never edited after)
 
 ---
 
@@ -138,6 +149,7 @@ Design doc: `task8/design/KM08-PLAN.md` (single source of truth)
 5. `worlds/korvin-merrow/task-setup/platform/taskN/current/` — active uploadable set
 6. `docs/grader-guidelines-lessons.md` — before editing any grader
 7. `docs/reasoning-discipline.md` — before any one-way-door decision
+8. `docs/task-structure-dossier.md` — before brainstorming any new world or task slate (Abi variety mandate, 6/10: every world carries at least 5 distinct structural categories; sheet snapshot at `reference/source/task-selection-categories-snapshot-2026-06-10.csv`)
 
 ---
 
@@ -181,3 +193,7 @@ Design doc: `task8/design/KM08-PLAN.md` (single source of truth)
 | KM06 | RFD (FA/GA entered; PL + final review pending) |
 | KM07 | v2 TAIGA RUNNING — bone-health false closure; pilot result pending |
 | KM08 | v4.1 BUILT + BYTE-VERIFIED — awaiting upload authorization |
+| KM09 | v1 PACKET STAGED 6/10 — coding attestation, no mounted file; awaiting Alexander read-and-own + entry authorization. `platform/task9/current/` |
+| KM10 | v1 PACKET STAGED 6/10 — CDI query response, mounted query memo (new author name pending confirm); awaiting Alexander read-and-own + entry authorization. `platform/task10/current/` |
+
+World target: **10 tasks** (Larry 6/10 pod announcement: over 8, preferably 10, before a new world; Alexander decision recorded in `reference/world-spec-guidelines/POD-ANNOUNCEMENT-2026-06-10-delivery-day-and-operating-rules.md`). Submit each task as it clears — no batching (pod rule 3).
