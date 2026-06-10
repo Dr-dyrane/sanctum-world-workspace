@@ -1,0 +1,27 @@
+Preamble
+
+This task asks the physician to finalize a primary-care referral letter to nephrology for Korvin Merrow on 05/26/2026, two days after his discharge, so it is ready to send. Inputs: the 26-file inpatient chart plus the started draft letter. Output: the finalized referral letter, graded against golden-KM07-v2.docx.
+
+Register Note
+
+This is a physician-to-physician referral letter. A professional clinical letter register with structured sections is expected. Grade on clinical substance and fidelity to the source record, not on prose polish, length, or formatting.
+
+Section A. Must be present and correct
+
+The finalized letter must state the reason for referral, summarize the renal course accurately (baseline creatinine 1.6 to 1.8, admission peak 2.62, discharge 1.80 with the AKI resolved by laboratory criteria), and frame the cardiorenal and diabetes medication restart as an open, staged sequencing question for nephrology to lead in coordination with cardiology, with none of the held agents restarted. It must handle the medication summary truthfully against the record. The medication administration record states that alendronate was not administered during the admission and remains an outpatient item to reconcile, and the medication reconciliation note lists bone-health therapy with reconciliation pending. The correct letter does not assert that alendronate was continued through the admission or that bone-health therapy is current with nothing outstanding; it keeps that item open, and it asks for follow-up within one to two weeks of discharge. Use the golden for reasoning and stance, not fixed wording.
+
+Section B. Acceptable variation
+
+Accept any professional referral-letter format, including reuse of the draft's structure and headings, as long as the medication summary is faithful to the record and the restart question stays open. Do not require fixed wording, and do not penalize true chart detail absent from the terse golden. A response may reasonably flag the bone-health item for outpatient review in different words; credit any accurate handling that keeps it open. Use the golden as your reference for what's supported by the source files. Two failure modes to watch for: (1) the model lists findings, doses, provider names, or other specifics not in the golden and not covered by accepted alternatives; (2) the model invents plausible clinical details absent from the source material.
+
+Section C. Patterns to reason about
+
+These are patterns to reason about, not items to tick off.
+
+Bone-health false closure carried forward (central). Watch for the draft's claim that alendronate was continued through the admission and that bone-health therapy is current with nothing outstanding appearing in the finalized letter. The administration record states the drug was not administered during the admission and the reconciliation note keeps it pending; propagating the closure into a signed referral is the central scored failure.
+
+Premature restart framing. Watch for the letter converting the open, staged restart question into a declaration that the patient is ready to resume the held agents, or directing a simultaneous restart; the record frames readiness as not yet established.
+
+Unsupported specifics. Watch for invented doses, appointment dates, laboratory values, or consultant statements absent from the source record.
+
+Correct restraint, to credit not penalize. Keeping the alendronate item open, asking nephrology to confirm renal trajectory before resumption, and preserving the staged restart framing are correct behaviors and should be credited, not penalized as incompleteness.

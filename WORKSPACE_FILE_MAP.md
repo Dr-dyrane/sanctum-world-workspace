@@ -153,18 +153,31 @@ Design doc: `task8/design/KM08-PLAN.md` (single source of truth)
 | Task state + history | `task-setup/taskN/` subfolders |
 | Dead root packages | `_archive/` (gitignored) |
 | Pipeline build history | `korvin-merrow/_pipeline-history/` |
+| Loose planning docs | `task-setup/taskN/design/` or `runs/` or `fa-ga/` — never at folder root |
+| Dashboard + perf report | Update on every pilot gate clear or status change |
 
 ---
 
-## Active task status (6/9/2026)
+## Contribution hygiene rules (enforced on every commit)
+
+1. **No .py files outside `tools/`** — ever. Live in `tools/build/` or `tools/verify/`; dead in `tools/archive/`.
+2. **No loose .md files at folder roots** — planning docs go in `design/`, run records in `runs/`, annotations in `fa-ga/` or `preference-labeling/` or `handoff/`.
+3. **No task artifacts outside `platform/taskN/current/`** — superseded sets move to `platform/taskN/archive/YYYY-MM-DD-reason/` immediately.
+4. **No new root-level folders** — dead packages go in `_archive/` (gitignored).
+5. **Dashboard + report updated on every pilot gate clear** — `dashboard/km-world-dashboard.html` and `task-setup/KM-WORLD-PERFORMANCE-REPORT.md` are always current.
+6. **One canonical home per artifact type** — if you can't name the exact folder, check this file before creating.
+
+---
+
+## Active task status (6/10/2026)
 
 | Task | Status |
 |---|---|
-| KM01 | RFD (Ready for Delivery) |
+| KM01 | RFD |
 | KM02 | RFD |
-| KM03 | RFD (post-Sang, FA/GA + 3 PLs submitted) |
-| KM04 | Awaiting final human review |
-| KM05 | Post-Sang rerun; FA/GA entered, AutoQC passed; PL pending |
-| KM06 | Post-Sang rerun; FA/GA entered, AutoQC passed; PL pending |
-| KM07 | Staged locally, not piloted yet |
-| KM08 | v4 BUILT + BYTE-VERIFIED → ready to upload (render+visual confirm first) |
+| KM03 | RFD (post-Sang, FA/GA + 3 PLs — PL submission pending) |
+| KM04 | RFD (FA/GA entered; PL pending) |
+| KM05 | RFD (FA/GA entered, AutoQC passed; 3 PLs pending) |
+| KM06 | RFD (FA/GA entered; PL + final review pending) |
+| KM07 | v2 TAIGA RUNNING — bone-health false closure; pilot result pending |
+| KM08 | v4.1 BUILT + BYTE-VERIFIED — awaiting upload authorization |
