@@ -1,14 +1,6 @@
 # Reviewer Response Protocol
 
-## Current Gate
-
-Brainstorm is submitted and awaiting Human Review.
-
-- Task ID: `cyau8803`
-- Status: `Ready for Plan Review`
-- Brainstorm AutoQC: `51/51 passed`
-
-World Spec drafting remains blocked until Brainstorm receives `GO`.
+This is the STANDING protocol for processing any reviewer decision (Brainstorm, World Spec, or per-task human review). It is not a status file - for current status read `dashboard/km-world-dashboard.html`, `task-setup/KM-WORLD-PERFORMANCE-REPORT.md`, and the active `TASKN-STATE.md`. (Korvin Merrow is long past Brainstorm/Spec GO; the world is live and all 10 tasks have piloted. The GO/SEND-BACK workflows below apply identically at the per-task review stage.)
 
 ## GO Workflow
 
@@ -94,3 +86,6 @@ After resubmission:
 
 ## ABI UPDATE 2026-06-09 - EnvLinter / Taiga QA annotations must be descriptive
 EnvLinter (Taiga QA) thumbs-down annotations must EXPLAIN THE ACTUAL RATIONALE for thumbing down - the substantive reason the flag is wrong, or the concrete cause if it is a tech issue. Do NOT write "Rahul/reviewer said it's okay" or otherwise appeal to a reviewer's say-so as the justification. (These annotations are client-visible; they must stand on their own reasoning.) Pairs with the FA/GA failure-only + no-section-names update in docs/grader-guidelines-lessons.md.
+
+## TECH-ISSUE QA DISPOSITION - the 6/11 correction (KM07)
+The bare words "tech issue" / "known issue" / "N/A" now FAIL the Taiga QA Feedback review as dismissive deflection - it does not engage the finding's substance. A tech-issue disagree needs a SUBSTANTIVE, fact-referenced rebuttal in BOTH the annotation box and the dismissal box: state the concrete cause and cite evidence the grader actually ran. Worked example for the recurring `enable_anthropic_api=False` false positive: "The grader did not fail or fall through. The model grader executed normally on the trajectory pilot (job <ID>) and returned valid per-run scores across all ten runs (<range>); enable_anthropic_api=False is a static configuration-preflight signal that does not reflect the actual grading run, which empirically contradicts the predicted cannot-call-the-model failure." This supersedes the older two-field "exactly tech issue" rule (KM03-era). See AGENTS.md guardrail 4 and TASK-RUNBOOK section D step 4.

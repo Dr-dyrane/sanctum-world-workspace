@@ -1,6 +1,8 @@
 # Clinical Voice Lessons - what the pipeline's rewrite taught us
 
-Date: 2026-06-04. Source: paired corpus from Korvin Merrow run #1 - writer templates (`.meta/references/`) vs pipeline-generated clinical files (`filesystem/`), same facts, different register. Mined so World #2 templates sound clinical at authoring time. Companion: `worlds/korvin-merrow/reference-file-design/epic-note-design-system.md` (visuals), `reference/checklists/spec-autoqc-preflight.md` (compliance).
+Date: 2026-06-04 (standing standard; re-affirmed 2026-06-11). Source: paired corpus from Korvin Merrow run #1 - writer templates (`.meta/references/`) vs pipeline-generated clinical files (`filesystem/`), same facts, different register. Mined so World #2 templates sound clinical at authoring time. Companion: `worlds/korvin-merrow/reference-file-design/epic-note-design-system.md` (visuals), `reference/checklists/spec-autoqc-preflight.md` (compliance).
+
+THE STANDARD. This is the canonical clinical-voice bar for every world file, golden, and reference template the team produces - the "beautiful clinical tone" the World #1 pipeline returned when it rewrote the writer templates. Read it before authoring any chart-facing prose. A second approved corpus to study is the client's `reference/templates/WorldSpec_Quill.docx.md` (its patient profile, HPI, and home-med table are written in exactly this register). The two caveats below (clinical polish hurts trap carriers; metadata once not twice) are part of the standard, not footnotes to it.
 
 ## The ten patterns (template habit -> clinical habit)
 

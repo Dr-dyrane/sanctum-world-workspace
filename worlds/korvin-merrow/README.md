@@ -1,6 +1,8 @@
 ﻿# Korvin Merrow World
 
-KM03/KM04 Sang review history 6/8 late: Sang's Trigeminus review required grader/golden revisions before continuing. The pre-fix spreads (`877aa204` for KM03, `709be0e8` for KM04) are historical evidence only. Current state is the post-fix rerun plus FA/GA platform-entry lines below. Read `docs/grader-guidelines-lessons.md` before any grader work.
+CURRENT SNAPSHOT (2026-06-11). World `Healthcare_247_Merrow` is live (26 files); all 10 tasks have piloted. KM01-KM06 are Ready for Delivery (PL / final-review tails pending). KM07 v3 was reseeded after Abi retired the v2 bone-health false-closure design as unfair; it is a fair mid-band (mean 0.525), bankable pending the golden-reachability check. KM08 awaits first human review. KM09 (sepsis-to-principal) and KM10 (CDI query, reachability open) are piloted with FA/GA drafted. LIVE STATUS: `dashboard/km-world-dashboard.html`, `task-setup/KM-WORLD-PERFORMANCE-REPORT.md`, and each `task-setup/taskN/TASKN-STATE.md`. The dated paragraphs below are a frozen ~6/8 snapshot kept for provenance and are SUPERSEDED by those sources.
+
+(Historical ~6/8 detail follows.) KM03/KM04 Sang review history 6/8 late: Sang's Trigeminus review required grader/golden revisions before continuing. The pre-fix spreads (`877aa204` for KM03, `709be0e8` for KM04) are historical evidence only. Current state is the post-fix rerun plus FA/GA platform-entry lines below. Read `docs/grader-guidelines-lessons.md` before any grader work.
 
 KM03 post-fix rerun 6/8 late: rerun job `8e97cdd7` is complete after the Sang grader/golden fix. Spread: 80, 62, 90, 30, 90, 88, 82, 87, 85, 70; mean 76.4; single lowest Attempt 4 / run `c2eea662` at 0.30. Current local FA/GA is re-derived at `task-setup/task3/fa-ga/FA-GA-current.md`; Alexander later completed platform FA/GA entry on Attempt 4; FA/GA AutoQC passed.
 
@@ -26,7 +28,7 @@ KM03 v2.2 KM02-bar plan update 6/8: current primary mechanism source is `task-se
 
 KM03 v2.2 platform / Taiga update 6/8: active platform files are `task-setup/platform/task3/current/prompt-task3-v2.2.txt`, `task-setup/platform/task3/current/discharge_planning_summary_draft_05242026.docx`, `task-setup/platform/task3/current/golden-KM03-v2.2.docx`, and `task-setup/platform/task3/current/grader-guidelines-task3-v2.2.txt`. Task AutoQC passed 36/36 (`qcaud_fc`); Taiga job `877aa204` cleared the difficulty gate. Local FA/GA current draft is `task-setup/task3/fa-ga/FA-GA-current.md`; no platform-entered v2.2 FA/GA, PL, final review, additional upload, or AutoQC response exists.
 
-Start here only after reading `project/STATUS.md`.
+Entry point for a new session: read `AGENTS.md` and root `WORKSPACE_FILE_MAP.md` first, then the live status sources named in the CURRENT SNAPSHOT at the top of this file. (The old `project/STATUS.md` pointer is obsolete - `project/` was archived in the 6/9 hygiene restructure.)
 
 ## Folder Guide
 

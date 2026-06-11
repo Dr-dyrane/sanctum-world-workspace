@@ -1,5 +1,5 @@
 # Workspace File Map
-**Last updated: 2026-06-10 (hygiene pass 2: loose-file sweep)**
+**Last updated: 2026-06-11 (KM07 v3 reseed + all-10-piloted status refresh; Quill latest-guidance examples registered)**
 
 Single source of truth for repo structure, placement rules, and navigation.
 Read this + `AGENTS.md` at the start of any new session before touching files.
@@ -18,6 +18,10 @@ sanctum-world-workspace/
   dashboard/                   ← km-world-dashboard.html + KM-WORLD-DASHBOARD-PROMPT.md (informational only)
   docs/                        ← lessons, playbooks, domain knowledge
   reference/                   ← Sanctum source docs, templates, guidelines
+                                 reference/templates/ now holds the client's latest-guidance worked
+                                 example (Quill CDI world+task: Brainstorm, WorldSpec, Task prompt,
+                                 Golden Response, Grader Guidelines, FA_GA, Preferential Labeling) +
+                                 README.md explaining it and its deltas vs KM conventions
   tools/                       ← all Python scripts (canonical home)
   worlds/
     korvin-merrow/             ← the only live world
@@ -96,6 +100,7 @@ task-setup/
   step10-review-packet.md      ← tasks 2-6 planning packet (kept at root: cited by WORLD_SPEC_KICKOFF)
   KM-WORLD-PERFORMANCE-REPORT.md
   KM-World-Performance.xlsx
+  KM-vs-QUILL-SANCTUM-MAPPING-REVIEW.md  ← KM-vs-exemplar gap map + anticipated-corrections queue (6/11)
   platform/                    ← UPLOAD SETS (single source of truth per task)
     task1/current/             ← KM01: med-rec safety review (RFD)
     task2/current/             ← KM02: discharge summary (RFD)
@@ -103,8 +108,10 @@ task-setup/
     task4/current/             ← KM04: interdisciplinary care plan (RFD)
     task5/current/             ← KM05: post-discharge transition note (post-Sang)
     task6/current/             ← KM06: post-discharge follow-up, insulin (RFD)
-    task7/current/             ← KM07: nephrology referral letter (staged, not piloted)
-    task8/current/             ← KM08 v4: gabapentin uptitration addendum (READY TO UPLOAD)
+    task7/current/             ← KM07 v3: nephrology referral letter, placeholder-synthesize (re-piloted, fair mid-band)
+    task8/current/             ← KM08 v4: gabapentin uptitration addendum (awaiting first human review)
+    task9/current/             ← KM09: coding attestation, sepsis-to-principal (piloted)
+    task10/current/            ← KM10: CDI query response (piloted, reachability open)
     task*/archive/             ← superseded platform sets (do not upload from archive)
   task1/                       ← fa-ga/, preference-labeling/, handoff/, trajectories/
   task2/                       ← TASK2-STATE.md + fa-ga/, runs/, learnings/, preference-labeling/
@@ -117,8 +124,12 @@ task-setup/
   task6/                       ← TASK6-STATE.md + fa-ga/ (FA-GA-current.md is canonical; conflicting
                                  FA-GA-v5.md → fa-ga/archive/), runs/, design/ (retired v1/v3 plans →
                                  design/archive/), preference-labeling/, handoff/ (NOTE-FOR-ABI-task6.md)
-  task7/                       ← TASK7-STATE.md only (artifacts in platform/task7/current/)
+  task7/                       ← TASK7-STATE.md + design/ (v2-PLAN, v3-placeholder-plan), runs/ (v2 + v3
+                                 results + golden-reachability structural pass), fa-ga/, qa/, learnings/
+                                 (KM07-learnings.md: the fairness + chart-aware-grader lessons)
   task8/                       ← TASK8-STATE.md + design/KM08-PLAN.md + fa-ga/, runs/
+  task9/                       ← TASK9-STATE.md + design/ (KM09-PLAN, bite-risk-assessment), fa-ga/, runs/
+  task10/                      ← TASK10-STATE.md + design/KM10-PLAN.md + fa-ga/, runs/
 ```
 
 ---
@@ -150,6 +161,9 @@ Pilot preregistrations: `task7/runs/KM07-v2-pilot-preregistration.md`, `task8/ru
 6. `docs/grader-guidelines-lessons.md` — before editing any grader
 7. `docs/reasoning-discipline.md` — before any one-way-door decision
 8. `docs/task-structure-dossier.md` — before brainstorming any new world or task slate (Abi variety mandate, 6/10: every world carries at least 5 distinct structural categories; sheet snapshot at `reference/source/task-selection-categories-snapshot-2026-06-10.csv`)
+9. `docs/task-difficulty-lessons.md` — before designing any task mechanism (the cold/forced/contradicted difficulty rule AND the fairness doctrine in sections 5-6: never floor a planted claim with no correction instruction)
+10. `docs/clinical-voice-lessons.md` — before authoring any world file, golden, or reference template (the World #1 pipeline voice standard)
+11. `reference/templates/README.md` — the client's latest-guidance worked example (CDI world+task) and its deltas vs KM conventions
 
 ---
 
@@ -181,7 +195,9 @@ Pilot preregistrations: `task7/runs/KM07-v2-pilot-preregistration.md`, `task8/ru
 
 ---
 
-## Active task status (6/10/2026)
+## Active task status (6/11/2026)
+
+Live status lives in `dashboard/km-world-dashboard.html`, `task-setup/KM-WORLD-PERFORMANCE-REPORT.md`, and each `taskN/TASKN-STATE.md`; this table is a convenience snapshot - trust those if they disagree.
 
 | Task | Status |
 |---|---|
@@ -191,9 +207,9 @@ Pilot preregistrations: `task7/runs/KM07-v2-pilot-preregistration.md`, `task8/ru
 | KM04 | RFD (FA/GA entered; PL pending) |
 | KM05 | RFD (FA/GA entered, AutoQC passed; 3 PLs pending) |
 | KM06 | RFD (FA/GA entered; PL + final review pending) |
-| KM07 | AWAITING FIRST HUMAN REVIEW (platform 2e5v8bf2) — v2 bone-health false closure, mean ~0.36; FA/GA drafted (failure-only); catch-ceiling watch item to raise with reviewer |
+| KM07 | v3 RE-PILOTED, fair mid-band (mean 0.525, job dba6c34f), bankable pending golden-reachability check. v2 (bone-health false closure) RETIRED by Abi as unfair; v3 = placeholder-synthesize + chart-aware grader fix (validated). FA/GA drafted; QA dispositions + substantive tech-issue rebuttal staged. `platform/task7/current/` |
 | KM08 | AWAITING FIRST HUMAN REVIEW (platform 1l71a77d) — v4.1 gabapentin escalation, bimodal ~0.67; FA/GA drafted (failure-only) |
-| KM09 | IN ENTRY (Alexander on platform) — v1.1 RE-CENTERED on principal-dx sepsis-anchoring (central), MCC capture secondary; golden rebuilt + grader rewritten + verified. `platform/task9/current/` |
-| KM10 | v1 PACKET STAGED 6/10 — CDI query response, mounted query memo (new author name pending confirm); awaiting Alexander read-and-own + entry authorization. `platform/task10/current/` |
+| KM09 | PILOTED — v1.1 sepsis-to-principal (central), ~0.31 deep floor; FA/GA drafted; prereg v1.1 DRAFT must be reviewed + locked before entry. `platform/task9/current/` |
+| KM10 | PILOTED — CDI query response, all-floor ~0.25; FA/GA drafted; REACHABILITY OPEN (no catcher observed - confirm any run can decline before banking). `platform/task10/current/` |
 
 World target: **10 tasks** (Larry 6/10 pod announcement: over 8, preferably 10, before a new world; Alexander decision recorded in `reference/world-spec-guidelines/POD-ANNOUNCEMENT-2026-06-10-delivery-day-and-operating-rules.md`). Submit each task as it clears — no batching (pod rule 3).

@@ -8,16 +8,15 @@ This repository organizes Project Sanctum World Building work: source-of-truth m
 
 Project Sanctum Worlds are realistic clinical environments that test frontier AI models on physician-level judgment: synthesis across messy documents, prioritization, uncertainty handling, medication reasoning, specialist conflict resolution, and safe decision-making.
 
-## Current Status
+## Current Status (2026-06-11)
 
-- Active world: Korvin Merrow World
-- RL Studio task ID: `cyau8803`
-- World Spec: approved by Stacey S after RL Studio upload and Spec AutoQC.
-- World created: `Healthcare_247_Merrow`, with Final Files AutoQC 78/78 after three revisions.
-- Tasks 1-6: RFD or effectively RFD per the active task frontier.
-- Task 7: v2 Taiga running, pilot result pending.
-- Task 8: v4.1 built and byte-verified, awaiting upload authorization.
-- Live state source: root `WORKSPACE_FILE_MAP.md` plus the active `TASKN-STATE.md`. This README is only the front door.
+- Active world: Korvin Merrow World, created as `Healthcare_247_Merrow` (live, 26 files; World Spec approved by Stacey S; Final Files AutoQC 78/78 after three revisions).
+- Target is 10 tasks and all 10 have piloted.
+- Tasks 1-6: Ready for Delivery (per-task Preference Label / final-review tails pending).
+- Task 7: v3 reseeded after Abi retired the v2 design as unfair; fair mid-band (mean 0.525), bankable pending the golden-reachability check.
+- Task 8: awaiting first human review (gabapentin uptitration, bimodal ~0.67).
+- Tasks 9-10: piloted with FA/GA drafted (KM09 sepsis-to-principal ~0.31; KM10 CDI query response, all-floor ~0.25, reachability open).
+- Live state source: `dashboard/km-world-dashboard.html`, `worlds/korvin-merrow/task-setup/KM-WORLD-PERFORMANCE-REPORT.md`, root `WORKSPACE_FILE_MAP.md`, and each active `TASKN-STATE.md`. This README is only the front door.
 
 ## Current Boundary
 
