@@ -29,10 +29,32 @@ The hash drives view state, so any filtered/sorted view is shareable:
 
 The inline script is organized as banner-commented modules so each concern has
 one home: CONFIG (score bands, stages, labels — every threshold lives here),
-GLOSSARY (plain-English definitions), DATA (the task snapshot + provenance
-notes), UTILS, STATE (versioned localStorage), COMPONENTS (pure render
-functions), VIEWS, CONTROLLER (filter/sort/hash), SOUND (opt-in, muted by
-default). Change a score threshold once in CONFIG and every visual follows.
+GLOSSARY (plain-English definitions), DATA (the WORLDS registry), UTILS, STATE
+(versioned localStorage), WORLD CONTROL, COMPONENTS (pure render functions),
+VIEWS (all re-renderable), CONTROLLER (filter/sort/hash), SOUND (opt-in, muted
+by default), WORLD SWITCHER + BOOT. Change a score threshold once in CONFIG and
+every visual follows.
+
+## Adding a world
+
+The dashboard is multi-world. All data lives in the `WORLDS` registry in the
+DATA module; the header title is a dropdown listing every registered world.
+To plug in a new world, add one block:
+
+```js
+WORLDS['my-world'] = {
+  title: '...', kicker: '...', blurb: '...', driveUrl: '...' /* or null */,
+  meta: { world, patient, chart, writer, source, dataSyncedOn, provenance },
+  tasks: [ { id, position, stage, name, plain, mechanism, verdict, workflow,
+             reviewer, platformId, taigaJob, mean, spread, runsTotal,
+             quality, reach, provNote? }, ... ],
+};
+```
+
+Everything else (hero, radial, cards, filters, summary, FAB, deep links,
+screen-reader table) renders from the registry. The selected world persists
+across reloads and is shareable via `#world=<id>`. Task deep links work for
+any world's ids (e.g. `#QX03`).
 
 ## Conventions
 

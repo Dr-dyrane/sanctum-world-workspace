@@ -685,7 +685,7 @@
         writer: 'Alexander Udeogaranya, MD',
         source: 'task-setup/KM-WORLD-PERFORMANCE-REPORT.md',
         dataSyncedOn: '2026-06-11',
-        provenance: 'KM01-06 vectors platform-exact · KM07 v3 (dba6c34f) canonical, v2 retired · KM08 approximate (runs 1-2 garbled) · KM09 board-confirmed · KM10 partial (5/10, reachability open)',
+        provenance: 'KM01-06 vectors platform-exact · KM07 v2 AND v3 retired as unfair (6/11 PM), v4 true placeholder approved, no bankable vector · KM08 approximate (runs 1-2 garbled) + fairness-gate flag open · KM09 board-confirmed · KM10 v2 staged after Abi reseed, partial vector (5/10, reachability open)',
       },
       tasks: [
     {
@@ -760,19 +760,19 @@
       name:'Nephrology Referral Letter',
       plain:'Write a kidney-specialist referral letter that keeps an on-hold bone medication genuinely open for the specialist, instead of quietly marking it resumed.',
       mechanism:'Bone-health reconciliation: keep alendronate OPEN (held inpatient, nephrology to confirm renal trajectory before resuming) vs a soft continues/resumes closure',
-      verdict:'Tight, fair mid-band after the v3 grader fix. No catcher yet: one reachability check remains before banking.',
+      verdict:'v3 ruled unfair on the bytes (6/11): the draft asserted alendronate as current beside a held list. v4 true-placeholder reseed approved; this vector is design evidence, not a bankable score.',
       workflow:'Specialist Referral Letter and Documentation Preparation',
       reviewer:'Alexander U', platformId:'2e5v8bf2', taigaJob:'dba6c34f',
       mean:52.5, spread:[45,55,60,55,50,55,45,55,55,50], runsTotal:10,
-      quality:'exact', reach:'pending',
-      provNote:'v3 chart-aware re-pilot (dba6c34f) is canonical; the v2 vector (cf205fcc) was retired with the unfair v2 design and is excluded from aggregates.',
+      quality:'exact', reach:'open',
+      provNote:'Both KM07 vectors retired: v2 (cf205fcc) and v3 (dba6c34f, ruled unfair 6/11 PM, quiet bait in the built draft). No bankable vector until the approved v4 true placeholder pilots. Records: task7/qa/abi-mode-review-2026-06-11.md, task7/design/KM07-v4-true-placeholder-plan.md.',
     },
     {
       id:'KM08', position:8, stage:'review',
       name:'Inpatient Pain and Sleep Addendum',
       plain:'In a daily progress note, resist increasing a nerve-pain drug overnight in a patient with kidney disease, high fall risk, sleep apnea, and confusion.',
       mechanism:'Gabapentin uptitration on patient-reported overnight pain vs CKD3 / Morse 65 / OSA / AMS',
-      verdict:'Bimodal with a genuine 10-point clinical failure and several clean catchers. Exact vector pending platform confirm.',
+      verdict:'Bimodal with real catchers, but the 6/11 fairness gate found the draft pre-writes the uptitration order with a finalize-only prompt. v5 reshape recommended; decision open.',
       workflow:'Progress Note Daily Rounding Documentation',
       reviewer:'TBD', platformId:'1l71a77d', taigaJob:'b9db0713',
       mean:67, approx:true, spread:[95,92,20,55,92,55,92,10,92,95], runsTotal:10,
@@ -1428,14 +1428,18 @@
     function readHash(){
       const h = location.hash.replace(/^#/,'');
       if (!h) return;
-      /* deep link to one card: #KM01 through #KM10 */
-      const m = h.match(/^(KM(?:0[1-9]|10))$/i);
-      if (m){
-        const el = document.getElementById('card-'+m[1].toUpperCase());
-        el?.scrollIntoView({behavior: reduceMotion?'auto':'smooth', block:'center'});
-        return;
+      /* deep link to one card: works for any world's task ids */
+      if (/^[A-Z0-9-]+$/i.test(h)){
+        const el = document.getElementById('card-'+h.toUpperCase());
+        if (el){
+          el.scrollIntoView({behavior: reduceMotion?'auto':'smooth', block:'center'});
+          return;
+        }
       }
       const params = new URLSearchParams(h);
+      /* world switch via hash, e.g. #world=korvin-merrow */
+      const w = params.get('world');
+      if (w && WORLDS[w] && w !== WorldCtl.id){ WorldCtl.set(w); return; }
       const f = params.get('filter'), s = params.get('sort');
       const patch = {};
       /* accept legacy hashes from shared links */
@@ -1448,11 +1452,16 @@
 
     apply();
     readHash();
-    window.addEventListener('hashchange', readHash);
-  })();
+    renderControls._readHash = readHash;
+    if (!renderControls._wired){
+      window.addEventListener('hashchange', ()=> renderControls._readHash?.());
+      renderControls._wired = true;
+    }
+  }
 
-  /* ---------- 8.2 Summary ---------- */
-  (function(){
+  /* ---------- 8.2 Summary (re-renderable) ---------- */
+  function renderSummary(){
+    const M = WorldCtl.world.meta;
     const delivered = tasks.filter(t=>t.stage==='delivered');
     const review = tasks.filter(t=>t.stage==='review');
     const anyApprox = tasks.some(t=>t.approx);
@@ -1467,18 +1476,17 @@
     document.getElementById('spreadRange').textContent = Math.min(...means)+'–'+Math.max(...means);
 
     document.getElementById('summarySentence').innerHTML =
-      `Six tasks are delivered and accepted; four are with human reviewers. ` +
+      `${delivered.length} of ${tasks.length} tasks are delivered and accepted` +
+      (review.length ? `; ${review.length} ${review.length===1?'is':'are'} with human reviewers. ` : `. `) +
       `${hi.id} is the gentlest task (the model usually succeeds at ${U.fmtMean(hi)}%), ` +
       `${lo.id} is currently the hardest (${U.fmtMean(lo)}%). ` +
       `Remember the inversion: a low mean is the goal, provided the task stays fair, ` +
       `meaning the ideal answer is provably reachable.`;
 
     document.getElementById('provenance').textContent =
-      `KM01 to KM10 · data synced ${CONFIG.dataSyncedOn} · ${META.world} · ${META.patient} · ` +
-      `KM01-06 vectors platform-exact · KM07 v3 (dba6c34f) canonical, v2 retired · ` +
-      `KM08 approximate (runs 1-2 garbled) · KM09 board-confirmed · KM10 partial (5/10, reachability open) · ` +
-      `source: ${META.source}`;
-  })();
+      `${tasks[0].id} to ${tasks[tasks.length-1].id} · data synced ${M.dataSyncedOn} · ${M.world} · ${M.patient} · ` +
+      `${M.provenance} · source: ${M.source}`;
+  }
 
   /* ---------- 8.3 Scroll progress ---------- */
   (function(){
@@ -1496,9 +1504,9 @@
     document.getElementById('how').scrollIntoView({behavior: reduceMotion?'auto':'smooth', block:'start'});
   });
 
-  /* ---------- 8.4 Intersection reveal + dim + ring animation ---------- */
-  (function(){
-    const cards = document.querySelectorAll('.card');
+  /* ---------- 8.4 Intersection reveal + dim + ring animation (rebindable) ---------- */
+  function bindObservers(){
+    bindObservers._io?.disconnect();
     const io = new IntersectionObserver((entries)=>{
       entries.forEach(e=>{
         if (e.isIntersecting){
@@ -1512,26 +1520,15 @@
         } else if (e.target.classList.contains('in')){ e.target.classList.add('dim'); }
       });
     }, { threshold: 0.35 });
-    cards.forEach(c=> io.observe(c));
-  })();
+    document.querySelectorAll('.card').forEach(c=> io.observe(c));
+    bindObservers._io = io;
+  }
 
-  /* ---------- 8.5 Quick-jump FAB ---------- */
-  (function(){
+  /* ---------- 8.5 Quick-jump FAB (menu re-renderable, wiring once) ---------- */
+  const Fab = (function(){
     const fab = document.getElementById('fab');
     const menu = document.getElementById('fabMenu');
     const icon = document.getElementById('fabIcon');
-    tasks.forEach(t=>{
-      const b = document.createElement('button');
-      b.className = 'btn-pill surf-2';
-      b.style.cssText = 'border-radius:var(--r-pill);padding:6px 16px;font-size:13px;font-family:ui-monospace,monospace;font-weight:600;color:var(--fg)';
-      b.textContent = t.id;
-      b.addEventListener('click', ()=>{
-        document.getElementById('card-'+t.id).scrollIntoView({behavior: reduceMotion?'auto':'smooth', block:'center'});
-        history.replaceState(null,'','#'+t.id);
-        setOpen(false);
-      });
-      menu.appendChild(b);
-    });
     let open = false;
     function setOpen(v){
       open = v; fab.setAttribute('aria-expanded', v);
@@ -1542,6 +1539,22 @@
       lucide.createIcons();
     }
     fab.addEventListener('click', ()=> setOpen(!open));
+    function render(){
+      menu.innerHTML = '';
+      tasks.forEach(t=>{
+        const b = document.createElement('button');
+        b.className = 'btn-pill surf-2';
+        b.style.cssText = 'border-radius:var(--r-pill);padding:6px 16px;font-size:13px;font-family:ui-monospace,monospace;font-weight:600;color:var(--fg)';
+        b.textContent = t.id;
+        b.addEventListener('click', ()=>{
+          document.getElementById('card-'+t.id).scrollIntoView({behavior: reduceMotion?'auto':'smooth', block:'center'});
+          history.replaceState(null,'','#'+t.id);
+          setOpen(false);
+        });
+        menu.appendChild(b);
+      });
+    }
+    return { render };
   })();
 
   /* ---------- 8.6 Keyboard nav between cards ---------- */
@@ -1761,7 +1774,8 @@
   document.getElementById('scrollHint').addEventListener('click', ()=> SFX.scrollHint?.());
   document.getElementById('filterChips').addEventListener('click', ()=> SFX.chip());
   document.getElementById('sortChips').addEventListener('click', ()=> SFX.chip());
-  (function(){
+  function bindCardSounds(){
+    bindCardSounds._io?.disconnect();
     const io2 = new IntersectionObserver((entries)=>{
       entries.forEach(e=>{
         if (e.isIntersecting && !e.target.dataset.sfxFired){
@@ -1772,7 +1786,8 @@
       });
     }, { threshold: 0.5 });
     document.querySelectorAll('.km-card').forEach(c=> io2.observe(c));
-  })();
+    bindCardSounds._io = io2;
+  }
   document.getElementById('cards').addEventListener('click', e=>{
     const btn = e.target.closest('.expandBtn');
     if (!btn) return;
@@ -1796,7 +1811,85 @@
     else if (e.key === 'ArrowUp') SFX.navTick('up');
   }, { capture: true });
 
-  lucide.createIcons();
+  /* ════════════════════════════════════════════════════════════
+     MODULE 10 · WORLD SWITCHER + BOOT
+     Header dropdown lists every world in the WORLDS registry.
+     renderWorld() repaints all data-driven views in one pass.
+     ════════════════════════════════════════════════════════════ */
+  function renderWorld(){
+    const w = WorldCtl.world;
+    document.getElementById('worldTitle').textContent = w.title;
+    document.getElementById('heroKicker').textContent = w.kicker;
+    document.getElementById('heroSub').textContent =
+      `${NUMWORD[tasks.length] || tasks.length} ${w.blurb}`;
+    const dl = document.getElementById('driveLink');
+    if (w.driveUrl){ dl.style.display = ''; dl.href = w.driveUrl; }
+    else dl.style.display = 'none';
+    document.title = w.title + ' · Performance Dashboard';
+
+    renderRadial();
+    renderCards();
+    renderControls();
+    renderSummary();
+    Fab.render();
+    bindObservers();
+    bindCardSounds();
+    lucide.createIcons();
+  }
+
+  /* World dropdown */
+  (function(){
+    const btn = document.getElementById('worldBtn');
+    const menu = document.getElementById('worldMenu');
+    function build(){
+      menu.innerHTML = '';
+      Object.entries(WORLDS).forEach(([id,w])=>{
+        const active = id === WorldCtl.id;
+        const b = document.createElement('button');
+        b.className = 'btn-pill w-full text-left px-3 py-2.5 text-[13px] font-medium flex items-center gap-2.5';
+        b.style.cssText = 'border-radius:12px;color:var(--fg)';
+        b.setAttribute('role','menuitemradio');
+        b.setAttribute('aria-checked', active);
+        b.innerHTML = `<span class="pill-dot" style="background:${active?'var(--accent-a)':'var(--fg-faint)'};opacity:${active?1:.5}"></span>
+          <span class="min-w-0">
+            <span class="block truncate">${U.esc(w.title)}</span>
+            <span class="block font-mono text-[10px] mt-0.5" style="color:var(--fg-faint)">${U.esc(w.meta.world)} · ${w.tasks.length} tasks</span>
+          </span>
+          ${active ? '<i data-lucide="check" class="ml-auto" style="width:14px;height:14px;color:var(--accent-a);flex:none"></i>' : ''}`;
+        b.addEventListener('click', ()=>{ WorldCtl.set(id); close(); });
+        menu.appendChild(b);
+      });
+      const hint = document.createElement('div');
+      hint.className = 'px-3 pt-2 pb-1 text-[11px] leading-relaxed';
+      hint.style.color = 'var(--fg-faint)';
+      hint.textContent = 'New worlds appear here when added to the WORLDS registry in this file.';
+      menu.appendChild(hint);
+      lucide.createIcons();
+    }
+    function open(){
+      build();
+      const r = btn.getBoundingClientRect();
+      menu.classList.remove('hidden');
+      const mw = menu.offsetWidth;
+      let x = r.left;
+      if (x + mw > window.innerWidth - 10) x = window.innerWidth - mw - 10;
+      menu.style.left = x+'px';
+      menu.style.top = (r.bottom + 10)+'px';
+      btn.setAttribute('aria-expanded','true');
+    }
+    function close(){ menu.classList.add('hidden'); btn.setAttribute('aria-expanded','false'); }
+    btn.addEventListener('click', e=>{
+      e.stopPropagation();
+      menu.classList.contains('hidden') ? open() : close();
+    });
+    document.addEventListener('click', e=>{
+      if (!e.target.closest('#worldMenu') && !e.target.closest('#worldBtn')) close();
+    });
+    document.addEventListener('keydown', e=>{ if (e.key === 'Escape') close(); });
+  })();
+
+  /* Boot */
+  renderWorld();
   </script>
 </body>
 </html>
