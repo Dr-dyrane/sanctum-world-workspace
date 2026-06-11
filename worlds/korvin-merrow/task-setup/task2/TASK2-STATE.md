@@ -44,3 +44,6 @@ The clean prompt is superseded and preserved under `platform/task2/hold/`.
 Do not run additional platform steps, QA, AutoQC responses, preference-label resubmission, uploads, submissions, or RLS mutations without Alexander explicitly authorizing the exact step.
 
 If Abi reseeds or changes the platform state, update this file, `project/STATUS.md`, `docs/status-dashboard.md`, the Claude handoff files, and `project/WORKSPACE_FILE_MAP.md`.
+
+## Metadata flag (6/10)
+The local platform/task2/current base copies (discharge_summary_draft_incomplete_05242026.docx, golden-KM02-v5.docx) carry python-docx core-metadata stamps from a post-upload local re-save. The platform copies passed AutoQC and all derived Mode A task files are scrubbed at build (tools/mode_a_clone.scrub_core). Do NOT re-upload these local copies anywhere without a scrub_core pass first.

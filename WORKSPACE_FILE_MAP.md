@@ -191,9 +191,9 @@ Pilot preregistrations: `task7/runs/KM07-v2-pilot-preregistration.md`, `task8/ru
 | KM04 | RFD (FA/GA entered; PL pending) |
 | KM05 | RFD (FA/GA entered, AutoQC passed; 3 PLs pending) |
 | KM06 | RFD (FA/GA entered; PL + final review pending) |
-| KM07 | v2 TAIGA RUNNING — bone-health false closure; pilot result pending |
-| KM08 | v4.1 BUILT + BYTE-VERIFIED — awaiting upload authorization |
-| KM09 | v1 PACKET STAGED 6/10 — coding attestation, no mounted file; awaiting Alexander read-and-own + entry authorization. `platform/task9/current/` |
+| KM07 | AWAITING FIRST HUMAN REVIEW (platform 2e5v8bf2) — v2 bone-health false closure, mean ~0.36; FA/GA drafted (failure-only); catch-ceiling watch item to raise with reviewer |
+| KM08 | AWAITING FIRST HUMAN REVIEW (platform 1l71a77d) — v4.1 gabapentin escalation, bimodal ~0.67; FA/GA drafted (failure-only) |
+| KM09 | IN ENTRY (Alexander on platform) — v1.1 RE-CENTERED on principal-dx sepsis-anchoring (central), MCC capture secondary; golden rebuilt + grader rewritten + verified. `platform/task9/current/` |
 | KM10 | v1 PACKET STAGED 6/10 — CDI query response, mounted query memo (new author name pending confirm); awaiting Alexander read-and-own + entry authorization. `platform/task10/current/` |
 
 World target: **10 tasks** (Larry 6/10 pod announcement: over 8, preferably 10, before a new world; Alexander decision recorded in `reference/world-spec-guidelines/POD-ANNOUNCEMENT-2026-06-10-delivery-day-and-operating-rules.md`). Submit each task as it clears — no batching (pod rule 3).

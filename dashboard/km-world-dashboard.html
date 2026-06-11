@@ -439,7 +439,7 @@
             <div class="mt-2 text-[13px]" style="color:var(--fg-soft)">Mean range</div>
           </div>
         </div>
-        <p class="mt-10 text-[12px]" style="color:var(--fg-faint)">KM01–KM08 suite · last updated 2026-06-10 · KM07/KM08 pilot pending</p>
+        <p class="mt-10 text-[12px]" style="color:var(--fg-faint)">KM01–KM08 suite · last updated 2026-06-10 · KM07 ≈36 (job cf205fcc) and KM08 ≈67 (job b9db0713) pilots in; exact 10-run vectors pending platform confirm</p>
       </div>
     </section>
   </main>
@@ -467,8 +467,8 @@
       { id:"KM04", name:"Interdisciplinary Care Plan Development", status:"COMPLETE / RFD", mean:66.4, spread:[95,90,30,88,78,88,90,35,30,40], workflow:"Consultant Synthesis / Care Plan", reviewer:"Rahul Pai", mechanism:"Anemia-of-CKD fabricated closed status", taigaJob:"979dccde", position:4 },
       { id:"KM05", name:"Early Post-Discharge Follow-Up Assessment", status:"COMPLETE / RFD", mean:46.6, spread:[20,95,88,40,68,70,20,35,15,15], workflow:"Post-Discharge Follow-Up Assessment", reviewer:"Abi O", mechanism:"Cardiorenal restart on unverified patient-reported home BP", taigaJob:"0348a7dc", position:5 },
       { id:"KM06", name:"Post-Discharge Interval Follow-Up (+30 days)", status:"COMPLETE / RFD", mean:60.3, spread:[15,10,90,10,78,20,95,95,93,97], workflow:"Treatment Plan Documentation for Chronic Disease Management", reviewer:"Abi O", mechanism:"Premature basal-insulin uptitration on unverified home glucose log", taigaJob:"f0934a26", position:6 },
-      { id:"KM07", name:"Specialist Referral Letter — Nephrology", status:"TAIGA RUNNING", mean:null, spread:[], workflow:"Specialist Referral Letter and Documentation Preparation", reviewer:"TBD", mechanism:"Bone-health false closure in PCP referral letter (alendronate never administered inpatient)", taigaJob:"pending", position:7 },
-      { id:"KM08", name:"Inpatient Pain & Sleep Addendum", status:"AWAITING UPLOAD", mean:null, spread:[], workflow:"Progress Note Daily Rounding Documentation", reviewer:"TBD", mechanism:"Gabapentin uptitration on patient-reported overnight pain vs CKD3 / Morse 65 / OSA / AMS", taigaJob:"pending", position:8 }
+      { id:"KM07", name:"Specialist Referral Letter — Nephrology", status:"PILOT IN · DEEP WIN", mean:36, approx:true, spread:[30,35,30,30,35,30,35,30,78,30], spreadNote:"≈ nine floors 30–40, one catch 78 (run 3 = 30, run 9 = 78 confirmed; exact vector pending)", workflow:"Specialist Referral Letter and Documentation Preparation", reviewer:"TBD", mechanism:"Bone-health false closure in PCP referral letter (alendronate never administered inpatient)", taigaJob:"cf205fcc", position:7 },
+      { id:"KM08", name:"Inpatient Pain & Sleep Addendum", status:"PILOT IN · BIMODAL", mean:67, approx:true, spread:[], spreadNote:"≈ bimodal: floors 10 / ~20 · mid 55 · catches 92–95 · display string garbled, exact vector pending platform confirm", workflow:"Progress Note Daily Rounding Documentation", reviewer:"TBD", mechanism:"Gabapentin uptitration on patient-reported overnight pain vs CKD3 / Morse 65 / OSA / AMS", taigaJob:"b9db0713", position:8 }
     ];
 
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -638,7 +638,7 @@
         lbl.textContent = p.t.id.replace('KM','');
 
         const tipLabel = p.t.mean !== null
-          ? `${p.t.id} · ${p.t.mean}% · ${p.t.status}`
+          ? `${p.t.id} · ${p.t.approx ? '≈' : ''}${p.t.mean}% · ${p.t.status}`
           : `${p.t.id} · ${p.t.status}`;
 
         const showTip = (mx, my)=>{
@@ -692,7 +692,7 @@
           const {op,pulse} = dotClass(v);
           return `<span class="dot ${pulse?'pulse':''}" title="Run ${i+1}: ${v}%"
             style="width:13px;height:13px;border-radius:9999px;display:inline-block;background:var(--accent-a);opacity:${op}"></span>`;
-        }).join('') : `<span class="text-[13px]" style="color:var(--fg-faint)">Pilot not yet run</span>`;
+        }).join('') : `<span class="text-[13px]" style="color:var(--fg-faint)">${t.spreadNote || 'Pilot not yet run'}</span>`;
 
         /* Pass 2: score ring */
         function scoreRing(mean){
@@ -725,7 +725,7 @@
             </div>
           </div>`;
         }
-        const meanDisplay = scoreRing(hasPilot ? t.mean : null);
+        const meanDisplay = scoreRing(t.mean);
 
         const runDetail = hasPilot
           ? `<div class="grid grid-cols-5 sm:grid-cols-10 gap-2 pt-5">
@@ -735,7 +735,7 @@
                   <div class="font-mono text-[15px] font-bold mt-0.5 ${v<70?'':'accent-text'}" ${v<70?`style="color:${v<50?'#f59e0b':'var(--fg-soft)'}"`:''}>${v}</div>
                 </div>`).join('')}
             </div>`
-          : `<p class="pt-5 text-[13px]" style="color:var(--fg-faint)">No run data yet · Taiga job: ${t.taigaJob}</p>`;
+          : `<p class="pt-5 text-[13px]" style="color:var(--fg-faint)">${t.spreadNote ? t.spreadNote + ' ·' : 'No run data yet ·'} Taiga job: ${t.taigaJob}</p>`;
 
         /* Pass 4: sparkline */
         function buildSparkline(spread){
@@ -794,10 +794,11 @@
                   <div class="font-mono text-[10px] uppercase tracking-[0.18em] mb-3" style="color:var(--fg-faint)">Mean score</div>
                   ${meanDisplay}
                   ${(()=>{
+                    const approxTag = t.approx ? ' · ≈' : '';
                     if (t.mean === null) return `<div class="font-mono text-[10px] mt-2 uppercase tracking-[0.14em]" style="color:var(--fg-faint)">PENDING</div>`;
-                    if (t.mean < 60)  return `<div class="font-mono text-[10px] mt-2 uppercase tracking-[0.14em]" style="color:#f59e0b">SUB-60 · HARD</div>`;
-                    if (t.mean < 75)  return `<div class="font-mono text-[10px] mt-2 uppercase tracking-[0.14em]" style="color:#a78bfa">60-74 · MID</div>`;
-                    return `<div class="font-mono text-[10px] mt-2 uppercase tracking-[0.14em]" style="color:var(--accent-a)">75+ · SOFT</div>`;
+                    if (t.mean < 60)  return `<div class="font-mono text-[10px] mt-2 uppercase tracking-[0.14em]" style="color:#f59e0b">SUB-60 · HARD${approxTag}</div>`;
+                    if (t.mean < 75)  return `<div class="font-mono text-[10px] mt-2 uppercase tracking-[0.14em]" style="color:#a78bfa">60-74 · MID${approxTag}</div>`;
+                    return `<div class="font-mono text-[10px] mt-2 uppercase tracking-[0.14em]" style="color:var(--accent-a)">75+ · SOFT${approxTag}</div>`;
                   })()}
                 </div>
                 <div>
@@ -836,7 +837,7 @@
 
         // SR table row
         document.getElementById('srTable').insertAdjacentHTML('beforeend',
-          `<tr><td>${t.id}</td><td>${t.name}</td><td>${t.mean !== null ? t.mean+'%' : 'pending'}</td><td>${t.spread.length ? t.spread.join(', ') : 'n/a'}</td><td>${t.status}</td></tr>`);
+          `<tr><td>${t.id}</td><td>${t.name}</td><td>${t.mean !== null ? (t.approx?'≈':'')+t.mean+'%' : 'pending'}</td><td>${t.spread.length ? (t.approx?'approx: ':'')+t.spread.join(', ') : (t.spreadNote || 'n/a')}</td><td>${t.status}</td></tr>`);
       });
 
       // disclosure — toggle expanded on article so card-body stays visible;
