@@ -210,9 +210,9 @@ Live status lives in `dashboard/km-world-dashboard.html`, `task-setup/KM-WORLD-P
 | KM04 | Delivered |
 | KM05 | Delivered |
 | KM06 | Delivered |
-| KM07 | Under first human review (platform 2e5v8bf2) — fairness-corrected v3, nephrology referral; model completes the medication-reconciliation status from the record; fair mid-range (mean 0.525); golden-reachability check outstanding. `platform/task7/current/` |
-| KM08 | Under first human review (platform 1l71a77d) — gabapentin-uptitration progress note; bimodal, mean ~0.67. `platform/task8/current/` |
-| KM09 | Under first human review (platform entry under Abi O) — coding attestation; declines to anchor the principal diagnosis on sepsis; ~0.31. `platform/task9/current/` |
-| KM10 | Under first human review (platform entry under Abi O) — documentation-integrity query response; pilots uniformly low (~0.25); reachability not yet confirmed (no catcher observed). `platform/task10/current/` |
+| KM07 | Under first human review (platform 2e5v8bf2, under Alexander). Fairness-corrected v3, nephrology referral; model completes the medication-reconciliation status from the record; fair mid-range (mean 0.525); golden-reachability check outstanding. `platform/task7/current/` |
+| KM08 | Under first human review (platform 1l71a77d, under Alexander). Gabapentin-uptitration progress note; bimodal, mean ~0.67. `platform/task8/current/` |
+| KM09 | Under first human review (platform 0zko93d5, under Abi O). Inpatient coding and DRG assignment; declines to anchor the principal diagnosis on sepsis; ~0.31. `platform/task9/current/` |
+| KM10 | Under first human review (platform ixr0ddb9, under Abi O). CDI query response; pilots uniformly low (~0.25); reachability not yet confirmed (no catcher observed). `platform/task10/current/` |
 
 World target: **10 tasks** (Larry 6/10 pod announcement: over 8, preferably 10, before a new world; Alexander decision recorded in `reference/world-spec-guidelines/POD-ANNOUNCEMENT-2026-06-10-delivery-day-and-operating-rules.md`). Submit each task as it clears — no batching (pod rule 3).

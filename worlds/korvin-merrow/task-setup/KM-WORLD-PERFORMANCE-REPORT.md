@@ -24,10 +24,10 @@ Last data sync: 2026-06-11 (KM07 v3 chart-aware re-pilot dba6c34f synced; v2 vec
 | KM06 | 2zw95f4e | Delivered | Janette S | 2026-06-09 |
 | KM07 | 2e5v8bf2 | Under first human review | Alexander U | In review |
 | KM08 | 1l71a77d | Under first human review | TBD | In review |
-| KM09 | ixr0ddb9 / 0zko93d5 (confirm pairing) | Under first human review | Abimbola O | In review |
-| KM10 | ixr0ddb9 / 0zko93d5 (confirm pairing) | Under first human review | Abimbola O | In review |
+| KM09 | 0zko93d5 | Under first human review | Abimbola O | In review |
+| KM10 | ixr0ddb9 | Under first human review | Abimbola O | In review |
 
-Board sync 2026-06-11 (PM): six tasks delivered and accepted (KM01 through KM06, all moved to Delivered by Rahul Pai on the board); four under first human review (KM07 2e5v8bf2 and KM08 1l71a77d under Alexander; the two newest platform entries, ixr0ddb9 and 0zko93d5, under Abimbola O = KM09 and KM10, pairing to be confirmed against the board). KM07's review is on the fairness-corrected v3 (placeholder-synthesize, chart-aware grader, mean 0.525); the prior bone-health false-closure design was retired as unfair. The pilot job IDs remain dba6c34f (KM07 v3), df5ba05c (KM09), and 2eb3a8ce (KM10) for the trajectory evidence in section 2.
+Board sync 2026-06-11 (PM): six tasks delivered and accepted (KM01 through KM06, all moved to Delivered by Rahul Pai on the board); four under first human review (KM07 2e5v8bf2 and KM08 1l71a77d under Alexander; KM09 is 0zko93d5, Inpatient Medical Coding and DRG Assignment, and KM10 is ixr0ddb9, CDI Query Response Review, both under Abimbola O, confirmed against the board 6/11). KM07's review is on the fairness-corrected v3 (placeholder-synthesize, chart-aware grader, mean 0.525); the prior bone-health false-closure design was retired as unfair. The pilot job IDs remain dba6c34f (KM07 v3), df5ba05c (KM09), and 2eb3a8ce (KM10) for the trajectory evidence in section 2.
 
 Platform board sync 2026-06-10 (PM): KM01 (Task 1), KM02 (waivf867), KM03 (c8izef70), KM04 (042j9681), KM05 (b0tza971), KM06 (2zw95f4e) = Ready for Delivery. KM07 (2e5v8bf2) = REWORK / reseed after Abi's 6/9 first review (v2 false-closure design ruled unfair). KM08 (1l71a77d) = Awaiting First Human Review. KM09 (df5ba05c) and KM10 (2eb3a8ce) = piloted 6/10 PM, FA/GA drafted, not yet entered. An [AQC-EVAL] sibling task on the KM06 ID (2zw95f4e) sits in Task Writing under Dhruv Ahuja (separate AQC eval, not our deliverable). Note: the board's Latest Score / GT Grade / Criteria columns render 0 / [object Object] / dash for these rows = a display glitch, not real scores; trust the per-task run records for spreads. World target = 10 tasks (pod rule 6/10).
 
