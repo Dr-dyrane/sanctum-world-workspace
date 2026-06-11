@@ -10,6 +10,7 @@ Read this + `AGENTS.md` at the start of any new session before touching files.
 
 ```
 sanctum-world-workspace/
+  DO-NOT-REPEAT.md             ← COLD-START mistakes ledger; read first, every mistake as a rule
   AGENTS.md                    ← operating instructions (always read first)
   README.md                    ← repo overview
   WORKSPACE_FILE_MAP.md        ← this file
@@ -153,6 +154,7 @@ Pilot preregistrations: `task7/runs/KM07-v2-pilot-preregistration.md`, `task8/ru
 
 ## Navigation ladder (read in this order for any new session)
 
+0. `DO-NOT-REPEAT.md` (repo root) — the cold-start mistakes ledger; read it before the ladder so you inherit the scar tissue without re-paying for it.
 1. `AGENTS.md` — operating instructions and guardrails
 2. `WORKSPACE_FILE_MAP.md` — this file; structure + placement rules
 3. `worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md` — before any task-stage work
