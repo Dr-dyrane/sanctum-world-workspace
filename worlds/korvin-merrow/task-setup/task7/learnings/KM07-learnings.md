@@ -1,0 +1,22 @@
+# KM07 learnings (Specialist Referral Letter to Nephrology)
+
+Two lessons, both general enough to apply to future tasks. Companion central homes: `docs/grader-guidelines-lessons.md` (grader), `TASK-RUNBOOK.md` (build gates), `AGENTS.md` guardrail #5 (framing-change re-audit), `docs/reasoning-discipline.md` (read why before concluding).
+
+## Lesson 1 - the planted-false-claim fairness trap (Abi, 3rd instance)
+A draft that carries a false or unverified claim, written by the same author who writes the golden, with no instruction to the model to correct it, is unfair to floor: propagating the draft is defensible, so flooring it punishes the model for trusting the chart it was handed. Abi flagged this same class three times: KM05 (home-BP read as physician-verified -> re-attribute to the patient), KM06 (false closures with no reconcile instruction -> add a reconcile-and-correct line), KM07 (bone-health false closure -> reseed).
+
+Fix taken on KM07: Option A (placeholder / synthesize). The draft states no bone-health status; it leaves the reconciliation open, and the model must complete it from the record. No planted lie, so flooring a fabricated closure is fair. Option B (a reconcile-and-correct instruction) was rejected because it killed KM06 v4 (mean to ~0.98 all-catch); a reconcile instruction defeats every propagation mechanism.
+
+Carry-forward: this is now a standing pre-build gate in the runbook. Any mounted draft carrying an unverified or false claim must (a) attribute it to an unverified source, (b) leave it as a placeholder the model synthesizes, or (c) instruct reconcile-and-correct (knowing (c) is a difficulty-killer on propagation mechanisms).
+
+## Lesson 2 - synthesis tasks need a chart-aware grader (the v3 pilot finding)
+KM07 v3 piloted at mean 0.45 (job cf00b80c), but the 0.30-to-0.70 spread was mostly grader noise, not signal. Att4 (0.30) and Att8 (0.70) wrote the identical alendronate closure; the 40-point gap came from Att4's grader flagging cefpodoxime 200 mg BID, glargine 12-to-18 titration, and gabapentin 100 mg trial as "invented specifics" when all three are verbatim in the MAR. The grader ran golden-only, so it could not tell true chart detail from fabrication and defaulted to suspicion.
+
+Root cause and why it slipped: the v2 grader was correctly golden-only, because v2's scored axis (catch a planted closure) was checkable against the terse golden alone and the model added little detail. The v2-to-v3 switch to Option A changed the task to "synthesize the whole reconciliation from the chart," which makes the output rich with true chart detail the golden does not enumerate. That new property is what required grader chart-access. The grader was a surviving artifact across a framing change and was not re-checked for chart-access fit, only for wording. The KM03/KM04 precedent (include_input_files=true, justify the Self-Contained warning, do not make the grader golden-only) already held the lesson; it was not connected to KM07 until the pilot was read on the bytes.
+
+Fix taken: Register Note now tells the grader the full 26-file record is mounted and to verify any specific (dose, date, lab, name, inpatient med status) against it before calling it invented (names the three example specifics); Section B failure-mode (1) rescoped to specifics supported by neither the golden nor the mounted record. Platform step before re-pilot: include_input_files=true, expect and justify the Self-Contained AutoQC warning. Re-pilot pending.
+
+Carry-forward: a task that synthesizes a deliverable from the chart needs a chart-aware grader by default; a golden-only grader is only safe when the scored axis is fully checkable against the golden. Added to the runbook and to the framing-change re-audit (check the grader's chart-access setting, not just its wording).
+
+## Difficulty note
+v2 (planted closure) floored 9/10 at mean 0.36 but was unfair. v3 (placeholder) is fair and bites at a mid-band (~0.45 raw, likely a touch higher once the specifics-noise is removed). The discriminator is the subtle judgment most models miss: keep alendronate open and ask nephrology to confirm renal trajectory before resuming, rather than writing "continues / resumes on outpatient schedule." Forecast was ~0.55; actual 0.45, the suite's usual ~10-point downward surprise, inside the forecast range.
