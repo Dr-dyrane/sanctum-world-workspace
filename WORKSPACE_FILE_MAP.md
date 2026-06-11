@@ -103,16 +103,16 @@ task-setup/
   KM-World-Performance.xlsx
   KM-vs-QUILL-SANCTUM-MAPPING-REVIEW.md  ← KM-vs-exemplar gap map + anticipated-corrections queue (6/11)
   platform/                    ← UPLOAD SETS (single source of truth per task)
-    task1/current/             ← KM01: med-rec safety review (RFD)
-    task2/current/             ← KM02: discharge summary (RFD)
-    task3/current/             ← KM03: transition-of-care summary (RFD)
-    task4/current/             ← KM04: interdisciplinary care plan (RFD)
-    task5/current/             ← KM05: post-discharge transition note (post-Sang)
-    task6/current/             ← KM06: post-discharge follow-up, insulin (RFD)
-    task7/current/             ← KM07 v3: nephrology referral letter, placeholder-synthesize (re-piloted, fair mid-band)
-    task8/current/             ← KM08 v4: gabapentin uptitration addendum (awaiting first human review)
-    task9/current/             ← KM09: coding attestation, sepsis-to-principal (piloted)
-    task10/current/            ← KM10: CDI query response (piloted, reachability open)
+    task1/current/             ← KM01: med-rec safety review (delivered)
+    task2/current/             ← KM02: discharge summary (delivered)
+    task3/current/             ← KM03: transition-of-care summary (delivered)
+    task4/current/             ← KM04: interdisciplinary care plan (delivered)
+    task5/current/             ← KM05: post-discharge transition note (delivered)
+    task6/current/             ← KM06: post-discharge follow-up, insulin (delivered)
+    task7/current/             ← KM07 v3: nephrology referral letter, placeholder-synthesize (under first human review)
+    task8/current/             ← KM08 v4: gabapentin uptitration addendum (under first human review)
+    task9/current/             ← KM09: coding attestation, sepsis-to-principal (under first human review)
+    task10/current/            ← KM10: CDI query response (under first human review; reachability not yet confirmed)
     task*/archive/             ← superseded platform sets (do not upload from archive)
   task1/                       ← fa-ga/, preference-labeling/, handoff/, trajectories/
   task2/                       ← TASK2-STATE.md + fa-ga/, runs/, learnings/, preference-labeling/
@@ -204,15 +204,15 @@ Live status lives in `dashboard/km-world-dashboard.html`, `task-setup/KM-WORLD-P
 
 | Task | Status |
 |---|---|
-| KM01 | RFD |
-| KM02 | RFD |
-| KM03 | RFD (post-Sang, FA/GA + 3 PLs — PL submission pending) |
-| KM04 | RFD (FA/GA entered; PL pending) |
-| KM05 | RFD (FA/GA entered, AutoQC passed; 3 PLs pending) |
-| KM06 | RFD (FA/GA entered; PL + final review pending) |
-| KM07 | v3 RE-PILOTED, fair mid-band (mean 0.525, job dba6c34f), bankable pending golden-reachability check. v2 (bone-health false closure) RETIRED by Abi as unfair; v3 = placeholder-synthesize + chart-aware grader fix (validated). FA/GA drafted; QA dispositions + substantive tech-issue rebuttal staged. `platform/task7/current/` |
-| KM08 | AWAITING FIRST HUMAN REVIEW (platform 1l71a77d) — v4.1 gabapentin escalation, bimodal ~0.67; FA/GA drafted (failure-only) |
-| KM09 | PILOTED — v1.1 sepsis-to-principal (central), ~0.31 deep floor; FA/GA drafted; prereg v1.1 DRAFT must be reviewed + locked before entry. `platform/task9/current/` |
-| KM10 | PILOTED — CDI query response, all-floor ~0.25; FA/GA drafted; REACHABILITY OPEN (no catcher observed - confirm any run can decline before banking). `platform/task10/current/` |
+| KM01 | Delivered |
+| KM02 | Delivered |
+| KM03 | Delivered |
+| KM04 | Delivered |
+| KM05 | Delivered |
+| KM06 | Delivered |
+| KM07 | Under first human review (platform 2e5v8bf2) — fairness-corrected v3, nephrology referral; model completes the medication-reconciliation status from the record; fair mid-range (mean 0.525); golden-reachability check outstanding. `platform/task7/current/` |
+| KM08 | Under first human review (platform 1l71a77d) — gabapentin-uptitration progress note; bimodal, mean ~0.67. `platform/task8/current/` |
+| KM09 | Under first human review (platform entry under Abi O) — coding attestation; declines to anchor the principal diagnosis on sepsis; ~0.31. `platform/task9/current/` |
+| KM10 | Under first human review (platform entry under Abi O) — documentation-integrity query response; pilots uniformly low (~0.25); reachability not yet confirmed (no catcher observed). `platform/task10/current/` |
 
 World target: **10 tasks** (Larry 6/10 pod announcement: over 8, preferably 10, before a new world; Alexander decision recorded in `reference/world-spec-guidelines/POD-ANNOUNCEMENT-2026-06-10-delivery-day-and-operating-rules.md`). Submit each task as it clears — no batching (pod rule 3).

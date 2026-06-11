@@ -58,7 +58,7 @@ Any ChatGPT output should be treated as advisory, not authoritative.
 - Brainstorm Human Review must return GO before World Spec drafting.
 - World Spec must clear AutoQC and Human Review before onboarding completion.
 - Steps 7-17 require explicit phase update or direct Alexander authorization.
-- For Korvin specifically, all 10 tasks have piloted (KM01-06 Ready for Delivery; KM07 v3 reseeded fair mid-band; KM08 awaiting first review; KM09-10 piloted). For the current gate use the live status sources (`dashboard/km-world-dashboard.html`, `worlds/korvin-merrow/task-setup/KM-WORLD-PERFORMANCE-REPORT.md`, root `WORKSPACE_FILE_MAP.md`, the active `TASKN-STATE.md`), not this historical onboarding summary. The old `project/STATUS.md` pointer is obsolete (archived in the 6/9 restructure).
+- For Korvin specifically, six tasks are delivered (KM01 through KM06) and four are under first human review (KM07 through KM10, KM07 being the fairness-corrected v3). For the current gate use the live status sources (`dashboard/km-world-dashboard.html`, `worlds/korvin-merrow/task-setup/KM-WORLD-PERFORMANCE-REPORT.md`, root `WORKSPACE_FILE_MAP.md`, the active `TASKN-STATE.md`), not this historical onboarding summary. The old `project/STATUS.md` pointer is obsolete (archived in the 6/9 restructure).
 
 ## Authorship And Good Faith Compliance
 
