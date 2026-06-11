@@ -1,0 +1,1 @@
+I'm the physician advisor for our CDI program reviewing Quill's chart from his recent admission before it's coded. Can you go through the documentation and draft any queries that are warranted, addressed to the appropriate provider? I want to make sure our severity of illness capture is complete and the queries are compliant.
