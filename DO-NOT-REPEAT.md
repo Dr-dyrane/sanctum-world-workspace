@@ -62,6 +62,7 @@ Last updated: 2026-06-11. Sources distilled here: `docs/task-difficulty-lessons.
 - Re-piloted without a locked preregistration (KM07 v3), forcing a post-hoc reconciliation. FIX: lock the prereg (forecast + read rules) BEFORE every pilot; never edit it after.
 - Put .py files or loose planning .md at task-folder roots. FIX: scripts in `tools/`; planning in `design/`/`runs/`/`fa-ga/`; uploadable sets only in `platform/taskN/current/`.
 - Told the user git was impossible when `rm`/commit failed with "Operation not permitted." FIX: the sandbox is create/overwrite-only until you call `mcp__cowork__allow_cowork_file_delete`; once approved, full git works (`docs/git-workflow.md`).
+- Ran `git add -A` and swept unrelated working-tree changes (an in-progress dashboard rewrite) into an unrelated commit (KM10 v2, 6/11). FIX: stage the specific paths you actually changed (`git add path1 path2 ...`), never `-A`, so someone else's WIP is not bundled under the wrong commit message. Run `git status` first and look at what is modified before staging.
 - Wrote a rule in instance-shape right after one error, so its siblings re-bit (the markdown/docx, framing-date, and template misses each fixed only their own case). FIX: write every rule at the CLASS it belongs to, not the single instance.
 
 ---
