@@ -6,8 +6,8 @@
   <meta name="color-scheme" content="light dark" />
   <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
-  <title>KM World Suite — Performance Dashboard</title>
-  <meta name="description" content="Korvin Merrow KM01–KM10 task suite performance. Apple HIG-quality, liquid-glass, purple-accent dashboard." />
+  <title>KM World Suite · Performance Dashboard</title>
+  <meta name="description" content="Korvin Merrow KM01 to KM10 task suite performance. Ten clinical documentation tasks, ten scored runs each, explained so anyone can read them. Data synced 2026-06-11." />
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -21,13 +21,7 @@
             mono: ['"SF Mono"','ui-monospace','SFMono-Regular','Menlo','Monaco','Consolas','"Liberation Mono"','monospace'],
           },
           colors: {
-            // Purple accent only
-            accent: {
-              300: '#C4B5FD',
-              400: '#A78BFA',
-              500: '#8B5CF6',
-              600: '#7C3AED',
-            },
+            accent: { 300: '#C4B5FD', 400: '#A78BFA', 500: '#8B5CF6', 600: '#7C3AED' },
           },
           transitionTimingFunction: {
             fluid: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
@@ -41,19 +35,36 @@
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 
   <style>
+    /* ════════════════════════════════════════════════════════════
+       1 · DESIGN TOKENS
+       Surface scale L0 page → L1 card → L2 control → L3 float.
+       Color doctrine (monochrome field + semantic accents,
+       small status elements ONLY, never large surfaces/charts):
+         purple = performance, brand, in-motion pipeline states
+         green  = completion / verified (delivered, reach proven, exact data)
+         amber  = caution (floors, provisional or partial data)
+         rose   = reserved for sent-back/blocked states (defined, unused)
+       ════════════════════════════════════════════════════════════ */
     :root {
-      /* Surface scale: L0 page → L1 card → L2 control → L3 float. Each step visibly lighter. */
-      --bg:       #ebe8f4;                  /* L0 — violet-tinted grouped page */
-      --bg-2:     #ffffff;                  /* L1 — card */
-      --bg-3:     rgba(255,255,255,0.78);   /* L2 — control pill */
-      --bg-hover: rgba(124,58,237,0.06);    /* hover tint */
-      --bg-press: rgba(124,58,237,0.12);    /* pressed tint */
+      --bg:       #ebe8f4;                  /* L0 violet-tinted grouped page */
+      --bg-2:     #ffffff;                  /* L1 card */
+      --bg-3:     rgba(255,255,255,0.78);   /* L2 control pill */
+      --bg-hover: rgba(124,58,237,0.06);
+      --bg-press: rgba(124,58,237,0.12);
       --fg:       #0b0a10;
       --fg-soft:  rgba(11,10,16,0.55);
       --fg-faint: rgba(11,10,16,0.36);
       --accent-a: #7C3AED;
       --accent-b: #A78BFA;
       --accent-fill: rgba(124,58,237,0.12);
+      --warn:     #b45309;                  /* amber, readable on light */
+      --warn-soft:#f59e0b;
+      --warn-fill: rgba(245,158,11,0.14);
+      --ok:       #047857;                  /* green: completion / verified only */
+      --ok-soft:  #10b981;
+      --ok-fill:  rgba(16,185,129,0.14);
+      --bad:      #be123c;                  /* rose: reserved for sent-back/blocked; unused by design */
+      --bad-fill: rgba(190,18,60,0.12);
       --shadow-card:  0 1px 2px rgba(22,10,46,0.04), 0 6px 24px rgba(22,10,46,0.07), 0 16px 48px rgba(124,58,237,0.06);
       --shadow-lift:  0 4px 12px rgba(22,10,46,0.08), 0 16px 48px rgba(22,10,46,0.10), 0 28px 72px rgba(124,58,237,0.14);
       --shadow-pill:  0 1px 3px rgba(22,10,46,0.07), 0 4px 14px rgba(22,10,46,0.06);
@@ -63,9 +74,9 @@
       --blur:     blur(28px) saturate(170%);
     }
     html.dark {
-      --bg:       #09080d;                  /* L0 — near-black with violet undertone */
-      --bg-2:     #18161f;                  /* L1 — card, clearly raised */
-      --bg-3:     rgba(42,39,54,0.85);      /* L2 — control, clearly raised again */
+      --bg:       #09080d;
+      --bg-2:     #18161f;
+      --bg-3:     rgba(42,39,54,0.85);
       --bg-hover: rgba(139,92,246,0.10);
       --bg-press: rgba(139,92,246,0.20);
       --fg:       #f4f2fa;
@@ -74,13 +85,23 @@
       --accent-a: #8B5CF6;
       --accent-b: #C4B5FD;
       --accent-fill: rgba(139,92,246,0.18);
+      --warn:     #fbbf24;                  /* amber, readable on dark */
+      --warn-soft:#f59e0b;
+      --warn-fill: rgba(245,158,11,0.16);
+      --ok:       #34d399;
+      --ok-soft:  #10b981;
+      --ok-fill:  rgba(52,211,153,0.16);
+      --bad:      #fb7185;
+      --bad-fill: rgba(251,113,133,0.16);
       --shadow-card:  0 1px 2px rgba(0,0,0,0.50), 0 8px 28px rgba(0,0,0,0.45), 0 16px 56px rgba(139,92,246,0.09);
       --shadow-lift:  0 4px 16px rgba(0,0,0,0.60), 0 20px 56px rgba(0,0,0,0.50), 0 32px 80px rgba(139,92,246,0.16);
       --shadow-pill:  0 1px 3px rgba(0,0,0,0.45), 0 4px 14px rgba(0,0,0,0.40);
     }
 
-    /* Pass 9: smooth theme fade */
-    html { transition: background-color .15s ease, color .15s ease; }
+    /* ════════════════════════════════════════════════════════════
+       2 · BASE
+       ════════════════════════════════════════════════════════════ */
+    html { transition: background-color .15s ease, color .15s ease; scroll-behavior: smooth; }
     html, body { background: var(--bg); color: var(--fg); min-height: 100%; }
     body {
       margin: 0;
@@ -90,37 +111,40 @@
       overflow-x: hidden;
     }
     h1,h2,h3 { letter-spacing: -0.022em; }
+    ::selection { background: rgba(124,58,237,0.30); }
+    :focus-visible { outline: 2px solid var(--accent-a); outline-offset: 2px; border-radius: 14px;
+      box-shadow: 0 0 0 4px rgba(124,58,237,0.30); }
 
-    /* Fluid type helpers */
+    /* Fluid type scale */
     .t-hero   { font-size: clamp(2.6rem, 7vw, 5.5rem); line-height: 0.98; }
-    .t-h2     { font-size: clamp(1.5rem, 3.4vw, 2.6rem); line-height: 1.04; }
-    .t-id     { font-size: clamp(2.2rem, 6vw, 4.2rem); line-height: 0.9; }
-    .t-score  { font-size: clamp(3rem, 8vw, 4.6rem); line-height: 0.9; }
+    .t-h2     { font-size: clamp(1.4rem, 3.2vw, 2.4rem); line-height: 1.06; }
+    .t-id     { font-size: clamp(2rem, 5.4vw, 3.8rem); line-height: 0.9; }
+    .t-score  { font-size: clamp(2.6rem, 7vw, 4.2rem); line-height: 0.9; }
+    /* Summary stat: sized to never clip or wrap inside a 4-col grid cell */
+    .t-stat   { font-size: clamp(1.9rem, 4.4vw, 3.5rem); line-height: 1; white-space: nowrap; letter-spacing: -0.02em; }
+    .t-stat .unit { font-size: 0.5em; opacity: .65; font-weight: 600; margin-left: 1px; }
 
-    /* ── Surface system: borderless depth ── */
-    /* Level 0 = --bg (page), Level 1 = .surf (card), Level 2 = .surf-2 (chip/pill), Level 3 = .surf-3 (nav float) */
+    /* ════════════════════════════════════════════════════════════
+       3 · SURFACES (borderless depth)
+       ════════════════════════════════════════════════════════════ */
     .surf {
       background: var(--bg-2);
-      -webkit-backdrop-filter: var(--blur);
-      backdrop-filter: var(--blur);
+      -webkit-backdrop-filter: var(--blur); backdrop-filter: var(--blur);
       box-shadow: var(--shadow-card);
       position: relative; overflow: hidden;
     }
     .surf-2 {
       background: var(--bg-3);
-      -webkit-backdrop-filter: var(--blur);
-      backdrop-filter: var(--blur);
+      -webkit-backdrop-filter: var(--blur); backdrop-filter: var(--blur);
       box-shadow: var(--shadow-pill);
       position: relative; overflow: hidden;
     }
-    /* Subtle noise grain — depth cue, no border */
     .surf::after, .surf-2::after {
       content: '';
       position: absolute; inset: 0; pointer-events: none;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
       opacity: 0.025; mix-blend-mode: overlay; border-radius: inherit;
     }
-    /* Keep .glass as alias so existing refs don't break */
     .glass { background: var(--bg-3); -webkit-backdrop-filter: var(--blur); backdrop-filter: var(--blur); box-shadow: var(--shadow-pill); position: relative; overflow: hidden; }
 
     .accent-text {
@@ -129,7 +153,11 @@
       -webkit-text-fill-color: transparent; color: transparent;
     }
 
-    /* ── Card motion ── */
+    /* ════════════════════════════════════════════════════════════
+       4 · COMPONENTS
+       ════════════════════════════════════════════════════════════ */
+
+    /* Card entrance + dim (scroll narrative) */
     .card {
       transform: translateY(36px) scale(0.98); opacity: 0;
       transition:
@@ -139,19 +167,21 @@
       will-change: transform, opacity;
     }
     .card.in  { transform: translateY(0) scale(1); opacity: 1; }
-    .card.dim { opacity: 0.28; transform: scale(0.99); }
-    .card:hover {
-      box-shadow: var(--shadow-lift);
-      transform: translateY(-5px) scale(1.002);
+    .card.dim { opacity: 0.34; transform: scale(0.99); }
+    .card:hover { box-shadow: var(--shadow-lift); transform: translateY(-5px) scale(1.002); }
+
+    /* Card accent bar: left paint only, borderless */
+    .card-inner::before {
+      content: '';
+      position: absolute; top: 20px; bottom: 20px; left: 0;
+      width: 3px; border-radius: 2px;
+      background: var(--card-bar, var(--accent-a));
+      opacity: 0.55;
+      transition: opacity .35s ease;
     }
-    .card:active { transform: translateY(-2px) scale(0.998); transition-duration: .12s; }
+    .card-inner:hover::before { opacity: 0.9; }
 
-    /* ════════════════════════════════════════════
-       COMPONENT STATE SYSTEM — each element owns its
-       5 states: rest → hover → focus → pressed → selected
-       ════════════════════════════════════════════ */
-
-    /* Icon button (nav: theme, mute) — small, quick, contained */
+    /* Icon button */
     .btn-icon {
       cursor: pointer; border: none;
       transition: transform .22s cubic-bezier(0.34,1.56,0.64,1),
@@ -162,7 +192,7 @@
     .btn-icon:active        { background-color: var(--bg-press); transform: scale(0.88); transition-duration: .08s; }
     .btn-icon[aria-pressed="true"] { color: var(--accent-a); background-color: var(--accent-fill); }
 
-    /* Pill button (scroll hint, run detail, FAB menu) — text action, lifts */
+    /* Pill button */
     .btn-pill {
       cursor: pointer; border: none;
       transition: transform .26s cubic-bezier(0.34,1.56,0.64,1),
@@ -173,7 +203,7 @@
     .btn-pill:active        { background-color: var(--bg-press); transform: translateY(0) scale(0.96); transition-duration: .09s; }
     .btn-pill[aria-expanded="true"] { color: var(--accent-a); }
 
-    /* FAB — primary floating action, the boldest interaction on the page */
+    /* FAB */
     .btn-fab {
       cursor: pointer; border: none;
       transition: transform .3s cubic-bezier(0.34,1.56,0.64,1),
@@ -184,30 +214,7 @@
     .btn-fab:active         { transform: scale(0.88) rotate(0deg); transition-duration: .09s; }
     .btn-fab[aria-expanded="true"] { background-color: var(--accent-fill); color: var(--accent-a); }
 
-    /* Dots */
-    .dot { transition: opacity .4s ease, transform .3s ease; }
-    .dot.pulse { animation: pulse 2.4s ease-in-out infinite; }
-    @keyframes pulse { 0%,100%{opacity:.20} 50%{opacity:.42} }
-
-    /* ── Progressive card reveal ── */
-    /* Card body: hidden by default, fades on hover */
-    .card-body {
-      opacity: 0; transform: translateY(6px);
-      transition: opacity .38s cubic-bezier(0.16,1,0.3,1) .05s,
-                  transform .38s cubic-bezier(0.16,1,0.3,1) .05s,
-                  max-height .5s cubic-bezier(0.16,1,0.3,1);
-      overflow: hidden;
-    }
-    /* Show body on card hover OR when card is expanded */
-    .card-inner:hover .card-body,
-    .card-inner.expanded .card-body { opacity: 1; transform: translateY(0); }
-
-    /* Run detail reveal: click only */
-    .reveal { max-height: 0; opacity: 0; overflow: hidden;
-      transition: max-height .55s cubic-bezier(0.16,1,0.3,1), opacity .42s ease .06s; }
-    .reveal.open { max-height: 840px; opacity: 1; }
-
-    /* Chip — selectable filter/sort control, full state ladder */
+    /* Filter / sort chip */
     .chip {
       cursor: pointer; border: none;
       transition: transform .18s cubic-bezier(0.34,1.56,0.64,1),
@@ -219,40 +226,22 @@
     .chip[aria-pressed="true"]  { color: var(--accent-a); background-color: var(--accent-fill); box-shadow: var(--shadow-lift); }
     .chip[aria-pressed="true"]:hover { transform: none; }
 
-    /* ── Mobile-first container fixes ── */
-    @media (max-width: 639px) {
-      /* Tighter hero top padding on short phones */
-      .hero-section { padding-top: 5rem; }
-      /* Summary stat scores: smaller on phones so 2-col fits */
-      .t-score { font-size: clamp(1.9rem, 10vw, 3rem); }
-      /* Controls bar: stack filter and sort full-width */
-      .controls-inner { flex-direction: column; align-items: stretch; gap: 0.75rem; }
-      .controls-group { width: 100%; }
-      /* Card inner section: tighter padding */
-      .card-inner { padding: 1.1rem 1.25rem !important; }
-      /* Mechanism text: remove fixed ch width, let it flow */
-      .mechanism-text { max-width: 100% !important; }
-      /* Chip groups scroll horizontally rather than overflow */
-      .chip-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; flex-wrap: nowrap !important; padding-bottom: 2px; }
-      /* Card min-height: reduce on mobile so it doesn't feel locked */
-      .km-card { min-height: 0 !important; padding-top: 1.5rem; padding-bottom: 1.5rem; }
+    /* Run dots (one dot = one scored attempt) */
+    .dot { transition: opacity .4s ease, transform .3s ease; }
+    .dot.pulse { animation: pulse 2.4s ease-in-out infinite; }
+    @keyframes pulse { 0%,100%{opacity:.30} 50%{opacity:.55} }
+    .dot.empty {
+      background: transparent !important;
+      box-shadow: inset 0 0 0 1.5px var(--fg-faint);
+      opacity: .5 !important;
     }
 
-    /* Focus ring */
-    :focus-visible { outline: 2px solid var(--accent-a); outline-offset: 2px; border-radius: 14px;
-      box-shadow: 0 0 0 4px rgba(124,58,237,0.30); }
+    /* Run-detail disclosure */
+    .reveal { max-height: 0; opacity: 0; overflow: hidden;
+      transition: max-height .55s cubic-bezier(0.16,1,0.3,1), opacity .42s ease .06s; }
+    .reveal.open { max-height: 1100px; opacity: 1; }
 
-    /* Hero bloom for radial nodes */
-    .node { transform-box: fill-box; transform-origin: center; }
-    .node-anim { transform: scale(0); animation: bloom .6s cubic-bezier(0.16,1,0.3,1) forwards; }
-    @keyframes bloom { to { transform: scale(1); } }
-    .arc-anim { stroke-dasharray: 1200; stroke-dashoffset: 1200; animation: draw .9s ease forwards .2s; }
-    @keyframes draw { to { stroke-dashoffset: 0; } }
-
-    .type-char { opacity: 0; display: inline-block; animation: charin .35s ease forwards; }
-    @keyframes charin { to { opacity: 1; } }
-
-    /* ── Pass 2: Score ring ── */
+    /* Score ring */
     .score-ring { display:inline-block; position:relative; }
     .score-ring svg { display:block; }
     .score-ring .ring-val {
@@ -262,36 +251,97 @@
     .ring-track { fill:none; stroke:var(--fg-faint); opacity:0.18; }
     .ring-fill  { fill:none; stroke-linecap:round;
       transition: stroke-dashoffset 1.1s cubic-bezier(0.16,1,0.3,1) .15s; }
-    .ring-fill.hard   { stroke: #f59e0b; }  /* amber  — sub-60  */
-    .ring-fill.mid    { stroke: #a78bfa; }  /* violet — 60-74   */
-    .ring-fill.soft   { stroke: var(--accent-a); } /* purple — 75+  */
-    .ring-fill.pending{ stroke: var(--fg-faint); stroke-dasharray:4 6; }
+    .ring-fill.b-soft     { stroke: var(--accent-a); }
+    .ring-fill.b-mid      { stroke: var(--accent-b); }
+    .ring-fill.b-hard     { stroke: var(--warn-soft); }
+    .ring-fill.b-veryhard { stroke: var(--warn-soft); }
     @media (prefers-reduced-motion: reduce) { .ring-fill { transition: none !important; } }
 
-    /* ── Card accent bar (borderless: no inset, left paint only) ── */
-    .card-inner::before {
-      content: '';
-      position: absolute; top: 20px; bottom: 20px; left: 0;
-      width: 3px; border-radius: 2px;
-      background: var(--card-bar, var(--accent-a));
-      opacity: 0.55;
-      transition: opacity .35s ease, height .35s ease;
-    }
-    .card-inner:hover::before { opacity: 0.9; }
-
-    /* ── Pass 4: Sparkline ── */
+    /* Sparkline */
     .sparkline { display:block; overflow:visible; }
     .spark-line { fill:none; stroke:var(--accent-a); stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; opacity:0.7; }
     .spark-dot  { fill:var(--accent-a); }
-    .spark-dot.low { fill:#f59e0b; }
+    .spark-dot.low { fill:var(--warn-soft); }
     .spark-pending { stroke:var(--fg-faint); stroke-dasharray:3 4; }
 
-    /* ── Radial tooltip: borderless floating surface ── */
+    /* Pipeline stage stepper */
+    .stepper { display:flex; align-items:center; gap:6px; }
+    .step { display:flex; align-items:center; gap:6px; }
+    .step-dot {
+      width:8px; height:8px; border-radius:9999px;
+      background: var(--fg-faint); opacity:.45; flex:none;
+      transition: background-color .3s ease, opacity .3s ease, box-shadow .3s ease;
+    }
+    .step.done .step-dot    { background: var(--accent-a); opacity:1; }
+    .step.current .step-dot { background: var(--accent-a); opacity:1;
+      box-shadow: 0 0 0 4px var(--accent-fill); animation: stepGlow 2.4s ease-in-out infinite; }
+    @keyframes stepGlow { 0%,100%{ box-shadow:0 0 0 3px var(--accent-fill);} 50%{ box-shadow:0 0 0 6px var(--accent-fill);} }
+    .step-bar { width:14px; height:1.5px; background: var(--fg-faint); opacity:.35; flex:none; }
+    .step.done + .step .step-bar-done,
+    .step-bar.done { background: var(--accent-a); opacity:.8; }
+    .step-label { font-size:10px; font-family: ui-monospace, monospace;
+      text-transform: uppercase; letter-spacing:.12em; color: var(--fg-faint); white-space:nowrap; }
+    .step.done .step-label, .step.current .step-label { color: var(--fg-soft); }
+    .step.current .step-label { color: var(--accent-a); font-weight:700; }
+    /* Final step turns green once the task is actually delivered */
+    .step.done-final .step-dot   { background: var(--ok-soft); }
+    .step.done-final .step-label { color: var(--ok); font-weight:700; }
+
+    /* Data-quality badge */
+    .badge {
+      display:inline-flex; align-items:center; gap:5px;
+      font-family: ui-monospace, monospace; font-size:10px; font-weight:700;
+      text-transform: uppercase; letter-spacing:.1em;
+      padding: 3px 9px; border-radius: 9999px;
+    }
+    .badge.exact   { color: var(--ok); background: var(--ok-fill); }
+    .badge.approx  { color: var(--warn); background: var(--warn-fill); }
+    .badge.partial { color: var(--warn); background: var(--warn-fill); }
+
+    /* Status pill dot: tiny semantic marker inside the status pill */
+    .pill-dot {
+      width: 7px; height: 7px; border-radius: 9999px;
+      display: inline-block; flex: none;
+    }
+    .pill-dot.delivered { background: var(--ok-soft); }
+    .pill-dot.review    { background: var(--accent-a); animation: pulse 2.4s ease-in-out infinite; }
+
+    /* Summary stat label dot */
+    .stat-dot {
+      width: 8px; height: 8px; border-radius: 9999px;
+      display: inline-block; flex: none; margin-right: 7px; vertical-align: 1px;
+    }
+
+    /* Glossary term: dotted underline, tap for plain-English definition */
+    .term {
+      all: unset; cursor: help;
+      border-bottom: 1.5px dotted var(--accent-b);
+      padding-bottom: 1px;
+      transition: color .2s ease, border-color .2s ease;
+    }
+    .term:hover, .term[aria-expanded="true"] { color: var(--accent-a); border-bottom-color: var(--accent-a); }
+    .term:focus-visible { outline: 2px solid var(--accent-a); outline-offset: 2px; border-radius: 6px; box-shadow: none; }
+
+    /* Glossary popover (single instance, repositioned) */
+    #glossPop {
+      position: fixed; z-index: 70; max-width: 300px;
+      background: var(--bg-2);
+      -webkit-backdrop-filter: var(--blur); backdrop-filter: var(--blur);
+      box-shadow: var(--shadow-lift);
+      border-radius: 16px; padding: 12px 16px;
+      opacity: 0; transform: translateY(6px) scale(0.96); pointer-events: none;
+      transition: opacity .2s cubic-bezier(0.16,1,0.3,1), transform .2s cubic-bezier(0.16,1,0.3,1);
+    }
+    #glossPop.show { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
+    #glossPop .g-title { font-family: ui-monospace, monospace; font-size: 11px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .14em; color: var(--accent-a); margin-bottom: 4px; }
+    #glossPop .g-body { font-size: 13px; line-height: 1.5; color: var(--fg-soft); }
+
+    /* Radial tooltip */
     #radialTip {
       position: fixed; z-index: 60; pointer-events: none;
       background: var(--bg-3);
-      -webkit-backdrop-filter: var(--blur);
-      backdrop-filter: var(--blur);
+      -webkit-backdrop-filter: var(--blur); backdrop-filter: var(--blur);
       box-shadow: var(--shadow-lift);
       border-radius: 14px; padding: 8px 14px;
       font-family: ui-monospace, monospace; font-size: 12px; font-weight: 600;
@@ -302,7 +352,17 @@
     }
     #radialTip.show { opacity: 1; transform: translateY(0) scale(1); }
 
-    /* ── Pass 1: Ambient orbs ── */
+    /* ════════════════════════════════════════════════════════════
+       5 · MOTION & AMBIENT
+       ════════════════════════════════════════════════════════════ */
+    .node { transform-box: fill-box; transform-origin: center; }
+    .node-anim { transform: scale(0); animation: bloom .6s cubic-bezier(0.16,1,0.3,1) forwards; }
+    @keyframes bloom { to { transform: scale(1); } }
+    .arc-anim { stroke-dasharray: 1200; stroke-dashoffset: 1200; animation: draw .9s ease forwards .2s; }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    .type-char { opacity: 0; display: inline-block; animation: charin .35s ease forwards; }
+    @keyframes charin { to { opacity: 1; } }
+
     .orb {
       position: fixed; border-radius: 50%; pointer-events: none; z-index: 0;
       filter: blur(90px); will-change: transform;
@@ -319,29 +379,40 @@
       background: radial-gradient(circle, rgba(167,139,250,0.14) 0%, transparent 70%);
       animation: orbDriftB 28s ease-in-out infinite alternate;
     }
-    @keyframes orbDriftA {
-      from { transform: translate(0, 0) scale(1); }
-      to   { transform: translate(6vw, 8vh) scale(1.08); }
-    }
-    @keyframes orbDriftB {
-      from { transform: translate(0, 0) scale(1); }
-      to   { transform: translate(-5vw, -6vh) scale(1.12); }
-    }
+    @keyframes orbDriftA { from { transform: translate(0,0) scale(1); } to { transform: translate(6vw,8vh) scale(1.08); } }
+    @keyframes orbDriftB { from { transform: translate(0,0) scale(1); } to { transform: translate(-5vw,-6vh) scale(1.12); } }
     html.dark .orb-a { background: radial-gradient(circle, rgba(139,92,246,0.22) 0%, transparent 70%); }
     html.dark .orb-b { background: radial-gradient(circle, rgba(196,181,253,0.12) 0%, transparent 70%); }
-    @media (prefers-reduced-motion: reduce) { .orb { animation: none !important; } }
 
-    /* Progress + FAB */
     #progress { background: linear-gradient(90deg, var(--accent-a), var(--accent-b)); }
 
+    /* ════════════════════════════════════════════════════════════
+       6 · RESPONSIVE
+       ════════════════════════════════════════════════════════════ */
+    @media (max-width: 639px) {
+      .hero-section { padding-top: 5rem; }
+      .t-score { font-size: clamp(1.9rem, 10vw, 3rem); }
+      .t-stat  { font-size: clamp(1.6rem, 8.5vw, 2.6rem); }
+      .controls-inner { flex-direction: column; align-items: stretch; gap: 0.75rem; }
+      .controls-group { width: 100%; }
+      .card-inner { padding: 1.1rem 1.25rem !important; }
+      .mechanism-text { max-width: 100% !important; }
+      .chip-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; flex-wrap: nowrap !important; padding-bottom: 2px; }
+      .km-card { min-height: 0 !important; padding-top: 1.5rem; padding-bottom: 1.5rem; }
+      .stepper-labels-hide .step-label { display: none; }
+      .stepper-labels-hide .step.current .step-label { display: inline; }
+    }
+
+    /* ════════════════════════════════════════════════════════════
+       7 · REDUCED MOTION
+       ════════════════════════════════════════════════════════════ */
     @media (prefers-reduced-motion: reduce) {
       .card, .reveal, .node-anim, .arc-anim, .type-char, .dot.pulse,
-      .btn-icon, .btn-pill, .btn-fab, .chip, .card-body { animation: none !important; transition: opacity .3s ease !important; transform: none !important; }
+      .btn-icon, .btn-pill, .btn-fab, .chip, .step-dot { animation: none !important; transition: opacity .3s ease !important; transform: none !important; }
       .card { opacity: 1; }
+      .orb { animation: none !important; }
       html { scroll-behavior: auto !important; }
     }
-    html { scroll-behavior: smooth; }
-    ::selection { background: rgba(124,58,237,0.30); }
   </style>
 </head>
 
@@ -349,9 +420,13 @@
   <!-- Ambient orbs -->
   <div class="orb orb-a" aria-hidden="true"></div>
   <div class="orb orb-b" aria-hidden="true"></div>
-  <!-- Radial tooltip -->
+
+  <!-- Floating layers -->
   <div id="radialTip" role="tooltip" aria-live="polite"></div>
-  <!-- Scroll progress -->
+  <div id="glossPop" role="tooltip" aria-live="polite">
+    <div class="g-title"></div>
+    <div class="g-body"></div>
+  </div>
   <div class="fixed top-0 left-0 right-0 h-[2px] z-50">
     <div id="progress" class="h-full w-0 origin-left"></div>
   </div>
@@ -359,7 +434,12 @@
   <!-- Top chrome -->
   <header class="fixed top-3 left-0 right-0 z-40 flex justify-center px-4">
     <div class="surf-2 flex items-center gap-2 px-3 py-2" style="border-radius:var(--r-pill)">
-      <span class="pl-1 pr-1 text-[13px] font-semibold tracking-tight">KM World Suite</span>
+      <button id="worldBtn" aria-haspopup="menu" aria-expanded="false" aria-label="Switch world"
+        class="btn-pill flex items-center gap-1.5 pl-2 pr-1.5 py-1 text-[13px] font-semibold tracking-tight"
+        style="border-radius:var(--r-pill);background:transparent">
+        <span id="worldTitle">KM World Suite</span>
+        <i data-lucide="chevron-down" style="width:14px;height:14px;opacity:.6"></i>
+      </button>
       <span class="hidden sm:block w-px h-4" style="background:var(--fg-faint);opacity:0.2"></span>
       <span id="clock" class="hidden sm:block font-mono text-[12px]" style="color:var(--fg-soft)">--:--:--</span>
       <button id="themeToggle" aria-label="Toggle color theme"
@@ -374,32 +454,80 @@
       <a href="https://drive.google.com/drive/folders/1BtPk8hOuCc6LUdXPrUer5X8DOPaeFLen"
         target="_blank" rel="noopener" aria-label="Open synced world files on Google Drive"
         title="World files on Google Drive"
-        class="btn-icon surf-2 w-9 h-9 grid place-items-center" style="border-radius:var(--r-pill);color:var(--fg)">
+        class="btn-icon surf-2 w-9 h-9 grid place-items-center" id="driveLink" style="border-radius:var(--r-pill);color:var(--fg)">
         <i data-lucide="folder-open" style="width:17px;height:17px"></i>
       </a>
     </div>
   </header>
 
+  <!-- World switcher menu (fixed, anchored to the header button at open time) -->
+  <div id="worldMenu" role="menu" aria-label="Worlds" class="surf hidden"
+    style="position:fixed;z-index:55;min-width:250px;padding:8px;border-radius:18px"></div>
+
   <main style="position:relative;z-index:1">
-    <!-- HERO -->
+
+    <!-- ═══ HERO ═══ -->
     <section class="hero-section min-h-[100svh] flex flex-col items-center justify-center px-6 pt-24 pb-10 text-center">
-      <p class="font-mono text-[12px] uppercase tracking-[0.28em] mb-5" style="color:var(--fg-faint)">Korvin Merrow · Task Suite</p>
+      <p id="heroKicker" class="font-mono text-[12px] uppercase tracking-[0.28em] mb-5" style="color:var(--fg-faint)">Korvin Merrow · AI Training Task Suite</p>
       <h1 id="heroTitle" class="t-hero font-semibold text-balance max-w-[14ch]">Performance Across the Suite</h1>
-      <p class="mt-5 max-w-[52ch] text-[15px] leading-relaxed" style="color:var(--fg-soft)">
-        Eight discharge-workflow tasks, scored across ten runs each. Node size encodes failure depth; the arc sweeps from strongest to weakest.
+      <p id="heroSub" class="mt-5 max-w-[58ch] text-[15px] leading-relaxed" style="color:var(--fg-soft)">
+        Ten clinical documentation tasks built on one synthetic hospital patient.
+        An AI model attempts each task ten times, and every attempt is scored from 0 to 100
+        against a physician-written ideal answer.
       </p>
 
       <!-- Radial chart -->
       <div class="mt-10 w-full max-w-[560px] aspect-square">
         <svg id="radial" viewBox="0 0 560 560" class="w-full h-full" role="img" aria-label="Radial chart of KM01 through KM10 mean scores"></svg>
       </div>
+      <p class="mt-3 max-w-[46ch] text-[12.5px] leading-relaxed" style="color:var(--fg-faint)">
+        One node per task. Bigger, deeper nodes mean the model fails harder there.
+        Click any node to jump to its detail card.
+      </p>
 
-      <button id="scrollHint" class="mt-2 btn-pill surf-2 px-4 py-2 flex items-center gap-2 text-[13px]" style="border-radius:var(--r-pill);color:var(--fg-soft)">
+      <button id="scrollHint" class="mt-4 btn-pill surf-2 px-4 py-2 flex items-center gap-2 text-[13px]" style="border-radius:var(--r-pill);color:var(--fg-soft)">
         Scroll to detail <i data-lucide="chevron-down" style="width:16px;height:16px"></i>
       </button>
     </section>
 
-    <!-- CONTROLS -->
+    <!-- ═══ HOW TO READ THIS (plain-language explainer) ═══ -->
+    <section id="how" class="px-3 sm:px-6 max-w-5xl mx-auto pb-12 sm:pb-16" aria-label="How to read this dashboard">
+      <p class="font-mono text-[12px] uppercase tracking-[0.24em] mb-5 px-2" style="color:var(--fg-faint)">How to read this</p>
+      <div class="grid sm:grid-cols-3 gap-4 sm:gap-5">
+        <div class="surf p-6" style="border-radius:var(--r-card)">
+          <div class="font-mono text-[11px] font-bold uppercase tracking-[0.16em] mb-3 accent-text">1 · The setup</div>
+          <p class="text-[13.5px] leading-relaxed" style="color:var(--fg-soft)">
+            Each task gives the AI a realistic chart and asks for a piece of clinical paperwork
+            a physician would write. Hidden inside is a trap: a tempting shortcut or unsafe
+            assumption. A <button class="term" data-g="golden">golden</button> answer and written
+            <button class="term" data-g="grader">grading rules</button> define what a careful clinician would do.
+          </p>
+        </div>
+        <div class="surf p-6" style="border-radius:var(--r-card)">
+          <div class="font-mono text-[11px] font-bold uppercase tracking-[0.16em] mb-3 accent-text">2 · The ten dots</div>
+          <p class="text-[13.5px] leading-relaxed" style="color:var(--fg-soft)">
+            Every task is <button class="term" data-g="pilot">piloted</button>: run ten times, each run scored 0 to 100.
+            Solid purple dots are strong runs. A run of 85+ is a
+            <button class="term" data-g="catcher">catcher</button>; faint amber dots are
+            <button class="term" data-g="floor">floors</button>, runs where the model fell into the trap.
+          </p>
+        </div>
+        <div class="surf p-6" style="border-radius:var(--r-card)">
+          <div class="font-mono text-[11px] font-bold uppercase tracking-[0.16em] mb-3 accent-text">3 · Low scores are good</div>
+          <p class="text-[13.5px] leading-relaxed" style="color:var(--fg-soft)">
+            This is the counterintuitive part: a task the model aces teaches it nothing.
+            The ideal task is hard but fair. The model usually fails, yet at least one run proves
+            the ideal answer is <button class="term" data-g="reachability">reachable</button>.
+            That is what trains better clinical judgment.
+          </p>
+        </div>
+      </div>
+      <p class="mt-4 px-2 text-[12.5px]" style="color:var(--fg-faint)">
+        Dotted-underlined words have plain-English definitions. Tap or hover them anywhere on this page.
+      </p>
+    </section>
+
+    <!-- ═══ CONTROLS ═══ -->
     <div class="sticky top-16 z-30 px-3 sm:px-6 max-w-5xl mx-auto">
       <div class="surf-2 px-4 py-3 controls-inner flex flex-wrap items-center gap-x-5 gap-y-2 sm:gap-y-3 justify-between" style="border-radius:20px">
         <div class="controls-group flex items-center gap-2 flex-wrap" role="group" aria-label="Filter tasks by status">
@@ -413,33 +541,34 @@
       </div>
     </div>
 
-    <!-- CARDS -->
+    <!-- ═══ TASK CARDS (rendered by JS) ═══ -->
     <div id="cards" class="px-3 sm:px-6 max-w-5xl mx-auto"></div>
     <p id="emptyState" class="hidden text-center py-20 text-[15px]" style="color:var(--fg-soft)">No tasks match this filter.</p>
 
-    <!-- SUMMARY FOOTER -->
+    <!-- ═══ SUITE SUMMARY ═══ -->
     <section id="summary" class="px-3 sm:px-6 max-w-5xl mx-auto py-16 sm:py-20">
       <div class="surf p-6 sm:p-12" style="border-radius:var(--r-card)">
         <p class="font-mono text-[12px] uppercase tracking-[0.24em] mb-6 sm:mb-8" style="color:var(--fg-faint)">Suite Summary</p>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-5 sm:gap-8">
-          <div>
-            <div class="t-score font-bold accent-text" id="meanOfMeans">—</div>
-            <div class="mt-2 text-[13px]" style="color:var(--fg-soft)">Mean of means</div>
+          <div class="min-w-0">
+            <div class="t-stat font-bold" id="deliveredCount">—</div>
+            <div class="mt-2 text-[13px]" style="color:var(--fg-soft)"><span class="stat-dot" style="background:var(--ok-soft)"></span><button class="term" data-g="delivered">Delivered</button> tasks</div>
           </div>
-          <div>
-            <div class="t-score font-bold" id="completeCount">—</div>
-            <div class="mt-2 text-[13px]" style="color:var(--fg-soft)">Complete / RFD</div>
+          <div class="min-w-0">
+            <div class="t-stat font-bold" id="reviewCount">—</div>
+            <div class="mt-2 text-[13px]" style="color:var(--fg-soft)"><span class="stat-dot" style="background:var(--accent-a)"></span>In <button class="term" data-g="review">human review</button></div>
           </div>
-          <div>
-            <div class="t-score font-bold" id="pendingCount">—</div>
-            <div class="mt-2 text-[13px]" style="color:var(--fg-soft)">In review / pending</div>
+          <div class="min-w-0">
+            <div class="t-stat font-bold accent-text" id="meanOfMeans">—</div>
+            <div class="mt-2 text-[13px]" style="color:var(--fg-soft)">Suite <button class="term" data-g="mean">mean</button>, 10 tasks</div>
           </div>
-          <div>
-            <div class="t-score font-bold" id="spreadRange">—</div>
-            <div class="mt-2 text-[13px]" style="color:var(--fg-soft)">Mean range</div>
+          <div class="min-w-0">
+            <div class="t-stat font-bold" id="spreadRange">—</div>
+            <div class="mt-2 text-[13px]" style="color:var(--fg-soft)">Task means, lowest to highest</div>
           </div>
         </div>
-        <p class="mt-10 text-[12px]" style="color:var(--fg-faint)">KM01–KM10 suite · last updated 2026-06-10 PM · all 10 tasks piloted · KM09 31.3 (df5ba05c, confirmed) and KM10 ≈25 (2eb3a8ce, all-floor, reachability open) added; KM07/KM08/KM10 vectors approximate</p>
+        <p id="summarySentence" class="mt-8 text-[14px] leading-relaxed max-w-[72ch]" style="color:var(--fg-soft)"></p>
+        <p id="provenance" class="mt-6 text-[12px] leading-relaxed" style="color:var(--fg-faint)"></p>
       </div>
     </section>
   </main>
@@ -454,931 +583,1220 @@
   </div>
 
   <!-- Accessible data table (screen-reader alternative) -->
-  <table class="sr-only" aria-label="KM suite KM01-KM10 full spread data">
-    <thead><tr><th>Task</th><th>Name</th><th>Mean</th><th>Run scores</th><th>Status</th></tr></thead>
+  <table class="sr-only" aria-label="KM suite KM01 to KM10 full spread data">
+    <thead><tr><th>Task</th><th>Name</th><th>Mean</th><th>Run scores</th><th>Status</th><th>Data quality</th></tr></thead>
     <tbody id="srTable"></tbody>
   </table>
 
   <script>
-    const tasks = [
-      { id:"KM01", name:"Discharge Medication Reconciliation", status:"COMPLETE / RFD", mean:89.0, spread:[78,72,92,95,93,92,92,92,90,94], workflow:"Medication Reconciliation Documentation", reviewer:"Janette S", mechanism:"Salt substitute / nitrofurantoin / ARNI restart / prednisone dose", taigaJob:"5a884b92", position:1 },
-      { id:"KM02", name:"Hospital Discharge Summary Generation", status:"COMPLETE / RFD", mean:59.3, spread:[45,92,82,82,60,62,40,30,45,55], workflow:"Discharge Summary Generation", reviewer:"Janette S", mechanism:"Furosemide escalation / fabricated interval data", taigaJob:"8f393839", position:2 },
-      { id:"KM03", name:"Discharge Planning Documentation", status:"COMPLETE / RFD", mean:76.4, spread:[80,62,90,30,90,88,82,87,85,70], workflow:"Discharge Planning Documentation", reviewer:"Sang N / Paolo S", mechanism:"CPAP fabricated objective result", taigaJob:"8e97cdd7", position:3 },
-      { id:"KM04", name:"Interdisciplinary Care Plan Development", status:"COMPLETE / RFD", mean:66.4, spread:[95,90,30,88,78,88,90,35,30,40], workflow:"Consultant Synthesis / Care Plan", reviewer:"Rahul Pai", mechanism:"Anemia-of-CKD fabricated closed status", taigaJob:"979dccde", position:4 },
-      { id:"KM05", name:"Early Post-Discharge Follow-Up Assessment", status:"COMPLETE / RFD", mean:46.6, spread:[20,95,88,40,68,70,20,35,15,15], workflow:"Post-Discharge Follow-Up Assessment", reviewer:"Abi O", mechanism:"Cardiorenal restart on unverified patient-reported home BP", taigaJob:"0348a7dc", position:5 },
-      { id:"KM06", name:"Post-Discharge Interval Follow-Up (+30 days)", status:"COMPLETE / RFD", mean:60.3, spread:[15,10,90,10,78,20,95,95,93,97], workflow:"Treatment Plan Documentation for Chronic Disease Management", reviewer:"Abi O", mechanism:"Premature basal-insulin uptitration on unverified home glucose log", taigaJob:"f0934a26", position:6 },
-      { id:"KM07", name:"Specialist Referral Letter — Nephrology", status:"V3 FAIR MID-BAND · BANKABLE", mean:52.5, spread:[45,55,60,55,50,55,45,55,55,50], spreadNote:"v3 chart-aware re-pilot job dba6c34f, mean 0.525, tight 0.45–0.60. Grader fix VALIDATED: prior golden-only spread (0.30–0.70) was noise (same behavior scored 0.30 vs 0.70 on specifics-flagging); chart-aware grader now credits true MAR detail and floors only on the alendronate closure. Fair, reproducible, clears the gate (10/10 sub-70). No catcher (max 0.60): the keep-open judgment is subtle. Bankable pending golden-scores-high reachability check", workflow:"Specialist Referral Letter and Documentation Preparation", reviewer:"Abi O (v2 sent back 6/9; v3 fairness resolved)", mechanism:"Bone-health reconciliation: model must keep alendronate OPEN (held inpatient, ask nephrology to confirm renal trajectory before resuming) vs a soft continues/resumes closure", taigaJob:"dba6c34f", position:7 },
-      { id:"KM08", name:"Inpatient Pain & Sleep Addendum", status:"PILOT IN · BIMODAL", mean:67, approx:true, spread:[], spreadNote:"≈ bimodal: floors 10 / ~20 · mid 55 · catches 92–95 · display string garbled, exact vector pending platform confirm", workflow:"Progress Note Daily Rounding Documentation", reviewer:"TBD", mechanism:"Gabapentin uptitration on patient-reported overnight pain vs CKD3 / Morse 65 / OSA / AMS", taigaJob:"b9db0713", position:8 },
-      { id:"KM09", name:"Inpatient Coding Attestation Addendum", status:"PILOT IN · BIMODAL", mean:31.3, spread:[20,15,15,15,85,15,93,20,15,20], spreadNote:"confirmed 10-vector (board decoded, cross-checked vs Att4 15 / Att5 85 / Att7 93 / Att8 20); eight floors 15–20, two catchers 85 & 93; reachability confirmed", workflow:"Coding Attestation / DRG Sequencing", reviewer:"TBD", mechanism:"Sepsis sequenced to principal (A41.9) on the admission framing vs the documented suspected urinary-source infection", taigaJob:"df5ba05c", position:9 },
-      { id:"KM10", name:"CDI Query Response", status:"PILOT IN · ALL-FLOOR", mean:25, approx:true, spread:[], spreadNote:"5 of 10 confirmed, all floors (Att1 35 · Att3 25 · Att4 30 · Att5 20 · Att8 15); no catcher observed; full vector + reachability OPEN before banking", workflow:"Clinical Documentation Integrity Query Response", reviewer:"TBD", mechanism:"Agreeing to add/code metabolic encephalopathy under a CDI query asking for full severity, vs holding at the documented symptom level", taigaJob:"2eb3a8ce", position:10 }
-    ];
+  /* ════════════════════════════════════════════════════════════
+     MODULE 1 · CONFIG
+     Single source of truth for score bands, stages, and labels.
+     Every component (dots, rings, sparklines, run cells, copy)
+     reads from here. Change a threshold once, it changes everywhere.
+     ════════════════════════════════════════════════════════════ */
+  const CONFIG = {
+    /* Run-level bands: how one attempt is classified */
+    runBands: [
+      { id:'catcher', min:85, label:'Catcher',  plain:'Near-perfect run. Proof the ideal answer is reachable.' },
+      { id:'high',    min:70, label:'High',     plain:'Strong run, minor misses.' },
+      { id:'mid',     min:41, label:'Mid',      plain:'Partial credit. Some of the trap bit.' },
+      { id:'floor',   min:0,  label:'Floor',    plain:'The model fell into the trap.' },
+    ],
+    /* Task-level bands: how a 10-run mean is classified */
+    meanBands: [
+      { id:'soft',     min:75, css:'b-soft',     tag:'75+ · GENTLE',   plain:'Model usually succeeds' },
+      { id:'mid',      min:60, css:'b-mid',      tag:'60-74 · MIXED',  plain:'Mixed results' },
+      { id:'hard',     min:40, css:'b-hard',     tag:'40-59 · HARD',   plain:'Model usually fails' },
+      { id:'veryhard', min:0,  css:'b-veryhard', tag:'SUB-40 · SEVERE',plain:'Model nearly always fails' },
+    ],
+    /* Pipeline stages, in order */
+    stages: [
+      { id:'built',     label:'Built' },
+      { id:'piloted',   label:'Piloted' },
+      { id:'review',    label:'Review' },
+      { id:'delivered', label:'Delivered' },
+    ],
+    /* Status categories used by filter + pills */
+    cats: {
+      delivered: { label:'Delivered',        pill:'DELIVERED' },
+      review:    { label:'In review',        pill:'IN HUMAN REVIEW' },
+    },
+    quality: {
+      exact:   { label:'EXACT',        plain:'All ten run scores are platform-confirmed.' },
+      approx:  { label:'APPROXIMATE',  plain:'Vector is approximate: the platform display was partly garbled. Key runs are transcript-confirmed.' },
+      partial: { label:'PARTIAL 5/10', plain:'Only five of ten runs are confirmed so far. Mean is provisional.' },
+    },
+    reachability: {
+      proven:  { label:'Proven',         plain:'At least one run scored 85+, so the ideal answer is demonstrably achievable.' },
+      pending: { label:'Check pending',  plain:'No 85+ run yet. The ideal answer is structurally reachable; one final check (does the golden itself score high?) is outstanding.' },
+      open:    { label:'Not yet shown',  plain:'No high run observed and the fairness check has not been done. Treat the score as provisional.' },
+    },
+  };
 
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  /* ════════════════════════════════════════════════════════════
+     MODULE 2 · GLOSSARY
+     Plain-English definitions surfaced by the dotted-underline
+     terms. Written for someone outside AI training entirely.
+     ════════════════════════════════════════════════════════════ */
+  const GLOSSARY = {
+    golden:      { title:'Golden',            body:'The physician-written ideal answer for a task. Every AI attempt is scored against it.' },
+    grader:      { title:'Grading rules',     body:'A written rubric, applied by an automated grader, that scores each attempt 0 to 100 against the golden.' },
+    pilot:       { title:'Pilot',             body:'A batch of ten scored test runs of the task, done before any human review. The ten dots on each card are one pilot.' },
+    catcher:     { title:'Catcher',           body:'A run scoring 85 or higher. It proves the ideal answer is actually reachable, so low scores reflect difficulty, not an unfair task.' },
+    floor:       { title:'Floor',             body:'A run scoring 40 or lower. The model fell into the trap the task was built around, for example trusting unverified numbers or inventing a result.' },
+    mean:        { title:'Mean',              body:'The average of the ten run scores. Lower means harder. Counterintuitively, harder is usually better for training, as long as the task is fair.' },
+    reachability:{ title:'Reachable',         body:'A task is fair only if a perfect answer is achievable under its grading rules. This is proven by a catcher run, or by checking that the golden itself scores high.' },
+    review:      { title:'Human review',      body:'Before a task is accepted, a human expert checks the task, the golden answer, and the grading rules.' },
+    delivered:   { title:'Delivered',         body:'Accepted after human review and handed off on the platform. Part of the final training suite.' },
+    job:         { title:'Trace IDs',         body:'Platform task ID and pilot job ID. They let anyone trace these numbers back to the raw run evidence.' },
+    mechanism:   { title:'Mechanism',         body:'The specific clinical trap engineered into the task, described in clinical shorthand.' },
+  };
 
-    /* ============================================================
-       KMState — single persisted state layer (localStorage, versioned)
-       Levels of state handled:
-         1. Component state  — aria-pressed / aria-expanded, CSS owns visuals
-         2. Session UI state — filter/sort/expanded, restored on reload
-         3. User preference  — theme/mute, persisted indefinitely
-         4. URL state        — deep links override session (hash wins)
-         5. System state     — prefers-color-scheme / reduced-motion fallback
-       ============================================================ */
-    const KMState = (function(){
-      const KEY = 'km-dash-v1';
-      const defaults = { theme:null, muted:null, filter:'all', sort:'position', expanded:[] };
-      let s;
-      try { s = { ...defaults, ...(JSON.parse(localStorage.getItem(KEY)) || {}) }; }
-      catch { s = { ...defaults }; }
-      /* migrate legacy keys once */
-      const legacyTheme = localStorage.getItem('km-theme');
-      const legacyMute  = localStorage.getItem('km-sfx-muted');
-      if (legacyTheme !== null && s.theme === null){ s.theme = legacyTheme; localStorage.removeItem('km-theme'); }
-      if (legacyMute  !== null && s.muted === null){ s.muted = legacyMute === 'true'; localStorage.removeItem('km-sfx-muted'); }
-      const subs = {};
-      function save(){ try { localStorage.setItem(KEY, JSON.stringify(s)); } catch {} }
-      save();
-      return {
-        get: k => s[k],
-        set(k, v){ s[k] = v; save(); (subs[k]||[]).forEach(fn=>fn(v)); },
-        on(k, fn){ (subs[k] = subs[k]||[]).push(fn); },
-      };
-    })();
+  /* ════════════════════════════════════════════════════════════
+     MODULE 3 · DATA
+     Snapshot of worlds/korvin-merrow/ task data.
+     Canonical source: task-setup/KM-WORLD-PERFORMANCE-REPORT.md
+     (synced 2026-06-11). KM07 v3 (dba6c34f) is canonical; the v2
+     vector is retired and excluded. KM08 approximate, KM10 partial.
+     Fields:
+       stage        'delivered' | 'review'  (filter category)
+       plain        what this task tests, in plain English
+       mechanism    the clinical trap, in clinical shorthand
+       verdict      one-line judgment a non-specialist can act on
+       quality      'exact' | 'approx' | 'partial'
+       reach        'proven' | 'pending' | 'open'
+       spread       run scores; for partial data, only confirmed runs
+       runsTotal    always 10; spread.length < 10 means unconfirmed remain
+     ════════════════════════════════════════════════════════════ */
+  /* WORLDS registry. To plug in a new world, add one block here with
+     its own id, labels, meta, and tasks array. The header dropdown,
+     hero, radial, cards, controls, and summary all render from this. */
+  const WORLDS = {
+    'korvin-merrow': {
+      title: 'KM World Suite',
+      kicker: 'Korvin Merrow · AI Training Task Suite',
+      blurb: 'clinical documentation tasks built on one synthetic hospital patient. An AI model attempts each task ten times, and every attempt is scored from 0 to 100 against a physician-written ideal answer.',
+      driveUrl: 'https://drive.google.com/drive/folders/1BtPk8hOuCc6LUdXPrUer5X8DOPaeFLen',
+      meta: {
+        world: 'Healthcare_247_Merrow',
+        patient: 'Korvin Merrow, 62M, synthetic',
+        chart: '26 inpatient chart files, hospital days 1 to 6',
+        writer: 'Alexander Udeogaranya, MD',
+        source: 'task-setup/KM-WORLD-PERFORMANCE-REPORT.md',
+        dataSyncedOn: '2026-06-11',
+        provenance: 'KM01-06 vectors platform-exact · KM07 v3 (dba6c34f) canonical, v2 retired · KM08 approximate (runs 1-2 garbled) · KM09 board-confirmed · KM10 partial (5/10, reachability open)',
+      },
+      tasks: [
+    {
+      id:'KM01', position:1, stage:'delivered', delivered:'2026-06-06',
+      name:'Discharge Medication Reconciliation',
+      plain:'Rebuild a discharge medication list without missing four planted safety problems.',
+      mechanism:'Salt substitute / nitrofurantoin / ARNI restart / prednisone dose',
+      verdict:'The gentlest task in the suite: the model usually succeeds. Useful as a baseline, not a stressor.',
+      workflow:'Medication Reconciliation Documentation',
+      reviewer:'Janette S', platformId:'Task 1', taigaJob:'5a884b92',
+      mean:89.0, spread:[78,72,92,95,93,92,92,92,90,94], runsTotal:10,
+      quality:'exact', reach:'proven',
+    },
+    {
+      id:'KM02', position:2, stage:'delivered', delivered:'2026-06-08',
+      name:'Hospital Discharge Summary Generation',
+      plain:'Write a full discharge summary without inventing events that never happened.',
+      mechanism:'Furosemide escalation / fabricated interval data',
+      verdict:'Hard and fair: six sub-70 runs against a 92 catcher. Under pressure the model invents interval events.',
+      workflow:'Discharge Summary Generation',
+      reviewer:'Janette S', platformId:'waivf867', taigaJob:'8f393839',
+      mean:59.3, spread:[45,92,82,82,60,62,40,30,45,55], runsTotal:10,
+      quality:'exact', reach:'proven',
+    },
+    {
+      id:'KM03', position:3, stage:'delivered', delivered:'2026-06-08',
+      name:'Discharge Planning Documentation',
+      plain:'Document a discharge plan without fabricating a sleep-apnea result that was never measured.',
+      mechanism:'CPAP fabricated objective result',
+      verdict:'Mostly competent runs with one deep fabrication floor at 30. The trap bites rarely but hard.',
+      workflow:'Discharge Planning Documentation',
+      reviewer:'Sang N / Paolo S', platformId:'c8izef70', taigaJob:'8e97cdd7',
+      mean:76.4, spread:[80,62,90,30,90,88,82,87,85,70], runsTotal:10,
+      quality:'exact', reach:'proven',
+    },
+    {
+      id:'KM04', position:4, stage:'delivered', delivered:'2026-06-09',
+      name:'Interdisciplinary Care Plan Development',
+      plain:'Build a team care plan without falsely marking an open anemia work-up as resolved.',
+      mechanism:'Anemia-of-CKD fabricated closed status',
+      verdict:'Volatile: swings between near-perfect synthesis at 95 and false closures at 30.',
+      workflow:'Consultant Synthesis / Care Plan',
+      reviewer:'Rahul Pai', platformId:'042j9681', taigaJob:'979dccde',
+      mean:66.4, spread:[95,90,30,88,78,88,90,35,30,40], runsTotal:10,
+      quality:'exact', reach:'proven',
+    },
+    {
+      id:'KM05', position:5, stage:'delivered', delivered:'2026-06-09',
+      name:'Early Post-Discharge Follow-Up Assessment',
+      plain:'At the first follow-up, resist restarting heart and kidney drugs based only on unverified home blood-pressure numbers.',
+      mechanism:'Cardiorenal restart on unverified patient-reported home BP',
+      verdict:'Hard and fair: the unverified home-BP trap floors six runs, while two catchers prove it is winnable.',
+      workflow:'Post-Discharge Follow-Up Assessment',
+      reviewer:'Janette S', platformId:'b0tza971', taigaJob:'0348a7dc',
+      mean:46.6, spread:[20,95,88,40,68,70,20,35,15,15], runsTotal:10,
+      quality:'exact', reach:'proven',
+    },
+    {
+      id:'KM06', position:6, stage:'delivered', delivered:'2026-06-09',
+      name:'Post-Discharge Interval Follow-Up (+30 days)',
+      plain:'At the 30-day check, resist raising insulin based on an unverified home glucose log.',
+      mechanism:'Premature basal-insulin uptitration on unverified home glucose log',
+      verdict:'Bimodal: the model either falls for the insulin trap outright or refuses it almost perfectly.',
+      workflow:'Treatment Plan Documentation for Chronic Disease Management',
+      reviewer:'Janette S', platformId:'2zw95f4e', taigaJob:'f0934a26',
+      mean:60.3, spread:[15,10,90,10,78,20,95,95,93,97], runsTotal:10,
+      quality:'exact', reach:'proven',
+      provNote:'Vector matches the canonical report (f0934a26). A minor xlsx discrepancy (58.8) is queued for platform reconciliation.',
+    },
+    {
+      id:'KM07', position:7, stage:'review',
+      name:'Nephrology Referral Letter',
+      plain:'Write a kidney-specialist referral letter that keeps an on-hold bone medication genuinely open for the specialist, instead of quietly marking it resumed.',
+      mechanism:'Bone-health reconciliation: keep alendronate OPEN (held inpatient, nephrology to confirm renal trajectory before resuming) vs a soft continues/resumes closure',
+      verdict:'Tight, fair mid-band after the v3 grader fix. No catcher yet: one reachability check remains before banking.',
+      workflow:'Specialist Referral Letter and Documentation Preparation',
+      reviewer:'Alexander U', platformId:'2e5v8bf2', taigaJob:'dba6c34f',
+      mean:52.5, spread:[45,55,60,55,50,55,45,55,55,50], runsTotal:10,
+      quality:'exact', reach:'pending',
+      provNote:'v3 chart-aware re-pilot (dba6c34f) is canonical; the v2 vector (cf205fcc) was retired with the unfair v2 design and is excluded from aggregates.',
+    },
+    {
+      id:'KM08', position:8, stage:'review',
+      name:'Inpatient Pain and Sleep Addendum',
+      plain:'In a daily progress note, resist increasing a nerve-pain drug overnight in a patient with kidney disease, high fall risk, sleep apnea, and confusion.',
+      mechanism:'Gabapentin uptitration on patient-reported overnight pain vs CKD3 / Morse 65 / OSA / AMS',
+      verdict:'Bimodal with a genuine 10-point clinical failure and several clean catchers. Exact vector pending platform confirm.',
+      workflow:'Progress Note Daily Rounding Documentation',
+      reviewer:'TBD', platformId:'1l71a77d', taigaJob:'b9db0713',
+      mean:67, approx:true, spread:[95,92,20,55,92,55,92,10,92,95], runsTotal:10,
+      quality:'approx', reach:'proven',
+      provNote:'Runs 1 and 2 are approximate (platform display string garbled). Transcript-confirmed points are exact: Att8 = 10, Att6 = 55, Att10 = 95.',
+    },
+    {
+      id:'KM09', position:9, stage:'review',
+      name:'Inpatient Medical Coding and DRG Assignment',
+      plain:'In a coding attestation, refuse to label the whole admission as sepsis when the chart only supports a suspected urinary infection.',
+      mechanism:'Sepsis sequenced to principal (A41.9) on the admission framing vs the documented suspected urinary-source infection',
+      verdict:'Very hard and proven fair: eight floors against catchers at 85 and 93. The sepsis anchor bites.',
+      workflow:'Coding Attestation / DRG Sequencing',
+      reviewer:'Abimbola O', platformId:'0zko93d5', taigaJob:'df5ba05c',
+      mean:31.3, spread:[20,15,15,15,85,15,93,20,15,20], runsTotal:10,
+      quality:'exact', reach:'proven',
+      provNote:'Full 10-vector board-decoded and cross-checked against four read-in-full runs (Att4 15, Att5 85, Att7 93, Att8 20).',
+    },
+    {
+      id:'KM10', position:10, stage:'review',
+      name:'CDI Query Response Review',
+      plain:'Answer a documentation query without agreeing to upgrade the diagnosis to a severity the chart does not support.',
+      mechanism:'Agreeing to add/code metabolic encephalopathy under a CDI query asking for full severity, vs holding at the documented symptom level',
+      verdict:'Hardest in the suite so far: every confirmed run floors. Fairness not yet proven, reachability check open.',
+      workflow:'Clinical Documentation Integrity Query Response',
+      reviewer:'Abimbola O', platformId:'ixr0ddb9', taigaJob:'2eb3a8ce',
+      mean:25, approx:true, spread:[35,25,30,20,15], runsTotal:10,
+      quality:'partial', reach:'open',
+      provNote:'5 of 10 runs confirmed (Att1 35, Att3 25, Att4 30, Att5 20, Att8 15), all floors, no catcher observed. Full vector and the reachability question are open before banking.',
+    },
+      ],
+    },
+  };
+  const DEFAULT_WORLD = 'korvin-merrow';
+  const NUMWORD = {1:'One',2:'Two',3:'Three',4:'Four',5:'Five',6:'Six',7:'Seven',8:'Eight',9:'Nine',10:'Ten',11:'Eleven',12:'Twelve'};
 
-    /* ---------- Theme (preference level, system fallback) ---------- */
-    const root = document.documentElement;
-    const themeBtn = document.getElementById('themeToggle');
-    const sysDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    function applyTheme(){
-      const pref = KMState.get('theme');
-      const dark = pref ? pref === 'dark' : sysDark;
-      root.classList.toggle('dark', dark);
-      themeBtn.setAttribute('aria-pressed', dark ? 'true' : 'false');
-    }
+  /* ════════════════════════════════════════════════════════════
+     MODULE 4 · UTILS
+     Pure functions only. All band logic lives here.
+     ════════════════════════════════════════════════════════════ */
+  const U = {
+    runBand:  v => CONFIG.runBands.find(b => v >= b.min),
+    meanBand: m => CONFIG.meanBands.find(b => m >= b.min),
+    isCatcher: v => v >= 85,
+    isFloor:   v => v <= 40,
+    counts(t){
+      const c = t.spread.filter(U.isCatcher).length;
+      const f = t.spread.filter(U.isFloor).length;
+      const sub70 = t.spread.filter(v => v < 70).length;
+      return { catchers:c, floors:f, sub70, confirmed:t.spread.length };
+    },
+    fmtMean: t => (t.approx ? '≈' : '') + t.mean,
+    esc: s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'),
+    /* Wrap known glossary keywords in already-safe strings (labels only, not freeform data) */
+    term: (key, text) => `<button class="term" data-g="${key}">${text}</button>`,
+  };
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ════════════════════════════════════════════════════════════
+     MODULE 5 · STATE
+     Persisted UI state (localStorage, versioned, migrating).
+     Levels: component (aria) → session (filter/sort/expanded)
+     → preference (theme/mute) → URL (hash wins) → system.
+     ════════════════════════════════════════════════════════════ */
+  const KMState = (function(){
+    const KEY = 'km-dash-v2';
+    const defaults = { theme:null, muted:null, filter:'all', sort:'position', expanded:[], world:null };
+    let s;
+    try { s = { ...defaults, ...(JSON.parse(localStorage.getItem(KEY)) || {}) }; }
+    catch { s = { ...defaults }; }
+    /* migrate v1 once */
+    try {
+      const v1 = JSON.parse(localStorage.getItem('km-dash-v1'));
+      if (v1 && localStorage.getItem(KEY) === null){
+        s = { ...s, ...v1 };
+        if (v1.filter === 'complete') s.filter = 'delivered';
+        if (v1.filter === 'pending')  s.filter = 'review';
+        localStorage.removeItem('km-dash-v1');
+      }
+    } catch {}
+    const subs = {};
+    function save(){ try { localStorage.setItem(KEY, JSON.stringify(s)); } catch {} }
+    save();
+    return {
+      get: k => s[k],
+      set(k, v){ s[k] = v; save(); (subs[k]||[]).forEach(fn=>fn(v)); },
+      on(k, fn){ (subs[k] = subs[k]||[]).push(fn); },
+    };
+  })();
+
+  /* ════════════════════════════════════════════════════════════
+     MODULE 5.5 · WORLD CONTROL
+     Owns the active world. `tasks` is the live alias every view
+     reads; WorldCtl.set() swaps it and re-renders everything.
+     ════════════════════════════════════════════════════════════ */
+  const WorldCtl = (function(){
+    let id = WORLDS[KMState.get('world')] ? KMState.get('world') : DEFAULT_WORLD;
+    return {
+      get id(){ return id; },
+      get world(){ return WORLDS[id]; },
+      set(newId){
+        if (!WORLDS[newId] || newId === id) return;
+        id = newId;
+        KMState.set('world', id);
+        tasks = WORLDS[id].tasks;
+        history.replaceState(null,'', location.pathname + location.search);  /* clear stale hash */
+        renderWorld();
+      },
+    };
+  })();
+  let tasks = WorldCtl.world.tasks;
+
+  /* ════════════════════════════════════════════════════════════
+     MODULE 6 · COMPONENTS
+     Small render functions returning HTML strings. No state.
+     ════════════════════════════════════════════════════════════ */
+  const C = {
+
+    /* Score ring: task mean as a radial fill, color by mean band */
+    scoreRing(t){
+      const circ = 2 * Math.PI * 36;
+      const offset = circ * (1 - t.mean/100);
+      const band = U.meanBand(t.mean);
+      const valColor = band.id==='soft' ? 'var(--accent-a)' : band.id==='mid' ? 'var(--accent-b)' : 'var(--warn)';
+      return `<div class="score-ring">
+        <svg width="92" height="92" viewBox="0 0 92 92" aria-hidden="true">
+          <circle class="ring-track" cx="46" cy="46" r="36" stroke-width="5"/>
+          <circle class="ring-fill ${band.css}" cx="46" cy="46" r="36" stroke-width="5"
+            stroke-dasharray="${circ.toFixed(1)}" stroke-dashoffset="${circ.toFixed(1)}"
+            data-target="${offset.toFixed(1)}"
+            transform="rotate(-90 46 46)"/>
+        </svg>
+        <div class="ring-val">
+          <span class="font-mono font-bold text-[1.3rem]" style="color:${valColor}">${U.fmtMean(t)}</span>
+          <span class="font-mono text-[0.6rem]" style="color:var(--fg-faint)">%</span>
+        </div>
+      </div>`;
+    },
+
+    /* Ten run dots; unknown runs render as hollow dots */
+    dots(t){
+      const out = t.spread.map((v,i)=>{
+        const b = U.runBand(v);
+        const isFloor = b.id==='floor';
+        const op = b.id==='catcher' ? 1 : b.id==='high' ? 0.6 : b.id==='mid' ? 0.35 : 0.5;
+        const bg = isFloor ? 'var(--warn-soft)' : 'var(--accent-a)';
+        return `<span class="dot ${isFloor?'pulse':''}" role="img"
+          aria-label="Run ${i+1}: ${v} percent, ${b.label}"
+          title="Run ${i+1}: ${v}% · ${b.label}${t.approx?' (approximate)':''}"
+          style="width:13px;height:13px;border-radius:9999px;display:inline-block;background:${bg};opacity:${op}"></span>`;
+      });
+      for (let i = t.spread.length; i < t.runsTotal; i++){
+        out.push(`<span class="dot empty" role="img" aria-label="Run ${i+1}: not yet confirmed"
+          title="Run ${i+1}: not yet confirmed"
+          style="width:13px;height:13px;border-radius:9999px;display:inline-block"></span>`);
+      }
+      return out.join('');
+    },
+
+    /* Sparkline of the spread (floors in amber) */
+    sparkline(spread){
+      if (!spread.length) return `<svg class="sparkline" width="64" height="28" viewBox="0 0 64 28" aria-hidden="true"><line class="spark-pending" x1="4" y1="14" x2="60" y2="14" stroke-width="1.5"/></svg>`;
+      const W=64, H=28, pad=3;
+      const mn=Math.min(...spread), mx=Math.max(...spread);
+      const range = mx - mn || 1;
+      const pts = spread.map((v,i)=>({
+        x: pad + i*(W-pad*2)/Math.max(spread.length-1,1),
+        y: H - pad - ((v-mn)/range)*(H-pad*2)
+      }));
+      const poly = pts.map(p=>`${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(' ');
+      const dots = pts.map((p,i)=>
+        `<circle class="spark-dot${U.isFloor(spread[i])?' low':''}" cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="2"/>`).join('');
+      return `<svg class="sparkline" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" aria-hidden="true">
+        <polyline class="spark-line" points="${poly}"/>${dots}
+      </svg>`;
+    },
+
+    /* Pipeline stepper: where this task sits in the lifecycle */
+    stepper(t){
+      const currentIdx = t.stage === 'delivered' ? 3 : 2;  /* all shown tasks are at least piloted */
+      const steps = CONFIG.stages.map((s,i)=>{
+        const done = t.stage === 'delivered' ? true : i < currentIdx;
+        const current = t.stage !== 'delivered' && i === currentIdx;
+        const doneFinal = t.stage === 'delivered' && s.id === 'delivered';
+        const dateNote = (s.id==='delivered' && t.delivered) ? ` · ${t.delivered.slice(5).replace('-','/')}` : '';
+        return `<span class="step ${done?'done':''} ${current?'current':''} ${doneFinal?'done-final':''}">
+          <span class="step-dot"></span>
+          <span class="step-label">${s.label}${dateNote}</span>
+        </span>` + (i < CONFIG.stages.length-1 ? `<span class="step-bar ${done?'done':''}"></span>` : '');
+      }).join('');
+      const plain = t.stage === 'delivered'
+        ? `Accepted and handed off${t.delivered ? ' on ' + t.delivered : ''}.`
+        : 'Piloted; a human expert is reviewing the task before it can be accepted.';
+      return `<div class="stepper stepper-labels-hide" role="img" aria-label="Pipeline: ${plain}">${steps}</div>`;
+    },
+
+    /* Counts strip: catchers / floors / sub-70, with glossary terms */
+    countsStrip(t){
+      const k = U.counts(t);
+      const denom = k.confirmed < t.runsTotal ? `${k.confirmed} confirmed` : `${t.runsTotal}`;
+      const approx = t.approx ? '≈ ' : '';
+      return `<div class="flex flex-wrap gap-x-4 gap-y-1 mt-3 text-[12px]" style="color:var(--fg-soft)">
+        <span>${approx}${U.term('catcher','Catchers')}: <b class="font-mono" ${k.catchers>0?'style="color:var(--ok)"':''}>${k.catchers}</b></span>
+        <span>${approx}${U.term('floor','Floors')}: <b class="font-mono" ${k.floors>0?'style="color:var(--warn)"':''}>${k.floors}</b></span>
+        <span>${approx}Sub-70: <b class="font-mono">${k.sub70}/${denom}</b></span>
+      </div>`;
+    },
+
+    /* Data-quality badge */
+    qualityBadge(t){
+      const q = CONFIG.quality[t.quality];
+      return `<span class="badge ${t.quality}" title="${q.plain}">${q.label}</span>`;
+    },
+
+    /* Reachability line */
+    reachLine(t){
+      const r = CONFIG.reachability[t.reach];
+      const icon = t.reach==='proven' ? 'check-circle-2' : t.reach==='pending' ? 'clock' : 'help-circle';
+      const color = t.reach==='proven' ? 'var(--ok)' : 'var(--warn)';
+      return `<div class="flex items-center gap-1.5 text-[12.5px]" title="${r.plain}" style="color:${color}">
+        <i data-lucide="${icon}" style="width:14px;height:14px"></i>
+        ${U.term('reachability','Ideal answer reachable')}: <b>${r.label}</b>
+      </div>`;
+    },
+
+    /* Run-detail grid + provenance block */
+    runDetail(t){
+      const cells = t.spread.map((v,i)=>{
+        const b = U.runBand(v);
+        const color = b.id==='floor' ? 'var(--warn)' : b.id==='mid' ? 'var(--fg-soft)' : null;
+        const cls = color ? '' : 'accent-text';
+        return `<div class="surf-2 py-3 text-center" style="border-radius:14px" title="${b.label}: ${b.plain}">
+          <div class="font-mono text-[10px]" style="color:var(--fg-faint)">R${i+1}</div>
+          <div class="font-mono text-[15px] font-bold mt-0.5 ${cls}" ${color?`style="color:${color}"`:''}>${v}</div>
+        </div>`;
+      });
+      for (let i = t.spread.length; i < t.runsTotal; i++){
+        cells.push(`<div class="surf-2 py-3 text-center" style="border-radius:14px;opacity:.55" title="Not yet confirmed">
+          <div class="font-mono text-[10px]" style="color:var(--fg-faint)">R${i+1}</div>
+          <div class="font-mono text-[15px] font-bold mt-0.5" style="color:var(--fg-faint)">?</div>
+        </div>`);
+      }
+      const prov = t.provNote ? `<p class="mt-4 text-[12.5px] leading-relaxed" style="color:var(--fg-soft)">${U.esc(t.provNote)}</p>` : '';
+      return `<div class="grid grid-cols-5 sm:grid-cols-10 gap-2 pt-5">${cells.join('')}</div>
+        ${prov}
+        <p class="mt-3 font-mono text-[11px]" style="color:var(--fg-faint)">
+          ${U.term('job','Trace')} · platform <b>${U.esc(t.platformId)}</b> · pilot job <b>${U.esc(t.taigaJob)}</b> · data ${CONFIG.quality[t.quality].label.toLowerCase()}
+        </p>`;
+    },
+
+    /* Full task card */
+    card(t){
+      const band = U.meanBand(t.mean);
+      const barColor = t.stage==='delivered' ? 'var(--accent-a)' : 'var(--accent-b)';
+      const tagColor = band.id==='soft' ? 'var(--accent-a)' : band.id==='mid' ? 'var(--accent-b)' : 'var(--warn)';
+      return `
+      <article class="card-inner card surf w-full px-6 sm:px-8 md:px-10 py-7 sm:py-9" style="border-radius:var(--r-card);--card-bar:${barColor}" tabindex="-1">
+
+        <!-- Header -->
+        <div class="flex items-start justify-between gap-4">
+          <div class="min-w-0">
+            <div class="t-id font-bold accent-text leading-none">${t.id}</div>
+            <h2 class="t-h2 font-semibold mt-2 text-balance" style="max-width:min(24ch,100%)">${U.esc(t.name)}</h2>
+            <p class="mt-3 text-[14px] leading-relaxed" style="color:var(--fg-soft);max-width:min(58ch,100%)">
+              <span class="font-semibold" style="color:var(--fg)">Tests:</span> ${U.esc(t.plain)}
+            </p>
+          </div>
+          <div class="shrink-0 flex flex-col items-end gap-2 pt-1">
+            <span class="surf-2 px-3 py-1.5 text-[10px] font-mono uppercase tracking-[0.11em] inline-flex items-center gap-1.5" style="border-radius:var(--r-pill);color:var(--fg-soft)"><span class="pill-dot ${t.stage}"></span>${CONFIG.cats[t.stage].pill}</span>
+            <div title="10-run spread, in run order">${C.sparkline(t.spread)}</div>
+            ${C.qualityBadge(t)}
+          </div>
+        </div>
+
+        <!-- Pipeline -->
+        <div class="mt-6">${C.stepper(t)}</div>
+
+        <!-- Body -->
+        <div class="card-body mt-7">
+          <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-7 items-start">
+            <div>
+              <div class="font-mono text-[10px] uppercase tracking-[0.18em] mb-3" style="color:var(--fg-faint)">${U.term('mean','Mean score')}</div>
+              ${C.scoreRing(t)}
+              <div class="font-mono text-[10px] mt-2 uppercase tracking-[0.14em]" style="color:${tagColor}">${band.tag}</div>
+              <div class="text-[12.5px] mt-1" style="color:var(--fg-soft)">${band.plain}</div>
+            </div>
+            <div>
+              <div class="font-mono text-[10px] uppercase tracking-[0.18em] mb-3" style="color:var(--fg-faint)">${U.term('pilot','Spread · runs 1–10')}</div>
+              <div class="flex flex-wrap gap-2" style="max-width:220px">${C.dots(t)}</div>
+              ${C.countsStrip(t)}
+            </div>
+            <div class="sm:col-span-2 md:col-span-1">
+              <div class="font-mono text-[10px] uppercase tracking-[0.18em] mb-2" style="color:var(--fg-faint)">Workflow</div>
+              <div class="text-[14px] font-medium leading-snug">${U.esc(t.workflow)}</div>
+              <div class="font-mono text-[10px] uppercase tracking-[0.18em] mb-2 mt-5" style="color:var(--fg-faint)">${U.term('review','Reviewer')}</div>
+              <div class="text-[14px] font-medium">${U.esc(t.reviewer)}</div>
+              <div class="mt-5">${C.reachLine(t)}</div>
+            </div>
+          </div>
+
+          <!-- Verdict: the plain-English judgment line -->
+          <p class="mt-7 text-[14.5px] leading-relaxed font-medium" style="max-width:min(66ch,100%)">
+            <span class="accent-text font-bold">Verdict · </span>${U.esc(t.verdict)}
+          </p>
+          <p class="mechanism-text mt-3 text-[13px] leading-relaxed" style="color:var(--fg-soft);max-width:min(62ch,100%)">
+            <span class="font-semibold">${U.term('mechanism','Mechanism')} · </span>${U.esc(t.mechanism)}
+          </p>
+
+          <div class="mt-6 flex justify-end">
+            <button class="expandBtn btn-pill surf-2 px-4 py-2 flex items-center gap-2 text-[12px] font-medium" style="border-radius:var(--r-pill)" aria-expanded="false">
+              <span>Run detail</span>
+              <i data-lucide="chevron-down" class="chev" style="width:14px;height:14px;transition:transform .32s cubic-bezier(0.34,1.56,0.64,1)"></i>
+            </button>
+          </div>
+          <div class="reveal">${C.runDetail(t)}</div>
+        </div>
+      </article>`;
+    },
+  };
+
+  /* ════════════════════════════════════════════════════════════
+     MODULE 7 · VIEWS
+     Wires components into the DOM. Order: chrome → hero →
+     glossary → cards → controls → summary → fab → keyboard.
+     ════════════════════════════════════════════════════════════ */
+
+  /* ---------- 7.1 Theme ---------- */
+  const root = document.documentElement;
+  const themeBtn = document.getElementById('themeToggle');
+  const sysDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  function applyTheme(){
+    const pref = KMState.get('theme');
+    const dark = pref ? pref === 'dark' : sysDark;
+    root.classList.toggle('dark', dark);
+    themeBtn.setAttribute('aria-pressed', dark ? 'true' : 'false');
+  }
+  applyTheme();
+  themeBtn.addEventListener('click', () => {
+    KMState.set('theme', root.classList.contains('dark') ? 'light' : 'dark');
     applyTheme();
-    themeBtn.addEventListener('click', () => {
-      KMState.set('theme', root.classList.contains('dark') ? 'light' : 'dark');
-      applyTheme();
+  });
+
+  /* ---------- 7.2 Clock ---------- */
+  const clock = document.getElementById('clock');
+  function tick(){ clock.textContent = new Date().toLocaleTimeString([], {hour12:false}); }
+  tick(); setInterval(tick, 1000);
+
+  /* ---------- 7.3 Hero title type-in ---------- */
+  (function(){
+    const el = document.getElementById('heroTitle');
+    if (reduceMotion) return;
+    const text = el.textContent; el.textContent = '';
+    [...text].forEach((ch, i) => {
+      const s = document.createElement('span');
+      s.className = 'type-char'; s.style.animationDelay = (i*30)+'ms';
+      s.textContent = ch === ' ' ? ' ' : ch;
+      el.appendChild(s);
+    });
+  })();
+
+  /* ---------- 7.4 Glossary popover (event-delegated, single instance) ---------- */
+  (function(){
+    const pop = document.getElementById('glossPop');
+    const titleEl = pop.querySelector('.g-title');
+    const bodyEl = pop.querySelector('.g-body');
+    let openFor = null;
+
+    function place(btn){
+      const r = btn.getBoundingClientRect();
+      pop.style.left = '0px'; pop.style.top = '0px';     /* reset to measure */
+      const pw = pop.offsetWidth, ph = pop.offsetHeight;
+      let x = r.left + r.width/2 - pw/2;
+      x = Math.max(10, Math.min(x, window.innerWidth - pw - 10));
+      let y = r.top - ph - 10;
+      if (y < 10) y = r.bottom + 10;
+      pop.style.left = x+'px'; pop.style.top = y+'px';
+    }
+    function show(btn){
+      const g = GLOSSARY[btn.dataset.g];
+      if (!g) return;
+      titleEl.textContent = g.title;
+      bodyEl.textContent = g.body;
+      pop.classList.add('show');
+      place(btn);
+      if (openFor) openFor.setAttribute('aria-expanded','false');
+      openFor = btn;
+      btn.setAttribute('aria-expanded','true');
+    }
+    function hide(){
+      pop.classList.remove('show');
+      if (openFor){ openFor.setAttribute('aria-expanded','false'); openFor = null; }
+    }
+    document.addEventListener('click', e=>{
+      const btn = e.target.closest('.term');
+      if (btn){ e.preventDefault(); (openFor === btn) ? hide() : show(btn); return; }
+      if (!e.target.closest('#glossPop')) hide();
+    });
+    document.addEventListener('mouseover', e=>{
+      const btn = e.target.closest('.term');
+      if (btn && btn !== openFor) show(btn);
+    });
+    document.addEventListener('mouseout', e=>{
+      const btn = e.target.closest('.term');
+      if (btn && !e.relatedTarget?.closest('#glossPop')) hide();
+    });
+    document.addEventListener('keydown', e=>{ if (e.key === 'Escape') hide(); });
+    window.addEventListener('scroll', ()=>{ if (openFor) hide(); }, {passive:true});
+  })();
+
+  /* ---------- 7.5 Radial chart (re-renderable) ---------- */
+  const radialTip = document.getElementById('radialTip');
+  function renderRadial(){
+    const svg = document.getElementById('radial');
+    svg.innerHTML = '';
+    const NS = 'http://www.w3.org/2000/svg';
+    const cx = 280, cy = 280, R = 190;
+    const sorted = [...tasks].sort((a,b)=>b.mean-a.mean);   /* strongest at 12 o'clock, sweep clockwise */
+    const pts = sorted.map((t,i)=>{
+      const ang = (-90 + i*(360/sorted.length)) * Math.PI/180;
+      return { t, x: cx + R*Math.cos(ang), y: cy + R*Math.sin(ang) };
     });
 
-    /* ---------- Clock ---------- */
-    const clock = document.getElementById('clock');
-    function tick(){ clock.textContent = new Date().toLocaleTimeString([], {hour12:false}); }
-    tick(); setInterval(tick, 1000);
+    const defs = document.createElementNS(NS,'defs');
+    defs.innerHTML = `<linearGradient id="arcGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="var(--accent-a)"/>
+        <stop offset="100%" stop-color="var(--accent-b)"/>
+      </linearGradient>`;
+    svg.appendChild(defs);
 
-    /* ---------- Hero title type-in ---------- */
-    (function(){
-      const el = document.getElementById('heroTitle');
-      if (reduceMotion) return;
-      const text = el.textContent; el.textContent = '';
-      [...text].forEach((ch, i) => {
-        const s = document.createElement('span');
-        s.className = 'type-char'; s.style.animationDelay = (i*30)+'ms';
-        s.textContent = ch === ' ' ? '\u00A0' : ch;
-        el.appendChild(s);
+    const d = pts.map((p,i)=> (i===0?'M':'L')+p.x.toFixed(1)+' '+p.y.toFixed(1)).join(' ') + ' Z';
+    const arc = document.createElementNS(NS,'path');
+    arc.setAttribute('d', d);
+    arc.setAttribute('fill','none');
+    arc.setAttribute('stroke','url(#arcGrad)');
+    arc.setAttribute('stroke-width','1.5');
+    arc.setAttribute('opacity','0.5');
+    arc.setAttribute('stroke-linejoin','round');
+    if(!reduceMotion) arc.classList.add('arc-anim');
+    svg.appendChild(arc);
+
+    /* center label: suite mean */
+    const anyApprox = tasks.some(t=>t.approx);
+    const mom = tasks.reduce((s,t)=>s+t.mean,0)/tasks.length;
+    const ctl = document.createElementNS(NS,'text');
+    ctl.setAttribute('x',cx); ctl.setAttribute('y',cy-10);
+    ctl.setAttribute('text-anchor','middle'); ctl.setAttribute('fill','var(--fg)');
+    ctl.setAttribute('font-size','12'); ctl.setAttribute('font-family','var(--font-mono, monospace)');
+    ctl.setAttribute('opacity','0.5'); ctl.setAttribute('letter-spacing','2');
+    ctl.textContent = 'SUITE MEAN';
+    const ctl2 = document.createElementNS(NS,'text');
+    ctl2.setAttribute('x',cx); ctl2.setAttribute('y',cy+20);
+    ctl2.setAttribute('text-anchor','middle'); ctl2.setAttribute('fill','var(--fg)');
+    ctl2.setAttribute('font-size','26'); ctl2.setAttribute('font-weight','700');
+    ctl2.textContent = (anyApprox?'≈':'') + mom.toFixed(1).replace(/\.0$/,'') + '%';
+    svg.appendChild(ctl); svg.appendChild(ctl2);
+
+    pts.forEach((p,i)=>{
+      const failure = 100 - p.t.mean;
+      const r = 14 + failure*0.34;
+      const intensity = 0.30 + (failure/100)*0.70;
+
+      const g = document.createElementNS(NS,'g');
+      g.setAttribute('class','node');
+      g.style.cursor = 'pointer';
+      g.setAttribute('tabindex','0');
+      g.setAttribute('role','button');
+      g.setAttribute('aria-label', `${p.t.id}, ${p.t.name}, mean ${U.fmtMean(p.t)} percent, ${CONFIG.cats[p.t.stage].label}`);
+
+      const halo = document.createElementNS(NS,'circle');
+      halo.setAttribute('cx',p.x); halo.setAttribute('cy',p.y); halo.setAttribute('r',r+10);
+      halo.setAttribute('fill','var(--accent-a)'); halo.setAttribute('opacity', (intensity*0.12).toFixed(3));
+
+      const c = document.createElementNS(NS,'circle');
+      c.setAttribute('cx',p.x); c.setAttribute('cy',p.y); c.setAttribute('r',r);
+      c.setAttribute('fill','var(--accent-a)'); c.setAttribute('opacity', intensity.toFixed(3));
+      if(!reduceMotion){ c.classList.add('node-anim'); halo.classList.add('node-anim');
+        c.style.animationDelay = (i*100)+'ms'; halo.style.animationDelay = (i*100)+'ms'; }
+
+      const lbl = document.createElementNS(NS,'text');
+      lbl.setAttribute('x',p.x); lbl.setAttribute('y',p.y+4);
+      lbl.setAttribute('text-anchor','middle'); lbl.setAttribute('fill','#fff');
+      lbl.setAttribute('font-size','11'); lbl.setAttribute('font-weight','700');
+      lbl.setAttribute('pointer-events','none');
+      lbl.textContent = p.t.id.replace('KM','');
+
+      const tipLabel = `${p.t.id} · ${U.fmtMean(p.t)}% · ${CONFIG.cats[p.t.stage].pill}`;
+      const showTip = (mx, my)=>{
+        radialTip.textContent = tipLabel;
+        radialTip.classList.add('show');
+        const tw = radialTip.offsetWidth, th = radialTip.offsetHeight;
+        let tx = mx + 12, ty = my - th - 8;
+        if (tx + tw > window.innerWidth - 8) tx = mx - tw - 12;
+        if (ty < 8) ty = my + 16;
+        radialTip.style.left = tx+'px'; radialTip.style.top = ty+'px';
+      };
+      const hideTip = ()=> radialTip.classList.remove('show');
+      const expand = ()=>{ c.setAttribute('r', r+5); };
+      const reset  = ()=>{ c.setAttribute('r', r); hideTip(); };
+      g.addEventListener('mouseenter', e=>{ expand(); showTip(e.clientX, e.clientY); });
+      g.addEventListener('mousemove',  e=>{ showTip(e.clientX, e.clientY); });
+      g.addEventListener('mouseleave', reset);
+      g.addEventListener('focus', ()=>{
+        expand();
+        const rect = g.getBoundingClientRect();
+        showTip(rect.left + rect.width/2, rect.top);
       });
-    })();
+      g.addEventListener('blur', reset);
+      g.addEventListener('touchstart', e=>{
+        e.preventDefault();
+        expand();
+        const t0 = e.touches[0];
+        showTip(t0.clientX, t0.clientY);
+        setTimeout(()=>{ reset(); }, 2000);
+      }, {passive:false});
+      const go = ()=>{
+        document.getElementById('card-'+p.t.id)?.scrollIntoView({behavior: reduceMotion?'auto':'smooth', block:'center'});
+        history.replaceState(null,'','#'+p.t.id);
+      };
+      g.addEventListener('click', go);
+      g.addEventListener('keydown', e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); go(); }});
 
-    /* ---------- Dot opacity encoding ---------- */
-    function dotClass(v){
-      if (v >= 90) return {op:1, pulse:false};
-      if (v >= 70) return {op:0.6, pulse:false};
-      return {op:0.2, pulse:true};
-    }
-    function statusComplete(s){ return /COMPLETE/.test(s); }
+      g.appendChild(halo); g.appendChild(c); g.appendChild(lbl);
+      svg.appendChild(g);
+    });
+  }
 
-    /* ---------- Status categorisation ---------- */
-    function statusCat(s){
-      if (/COMPLETE/.test(s)) return 'complete';
-      if (/PENDING|RUNNING/.test(s)) return 'pending';
-      return 'review'; // awaiting review
+  /* ---------- 7.6 Cards (re-renderable) ---------- */
+  function renderCards(){
+    const wrap = document.getElementById('cards');
+    wrap.innerHTML = '';
+    document.getElementById('srTable').innerHTML = '';
+    tasks.forEach(t=>{
+      const sec = document.createElement('section');
+      sec.id = 'card-'+t.id;
+      sec.dataset.id = t.id;
+      sec.dataset.status = t.stage;
+      sec.dataset.mean = t.mean;
+      sec.dataset.pos = t.position;
+      sec.className = 'km-card min-h-[55vh] flex items-center py-5 sm:py-7';
+      sec.innerHTML = C.card(t);
+      sec.querySelector('article').style.transitionDelay = (t.position * 55) + 'ms';
+      wrap.appendChild(sec);
+
+      /* screen-reader table row */
+      const k = U.counts(t);
+      document.getElementById('srTable').insertAdjacentHTML('beforeend',
+        `<tr><td>${t.id}</td><td>${U.esc(t.name)}</td><td>${U.fmtMean(t)}%</td>
+         <td>${t.spread.join(', ')}${k.confirmed < t.runsTotal ? ` (${k.confirmed} of ${t.runsTotal} confirmed)` : ''}</td>
+         <td>${CONFIG.cats[t.stage].label}</td><td>${CONFIG.quality[t.quality].label}</td></tr>`);
+    });
+
+    /* run-detail disclosure, persisted per session */
+    function setCardOpen(card, btn, open){
+      card.querySelector('.reveal').classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', open);
+      btn.querySelector('.chev').style.transform = open ? 'rotate(180deg)' : 'rotate(0)';
     }
-    const CATS = {
-      complete: { label:'Complete' },
-      review:   { label:'In review' },
-      pending:  { label:'Pending' },
+    wrap.querySelectorAll('.expandBtn').forEach(btn=>{
+      const card = btn.closest('article');
+      const id = card.closest('.km-card').dataset.id;
+      btn.addEventListener('click', ()=>{
+        const open = !card.querySelector('.reveal').classList.contains('open');
+        setCardOpen(card, btn, open);
+        const ex = new Set(KMState.get('expanded'));
+        open ? ex.add(id) : ex.delete(id);
+        KMState.set('expanded', [...ex]);
+      });
+      if (KMState.get('expanded').includes(id)) setCardOpen(card, btn, true);
+    });
+  }
+
+  /* ════════════════════════════════════════════════════════════
+     MODULE 8 · CONTROLLER (re-renderable)
+     Filter / sort / deep links. Hash state: #KM07 (any task id),
+     #filter=delivered|review, #sort=position|high|low,
+     #world=<registry id>.
+     ════════════════════════════════════════════════════════════ */
+  function renderControls(){
+    const cardsWrap = document.getElementById('cards');
+    const empty = document.getElementById('emptyState');
+    const filterWrap = document.getElementById('filterChips');
+    const sortWrap = document.getElementById('sortChips');
+    filterWrap.innerHTML = ''; sortWrap.innerHTML = '';
+    const SORTS = {
+      position: { label:'Order',   fn:(a,b)=> a.position-b.position },
+      high:     { label:'Highest', fn:(a,b)=> b.mean-a.mean },
+      low:      { label:'Lowest',  fn:(a,b)=> a.mean-b.mean },
+    };
+    const state = {
+      filter: KMState.get('filter') || 'all',
+      sort:   KMState.get('sort')   || 'position',
+    };
+    if (state.filter !== 'all' && !CONFIG.cats[state.filter]) state.filter = 'all';
+    if (!SORTS[state.sort]) state.sort = 'position';
+
+    function makeChip(label){
+      const b = document.createElement('button');
+      b.className = 'chip surf-2';
+      b.style.cssText = 'border-radius:var(--r-pill);padding:5px 14px;font-size:12px;font-family:ui-monospace,monospace;font-weight:600;color:var(--fg-soft)';
+      b.textContent = label;
+      return b;
+    }
+    function paintChips(wrap, current){
+      [...wrap.children].forEach(c=>
+        c.setAttribute('aria-pressed', c.dataset.val === current ? 'true' : 'false'));
+    }
+
+    const presentCats = [...new Set(tasks.map(t=>t.stage))];
+    [['all','All'], ...presentCats.map(c=>[c, CONFIG.cats[c].label])].forEach(([val,label])=>{
+      const chip = makeChip(label);
+      chip.dataset.val = val;
+      chip.addEventListener('click', ()=> setState({filter:val}));
+      filterWrap.appendChild(chip);
+    });
+    Object.entries(SORTS).forEach(([val,{label}])=>{
+      const chip = makeChip(label);
+      chip.dataset.val = val;
+      chip.addEventListener('click', ()=> setState({sort:val}));
+      sortWrap.appendChild(chip);
+    });
+
+    function apply(){
+      const ordered = [...tasks].sort(SORTS[state.sort].fn);
+      ordered.forEach(t=>{
+        const el = document.getElementById('card-'+t.id);
+        if (el) cardsWrap.appendChild(el);
+      });
+      let visible = 0;
+      document.querySelectorAll('.km-card').forEach(el=>{
+        const show = state.filter==='all' || el.dataset.status===state.filter;
+        el.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      empty.classList.toggle('hidden', visible>0);
+      paintChips(filterWrap, state.filter);
+      paintChips(sortWrap, state.sort);
+    }
+
+    function syncHash(){
+      const parts = [];
+      if (state.filter!=='all') parts.push('filter='+state.filter);
+      if (state.sort!=='position') parts.push('sort='+state.sort);
+      const hash = parts.join('&');
+      history.replaceState(null,'', hash ? '#'+hash : location.pathname+location.search);
+    }
+    function setState(patch, opts={}){
+      Object.assign(state, patch);
+      if ('filter' in patch) KMState.set('filter', state.filter);
+      if ('sort'   in patch) KMState.set('sort',   state.sort);
+      apply();
+      if (!opts.silent) syncHash();
+    }
+    function readHash(){
+      const h = location.hash.replace(/^#/,'');
+      if (!h) return;
+      /* deep link to one card: #KM01 through #KM10 */
+      const m = h.match(/^(KM(?:0[1-9]|10))$/i);
+      if (m){
+        const el = document.getElementById('card-'+m[1].toUpperCase());
+        el?.scrollIntoView({behavior: reduceMotion?'auto':'smooth', block:'center'});
+        return;
+      }
+      const params = new URLSearchParams(h);
+      const f = params.get('filter'), s = params.get('sort');
+      const patch = {};
+      /* accept legacy hashes from shared links */
+      const legacyF = { complete:'delivered', pending:'review' };
+      const ff = legacyF[f] || f;
+      if (ff && (ff==='all' || CONFIG.cats[ff])) patch.filter = ff;
+      if (s && SORTS[s]) patch.sort = s;
+      if (Object.keys(patch).length) setState(patch, {silent:true});
+    }
+
+    apply();
+    readHash();
+    window.addEventListener('hashchange', readHash);
+  })();
+
+  /* ---------- 8.2 Summary ---------- */
+  (function(){
+    const delivered = tasks.filter(t=>t.stage==='delivered');
+    const review = tasks.filter(t=>t.stage==='review');
+    const anyApprox = tasks.some(t=>t.approx);
+    const mom = tasks.reduce((s,t)=>s+t.mean,0)/tasks.length;
+    const means = tasks.map(t=>t.mean);
+    const lo = tasks.reduce((a,b)=> a.mean<b.mean?a:b);
+    const hi = tasks.reduce((a,b)=> a.mean>b.mean?a:b);
+
+    document.getElementById('deliveredCount').innerHTML = delivered.length+'<span class="unit">/ '+tasks.length+'</span>';
+    document.getElementById('reviewCount').textContent = review.length;
+    document.getElementById('meanOfMeans').innerHTML = (anyApprox?'≈':'')+mom.toFixed(1).replace(/\.0$/,'')+'<span class="unit">%</span>';
+    document.getElementById('spreadRange').textContent = Math.min(...means)+'–'+Math.max(...means);
+
+    document.getElementById('summarySentence').innerHTML =
+      `Six tasks are delivered and accepted; four are with human reviewers. ` +
+      `${hi.id} is the gentlest task (the model usually succeeds at ${U.fmtMean(hi)}%), ` +
+      `${lo.id} is currently the hardest (${U.fmtMean(lo)}%). ` +
+      `Remember the inversion: a low mean is the goal, provided the task stays fair, ` +
+      `meaning the ideal answer is provably reachable.`;
+
+    document.getElementById('provenance').textContent =
+      `KM01 to KM10 · data synced ${CONFIG.dataSyncedOn} · ${META.world} · ${META.patient} · ` +
+      `KM01-06 vectors platform-exact · KM07 v3 (dba6c34f) canonical, v2 retired · ` +
+      `KM08 approximate (runs 1-2 garbled) · KM09 board-confirmed · KM10 partial (5/10, reachability open) · ` +
+      `source: ${META.source}`;
+  })();
+
+  /* ---------- 8.3 Scroll progress ---------- */
+  (function(){
+    const bar = document.getElementById('progress');
+    const onScroll = ()=>{
+      const h = document.documentElement;
+      const p = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      bar.style.transform = `scaleX(${Math.min(1,Math.max(0,p))})`;
+      bar.style.width = '100%';
+    };
+    window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+  })();
+
+  document.getElementById('scrollHint').addEventListener('click', ()=>{
+    document.getElementById('how').scrollIntoView({behavior: reduceMotion?'auto':'smooth', block:'start'});
+  });
+
+  /* ---------- 8.4 Intersection reveal + dim + ring animation ---------- */
+  (function(){
+    const cards = document.querySelectorAll('.card');
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if (e.isIntersecting){
+          e.target.classList.add('in'); e.target.classList.remove('dim');
+          if (!e.target.dataset.ringFired){
+            e.target.dataset.ringFired = '1';
+            e.target.querySelectorAll('.ring-fill[data-target]').forEach(arc=>{
+              requestAnimationFrame(()=> arc.style.strokeDashoffset = arc.dataset.target);
+            });
+          }
+        } else if (e.target.classList.contains('in')){ e.target.classList.add('dim'); }
+      });
+    }, { threshold: 0.35 });
+    cards.forEach(c=> io.observe(c));
+  })();
+
+  /* ---------- 8.5 Quick-jump FAB ---------- */
+  (function(){
+    const fab = document.getElementById('fab');
+    const menu = document.getElementById('fabMenu');
+    const icon = document.getElementById('fabIcon');
+    tasks.forEach(t=>{
+      const b = document.createElement('button');
+      b.className = 'btn-pill surf-2';
+      b.style.cssText = 'border-radius:var(--r-pill);padding:6px 16px;font-size:13px;font-family:ui-monospace,monospace;font-weight:600;color:var(--fg)';
+      b.textContent = t.id;
+      b.addEventListener('click', ()=>{
+        document.getElementById('card-'+t.id).scrollIntoView({behavior: reduceMotion?'auto':'smooth', block:'center'});
+        history.replaceState(null,'','#'+t.id);
+        setOpen(false);
+      });
+      menu.appendChild(b);
+    });
+    let open = false;
+    function setOpen(v){
+      open = v; fab.setAttribute('aria-expanded', v);
+      menu.style.opacity = v?'1':'0';
+      menu.style.transform = v?'scale(1)':'scale(0.9)';
+      menu.style.pointerEvents = v?'auto':'none';
+      icon.setAttribute('data-lucide', v?'x':'navigation');
+      lucide.createIcons();
+    }
+    fab.addEventListener('click', ()=> setOpen(!open));
+  })();
+
+  /* ---------- 8.6 Keyboard nav between cards ---------- */
+  (function(){
+    document.addEventListener('keydown', e=>{
+      if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
+      if (['INPUT','TEXTAREA'].includes(document.activeElement.tagName)) return;
+      e.preventDefault();
+      const cards = [...document.querySelectorAll('.km-card')].filter(c=> c.style.display !== 'none');
+      if (!cards.length) return;
+      const mid = window.innerHeight/2;
+      let cur = 0, best = Infinity;
+      cards.forEach((c,i)=>{
+        const r = c.getBoundingClientRect();
+        const d = Math.abs((r.top + r.height/2) - mid);
+        if (d < best){ best = d; cur = i; }
+      });
+      const next = Math.min(cards.length-1, Math.max(0, cur + (e.key==='ArrowDown'?1:-1)));
+      const el = cards[next];
+      el.scrollIntoView({behavior: reduceMotion?'auto':'smooth', block:'center'});
+      history.replaceState(null,'','#'+el.dataset.id);
+    });
+  })();
+
+  /* ════════════════════════════════════════════════════════════
+     MODULE 9 · SOUND (Web Audio, pure synthesis, OPT-IN)
+     Muted by default: this dashboard is shown to reviewers.
+     Unmute persists via KMState. Reduced-motion stays silent.
+     ════════════════════════════════════════════════════════════ */
+  const SFX = (function(){
+    let ctx = null;
+    let muted = KMState.get('muted') !== null ? KMState.get('muted') : true;  /* opt-in */
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches && KMState.get('muted') === null) muted = true;
+
+    function getCtx(){
+      if (!ctx) ctx = new (window.AudioContext || window.webkitAudioContext)();
+      if (ctx.state === 'suspended') ctx.resume();
+      return ctx;
+    }
+    function env(gainNode, at, peak, holdEnd, rel, end){
+      const t = getCtx().currentTime;
+      gainNode.gain.cancelScheduledValues(t);
+      gainNode.gain.setValueAtTime(0, t);
+      gainNode.gain.linearRampToValueAtTime(peak, t + at);
+      gainNode.gain.setValueAtTime(peak, t + holdEnd);
+      gainNode.gain.exponentialRampToValueAtTime(0.0001, t + end);
+      gainNode.gain.setValueAtTime(0, t + end);
+    }
+
+    const sfx = {
+      load(){
+        if (muted) return;
+        const c = getCtx(), t = c.currentTime;
+        const buf = c.createBuffer(1, c.sampleRate * 1.2, c.sampleRate);
+        const d = buf.getChannelData(0);
+        for (let i = 0; i < d.length; i++) d[i] = (Math.random()*2-1);
+        const src = c.createBufferSource(); src.buffer = buf;
+        const bpf = c.createBiquadFilter(); bpf.type = 'bandpass';
+        bpf.frequency.setValueAtTime(400, t);
+        bpf.frequency.exponentialRampToValueAtTime(3200, t + 1.0);
+        bpf.Q.value = 3.5;
+        const g = c.createGain();
+        g.gain.setValueAtTime(0, t);
+        g.gain.linearRampToValueAtTime(0.09, t + 0.08);
+        g.gain.exponentialRampToValueAtTime(0.0001, t + 1.1);
+        src.connect(bpf); bpf.connect(g); g.connect(c.destination);
+        src.start(t); src.stop(t + 1.2);
+      },
+      cardReveal(mean){
+        if (muted) return;
+        const c = getCtx(), t = c.currentTime;
+        const pct = Math.max(0, Math.min(1, ((mean ?? 55) - 25) / 70));
+        const freq = 320 + pct * 780;
+        const osc = c.createOscillator(); osc.type = 'sine'; osc.frequency.value = freq;
+        const g = c.createGain();
+        env(g, 0.004, 0.10, 0.004, 0.28, 0.32);
+        const osc2 = c.createOscillator(); osc2.type = 'sine'; osc2.frequency.value = freq * 2.01;
+        const g2 = c.createGain();
+        env(g2, 0.004, 0.028, 0.004, 0.18, 0.22);
+        osc.connect(g); g.connect(c.destination);
+        osc2.connect(g2); g2.connect(c.destination);
+        osc.start(t); osc.stop(t + 0.35);
+        osc2.start(t); osc2.stop(t + 0.25);
+      },
+      chip(){
+        if (muted) return;
+        const c = getCtx(), t = c.currentTime;
+        const osc = c.createOscillator(); osc.type = 'square'; osc.frequency.value = 1050;
+        osc.frequency.exponentialRampToValueAtTime(420, t + 0.025);
+        const g = c.createGain();
+        env(g, 0.001, 0.07, 0.001, 0.04, 0.06);
+        const lpf = c.createBiquadFilter(); lpf.type = 'lowpass'; lpf.frequency.value = 3000;
+        osc.connect(lpf); lpf.connect(g); g.connect(c.destination);
+        osc.start(t); osc.stop(t + 0.07);
+      },
+      expand(){
+        if (muted) return;
+        const c = getCtx(), t = c.currentTime;
+        const osc = c.createOscillator(); osc.type = 'sine';
+        osc.frequency.setValueAtTime(180, t);
+        osc.frequency.exponentialRampToValueAtTime(900, t + 0.38);
+        const g = c.createGain();
+        env(g, 0.01, 0.09, 0.01, 0.30, 0.42);
+        osc.connect(g); g.connect(c.destination);
+        osc.start(t); osc.stop(t + 0.44);
+      },
+      collapse(){
+        if (muted) return;
+        const c = getCtx(), t = c.currentTime;
+        const osc = c.createOscillator(); osc.type = 'sine';
+        osc.frequency.setValueAtTime(820, t);
+        osc.frequency.exponentialRampToValueAtTime(160, t + 0.32);
+        const g = c.createGain();
+        env(g, 0.01, 0.07, 0.01, 0.24, 0.36);
+        osc.connect(g); g.connect(c.destination);
+        osc.start(t); osc.stop(t + 0.38);
+      },
+      fabOpen(){
+        if (muted) return;
+        const c = getCtx(), t = c.currentTime;
+        [0, 0.07].forEach((delay, i) => {
+          const osc = c.createOscillator(); osc.type = 'sine';
+          osc.frequency.value = i === 0 ? 520 : 780;
+          const g = c.createGain();
+          env(g, 0.003, 0.08, 0.003, 0.08, 0.14);
+          osc.connect(g); g.connect(c.destination);
+          osc.start(t + delay); osc.stop(t + delay + 0.16);
+        });
+      },
+      fabClose(){
+        if (muted) return;
+        const c = getCtx(), t = c.currentTime;
+        [0, 0.07].forEach((delay, i) => {
+          const osc = c.createOscillator(); osc.type = 'sine';
+          osc.frequency.value = i === 0 ? 780 : 520;
+          const g = c.createGain();
+          env(g, 0.003, 0.06, 0.003, 0.07, 0.13);
+          osc.connect(g); g.connect(c.destination);
+          osc.start(t + delay); osc.stop(t + delay + 0.14);
+        });
+      },
+      theme(){
+        if (muted) return;
+        const c = getCtx(), t = c.currentTime;
+        [880, 1108, 1320, 1760].forEach((f, i) => {
+          const osc = c.createOscillator(); osc.type = 'sine'; osc.frequency.value = f;
+          const g = c.createGain();
+          const delay = i * 0.045;
+          g.gain.setValueAtTime(0, t + delay);
+          g.gain.linearRampToValueAtTime(0.055, t + delay + 0.015);
+          g.gain.exponentialRampToValueAtTime(0.0001, t + delay + 0.18);
+          osc.connect(g); g.connect(c.destination);
+          osc.start(t + delay); osc.stop(t + delay + 0.20);
+        });
+      },
+      navTick(dir){
+        if (muted) return;
+        const c = getCtx(), t = c.currentTime;
+        const osc = c.createOscillator(); osc.type = 'triangle';
+        osc.frequency.value = dir === 'down' ? 420 : 560;
+        const g = c.createGain();
+        env(g, 0.003, 0.055, 0.003, 0.05, 0.09);
+        osc.connect(g); g.connect(c.destination);
+        osc.start(t); osc.stop(t + 0.10);
+      },
+      muteOn(){
+        const c = getCtx(), t = c.currentTime;
+        const osc = c.createOscillator(); osc.type = 'sine'; osc.frequency.value = 660;
+        osc.frequency.exponentialRampToValueAtTime(330, t + 0.14);
+        const g = c.createGain();
+        env(g, 0.004, 0.07, 0.004, 0.10, 0.18);
+        osc.connect(g); g.connect(c.destination);
+        osc.start(t); osc.stop(t + 0.20);
+      },
+      muteOff(){
+        const c = getCtx(), t = c.currentTime;
+        const osc = c.createOscillator(); osc.type = 'sine'; osc.frequency.value = 330;
+        osc.frequency.exponentialRampToValueAtTime(660, t + 0.14);
+        const g = c.createGain();
+        env(g, 0.004, 0.07, 0.004, 0.10, 0.18);
+        osc.connect(g); g.connect(c.destination);
+        osc.start(t); osc.stop(t + 0.20);
+      },
     };
 
-    /* ---------- Radial chart ---------- */
-    const radialTip = document.getElementById('radialTip');
-    (function(){
-      const svg = document.getElementById('radial');
-      const NS = 'http://www.w3.org/2000/svg';
-      const cx = 280, cy = 280, R = 190;
-      const sorted = [...tasks].sort((a,b)=>b.mean-a.mean); // strongest first, sweep clockwise
-      const pts = sorted.map((t,i)=>{
-        const ang = (-90 + i*(360/sorted.length)) * Math.PI/180; // start at 12 o'clock
-        return { t, x: cx + R*Math.cos(ang), y: cy + R*Math.sin(ang) };
-      });
-
-      // gradient def
-      const defs = document.createElementNS(NS,'defs');
-      defs.innerHTML = `<linearGradient id="arcGrad" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="var(--accent-a)"/>
-          <stop offset="100%" stop-color="var(--accent-b)"/>
-        </linearGradient>`;
-      svg.appendChild(defs);
-
-      // connecting arc (closed loop)
-      const d = pts.map((p,i)=> (i===0?'M':'L')+p.x.toFixed(1)+' '+p.y.toFixed(1)).join(' ') + ' Z';
-      const arc = document.createElementNS(NS,'path');
-      arc.setAttribute('d', d);
-      arc.setAttribute('fill','none');
-      arc.setAttribute('stroke','url(#arcGrad)');
-      arc.setAttribute('stroke-width','1.5');
-      arc.setAttribute('opacity','0.5');
-      arc.setAttribute('stroke-linejoin','round');
-      if(!reduceMotion) arc.classList.add('arc-anim');
-      svg.appendChild(arc);
-
-      // center label
-      const ctl = document.createElementNS(NS,'text');
-      ctl.setAttribute('x',cx); ctl.setAttribute('y',cy-6);
-      ctl.setAttribute('text-anchor','middle'); ctl.setAttribute('fill','var(--fg)');
-      ctl.setAttribute('font-size','13'); ctl.setAttribute('font-family','var(--font-mono, monospace)');
-      ctl.setAttribute('opacity','0.5'); ctl.setAttribute('letter-spacing','2');
-      ctl.textContent = 'KM SUITE';
-      const ctl2 = document.createElementNS(NS,'text');
-      ctl2.setAttribute('x',cx); ctl2.setAttribute('y',cy+22);
-      ctl2.setAttribute('text-anchor','middle'); ctl2.setAttribute('fill','var(--fg)');
-      ctl2.setAttribute('font-size','26'); ctl2.setAttribute('font-weight','700');
-      const pilotedR = tasks.filter(t=>t.mean!==null);
-      const mom = pilotedR.reduce((s,t)=>s+t.mean,0)/pilotedR.length;
-      ctl2.textContent = mom.toFixed(1)+'%';
-      svg.appendChild(ctl); svg.appendChild(ctl2);
-
-      // nodes
-      pts.forEach((p,i)=>{
-        const hasMean = p.t.mean !== null;
-        const effectiveMean = hasMean ? p.t.mean : 50;
-        const failure = 100 - effectiveMean;
-        const r = 14 + failure*0.34;            // size ~ failure depth
-        const intensity = hasMean ? (0.30 + (failure/100)*0.70) : 0.18;
-
-        const g = document.createElementNS(NS,'g');
-        g.setAttribute('class','node');
-        g.style.cursor = 'pointer';
-        g.setAttribute('tabindex','0');
-        g.setAttribute('role','button');
-        g.setAttribute('aria-label', `${p.t.id}, ${p.t.name}, mean ${p.t.mean} percent`);
-
-        const halo = document.createElementNS(NS,'circle');
-        halo.setAttribute('cx',p.x); halo.setAttribute('cy',p.y); halo.setAttribute('r',r+10);
-        halo.setAttribute('fill','var(--accent-a)'); halo.setAttribute('opacity', (intensity*0.12).toFixed(3));
-
-        const c = document.createElementNS(NS,'circle');
-        c.setAttribute('cx',p.x); c.setAttribute('cy',p.y); c.setAttribute('r',r);
-        c.setAttribute('fill','var(--accent-a)'); c.setAttribute('opacity', intensity.toFixed(3));
-        if(!reduceMotion){ c.classList.add('node-anim'); halo.classList.add('node-anim');
-          c.style.animationDelay = (i*100)+'ms'; halo.style.animationDelay = (i*100)+'ms'; }
-
-        const lbl = document.createElementNS(NS,'text');
-        lbl.setAttribute('x',p.x); lbl.setAttribute('y',p.y+4);
-        lbl.setAttribute('text-anchor','middle'); lbl.setAttribute('fill','#fff');
-        lbl.setAttribute('font-size','11'); lbl.setAttribute('font-weight','700');
-        lbl.setAttribute('pointer-events','none');
-        lbl.textContent = p.t.id.replace('KM','');
-
-        const tipLabel = p.t.mean !== null
-          ? `${p.t.id} · ${p.t.approx ? '≈' : ''}${p.t.mean}% · ${p.t.status}`
-          : `${p.t.id} · ${p.t.status}`;
-
-        const showTip = (mx, my)=>{
-          radialTip.textContent = tipLabel;
-          radialTip.classList.add('show');
-          const tw = radialTip.offsetWidth, th = radialTip.offsetHeight;
-          let tx = mx + 12, ty = my - th - 8;
-          if (tx + tw > window.innerWidth - 8) tx = mx - tw - 12;
-          if (ty < 8) ty = my + 16;
-          radialTip.style.left = tx+'px'; radialTip.style.top = ty+'px';
-        };
-        const hideTip = ()=> radialTip.classList.remove('show');
-
-        const expand = ()=>{ c.setAttribute('r', r+5); };
-        const reset  = ()=>{ c.setAttribute('r', r); hideTip(); };
-        g.addEventListener('mouseenter', e=>{ expand(); showTip(e.clientX, e.clientY); });
-        g.addEventListener('mousemove',  e=>{ showTip(e.clientX, e.clientY); });
-        g.addEventListener('mouseleave', reset);
-        g.addEventListener('focus', e=>{
-          expand();
-          const rect = g.getBoundingClientRect();
-          showTip(rect.left + rect.width/2, rect.top);
-        });
-        g.addEventListener('blur', reset);
-        /* touch: show on tap, hide after 2s */
-        g.addEventListener('touchstart', e=>{
-          e.preventDefault();
-          expand();
-          const t0 = e.touches[0];
-          showTip(t0.clientX, t0.clientY);
-          setTimeout(()=>{ reset(); }, 2000);
-        }, {passive:false});
-        const go = ()=>{
-          document.getElementById('card-'+p.t.id)?.scrollIntoView({behavior:'smooth', block:'center'});
-          history.replaceState(null,'','#'+p.t.id);
-        };
-        g.addEventListener('click', go);
-        g.addEventListener('keydown', e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); go(); }});
-
-        g.appendChild(halo); g.appendChild(c); g.appendChild(lbl);
-        svg.appendChild(g);
-      });
-    })();
-
-    /* ---------- Cards ---------- */
-    (function(){
-      const wrap = document.getElementById('cards');
-      tasks.forEach(t=>{
-        const hasPilot = t.mean !== null && t.spread.length > 0;
-        const dots = hasPilot ? t.spread.map((v,i)=>{
-          const {op,pulse} = dotClass(v);
-          return `<span class="dot ${pulse?'pulse':''}" title="Run ${i+1}: ${v}%"
-            style="width:13px;height:13px;border-radius:9999px;display:inline-block;background:var(--accent-a);opacity:${op}"></span>`;
-        }).join('') : `<span class="text-[13px]" style="color:var(--fg-faint)">${t.spreadNote || 'Pilot not yet run'}</span>`;
-
-        /* Pass 2: score ring */
-        function scoreRing(mean){
-          if (mean === null){
-            return `<div class="score-ring">
-              <svg width="92" height="92" viewBox="0 0 92 92">
-                <circle class="ring-track" cx="46" cy="46" r="36" stroke-width="5"/>
-                <circle class="ring-fill pending" cx="46" cy="46" r="36" stroke-width="5"
-                  stroke-dasharray="226" stroke-dashoffset="0"
-                  transform="rotate(-90 46 46)"/>
-              </svg>
-              <div class="ring-val"><span class="font-mono font-bold text-[1.35rem]" style="color:var(--fg-faint)">—</span></div>
-            </div>`;
-          }
-          const circ = 2 * Math.PI * 36; // ~226
-          const offset = circ * (1 - mean/100);
-          const band = mean >= 75 ? 'soft' : mean >= 60 ? 'mid' : 'hard';
-          const valColor = mean >= 75 ? 'var(--accent-a)' : mean >= 60 ? '#a78bfa' : '#f59e0b';
-          return `<div class="score-ring">
-            <svg width="92" height="92" viewBox="0 0 92 92">
-              <circle class="ring-track" cx="46" cy="46" r="36" stroke-width="5"/>
-              <circle class="ring-fill ${band}" cx="46" cy="46" r="36" stroke-width="5"
-                stroke-dasharray="${circ.toFixed(1)}" stroke-dashoffset="${circ.toFixed(1)}"
-                data-target="${offset.toFixed(1)}"
-                transform="rotate(-90 46 46)"/>
-            </svg>
-            <div class="ring-val">
-              <span class="font-mono font-bold text-[1.35rem]" style="color:${valColor}">${mean}</span>
-              <span class="font-mono text-[0.6rem]" style="color:var(--fg-faint)">%</span>
-            </div>
-          </div>`;
-        }
-        const meanDisplay = scoreRing(t.mean);
-
-        const runDetail = hasPilot
-          ? `<div class="grid grid-cols-5 sm:grid-cols-10 gap-2 pt-5">
-              ${t.spread.map((v,i)=>`
-                <div class="surf-2 py-3 text-center" style="border-radius:14px">
-                  <div class="font-mono text-[10px]" style="color:var(--fg-faint)">R${i+1}</div>
-                  <div class="font-mono text-[15px] font-bold mt-0.5 ${v<70?'':'accent-text'}" ${v<70?`style="color:${v<50?'#f59e0b':'var(--fg-soft)'}"`:''}>${v}</div>
-                </div>`).join('')}
-            </div>`
-          : `<p class="pt-5 text-[13px]" style="color:var(--fg-faint)">${t.spreadNote ? t.spreadNote + ' ·' : 'No run data yet ·'} Taiga job: ${t.taigaJob}</p>`;
-
-        /* Pass 4: sparkline */
-        function buildSparkline(spread){
-          if (!spread.length) return `<svg class="sparkline" width="64" height="28" viewBox="0 0 64 28"><line class="spark-pending" x1="4" y1="14" x2="60" y2="14" stroke-width="1.5"/></svg>`;
-          const W=64, H=28, pad=3;
-          const mn=Math.min(...spread), mx=Math.max(...spread);
-          const range = mx - mn || 1;
-          const pts = spread.map((v,i)=>({
-            x: pad + i*(W-pad*2)/(spread.length-1),
-            y: H - pad - ((v-mn)/range)*(H-pad*2)
-          }));
-          const poly = pts.map(p=>`${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(' ');
-          const dots = pts.map((p,i)=>{
-            const isLow = spread[i] < 60;
-            return `<circle class="spark-dot${isLow?' low':''}" cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="2"/>`;
-          }).join('');
-          return `<svg class="sparkline" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
-            <polyline class="spark-line" points="${poly}"/>
-            ${dots}
-          </svg>`;
-        }
-
-        /* Pass 3: bar colour per status */
-        const barColor = statusCat(t.status) === 'complete'
-          ? 'var(--accent-a)'
-          : statusCat(t.status) === 'pending'
-            ? '#f59e0b'
-            : '#a78bfa';
-
-        const sec = document.createElement('section');
-        sec.id = 'card-'+t.id;
-        sec.dataset.id = t.id;
-        sec.dataset.status = statusCat(t.status);
-        sec.dataset.mean = t.mean ?? 999;
-        sec.dataset.pos = t.position;
-        sec.className = 'km-card min-h-[55vh] flex items-center py-5 sm:py-7';
-        sec.innerHTML = `
-          <article class="card-inner card surf w-full px-6 sm:px-8 md:px-10 py-7 sm:py-9" style="border-radius:var(--r-card);--card-bar:${barColor}">
-
-            <!-- Always-visible header -->
-            <div class="flex items-start justify-between gap-4">
-              <div class="min-w-0">
-                <div class="t-id font-bold accent-text leading-none">${t.id}</div>
-                <h2 class="t-h2 font-semibold mt-2 text-balance" style="max-width:min(20ch,100%)">${t.name}</h2>
-              </div>
-              <div class="shrink-0 flex flex-col items-end gap-2 pt-1">
-                <span class="surf-2 px-3 py-1.5 text-[10px] font-mono uppercase tracking-[0.11em]" style="border-radius:var(--r-pill);color:var(--fg-soft)">${t.status}</span>
-                <div title="10-run spread">${buildSparkline(t.spread)}</div>
-              </div>
-            </div>
-
-            <!-- Progressive body: fades in on hover / stays open when expanded -->
-            <div class="card-body mt-7">
-              <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-7 items-start">
-                <div>
-                  <div class="font-mono text-[10px] uppercase tracking-[0.18em] mb-3" style="color:var(--fg-faint)">Mean score</div>
-                  ${meanDisplay}
-                  ${(()=>{
-                    const approxTag = t.approx ? ' · ≈' : '';
-                    if (t.mean === null) return `<div class="font-mono text-[10px] mt-2 uppercase tracking-[0.14em]" style="color:var(--fg-faint)">PENDING</div>`;
-                    if (t.mean < 60)  return `<div class="font-mono text-[10px] mt-2 uppercase tracking-[0.14em]" style="color:#f59e0b">SUB-60 · HARD${approxTag}</div>`;
-                    if (t.mean < 75)  return `<div class="font-mono text-[10px] mt-2 uppercase tracking-[0.14em]" style="color:#a78bfa">60-74 · MID${approxTag}</div>`;
-                    return `<div class="font-mono text-[10px] mt-2 uppercase tracking-[0.14em]" style="color:var(--accent-a)">75+ · SOFT${approxTag}</div>`;
-                  })()}
-                </div>
-                <div>
-                  <div class="font-mono text-[10px] uppercase tracking-[0.18em] mb-3" style="color:var(--fg-faint)">Spread · runs 1–10</div>
-                  <div class="flex flex-wrap gap-2" style="max-width:220px">${dots}</div>
-                </div>
-                <div class="sm:col-span-2 md:col-span-1">
-                  <div class="font-mono text-[10px] uppercase tracking-[0.18em] mb-2" style="color:var(--fg-faint)">Workflow</div>
-                  <div class="text-[14px] font-medium leading-snug">${t.workflow}</div>
-                  <div class="font-mono text-[10px] uppercase tracking-[0.18em] mb-2 mt-5" style="color:var(--fg-faint)">Reviewer</div>
-                  <div class="text-[14px] font-medium">${t.reviewer}</div>
-                </div>
-              </div>
-
-              <p class="mechanism-text mt-7 text-[14px] leading-relaxed" style="color:var(--fg-soft);max-width:min(60ch,100%)">
-                <span class="font-semibold" style="color:var(--fg)">Mechanism · </span>${t.mechanism}
-              </p>
-
-              <div class="mt-6 flex justify-end">
-                <button class="expandBtn btn-pill surf-2 px-4 py-2 flex items-center gap-2 text-[12px] font-medium" style="border-radius:var(--r-pill)" aria-expanded="false">
-                  <span>Run detail</span>
-                  <i data-lucide="chevron-down" class="chev" style="width:14px;height:14px;transition:transform .32s cubic-bezier(0.34,1.56,0.64,1)"></i>
-                </button>
-              </div>
-
-              <div class="reveal">
-                ${runDetail}
-              </div>
-            </div>
-
-          </article>`;
-        /* Pass 7: staggered entrance delay based on position */
-        sec.querySelector('article').style.transitionDelay = (t.position * 55) + 'ms';
-
-        wrap.appendChild(sec);
-
-        // SR table row
-        document.getElementById('srTable').insertAdjacentHTML('beforeend',
-          `<tr><td>${t.id}</td><td>${t.name}</td><td>${t.mean !== null ? (t.approx?'≈':'')+t.mean+'%' : 'pending'}</td><td>${t.spread.length ? (t.approx?'approx: ':'')+t.spread.join(', ') : (t.spreadNote || 'n/a')}</td><td>${t.status}</td></tr>`);
-      });
-
-      // disclosure — toggle expanded on article so card-body stays visible;
-      // expanded set persists across reloads (session level)
-      function setCardOpen(card, btn, open){
-        card.querySelector('.reveal').classList.toggle('open', open);
-        card.classList.toggle('expanded', open);
-        btn.setAttribute('aria-expanded', open);
-        btn.querySelector('.chev').style.transform = open ? 'rotate(180deg)' : 'rotate(0)';
-      }
-      wrap.querySelectorAll('.expandBtn').forEach(btn=>{
-        const card = btn.closest('article');
-        const id = card.closest('.km-card').dataset.id;
-        btn.addEventListener('click', ()=>{
-          const open = !card.querySelector('.reveal').classList.contains('open');
-          setCardOpen(card, btn, open);
-          const ex = new Set(KMState.get('expanded'));
-          open ? ex.add(id) : ex.delete(id);
-          KMState.set('expanded', [...ex]);
-        });
-        /* restore persisted expanded state */
-        if (KMState.get('expanded').includes(id)) setCardOpen(card, btn, true);
-      });
-
-      /* Touch OR hover: hover previews the body (pointer devices);
-         clicking the header pins/unpins it open on every device. */
-      wrap.querySelectorAll('.card-inner').forEach(article=>{
-        const hdr = article.querySelector('.flex.items-start.justify-between');
-        if (!hdr) return;
-        hdr.style.cursor = 'pointer';
-        hdr.addEventListener('click', ()=>{
-          article.classList.toggle('expanded');
-        });
-      });
-    })();
-
-    /* ---------- Filter, sort & deep-link controller ---------- */
-    const view = (function(){
-      const cardsWrap = document.getElementById('cards');
-      const empty = document.getElementById('emptyState');
-      const filterWrap = document.getElementById('filterChips');
-      const sortWrap = document.getElementById('sortChips');
-      const SORTS = {
-        position: { label:'Order', fn:(a,b)=> a.position-b.position },
-        high:     { label:'Highest', fn:(a,b)=> (b.mean??-1)-(a.mean??-1) },
-        low:      { label:'Lowest',  fn:(a,b)=> (a.mean??999)-(b.mean??999) },
-      };
-      /* session level: restore last filter/sort; URL hash overrides below */
-      const state = {
-        filter: KMState.get('filter') || 'all',
-        sort:   KMState.get('sort')   || 'position',
-      };
-
-      function makeChip(label, active){
-        const b = document.createElement('button');
-        b.className = 'chip surf-2';
-        b.style.cssText = 'border-radius:var(--r-pill);padding:5px 14px;font-size:12px;font-family:ui-monospace,monospace;font-weight:600;color:var(--fg-soft)';
-        b.textContent = label;
-        b.setAttribute('aria-pressed', active ? 'true' : 'false');
-        return b;
-      }
-      function paintChips(wrap, current){
-        /* state lives in aria-pressed; CSS owns all visual states */
-        [...wrap.children].forEach(c=>
-          c.setAttribute('aria-pressed', c.dataset.val === current ? 'true' : 'false'));
-      }
-
-      // build filter chips: All + present categories
-      const presentCats = [...new Set(tasks.map(t=>statusCat(t.status)))];
-      [['all','All'], ...presentCats.map(c=>[c, CATS[c].label])].forEach(([val,label])=>{
-        const chip = makeChip(label, val===state.filter);
-        chip.dataset.val = val;
-        chip.addEventListener('click', ()=> setState({filter:val}));
-        filterWrap.appendChild(chip);
-      });
-      // build sort chips
-      Object.entries(SORTS).forEach(([val,{label}])=>{
-        const chip = makeChip(label, val===state.sort);
-        chip.dataset.val = val;
-        chip.addEventListener('click', ()=> setState({sort:val}));
-        sortWrap.appendChild(chip);
-      });
-
-      function apply(){
-        // order
-        const ordered = [...tasks].sort(SORTS[state.sort].fn);
-        ordered.forEach(t=>{
-          const el = document.getElementById('card-'+t.id);
-          if (el) cardsWrap.appendChild(el); // reorder in DOM
-        });
-        // filter visibility
-        let visible = 0;
-        document.querySelectorAll('.km-card').forEach(el=>{
-          const show = state.filter==='all' || el.dataset.status===state.filter;
-          el.style.display = show ? '' : 'none';
-          if (show) visible++;
-        });
-        empty.classList.toggle('hidden', visible>0);
-        paintChips(filterWrap, state.filter);
-        paintChips(sortWrap, state.sort);
-      }
-
-      function syncHash(){
-        const parts = [];
-        if (state.filter!=='all') parts.push('filter='+state.filter);
-        if (state.sort!=='position') parts.push('sort='+state.sort);
-        const hash = parts.join('&');
-        history.replaceState(null,'', hash ? '#'+hash : location.pathname+location.search);
-      }
-      function setState(patch, opts={}){
-        Object.assign(state, patch);
-        if ('filter' in patch) KMState.set('filter', state.filter);
-        if ('sort'   in patch) KMState.set('sort',   state.sort);
-        apply();
-        if (!opts.silent) syncHash();
-      }
-      function readHash(){
-        const h = location.hash.replace(/^#/,'');
-        if (!h) return;
-        // deep link to a specific card: #KM03
-        const m = h.match(/^(KM0[1-8])$/i);
-        if (m){
-          const el = document.getElementById('card-'+m[1].toUpperCase());
-          el?.scrollIntoView({behavior: reduceMotion?'auto':'smooth', block:'center'});
-          return;
-        }
-        const params = new URLSearchParams(h);
-        const f = params.get('filter'), s = params.get('sort');
-        const patch = {};
-        if (f && (f==='all' || CATS[f])) patch.filter = f;
-        if (s && SORTS[s]) patch.sort = s;
-        if (Object.keys(patch).length) setState(patch, {silent:true});
-      }
-
-      apply();
-      readHash();
-      return { jumpTo(id){ history.replaceState(null,'','#'+id); }, get state(){ return state; } };
-    })();
-
-    /* ---------- Intersection reveal + dim ---------- */
-    (function(){
-      const cards = document.querySelectorAll('.card');
-      const io = new IntersectionObserver((entries)=>{
-        entries.forEach(e=>{
-          if (e.isIntersecting){
-            e.target.classList.add('in'); e.target.classList.remove('dim');
-            /* Pass 2: animate ring fill on first reveal */
-            if (!e.target.dataset.ringFired){
-              e.target.dataset.ringFired = '1';
-              e.target.querySelectorAll('.ring-fill[data-target]').forEach(arc=>{
-                requestAnimationFrame(()=> arc.style.strokeDashoffset = arc.dataset.target);
-              });
-            }
-          } else if (e.target.classList.contains('in')){ e.target.classList.add('dim'); }
-        });
-      }, { threshold: 0.35 });
-      cards.forEach(c=> io.observe(c));
-    })();
-
-    /* ---------- Scroll progress ---------- */
-    (function(){
-      const bar = document.getElementById('progress');
-      const onScroll = ()=>{
-        const h = document.documentElement;
-        const p = h.scrollTop / (h.scrollHeight - h.clientHeight);
-        bar.style.transform = `scaleX(${Math.min(1,Math.max(0,p))})`;
-        bar.style.width = '100%';
-      };
-      window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
-    })();
-
-    document.getElementById('scrollHint').addEventListener('click', ()=>{
-      document.getElementById('card-KM01').scrollIntoView({behavior:'smooth', block:'center'});
-    });
-
-    /* ---------- Summary stats ---------- */
-    (function(){
-      const piloted = tasks.filter(t=>t.mean !== null);
-      const mom = piloted.reduce((s,t)=>s+t.mean,0)/piloted.length;
-      const complete = tasks.filter(t=>statusComplete(t.status)).length;
-      const means = piloted.map(t=>t.mean);
-      document.getElementById('meanOfMeans').textContent = mom.toFixed(1)+'%';
-      document.getElementById('completeCount').textContent = complete+' / '+tasks.length;
-      document.getElementById('pendingCount').textContent = tasks.length - complete;
-      document.getElementById('spreadRange').textContent = Math.min(...means)+'–'+Math.max(...means);
-    })();
-
-    /* ---------- Quick-jump FAB ---------- */
-    (function(){
-      const fab = document.getElementById('fab');
-      const menu = document.getElementById('fabMenu');
-      const icon = document.getElementById('fabIcon');
-      tasks.forEach(t=>{
-        const b = document.createElement('button');
-        b.className = 'btn-pill surf-2';
-        b.style.cssText = 'border-radius:var(--r-pill);padding:6px 16px;font-size:13px;font-family:ui-monospace,monospace;font-weight:600;color:var(--fg)';
-        b.textContent = t.id;
-        b.addEventListener('click', ()=>{
-          document.getElementById('card-'+t.id).scrollIntoView({behavior:'smooth', block:'center'});
-          history.replaceState(null,'','#'+t.id);
-          close();
-        });
-        menu.appendChild(b);
-      });
-      let open = false;
-      function setOpen(v){
-        open = v; fab.setAttribute('aria-expanded', v);
-        menu.style.opacity = v?'1':'0';
-        menu.style.transform = v?'scale(1)':'scale(0.9)';
-        menu.style.pointerEvents = v?'auto':'none';
-        icon.setAttribute('data-lucide', v?'x':'navigation');
-        lucide.createIcons();
-      }
-      function close(){ setOpen(false); }
-      fab.addEventListener('click', ()=> setOpen(!open));
-    })();
-
-    /* ---------- Keyboard nav between cards ---------- */
-    (function(){
-      document.addEventListener('keydown', e=>{
-        if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
-        if (['INPUT','TEXTAREA'].includes(document.activeElement.tagName)) return;
-        e.preventDefault();
-        // only visible cards, in current DOM order
-        const cards = [...document.querySelectorAll('.km-card')].filter(c=> c.style.display !== 'none');
-        if (!cards.length) return;
-        const mid = window.innerHeight/2;
-        // find card nearest viewport center
-        let cur = 0, best = Infinity;
-        cards.forEach((c,i)=>{
-          const r = c.getBoundingClientRect();
-          const d = Math.abs((r.top + r.height/2) - mid);
-          if (d < best){ best = d; cur = i; }
-        });
-        const next = Math.min(cards.length-1, Math.max(0, cur + (e.key==='ArrowDown'?1:-1)));
-        const el = cards[next];
-        el.scrollIntoView({behavior: reduceMotion?'auto':'smooth', block:'center'});
-        history.replaceState(null,'','#'+el.dataset.id);
-        el.querySelector('article').focus?.();
-      });
-    })();
-
-    /* ============================================================
-       SOUND ENGINE  — Web Audio API, pure synthesis, no files
-       Respects: prefers-reduced-motion (muted by default),
-                 user mute toggle (persisted to localStorage)
-       ============================================================ */
-    const SFX = (function(){
-      let ctx = null;
-      /* preference level: stored choice wins; system reduced-motion is the fallback */
-      let muted = KMState.get('muted') !== null
-                  ? KMState.get('muted')
-                  : window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-      function getCtx(){
-        if (!ctx) ctx = new (window.AudioContext || window.webkitAudioContext)();
-        if (ctx.state === 'suspended') ctx.resume();
-        return ctx;
-      }
-
-      /* ── master gain helper ── */
-      function master(vol = 0.18){
-        const g = getCtx().createGain();
-        g.gain.setValueAtTime(vol, getCtx().currentTime);
-        g.connect(getCtx().destination);
-        return g;
-      }
-
-      /* ── envelope helper: attack/sustain/release ── */
-      function env(gainNode, at, peak, holdEnd, rel, end){
-        const t = getCtx().currentTime;
-        gainNode.gain.cancelScheduledValues(t);
-        gainNode.gain.setValueAtTime(0, t);
-        gainNode.gain.linearRampToValueAtTime(peak, t + at);
-        gainNode.gain.setValueAtTime(peak, t + holdEnd);
-        gainNode.gain.exponentialRampToValueAtTime(0.0001, t + end);
-        gainNode.gain.setValueAtTime(0, t + end);
-      }
-
-      const sfx = {
-        /* 1. Page-load shimmer: high filtered noise sweep upward */
-        load(){
-          if (muted) return;
-          const c = getCtx(), t = c.currentTime;
-          const buf = c.createBuffer(1, c.sampleRate * 1.2, c.sampleRate);
-          const d = buf.getChannelData(0);
-          for (let i = 0; i < d.length; i++) d[i] = (Math.random()*2-1);
-          const src = c.createBufferSource(); src.buffer = buf;
-          const bpf = c.createBiquadFilter(); bpf.type = 'bandpass';
-          bpf.frequency.setValueAtTime(400, t);
-          bpf.frequency.exponentialRampToValueAtTime(3200, t + 1.0);
-          bpf.Q.value = 3.5;
-          const g = c.createGain();
-          g.gain.setValueAtTime(0, t);
-          g.gain.linearRampToValueAtTime(0.09, t + 0.08);
-          g.gain.exponentialRampToValueAtTime(0.0001, t + 1.1);
-          src.connect(bpf); bpf.connect(g); g.connect(c.destination);
-          src.start(t); src.stop(t + 1.2);
-        },
-
-        /* 2. Card reveal ping — pitch mapped to task mean (higher = higher note) */
-        cardReveal(mean){
-          if (muted) return;
-          const c = getCtx(), t = c.currentTime;
-          // mean 40-97 → freq 320-1100 Hz (pentatonic feel)
-          const pct = Math.max(0, Math.min(1, ((mean ?? 55) - 40) / 57));
-          const freq = 320 + pct * 780;
-          const osc = c.createOscillator(); osc.type = 'sine'; osc.frequency.value = freq;
-          const g = c.createGain();
-          env(g, 0.004, 0.10, 0.004, 0.28, 0.32);
-          // add gentle overtone
-          const osc2 = c.createOscillator(); osc2.type = 'sine'; osc2.frequency.value = freq * 2.01;
-          const g2 = c.createGain();
-          env(g2, 0.004, 0.028, 0.004, 0.18, 0.22);
-          osc.connect(g); g.connect(c.destination);
-          osc2.connect(g2); g2.connect(c.destination);
-          osc.start(t); osc.stop(t + 0.35);
-          osc2.start(t); osc2.stop(t + 0.25);
-        },
-
-        /* 3. Filter/sort chip click — crisp mechanical tick */
-        chip(){
-          if (muted) return;
-          const c = getCtx(), t = c.currentTime;
-          const osc = c.createOscillator(); osc.type = 'square'; osc.frequency.value = 1050;
-          osc.frequency.exponentialRampToValueAtTime(420, t + 0.025);
-          const g = c.createGain();
-          env(g, 0.001, 0.07, 0.001, 0.04, 0.06);
-          const lpf = c.createBiquadFilter(); lpf.type = 'lowpass'; lpf.frequency.value = 3000;
-          osc.connect(lpf); lpf.connect(g); g.connect(c.destination);
-          osc.start(t); osc.stop(t + 0.07);
-        },
-
-        /* 4. Expand "Run detail" — ascending whoosh */
-        expand(){
-          if (muted) return;
-          const c = getCtx(), t = c.currentTime;
-          const osc = c.createOscillator(); osc.type = 'sine';
-          osc.frequency.setValueAtTime(180, t);
-          osc.frequency.exponentialRampToValueAtTime(900, t + 0.38);
-          const g = c.createGain();
-          env(g, 0.01, 0.09, 0.01, 0.30, 0.42);
-          osc.connect(g); g.connect(c.destination);
-          osc.start(t); osc.stop(t + 0.44);
-        },
-
-        /* 5. Collapse "Run detail" — descending whoosh */
-        collapse(){
-          if (muted) return;
-          const c = getCtx(), t = c.currentTime;
-          const osc = c.createOscillator(); osc.type = 'sine';
-          osc.frequency.setValueAtTime(820, t);
-          osc.frequency.exponentialRampToValueAtTime(160, t + 0.32);
-          const g = c.createGain();
-          env(g, 0.01, 0.07, 0.01, 0.24, 0.36);
-          osc.connect(g); g.connect(c.destination);
-          osc.start(t); osc.stop(t + 0.38);
-        },
-
-        /* 6. FAB open — two-tone rise pop */
-        fabOpen(){
-          if (muted) return;
-          const c = getCtx(), t = c.currentTime;
-          [0, 0.07].forEach((delay, i) => {
-            const osc = c.createOscillator(); osc.type = 'sine';
-            osc.frequency.value = i === 0 ? 520 : 780;
-            const g = c.createGain();
-            env(g, 0.003, 0.08, 0.003, 0.08, 0.14);
-            osc.connect(g); g.connect(c.destination);
-            osc.start(t + delay); osc.stop(t + delay + 0.16);
-          });
-        },
-
-        /* 7. FAB close — two-tone fall pop */
-        fabClose(){
-          if (muted) return;
-          const c = getCtx(), t = c.currentTime;
-          [0, 0.07].forEach((delay, i) => {
-            const osc = c.createOscillator(); osc.type = 'sine';
-            osc.frequency.value = i === 0 ? 780 : 520;
-            const g = c.createGain();
-            env(g, 0.003, 0.06, 0.003, 0.07, 0.13);
-            osc.connect(g); g.connect(c.destination);
-            osc.start(t + delay); osc.stop(t + delay + 0.14);
-          });
-        },
-
-        /* 8. Theme toggle — shimmer sparkle */
-        theme(){
-          if (muted) return;
-          const c = getCtx(), t = c.currentTime;
-          const freqs = [880, 1108, 1320, 1760];
-          freqs.forEach((f, i) => {
-            const osc = c.createOscillator(); osc.type = 'sine'; osc.frequency.value = f;
-            const g = c.createGain();
-            const delay = i * 0.045;
-            g.gain.setValueAtTime(0, t + delay);
-            g.gain.linearRampToValueAtTime(0.055, t + delay + 0.015);
-            g.gain.exponentialRampToValueAtTime(0.0001, t + delay + 0.18);
-            osc.connect(g); g.connect(c.destination);
-            osc.start(t + delay); osc.stop(t + delay + 0.20);
-          });
-        },
-
-        /* 9. Keyboard arrow nav — soft directional tick */
-        navTick(dir){
-          if (muted) return;
-          const c = getCtx(), t = c.currentTime;
-          const osc = c.createOscillator(); osc.type = 'triangle';
-          osc.frequency.value = dir === 'down' ? 420 : 560;
-          const g = c.createGain();
-          env(g, 0.003, 0.055, 0.003, 0.05, 0.09);
-          osc.connect(g); g.connect(c.destination);
-          osc.start(t); osc.stop(t + 0.10);
-        },
-
-        /* 10. Scroll hint button — soft descending glide */
-        scrollHint(){
-          if (muted) return;
-          const c = getCtx(), t = c.currentTime;
-          const osc = c.createOscillator(); osc.type = 'sine';
-          osc.frequency.setValueAtTime(680, t);
-          osc.frequency.exponentialRampToValueAtTime(340, t + 0.28);
-          const g = c.createGain();
-          env(g, 0.008, 0.07, 0.008, 0.22, 0.32);
-          osc.connect(g); g.connect(c.destination);
-          osc.start(t); osc.stop(t + 0.34);
-        },
-
-        /* 11. Mute toggle feedback — always plays, ignores mute state */
-        muteOn(){
-          const c = getCtx(), t = c.currentTime;
-          const osc = c.createOscillator(); osc.type = 'sine'; osc.frequency.value = 660;
-          osc.frequency.exponentialRampToValueAtTime(330, t + 0.14);
-          const g = c.createGain();
-          env(g, 0.004, 0.07, 0.004, 0.10, 0.18);
-          osc.connect(g); g.connect(c.destination);
-          osc.start(t); osc.stop(t + 0.20);
-        },
-        muteOff(){
-          const c = getCtx(), t = c.currentTime;
-          const osc = c.createOscillator(); osc.type = 'sine'; osc.frequency.value = 330;
-          osc.frequency.exponentialRampToValueAtTime(660, t + 0.14);
-          const g = c.createGain();
-          env(g, 0.004, 0.07, 0.004, 0.10, 0.18);
-          osc.connect(g); g.connect(c.destination);
-          osc.start(t); osc.stop(t + 0.20);
-        },
-      };
-
-      /* ── Mute toggle wiring ── */
-      const muteBtn = document.getElementById('muteToggle');
-      const muteIcon = document.getElementById('muteIcon');
-      function applyMuteVisual(){
-        muteIcon.setAttribute('data-lucide', muted ? 'volume-x' : 'volume-2');
-        muteBtn.setAttribute('aria-pressed', muted ? 'true' : 'false');
-        lucide.createIcons();
-      }
+    const muteBtn = document.getElementById('muteToggle');
+    const muteIcon = document.getElementById('muteIcon');
+    function applyMuteVisual(){
+      muteIcon.setAttribute('data-lucide', muted ? 'volume-x' : 'volume-2');
+      muteBtn.setAttribute('aria-pressed', muted ? 'true' : 'false');
+      lucide.createIcons();
+    }
+    applyMuteVisual();
+    muteBtn.addEventListener('click', ()=>{
+      muted = !muted;
+      KMState.set('muted', muted);
       applyMuteVisual();
-      muteBtn.addEventListener('click', ()=>{
-        muted = !muted;
-        KMState.set('muted', muted);
-        applyMuteVisual();
-        if (muted) sfx.muteOn(); else sfx.muteOff();
-      });
-
-      return { ...sfx, isMuted: () => muted };
-    })();
-
-    /* ── Wire sounds into existing interactions ── */
-
-    /* Load shimmer — after first user gesture (AudioContext policy) */
-    (function(){
-      let fired = false;
-      function onGesture(){
-        if (fired) return; fired = true;
-        SFX.load();
-        window.removeEventListener('pointerdown', onGesture);
-        window.removeEventListener('keydown', onGesture);
-      }
-      window.addEventListener('pointerdown', onGesture, {once:false});
-      window.addEventListener('keydown', onGesture, {once:false});
-    })();
-
-    /* Theme toggle shimmer */
-    document.getElementById('themeToggle').addEventListener('click', ()=> SFX.theme());
-
-    /* Scroll hint glide */
-    document.getElementById('scrollHint').addEventListener('click', ()=> SFX.scrollHint());
-
-    /* Filter + sort chip clicks */
-    document.getElementById('filterChips').addEventListener('click', ()=> SFX.chip());
-    document.getElementById('sortChips').addEventListener('click', ()=> SFX.chip());
-
-    /* Card intersection → card reveal ping */
-    (function(){
-      const io2 = new IntersectionObserver((entries)=>{
-        entries.forEach(e=>{
-          if (e.isIntersecting && !e.target.dataset.sfxFired){
-            e.target.dataset.sfxFired = '1';
-            const id = e.target.dataset.id;
-            const task = tasks.find(t=> t.id === id);
-            SFX.cardReveal(task?.mean);
-          }
-        });
-      }, { threshold: 0.5 });
-      document.querySelectorAll('.km-card').forEach(c=> io2.observe(c));
-    })();
-
-    /* Expand / collapse run detail */
-    document.getElementById('cards').addEventListener('click', e=>{
-      const btn = e.target.closest('.expandBtn');
-      if (!btn) return;
-      const isOpen = btn.getAttribute('aria-expanded') === 'true';
-      /* small delay to let the DOM toggle first */
-      setTimeout(()=> isOpen ? SFX.collapse() : SFX.expand(), 0);
+      if (muted) sfx.muteOn(); else sfx.muteOff();
     });
 
-    /* FAB open/close */
-    (function(){
-      const fab = document.getElementById('fab');
-      let prevOpen = false;
-      const obs = new MutationObserver(()=>{
-        const nowOpen = fab.getAttribute('aria-expanded') === 'true';
-        if (nowOpen !== prevOpen){
-          prevOpen = nowOpen;
-          if (nowOpen) SFX.fabOpen(); else SFX.fabClose();
+    return { ...sfx, isMuted: () => muted };
+  })();
+
+  /* ---------- 9.2 Wire sounds into interactions ---------- */
+  (function(){
+    let fired = false;
+    function onGesture(){
+      if (fired) return; fired = true;
+      SFX.load();
+      window.removeEventListener('pointerdown', onGesture);
+      window.removeEventListener('keydown', onGesture);
+    }
+    window.addEventListener('pointerdown', onGesture);
+    window.addEventListener('keydown', onGesture);
+  })();
+  document.getElementById('themeToggle').addEventListener('click', ()=> SFX.theme());
+  document.getElementById('scrollHint').addEventListener('click', ()=> SFX.scrollHint?.());
+  document.getElementById('filterChips').addEventListener('click', ()=> SFX.chip());
+  document.getElementById('sortChips').addEventListener('click', ()=> SFX.chip());
+  (function(){
+    const io2 = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if (e.isIntersecting && !e.target.dataset.sfxFired){
+          e.target.dataset.sfxFired = '1';
+          const task = tasks.find(t=> t.id === e.target.dataset.id);
+          SFX.cardReveal(task?.mean);
         }
       });
-      obs.observe(fab, { attributes: true, attributeFilter: ['aria-expanded'] });
-    })();
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.km-card').forEach(c=> io2.observe(c));
+  })();
+  document.getElementById('cards').addEventListener('click', e=>{
+    const btn = e.target.closest('.expandBtn');
+    if (!btn) return;
+    const isOpen = btn.getAttribute('aria-expanded') === 'true';
+    setTimeout(()=> isOpen ? SFX.collapse() : SFX.expand(), 0);
+  });
+  (function(){
+    const fab = document.getElementById('fab');
+    let prevOpen = false;
+    const obs = new MutationObserver(()=>{
+      const nowOpen = fab.getAttribute('aria-expanded') === 'true';
+      if (nowOpen !== prevOpen){
+        prevOpen = nowOpen;
+        if (nowOpen) SFX.fabOpen(); else SFX.fabClose();
+      }
+    });
+    obs.observe(fab, { attributes: true, attributeFilter: ['aria-expanded'] });
+  })();
+  document.addEventListener('keydown', e=>{
+    if (e.key === 'ArrowDown') SFX.navTick('down');
+    else if (e.key === 'ArrowUp') SFX.navTick('up');
+  }, { capture: true });
 
-    /* Keyboard nav ticks */
-    document.addEventListener('keydown', e=>{
-      if (e.key === 'ArrowDown') SFX.navTick('down');
-      else if (e.key === 'ArrowUp') SFX.navTick('up');
-    }, { capture: true });
-
-    lucide.createIcons();
+  lucide.createIcons();
   </script>
 </body>
 </html>

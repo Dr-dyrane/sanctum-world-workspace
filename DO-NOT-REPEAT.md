@@ -20,6 +20,7 @@ Last updated: 2026-06-11. Sources distilled here: `docs/task-difficulty-lessons.
 - Added a reconcile-and-correct clause to a propagation task and killed the difficulty (KM06 v4 went to ~0.98 all-catch). FIX: reserve the reconcile clause for genuine judgment traps; never add it (or stance hints to the prompt) to chase a clean board.
 - Re-attributed a claim but added an "unverified" caveat, telegraphing the catch. FIX: attribution only; no caveat, or you hand the model the answer.
 - Shipped a floor with no reachable catcher, which reads as an unfair gotcha (KM10, still open). FIX: prove a catch is reachable (a catcher run, or the golden scores ~0.85-0.95 under its own grader) before banking.
+- Answered a CDI or external query by declining on PROCEDURAL grounds ("a diagnosis cannot be added after discharge") instead of CLINICAL grounds, restated the absence of a diagnosis without explaining why, and built the decline on ancillary observations (nursing, OT) rather than the treating physician's own documented assessment (KM10 v1, reseeded by Abi 6/11). FIX: a CDI query is answered post-discharge by design, so the integrity-correct answer engages the indicators and explains WHY the record does not support the diagnosis, in the treating clinician's voice anchored on the treating note. Write the golden and FA as a reasoned clinical determination, not a bare "symptoms only, decline."
 
 ## 3. Difficulty (these make a task too easy and get it bounced)
 

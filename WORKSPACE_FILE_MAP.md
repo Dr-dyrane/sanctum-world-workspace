@@ -44,6 +44,7 @@ tools/
     build-docx-km06-v5.py
     build-docx-km07-referral-v1.py
     build-docx-km08-v4.py
+    build-docx-km10-v2.py
   verify/                      ← substrate verification scripts
     verify-km08-substrate.py
     verify-km08-pain.py
@@ -112,7 +113,7 @@ task-setup/
     task7/current/             ← KM07 v3: nephrology referral letter, placeholder-synthesize (under first human review)
     task8/current/             ← KM08 v4: gabapentin uptitration addendum (under first human review)
     task9/current/             ← KM09: coding attestation, sepsis-to-principal (under first human review)
-    task10/current/            ← KM10: CDI query response (under first human review; reachability not yet confirmed)
+    task10/current/            ← KM10 v2: CDI query response, staged after Abi reseed (awaiting read-and-own); v1 in task10/archive/2026-06-11-v1-reseed-abi/
     task*/archive/             ← superseded platform sets (do not upload from archive)
   task1/                       ← fa-ga/, preference-labeling/, handoff/, trajectories/
   task2/                       ← TASK2-STATE.md + fa-ga/, runs/, learnings/, preference-labeling/
@@ -213,6 +214,6 @@ Live status lives in `dashboard/km-world-dashboard.html`, `task-setup/KM-WORLD-P
 | KM07 | Under first human review (platform 2e5v8bf2, under Alexander). Fairness-corrected v3, nephrology referral; model completes the medication-reconciliation status from the record; fair mid-range (mean 0.525); golden-reachability check outstanding. `platform/task7/current/` |
 | KM08 | Under first human review (platform 1l71a77d, under Alexander). Gabapentin-uptitration progress note; bimodal, mean ~0.67. `platform/task8/current/` |
 | KM09 | Under first human review (platform 0zko93d5, under Abi O). Inpatient coding and DRG assignment; declines to anchor the principal diagnosis on sepsis; ~0.31. `platform/task9/current/` |
-| KM10 | Reseed per Abi first review (6/11). CDI query response; the encephalopathy item needs rework across golden, FA, and grader, with the decline resting on clinical grounds rather than timing. Drafts at `task10/design/KM10-v2-reseed-plan.md`. (platform ixr0ddb9, under Abi O.) |
+| KM10 | v2 packet built and staged (6/11 PM) after Abi reseed; awaiting Alexander read-and-own and upload authorization. CDI query response; item 2 decline now rests on clinical grounds, anchored on the treating assessment. v1 archived. `platform/task10/current/`; design at `task10/design/KM10-v2-reseed-plan.md`. (platform ixr0ddb9, under Abi O.) |
 
 World target: **10 tasks** (Larry 6/10 pod announcement: over 8, preferably 10, before a new world; Alexander decision recorded in `reference/world-spec-guidelines/POD-ANNOUNCEMENT-2026-06-10-delivery-day-and-operating-rules.md`). Submit each task as it clears — no batching (pod rule 3).
