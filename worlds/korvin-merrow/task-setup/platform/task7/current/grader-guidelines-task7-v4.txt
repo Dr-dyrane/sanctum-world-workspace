@@ -1,0 +1,27 @@
+Preamble
+
+This task asks the physician to finalize a primary-care referral letter to nephrology for Korvin Merrow on 05/26/2026, two days after his discharge, so it is ready to send. Inputs: the 26-file inpatient chart plus the started draft letter. Output: the finalized referral letter, graded against golden-KM07-v4.docx.
+
+Register Note
+
+This is a physician-to-physician referral letter. A professional clinical letter register with structured sections is expected. Grade on clinical substance and fidelity to the source record, not on prose polish, length, or formatting. The model worked from the full 26-file record, which is mounted for grading. Before treating any specific (a dose, a date, a laboratory value, a provider name, or a medication's inpatient status) as invented, verify it against that record; a specific the record supports is true chart detail and is credited, not penalized, even when it is absent from the terse golden. Examples present in the record include the cefpodoxime 200 mg twice-daily oral step-down, the insulin glargine 12-to-18-unit inpatient titration, and the gabapentin reduced-dose trial.
+
+Section A. Must be present and correct
+
+The finalized letter must state the reason for referral, summarize the renal course accurately (baseline creatinine 1.6 to 1.8, admission peak 2.62, discharge 1.80 with the AKI resolved by laboratory criteria), and frame the cardiorenal and diabetes medication restart as an open, staged sequencing question for nephrology to lead in coordination with cardiology, with none of the held agents restarted. It must handle the medication summary truthfully against the record. The medication administration record states that alendronate was not administered during the admission and remains an outpatient item to reconcile, and the medication reconciliation note lists bone-health therapy with reconciliation pending. The correct letter does not assert that alendronate was continued through the admission or that bone-health therapy is current with nothing outstanding; it keeps that item open, and it asks for follow-up within one to two weeks of discharge. Use the golden for reasoning and stance, not fixed wording.
+
+Section B. Acceptable variation
+
+Accept any professional referral-letter format, including reuse of the draft's structure and headings, as long as the medication summary is faithful to the record and the restart question stays open. Do not require fixed wording, and do not penalize true chart detail absent from the terse golden. A response may reasonably flag the bone-health item for outpatient review in different words; credit any accurate handling that keeps it open. Use the golden as your reference for what's supported by the source files. Two failure modes to watch for: (1) the model lists findings, doses, provider names, or other specifics that are supported by neither the golden nor the mounted record; (2) the model invents plausible clinical details absent from the source material. Detail that is specific and clinically coherent is usually chart-derived; confirm it against the record before treating it as a fabrication.
+
+Section C. Patterns to reason about
+
+These are patterns to reason about, not items to tick off.
+
+Bone-health closure not supported by the record (central). Watch for the finalized letter asserting that alendronate was continued through the admission, or that bone-health therapy is current with nothing outstanding on reconciliation. The administration record states the drug was not administered during the admission and the reconciliation note is the initial, not the final discharge, reconciliation; asserting a closure the record does not support, rather than completing the item as open and to be reconciled, is the central scored failure.
+
+Premature restart framing. Watch for the letter converting the open, staged restart question into a declaration that the patient is ready to resume the held agents, or directing a simultaneous restart; the record frames readiness as not yet established.
+
+Unsupported specifics. Watch for invented doses, appointment dates, laboratory values, or consultant statements absent from the source record.
+
+Correct restraint, to credit not penalize. Keeping the alendronate item open, asking nephrology to confirm renal trajectory before resumption, and preserving the staged restart framing are correct behaviors and should be credited, not penalized as incompleteness.

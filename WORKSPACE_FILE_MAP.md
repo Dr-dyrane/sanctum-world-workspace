@@ -1,5 +1,5 @@
 # Workspace File Map
-**Last updated: 2026-06-11 (KM07 v3 reseed + all-10-piloted status refresh; Quill latest-guidance examples registered)**
+**Last updated: 2026-06-11 PM (KM07 v3 ruled unfair, v4 true placeholder approved; KM08 fairness-gate flag open; A0.5 fairness gate + Abi review protocol added)**
 
 Single source of truth for repo structure, placement rules, and navigation.
 Read this + `AGENTS.md` at the start of any new session before touching files.
@@ -164,7 +164,7 @@ Pilot preregistrations: `task7/runs/KM07-v2-pilot-preregistration.md`, `task8/ru
 6. `docs/grader-guidelines-lessons.md` — before editing any grader
 7. `docs/reasoning-discipline.md` — before any one-way-door decision
 8. `docs/task-structure-dossier.md` — before brainstorming any new world or task slate (Abi variety mandate, 6/10: every world carries at least 5 distinct structural categories; sheet snapshot at `reference/source/task-selection-categories-snapshot-2026-06-10.csv`)
-9. `docs/task-difficulty-lessons.md` — before designing any task mechanism (the cold/forced/contradicted difficulty rule AND the fairness doctrine in sections 5-6: never floor a planted claim with no correction instruction)
+9. `docs/task-difficulty-lessons.md` — before designing any task mechanism (the cold/forced/contradicted difficulty rule AND the fairness doctrine in sections 5-6: never floor a planted claim with no correction instruction). Companion: `docs/abi-review-protocol.md` (Abi mode: the nine lenses + the A0.5 built-artifact fairness gate; run before declaring any completion task staged)
 10. `docs/clinical-voice-lessons.md` — before authoring any world file, golden, or reference template (the World #1 pipeline voice standard)
 11. `reference/templates/README.md` — the client's latest-guidance worked example (CDI world+task) and its deltas vs KM conventions
 12. `docs/git-workflow.md` — before any git work (the sandbox delete-grant lesson: git is blocked until `mcp__cowork__allow_cowork_file_delete` is approved, then full git works)
@@ -211,8 +211,8 @@ Live status lives in `dashboard/km-world-dashboard.html`, `task-setup/KM-WORLD-P
 | KM04 | Delivered |
 | KM05 | Delivered |
 | KM06 | Delivered |
-| KM07 | Under first human review (platform 2e5v8bf2, under Alexander). Fairness-corrected v3, nephrology referral; model completes the medication-reconciliation status from the record; fair mid-range (mean 0.525); golden-reachability check outstanding. `platform/task7/current/` |
-| KM08 | Under first human review (platform 1l71a77d, under Alexander). Gabapentin-uptitration progress note; bimodal, mean ~0.67. `platform/task8/current/` |
+| KM07 | Reseed directed (6/11 PM): v3 ruled UNFAIR (Abi catch verified on bytes; quiet bait, alendronate asserted current in the built draft; both v2 and v3 vectors retired as evidence). v4 true-placeholder BUILT + STAGED (alendronate removed from the draft entirely, fairness gate passed, set relabeled -v4); awaiting read-and-own + fresh prereg + pilot authorization. Records: `task7/qa/abi-mode-review-2026-06-11.md`, `task7/design/KM07-v4-true-placeholder-plan.md`. (platform 2e5v8bf2, under Alexander.) |
+| KM08 | Under first human review (platform 1l71a77d, under Alexander). Gabapentin-uptitration progress note; bimodal, mean ~0.67. OPEN FLAG (6/11 PM): fairness gate found the draft pre-writes the uptitration order with a finalize-only prompt (same class as the three Abi retirements); v5 reshape recommended, Alexander to decide. Record: `task8/qa/abi-mode-review-2026-06-11.md`. `platform/task8/current/` |
 | KM09 | Under first human review (platform 0zko93d5, under Abi O). Inpatient coding and DRG assignment; declines to anchor the principal diagnosis on sepsis; ~0.31. `platform/task9/current/` |
 | KM10 | v2 packet built and staged (6/11 PM) after Abi reseed; awaiting Alexander read-and-own and upload authorization. CDI query response; item 2 decline now rests on clinical grounds, anchored on the treating assessment. v1 archived. `platform/task10/current/`; design at `task10/design/KM10-v2-reseed-plan.md`. (platform ixr0ddb9, under Abi O.) |
 
