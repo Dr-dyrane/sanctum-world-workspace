@@ -1,6 +1,6 @@
 # KM07 learnings (Specialist Referral Letter to Nephrology)
 
-Two lessons, both general enough to apply to future tasks. Companion central homes: `docs/grader-guidelines-lessons.md` (grader), `TASK-RUNBOOK.md` (build gates), `AGENTS.md` guardrail #5 (framing-change re-audit), `docs/reasoning-discipline.md` (read why before concluding).
+Three lessons, all general enough to apply to future tasks. Companion central homes: `docs/grader-guidelines-lessons.md` (grader), `TASK-RUNBOOK.md` (build gates), `AGENTS.md` guardrail #5 (framing-change re-audit), `docs/reasoning-discipline.md` (read why before concluding).
 
 ## Lesson 1 - the planted-false-claim fairness trap (Abi, 3rd instance)
 A draft that carries a false or unverified claim, written by the same author who writes the golden, with no instruction to the model to correct it, is unfair to floor: propagating the draft is defensible, so flooring it punishes the model for trusting the chart it was handed. Abi flagged this same class three times: KM05 (home-BP read as physician-verified -> re-attribute to the patient), KM06 (false closures with no reconcile instruction -> add a reconcile-and-correct line), KM07 (bone-health false closure -> reseed).
@@ -20,5 +20,15 @@ Fix VALIDATED (re-pilot job dba6c34f): the noise collapsed. Golden-only pilot wa
 
 Carry-forward: a task that synthesizes a deliverable from the chart needs a chart-aware grader by default; a golden-only grader is only safe when the scored axis is fully checkable against the golden. Added to the runbook and to the framing-change re-audit (check the grader's chart-access setting, not just its wording).
 
-## Difficulty note
-v2 (planted closure) floored 9/10 at mean 0.36 but was unfair. v3 (placeholder) is fair and bites at a mid-band (~0.45 raw, likely a touch higher once the specifics-noise is removed). The discriminator is the subtle judgment most models miss: keep alendronate open and ask nephrology to confirm renal trajectory before resuming, rather than writing "continues / resumes on outpatient schedule." Forecast was ~0.55; actual 0.45, the suite's usual ~10-point downward surprise, inside the forecast range.
+## Lesson 3 - the quiet bait, and reviewing the plan instead of the artifact (Abi, 6/11; supersedes Lesson 1's claim that v3 was the fair fix)
+
+v3 was ruled unfair on the same class as v2. The built draft listed alendronate inside "Current medications" with its dosing day, directly beside an explicit "Held pending your guidance" list, with a finalize-only prompt. The author had already categorized the scored item; the model was floored for not silently reversing that categorization. The "placeholder" only blanked the reconciliation-status field; the false claim lived in the membership of the current-medications list, which the placeholder never touched. The anti-telegraph instruction (make the row look as routine as the others) is what re-planted the lie: looking routine and asserting are the same act.
+
+Why it slipped: the in-house fairness review read the v3 design plan ("the reconciliation summary is left to be completed", "no longer states any closure") and trusted that description without extracting the built draft's text. Reviewing a plan is not reviewing a task. Second, the wrong test was applied: discoverability (the MAR contradicts the listing, so the model could check) instead of Abi's test (a same-author draft asserting something the golden overrides, with no instruction to override, is bait regardless of discoverability).
+
+Fixes taken: runbook gate A0.5 (fairness gate runs against the built artifact, cold, quoting the draft's verbatim lines about the scored item); DO-NOT-REPEAT section 2 entries; same-day sibling sweep (the gate run on KM08's built bytes found the same class: a pre-written uptitration order with a finalize-only prompt, filed at task8/qa/abi-mode-review-2026-06-11.md). v4 direction approved: true placeholder, alendronate appears nowhere in the draft; design of record at design/KM07-v4-true-placeholder-plan.md.
+
+Carry-forward: a completion task is fair only when the draft asserts nothing the correct answer would change, or the prompt licenses correction. Placeholder means absent, not routine-looking. And when one construction fails a fairness class, re-run the gate on every sibling's built bytes the same day.
+
+## Difficulty note (historical; v3 verdict superseded by Lesson 3)
+v2 (planted closure) floored 9/10 at mean 0.36 but was unfair. v3 piloted at a tight mid-band (0.45 to 0.60, mean 0.525, job dba6c34f) but was itself ruled unfair on 6/11: the band reflected runs trusting the asserted current-medications listing, not free clinical judgment, and no run reached the golden behavior (no catcher; golden self-score never run). Treat both vectors as design evidence, not bankable data. The open empirical question for v4 (true placeholder): does the tidy-closure prior still floor when the draft asserts nothing, per the doctrine, or does the task go soft, per the v3 post-mortem? The v4 pilot settles it under the pre-registered decision rule in the v4 plan.

@@ -110,6 +110,8 @@ __pycache__/
 .ruff_cache/
 dist/
 build/
+!tools/build/
+!tools/build/*.py
 coverage/
 *.sqlite-shm
 *.sqlite-wal

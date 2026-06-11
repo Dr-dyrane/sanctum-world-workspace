@@ -28,6 +28,19 @@ DOC SPINE / READ RECEIPT: the workspace read spine is the root `WORKSPACE_FILE_M
 - WORLD #2 HEADER CONVENTION: do NOT use the "Date / Anchor" header-label convention in world files (it is a Sanctum project artifact, not a real clinical header, and it leaks into agent output; Abi flagged it on task files). Use real clinical fields ("Date of Service", "Hospital Day", "Encounter Date"). Verified 6/6: present in 19 of 26 Korvin world files; left as-is because the world is FINALIZED + passed Final Files 78/78 and editing a live world mid-review is a high-cost one-way door no reviewer required. Fix at BUILD time in World #2, not by re-opening a finalized world.
 - DO NOT re-open a FINALIZED/live world for cosmetic fixes (header labels, structural bold). It invalidates synced trajectories and destabilizes a passing world. Only re-open if a reviewer flags the WORLD specifically, or a hardening change is explicitly authorized. Verify the actual files (python-docx text extraction, NOT grep on the zipped .docx - grep on binary docx gives false negatives) before deciding.
 
+## A0.5 FAIRNESS GATE - runs against the BUILT artifact, never the plan (added 2026-06-11 after KM07 v3)
+
+Before any completion task is declared staged, a cold reader (not the builder; the builder is anchored on making it floor, which is the bias that plants the bait) answers Abi's two questions line by line against the built draft's extracted text, and the gate record QUOTES the draft's verbatim lines about the scored item. Reviewing the design plan instead of the built artifact is how KM07 v3 shipped a quiet bait after v2 was retired for a loud one.
+
+- [ ] Extract the built draft's text from the bytes (python-docx or XML extraction, never the design doc's description of the draft).
+- [ ] Question 1: does the draft assert or imply anything the correct answer would change? Corollaries: looking routine is asserting; a status disclaimer does not un-assert membership; a pre-written plan order is an assertion (KM08 v4.1 finding); a categorization (current vs held) is an assertion about every item it places.
+- [ ] Question 2: if yes, does the prompt tell the model to correct errors? Any false or judgment-bearing content with a finalize-only prompt FAILS the gate.
+- [ ] A true placeholder means the draft asserts NOTHING about the trap item, not that the item looks routine, and not that it sits in a different list.
+- [ ] Quote the verbatim draft lines about the scored item in the gate record (taskN/qa/). If the correct quote is "none", say so.
+- [ ] Companion check: pre-register what spread this construction needs to bank (catcher threshold, floor count) before the pilot, in the locked prereg.
+
+Full protocol and the nine lenses: `docs/abi-review-protocol.md`. Ledger entries: `DO-NOT-REPEAT.md` section 2.
+
 ## A. Off-clock prep (Claude builds, physician rules)
 - [ ] READ RECEIPT: state the current task, current platform state, current forbidden actions, files read from the spine, and three no-repeat lessons from prior tasks before drafting prompt, golden, grader, or mounted-file content.
 - [ ] HYPOTHESIS KILL-CHAIN: before authoring a mounted adversarial input, answer six questions in the active gate or design packet: would a real clinician plausibly write it; which exact agent-read files rebut it; is the failure clinical judgment rather than simple chart-reading; is the planted error quiet enough not to look like an error; can a correct answer reuse parts without penalty; and what high-scoring catch run versus low-scoring propagation run should look like.
