@@ -2,12 +2,12 @@
 
 World: Healthcare_247_Merrow | Patient: Korvin Merrow, 62M | Chart: 26 inpatient files (HD1-HD6)
 World created: 2026-06-05 | Pod: Vaguspod | Writer: Alexander Udeogaranya, MD
-Last data sync: 2026-06-10 (KM07 v2 + KM08 v4.1 pilots added; KM09/KM10 staged). This markdown is the canonical @data-analytics source.
+Last data sync: 2026-06-10 PM (KM09 v1.1 + KM10 v1 pilots added; all 10 tasks now piloted). This markdown is the canonical @data-analytics source.
 
 > DATA-SOURCE INTEGRITY (read before external reporting):
 > 1. KM01-KM06 score vectors are EXACT (platform-confirmed). KM07 and KM08 vectors are APPROXIMATE where the platform display string was garbled on runs 1-2; the confirmed transcript points are exact (KM07: Att3 0.30, Att9 0.78 | KM08: Att8 0.10, Att6 0.55, Att10 0.95). Confirm full 10-vectors off-platform before any client-facing number.
 > 2. Durable evidence chain per task lives in taskN/runs/ (trajectory tarballs + results-and-prereg-reconciliation.md) and taskN/fa-ga/FA-GA-current.md. Locked preregistrations sit beside each result, unedited.
-> 3. PENDING real-environment step: regenerate KM-World-Performance.xlsx via tools/build-world-performance-xlsx.py (the .py is updated with KM07/KM08; the sandbox mount truncated it mid-session so the xlsx was not rebuilt here). Until rebuilt, the xlsx is stale at 6 tasks; THIS markdown is authoritative.
+> 3. DONE 6/10 late (MacBook session): KM-World-Performance.xlsx regenerated at 8 tasks via tools/build-world-performance-xlsx.py (script verified complete on the bytes, compiles, all eight KM data blocks present; output sha 0ef20627, reload-verified from the repo path). The script's hardcoded Windows output path was replaced with repo-relative resolution. THIS markdown remains the canonical @data-analytics source; the xlsx is its presentation artifact.
 > 4. Minor reconciliation to resolve: KM06 vector differs slightly between this report (f0934a26: 15,10,90,10,78,20,95,95,93,97 = 60.3) and the xlsx script (10,10,90,10,78,95,95,93,97,10 = 58.8). Pick one canonical vector from the platform when convenient.
 
 ---
@@ -22,12 +22,12 @@ Last data sync: 2026-06-10 (KM07 v2 + KM08 v4.1 pilots added; KM09/KM10 staged).
 | KM04 | 042j9681 | Ready for Delivery | Rahul Pai | 2026-06-09 |
 | KM05 | b0tza971 | Ready for Delivery | Janette S | 2026-06-09 |
 | KM06 | 2zw95f4e | Ready for Delivery | Janette S | 2026-06-09 |
-| KM07 | 2e5v8bf2 | Awaiting First Human Review | TBD | Submitted |
+| KM07 | dba6c34f | v3 re-piloted (mean 0.525, fair mid-band); grader fix validated (tight 0.45-0.60, noise gone); bankable pending golden-reachability check | Abi O | Ready for FA/GA |
 | KM08 | 1l71a77d | Awaiting First Human Review | TBD | Submitted |
-| KM09 | in entry | Alexander entering on platform (v1.1 principal-dx) | TBD | Entering |
-| KM10 | TBD | v1 packet staged (CDI query response) | TBD | Not piloted |
+| KM09 | df5ba05c | Piloted; bimodal; FA/GA drafted | TBD | Piloted |
+| KM10 | 2eb3a8ce | Piloted; all-floor; FA/GA drafted; reachability open | TBD | Piloted |
 
-Platform board sync 2026-06-10 (PM): KM01 (Task 1), KM02 (waivf867), KM03 (c8izef70), KM04 (042j9681), KM05 (b0tza971), KM06 (2zw95f4e) = Ready for Delivery. KM07 (2e5v8bf2) and KM08 (1l71a77d) = Awaiting First Human Review. KM09 in entry by Alexander. An [AQC-EVAL] sibling task on the KM06 ID (2zw95f4e) sits in Task Writing under Dhruv Ahuja (separate AQC eval, not our deliverable). Note: the board's Latest Score / GT Grade / Criteria columns render 0 / [object Object] / dash for these rows = a display glitch, not real scores; trust the per-task run records for spreads. World target = 10 tasks (pod rule 6/10).
+Platform board sync 2026-06-10 (PM): KM01 (Task 1), KM02 (waivf867), KM03 (c8izef70), KM04 (042j9681), KM05 (b0tza971), KM06 (2zw95f4e) = Ready for Delivery. KM07 (2e5v8bf2) = REWORK / reseed after Abi's 6/9 first review (v2 false-closure design ruled unfair). KM08 (1l71a77d) = Awaiting First Human Review. KM09 (df5ba05c) and KM10 (2eb3a8ce) = piloted 6/10 PM, FA/GA drafted, not yet entered. An [AQC-EVAL] sibling task on the KM06 ID (2zw95f4e) sits in Task Writing under Dhruv Ahuja (separate AQC eval, not our deliverable). Note: the board's Latest Score / GT Grade / Criteria columns render 0 / [object Object] / dash for these rows = a display glitch, not real scores; trust the per-task run records for spreads. World target = 10 tasks (pod rule 6/10).
 
 ---
 
@@ -43,22 +43,23 @@ Platform board sync 2026-06-10 (PM): KM01 (Task 1), KM02 (waivf867), KM03 (c8ize
 | KM06 | f0934a26 | 15, 10, 90, 10, 78, 20, 95, 95, 93, 97 | 60.3% | 10 | 97 | 4 | 5 |
 | KM07 | cf205fcc | ~35, 30, 30, 30, 35, 30, 30, 30, 78, 30 (approx; 1-2 reconstructed) | ~35.8% | 30 | 78 | 9 | 9 |
 | KM08 | b9db0713 | ~95, 92, 20, 55, 92, 55, 92, 10, 92, 95 (approx; confirmed 0.10/0.55/0.95) | ~67% | 10 | 95 | ~3 | ~4 |
-| KM09 | not piloted | staged (no mounted file; coding attestation) | — | — | — | — | — |
-| KM10 | not piloted | staged (mounted CDI query) | — | — | — | — | — |
+| KM09 | df5ba05c | 20, 15, 15, 15, 85, 15, 93, 20, 15, 20 (confirmed) | 31.3% | 15 | 93 | 8 | 9 |
+| KM10 | 2eb3a8ce | 35, 25, 30, 20, 15 confirmed (5/10, all floors; no catcher) | ~25% | 15 | 35 | 5/5 | 5/5 |
 
-KM07 and KM08 vectors are approximate where the platform display string was partially garbled (KM07 runs 1-2; KM08 runs 1-2); confirmed transcript points are exact (KM07 0.30 Att3 / 0.78 Att9; KM08 0.10 Att8 / 0.55 Att6 / 0.95 Att10). Confirm exact vectors off-platform before any external reporting. Durable per-task evidence: task7/runs/KM07-v2-results-and-prereg-reconciliation.md, task8/runs/KM08-v41-results-and-prereg-reconciliation.md, plus locked preregistrations and trajectory tarballs in each runs/ folder.
+KM07 and KM08 vectors are approximate where the platform display string was partially garbled (KM07 runs 1-2; KM08 runs 1-2); confirmed transcript points are exact (KM07 0.30 Att3 / 0.78 Att9; KM08 0.10 Att8 / 0.55 Att6 / 0.95 Att10). KM09's full 10-vector is confirmed (board string decoded and cross-checks against four read-in-full runs: Att4 0.15, Att5 0.85, Att7 0.93, Att8 0.20). KM10 has 5 of 10 confirmed (Att1 0.35, Att3 0.25, Att4 0.30, Att5 0.20, Att8 0.15), all floors, no catcher observed; its full vector and the reachability question (does any run decline?) are still open. Confirm exact vectors off-platform before any external reporting. Durable per-task evidence: task7/runs/KM07-v2-results-and-prereg-reconciliation.md, task8/runs/KM08-v41-results-and-prereg-reconciliation.md, task9/runs/KM09-v1.1-results-and-prereg-reconciliation.md, task10/runs/KM10-v1-results-and-prereg-reconciliation.md, plus preregistrations and trajectory tarballs in each runs/ folder.
 
-### Aggregate Statistics (8 piloted tasks, 80 runs; KM07/KM08 approximate)
+### Aggregate Statistics (10 piloted tasks, 100 runs; KM07/KM08/KM10 approximate)
 
 | Metric | Value |
 |--------|-------|
-| World mean (8 piloted, approx) | ~60% |
+| World mean (10 piloted, approx) | ~56% |
 | Overall min | 10 (KM06, KM08) |
 | Overall max | 97 (KM06 Att10) |
-| Tasks with sub-70 floor | 7 / 8 (all except KM01) |
-| Bimodal tasks (clear catch/floor split) | 6 (KM02, KM04, KM05, KM06, KM08; KM07 floor-skewed) |
-| Deepest floors (suite killers) | KM05 46.6, KM07 ~35.8, KM02 59.3 |
+| Tasks with sub-70 floor | 9 / 10 (all except KM01) |
+| Bimodal tasks (clear catch/floor split) | 7 (KM02, KM04, KM05, KM06, KM08, KM09; KM07 floor-skewed, KM10 all-floor) |
+| Deepest floors (suite killers) | KM10 ~25 (all-floor), KM09 31.3, KM07 ~35.8, KM05 46.6 |
 | Fair-clearer profile | KM01 89.0, KM08 ~67 (genuine floor + clean 0.95 catch) |
+| Open reachability flag | KM10 (no catcher observed; confirm any run declines before banking) |
 
 ---
 
@@ -87,6 +88,8 @@ KM07 and KM08 vectors are approximate where the platform display string was part
 | Treatment Plan Documentation (Chronic Disease) | KM06 | +30 insulin management |
 | Specialist Referral Letter | KM07 | Nephrology referral, PCP-authored |
 | Progress Note Daily Rounding Documentation | KM08 | Inpatient pain/sleep addendum |
+| Coding Attestation / DRG Sequencing | KM09 | Inpatient coding addendum, +1 day |
+| Clinical Documentation Integrity Query Response | KM10 | CDI query response, +3 days |
 
 ### Time Anchor Distribution
 
@@ -95,6 +98,8 @@ KM07 and KM08 vectors are approximate where the platform display string was part
 | Discharge day (05/24) | KM01, KM02, KM03, KM04, KM08 | Active inpatient, chart open, decisions live |
 | +2 days post-discharge (05/26) | KM07 | PCP referral letter to nephrology, post-snapshot |
 | +7 post-discharge (05/31) | KM05 | First outpatient visit, transition assessment |
+| +1 day post-discharge (05/25) | KM09 | Coding attestation addendum, HIM-requested |
+| +3 days post-discharge (05/27) | KM10 | CDI query response, post-discharge review |
 | +30 post-discharge (06/23) | KM06 | Interval follow-up, no new objective data |
 
 ### Trap Coverage Matrix (from locked architecture)

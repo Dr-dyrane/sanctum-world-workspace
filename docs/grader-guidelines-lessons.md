@@ -52,6 +52,14 @@ After (~50 words, same signal):
 
 Same signal, one-third the size. The grader still knows exactly what the trap is and why it is wrong; it just no longer reads the full case file.
 
+## Lesson 3 - synthesis tasks need a chart-aware grader (KM07 v3, 6/11)
+
+Source: KM07 v3 pilot (job cf00b80c). The task asks the model to synthesize a deliverable (a referral letter's medication reconciliation) from the chart, so the output legitimately fills with true chart detail the terse golden does not enumerate. The grader ran golden-only and could not tell true detail from invention, so it flagged real MAR facts (cefpodoxime 200 mg BID step-down, glargine 12-to-18 titration, gabapentin reduced-dose trial) as "unsupported specifics." Two runs with the identical scored behavior landed 40 points apart (0.30 vs 0.70) purely on whether that run's grader accepted or suspected the specifics. The spread was grader noise, not signal.
+
+The rule: when the scored deliverable is synthesized from the chart, the grader must be chart-aware (include_input_files=true) and the guidance must tell it to verify any specific (dose, date, lab, name, inpatient med status) against the mounted record before treating it as invented, crediting chart-supported detail even when it is absent from the golden. A golden-only grader is only safe when the scored axis is fully checkable against the golden alone (for example KM07 v2, where the only axis was a planted closure the golden keeps open). This is the same include_input_files posture KM03 and KM04 already use; expect and justify the "Self-Contained Guidelines" AutoQC warning rather than fixing it by making the grader golden-only.
+
+Why it slipped, for the record: the v2 grader was correctly golden-only; the v2-to-v3 reseed changed the task from "catch a planted claim" to "synthesize from the chart," which is what created the chart-access requirement. The grader survived the framing change and was re-checked only for wording, not for chart-access fit. Framing-change re-audit (AGENTS.md guardrail #5) now explicitly includes the grader's chart-access setting.
+
 ## The general principle
 
 The grader is **guidance, not a review document.** Write the minimum that lets a grader score the response correctly. When the artifact starts reading like "someone who spent months building this world," that is the tell to compress. Structure (Lesson 1) is non-negotiable; everything inside the structure (Lesson 2) is ruthlessly compressed to signal.
@@ -66,6 +74,7 @@ The grader is **guidance, not a review document.** Write the minimum that lets a
 - [ ] Section C includes a "correct restraint, credit not penalize" pattern.
 - [ ] Section C patterns are "watch for X + one-line why," no inline file walkthroughs.
 - [ ] Whole grader <= ~1 page (1.25 max); body ratio ~A 40 / B 20 / C 40.
+- [ ] If the deliverable is synthesized from the chart, the grader is chart-aware: include_input_files=true, Register Note instructs verifying specifics against the mounted record before calling them invented (Lesson 3). Golden-only is allowed only when the scored axis is fully checkable against the golden alone.
 - [ ] Re-run/re-grade after any grader or golden change; re-derive FA + GA on the new lowest run.
 
 ## Prompt note (same review, KM04)

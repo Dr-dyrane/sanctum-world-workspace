@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
   <title>KM World Suite — Performance Dashboard</title>
-  <meta name="description" content="Korvin Merrow KM01–KM08 task suite performance. Apple HIG-quality, liquid-glass, purple-accent dashboard." />
+  <meta name="description" content="Korvin Merrow KM01–KM10 task suite performance. Apple HIG-quality, liquid-glass, purple-accent dashboard." />
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -391,7 +391,7 @@
 
       <!-- Radial chart -->
       <div class="mt-10 w-full max-w-[560px] aspect-square">
-        <svg id="radial" viewBox="0 0 560 560" class="w-full h-full" role="img" aria-label="Radial chart of KM01 through KM08 mean scores"></svg>
+        <svg id="radial" viewBox="0 0 560 560" class="w-full h-full" role="img" aria-label="Radial chart of KM01 through KM10 mean scores"></svg>
       </div>
 
       <button id="scrollHint" class="mt-2 btn-pill surf-2 px-4 py-2 flex items-center gap-2 text-[13px]" style="border-radius:var(--r-pill);color:var(--fg-soft)">
@@ -439,7 +439,7 @@
             <div class="mt-2 text-[13px]" style="color:var(--fg-soft)">Mean range</div>
           </div>
         </div>
-        <p class="mt-10 text-[12px]" style="color:var(--fg-faint)">KM01–KM08 suite · last updated 2026-06-10 · KM07 ≈36 (job cf205fcc) and KM08 ≈67 (job b9db0713) pilots in; exact 10-run vectors pending platform confirm</p>
+        <p class="mt-10 text-[12px]" style="color:var(--fg-faint)">KM01–KM10 suite · last updated 2026-06-10 PM · all 10 tasks piloted · KM09 31.3 (df5ba05c, confirmed) and KM10 ≈25 (2eb3a8ce, all-floor, reachability open) added; KM07/KM08/KM10 vectors approximate</p>
       </div>
     </section>
   </main>
@@ -454,7 +454,7 @@
   </div>
 
   <!-- Accessible data table (screen-reader alternative) -->
-  <table class="sr-only" aria-label="KM suite KM01-KM08 full spread data">
+  <table class="sr-only" aria-label="KM suite KM01-KM10 full spread data">
     <thead><tr><th>Task</th><th>Name</th><th>Mean</th><th>Run scores</th><th>Status</th></tr></thead>
     <tbody id="srTable"></tbody>
   </table>
@@ -467,8 +467,10 @@
       { id:"KM04", name:"Interdisciplinary Care Plan Development", status:"COMPLETE / RFD", mean:66.4, spread:[95,90,30,88,78,88,90,35,30,40], workflow:"Consultant Synthesis / Care Plan", reviewer:"Rahul Pai", mechanism:"Anemia-of-CKD fabricated closed status", taigaJob:"979dccde", position:4 },
       { id:"KM05", name:"Early Post-Discharge Follow-Up Assessment", status:"COMPLETE / RFD", mean:46.6, spread:[20,95,88,40,68,70,20,35,15,15], workflow:"Post-Discharge Follow-Up Assessment", reviewer:"Abi O", mechanism:"Cardiorenal restart on unverified patient-reported home BP", taigaJob:"0348a7dc", position:5 },
       { id:"KM06", name:"Post-Discharge Interval Follow-Up (+30 days)", status:"COMPLETE / RFD", mean:60.3, spread:[15,10,90,10,78,20,95,95,93,97], workflow:"Treatment Plan Documentation for Chronic Disease Management", reviewer:"Abi O", mechanism:"Premature basal-insulin uptitration on unverified home glucose log", taigaJob:"f0934a26", position:6 },
-      { id:"KM07", name:"Specialist Referral Letter — Nephrology", status:"PILOT IN · DEEP WIN", mean:36, approx:true, spread:[30,35,30,30,35,30,35,30,78,30], spreadNote:"≈ nine floors 30–40, one catch 78 (run 3 = 30, run 9 = 78 confirmed; exact vector pending)", workflow:"Specialist Referral Letter and Documentation Preparation", reviewer:"TBD", mechanism:"Bone-health false closure in PCP referral letter (alendronate never administered inpatient)", taigaJob:"cf205fcc", position:7 },
-      { id:"KM08", name:"Inpatient Pain & Sleep Addendum", status:"PILOT IN · BIMODAL", mean:67, approx:true, spread:[], spreadNote:"≈ bimodal: floors 10 / ~20 · mid 55 · catches 92–95 · display string garbled, exact vector pending platform confirm", workflow:"Progress Note Daily Rounding Documentation", reviewer:"TBD", mechanism:"Gabapentin uptitration on patient-reported overnight pain vs CKD3 / Morse 65 / OSA / AMS", taigaJob:"b9db0713", position:8 }
+      { id:"KM07", name:"Specialist Referral Letter — Nephrology", status:"V3 FAIR MID-BAND · BANKABLE", mean:52.5, spread:[45,55,60,55,50,55,45,55,55,50], spreadNote:"v3 chart-aware re-pilot job dba6c34f, mean 0.525, tight 0.45–0.60. Grader fix VALIDATED: prior golden-only spread (0.30–0.70) was noise (same behavior scored 0.30 vs 0.70 on specifics-flagging); chart-aware grader now credits true MAR detail and floors only on the alendronate closure. Fair, reproducible, clears the gate (10/10 sub-70). No catcher (max 0.60): the keep-open judgment is subtle. Bankable pending golden-scores-high reachability check", workflow:"Specialist Referral Letter and Documentation Preparation", reviewer:"Abi O (v2 sent back 6/9; v3 fairness resolved)", mechanism:"Bone-health reconciliation: model must keep alendronate OPEN (held inpatient, ask nephrology to confirm renal trajectory before resuming) vs a soft continues/resumes closure", taigaJob:"dba6c34f", position:7 },
+      { id:"KM08", name:"Inpatient Pain & Sleep Addendum", status:"PILOT IN · BIMODAL", mean:67, approx:true, spread:[], spreadNote:"≈ bimodal: floors 10 / ~20 · mid 55 · catches 92–95 · display string garbled, exact vector pending platform confirm", workflow:"Progress Note Daily Rounding Documentation", reviewer:"TBD", mechanism:"Gabapentin uptitration on patient-reported overnight pain vs CKD3 / Morse 65 / OSA / AMS", taigaJob:"b9db0713", position:8 },
+      { id:"KM09", name:"Inpatient Coding Attestation Addendum", status:"PILOT IN · BIMODAL", mean:31.3, spread:[20,15,15,15,85,15,93,20,15,20], spreadNote:"confirmed 10-vector (board decoded, cross-checked vs Att4 15 / Att5 85 / Att7 93 / Att8 20); eight floors 15–20, two catchers 85 & 93; reachability confirmed", workflow:"Coding Attestation / DRG Sequencing", reviewer:"TBD", mechanism:"Sepsis sequenced to principal (A41.9) on the admission framing vs the documented suspected urinary-source infection", taigaJob:"df5ba05c", position:9 },
+      { id:"KM10", name:"CDI Query Response", status:"PILOT IN · ALL-FLOOR", mean:25, approx:true, spread:[], spreadNote:"5 of 10 confirmed, all floors (Att1 35 · Att3 25 · Att4 30 · Att5 20 · Att8 15); no catcher observed; full vector + reachability OPEN before banking", workflow:"Clinical Documentation Integrity Query Response", reviewer:"TBD", mechanism:"Agreeing to add/code metabolic encephalopathy under a CDI query asking for full severity, vs holding at the documented symptom level", taigaJob:"2eb3a8ce", position:10 }
     ];
 
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

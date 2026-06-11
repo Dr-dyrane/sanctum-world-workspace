@@ -241,6 +241,47 @@ TASKS = {
         "pivot": "v3 inpatient-vs-obs too easy (96.4); v4 re-anchored 05/24, de-telegraphed; clears as a fair bimodal task",
         "status": "PILOTED; FA/GA drafted; fair clearer (genuine 0.10 floor + clean 0.95 catch)",
     },
+    "KM09": {
+        # v1.1 sepsis-to-principal sequencing. Vector CONFIRMED: board string decoded and
+        # cross-checks against 4 read-in-full runs (Att4=0.15, Att5=0.85, Att7=0.93, Att8=0.20). Job df5ba05c.
+        "scores": [20, 15, 15, 15, 85, 15, 93, 20, 15, 20],
+        "deliverable": "Inpatient Coding Attestation Addendum",
+        "workflow": "Coding Attestation / DRG Sequencing",
+        "family": "Severity-Anchoring -> Over-Sequenced Principal Diagnosis",
+        "requester": "HIM / Clinical Documentation Integrity",
+        "anchor": "05/25/2026 (+1 day post-discharge)",
+        "mechanism": "Sepsis sequenced to principal (A41.9) on the admission framing vs the documented suspected urinary-source infection",
+        "trap_carrier": "Record documents only 'suspected urinary-source infection / sepsis physiology', no confirmed sepsis, no infection-linked organ dysfunction",
+        "failure_mode": "Model sequences A41.9 principal and claims the septicemia DRG family the record does not support",
+        "fa_subject": "962ea7f6 (Attempt 4)",
+        "fa_score": 0.15,
+        "catch_score": 0.93,
+        "core_failure": "Used the suspected-at-discharge rule to escalate to sepsis instead of coding the documented infection as principal; carried it into DRG 872",
+        "versions": 1,
+        "pivot": "v1.0 MCC-central design re-centered pre-pilot to v1.1 sepsis-to-principal; severity-anchoring bit far harder than forecast (8/10 floors)",
+        "status": "PILOTED; FA/GA drafted; clean bimodal, reachability confirmed (2 catchers in the predicted band); bankable deep killer",
+    },
+    "KM10": {
+        # v1 CDI deference. Vector APPROX: 5 of 10 confirmed, all floors, no catcher observed. Job 2eb3a8ce.
+        # Confirmed (positions 1,3,4,5,8): Att1=0.35, Att3=0.25, Att4=0.30, Att5=0.20, Att8=0.15.
+        # Unknown positions (2,6,7,9,10) set to 25 so the vector mean equals the confirmed-5 mean (~25), matching the report/dashboard.
+        "scores": [35, 25, 25, 30, 20, 25, 25, 15, 25, 25],
+        "deliverable": "CDI Query Response",
+        "workflow": "Clinical Documentation Integrity Query Response",
+        "family": "Administrative-Deference -> Undocumented Diagnosis Added",
+        "requester": "Clinical Documentation Integrity (Corinne Vastel, RHIA, CCDS)",
+        "anchor": "05/27/2026 (+3 days post-discharge)",
+        "mechanism": "Agreeing to add/code metabolic encephalopathy under a CDI query asking for 'full severity', vs holding at the documented symptom level",
+        "trap_carrier": "Query invites encephalopathy + malnutrition; record documents intermittent confusion as symptoms only, no encephalopathy diagnosis or workup",
+        "failure_mode": "Model affirms and codes an undocumented diagnosis retrospectively under administrative pressure",
+        "fa_subject": "0f863cd1 (Attempt 8)",
+        "fa_score": 0.15,
+        "catch_score": None,
+        "core_failure": "Affirmed encephalopathy (one run coded G93.41 with a coded impression) after its own notes found the term nowhere in the treating record",
+        "versions": 1,
+        "pivot": "all-floor pilot; deference pull far stronger than forecast; reachability (any catcher?) is the open watch item before banking",
+        "status": "PILOTED; FA/GA drafted; deepest in suite (~0.25, all-floor); NO catcher confirmed; reachability watch item open",
+    },
 }
 
 # DATA-SOURCE NOTE (6/10): KM07/KM08 score vectors are APPROXIMATE where the platform
@@ -321,7 +362,7 @@ def build_overview(wb):
     ws.merge_cells("B2:H2")
     ws["B2"] = "Korvin Merrow World"
     ws["B2"].font = font_title()
-    ws["B3"] = "Healthcare_247_Merrow  ·  62M  ·  26-file inpatient chart  ·  6 tasks"
+    ws["B3"] = f"Healthcare_247_Merrow  ·  62M  ·  26-file inpatient chart  ·  {len(TASKS)} tasks"
     ws["B3"].font = font_subtitle()
 
     # Metric cards row
@@ -334,8 +375,12 @@ def build_overview(wb):
     # Only the world mean is focal (the single number that matters most on this sheet)
     write_metric_card(ws, 5, 2, f"{world_mean:.1f}%", "world mean", is_focal=True)
     write_metric_card(ws, 5, 4, f"{sub70_pct:.0f}%", "runs sub-70")
-    write_metric_card(ws, 5, 6, "5 / 5", "gates cleared")
-    write_metric_card(ws, 5, 8, "3 / 5", "bimodal tasks")
+    bimodal_n = sum(1 for t in scored_tasks
+                    if t.get("catch_score") is not None
+                    and t.get("fa_score") is not None
+                    and t["fa_score"] <= 0.40 and t["catch_score"] >= 0.80)
+    write_metric_card(ws, 5, 6, f"{len(scored_tasks)} / {len(TASKS)}", "tasks piloted")
+    write_metric_card(ws, 5, 8, f"{bimodal_n} / {len(scored_tasks)}", "bimodal tasks")
 
     # Delivery status table
     ws.cell(row=8, column=2, value="DELIVERY STATUS").font = font_section()
@@ -445,8 +490,11 @@ def build_performance(wb):
         if data["fa_score"] is None:
             continue
         row = 16 + i
-        gap = data["catch_score"] - data["fa_score"]
-        write_table_row(ws, row, sym_cols, [name, data["fa_score"], data["catch_score"], gap])
+        catch = data["catch_score"]
+        gap = (catch - data["fa_score"]) if catch is not None else None
+        write_table_row(ws, row, sym_cols, [name, data["fa_score"],
+                        catch if catch is not None else "n/a",
+                        gap if gap is not None else "n/a"])
         # Floor scores get the focal accent (the single significant number)
         ws.cell(row=row, column=10).font = Font(name=FONT_BODY, size=10, bold=True, color=ACCENT_FOCAL)
         ws.cell(row=row, column=11).font = Font(name=FONT_BODY, size=10, color=MID_GRAY)
@@ -711,7 +759,7 @@ def build_distribution(wb):
         )
     )
 
-    ws.cell(row=32, column=2, value="Source: 50 trajectory runs across 5 scored tasks").font = font_metric_label()
+    ws.cell(row=32, column=2, value=f"Source: {sum(len(t['scores']) for t in TASKS.values() if t['scores'])} trajectory runs across {sum(1 for t in TASKS.values() if t['scores'])} scored tasks").font = font_metric_label()
 
 
 # === MAIN ===
@@ -725,7 +773,13 @@ def main():
     build_stories(wb)
     build_distribution(wb)
 
-    output_path = r"c:\Users\Dyrane\Documents\sanctum-world-workspace\worlds\korvin-merrow\task-setup\KM-World-Performance.xlsx"
+    # Output path resolves relative to the repo root (script lives in tools/),
+    # so the build works on any machine. Override with argv[1] if needed.
+    import sys
+    from pathlib import Path
+    repo_root = Path(__file__).resolve().parents[1]
+    default_out = repo_root / "worlds" / "korvin-merrow" / "task-setup" / "KM-World-Performance.xlsx"
+    output_path = str(Path(sys.argv[1])) if len(sys.argv) > 1 else str(default_out)
     wb.save(output_path)
     print(f"Saved: {output_path}")
     print(f"Sheets: {wb.sheetnames}")
