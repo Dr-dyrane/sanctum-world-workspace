@@ -22,7 +22,7 @@ Last data sync: 2026-06-10 PM (KM09 v1.1 + KM10 v1 pilots added; all 10 tasks no
 | KM04 | 042j9681 | Ready for Delivery | Rahul Pai | 2026-06-09 |
 | KM05 | b0tza971 | Ready for Delivery | Janette S | 2026-06-09 |
 | KM06 | 2zw95f4e | Ready for Delivery | Janette S | 2026-06-09 |
-| KM07 | 2e5v8bf2 | REWORK — Abi 6/9 sent v2 back (unfair draft-correction design); v3 reseed | Abi O | Reseeding |
+| KM07 | cf00b80c | v3 piloted (mean 0.45, fair); grader fix applied (chart-access); re-pilot pending | Abi O | Task writing |
 | KM08 | 1l71a77d | Awaiting First Human Review | TBD | Submitted |
 | KM09 | df5ba05c | Piloted; bimodal; FA/GA drafted | TBD | Piloted |
 | KM10 | 2eb3a8ce | Piloted; all-floor; FA/GA drafted; reachability open | TBD | Piloted |
