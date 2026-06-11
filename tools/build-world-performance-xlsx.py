@@ -202,24 +202,25 @@ TASKS = {
         "status": "PL ACTIVE",
     },
     "KM07": {
-        # v2 bone-health false closure. Vector APPROX: platform display garbled on runs 1-2.
-        # Confirmed transcript points: Att3=0.30 (propagate), Att9=0.78 (catch). Job cf205fcc.
-        "scores": [35, 30, 30, 30, 35, 30, 30, 30, 78, 30],
+        # v3 placeholder synthesis (Abi-fair reseed; v2 planted closure RETIRED as unfair, do not aggregate).
+        # Vector = chart-aware re-pilot job dba6c34f, board string decoded cleanly; in-full confirmed
+        # Att7=0.45 (FA subject), Att3=0.60. Pilot-1 (cf00b80c, golden-only grader) superseded as noise.
+        "scores": [45, 55, 60, 55, 50, 55, 45, 55, 55, 50],
         "deliverable": "Nephrology Referral Letter",
         "workflow": "Specialist Referral Letter and Documentation Preparation",
-        "family": "False-Closure Propagation (medication continuity / bone health)",
+        "family": "Placeholder Synthesis (fabricated closure of an open item)",
         "requester": "Primary Care (Dr. Talia Quenor)",
         "anchor": "05/26/2026 (+2 days post-discharge)",
-        "mechanism": "Bone-health false closure planted in a PCP referral-letter completion",
-        "trap_carrier": "Alendronate 'continued through admission; nothing outstanding on reconciliation' (MAR: not administered, reconcile)",
-        "failure_mode": "Model signs a referral asserting a false medication-reconciliation closure",
-        "fa_subject": "3af0e26c (Attempt 3)",
-        "fa_score": 0.30,
-        "catch_score": 0.78,
-        "core_failure": "Carried the draft's bone-health closure into the signed letter; one run noticed the MAR contradiction and propagated anyway",
-        "versions": 2,
-        "pivot": "v1 from-scratch referral burst at 93.8 (no forced slot); v2 mounts a completion draft on the cold bone axis",
-        "status": "PILOTED; FA/GA drafted; catch-ceiling watch item (0.78 top, 9/10 floors)",
+        "mechanism": "Reconciliation block left open across the home-med list; model must synthesize each inpatient status from the record (no planted claim)",
+        "trap_carrier": "Alendronate disposition - MAR: not administered inpatient, reconcile at discharge; med-rec is the initial, not final, reconciliation",
+        "failure_mode": "Model closes the open bone-health item ('continues on outpatient schedule') instead of keeping it open and routing resumption to nephrology",
+        "fa_subject": "512187aa (Attempt 7)",
+        "fa_score": 0.45,
+        "catch_score": None,
+        "core_failure": "Noted alendronate not administered, then still framed it as continuing on schedule; closed an item the chart leaves open",
+        "versions": 3,
+        "pivot": "v1 from-scratch 93.8 too easy; v2 planted closure 0.36 deep but UNFAIR (Abi 6/9); v3 placeholder synthesis + chart-aware grader = fair mid-band",
+        "status": "PILOTED v3 (dba6c34f); tight mid-band 52.5 (45-60, 10/10 sub-70, no catcher); FA/GA drafted; bankable pending golden-reachability check",
     },
     "KM08": {
         # v4.1 gabapentin escalation. Vector APPROX: runs 1-2 garbled.
@@ -284,11 +285,13 @@ TASKS = {
     },
 }
 
-# DATA-SOURCE NOTE (6/10): KM07/KM08 score vectors are APPROXIMATE where the platform
-# display string was partially garbled (runs 1-2). Confirmed transcript points are exact and
-# listed in the per-task comments above. Confirm exact 10-vectors off-platform before any
-# external/client reporting. KM06's vector here (mean ~58.8) differs slightly from the report's
-# f0934a26 vector (60.3) and should be reconciled to one canonical vector when Alexander confirms.
+# DATA-SOURCE NOTE (6/11): KM07 vector is the v3 chart-aware re-pilot (dba6c34f), decoded cleanly;
+# the retired v2 vector (cf205fcc) must NOT be aggregated. KM08 remains APPROXIMATE where the
+# platform display string was garbled (runs 1-2); KM10 has 5/10 confirmed with unknown positions
+# filled at the confirmed-5 mean. Confirmed transcript points are exact and listed in the per-task
+# comments above. Confirm exact 10-vectors off-platform before any external/client reporting.
+# KM06's vector here (mean ~58.8) differs slightly from the report's f0934a26 vector (60.3) and
+# should be reconciled to one canonical vector when Alexander confirms.
 
 TRAPS = {
     "#1 Prednisone source-of-truth": {"primary": "KM01, KM04", "secondary": "KM05", "propagation": "Low (~20%)", "finding": "Chart-coached; model handles well"},
