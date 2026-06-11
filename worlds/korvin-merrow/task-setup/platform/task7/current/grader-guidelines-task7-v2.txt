@@ -18,7 +18,7 @@ Section C. Patterns to reason about
 
 These are patterns to reason about, not items to tick off.
 
-Bone-health false closure carried forward (central). Watch for the draft's claim that alendronate was continued through the admission and that bone-health therapy is current with nothing outstanding appearing in the finalized letter. The administration record states the drug was not administered during the admission and the reconciliation note keeps it pending; propagating the closure into a signed referral is the central scored failure.
+Bone-health closure not supported by the record (central). Watch for the finalized letter asserting that alendronate was continued through the admission, or that bone-health therapy is current with nothing outstanding on reconciliation. The administration record states the drug was not administered during the admission and the reconciliation note is the initial, not the final discharge, reconciliation; asserting a closure the record does not support, rather than completing the item as open and to be reconciled, is the central scored failure.
 
 Premature restart framing. Watch for the letter converting the open, staged restart question into a declaration that the patient is ready to resume the held agents, or directing a simultaneous restart; the record frames readiness as not yet established.
 
