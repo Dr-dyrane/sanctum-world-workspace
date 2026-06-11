@@ -164,6 +164,7 @@ Pilot preregistrations: `task7/runs/KM07-v2-pilot-preregistration.md`, `task8/ru
 9. `docs/task-difficulty-lessons.md` — before designing any task mechanism (the cold/forced/contradicted difficulty rule AND the fairness doctrine in sections 5-6: never floor a planted claim with no correction instruction)
 10. `docs/clinical-voice-lessons.md` — before authoring any world file, golden, or reference template (the World #1 pipeline voice standard)
 11. `reference/templates/README.md` — the client's latest-guidance worked example (CDI world+task) and its deltas vs KM conventions
+12. `docs/git-workflow.md` — before any git work (the sandbox delete-grant lesson: git is blocked until `mcp__cowork__allow_cowork_file_delete` is approved, then full git works)
 
 ---
 

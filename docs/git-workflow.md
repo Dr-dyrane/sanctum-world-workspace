@@ -2,6 +2,25 @@
 
 Git is used for local checkpoints, rollback, and change review. Do not push or publish unless Alexander confirms the target remote is private and safe.
 
+## Running git from the agent sandbox - the deletion-grant lesson (2026-06-11)
+
+The agent's bash sandbox mounts this folder CREATE/OVERWRITE-ONLY by default: it can make and edit files, but UNLINK and RENAME are blocked. Every git WRITE command renames or removes files (the index lockfile, refs, objects), so `git add`, `git commit`, `git fetch`, `git merge`, `git pull`, `git push`, `git rebase`, `git reset`, `git checkout`, and clearing `.git/*.lock` all fail with "Operation not permitted" - as do plain `rm` and `mv`. Creating and overwriting files works, which is why an agent can edit the tree but (by default) not commit. This is the practical meaning of the old "sandbox = no git" environment note.
+
+UNBLOCK IT WITH THE DELETION GRANT. When a delete (or any git write) fails with "Operation not permitted", call the cowork capability `mcp__cowork__allow_cowork_file_delete` with any path in the folder (for example `.git/index.lock`). The user approves once, and deletion is enabled for the WHOLE folder for the rest of the session. Verified 6/11: the grant lifts RENAME as well as unlink, so full git then works directly from the agent - we committed and pushed three commits this way. So the refined rule is: the sandbox cannot do git UNTIL the delete permission is granted; after the grant it can.
+
+STALE LOCKS. A git op interrupted by the restriction (a `fetch`/`merge` that half-ran) leaves 0-byte `.git/HEAD.lock` / `.git/index.lock` that block every later git command. After the grant, clear them first: `rm -f .git/HEAD.lock .git/index.lock`.
+
+IDENTITY. This repo is preconfigured `user.name = Claude Code`, `user.email = claude-code@sanctum.local`, so agent commits read as "Claude Code" unless you change them. To commit under the human author: `git config user.name "<name>" && git config user.email "<email>"`.
+
+The workflow that worked (6/11):
+1. If `rm`/git fails with "Operation not permitted", call `allow_cowork_file_delete` and have the user approve.
+2. `rm -f .git/HEAD.lock .git/index.lock` to clear any stale locks.
+3. Stage by LOGICAL change and commit in groups: `git add <paths> && git commit -m "..."` (one commit per coherent change set, not one giant commit).
+4. `git push origin <branch>` only after the user approves the push.
+5. Verify: `git status -sb` shows no ahead/behind, and `git log --oneline -5` shows the new commits.
+
+Alternative: the environment also assigns git+delete to Codex; if the agent is not granted delete, hand the grouped commit commands to the user or Codex to run in a real terminal.
+
 ## Recommended Branches
 
 - `main`: stable private baseline.
@@ -10,7 +29,7 @@ Git is used for local checkpoints, rollback, and change review. Do not push or p
 - `reviewer-fixes/*`: human reviewer feedback revisions.
 - `autoqc-fixes/*`: AutoQC remediation branches.
 
-Current note: the active local branch may still be `james-carter-brainstorm` because it tracks `origin/james-carter-brainstorm` and is ahead by local commits. Treat that as a known historical branch-name mismatch, not a current patient-identity signal. Rename only after Alexander approves the remote strategy.
+Current note (2026-06-11): the active branch is `korvin-merrow-brainstorm`, tracking `origin/korvin-merrow-brainstorm` and in sync with it after the 6/11 push (commits `cb22931`, `3e1522f`, `a3d9ecf`). The `james-carter-brainstorm` remote branch still exists as a historical branch-name artifact, not a current patient-identity signal; do not rename without Alexander's remote-strategy approval.
 
 ## Tagging Strategy
 

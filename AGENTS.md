@@ -84,6 +84,8 @@ Clinical-voice doctrine is recorded in `docs/clinical-voice-lessons.md` - the te
 
 Task-design doctrine has two companion docs to read before designing any task or world: `docs/task-difficulty-lessons.md` (difficulty = a cold, forced, chart-contradicted move; plus the FAIRNESS doctrine in sections 5-6) and `docs/task-structure-dossier.md` (the eight structures and the standing variety mandate - every world carries at least 5 distinct structural categories; completion/draft-and-finalize capped at 1-2).
 
+Git workflow doctrine is recorded in `docs/git-workflow.md`. Read it before any git work. Key operational lesson (6/11): the agent sandbox is create/overwrite-only by default, so `rm`, `mv`, and all git WRITE commands (add/commit/fetch/merge/pull/push/rebase/reset/checkout, clearing `.git/*.lock`) fail with "Operation not permitted" until file deletion is granted. When that happens, call `mcp__cowork__allow_cowork_file_delete` (do not tell the user git is impossible); once approved, deletion AND rename are enabled for the folder for the session and full git works directly from the agent. Then clear any stale `.git/*.lock`, commit in logical groups, and push to `origin/<branch>` only with the user's approval.
+
 Never advance to a later pass without explicit user approval.
 
 Always respect the current phase in root `WORKSPACE_FILE_MAP.md` and the active `TASKN-STATE.md`. Never cross a phase boundary without explicit Alexander approval.
