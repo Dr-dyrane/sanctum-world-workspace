@@ -7,7 +7,7 @@ Last data sync: 2026-06-10 (KM07 v2 + KM08 v4.1 pilots added; KM09/KM10 staged).
 > DATA-SOURCE INTEGRITY (read before external reporting):
 > 1. KM01-KM06 score vectors are EXACT (platform-confirmed). KM07 and KM08 vectors are APPROXIMATE where the platform display string was garbled on runs 1-2; the confirmed transcript points are exact (KM07: Att3 0.30, Att9 0.78 | KM08: Att8 0.10, Att6 0.55, Att10 0.95). Confirm full 10-vectors off-platform before any client-facing number.
 > 2. Durable evidence chain per task lives in taskN/runs/ (trajectory tarballs + results-and-prereg-reconciliation.md) and taskN/fa-ga/FA-GA-current.md. Locked preregistrations sit beside each result, unedited.
-> 3. PENDING real-environment step: regenerate KM-World-Performance.xlsx via tools/build-world-performance-xlsx.py (the .py is updated with KM07/KM08; the sandbox mount truncated it mid-session so the xlsx was not rebuilt here). Until rebuilt, the xlsx is stale at 6 tasks; THIS markdown is authoritative.
+> 3. DONE 6/10 late (MacBook session): KM-World-Performance.xlsx regenerated at 8 tasks via tools/build-world-performance-xlsx.py (script verified complete on the bytes, compiles, all eight KM data blocks present; output sha 0ef20627, reload-verified from the repo path). The script's hardcoded Windows output path was replaced with repo-relative resolution. THIS markdown remains the canonical @data-analytics source; the xlsx is its presentation artifact.
 > 4. Minor reconciliation to resolve: KM06 vector differs slightly between this report (f0934a26: 15,10,90,10,78,20,95,95,93,97 = 60.3) and the xlsx script (10,10,90,10,78,95,95,93,97,10 = 58.8). Pick one canonical vector from the platform when convenient.
 
 ---

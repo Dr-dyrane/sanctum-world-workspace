@@ -725,7 +725,13 @@ def main():
     build_stories(wb)
     build_distribution(wb)
 
-    output_path = r"c:\Users\Dyrane\Documents\sanctum-world-workspace\worlds\korvin-merrow\task-setup\KM-World-Performance.xlsx"
+    # Output path resolves relative to the repo root (script lives in tools/),
+    # so the build works on any machine. Override with argv[1] if needed.
+    import sys
+    from pathlib import Path
+    repo_root = Path(__file__).resolve().parents[1]
+    default_out = repo_root / "worlds" / "korvin-merrow" / "task-setup" / "KM-World-Performance.xlsx"
+    output_path = str(Path(sys.argv[1])) if len(sys.argv) > 1 else str(default_out)
     wb.save(output_path)
     print(f"Saved: {output_path}")
     print(f"Sheets: {wb.sheetnames}")
