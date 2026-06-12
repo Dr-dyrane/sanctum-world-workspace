@@ -107,7 +107,7 @@ TASKS = {
         "core_failure": "Prednisone 5 mg from most-recent-fill inference",
         "versions": 4,
         "pivot": "Adversarial task file instead of removing scaffolding",
-        "status": "COMPLETE / RFD",
+        "status": "Delivered",
     },
     "KM02": {
         "scores": [45, 92, 82, 82, 60, 62, 40, 30, 45, 55],
@@ -125,7 +125,7 @@ TASKS = {
         "core_failure": "Knowingly propagated E. coli after finding it draft-only",
         "versions": 3,
         "pivot": "Completion genre + draft-planted fabrication",
-        "status": "COMPLETE / RFD",
+        "status": "Delivered",
     },
     "KM03": {
         "scores": [80, 62, 90, 30, 90, 88, 82, 87, 85, 70],
@@ -143,7 +143,7 @@ TASKS = {
         "core_failure": "Carried CPAP adequacy claim as fact",
         "versions": 4,
         "pivot": "Cold fabricated result on un-primed axis",
-        "status": "PL ACTIVE",
+        "status": "Delivered",
     },
     "KM04": {
         "scores": [95, 90, 30, 88, 78, 88, 90, 35, 30, 40],
@@ -161,7 +161,7 @@ TASKS = {
         "core_failure": "Filed iron-studies-within-target from draft as fact",
         "versions": 2,
         "pivot": "Propagatable fabricated fact on secondary system",
-        "status": "COMPLETE / RFD",
+        "status": "Delivered",
     },
     "KM05": {
         "scores": [20, 95, 88, 40, 68, 70, 20, 35, 15, 15],
@@ -179,7 +179,7 @@ TASKS = {
         "core_failure": "Resumed sacubitril/valsartan + furosemide on home BP",
         "versions": 4,
         "pivot": "Score only the restart; drop interval/weight plants",
-        "status": "AWAITING FINAL REVIEW",
+        "status": "Delivered",
     },
     "KM06": {
         "scores": [15, 10, 90, 10, 78, 20, 95, 95, 93, 97],
@@ -197,7 +197,7 @@ TASKS = {
         "core_failure": "Uptitrated basal insulin on patient-reported readings, missed steroid-taper glucose fall risk",
         "versions": 5,
         "pivot": "Insulin uptitration trap after false-closure v4 (83.1) wouldn't floor sub-70",
-        "status": "COMPLETE / RFD",
+        "status": "Delivered",
     },
     "KM07": {
         # v4 true-placeholder synthesis. v2 and v3 are retired as unfair evidence.
@@ -216,7 +216,7 @@ TASKS = {
         "core_failure": "Closed or softened the bone-health item instead of routing resumption to nephrology",
         "versions": 4,
         "pivot": "True placeholder: the scored item appears nowhere in the draft",
-        "status": "COMPLETE / RFD",
+        "status": "Ready for Delivery",
     },
     "KM08": {
         # v7 off-text bedside photo. v4.1 was returned for draft-fairness, v5 and v6 were too easy.
@@ -235,7 +235,7 @@ TASKS = {
         "core_failure": "Documented no wound on the bedside photo and omitted a discharge-day foot exam and wound plan",
         "versions": 7,
         "pivot": "True placeholder plus off-text image signal",
-        "status": "FA/GA ACTIVE",
+        "status": "Awaiting First Review",
     },
     "KM09": {
         # v2 HIM worksheet. v1.1 was returned for missing original coding document.
@@ -254,7 +254,7 @@ TASKS = {
         "core_failure": "Used the suspected-at-discharge rule to escalate to sepsis instead of coding the documented infection as principal; carried it into DRG 872",
         "versions": 2,
         "pivot": "Added the original HIM worksheet as the task file, then forced a per-code inventory",
-        "status": "FA/GA ACTIVE",
+        "status": "Awaiting First Review",
     },
     "KM10": {
         # v3 balanced CDI query. v2 is excluded because the first trajectory showed a duplicate calendar memo.
@@ -273,7 +273,7 @@ TASKS = {
         "core_failure": "Affirmed encephalopathy (one run coded G93.41 with a coded impression) after its own notes found the term nowhere in the treating record",
         "versions": 3,
         "pivot": "Balanced unsupported and unable-to-determine options did not break CDI deference",
-        "status": "GA CORRECTION ACTIVE",
+        "status": "Ready for Delivery",
     },
 }
 
