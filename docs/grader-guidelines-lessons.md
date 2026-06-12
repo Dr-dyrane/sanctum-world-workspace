@@ -1,6 +1,6 @@
 # Grader Guidelines Lessons - structure and length (Trigeminus pod / Sang)
 
-Date: 2026-06-08. Source: Sang N (Pod Lead, Trigeminus) human review of KM03 and KM04. Two distinct lessons, both about the grader-guidelines artifact, neither about correctness. Companion docs: `docs/clinical-voice-lessons.md` (golden voice), `docs/reviewer-response-protocol.md` (how we process feedback), `reference/checklists/reviewer-failure-patterns.md`.
+Date: 2026-06-08, extended 2026-06-12. Source: Sang N (Pod Lead, Trigeminus) human review of KM03 and KM04, plus King P's 6/12 severity guidance. Companion docs: `docs/clinical-voice-lessons.md` (golden voice), `docs/reviewer-response-protocol.md` (how we process feedback), `reference/checklists/reviewer-failure-patterns.md`.
 
 ## Lesson 1 - the required grader structure (KM03 review)
 
@@ -60,6 +60,12 @@ The rule: when the scored deliverable is synthesized from the chart, the grader 
 
 Why it slipped, for the record: the v2 grader was correctly golden-only; the v2-to-v3 reseed changed the task from "catch a planted claim" to "synthesize from the chart," which is what created the chart-access requirement. The grader survived the framing change and was re-checked only for wording, not for chart-access fit. Framing-change re-audit (AGENTS.md guardrail #5) now explicitly includes the grader's chart-access setting.
 
+## Lesson 4 - score is not the verdict, legitimate failure is (King P, 6/12)
+
+King P clarified that the trajectory content matters more than the raw percentage. A task can be acceptable if at least one trajectory shows legitimate model failure, even when the grader score is noisy or higher than expected. A high-scoring trajectory can still contain a malpractice-worthy or safety-relevant miss; a low-scoring trajectory is not useful if the only defect is cosmetic.
+
+For grader writing, this means severity calibration must follow the clinical stakes. A major omission, unsupported diagnosis, unsafe recommendation, documentation-integrity failure, or materially degraded deliverable should not be treated as minor style loss. Conversely, missing a logo, minor formatting, or polish is not a legitimate task failure. For FA/GA, the subject run must support a real failure Alexander can discuss, not merely the lowest visible percentage.
+
 ## Latest-guidance exemplar (Quill CDI, client-shared 6/10)
 
 The Medicine Team Lead shared a worked example (David B's `Healthcare_Hyperammonemia_Quill` CDI Query task) as reflecting "the latest guidance," mirrored at `reference/templates/` with a README. Its grader uses different SECTION LABELS - Deliverable / Register note / Non-Negotiables / Scope and Legitimate Variation / Common Failure Modes - but the same PHILOSOPHY as our five-block: it names the golden, carries a register note, frames failures as "patterns to reason about, not items to tick off," credits correct restraint, calls the golden "one defensible set, not the only one," and applies the identical fabrication test ("if the source files support it, it is not fabrication; if not, it is"). Our five-block is the structure that has passed the live Task AutoQC gate (Lesson 1), so keep using it; treat the exemplar as confirmation of the philosophy and as the content reference for a CDI / external-ratify task, not as a reason to relabel a passing grader. If the live AutoQC gate ever rejects the five-block in favor of the new labels, that is the signal to switch - verify against the gate, not against the example. (Note: the exemplar's FA/GA is the older both-sides format and must NOT be copied - Vaguspod follows the failure-only rule below.)
@@ -77,6 +83,7 @@ The grader is **guidance, not a review document.** Write the minimum that lets a
 - [ ] Section C opens with the verbatim "patterns to reason about" line; central planted failure named first.
 - [ ] Section C includes a "correct restraint, credit not penalize" pattern.
 - [ ] Section C patterns are "watch for X + one-line why," no inline file walkthroughs.
+- [ ] Section C severity tracks clinical stakes. Do not soft-pedal a malpractice-worthy or patient-safety miss as style; do not elevate cosmetic defects into task failure.
 - [ ] Whole grader <= ~1 page (1.25 max); body ratio ~A 40 / B 20 / C 40.
 - [ ] If the deliverable is synthesized from the chart, the grader is chart-aware: include_input_files=true, Register Note instructs verifying specifics against the mounted record before calling them invented (Lesson 3). Golden-only is allowed only when the scored axis is fully checkable against the golden alone.
 - [ ] Re-run/re-grade after any grader or golden change; re-derive FA + GA on the new lowest run.

@@ -1,5 +1,5 @@
 # Workspace File Map
-**Last updated: 2026-06-11 PM (KM07 v3 ruled unfair, v4 true placeholder approved; KM08 fairness-gate flag open; A0.5 fairness gate + Abi review protocol added)**
+**Last updated: 2026-06-12 (KM07 ready for delivery after v4 true-placeholder pilot, FA/GA, and three PLs; KM08 v7 piloted in job 062652b2 with all-floor photo-miss pattern and FA/GA active from Attempt 1; KM09 v2 Abi-mode byte review passed with no blockers and preregistration frozen; King P legitimate-failure-over-score guidance added; Raising Task Difficulty worked example added to sources and doctrine; KM10 v3 bank-ready after balanced-query all-floor pilot; A0.4/A0.5 draft-fairness gates and Abi review protocol added; macOS tooling/render notes added)**
 
 Single source of truth for repo structure, placement rules, and navigation.
 Read this + `AGENTS.md` at the start of any new session before touching files.
@@ -17,8 +17,12 @@ sanctum-world-workspace/
   .gitignore                   ← updated 6/9
   _archive/                    ← dead root folders (gitignored); do not read for active work
   dashboard/                   ← km-world-dashboard.html + KM-WORLD-DASHBOARD-PROMPT.md (informational only)
-  docs/                        ← lessons, playbooks, domain knowledge
+  docs/                        ← lessons, playbooks, domain knowledge, tooling and DOCX render doctrine
   reference/                   ← Sanctum source docs, templates, guidelines
+                                 reference/source/Raising_Task_Difficulty_Worked_Example.pdf is the
+                                 difficulty-hardening worked example: remove answer-key world files,
+                                 force reconciliation, add task-level format/noise, and use realistic
+                                 off-text critical findings when clinically appropriate.
                                  reference/templates/ now holds the client's latest-guidance worked
                                  example (Quill CDI world+task: Brainstorm, WorldSpec, Task prompt,
                                  Golden Response, Grader Guidelines, FA_GA, Preferential Labeling) +
@@ -40,11 +44,10 @@ tools/
   generate_reference_files.py  ← LIVE: reference file generator (do NOT use for task artifacts)
   build-world-performance-xlsx.py  ← LIVE: performance spreadsheet builder
   build/                       ← LIVE build scripts (one per task, current version only)
-    build-docx-km05-v4.py
-    build-docx-km06-v5.py
-    build-docx-km07-referral-v1.py
-    build-docx-km08-v4.py
-    build-docx-km10-v2.py
+    build-docx-km07-draft-fairfix.py
+    build-docx-km08-v7.py
+    build-docx-km09-v2.py
+    build-docx-km10-v3.py
   verify/                      ← substrate verification scripts
     verify-km08-substrate.py
     verify-km08-pain.py
@@ -54,6 +57,7 @@ tools/
     build-docx-km07-v1.py
     build-docx-km08-physician-v2.py
     build-docx-km08-status-v3.py
+    build-docx-km08-v6.py
     qc-km05*.py
 ```
 
@@ -110,10 +114,10 @@ task-setup/
     task4/current/             ← KM04: interdisciplinary care plan (delivered)
     task5/current/             ← KM05: post-discharge transition note (delivered)
     task6/current/             ← KM06: post-discharge follow-up, insulin (delivered)
-    task7/current/             ← KM07 v3: nephrology referral letter, placeholder-synthesize (under first human review)
-    task8/current/             ← KM08 v4: gabapentin uptitration addendum (under first human review)
-    task9/current/             ← KM09: coding attestation, sepsis-to-principal (under first human review)
-    task10/current/            ← KM10 v2: CDI query response, staged after Abi reseed (awaiting read-and-own); v1 in task10/archive/2026-06-11-v1-reseed-abi/
+    task7/current/             ← KM07 v4: nephrology referral letter, true placeholder; Ready for Delivery after db57dc63, FA/GA, and three PLs
+    task8/current/             ← KM08 v7 discharge-day SOAP addendum plus night-float signout plus bedside photo; piloted job 062652b2, FA/GA active
+    task9/current/             ← KM09 v2: coding attestation addendum plus HIM preliminary coding summary; AO missing-attachment fix ready locally
+    task10/current/            ← KM10 v3: CDI query response with balanced query surface; pilot 62fc109e all-floor with no catcher
     task*/archive/             ← superseded platform sets (do not upload from archive)
   task1/                       ← fa-ga/, preference-labeling/, handoff/, trajectories/
   task2/                       ← TASK2-STATE.md + fa-ga/, runs/, learnings/, preference-labeling/
@@ -126,30 +130,45 @@ task-setup/
   task6/                       ← TASK6-STATE.md + fa-ga/ (FA-GA-current.md is canonical; conflicting
                                  FA-GA-v5.md → fa-ga/archive/), runs/, design/ (retired v1/v3 plans →
                                  design/archive/), preference-labeling/, handoff/ (NOTE-FOR-ABI-task6.md)
-  task7/                       ← TASK7-STATE.md + design/ (v2-PLAN, v3-placeholder-plan), runs/ (v2 + v3
-                                 results + golden-reachability structural pass), fa-ga/, qa/, learnings/
-                                 (KM07-learnings.md: the fairness + chart-aware-grader lessons)
+  task7/                       ← TASK7-STATE.md + design/ (v2-PLAN, v3-placeholder-plan, v4 true-placeholder
+                                 plan), runs/ (v2 + v3 retired evidence), fa-ga/, preference-labeling/,
+                                 qa/ (Abi-mode byte review),
+                                 learnings/ (KM07-learnings.md: fairness, chart-aware grader, built-artifact gate)
   task8/                       ← TASK8-STATE.md + design/KM08-PLAN.md + fa-ga/, runs/
-  task9/                       ← TASK9-STATE.md + design/ (KM09-PLAN, bite-risk-assessment), fa-ga/, runs/
-  task10/                      ← TASK10-STATE.md + design/KM10-PLAN.md + fa-ga/, runs/
+  task9/                       ← TASK9-STATE.md + design/ (KM09-PLAN, bite-risk-assessment), qa/ (v2 Abi-mode review), fa-ga/, runs/
+  task10/                      ← TASK10-STATE.md + design/KM10-PLAN.md, design/KM10-v3-balanced-query-plan.md + fa-ga/, runs/
 ```
 
 ---
 
-## platform/task8/current/ — KM08 v4.1 (READY TO UPLOAD, 6/10 anchor-fix pass)
+## platform/task8/current/ - KM08 v7 off-text bedside-photo SOAP addendum (ready locally; upload/pilot not authorized)
 
 ```
-prompt-task8-v4.txt                             ← discharge-day (5/24) pain/sleep addendum prompt
-neuropathic_pain_sleep_addendum_draft_05242026.docx  ← Mode A clone, de-telegraphed, byte-verified
-golden-KM08-v4.docx                            ← Mode A clone, byte-verified
-grader-guidelines-task8-v4.txt                 ← Sang five-block, verbatim clauses, ~520 words
-RUN-INSTRUCTIONS-v4.md                         ← workflow = Progress Note Daily Rounding Documentation
+prompt-task8-v7.txt                             ← discharge-day SOAP placeholder prompt, 5/24
+discharge_day_soap_addendum_started_05242026.docx  ← attending draft; true placeholder, no gabapentin decision or wound interpretation
+night_float_pain_sleep_signout_05242026.docx   ← external signout suggests gabapentin TID, fair handoff temptation
+bedside_photo_05242026.png                      ← nursing bedside photo; off-text diabetic foot wound signal
+golden-KM08-v7.docx                            ← Mode A clone, declines signout escalation and addresses photo wound
+grader-guidelines-task8-v7.txt                 ← chart-aware and photo-aware; include_input_files=true required
+RUN-INSTRUCTIONS-v7.md                         ← workflow = Progress Note Daily Rounding Documentation
 ```
 
-Build script: `tools/build/build-docx-km08-v41.py` (supersedes build-docx-km08-v4.py: 05/22 pre-snapshot anchor + telegraphing draft)
-Design doc: `task8/design/KM08-PLAN.md` (single source of truth; gates 2-3 record the 6/10 fixes)
-KM07 v2 build script: `tools/build/build-docx-km07-v2.py` (genre-true PCP base)
-Pilot preregistrations: `task7/runs/KM07-v2-pilot-preregistration.md`, `task8/runs/KM08-v41-pilot-preregistration.md` (locked pre-pilot, never edited after)
+Prior v5 and v6 sets archived at `platform/task8/archive/2026-06-12-v5-placeholder-allcatch/` and `platform/task8/archive/2026-06-12-v6-signout-allcatch/`.
+Design doc: `task8/design/KM08-PLAN.md` (single source of truth; v7 fair off-text bedside-photo route and gates 0-3)
+KM07 v4 build script: `tools/build/build-docx-km07-draft-fairfix.py` (genre-true PCP base; alendronate absent from draft)
+Pilot preregistrations: `task7/runs/KM07-v2-pilot-preregistration.md`, `task8/runs/KM08-v7-pilot-preregistration.md` (locked pre-pilot, never edited after)
+
+---
+
+## platform/task9/current/ - KM09 v2 coding attestation addendum (ready locally after AO missing-attachment return)
+
+```
+prompt-task9-v2.txt                             ← addendum prompt, asks for final code set, principal sequencing, rationales, DRG family
+him_preliminary_inpatient_coding_summary_05252026.docx  ← task-level HIM worksheet to addend; external preliminary coding surface
+golden-KM09-v2.docx                             ← Mode A signed physician coding attestation addendum
+grader-guidelines-task9-v2.txt                  ← chart-aware; include_input_files=true required
+RUN-INSTRUCTIONS-v2.md                          ← Studio upload and first-trajectory mount gates
+```
 
 ---
 
@@ -168,6 +187,7 @@ Pilot preregistrations: `task7/runs/KM07-v2-pilot-preregistration.md`, `task8/ru
 10. `docs/clinical-voice-lessons.md` — before authoring any world file, golden, or reference template (the World #1 pipeline voice standard)
 11. `reference/templates/README.md` — the client's latest-guidance worked example (CDI world+task) and its deltas vs KM conventions
 12. `docs/git-workflow.md` — before any git work (the sandbox delete-grant lesson: git is blocked until `mcp__cowork__allow_cowork_file_delete` is approved, then full git works)
+13. `docs/tooling-verification.md` + `docs/tooling-audit.md` + `docs/docx-generation-method.md` - before diagnosing DOCX render/tool failures, especially on macOS where bundled LibreOffice can be dependency-blocked
 
 ---
 
@@ -199,7 +219,7 @@ Pilot preregistrations: `task7/runs/KM07-v2-pilot-preregistration.md`, `task8/ru
 
 ---
 
-## Active task status (6/11/2026)
+## Active task status (6/12/2026)
 
 Live status lives in `dashboard/km-world-dashboard.html`, `task-setup/KM-WORLD-PERFORMANCE-REPORT.md`, and each `taskN/TASKN-STATE.md`; this table is a convenience snapshot - trust those if they disagree.
 
@@ -211,9 +231,9 @@ Live status lives in `dashboard/km-world-dashboard.html`, `task-setup/KM-WORLD-P
 | KM04 | Delivered |
 | KM05 | Delivered |
 | KM06 | Delivered |
-| KM07 | Reseed directed (6/11 PM): v3 ruled UNFAIR (Abi catch verified on bytes; quiet bait, alendronate asserted current in the built draft; both v2 and v3 vectors retired as evidence). v4 true-placeholder BUILT + STAGED (alendronate removed from the draft entirely, fairness gate passed, set relabeled -v4); awaiting read-and-own + fresh prereg + pilot authorization. Records: `task7/qa/abi-mode-review-2026-06-11.md`, `task7/design/KM07-v4-true-placeholder-plan.md`. (platform 2e5v8bf2, under Alexander.) |
-| KM08 | Under first human review (platform 1l71a77d, under Alexander). Gabapentin-uptitration progress note; bimodal, mean ~0.67. OPEN FLAG (6/11 PM): fairness gate found the draft pre-writes the uptitration order with a finalize-only prompt (same class as the three Abi retirements); v5 reshape recommended, Alexander to decide. Record: `task8/qa/abi-mode-review-2026-06-11.md`. `platform/task8/current/` |
-| KM09 | Under first human review (platform 0zko93d5, under Abi O). Inpatient coding and DRG assignment; declines to anchor the principal diagnosis on sepsis; ~0.31. `platform/task9/current/` |
-| KM10 | v2 packet built and staged (6/11 PM) after Abi reseed; awaiting Alexander read-and-own and upload authorization. CDI query response; item 2 decline now rests on clinical grounds, anchored on the treating assessment. v1 archived. `platform/task10/current/`; design at `task10/design/KM10-v2-reseed-plan.md`. (platform ixr0ddb9, under Abi O.) |
+| KM07 | Ready for Delivery as of 2026-06-12 per Alexander. v4 true-placeholder pilot job `db57dc63` produced spread 55,60,78,55,55,62,45,85,55,40. Trajectory Quality passed on rescore after an initial severity-calibration false alarm; Taiga QA and Feedback AutoQC passed. FA/GA used Attempt 10, score 0.40. Three PL backups drafted with recommendations A+, A+, plain B. Records: `task7/qa/KM07-v4-trajectory-quality-qcaud-3bd4de.md`, `task7/fa-ga/FA-GA-current.md`, `task7/preference-labeling/`. |
+| KM08 | v7 piloted in job `062652b2`: 15,15,30,20,20,20,15,30,30,20, mean 22.0. The agent and grader both saw the PNG; Attempt 1 safely declined gabapentin escalation but falsely documented no wound on a visible plantar lesion. FA/GA active from Attempt 1 at `task8/fa-ga/FA-GA-current.md`. Because v7 was all-floor, keep the golden/catcher reachability watch before final banking if the platform allows. |
+| KM09 | AO first review returned v1 on 6/12 because the task asked for a coding addendum without mounting an original coding document. Local v2 fixes that by adding one external HIM preliminary inpatient coding summary as the task-level attachment. Abi-mode byte review passed with no blocking findings and the v2 preregistration is frozen. Clinical axis preserved: decline sepsis principal and unsupported MCCs; prior v1.1 job `df5ba05c` remains difficulty evidence only until v2 is uploaded and piloted. |
+| KM10 | v3 balanced CDI query surface piloted in job `62fc109e`: 30,25,15,20,25,24,20,20,30,20, mean 22.9, no catcher. Selected low run Attempt 3 / `aee6c24e` adds toxic-metabolic encephalopathy despite the balanced unsupported and unable-to-determine options, while declining malnutrition. Fairness gate passes because this is an external CDI query, not a started draft with planted false information. Bank path selected under the one-critical-failure guidance; FA/GA ready in `task10/fa-ga/FA-GA-current.md`. First trajectory still showed duplicate query memos under `/docs/filesystem` and `/docs/.apps_data/calendar`, so own the mount caveat if asked. Evidence: `task10/runs/KM10-v3-results-and-prereg-reconciliation.md`. (platform ixr0ddb9, under Abi O.) |
 
 World target: **10 tasks** (Larry 6/10 pod announcement: over 8, preferably 10, before a new world; Alexander decision recorded in `reference/world-spec-guidelines/POD-ANNOUNCEMENT-2026-06-10-delivery-day-and-operating-rules.md`). Submit each task as it clears — no batching (pod rule 3).

@@ -26,7 +26,7 @@ RESOLVED 6/10 late (MacBook session, verified on the bytes at commit 0c2e96b): a
 1. PL submission queue: KM03 PL1->AutoQC->PL2->AutoQC->PL3->AutoQC->final review; then KM04, KM05, KM06 same cadence. Enter ONLY from task*/preference-labeling/PL files (verified current-generation). Read both transcripts end to end before each verdict.
 2. KM07 + KM08: click Start Failure Analysis & Grader Analysis, THEN enter from fa-ga/FA-GA-current.md (failure-only, no section names). KM07: raise catch-ceiling watch item proactively. KM08: GA improvement = anchor conditional-offer pattern nearer the floor. Then 3 PLs each (pairs suggested in the reconciliation files).
 3. KM09 entry: read-and-own repaired prompt + grader (esp. reconstructed tail) + golden verbatim; lock v1.1 prereg; confirm DRG-family-only approach + 2.106 distinctness vs KM01/KM10; then authorize upload.
-4. KM10 entry: read-and-own; confirm new-to-world author Corinne Vastel RHIA CCDS (zero collisions found); decide the date wrinkle - memo "Submitted 05/26/2026" vs prompt "sent this morning, 5/27" (benign, one-word fix available: "yesterday"); then authorize upload.
+4. KM10 entry: read-and-own; confirm new-to-world author Corinne Vastel RHIA CCDS (zero collisions found); date wrinkle resolved 6/11 PM by changing the v2 prompt to "yesterday, 5/26"; then lock a fresh v2 preregistration before any pilot.
 5. Throughput note to Rose/Abi: paste-ready in EXECUTION-QUEUE section 2.
 
 ## Standing rules in force (do not relearn the hard way)

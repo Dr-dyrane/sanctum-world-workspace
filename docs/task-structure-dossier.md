@@ -2,7 +2,7 @@
 
 Date: 2026-06-10. Mandate source, Abi (pod lead), verbatim: "would recommend future task not all follow the same structure of draft and finalize. We want to see a variety of tasks in your world and not a monotony, this is also an ask of the client."
 
-Standing rule (Alexander, 6/10): **every world carries at least 5 distinct structural categories.** Sheet snapshot this dossier maps against: `reference/source/task-selection-categories-snapshot-2026-06-10.csv` (232 workflows with claim counts; confirm against the live sheet at claim time). Companions: `docs/task-difficulty-lessons.md` (the cold-axis playbook), `worlds/korvin-merrow/task-setup/task8/design/KM08-PLAN.md` (the derived floor rule).
+Standing rule (Alexander, 6/10): **every world carries at least 5 distinct structural categories.** Sheet snapshot this dossier maps against: `reference/source/task-selection-categories-snapshot-2026-06-10.csv` (232 workflows with claim counts; confirm against the live sheet at claim time). Companions: `docs/task-difficulty-lessons.md` (the cold-axis playbook, now extended with `reference/source/Raising_Task_Difficulty_Worked_Example.pdf`), `worlds/korvin-merrow/task-setup/task8/design/KM08-PLAN.md` (the derived floor rule).
 
 ## 1. The KM autopsy: why ideas got hard
 
@@ -62,9 +62,12 @@ Physician-voice rule (Medicine Team Lead, standing): the final deliverable is ph
 
 1. Choose the 5+ structures FIRST; write one line per task naming structure + forcing function + where the substrate must live.
 2. Build the substrate FOR each structure: a genuinely borderline admission if S4 is wanted; a payer denial letter or CDI query as a planned file if S3 is wanted; a coding-relevant documentation gap if S2-coding is wanted; a quiet measure-disqualifier if S5 is wanted; ONE cold chart-contradicted axis reserved for the S1 floor.
-3. Anchor rules apply per structure: every encounter strictly post-snapshot, never future-dated, varied timepoints.
-4. Self-containment: S2/S3/S5 lean on coding/payer/measure knowledge; keep the required knowledge pre-July-2025 or attach the source document as a file (realistic for denial letters and policy excerpts).
-5. Put the S8 fairness question to the pod before building anything on it.
+3. Remove answer-key synthesis from shared world files. The Raising Task Difficulty worked example shows that a world-level discharge summary or similar synthesis can make every trap transcription-simple. World files should hold raw chart material; completed summaries can be scoped as task-level files only when that task realistically needs them.
+4. Plan task-level format and noise deliberately. Templates, intake notes, nursing notes, bundled labs, or irrelevant-but-realistic files can make a structure harder by forcing the model to filter and fit the answer, as long as they do not pre-answer the task.
+5. Plan off-text signals where realistic. A photo of an infected line, medication bottle, handwritten list, downtime note, or preliminary image capture can be a fair high-stakes discriminator when it is visible, dated, clinically plausible, and supported by at least a minimal chart clue.
+6. Anchor rules apply per structure: every encounter strictly post-snapshot, never future-dated, varied timepoints.
+7. Self-containment: S2/S3/S5 lean on coding/payer/measure knowledge; keep the required knowledge pre-July-2025 or attach the source document as a file (realistic for denial letters and policy excerpts).
+8. Put the S8 fairness question to the pod before building anything on it.
 
 ## 5. Default 8-task allocation (7 structures, rule satisfied)
 

@@ -90,6 +90,17 @@ pdftotext file.pdf -                                   # split on \f to find BLA
 Then actually LOOK at page 1 and one dense page. Checks that only renders catch: blank pages (empty paragraphs interacting with Heading-1 pageBreakBefore - fix by deleting empty paragraphs via the object model, checking pPr for sectPr before removing); unreadable density (6pt text passes every XML check and fails every human); layout collapse in tables.
 Caveat: the sandbox LibreOffice lacks Calibri/Calibri Light and substitutes (sometimes a serif). Font-family judgments need a Windows/Word render; everything else (sizes, colors, fills, breaks) is reliable.
 
+Mac note, 2026-06-11: in the local macOS Codex app session, the bundled runtime includes `soffice`, `pdfinfo`, and `pdftoppm`, but `soffice` currently fails because its LibreOffice dylibs link to missing Homebrew paths under `/opt/homebrew/opt/` for `little-cms2`, `fontconfig`, and `freetype`. That is a machine dependency failure, not a DOCX failure. The clean fix, with Alexander approval, is to install Homebrew dependencies: `brew install little-cms2 fontconfig freetype`.
+
+Mac fallbacks while LibreOffice is blocked:
+
+```bash
+qlmanage -t -s 1600 -o /tmp/docx-preview file.docx
+textutil -convert html -output /tmp/docx.html file.docx
+```
+
+Use Quick Look for first-page visual sanity and textutil for text sanity only. They do not replace the full render gate because they do not prove multi-page PDF layout, page breaks, dense-table behavior, or PDF-to-PNG rendering.
+
 ### Step 5: NUMERIC DIFF - the definition of "matches the template"
 
 Run the Step-1 fingerprint on BOTH files and compare. Done means: size set identical; border colors identical; fill palette a subset of the target's; margins equal (pgMar twips); styles.xml byte-identical when template-filling; zero banned characters. "Looks the same" is not a state; "fingerprint diff is empty" is.
@@ -135,6 +146,8 @@ python3 tools/generate_reference_files.py
 # 3. gate + render + look
 python3 -c "from docx import Document; raw=open(F,'rb').read(); assert raw.find(b'PK\x05\x06')>=0; Document(F); print('gate ok')"
 soffice --headless --convert-to pdf "$F" && pdftoppm -png -r 100 out.pdf p && open p-1.png
+# macOS fallback only when bundled LibreOffice is dependency-blocked:
+qlmanage -t -s 1600 -o /tmp/docx-preview "$F"
 # 4. fingerprint diff vs target; iterate until empty
 ```
 
