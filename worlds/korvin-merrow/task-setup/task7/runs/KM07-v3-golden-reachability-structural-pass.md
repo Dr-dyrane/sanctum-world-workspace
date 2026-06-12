@@ -1,5 +1,7 @@
-# KM07 v3 golden-reachability structural pass (local, 6/11)
-Purpose: de-risk the pre-bank platform check (does golden-KM07-v2.docx score ~0.85-0.95 under the chart-aware grader-guidelines-task7-v2.txt?). This is a paper walk of the golden's text against the grader's own terms, with every specific byte-checked against the world files. It does NOT replace the platform run; it predicts it.
+# KM07 v3 golden-reachability structural pass (local, 6/11) - RETIRED EVIDENCE
+Status 2026-06-11 PM: RETIRED with v3 after AO ruled the built draft unfair. This paper walk still shows the golden content was internally plausible, but it does not make v3 bankable and must not be used as a substitute for v4 reachability.
+
+Purpose at the time: de-risk the pre-bank platform check (does golden-KM07-v2.docx score ~0.85-0.95 under the chart-aware grader-guidelines-task7-v2.txt?). This is a paper walk of the golden's text against the grader's own terms, with every specific byte-checked against the world files. It does NOT replace the platform run; it predicts it.
 
 ## Section A (must be present and correct) - all five satisfied
 1. Reason for referral: stated in its own section (renal follow-up + lead the staged reintroduction of held agents, coordinated with cardiology).

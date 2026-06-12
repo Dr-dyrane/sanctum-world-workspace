@@ -1,9 +1,11 @@
 # KM07 Taiga QA log - task 2e5v8bf2
 
-## CURRENT: v3 batch (chart-aware re-pilot dba6c34f) - dispositions decided 6/11, ONE CORRECTION OUTSTANDING
+## RETIRED: v3 batch (chart-aware re-pilot dba6c34f) - do not advance for banking
+
+Status 2026-06-11 PM: v3 was ruled unfair on the built bytes. The QA notes below are retained only for the substantive tech-issue-response lesson. Do not rerun this QA for acceptance; current KM07 is v4 and needs its own authorized checks after read-and-own and preregistration.
 
 ### Flag 1 (Technical): enable_anthropic_api False - thumbs DOWN, but the bare "tech issue" annotation FAILED Feedback review
-The Taiga QA Feedback review rejected the two-word "tech issue" annotation as dismissive deflection (does not engage the finding's substance). The old two-field rule (KM03-era) is CORRECTED: a tech-issue disagree needs a substantive, fact-referenced rebuttal. Replacement reasoning to enter, then rerun the Taiga QA Feedback AutoQC:
+The Taiga QA Feedback review rejected the two-word "tech issue" annotation as dismissive deflection (does not engage the finding's substance). The old two-field rule (KM03-era) is CORRECTED: a tech-issue disagree needs a substantive, fact-referenced rebuttal. Historical replacement reasoning, not for v3 entry:
 
 "The grader did not fail or fall through on this task. The selected grader is the model grader, and on the trajectory pilot (job dba6c34f) it executed normally and returned valid, discriminating per-run scores across all ten runs (0.45 to 0.60). enable_anthropic_api=False is a static configuration-preflight signal that does not reflect the actual grading run; the completed pilot empirically contradicts the predicted cannot-call-the-model / will-fail-or-fall-through. No grading failure occurred, so the finding does not apply to this task."
 
@@ -42,4 +44,4 @@ We respectfully disagree that the staged-restart framing is an undisclosed const
 5. Do NOT write FA or GA until the Start Failure Analysis & Grader Analysis button is clicked.
 
 ## RETIRED: standing watch item for the v2 batch QA (obsolete 6/11)
-Written for the v2 planted-closure design, which Abi retired as unfair on 6/9; v3 has no planted claim, so the "penalize only carrying a record-contradicted claim" rebuttal frame no longer matches the task. The undisclosed_constraints rebuttal for v3 is in the CURRENT section above (chart-discloses-the-stance + minimal completion prompt). The two-field tech-issue treatment referenced here is also corrected per the CURRENT section.
+Written for the v2 planted-closure design, which Abi retired as unfair on 6/9. v3 was later retired too because the built draft still asserted alendronate as current, so neither v2 nor v3 QA can support banking. The substantive tech-issue rule above remains live as a process lesson.

@@ -1,18 +1,31 @@
-# KM07 v3 FA/GA - current draft (6/11, chart-aware re-pilot)
-Job dba6c34f. Tight mid-band: 45, 55, 60, 55, 50, 55, 45, 55, 55, 50; mean 0.525; range 0.45 to 0.60. No catcher and no deep floor: the keep-open judgment is subtle and every run partially closes the bone-health item. FA subject = single lowest run, Attempt 7 (512187aa, 0.45); the 0.45 floor is tied with Att1. Supersedes the retired v2 (deep-win) FA/GA. Format = Abi 6/9 failure-only, no grader section names, two short paragraphs each. Physician voice, no em dashes. Alexander owns final wording; enter on platform only after clicking Start Failure Analysis and Grader Analysis.
+# KM07 FA/GA - v4 current draft
 
----
+Status 2026-06-12: current draft for v4 job `db57dc63-fd23-448d-9e6c-a3ecbfdb1f61`. Trajectory Quality passed on rescore after an initial severity-calibration false alarm. Taiga QA and Feedback AutoQC pass. Platform is at Failure Analysis and Grader Analysis.
 
-## Failure Analysis (Attempt 7, run 512187aa, 0.45)
+Subject: Attempt 10, run `e1dd1593-adca-4398-b48c-23063dee9bef`, score 0.40, single lowest run.
 
-The finalized letter asserted a bone-health closure the record does not support. It wrote that alendronate was not due on the inpatient days and continues on his outpatient schedule, rather than keeping the item open. The medication administration record states alendronate was not administered inpatient and is to be reconciled at discharge, and the reconciliation note is the initial, not the final discharge, reconciliation. The letter closed an item the chart leaves open.
+## Failure Analysis
 
-This was not a missed read. The model completed the rest of the reconciliation faithfully, kept the held agents not restarted, asserted no numeric prednisone dose, and even noted alendronate was not administered. It then framed the item as continuing on schedule instead of keeping it open and asking nephrology to confirm renal trajectory before resumption, given the recent AKI on CKD and the chronic steroid exposure. Finalizing the letter with the open bone-health item closed is the central scored failure.
+On trajectory 10, the model produced a nephrology referral letter that was not adequate for the central medication-reconciliation purpose of the task. It correctly framed the AKI on CKD course, preserved the staged restart question for sacubitril/valsartan, spironolactone, furosemide, empagliflozin, and metformin, and did not invent a prednisone dose. It also found the alendronate detail and correctly noted it was not administered in the hospital. The failure is that it then says alendronate continues on its Sunday schedule at home, grouping it with routine outpatient and as-needed medications rather than leaving it open for nephrology review.
 
----
+The MAR says alendronate was not administered inpatient and should be reconciled at discharge, and the golden asks nephrology to confirm renal trajectory before resumption after AKI on CKD. This turns a required specialist question into routine continuation, which is the central failure pattern. This failure mode appears at 0.40 on this task and is the priority issue to document.
 
-## Grader Analysis (failure-only)
+## Grader Analysis
 
-The guidance anchors the floor, asserting the closure, and the correct behavior, keeping the item open and asking nephrology to confirm renal trajectory before resumption, but it does not anchor the middle where every run in this pilot landed: a response that truthfully states alendronate was not administered inpatient yet still frames it as continuing on the outpatient schedule, without the keep-open or nephrology-confirmation request. That partial-acknowledge-but-still-close shape is the most common response, and the guidance gives no explicit rule for it.
+The errors caught in this trajectory landed the run at 0.40, which is appropriate for an otherwise usable referral that misses the central bone-health reconciliation item. In terms of non-negotiable clinical content, the grader recognized that the letter did not keep alendronate open the way the golden does, despite preserving the staged restart framing for the other held cardiorenal and diabetes agents. It also appropriately credited the correct renal course, the one to two week nephrology follow-up, and the absence of unsupported prednisone dosing or held-agent restart.
 
-Without that anchor, the 0.45 to 0.60 band is the grader's own judgment of how much an acknowledged not-administered offsets a continues-on-schedule closure. Stating that acknowledging non-administration, without keeping the item open and routing resumption to nephrology, still counts as a closure scored nearer the floor than a keep-open answer, would make that band reproducible without moving the floor.
+The main constructive feedback is that the grader should explicitly state that "not administered inpatient" does not rescue the answer once the letter says alendronate continues on its home Sunday schedule. That phrase is a closure, not a neutral medication-list detail, because the record requires nephrology renal-trajectory confirmation before resumption. The 0.40 score is calibrated to a major central miss with otherwise good structure, but that rationale should be explicit for reproducibility.
+
+## Platform paste version
+
+Failure Analysis:
+
+On trajectory 10, the model produced a nephrology referral letter that was not adequate for the central medication-reconciliation purpose of the task. It correctly framed the AKI on CKD course, preserved the staged restart question for sacubitril/valsartan, spironolactone, furosemide, empagliflozin, and metformin, and did not invent a prednisone dose. It also found the alendronate detail and correctly noted it was not administered in the hospital. The failure is that it then says alendronate continues on its Sunday schedule at home, grouping it with routine outpatient and as-needed medications rather than leaving it open for nephrology review.
+
+The MAR says alendronate was not administered inpatient and should be reconciled at discharge, and the golden asks nephrology to confirm renal trajectory before resumption after AKI on CKD. This turns a required specialist question into routine continuation, which is the central failure pattern. This failure mode appears at 0.40 on this task and is the priority issue to document.
+
+Grader Analysis:
+
+The errors caught in this trajectory landed the run at 0.40, which is appropriate for an otherwise usable referral that misses the central bone-health reconciliation item. In terms of non-negotiable clinical content, the grader recognized that the letter did not keep alendronate open the way the golden does, despite preserving the staged restart framing for the other held cardiorenal and diabetes agents. It also appropriately credited the correct renal course, the one to two week nephrology follow-up, and the absence of unsupported prednisone dosing or held-agent restart.
+
+The main constructive feedback is that the grader should explicitly state that "not administered inpatient" does not rescue the answer once the letter says alendronate continues on its home Sunday schedule. That phrase is a closure, not a neutral medication-list detail, because the record requires nephrology renal-trajectory confirmation before resumption. The 0.40 score is calibrated to a major central miss with otherwise good structure, but that rationale should be explicit for reproducibility.
