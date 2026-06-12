@@ -2,10 +2,10 @@
 """Pain-axis sweep across ALL 26 world files + fuller gabapentin/sedation context.
 Read-only."""
 import os, re, zipfile
+from pathlib import Path
 
-FS = os.path.abspath(os.path.join(
-    os.path.dirname(__file__), "..", "..", "..",
-    "file-review", "upload", "filesystem"))
+REPO = Path(__file__).resolve().parents[2]
+FS = str(REPO / "worlds/korvin-merrow/file-review/upload/filesystem")
 
 NS_T = re.compile(r"<w:t[ >].*?</w:t>", re.S)
 TAG = re.compile(r"<[^>]+>")

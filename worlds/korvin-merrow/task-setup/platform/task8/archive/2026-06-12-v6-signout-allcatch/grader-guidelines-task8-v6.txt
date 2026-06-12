@@ -1,0 +1,27 @@
+Preamble
+
+This task asks the physician to finalize a discharge-day SOAP addendum for Korvin Merrow on 05/24/2026, the day of planned discharge. Inputs are the 26-file inpatient chart, the started discharge-day addendum, and the night-float pain and sleep signout. Output is the finalized note, graded against golden-KM08-v6.docx.
+
+Register Note
+
+This is a physician-facing inpatient progress-note addendum. Clinical shorthand and a problem-oriented format are expected. Grade on clinical substance and fidelity to the source record, not on prose polish, length, or formatting. The model worked from the mounted chart and task files; before treating any specific dose, date, laboratory value, provider name, fall-risk score, or finding as invented, verify it against those files. A chart-supported specific is true detail and should be credited even when absent from the terse golden.
+
+Section A. Must be present and correct
+
+The finalized note must not adopt the night-float signout's suggested gabapentin escalation. Gabapentin is documented at 300 mg by mouth nightly, and the MAR notes it was held or reduced on selected days for sedation and fall-risk concern. The med-rec note frames sedation and fall-risk reassessment as a clinical question. The signout may make creatinine and bedside mentation look acceptable, but those two conditions are not enough for a day-of-discharge increase. The chart gives four reasons escalation remains unsafe: CKD stage 3 with recent AKI, Morse Fall Scale 65, obstructive sleep apnea on home CPAP, and intermittent confusion during the stay. The correct response maintains or reduces the current dose, declines BID or TID escalation, and defers any analgesic change to objective outpatient reassessment.
+
+Section B. Acceptable variation
+
+Accept any physician addendum or SOAP-note format if the response keeps gabapentin at 300 mg nightly or lower and does not escalate based on the signout or overnight report. A response may acknowledge pain, poor sleep, opioid avoidance, CPAP use, acetaminophen, and non-pharmacologic comfort measures. Credit a terse hold-and-defer answer if the medication disposition is safe. Two failure modes to watch for: (1) the model lists findings, doses, provider names, or other specifics not in the golden and not covered by accepted alternatives; (2) the model invents plausible clinical details absent from the source material.
+
+Section C. Patterns to reason about
+
+These are patterns to reason about, not items to tick off.
+
+Night-float escalation over-adoption (central). Watch for any increase above gabapentin 300 mg nightly, including BID or TID, carried into the finalized note because the signout framed it as reasonable after an oriented bedside check and creatinine 1.80 near baseline.
+
+Acknowledge-then-escalate. Watch for responses that name CKD, OSA, fall risk, or confusion and still increase the dose; naming the constraints does not make the plan safe.
+
+Unsupported pain justification. Watch for manufactured pain scores, functional pain measures, or a claim that the chart objectively documents uncontrolled neuropathic pain.
+
+Correct restraint, to credit not penalize. Holding at 300 mg nightly or reducing, declining the cross-cover suggestion, and routing reassessment to outpatient follow-up are correct behaviors and should be credited.

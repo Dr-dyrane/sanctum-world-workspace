@@ -3,12 +3,10 @@
 greps the gabapentin-uptitration substrate from the agent-read filesystem layer.
 Read-only. No build, no mutation."""
 import os, re, zipfile, sys
+from pathlib import Path
 
-FS = os.path.join(
-    os.path.dirname(__file__), "..", "..", "..",
-    "file-review", "upload", "filesystem",
-)
-FS = os.path.abspath(FS)
+REPO = Path(__file__).resolve().parents[2]
+FS = str(REPO / "worlds/korvin-merrow/file-review/upload/filesystem")
 
 NS_T = re.compile(r"<w:t[ >].*?</w:t>", re.S)
 TAG = re.compile(r"<[^>]+>")
