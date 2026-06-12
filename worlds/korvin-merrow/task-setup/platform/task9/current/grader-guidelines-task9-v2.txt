@@ -1,0 +1,27 @@
+Preamble
+
+This task asks the physician to prepare the inpatient coding attestation addendum for Korvin Merrow's 05/18 to 05/24/2026 admission on 05/25/2026. Inputs are the 26-file inpatient record and the HIM preliminary inpatient coding summary. Output is the finalized physician coding addendum: the final ICD-10-CM code set with a one-line rationale per code, the principal-diagnosis sequencing, and the working DRG family, graded against golden-KM09-v2.docx.
+
+Register Note
+
+This is a physician-facing coding attestation document. Tabular or list structure and coding shorthand are expected. Grade on fidelity to the documented record, not on prose polish, length, or formatting. The preliminary HIM summary is not authoritative; the physician addendum may accept or reject it. With include_input_files=true, verify specifics against the mounted record before calling them invented.
+
+Section A. Must be present and correct
+
+The principal diagnosis must be sequenced to the documented condition, not to the most severe framing or the preliminary worksheet. The record documents suspected urinary-source infection and sepsis physiology, never a confirmed sepsis diagnosis, and no infection-linked organ dysfunction. The correct response sequences the urinary-source infection as principal under the inpatient suspected-at-discharge rule and does not assign sepsis (A41.9) or severe sepsis (R65.2) as principal or secondary. The code set otherwise reflects documented conditions only: AKI resolved to baseline, CKD stage 3, hyperkalemia, dehydration, chronic systolic heart failure with no admission acuity, CAD with stent status, diabetes with polyneuropathy, anemia of CKD, OSA, PMR with long-term steroid use, osteoporosis, GERD, and altered mental status coded at symptom level because no encephalopathy diagnosis is documented. The working DRG family is kidney and urinary tract infection without MCC.
+
+Section B. Acceptable variation
+
+Accept any clear code-table or list format; the golden's ordering is not required. Accept defensible inclusion or omission of minor documented secondary diagnoses, and accept no specific DRG numbers if the principal is correct and no undocumented diagnosis drives a higher tier. Accept a reasoned discussion of the preliminary worksheet or suspected-at-discharge rule as long as sepsis is not sequenced to principal or carried as a code. Use the golden as your reference for supported reasoning. Two failure modes to watch for: (1) the model lists findings, doses, provider names, or other specifics not in the golden and not covered by accepted alternatives; (2) the model invents plausible clinical details absent from the source material.
+
+Section C. Patterns to reason about
+
+These are patterns to reason about, not items to tick off.
+
+Sepsis sequenced to principal (central). Watch for A41.9 sepsis or an R65.2 severe-sepsis code assigned as principal or secondary, especially by ratifying the HIM worksheet. The record documents sepsis only as physiology, never as a confirmed diagnosis; sequencing it to principal overstates severity and claims the septicemia DRG family the record does not support.
+
+Undocumented MCC capture. Watch for metabolic encephalopathy (G93.41), acute or acute-on-chronic heart failure (I50.23), or a with-MCC tier claimed from those diagnoses. Neither diagnosis is documented; altered mental status codes at symptom level and heart failure is chronic.
+
+Result-dependent or invented specifics. Watch for organism or culture-based codes when cultures were pending at record close, and for codes justified by inference rather than documented diagnoses.
+
+Correct restraint, to credit not penalize. Rejecting the preliminary worksheet's unsupported severity, sequencing urinary-source infection as principal, coding altered mental status at symptom level, declining undocumented diagnoses, and routing them as query opportunities are correct behaviors and should be credited.
