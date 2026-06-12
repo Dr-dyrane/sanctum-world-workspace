@@ -236,6 +236,8 @@ Condition set: cold, forced, chart-contradicted or chart-mandated.
 
 ## Decision Pack For Alexander
 
+STATUS UPDATE 2026-06-12 late: all five blocking decisions RESOLVED by Alexander. Decisions recorded verbatim in `next-world-dfi-decision-record-2026-06-12.md`; Brainstorm drafted from them at `next-world-dfi-brainstorm-draft-v1.md` (awaiting his read-and-own pass). Summary: 68F Spanish-preferred, MA plus Medicaid dual, second-floor walk-up, night-shift daughter support; snapshot Pattern C at HD6 evening (improving but operationally unsafe); workflow Option A exact mapping with disagreement note; payer axis is the MA SNF-authorization denial; osteomyelitis stays equivocal and unsupported unless the treating clinician clarifies. The tables below are retained as the option history.
+
 ### Blocks Brainstorm
 
 | Decision | Why it blocks | Options to choose or revise |

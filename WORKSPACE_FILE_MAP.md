@@ -48,6 +48,13 @@ sanctum-world-workspace/
                                  live (06/09) doc + live sheet verification: strings/priorities/claims
                                  unchanged for Brainstorm scope; 30-file minimum now in-doc; cutoff
                                  July 31 2025; residual open items for Phase 2+.
+                                 reference/workflows/next-world-dfi-decision-record-2026-06-12.md holds
+                                 Alexander's five Brainstorm-blocking decisions verbatim (identity,
+                                 Pattern C snapshot, Option A workflows, SNF-denial payer axis,
+                                 equivocal osteomyelitis).
+                                 reference/workflows/next-world-dfi-brainstorm-draft-v1.md is the
+                                 four-element Brainstorm draft built from that record; markdown only,
+                                 awaiting Alexander's read-and-own pass; no DOCX or submission yet.
   tools/                       ← all Python scripts (canonical home)
   worlds/
     korvin-merrow/             ← the only live world
