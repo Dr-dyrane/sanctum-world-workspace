@@ -50,6 +50,7 @@ Structure spread: S1 x1, S2 x2, S3 x3, S4, S5, S6, S7 (seven distinct structures
 
 ## Draft notes (strip before DOCX)
 
+- PATIENT NAME: OPEN FOR ALEXANDER, and it blocks the DOCX. World #1 lesson on the record (Stacey correction A1, `worlds/korvin-merrow/reviews/stacey-corrections-recovery-report.md`): the prior working name James Carter was rejected as a common, generically plausible name and replaced with the unmistakably fictional Korvin Merrow across every reference including the document title. AutoQC 2.2 enforces the same: generic first-plus-surname combinations fail; clearly invented names pass. Candidate options in the Korvin Merrow / Zephyrus Quill register, Spanish-textured and unmistakably fictional, for Alexander to pick or replace: Ondina Vasquell, Felisbela Torremol, Amantina Quenterra, Lucresia Salviera. The chosen surname also feeds the platform world name (Healthcare_NNN_Surname, number assigned at creation) and the spec filename convention.
 - Cardiac comorbidity written as HFpEF; Alexander's decision allowed HFpEF or stable CAD; final pick (or both) at read-and-own.
 - Cross-world rotation honored: photo is substrate only; coding core is ulcer-family/POA, not sepsis-to-principal; CDI core is osteomyelitis specificity, not encephalopathy-style addition.
 - Task 6 exists in its own branch where she remains inpatient at day +2; tasks do not share one future timeline.

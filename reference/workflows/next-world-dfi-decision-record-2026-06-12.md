@@ -26,6 +26,10 @@ Task 4 centers on Medicare Advantage denial of SNF authorization. The denial pos
 
 Equivocal and unsupported specificity, not confirmed osteomyelitis. MRI shows marrow edema adjacent to the ulcer and states early osteomyelitis cannot be excluded. Podiatry debrides soft tissue and does not document exposed bone; no bone specimen confirms osteomyelitis. ID treats deep diabetic foot infection and does not sign acute osteomyelitis. Pathology, if present, is soft tissue only or non-confirmatory. HIM/CDI can fairly pressure toward acute osteomyelitis and POA coding; the correct stance is restraint: diabetic foot infection or ulcer with cellulitis/deep soft tissue infection is supported; acute osteomyelitis is not established unless the treating clinician clarifies it.
 
+## Open decision 6 (added 6/12 late, Alexander's catch): patient name
+
+The identity decision above carries no name, and the World #1 record shows why that blocks: the James Carter working name was rejected by reviewer correction A1 as a common, generically plausible name and migrated to the unmistakably fictional Korvin Merrow across all references (AutoQC 2.2 class). The DFI patient needs an unmistakably fictional, Spanish-textured name before any DOCX or submission artifact exists, since it feeds the document title, the spec filename, and the platform world name. Candidates offered for Alexander's pick or replacement: Ondina Vasquell, Felisbela Torremol, Amantina Quenterra, Lucresia Salviera.
+
 ## One-line decision set (Alexander's own summary)
 
 Patient: 68F, Spanish-preferred, Medicare Advantage plus Medicaid, lives in second-floor walk-up with daughter support limited by night work. Snapshot: HD6 evening, medically improving but operationally unsafe, Pattern C anchors. Workflow: Option A exact mapping with disagreement note. Payer axis: SNF authorization denial, with offloading/DME/home-health facts as support. Osteomyelitis: equivocal imaging and no treating/pathologic confirmation, so specificity is unsupported unless clarified.
