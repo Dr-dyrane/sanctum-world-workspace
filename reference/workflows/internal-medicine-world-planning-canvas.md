@@ -150,7 +150,7 @@ Do not build until every answer below is yes.
 
 - The slate has at least 5 structures and no more than 2 completion tasks.
 - Every task has a forced slot, not just a broad synthesis request.
-- Every essential file exists because a task needs it.
+- The source geometry can support at least 30 world-level files, with every essential file present because a task needs it.
 - No world file acts as an answer key for the task slate.
 - Every same-author draft trap is a true placeholder or has a correct-errors instruction.
 - Every external adversarial file is realistic by genre.

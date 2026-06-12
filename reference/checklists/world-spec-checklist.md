@@ -50,7 +50,7 @@ Use this checklist after Brainstorm approval and before World Spec AutoQC.
 - Use the source geometry board from `reference/workflows/internal-medicine-world-planning-canvas.md` to prove no shared world file is acting as an answer-key synthesis.
 - Supplementary files add realistic noise only and must not carry trap content.
 - Aim for approximately 90% essential and 10% supplementary.
-- Target at least 15-20 files per world unless the design justifies otherwise.
+- Starting 06/10/2026, new worlds need at least 30 world-level files unless project leadership grants an explicit exception. Task-level files do not count toward the world-level minimum.
 - Include at least 3-4 file modalities where appropriate.
 - No single file should resolve a task by itself.
 - Every essential file needs either a reference/template origin or a description detailed enough for a non-domain-expert builder.

@@ -90,6 +90,7 @@ A bankable deep task is BIMODAL: a clear floor (the propagators) AND clear catch
 
 - Read by PER-AXIS propagation rate / disposition, not the headline mean.
 - Read the content before trusting the percentage. The score is evidence, not the verdict. A 0.90 can hide a legitimate clinical failure, and a low score can be unusable if the only defect is cosmetic.
+- Do not require a sub-70 score for approval. One trajectory with a critical clinical or material deliverable failure can be bankable if the construction is fair and the FA can explain the miss.
 - For a propagation task: do the floors carry the fabricated line forward, and do the catchers correct it and score high?
 - If it clusters too high (no floor): the axis is too warm/bright or the plant too obvious - re-center the IDEA (colder axis, sharper plant), do NOT just rewrite prose.
 - If it is all-floor (no catcher): check the plant is chart-CONTRADICTED, not chart-silent; if silent, it is unfair - re-center onto the chart-mandated move (the KM05 v4 fix).
