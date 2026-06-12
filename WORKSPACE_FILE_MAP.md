@@ -1,5 +1,5 @@
 # Workspace File Map
-**Last updated: 2026-06-12 (KM07 ready for delivery after v4 true-placeholder pilot, FA/GA, and three PLs; KM08 v7 piloted in job 062652b2 with all-floor photo-miss pattern and FA/GA active from Attempt 1; KM09 v2 piloted cleanly in job 8ca908b5 with FA/GA active from Attempt 6; King P legitimate-failure-over-score guidance added and numeric score gates demoted; Raising Task Difficulty worked example added to sources and doctrine; KM10 v3 corrected GA after AO second review; A0.4/A0.5 draft-fairness gates and Abi review protocol added; macOS tooling/render notes added; internal medicine next-world planning canvas added; new-world 30 world-level file minimum indexed; next-world diabetic foot selection packet and hour prep packet indexed)**
+**Last updated: 2026-06-12 (KM07 ready for delivery after v4 true-placeholder pilot, FA/GA, and three PLs; KM08 v7 piloted in job 062652b2 with all-floor photo-miss pattern and FA/GA active from Attempt 1; KM09 v2 piloted cleanly in job 8ca908b5 with FA/GA active from Attempt 6; King P legitimate-failure-over-score guidance added and numeric score gates demoted; Raising Task Difficulty worked example added to sources and doctrine; KM10 v3 corrected GA after AO second review; A0.4/A0.5 draft-fairness gates and Abi review protocol added; macOS tooling/render notes added; internal medicine next-world planning canvas added; new-world 30 world-level file minimum indexed; next-world diabetic foot selection packet and hour prep packet indexed; Ondina Vasquell Brainstorm v1.1 indexed)**
 
 Single source of truth for repo structure, placement rules, and navigation.
 Read this + `AGENTS.md` at the start of any new session before touching files.
@@ -52,9 +52,12 @@ sanctum-world-workspace/
                                  Alexander's five Brainstorm-blocking decisions verbatim (identity,
                                  Pattern C snapshot, Option A workflows, SNF-denial payer axis,
                                  equivocal osteomyelitis).
-                                 reference/workflows/next-world-dfi-brainstorm-draft-v1.md is the
-                                 four-element Brainstorm draft built from that record; markdown only,
-                                 awaiting Alexander's read-and-own pass; no DOCX or submission yet.
+                                 reference/workflows/next-world-dfi-brainstorm-draft-v1.1.md is the
+                                 current four-element Brainstorm draft built from that record; it closes
+                                 the patient-name, document-date, exact-snapshot, requester, task-anchor,
+                                 and task-level-trap gates; markdown only, no DOCX or submission yet.
+                                 reference/workflows/next-world-dfi-brainstorm-draft-v1.md is superseded
+                                 local history.
   tools/                       ← all Python scripts (canonical home)
   worlds/
     korvin-merrow/             ← the only live world
