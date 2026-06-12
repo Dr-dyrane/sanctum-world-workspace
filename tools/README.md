@@ -14,6 +14,10 @@ All Python scripts for this workspace live here. Do not create `.py` files insid
 - `generate_reference_files.py` — reference file generator (NOT for task artifacts; see AGENTS.md guardrail 1)
 - `build-world-performance-xlsx.py` — world performance spreadsheet builder
 
+## Current non-task build script
+
+- `build/build-docx-ondina-brainstorm.py` — Mode A clone build for `worlds/ondina-vasquell/submission/Ondina_Vasquell_Brainstorm.docx`
+
 ## macOS document-tool note, 2026-06-11
 
 On the current local Mac, use the bundled Codex Python for repo automation:

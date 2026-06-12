@@ -1,5 +1,5 @@
 # Workspace File Map
-**Last updated: 2026-06-12 (KM07 ready for delivery after v4 true-placeholder pilot, FA/GA, and three PLs; KM08 v7 piloted in job 062652b2 with all-floor photo-miss pattern and FA/GA active from Attempt 1; KM09 v2 piloted cleanly in job 8ca908b5 with FA/GA active from Attempt 6; King P legitimate-failure-over-score guidance added and numeric score gates demoted; Raising Task Difficulty worked example added to sources and doctrine; KM10 v3 corrected GA after AO second review; A0.4/A0.5 draft-fairness gates and Abi review protocol added; macOS tooling/render notes added; internal medicine next-world planning canvas added; new-world 30 world-level file minimum indexed; next-world diabetic foot selection packet and hour prep packet indexed; Ondina Vasquell Brainstorm v1.1 indexed)**
+**Last updated: 2026-06-12 (KM07 ready for delivery after v4 true-placeholder pilot, FA/GA, and three PLs; KM08 v7 piloted in job 062652b2 with all-floor photo-miss pattern and FA/GA active from Attempt 1; KM09 v2 piloted cleanly in job 8ca908b5 with FA/GA active from Attempt 6; King P legitimate-failure-over-score guidance added and numeric score gates demoted; Raising Task Difficulty worked example added to sources and doctrine; KM10 v3 corrected GA after AO second review; A0.4/A0.5 draft-fairness gates and Abi review protocol added; macOS tooling/render notes added; internal medicine next-world planning canvas added; new-world 30 world-level file minimum indexed; next-world diabetic foot selection packet and hour prep packet indexed; Ondina Vasquell Brainstorm submission copy and Mode A DOCX built; final local audit PASS with DOCX hash recorded)**
 
 Single source of truth for repo structure, placement rules, and navigation.
 Read this + `AGENTS.md` at the start of any new session before touching files.
@@ -53,9 +53,8 @@ sanctum-world-workspace/
                                  Pattern C snapshot, Option A workflows, SNF-denial payer axis,
                                  equivocal osteomyelitis).
                                  reference/workflows/next-world-dfi-brainstorm-draft-v1.1.md is the
-                                 current four-element Brainstorm draft built from that record; it closes
-                                 the patient-name, document-date, exact-snapshot, requester, task-anchor,
-                                 and task-level-trap gates; markdown only, no DOCX or submission yet.
+                                 planning history for the four-element Brainstorm; reviewer-facing
+                                 source and built DOCX now live under worlds/ondina-vasquell/submission/.
                                  reference/workflows/next-world-dfi-brainstorm-draft-v1.md is superseded
                                  local history.
   tools/                       ← all Python scripts (canonical home)
@@ -68,10 +67,13 @@ sanctum-world-workspace/
                                  phase-1 worksheets FILLED from the hour packet (1a slate,
                                  1c pairings + fairness gates, 1d forecasts). phase-2 holds
                                  2b-spec-prep-checklist.md (KM reviewer-correction
-                                 inheritance: comorbidity expansion + med specificity
+                                 inheritance: comorbidity expansion DONE, med specificity
                                  OPEN FOR ALEXANDER) and 2c-autoqc-25-defense-notes.md
                                  (osteo, perfusion-conflict, borderline-stay defenses,
-                                 drafted same-day per the KM lesson).
+                                 drafted same-day per the KM lesson). Brainstorm DOCX
+                                 built at worlds/ondina-vasquell/submission/
+                                 Ondina_Vasquell_Brainstorm.docx, SHA prefix f260fc69,
+                                 final local audit PASS; Studio submission/review pending.
 ```
 
 ---
@@ -86,6 +88,7 @@ tools/
   generate_reference_files.py  ← LIVE: reference file generator (do NOT use for task artifacts)
   build-world-performance-xlsx.py  ← LIVE: performance spreadsheet builder
   build/                       ← LIVE build scripts (one per task, current version only)
+    build-docx-ondina-brainstorm.py
     build-docx-km07-draft-fairfix.py
     build-docx-km08-v7.py
     build-docx-km09-v2.py

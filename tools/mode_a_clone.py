@@ -100,7 +100,10 @@ def fingerprint(path):
 
 
 def _core_clean(path):
-    c = zipfile.ZipFile(path).read("docProps/core.xml").decode()
+    try:
+        c = zipfile.ZipFile(path).read("docProps/core.xml").decode()
+    except KeyError:
+        return True
     creator_clean = "<dc:creator></dc:creator>" in c or "<dc:creator/>" in c
     description_clean = "<dc:description></dc:description>" in c or "<dc:description/>" in c
     modified_by_clean = "<cp:lastModifiedBy></cp:lastModifiedBy>" in c or "<cp:lastModifiedBy/>" in c

@@ -1,13 +1,13 @@
 # Ondina Vasquell World (World #2) - Cockpit
 
-Status: PHASE 1 SUBSTANTIALLY COMPLETE. Brainstorm v1.1 at the DOCX gate. World folder authorized by Alexander 6/12 late, superseding the planning-canvas scope lock. No substrate file, task artifact, DOCX, image, upload, AutoQC run, or platform action without Alexander's explicit authorization for that exact step.
+Status: PHASE 1 SUBMISSION-READY LOCALLY. Brainstorm DOCX built locally by Mode A clone on 6/12 after Alexander authorization, final local Brainstorm audit passed, and Alexander is submitting in Studio. World folder authorized by Alexander 6/12 late, superseding the planning-canvas scope lock. No substrate file, task artifact, image, upload, AutoQC run, or platform action without Alexander's explicit authorization for that exact step.
 
-Patient: Ondina Vasquell, 68F, Spanish-preferred, insulin-dependent T2DM, CKD 3b, PAD, diabetic neuropathy, HFpEF, limited mobility; second-floor walk-up; daughter support limited by night work; Medicare Advantage with Medicaid secondary. World: limb-threat diabetic foot infection, 6-day admission, snapshot May 21, 2026 at 18:00 (HD6 evening), medically improving but operationally unsafe. Branch posture: decision 7, stay on korvin-merrow-brainstorm until KM closes; cut ondina-vasquell-brainstorm at that boundary.
+Patient: Ondina Vasquell, 68F, Spanish-preferred, insulin-dependent T2DM with diabetic peripheral neuropathy and mild diabetic retinopathy, CKD 3b with anemia of CKD, PAD, HFpEF, hypertension, dyslipidemia, obesity, OSA, knee osteoarthritis, limited mobility; second-floor walk-up; daughter support limited by night work; Medicare Advantage with Medicaid secondary. World: limb-threat diabetic foot infection, 6-day admission, snapshot May 21, 2026 at 18:00 (HD6 evening), medically improving but operationally unsafe. Branch posture: decision 7, stay on korvin-merrow-brainstorm until KM closes; cut ondina-vasquell-brainstorm at that boundary.
 
 ## Read order for this world
 
 1. reference/workflows/next-world-dfi-decision-record-2026-06-12.md (physician-originated decisions 1 to 10)
-2. reference/workflows/next-world-dfi-brainstorm-draft-v1.1.md (Brainstorm of record, twice reviewed, residuals fixed)
+2. worlds/ondina-vasquell/submission/Ondina_Vasquell_Brainstorm.md (reviewer-facing Brainstorm source for DOCX; twice reviewed, residuals fixed)
 3. reference/workflows/next-world-dfi-hour-prep-packet.md (options history, worksheet sources, live-guidance gate)
 4. reference/workflows/live-guidance-delta-memo-2026-06-12.md (live doc and sheet verification; Phase 2+ residual gates)
 5. This folder's phase files in numbered order.
@@ -23,9 +23,9 @@ Patient: Ondina Vasquell, 68F, Spanish-preferred, insulin-dependent T2DM, CKD 3b
 
 | Deliverable | State |
 |---|---|
-| Brainstorm content, 4 elements, 10 tasks, 7 structures | v1.1 of record; awaiting Alexander read-and-own word and DOCX authorization |
-| Brainstorm DOCX | Gated; Mode A clone build plan in doctrine item 3 |
-| Brainstorm self-QC + AutoQC + pod review | After DOCX; Section 1 AutoQC prompt self-QC first |
+| Brainstorm content, 4 elements, 10 tasks, 7 structures | Submission copy controls; comorbidity depth expanded to 13 common conditions; final local audit PASS; Studio submission in progress by Alexander |
+| Brainstorm DOCX | Built at submission/Ondina_Vasquell_Brainstorm.docx by tools/build/build-docx-ondina-brainstorm.py; SHA256 f260fc699afbc960f6acdaf34746279b7cd15cdb8718ab495c8334b5fa5ab1cc; Mode A fingerprint clean; full LibreOffice render blocked by local dylib issue, Quick Look/textutil fallbacks clean |
+| Brainstorm self-QC + AutoQC + pod review | External Studio gate pending Alexander; no repo-side AutoQC or platform action authorized |
 | Claude transcript | Decision 8: assembled from git history at the end |
 | World Spec | Phase 2; checklist at phase-2-world-spec-and-substrate/2b-spec-prep-checklist.md |
 | AutoQC 2.5 intentional-ambiguity defenses | Drafted same-day per KM lesson: phase-2-world-spec-and-substrate/2c-autoqc-25-defense-notes.md |
