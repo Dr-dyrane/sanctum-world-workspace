@@ -1,6 +1,6 @@
 # Brainstorm: Ondina Vasquell Limb-Threat Diabetic Foot Infection
 
-Concept pitch for Team Lead review. World type: typical clinical, inpatient hospital medicine with post-discharge administrative encounters. Snapshot: May 21, 2026 at 18:00, hospital day 6. Patient: Ondina Vasquell (fictional), 68F. June 12, 2026.
+Concept pitch for Team Lead review. World Type: Typical Clinical World (inpatient hospital medicine with post-discharge administrative encounters). Snapshot: May 21, 2026 at 18:00, hospital day 6. Patient: Ondina Vasquell, 68F. June 12, 2026.
 
 ## 1. World setup
 
