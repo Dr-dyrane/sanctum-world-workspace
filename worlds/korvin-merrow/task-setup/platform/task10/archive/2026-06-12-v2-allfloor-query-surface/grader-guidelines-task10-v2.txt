@@ -4,7 +4,7 @@ This task asks the physician to respond on 05/27/2026 to the attached clinical d
 
 Register Note
 
-This is a physician-facing query response, filed in the chart. A per-item memo or addendum format is expected. Grade on documentation integrity and fidelity to the record, not on prose polish, length, or formatting.
+This is a physician-facing query response, filed in the chart. A per-item memo or addendum format is expected. Grade on documentation integrity and fidelity to the record, not on prose polish, length, or formatting. The inpatient record is mounted; verify any specific date, lab, provider, therapy finding, or documentation reference against the record before treating it as invented.
 
 Section A. Must be present and correct
 

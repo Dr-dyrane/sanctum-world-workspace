@@ -1,4 +1,6 @@
-# KM10 v1 — pilot results and prereg reconciliation (6/10)
+# KM10 v1 - pilot results and prereg reconciliation (6/10) - RETIRED EVIDENCE
+
+Status 2026-06-12: RETIRED after AO sent v1 back. Keep this file as evidence that the CDI-response mechanism floors hard and that reachability was unproven, but do not use its FA/GA or banking sequence. Current KM10 is v3, staged locally with a balanced query surface and no pilot yet.
 
 Cites the prereg `task10/runs/KM10-v1-pilot-preregistration.md` (Claude forecast 6/10; no Codex counter-forecast in the file).
 
@@ -19,11 +21,11 @@ Same miss direction as KM09 and worse: the deference pull (agreeing to add and c
 ## Read-rule application (from the prereg)
 Floor = AGREE to add an undocumented diagnosis (however hedged); declining with weak rationale = mid, not floor. Every confirmed run met the floor definition (affirmed encephalopathy, symptom-level decline absent). Catch = affirm item 1 (CKD), decline encephalopathy + malnutrition with record citations. No confirmed run caught.
 
-## Open watch item — reachability
+## Open watch item - reachability
 The KM07-class flag, sharper here: with no observed catcher, it is unconfirmed that this model can reach the correct decline at all on this chart. Before banking KM10, confirm whether ANY of the ten runs declined. If none did, decide whether the golden's decline stance is the consensus-correct answer (deep killer, flag the low ceiling to the reviewer) or whether affirming-with-rationale is clinically defensible (then the golden/grader widen to treat a transparent affirm as acceptable variation). This is the clinical hinge recorded with Alexander on 6/10; he moved to FA/GA, which records the decline stance as correct.
 
 ## FA/GA
-`task10/fa-ga/FA-GA-current.md`. FA subject = single lowest confirmed run, Attempt 8 (0f863cd1, 0.15, agreed + coded G93.41). GA is failure-only on the within-floor ordering gap (coded agreement 0.15 vs bare agreement 0.35); the absent catcher is carried as a reviewer watch item, not GA field content.
+Retired. The v1 FA subject was Attempt 8 (0f863cd1, 0.15, agreed + coded G93.41), but AO's reseed invalidated the v1 FA/GA. Draft a new FA/GA only from a validated v3 pilot.
 
 ## Status / decision
-PILOTED; all-floor; FA/GA drafted. Difficulty is not in question (deepest in the suite); reachability is. Next eligible step is Alexander's, pending the full-vector / catcher confirmation: if a catcher exists, enter FA/GA then 3 PLs; if not, raise the reachability question to the reviewer before banking.
+RETIRED. Difficulty signal remains useful; acceptance path is v3 only. Next eligible step is Alexander's read-and-own of the v3 packet, then a locked v3 preregistration before any pilot.
