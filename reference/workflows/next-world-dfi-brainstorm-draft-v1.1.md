@@ -2,7 +2,7 @@
 
 Document date: June 12, 2026
 
-Status: DRAFT for Alexander's read-and-own pass and Claude audit. Markdown only. No DOCX, no submission, no AutoQC run, and no platform action. Built from Alexander's decision record, the ratified scorecard, the filled canvas, and the Korvin Brainstorm AutoQC failure lessons.
+Status: PLANNING RECORD. The reviewer-facing submission copy, with internal register stripped per Alexander's 6/12 gate verdict (clean title, no status line, T4 requester polish, structural categories in plain words), lives at `worlds/ondina-vasquell/submission/Ondina_Vasquell_Brainstorm.md`. That copy is the DOCX source. This file remains the planning history. Built from Alexander's decision record, the ratified scorecard, the filled canvas, and the Korvin Brainstorm AutoQC failure lessons.
 
 World type: typical clinical, inpatient hospital medicine with post-discharge administrative encounters.
 
