@@ -46,6 +46,7 @@ Use this checklist before Brainstorm AutoQC and Human Brainstorm Review.
 ## Rough Task Ideas
 
 - Target 10 tasks for concept planning (pod rule 6/10: over 8, preferably 10, before a new world).
+- Fill `reference/workflows/internal-medicine-world-planning-canvas.md` before drafting the Brainstorm. The official Brainstorm receives only the high-level outputs, but the local canvas must already account for each task surface, trap, forced slot, source route, fairness route, and grader mode.
 - STRUCTURAL VARIETY IS A GATE (Abi mandate 6/10, client ask): read `docs/task-structure-dossier.md` BEFORE drafting task ideas. The slate must span at least 5 distinct structures; draft-and-finalize completion is capped at 1-2 tasks per world. Name each task's structure (S1-S8) and its native forcing function in the brainstorm.
 - Design the world substrate FOR the chosen structures at this stage (a borderline case if a determination task is wanted; an external adversarial document if a ratify-or-refute task is wanted; a quiet measure-disqualifier if an abstraction task is wanted). The Korvin lesson: substrate chosen after the world is fixed cannot floor variety structures.
 - Each task should map to an approved workflow category by its VERBATIM sheet string; check claim counts on the live Task Selection Categories sheet.
@@ -74,4 +75,3 @@ Use this checklist before Brainstorm AutoQC and Human Brainstorm Review.
 - Inventing a workflow instead of mapping to the approved tracker.
 - Designing tasks that would require information outside the world files.
 - Letting the prompt idea hint at the trap.
-

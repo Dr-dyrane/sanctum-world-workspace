@@ -60,14 +60,15 @@ Physician-voice rule (Medicine Team Lead, standing): the final deliverable is ph
 
 ## 4. World #2 design implications (do at brainstorm, not at task time)
 
-1. Choose the 5+ structures FIRST; write one line per task naming structure + forcing function + where the substrate must live.
-2. Build the substrate FOR each structure: a genuinely borderline admission if S4 is wanted; a payer denial letter or CDI query as a planned file if S3 is wanted; a coding-relevant documentation gap if S2-coding is wanted; a quiet measure-disqualifier if S5 is wanted; ONE cold chart-contradicted axis reserved for the S1 floor.
-3. Remove answer-key synthesis from shared world files. The Raising Task Difficulty worked example shows that a world-level discharge summary or similar synthesis can make every trap transcription-simple. World files should hold raw chart material; completed summaries can be scoped as task-level files only when that task realistically needs them.
-4. Plan task-level format and noise deliberately. Templates, intake notes, nursing notes, bundled labs, or irrelevant-but-realistic files can make a structure harder by forcing the model to filter and fit the answer, as long as they do not pre-answer the task.
-5. Plan off-text signals where realistic. A photo of an infected line, medication bottle, handwritten list, downtime note, or preliminary image capture can be a fair high-stakes discriminator when it is visible, dated, clinically plausible, and supported by at least a minimal chart clue.
-6. Anchor rules apply per structure: every encounter strictly post-snapshot, never future-dated, varied timepoints.
-7. Self-containment: S2/S3/S5 lean on coding/payer/measure knowledge; keep the required knowledge pre-July-2025 or attach the source document as a file (realistic for denial letters and policy excerpts).
-8. Put the S8 fairness question to the pod before building anything on it.
+1. Fill `reference/workflows/internal-medicine-world-planning-canvas.md` before the Brainstorm; it is the local task/trap/source/fairness workspace that prevents files from being designed before the task slate is armed.
+2. Choose the 5+ structures FIRST; write one line per task naming structure + forcing function + where the substrate must live.
+3. Build the substrate FOR each structure: a genuinely borderline admission if S4 is wanted; a payer denial letter or CDI query as a planned file if S3 is wanted; a coding-relevant documentation gap if S2-coding is wanted; a quiet measure-disqualifier if S5 is wanted; ONE cold chart-contradicted axis reserved for the S1 floor.
+4. Remove answer-key synthesis from shared world files. The Raising Task Difficulty worked example shows that a world-level discharge summary or similar synthesis can make every trap transcription-simple. World files should hold raw chart material; completed summaries can be scoped as task-level files only when that task realistically needs them.
+5. Plan task-level format and noise deliberately. Templates, intake notes, nursing notes, bundled labs, or irrelevant-but-realistic files can make a structure harder by forcing the model to filter and fit the answer, as long as they do not pre-answer the task.
+6. Plan off-text signals where realistic. A photo of an infected line, medication bottle, handwritten list, downtime note, or preliminary image capture can be a fair high-stakes discriminator when it is visible, dated, clinically plausible, and supported by at least a minimal chart clue.
+7. Anchor rules apply per structure: every encounter strictly post-snapshot, never future-dated, varied timepoints.
+8. Self-containment: S2/S3/S5 lean on coding/payer/measure knowledge; keep the required knowledge pre-July-2025 or attach the source document as a file (realistic for denial letters and policy excerpts).
+9. Put the S8 fairness question to the pod before building anything on it.
 
 ## 5. Default 8-task allocation (7 structures, rule satisfied)
 

@@ -31,6 +31,7 @@ Use this checklist after Brainstorm approval and before World Spec AutoQC.
 ## Section 2: Task Specifications
 
 - Plan 5-10 tasks.
+- Reconcile the task section against `reference/workflows/internal-medicine-world-planning-canvas.md`; every task should retain its structure, forced slot, trap route, fairness route, source geometry, grader mode, and reachability plan from the pre-brainstorm canvas.
 - At least one task should map to a P0 workflow.
 - Tasks should span multiple clinical workflows and reasoning demands.
 - Each task should include workflow, draft prompt, expected output, failure design, and task-level files.
@@ -46,6 +47,7 @@ Use this checklist after Brainstorm approval and before World Spec AutoQC.
 
 - Design files after tasks.
 - Each essential file exists because at least one task needs it.
+- Use the source geometry board from `reference/workflows/internal-medicine-world-planning-canvas.md` to prove no shared world file is acting as an answer-key synthesis.
 - Supplementary files add realistic noise only and must not carry trap content.
 - Aim for approximately 90% essential and 10% supplementary.
 - Target at least 15-20 files per world unless the design justifies otherwise.
@@ -81,4 +83,3 @@ Use this checklist after Brainstorm approval and before World Spec AutoQC.
 - Re-upload and rerun AutoQC after edits.
 - Document any false-positive disagreement with reasoning.
 - Mark diagnostics reviewed before submitting.
-
