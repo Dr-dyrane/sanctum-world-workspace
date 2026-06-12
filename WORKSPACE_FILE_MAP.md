@@ -60,7 +60,18 @@ sanctum-world-workspace/
                                  local history.
   tools/                       ← all Python scripts (canonical home)
   worlds/
-    korvin-merrow/             ← the only live world
+    korvin-merrow/             ← World #1 (delivered KM01-07; KM08-10 in review)
+    ondina-vasquell/           ← World #2 (authorized 6/12 late): skeleton evolved to live
+                                 cockpit. 00-START-HERE.md = world cockpit with decisions
+                                 8-10 build doctrine (transcript from git hx; Custom Made
+                                 origin + Mode A HIM/EMR; Codex imagegen delegation).
+                                 phase-1 worksheets FILLED from the hour packet (1a slate,
+                                 1c pairings + fairness gates, 1d forecasts). phase-2 holds
+                                 2b-spec-prep-checklist.md (KM reviewer-correction
+                                 inheritance: comorbidity expansion + med specificity
+                                 OPEN FOR ALEXANDER) and 2c-autoqc-25-defense-notes.md
+                                 (osteo, perfusion-conflict, borderline-stay defenses,
+                                 drafted same-day per the KM lesson).
 ```
 
 ---
