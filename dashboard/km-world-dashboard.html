@@ -317,6 +317,7 @@
       display: inline-block; flex: none;
     }
     .pill-dot.delivered { background: var(--ok-soft); }
+    .pill-dot.ready     { background: var(--warn-soft); }
     .pill-dot.review    { background: var(--accent-a); animation: pulse 2.4s ease-in-out infinite; }
 
     /* Summary stat label dot */
@@ -506,8 +507,9 @@
               <div id="heroPrimaryMetric" class="font-bold leading-none mt-3" style="font-size:4.25rem">-</div>
               <p id="heroPrimaryCaption" class="mt-4 text-[14px] leading-relaxed" style="color:var(--fg-soft)">Useful failure signal across the active task set.</p>
             </div>
-            <div class="mt-6 grid grid-cols-3 gap-3 text-[12.5px]" style="color:var(--fg-soft)">
+            <div class="mt-6 grid grid-cols-4 gap-3 text-[12.5px]" style="color:var(--fg-soft)">
               <div><b id="heroDelivered" class="block text-[20px]" style="color:var(--fg)">-</b>Delivered</div>
+              <div><b id="heroReady" class="block text-[20px]" style="color:var(--fg)">-</b>Ready</div>
               <div><b id="heroReview" class="block text-[20px]" style="color:var(--fg)">-</b>Review</div>
               <div><b id="heroHardest" class="block text-[20px]" style="color:var(--fg)">-</b>Hardest</div>
             </div>
@@ -567,6 +569,10 @@
           <div class="min-w-0">
             <div class="t-stat font-bold" id="deliveredCount">-</div>
             <div class="mt-2 text-[13px]" style="color:var(--fg-soft)"><span class="stat-dot" style="background:var(--ok-soft)"></span><button class="term" data-g="delivered">Delivered</button> tasks</div>
+          </div>
+          <div class="min-w-0">
+            <div class="t-stat font-bold" id="readyCount">-</div>
+            <div class="mt-2 text-[13px]" style="color:var(--fg-soft)"><span class="stat-dot" style="background:var(--warn-soft)"></span>Ready to deliver</div>
           </div>
           <div class="min-w-0">
             <div class="t-stat font-bold" id="reviewCount">-</div>
@@ -640,6 +646,7 @@
     /* Status categories used by filter + pills */
     cats: {
       delivered: { label:'Delivered',        pill:'DELIVERED' },
+      ready:     { label:'Ready to deliver',  pill:'READY FOR DELIVERY' },
       review:    { label:'In review',        pill:'IN HUMAN REVIEW' },
     },
     quality: {
@@ -679,7 +686,7 @@
      Snapshot of Project Sanctum / Mercor task data.
      Synced 2026-06-12. External AQC eval rows are excluded.
      Fields:
-       stage        'delivered' | 'review'  (filter category)
+       stage        'delivered' | 'ready' | 'review'  (filter category)
        plain        what this task tests, in plain English
        mechanism    the clinical trap, in clinical shorthand
        verdict      one-line judgment a non-specialist can act on
@@ -775,7 +782,7 @@
       provNote:'Vector is confirmed in the active Project Sanctum record. The external AQC eval row with the same task surface is excluded from this dashboard.',
     },
     {
-      id:'KM07', position:7, stage:'review',
+      id:'KM07', position:7, stage:'ready',
       name:'Nephrology Referral Letter',
       plain:'Write a kidney-specialist referral letter that keeps an on-hold bone medication genuinely open for the specialist, instead of quietly marking it resumed.',
       mechanism:'Bone-health reconciliation: keep alendronate OPEN (held inpatient, nephrology to confirm renal trajectory before resuming) vs a soft continues/resumes closure',
@@ -811,7 +818,7 @@
       provNote:'The active spread is exact from the Project Sanctum review record. The mounted HIM summary was clean, and two catcher runs prove the ideal answer is reachable.',
     },
     {
-      id:'KM10', position:10, stage:'review',
+      id:'KM10', position:10, stage:'ready',
       name:'CDI Query Response Review',
       plain:'Answer a documentation query without agreeing to upgrade the diagnosis to a severity the chart does not support.',
       mechanism:'Agreeing to add/code metabolic encephalopathy despite balanced unsupported and unable-to-determine options, vs holding at the documented symptom level',
@@ -979,7 +986,7 @@
 
     /* Pipeline stepper: where this task sits in the lifecycle */
     stepper(t){
-      const currentIdx = t.stage === 'delivered' ? 3 : 2;  /* all shown tasks are at least piloted */
+      const currentIdx = (t.stage === 'delivered' || t.stage === 'ready') ? 3 : 2;  /* all shown tasks are at least piloted */
       const steps = CONFIG.stages.map((s,i)=>{
         const done = t.stage === 'delivered' ? true : i < currentIdx;
         const current = t.stage !== 'delivered' && i === currentIdx;
@@ -992,6 +999,8 @@
       }).join('');
       const plain = t.stage === 'delivered'
         ? `Accepted and handed off${t.delivered ? ' on ' + t.delivered : ''}.`
+        : t.stage === 'ready'
+        ? 'Reviewed and cleared; queued for delivery on the platform.'
         : 'Piloted; a human expert is reviewing the task before it can be accepted.';
       return `<div class="stepper stepper-labels-hide" role="img" aria-label="Pipeline: ${plain}">${steps}</div>`;
     },
@@ -1499,6 +1508,7 @@
   function renderSummary(){
     const M = WorldCtl.world.meta;
     const delivered = tasks.filter(t=>t.stage==='delivered');
+    const ready = tasks.filter(t=>t.stage==='ready');
     const review = tasks.filter(t=>t.stage==='review');
     const anyApprox = tasks.some(t=>t.approx);
     const mom = tasks.reduce((s,t)=>s+t.mean,0)/tasks.length;
@@ -1511,6 +1521,7 @@
 
     document.getElementById('deliveredCount').innerHTML = delivered.length+'<span class="unit">/ '+tasks.length+'</span>';
     document.getElementById('reviewCount').textContent = review.length;
+    document.getElementById('readyCount').textContent = ready.length;
     document.getElementById('meanOfMeans').innerHTML = (anyApprox?'≈':'')+mom.toFixed(1).replace(/\.0$/,'')+'<span class="unit">%</span>';
     document.getElementById('spreadRange').textContent = Math.min(...means)+' to '+Math.max(...means);
 
@@ -1520,6 +1531,7 @@
       `${sub70} scored attempts fell below 70. That is the suite's primary training signal.`;
     document.getElementById('heroDelivered').textContent = delivered.length+'/'+tasks.length;
     document.getElementById('heroReview').textContent = review.length;
+    document.getElementById('heroReady').textContent = ready.length;
     document.getElementById('heroHardest').textContent = lo.id;
 
     document.getElementById('summarySentence').innerHTML =
