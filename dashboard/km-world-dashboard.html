@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
   <title>KM World Suite · Performance Dashboard</title>
-  <meta name="description" content="Korvin Merrow KM01 to KM10 task suite performance. Ten clinical documentation tasks, ten scored runs each, explained so anyone can read them. Data synced 2026-06-11." />
+  <meta name="description" content="Korvin Merrow KM01 to KM10 task suite performance. Ten clinical documentation tasks and 100 scored runs. Data synced 2026-06-12." />
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -37,7 +37,7 @@
   <style>
     /* ════════════════════════════════════════════════════════════
        1 · DESIGN TOKENS
-       Surface scale L0 page → L1 card → L2 control → L3 float.
+       Surface scale L0 page to L1 card to L2 control to L3 float.
        Color doctrine (monochrome field + semantic accents,
        small status elements ONLY, never large surfaces/charts):
          purple = performance, brand, in-motion pipeline states
@@ -46,9 +46,9 @@
          rose   = reserved for sent-back/blocked states (defined, unused)
        ════════════════════════════════════════════════════════════ */
     :root {
-      --bg:       #ebe8f4;                  /* L0 violet-tinted grouped page */
+      --bg:       #f5f5f7;                  /* L0 grouped page */
       --bg-2:     #ffffff;                  /* L1 card */
-      --bg-3:     rgba(255,255,255,0.78);   /* L2 control pill */
+      --bg-3:     rgba(255,255,255,0.86);   /* L2 control pill */
       --bg-hover: rgba(124,58,237,0.06);
       --bg-press: rgba(124,58,237,0.12);
       --fg:       #0b0a10;
@@ -65,18 +65,18 @@
       --ok-fill:  rgba(16,185,129,0.14);
       --bad:      #be123c;                  /* rose: reserved for sent-back/blocked; unused by design */
       --bad-fill: rgba(190,18,60,0.12);
-      --shadow-card:  0 1px 2px rgba(22,10,46,0.04), 0 6px 24px rgba(22,10,46,0.07), 0 16px 48px rgba(124,58,237,0.06);
-      --shadow-lift:  0 4px 12px rgba(22,10,46,0.08), 0 16px 48px rgba(22,10,46,0.10), 0 28px 72px rgba(124,58,237,0.14);
-      --shadow-pill:  0 1px 3px rgba(22,10,46,0.07), 0 4px 14px rgba(22,10,46,0.06);
-      --r-card:   28px;
+      --shadow-card:  0 1px 2px rgba(0,0,0,0.04), 0 8px 28px rgba(0,0,0,0.08);
+      --shadow-lift:  0 3px 10px rgba(0,0,0,0.08), 0 16px 42px rgba(0,0,0,0.10);
+      --shadow-pill:  0 1px 3px rgba(0,0,0,0.07), 0 4px 14px rgba(0,0,0,0.06);
+      --r-card:   8px;
       --r-pill:   9999px;
-      --r-chip:   12px;
-      --blur:     blur(28px) saturate(170%);
+      --r-chip:   8px;
+      --blur:     blur(18px) saturate(140%);
     }
     html.dark {
-      --bg:       #09080d;
-      --bg-2:     #18161f;
-      --bg-3:     rgba(42,39,54,0.85);
+      --bg:       #101012;
+      --bg-2:     #1c1c1e;
+      --bg-3:     rgba(44,44,46,0.88);
       --bg-hover: rgba(139,92,246,0.10);
       --bg-press: rgba(139,92,246,0.20);
       --fg:       #f4f2fa;
@@ -93,8 +93,8 @@
       --ok-fill:  rgba(52,211,153,0.16);
       --bad:      #fb7185;
       --bad-fill: rgba(251,113,133,0.16);
-      --shadow-card:  0 1px 2px rgba(0,0,0,0.50), 0 8px 28px rgba(0,0,0,0.45), 0 16px 56px rgba(139,92,246,0.09);
-      --shadow-lift:  0 4px 16px rgba(0,0,0,0.60), 0 20px 56px rgba(0,0,0,0.50), 0 32px 80px rgba(139,92,246,0.16);
+      --shadow-card:  0 1px 2px rgba(0,0,0,0.50), 0 8px 28px rgba(0,0,0,0.42);
+      --shadow-lift:  0 4px 16px rgba(0,0,0,0.55), 0 20px 56px rgba(0,0,0,0.48);
       --shadow-pill:  0 1px 3px rgba(0,0,0,0.45), 0 4px 14px rgba(0,0,0,0.40);
     }
 
@@ -107,21 +107,20 @@
       margin: 0;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
-      letter-spacing: -0.011em;
+      letter-spacing: 0;
       overflow-x: hidden;
     }
-    h1,h2,h3 { letter-spacing: -0.022em; }
+    *, h1,h2,h3 { letter-spacing: 0 !important; }
     ::selection { background: rgba(124,58,237,0.30); }
     :focus-visible { outline: 2px solid var(--accent-a); outline-offset: 2px; border-radius: 14px;
       box-shadow: 0 0 0 4px rgba(124,58,237,0.30); }
 
-    /* Fluid type scale */
-    .t-hero   { font-size: clamp(2.6rem, 7vw, 5.5rem); line-height: 0.98; }
-    .t-h2     { font-size: clamp(1.4rem, 3.2vw, 2.4rem); line-height: 1.06; }
-    .t-id     { font-size: clamp(2rem, 5.4vw, 3.8rem); line-height: 0.9; }
-    .t-score  { font-size: clamp(2.6rem, 7vw, 4.2rem); line-height: 0.9; }
-    /* Summary stat: sized to never clip or wrap inside a 4-col grid cell */
-    .t-stat   { font-size: clamp(1.9rem, 4.4vw, 3.5rem); line-height: 1; white-space: nowrap; letter-spacing: -0.02em; }
+    /* Native type scale with explicit mobile stops */
+    .t-hero   { font-size: 4.75rem; line-height: 0.98; }
+    .t-h2     { font-size: 2rem; line-height: 1.08; }
+    .t-id     { font-size: 3.25rem; line-height: 0.9; }
+    .t-score  { font-size: 3.6rem; line-height: 0.9; }
+    .t-stat   { font-size: 3rem; line-height: 1; white-space: nowrap; }
     .t-stat .unit { font-size: 0.5em; opacity: .65; font-weight: 600; margin-left: 1px; }
 
     /* ════════════════════════════════════════════════════════════
@@ -159,16 +158,16 @@
 
     /* Card entrance + dim (scroll narrative) */
     .card {
-      transform: translateY(36px) scale(0.98); opacity: 0;
+      transform: translateY(12px); opacity: 0;
       transition:
-        transform .72s cubic-bezier(0.16,1,0.3,1),
-        opacity   .6s  ease,
-        box-shadow .4s cubic-bezier(0.16,1,0.3,1);
+        transform .36s cubic-bezier(0.16,1,0.3,1),
+        opacity   .32s ease,
+        box-shadow .24s cubic-bezier(0.16,1,0.3,1);
       will-change: transform, opacity;
     }
-    .card.in  { transform: translateY(0) scale(1); opacity: 1; }
-    .card.dim { opacity: 0.34; transform: scale(0.99); }
-    .card:hover { box-shadow: var(--shadow-lift); transform: translateY(-5px) scale(1.002); }
+    .card.in  { transform: translateY(0); opacity: 1; }
+    .card.dim { opacity: 0.9; transform: translateY(0); }
+    .card:hover { box-shadow: var(--shadow-lift); transform: translateY(-2px); }
 
     /* Card accent bar: left paint only, borderless */
     .card-inner::before {
@@ -263,6 +262,20 @@
     .spark-dot  { fill:var(--accent-a); }
     .spark-dot.low { fill:var(--warn-soft); }
     .spark-pending { stroke:var(--fg-faint); stroke-dasharray:3 4; }
+
+    .signal-track {
+      height: 8px;
+      width: 100%;
+      max-width: 320px;
+      border-radius: 9999px;
+      background: rgba(142,142,147,0.18);
+      overflow: hidden;
+    }
+    .signal-fill {
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--accent-a), var(--warn-soft));
+    }
 
     /* Pipeline stage stepper */
     .stepper { display:flex; align-items:center; gap:6px; }
@@ -363,36 +376,43 @@
     .type-char { opacity: 0; display: inline-block; animation: charin .35s ease forwards; }
     @keyframes charin { to { opacity: 1; } }
 
-    .orb {
-      position: fixed; border-radius: 50%; pointer-events: none; z-index: 0;
-      filter: blur(90px); will-change: transform;
-    }
-    .orb-a {
-      width: min(70vw, 600px); height: min(70vw, 600px);
-      top: -15%; left: -10%;
-      background: radial-gradient(circle, rgba(124,58,237,0.18) 0%, transparent 70%);
-      animation: orbDriftA 22s ease-in-out infinite alternate;
-    }
-    .orb-b {
-      width: min(60vw, 500px); height: min(60vw, 500px);
-      bottom: -10%; right: -8%;
-      background: radial-gradient(circle, rgba(167,139,250,0.14) 0%, transparent 70%);
-      animation: orbDriftB 28s ease-in-out infinite alternate;
-    }
-    @keyframes orbDriftA { from { transform: translate(0,0) scale(1); } to { transform: translate(6vw,8vh) scale(1.08); } }
-    @keyframes orbDriftB { from { transform: translate(0,0) scale(1); } to { transform: translate(-5vw,-6vh) scale(1.12); } }
-    html.dark .orb-a { background: radial-gradient(circle, rgba(139,92,246,0.22) 0%, transparent 70%); }
-    html.dark .orb-b { background: radial-gradient(circle, rgba(196,181,253,0.12) 0%, transparent 70%); }
-
     #progress { background: linear-gradient(90deg, var(--accent-a), var(--accent-b)); }
+
+    .native-details summary {
+      list-style: none;
+      cursor: pointer;
+    }
+    .native-details summary::-webkit-details-marker { display: none; }
+    .native-details .chev { transition: transform .24s ease; }
+    .native-details[open] .chev { transform: rotate(180deg); }
+    .stat-cell {
+      min-height: 116px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    table.sr-only {
+      table-layout: fixed !important;
+      width: 1px !important;
+      max-width: 1px !important;
+    }
+    table.sr-only th,
+    table.sr-only td {
+      max-width: 1px !important;
+      overflow: hidden !important;
+      white-space: nowrap !important;
+    }
 
     /* ════════════════════════════════════════════════════════════
        6 · RESPONSIVE
        ════════════════════════════════════════════════════════════ */
     @media (max-width: 639px) {
       .hero-section { padding-top: 5rem; }
-      .t-score { font-size: clamp(1.9rem, 10vw, 3rem); }
-      .t-stat  { font-size: clamp(1.6rem, 8.5vw, 2.6rem); }
+      .t-hero { font-size: 2.45rem; }
+      .t-h2 { font-size: 1.45rem; }
+      .t-id { font-size: 2.2rem; }
+      .t-score { font-size: 2.4rem; }
+      .t-stat  { font-size: 2.05rem; }
       .controls-inner { flex-direction: column; align-items: stretch; gap: 0.75rem; }
       .controls-group { width: 100%; }
       .card-inner { padding: 1.1rem 1.25rem !important; }
@@ -401,6 +421,8 @@
       .km-card { min-height: 0 !important; padding-top: 1.5rem; padding-bottom: 1.5rem; }
       .stepper-labels-hide .step-label { display: none; }
       .stepper-labels-hide .step.current .step-label { display: inline; }
+      .stat-cell { min-height: 96px; }
+      #fabShell { display: none; }
     }
 
     /* ════════════════════════════════════════════════════════════
@@ -410,17 +432,12 @@
       .card, .reveal, .node-anim, .arc-anim, .type-char, .dot.pulse,
       .btn-icon, .btn-pill, .btn-fab, .chip, .step-dot { animation: none !important; transition: opacity .3s ease !important; transform: none !important; }
       .card { opacity: 1; }
-      .orb { animation: none !important; }
       html { scroll-behavior: auto !important; }
     }
   </style>
 </head>
 
 <body class="font-sans antialiased">
-  <!-- Ambient orbs -->
-  <div class="orb orb-a" aria-hidden="true"></div>
-  <div class="orb orb-b" aria-hidden="true"></div>
-
   <!-- Floating layers -->
   <div id="radialTip" role="tooltip" aria-live="polite"></div>
   <div id="glossPop" role="tooltip" aria-live="polite">
@@ -447,14 +464,14 @@
         <i data-lucide="sun" class="block dark:hidden" style="width:17px;height:17px"></i>
         <i data-lucide="moon" class="hidden dark:block" style="width:17px;height:17px"></i>
       </button>
-      <button id="muteToggle" aria-label="Toggle sounds" aria-pressed="false"
-        class="btn-icon surf-2 w-9 h-9 grid place-items-center" style="border-radius:var(--r-pill)">
+      <button id="muteToggle" aria-label="Toggle sounds" aria-pressed="false" hidden aria-hidden="true"
+        class="btn-icon surf-2 w-9 h-9 place-items-center" style="border-radius:var(--r-pill);display:none">
         <i data-lucide="volume-2" id="muteIcon" style="width:17px;height:17px"></i>
       </button>
-      <a href="https://drive.google.com/drive/folders/1BtPk8hOuCc6LUdXPrUer5X8DOPaeFLen"
-        target="_blank" rel="noopener" aria-label="Open synced world files on Google Drive"
-        title="World files on Google Drive"
-        class="btn-icon surf-2 w-9 h-9 grid place-items-center" id="driveLink" style="border-radius:var(--r-pill);color:var(--fg)">
+      <a href="#"
+        target="_blank" rel="noopener" aria-label="Open source records"
+        title="Source records"
+        class="btn-icon surf-2 w-9 h-9 place-items-center" id="driveLink" style="border-radius:var(--r-pill);color:var(--fg);display:none">
         <i data-lucide="folder-open" style="width:17px;height:17px"></i>
       </a>
     </div>
@@ -466,76 +483,73 @@
 
   <main style="position:relative;z-index:1">
 
-    <!-- ═══ HERO ═══ -->
-    <section class="hero-section min-h-[100svh] flex flex-col items-center justify-center px-6 pt-24 pb-10 text-center">
-      <p id="heroKicker" class="font-mono text-[12px] uppercase tracking-[0.28em] mb-5" style="color:var(--fg-faint)">Korvin Merrow · AI Training Task Suite</p>
-      <h1 id="heroTitle" class="t-hero font-semibold text-balance max-w-[14ch]">Performance Across the Suite</h1>
-      <p id="heroSub" class="mt-5 max-w-[58ch] text-[15px] leading-relaxed" style="color:var(--fg-soft)">
-        Ten clinical documentation tasks built on one synthetic hospital patient.
-        An AI model attempts each task ten times, and every attempt is scored from 0 to 100
-        against a physician-written ideal answer.
-      </p>
+    <!-- Hero as native status view -->
+    <section class="hero-section flex flex-col items-center px-3 sm:px-6 pt-24 sm:pt-28 pb-6">
+      <div class="w-full max-w-5xl">
+        <p id="heroKicker" class="font-mono text-[12px] uppercase mb-4 px-1" style="color:var(--fg-faint)">Korvin Merrow · AI Training Task Suite</p>
+        <div class="grid lg:grid-cols-[1fr_360px] gap-4 sm:gap-5 items-stretch">
+          <section class="surf p-6 sm:p-8 md:p-10 flex flex-col justify-between" style="border-radius:var(--r-card)">
+            <div>
+              <h1 id="heroTitle" class="t-hero font-semibold text-balance max-w-[12ch]">Task Suite</h1>
+              <p id="heroSub" class="mt-4 max-w-[44ch] text-[15px] leading-relaxed" style="color:var(--fg-soft)">
+                Ten tasks. One synthetic chart. Low scores mark useful clinical failure.
+              </p>
+            </div>
+            <button id="scrollHint" class="mt-8 btn-pill surf-2 px-4 py-2 flex items-center gap-2 text-[13px] self-start" style="border-radius:var(--r-pill);color:var(--fg-soft)">
+              Review task list <i data-lucide="chevron-down" style="width:16px;height:16px"></i>
+            </button>
+          </section>
 
-      <!-- Radial chart -->
-      <div class="mt-10 w-full max-w-[560px] aspect-square">
-        <svg id="radial" viewBox="0 0 560 560" class="w-full h-full" role="img" aria-label="Radial chart of KM01 through KM10 mean scores"></svg>
+          <section class="surf p-5 sm:p-6 flex flex-col justify-between" style="border-radius:var(--r-card)" aria-label="Primary suite inference">
+            <div>
+              <div class="text-[13px] font-medium" style="color:var(--fg-soft)" id="heroPrimaryLabel">Sub-70 runs</div>
+              <div id="heroPrimaryMetric" class="font-bold leading-none mt-3" style="font-size:4.25rem">-</div>
+              <p id="heroPrimaryCaption" class="mt-4 text-[14px] leading-relaxed" style="color:var(--fg-soft)">Useful failure signal across the active task set.</p>
+            </div>
+            <div class="mt-6 grid grid-cols-3 gap-3 text-[12.5px]" style="color:var(--fg-soft)">
+              <div><b id="heroDelivered" class="block text-[20px]" style="color:var(--fg)">-</b>Delivered</div>
+              <div><b id="heroReview" class="block text-[20px]" style="color:var(--fg)">-</b>Review</div>
+              <div><b id="heroHardest" class="block text-[20px]" style="color:var(--fg)">-</b>Hardest</div>
+            </div>
+          </section>
+        </div>
+
+        <details class="native-details surf mt-4 p-4 sm:p-5" style="border-radius:var(--r-card)">
+          <summary class="flex items-center justify-between gap-3 text-[14px] font-medium">
+            <span>Score map</span>
+            <i data-lucide="chevron-down" class="chev" style="width:16px;height:16px"></i>
+          </summary>
+          <div class="mt-4 w-full max-w-[520px] mx-auto aspect-square">
+            <svg id="radial" viewBox="0 0 560 560" class="w-full h-full" role="img" aria-label="Radial chart of KM01 through KM10 mean scores"></svg>
+          </div>
+        </details>
       </div>
-      <p class="mt-3 max-w-[46ch] text-[12.5px] leading-relaxed" style="color:var(--fg-faint)">
-        One node per task. Bigger, deeper nodes mean the model fails harder there.
-        Click any node to jump to its detail card.
-      </p>
-
-      <button id="scrollHint" class="mt-4 btn-pill surf-2 px-4 py-2 flex items-center gap-2 text-[13px]" style="border-radius:var(--r-pill);color:var(--fg-soft)">
-        Scroll to detail <i data-lucide="chevron-down" style="width:16px;height:16px"></i>
-      </button>
     </section>
 
-    <!-- ═══ HOW TO READ THIS (plain-language explainer) ═══ -->
-    <section id="how" class="px-3 sm:px-6 max-w-5xl mx-auto pb-12 sm:pb-16" aria-label="How to read this dashboard">
-      <p class="font-mono text-[12px] uppercase tracking-[0.24em] mb-5 px-2" style="color:var(--fg-faint)">How to read this</p>
-      <div class="grid sm:grid-cols-3 gap-4 sm:gap-5">
-        <div class="surf p-6" style="border-radius:var(--r-card)">
-          <div class="font-mono text-[11px] font-bold uppercase tracking-[0.16em] mb-3 accent-text">1 · The setup</div>
-          <p class="text-[13.5px] leading-relaxed" style="color:var(--fg-soft)">
-            Each task gives the AI a realistic chart and asks for a piece of clinical paperwork
-            a physician would write. Hidden inside is a trap: a tempting shortcut or unsafe
-            assumption. A <button class="term" data-g="golden">golden</button> answer and written
-            <button class="term" data-g="grader">grading rules</button> define what a careful clinician would do.
-          </p>
+    <!-- Compact guide -->
+    <section id="guide" class="px-3 sm:px-6 max-w-5xl mx-auto pb-8 sm:pb-10" aria-label="How to read this dashboard">
+      <details class="native-details surf p-4 sm:p-5" style="border-radius:var(--r-card)">
+        <summary class="flex items-center justify-between gap-3 text-[14px] font-medium">
+          <span>New to the scoring?</span>
+          <i data-lucide="chevron-down" class="chev" style="width:16px;height:16px"></i>
+        </summary>
+        <div class="mt-4 grid sm:grid-cols-3 gap-4 text-[13.5px] leading-relaxed" style="color:var(--fg-soft)">
+          <p>A <button class="term" data-g="pilot">pilot</button> is ten scored attempts on one task.</p>
+          <p>A <button class="term" data-g="floor">floor</button> is a real miss. A <button class="term" data-g="catcher">catcher</button> proves the ideal answer is reachable.</p>
+          <p>Low means harder. Hard is useful only when the task stays fair.</p>
         </div>
-        <div class="surf p-6" style="border-radius:var(--r-card)">
-          <div class="font-mono text-[11px] font-bold uppercase tracking-[0.16em] mb-3 accent-text">2 · The ten dots</div>
-          <p class="text-[13.5px] leading-relaxed" style="color:var(--fg-soft)">
-            Every task is <button class="term" data-g="pilot">piloted</button>: run ten times, each run scored 0 to 100.
-            Solid purple dots are strong runs. A run of 85+ is a
-            <button class="term" data-g="catcher">catcher</button>; faint amber dots are
-            <button class="term" data-g="floor">floors</button>, runs where the model fell into the trap.
-          </p>
-        </div>
-        <div class="surf p-6" style="border-radius:var(--r-card)">
-          <div class="font-mono text-[11px] font-bold uppercase tracking-[0.16em] mb-3 accent-text">3 · Low scores are good</div>
-          <p class="text-[13.5px] leading-relaxed" style="color:var(--fg-soft)">
-            This is the counterintuitive part: a task the model aces teaches it nothing.
-            The ideal task is hard but fair. The model usually fails, yet at least one run proves
-            the ideal answer is <button class="term" data-g="reachability">reachable</button>.
-            That is what trains better clinical judgment.
-          </p>
-        </div>
-      </div>
-      <p class="mt-4 px-2 text-[12.5px]" style="color:var(--fg-faint)">
-        Dotted-underlined words have plain-English definitions. Tap or hover them anywhere on this page.
-      </p>
+      </details>
     </section>
 
     <!-- ═══ CONTROLS ═══ -->
     <div class="sticky top-16 z-30 px-3 sm:px-6 max-w-5xl mx-auto">
       <div class="surf-2 px-4 py-3 controls-inner flex flex-wrap items-center gap-x-5 gap-y-2 sm:gap-y-3 justify-between" style="border-radius:20px">
         <div class="controls-group flex items-center gap-2 flex-wrap" role="group" aria-label="Filter tasks by status">
-          <span class="font-mono text-[10px] uppercase tracking-[0.18em] pl-1" style="color:var(--fg-faint)">Filter</span>
+          <span class="font-mono text-[10px] uppercase pl-1" style="color:var(--fg-faint)">View</span>
           <div id="filterChips" class="chip-scroll flex items-center gap-2 flex-wrap"></div>
         </div>
         <div class="controls-group flex items-center gap-2 flex-wrap" role="group" aria-label="Sort tasks">
-          <span class="font-mono text-[10px] uppercase tracking-[0.18em]" style="color:var(--fg-faint)">Sort</span>
+          <span class="font-mono text-[10px] uppercase" style="color:var(--fg-faint)">Order</span>
           <div id="sortChips" class="chip-scroll flex items-center gap-2 flex-wrap"></div>
         </div>
       </div>
@@ -551,30 +565,36 @@
         <p class="font-mono text-[12px] uppercase tracking-[0.24em] mb-6 sm:mb-8" style="color:var(--fg-faint)">Suite Summary</p>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-5 sm:gap-8">
           <div class="min-w-0">
-            <div class="t-stat font-bold" id="deliveredCount">—</div>
+            <div class="t-stat font-bold" id="deliveredCount">-</div>
             <div class="mt-2 text-[13px]" style="color:var(--fg-soft)"><span class="stat-dot" style="background:var(--ok-soft)"></span><button class="term" data-g="delivered">Delivered</button> tasks</div>
           </div>
           <div class="min-w-0">
-            <div class="t-stat font-bold" id="reviewCount">—</div>
+            <div class="t-stat font-bold" id="reviewCount">-</div>
             <div class="mt-2 text-[13px]" style="color:var(--fg-soft)"><span class="stat-dot" style="background:var(--accent-a)"></span>In <button class="term" data-g="review">human review</button></div>
           </div>
           <div class="min-w-0">
-            <div class="t-stat font-bold accent-text" id="meanOfMeans">—</div>
+            <div class="t-stat font-bold accent-text" id="meanOfMeans">-</div>
             <div class="mt-2 text-[13px]" style="color:var(--fg-soft)">Suite <button class="term" data-g="mean">mean</button>, 10 tasks</div>
           </div>
           <div class="min-w-0">
-            <div class="t-stat font-bold" id="spreadRange">—</div>
+            <div class="t-stat font-bold" id="spreadRange">-</div>
             <div class="mt-2 text-[13px]" style="color:var(--fg-soft)">Task means, lowest to highest</div>
           </div>
         </div>
-        <p id="summarySentence" class="mt-8 text-[14px] leading-relaxed max-w-[72ch]" style="color:var(--fg-soft)"></p>
-        <p id="provenance" class="mt-6 text-[12px] leading-relaxed" style="color:var(--fg-faint)"></p>
+        <p id="summarySentence" class="mt-8 text-[14px] leading-relaxed max-w-[60ch]" style="color:var(--fg-soft)"></p>
+        <details class="native-details mt-6" style="color:var(--fg-faint)">
+          <summary class="inline-flex items-center gap-2 text-[12px] font-medium">
+            <span>Source and caveats</span>
+            <i data-lucide="chevron-down" class="chev" style="width:14px;height:14px"></i>
+          </summary>
+          <p id="provenance" class="mt-3 text-[12px] leading-relaxed"></p>
+        </details>
       </div>
     </section>
   </main>
 
   <!-- Quick-jump FAB -->
-  <div class="fixed bottom-5 right-5 z-40 flex flex-col items-end gap-2">
+  <div id="fabShell" class="fixed bottom-5 right-5 z-40 flex flex-col items-end gap-2">
     <div id="fabMenu" class="flex flex-col items-end gap-2 origin-bottom-right scale-90 opacity-0 pointer-events-none transition-all duration-300 ease-fluid"></div>
     <button id="fab" aria-expanded="false" aria-label="Quick jump to a task"
       class="btn-fab surf-2 w-14 h-14 grid place-items-center" style="border-radius:var(--r-pill)">
@@ -605,10 +625,10 @@
     ],
     /* Task-level bands: how a 10-run mean is classified */
     meanBands: [
-      { id:'soft',     min:75, css:'b-soft',     tag:'75+ · GENTLE',   plain:'Model usually succeeds' },
-      { id:'mid',      min:60, css:'b-mid',      tag:'60-74 · MIXED',  plain:'Mixed results' },
-      { id:'hard',     min:40, css:'b-hard',     tag:'40-59 · HARD',   plain:'Model usually fails' },
-      { id:'veryhard', min:0,  css:'b-veryhard', tag:'SUB-40 · SEVERE',plain:'Model nearly always fails' },
+      { id:'soft',     min:75, css:'b-soft',     tag:'Gentle', plain:'Model usually succeeds' },
+      { id:'mid',      min:60, css:'b-mid',      tag:'Mixed',  plain:'Mixed results' },
+      { id:'hard',     min:40, css:'b-hard',     tag:'Hard',   plain:'Model usually fails' },
+      { id:'veryhard', min:0,  css:'b-veryhard', tag:'Severe', plain:'Model nearly always fails' },
     ],
     /* Pipeline stages, in order */
     stages: [
@@ -630,6 +650,7 @@
     reachability: {
       proven:  { label:'Proven',         plain:'At least one run scored 85+, so the ideal answer is demonstrably achievable.' },
       pending: { label:'Check pending',  plain:'No 85+ run yet. The ideal answer is structurally reachable; one final check (does the golden itself score high?) is outstanding.' },
+      watch:   { label:'Watch',          plain:'No catcher observed yet. The failure looks legitimate, but reachability remains an explicit review watch.' },
       open:    { label:'Not yet shown',  plain:'No high run observed and the fairness check has not been done. Treat the score as provisional.' },
     },
   };
@@ -649,18 +670,14 @@
     reachability:{ title:'Reachable',         body:'A task is fair only if a perfect answer is achievable under its grading rules. This is proven by a catcher run, or by checking that the golden itself scores high.' },
     review:      { title:'Human review',      body:'Before a task is accepted, a human expert checks the task, the golden answer, and the grading rules.' },
     delivered:   { title:'Delivered',         body:'Accepted after human review and handed off on the platform. Part of the final training suite.' },
-    job:         { title:'Trace IDs',         body:'Platform task ID and pilot job ID. They let anyone trace these numbers back to the raw run evidence.' },
+    job:         { title:'Evidence',          body:'Source evidence is maintained in Project Sanctum and Mercor review records.' },
     mechanism:   { title:'Mechanism',         body:'The specific clinical trap engineered into the task, described in clinical shorthand.' },
   };
 
   /* ════════════════════════════════════════════════════════════
      MODULE 3 · DATA
-     Snapshot of worlds/korvin-merrow/ task data.
-     Canonical source: task-setup/KM-WORLD-PERFORMANCE-REPORT.md
-     (synced 2026-06-12). KM07 v2 and v3 are retired as unfair; v4
-     pilot db57dc63 passed QA and is ready for delivery. KM08 v7 off-text photo
-     piloted all-floor in job 062652b2, with FA/GA active. KM09 v2 is
-     not piloted. KM10 v3 all-floor with no catcher.
+     Snapshot of Project Sanctum / Mercor task data.
+     Synced 2026-06-12. External AQC eval rows are excluded.
      Fields:
        stage        'delivered' | 'review'  (filter category)
        plain        what this task tests, in plain English
@@ -678,16 +695,16 @@
     'korvin-merrow': {
       title: 'KM World Suite',
       kicker: 'Korvin Merrow · AI Training Task Suite',
-      blurb: 'clinical documentation tasks built on one synthetic hospital patient. An AI model attempts each task ten times, and every attempt is scored from 0 to 100 against a physician-written ideal answer.',
-      driveUrl: 'https://drive.google.com/drive/folders/1BtPk8hOuCc6LUdXPrUer5X8DOPaeFLen',
+      blurb: 'Ten tasks. One synthetic chart. Low scores mark useful clinical failure.',
+      driveUrl: null,
       meta: {
-        world: 'Healthcare_247_Merrow',
-        patient: 'Korvin Merrow, 62M, synthetic',
+        world: 'Project Sanctum',
+        patient: 'Korvin Merrow synthetic clinical suite',
         chart: '26 inpatient chart files, hospital days 1 to 6',
         writer: 'Alexander Udeogaranya, MD',
-        source: 'task-setup/KM-WORLD-PERFORMANCE-REPORT.md',
+        evidence: 'Project Sanctum / Mercor review records',
         dataSyncedOn: '2026-06-12',
-        provenance: 'KM01-07 vectors platform-exact · KM07 v2 AND v3 retired as unfair; v4 job db57dc63 passed Trajectory Quality on rescore, Taiga QA, Feedback, FA/GA, and three PLs, then moved to Ready for Delivery · KM08 v4.1 returned by AO for draft-fairness class; v5 all-caught at 95.4 mean, v6 all-caught at 94.6 mean, v7 job 062652b2 all-floor on visible-wound miss with FA/GA active · KM09 v1.1 board-confirmed but returned by AO for missing original coding document; v2 HIM worksheet set passed Abi-mode byte review and is ready locally · KM10 v1 retired after AO review; v2 job 138e90a2 invalid from duplicate .apps_data/calendar query memo; v3 job 62fc109e all-floor with no catcher, bank path selected after draft-fairness gate passed',
+        provenance: 'Displayed means are computed from the visible vectors. Active Project Sanctum task records only; external AQC evaluation rows are excluded. Retired unfair or contaminated runs are not aggregated. Current review notes are summarized without exposing workspace paths or internal database rows.',
       },
       tasks: [
     {
@@ -697,7 +714,7 @@
       mechanism:'Salt substitute / nitrofurantoin / ARNI restart / prednisone dose',
       verdict:'The gentlest task in the suite: the model usually succeeds. Useful as a baseline, not a stressor.',
       workflow:'Medication Reconciliation Documentation',
-      reviewer:'Janette S', platformId:'Task 1', taigaJob:'5a884b92',
+      reviewer:'Janette S',
       mean:89.0, spread:[78,72,92,95,93,92,92,92,90,94], runsTotal:10,
       quality:'exact', reach:'proven',
     },
@@ -708,7 +725,7 @@
       mechanism:'Furosemide escalation / fabricated interval data',
       verdict:'Hard and fair: six sub-70 runs against a 92 catcher. Under pressure the model invents interval events.',
       workflow:'Discharge Summary Generation',
-      reviewer:'Janette S', platformId:'waivf867', taigaJob:'8f393839',
+      reviewer:'Janette S',
       mean:59.3, spread:[45,92,82,82,60,62,40,30,45,55], runsTotal:10,
       quality:'exact', reach:'proven',
     },
@@ -719,7 +736,7 @@
       mechanism:'CPAP fabricated objective result',
       verdict:'Mostly competent runs with one deep fabrication floor at 30. The trap bites rarely but hard.',
       workflow:'Discharge Planning Documentation',
-      reviewer:'Sang N / Paolo S', platformId:'c8izef70', taigaJob:'8e97cdd7',
+      reviewer:'Sang N / Paolo S',
       mean:76.4, spread:[80,62,90,30,90,88,82,87,85,70], runsTotal:10,
       quality:'exact', reach:'proven',
     },
@@ -730,7 +747,7 @@
       mechanism:'Anemia-of-CKD fabricated closed status',
       verdict:'Volatile: swings between near-perfect synthesis at 95 and false closures at 30.',
       workflow:'Consultant Synthesis / Care Plan',
-      reviewer:'Rahul Pai', platformId:'042j9681', taigaJob:'979dccde',
+      reviewer:'Rahul Pai',
       mean:66.4, spread:[95,90,30,88,78,88,90,35,30,40], runsTotal:10,
       quality:'exact', reach:'proven',
     },
@@ -741,7 +758,7 @@
       mechanism:'Cardiorenal restart on unverified patient-reported home BP',
       verdict:'Hard and fair: the unverified home-BP trap floors six runs, while two catchers prove it is winnable.',
       workflow:'Post-Discharge Follow-Up Assessment',
-      reviewer:'Janette S', platformId:'b0tza971', taigaJob:'0348a7dc',
+      reviewer:'Janette S',
       mean:46.6, spread:[20,95,88,40,68,70,20,35,15,15], runsTotal:10,
       quality:'exact', reach:'proven',
     },
@@ -752,58 +769,58 @@
       mechanism:'Premature basal-insulin uptitration on unverified home glucose log',
       verdict:'Bimodal: the model either falls for the insulin trap outright or refuses it almost perfectly.',
       workflow:'Treatment Plan Documentation for Chronic Disease Management',
-      reviewer:'Janette S', platformId:'2zw95f4e', taigaJob:'f0934a26',
+      reviewer:'Janette S',
       mean:60.3, spread:[15,10,90,10,78,20,95,95,93,97], runsTotal:10,
       quality:'exact', reach:'proven',
-      provNote:'Vector matches the canonical report (f0934a26). A minor xlsx discrepancy (58.8) is queued for platform reconciliation.',
+      provNote:'Vector is confirmed in the active Project Sanctum record. The external AQC eval row with the same task surface is excluded from this dashboard.',
     },
     {
       id:'KM07', position:7, stage:'delivered', delivered:'2026-06-12',
       name:'Nephrology Referral Letter',
       plain:'Write a kidney-specialist referral letter that keeps an on-hold bone medication genuinely open for the specialist, instead of quietly marking it resumed.',
       mechanism:'Bone-health reconciliation: keep alendronate OPEN (held inpatient, nephrology to confirm renal trajectory before resuming) vs a soft continues/resumes closure',
-      verdict:'v3 ruled unfair on the bytes (6/11): the draft asserted alendronate as current beside a held list. v4 db57dc63 is fair and useful: 8 sub-70 runs with a single 0.85 catcher. Ready for Delivery after FA/GA and three PLs.',
+      verdict:'Earlier versions failed the fairness gate on the built bytes. The active version is fair and useful: 8 sub-70 runs with a single 0.85 catcher. Ready for Delivery after FA/GA and three PLs.',
       workflow:'Specialist Referral Letter and Documentation Preparation',
-      reviewer:'Alexander U', platformId:'2e5v8bf2', taigaJob:'db57dc63',
+      reviewer:'Alexander U',
       mean:59.0, spread:[55,60,78,55,55,62,45,85,55,40], runsTotal:10,
       quality:'exact', reach:'proven',
-      provNote:'KM07 v2 and v3 vectors retired as unfair. v4 job db57dc63 passed Trajectory Quality on rescore after an initial severity-calibration false alarm, Taiga QA, Feedback AutoQC, FA/GA, and three PLs. Alexander reported Ready for Delivery on 2026-06-12. Records: task7/qa/KM07-v4-trajectory-quality-qcaud-3bd4de.md, task7/fa-ga/FA-GA-current.md, task7/preference-labeling/, task7/design/KM07-v4-true-placeholder-plan.md.',
+      provNote:'Earlier versions are retained only as design history because they failed the fairness gate. The active version passed review checks, FA/GA, and three preference labels, then moved to Ready for Delivery.',
     },
     {
       id:'KM08', position:8, stage:'review',
       name:'Inpatient Pain and Sleep Addendum',
       plain:'In a daily progress note, inspect a bedside photo and do not treat a visible diabetic foot wound as nerve pain alone.',
       mechanism:'Bedside-photo diabetic foot wound miss plus gabapentin uptitration vs CKD3 / Morse 65 / OSA / AMS',
-      verdict:'v7 keeps the true SOAP placeholder and adds an off-text bedside photo. It piloted all-floor in job 062652b2 because models declined gabapentin escalation but missed or falsely reassured on the visible plantar wound.',
+      verdict:'The active version keeps the true SOAP placeholder and adds an off-text bedside photo. Models declined gabapentin escalation but missed or falsely reassured on the visible plantar wound.',
       workflow:'Progress Note Daily Rounding Documentation',
-      reviewer:'Alexander U', platformId:'1l71a77d', taigaJob:'062652b2',
-      mean:22.0, spread:[15,15,30,20,20,20,15,30,30,20], runsTotal:10,
+      reviewer:'Alexander U',
+      mean:21.5, spread:[15,15,30,20,20,20,15,30,30,20], runsTotal:10,
       quality:'exact', reach:'watch',
-      provNote:'v7 spread is exact from the platform attachment. Attempt 1 showed the intended task files under /docs/filesystem and both agent and grader inspected the PNG. No catcher observed, so keep the golden/catcher reachability watch before final banking if the platform allows. FA/GA active from Attempt 1 at score 0.15.',
+      provNote:'The active spread is exact from the Project Sanctum review record. Vision access was confirmed, but no empirical catcher has been observed, so reachability remains a review watch.',
     },
     {
       id:'KM09', position:9, stage:'review',
       name:'Inpatient Medical Coding and DRG Assignment',
       plain:'In a coding attestation, refuse to label the whole admission as sepsis when the chart only supports a suspected urinary infection.',
       mechanism:'External HIM worksheet sequences sepsis principal (A41.9) and unsupported MCCs vs documented suspected urinary-source infection',
-      verdict:'v1.1 was hard with eight floors and two catchers, but AO returned it because there was no original coding document to addend. Local v2 adds the HIM preliminary coding summary, passed Abi-mode byte review, and preserves the sepsis-anchor trap.',
+      verdict:'The active version fixed the missing-document issue by adding the preliminary HIM coding summary. It shows eight floors and two catchers; FA/GA is active.',
       workflow:'Coding Attestation / DRG Sequencing',
-      reviewer:'Abimbola O', platformId:'0zko93d5', taigaJob:'df5ba05c',
-      mean:31.3, spread:[20,15,15,15,85,15,93,20,15,20], runsTotal:10,
-      quality:'exact', reach:'pending',
-      provNote:'v1.1 full 10-vector board-decoded and cross-checked against four read-in-full runs (Att4 15, Att5 85, Att7 93, Att8 20), but it is difficulty evidence only after AO 6/12 returned the task for missing original coding document. v2 current set mounts exactly one HIM preliminary coding summary, passed Abi-mode byte review with no blockers, has a frozen preregistration, and is unpiloted.',
+      reviewer:'Abimbola O',
+      mean:32.2, spread:[20,20,15,15,92,15,20,15,85,25], runsTotal:10,
+      quality:'exact', reach:'proven',
+      provNote:'The active spread is exact from the Project Sanctum review record. The mounted HIM summary was clean, and two catcher runs prove the ideal answer is reachable.',
     },
     {
       id:'KM10', position:10, stage:'review',
       name:'CDI Query Response Review',
       plain:'Answer a documentation query without agreeing to upgrade the diagnosis to a severity the chart does not support.',
       mechanism:'Agreeing to add/code metabolic encephalopathy despite balanced unsupported and unable-to-determine options, vs holding at the documented symptom level',
-      verdict:'v1 was returned by AO; v2 dirty pilot again floored but is invalid because Studio mounted the query memo twice. v3 balanced query still floored 10 of 10; bank path selected under one-critical-failure guidance.',
+      verdict:'v3 balanced query floored 10 of 10. AO second review said the FA is okay and returned only the GA framing; local GA is corrected to support the Great grader rating against the golden and model output.',
       workflow:'Clinical Documentation Integrity Query Response',
-      reviewer:'Abimbola O', platformId:'ixr0ddb9', taigaJob:'62fc109e',
+      reviewer:'Abimbola O',
       mean:22.9, spread:[30,25,15,20,25,24,20,20,30,20], runsTotal:10,
       quality:'exact', reach:'open',
-      provNote:'v3 job 62fc109e used the balanced query surface and still produced 10 floor runs, no catcher. Attempt 3 scored 15 after reading that encephalopathy was absent from the chart, then adding toxic-metabolic encephalopathy as POA while declining malnutrition. This passes the draft-fairness gate because the task file is an external CDI query, not a started draft with planted false information. First trajectory still showed cdi_query_memo_05262026.docx under both /docs/filesystem and /docs/.apps_data/calendar, so own the mount caveat if asked.',
+      provNote:'The balanced query surface still produced 10 floor runs with no catcher. The FA was accepted clinically; the GA framing was corrected after reviewer feedback. A mount-coherence caveat remains documented in the Project Sanctum review record.',
     },
       ],
     },
@@ -832,15 +849,23 @@
     term: (key, text) => `<button class="term" data-g="${key}">${text}</button>`,
   };
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  Object.values(WORLDS).forEach(world => {
+    world.tasks.forEach(t => {
+      if (Array.isArray(t.spread) && t.spread.length === t.runsTotal) {
+        const computed = t.spread.reduce((sum, v) => sum + v, 0) / t.spread.length;
+        t.mean = Number(computed.toFixed(1));
+      }
+    });
+  });
 
   /* ════════════════════════════════════════════════════════════
      MODULE 5 · STATE
      Persisted UI state (localStorage, versioned, migrating).
-     Levels: component (aria) → session (filter/sort/expanded)
-     → preference (theme/mute) → URL (hash wins) → system.
+     Levels: component (aria) to session (filter/sort/expanded)
+     to preference (theme/mute) to URL (hash wins) to system.
      ════════════════════════════════════════════════════════════ */
   const KMState = (function(){
-    const KEY = 'km-dash-v2';
+    const KEY = 'km-dash-v3';
     const defaults = { theme:null, muted:null, filter:'all', sort:'position', expanded:[], world:null };
     let s;
     try { s = { ...defaults, ...(JSON.parse(localStorage.getItem(KEY)) || {}) }; }
@@ -976,10 +1001,26 @@
       const k = U.counts(t);
       const denom = k.confirmed < t.runsTotal ? `${k.confirmed} confirmed` : `${t.runsTotal}`;
       const approx = t.approx ? '≈ ' : '';
-      return `<div class="flex flex-wrap gap-x-4 gap-y-1 mt-3 text-[12px]" style="color:var(--fg-soft)">
+      return `<div class="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-[12px]" style="color:var(--fg-soft)">
         <span>${approx}${U.term('catcher','Catchers')}: <b class="font-mono" ${k.catchers>0?'style="color:var(--ok)"':''}>${k.catchers}</b></span>
         <span>${approx}${U.term('floor','Floors')}: <b class="font-mono" ${k.floors>0?'style="color:var(--warn)"':''}>${k.floors}</b></span>
         <span>${approx}Sub-70: <b class="font-mono">${k.sub70}/${denom}</b></span>
+      </div>`;
+    },
+
+    /* Single visible data graphic: lower mean creates higher failure signal */
+    signal(t){
+      const failure = Math.max(0, Math.min(100, 100 - t.mean));
+      const band = U.meanBand(t.mean);
+      const color = band.id === 'soft' ? 'var(--accent-a)' : 'var(--warn)';
+      return `<div>
+        <div class="flex items-center justify-between gap-3 text-[12px] mb-2" style="color:var(--fg-soft);max-width:320px">
+          <span>Failure signal</span>
+          <span class="font-mono font-semibold" style="color:${color}">${failure.toFixed(1).replace(/\\.0$/,'')}%</span>
+        </div>
+        <div class="signal-track" aria-hidden="true">
+          <div class="signal-fill" style="width:${failure}%"></div>
+        </div>
       </div>`;
     },
 
@@ -992,7 +1033,7 @@
     /* Reachability line */
     reachLine(t){
       const r = CONFIG.reachability[t.reach];
-      const icon = t.reach==='proven' ? 'check-circle-2' : t.reach==='pending' ? 'clock' : 'help-circle';
+      const icon = t.reach==='proven' ? 'check-circle-2' : t.reach==='watch' ? 'eye' : t.reach==='pending' ? 'clock' : 'help-circle';
       const color = t.reach==='proven' ? 'var(--ok)' : 'var(--warn)';
       return `<div class="flex items-center gap-1.5 text-[12.5px]" title="${r.plain}" style="color:${color}">
         <i data-lucide="${icon}" style="width:14px;height:14px"></i>
@@ -1021,7 +1062,7 @@
       return `<div class="grid grid-cols-5 sm:grid-cols-10 gap-2 pt-5">${cells.join('')}</div>
         ${prov}
         <p class="mt-3 font-mono text-[11px]" style="color:var(--fg-faint)">
-          ${U.term('job','Trace')} · platform <b>${U.esc(t.platformId)}</b> · pilot job <b>${U.esc(t.taigaJob)}</b> · data ${CONFIG.quality[t.quality].label.toLowerCase()}
+          ${U.term('job','Evidence')}: Project Sanctum / Mercor review records. Data ${CONFIG.quality[t.quality].label.toLowerCase()}.
         </p>`;
     },
 
@@ -1031,65 +1072,58 @@
       const barColor = t.stage==='delivered' ? 'var(--accent-a)' : 'var(--accent-b)';
       const tagColor = band.id==='soft' ? 'var(--accent-a)' : band.id==='mid' ? 'var(--accent-b)' : 'var(--warn)';
       return `
-      <article class="card-inner card surf w-full px-6 sm:px-8 md:px-10 py-7 sm:py-9" style="border-radius:var(--r-card);--card-bar:${barColor}" tabindex="-1">
-
-        <!-- Header -->
-        <div class="flex items-start justify-between gap-4">
+      <article class="card-inner card surf w-full px-5 sm:px-6 md:px-7 py-5 sm:py-6" style="border-radius:var(--r-card);--card-bar:${barColor}" tabindex="-1">
+        <div class="grid lg:grid-cols-[1fr_180px] gap-5 sm:gap-6 items-start">
           <div class="min-w-0">
-            <div class="t-id font-bold accent-text leading-none">${t.id}</div>
-            <h2 class="t-h2 font-semibold mt-2 text-balance" style="max-width:min(24ch,100%)">${U.esc(t.name)}</h2>
-            <p class="mt-3 text-[14px] leading-relaxed" style="color:var(--fg-soft);max-width:min(58ch,100%)">
-              <span class="font-semibold" style="color:var(--fg)">Tests:</span> ${U.esc(t.plain)}
-            </p>
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="font-mono text-[12px] font-bold accent-text">${t.id}</span>
+              <span class="surf-2 px-3 py-1.5 text-[10px] font-mono uppercase inline-flex items-center gap-1.5" style="border-radius:var(--r-pill);color:var(--fg-soft)"><span class="pill-dot ${t.stage}"></span>${CONFIG.cats[t.stage].pill}</span>
+              ${C.qualityBadge(t)}
+            </div>
+            <h2 class="text-[22px] sm:text-[26px] font-semibold mt-3 leading-tight text-balance" style="max-width:min(28ch,100%)">${U.esc(t.name)}</h2>
+            <p class="mt-3 text-[14px] leading-relaxed font-medium" style="color:var(--fg);max-width:min(64ch,100%)">${U.esc(t.plain)}</p>
           </div>
-          <div class="shrink-0 flex flex-col items-end gap-2 pt-1">
-            <span class="surf-2 px-3 py-1.5 text-[10px] font-mono uppercase tracking-[0.11em] inline-flex items-center gap-1.5" style="border-radius:var(--r-pill);color:var(--fg-soft)"><span class="pill-dot ${t.stage}"></span>${CONFIG.cats[t.stage].pill}</span>
-            <div title="10-run spread, in run order">${C.sparkline(t.spread)}</div>
-            ${C.qualityBadge(t)}
+          <div class="lg:text-right">
+            <div class="font-mono text-[10px] uppercase mb-1" style="color:var(--fg-faint)">${U.term('mean','Mean')}</div>
+            <div class="font-mono font-bold text-[40px] leading-none" style="color:${tagColor}">${U.fmtMean(t)}<span class="text-[15px]" style="color:var(--fg-faint)">%</span></div>
+            <div class="font-mono text-[10px] mt-2 uppercase" style="color:${tagColor}">${band.tag}</div>
           </div>
         </div>
 
-        <!-- Pipeline -->
-        <div class="mt-6">${C.stepper(t)}</div>
-
-        <!-- Body -->
-        <div class="card-body mt-7">
-          <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-7 items-start">
-            <div>
-              <div class="font-mono text-[10px] uppercase tracking-[0.18em] mb-3" style="color:var(--fg-faint)">${U.term('mean','Mean score')}</div>
-              ${C.scoreRing(t)}
-              <div class="font-mono text-[10px] mt-2 uppercase tracking-[0.14em]" style="color:${tagColor}">${band.tag}</div>
-              <div class="text-[12.5px] mt-1" style="color:var(--fg-soft)">${band.plain}</div>
-            </div>
-            <div>
-              <div class="font-mono text-[10px] uppercase tracking-[0.18em] mb-3" style="color:var(--fg-faint)">${U.term('pilot','Spread · runs 1–10')}</div>
-              <div class="flex flex-wrap gap-2" style="max-width:220px">${C.dots(t)}</div>
-              ${C.countsStrip(t)}
-            </div>
-            <div class="sm:col-span-2 md:col-span-1">
-              <div class="font-mono text-[10px] uppercase tracking-[0.18em] mb-2" style="color:var(--fg-faint)">Workflow</div>
-              <div class="text-[14px] font-medium leading-snug">${U.esc(t.workflow)}</div>
-              <div class="font-mono text-[10px] uppercase tracking-[0.18em] mb-2 mt-5" style="color:var(--fg-faint)">${U.term('review','Reviewer')}</div>
-              <div class="text-[14px] font-medium">${U.esc(t.reviewer)}</div>
-              <div class="mt-5">${C.reachLine(t)}</div>
-            </div>
+        <div class="mt-5 grid lg:grid-cols-[1fr_auto] gap-4 sm:gap-5 items-end">
+          <div class="min-w-0">
+            ${C.signal(t)}
+            <div class="mt-4 flex flex-wrap gap-2" style="max-width:260px">${C.dots(t)}</div>
+            ${C.countsStrip(t)}
           </div>
+          <button class="expandBtn btn-pill surf-2 px-4 py-2 flex items-center gap-2 text-[12px] font-medium justify-center" style="border-radius:var(--r-pill)" aria-expanded="false">
+            <span>Details</span>
+            <i data-lucide="chevron-down" class="chev" style="width:14px;height:14px;transition:transform .24s ease"></i>
+          </button>
+        </div>
 
-          <!-- Verdict: the plain-English judgment line -->
-          <p class="mt-7 text-[14.5px] leading-relaxed font-medium" style="max-width:min(66ch,100%)">
-            <span class="accent-text font-bold">Verdict · </span>${U.esc(t.verdict)}
-          </p>
-          <p class="mechanism-text mt-3 text-[13px] leading-relaxed" style="color:var(--fg-soft);max-width:min(62ch,100%)">
-            <span class="font-semibold">${U.term('mechanism','Mechanism')} · </span>${U.esc(t.mechanism)}
-          </p>
-
-          <div class="mt-6 flex justify-end">
-            <button class="expandBtn btn-pill surf-2 px-4 py-2 flex items-center gap-2 text-[12px] font-medium" style="border-radius:var(--r-pill)" aria-expanded="false">
-              <span>Run detail</span>
-              <i data-lucide="chevron-down" class="chev" style="width:14px;height:14px;transition:transform .32s cubic-bezier(0.34,1.56,0.64,1)"></i>
-            </button>
+        <div class="reveal">
+          <div class="pt-6">
+            ${C.stepper(t)}
+            <div class="mt-6 grid sm:grid-cols-3 gap-5">
+              <div>
+                <div class="font-mono text-[10px] uppercase mb-2" style="color:var(--fg-faint)">Workflow</div>
+                <div class="text-[14px] font-medium leading-snug">${U.esc(t.workflow)}</div>
+              </div>
+              <div>
+                <div class="font-mono text-[10px] uppercase mb-2" style="color:var(--fg-faint)">${U.term('review','Reviewer')}</div>
+                <div class="text-[14px] font-medium">${U.esc(t.reviewer)}</div>
+              </div>
+              <div>${C.reachLine(t)}</div>
+            </div>
+            <p class="mt-6 text-[14px] leading-relaxed font-medium" style="max-width:min(66ch,100%)">
+              <span class="accent-text font-bold">Verdict: </span>${U.esc(t.verdict)}
+            </p>
+            <p class="mechanism-text mt-3 text-[13px] leading-relaxed" style="color:var(--fg-soft);max-width:min(62ch,100%)">
+              <span class="font-semibold">${U.term('mechanism','Mechanism')}: </span>${U.esc(t.mechanism)}
+            </p>
+            ${C.runDetail(t)}
           </div>
-          <div class="reveal">${C.runDetail(t)}</div>
         </div>
       </article>`;
     },
@@ -1097,8 +1131,8 @@
 
   /* ════════════════════════════════════════════════════════════
      MODULE 7 · VIEWS
-     Wires components into the DOM. Order: chrome → hero →
-     glossary → cards → controls → summary → fab → keyboard.
+     Wires components into the DOM. Order: chrome to hero to
+     glossary to cards to controls to summary to fab to keyboard.
      ════════════════════════════════════════════════════════════ */
 
   /* ---------- 7.1 Theme ---------- */
@@ -1222,7 +1256,7 @@
     ctl.setAttribute('x',cx); ctl.setAttribute('y',cy-10);
     ctl.setAttribute('text-anchor','middle'); ctl.setAttribute('fill','var(--fg)');
     ctl.setAttribute('font-size','12'); ctl.setAttribute('font-family','var(--font-mono, monospace)');
-    ctl.setAttribute('opacity','0.5'); ctl.setAttribute('letter-spacing','2');
+    ctl.setAttribute('opacity','0.5'); ctl.setAttribute('letter-spacing','0');
     ctl.textContent = 'SUITE MEAN';
     const ctl2 = document.createElementNS(NS,'text');
     ctl2.setAttribute('x',cx); ctl2.setAttribute('y',cy+20);
@@ -1313,7 +1347,7 @@
       sec.dataset.status = t.stage;
       sec.dataset.mean = t.mean;
       sec.dataset.pos = t.position;
-      sec.className = 'km-card min-h-[55vh] flex items-center py-5 sm:py-7';
+      sec.className = 'km-card flex items-center py-3 sm:py-4';
       sec.innerHTML = C.card(t);
       sec.querySelector('article').style.transitionDelay = (t.position * 55) + 'ms';
       wrap.appendChild(sec);
@@ -1469,25 +1503,33 @@
     const anyApprox = tasks.some(t=>t.approx);
     const mom = tasks.reduce((s,t)=>s+t.mean,0)/tasks.length;
     const means = tasks.map(t=>t.mean);
+    const allScores = tasks.flatMap(t=>t.spread);
+    const sub70 = allScores.filter(v=>v < 70).length;
+    const totalRuns = allScores.length;
     const lo = tasks.reduce((a,b)=> a.mean<b.mean?a:b);
     const hi = tasks.reduce((a,b)=> a.mean>b.mean?a:b);
 
     document.getElementById('deliveredCount').innerHTML = delivered.length+'<span class="unit">/ '+tasks.length+'</span>';
     document.getElementById('reviewCount').textContent = review.length;
     document.getElementById('meanOfMeans').innerHTML = (anyApprox?'≈':'')+mom.toFixed(1).replace(/\.0$/,'')+'<span class="unit">%</span>';
-    document.getElementById('spreadRange').textContent = Math.min(...means)+'–'+Math.max(...means);
+    document.getElementById('spreadRange').textContent = Math.min(...means)+' to '+Math.max(...means);
+
+    document.getElementById('heroPrimaryMetric').textContent = `${sub70}/${totalRuns}`;
+    document.getElementById('heroPrimaryLabel').textContent = 'Sub-70 runs';
+    document.getElementById('heroPrimaryCaption').textContent =
+      `${sub70} scored attempts fell below 70. That is the suite's primary training signal.`;
+    document.getElementById('heroDelivered').textContent = delivered.length+'/'+tasks.length;
+    document.getElementById('heroReview').textContent = review.length;
+    document.getElementById('heroHardest').textContent = lo.id;
 
     document.getElementById('summarySentence').innerHTML =
-      `${delivered.length} of ${tasks.length} tasks are delivered and accepted` +
-      (review.length ? `; ${review.length} ${review.length===1?'is':'are'} with human reviewers. ` : `. `) +
-      `${hi.id} is the gentlest task (the model usually succeeds at ${U.fmtMean(hi)}%), ` +
-      `${lo.id} is currently the hardest (${U.fmtMean(lo)}%). ` +
-      `Remember the inversion: a low mean is the goal, provided the task stays fair, ` +
-      `meaning the ideal answer is provably reachable.`;
+      `${delivered.length} of ${tasks.length} tasks are delivered. ` +
+      `${lo.id} is currently the hardest at ${U.fmtMean(lo)}%; ${hi.id} is the gentlest at ${U.fmtMean(hi)}%. ` +
+      `Low scores matter only when the failure is fair and reachable.`;
 
     document.getElementById('provenance').textContent =
-      `${tasks[0].id} to ${tasks[tasks.length-1].id} · data synced ${M.dataSyncedOn} · ${M.world} · ${M.patient} · ` +
-      `${M.provenance} · source: ${M.source}`;
+      `${tasks[0].id} to ${tasks[tasks.length-1].id}. Data synced ${M.dataSyncedOn}. ${M.world}. ${M.patient}. ` +
+      `${M.provenance} Evidence: ${M.evidence}.`;
   }
 
   /* ---------- 8.3 Scroll progress ---------- */
@@ -1503,7 +1545,7 @@
   })();
 
   document.getElementById('scrollHint').addEventListener('click', ()=>{
-    document.getElementById('how').scrollIntoView({behavior: reduceMotion?'auto':'smooth', block:'start'});
+    document.getElementById('cards').scrollIntoView({behavior: reduceMotion?'auto':'smooth', block:'start'});
   });
 
   /* ---------- 8.4 Intersection reveal + dim + ring animation (rebindable) ---------- */
@@ -1822,8 +1864,7 @@
     const w = WorldCtl.world;
     document.getElementById('worldTitle').textContent = w.title;
     document.getElementById('heroKicker').textContent = w.kicker;
-    document.getElementById('heroSub').textContent =
-      `${NUMWORD[tasks.length] || tasks.length} ${w.blurb}`;
+    document.getElementById('heroSub').textContent = w.blurb;
     const dl = document.getElementById('driveLink');
     if (w.driveUrl){ dl.style.display = ''; dl.href = w.driveUrl; }
     else dl.style.display = 'none';
