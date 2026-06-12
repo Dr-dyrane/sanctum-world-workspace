@@ -30,6 +30,10 @@ Equivocal and unsupported specificity, not confirmed osteomyelitis. MRI shows ma
 
 The World #1 record shows why this cannot wait for DOCX: the James Carter working name was rejected by reviewer correction A1 as a common, generically plausible name and migrated to the unmistakably fictional Korvin Merrow across all references (AutoQC 2.2 class). The DFI patient needs an unmistakably fictional, Spanish-textured name before any submission artifact exists, since it feeds the document title, the spec filename, and the platform world name. Alexander selected Ondina Vasquell from Claude's candidate set, using the Spanish-form spelling after guideline check. Retired alternatives: Felisbela Torremol, Amantina Quenterra, Lucresia Salviera.
 
+## Decision 7 (closed 6/12 late): branch posture
+
+World #2 work stays on `korvin-merrow-brainstorm` until the KM world fully closes (KM08-10 delivered). `ondina-vasquell-brainstorm` gets cut at that clean boundary, mirroring the james-carter to korvin-merrow precedent. Single shared working copy; no branch switching while KM reviews are in flight.
+
 ## One-line decision set (Alexander's own summary)
 
 Patient: Ondina Vasquell, 68F, Spanish-preferred, Medicare Advantage plus Medicaid, lives in second-floor walk-up with daughter support limited by night work, HFpEF as the cardiac comorbidity. Snapshot: HD6 evening, medically improving but operationally unsafe, Pattern C anchors. Workflow: Option A exact mapping with disagreement note. Payer axis: SNF authorization denial, with offloading/DME/home-health facts as support. Osteomyelitis: equivocal imaging and no treating/pathologic confirmation, so specificity is unsupported unless clarified.
