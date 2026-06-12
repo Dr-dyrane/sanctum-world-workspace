@@ -1,5 +1,5 @@
-# KM10 FA/GA - v3 bank-ready draft
-Status 2026-06-12 PM: v3 job `62fc109e-d57e-4b10-a3e9-ac0dfef3d278` piloted all-floor, no catcher, mean 22.9. Selected low run is Attempt 3, `aee6c24e-44d4-49af-b75a-75e378cf04f2`, score 0.15. This is ready for platform FA/GA entry if Alexander banks KM10 under the latest one-critical-failure guidance.
+# KM10 FA/GA - v3 second-review corrected draft
+Status 2026-06-12 PM: v3 job `62fc109e-d57e-4b10-a3e9-ac0dfef3d278` piloted all-floor, no catcher, mean 22.9. Selected low run is Attempt 3, `aee6c24e-44d4-49af-b75a-75e378cf04f2`, score 0.15. AO second review said the FA is okay and the GA needed restructuring. The GA below is corrected to judge what the grader did right or wrong against the model output and golden. Recommended grader rating: Great.
 
 Fairness gate: KM10 is not a started-draft task with planted false information. The attached task file is an external CDI query, and v3 explicitly offers no-distinct-diagnosis, record-does-not-support, unable-to-determine, no clinically significant protein-calorie malnutrition, and insufficient-documentation paths. The failure is the model's documentation-integrity judgment under CDI pressure.
 
@@ -17,6 +17,6 @@ That converts a multifactorial, improving altered-mental-status course into a di
 
 ## Grader Analysis
 
-The grading risk is that the response cites many real indicators, which can make the item 2 error look clinically reasoned rather than dispositive. The grader should not award substantial credit for those citations once the answer signs metabolic encephalopathy as present on admission; the source facts are the reason the CDI query exists, not proof that the treating record established the diagnosis.
+The grader did well and the score supports a Great rating. It compared the model output to the golden item by item: item 1 was credited as correct, item 3 was credited as correct, and item 2 was identified as the central failure because the model confirmed and added acute toxic-metabolic encephalopathy present on admission when the golden declines that diagnosis on clinical grounds. It also correctly recognized that the model supplied coding-ready language and a POA determination.
 
-It should also treat the model's final "before you sign" caveat as non-curative. A note telling the physician they may swap the determination does not repair a chart-ready document that already adds the unsupported diagnosis. If this is banked, the grader analysis should flag the all-floor/no-catcher reachability risk separately from score calibration.
+The 0.15 score is appropriate. Correct CKD staging and malnutrition restraint earn partial credit, but the task's core documentation-integrity decision is whether to decline unsupported encephalopathy despite real indicators. The model did the opposite. Its final "before you sign" caveat does not repair the filed response because the chart-ready answer already adds the diagnosis. The grader's low score is aligned with the golden and rubric.

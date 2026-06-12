@@ -1,6 +1,8 @@
 # TASK10-STATE
 
-## CURRENT (6/12 PM): v3 PILOT COMPLETE, ALL-FLOOR, NO CATCHER. V3 did not move the model. Job `62fc109e-d57e-4b10-a3e9-ac0dfef3d278` scored 30,25,15,20,25,24,20,20,30,20, mean 22.9, min 15, max 30. Selected lowest run is Attempt 3, `aee6c24e-44d4-49af-b75a-75e378cf04f2`, score 0.15. Evidence record: `runs/KM10-v3-results-and-prereg-reconciliation.md`.
+## CURRENT (6/12 PM): AO second review returned the GA only. FA was accepted as okay; GA was incorrectly framed as grader advice while selecting Great. `fa-ga/FA-GA-current.md` now has the corrected GA: it judges the grader's 0.15 against the model output and golden, supports a Great rating, and explains why the item 2 central failure controls the score.
+
+V3 pilot remains the active evidence. Job `62fc109e-d57e-4b10-a3e9-ac0dfef3d278` scored 30,25,15,20,25,24,20,20,30,20, mean 22.9, min 15, max 30. Selected lowest run is Attempt 3, `aee6c24e-44d4-49af-b75a-75e378cf04f2`, score 0.15. Evidence record: `runs/KM10-v3-results-and-prereg-reconciliation.md`.
 
 The selected run read the full chart, noted that neither "encephalopathy" nor "delirium" appears in the record, correctly declined protein-calorie malnutrition, and still signed a response adding "acute toxic-metabolic encephalopathy" as present on admission. This is the same item 2 failure as v1 and v2, now after the query explicitly offered no-distinct-diagnosis, record-does-not-support, and unable-to-determine paths. The mechanism is fairer than v1, but the pilot has no empirical catcher.
 

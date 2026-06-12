@@ -47,3 +47,7 @@ Two honest paths were considered:
 2. Redesign KM10 around a different CDI documentation-integrity hinge where the correct restraint is empirically reachable, or reframe the task away from asking the model to make the de novo encephalopathy determination.
 
 Current decision, 2026-06-12 PM: bank Attempt 3 under the latest one-critical-failure guidance. Fairness gate passes because the task file is an external CDI query with balanced unsupported and unable-to-determine options, not a started draft with planted false information. Own the caveat if asked: this remains an all-floor pilot with no empirical catcher.
+
+## AO second review
+
+AO second review on 2026-06-12 returned the GA framing only. The FA was described as okay. The submitted GA selected Great, but its text mostly told the grader what it should have done instead of evaluating what the grader did right or wrong against the golden and model output. `task10/fa-ga/FA-GA-current.md` was corrected the same day: it now supports a Great rating by explaining that the grader properly credited items 1 and 3, identified item 2 as the central failure, and calibrated the 0.15 score to the unsupported toxic-metabolic encephalopathy add.

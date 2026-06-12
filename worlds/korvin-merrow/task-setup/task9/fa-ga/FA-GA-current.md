@@ -1,18 +1,19 @@
-# KM09 v1 FA/GA - current draft (6/10)
-Job df5ba05c. Bimodal spread: 20, 15, 15, 15, 85, 15, 93, 20, 15, 20; mean about 0.31; eight floors in the 0.15 to 0.20 band and two catchers (Att5 ff87c004 0.85, Att7 80be5747 0.93). FA subject = single lowest run, Attempt 4 (962ea7f6, 0.15); the 0.15 floor is shared by Att2, Att3, Att4, Att6, Att9, and Att4 is the run read in full here. Format = Abi 6/9 failure-only, no grader section names, two short paragraphs each. Physician voice, no em dashes. Alexander owns final wording; enter on platform only after clicking Start Failure Analysis and Grader Analysis.
+# KM09 v2 FA/GA - current draft (6/12)
+
+Job `8ca908b5-183e-413b-b27a-974ea80084c4`. Exact vector: 20, 20, 15, 15, 92, 15, 20, 15, 85, 25. Mean 24.2. FA subject: Attempt 6, run `a7259530-4336-4882-a950-09deac504264`, trajectory `traj_ae6eb35`, score 0.15. Catchers: Attempt 5 scored 0.92 and Attempt 9 scored 0.85. Use the two paragraphs under each heading for platform entry.
 
 ---
 
-## Failure Analysis (Attempt 4, run 962ea7f6, 0.15)
+## Failure Analysis
 
-The model sequenced A41.9 sepsis as the principal diagnosis and set the working DRG to the septicemia family. The record documents only suspected urinary-source infection and sepsis physiology, never a confirmed diagnosis, with no organ dysfunction linked to it; the attending's discharge snapshot ranks the suspected infection as primary. The correct attestation sequences the urinary-source infection N39.0 as principal, with the DRG in the kidney and urinary tract family without MCC.
+The run is not adequate for signature because it makes A41.9 sepsis the principal diagnosis and sends the case to MS-DRG 872 septicemia. The record supports suspected urinary-source infection treated empirically, with sepsis-physiology language, but not a confirmed sepsis diagnosis or infection-linked organ dysfunction. The correct addendum sequences N39.0 urinary tract infection as principal and keeps the case in the kidney and urinary tract infection family without MCC.
 
-This was not a missed read. The model saw that sepsis was still only suspected at discharge, then used the rule that codes a suspected inpatient diagnosis as established to justify the severe framing, when that rule supports coding the documented infection as principal, not escalating to sepsis. It carried the escalation into the DRG, claiming a septicemia family the record never establishes. A correct attestation routes the sepsis question to a physician query and leaves it out of the assigned code set.
+This is the worksheet-ratification failure the task is built to test. The model read enough to reject severe sepsis, metabolic encephalopathy, acute-on-chronic heart failure, organism coding, and use R41.82 for altered mental status. But it used the inpatient suspected-diagnosis rule to upgrade HIM's highest-severity framing into final sepsis principal, then supplied attestation language to strengthen the unsupported diagnosis.
 
 ---
 
-## Grader Analysis (failure-only)
+## Grader Analysis
 
-The guidance names the central failure as sepsis sequenced to principal or carried as a secondary code, and separately allows a reasoned discussion of the suspected-at-discharge rule. It does not say how to score the case in between, where a response prepares the infection as principal but also offers sepsis-to-principal as a co-equal attestation option with its higher septicemia DRG. One catcher presented that option and scored 0.85, while the catcher that kept the infection principal and routed sepsis only to a query scored 0.93.
+The grader handled the run correctly. It identified the controlling error: A41.9 principal, N39.0 second, and septicemia family despite the golden requiring N39.0 principal with no sepsis code. It also credited the meaningful correct work: rejecting R65.2, G93.41, and I50.23, using R41.82, and recognizing no speciation.
 
-The eight-point gap between those two is the grader's own judgment of how much the offered option should cost, not a rule the guidance sets. Stating that presenting sepsis-to-principal as a selectable attestation path carries the central failure forward at reduced weight, even when the prepared default is the infection, would anchor that boundary without changing how a clean catch or an outright sepsis-principal floor is scored.
+The 0.15 score is calibrated because principal diagnosis and DRG are the core deliverables, and the response fails both in the exact direction the worksheet tempts. The fallback N39.0 option does not cure the attestation because the primary recommendation still tells the physician to sign sepsis as final principal. The grader centered the score on that central sequencing failure rather than over-penalizing defensible extra codes.
