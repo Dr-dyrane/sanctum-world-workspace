@@ -1,5 +1,5 @@
 # Workspace File Map
-**Last updated: 2026-06-12 (KM07 ready for delivery after v4 true-placeholder pilot, FA/GA, and three PLs; KM08 v7 piloted in job 062652b2 with all-floor photo-miss pattern and FA/GA active from Attempt 1; KM09 v2 piloted cleanly in job 8ca908b5 with FA/GA active from Attempt 6; King P legitimate-failure-over-score guidance added; Raising Task Difficulty worked example added to sources and doctrine; KM10 v3 corrected GA after AO second review; A0.4/A0.5 draft-fairness gates and Abi review protocol added; macOS tooling/render notes added; internal medicine next-world planning canvas added)**
+**Last updated: 2026-06-12 (KM07 ready for delivery after v4 true-placeholder pilot, FA/GA, and three PLs; KM08 v7 piloted in job 062652b2 with all-floor photo-miss pattern and FA/GA active from Attempt 1; KM09 v2 piloted cleanly in job 8ca908b5 with FA/GA active from Attempt 6; King P legitimate-failure-over-score guidance added and numeric score gates demoted; Raising Task Difficulty worked example added to sources and doctrine; KM10 v3 corrected GA after AO second review; A0.4/A0.5 draft-fairness gates and Abi review protocol added; macOS tooling/render notes added; internal medicine next-world planning canvas added; new-world 30 world-level file minimum indexed; next-world diabetic foot selection packet and hour prep packet indexed)**
 
 Single source of truth for repo structure, placement rules, and navigation.
 Read this + `AGENTS.md` at the start of any new session before touching files.
@@ -31,6 +31,23 @@ sanctum-world-workspace/
                                  pre-brainstorm playground for the next internal medicine world: task
                                  surfaces, traps, source geometry, fairness routes, grader modes, and
                                  reachability before any build.
+                                 reference/workflows/next-world-selection-proposal.md records the ten
+                                 candidate internal medicine worlds and selection criteria.
+                                 reference/workflows/next-world-candidate-scorecard.md scores those
+                                 candidates and ratifies diabetic foot infection with limb threat as
+                                 the primary planning candidate.
+                                 reference/workflows/next-world-diabetic-foot-planning-canvas.md is
+                                 the filled no-build cockpit for Candidate 1.
+                                 reference/workflows/next-world-dfi-hour-prep-packet.md is the
+                                 one-hour no-build preparation packet for Candidate 1: live-guidance
+                                 gate (closed for Brainstorm scope 6/12 PM), workflow options, canvas
+                                 gap audit, Phase 1 worksheets, decision pack, and verification log.
+                                 reference/workflows/next-world-dfi-hour-prep-packet-review-2026-06-12.md
+                                 is the independent handoff review (PASS, two non-blocking findings).
+                                 reference/workflows/live-guidance-delta-memo-2026-06-12.md records the
+                                 live (06/09) doc + live sheet verification: strings/priorities/claims
+                                 unchanged for Brainstorm scope; 30-file minimum now in-doc; cutoff
+                                 July 31 2025; residual open items for Phase 2+.
   tools/                       ← all Python scripts (canonical home)
   worlds/
     korvin-merrow/             ← the only live world
@@ -188,11 +205,13 @@ RUN-INSTRUCTIONS-v2.md                          ← Studio upload and first-traj
 7. `docs/reasoning-discipline.md` — before any one-way-door decision
 8. `docs/task-structure-dossier.md` — before brainstorming any new world or task slate (Abi variety mandate, 6/10: every world carries at least 5 distinct structural categories; sheet snapshot at `reference/source/task-selection-categories-snapshot-2026-06-10.csv`)
 9. `reference/workflows/internal-medicine-world-planning-canvas.md` - before drafting a new internal medicine Brainstorm; this is the task/trap/source/fairness playground and no-build gate
-10. `docs/task-difficulty-lessons.md` - before designing any task mechanism (the cold/forced/contradicted difficulty rule AND the fairness doctrine in sections 5-6: never floor a planted claim with no correction instruction). Companion: `docs/abi-review-protocol.md` (Abi mode: the nine lenses + the A0.5 built-artifact fairness gate; run before declaring any completion task staged)
-11. `docs/clinical-voice-lessons.md` - before authoring any world file, golden, or reference template (the World #1 pipeline voice standard)
-12. `reference/templates/README.md` - the client's latest-guidance worked example (CDI world+task) and its deltas vs KM conventions
-13. `docs/git-workflow.md` - before any git work (the sandbox delete-grant lesson: git is blocked until `mcp__cowork__allow_cowork_file_delete` is approved, then full git works)
-14. `docs/tooling-verification.md` + `docs/tooling-audit.md` + `docs/docx-generation-method.md` - before diagnosing DOCX render/tool failures, especially on macOS where bundled LibreOffice can be dependency-blocked
+10. `reference/workflows/next-world-selection-proposal.md`, `reference/workflows/next-world-candidate-scorecard.md`, `reference/workflows/next-world-diabetic-foot-planning-canvas.md`, and `reference/workflows/next-world-dfi-hour-prep-packet.md` - current next-world planning packet; planning only, no build authority
+11. `reference/checklists/world-spec-checklist.md` - before drafting a new World Spec; includes the 06/10 minimum of 30 world-level files for new worlds
+12. `docs/task-difficulty-lessons.md` - before designing any task mechanism (the cold/forced/contradicted difficulty rule AND the fairness doctrine in sections 5-6: never floor a planted claim with no correction instruction). Companion: `docs/abi-review-protocol.md` (Abi mode: the nine lenses + the A0.5 built-artifact fairness gate; run before declaring any completion task staged)
+13. `docs/clinical-voice-lessons.md` - before authoring any world file, golden, or reference template (the World #1 pipeline voice standard)
+14. `reference/templates/README.md` - the client's latest-guidance worked example (CDI world+task) and its deltas vs KM conventions
+15. `docs/git-workflow.md` - before any git work (the sandbox delete-grant lesson: git is blocked until `mcp__cowork__allow_cowork_file_delete` is approved, then full git works)
+16. `docs/tooling-verification.md` + `docs/tooling-audit.md` + `docs/docx-generation-method.md` - before diagnosing DOCX render/tool failures, especially on macOS where bundled LibreOffice can be dependency-blocked
 
 ---
 
