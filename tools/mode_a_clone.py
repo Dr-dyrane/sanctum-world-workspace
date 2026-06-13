@@ -152,6 +152,74 @@ def scrub_core(path):
     zin.close(); zout.close(); os.replace(tmp, path)
 
 
+_SYN = ("synthetic training document", "synthetic training", "synthetic")
+_TOOL = ("python-docx", "aspose")
+
+
+def scrub_all_metadata(path):
+    """Phase 3 world/task files: scrub EVERY metadata surface, not just core.xml.
+    Empties core.xml (creator/description/lastModifiedBy, python-docx), neutralizes
+    app.xml value fields (Application/Company/Template/Manager), drops custom.xml,
+    and blanks any <w:t> carrying a SYNTHETIC marker in document/headers/footers.
+    The footer/body synthetic text is best removed at build time by clearing the
+    footer; this is the belt-and-braces pass. Run AFTER final save, before staging,
+    then assert verify_no_synthetic(path)."""
+    import os
+    tmp = path + ".tmp"
+    zin = zipfile.ZipFile(path, "r"); zout = zipfile.ZipFile(tmp, "w", zipfile.ZIP_DEFLATED)
+    for item in zin.infolist():
+        name = item.filename
+        if name == "docProps/custom.xml":
+            continue  # drop custom properties entirely
+        data = zin.read(name)
+        if name == "docProps/core.xml":
+            c = data.decode("utf-8")
+            c = re.sub(r"<dc:creator>.*?</dc:creator>", "<dc:creator></dc:creator>", c)
+            c = re.sub(r"<dc:description>.*?</dc:description>", "<dc:description></dc:description>", c)
+            c = re.sub(r"<cp:lastModifiedBy>.*?</cp:lastModifiedBy>", "<cp:lastModifiedBy></cp:lastModifiedBy>", c)
+            data = c.encode("utf-8")
+        elif name == "docProps/app.xml":
+            c = data.decode("utf-8")
+            for tag in ("Application", "Company", "Template", "Manager"):
+                c = re.sub(rf"<{tag}>.*?</{tag}>", f"<{tag}></{tag}>", c)
+            data = c.encode("utf-8")
+        elif re.search(r"word/(document|header\d*|footer\d*)\.xml$", name):
+            c = data.decode("utf-8")
+            c = re.sub(r"<w:t([^>]*)>([^<]*)</w:t>",
+                       lambda m: f"<w:t{m.group(1)}></w:t>"
+                       if any(s in m.group(2).lower() for s in _SYN) else m.group(0), c)
+            data = c.encode("utf-8")
+        # also fix the [Content_Types]/.rels reference to a dropped custom.xml
+        if name == "[Content_Types].xml":
+            c = data.decode("utf-8")
+            c = c.replace('<Override PartName="/docProps/custom.xml" ContentType="application/vnd.openxmlformats-officedocument.custom-properties+xml"/>', "")
+            data = c.encode("utf-8")
+        if name == "_rels/.rels":
+            c = data.decode("utf-8")
+            c = re.sub(r'<Relationship[^>]*custom\.xml[^>]*/>', "", c)
+            data = c.encode("utf-8")
+        zout.writestr(item, data)
+    zin.close(); zout.close(); os.replace(tmp, path)
+
+
+def verify_no_synthetic(path):
+    """Hard gate: no part (every .xml and .rels, incl. ALL headers/footers and all
+    three docProps) may contain a synthetic marker or authoring-tool fingerprint.
+    Returns True or raises AssertionError naming the offending parts."""
+    z = zipfile.ZipFile(path)
+    offenders = []
+    for n in z.namelist():
+        if not (n.endswith(".xml") or n.endswith(".rels")):
+            continue
+        low = z.read(n).decode("utf-8", "ignore").lower()
+        bad = [t for t in (_SYN + _TOOL) if t in low]
+        if bad:
+            offenders.append((n, sorted(set(bad))))
+    assert not offenders, f"synthetic/tool token leak: {offenders}"
+    print("  [OK ] verify_no_synthetic: zero synthetic/tool tokens in any part")
+    return True
+
+
 if __name__ == "__main__":
     print(__doc__)
     print("Import the primitives in a per-artifact build script. Example skeleton:")
