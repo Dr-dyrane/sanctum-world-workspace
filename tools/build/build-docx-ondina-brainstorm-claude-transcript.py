@@ -4,12 +4,10 @@
 from __future__ import annotations
 
 import re
-import sys
 import zipfile
 from pathlib import Path
 
 from docx import Document
-from docx.enum.section import WD_SECTION
 from docx.enum.table import WD_TABLE_ALIGNMENT, WD_CELL_VERTICAL_ALIGNMENT
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml import OxmlElement
@@ -21,6 +19,25 @@ SOURCE = REPO / "worlds/ondina-vasquell/submission/Ondina_Vasquell_Brainstorm_Cl
 OUT = REPO / "worlds/ondina-vasquell/submission/Ondina_Vasquell_Brainstorm_Claude_Transcript.docx"
 
 BANNED_RE = re.compile("[\u2013\u2014\u2190-\u21ff]")
+CONTENT_WIDTH_DXA = 9360
+
+ROLE_COLORS = {
+    "System": "6B7280",
+    "Human": "1F4D78",
+    "Assistant": "8A5A44",
+}
+
+ROLE_FILLS = {
+    "System": "F8FAFC",
+    "Human": "F6F8FA",
+    "Assistant": "FBF7F0",
+}
+
+ROLE_BORDERS = {
+    "System": "CBD5E1",
+    "Human": "D0D7DE",
+    "Assistant": "E4D8C8",
+}
 
 
 def set_cell_shading(cell, fill: str) -> None:
@@ -45,6 +62,31 @@ def set_cell_margins(cell, top=80, start=120, bottom=80, end=120) -> None:
             tc_mar.append(node)
         node.set(qn("w:w"), str(value))
         node.set(qn("w:type"), "dxa")
+
+
+def set_cell_borders(cell, color: str, accent: str | None = None) -> None:
+    tc_pr = cell._tc.get_or_add_tcPr()
+    borders = tc_pr.find(qn("w:tcBorders"))
+    if borders is None:
+        borders = OxmlElement("w:tcBorders")
+        tc_pr.append(borders)
+    for edge in ("top", "right", "bottom"):
+        node = borders.find(qn(f"w:{edge}"))
+        if node is None:
+            node = OxmlElement(f"w:{edge}")
+            borders.append(node)
+        node.set(qn("w:val"), "single")
+        node.set(qn("w:sz"), "6")
+        node.set(qn("w:space"), "0")
+        node.set(qn("w:color"), color)
+    left = borders.find(qn("w:left"))
+    if left is None:
+        left = OxmlElement("w:left")
+        borders.append(left)
+    left.set(qn("w:val"), "single")
+    left.set(qn("w:sz"), "14")
+    left.set(qn("w:space"), "0")
+    left.set(qn("w:color"), accent or color)
 
 
 def set_table_widths(table, widths: list[int]) -> None:
@@ -93,15 +135,6 @@ def set_paragraph_spacing(paragraph, before=0, after=6, line=280) -> None:
     spacing.set(qn("w:lineRule"), "auto")
 
 
-def shade_paragraph(paragraph, fill: str) -> None:
-    p_pr = paragraph._p.get_or_add_pPr()
-    shd = p_pr.find(qn("w:shd"))
-    if shd is None:
-        shd = OxmlElement("w:shd")
-        p_pr.append(shd)
-    shd.set(qn("w:fill"), fill)
-
-
 def add_para(doc, text: str, style: str | None = None, bold_prefix: bool = False):
     p = doc.add_paragraph(style=style)
     set_paragraph_spacing(p, after=6, line=280)
@@ -122,35 +155,61 @@ def add_para(doc, text: str, style: str | None = None, bold_prefix: bool = False
     return p
 
 
-def add_code_para(doc, text: str):
+def add_meta_line(doc, text: str):
     p = doc.add_paragraph()
-    p.paragraph_format.left_indent = Inches(0.18)
-    p.paragraph_format.right_indent = Inches(0.05)
-    set_paragraph_spacing(p, after=1, line=245)
-    shade_paragraph(p, "F6F8FA")
-    run = p.add_run(text if text else " ")
-    run.font.name = "Courier New"
-    run.font.size = Pt(9)
-    run.font.color.rgb = RGBColor.from_string("1F2937")
+    set_paragraph_spacing(p, after=3, line=250)
+    run = p.add_run(text)
+    run.font.name = "Arial"
+    run.font.size = Pt(10)
+    run.font.color.rgb = RGBColor.from_string("374151")
     return p
 
 
-def add_key_value_table(doc, rows: list[tuple[str, str]]) -> None:
-    table = doc.add_table(rows=0, cols=2)
-    table.style = "Table Grid"
-    set_table_widths(table, [2600, 6760])
-    for label, value in rows:
-        row = table.add_row()
-        row.cells[0].text = label
-        row.cells[1].text = value
-        set_cell_shading(row.cells[0], "F2F4F7")
-        for cell in row.cells:
-            for p in cell.paragraphs:
-                for run in p.runs:
-                    run.font.name = "Arial"
-                    run.font.size = Pt(10)
-                set_paragraph_spacing(p, after=0, line=260)
-            row.cells[0].paragraphs[0].runs[0].bold = True
+def add_turn_number(doc, text: str):
+    p = doc.add_paragraph()
+    set_paragraph_spacing(p, before=14, after=1, line=250)
+    run = p.add_run(text)
+    run.font.name = "Arial"
+    run.font.size = Pt(12)
+    run.font.color.rgb = RGBColor.from_string("1F4D78")
+    run.bold = True
+
+
+def add_role_label(doc, role: str):
+    p = doc.add_paragraph()
+    set_paragraph_spacing(p, before=3, after=3, line=250)
+    run = p.add_run(role)
+    run.font.name = "Arial"
+    run.font.size = Pt(11)
+    run.font.color.rgb = RGBColor.from_string(ROLE_COLORS.get(role, "1F4D78"))
+    run.bold = True
+
+
+def add_code_block(doc, lines: list[str], role: str | None) -> None:
+    table = doc.add_table(rows=1, cols=1)
+    table.alignment = WD_TABLE_ALIGNMENT.LEFT
+    table.autofit = False
+    set_table_widths(table, [CONTENT_WIDTH_DXA])
+    cell = table.rows[0].cells[0]
+    cell.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.TOP
+    fill = ROLE_FILLS.get(role or "", "F6F8FA")
+    border = ROLE_BORDERS.get(role or "", "D0D7DE")
+    accent = ROLE_COLORS.get(role or "", "6B7280")
+    set_cell_shading(cell, fill)
+    set_cell_borders(cell, border, accent)
+    set_cell_margins(cell, top=130, start=170, bottom=130, end=170)
+
+    block_lines = lines or [""]
+    for idx, block_line in enumerate(block_lines):
+        p = cell.paragraphs[0] if idx == 0 else cell.add_paragraph()
+        set_paragraph_spacing(p, after=1, line=232)
+        run = p.add_run(block_line if block_line else " ")
+        run.font.name = "Courier New"
+        run.font.size = Pt(8.7)
+        run.font.color.rgb = RGBColor.from_string("111827")
+
+    spacer = doc.add_paragraph()
+    set_paragraph_spacing(spacer, after=3, line=200)
     doc.add_paragraph()
 
 
@@ -183,29 +242,38 @@ def build_docx() -> None:
     title = lines[0].removeprefix("# ").strip()
     title_p = doc.add_paragraph()
     title_p.alignment = WD_ALIGN_PARAGRAPH.LEFT
-    set_paragraph_spacing(title_p, after=3, line=280)
+    set_paragraph_spacing(title_p, after=5, line=280)
     run = title_p.add_run(title)
     run.font.name = "Arial"
-    run.font.size = Pt(20)
-    run.font.color.rgb = RGBColor.from_string("1F4D78")
+    run.font.size = Pt(19)
+    run.font.color.rgb = RGBColor.from_string("111827")
     run.bold = True
 
     skip_first = True
     in_code = False
+    code_lines: list[str] = []
+    current_role: str | None = None
+    seen_turn = False
     for raw in lines:
         line = raw.strip()
         if skip_first:
             skip_first = False
             continue
         if line.startswith("```"):
-            in_code = not in_code
+            if in_code:
+                add_code_block(doc, code_lines, current_role)
+                code_lines = []
+                in_code = False
+            else:
+                in_code = True
+                code_lines = []
             continue
         if not line:
             if in_code:
-                add_code_para(doc, "")
+                code_lines.append("")
             continue
         if in_code:
-            add_code_para(doc, raw.rstrip())
+            code_lines.append(raw.rstrip())
             continue
         if line.startswith("## "):
             p = doc.add_paragraph(line[3:], style="Heading 1")
@@ -214,15 +282,17 @@ def build_docx() -> None:
             p = doc.add_paragraph(line[4:], style="Heading 2")
             set_paragraph_spacing(p, before=12, after=6, line=280)
         elif re.match(r"^\d+\.$", line):
-            p = doc.add_paragraph(line, style="Heading 2")
-            set_paragraph_spacing(p, before=12, after=2, line=260)
+            add_turn_number(doc, line)
+            seen_turn = True
         elif line in {"System", "Human", "Assistant"}:
-            p = doc.add_paragraph(line, style="Heading 3")
-            set_paragraph_spacing(p, before=3, after=2, line=260)
+            current_role = line
+            add_role_label(doc, line)
         elif re.match(r"^\d+\. ", line):
             add_para(doc, line)
         elif line.startswith("Alexander:") or line.startswith("Claude:"):
             add_para(doc, line, bold_prefix=True)
+        elif not seen_turn and ":" in line:
+            add_meta_line(doc, line)
         else:
             add_para(doc, line)
 
