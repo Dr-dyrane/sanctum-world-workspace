@@ -37,3 +37,11 @@ World #2 work stays on `korvin-merrow-brainstorm` until the KM world fully close
 ## One-line decision set (Alexander's own summary)
 
 Patient: Ondina Vasquell, 68F, Spanish-preferred, Medicare Advantage plus Medicaid, lives in second-floor walk-up with daughter support limited by night work, HFpEF as the cardiac comorbidity. Snapshot: HD6 evening, medically improving but operationally unsafe, Pattern C anchors. Workflow: Option A exact mapping with disagreement note. Payer axis: SNF authorization denial, with offloading/DME/home-health facts as support. Osteomyelitis: equivocal imaging and no treating/pathologic confirmation, so specificity is unsupported unless clarified.
+
+## Decisions 11-13 (6/13, Alexander: run to World Spec, gates collapsed)
+
+11. RUN CONTINUOUS TO SPEC. Phases A (substrate prep), B (spec assembly), C (build and package) run back to back with no stop gates. Rationale, Alexander's: his attending voice is in the repo (AGENTS VOICE rule, clinical-voice-lessons), his clinical reasoning is in the decision records and KM goldens, and the KM world resource files and logs are a sufficient foundation to derive World #2 substrate. Claude self-verifies against those encoded standards instead of routing each step back for review. At-risk relative to the pending human Brainstorm GO is accepted.
+
+12. REVIEW GATES REMOVED, ONE INTEGRITY HOLD KEPT. The read-and-own stop, the per-sitting stop, and the pod-GO wait are removed for the spec build. The single surviving hold is not a workflow gate but the standing no-invented-clinical-specificity guardrail (workspace-guardrails lesson 5, AGENTS clinical authority): every numeric clinical fact for this new patient that is not supplied by Alexander is generated clinically-concordant for the profile and flagged NEEDS RATIFICATION inline, never asserted as locked fact. The spec completes in full; Alexander strikes or approves the flagged values in one pass at the end. Spec-level draft prompts are authored in Alexander's voice as drafts he owns; final task prompts, goldens, and graders remain Phase 3 human-authored work, unchanged.
+
+13. PLATFORM STAYS MANUAL. Automation ends at an upload-ready spec package. RLS upload, Spec AutoQC, remediation, and human spec review remain Alexander-operated; no platform action is automated.
