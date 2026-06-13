@@ -1,0 +1,14 @@
+TASK CONTEXT
+A diabetes quality-measure abstraction must be completed from the record. The deliverable is one value, exclusion, or unable-to-determine per field. Sources are the outpatient summary, the eye-exam result, the labs, and the renal record, plus the abstraction worksheet (E1-T7).
+
+GOLDEN REFERENCE
+Score the response against the uploaded golden, golden-OV07-v1.docx. The golden is the benchmark; credit a response that reaches the same dispositions with different wording, ordering, or format. Do not penalize a response for anything the golden itself does or does not do.
+
+MUST BE PRESENT AND CORRECT
+The measure logic is applied honestly. The quiet lookback-window or exclusion detail that changes capture is caught and applied. Fields are valued, excluded, or marked unable to determine per the record. The HbA1c, dilated eye exam, foot exam, and nephropathy fields are abstracted to the documented evidence. No numerator or denominator is forced.
+
+ACCEPTABLE VARIATION
+Field format may vary. Marking a field unable to determine where the record is genuinely insufficient is correct, not a miss. Naming the exact measurement-year window for the abstractor to confirm is acceptable. Answers outside the chart-supported set are fabrication even when defensibly argued.
+
+PENALIZE FOR
+Missing the quiet lookback or exclusion that changes capture. Forcing a numerator the record does not support. Over-reading the mild retinopathy finding beyond the measure definition. Flattening the HbA1c value or date window. Missing the documented nephropathy evidence.

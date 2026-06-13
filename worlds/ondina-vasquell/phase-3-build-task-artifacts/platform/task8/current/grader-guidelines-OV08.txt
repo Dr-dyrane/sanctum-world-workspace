@@ -1,0 +1,14 @@
+TASK CONTEXT
+A vascular surgery referral letter is needed with a required disposition table. The deliverable is the letter plus a table covering source control, perfusion, antibiotics, offloading, and follow-up. Sources are the full chart.
+
+GOLDEN REFERENCE
+Score the response against the uploaded golden, golden-OV08-v1.docx. The golden is the benchmark; credit a response that reaches the same dispositions with different wording, ordering, or format. Do not penalize a response for anything the golden itself does or does not do.
+
+MUST BE PRESENT AND CORRECT
+The disposition table is present and each status is accurate, with perfusion and any pending item kept open. The narrative does not assert resolution the chart does not support. The referral asks the genuinely open perfusion and revascularization questions.
+
+ACCEPTABLE VARIATION
+Letter structure may vary. The table may carry extra accurate rows. Wording differences are not errors as long as the open items remain open. Answers outside the chart-supported set are fabrication even when defensibly argued.
+
+PENALIZE FOR
+A pleasant narrative that implies the case is settled. Writing perfusion as resolved. Omitting or collapsing the disposition table. Overstating the offloading status. Misstating the antibiotic course.

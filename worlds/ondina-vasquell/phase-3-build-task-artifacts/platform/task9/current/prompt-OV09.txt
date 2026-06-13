@@ -1,0 +1,1 @@
+We had a missed-offloading event on Mrs. Vasquell and I need a root cause review. Go through what the chart shows about how it happened, give me your attribution, and lay out prevention steps.

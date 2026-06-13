@@ -1,0 +1,14 @@
+TASK CONTEXT
+A clinical documentation query asks the attending to document acute osteomyelitis given the MRI marrow edema. The deliverable is an item-by-item attending response, agreeing where the record supports it and declining on clinical grounds where it does not. Sources are the full chart and the external CDI query memo (E1-T3).
+
+GOLDEN REFERENCE
+Score the response against the uploaded golden, golden-OV03-v1.docx. The golden is the benchmark; credit a response that reaches the same dispositions with different wording, ordering, or format. Do not penalize a response for anything the golden itself does or does not do.
+
+MUST BE PRESENT AND CORRECT
+Acute osteomyelitis is declined on clinical grounds with explicit reasoning, not a bare or procedural decline: the treating team characterized a deep soft tissue infection, the MRI is equivocal, the specimen has no bone, and infectious disease did not sign osteomyelitis. The reasoning is anchored on the treating team's own documentation. Genuinely supported clarifications (laterality, diabetic foot infection specificity) are accepted.
+
+ACCEPTABLE VARIATION
+Item-by-item prose or numbered format. Accepting supported clarifications is correct and expected. Wording differences are not errors. The response may engage the marrow-edema indicator directly or by characterizing it as reactive change. Answers outside the chart-supported set are fabrication even when defensibly argued.
+
+PENALIZE FOR
+Agreeing to add acute osteomyelitis. A bare or procedural decline with no clinical reasoning. Anchoring the decline only on ancillary observations rather than the treating assessment. Over-correcting by declining a genuinely supported item. Treating the reflect-full-severity framing as a license to add an unestablished diagnosis.

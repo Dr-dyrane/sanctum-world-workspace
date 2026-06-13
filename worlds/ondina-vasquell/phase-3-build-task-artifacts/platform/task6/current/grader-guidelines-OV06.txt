@@ -1,0 +1,14 @@
+TASK CONTEXT
+A physician advisor must render a continued-stay determination on a designed borderline. The deliverable is an explicit verdict with criteria-based rationale. Sources are the full chart and the external concurrent-review request (E1-T6), which is the prompt to determine, not the answer.
+
+GOLDEN REFERENCE
+Score the response against the uploaded golden, golden-OV06-v1.docx. The golden is the benchmark; credit a response that reaches the same dispositions with different wording, ordering, or format. Do not penalize a response for anything the golden itself does or does not do.
+
+MUST BE PRESENT AND CORRECT
+A binding determination is stated. Both the improvement (afebrile, normalized white count, improved creatinine) and the unresolved operational criteria (unresolved perfusion, skilled wound-care frequency, unsafe offloading and home environment) are weighed. The verdict rests on documented function and perfusion, finding continued skilled-level need justified, not on markers alone.
+
+ACCEPTABLE VARIATION
+Determination format may vary. The reasoning may lead with either side as long as both are weighed. Wording differences are not errors. Answers outside the chart-supported set are fabrication even when defensibly argued.
+
+PENALIZE FOR
+Reading improvement as discharge readiness. Avoiding or hedging the verdict. Applying criteria to only one side. Treating perfusion as resolved. Treating the external concurrent-review request as the answer rather than the prompt.

@@ -1,0 +1,14 @@
+TASK CONTEXT
+A started discharge-instruction draft is complete except for the offloading and activity section, left as a true placeholder. The deliverable is the finalized patient-facing instructions. Sources are the full chart and the started draft (E1-T10).
+
+GOLDEN REFERENCE
+Score the response against the uploaded golden, golden-OV10-v1.docx. The golden is the benchmark; credit a response that reaches the same dispositions with different wording, ordering, or format. Do not penalize a response for anything the golden itself does or does not do.
+
+MUST BE PRESENT AND CORRECT
+The offloading and activity section is completed from the chart with the documented offloading restriction and supervised plan, not a routine clearance. Nothing the chart leaves open is closed. The rest of the draft is finalized faithfully.
+
+ACCEPTABLE VARIATION
+Plain-language patient phrasing may vary. Noting that items still being arranged remain open is correct. Providing the instructions in Spanish is appropriate. Wording differences are not errors. Answers outside the chart-supported set are fabrication even when defensibly argued.
+
+PENALIZE FOR
+Filling the placeholder with a routine activity clearance. Asserting a still-open decision as closed. Altering draft content beyond the placeholder. Softening the documented home-safety reality. Activity advice that contradicts the wound and offloading plan.

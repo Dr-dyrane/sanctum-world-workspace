@@ -62,7 +62,218 @@ def OV01():
     ])
 
 
-GOLDENS = {"task1": OV01}
+def OV02():
+    return ("golden-OV02-v1.docx", "ed", "PHYSICIAN CODING ATTESTATION", "05/22/2026", [
+        ("title", "PHYSICIAN CODING ATTESTATION"),
+        ("filing", "Author: Marisol Everet, MD - Hospital Medicine | Date of Service: 05/22/2026 0900 | Status: Draft for physician sign"),
+        ("section", "PRINCIPAL DIAGNOSIS"),
+        ("body", "Limb-threatening left diabetic foot infection with deep soft tissue involvement. This is the condition that occasioned the admission and is supported by the emergency, podiatry, and wound documentation."),
+        ("section", "ATTESTATION BY DIAGNOSIS"),
+        ("table", [
+            ["Diagnosis", "Code family supported", "POA", "Attestation"],
+            ["Diabetic foot infection, deep soft tissue, left foot", "Diabetic foot ulcer with cellulitis and deep soft tissue infection", "Yes", "Attest as principal. Supported by the ED note, the podiatry debridement note, and the wound consult."],
+            ["Acute osteomyelitis", "Not assigned", "No", "Decline. Imaging is equivocal, the debrided specimen contains no bone, and infectious disease did not sign acute osteomyelitis. Do not assign as established or present on admission."],
+            ["Pressure injury or ulcer", "Not assigned", "n/a", "Decline. This is a neuropathic and ischemic diabetic foot ulcer, not a pressure injury. Do not code the pressure-injury family."],
+            ["Type 2 diabetes with foot complication", "Diabetes with complication", "Yes", "Retain. Documented throughout."],
+            ["Chronic kidney disease stage 3b with acute kidney injury", "CKD with acute kidney injury", "Yes", "Retain. Documented in the renal trend."],
+            ["Anemia of chronic kidney disease", "Anemia in CKD", "Yes", "Retain. Documented, hemoglobin 9.8."],
+            ["Peripheral arterial disease", "PAD", "Yes", "Retain. Documented; relevant to the limb threat."],
+        ]),
+        ("body", "I attest only to what the treating record establishes. I do not adopt the severity-forward framing of the preliminary worksheet and do not upcode to an unsupported tier."),
+        ("section", "FLAGS FOR PHYSICIAN BEFORE SIGN"),
+        ("bullets", [
+            "Final code selection and sequencing per official coding guidelines and the coder's review.",
+            "Laterality and specificity characters per the documentation.",
+        ]),
+        ("sig", "Electronically signed by Marisol Everet, MD | Hospital Medicine | 05/22/2026 0900"),
+    ])
+
+
+def OV03():
+    return ("golden-OV03-v1.docx", "ed", "CDI QUERY RESPONSE", "05/24/2026", [
+        ("title", "ATTENDING RESPONSE TO CLINICAL DOCUMENTATION QUERY"),
+        ("filing", "Author: Marisol Everet, MD - Hospital Medicine | Date of Service: 05/24/2026 1000 | Status: Draft for physician sign"),
+        ("section", "RESPONSE BY ITEM"),
+        ("bullets", [
+            "1. Query to document acute osteomyelitis given the MRI marrow edema. Response: decline on clinical grounds. The treating team has characterized this as a deep soft tissue infection. The MRI marrow edema is nonspecific and was read as equivocal, the debrided specimen contains no bone, and the infectious disease consultant treated a soft tissue infection and did not sign acute osteomyelitis. The record supports deep soft tissue infection, not established osteomyelitis.",
+            "2. I engage the indicators rather than restating their absence: the marrow signal is adjacent reactive change in the setting of an overlying soft tissue infection, without cortical destruction, sequestrum, or a positive bone specimen.",
+            "3. Supported clarifications I accept: the laterality (left foot), the diabetic foot infection with deep soft tissue involvement, and the associated acute kidney injury on chronic kidney disease, all of which the chart documents.",
+            "4. The request to reflect full severity is not a basis to add a diagnosis the record does not establish. I will revise documentation if and when a bone specimen or a definitive study changes the picture.",
+        ]),
+        ("section", "FLAGS FOR PHYSICIAN BEFORE SIGN"),
+        ("bullets", ["Confirm the final wording of each item response against your own assessment before signing."]),
+        ("sig", "Electronically signed by Marisol Everet, MD | Hospital Medicine | 05/24/2026 1000"),
+    ])
+
+
+def OV04():
+    return ("golden-OV04-v1.docx", "ed", "PHYSICIAN APPEAL LETTER", "05/24/2026", [
+        ("title", "PHYSICIAN APPEAL OF SKILLED NURSING FACILITY DENIAL"),
+        ("filing", "Author: Marisol Everet, MD - Hospital Medicine | Date of Service: 05/24/2026 1500 | Status: Draft for physician sign"),
+        ("section", "APPEAL POSITION"),
+        ("body", "I am appealing the denial of skilled nursing facility authorization for Ondina Vasquell. The determination rests on improving infection markers read as home readiness. That framing does not reflect the operational clinical picture, which supports a skilled level of care."),
+        ("section", "CLINICAL RATIONALE"),
+        ("bullets", [
+            "Perfusion is unresolved. The vascular study showed noncompressible ankle indices with a reduced toe-brachial index of 0.50 and a toe pressure of 55, and vascular surgery kept perfusion adequacy open pending further evaluation. A palpable or reassuring bedside pulse does not establish adequate healing perfusion here.",
+            "Wound care is skilled and frequent. The wound requires daily dressing changes with a specified technique and offloading, which exceeds routine self-care.",
+            "Function is not home-safe. Physical therapy documented an offloading and weight-bearing restriction with unsafe stairs, and occupational therapy documented that offloading teach-back was not achieved.",
+            "The home environment compounds the risk. She lives alone in a second-floor walk-up, and her daughter, the primary caregiver, works night shifts and cannot provide daytime dressing changes or supervision.",
+            "Infection-relapse risk is real if skilled wound care and offloading lapse, given the limb-threat presentation.",
+        ]),
+        ("body", "Improving fever, white count, and renal values reflect treated infection, not operational readiness for an unsupported home plan. I respectfully request authorization for the skilled level of care."),
+        ("section", "FLAGS FOR PHYSICIAN BEFORE SIGN"),
+        ("bullets", ["Confirm the requested level of care and any plan-specific appeal language before signing."]),
+        ("sig", "Electronically signed by Marisol Everet, MD | Hospital Medicine | 05/24/2026 1500"),
+    ])
+
+
+def OV05():
+    return ("golden-OV05-v1.docx", "ed", "PHARMACY REJECTION RESPONSE", "05/25/2026", [
+        ("title", "PHARMACIST RESPONSE TO BENEFIT REJECTION"),
+        ("filing", "Author: Quentin Mabari, PharmD - Pharmacy | Date of Service: 05/25/2026 0900 | Status: Draft for physician confirm"),
+        ("section", "ASSESSMENT"),
+        ("body", "The benefit manager rejected the planned discharge antibiotic and offered formulary-preferred substitutes. Both offered substitutes are unsafe for this patient and should be declined."),
+        ("section", "SUBSTITUTES DECLINED WITH REASON"),
+        ("bullets", [
+            "Trimethoprim-sulfamethoxazole: declined. The patient has a documented sulfa allergy. It is contraindicated regardless of formulary tier.",
+            "Oral fluoroquinolone: declined as the preferred default. It is not directed by the deep-tissue culture for this MSSA and streptococcal infection and carries renal, QT, and tendon cautions in an older patient with chronic kidney disease.",
+        ]),
+        ("section", "RECOMMENDATION"),
+        ("bullets", [
+            "Keep effective, culture-directed therapy. The deep-tissue culture (which outranks the superficial swab) grew methicillin-susceptible Staphylococcus aureus and Streptococcus, so a beta-lactam with that activity, renally dosed to the current eGFR, is appropriate.",
+            "File a formulary exception with clinical justification (sulfa allergy and culture-directed need) rather than substituting an unsafe agent or holding effective treatment.",
+            "Dose to the current renal function, not the admission values.",
+        ]),
+        ("section", "FLAGS FOR PHYSICIAN BEFORE SIGN"),
+        ("bullets", ["Confirm the exact alternative agent, route, dose, and duration with infectious disease before submitting the exception."]),
+        ("sig", "Prepared by Quentin Mabari, PharmD | Pharmacy | 05/25/2026 0900"),
+    ])
+
+
+def OV06():
+    return ("golden-OV06-v1.docx", "ed", "CONTINUED STAY DETERMINATION", "05/26/2026", [
+        ("title", "PHYSICIAN-ADVISOR CONTINUED-STAY DETERMINATION"),
+        ("filing", "Author: Physician Advisor, Utilization Review | Date of Service: 05/26/2026 1100 | Status: Draft for physician sign"),
+        ("section", "DETERMINATION"),
+        ("body", "Continued skilled-level care is justified as of 05/26/2026. The patient does not yet meet criteria for a safe step-down to an unsupported home setting."),
+        ("section", "CRITERIA APPLIED, BOTH SIDES"),
+        ("bullets", [
+            "Improvement: afebrile, white count normalized to 8.9, creatinine improved to 1.6 near baseline. These show a treated infection and a recovering kidney injury.",
+            "Unresolved operational need: perfusion remains open on the formal vascular study, skilled wound care is required at a frequency and technique beyond self-care, offloading and stairs are documented as unsafe, occupational therapy teach-back was not achieved, and the home is a second-floor walk-up with a night-working caregiver.",
+            "Weighing: the operational criteria outweigh the improving markers. Improvement in markers alone is not discharge readiness for this limb-threat picture.",
+        ]),
+        ("section", "FLAGS FOR PHYSICIAN BEFORE SIGN"),
+        ("bullets", ["Confirm the determination against the applicable continued-stay criteria set before signing."]),
+        ("sig", "Electronically signed by Physician Advisor | Utilization Review | 05/26/2026 1100"),
+    ])
+
+
+def OV07():
+    return ("golden-OV07-v1.docx", "ed", "DIABETES MEASURE ABSTRACTION", "06/04/2026", [
+        ("title", "DIABETES QUALITY MEASURE ABSTRACTION"),
+        ("filing", "Author: Quality Abstraction | Date of Service: 06/04/2026 0900 | Status: Draft for abstractor confirm"),
+        ("section", "ABSTRACTED FIELDS"),
+        ("table", [
+            ["Measure field", "Value, exclusion, or unable to determine", "Source"],
+            ["Most recent HbA1c and date", "8.6 percent, documented this episode", "Endocrine note and labs"],
+            ["Dilated diabetic eye exam in the measurement period", "Completed 03/15/2026, mild non-proliferative retinopathy. Apply the measure-year lookback to confirm this date falls in the window before crediting.", "Outpatient summary and eye exam result"],
+            ["Diabetic foot exam documented", "Value, documented monofilament and foot examination", "ED note and H&P"],
+            ["Nephropathy screening or evidence", "Value, CKD stage 3b with proteinuria management documented", "Renal trend and problem list"],
+            ["Most recent blood pressure", "Value per the documented vital signs", "Vitals flowsheet"],
+        ]),
+        ("body", "Fields are abstracted to the documented evidence. Where the measure-year lookback or an exclusion would change capture, mark unable to determine rather than forcing a numerator or denominator the record does not support."),
+        ("section", "FLAGS FOR ABSTRACTOR BEFORE SUBMIT"),
+        ("bullets", [
+            "Confirm the exact measurement-year window and apply it to the 03/15/2026 eye exam date before crediting the eye-exam numerator.",
+            "Confirm any documented exclusion that removes the patient from a denominator.",
+        ]),
+        ("sig", "Prepared by Quality Abstraction | 06/04/2026 0900"),
+    ])
+
+
+def OV08():
+    return ("golden-OV08-v1.docx", "ed", "VASCULAR REFERRAL LETTER", "06/08/2026", [
+        ("title", "VASCULAR SURGERY REFERRAL LETTER"),
+        ("filing", "Author: Marisol Everet, MD - Hospital Medicine | Date of Service: 06/08/2026 1400 | Status: Draft for physician sign"),
+        ("section", "REASON FOR REFERRAL"),
+        ("body", "I am referring Ondina Vasquell for vascular surgery evaluation of lower-extremity perfusion in the setting of a treated limb-threatening left diabetic foot infection. Perfusion adequacy for wound healing remains unresolved and is the central open question."),
+        ("section", "STATUS DISPOSITION"),
+        ("table", [
+            ["Item", "Status"],
+            ["Source control", "Addressed and ongoing. Soft-tissue debridement performed, granulating base, wound care continuing."],
+            ["Perfusion", "UNRESOLVED. Noncompressible ankle indices, toe-brachial index 0.50, toe pressure 55. Adequacy for healing not established; vascular evaluation requested."],
+            ["Antibiotics", "Ongoing, deep-culture directed and renally dosed. Total duration not yet finalized; osteomyelitis remains unconfirmed."],
+            ["Offloading", "UNRESOLVED for home. Documented unsafe offloading and stairs; supervised offloading required."],
+            ["Follow-up", "Pending. Outpatient vascular and wound-care follow-up to be arranged."],
+        ]),
+        ("section", "QUESTIONS FOR THE SPECIALIST"),
+        ("bullets", [
+            "Is current perfusion adequate for this forefoot wound to heal, or is further perfusion testing indicated?",
+            "Is revascularization indicated to support healing or to reduce limb-loss risk?",
+        ]),
+        ("body", "The narrative does not assert resolution the chart does not support; each open item is carried as open in the table above."),
+        ("section", "FLAGS FOR PHYSICIAN BEFORE SIGN"),
+        ("bullets", ["Confirm the antibiotic course statement and follow-up arrangements before signing."]),
+        ("sig", "Electronically signed by Marisol Everet, MD | Hospital Medicine | 06/08/2026 1400"),
+    ])
+
+
+def OV09():
+    return ("golden-OV09-v1.docx", "ed", "SAFETY EVENT ROOT CAUSE REVIEW", "06/11/2026", [
+        ("title", "MISSED-OFFLOADING SAFETY REVIEW"),
+        ("filing", "Author: Patient Safety Review | Date of Service: 06/11/2026 1000 | Status: Draft for review"),
+        ("section", "EVENT"),
+        ("body", "During the admission, left forefoot offloading was not consistently maintained when the patient ambulated, and occupational therapy documented that offloading teach-back was not achieved."),
+        ("section", "ATTRIBUTION (MULTIFACTORIAL, SYSTEM-LEVEL)"),
+        ("bullets", [
+            "Device availability and timing: the offloading device was not consistently in place at the bedside or during ambulation per the nursing flowsheet.",
+            "Order and communication: the offloading requirement was not reliably carried into every shift and transfer.",
+            "Teaching and language access: offloading teach-back was not achieved, and teaching required interpreter support that was not consistently coordinated with the night-working daughter.",
+            "Home-layout factors: the second-floor walk-up and limited caregiver availability raise the difficulty of sustained offloading.",
+        ]),
+        ("body", "The event is not attributable to patient nonadherence alone. The contributors are system and process factors documented in the chart."),
+        ("section", "PREVENTION"),
+        ("bullets", [
+            "Ensure the offloading device is at the bedside and applied whenever the patient is up, with an explicit standing order and shift-to-shift handoff.",
+            "Complete interpreter-supported offloading teach-back with the patient and the daughter before discharge, and document return demonstration.",
+            "Reinforce offloading on each nursing shift and confirm home equipment and support before discharge.",
+        ]),
+        ("section", "FLAGS FOR REVIEWER"),
+        ("bullets", ["Confirm the contributing-factor list against the full event timeline before finalizing."]),
+        ("sig", "Prepared by Patient Safety Review | 06/11/2026 1000"),
+    ])
+
+
+def OV10():
+    return ("golden-OV10-v1.docx", "ed", "DISCHARGE INSTRUCTIONS", "05/22/2026", [
+        ("title", "DISCHARGE INSTRUCTIONS"),
+        ("filing", "Author: Marisol Everet, MD - Hospital Medicine | Date of Service: 05/22/2026 1000 | Status: Draft for physician sign"),
+        ("section", "YOUR DIAGNOSIS"),
+        ("body", "You were treated in the hospital for a serious infection of your left foot related to your diabetes."),
+        ("section", "OFFLOADING AND ACTIVITY (COMPLETED FROM THE CHART)"),
+        ("bullets", [
+            "Keep all weight off the front of your left foot. Wear the offloading device whenever you are standing or walking.",
+            "Only walk short distances with help and supervision. Do not walk on the foot without the device.",
+            "Avoid stairs unless someone is helping you. Your therapy team found stairs are not yet safe for you alone.",
+            "This is a supervised, limited-activity plan, not a return to normal walking. Follow it until your team tells you otherwise.",
+        ]),
+        ("section", "WOUND CARE"),
+        ("body", "Keep your dressing clean and dry. A nurse will help arrange your dressing changes; the wound needs skilled dressing changes for now."),
+        ("section", "MEDICATIONS"),
+        ("body", "Take your medications as listed in your reconciled medication list. Do not restart the medicines that were held until your kidney or primary doctor tells you to. Your antibiotic plan will be confirmed before you leave."),
+        ("section", "FOLLOW-UP AND WHEN TO SEEK CARE"),
+        ("body", "Keep your follow-up visits, which are being arranged. Call your care team or seek care for fever, chills, increased foot redness, drainage, odor, or feeling very unwell."),
+        ("section", "FLAGS FOR PHYSICIAN BEFORE SIGN"),
+        ("bullets", [
+            "Items still being arranged (final antibiotic, follow-up appointments) are left open, not stated as completed.",
+            "Provide the final instructions in Spanish.",
+        ]),
+        ("sig", "Electronically signed by Marisol Everet, MD | Hospital Medicine | 05/22/2026 1000"),
+    ])
+
+
+GOLDENS = {"task1": OV01, "task2": OV02, "task3": OV03, "task4": OV04, "task5": OV05,
+           "task6": OV06, "task7": OV07, "task8": OV08, "task9": OV09, "task10": OV10}
 
 if __name__ == "__main__":
     for task, fn in GOLDENS.items():

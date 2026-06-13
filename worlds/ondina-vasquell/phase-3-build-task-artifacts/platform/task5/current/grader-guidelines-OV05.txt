@@ -1,0 +1,14 @@
+TASK CONTEXT
+A pharmacy benefit manager rejected the planned discharge antibiotic and offered formulary-preferred substitutes. The deliverable is a pharmacist-to-prescriber response choosing among substitute, appeal, hold, or exception with rationale. Sources are the full chart (renal trend, cultures, allergy, infectious disease plan) and the external rejection notice (E1-T5).
+
+GOLDEN REFERENCE
+Score the response against the uploaded golden, golden-OV05-v1.docx. The golden is the benchmark; credit a response that reaches the same dispositions with different wording, ordering, or format. Do not penalize a response for anything the golden itself does or does not do.
+
+MUST BE PRESENT AND CORRECT
+The formulary-preferred substitute is declined with the specific reason: trimethoprim-sulfamethoxazole is contraindicated by the documented sulfa allergy, and an oral fluoroquinolone is not culture-directed and carries renal and other cautions. A renally appropriate, allergy-safe, culture-directed alternative or a formulary-exception appeal is proposed. Dosing reflects current renal function. The deep-tissue culture is used rather than the superficial swab.
+
+ACCEPTABLE VARIATION
+Proposing a specific safe alternative or a formulary exception are both acceptable. Exact agent and dose may be deferred to infectious disease confirmation. Format may vary. Wording differences are not errors. Answers outside the chart-supported set are fabrication even when defensibly argued.
+
+PENALIZE FOR
+Accepting the unsafe formulary substitute. Overlooking the sulfa allergy. Carrying admission renal dosing forward. Letting the superficial swab drive the choice. Choosing to hold effective therapy when a safe alternative or exception is available.

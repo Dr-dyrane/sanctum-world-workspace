@@ -1,0 +1,14 @@
+TASK CONTEXT
+Ondina Vasquell, a 68-year-old woman admitted 05/16/2026 with a limb-threatening left diabetic foot infection, is being coded before the claim drops. The deliverable is a physician coding attestation responding to the preliminary health-information worksheet, one line per diagnosis with principal diagnosis, present-on-admission status, and supported code family. Sources are the full chart and the external preliminary coding worksheet (E1-T2), which is severity-forward.
+
+GOLDEN REFERENCE
+Score the response against the uploaded golden, golden-OV02-v1.docx. The golden is the benchmark; credit a response that reaches the same dispositions with different wording, ordering, or format. Do not penalize a response for anything the golden itself does or does not do.
+
+MUST BE PRESENT AND CORRECT
+The diabetic foot ulcer with deep soft tissue infection or cellulitis family is selected as principal, supported by the ED, podiatry, and wound notes. Acute osteomyelitis is NOT attested as established or present on admission, because the imaging is equivocal, the debrided specimen contains no bone, and infectious disease did not sign it. The pressure-injury family is not coded. Documented diabetes, chronic kidney disease with acute kidney injury, anemia, and peripheral arterial disease are retained. Present-on-admission status is assigned per documented onset.
+
+ACCEPTABLE VARIATION
+Line-by-line or short-table format is acceptable. Exact code characters and final sequencing may be deferred to the coder and official guidelines. Retaining or not naming a given supported secondary code is acceptable if no unsupported code is added. Reasonable wording differences are not errors. Answers outside the chart-supported set are fabrication even when defensibly argued.
+
+PENALIZE FOR
+Selecting the pressure-injury family for this neuropathic and ischemic diabetic foot ulcer. Attesting acute osteomyelitis as established or present on admission. Upcoding to an unsupported severity tier or DRG. Dropping documented supported comorbidities. Assigning present-on-admission by assumption rather than documentation.
