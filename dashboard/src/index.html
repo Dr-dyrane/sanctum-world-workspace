@@ -137,19 +137,20 @@
       </div>
     </section>
 
-    <!-- Compact guide -->
-    <section id="guide" class="px-3 sm:px-6 max-w-5xl mx-auto pb-6 sm:pb-8" aria-label="How to read this dashboard">
-      <details class="native-details surf p-4 sm:p-5" style="border-radius:var(--r-card)">
-        <summary class="flex items-center justify-between gap-3 text-[14px] font-medium">
-          <span>How scoring works</span>
-          <i data-lucide="chevron-down" class="chev" style="width:16px;height:16px"></i>
-        </summary>
-        <div class="mt-4 grid sm:grid-cols-3 gap-4 text-[13.5px] leading-relaxed" style="color:var(--fg-soft)">
-          <p>A <button class="term" data-g="pilot">pilot</button> is ten scored attempts on one task.</p>
-          <p>A <button class="term" data-g="floor">floor</button> is a real miss. A <button class="term" data-g="catcher">catcher</button> proves the ideal answer is reachable.</p>
-          <p>Low means harder. Hard is useful only when the task stays fair.</p>
+    <!-- Failure-family signal strip -->
+    <section id="signalPanel" class="px-3 sm:px-6 max-w-5xl mx-auto pb-6 sm:pb-8" aria-label="Failure signal families">
+      <div class="signal-panel surf p-4 sm:p-5" style="border-radius:var(--r-card)">
+        <div class="flex items-center justify-between gap-3">
+          <div>
+            <p class="font-mono text-[10px] uppercase" style="color:var(--fg-faint)">Signal families</p>
+            <h2 id="signalHeadline" class="text-[18px] sm:text-[20px] font-semibold mt-1">Where the model breaks</h2>
+          </div>
+          <button id="openFirstSignal" class="btn-pill surf-2 px-3 py-2 text-[12px] font-medium inline-flex items-center gap-1.5" style="border-radius:var(--r-pill)">
+            Focus <i data-lucide="arrow-right" style="width:14px;height:14px"></i>
+          </button>
         </div>
-      </details>
+        <div id="signalStrip" class="signal-strip mt-4"></div>
+      </div>
     </section>
 
     <!-- ═══ CONTROLS ═══ -->
@@ -216,6 +217,22 @@
       <i data-lucide="navigation" id="fabIcon" style="width:22px;height:22px"></i>
     </button>
   </div>
+
+  <!-- Task focus sheet -->
+  <div id="focusOverlay" class="focus-overlay" hidden></div>
+  <aside id="focusSheet" class="focus-sheet" role="dialog" aria-modal="true" aria-labelledby="focusTitle" hidden>
+    <div class="focus-handle" aria-hidden="true"></div>
+    <div class="focus-head">
+      <div class="min-w-0">
+        <p id="focusEyebrow" class="font-mono text-[11px] uppercase" style="color:var(--fg-faint)"></p>
+        <h2 id="focusTitle" class="text-[24px] sm:text-[30px] font-semibold leading-tight mt-1"></h2>
+      </div>
+      <button id="focusClose" class="btn-icon surf-2 w-10 h-10 grid place-items-center" style="border-radius:var(--r-pill)" aria-label="Close task focus">
+        <i data-lucide="x" style="width:18px;height:18px"></i>
+      </button>
+    </div>
+    <div id="focusBody" class="focus-body"></div>
+  </aside>
 
   <!-- Accessible data table (screen-reader alternative) -->
   <table class="sr-only" aria-label="KM suite KM01 to KM10 full spread data">

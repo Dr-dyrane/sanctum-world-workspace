@@ -276,61 +276,31 @@
       const tagColor = band.id==='pending' ? 'var(--fg-faint)' : band.id==='soft' ? 'var(--accent-a)' : band.id==='mid' ? 'var(--accent-b)' : 'var(--warn)';
       const meanUnit = U.hasMean(t) ? '<span class="text-[15px]" style="color:var(--fg-faint)">%</span>' : '';
       const scoreLabel = U.hasMean(t) ? U.fmtMean(t) : 'TBD';
+      const fam = CONFIG.failureFamilies[t.family] || { label:'Clinical signal' };
       return `
-      <article class="card-inner card surf w-full px-4 sm:px-5 md:px-6 py-4 sm:py-5" style="border-radius:var(--r-card);--card-bar:${barColor}" tabindex="-1">
-        <div class="flex flex-col sm:flex-row sm:items-start gap-4">
+      <article class="card-inner card surf w-full px-4 sm:px-5 md:px-6 py-4 sm:py-5" style="border-radius:var(--r-card);--card-bar:${barColor}" tabindex="-1" data-open-task="${t.id}">
+        <div class="flex flex-col sm:flex-row sm:items-center gap-4">
           <div class="flex items-start gap-4 min-w-0 flex-1">
             <div class="task-index">${String(t.position).padStart(2,'0')}</div>
             <div class="min-w-0">
               <div class="flex flex-wrap items-center gap-2">
                 <span class="font-mono text-[12px] font-bold accent-text">${t.id}</span>
                 <span class="surf-2 px-3 py-1.5 text-[10px] font-mono uppercase inline-flex items-center gap-1.5" style="border-radius:var(--r-pill);color:var(--fg-soft)"><span class="pill-dot ${t.stage}"></span>${CONFIG.cats[t.stage].pill}</span>
-                ${C.qualityBadge(t)}
+                <span class="font-mono text-[10px] uppercase" style="color:var(--fg-faint)">${U.esc(fam.label)}</span>
               </div>
               <h2 class="text-[19px] sm:text-[22px] font-semibold mt-2 leading-tight text-balance" style="max-width:min(34ch,100%)">${U.esc(t.name)}</h2>
-              <p class="mt-2 text-[14px] leading-relaxed" style="color:var(--fg-soft);max-width:min(68ch,100%)">${U.esc(t.plain)}</p>
+              <div class="mt-3 flex flex-wrap gap-2" style="max-width:260px">${C.dots(t)}</div>
             </div>
           </div>
-          <div class="score-capsule">
-            <div class="font-mono text-[10px] uppercase mb-1" style="color:var(--fg-faint)">${U.term('mean','Mean')}</div>
-            <div class="font-mono font-bold text-[28px] leading-none" style="color:${tagColor}">${scoreLabel}${meanUnit}</div>
-            <div class="font-mono text-[10px] mt-1 uppercase" style="color:${tagColor}">${band.tag}</div>
-          </div>
-        </div>
-
-        <div class="mt-4 grid lg:grid-cols-[1fr_auto] gap-4 sm:gap-5 items-end">
-          <div class="min-w-0">
-            ${C.signal(t)}
-            <div class="mt-4 flex flex-wrap gap-2" style="max-width:260px">${C.dots(t)}</div>
-            ${C.countsStrip(t)}
-          </div>
-          <button class="expandBtn btn-pill surf-2 px-4 py-2 flex items-center gap-2 text-[12px] font-medium justify-center" style="border-radius:var(--r-pill)" aria-expanded="false">
-            <span>Details</span>
-            <i data-lucide="chevron-down" class="chev" style="width:14px;height:14px;transition:transform .24s ease"></i>
-          </button>
-        </div>
-
-        <div class="reveal">
-          <div class="pt-6">
-            ${C.stepper(t)}
-            <div class="mt-6 grid sm:grid-cols-3 gap-5">
-              <div>
-                <div class="font-mono text-[10px] uppercase mb-2" style="color:var(--fg-faint)">Workflow</div>
-                <div class="text-[14px] font-medium leading-snug">${U.esc(t.workflow)}</div>
-              </div>
-              <div>
-                <div class="font-mono text-[10px] uppercase mb-2" style="color:var(--fg-faint)">${U.term('review','Reviewer')}</div>
-                <div class="text-[14px] font-medium">${U.esc(t.reviewer)}</div>
-              </div>
-              <div>${C.reachLine(t)}</div>
+          <div class="flex items-center gap-3 sm:ml-auto">
+            <div class="score-capsule">
+              <div class="font-mono text-[10px] uppercase mb-1" style="color:var(--fg-faint)">${U.term('mean','Mean')}</div>
+              <div class="font-mono font-bold text-[28px] leading-none" style="color:${tagColor}">${scoreLabel}${meanUnit}</div>
+              <div class="font-mono text-[10px] mt-1 uppercase" style="color:${tagColor}">${band.tag}</div>
             </div>
-            <p class="mt-6 text-[14px] leading-relaxed font-medium" style="max-width:min(66ch,100%)">
-              <span class="accent-text font-bold">Verdict: </span>${U.esc(t.verdict)}
-            </p>
-            <p class="mechanism-text mt-3 text-[13px] leading-relaxed" style="color:var(--fg-soft);max-width:min(62ch,100%)">
-              <span class="font-semibold">${U.term('mechanism','Mechanism')}: </span>${U.esc(t.mechanism)}
-            </p>
-            ${C.runDetail(t)}
+            <button class="openTaskBtn btn-icon surf-2 w-10 h-10 grid place-items-center open-task" style="border-radius:var(--r-pill)" aria-label="Open ${U.esc(t.id)} focus">
+              <i data-lucide="arrow-up-right" style="width:17px;height:17px"></i>
+            </button>
           </div>
         </div>
       </article>`;
@@ -556,6 +526,144 @@
     });
   }
 
+  /* ---------- 7.5.5 Focus sheet ---------- */
+  const Focus = (function(){
+    const overlay = document.getElementById('focusOverlay');
+    const sheet = document.getElementById('focusSheet');
+    const closeBtn = document.getElementById('focusClose');
+    const eyebrow = document.getElementById('focusEyebrow');
+    const title = document.getElementById('focusTitle');
+    const body = document.getElementById('focusBody');
+    let activeId = null;
+
+    function taskById(id){ return tasks.find(t=>t.id === id); }
+    function metric(label, value, hint=''){
+      return `<div class="focus-metric">
+        <div class="font-mono text-[10px] uppercase" style="color:var(--fg-faint)">${label}</div>
+        <div class="mt-2 text-[22px] font-bold leading-none">${value}</div>
+        ${hint ? `<div class="mt-2 text-[12px] leading-snug" style="color:var(--fg-soft)">${hint}</div>` : ''}
+      </div>`;
+    }
+    function content(t){
+      const k = U.counts(t);
+      const band = U.meanBand(t.mean);
+      const fam = CONFIG.failureFamilies[t.family] || { label:'Clinical signal', plain:'' };
+      const score = U.hasMean(t) ? U.fmtMean(t) + '%' : 'TBD';
+      const floorLine = k.confirmed ? `${k.floors} floor${k.floors === 1 ? '' : 's'}` : 'Not piloted';
+      return `
+        <div class="focus-metric-grid">
+          ${metric('Mean', score, band.tag)}
+          ${metric('Status', CONFIG.cats[t.stage].label, CONFIG.quality[t.quality].label)}
+          ${metric('Signal', floorLine, `${k.sub70} sub-70`)}
+        </div>
+
+        <div class="focus-section">
+          <div class="font-mono text-[10px] uppercase mb-2" style="color:var(--fg-faint)">What this tests</div>
+          <p class="text-[15px] leading-relaxed font-medium">${U.esc(t.plain)}</p>
+        </div>
+
+        <div class="focus-section">
+          <div class="font-mono text-[10px] uppercase mb-2" style="color:var(--fg-faint)">Failure family</div>
+          <p class="text-[14px] leading-relaxed"><b>${U.esc(fam.label)}.</b> <span style="color:var(--fg-soft)">${U.esc(fam.plain || '')}</span></p>
+        </div>
+
+        <div class="focus-section">
+          <div class="font-mono text-[10px] uppercase mb-2" style="color:var(--fg-faint)">Verdict</div>
+          <p class="text-[14px] leading-relaxed">${U.esc(t.verdict)}</p>
+        </div>
+
+        <div class="focus-section">
+          <div class="font-mono text-[10px] uppercase mb-2" style="color:var(--fg-faint)">Mechanism</div>
+          <p class="text-[13.5px] leading-relaxed" style="color:var(--fg-soft)">${U.esc(t.mechanism)}</p>
+        </div>
+
+        <div class="focus-section">
+          ${C.stepper(t)}
+          <div class="mt-5 grid sm:grid-cols-2 gap-4">
+            <div>
+              <div class="font-mono text-[10px] uppercase mb-2" style="color:var(--fg-faint)">Workflow</div>
+              <div class="text-[14px] font-medium leading-snug">${U.esc(t.workflow)}</div>
+            </div>
+            <div>
+              <div class="font-mono text-[10px] uppercase mb-2" style="color:var(--fg-faint)">Reviewer</div>
+              <div class="text-[14px] font-medium">${U.esc(t.reviewer)}</div>
+            </div>
+          </div>
+          <div class="mt-5">${C.reachLine(t)}</div>
+        </div>
+
+        <div class="focus-section">
+          <div class="font-mono text-[10px] uppercase mb-2" style="color:var(--fg-faint)">Pilot runs</div>
+          ${C.runDetail(t)}
+        </div>
+      `;
+    }
+    function open(id){
+      const t = taskById(id);
+      if (!t) return;
+      activeId = id;
+      const fam = CONFIG.failureFamilies[t.family] || { label:'Clinical signal' };
+      eyebrow.textContent = `${t.id} · ${fam.label}`;
+      title.textContent = t.name;
+      body.innerHTML = content(t);
+      overlay.hidden = false;
+      sheet.hidden = false;
+      document.body.style.overflow = 'hidden';
+      requestAnimationFrame(()=>{
+        overlay.classList.add('open');
+        sheet.classList.add('open');
+        lucide.createIcons();
+        closeBtn.focus({ preventScroll:true });
+      });
+    }
+    function close(){
+      overlay.classList.remove('open');
+      sheet.classList.remove('open');
+      document.body.style.overflow = '';
+      setTimeout(()=>{
+        overlay.hidden = true;
+        sheet.hidden = true;
+        activeId = null;
+      }, reduceMotion ? 0 : 320);
+    }
+    overlay.addEventListener('click', close);
+    closeBtn.addEventListener('click', close);
+    document.addEventListener('keydown', e=>{
+      if (e.key === 'Escape' && activeId) close();
+    });
+    return { open, close };
+  })();
+
+  /* ---------- 7.5.6 Failure-family signal strip ---------- */
+  function renderSignalStrip(){
+    const strip = document.getElementById('signalStrip');
+    const headline = document.getElementById('signalHeadline');
+    const first = document.getElementById('openFirstSignal');
+    const groups = tasks.reduce((acc,t)=>{
+      const key = t.family || 'closure';
+      (acc[key] ||= []).push(t);
+      return acc;
+    }, {});
+    const entries = Object.entries(groups).sort((a,b)=> b[1].length - a[1].length || a[1][0].position - b[1][0].position);
+    headline.textContent = tasks.every(t=>t.stage === 'planned') ? 'What this world is built to test' : 'Where the model breaks';
+    strip.innerHTML = entries.map(([key,items], idx)=>{
+      const fam = CONFIG.failureFamilies[key] || { label:'Clinical signal', plain:'' };
+      const ids = items.map(t=>t.id).join(', ');
+      return `<button class="signal-chip" data-focus="${items[0].id}" style="transition-delay:${idx*45}ms" title="${U.esc(fam.plain || '')}">
+        <span class="count">${items.length}</span>
+        <span class="label">${U.esc(fam.label)}</span>
+        <span class="ids">${U.esc(ids)}</span>
+      </button>`;
+    }).join('');
+    strip.querySelectorAll('[data-focus]').forEach(btn=>{
+      btn.addEventListener('click', ()=> Focus.open(btn.dataset.focus));
+    });
+    first.onclick = ()=> {
+      const id = entries[0]?.[1]?.[0]?.id;
+      if (id) Focus.open(id);
+    };
+  }
+
   /* ---------- 7.6 Cards (re-renderable) ---------- */
   function renderCards(){
     const wrap = document.getElementById('cards');
@@ -584,24 +692,17 @@
          <td>${runText}</td>
          <td>${CONFIG.cats[t.stage].label}</td><td>${CONFIG.quality[t.quality].label}</td></tr>`);
     });
-
-    /* run-detail disclosure, persisted per session */
-    function setCardOpen(card, btn, open){
-      card.querySelector('.reveal').classList.toggle('open', open);
-      btn.setAttribute('aria-expanded', open);
-      btn.querySelector('.chev').style.transform = open ? 'rotate(180deg)' : 'rotate(0)';
-    }
-    wrap.querySelectorAll('.expandBtn').forEach(btn=>{
-      const card = btn.closest('article');
-      const id = card.closest('.km-card').dataset.id;
-      btn.addEventListener('click', ()=>{
-        const open = !card.querySelector('.reveal').classList.contains('open');
-        setCardOpen(card, btn, open);
-        const ex = new Set(KMState.get('expanded'));
-        open ? ex.add(id) : ex.delete(id);
-        KMState.set('expanded', [...ex]);
+    wrap.querySelectorAll('[data-open-task]').forEach(card=>{
+      card.addEventListener('click', e=>{
+        if (e.target.closest('.term')) return;
+        Focus.open(card.dataset.openTask);
       });
-      if (KMState.get('expanded').includes(id)) setCardOpen(card, btn, true);
+      card.addEventListener('keydown', e=>{
+        if (e.key === 'Enter' || e.key === ' '){
+          e.preventDefault();
+          Focus.open(card.dataset.openTask);
+        }
+      });
     });
   }
 
@@ -1186,6 +1287,7 @@
     renderRadial();
     renderCards();
     renderControls();
+    renderSignalStrip();
     renderSummary();
     Fab.render();
     bindObservers();
