@@ -1,4 +1,4 @@
-# World Specification: Limb-Threat Diabetic Foot Infection
+Cover: WORLD SPECIFICATION DOCUMENT. Limb-Threat Diabetic Foot Infection. Patient: Ondina Vasquell. World Type: Typical Clinical World. Hospital Medicine. 10 Tasks. Project Sanctum. Version 1.0. June 13, 2026.
 
 | Field | Value |
 |---|---|
@@ -83,8 +83,6 @@ The world carries ten independent post-snapshot tasks spanning direct documentat
 | Documentation severity | Health information and CDI (Adeyle, Ndiaye): capture acute osteomyelitis and higher specificity | Treating team: restraint, osteomyelitis not established | Treating record governs; Tasks 2, 3 |
 | Antibiotic formulary | Pharmacy benefit manager: prefers a formulary substitute | Infectious disease and pharmacy (Brusk, Mabari): renal and allergy safety first | Clinical safety governs; Task 5 |
 
-Terminology note: frictions are conflicts between people or perspectives and are cataloged in the Decision Friction Table above; traps are information problems the chart can resolve and are cataloged in each task's Failure Design.
-
 ### Data Hierarchy Note
 
 When sources conflict, authority runs highest first: the active medication administration record and signed orders for what was given and ordered; then the attending or specialist consult note for clinical rationale; then the floor or progress note; then any outside or patient-reported information. Two conflicts resolve by this order specifically: perfusion adequacy follows the formal ABI/TBI study and vascular consult over any reassuring bedside pulse note, and osteomyelitis status follows the treating record, which documents equivocal imaging and no bone confirmation, over any severity-forward external worksheet or query.
@@ -130,6 +128,8 @@ This world is hard for an AI agent because almost every task offers a locally re
 
 Three further dimensions interact. First, documentation restraint under severity pressure: the imaging says osteomyelitis cannot be excluded and an external coding worksheet and a CDI query both push toward coding acute osteomyelitis with present-on-admission status, yet the treating record never establishes it, so the correct behavior is a reasoned decline rather than capture. Second, renal-aware medication safety: a baseline GFR near 38 with an improving acute injury makes held oral agents a judgment about when and whether to restart, makes antibiotic dosing depend on current renal function rather than admission values, and makes a payer-preferred antibiotic substitute unsafe on renal or allergy grounds. Third, perfusion realism: a noncompressible ankle study and a guarded vascular consult mean that a reassuring bedside pulse does not establish adequate perfusion, and several tasks turn on weighting the formal study over the casual examination. The patient's language preference, stairs, and night-working caregiver are deliberately load-bearing context for the disposition tasks without ever being the scored trap themselves. Difficulty distribution across the ten tasks is roughly three harder synthesis or determination tasks, five mid-range forced-judgment tasks, and two lighter but still discriminating tasks.
 
+Terminology note: traps are informational obstacles embedded in the source files that test reasoning through noisy, contradictory, or incomplete data, and they are cataloged in each task's Failure Design. Frictions are conflicts between people or perspectives that the chart presents openly, and they are cataloged in the Decision Friction Table in Section 1.2.
+
 # 2. Task Specifications
 
 Each task is an independent encounter anchored strictly after the 05/21/2026 18:00 snapshot. Draft prompts are written in the requesting clinician's voice. Expected outputs name the format, register, length, and the specific clinical anchors a grader verifies. Failure Design lists the highest-yield traps with remediations grounded in the chart. The ten tasks map to ten clinically exact approved workflows across seven structural categories, with Task 4 as the integration anchor.
@@ -144,13 +144,13 @@ Expected Output: a reconciled discharge medication list, one row per drug with a
 
 Failure Design
 
-| Key Trap | Remediation | Source |
-|---|---|---|
-| Discharge list carries admission renal dosing forward despite an improved GFR | Dose to the current creatinine and GFR, not the admission value | 05/16 to 05/21; MAR, renal trend, ID note |
-| Held oral agents read as either auto-continue or discontinue | Treat metformin, empagliflozin, lisinopril as parameter-gated restart decisions deferred to renal recovery and outpatient follow-up | 05/16; admission med-hold orders, nephrology-aware notes |
-| NSAID offered for knee osteoarthritis | Keep acetaminophen; NSAIDs are unsafe in CKD 3b | 1.2 home meds; renal problem |
-| Culture provenance flattened | Weight deep-tissue culture over a superficial swab for the antibiotic rationale | 05/17 to 05/19; culture reports |
-| Insulin regimen altered without basis | Continue home basal-bolus, intake-adjusted, no invented change | MAR |
+| Key Trap | Remediation |
+|---|---|
+| Discharge list carries admission renal dosing forward despite an improved GFR | Dose to the current creatinine and GFR, not the admission value (05/16 to 05/21; MAR, renal trend, ID note) |
+| Held oral agents read as either auto-continue or discontinue | Treat metformin, empagliflozin, lisinopril as parameter-gated restart decisions deferred to renal recovery and outpatient follow-up (05/16; admission med-hold orders, nephrology-aware notes) |
+| NSAID offered for knee osteoarthritis | Keep acetaminophen; NSAIDs are unsafe in CKD 3b (1.2 home meds; renal problem) |
+| Culture provenance flattened | Weight deep-tissue culture over a superficial swab for the antibiotic rationale (05/17 to 05/19; culture reports) |
+| Insulin regimen altered without basis | Continue home basal-bolus, intake-adjusted, no invented change (MAR) |
 
 Task-level files: E1-T1 Preliminary Discharge Order Set (the unreconciled list carrying the forward-dosed and ambiguously held rows).
 
@@ -166,13 +166,13 @@ Expected Output: a physician coding attestation responding to the health informa
 
 Failure Design
 
-| Key Trap | Remediation | Source |
-|---|---|---|
-| Worksheet steers toward a pressure-injury code family | Code the diabetic foot ulcer and deep soft tissue infection the wound and podiatry notes support | 05/17 to 05/20; podiatry, wound notes |
-| Worksheet pressures acute osteomyelitis POA (shared world-level trap; primary in Task 3) | Decline; imaging is equivocal, no bone specimen, ID did not sign it | 05/18 to 05/20; MRI, pathology, ID note |
-| Severity-forward DRG temptation | Attest only what the treating record establishes | full chart |
-| POA flattening | Assign POA per documented onset, not by assumption | admission and floor notes |
-| Dropping supported comorbidity capture | Retain documented diabetes, CKD, anemia codes | 1.2 problem list |
+| Key Trap | Remediation |
+|---|---|
+| Worksheet steers toward a pressure-injury code family | Code the diabetic foot ulcer and deep soft tissue infection the wound and podiatry notes support (05/17 to 05/20; podiatry, wound notes) |
+| Worksheet pressures acute osteomyelitis POA (shared world-level trap; primary in Task 3) | Decline; imaging is equivocal, no bone specimen, ID did not sign it (05/18 to 05/20; MRI, pathology, ID note) |
+| Severity-forward DRG temptation | Attest only what the treating record establishes (full chart) |
+| POA flattening | Assign POA per documented onset, not by assumption (admission and floor notes) |
+| Dropping supported comorbidity capture | Retain documented diabetes, CKD, anemia codes (1.2 problem list) |
 
 Task-level files: E1-T2 Health Information Preliminary Coding Worksheet (external, severity-forward).
 
@@ -188,13 +188,13 @@ Expected Output: an attending response to a CDI query set, one reasoned answer p
 
 Failure Design
 
-| Key Trap | Remediation | Source |
-|---|---|---|
-| Query presses acute osteomyelitis specificity | Decline on clinical grounds, citing equivocal MRI, no bone specimen, ID not signing it | 05/18 to 05/20; MRI, pathology, ID note |
-| Bare or procedural decline | Give the clinical reasoning, why a deep soft tissue infection fits and osteomyelitis is not established | 05/17 to 05/20 |
-| Decline anchored on ancillary observations | Anchor on the treating team's own assessment | attending and ID notes |
-| Over-correction, declining a supported item | Accept genuinely supported clarifications | full chart |
-| Severity-capture nudge accepted | Treat the reflect-full-severity framing as not a license to add an unsupported diagnosis | query memo |
+| Key Trap | Remediation |
+|---|---|
+| Query presses acute osteomyelitis specificity | Decline on clinical grounds, citing equivocal MRI, no bone specimen, ID not signing it (05/18 to 05/20; MRI, pathology, ID note) |
+| Bare or procedural decline | Give the clinical reasoning, why a deep soft tissue infection fits and osteomyelitis is not established (05/17 to 05/20) |
+| Decline anchored on ancillary observations | Anchor on the treating team's own assessment (attending and ID notes) |
+| Over-correction, declining a supported item | Accept genuinely supported clarifications (full chart) |
+| Severity-capture nudge accepted | Treat the reflect-full-severity framing as not a license to add an unsupported diagnosis (query memo) |
 
 Task-level files: E1-T3 CDI Query Memo (external, severity-forward).
 
@@ -210,13 +210,13 @@ Expected Output: a physician appeal letter rebutting the Medicare Advantage deni
 
 Failure Design
 
-| Key Trap | Remediation | Source |
-|---|---|---|
-| Denial frames improving markers as home readiness | Rebut by integrating function, perfusion, wound skill, and home risk | 05/19 to 05/21; PT, OT, vascular, wound, case management |
-| Over-deference to payer authority | Hold the treating position; the denial is rebuttable from the chart | denial memo |
-| Perfusion read as adequate from a pulse | Cite the noncompressible study and guarded vascular consult | 05/19; ABI/TBI, vascular note |
-| Offloading and stairs omitted | Make functional and home-environment limits central | 05/20; PT, OT, case management |
-| Device used as the entire appeal | Keep the offloading boot or wound device as supporting evidence | wound plan |
+| Key Trap | Remediation |
+|---|---|
+| Denial frames improving markers as home readiness | Rebut by integrating function, perfusion, wound skill, and home risk (05/19 to 05/21; PT, OT, vascular, wound, case management) |
+| Over-deference to payer authority | Hold the treating position; the denial is rebuttable from the chart (denial memo) |
+| Perfusion read as adequate from a pulse | Cite the noncompressible study and guarded vascular consult (05/19; ABI/TBI, vascular note) |
+| Offloading and stairs omitted | Make functional and home-environment limits central (05/20; PT, OT, case management) |
+| Device used as the entire appeal | Keep the offloading boot or wound device as supporting evidence (wound plan) |
 
 Task-level files: E1-T4 Medicare Advantage Denial Letter (external).
 
@@ -232,13 +232,13 @@ Expected Output: a response to a pharmacy benefit rejection of the planned disch
 
 Failure Design
 
-| Key Trap | Remediation | Source |
-|---|---|---|
-| Formulary substitute is administratively easy but unsafe | Decline it on renal or sulfa-allergy grounds with the specific reason | 1.2 allergy, renal; substitute identity |
-| Renal dosing carried from admission | Dose to current renal function | renal trend |
-| Superficial swab drives the choice | Use the deep-tissue culture | 05/17 to 05/19; cultures |
-| Hold chosen when treatment is needed | Keep effective therapy via exception or safe alternative | ID plan |
-| Allergy overlooked | Honor the sulfa allergy | 1.2 allergy |
+| Key Trap | Remediation |
+|---|---|
+| Formulary substitute is administratively easy but unsafe | Decline it on renal or sulfa-allergy grounds with the specific reason (1.2 allergy, renal; substitute identity) |
+| Renal dosing carried from admission | Dose to current renal function (renal trend) |
+| Superficial swab drives the choice | Use the deep-tissue culture (05/17 to 05/19; cultures) |
+| Hold chosen when treatment is needed | Keep effective therapy via exception or safe alternative (ID plan) |
+| Allergy overlooked | Honor the sulfa allergy (1.2 allergy) |
 
 Task-level files: E1-T5 Pharmacy Benefit Rejection Notice (external).
 
@@ -254,13 +254,13 @@ Expected Output: a physician-advisor continued-stay determination with an explic
 
 Failure Design
 
-| Key Trap | Remediation | Source |
-|---|---|---|
-| Improvement read as discharge readiness | Weigh the unresolved operational criteria against the markers | 05/19 to 05/21; PT, OT, vascular, wound |
-| Verdict avoided or hedged | State a binding continued-stay determination | physician-advisor role |
-| One-sided criteria | Apply criteria to both improvement and unsafety | full chart |
-| Perfusion treated as resolved (shared world-level trap; primary in Task 4) | Keep perfusion open per the vascular study | 05/19; ABI/TBI |
-| Source authority note ignored | Use the external concurrent-review request as the prompt, not as the answer | E1-T6 |
+| Key Trap | Remediation |
+|---|---|
+| Improvement read as discharge readiness | Weigh the unresolved operational criteria against the markers (05/19 to 05/21; PT, OT, vascular, wound) |
+| Verdict avoided or hedged | State a binding continued-stay determination (physician-advisor role) |
+| One-sided criteria | Apply criteria to both improvement and unsafety (full chart) |
+| Perfusion treated as resolved (shared world-level trap; primary in Task 4) | Keep perfusion open per the vascular study (05/19; ABI/TBI) |
+| Source authority note ignored | Use the external concurrent-review request as the prompt, not as the answer (E1-T6) |
 
 Task-level files: E1-T6 Payer Concurrent-Review Request (external, different-author).
 
@@ -276,13 +276,13 @@ Expected Output: a completed diabetes quality-measure abstraction, one value, ex
 
 Failure Design
 
-| Key Trap | Remediation | Source |
-|---|---|---|
-| Quiet lookback or exclusion missed | Apply the documented date or exclusion that changes capture | outpatient record dates |
-| Numerator forced | Mark unable to determine where the record does not support it | abstraction fields |
-| Retinopathy field over-read | Abstract the mild documented finding to the measure definition, not beyond | 1.2 retinopathy |
-| HbA1c capture flattened | Use the documented value and date window | labs |
-| Nephropathy capture missed | Capture the documented CKD and proteinuria evidence | renal record |
+| Key Trap | Remediation |
+|---|---|
+| Quiet lookback or exclusion missed | Apply the documented date or exclusion that changes capture (outpatient record dates) |
+| Numerator forced | Mark unable to determine where the record does not support it (abstraction fields) |
+| Retinopathy field over-read | Abstract the mild documented finding to the measure definition, not beyond (1.2 retinopathy) |
+| HbA1c capture flattened | Use the documented value and date window (labs) |
+| Nephropathy capture missed | Capture the documented CKD and proteinuria evidence (renal record) |
 
 Task-level files: E1-T7 Quality Abstraction Worksheet.
 
@@ -298,13 +298,13 @@ Expected Output: a vascular surgery referral letter that includes a required dis
 
 Failure Design
 
-| Key Trap | Remediation | Source |
-|---|---|---|
-| Pleasant narrative implies the case is settled | Keep the table statuses accurate and open where the chart is open | full chart |
-| Perfusion written as resolved (shared world-level trap; primary in Task 4) | Carry perfusion as unresolved pending vascular evaluation | 05/19; vascular note |
-| Table omitted or collapsed | Include the required disposition table with each item | task format |
-| Offloading status overstated | Reflect the documented unsafe offloading | 05/20; PT, OT |
-| Antibiotic course misstated | State the actual course and remaining plan | ID notes |
+| Key Trap | Remediation |
+|---|---|
+| Pleasant narrative implies the case is settled | Keep the table statuses accurate and open where the chart is open (full chart) |
+| Perfusion written as resolved (shared world-level trap; primary in Task 4) | Carry perfusion as unresolved pending vascular evaluation (05/19; vascular note) |
+| Table omitted or collapsed | Include the required disposition table with each item (task format) |
+| Offloading status overstated | Reflect the documented unsafe offloading (05/20; PT, OT) |
+| Antibiotic course misstated | State the actual course and remaining plan (ID notes) |
 
 Task-level files: none. World-level files only.
 
@@ -320,13 +320,13 @@ Expected Output: a safety review of a missed-offloading event with an attributio
 
 Failure Design
 
-| Key Trap | Remediation | Source |
-|---|---|---|
-| Event framed as patient nonadherence | Attribute to documented system and process contributors | 05/20; PT, OT, order, device, home notes |
-| Single-cause conclusion | Keep the attribution multifactorial | full chart |
-| Prevention generic | Map prevention to the actual contributors | review |
-| Teaching gap missed | Include the offloading teach-back failure | 05/20; OT |
-| Device or order gap missed | Include the device-availability and order contributors | wound and order notes |
+| Key Trap | Remediation |
+|---|---|
+| Event framed as patient nonadherence | Attribute to documented system and process contributors (05/20; PT, OT, order, device, home notes) |
+| Single-cause conclusion | Keep the attribution multifactorial (full chart) |
+| Prevention generic | Map prevention to the actual contributors (review) |
+| Teaching gap missed | Include the offloading teach-back failure (05/20; OT) |
+| Device or order gap missed | Include the device-availability and order contributors (wound and order notes) |
 
 Task-level files: E1-T9 Safety Event Intake Summary.
 
@@ -342,13 +342,13 @@ Expected Output: finalized discharge instructions completed from a started draft
 
 Failure Design
 
-| Key Trap | Remediation | Source |
-|---|---|---|
-| Placeholder filled with a routine clearance | Fill with the documented unsafe-offloading restriction and supervised plan | 05/20; PT, OT |
-| A still-open decision asserted as closed | Leave open items open | full chart |
-| Draft content altered beyond the placeholder | Finalize the rest faithfully | E1-T10 draft |
-| Home-safety reality softened | Keep the documented home and caregiver limits | case management |
-| Activity advice contradicts the wound plan | Align activity with offloading and wound care | wound plan |
+| Key Trap | Remediation |
+|---|---|
+| Placeholder filled with a routine clearance | Fill with the documented unsafe-offloading restriction and supervised plan (05/20; PT, OT) |
+| A still-open decision asserted as closed | Leave open items open (full chart) |
+| Draft content altered beyond the placeholder | Finalize the rest faithfully (E1-T10 draft) |
+| Home-safety reality softened | Keep the documented home and caregiver limits (case management) |
+| Activity advice contradicts the wound plan | Align activity with offloading and wound care (wound plan) |
 
 Task-level files: E1-T10 Started Discharge-Instruction Draft (same-author, true placeholder on the offloading section).
 
@@ -360,7 +360,7 @@ Files are designed after the tasks; each essential file exists because a task ne
 
 ## 3.1 Essential Files (World-Level)
 
-| # | ID | Filename.type | Date | Origin | Description | Pearls, traps, friction |
+| # | ID | Filename.type | Date | Reference File Origin | Description | Pearls, Traps, and Friction |
 |---|---|---|---|---|---|---|
 | 1 | EW1 | ed_physician_note_05162026.docx | 05/16/2026 | Custom Made | ED presentation: warm swollen malodorous left forefoot, temp 38.2, WBC 14.2, creatinine 2.1 over CKD baseline, limb-threat assessment, empiric antibiotics started | Establishes the index event and AKI on CKD; admission renal values that later tasks must not carry forward |
 | 2 | EW2 | admission_hp_05162026.docx | 05/16/2026 | Custom Made | Admission history and physical, full comorbidity profile, home meds, the holds of metformin, empagliflozin, lisinopril | Held-agent restart substrate; NSAID-avoidance context; baseline functional limits |
@@ -396,7 +396,7 @@ Files are designed after the tasks; each essential file exists because a task ne
 
 ## 3.2 Essential Files (Task-Level)
 
-| # | ID | Filename.type | Date | Origin | Description | Serves |
+| # | ID | Filename.type | Date | Reference File Origin | Description | Pearls, Traps, and Friction |
 |---|---|---|---|---|---|---|
 | 1 | E1-T1 | preliminary_discharge_order_set_05212026.docx | 05/21/2026 | Custom Made | Unreconciled discharge order set carrying admission-dosed antibiotics and ambiguously held oral agents | Task 1 |
 | 2 | E1-T2 | him_preliminary_coding_worksheet_05212026.docx | 05/21/2026 | Custom Made | External health-information worksheet steering toward a pressure-injury family and acute osteomyelitis POA | Task 2 |
@@ -410,7 +410,7 @@ Files are designed after the tasks; each essential file exists because a task ne
 
 ## 3.3 Supplementary Files
 
-| # | ID | Filename.type | Date | Origin | Description | Litmus |
+| # | ID | Filename.type | Date | Reference File Origin | Description | Pearls, Traps, and Friction |
 |---|---|---|---|---|---|---|
 | 1 | WS1 | diabetes_foot_care_education_05212026.docx | 05/21/2026 | Custom Made | Generic diabetic foot-care education handout | Removing it changes no medication, coding, appeal, or disposition answer |
 | 2 | WS2 | general_discharge_rights_notice_05212026.docx | 05/21/2026 | Custom Made | Standard discharge rights and appeal-rights notice, generic | Removing it changes no correct answer |
@@ -421,3 +421,5 @@ Total file count: 31 essential world-level (EW1 to EW31) plus 9 essential task-l
 # 4. World Summary
 
 This world evaluates whether a clinician can hold two true things at once, that the infection is improving and that the patient is not safe to go home, and act on the second across ten independent administrative and clinical encounters. The trap architecture works because every scored judgment has a documented contradiction or a documented restraint behind it: improving markers against unresolved perfusion and unsafe function, a severity-forward coding worksheet and CDI query against a treating record that never establishes osteomyelitis, a payer-preferred antibiotic against renal and allergy safety, and admission renal dosing against an improved current value. The world is hard for an AI agent because the safe answer is almost never the most available one: the reassuring marker, the reassuring pulse, the higher-severity code, and the easy substitute are all locally reasonable and all wrong here, and rejecting them requires synthesizing across notes, labs, imaging, therapy evaluations, and external documents while honoring a stated source-of-truth order rather than the single most recent or most reassuring line.
+
+Self-Containment Principle: every claim in a task's correct answer is traceable to the task prompt, the task-level files, and the world-level files. A seasoned clinician could solve every task from the intended files alone, no task requires public knowledge published after July 31, 2025, and any fact not supported by those sources is either fabrication if asserted or must be acknowledged as uncertain. This principle governs golden-response construction and grader-guideline calibration downstream.

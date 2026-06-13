@@ -105,6 +105,16 @@ def add_callout(doc, text: str) -> None:
     shade(t.cell(0, 0), CALLOUT_FILL)
 
 
+def add_cover(doc, text: str) -> None:
+    """Blue 1x1 cover banner: 4472C4 fill, white bold text, black border."""
+    t = doc.add_table(rows=1, cols=1)
+    t.style = "TableNormal"
+    set_borders(t, outer="000000", inner="000000")
+    t.cell(0, 0).text = text
+    shade(t.cell(0, 0), HEADER_FILL)
+    white_bold(t.cell(0, 0))
+
+
 def parse_md_table(block):
     rows = []
     for ln in block:
@@ -140,7 +150,9 @@ def build() -> None:
             doc.add_paragraph(ln[3:].strip(), style="Heading 2")
         elif ln.startswith("### "):
             doc.add_paragraph(ln[4:].strip(), style="Heading 2")
-        elif ln.startswith("Terminology note:"):
+        elif ln.startswith("Cover:"):
+            add_cover(doc, ln[len("Cover:"):].strip())
+        elif ln.startswith("Terminology note:") or ln.startswith("Self-Containment Principle:"):
             add_callout(doc, ln.strip())
         elif ln.strip() == "":
             pass
