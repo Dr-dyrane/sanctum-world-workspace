@@ -155,16 +155,27 @@
 
     <!-- ═══ CONTROLS ═══ -->
     <div class="sticky top-16 z-30 px-3 sm:px-6 max-w-5xl mx-auto">
-      <div class="surf-2 px-4 py-3 controls-inner flex flex-wrap items-center gap-x-5 gap-y-2 sm:gap-y-3 justify-between" style="border-radius:20px">
-        <div class="controls-group flex items-center gap-2 flex-wrap" role="group" aria-label="Filter tasks by status">
-          <span class="micro-label pl-1">View</span>
-          <div id="filterChips" class="chip-scroll flex items-center gap-2 flex-wrap"></div>
+      <details id="viewOptions" class="view-options surf-2">
+        <summary class="view-options-summary">
+          <span>
+            <span class="micro-label block">Tasks</span>
+            <span id="viewSummary" class="view-summary-text">All tasks, ordered</span>
+          </span>
+          <span class="view-options-control">
+            View Options <i data-lucide="sliders-horizontal" style="width:15px;height:15px"></i>
+          </span>
+        </summary>
+        <div class="view-options-panel">
+          <div class="controls-group" role="group" aria-label="Filter tasks by status">
+            <span class="micro-label">Show</span>
+            <div id="filterChips" class="chip-scroll"></div>
+          </div>
+          <div class="controls-group" role="group" aria-label="Sort tasks">
+            <span class="micro-label">Sort</span>
+            <div id="sortChips" class="chip-scroll"></div>
+          </div>
         </div>
-        <div class="controls-group flex items-center gap-2 flex-wrap" role="group" aria-label="Sort tasks">
-          <span class="micro-label">Order</span>
-          <div id="sortChips" class="chip-scroll flex items-center gap-2 flex-wrap"></div>
-        </div>
-      </div>
+      </details>
     </div>
 
     <!-- ═══ TASK CARDS (rendered by JS) ═══ -->

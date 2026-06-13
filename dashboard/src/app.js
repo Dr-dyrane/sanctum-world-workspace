@@ -336,31 +336,26 @@
       const scoreLabel = U.hasMean(t) ? U.fmtMean(t) : 'TBD';
       const fam = CONFIG.failureFamilies[t.family] || { label:'Clinical signal' };
       return `
-      <article class="card-inner card surf w-full px-4 sm:px-5 md:px-6 py-4 sm:py-5" style="border-radius:var(--r-card);--card-bar:${barColor}" tabindex="-1" data-open-task="${t.id}">
-        <div class="flex flex-col sm:flex-row sm:items-center gap-4">
-          <div class="flex items-start gap-4 min-w-0 flex-1">
-            <div class="task-index">${String(t.position).padStart(2,'0')}</div>
-            <div class="min-w-0">
-              <div class="flex flex-wrap items-center gap-2">
-                <span class="font-mono text-[12px] font-bold accent-text">${t.id}</span>
-                <span class="surf-2 px-3 py-1.5 text-[10px] font-mono inline-flex items-center gap-1.5" style="border-radius:var(--r-pill);color:var(--fg-soft)"><span class="pill-dot ${t.stage}"></span>${CONFIG.cats[t.stage].pill}</span>
-                <span class="micro-label">${U.esc(fam.label)}</span>
-              </div>
-              <h2 class="text-[19px] sm:text-[22px] font-semibold mt-2 leading-tight text-balance" style="max-width:min(34ch,100%)">${U.esc(t.name)}</h2>
-              <div class="mt-3 flex flex-wrap gap-2" style="max-width:260px">${C.dots(t)}</div>
-            </div>
-          </div>
-          <div class="flex items-center gap-3 sm:ml-auto">
-            <div class="score-capsule">
-              <div class="micro-label mb-1">${U.term('mean','Mean')}</div>
-              <div class="font-mono font-bold text-[28px] leading-none" style="color:${tagColor}">${scoreLabel}${meanUnit}</div>
-              <div class="font-mono text-[10px] mt-1" style="color:${tagColor}">${band.tag}</div>
-            </div>
-            <button class="openTaskBtn btn-icon surf-2 w-10 h-10 grid place-items-center open-task" style="border-radius:var(--r-pill)" aria-label="Open ${U.esc(t.id)} focus">
-              <i data-lucide="arrow-up-right" style="width:17px;height:17px"></i>
-            </button>
-          </div>
+      <article class="card-inner card task-row w-full" style="--card-bar:${barColor}" tabindex="-1" role="button" data-open-task="${t.id}" aria-label="Open ${U.esc(t.id)} focus">
+        <div class="task-row-status">
+          <span class="pill-dot ${t.stage}"></span>
+          <span>${CONFIG.cats[t.stage].pill}</span>
         </div>
+        <div class="task-row-main">
+          <div class="task-row-kicker">
+            <span class="task-id">${t.id}</span>
+            <span>${U.esc(fam.label)}</span>
+          </div>
+          <h2>${U.esc(t.name)}</h2>
+          <p>${U.esc(t.plain)}</p>
+          <div class="task-run-strip" aria-label="Pilot run spread">${C.dots(t)}</div>
+        </div>
+        <div class="task-row-score">
+          <div class="micro-label">${U.term('mean','Mean')}</div>
+          <div class="task-score-value" style="color:${tagColor}">${scoreLabel}${meanUnit}</div>
+          <div class="task-score-band" style="color:${tagColor}">${band.tag}</div>
+        </div>
+        <div class="task-row-chevron" aria-hidden="true"><i data-lucide="chevron-right" style="width:18px;height:18px"></i></div>
       </article>`;
     },
   };
@@ -796,7 +791,7 @@
       sec.dataset.status = t.stage;
       sec.dataset.mean = t.mean;
       sec.dataset.pos = t.position;
-      sec.className = 'km-card flex items-center py-3 sm:py-4';
+      sec.className = 'km-card';
       sec.innerHTML = C.card(t);
       sec.querySelector('article').style.transitionDelay = (t.position * 55) + 'ms';
       wrap.appendChild(sec);
@@ -903,6 +898,13 @@
       empty.classList.toggle('hidden', visible>0);
       paintChips(filterWrap, state.filter);
       paintChips(sortWrap, state.sort);
+      const summary = document.getElementById('viewSummary');
+      if (summary) {
+        const filterLabel = state.filter === 'all' ? 'All tasks' : CONFIG.cats[state.filter].label;
+        const sortLabel = SORTS[state.sort].label.toLowerCase();
+        summary.textContent = `${filterLabel}, ${sortLabel}`;
+      }
+      lucide.createIcons();
     }
 
     function syncHash(){
