@@ -235,7 +235,7 @@ TASKS = {
         "core_failure": "Documented no wound on the bedside photo and omitted a discharge-day foot exam and wound plan",
         "versions": 7,
         "pivot": "True placeholder plus off-text image signal",
-        "status": "Awaiting First Review",
+        "status": "Awaiting Final Review post PL",
     },
     "KM09": {
         # v2 HIM worksheet. v1.1 was returned for missing original coding document.

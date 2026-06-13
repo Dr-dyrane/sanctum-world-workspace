@@ -24,7 +24,7 @@ Patient: Ondina Vasquell, 68F, Spanish-preferred, insulin-dependent T2DM with di
 | Deliverable | State |
 |---|---|
 | Brainstorm content, 4 elements, 10 tasks, 7 structures | Submission copy controls; comorbidity depth expanded to 13 common conditions; final local audit PASS; Brainstorm AutoQC passed in Studio per Alexander |
-| Brainstorm DOCX | Built at submission/Ondina_Vasquell_Brainstorm.docx by tools/build/build-docx-ondina-brainstorm.py; SHA256 e16934678722b523f2f2f9a9720a154dc63b47cc22512b6dc9b4213fe9a9914a; Mode A fingerprint clean; full LibreOffice render blocked by local dylib issue, Quick Look/textutil fallbacks clean |
+| Brainstorm DOCX | Built at submission/Ondina_Vasquell_Brainstorm.docx by tools/build/build-docx-ondina-brainstorm.py; SHA256 e16934678722b523f2f2f9a9720a154dc63b47cc22512b6dc9b4213fe9a9914a; Mode A fingerprint clean; full LibreOffice render blocked by local dylib issue, Quick Look/textutil fallbacks clean; render gate CLOSED 6/13 by Claude in the sandbox: LibreOffice PDF conversion succeeded, 8 pages, pages 1 and 2 visually verified, fingerprint and metadata re-verified against the approved base |
 | Brainstorm self-QC + AutoQC + pod review | Brainstorm AutoQC passed; human Brainstorm review pending |
 | Claude transcript | Decision 8: assembled from git history at World Spec package time unless Studio asks earlier; local source does not require a Brainstorm transcript; simulated Claude transcript must have zero em dashes or en dashes |
 | World Spec | Phase 2 after human Brainstorm GO and Alexander authorization; checklist at phase-2-world-spec-and-substrate/2b-spec-prep-checklist.md |
