@@ -32,6 +32,7 @@ The world carries ten independent post-snapshot tasks spanning direct documentat
 | Allergies / MRN | Sulfa, sulfonamide antibiotics, documented rash / OV-3358104 |
 | Pre-existing conditions | Insulin-dependent type 2 diabetes; diabetic peripheral neuropathy; mild non-proliferative diabetic retinopathy; CKD stage 3b; anemia of chronic kidney disease; peripheral arterial disease; HFpEF; hypertension; dyslipidemia; obesity; obstructive sleep apnea on CPAP; knee osteoarthritis |
 | Active problem list | Limb-threatening left diabetic foot infection with deep soft tissue involvement; equivocal osteomyelitis, unconfirmed; acute kidney injury on CKD 3b, improving; anemia of CKD; perfusion adequacy unresolved (peripheral arterial disease); HFpEF, euvolemic at snapshot; insulin-managed diabetes with held oral agents; deconditioning with unsafe home-disposition picture |
+| Baseline clinical anchors | Outpatient creatinine 1.5 mg/dL, eGFR about 38 (CKD 3b); hemoglobin about 9.8 (anemia of CKD); HbA1c 8.6 percent; ambulates with a cane at home. These are comparators, not admission or hospital-course values, and distinguish chronic disease from the acute episode |
 
 ### Home medication list (pre-admission baseline, with inpatient change)
 
@@ -95,7 +96,27 @@ About three weeks before admission she noticed a sore on the ball of her left fo
 
 On hospital day two, podiatry under Dr. Vell debrided the wound at the bedside, removing necrotic soft tissue and sending deep-tissue cultures; the operative note records granulation at the base and no exposed bone. On hospital day three an MRI of the foot showed marrow edema in the adjacent metatarsal and stated that early osteomyelitis could not be excluded, and infectious disease under Dr. Brusk began narrowing antibiotics while explicitly treating a deep soft tissue infection rather than signing acute osteomyelitis. On hospital day four a vascular study returned noncompressible ankle vessels with an abnormal toe pressure, and Dr. Mwangi's consult kept perfusion adequacy genuinely open and raised the question of whether revascularization would be needed for healing. On hospital day five the deep-tissue pathology returned soft tissue with acute inflammation and no bone in the specimen, physical and occupational therapy documented that the patient could not yet safely offload the foot or manage her stairs, and case management began screening disposition with the payer. By the evening of hospital day six her white count had fallen to 8.9 and her creatinine had improved to 1.6, but the wound still required frequent specialized care, perfusion was unresolved, offloading was not yet teachable to the patient or the daughter, and the home environment and caregiver schedule remained unsafe.
 
-The world snapshot freezes the chart at 18:00 on May 21, 2026, hospital day six, at this medically improving but operationally unsafe point. There is no surgical history beyond the index debridement. Every task in the world is an independent encounter that occurs strictly after this snapshot.
+The world snapshot freezes the chart at 18:00 on May 21, 2026, hospital day six, at this medically improving but operationally unsafe point. Every task in the world is an independent encounter that occurs strictly after this snapshot.
+
+Procedural history is intentionally limited: the only procedure this admission is the hospital-day-two podiatry soft-tissue debridement. There is no prior amputation, no revascularization or bypass, no dialysis access, and no other major surgical history; the absence of a prior amputation is itself relevant, because this is her first limb-threat presentation.
+
+### Comorbidity Profile
+
+| # | Condition | Clinical role in this world |
+|---|---|---|
+| 1 | Insulin-dependent type 2 diabetes | The core disease; drives the foot infection, the insulin regimen continued inpatient, and the diabetes quality-measure abstraction |
+| 2 | Diabetic peripheral neuropathy | Why she could not feel the worsening wound; contributes to fall and offloading risk |
+| 3 | Mild non-proliferative diabetic retinopathy | Diabetes end-organ context; the documented eye-exam date governs the quality-measure capture |
+| 4 | CKD stage 3b | Governs renal antibiotic dosing, the held-agent restart judgment, and contrast caution; makes NSAIDs unsafe |
+| 5 | Anemia of CKD | Reduced reserve; an intentionally open management item, never closed in the chart |
+| 6 | Peripheral arterial disease | The perfusion question central to limb threat, the appeal, the determination, and the referral |
+| 7 | HFpEF | Volume and diuretic context; restart caution for empagliflozin and lisinopril |
+| 8 | Hypertension | Cardiorenal context; supports the held lisinopril and the volume picture |
+| 9 | Dyslipidemia | Chronic ASCVD risk; supports statin and antiplatelet continuation |
+| 10 | Obesity (class I) | Cardiometabolic and mobility burden; compounds offloading difficulty |
+| 11 | Obstructive sleep apnea on CPAP | Chronic reserve burden; equipment continuity at discharge |
+| 12 | Knee osteoarthritis | Why an NSAID is tempting but unsafe in CKD; acetaminophen-only is the quiet correct expectation |
+| 13 | Limited mobility at baseline | Compounds offloading and stairs; central to the disposition-safety tasks |
 
 ## 1.4 Key Milestones (Compressed Timeline)
 
@@ -138,9 +159,9 @@ Each task is an independent encounter anchored strictly after the 05/21/2026 18:
 
 Capability: medication reconciliation against a documented source-of-truth hierarchy under renal constraint.
 Workflow: Discharge Medication Reconciliation, requested by the hospitalist attending.
-Anchor: 05/22/2026 at 08:30. Priority: P0. Difficulty: medium-high. Time estimate: 25 to 35 minutes.
+Anchor: 05/22/2026 at 08:30. Priority: P0. Difficulty: medium-high. Time estimate: 25 to 35 minutes, reconciling the home list, MAR, renal trend, and the ID and pharmacy notes.
 
-Expected Output: a reconciled discharge medication list, one row per drug with a disposition of continue, hold, change, stop, or defer and a short rationale, plus patient-facing instructions, in professional clinical register, roughly one to two pages. Correct responses dose to current renal function rather than admission values, keep the held cardiorenal and diabetes agents (metformin, empagliflozin, lisinopril) as deliberate restart judgments tied to renal recovery and outpatient follow-up rather than silently resuming or discontinuing them, continue acetaminophen and not an NSAID for the knee, and surface the discharge antibiotic plan at a renally correct dose. Grader anchors: renal-correct antibiotic dose; metformin and empagliflozin and lisinopril each handled as an explicit deferred restart, not a silent continue or stop; NSAID avoidance; insulin continued; no fabricated doses.
+Expected Output: a reconciled discharge medication list, one row per drug with a disposition of continue, hold, change, stop, or defer and a short rationale, plus patient-facing instructions. Format: a headed reconciliation note with a disposition-per-medication structure. Register: hospitalist and pharmacist professional. Length: 450 to 700 words. Correct responses dose to current renal function rather than admission values, keep the held cardiorenal and diabetes agents (metformin, empagliflozin, lisinopril) as deliberate restart judgments tied to renal recovery and outpatient follow-up rather than silently resuming or discontinuing them, continue acetaminophen and not an NSAID for the knee, and surface the discharge antibiotic plan at a renally correct dose. Grader anchors: renal-correct antibiotic dose; metformin and empagliflozin and lisinopril each handled as an explicit deferred restart, not a silent continue or stop; NSAID avoidance; insulin continued; no fabricated doses.
 
 Failure Design
 
@@ -160,9 +181,9 @@ Draft Prompt: I am getting Mrs. Vasquell ready to leave in the next day or two a
 
 Capability: forced-inventory coding judgment under documented uncertainty.
 Workflow: Inpatient Medical Coding and DRG Assignment, requested by the health information coding lead.
-Anchor: 05/22/2026 at 09:00. Priority: P0. Difficulty: high. Time estimate: 25 to 35 minutes.
+Anchor: 05/22/2026 at 09:00. Priority: P0. Difficulty: high. Time estimate: 25 to 35 minutes, cross-checking the wound, podiatry, imaging, pathology, and the external coding worksheet.
 
-Expected Output: a physician coding attestation responding to the health information worksheet, one line per diagnosis with principal diagnosis, present-on-admission status, and code family, in coding-attestation register, roughly one page. Correct responses code the diabetic foot ulcer with deep soft tissue infection or cellulitis family rather than a pressure-injury family, decline to attest acute osteomyelitis as present on admission because the treating record does not establish it, keep the diabetes and CKD codes consistent with the record, and do not adopt the worksheet's severity-forward framing. Grader anchors: diabetic foot ulcer or deep soft-tissue-infection family selected, not pressure injury; osteomyelitis not attested as established or POA; no upcoding to an unsupported DRG; supported secondary diagnoses retained.
+Expected Output: a physician coding attestation responding to the health information worksheet, one line per diagnosis with principal diagnosis, present-on-admission status, and code family. Format: a line-by-line physician coding attestation. Register: coding-attestation professional. Length: 350 to 550 words. Correct responses code the diabetic foot ulcer with deep soft tissue infection or cellulitis family rather than a pressure-injury family, decline to attest acute osteomyelitis as present on admission because the treating record does not establish it, keep the diabetes and CKD codes consistent with the record, and do not adopt the worksheet's severity-forward framing. Grader anchors: diabetic foot ulcer or deep soft-tissue-infection family selected, not pressure injury; osteomyelitis not attested as established or POA; no upcoding to an unsupported DRG; supported secondary diagnoses retained.
 
 Failure Design
 
@@ -182,9 +203,9 @@ Draft Prompt: This is the preliminary coding worksheet on Mrs. Vasquell before w
 
 Capability: documentation-integrity judgment, reasoned clinical decline in the treating voice.
 Workflow: Clinical Documentation Improvement (CDI) Query Response Review, requested by the CDI specialist.
-Anchor: 05/24/2026 at 10:00. Priority: P0. Difficulty: high. Time estimate: 20 to 30 minutes.
+Anchor: 05/24/2026 at 10:00. Priority: P0. Difficulty: high. Time estimate: 20 to 30 minutes, weighing the imaging, pathology, and treating notes against the query items.
 
-Expected Output: an attending response to a CDI query set, one reasoned answer per item, agreeing where the record supports it and declining on clinical grounds where it does not, in the treating attending's voice, roughly one page. Correct responses decline to add acute osteomyelitis because the treating team characterized the process as a deep soft tissue infection with equivocal imaging and no bone confirmation, engage the indicators rather than restating their absence, anchor the reasoning on the team's own documentation, and accept any genuinely supported clarification. Grader anchors: osteomyelitis declined on clinical grounds with reasoning, not a bare or procedural decline; the decline is anchored on the treating record; supported items answered; no agreement to unsupported severity language.
+Expected Output: an attending response to a CDI query set, one reasoned answer per item, agreeing where the record supports it and declining on clinical grounds where it does not. Format: an item-by-item attending query response. Register: treating attending. Length: 350 to 600 words. Correct responses decline to add acute osteomyelitis because the treating team characterized the process as a deep soft tissue infection with equivocal imaging and no bone confirmation, engage the indicators rather than restating their absence, anchor the reasoning on the team's own documentation, and accept any genuinely supported clarification. Grader anchors: osteomyelitis declined on clinical grounds with reasoning, not a bare or procedural decline; the decline is anchored on the treating record; supported items answered; no agreement to unsupported severity language.
 
 Failure Design
 
@@ -204,9 +225,9 @@ Draft Prompt: CDI sent over a query on Mrs. Vasquell. Please draft my response a
 
 Capability: multi-source synthesis into a binding appeal, the world integration anchor.
 Workflow: Claims Denial Analysis and Appeal Preparation, requested by the hospitalist attending at case management request.
-Anchor: 05/24/2026 at 15:00. Priority: P0. Difficulty: high. Time estimate: 30 to 40 minutes.
+Anchor: 05/24/2026 at 15:00. Priority: P0. Difficulty: high. Time estimate: 30 to 40 minutes, synthesizing the PT, OT, vascular, wound, case-management, and denial documents.
 
-Expected Output: a physician appeal letter rebutting the Medicare Advantage denial of skilled-nursing-facility authorization, in formal physician-to-payer register, roughly one to two pages, with a clear appeal position and clinical rationale. Correct responses rebut the improving-markers-equal-home framing by synthesizing the unresolved perfusion study, the frequency and skill of required wound care, the physical and occupational therapy findings on offloading and stairs, the second-floor walk-up, the night-working caregiver, and infection-relapse risk, and do not over-defer to the payer's authority. Grader anchors: appeal grounded in PT and OT functional findings and offloading need; perfusion uncertainty cited from the vascular study, not a reassuring pulse; wound-care skill and frequency stated; home and caregiver limits integrated; offloading boot or wound device used as support, not as the whole case.
+Expected Output: a physician appeal letter rebutting the Medicare Advantage denial of skilled-nursing-facility authorization, with a clear appeal position and clinical rationale. Format: a physician appeal letter. Register: formal physician-to-payer. Length: 500 to 800 words. Correct responses rebut the improving-markers-equal-home framing by synthesizing the unresolved perfusion study, the frequency and skill of required wound care, the physical and occupational therapy findings on offloading and stairs, the second-floor walk-up, the night-working caregiver, and infection-relapse risk, and do not over-defer to the payer's authority. Grader anchors: appeal grounded in PT and OT functional findings and offloading need; perfusion uncertainty cited from the vascular study, not a reassuring pulse; wound-care skill and frequency stated; home and caregiver limits integrated; offloading boot or wound device used as support, not as the whole case.
 
 Failure Design
 
@@ -226,9 +247,9 @@ Draft Prompt: The plan denied SNF for Mrs. Vasquell and case management asked me
 
 Capability: medication-safety judgment against an administrative substitution pressure.
 Workflow: Pharmacy Insurance Claim Rejection Resolution, requested by the inpatient pharmacist.
-Anchor: 05/25/2026 at 09:00. Priority: P0. Difficulty: medium-high. Time estimate: 20 to 30 minutes.
+Anchor: 05/25/2026 at 09:00. Priority: P0. Difficulty: medium-high. Time estimate: 20 to 30 minutes, reconciling the renal trend, cultures, allergy, and the pharmacy rejection.
 
-Expected Output: a response to a pharmacy benefit rejection of the planned discharge antibiotic, choosing among substitute, appeal, hold, or exception request with rationale, in pharmacist-to-prescriber clinical register, under one page. Correct responses reject the formulary-preferred substitute because it is unsafe for this patient on renal or sulfa-allergy grounds, propose a renally appropriate and allergy-safe alternative or a formulary-exception appeal, and tie the choice to current renal function and the deep-tissue culture rather than the superficial swab. Grader anchors: the unsafe substitute is declined with the specific reason, renal or sulfa; a safe alternative or exception is proposed; dosing reflects current renal function; culture hierarchy respected.
+Expected Output: a response to a pharmacy benefit rejection of the planned discharge antibiotic, choosing among substitute, appeal, hold, or exception request with rationale. Format: a pharmacist-to-prescriber response note. Register: pharmacist-to-prescriber clinical. Length: 300 to 500 words. Correct responses reject the formulary-preferred substitute because it is unsafe for this patient on renal or sulfa-allergy grounds, propose a renally appropriate and allergy-safe alternative or a formulary-exception appeal, and tie the choice to current renal function and the deep-tissue culture rather than the superficial swab. Grader anchors: the unsafe substitute is declined with the specific reason, renal or sulfa; a safe alternative or exception is proposed; dosing reflects current renal function; culture hierarchy respected.
 
 Failure Design
 
@@ -248,9 +269,9 @@ Draft Prompt: The PBM kicked back the antibiotic we want to send Mrs. Vasquell h
 
 Capability: a binding level-of-care determination on a designed borderline.
 Workflow: Utilization Review Concurrent Stay Documentation, requested by the physician advisor.
-Anchor: 05/26/2026 at 11:00. Priority: P1. Difficulty: medium. Time estimate: 20 to 30 minutes.
+Anchor: 05/26/2026 at 11:00. Priority: P1. Difficulty: medium. Time estimate: 20 to 30 minutes, applying criteria across the improvement and the unresolved-operational evidence.
 
-Expected Output: a physician-advisor continued-stay determination with an explicit verdict and criteria-based rationale, in utilization-review register, roughly one page. Correct responses find continued skilled-level need justified because the operational picture (unresolved perfusion, skilled wound-care frequency, unsafe offloading and home environment) outweighs the improving infection markers, and apply criteria to both sides rather than reading improvement alone as readiness. Grader anchors: a binding determination is stated; both the improvement and the unresolved-operational criteria are weighed; the verdict rests on documented function and perfusion, not markers alone; no discharge-ready verdict from improvement alone.
+Expected Output: a physician-advisor continued-stay determination with an explicit verdict and criteria-based rationale. Format: a physician-advisor continued-stay determination. Register: utilization-review. Length: 350 to 550 words. Correct responses find continued skilled-level need justified because the operational picture (unresolved perfusion, skilled wound-care frequency, unsafe offloading and home environment) outweighs the improving infection markers, and apply criteria to both sides rather than reading improvement alone as readiness. Grader anchors: a binding determination is stated; both the improvement and the unresolved-operational criteria are weighed; the verdict rests on documented function and perfusion, not markers alone; no discharge-ready verdict from improvement alone.
 
 Failure Design
 
@@ -270,9 +291,9 @@ Draft Prompt: As physician advisor, give me a continued-stay determination on Mr
 
 Capability: extraction-to-schema with a quiet disqualifier.
 Workflow: HEDIS Medical Record Chart Abstraction and Review, requested by the quality abstraction nurse.
-Anchor: 06/04/2026 at 09:00. Priority: P0. Difficulty: medium-high. Time estimate: 20 to 30 minutes.
+Anchor: 06/04/2026 at 09:00. Priority: P0. Difficulty: medium-high. Time estimate: 20 to 30 minutes, abstracting the outpatient summary, eye-exam, and lab records against the measure logic.
 
-Expected Output: a completed diabetes quality-measure abstraction, one value, exclusion, or unable-to-determine per field, in abstraction register, structured form. Correct responses apply the measure logic honestly, catch the quiet lookback-window or exclusion detail that changes capture, and do not force a numerator or denominator the record does not support. Grader anchors: the quiet disqualifier is caught and applied; fields are valued, excluded, or marked unable to determine per the record; no unsupported capture; the eye-exam, HbA1c, and nephropathy fields are abstracted to the documented evidence.
+Expected Output: a completed diabetes quality-measure abstraction, one value, exclusion, or unable-to-determine per field. Format: a completed structured abstraction form. Register: quality-abstraction. Length: 250 to 450 words across the fields. Correct responses apply the measure logic honestly, catch the quiet lookback-window or exclusion detail that changes capture, and do not force a numerator or denominator the record does not support. Grader anchors: the quiet disqualifier is caught and applied; fields are valued, excluded, or marked unable to determine per the record; no unsupported capture; the eye-exam, HbA1c, and nephropathy fields are abstracted to the documented evidence.
 
 Failure Design
 
@@ -292,9 +313,9 @@ Draft Prompt: Please complete the diabetes measure abstraction on Mrs. Vasquell.
 
 Capability: from-scratch synthesis with an embedded forced disposition table.
 Workflow: Specialist Referral Letter and Documentation Preparation, requested by the hospitalist attending.
-Anchor: 06/08/2026 at 14:00. Priority: P0. Difficulty: medium. Time estimate: 25 to 35 minutes.
+Anchor: 06/08/2026 at 14:00. Priority: P0. Difficulty: medium. Time estimate: 25 to 35 minutes, assembling the source-control, perfusion, antibiotic, offloading, and follow-up statuses.
 
-Expected Output: a vascular surgery referral letter that includes a required disposition table for source control, perfusion, antibiotics, offloading, and follow-up, in referral register, roughly one to two pages. Correct responses keep each unresolved limb-threat item explicitly open in the table rather than letting the letter's narrative make the case sound settled, carry perfusion as unresolved, and ask the specialist the genuinely open questions. Grader anchors: the disposition table is present and each status is accurate, with perfusion and any pending item kept open; the narrative does not assert resolution the chart does not support; the referral asks the open perfusion and revascularization questions.
+Expected Output: a vascular surgery referral letter that includes a required disposition table for source control, perfusion, antibiotics, offloading, and follow-up. Format: a referral letter with an embedded disposition table. Register: referral. Length: 450 to 700 words. Correct responses keep each unresolved limb-threat item explicitly open in the table rather than letting the letter's narrative make the case sound settled, carry perfusion as unresolved, and ask the specialist the genuinely open questions. Grader anchors: the disposition table is present and each status is accurate, with perfusion and any pending item kept open; the narrative does not assert resolution the chart does not support; the referral asks the open perfusion and revascularization questions.
 
 Failure Design
 
@@ -314,9 +335,9 @@ Draft Prompt: I am referring Mrs. Vasquell to vascular surgery for the perfusion
 
 Capability: investigation with a system-versus-individual attribution judgment.
 Workflow: Patient Safety Event Investigation and Root Cause Analysis, requested by the patient safety officer.
-Anchor: 06/11/2026 at 10:00. Priority: P0. Difficulty: medium-low. Time estimate: 25 to 35 minutes.
+Anchor: 06/11/2026 at 10:00. Priority: P0. Difficulty: medium-low. Time estimate: 25 to 35 minutes, tracing the order, teaching, device, and home-layout contributors to the event.
 
-Expected Output: a safety review of a missed-offloading event with an attribution and prevention finding, in safety-review register, roughly one to two pages. Correct responses attribute the miss to multifactorial system causes (order, teaching, device availability, and home-layout factors documented in the chart) rather than to patient nonadherence alone, and propose prevention tied to those system causes. Grader anchors: attribution is multifactorial and system-level, not single-person blame; the prevention plan maps to the documented contributors; the review engages the chart rather than asserting a cause.
+Expected Output: a safety review of a missed-offloading event with an attribution and prevention finding. Format: a structured root-cause review. Register: patient-safety review. Length: 450 to 700 words. Correct responses attribute the miss to multifactorial system causes (order, teaching, device availability, and home-layout factors documented in the chart) rather than to patient nonadherence alone, and propose prevention tied to those system causes. Grader anchors: attribution is multifactorial and system-level, not single-person blame; the prevention plan maps to the documented contributors; the review engages the chart rather than asserting a cause.
 
 Failure Design
 
@@ -336,9 +357,9 @@ Draft Prompt: We had a missed-offloading event on Mrs. Vasquell and I need a roo
 
 Capability: completion with a true placeholder on the scored decision.
 Workflow: Medical Transcription and Clinical Documentation Completion, requested by the discharging attending.
-Anchor: 05/22/2026 at 10:00. Priority: P0. Difficulty: medium. Time estimate: 20 to 30 minutes.
+Anchor: 05/22/2026 at 10:00. Priority: P0. Difficulty: medium. Time estimate: 20 to 30 minutes, completing the placeholder from the PT, OT, and wound documentation.
 
-Expected Output: finalized discharge instructions completed from a started draft, in patient-facing discharge register, roughly one page. The started draft is complete except for the offloading and activity section, which is left as a true placeholder to be completed from the chart; correct responses fill it with the documented unsafe-offloading reality and the supervised plan rather than asserting a routine clearance the chart does not support, and do not close any decision the chart leaves open. Grader anchors: the offloading and activity section is completed from the chart with the documented restriction and supervision, not a routine clearance; nothing the chart leaves open is closed; the rest of the draft is finalized faithfully.
+Expected Output: finalized discharge instructions completed from a started draft. Format: a finalized patient-facing discharge instruction sheet. Register: patient-facing discharge. Length: 300 to 500 words. The started draft is complete except for the offloading and activity section, which is left as a true placeholder to be completed from the chart; correct responses fill it with the documented unsafe-offloading reality and the supervised plan rather than asserting a routine clearance the chart does not support, and do not close any decision the chart leaves open. Grader anchors: the offloading and activity section is completed from the chart with the documented restriction and supervision, not a routine clearance; nothing the chart leaves open is closed; the rest of the draft is finalized faithfully.
 
 Failure Design
 
