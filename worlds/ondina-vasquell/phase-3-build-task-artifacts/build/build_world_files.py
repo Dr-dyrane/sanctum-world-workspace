@@ -15,7 +15,7 @@ sys.path.insert(0, str(REPO))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from docx import Document
-from tools.mode_a_clone import scrub_all_metadata, verify_no_synthetic
+from tools.mode_a_clone import scrub_all_metadata, verify_no_synthetic, verify_no_km_identifiers
 import epic
 import clinical_data as CD
 
@@ -53,24 +53,46 @@ RENDER = {
 }
 
 
+def _parse_author_dept(filing):
+    author = dept = ""
+    if "Author:" in filing:
+        seg = filing.split("Author:", 1)[1].split("|", 1)[0].strip()
+        if " - " in seg:
+            author, dept = [x.strip() for x in seg.split(" - ", 1)]
+        else:
+            author = seg
+    return author, dept
+
+
 def build_one(spec, outdir=None):
     outdir = outdir or OUTDIR
     fname, base_key, note_type, dos, blocks = spec
     doc = Document(str(BASE[base_key]))
     epic.clear_body(doc)
-    # chrome
-    epic.facility_band(doc, CD.FACILITY, CD.filed(dos))
-    # hospital day from note_type/dos handled inside blocks' filing; banner needs hd
-    hd = next((b[1] for b in blocks if b[0] == "filing"), "")
-    # derive HD label from filename date vs admit
-    epic.patient_banner(doc, CD.PT["name"], CD.PT["mrn"],
-                        CD.banner_grid(_hd_label(fname), dos, CD.ROSTER["attending"]))
+    filing_txt = next((p for k, p in blocks if k == "filing"), "")
+    author, dept = _parse_author_dept(filing_txt)
+    # clean header/footer (KM clone leaves KM identifiers in these parts)
+    epic.clear_and_set_hf(doc, CD.PT["name"], CD.PT["mrn"], CD.FACILITY, note_type)
+    # KM chrome: masthead -> blue bar -> storyboard -> title -> filing -> encounter
+    epic.masthead(doc, CD.FACILITY, dept)
+    epic.blue_bar(doc)
+    demo = f"{CD.PT['age']} y  |  {CD.PT['sex']}  |  DOB {CD.PT['dob']}"
+    epic.storyboard(doc, CD.PT["name"], demo, CD.PT["mrn"], [
+        ("Date of Service", dos), ("Author", author or "See note"),
+        ("Allergies", CD.PT["allergies"]), ("Document", note_type)])
+    epic.note_title(doc, next((p for k, p in blocks if k == "title"), note_type))
+    if filing_txt:
+        epic.filing_line(doc, filing_txt)
+    epic.encounter_block(doc, CD.encounter_pairs(dos))
     for kind, payload in blocks:
+        if kind in ("title", "filing"):
+            continue
         RENDER[kind](doc, payload)
     out = outdir / fname
     doc.save(str(out))
     scrub_all_metadata(str(out))
     verify_no_synthetic(str(out))
+    verify_no_km_identifiers(str(out))
     _check_clean(out)
     return out
 

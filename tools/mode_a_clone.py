@@ -202,6 +202,29 @@ def scrub_all_metadata(path):
     zin.close(); zout.close(); os.replace(tmp, path)
 
 
+_KM_IDS = ("korvin", "merrow", "km-6427819", "mercy vale", "csn-204418827",
+           "fin-7740552", "vossmere", "travyn", "caldrane", "solthar", "halvek",
+           "quenor", "riverbend", "5w-318", "5 west medic")
+
+
+def verify_no_km_identifiers(path):
+    """Hard gate: NO part may carry a Korvin Merrow world identifier (name, MRN, CSN,
+    facility, or KM roster name). Catches header/footer leakage from the clone base
+    that verify_no_synthetic does not. Raises naming the offending parts."""
+    z = zipfile.ZipFile(path)
+    offenders = []
+    for n in z.namelist():
+        if not (n.endswith(".xml") or n.endswith(".rels")):
+            continue
+        low = z.read(n).decode("utf-8", "ignore").lower()
+        bad = [t for t in _KM_IDS if t in low]
+        if bad:
+            offenders.append((n, sorted(set(bad))))
+    assert not offenders, f"KM identifier leak: {offenders}"
+    print("  [OK ] verify_no_km_identifiers: zero KM identifiers in any part")
+    return True
+
+
 def verify_no_synthetic(path):
     """Hard gate: no part (every .xml and .rels, incl. ALL headers/footers and all
     three docProps) may contain a synthetic marker or authoring-tool fingerprint.

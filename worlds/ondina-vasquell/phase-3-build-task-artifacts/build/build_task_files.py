@@ -14,7 +14,7 @@ sys.path.insert(0, str(REPO)); sys.path.insert(0, str(Path(__file__).resolve().p
 warnings.filterwarnings("ignore")
 
 from docx import Document
-from tools.mode_a_clone import scrub_all_metadata, verify_no_synthetic
+from tools.mode_a_clone import scrub_all_metadata, verify_no_synthetic, verify_no_km_identifiers
 import epic
 import task_data as TD
 from build_world_files import BASE, RENDER, _check_clean
@@ -27,12 +27,15 @@ def build_one(spec):
     fname, base_key, blocks = spec
     doc = Document(str(BASE[base_key]))
     epic.clear_body(doc)
+    # external/draft surfaces: clear KM header/footer, plain Confidential footer
+    epic.clear_and_set_hf(doc, None, None, None, None)
     for kind, payload in blocks:
         RENDER[kind](doc, payload)
     out = OUTDIR / fname
     doc.save(str(out))
     scrub_all_metadata(str(out))
     verify_no_synthetic(str(out))
+    verify_no_km_identifiers(str(out))
     _check_clean(out)
     return out
 

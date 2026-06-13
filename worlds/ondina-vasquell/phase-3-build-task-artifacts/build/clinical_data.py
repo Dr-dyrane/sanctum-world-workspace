@@ -41,8 +41,8 @@ ROSTER = dict(
     daughter="Marisela Vasquell",
 )
 
-# ----- DERIVED texture registry (clinically-concordant; pending one-pass ratify) -----
-# Each: (id, value, rationale). Load-bearing anchors are NOT here (they are ratified).
+# ----- DERIVED texture registry (clinically-concordant; physician-ratified 2026-06-13) -----
+# Each: (id, value, rationale). Load-bearing anchors are NOT here; they are ratified in the substrate.
 DERIVED = [
     ("facility", FACILITY, "synthetic facility, distinct from KM Mercy Vale"),
     ("encounter ids", f"{ENC['csn']}, {ENC['fin']}, unit {ENC['unit']}, room {ENC['room']}", "synthetic plumbing"),
@@ -59,7 +59,7 @@ DERIVED = [
     ("deep tissue culture", "MSSA and Streptococcus agalactiae; MSSA oxacillin-S, clindamycin-S, TMP-SMX-S(not used, sulfa allergy)", "typical limb-threat DFI deep culture; drives de-escalation and the sulfa-constrained PBM trap"),
     ("superficial swab", "mixed skin flora, no dominant pathogen - lower authority", "culture-hierarchy trap substrate"),
     ("wound dimensions", "3.0 x 2.2 x 0.8 cm plantar left forefoot, granulating base, scant serous drainage", "post-debridement wound, no exposed bone (substrate)"),
-    ("toe pressure", "TBI 0.5 affected side, absolute toe pressure 38 mmHg; ankle noncompressible ABI > 1.3", "ratified ABI/TBI; absolute toe pressure derived concordant with TBI 0.5"),
+    ("toe pressure", "TBI 0.50 affected side, absolute toe pressure 55 mmHg; ankle noncompressible ABI > 1.3", "ratified ABI/TBI; absolute toe pressure derived concordant with TBI 0.50"),
     ("eye exam", "mild non-proliferative diabetic retinopathy, dilated exam 03/15/2026", "ratified milestone; finding concordant with A1c 8.6"),
     ("inpatient antibiotics", "vancomycin (by level) + piperacillin-tazobactam 2.25 g q8h renally dosed from HD1; cefepime 1 g q12h renally dosed culture-directed", "ratified empiric/step; doses renally adjusted for eGFR 38"),
 ]
@@ -78,6 +78,22 @@ def banner_grid(hd, dos, attending, service=None):
 
 def filed(dos):
     return f"Confidential - Filed {dos}"
+
+
+def encounter_pairs(dos):
+    """KM-style PATIENT / ENCOUNTER metadata block (attending of record = Everet)."""
+    return [
+        ("Patient", f"{PT['name']}, {PT['age']} y"),
+        ("Sex / DOB", f"{PT['sex']} / {PT['dob']}"),
+        ("MRN / FIN", f"{PT['mrn']} / {ENC['fin']}"),
+        ("Unit / Room", f"{ENC['unit']} / {ENC['room']}"),
+        ("Code Status", PT["code"]),
+        ("Allergies", PT["allergies"]),
+        ("Attending", ROSTER["attending"]),
+        ("Service", ENC["service"]),
+        ("Date of Service", dos),
+        ("Language", PT["language"]),
+    ]
 
 
 # =====================================================================
@@ -250,7 +266,17 @@ def EW6():
 def EW7():
     return ("mri_foot_report_05182026.docx", "consult", "IMAGING REPORT", "05/18/2026", [
         ("title", "MRI LEFT FOOT WITHOUT AND WITH CONTRAST"),
-        ("filing", "Author: Radiology - Musculoskeletal | Date of Service: 05/18/2026 1620 | Status: Final"),
+        ("filing", "Author: Radiology - Musculoskeletal | Date of Service: 05/18/2026 1620 | Status: Final | Accession HCR-IMG-05261844"),
+        ("section", "ORDER DETAILS"),
+        ("table", [
+            ["Field", "Value"],
+            ["Exam", "MRI left foot without and with contrast"],
+            ["Ordering service", "Hospital Medicine"],
+            ["Ordering clinician", "Marisol Everet, MD"],
+            ["Reason for exam", "Diabetic foot infection, plantar forefoot ulcer, evaluate for osteomyelitis and deep collection"],
+            ["Exam started", "05/18/2026 1542"],
+            ["Report finalized", "05/18/2026 1705"],
+        ]),
         ("section", "TECHNIQUE"),
         ("body", "Multiplanar multisequence MRI of the left foot. Note: contrast limited and renally cautious given chronic kidney disease; sequences acquired per renal-safe protocol."),
         ("section", "CLINICAL HISTORY"),
@@ -294,7 +320,17 @@ def EW8():
 def EW9():
     return ("abi_tbi_study_report_05192026.docx", "trend", "VASCULAR STUDY", "05/19/2026", [
         ("title", "LOWER EXTREMITY ARTERIAL STUDY (ABI / TBI)"),
-        ("filing", "Author: Vascular Laboratory | Date of Service: 05/19/2026 1120 | Status: Final"),
+        ("filing", "Author: Vascular Laboratory | Date of Service: 05/19/2026 1120 | Status: Final | Accession HCR-VAS-05193320"),
+        ("section", "STUDY DETAILS"),
+        ("table", [
+            ["Field", "Value"],
+            ["Procedure", "Bilateral lower-extremity arterial physiologic study with toe pressures"],
+            ["Ordering service", "Hospital Medicine"],
+            ["Ordering clinician", "Marisol Everet, MD"],
+            ["Technologist", "Vascular Lab Staff"],
+            ["Study started", "05/19/2026 1038"],
+            ["Report finalized", "05/19/2026 1155"],
+        ]),
         ("section", "INDICATION"),
         ("body", "Diabetic foot infection, assess lower-extremity perfusion."),
         ("section", "RESULTS"),
@@ -302,8 +338,8 @@ def EW9():
             ["Measure", "Right", "Left"],
             ["Ankle-brachial index", "Noncompressible (greater than 1.3)", "Noncompressible (greater than 1.3)"],
             ["Ankle waveform", "Monophasic", "Monophasic"],
-            ["Toe-brachial index", "0.6", "0.5"],
-            ["Toe pressure", "44 mmHg", "38 mmHg"],
+            ["Toe-brachial index", "0.84", "0.50"],
+            ["Toe pressure", "92 mmHg", "55 mmHg"],
         ]),
         ("section", "IMPRESSION"),
         ("bullets", [
@@ -323,7 +359,7 @@ def EW10():
         ("section", "REASON FOR CONSULTATION"),
         ("body", "Assess perfusion and need for revascularization in limb-threat diabetic foot infection."),
         ("section", "HISTORY AND SOURCE REVIEW"),
-        ("body", "Known peripheral arterial disease. Reviewed today's noninvasive study: ankle indices noncompressible with reduced toe pressures, left toe pressure 38 mmHg and toe-brachial index 0.5. The forefoot wound is granulating after debridement."),
+        ("body", "Known peripheral arterial disease. Reviewed today's noninvasive study: ankle indices noncompressible with reduced toe pressures, left toe pressure 55 mmHg and toe-brachial index 0.50. The forefoot wound is granulating after debridement."),
         ("section", "EXAMINATION"),
         ("body", "Diminished pedal pulses bilaterally, feet cool, capillary refill sluggish in the left forefoot. Wound base granulating."),
         ("section", "IMPRESSION AND PLAN"),
@@ -341,7 +377,16 @@ def EW10():
 def EW11():
     return ("foot_pathology_report_05202026.docx", "consult", "PATHOLOGY", "05/20/2026", [
         ("title", "SURGICAL PATHOLOGY REPORT"),
-        ("filing", "Author: Pathology | Date of Service: 05/20/2026 0930 | Status: Final"),
+        ("filing", "Author: Pathology | Date of Service: 05/20/2026 0930 | Status: Final | Case HCR-SP-26-0517"),
+        ("section", "CASE DETAILS"),
+        ("table", [
+            ["Field", "Value"],
+            ["Specimen", "Left forefoot deep soft tissue, debridement"],
+            ["Collected", "05/17/2026 1418"],
+            ["Received", "05/17/2026 1536"],
+            ["Reported", "05/20/2026 0930"],
+            ["Ordering clinician", "Priyanka Vell, DPM"],
+        ]),
         ("section", "SPECIMEN"),
         ("body", "Left forefoot deep soft tissue, debridement."),
         ("section", "CLINICAL HISTORY"),
@@ -495,7 +540,15 @@ def EW16():
 def EW17():
     return ("renal_lab_trend_05162026.docx", "trend", "RESULTS REVIEW", "05/21/2026", [
         ("title", "RENAL FUNCTION TREND (ADMISSION TO SNAPSHOT)"),
-        ("filing", "Author: Results Review | Date of Service: 05/21/2026 1730 | Status: Final"),
+        ("filing", "Author: Results Review | Date of Service: 05/21/2026 1730 | Status: Final | Result group HCR-LAB-RENAL-0521"),
+        ("section", "RESULTS HEADER"),
+        ("table", [
+            ["Field", "Value"],
+            ["Source", "Chemistry results review"],
+            ["Collection window", "05/16/2026 0845 to 05/21/2026 0528"],
+            ["Ordering service", "Hospital Medicine"],
+            ["Report status", "Final values through 05/21/2026 1730"],
+        ]),
         ("section", "RENAL TREND"),
         ("table", [
             ["Date", "Creatinine (mg/dL)", "eGFR", "BUN (mg/dL)", "Potassium (mEq/L)"],
@@ -513,7 +566,15 @@ def EW17():
 def EW18():
     return ("cbc_inflammatory_trend_05162026.docx", "trend", "RESULTS REVIEW", "05/21/2026", [
         ("title", "CBC AND INFLAMMATORY MARKER TREND"),
-        ("filing", "Author: Results Review | Date of Service: 05/21/2026 1730 | Status: Final"),
+        ("filing", "Author: Results Review | Date of Service: 05/21/2026 1730 | Status: Final | Result group HCR-LAB-INF-0521"),
+        ("section", "RESULTS HEADER"),
+        ("table", [
+            ["Field", "Value"],
+            ["Source", "Hematology and inflammatory marker results review"],
+            ["Collection window", "05/16/2026 0845 to 05/21/2026 0528"],
+            ["Ordering service", "Hospital Medicine"],
+            ["Report status", "Final values through 05/21/2026 1730"],
+        ]),
         ("section", "TREND"),
         ("table", [
             ["Date", "WBC (K/uL)", "CRP (mg/L)", "Hemoglobin (g/dL)", "Platelets (K/uL)"],
@@ -530,7 +591,16 @@ def EW18():
 def EW19():
     return ("culture_report_deep_tissue_05172026.docx", "trend", "MICROBIOLOGY", "05/19/2026", [
         ("title", "MICROBIOLOGY REPORT - DEEP TISSUE"),
-        ("filing", "Author: Microbiology | Source: Operative deep soft tissue (05/17) | Date Reported: 05/19/2026 | Status: Final"),
+        ("filing", "Author: Microbiology | Source: Operative deep soft tissue (05/17) | Date Reported: 05/19/2026 | Status: Final | Accession HCR-MIC-26-51744"),
+        ("section", "SPECIMEN DETAILS"),
+        ("table", [
+            ["Field", "Value"],
+            ["Specimen", "Deep soft tissue, left forefoot"],
+            ["Collected", "05/17/2026 1418"],
+            ["Received", "05/17/2026 1510"],
+            ["Reported", "05/19/2026 0832"],
+            ["Ordering clinician", "Priyanka Vell, DPM"],
+        ]),
         ("section", "SOURCE"),
         ("body", "Deep soft tissue obtained at operative debridement on 05/17/2026 (higher-authority specimen)."),
         ("section", "RESULT"),
@@ -555,7 +625,16 @@ def EW19():
 def EW20():
     return ("culture_report_superficial_swab_05162026.docx", "trend", "MICROBIOLOGY", "05/16/2026", [
         ("title", "MICROBIOLOGY REPORT - SUPERFICIAL SWAB"),
-        ("filing", "Author: Microbiology | Source: Superficial wound swab (05/16) | Date Reported: 05/18/2026 | Status: Final"),
+        ("filing", "Author: Microbiology | Source: Superficial wound swab (05/16) | Date Reported: 05/18/2026 | Status: Final | Accession HCR-MIC-26-51621"),
+        ("section", "SPECIMEN DETAILS"),
+        ("table", [
+            ["Field", "Value"],
+            ["Specimen", "Superficial wound swab, left forefoot"],
+            ["Collected", "05/16/2026 0902"],
+            ["Received", "05/16/2026 1018"],
+            ["Reported", "05/18/2026 0744"],
+            ["Ordering clinician", "Marisol Everet, MD"],
+        ]),
         ("section", "SOURCE"),
         ("body", "Superficial wound swab collected in the Emergency Department on 05/16/2026 (lower-authority specimen; surface flora)."),
         ("section", "RESULT"),
@@ -591,7 +670,7 @@ def EW21():
 def EW22():
     return ("home_med_list_05162026.docx", "pharmacy", "MEDICATION LIST", "05/16/2026", [
         ("title", "PRE-ADMISSION HOME MEDICATION LIST"),
-        ("filing", "Author: System-generated medication list | Date of Service: 05/16/2026 | Status: Reference"),
+        ("filing", "Author: EMR medication list | Date of Service: 05/16/2026 | Status: Reference"),
         ("section", "HOME MEDICATIONS"),
         ("table", [
             ["Medication", "Dose", "Route", "Frequency", "Indication"],
@@ -611,7 +690,7 @@ def EW22():
             ["Acetaminophen", "650 mg", "Oral", "Three times daily as needed", "Knee osteoarthritis"],
         ]),
         ("body", "NSAIDs are avoided given chronic kidney disease. CPAP is used nightly for obstructive sleep apnea."),
-        ("sig", "System-generated on 05/16/2026"),
+        ("sig", "EMR medication list filed on 05/16/2026"),
     ])
 
 
@@ -780,4 +859,4 @@ WORLD_FILES = [EW1, EW2, EW3, EW4, EW5, EW6, EW7, EW8, EW9, EW10, EW11, EW12, EW
                EW14, EW15, EW16, EW17, EW18, EW19, EW20, EW21, EW22, EW23, EW24,
                EW25, EW26, EW27, EW28, EW29]
 SUPPLEMENTARY = [WS1, WS2, WS3]
-# EW30 (wound photo) and EW31 (ABI/TBI tracing) are Codex-generated images.
+# EW30 (wound photo) and EW31 (ABI/TBI tracing) are Codex-produced images.

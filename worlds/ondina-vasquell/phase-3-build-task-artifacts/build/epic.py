@@ -1,49 +1,73 @@
 #!/usr/bin/env python3
-"""Epic-style note renderer for the Ondina Vasquell world files.
+"""Epic-style note renderer - matches the KM design system EXACTLY.
 
-Recipe extracted from the shipped-clean KM base bytes (ed_provider_assessment):
-  font            Arial throughout (Normal style = Arial 9.5pt)
-  body            sz 19 (9.5pt), black
-  section header  sz 20 (10pt) BOLD black, plain (no navy) - matches KM bytes
-  note title      sz 24 (12pt) BOLD black
-  masthead table  1x2, no fill, sz 22 bold
-  patient banner  fill EAEAEA, sz 18 grid
-  margins         top 0.5in, bottom 0.55in, left/right 0.65in (inherited from clone)
-
-Hard rule: GUARD() rejects any banned character (em/en dash, arrow, asterisk,
-square bracket, degree, multiply, superscripts) before it can reach a file.
-All chrome is rebuilt after clear_body so NO base (KM) content can survive.
+Constants and helpers reproduced from tools/generate_reference_files.py (the generator
+that produced the 33 approved KM reference files), so fingerprints match the KM target:
+  body        Arial 9.5pt, color INK 232830, space-after 4pt, line 1.08
+  section     BLUE 4472C4 bold 10pt, bottom rule C9D4EA
+  note title  NAVY 1F3864 bold 14pt
+  masthead    facility NAVY 11pt bold + dept GRAY 8pt; Confidential BLUE 8.5pt
+  blue bar    1x1 B_HEX 4472C4 accent
+  storyboard  name row B_HEX + white; 4 card cells CARD EDF2FA
+  table       header B_HEX + white; alternate rows CARD; borders C9D4EA
+  signature   top rule C9D4EA + GRAY italic
+Header/footer are CLEARED (KM clone leaves KM identifiers there) and rewritten clean:
+  header  "<name>  |  MRN <mrn>"   footer  "<facility>  |  <doctype>  |  Confidential"
+GUARD rejects banned characters before they can reach a file. No synthetic banner.
 """
 from __future__ import annotations
+from docx.shared import Pt, RGBColor, Inches
+from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml.ns import qn
 from docx.oxml import OxmlElement
 
-BLACK = "000000"
-GRAYLABEL = "595959"
-BANNERFILL = "EAEAEA"
-RULE = "BFBFBF"
-BODY_SZ = "19"      # 9.5pt
-SEC_SZ = "20"       # 10pt
-TITLE_SZ = "24"     # 12pt
-MAST_SZ = "22"      # 11pt
-BANNER_SZ = "18"    # 9pt
-SMALL_SZ = "17"     # 8.5pt filing/signature
+INK = RGBColor(0x23, 0x28, 0x30)
+BLUE = RGBColor(0x44, 0x72, 0xC4)
+NAVY = RGBColor(0x1F, 0x38, 0x64)
+GRAY = RGBColor(0x5E, 0x66, 0x70)
+WHITE = RGBColor(0xFF, 0xFF, 0xFF)
+B_HEX = "4472C4"
+CARD = "EDF2FA"
+RULE = "C9D4EA"
 
-BANNED = {"—": "-", "–": "-", "→": " to ", "•": "-",
-          "*": "", "[": "(", "]": ")", "°": " ", "×": "x",
-          "⁹": "9", "¹": "1", "⁰": "0"}
+BANNED = "—–→•°×⁹¹⁰*[]"
 
 
 def GUARD(text: str) -> str:
-    """Reject banned characters outright; callers must pre-clean. Returns text
-    unchanged if clean, else raises so a bad char can never be written silently."""
-    bad = [c for c in text if c in BANNED]
+    bad = [c for c in str(text) if c in BANNED]
     if bad:
-        raise ValueError(f"banned character {bad!r} in: {text[:60]!r}")
-    return text
+        raise ValueError(f"banned character {bad!r} in: {str(text)[:60]!r}")
+    return str(text)
 
 
-def clear_body(doc) -> None:
+def _run(p, t, sz=9.5, c=INK, b=False, i=False):
+    GUARD(t)
+    r = p.add_run(t)
+    r.font.name = "Arial"; r.font.size = Pt(sz); r.font.color.rgb = c
+    r.font.bold = b; r.font.italic = i
+    return r
+
+
+def _shade(cell, fill):
+    pr = cell._tc.get_or_add_tcPr()
+    s = OxmlElement("w:shd"); s.set(qn("w:val"), "clear"); s.set(qn("w:fill"), fill)
+    pr.append(s)
+
+
+def _borders(t, none=False):
+    pr = t._tbl.tblPr
+    b = OxmlElement("w:tblBorders")
+    for e in ("top", "left", "bottom", "right", "insideH", "insideV"):
+        el = OxmlElement("w:" + e)
+        if none:
+            el.set(qn("w:val"), "none")
+        else:
+            el.set(qn("w:val"), "single"); el.set(qn("w:sz"), "4"); el.set(qn("w:color"), RULE)
+        b.append(el)
+    pr.append(b)
+
+
+def clear_body(doc):
     body = doc.element.body
     for child in list(body):
         if child.tag == qn("w:sectPr"):
@@ -51,133 +75,132 @@ def clear_body(doc) -> None:
         body.remove(child)
 
 
-def _runfmt(run, *, size, bold, color=BLACK, italic=False):
-    rpr = run._r.get_or_add_rPr()
-    fonts = OxmlElement("w:rFonts")
-    fonts.set(qn("w:ascii"), "Arial"); fonts.set(qn("w:hAnsi"), "Arial")
-    rpr.append(fonts)
-    if bold:
-        rpr.append(OxmlElement("w:b"))
-    if italic:
-        rpr.append(OxmlElement("w:i"))
-    c = OxmlElement("w:color"); c.set(qn("w:val"), color); rpr.append(c)
-    s = OxmlElement("w:sz"); s.set(qn("w:val"), size); rpr.append(s)
+def _clear_part(hf):
+    """Empty a header/footer part of all inherited content (KM identifiers live here)."""
+    el = hf._element
+    for child in list(el):
+        el.remove(child)
 
 
-def _shade(cell, fill):
-    shd = OxmlElement("w:shd"); shd.set(qn("w:val"), "clear")
-    shd.set(qn("w:color"), "auto"); shd.set(qn("w:fill"), fill)
-    cell._tc.get_or_add_tcPr().append(shd)
+def clear_and_set_hf(doc, name, mrn, facility, doctype):
+    """Wipe every header/footer part (KM clone leaves KM name/MRN/facility there)
+    and write a clean running header and footer. name=None -> blank header and a
+    plain Confidential footer (external task files)."""
+    from docx.text.paragraph import Paragraph
+    header_txt = f"{name}  |  MRN {mrn}" if name else ""
+    footer_txt = f"{facility}  |  {doctype}  |  Confidential" if facility else "Confidential"
+    GUARD(header_txt); GUARD(footer_txt)
+    for s in doc.sections:
+        s.different_first_page_header_footer = False
+        for hf in (s.header, s.first_page_header, s.even_page_header):
+            hf.is_linked_to_previous = False
+            _clear_part(hf)
+            p = hf._element.makeelement(qn("w:p"), {})
+            hf._element.append(p)
+            if header_txt:
+                _run(Paragraph(p, hf), header_txt, 7.5, GRAY)
+        for hf in (s.footer, s.first_page_footer, s.even_page_footer):
+            hf.is_linked_to_previous = False
+            _clear_part(hf)
+            p = hf._element.makeelement(qn("w:p"), {})
+            hf._element.append(p)
+            par = Paragraph(p, hf)
+            par.alignment = WD_ALIGN_PARAGRAPH.CENTER
+            _run(par, footer_txt, 7.5, GRAY)
 
 
-def _borders(table, color=RULE):
-    b = OxmlElement("w:tblBorders")
-    for edge in ("top", "left", "bottom", "right", "insideH", "insideV"):
-        e = OxmlElement(f"w:{edge}")
-        e.set(qn("w:val"), "single"); e.set(qn("w:sz"), "4")
-        e.set(qn("w:space"), "0"); e.set(qn("w:color"), color)
-        b.append(e)
-    table._tbl.tblPr.append(b)
+def masthead(doc, facility, dept):
+    m = doc.add_table(rows=1, cols=2); _borders(m, none=True)
+    _run(m.rows[0].cells[0].paragraphs[0], facility, 11, NAVY, b=True)
+    if dept:
+        _run(m.rows[0].cells[0].add_paragraph(), dept, 8, GRAY)
+    pr = m.rows[0].cells[1].paragraphs[0]; pr.alignment = WD_ALIGN_PARAGRAPH.RIGHT
+    _run(pr, "Confidential", 8.5, BLUE, b=True)
 
 
-def facility_band(doc, facility, filed):
-    GUARD(facility); GUARD(filed)
-    t = doc.add_table(rows=1, cols=2); t.style = "TableNormal"
-    t.cell(0, 0).text = facility
-    _runfmt(t.cell(0, 0).paragraphs[0].runs[0], size=MAST_SZ, bold=True)
-    t.cell(0, 1).text = filed
-    p = t.cell(0, 1).paragraphs[0]
-    p.alignment = 2  # right
-    _runfmt(p.runs[0], size="15", bold=False, color=GRAYLABEL)
-    doc.add_paragraph()
+def blue_bar(doc):
+    hr = doc.add_table(rows=1, cols=1); _borders(hr, none=True)
+    _shade(hr.rows[0].cells[0], B_HEX)
+    tr = hr.rows[0]._tr.get_or_add_trPr()
+    h = OxmlElement("w:trHeight"); h.set(qn("w:val"), "40"); tr.append(h)
 
 
-def patient_banner(doc, name, mrn, grid):
-    """grid: list of (label, value) pairs rendered 4-up under a name row."""
-    GUARD(name); GUARD(mrn)
-    rows = 1 + (len(grid) + 1) // 2
-    t = doc.add_table(rows=rows, cols=4); t.style = "TableNormal"
-    _borders(t)
-    # name row spans
-    top = t.cell(0, 0).merge(t.cell(0, 3))
-    _shade(top, BANNERFILL)
-    p = top.paragraphs[0]
-    r1 = p.add_run(name); _runfmt(r1, size="22", bold=True)
-    r2 = p.add_run("      MRN " + mrn); _runfmt(r2, size=BANNER_SZ, bold=True)
-    r = 1; c = 0
-    for label, value in grid:
-        GUARD(label); GUARD(str(value))
-        lc = t.cell(r, c); _shade(lc, BANNERFILL)
-        rl = lc.paragraphs[0].add_run(label); _runfmt(rl, size="16", bold=True, color=GRAYLABEL)
-        vc = t.cell(r, c + 1); _shade(vc, BANNERFILL)
-        rv = vc.paragraphs[0].add_run(str(value)); _runfmt(rv, size=BANNER_SZ, bold=False)
-        c += 2
-        if c > 3:
-            c = 0; r += 1
+def storyboard(doc, name, demo, mrn, fields):
+    """fields: list of exactly 4 (label, value) shown as light-blue cards."""
+    sb = doc.add_table(rows=2, cols=4); _borders(sb)
+    top = sb.rows[0]
+    mc = top.cells[0].merge(top.cells[2]); _shade(mc, B_HEX)
+    p = mc.paragraphs[0]
+    _run(p, "  " + name, 13, WHITE, b=True)
+    if demo:
+        _run(p, "    " + demo, 9, WHITE)
+    c3 = top.cells[3]; _shade(c3, B_HEX)
+    p = c3.paragraphs[0]; p.alignment = WD_ALIGN_PARAGRAPH.RIGHT
+    _run(p, "MRN " + mrn + "  ", 10, WHITE, b=True)
+    for j, (k, v) in enumerate(fields[:4]):
+        cell = sb.rows[1].cells[j]; _shade(cell, CARD)
+        p = cell.paragraphs[0]
+        _run(p, k + "\n", 7.4, GRAY, b=True); _run(p, str(v)[:90], 8.2)
     doc.add_paragraph()
 
 
 def note_title(doc, title):
-    GUARD(title)
-    p = doc.add_paragraph(); r = p.add_run(title)
-    _runfmt(r, size=TITLE_SZ, bold=True)
+    p = doc.add_paragraph(); _run(p, title, 14, NAVY, b=True)
 
 
 def filing_line(doc, text):
-    GUARD(text)
-    p = doc.add_paragraph(); r = p.add_run(text)
-    _runfmt(r, size=SMALL_SZ, bold=False, color=GRAYLABEL)
-    doc.add_paragraph()
+    p = doc.add_paragraph(); _run(p, text, 8, GRAY)
 
 
 def section(doc, name):
-    GUARD(name)
-    p = doc.add_paragraph(); r = p.add_run(name)
-    _runfmt(r, size=SEC_SZ, bold=True)
-    # thin bottom rule
-    ppr = p._p.get_or_add_pPr()
-    pbdr = OxmlElement("w:pBdr")
-    bottom = OxmlElement("w:bottom")
-    bottom.set(qn("w:val"), "single"); bottom.set(qn("w:sz"), "4")
-    bottom.set(qn("w:space"), "1"); bottom.set(qn("w:color"), RULE)
-    pbdr.append(bottom); ppr.append(pbdr)
+    p = doc.add_paragraph()
+    p.paragraph_format.space_before = Pt(9); p.paragraph_format.space_after = Pt(3)
+    _run(p, name.upper(), 10, BLUE, b=True)
+    pr = p._p.get_or_add_pPr(); pb = OxmlElement("w:pBdr"); bo = OxmlElement("w:bottom")
+    bo.set(qn("w:val"), "single"); bo.set(qn("w:sz"), "6"); bo.set(qn("w:color"), RULE); bo.set(qn("w:space"), "2")
+    pb.append(bo); pr.append(pb)
 
 
 def body(doc, text, *, bold=False):
-    GUARD(text)
-    p = doc.add_paragraph(); r = p.add_run(text)
-    _runfmt(r, size=BODY_SZ, bold=bold)
+    p = doc.add_paragraph(); _run(p, text, 9.5, INK, b=bold)
 
 
 def bullets(doc, items):
     for it in items:
-        GUARD(it)
-        p = doc.add_paragraph(style="List Bullet"); r = p.add_run(it)
-        _runfmt(r, size=BODY_SZ, bold=False)
+        p = doc.add_paragraph(style="List Bullet")
+        p.paragraph_format.space_after = Pt(1.5)
+        _run(p, it, 9.5, INK)
 
 
 def data_table(doc, rows, *, header=True):
     if not rows:
         return
-    ncol = len(rows[0])
-    t = doc.add_table(rows=len(rows), cols=ncol); t.style = "TableNormal"
-    _borders(t)
+    cols = max(len(r) for r in rows)
+    tb = doc.add_table(rows=len(rows), cols=cols); _borders(tb)
     for ri, row in enumerate(rows):
-        for ci in range(ncol):
-            val = row[ci] if ci < len(row) else ""
-            GUARD(str(val))
-            cell = t.cell(ri, ci); cell.text = str(val)
+        for ci in range(cols):
+            c = tb.rows[ri].cells[ci]; pp = c.paragraphs[0]
+            v = row[ci] if ci < len(row) else ""
             if ri == 0 and header:
-                _shade(cell, BANNERFILL)
-                _runfmt(cell.paragraphs[0].runs[0], size="17", bold=True)
+                _shade(c, B_HEX); _run(pp, str(v), 8, WHITE, b=True)
             else:
-                if cell.paragraphs[0].runs:
-                    _runfmt(cell.paragraphs[0].runs[0], size="17", bold=False)
+                if ri % 2 == 0:
+                    _shade(c, CARD)
+                _run(pp, str(v), 8, INK)
     doc.add_paragraph()
 
 
 def signature(doc, text):
-    GUARD(text)
-    doc.add_paragraph()
-    p = doc.add_paragraph(); r = p.add_run(text)
-    _runfmt(r, size=BODY_SZ, bold=False, italic=True)
+    sg = doc.add_paragraph(); sg.paragraph_format.space_before = Pt(10)
+    pr = sg._p.get_or_add_pPr(); pb = OxmlElement("w:pBdr"); bo = OxmlElement("w:top")
+    bo.set(qn("w:val"), "single"); bo.set(qn("w:sz"), "4"); bo.set(qn("w:color"), RULE); bo.set(qn("w:space"), "4")
+    pb.append(bo); pr.append(pb)
+    _run(sg, text, 9, GRAY, i=True)
+
+
+def encounter_block(doc, pairs):
+    """KM PATIENT / ENCOUNTER block: metadata as labeled body lines."""
+    section(doc, "PATIENT / ENCOUNTER")
+    for k, v in pairs:
+        p = doc.add_paragraph()
+        _run(p, k + ": ", 9, INK, b=True); _run(p, str(v), 9, INK)
