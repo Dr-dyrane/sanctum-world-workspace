@@ -8,7 +8,7 @@ Version tested: KM08 v7, true SOAP placeholder plus external night-float signout
 
 15, 15, 30, 20, 20, 20, 15, 30, 30, 20
 
-Mean: 22.0
+Mean: 21.5
 Minimum: 15
 Maximum: 30
 Sub-70: 10

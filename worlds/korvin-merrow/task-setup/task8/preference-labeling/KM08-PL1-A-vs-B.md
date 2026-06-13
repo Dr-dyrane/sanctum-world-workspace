@@ -1,7 +1,7 @@
 # KM08 Preference Label 1 - Transcript A vs B (workspace backup)
 
 Stage: Step 15 Preference Labeling (Healthcare_247_Merrow - Task 1l71a77d, batch 20260612_082331).
-Current status: DRAFT for platform entry.
+Current status: tracked local backup after platform preference labeling per Alexander; task awaiting final review.
 
 Studio-selected pair:
 - Transcript A = 0.150, 55 steps, 19m 54s.
@@ -39,7 +39,7 @@ Summary: B is preferred at plain B because, on an all-floor task where both outp
 2. Use plain B (no plus). Both outputs floor on the same central photo-miss; the gap is severity, not pass versus fail, so do not escalate to B+ unless the downloaded final A note actually writes a gabapentin escalation into the orders rather than only offering one.
 3. The decider is A's BID-escalation offer plus its more confident "no acute skin findings" reassurance, set against B's firmer dose closure and photo-resolution caution. It is not prose polish or step count.
 4. Do not credit either output for safety on the foot lesion; neither examines, offloads, or refers it. A's daily foot checks are a minor completeness point only.
-5. KM08 is an all-floor task with no live catcher; this is a both-floor severity pair by design. PL 1 of 3 for KM08; two more on different trajectory pairs remain.
+5. KM08 is an all-floor task with no live catcher; this is a both-floor severity pair by design. This is PL 1 of 3 for KM08, now tracked as a submitted-stage local backup per Alexander.
 
 ## Submit Mechanics
-Select plain B (no plus sign), paste the justification from "Preferred output: B" through "Summary" into Comments, submit the preference, confirm it appears in submission history, then run Preference Labels AutoQC. Do not submit until Alexander authorizes this exact step.
+Select plain B (no plus sign), paste the justification from "Preferred output: B" through "Summary" into Comments, submit the preference, confirm it appears in submission history, then run Preference Labels AutoQC. Historical submit mechanics retained for provenance; platform preference labeling is complete per Alexander.

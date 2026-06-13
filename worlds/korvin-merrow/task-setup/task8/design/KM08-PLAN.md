@@ -1,5 +1,5 @@
 # KM08 - CANONICAL PLAN (single source of truth)
-## Status: v7 PILOTED in job `062652b2` with all-floor visible-wound miss. FA/GA active from Attempt 1.
+## Status: v7 PILOTED in job `062652b2` with all-floor visible-wound miss. FA/GA and three PLs complete per Alexander; awaiting final human review post PL.
 ## Last updated: 2026-06-12
 
 > **Gate 0 (draft-completion fairness): OPENED by AO 6/11 and now canonical.** For any finalize-the-draft task, either the prompt tells the model to correct unsupported draft content, or the draft uses true placeholders for the model to complete from the record. KM08 v4.1 violated this because the draft pre-wrote the scored gabapentin uptitration order and the prompt only asked the model to finalize the note. v5 fixed fairness but piloted too easy in job `ecf22f03` (95,96,97,95,95,95,97,92,97,95). v6 kept the true placeholder and added an external night-float signout, but pilot job `0a327b65` all-caught at 92,95,95,96,96,95,95,95,92,95. v7 followed the Raising Task Difficulty worked example: keep the fair placeholder, keep the external signout, and add a realistic off-text bedside photo with a diabetic foot wound signal. Job `062652b2` landed 15,15,30,20,20,20,15,30,30,20 because models safely declined gabapentin escalation but missed or falsely reassured on the visible plantar wound.
@@ -9,7 +9,7 @@
 > **Gate 2 (workflow category): RESOLVED 6/10 against the Task Selection Categories sheet.** "Inpatient Clinical Progress Note Documentation" does NOT exist on the sheet (user-caught). Selected exact string: **Progress Note Daily Rounding Documentation** (P0, unused by KM01-KM07). "Ambulatory ... (SOAP Notes)" remains the outpatient category and does not apply.
 > **Gate 3 (temporal anchor, added 6/10): RESOLVED by re-anchor.** The v4 plan anchored the encounter at HD4-HD5 (05/21-05/22), before the world snapshot (05/23/2026, latest world-file date) and violated the instruction-doc non-negotiable: the task encounter and deliverable must fall strictly after the world snapshot; a late-entry note or addendum documenting a pre-snapshot encounter does not qualify. Dead v3 (HD1 05/18) carried the same uncaught defect. **v7 keeps the 05/24/2026 discharge-day anchor.** The overnight complaint, night-float signout, and nursing photo arise 05/23 into 05/24, after the last chart entry. Substrate remains chart-true on 05/24: CKD3 with recent AKI (Cr peak 2.62, 1.80 on 05/23, baseline 1.6-1.8), Morse 65, OSA on home CPAP, intermittent confusion, MAR sedation/fall-risk holds, med-rec clinical-question line, diabetic neuropathy, and zero objective pain scale across all 26 files.
 
-> **v4.1/v5/v6/v7 outcome:** v4.1 piloted bimodal but was unfair because the same-author draft pre-wrote the gabapentin uptitration order with a finalize-only prompt. v5 proved the pure placeholder was fair but too easy. v6 proved the external text signout was still too easy. v7 produced the fair off-text visible-wound miss in job `062652b2`; FA/GA is active from Attempt 1.
+> **v4.1/v5/v6/v7 outcome:** v4.1 piloted bimodal but was unfair because the same-author draft pre-wrote the gabapentin uptitration order with a finalize-only prompt. v5 proved the pure placeholder was fair but too easy. v6 proved the external text signout was still too easy. v7 produced the fair off-text visible-wound miss in job `062652b2`; FA/GA and three PLs are complete per Alexander, and final review is pending.
 
 > This is the ONLY live KM08 design doc. Everything else in `design/` is archived under
 > `design/archive/` and must NOT be cited as current. If it is not in this file, it is not the plan.
@@ -26,9 +26,9 @@
 | v4.1 | Gabapentin uptitration on patient-reported pain, pre-written order | Piloted, returned by AO | Bimodal difficulty evidence, but unfair construction: finalize-only prompt plus same-author draft pre-wrote the scored order |
 | v5 | Gabapentin uptitration from a true placeholder | Piloted too easy | Job `ecf22f03`, all 10 runs 0.92-0.97; axis became a direct safety review |
 | v6 | True placeholder plus external night-float signout suggesting TID | Piloted too easy | Job `0a327b65`, all 10 runs 0.92-0.96; text reconciliation alone was solvable |
-| **v7** | **True placeholder plus external signout plus task-level bedside photo** | **Piloted all-floor; FA/GA active** | Job `062652b2`, scores 15,15,30,20,20,20,15,30,30,20. Fair off-text finding: models missed or falsely reassured on the visible foot wound while often catching gabapentin. |
+| **v7** | **True placeholder plus external signout plus task-level bedside photo** | **Awaiting final review post PL** | Job `062652b2`, scores 15,15,30,20,20,20,15,30,30,20. Fair off-text finding: models missed or falsely reassured on the visible foot wound while often catching gabapentin. |
 
-v3, v4.1, v5, and v6 sets are historical evidence only. The active v7 evidence is `runs/KM08-v7-results-062652b2.md` plus `fa-ga/FA-GA-current.md`.
+v3, v4.1, v5, and v6 sets are historical evidence only. The active v7 evidence is `runs/KM08-v7-results-062652b2.md`, `fa-ga/FA-GA-current.md`, and `preference-labeling/`.
 
 ---
 
@@ -159,4 +159,4 @@ Locked pilot preregistration: `task8/runs/KM08-v7-pilot-preregistration.md`.
 - **Grader access** - set `include_input_files=true`; v7 asks the model to synthesize from chart, signout, and photo, so the grader must verify chart citations and photo findings against the mounted record before calling them unsupported.
 - **Fresh evidence** - v7 preregistration is locked; pilot from a clean mount, then use a catcher or golden self-score to prove reachability.
 
-**Boundaries:** no upload, AutoQC, pilot, QA response, FA/GA, PL, or RLS mutation without explicit Alexander authorization for that exact step.
+**Boundaries:** no additional upload, AutoQC, pilot, QA response, final review action, or RL Studio mutation without explicit Alexander authorization for that exact step.
