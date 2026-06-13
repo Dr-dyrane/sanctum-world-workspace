@@ -1,6 +1,26 @@
 # Claude Transcript Requirements
 
-Source scope: `reference/source/New Writers Version - Instruction Guide (05_24).md`, local template/link indexes under `reference/templates/`, and existing source-derived World Spec guideline files.
+Source scope: `reference/source/New Writers Version - Instruction Guide (05_24).md`, `reference/source/[EXP] Project Sanctum Instruction Document (06_08).md`, local template/link indexes under `reference/templates/`, and existing source-derived World Spec guideline files.
+
+## 2026-06-13 Update From 06_08 Source
+
+The 06_08 instruction document is now the governing local source for World Spec transcript scope.
+
+Verified evidence:
+
+- `reference/source/[EXP] Project Sanctum Instruction Document (06_08).md:2124` says the Spec stage uploads the spec, reference files, and Claude transcripts.
+- `reference/source/[EXP] Project Sanctum Instruction Document (06_08).md:2144` labels Step 2 as uploading the spec, reference files, and Claude transcripts.
+- `reference/source/[EXP] Project Sanctum Instruction Document (06_08).md:2150` says to upload the brainstorm and world spec Claude transcripts, and says the transcripts are required to submit.
+
+Operational rule:
+
+1. Preserve a Brainstorm Claude transcript for World Spec submission.
+2. Preserve a World Spec Claude transcript for World Spec submission.
+3. Upload both transcript artifacts at World Spec submission unless the live RL Studio field or a reviewer explicitly narrows the requirement.
+4. Preserve the Claude share URL as provenance and format the artifact as a role-labeled transcript. Keep internal assembly notes out of the reviewer-facing transcript.
+5. Sanitize transcript artifacts before upload: no em dashes, no en dashes, no internal labels, no benchmark register, no source-register language.
+
+The older 05_24 audit below remains historical evidence for format uncertainty only. It no longer controls the scope question after the 06_08 source explicitly names both brainstorm and world spec transcripts.
 
 This is the canonical local transcript note. It records only source-of-truth evidence. It separates:
 
@@ -176,4 +196,3 @@ Before World Spec upload:
 3. Preserve the Claude QC chat if used.
 4. Do not assume upload format until the RL Studio field, upload tutorial, pod lead, or reviewer confirms it.
 5. If RL Studio asks for a transcript and the format is unclear, stop and ask before submitting.
-

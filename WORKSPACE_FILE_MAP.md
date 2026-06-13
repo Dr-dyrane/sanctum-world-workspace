@@ -1,5 +1,5 @@
 # Workspace File Map
-**Last updated: 2026-06-12 (KM07 ready for delivery after v4 true-placeholder pilot, FA/GA, and three PLs; KM08 v7 piloted in job 062652b2 with all-floor photo-miss pattern, FA/GA, and three PLs complete per Alexander, now awaiting final human review post PL; KM09 v2 piloted cleanly in job 8ca908b5 with FA/GA active from Attempt 6; King P legitimate-failure-over-score guidance added and numeric score gates demoted; Raising Task Difficulty worked example added to sources and doctrine; KM10 v3 corrected GA after AO second review; A0.4/A0.5 draft-fairness gates and Abi review protocol added; macOS tooling/render notes added; internal medicine next-world planning canvas added; new-world 30 world-level file minimum indexed; next-world diabetic foot selection packet and hour prep packet indexed; Ondina Vasquell Brainstorm submission copy and Mode A DOCX built; final local audit PASS with DOCX hash recorded; Brainstorm AutoQC per-task priority-label fix applied and passed per Alexander)**
+**Last updated: 2026-06-13 (KM07 ready for delivery after v4 true-placeholder pilot, FA/GA, and three PLs; KM08 v7 piloted in job 062652b2 with all-floor photo-miss pattern, FA/GA, and three PLs complete per Alexander, now awaiting final human review post PL; KM09 v2 piloted cleanly in job 8ca908b5 with FA/GA active from Attempt 6; King P legitimate-failure-over-score guidance added and numeric score gates demoted; Raising Task Difficulty worked example added to sources and doctrine; KM10 v3 corrected GA after AO second review; A0.4/A0.5 draft-fairness gates and Abi review protocol added; macOS tooling/render notes added; internal medicine next-world planning canvas added; new-world 30 world-level file minimum indexed; next-world diabetic foot selection packet and hour prep packet indexed; Ondina Vasquell Brainstorm submission copy and Mode A DOCX built; final local audit PASS with DOCX hash recorded; Brainstorm AutoQC per-task priority-label fix applied and passed per Alexander; 06_08 World Spec transcript rule indexed; Ondina Brainstorm Claude transcript built with share-link provenance)**
 
 Single source of truth for repo structure, placement rules, and navigation.
 Read this + `AGENTS.md` at the start of any new session before touching files.
@@ -74,7 +74,9 @@ sanctum-world-workspace/
                                  built at worlds/ondina-vasquell/submission/
                                  Ondina_Vasquell_Brainstorm.docx, SHA prefix e1693467,
                                  final local audit PASS; Brainstorm AutoQC passed per Alexander;
-                                 human Brainstorm review pending.
+                                 human Brainstorm review pending. Brainstorm Claude transcript
+                                 lives beside it as markdown and DOCX with Claude share
+                                 provenance for later World Spec submission.
 ```
 
 ---
@@ -90,6 +92,7 @@ tools/
   build-world-performance-xlsx.py  ← LIVE: performance spreadsheet builder
   build/                       ← LIVE build scripts (one per task, current version only)
     build-docx-ondina-brainstorm.py
+    build-docx-ondina-brainstorm-claude-transcript.py
     build-docx-km07-draft-fairfix.py
     build-docx-km08-v7.py
     build-docx-km09-v2.py

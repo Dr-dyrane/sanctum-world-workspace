@@ -4,6 +4,17 @@ Source scope: `reference/source/New Writers Version - Instruction Guide (05_24).
 
 This is not a Korvin Merrow file inventory. It is a source-derived upload manifest for what the World Spec submission package appears to require.
 
+## 2026-06-13 Transcript Scope Update
+
+The 06_08 instruction document explicitly adds transcript scope for World Spec submission. Upload package planning must include:
+
+1. Brainstorm Claude transcript.
+2. World Spec Claude transcript.
+
+Evidence: `reference/source/[EXP] Project Sanctum Instruction Document (06_08).md:2124`, `:2144`, and `:2150`.
+
+The 05_24 inventory findings below remain historical for format uncertainty. They are superseded on transcript scope by the 06_08 source.
+
 ## Inventory Table
 
 | Artifact | Required status from source | Format or handling | Evidence |
@@ -47,4 +58,3 @@ The source contains both of the following:
   - Evidence: `reference/source/New Writers Version - Instruction Guide (05_24).md:1887`, `:2399`, `:2448`.
 
 Resolution status: not resolved by local source text. Confirm from RL Studio fields, current pod guidance, or reviewer before final upload.
-

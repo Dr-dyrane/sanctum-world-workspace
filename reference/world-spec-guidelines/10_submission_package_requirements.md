@@ -6,6 +6,26 @@ This file records only source-of-truth evidence. Where the source does not state
 
 ## Core Findings
 
+### 2026-06-13 transcript scope update
+
+The 06_08 instruction document explicitly requires both the brainstorm Claude transcript and the world spec Claude transcript at World Spec submission.
+
+Evidence:
+
+- `reference/source/[EXP] Project Sanctum Instruction Document (06_08).md:2124` says the Spec stage uploads the spec, reference files, and Claude transcripts.
+- `reference/source/[EXP] Project Sanctum Instruction Document (06_08).md:2144` labels Step 2 as uploading the spec, reference files, and Claude transcripts.
+- `reference/source/[EXP] Project Sanctum Instruction Document (06_08).md:2150` says to upload the brainstorm and world spec Claude transcripts, and says the transcripts are required to submit.
+
+Current rule:
+
+1. World Spec `.docx` is required.
+2. Template/reference files for the spec are required when the upload surface asks for them.
+3. Brainstorm Claude transcript is required.
+4. World Spec Claude transcript is required.
+5. Each upload remains a separate artifact unless RL Studio says otherwise.
+
+The older 05_24 "Not found" transcript finding below remains useful for file-format uncertainty only. It is superseded on transcript scope by the 06_08 source.
+
 ### 1. What files are uploaded during World Spec submission?
 
 Evidence found:
@@ -149,4 +169,3 @@ Not found as required RL Studio upload artifacts in local source text:
 - Brainstorming transcript.
 - Separate Brainstorm document upload during Stage 2 World Spec submission.
 - Task prompts, golden responses, grader guidelines, or failure analysis during World Spec submission.
-
