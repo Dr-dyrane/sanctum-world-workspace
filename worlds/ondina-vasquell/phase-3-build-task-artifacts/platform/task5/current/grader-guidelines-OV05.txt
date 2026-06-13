@@ -1,5 +1,5 @@
 TASK CONTEXT
-A pharmacy benefit manager rejected the planned discharge antibiotic and offered formulary-preferred substitutes. The deliverable is a pharmacist-to-prescriber response choosing among substitute, appeal, hold, or exception with rationale. Sources are the full chart (renal trend, cultures, allergy, infectious disease plan) and the external rejection notice (E1-T5).
+A pharmacy benefit manager rejected the planned discharge antibiotic and offered formulary-preferred substitutes. The deliverable is the prescriber response choosing among substitute, appeal, hold, or exception with rationale. Sources are the full chart (renal trend, cultures, allergy, infectious disease plan) and the external rejection notice (E1-T5).
 
 GOLDEN REFERENCE
 Score the response against the uploaded golden, golden-OV05-v1.docx. The golden is the benchmark; credit a response that reaches the same dispositions with different wording, ordering, or format. Do not penalize a response for anything the golden itself does or does not do.

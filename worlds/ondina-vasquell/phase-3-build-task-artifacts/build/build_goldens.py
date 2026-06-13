@@ -128,9 +128,9 @@ def OV04():
 
 
 def OV05():
-    return ("golden-OV05-v1.docx", "ed", "PHARMACY REJECTION RESPONSE", "05/25/2026", [
-        ("title", "PHARMACIST RESPONSE TO BENEFIT REJECTION"),
-        ("filing", "Author: Quentin Mabari, PharmD - Pharmacy | Date of Service: 05/25/2026 0900 | Status: Draft for physician confirm"),
+    return ("golden-OV05-v1.docx", "ed", "PRESCRIBER RESPONSE TO PHARMACY BENEFIT REJECTION", "05/25/2026", [
+        ("title", "PRESCRIBER RESPONSE TO PHARMACY BENEFIT REJECTION"),
+        ("filing", "Author: Helena Brusk, MD - Infectious Disease | Date of Service: 05/25/2026 0900 | Status: Draft for physician sign"),
         ("section", "ASSESSMENT"),
         ("body", "The benefit manager rejected the planned discharge antibiotic and offered formulary-preferred substitutes. Both offered substitutes are unsafe for this patient and should be declined."),
         ("section", "SUBSTITUTES DECLINED WITH REASON"),
@@ -145,8 +145,8 @@ def OV05():
             "Dose to the current renal function, not the admission values.",
         ]),
         ("section", "FLAGS FOR PHYSICIAN BEFORE SIGN"),
-        ("bullets", ["Confirm the exact alternative agent, route, dose, and duration with infectious disease before submitting the exception."]),
-        ("sig", "Prepared by Quentin Mabari, PharmD | Pharmacy | 05/25/2026 0900"),
+        ("bullets", ["Confirm the exact alternative agent, route, dose, and duration and the formulary-exception submission."]),
+        ("sig", "Electronically signed by Helena Brusk, MD | Infectious Disease | 05/25/2026 0900"),
     ])
 
 

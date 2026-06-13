@@ -246,10 +246,10 @@ Draft Prompt: The plan denied SNF for Mrs. Vasquell and case management asked me
 ## Task 5: Pharmacy Insurance Claim Rejection Response
 
 Capability: medication-safety judgment against an administrative substitution pressure.
-Workflow: Pharmacy Insurance Claim Rejection Resolution, requested by the inpatient pharmacist.
+Workflow: Pharmacy Insurance Claim Rejection Resolution, requested by the infectious disease attending.
 Anchor: 05/25/2026 at 09:00. Priority: P0. Difficulty: medium-high. Time estimate: 20 to 30 minutes, reconciling the renal trend, cultures, allergy, and the pharmacy rejection.
 
-Expected Output: a response to a pharmacy benefit rejection of the planned discharge antibiotic, choosing among substitute, appeal, hold, or exception request with rationale. Format: a pharmacist-to-prescriber response note. Register: pharmacist-to-prescriber clinical. Length: 300 to 500 words. Correct responses reject the formulary-preferred substitute because it is unsafe for this patient on renal or sulfa-allergy grounds, propose a renally appropriate and allergy-safe alternative or a formulary-exception appeal, and tie the choice to current renal function and the deep-tissue culture rather than the superficial swab. Grader anchors: the unsafe substitute is declined with the specific reason, renal or sulfa; a safe alternative or exception is proposed; dosing reflects current renal function; culture hierarchy respected.
+Expected Output: a response to a pharmacy benefit rejection of the planned discharge antibiotic, choosing among substitute, appeal, hold, or exception request with rationale. Format: a prescriber response note to the pharmacy benefit rejection. Register: treating attending (prescriber) clinical. Length: 300 to 500 words. Correct responses reject the formulary-preferred substitute because it is unsafe for this patient on renal or sulfa-allergy grounds, propose a renally appropriate and allergy-safe alternative or a formulary-exception appeal, and tie the choice to current renal function and the deep-tissue culture rather than the superficial swab. Grader anchors: the unsafe substitute is declined with the specific reason, renal or sulfa; a safe alternative or exception is proposed; dosing reflects current renal function; culture hierarchy respected.
 
 Failure Design
 
