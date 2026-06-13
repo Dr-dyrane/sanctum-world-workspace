@@ -1,4 +1,4 @@
-Cover: WORLD SPECIFICATION DOCUMENT. Limb-Threat Diabetic Foot Infection. || World Title: Limb-Threat Diabetic Foot Infection. Patient: Ondina Vasquell. World Type: Typical Clinical World. Setting: inpatient hospital medicine. Snapshot: May 21, 2026 at 18:00. 10 Tasks. Project Sanctum. Version 1.0. June 13, 2026.
+Cover: ONDINA VASQUELL WORLD SPECIFICATION DOCUMENT || World Title: Limb-Threat Diabetic Foot Infection | World Type: Typical Clinical World | Snapshot: May 21, 2026 at 18:00 | 10 Tasks || Clinical domain: inpatient hospital medicine, vascular and wound care, health information and payer operations | Project Sanctum | Version 1.0 | June 13, 2026
 
 | Field | Value |
 |---|---|

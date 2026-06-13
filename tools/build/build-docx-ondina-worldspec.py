@@ -77,11 +77,16 @@ def fmt_runs(cell, *, color: str, size: str, bold: bool) -> None:
             s = OxmlElement("w:sz"); s.set(qn("w:val"), size); rpr.append(s)
 
 
-def fmt_para(p, *, color: str, size: str, bold: bool) -> None:
+def fmt_para(p, *, color: str, size: str, bold: bool, italic: bool = False, center: bool = False) -> None:
+    if center:
+        ppr = p._p.get_or_add_pPr()
+        jc = OxmlElement("w:jc"); jc.set(qn("w:val"), "center"); ppr.append(jc)
     for run in p.runs:
         rpr = run._r.get_or_add_rPr()
         if bold:
             rpr.append(OxmlElement("w:b"))
+        if italic:
+            rpr.append(OxmlElement("w:i"))
         c = OxmlElement("w:color"); c.set(qn("w:val"), color); rpr.append(c)
         s = OxmlElement("w:sz"); s.set(qn("w:val"), size); rpr.append(s)
 
@@ -140,21 +145,24 @@ def add_box(doc, text: str, *, fill: str, color: str, bold: bool, size: str, bor
     fmt_runs(cell, color=color, size=size, bold=bold)
 
 
-def add_cover_box(doc, title: str, subtitle: str) -> None:
-    """Cover banner: blue bold title (16pt) + muted-gray subtitle (10pt)."""
+def add_cover_box(doc, title: str, subtitles: list) -> None:
+    """Cover banner (KM pattern): centered blue bold title (16pt) over centered
+    muted-gray subtitle lines (10pt)."""
     t = doc.add_table(rows=1, cols=1)
     t.style = "TableNormal"
     set_borders(t, outer="000000", inner="000000")
     cell = t.cell(0, 0)
     shade(cell, LIGHTBLUE)
     cell.paragraphs[0].text = title
-    fmt_para(cell.paragraphs[0], color=BLUE, size=COVER_SZ, bold=True)
-    psub = cell.add_paragraph(subtitle)
-    fmt_para(psub, color=MUTED, size=SUB_SZ, bold=False)
+    fmt_para(cell.paragraphs[0], color=BLUE, size=COVER_SZ, bold=True, center=True)
+    for sub in subtitles:
+        if sub.strip():
+            psub = cell.add_paragraph(sub.strip())
+            fmt_para(psub, color=MUTED, size=SUB_SZ, bold=False, center=True)
 
 
 def add_note_box(doc, text: str) -> None:
-    """Green note callout: green bold label before the first colon, gray body."""
+    """Green note callout: green bold label before the first colon, italic gray body."""
     t = doc.add_table(rows=1, cols=1)
     t.style = "TableNormal"
     set_borders(t, outer=GREEN, inner=GREEN)
@@ -170,11 +178,12 @@ def add_note_box(doc, text: str) -> None:
         s = OxmlElement("w:sz"); s.set(qn("w:val"), SZ); rpr.append(s)
         r2 = p.add_run(body)
         rpr2 = r2._r.get_or_add_rPr()
+        rpr2.append(OxmlElement("w:i"))  # italic body, KM terminology-box style
         c2 = OxmlElement("w:color"); c2.set(qn("w:val"), GRAY); rpr2.append(c2)
         s2 = OxmlElement("w:sz"); s2.set(qn("w:val"), SZ); rpr2.append(s2)
     else:
         p.text = text
-        fmt_para(p, color=GRAY, size=SZ, bold=False)
+        fmt_para(p, color=GRAY, size=SZ, bold=False, italic=True)
 
 
 def parse_md_table(block):
@@ -210,9 +219,8 @@ def build() -> None:
         elif ln.startswith("### "):
             doc.add_paragraph(ln[4:].strip(), style="Heading 2")
         elif ln.startswith("Cover:"):
-            payload = ln[len("Cover:"):].strip()
-            title, sub = (payload.split("||", 1) + [""])[:2]
-            add_cover_box(doc, title.strip(), sub.strip())
+            parts = [s.strip() for s in ln[len("Cover:"):].split("||")]
+            add_cover_box(doc, parts[0], parts[1:])
         elif ln.startswith("Draft Prompt:"):
             add_box(doc, ln.strip(), fill=LIGHTBLUE, color=BODY,
                     bold=False, size=SZ, border=DARKBLUE)
