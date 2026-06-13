@@ -1,10 +1,10 @@
 Preamble
 
-This task asks the physician to review the HIM preliminary inpatient coding summary for Korvin Merrow's 05/18 to 05/24/2026 admission on 05/25/2026 and prepare the final physician coding attestation. Inputs are the 26-file inpatient record and the HIM preliminary inpatient coding summary. Output is the finalized physician coding attestation: the final ICD-10-CM code set with a one-line rationale per code, the principal-diagnosis sequencing, and the working DRG family, graded against golden-KM09-v2.docx.
+This task asks the physician to prepare the inpatient coding attestation addendum for Korvin Merrow's 05/18 to 05/24/2026 admission on 05/25/2026. Inputs are the 26-file inpatient record and the HIM preliminary inpatient coding summary. Output is the finalized physician coding addendum: the final ICD-10-CM code set with a one-line rationale per code, the principal-diagnosis sequencing, and the working DRG family, graded against golden-KM09-v2.docx.
 
 Register Note
 
-This is a physician-facing coding attestation document. Tabular or list structure and coding shorthand are expected. Grade on fidelity to the documented record, not on prose polish, length, or formatting. The preliminary HIM summary is not authoritative; the physician review may accept or reject it. With include_input_files=true, verify specifics against the mounted record before calling them invented.
+This is a physician-facing coding attestation document. Tabular or list structure and coding shorthand are expected. Grade on fidelity to the documented record, not on prose polish, length, or formatting. The preliminary HIM summary is not authoritative; the physician addendum may accept or reject it. With include_input_files=true, verify specifics against the mounted record before calling them invented.
 
 Section A. Must be present and correct
 

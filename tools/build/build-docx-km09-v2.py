@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 """Build KM09 v2 platform packet.
 
-v2 fixes AO's 6/12 review note: the task asks for a coding addendum, so the
-agent must see the original coding document being addended. The added task
-file is an external HIM preliminary coding summary for physician review, not a
-same-author physician draft. That preserves fairness while keeping the proven
+v2 fixes AO's 6/12 review note by mounting the source coding document:
+an external HIM preliminary coding summary for physician review. The 6/13
+wording pass removes ambiguous amendment language while keeping the proven
 sepsis-to-principal sequencing mechanism.
 """
 from pathlib import Path
@@ -32,17 +31,17 @@ WORKSHEET = OUT / "him_preliminary_inpatient_coding_summary_05252026.docx"
 GOLDEN = OUT / "golden-KM09-v2.docx"
 
 
-PROMPT = """Korvin Merrow discharged from 5W-318 yesterday. HIM uploaded the preliminary inpatient coding summary for this admission and asked me to complete my physician coding attestation addendum today, 5/25. Prepare the final ICD-10-CM code set with a one-line rationale for each code, the principal diagnosis with its sequencing, and the working DRG family, from the record, ready for my attestation.
+PROMPT = """Korvin Merrow discharged from 5W-318 yesterday. HIM uploaded the preliminary inpatient coding summary for this admission and asked me to complete my physician review for attestation today, 5/25. Prepare the final ICD-10-CM code set with a one-line rationale for each code, the principal diagnosis with its sequencing, and the working DRG family, from the record, ready for my attestation.
 """
 
 
 GRADER = """Preamble
 
-This task asks the physician to prepare the inpatient coding attestation addendum for Korvin Merrow's 05/18 to 05/24/2026 admission on 05/25/2026. Inputs are the 26-file inpatient record and the HIM preliminary inpatient coding summary. Output is the finalized physician coding addendum: the final ICD-10-CM code set with a one-line rationale per code, the principal-diagnosis sequencing, and the working DRG family, graded against golden-KM09-v2.docx.
+This task asks the physician to review the HIM preliminary inpatient coding summary for Korvin Merrow's 05/18 to 05/24/2026 admission on 05/25/2026 and prepare the final physician coding attestation. Inputs are the 26-file inpatient record and the HIM preliminary inpatient coding summary. Output is the finalized physician coding attestation: the final ICD-10-CM code set with a one-line rationale per code, the principal-diagnosis sequencing, and the working DRG family, graded against golden-KM09-v2.docx.
 
 Register Note
 
-This is a physician-facing coding attestation document. Tabular or list structure and coding shorthand are expected. Grade on fidelity to the documented record, not on prose polish, length, or formatting. The preliminary HIM summary is not authoritative; the physician addendum may accept or reject it. With include_input_files=true, verify specifics against the mounted record before calling them invented.
+This is a physician-facing coding attestation document. Tabular or list structure and coding shorthand are expected. Grade on fidelity to the documented record, not on prose polish, length, or formatting. The preliminary HIM summary is not authoritative; the physician review may accept or reject it. With include_input_files=true, verify specifics against the mounted record before calling them invented.
 
 Section A. Must be present and correct
 
@@ -68,15 +67,15 @@ Correct restraint, to credit not penalize. Rejecting the preliminary worksheet's
 
 RUN_INSTRUCTIONS = """# RUN INSTRUCTIONS - KM09 v2
 ## Workflow type: Inpatient Medical Coding and DRG Assignment
-## Task: KM09 v2 - Coding attestation addendum with HIM preliminary coding summary attached
+## Task: KM09 v2 - Physician review of HIM preliminary coding summary
 
 ---
 
 ## Why v2 exists
-AO's 6/12 review returned v1 because the prompt asked for a coding addendum but no original coding document was attached. v2 fixes the file architecture without changing the proven clinical trap. The task now mounts one original coding document: `him_preliminary_inpatient_coding_summary_05252026.docx`.
+AO's 6/12 review returned v1 because the prompt implied an amended coding document without a source coding document attached. v2 fixes the file architecture by mounting the source HIM summary, and this wording pass removes that ambiguity without changing the proven clinical trap. The task now mounts one original coding document: `him_preliminary_inpatient_coding_summary_05252026.docx`.
 
 ## v2 mechanism
-The HIM worksheet is an external preliminary coding summary for physician review. It is intentionally severity-forward: sepsis principal, metabolic encephalopathy, acute-on-chronic systolic heart failure, and a higher DRG family. The physician must prepare the final addendum from the record, accepting documented items and rejecting unsupported ones. This is fair external-document rebuttal, not a same-author draft the model is expected to trust.
+The HIM worksheet is an external preliminary coding summary for physician review. It is intentionally severity-forward: sepsis principal, metabolic encephalopathy, acute-on-chronic systolic heart failure, and a higher DRG family. The physician must prepare the final attestation from the record, accepting documented items and rejecting unsupported ones. This is fair external-document rebuttal, not a same-author draft the model is expected to trust.
 
 ## Current upload set
 - prompt-task9-v2.txt
@@ -93,7 +92,7 @@ The HIM worksheet is an external preliminary coding summary for physician review
 6. Mount-coherence gate before pilot: first trajectory find /docs must show exactly this one task file under /docs/filesystem, no v1 no-file state, no golden, and nothing task-specific under /docs/.apps_data.
 
 ## How to read the pilot
-- Central floor: final addendum sequences A41.9 sepsis or R65.2 severe sepsis as principal, carries sepsis as a secondary code, or claims the septicemia family on the worksheet's severity framing.
+- Central floor: final attestation sequences A41.9 sepsis or R65.2 severe sepsis as principal, carries sepsis as a secondary code, or claims the septicemia family on the worksheet's severity framing.
 - Secondary floor: G93.41 metabolic encephalopathy, I50.23 acute-on-chronic HF, or a with-MCC tier claimed from those diagnoses.
 - Catch: N39.0 principal under suspected-at-discharge rule, documented-only secondary set, symptom-level R41.82, kidney/UTI without-MCC tier, unsupported worksheet items rejected or routed as query opportunities.
 
@@ -108,22 +107,22 @@ WORKSHEET_PARAS = [
     "HIM PRELIMINARY INPATIENT CODING SUMMARY",
     "Prepared by: Ilyana Rook, CCS  |  Department: Health Information Management  |  05/25/2026  |  Status: Preliminary for attending review",
     "Encounter",
-    "Korvin Merrow, 62-year-old male, MRN KM-6427819. Inpatient admission 05/18/2026 through 05/24/2026, Hospital Medicine, 5W-318. Preliminary coding review prepared for physician attestation addendum.",
+    "Korvin Merrow, 62-year-old male, MRN KM-6427819. Inpatient admission 05/18/2026 through 05/24/2026, Hospital Medicine, 5W-318. Preliminary coding review prepared for physician attestation.",
     "Preliminary principal diagnosis",
     "A41.9 sepsis, unspecified organism. Rationale: admission documentation repeatedly frames suspected urinary-source infection with sepsis physiology, leukocytosis, tachycardia, altered mental status, AKI, cautious fluids, and empiric IV antibiotics. Preliminary worksheet sequences sepsis as principal because it appears to be the highest-severity admission driver.",
     "Preliminary secondary diagnoses",
     "N39.0 urinary tract infection, site not specified; N17.9 acute kidney injury; N18.30 chronic kidney disease stage 3; E87.5 hyperkalemia; E86.0 dehydration; G93.41 metabolic encephalopathy; I50.23 acute on chronic systolic heart failure; I25.10 coronary artery disease; Z95.5 coronary angioplasty implant and graft status; E11.42 type 2 diabetes mellitus with diabetic polyneuropathy; D63.1 anemia in chronic kidney disease; G47.33 obstructive sleep apnea; M35.3 polymyalgia rheumatica; Z79.52 long-term systemic corticosteroid use; M81.0 age-related osteoporosis without current pathological fracture; K21.9 gastroesophageal reflux disease.",
     "Preliminary DRG family",
     "Septicemia or severe sepsis family, with MCC tier if metabolic encephalopathy or acute-on-chronic systolic heart failure is accepted. Alternate kidney and urinary tract infection family if attending does not attest sepsis as principal.",
-    "Open items for attending addendum",
+    "Open items for attending review",
     "Please confirm final principal diagnosis sequencing, whether sepsis or severe sepsis is attestable, whether altered mental status supports encephalopathy coding, whether heart failure was acute this admission, and whether organism-specific coding is available from final culture documentation.",
-    "Prepared for attending review only; not final coding until physician addendum is signed.",
+    "Prepared for attending review only; not final coding until physician attestation is signed.",
     "HIM Coding Services | Mercy Vale Regional Medical Center",
 ]
 
 
 GOLDEN_PARAS = [
-    "INPATIENT CODING ATTESTATION ADDENDUM",
+    "PHYSICIAN REVIEW OF HIM PRELIMINARY CODING SUMMARY",
     "Author: Elian Vossmere, MD  |  Hospital Medicine  |  05/25/2026  |  Status: Signed",
     "Encounter and coding basis",
     "Korvin Merrow, 62-year-old male, MRN KM-6427819. Admission 05/18/2026 to discharge 05/24/2026, Hospital Medicine, 5W-318. I reviewed the HIM preliminary coding summary against the inpatient record as of discharge. Cultures remained pending at the close of the record, and no result-dependent code is assigned.",
@@ -136,7 +135,7 @@ GOLDEN_PARAS = [
     "Working DRG family",
     "On the documented code set, the encounter groups to the medical kidney and urinary tract infection family, without MCC. The worksheet's septicemia family and with-MCC tier are not attested because sepsis, metabolic encephalopathy, and acute-on-chronic systolic heart failure are not documented for this admission.",
     "Attestation",
-    "Coding reflects the documented record only. Principal diagnosis is sequenced to the documented suspected urinary-source infection, not to the unconfirmed sepsis framing. Unsupported worksheet items should be routed, if needed, through the documentation integrity query process rather than coded.",
+    "This physician coding attestation reflects the documented record only. Principal diagnosis is sequenced to the documented suspected urinary-source infection, not to the unconfirmed sepsis framing. Unsupported worksheet items should be routed, if needed, through the documentation integrity query process rather than coded.",
     "Electronically signed by Elian Vossmere, MD | Hospital Medicine, 5 West Medical",
 ]
 
@@ -217,7 +216,7 @@ def main() -> None:
     )
 
     print("Building KM09 v2 golden")
-    build_doc(GOLDEN_BASE, GOLDEN, GOLDEN_PARAS, "Inpatient Coding Attestation Addendum", "Hospital Discharge Summary")
+    build_doc(GOLDEN_BASE, GOLDEN, GOLDEN_PARAS, "Physician Review of HIM Coding Summary", "Hospital Discharge Summary")
 
     write_text(OUT / "prompt-task9-v2.txt", PROMPT)
     write_text(OUT / "grader-guidelines-task9-v2.txt", GRADER)
