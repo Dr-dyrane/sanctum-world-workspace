@@ -398,6 +398,11 @@ The transcript packet should preserve the link, show the conversation as role-la
 ```
 
 15.
+Human
+```text
+Final readiness check.
+```
+
 Assistant
 ```text
 Final readiness:
