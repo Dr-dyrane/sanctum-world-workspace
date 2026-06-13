@@ -1,0 +1,1 @@
+I am getting Mrs. Vasquell ready to leave in the next day or two and I need a clean discharge medication reconciliation. Build it from her chart, give me each medication with what we are doing and a short why, and write the patient instructions in plain language. Flag anything you want me to confirm before I sign.
