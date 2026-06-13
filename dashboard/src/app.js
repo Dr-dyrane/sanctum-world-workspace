@@ -15,6 +15,24 @@
       review: 'var(--bad)',
       planned: 'var(--fg-faint)',
     }[stage] || 'var(--fg-faint)'),
+    artifactKind(name){
+      const lower = String(name || '').toLowerCase();
+      if (lower.endsWith('.png') || lower.endsWith('.jpg') || lower.endsWith('.jpeg')) return { label:'Image', icon:'image' };
+      if (lower.endsWith('.docx')) return { label:'Doc', icon:'file-text' };
+      if (lower.endsWith('.txt')) return { label:'Text', icon:'file-type' };
+      return { label:'File', icon:'file' };
+    },
+    artifactCue(name){
+      const lower = String(name || '').toLowerCase();
+      if (lower.includes('photo') || lower.endsWith('.png') || lower.endsWith('.jpg')) return 'Visual evidence the model must notice';
+      if (lower.includes('signout')) return 'Covering-clinician signout to weigh against the chart';
+      if (lower.includes('handoff')) return 'External handoff to accept, edit, or rebut';
+      if (lower.includes('query')) return 'External query that must be answered with documentation integrity';
+      if (lower.includes('coding') || lower.includes('him')) return 'Preliminary coding worksheet, not final authority';
+      if (lower.includes('draft') || lower.includes('started')) return 'Started clinical document with open work';
+      if (lower.includes('summary')) return 'Clinical summary source';
+      return 'Mounted task material';
+    },
     isCatcher: v => v >= 85,
     isFloor:   v => v <= 40,
     counts(t){
@@ -238,7 +256,27 @@
       return `<span class="badge ${t.quality}" title="${q.plain}">${q.label}</span>`;
     },
 
-    artifactTile(role, fileText, note, icon, status){
+    artifactTile(role, artifact, note, icon, status, cue){
+      const files = Array.isArray(artifact) ? artifact : [artifact];
+      const isMulti = files.length > 1;
+      const preview = isMulti
+        ? `<div class="artifact-file-stack">
+            ${files.map(name => {
+              const kind = U.artifactKind(name);
+              return `<div class="artifact-file-row">
+                <span class="artifact-kind">${kind.label}</span>
+                <span class="artifact-cue">${U.esc(U.artifactCue(name))}</span>
+                <span class="artifact-file">${U.esc(name)}</span>
+              </div>`;
+            }).join('')}
+          </div>`
+        : `<div class="artifact-preview">
+            <div class="artifact-preview-title">${U.esc(cue || U.artifactCue(files[0]))}</div>
+            <div class="artifact-filebar">
+              <span class="artifact-kind">${U.esc(U.artifactKind(files[0]).label)}</span>
+              <span class="artifact-file">${U.esc(files[0])}</span>
+            </div>
+          </div>`;
       return `<article class="artifact-tile">
         <div class="artifact-icon" aria-hidden="true"><i data-lucide="${icon}" style="width:17px;height:17px"></i></div>
         <div class="min-w-0">
@@ -246,7 +284,7 @@
             <span>${U.esc(role)}</span>
             <span>${U.esc(status)}</span>
           </div>
-          <div class="artifact-name">${U.esc(fileText)}</div>
+          ${preview}
           <p class="artifact-note">${U.esc(note)}</p>
         </div>
       </article>`;
@@ -619,13 +657,13 @@
       const fileList = Array.isArray(p.files) ? p.files : [];
       return `<div class="packet-intro">
           <h3>Task packet</h3>
-          <p>Four artifacts define the task. The dashboard shows roles and sanitized filenames only, so the teaching layer explains the build without exposing local file paths.</p>
+          <p>Four artifacts define the task. This view renders what each artifact does; filenames stay as quiet provenance.</p>
         </div>
         <div class="artifact-grid">
-          ${C.artifactTile('Prompt', p.prompt || 'Planned prompt', 'The in-role request that sets the workflow and output boundary.', 'message-square-text', status)}
-          ${C.artifactTile('Task files', fileList.join(' + ') || 'No task file mounted', 'The mounted material the model must use or rebut. This is where format, noise, and fair traps live.', 'folder-open', status)}
-          ${C.artifactTile('Golden', p.golden || 'Planned golden reference', 'The physician reference answer. It defines the clinical target, not a script to copy.', 'badge-check', status)}
-          ${C.artifactTile('Grader', p.grader || 'Planned grader guidelines', 'The scoring rules. A good grader credits safe restraint and penalizes the central failure.', 'list-checks', status)}
+          ${C.artifactTile('Prompt', p.prompt || 'Planned prompt', 'The in-role request that sets the workflow, requester, date, and output boundary.', 'message-square-text', status, 'The ask the model receives')}
+          ${C.artifactTile('Task files', fileList.length ? fileList : ['No task file mounted'], 'The mounted material the model must use or rebut. This is where format, noise, and fair traps live.', 'folder-open', status)}
+          ${C.artifactTile('Golden', p.golden || 'Planned golden reference', 'The physician reference answer. It defines the clinical target, not a script to copy.', 'badge-check', status, 'The ideal clinical destination')}
+          ${C.artifactTile('Grader', p.grader || 'Planned grader guidelines', 'The scoring rules. A good grader credits safe restraint and penalizes the central failure.', 'list-checks', status, 'The rule set that decides the score')}
         </div>`;
     }
     function runs(t){

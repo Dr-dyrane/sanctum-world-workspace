@@ -500,6 +500,70 @@
       font-family: ui-monospace, monospace;
       overflow-wrap: anywhere;
     }
+    .artifact-preview,
+    .artifact-file-stack {
+      margin-top: 8px;
+      border-radius: 16px;
+      background: rgba(120,120,128,0.09);
+      padding: 10px;
+    }
+    .artifact-preview-title {
+      color: var(--fg);
+      font-size: 14px;
+      line-height: 1.25;
+      font-weight: 700;
+    }
+    .artifact-filebar,
+    .artifact-file-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+    }
+    .artifact-filebar {
+      margin-top: 8px;
+    }
+    .artifact-file-stack {
+      display: grid;
+      gap: 8px;
+    }
+    .artifact-file-row {
+      padding: 8px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.38);
+    }
+    html.dark .artifact-file-row {
+      background: rgba(255,255,255,0.05);
+    }
+    .artifact-kind {
+      flex: none;
+      min-width: 42px;
+      text-align: center;
+      border-radius: 9999px;
+      padding: 3px 7px;
+      background: var(--accent-fill);
+      color: var(--accent-a);
+      font-family: ui-monospace, monospace;
+      font-size: 10px;
+      font-weight: 750;
+    }
+    .artifact-cue {
+      flex: 1 1 auto;
+      min-width: 0;
+      color: var(--fg);
+      font-size: 12.5px;
+      font-weight: 650;
+      line-height: 1.25;
+    }
+    .artifact-file {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: var(--fg-faint);
+      font-family: ui-monospace, monospace;
+      font-size: 10.5px;
+    }
     .artifact-note {
       margin-top: 7px;
       color: var(--fg-soft);
