@@ -1,15 +1,8 @@
 # Phase 3 File Manifest - Ondina Vasquell reference files
 
-SECOND PASS (style-matched to KM + header/footer leak fixed). Every file is a Mode A clone of a clean KM Epic-note base, body + chrome + header/footer rebuilt from the canonical clinical_data module to the KM design system (navy/blue/light-blue, masthead, blue bar, patient storyboard, PATIENT/ENCOUNTER block, blue table headers). Gates per file: scrub_all_metadata; verify_no_synthetic; verify_no_km_identifiers (NEW - catches Korvin/Merrow/KM-MRN/Mercy Vale in any part incl. headers/footers); zero banned characters; styles.xml preserved; world dates <= 05/21/2026 18:00.
+CANONICAL TEMPLATE: every docx below (world, supplementary, task, and golden) is rendered through the single KM Epic template via build_world_files.build_one / epic.py. Fills and colors are a subset of the world-file vocabulary, each carries the clean Ondina running header and footer, the patient storyboard, and the PATIENT/ENCOUNTER block. Gates per file: scrub_all_metadata, verify_no_synthetic, verify_no_km_identifiers, zero banned characters, styles preserved.
 
-Counts: 29 world (EW1-EW29), 3 supplementary (WS1-WS3), 9 task (E1-T*) = 41 DOCX. Plus EW30/EW31 images PENDING (Codex). Planned total 43 + 2 images.
-
-## Mount placement (separation is load-bearing)
-
-- world-files/ + supplementary-files/ -> shared world filesystem.
-- task-files/ -> each E1-T travels ONLY with its keyed task; never in the shared world mount.
-
-## Files
+Counts: 29 world, 3 supplementary, 9 task, 1 golden = 42 DOCX. Plus EW30/EW31 images.
 
 | Category | Filename | SHA256 (first 16) |
 |---|---|---|
@@ -45,35 +38,13 @@ Counts: 29 world (EW1-EW29), 3 supplementary (WS1-WS3), 9 task (E1-T*) = 41 DOCX
 | Supplementary | diabetes_foot_care_education_05212026.docx | 93f4a0cef555dc2f |
 | Supplementary | general_discharge_rights_notice_05212026.docx | e15facc07c8b3407 |
 | Supplementary | nursing_shift_narrative_05182026.docx | 24a6885644d42f46 |
-| Task | cdi_query_memo_05232026.docx | 2a16baf67a49f96f |
-| Task | him_preliminary_coding_worksheet_05212026.docx | b9ec07989e94aade |
-| Task | medicare_advantage_denial_letter_05232026.docx | 67fdfbb7ce63795d |
-| Task | payer_concurrent_review_request_05252026.docx | ea3a9d4d4e7cdb5b |
-| Task | pharmacy_benefit_rejection_05242026.docx | c8204628babff5cc |
-| Task | preliminary_discharge_order_set_05212026.docx | 569275a8f55d516b |
-| Task | quality_abstraction_worksheet_06042026.docx | f1c09728ac759f81 |
-| Task | safety_event_intake_summary_06112026.docx | 87b8afbb33d61fc6 |
-| Task | started_discharge_instruction_draft_05212026.docx | d482718dc893a2ea |
-
-## DERIVED clinical values (physician-ratified 2026-06-13)
-
-| Item | Value | Rationale |
-|---|---|---|
-| facility | Harbor Crest Regional Medical Center | synthetic facility, distinct from KM Mercy Vale |
-| encounter ids | CSN-308852140, FIN-2207733, unit 6 South Medicine, room 6S-214 | synthetic plumbing |
-| clinician NPIs | all 10-digit synthetic, non-registry | chart realism |
-| HD1 vitals | T 38.2 C, HR 104, BP 148/82, RR 18, SpO2 96% RA, gluc 244 | febrile index event concordant with WBC 14.2 / temp 38.2 (substrate) |
-| HD2 vitals | T 37.8 C, HR 96, BP 142/80, RR 18, SpO2 97% RA, gluc 212 | post-debridement, improving |
-| HD4 vitals | T 37.2 C, HR 88, BP 138/78, RR 17, SpO2 97% RA, gluc 186 | narrowing trajectory |
-| HD6 vitals | T 36.8 C, HR 80, BP 134/76, RR 16, SpO2 98% RA, gluc 162 | defervescence by snapshot (substrate) |
-| creatinine intermediate | 1.5 base, 2.1 peak HD1, 1.9 HD2, 1.7 HD4, 1.6 HD6 | interpolated between ratified 1.5/2.1/1.6 |
-| WBC intermediate | 14.2 HD1, 12.1 HD2, 10.4 HD4, 8.9 HD6 | interpolated between ratified 14.2/8.9 |
-| CRP | 118 HD1, falling to 41 HD6 (mg/L) | inflammatory marker concordant with improving WBC |
-| BUN / K | BUN 38 HD1 to 26 HD6; K 4.6 to 4.1 mEq/L | AKI-on-CKD concordant, no hyperkalemia gate |
-| platelets / Hgb | platelets 318k; Hgb 9.8 stable (ratified) | anemia of CKD stays open |
-| deep tissue culture | MSSA and Streptococcus agalactiae; MSSA oxacillin-S, clindamycin-S, TMP-SMX-S(not used, sulfa allergy) | typical limb-threat DFI deep culture; drives de-escalation and the sulfa-constrained PBM trap |
-| superficial swab | mixed skin flora, no dominant pathogen - lower authority | culture-hierarchy trap substrate |
-| wound dimensions | 3.0 x 2.2 x 0.8 cm plantar left forefoot, granulating base, scant serous drainage | post-debridement wound, no exposed bone (substrate) |
-| toe pressure | TBI 0.50 affected side, absolute toe pressure 55 mmHg; ankle noncompressible ABI > 1.3 | ratified ABI/TBI; absolute toe pressure derived concordant with TBI 0.50 |
-| eye exam | mild non-proliferative diabetic retinopathy, dilated exam 03/15/2026 | ratified milestone; finding concordant with A1c 8.6 |
-| inpatient antibiotics | vancomycin (by level) + piperacillin-tazobactam 2.25 g q8h renally dosed from HD1; cefepime 1 g q12h renally dosed culture-directed | ratified empiric/step; doses renally adjusted for eGFR 38 |
+| Task | cdi_query_memo_05232026.docx | 646237d7c2d5acbc |
+| Task | him_preliminary_coding_worksheet_05212026.docx | a7c6620aa5e58d1d |
+| Task | medicare_advantage_denial_letter_05232026.docx | 9751b2019ad1f5a4 |
+| Task | payer_concurrent_review_request_05252026.docx | b6f8eb5f1173e1fe |
+| Task | pharmacy_benefit_rejection_05242026.docx | c82296cb6a84bd75 |
+| Task | preliminary_discharge_order_set_05212026.docx | 064da405e62e9bd9 |
+| Task | quality_abstraction_worksheet_06042026.docx | c98c31255d891b5c |
+| Task | safety_event_intake_summary_06112026.docx | 74d7597d083954c2 |
+| Task | started_discharge_instruction_draft_05212026.docx | 26022e61fd8d9fb4 |
+| Golden | golden-OV01-v1.docx | 77ee56f33d5d4629 |
