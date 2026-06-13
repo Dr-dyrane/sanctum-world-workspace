@@ -31,3 +31,17 @@ The Ondina Brainstorm passed AutoQC after one fix: every task needed an explicit
 ## Disposition
 
 The spec content passes the audit. Remaining before submission: Alexander ratifies the 51 RATIFY-flagged clinical values in the substrate pack; the spec DOCX is built by Mode A clone with the full gate chain; the reference templates and the World Spec Claude transcript are built; the upload manifest is assembled. No platform action is automated.
+
+## Pass: clinical-voice / linguo + provenance (2026-06-12)
+
+Trigger: "read logs and mention of clinical voice and linguo and make sure we are at par, avoid leakages and other mistakes made in km world."
+
+Source of truth read: docs/clinical-voice-lessons.md (the 10 patterns + the "polish hurts" caution).
+
+Findings:
+- POLISH-HURTS / SYNTHESIS-LEAK scan of the spec: file-plan Description column stays descriptive; the only "weight incorrectly" phrase sits in the Pearls/Traps column, which is the spec's job. PASS.
+- 1.3 Clinical History holds the discharge tension OPEN the way KM does (13x "unresolved", "stays unsafe", "operationally unsafe", "not yet", "still required"); no premature resolution of a scored decision. PASS.
+- Leakage re-scan of the submission DOCX visible text: zero internal/benchmark/architecture register; banned chars (em/en dash, arrow, asterisk) = 0. PASS.
+- Provenance bug CAUGHT and FIXED in 00-START-HERE.md: both the Brainstorm and World Spec DOCX entries carried the same stale SHA256 (b9a82f48...). Recomputed and corrected: Brainstorm e16934678722b523..., World Spec 4d96332b9dea55b4...; World Spec page-count corrected to 101 paras / 33 tables; Mode A fingerprint re-verified EMPTY vs KM base.
+
+New supporting doc: phase-3-build-task-artifacts/clinical-voice-and-file-grammar-guide.md - locks the 10 voice patterns, native document grammar per file, trap-carrier "plainest prose" flags, and the DO-NOT-REPEAT build lessons onto the Phase 3 file build before authoring (the "Application for World #2" action the lessons call for).
