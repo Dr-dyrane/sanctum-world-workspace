@@ -115,6 +115,102 @@
       -webkit-text-fill-color: transparent; color: transparent;
     }
 
+    .cockpit {
+      min-height: min(70vh, 680px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 11px;
+      border-radius: var(--r-pill);
+      background: rgba(120,120,128,0.13);
+      color: var(--fg-soft);
+      font-family: ui-monospace, monospace;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .status-pill::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 9999px;
+      background: var(--accent-a);
+    }
+    .status-pill.ready::before { background: var(--warn-soft); }
+    .status-pill.delivered::before { background: var(--ok-soft); }
+    .status-pill.planned::before { background: var(--fg-faint); }
+
+    .primary-cta {
+      color: #fff;
+      background: linear-gradient(135deg, var(--fg), rgba(11,10,16,0.78));
+      box-shadow: var(--shadow-pill);
+    }
+    html.dark .primary-cta {
+      color: #111113;
+      background: linear-gradient(135deg, #fff, rgba(244,242,250,0.78));
+    }
+
+    .metric-pane {
+      align-self: stretch;
+      min-height: 260px;
+      border-radius: 22px;
+      padding: 24px;
+      background:
+        linear-gradient(160deg, rgba(124,58,237,0.12), rgba(16,185,129,0.08)),
+        rgba(120,120,128,0.08);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    #heroPrimaryMetric {
+      font-size: clamp(4.25rem, 12vw, 7.4rem);
+      letter-spacing: 0;
+    }
+
+    .world-track {
+      display: grid;
+      grid-template-columns: repeat(var(--task-count, 10), minmax(0, 1fr));
+      gap: 6px;
+    }
+    .track-step {
+      height: 8px;
+      border-radius: 9999px;
+      background: rgba(120,120,128,0.18);
+      position: relative;
+      overflow: hidden;
+      border: 0;
+      cursor: pointer;
+    }
+    .track-step::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.82;
+      background: var(--fg-faint);
+    }
+    .track-step.delivered::after { background: var(--ok-soft); }
+    .track-step.ready::after { background: var(--warn-soft); }
+    .track-step.review::after { background: var(--accent-a); }
+    .track-step.planned::after { background: var(--fg-faint); opacity: .5; }
+
+    .mini-stat {
+      min-height: 76px;
+      padding: 14px;
+      border-radius: 18px;
+      background: rgba(120,120,128,0.09);
+    }
+    .mini-stat b {
+      color: var(--fg);
+      font-size: 24px;
+      line-height: 1;
+    }
+
     /* ════════════════════════════════════════════════════════════
        4 · COMPONENTS
        ════════════════════════════════════════════════════════════ */
@@ -142,6 +238,27 @@
       transition: opacity .35s ease;
     }
     .card-inner:hover::before { opacity: 0.9; }
+
+    .task-index {
+      width: 54px;
+      height: 54px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      background: rgba(120,120,128,0.12);
+      color: var(--fg);
+      font-family: ui-monospace, monospace;
+      font-weight: 800;
+      font-size: 15px;
+      flex: none;
+    }
+    .score-capsule {
+      min-width: 88px;
+      border-radius: 18px;
+      padding: 10px 12px;
+      background: rgba(120,120,128,0.10);
+      text-align: right;
+    }
 
     /* Icon button */
     .btn-icon {
@@ -388,6 +505,12 @@
       .stepper-labels-hide .step-label { display: none; }
       .stepper-labels-hide .step.current .step-label { display: inline; }
       .stat-cell { min-height: 96px; }
+      .cockpit { min-height: auto; }
+      .metric-pane { min-height: 190px; padding: 20px; }
+      #heroPrimaryMetric { font-size: 4.8rem; }
+      .mini-stat { min-height: 64px; padding: 12px; }
+      .task-index { width: 46px; height: 46px; border-radius: 15px; }
+      .score-capsule { min-width: 76px; text-align: left; }
       #fabShell { display: none; }
     }
 

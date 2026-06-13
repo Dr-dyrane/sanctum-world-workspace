@@ -97,7 +97,7 @@
 
   const WORLDS = {
     'korvin-merrow': {
-      title: 'KM World Suite',
+      title: 'Korvin Merrow',
       kicker: 'Korvin Merrow · AI Training Task Suite',
       blurb: 'Ten tasks. One synthetic chart. Low scores mark useful clinical failure.',
       driveUrl: null,

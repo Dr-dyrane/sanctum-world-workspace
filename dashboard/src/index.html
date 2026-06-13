@@ -6,8 +6,8 @@
   <meta name="color-scheme" content="light dark" />
   <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
-  <title>KM World Suite · Performance Dashboard</title>
-  <meta name="description" content="Korvin Merrow KM01 to KM10 task suite performance. Ten clinical documentation tasks and 100 scored runs. Data synced 2026-06-13." />
+  <title>Sanctum World Tracker</title>
+  <meta name="description" content="Sanctum world tracker for clinical task readiness, pilot signal, and next action." />
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -51,6 +51,8 @@
   <!-- Top chrome -->
   <header class="fixed top-3 left-0 right-0 z-40 flex justify-center px-4">
     <div class="surf-2 flex items-center gap-2 px-3 py-2" style="border-radius:var(--r-pill)">
+      <span class="hidden sm:inline-flex items-center pl-2 pr-1 text-[13px] font-semibold">Sanctum</span>
+      <span class="hidden sm:block w-px h-4" style="background:var(--fg-faint);opacity:0.2"></span>
       <button id="worldBtn" aria-haspopup="menu" aria-expanded="false" aria-label="Switch world"
         class="btn-pill flex items-center gap-1.5 pl-2 pr-1.5 py-1 text-[13px] font-semibold tracking-tight"
         style="border-radius:var(--r-pill);background:transparent">
@@ -83,41 +85,49 @@
 
   <main style="position:relative;z-index:1">
 
-    <!-- Hero as native status view -->
+    <!-- Hero as native status cockpit -->
     <section class="hero-section flex flex-col items-center px-3 sm:px-6 pt-24 sm:pt-28 pb-6">
       <div class="w-full max-w-5xl">
-        <p id="heroKicker" class="font-mono text-[12px] uppercase mb-4 px-1" style="color:var(--fg-faint)">Korvin Merrow · AI Training Task Suite</p>
-        <div class="grid lg:grid-cols-[1fr_360px] gap-4 sm:gap-5 items-stretch">
-          <section class="surf p-6 sm:p-8 md:p-10 flex flex-col justify-between" style="border-radius:var(--r-card)">
-            <div>
-              <h1 id="heroTitle" class="t-hero font-semibold text-balance max-w-[12ch]">Task Suite</h1>
-              <p id="heroSub" class="mt-4 max-w-[44ch] text-[15px] leading-relaxed" style="color:var(--fg-soft)">
+        <section class="cockpit surf p-5 sm:p-7 md:p-9" style="border-radius:var(--r-card)" aria-label="World status cockpit">
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <p id="heroKicker" class="font-mono text-[11px] uppercase" style="color:var(--fg-faint)">Korvin Merrow · AI Training Task Suite</p>
+            <span id="heroStatePill" class="status-pill">Loading</span>
+          </div>
+
+          <div class="mt-8 grid lg:grid-cols-[1fr_330px] gap-8 lg:gap-10 items-end">
+            <div class="min-w-0">
+              <h1 id="heroTitle" class="t-hero font-semibold text-balance max-w-[13ch]">Task Suite</h1>
+              <p id="heroSub" class="mt-4 max-w-[50ch] text-[16px] leading-relaxed" style="color:var(--fg-soft)">
                 Ten tasks. One synthetic chart. Low scores mark useful clinical failure.
               </p>
+              <p id="heroInsight" class="mt-5 text-[15px] leading-relaxed max-w-[54ch]" style="color:var(--fg)">Loading world status.</p>
+              <button id="scrollHint" class="primary-cta mt-7 btn-pill px-4 py-2.5 inline-flex items-center gap-2 text-[14px] font-semibold" style="border-radius:var(--r-pill)">
+                <span id="primaryActionText">Review task list</span>
+                <i data-lucide="arrow-down" style="width:16px;height:16px"></i>
+              </button>
             </div>
-            <button id="scrollHint" class="mt-8 btn-pill surf-2 px-4 py-2 flex items-center gap-2 text-[13px] self-start" style="border-radius:var(--r-pill);color:var(--fg-soft)">
-              Review task list <i data-lucide="chevron-down" style="width:16px;height:16px"></i>
-            </button>
-          </section>
 
-          <section class="surf p-5 sm:p-6 flex flex-col justify-between" style="border-radius:var(--r-card)" aria-label="Primary suite inference">
-            <div>
-              <div class="text-[13px] font-medium" style="color:var(--fg-soft)" id="heroPrimaryLabel">Sub-70 runs</div>
-              <div id="heroPrimaryMetric" class="font-bold leading-none mt-3" style="font-size:4.25rem">-</div>
-              <p id="heroPrimaryCaption" class="mt-4 text-[14px] leading-relaxed" style="color:var(--fg-soft)">Useful failure signal across the active task set.</p>
+            <div class="metric-pane">
+              <div class="text-[13px] font-medium" style="color:var(--fg-soft)" id="heroPrimaryLabel">Readiness</div>
+              <div id="heroPrimaryMetric" class="font-bold leading-none mt-3">-</div>
+              <p id="heroPrimaryCaption" class="mt-4 text-[14px] leading-relaxed" style="color:var(--fg-soft)">Primary world state.</p>
             </div>
-            <div class="mt-6 grid grid-cols-4 gap-3 text-[12.5px]" style="color:var(--fg-soft)">
-              <div><b id="heroDelivered" class="block text-[20px]" style="color:var(--fg)">-</b>Delivered</div>
-              <div><b id="heroReady" class="block text-[20px]" style="color:var(--fg)">-</b>Ready</div>
-              <div><b id="heroReview" class="block text-[20px]" style="color:var(--fg)">-</b>Review</div>
-              <div><b id="heroHardest" class="block text-[20px]" style="color:var(--fg)">-</b>Hardest</div>
+          </div>
+
+          <div class="mt-8 sm:mt-10">
+            <div id="worldTrack" class="world-track" aria-label="Task status timeline"></div>
+            <div class="mt-5 grid grid-cols-2 sm:grid-cols-4 gap-3 text-[12.5px]" style="color:var(--fg-soft)">
+              <div class="mini-stat"><b id="heroDelivered" class="block">-</b><span>Delivered</span></div>
+              <div class="mini-stat"><b id="heroReady" class="block">-</b><span>Ready</span></div>
+              <div class="mini-stat"><b id="heroReview" class="block">-</b><span>Review</span></div>
+              <div class="mini-stat"><b id="heroHardest" class="block">-</b><span>Hardest</span></div>
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
 
         <details class="native-details surf mt-4 p-4 sm:p-5" style="border-radius:var(--r-card)">
           <summary class="flex items-center justify-between gap-3 text-[14px] font-medium">
-            <span>Score map</span>
+            <span>Task map</span>
             <i data-lucide="chevron-down" class="chev" style="width:16px;height:16px"></i>
           </summary>
           <div class="mt-4 w-full max-w-[520px] mx-auto aspect-square">
@@ -128,10 +138,10 @@
     </section>
 
     <!-- Compact guide -->
-    <section id="guide" class="px-3 sm:px-6 max-w-5xl mx-auto pb-8 sm:pb-10" aria-label="How to read this dashboard">
+    <section id="guide" class="px-3 sm:px-6 max-w-5xl mx-auto pb-6 sm:pb-8" aria-label="How to read this dashboard">
       <details class="native-details surf p-4 sm:p-5" style="border-radius:var(--r-card)">
         <summary class="flex items-center justify-between gap-3 text-[14px] font-medium">
-          <span>New to the scoring?</span>
+          <span>How scoring works</span>
           <i data-lucide="chevron-down" class="chev" style="width:16px;height:16px"></i>
         </summary>
         <div class="mt-4 grid sm:grid-cols-3 gap-4 text-[13.5px] leading-relaxed" style="color:var(--fg-soft)">

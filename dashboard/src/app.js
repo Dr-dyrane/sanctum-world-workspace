@@ -275,26 +275,30 @@
       const barColor = t.stage==='delivered' ? 'var(--accent-a)' : 'var(--accent-b)';
       const tagColor = band.id==='pending' ? 'var(--fg-faint)' : band.id==='soft' ? 'var(--accent-a)' : band.id==='mid' ? 'var(--accent-b)' : 'var(--warn)';
       const meanUnit = U.hasMean(t) ? '<span class="text-[15px]" style="color:var(--fg-faint)">%</span>' : '';
+      const scoreLabel = U.hasMean(t) ? U.fmtMean(t) : 'TBD';
       return `
-      <article class="card-inner card surf w-full px-5 sm:px-6 md:px-7 py-5 sm:py-6" style="border-radius:var(--r-card);--card-bar:${barColor}" tabindex="-1">
-        <div class="grid lg:grid-cols-[1fr_180px] gap-5 sm:gap-6 items-start">
-          <div class="min-w-0">
-            <div class="flex flex-wrap items-center gap-2">
-              <span class="font-mono text-[12px] font-bold accent-text">${t.id}</span>
-              <span class="surf-2 px-3 py-1.5 text-[10px] font-mono uppercase inline-flex items-center gap-1.5" style="border-radius:var(--r-pill);color:var(--fg-soft)"><span class="pill-dot ${t.stage}"></span>${CONFIG.cats[t.stage].pill}</span>
-              ${C.qualityBadge(t)}
+      <article class="card-inner card surf w-full px-4 sm:px-5 md:px-6 py-4 sm:py-5" style="border-radius:var(--r-card);--card-bar:${barColor}" tabindex="-1">
+        <div class="flex flex-col sm:flex-row sm:items-start gap-4">
+          <div class="flex items-start gap-4 min-w-0 flex-1">
+            <div class="task-index">${String(t.position).padStart(2,'0')}</div>
+            <div class="min-w-0">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="font-mono text-[12px] font-bold accent-text">${t.id}</span>
+                <span class="surf-2 px-3 py-1.5 text-[10px] font-mono uppercase inline-flex items-center gap-1.5" style="border-radius:var(--r-pill);color:var(--fg-soft)"><span class="pill-dot ${t.stage}"></span>${CONFIG.cats[t.stage].pill}</span>
+                ${C.qualityBadge(t)}
+              </div>
+              <h2 class="text-[19px] sm:text-[22px] font-semibold mt-2 leading-tight text-balance" style="max-width:min(34ch,100%)">${U.esc(t.name)}</h2>
+              <p class="mt-2 text-[14px] leading-relaxed" style="color:var(--fg-soft);max-width:min(68ch,100%)">${U.esc(t.plain)}</p>
             </div>
-            <h2 class="text-[22px] sm:text-[26px] font-semibold mt-3 leading-tight text-balance" style="max-width:min(28ch,100%)">${U.esc(t.name)}</h2>
-            <p class="mt-3 text-[14px] leading-relaxed font-medium" style="color:var(--fg);max-width:min(64ch,100%)">${U.esc(t.plain)}</p>
           </div>
-          <div class="lg:text-right">
+          <div class="score-capsule">
             <div class="font-mono text-[10px] uppercase mb-1" style="color:var(--fg-faint)">${U.term('mean','Mean')}</div>
-            <div class="font-mono font-bold text-[40px] leading-none" style="color:${tagColor}">${U.fmtMean(t)}${meanUnit}</div>
-            <div class="font-mono text-[10px] mt-2 uppercase" style="color:${tagColor}">${band.tag}</div>
+            <div class="font-mono font-bold text-[28px] leading-none" style="color:${tagColor}">${scoreLabel}${meanUnit}</div>
+            <div class="font-mono text-[10px] mt-1 uppercase" style="color:${tagColor}">${band.tag}</div>
           </div>
         </div>
 
-        <div class="mt-5 grid lg:grid-cols-[1fr_auto] gap-4 sm:gap-5 items-end">
+        <div class="mt-4 grid lg:grid-cols-[1fr_auto] gap-4 sm:gap-5 items-end">
           <div class="min-w-0">
             ${C.signal(t)}
             <div class="mt-4 flex flex-wrap gap-2" style="max-width:260px">${C.dots(t)}</div>
@@ -745,6 +749,53 @@
     const lo = scored.length ? scored.reduce((a,b)=> a.mean<b.mean?a:b) : null;
     const hi = scored.length ? scored.reduce((a,b)=> a.mean>b.mean?a:b) : null;
 
+    let primary;
+    if (planned.length === tasks.length) {
+      primary = {
+        label: 'Planned tasks',
+        metric: String(tasks.length),
+        caption: 'Incoming task slate. No pilot data is shown until real runs exist.',
+        insight: `${tasks.length} task placeholders are staged. Next move: build the first task from the approved world plan.`,
+        pill: 'Incoming',
+        pillClass: 'planned',
+        action: 'View task slate',
+        filter: 'planned',
+      };
+    } else if (ready.length) {
+      primary = {
+        label: 'Ready tasks',
+        metric: String(ready.length),
+        caption: `${ready.map(t=>t.id).join(', ')} are queued for delivery or final action.`,
+        insight: `${delivered.length} of ${tasks.length} tasks are delivered. The active closure work is the ready queue.`,
+        pill: 'Ready queue',
+        pillClass: 'ready',
+        action: 'Show ready tasks',
+        filter: 'ready',
+      };
+    } else if (review.length) {
+      primary = {
+        label: 'In review',
+        metric: String(review.length),
+        caption: 'Human review is the active gate.',
+        insight: `${review.length} task${review.length === 1 ? '' : 's'} need expert review before delivery.`,
+        pill: 'Review',
+        pillClass: 'review',
+        action: 'Show review tasks',
+        filter: 'review',
+      };
+    } else {
+      primary = {
+        label: 'Delivered',
+        metric: `${delivered.length}/${tasks.length}`,
+        caption: totalRuns ? `${sub70} of ${totalRuns} scored runs are sub-70 training signal.` : 'World closed.',
+        insight: `${delivered.length} of ${tasks.length} tasks are delivered. This world is closed unless a reviewer reopens a task.`,
+        pill: 'Closed',
+        pillClass: 'delivered',
+        action: 'Review task list',
+        filter: 'all',
+      };
+    }
+
     document.getElementById('deliveredCount').innerHTML = delivered.length+'<span class="unit">/ '+tasks.length+'</span>';
     document.getElementById('reviewCount').textContent = review.length;
     document.getElementById('readyCount').textContent = ready.length || planned.length;
@@ -753,15 +804,29 @@
       : 'TBD';
     document.getElementById('spreadRange').textContent = scored.length ? Math.min(...means)+' to '+Math.max(...means) : 'pending';
 
-    document.getElementById('heroPrimaryMetric').textContent = totalRuns ? `${sub70}/${totalRuns}` : `${tasks.length}`;
-    document.getElementById('heroPrimaryLabel').textContent = totalRuns ? 'Sub-70 runs' : 'Task placeholders';
-    document.getElementById('heroPrimaryCaption').textContent = totalRuns
-      ? `${sub70} scored attempts fell below 70. That is the suite's primary training signal.`
-      : `${tasks.length} planned tasks are staged. Scores stay blank until real pilots exist.`;
+    const statePill = document.getElementById('heroStatePill');
+    statePill.textContent = primary.pill;
+    statePill.className = 'status-pill ' + primary.pillClass;
+    document.getElementById('heroInsight').textContent = primary.insight;
+    document.getElementById('primaryActionText').textContent = primary.action;
+    document.getElementById('scrollHint').dataset.filter = primary.filter;
+    document.getElementById('heroPrimaryMetric').textContent = primary.metric;
+    document.getElementById('heroPrimaryLabel').textContent = primary.label;
+    document.getElementById('heroPrimaryCaption').textContent = primary.caption;
     document.getElementById('heroDelivered').textContent = delivered.length+'/'+tasks.length;
     document.getElementById('heroReview').textContent = review.length;
     document.getElementById('heroReady').textContent = ready.length || planned.length;
     document.getElementById('heroHardest').textContent = lo ? lo.id : 'TBD';
+    const track = document.getElementById('worldTrack');
+    track.style.setProperty('--task-count', tasks.length);
+    track.innerHTML = tasks.map(t=>
+      `<button class="track-step ${t.stage}" title="${t.id}: ${CONFIG.cats[t.stage].label}" aria-label="${t.id}, ${CONFIG.cats[t.stage].label}" data-jump="${t.id}"></button>`
+    ).join('');
+    track.querySelectorAll('[data-jump]').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        document.getElementById('card-'+btn.dataset.jump)?.scrollIntoView({behavior: reduceMotion?'auto':'smooth', block:'center'});
+      });
+    });
 
     document.getElementById('summarySentence').innerHTML = scored.length
       ? `${delivered.length} of ${tasks.length} tasks are delivered. ` +
@@ -787,6 +852,11 @@
   })();
 
   document.getElementById('scrollHint').addEventListener('click', ()=>{
+    const preferred = document.getElementById('scrollHint').dataset.filter;
+    if (preferred) {
+      KMState.set('filter', preferred);
+      renderControls();
+    }
     document.getElementById('cards').scrollIntoView({behavior: reduceMotion?'auto':'smooth', block:'start'});
   });
 
@@ -1105,12 +1175,13 @@
   function renderWorld(){
     const w = WorldCtl.world;
     document.getElementById('worldTitle').textContent = w.title;
+    document.getElementById('heroTitle').textContent = w.title;
     document.getElementById('heroKicker').textContent = w.kicker;
     document.getElementById('heroSub').textContent = w.blurb;
     const dl = document.getElementById('driveLink');
     if (w.driveUrl){ dl.style.display = ''; dl.href = w.driveUrl; }
     else dl.style.display = 'none';
-    document.title = w.title + ' · Performance Dashboard';
+    document.title = w.title + ' · Sanctum';
 
     renderRadial();
     renderCards();
@@ -1147,7 +1218,7 @@
       const hint = document.createElement('div');
       hint.className = 'px-3 pt-2 pb-1 text-[11px] leading-relaxed';
       hint.style.color = 'var(--fg-faint)';
-      hint.textContent = 'New worlds appear here when added to the WORLDS registry in this file.';
+      hint.textContent = 'Choose a world to inspect.';
       menu.appendChild(hint);
       lucide.createIcons();
     }
