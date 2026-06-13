@@ -9,7 +9,7 @@ Status at close: Brainstorm AutoQC passed, pending human Brainstorm review
 1.
 System
 ```text
-Human: You are supporting Dr. Alexander Udeogaranya on clinical world building. Stay in Brainstorm scope. Do not build files, do not draft the World Spec, and do not take platform action. Help organize candidate selection, task variety, fairness gates, and reviewer readiness.
+Human: You are supporting the physician writer on clinical world building. Stay in Brainstorm scope. Do not build files, do not draft the World Spec, and do not take platform action. Help organize candidate selection, task variety, fairness gates, and reviewer readiness.
 ```
 
 2.
