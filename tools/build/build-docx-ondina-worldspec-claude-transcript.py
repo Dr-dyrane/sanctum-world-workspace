@@ -15,6 +15,8 @@ from docx.oxml.ns import qn
 from docx.shared import Inches, Pt, RGBColor
 
 REPO = Path(__file__).resolve().parents[2]
+import sys as _sys; _sys.path.insert(0, str(REPO))
+from tools.mode_a_clone import make_deterministic
 SOURCE = REPO / "worlds/ondina-vasquell/submission/Ondina_Vasquell_World_Spec_Claude_Transcript.md"
 OUT = REPO / "worlds/ondina-vasquell/submission/Ondina_Vasquell_World_Spec_Claude_Transcript.docx"
 
@@ -321,6 +323,7 @@ def build_docx() -> None:
         if BANNED_RE.search(xml):
             raise ValueError("DOCX XML contains banned dash or arrow characters")
     Document(str(OUT))
+    make_deterministic(str(OUT))
 
 
 if __name__ == "__main__":

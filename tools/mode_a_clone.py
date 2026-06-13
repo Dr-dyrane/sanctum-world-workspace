@@ -200,6 +200,35 @@ def scrub_all_metadata(path):
             data = c.encode("utf-8")
         zout.writestr(item, data)
     zin.close(); zout.close(); os.replace(tmp, path)
+    make_deterministic(path)
+
+
+_DETERM_DT = (2020, 1, 1, 0, 0, 0)
+_DETERM_ISO = "2020-01-01T00:00:00Z"
+
+
+def make_deterministic(path):
+    """Make a docx byte-reproducible: pin every zip entry's mod-time to a constant and
+    pin core.xml dcterms:created/modified to a constant, so identical content yields an
+    identical SHA across builds and machines. Idempotent; run as the final build step.
+    The build-time mod-times stamped by python-docx/zipfile are the main nondeterminism
+    source; this removes it."""
+    import os
+    tmp = path + ".tmp"
+    zin = zipfile.ZipFile(path, "r")
+    zout = zipfile.ZipFile(tmp, "w", zipfile.ZIP_DEFLATED)
+    for item in zin.infolist():
+        data = zin.read(item.filename)
+        if item.filename == "docProps/core.xml":
+            c = data.decode("utf-8")
+            c = re.sub(r"(<dcterms:created[^>]*>)[^<]*(</dcterms:created>)", rf"\g<1>{_DETERM_ISO}\g<2>", c)
+            c = re.sub(r"(<dcterms:modified[^>]*>)[^<]*(</dcterms:modified>)", rf"\g<1>{_DETERM_ISO}\g<2>", c)
+            data = c.encode("utf-8")
+        zi = zipfile.ZipInfo(item.filename, date_time=_DETERM_DT)
+        zi.compress_type = zipfile.ZIP_DEFLATED
+        zi.external_attr = item.external_attr
+        zout.writestr(zi, data)
+    zin.close(); zout.close(); os.replace(tmp, path)
 
 
 _KM_IDS = ("korvin", "merrow", "km-6427819", "mercy vale", "csn-204418827",

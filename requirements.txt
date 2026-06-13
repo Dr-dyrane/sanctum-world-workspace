@@ -1,0 +1,4 @@
+# Deterministic build toolchain for the sanctum world docx pipeline.
+# Pin these so the renderer output is byte-stable across machines.
+python-docx==1.2.0
+Pillow==12.2.0

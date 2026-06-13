@@ -28,7 +28,7 @@ from docx.oxml import OxmlElement
 
 REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO))
-from tools.mode_a_clone import integrity_gate, scrub_core, verify_against_base  # noqa: E402
+from tools.mode_a_clone import integrity_gate, scrub_core, verify_against_base, make_deterministic  # noqa: E402
 
 BASE = REPO / "worlds/korvin-merrow/file-review/pipeline-output/.meta/references/Alexander_World_Merrow_latest_6_4.docx"
 SRC = REPO / "worlds/ondina-vasquell/submission/Ondina_Vasquell_World_Spec.md"
@@ -238,6 +238,7 @@ def build() -> None:
 
     doc.save(str(OUT))
     scrub_core(str(OUT))
+    make_deterministic(str(OUT))
     print("integrity gate:", integrity_gate(str(OUT)))
     print("verify_against_base:", verify_against_base(str(OUT), str(BASE)))
     print("written:", OUT)
