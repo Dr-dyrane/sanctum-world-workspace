@@ -1,12 +1,17 @@
 # Dashboard Directory
 
-Standalone, zero-build visualizations for this workspace. Each file is fully
-self-contained (CDN dependencies only) and can be opened directly in a browser
-or served as a static file.
+Standalone visualizations for this workspace. Dashboard source is modular for
+editing, then built into a single portable HTML file that can be opened directly
+in a browser or served as a static file.
 
 ## Contents
 
-- `km-world-dashboard.html` — Korvin Merrow (KM01–KM10) task suite dashboard.
+- `src/index.html` - editable dashboard shell.
+- `src/styles.css` - editable visual system and layout styles.
+- `src/data.js` - editable world and task data snapshot.
+- `src/app.js` - editable rendering and interaction logic.
+- `km-world-dashboard.html` - generated portable Korvin Merrow (KM01-KM10)
+  task suite dashboard.
   Renders failure-depth as a radial node chart, run-spread dot matrices, and
   per-task detail cards. Built to be readable by someone outside AI training:
   a "How to read this" explainer, plain-English "Tests:" line and verdict per
@@ -25,21 +30,26 @@ The hash drives view state, so any filtered/sorted view is shareable:
 - `#sort=low` — order cards by mean (`position`, `high`, `low`).
 - Combine with `&`, e.g. `#filter=review&sort=low`.
 
-## Internal structure (single file, modular)
+## Internal structure
 
-The inline script is organized as banner-commented modules so each concern has
-one home: CONFIG (score bands, stages, labels — every threshold lives here),
-GLOSSARY (plain-English definitions), DATA (the WORLDS registry), UTILS, STATE
-(versioned localStorage), WORLD CONTROL, COMPONENTS (pure render functions),
-VIEWS (all re-renderable), CONTROLLER (filter/sort/hash), SOUND (opt-in, muted
-by default), WORLD SWITCHER + BOOT. Change a score threshold once in CONFIG and
-every visual follows.
+Development source lives in `dashboard/src/`, with CSS separated so visual work
+can happen in one file. The generated `km-world-dashboard.html` keeps the old
+portable behavior by inlining the CSS and JavaScript. To rebuild after editing
+source:
+
+```bash
+python3 tools/build/build-dashboard.py
+```
+
+The JavaScript remains organized by concern: CONFIG, GLOSSARY, DATA, UTILS,
+STATE, WORLD CONTROL, COMPONENTS, VIEWS, CONTROLLER, SOUND, and BOOT. Change a
+score threshold once in CONFIG and every visual follows.
 
 ## Adding a world
 
-The dashboard is multi-world. All data lives in the `WORLDS` registry in the
-DATA module; the header title is a dropdown listing every registered world.
-To plug in a new world, add one block:
+The dashboard is multi-world. All data lives in the `WORLDS` registry in
+`src/data.js`; the header title is a dropdown listing every registered world.
+To plug in a new world, add one block there:
 
 ```js
 WORLDS['my-world'] = {
@@ -58,8 +68,9 @@ any world's ids (e.g. `#QX03`).
 
 ## Conventions
 
-- Keep each dashboard as a single self-contained HTML file (Tailwind + Lucide
-  via CDN). Do not introduce a build pipeline or bundled dependencies here.
+- Keep `src/` as the editable source and `km-world-dashboard.html` as the
+  generated portable file (Tailwind + Lucide via CDN). Do not add bundled
+  dependencies here.
 - Source-of-truth data lives in `task-setup/KM-WORLD-PERFORMANCE-REPORT.md`
   (canonical) and each `taskN/TASKN-STATE.md`. Dashboards embed a snapshot for
   display; update the snapshot when the underlying data changes (hygiene rule:

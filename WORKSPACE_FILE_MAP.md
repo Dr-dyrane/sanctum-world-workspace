@@ -16,7 +16,7 @@ sanctum-world-workspace/
   WORKSPACE_FILE_MAP.md        ← this file
   .gitignore                   ← updated 6/9
   _archive/                    ← dead root folders (gitignored); do not read for active work
-  dashboard/                   ← km-world-dashboard.html + KM-WORLD-DASHBOARD-PROMPT.md (informational only)
+  dashboard/                   ← modular dashboard source in src/ plus generated km-world-dashboard.html
   docs/                        ← lessons, playbooks, domain knowledge, tooling and DOCX render doctrine
   reference/                   ← Sanctum source docs, templates, guidelines
                                  reference/source/Raising_Task_Difficulty_Worked_Example.pdf is the
@@ -107,6 +107,7 @@ tools/
     build-docx-km08-v7.py
     build-docx-km09-v2.py
     build-docx-km10-v3.py
+    build-dashboard.py          ← builds dashboard/km-world-dashboard.html from dashboard/src/
   verify/                      ← substrate verification scripts
     verify_ondina.py           ← one-command Ondina pre-stage gate: DOCX leak, template, metadata, filename, and anchor consistency checks
     verify-km08-substrate.py

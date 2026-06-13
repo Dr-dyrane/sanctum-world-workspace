@@ -97,6 +97,11 @@ docs/
   security-and-privacy.md
   tooling-audit.md
 dashboard/
+  src/
+    index.html
+    styles.css
+    data.js
+    app.js
   km-world-dashboard.html
 WORKSPACE_FILE_MAP.md
 reference/
