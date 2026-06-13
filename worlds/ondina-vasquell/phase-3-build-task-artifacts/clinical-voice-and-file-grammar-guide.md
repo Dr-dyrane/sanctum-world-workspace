@@ -76,3 +76,6 @@ Task-level files (E1-T*): the external severity-forward surfaces (HIM coding wor
 - Trap-carrier sections checked for accidental synthesis: no weighting, no sequencing, no readiness declaration.
 - Numbered problem-oriented plan present in notes that have a plan.
 - Dates pre-snapshot; banned characters zero; fingerprint clean.
+
+## Naming convention for cumulative reports (N2, Alexander audit 2026-06-13)
+Cumulative trend and flowsheet files are named by their FIRST-data date and report "values through" the last date; the in-document Date of Service is the last (snapshot) date. This is intentional (renal_lab_trend, cbc_inflammatory_trend, vital_signs_flowsheet, nursing_offloading_flowsheet). Point-in-time reports use Date of Service = collection date with a separate "Reported" date (both culture reports: deep-tissue DoS 05/17 collection, Reported 05/19; superficial swab DoS 05/16, Reported 05/18).

@@ -73,7 +73,7 @@ Pick one per row or replace; all unmistakably synthetic, no near-duplicates with
 
 | Role / service | Candidate name | Flag |
 |---|---|---|
-| Hospitalist attending (primary, golden voice) | Dr. Marisol Everet, MD | RATIFY |
+| Hospitalist attending (primary, golden voice) | Dr. Lillian Everet, MD | RATIFY (given name changed from Marisol per Alexander signed audit F2 2026-06-13, to avoid reviewer proximity with daughter Marisela) |
 | Hospitalist resident (PGY-2) | Dr. Tobias Renquist, MD | RATIFY |
 | Podiatry (debridement, offloading) | Dr. Priyanka Vell, DPM | RATIFY |
 | Vascular surgery (perfusion, revascularization) | Dr. Castor Mwangi, MD | RATIFY |

@@ -22,7 +22,7 @@ PLATFORM = HERE.parents[0] / "platform"
 def OV01():
     return ("golden-OV01-v1.docx", "ed", "DISCHARGE MEDICATION RECONCILIATION", "05/22/2026", [
         ("title", "DISCHARGE MEDICATION RECONCILIATION"),
-        ("filing", "Author: Marisol Everet, MD - Hospital Medicine | Date of Service: 05/22/2026 0830 | Status: Draft for physician sign"),
+        ("filing", "Author: Lillian Everet, MD - Hospital Medicine | Date of Service: 05/22/2026 0830 | Status: Draft for physician sign"),
         ("section", "SOURCES REVIEWED"),
         ("body", "Home medication list, medication administration record, admission medication-hold orders, renal function trend, infectious disease notes, and the preliminary unreconciled discharge order set."),
         ("section", "RECONCILED MEDICATIONS"),
@@ -58,14 +58,14 @@ def OV01():
             "Exact discharge antibiotic agent, route, and duration, renally dosed and deep-culture directed. The sulfa allergy excludes trimethoprim-sulfamethoxazole.",
             "Restart parameters and timing for metformin, empagliflozin, and lisinopril at outpatient follow-up.",
         ]),
-        ("sig", "Electronically signed by Marisol Everet, MD | Hospital Medicine | 05/22/2026 0830"),
+        ("sig", "Electronically signed by Lillian Everet, MD | Hospital Medicine | 05/22/2026 0830"),
     ])
 
 
 def OV02():
     return ("golden-OV02-v1.docx", "ed", "PHYSICIAN CODING ATTESTATION", "05/22/2026", [
         ("title", "PHYSICIAN CODING ATTESTATION"),
-        ("filing", "Author: Marisol Everet, MD - Hospital Medicine | Date of Service: 05/22/2026 0900 | Status: Draft for physician sign"),
+        ("filing", "Author: Lillian Everet, MD - Hospital Medicine | Date of Service: 05/22/2026 0900 | Status: Draft for physician sign"),
         ("section", "PRINCIPAL DIAGNOSIS"),
         ("body", "Limb-threatening left diabetic foot infection with deep soft tissue involvement. This is the condition that occasioned the admission and is supported by the emergency, podiatry, and wound documentation."),
         ("section", "ATTESTATION BY DIAGNOSIS"),
@@ -85,14 +85,14 @@ def OV02():
             "Final code selection and sequencing per official coding guidelines and the coder's review.",
             "Laterality and specificity characters per the documentation.",
         ]),
-        ("sig", "Electronically signed by Marisol Everet, MD | Hospital Medicine | 05/22/2026 0900"),
+        ("sig", "Electronically signed by Lillian Everet, MD | Hospital Medicine | 05/22/2026 0900"),
     ])
 
 
 def OV03():
     return ("golden-OV03-v1.docx", "ed", "CDI QUERY RESPONSE", "05/24/2026", [
         ("title", "ATTENDING RESPONSE TO CLINICAL DOCUMENTATION QUERY"),
-        ("filing", "Author: Marisol Everet, MD - Hospital Medicine | Date of Service: 05/24/2026 1000 | Status: Draft for physician sign"),
+        ("filing", "Author: Lillian Everet, MD - Hospital Medicine | Date of Service: 05/24/2026 1000 | Status: Draft for physician sign"),
         ("section", "RESPONSE BY ITEM"),
         ("bullets", [
             "1. Query to document acute osteomyelitis given the MRI marrow edema. Response: decline on clinical grounds. The treating team has characterized this as a deep soft tissue infection. The MRI marrow edema is nonspecific and was read as equivocal, the debrided specimen contains no bone, and the infectious disease consultant treated a soft tissue infection and did not sign acute osteomyelitis. The record supports deep soft tissue infection, not established osteomyelitis.",
@@ -102,14 +102,14 @@ def OV03():
         ]),
         ("section", "FLAGS FOR PHYSICIAN BEFORE SIGN"),
         ("bullets", ["Confirm the final wording of each item response against your own assessment before signing."]),
-        ("sig", "Electronically signed by Marisol Everet, MD | Hospital Medicine | 05/24/2026 1000"),
+        ("sig", "Electronically signed by Lillian Everet, MD | Hospital Medicine | 05/24/2026 1000"),
     ])
 
 
 def OV04():
     return ("golden-OV04-v1.docx", "ed", "PHYSICIAN APPEAL LETTER", "05/24/2026", [
         ("title", "PHYSICIAN APPEAL OF SKILLED NURSING FACILITY DENIAL"),
-        ("filing", "Author: Marisol Everet, MD - Hospital Medicine | Date of Service: 05/24/2026 1500 | Status: Draft for physician sign"),
+        ("filing", "Author: Lillian Everet, MD - Hospital Medicine | Date of Service: 05/24/2026 1500 | Status: Draft for physician sign"),
         ("section", "APPEAL POSITION"),
         ("body", "I am appealing the denial of skilled nursing facility authorization for Ondina Vasquell. The determination rests on improving infection markers read as home readiness. That framing does not reflect the operational clinical picture, which supports a skilled level of care."),
         ("section", "CLINICAL RATIONALE"),
@@ -123,7 +123,7 @@ def OV04():
         ("body", "Improving fever, white count, and renal values reflect treated infection, not operational readiness for an unsupported home plan. I respectfully request authorization for the skilled level of care."),
         ("section", "FLAGS FOR PHYSICIAN BEFORE SIGN"),
         ("bullets", ["Confirm the requested level of care and any plan-specific appeal language before signing."]),
-        ("sig", "Electronically signed by Marisol Everet, MD | Hospital Medicine | 05/24/2026 1500"),
+        ("sig", "Electronically signed by Lillian Everet, MD | Hospital Medicine | 05/24/2026 1500"),
     ])
 
 
@@ -194,7 +194,7 @@ def OV07():
 def OV08():
     return ("golden-OV08-v1.docx", "ed", "VASCULAR REFERRAL LETTER", "06/08/2026", [
         ("title", "VASCULAR SURGERY REFERRAL LETTER"),
-        ("filing", "Author: Marisol Everet, MD - Hospital Medicine | Date of Service: 06/08/2026 1400 | Status: Draft for physician sign"),
+        ("filing", "Author: Lillian Everet, MD - Hospital Medicine | Date of Service: 06/08/2026 1400 | Status: Draft for physician sign"),
         ("section", "REASON FOR REFERRAL"),
         ("body", "I am referring Ondina Vasquell for vascular surgery evaluation of lower-extremity perfusion in the setting of a treated limb-threatening left diabetic foot infection. Perfusion adequacy for wound healing remains unresolved and is the central open question."),
         ("section", "STATUS DISPOSITION"),
@@ -214,7 +214,7 @@ def OV08():
         ("body", "The narrative does not assert resolution the chart does not support; each open item is carried as open in the table above."),
         ("section", "FLAGS FOR PHYSICIAN BEFORE SIGN"),
         ("bullets", ["Confirm the antibiotic course statement and follow-up arrangements before signing."]),
-        ("sig", "Electronically signed by Marisol Everet, MD | Hospital Medicine | 06/08/2026 1400"),
+        ("sig", "Electronically signed by Lillian Everet, MD | Hospital Medicine | 06/08/2026 1400"),
     ])
 
 
@@ -247,7 +247,7 @@ def OV09():
 def OV10():
     return ("golden-OV10-v1.docx", "ed", "DISCHARGE INSTRUCTIONS", "05/22/2026", [
         ("title", "DISCHARGE INSTRUCTIONS"),
-        ("filing", "Author: Marisol Everet, MD - Hospital Medicine | Date of Service: 05/22/2026 1000 | Status: Draft for physician sign"),
+        ("filing", "Author: Lillian Everet, MD - Hospital Medicine | Date of Service: 05/22/2026 1000 | Status: Draft for physician sign"),
         ("section", "YOUR DIAGNOSIS"),
         ("body", "You were treated in the hospital for a serious infection of your left foot related to your diabetes."),
         ("section", "OFFLOADING AND ACTIVITY (COMPLETED FROM THE CHART)"),
@@ -268,7 +268,7 @@ def OV10():
             "Items still being arranged (final antibiotic, follow-up appointments) are left open, not stated as completed.",
             "Provide the final instructions in Spanish.",
         ]),
-        ("sig", "Electronically signed by Marisol Everet, MD | Hospital Medicine | 05/22/2026 1000"),
+        ("sig", "Electronically signed by Lillian Everet, MD | Hospital Medicine | 05/22/2026 1000"),
     ])
 
 

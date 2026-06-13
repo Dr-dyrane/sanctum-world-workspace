@@ -26,7 +26,7 @@ ENC = dict(csn="CSN-308852140", fin="FIN-2207733", unit="6 South Medicine",
 
 # ----- ratified roster (substrate sec 5) + derived synthetic NPIs -----
 ROSTER = dict(
-    attending="Marisol Everet, MD",          # hospitalist attending (golden voice)
+    attending="Lillian Everet, MD",          # hospitalist attending (golden voice); given name renamed off Maris- per Alexander audit F2 2026-06-13
     attending_npi="1427583069",
     resident="Tobias Renquist, MD (PGY-2)",
     podiatry="Priyanka Vell, DPM", podiatry_npi="1356024781",
@@ -272,7 +272,7 @@ def EW7():
             ["Field", "Value"],
             ["Exam", "MRI left foot without and with contrast"],
             ["Ordering service", "Hospital Medicine"],
-            ["Ordering clinician", "Marisol Everet, MD"],
+            ["Ordering clinician", "Lillian Everet, MD"],
             ["Reason for exam", "Diabetic foot infection, plantar forefoot ulcer, evaluate for osteomyelitis and deep collection"],
             ["Exam started", "05/18/2026 1542"],
             ["Report finalized", "05/18/2026 1705"],
@@ -326,7 +326,7 @@ def EW9():
             ["Field", "Value"],
             ["Procedure", "Bilateral lower-extremity arterial physiologic study with toe pressures"],
             ["Ordering service", "Hospital Medicine"],
-            ["Ordering clinician", "Marisol Everet, MD"],
+            ["Ordering clinician", "Lillian Everet, MD"],
             ["Technologist", "Vascular Lab Staff"],
             ["Study started", "05/19/2026 1038"],
             ["Report finalized", "05/19/2026 1155"],
@@ -589,7 +589,7 @@ def EW18():
 
 
 def EW19():
-    return ("culture_report_deep_tissue_05172026.docx", "trend", "MICROBIOLOGY", "05/19/2026", [
+    return ("culture_report_deep_tissue_05172026.docx", "trend", "MICROBIOLOGY", "05/17/2026", [
         ("title", "MICROBIOLOGY REPORT - DEEP TISSUE"),
         ("filing", "Author: Microbiology | Source: Operative deep soft tissue (05/17) | Date Reported: 05/19/2026 | Status: Final | Accession HCR-MIC-26-51744"),
         ("section", "SPECIMEN DETAILS"),
@@ -633,7 +633,7 @@ def EW20():
             ["Collected", "05/16/2026 0902"],
             ["Received", "05/16/2026 1018"],
             ["Reported", "05/18/2026 0744"],
-            ["Ordering clinician", "Marisol Everet, MD"],
+            ["Ordering clinician", "Lillian Everet, MD"],
         ]),
         ("section", "SOURCE"),
         ("body", "Superficial wound swab collected in the Emergency Department on 05/16/2026 (lower-authority specimen; surface flora)."),
