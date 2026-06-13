@@ -25,7 +25,7 @@ def T1():
     R = ROSTER
     return ("preliminary_discharge_order_set_05212026.docx", "mar", [
         ("title", "PRELIMINARY DISCHARGE ORDER SET (DRAFT - NOT RECONCILED)"),
-        ("filing", f"Generated 05/21/2026 1800 | Status: Draft, pending reconciliation | {RE}"),
+        ("filing", f"Filed 05/21/2026 1800 | Status: Draft, pending reconciliation | {RE}"),
         ("body", "Auto-populated draft discharge orders carried forward from active inpatient orders. Not yet reconciled against home medications or current renal function."),
         ("section", "MEDICATIONS CARRIED FORWARD"),
         ("table", [
@@ -45,7 +45,7 @@ def T1():
             ["Lisinopril", "20 mg Oral daily", "Status ambiguous: held inpatient, not marked resume or continue-hold"],
         ]),
         ("body", "This draft has not been reconciled. The intravenous antibiotic line, the held oral agents, and the insulin dose require clinician reconciliation before discharge. No reconciliation decision is recorded here."),
-        ("sig", "System-generated preliminary order set"),
+        ("sig", "Preliminary order set filed on 05/21/2026 1800"),
     ])
 
 
