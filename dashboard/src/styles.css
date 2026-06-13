@@ -4,9 +4,10 @@
        Color doctrine (monochrome field + semantic accents,
        small status elements ONLY, never large surfaces/charts):
          purple = performance, brand, in-motion pipeline states
+         blue   = ready / queued for delivery
          green  = completion / verified (delivered, reach proven, exact data)
          amber  = caution (floors, provisional or partial data)
-         rose   = reserved for sent-back/blocked states (defined, unused)
+         rose   = sent-back, blocked, or human-review attention
        ════════════════════════════════════════════════════════════ */
     :root {
       --bg:       #f5f5f7;                  /* L0 grouped page */
@@ -23,10 +24,13 @@
       --warn:     #b45309;                  /* amber, readable on light */
       --warn-soft:#f59e0b;
       --warn-fill: rgba(245,158,11,0.14);
+      --ready:    #2563eb;                  /* blue: ready / queued */
+      --ready-soft:#3b82f6;
+      --ready-fill: rgba(59,130,246,0.14);
       --ok:       #047857;                  /* green: completion / verified only */
       --ok-soft:  #10b981;
       --ok-fill:  rgba(16,185,129,0.14);
-      --bad:      #be123c;                  /* rose: reserved for sent-back/blocked; unused by design */
+      --bad:      #be123c;                  /* rose: review attention / sent-back */
       --bad-fill: rgba(190,18,60,0.12);
       --shadow-card:  0 1px 2px rgba(0,0,0,0.045);
       --shadow-lift:  0 8px 24px rgba(0,0,0,0.08);
@@ -52,6 +56,9 @@
       --warn:     #fbbf24;                  /* amber, readable on dark */
       --warn-soft:#f59e0b;
       --warn-fill: rgba(245,158,11,0.16);
+      --ready:    #60a5fa;
+      --ready-soft:#38bdf8;
+      --ready-fill: rgba(56,189,248,0.16);
       --ok:       #34d399;
       --ok-soft:  #10b981;
       --ok-fill:  rgba(52,211,153,0.16);
@@ -157,8 +164,9 @@
       border-radius: 9999px;
       background: var(--accent-a);
     }
-    .status-pill.ready::before { background: var(--warn-soft); }
+    .status-pill.ready::before { background: var(--ready-soft); }
     .status-pill.delivered::before { background: var(--ok-soft); }
+    .status-pill.review::before { background: var(--bad); }
     .status-pill.planned::before { background: var(--fg-faint); }
 
     .primary-cta {
@@ -210,8 +218,8 @@
       background: var(--fg-faint);
     }
     .track-step.delivered::after { background: var(--ok-soft); }
-    .track-step.ready::after { background: var(--warn-soft); }
-    .track-step.review::after { background: var(--accent-a); }
+    .track-step.ready::after { background: var(--ready-soft); }
+    .track-step.review::after { background: var(--bad); }
     .track-step.planned::after { background: var(--fg-faint); opacity: .5; }
 
     .mini-stat {
@@ -636,8 +644,8 @@
       display: inline-block; flex: none;
     }
     .pill-dot.delivered { background: var(--ok-soft); }
-    .pill-dot.ready     { background: var(--warn-soft); }
-    .pill-dot.review    { background: var(--accent-a); animation: pulse 2.4s ease-in-out infinite; }
+    .pill-dot.ready     { background: var(--ready-soft); }
+    .pill-dot.review    { background: var(--bad); animation: pulse 2.4s ease-in-out infinite; }
     .pill-dot.planned   { background: var(--fg-faint); }
 
     /* Summary stat label dot */

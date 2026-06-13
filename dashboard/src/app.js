@@ -9,6 +9,12 @@
       ? CONFIG.meanBands.find(b => m >= b.min)
       : { id:'pending', css:'b-pending', tag:'Pending', plain:'No pilot scores yet' },
     scoreSortValue: t => Number.isFinite(t.mean) ? t.mean : null,
+    stageColor: stage => ({
+      delivered: 'var(--ok-soft)',
+      ready: 'var(--ready-soft)',
+      review: 'var(--bad)',
+      planned: 'var(--fg-faint)',
+    }[stage] || 'var(--fg-faint)'),
     isCatcher: v => v >= 85,
     isFloor:   v => v <= 40,
     counts(t){
@@ -286,7 +292,7 @@
     /* Full task card */
     card(t){
       const band = U.meanBand(t.mean);
-      const barColor = t.stage==='delivered' ? 'var(--accent-a)' : 'var(--accent-b)';
+      const barColor = U.stageColor(t.stage);
       const tagColor = band.id==='pending' ? 'var(--fg-faint)' : band.id==='soft' ? 'var(--accent-a)' : band.id==='mid' ? 'var(--accent-b)' : 'var(--warn)';
       const meanUnit = U.hasMean(t) ? '<span class="text-[15px]" style="color:var(--fg-faint)">%</span>' : '';
       const scoreLabel = U.hasMean(t) ? U.fmtMean(t) : 'TBD';
