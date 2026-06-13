@@ -140,7 +140,7 @@ def build() -> None:
             doc.add_paragraph(ln[3:].strip(), style="Heading 2")
         elif ln.startswith("### "):
             doc.add_paragraph(ln[4:].strip(), style="Heading 2")
-        elif ln.startswith("Build note:"):
+        elif ln.startswith("Terminology note:"):
             add_callout(doc, ln.strip())
         elif ln.strip() == "":
             pass

@@ -12,8 +12,6 @@
 | Version | 1.0 |
 | Document date | June 13, 2026 |
 
-Build note: clinical values in this spec are physician-ratified from the substrate proposal pack (world-spec-prep/substrate-proposal-pack.md). Any value still flagged RATIFY in that pack is provisional until Alexander approves it; the spec carries the proposed value so the document is complete and gradeable.
-
 # 1. Clinical Scenario
 
 ## 1.1 Big Picture Summary
@@ -85,6 +83,8 @@ The world carries ten independent post-snapshot tasks spanning direct documentat
 | Documentation severity | Health information and CDI (Adeyle, Ndiaye): capture acute osteomyelitis and higher specificity | Treating team: restraint, osteomyelitis not established | Treating record governs; Tasks 2, 3 |
 | Antibiotic formulary | Pharmacy benefit manager: prefers a formulary substitute | Infectious disease and pharmacy (Brusk, Mabari): renal and allergy safety first | Clinical safety governs; Task 5 |
 
+Terminology note: frictions are conflicts between people or perspectives and are cataloged in the Decision Friction Table above; traps are information problems the chart can resolve and are cataloged in each task's Failure Design.
+
 ### Data Hierarchy Note
 
 When sources conflict, authority runs highest first: the active medication administration record and signed orders for what was given and ordered; then the attending or specialist consult note for clinical rationale; then the floor or progress note; then any outside or patient-reported information. Two conflicts resolve by this order specifically: perfusion adequacy follows the formal ABI/TBI study and vascular consult over any reassuring bedside pulse note, and osteomyelitis status follows the treating record, which documents equivocal imaging and no bone confirmation, over any severity-forward external worksheet or query.
@@ -132,9 +132,7 @@ Three further dimensions interact. First, documentation restraint under severity
 
 # 2. Task Specifications
 
-Each task is an independent encounter anchored strictly after the 05/21/2026 18:00 snapshot. Draft prompts are written in the requesting clinician's voice and are Alexander-owned drafts. Expected outputs name the format, register, length, and the specific clinical anchors a grader verifies. Failure Design lists the highest-yield traps with remediations grounded in the chart.
-
-Workflow-count note: this world maps each task to its clinically exact approved workflow string, which yields ten distinct workflows across seven structural categories. The guidance frames distinct-workflow count as a floor of three to five rather than a ceiling, and consolidating these would blur genuinely different physician-facing deliverables, for example a pharmacy rejection response, a payer appeal, a safety root-cause analysis, and a quality abstraction. Structure variety is explicit per task so the slate is not monotonous. The integration anchor is Task 4.
+Each task is an independent encounter anchored strictly after the 05/21/2026 18:00 snapshot. Draft prompts are written in the requesting clinician's voice. Expected outputs name the format, register, length, and the specific clinical anchors a grader verifies. Failure Design lists the highest-yield traps with remediations grounded in the chart. The ten tasks map to ten clinically exact approved workflows across seven structural categories, with Task 4 as the integration anchor.
 
 ## Task 1: Discharge Medication Reconciliation
 
@@ -340,7 +338,7 @@ Capability: completion with a true placeholder on the scored decision.
 Workflow: Medical Transcription and Clinical Documentation Completion, requested by the discharging attending.
 Anchor: 05/22/2026 at 10:00. Priority: P0. Difficulty: medium. Time estimate: 20 to 30 minutes.
 
-Expected Output: finalized discharge instructions completed from a started draft, in patient-facing discharge register, roughly one page. The started draft is complete except for the offloading and activity section, which is left as a true placeholder for the model to fill from the chart; correct responses fill it with the documented unsafe-offloading reality and the supervised plan rather than asserting a routine clearance the chart does not support, and do not close any decision the chart leaves open. Grader anchors: the offloading and activity section is completed from the chart with the documented restriction and supervision, not a routine clearance; nothing the chart leaves open is closed; the rest of the draft is finalized faithfully.
+Expected Output: finalized discharge instructions completed from a started draft, in patient-facing discharge register, roughly one page. The started draft is complete except for the offloading and activity section, which is left as a true placeholder to be completed from the chart; correct responses fill it with the documented unsafe-offloading reality and the supervised plan rather than asserting a routine clearance the chart does not support, and do not close any decision the chart leaves open. Grader anchors: the offloading and activity section is completed from the chart with the documented restriction and supervision, not a routine clearance; nothing the chart leaves open is closed; the rest of the draft is finalized faithfully.
 
 Failure Design
 
@@ -358,7 +356,7 @@ Draft Prompt: I started Mrs. Vasquell's discharge instructions but left the acti
 
 # 3. World File Plan
 
-Files are designed after the tasks; each essential file exists because a task needs it for a correct answer. World-level files provide raw material, never an answer-key synthesis: there is no shared discharge summary, no final infectious-disease antibiotic plan, no final vascular recommendation, and no coding or CDI conclusion at world level. Severity-forward external surfaces (the coding worksheet, the CDI query, the payer denial, the concurrent-review request, the pharmacy rejection) are task-level so they cannot pre-answer their tasks. ID convention: EW for essential world-level, E1-T for essential task-level keyed to the task, WS for supplementary world-level. Filenames are lowercase with underscores and an MMDDYYYY stamp matching the milestones. Origin tokens follow decision 9: Custom Made for writer-drafted document templates built on the Mode A HIM and EMR design system, Writer Produced File for media that engineering does not convert. Media rows carry the final upload filename. All clinical values trace to the ratified substrate pack.
+Files are designed after the tasks; each essential file exists because a task needs it for a correct answer. World-level files provide raw material, never an answer-key synthesis: there is no shared discharge summary, no final infectious-disease antibiotic plan, no final vascular recommendation, and no coding or CDI conclusion at world level. Severity-forward external surfaces (the coding worksheet, the CDI query, the payer denial, the concurrent-review request, the pharmacy rejection) are task-level so they cannot pre-answer their tasks. ID convention: EW for essential world-level, E1-T for essential task-level keyed to the task, WS for supplementary world-level. Filenames are lowercase with underscores and an MMDDYYYY stamp matching the milestones. Origin tokens: Custom Made for writer-drafted document templates, Writer Produced File for media that engineering does not convert. Media rows carry the final upload filename.
 
 ## 3.1 Essential Files (World-Level)
 

@@ -2,7 +2,7 @@
 
 Provenance and rule: derived by Claude from the decision record (locked clinical design), the KM medication-expansion and comorbidity packages (house pattern and register), and standard guideline-concordant management for this patient profile. Per decision 12, every numeric clinical fact NOT supplied by Alexander is generated clinically-concordant and flagged RATIFY. Alexander strikes or approves in one pass; nothing here is asserted as locked fact until he does. No value traces to a real patient.
 
-How to ratify: read the RATIFY-flagged values, change any you want, then say "ratify the pack" (or mark exceptions). The spec assembly consumes the ratified pack.
+RATIFICATION: Alexander read and ratified all flagged values on 2026-06-13. The proposed values are now LOCKED and consumed by the spec; the RATIFY tags below mark provenance (Claude-proposed, physician-ratified), not open items.
 
 ## 1. Identity package (arithmetic gates)
 
