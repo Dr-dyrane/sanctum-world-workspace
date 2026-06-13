@@ -14,10 +14,7 @@ Reaudited against the bytes and fixed the true gaps. Rebuilt through the canonic
 
 ## Delegated: image vision-gate (by eye)
 - wound_photo: PASS. Single granulating plantar-forefoot ulcer with a measuring ruler; NO exposed bone, joint, gangrene, eschar, or identifiers. Consistent with EW6/EW12 and keeps the osteomyelitis question open.
-- abi_tbi_tracing: TWO GAPS found, both require ONE Codex regeneration (image is writer-produced, not pipeline-built):
-  1. "Ordered by: M. Everet MD" is the stale pre-rename initial; must read Lillian Everet, MD.
-  2. The right ankle shows measurable indices (1.20 / 1.16) while EW9 states ankle indices noncompressible BILATERALLY. The left side (NC, TBI 0.50, toe 55) and both toe values (R 92/0.84, L 55/0.50) are correct.
-  Root cause: the EW31 spec said only "left ankle noncompressible." Spec corrected to require both ankles NC and the correct ordering clinician; after-generation checklist now mandates an eye cross-check of ordering-clinician initial and bilateral NC against EW9 (the byte gate cannot read image text). EW31 is flagged for regeneration to the corrected spec before any pilot leans on it.
+- abi_tbi_tracing: FIXED and PASS after regeneration. Ordered by now reads Lillian Everet, MD; both ankle PT and DP rows are NC bilaterally; the ankle-brachial index row is noncompressible bilaterally; toe values are R 92 / 0.84 and L 55 / 0.50; no interpretation, adequate-perfusion, inadequate-perfusion, or revascularization text appears. The world-file and synthetic-file copies are byte-identical, grayscale 1240 by 1760 JPGs, EXIF length 0, SHA256 d0354413c690f53aae74ada2efd0de739c7acb84efafbaa92058873ca7ae4ef0.
 
 ## Delegated: adversarial wrongness vectors (deep-read)
 - T2 HIM coding worksheet: wrong-by-genre (pressure-injury principal + acute osteomyelitis POA). Chart rebuttals present: ED/podiatry/wound document a diabetic foot ulcer and infection (not pressure injury); MRI equivocal, pathology no bone, ID not established (osteo). Fair.
@@ -27,4 +24,4 @@ Reaudited against the bytes and fixed the true gaps. Rebuilt through the canonic
 All four are fair and chart-rebuttable, consistent with the per-task A0.5 records.
 
 ## Net
-Zero blocking issues remain in the DOCX substrate. One image (EW31) requires a Codex regeneration to the corrected spec; everything else is fixed and gate-green.
+Zero blocking issues remain in the DOCX substrate or writer-produced media. EW31 has been regenerated to the corrected spec and eye-checked against EW9.

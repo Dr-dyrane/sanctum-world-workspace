@@ -62,7 +62,7 @@ EW30 and EW31 are complete from `phase-3-build-task-artifacts/codex-image-prompt
 
 EW30 `wound_photo_05202026.jpg`: SHA256 2cb1eea1e4f1019b31568e475599723b2d08224aa578dc8d1e1f37487b207afa. Visual check confirms a plantar diabetic forefoot wound, no exposed bone, no visible joint, no identifiers, and no image-only answer to the osteomyelitis question. EXIF length is 0.
 
-EW31 `abi_tbi_tracing_05192026.jpg`: SHA256 e4d06ebeda57d99d851e694006ee7476fed0e3427ce025a4ef49d6af11e95a88. Visual check confirms raw ABI/TBI tracing with the synthetic Ondina EMR header, left ankle noncompressible, left toe pressure 55 mmHg, left TBI 0.50, no interpretation paragraph, and no revascularization language. EXIF length is 0.
+EW31 `abi_tbi_tracing_05192026.jpg`: SHA256 d0354413c690f53aae74ada2efd0de739c7acb84efafbaa92058873ca7ae4ef0. Visual check confirms raw ABI/TBI tracing with the synthetic Ondina EMR header, Ordered by Lillian Everet, MD, bilateral ankle PT and DP marked NC, bilateral ankle-brachial index noncompressible, toe values R 92 / 0.84 and L 55 / 0.50, no interpretation paragraph, and no revascularization language. EXIF length is 0.
 
 Follow-up fix from the image audit: harmonized `abi_tbi_study_report_05192026.docx`, `vascular_consult_note_05192026.docx`, and the Phase 3 manifest to the image values of left toe pressure 55 mmHg and left TBI 0.50. Rebuilt world files and task files after removing non-clinical filed/register wording from DOCX content. Visible and XML leakage scans are clean across world-files, supplementary-files, task-files, and the World Spec DOCX.
 
