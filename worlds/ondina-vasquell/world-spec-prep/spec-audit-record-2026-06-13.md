@@ -18,6 +18,7 @@ The Ondina Brainstorm passed AutoQC after one fix: every task needed an explicit
 | 4 workflow count | Spec used ten distinct workflows with no defense note (the brainstorm had one) | 2.107 | Added a workflow-count note to Section 2 and Note 4 to the 2c defenses |
 | consistency | Big Picture file composition said 31 plus 6 plus 3 equals 40; Section 3 totals 31 plus 9 plus 3 equals 43 | 2.7, 2.45 | Corrected Big Picture to 43 |
 | consistency | Three dates used in files were missing from Key Milestones: 03/15, 04/30, 05/23 | 2.22, 2.23 | Added milestone rows; table re-verified chronological |
+| 6/13 deep audit | Section 3 used the older Quill-style seven-column file-plan shape and omitted explicit Source and Tool columns | 2.42, 2.85, 2.113 | Patched all 43 file rows to the current eight-column AutoQC shape: #, ID, Filename.type, Source, Tool, Reference File Origin, Description, Pearls, Traps, and Friction. Document rows now say Custom Built by Writer and DOCX Template; image rows now say Writer Produced Media and Writer Image Tool |
 
 ## Passes that returned clean
 
@@ -25,6 +26,7 @@ The Ondina Brainstorm passed AutoQC after one fix: every task needed an explicit
 - No answer-key synthesis in world-level files: stated explicitly in Section 3, and every external severity-forward surface (coding worksheet, CDI query, payer denial, concurrent-review request, pharmacy rejection) is task-level.
 - Trap fairness: every scored trap is chart-contradicted or chart-mandated, never chart-silent; the photo is substrate only.
 - Self-containment: no task depends on public knowledge after July 31, 2025.
+- File-plan row completeness: all 43 file rows include populated Source, Tool, Reference File Origin, Description, and Pearls, Traps, and Friction fields; media rows preserve final upload filenames.
 - Trap substrate traceability (2.49): every Failure Design source maps to a World File Plan row.
 - Formatting bans: zero em dashes, en dashes, arrows, asterisks; no letter-O PO token (routes written Oral); MM/DD/YYYY throughout; American English; name consistent.
 
@@ -45,3 +47,27 @@ Findings:
 - Provenance bug CAUGHT and FIXED in 00-START-HERE.md: both the Brainstorm and World Spec DOCX entries carried the same stale SHA256 (b9a82f48...). Recomputed and corrected: Brainstorm e16934678722b523..., World Spec 4d96332b9dea55b4...; World Spec page-count corrected to 101 paras / 33 tables; Mode A fingerprint re-verified EMPTY vs KM base.
 
 New supporting doc: phase-3-build-task-artifacts/clinical-voice-and-file-grammar-guide.md - locks the 10 voice patterns, native document grammar per file, trap-carrier "plainest prose" flags, and the DO-NOT-REPEAT build lessons onto the Phase 3 file build before authoring (the "Application for World #2" action the lessons call for).
+
+## Pass: Source and Tool column rebuild (2026-06-13)
+
+Trigger: deep Ondina catch-up audit before image generation.
+
+Finding: the current v6.3 local AutoQC master requires every file-plan row to include Source and Tool. Ondina had inherited the older Quill seven-column table shape, which was exemplar-consistent but no longer checker-safe.
+
+Fix: patched `submission/Ondina_Vasquell_World_Spec.md` Section 3 so all three file-plan tables use the current eight-column header. Rebuilt `submission/Alexander_World_Vasquell_latest_6_13.docx` with `tools/build/build-docx-ondina-worldspec.py`. Rebuild passed Mode A integrity and fingerprint against the approved KM base. Direct DOCX readback confirms the eight-column header appears in all three file-plan tables, Custom Built by Writer appears on 42 rows, Writer Produced Media and Writer Image Tool appear on the media rows, the stale Date plus Reference File Origin header appears zero times, and visible-text leakage terms AutoQC, RLS, Mercor, workspace, database, benchmark, synthetic, Codex, and Claude appear zero times. All XML parts have zero em dashes, en dashes, arrows, bullets, asterisks, brackets, Synthetic, SYNTHETIC, or python-docx. Final DOCX SHA256 after the EMR wording cleanup rebuild: 34632be5e71fefe3ec753119e5ea4be86ba8feb482792d84cd2bba95516a1b82.
+
+## Pass: writer-produced media completion (2026-06-13)
+
+EW30 and EW31 are complete from `phase-3-build-task-artifacts/codex-image-prompts.md`. Accepted copies are in both `phase-3-build-task-artifacts/synthetic-files/` and `phase-3-build-task-artifacts/world-files/`.
+
+EW30 `wound_photo_05202026.jpg`: SHA256 2cb1eea1e4f1019b31568e475599723b2d08224aa578dc8d1e1f37487b207afa. Visual check confirms a plantar diabetic forefoot wound, no exposed bone, no visible joint, no identifiers, and no image-only answer to the osteomyelitis question. EXIF length is 0.
+
+EW31 `abi_tbi_tracing_05192026.jpg`: SHA256 e4d06ebeda57d99d851e694006ee7476fed0e3427ce025a4ef49d6af11e95a88. Visual check confirms raw ABI/TBI tracing with the synthetic Ondina EMR header, left ankle noncompressible, left toe pressure 55 mmHg, left TBI 0.50, no interpretation paragraph, and no revascularization language. EXIF length is 0.
+
+Follow-up fix from the image audit: harmonized `abi_tbi_study_report_05192026.docx`, `vascular_consult_note_05192026.docx`, and the Phase 3 manifest to the image values of left toe pressure 55 mmHg and left TBI 0.50. Rebuilt world files and task files after removing non-clinical filed/register wording from DOCX content. Visible and XML leakage scans are clean across world-files, supplementary-files, task-files, and the World Spec DOCX.
+
+## Pass: EMR result realism sync (2026-06-13)
+
+Trigger: Alexander flagged that labs and radiology should look like native EMR artifacts with patient details, not generic summaries.
+
+Fix: patched `phase-3-build-task-artifacts/build/clinical_data.py` so MRI, ABI/TBI, pathology, deep micro, superficial micro, renal trend, and inflammatory trend files carry realistic accession, order, specimen, collection, received, reported, ordering clinician, source, and report-status blocks while preserving the same clinical conclusions. Rebuilt world-files and supplementary-files with the current Epic chrome: masthead, blue rule, patient storyboard, patient/encounter block, clean header/footer, and `verify_no_km_identifiers`. Rebuilt task-files after header/footer scrub. Updated the ABI tracing image to match the report accession and synthetic patient header while leaving the perfusion interpretation open.

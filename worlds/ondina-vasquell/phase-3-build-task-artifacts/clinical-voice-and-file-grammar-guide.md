@@ -42,7 +42,7 @@ Trap-carrier column: YES means this file carries a scored trap and must use the 
 | EW17, EW18 | Renal and CBC trends | Lab flowsheet: dated columns | NO | Trends precise; the renal trend is the comparator backbone |
 | EW19, EW20 | Culture reports (deep tissue, superficial swab) | Micro report: specimen, organism, susceptibilities | YES | Different authority by source; state source, do not rank for the reader |
 | EW21 | Endocrine and diabetes education note | Consult or education note | NO | Glycemic context; A1c precise |
-| EW22 | Home medication list | EMR system-generated med list | NO | Before-state for reconciliation; dose, route, frequency, indication |
+| EW22 | Home medication list | EMR medication list | NO | Before-state for reconciliation; dose, route, frequency, indication |
 | EW23 | Outpatient primary care summary | Outpatient visit summary | YES | Carries the quiet quality-measure lookback date; bury it, do not signpost it |
 | EW24 | Nursing offloading flowsheet | Nursing flowsheet | YES | Device-use and teaching contributors for the safety review; factual entries only |
 | EW25 | Medication hold orders | Signed order set | Partial | Makes the holds explicit, signed decisions with reasons |

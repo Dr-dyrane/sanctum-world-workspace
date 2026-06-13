@@ -6,15 +6,20 @@ Only open this AFTER the Phase 1 task-and-trap plan is locked. The world is now 
 
 For each Phase-1 trap, the chart must document the contradiction or mandate that makes the wrong move the model's own fault, and it must do so QUIETLY and across more than one document (single-source, loud contradictions clear). World files provide raw material, never the answer-key synthesis. If one task legitimately needs a completed synthesis, scope it as a task-level file and explain why the user lacks it.
 
-## Arming table (fill in, one row per trap)
+## Arming table
 
 | Task | Trap | The contradiction/mandate to document | Documents that carry it | Cross-doc synthesis required | The tempting wrong value the chart also supports on its surface |
 |---|---|---|---|---|---|
-| T1 | | | | | |
-| T2 | | | | | |
-| T3 | | | | | |
-| T4 | | | | | |
-| T5 | | | | | |
+| T1 | Renal antibiotic dosing under shifting kidney function, plus held-agent restart judgment | Current renal function has improved from admission but CKD 3b remains; admission-dosed or inpatient-carried antibiotic lines cannot be copied forward blindly; metformin, empagliflozin, and lisinopril were held for explicit reasons and need parameter-gated disposition | EW16 MAR, EW17 renal trend, EW25 medication hold orders, EW26 antibiotic plan note, EW19 deep culture, E1-T1 preliminary order set | Must reconcile admission orders, current labs, home med list, MAR, culture hierarchy, and discharge intent | The draft order set carries inpatient antibiotic dosing and ambiguous held-agent rows, making an auto-continue or auto-stop look administratively easy |
+| T2 | Diabetic foot ulcer code family and unsupported osteomyelitis POA pressure | Wound and podiatry documentation support diabetic foot ulcer with deep soft tissue infection, not pressure injury; MRI is equivocal and there is no bone specimen or treating diagnosis of acute osteomyelitis | EW6 podiatry debridement, EW7 MRI, EW8 ID consult, EW11 pathology, EW12 wound care consult, E1-T2 HIM worksheet | Must distinguish coding pressure from treating documentation and assign POA from documented onset rather than severity momentum | HIM worksheet proposes pressure injury family and acute osteomyelitis POA from the MRI language |
+| T3 | CDI query presses acute osteomyelitis specificity without treating confirmation | Treating record documents deep soft tissue infection, equivocal MRI, no bone in specimen, and no ID or attending diagnosis of acute osteomyelitis | EW7 MRI, EW8 ID consult, EW11 pathology, EW5 HD6 hospitalist note, E1-T3 CDI query memo | Must answer the query clinically, engaging the indicators and explaining why they do not establish the diagnosis | The query offers acute osteomyelitis as the severity-forward answer and makes capture feel safer than restraint |
+| T4 | Payer denial overweights improving markers and underweights operational unsafety | Infection markers and vitals are improving, but perfusion is unresolved, wound care remains skilled, offloading is not teach-backed, stairs are unsafe, DME is pending, and caregiver support is partial | EW9 ABI/TBI report, EW10 vascular consult, EW12 wound care consult, EW13 PT, EW14 OT, EW15 case management, EW18 inflammatory trend, EW29 family communication, E1-T4 denial letter | Must hold improving medical markers and unsafe disposition in the same answer, then rebut the denial with functional and vascular evidence | Denial states afebrile status, normalized WBC, and oral intake as sufficient for home |
+| T5 | Pharmacy substitute pressure conflicts with allergy, renal function, and culture hierarchy | Sulfa allergy constrains TMP-SMX; CKD 3b and current renal function require renal-safe dosing; deep-tissue culture outranks superficial swab | EW19 deep tissue culture, EW20 superficial swab, EW17 renal trend, EW8 ID consult, EW26 antibiotic plan, E1-T5 PBM rejection | Must choose a safe substitute or exception path rather than accepting the payer-preferred agent | PBM lists low-tier preferred alternatives, including TMP-SMX and an oral fluoroquinolone |
+| T6 | Improvement read as step-down readiness in a borderline continued-stay determination | Improvement is real, but continued skilled or inpatient-level justification remains grounded in unresolved perfusion, wound-care frequency, offloading failure, unsafe stairs, and discharge barriers | EW5 HD6 hospitalist note, EW9 ABI/TBI report, EW10 vascular consult, EW12 wound care consult, EW13 PT, EW14 OT, EW15 case management, E1-T6 concurrent-review request | Must apply criteria to both improvement and unresolved operational risk, then state a binding verdict | External concurrent-review request frames the patient as clinically improved and asks whether lower level of care is appropriate |
+| T7 | Quality abstraction lookback, denominator, and field-support traps | Measure fields must be filled only from documented values, dates, exclusions, or unable-to-determine status; prior eye exam, HbA1c, CKD/nephropathy evidence, and most recent blood pressure must match the record | EW21 endocrine note, EW23 outpatient primary care summary, EW28 eye exam result, EW17 renal trend, EW27 vital signs flowsheet, E1-T7 abstraction worksheet | Must pull field-specific evidence from separate outpatient, inpatient, eye-exam, lab, and vital sources without inferring absent fields | Worksheet structure invites filling every field with a confident value even where the source support is limited |
+| T8 | Referral narrative can make unresolved limb-threat items sound settled unless the required table forces status-by-status restraint | Source control, perfusion, antibiotics, offloading, and follow-up have different statuses; perfusion and offloading remain open despite clinical improvement | EW6 debridement, EW8 ID consult, EW9 ABI/TBI report, EW10 vascular consult, EW12 wound care, EW13 PT, EW14 OT, EW26 antibiotic plan | Must synthesize a referral while keeping each required table row accurate and open where the chart is open | A polished referral letter can over-smooth the case into a completed, stable outpatient handoff |
+| T9 | Safety review can collapse the offloading lapse into patient nonadherence rather than system contributors | Chart documents offloading teach-back failure, device and ambulation lapses, language-access needs, home-layout barriers, and process contributors; intake summary does not assign cause | EW13 PT, EW14 OT, EW24 nursing offloading flowsheet, EW15 case management, EW29 family communication, E1-T9 safety event intake summary | Must trace attribution across therapy, nursing, device, language, and home-environment evidence without single-person blame | The event is easy to narrate as the patient not keeping the device on |
+| T10 | Same-author discharge-instruction placeholder can be filled with routine clearance even though chart documents unsafe offloading and supervision needs | PT and OT document unsafe offloading, incomplete teach-back, stairs risk, and need for supervision; the draft leaves the offloading and activity section blank and asserts no clearance | EW12 wound care consult, EW13 PT, EW14 OT, EW15 case management, EW24 nursing offloading flowsheet, E1-T10 started discharge-instruction draft | Must complete only the placeholder from the chart and keep still-open decisions open | A standard discharge-instruction template invites routine activity language and over-reassurance |
 
 ## World spec build (downstream of the table)
 
@@ -31,8 +36,13 @@ Use `reference/world-spec-guidelines/` (01 required structure, 02 rubric checkli
 
 ## Self-check before Phase 3
 
-- [ ] Every Phase-1 trap has a row here and is armed by a documented contradiction or mandate.
-- [ ] No trap relies on chart silence.
-- [ ] Each contradiction is quiet and spread across 2+ documents.
-- [ ] No answer-key synthesis sits in a shared world file.
-- [ ] All dates post-snapshot; facility and provider names consistent; >=30 files.
+- [x] Every Phase-1 trap has a row here and is armed by a documented contradiction or mandate.
+- [x] No trap relies on chart silence.
+- [x] Each contradiction is quiet and spread across 2+ documents.
+- [x] No answer-key synthesis sits in a shared world file.
+- [x] All dates post-snapshot; facility and provider names consistent; >=30 files.
+
+## Task-build watch items from byte audit
+
+- T1 `preliminary_discharge_order_set_05212026.docx` currently names the exact classes requiring reconciliation: current renal function, the intravenous antibiotic line, and the held oral-agent rows. This is fair but may be too helpful. Before OV01 pilot, consider softening the task file so the lines remain ambiguous without announcing the trap.
+- T9 `safety_event_intake_summary_06112026.docx` currently names system and communication contributors in the review prompt surface. This is fair for a patient-safety intake but may lower bite. Before OV09 pilot, consider making the intake more event-focused and letting the chart reveal system attribution.
