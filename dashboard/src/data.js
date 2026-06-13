@@ -29,16 +29,16 @@
     ],
     /* Status categories used by filter + pills */
     cats: {
-      planned:   { label:'Planned',          pill:'PLANNED' },
-      delivered: { label:'Delivered',        pill:'DELIVERED' },
-      ready:     { label:'Ready to deliver',  pill:'READY FOR DELIVERY' },
-      review:    { label:'In review',        pill:'IN HUMAN REVIEW' },
+      planned:   { label:'Planned',          pill:'Planned' },
+      delivered: { label:'Delivered',        pill:'Delivered' },
+      ready:     { label:'Ready to deliver',  pill:'Ready to deliver' },
+      review:    { label:'In review',        pill:'In human review' },
     },
     quality: {
-      exact:   { label:'EXACT',        plain:'All ten run scores are platform-confirmed.' },
-      approx:  { label:'APPROXIMATE',  plain:'Vector is approximate: the platform display was partly garbled. Key runs are transcript-confirmed.' },
-      partial: { label:'PARTIAL 5/10', plain:'Only five of ten runs are confirmed so far. Mean is provisional.' },
-      planned: { label:'PLANNED',      plain:'Task is an incoming placeholder. No pilot scores exist yet.' },
+      exact:   { label:'Exact',        plain:'All ten run scores are platform-confirmed.' },
+      approx:  { label:'Approximate',  plain:'Vector is approximate: the platform display was partly garbled. Key runs are transcript-confirmed.' },
+      partial: { label:'Partial 5/10', plain:'Only five of ten runs are confirmed so far. Mean is provisional.' },
+      planned: { label:'Planned',      plain:'Task is an incoming placeholder. No pilot scores exist yet.' },
     },
     reachability: {
       proven:  { label:'Proven',         plain:'At least one run scored 85+, so the ideal answer is demonstrably achievable.' },
@@ -368,5 +368,86 @@
       ],
     },
   };
+  const TASK_PACKETS = {
+    KM01: {
+      prompt:'prompt-task1-v5.txt',
+      files:['medication_safety_handoff_pharmacy_05232026.docx'],
+      golden:'golden-response-task1-v6.docx',
+      grader:'grader-guidelines-task1-v10.txt',
+    },
+    KM02: {
+      prompt:'prompt-task2-escalation.txt',
+      files:['discharge_summary_draft_incomplete_05242026.docx'],
+      golden:'golden-KM02-v5.docx',
+      grader:'grader-guidelines-task2.txt',
+    },
+    KM03: {
+      prompt:'prompt-task3-v2.2.txt',
+      files:['discharge_planning_summary_draft_05242026.docx'],
+      golden:'golden-KM03-v2.2.docx',
+      grader:'grader-guidelines-task3-v2.2.txt',
+    },
+    KM04: {
+      prompt:'prompt-task4-v2.txt',
+      files:['interdisciplinary_care_plan_draft_05242026.docx'],
+      golden:'golden-KM04-v2.docx',
+      grader:'grader-guidelines-task4-v2.txt',
+    },
+    KM05: {
+      prompt:'prompt-task5-v4.txt',
+      files:['transition_clinic_followup_note_draft_05312026.docx'],
+      golden:'golden-KM05-v4.docx',
+      grader:'grader-guidelines-task5-v4.txt',
+    },
+    KM06: {
+      prompt:'prompt-task6-v5.txt',
+      files:['post_discharge_followup_note_draft_06232026.docx'],
+      golden:'golden-KM06-v5.docx',
+      grader:'grader-guidelines-task6-v5.txt',
+    },
+    KM07: {
+      prompt:'prompt-task7-v4.txt',
+      files:['nephrology_referral_letter_started_05262026.docx'],
+      golden:'golden-KM07-v4.docx',
+      grader:'grader-guidelines-task7-v4.txt',
+    },
+    KM08: {
+      prompt:'prompt-task8-v7.txt',
+      files:[
+        'discharge_day_soap_addendum_started_05242026.docx',
+        'night_float_pain_sleep_signout_05242026.docx',
+        'bedside_photo_05242026.png',
+      ],
+      golden:'golden-KM08-v7.docx',
+      grader:'grader-guidelines-task8-v7.txt',
+    },
+    KM09: {
+      prompt:'prompt-task9-v2.txt',
+      files:['him_preliminary_inpatient_coding_summary_05252026.docx'],
+      golden:'golden-KM09-v2.docx',
+      grader:'grader-guidelines-task9-v2.txt',
+    },
+    KM10: {
+      prompt:'prompt-task10-v3.txt',
+      files:['cdi_query_memo_05262026.docx'],
+      golden:'golden-KM10-v3.docx',
+      grader:'grader-guidelines-task10-v3.txt',
+    },
+  };
+  Object.values(WORLDS).forEach(world => {
+    world.tasks.forEach(t => {
+      if (TASK_PACKETS[t.id]) {
+        t.packet = TASK_PACKETS[t.id];
+      } else {
+        t.packet = {
+          prompt:'Planned prompt',
+          files:['Planned task-level files'],
+          golden:'Planned golden reference',
+          grader:'Planned grader guidelines',
+          planned:true,
+        };
+      }
+    });
+  });
   const DEFAULT_WORLD = 'korvin-merrow';
   const NUMWORD = {1:'One',2:'Two',3:'Three',4:'Four',5:'Five',6:'Six',7:'Seven',8:'Eight',9:'Nine',10:'Ten',11:'Eleven',12:'Twelve'};

@@ -65,13 +65,14 @@
       --ok-fill:  rgba(16,185,129,0.14);
       --bad:      #be123c;                  /* rose: reserved for sent-back/blocked; unused by design */
       --bad-fill: rgba(190,18,60,0.12);
-      --shadow-card:  0 1px 2px rgba(0,0,0,0.04), 0 8px 28px rgba(0,0,0,0.08);
-      --shadow-lift:  0 3px 10px rgba(0,0,0,0.08), 0 16px 42px rgba(0,0,0,0.10);
-      --shadow-pill:  0 1px 3px rgba(0,0,0,0.07), 0 4px 14px rgba(0,0,0,0.06);
+      --shadow-card:  0 1px 2px rgba(0,0,0,0.045);
+      --shadow-lift:  0 8px 24px rgba(0,0,0,0.08);
+      --shadow-pill:  none;
+      --liquid: rgba(255,255,255,0.72);
       --r-card:   8px;
       --r-pill:   9999px;
       --r-chip:   8px;
-      --blur:     blur(18px) saturate(140%);
+      --blur:     blur(22px) saturate(170%);
     }
     html.dark {
       --bg:       #101012;
@@ -93,9 +94,10 @@
       --ok-fill:  rgba(52,211,153,0.16);
       --bad:      #fb7185;
       --bad-fill: rgba(251,113,133,0.16);
-      --shadow-card:  0 1px 2px rgba(0,0,0,0.50), 0 8px 28px rgba(0,0,0,0.42);
-      --shadow-lift:  0 4px 16px rgba(0,0,0,0.55), 0 20px 56px rgba(0,0,0,0.48);
-      --shadow-pill:  0 1px 3px rgba(0,0,0,0.45), 0 4px 14px rgba(0,0,0,0.40);
+      --shadow-card:  0 1px 2px rgba(0,0,0,0.32);
+      --shadow-lift:  0 10px 32px rgba(0,0,0,0.34);
+      --shadow-pill:  none;
+      --liquid: rgba(44,44,46,0.70);
     }
 
     /* ════════════════════════════════════════════════════════════
@@ -128,15 +130,23 @@
        ════════════════════════════════════════════════════════════ */
     .surf {
       background: var(--bg-2);
-      -webkit-backdrop-filter: var(--blur); backdrop-filter: var(--blur);
       box-shadow: var(--shadow-card);
       position: relative; overflow: hidden;
     }
     .surf-2 {
       background: var(--bg-3);
-      -webkit-backdrop-filter: var(--blur); backdrop-filter: var(--blur);
       box-shadow: var(--shadow-pill);
       position: relative; overflow: hidden;
+    }
+    .chrome-bar,
+    #worldMenu,
+    #glossPop,
+    #radialTip,
+    .focus-sheet {
+      background: var(--liquid);
+      -webkit-backdrop-filter: var(--blur);
+      backdrop-filter: var(--blur);
+      box-shadow: var(--shadow-lift);
     }
     .surf::after, .surf-2::after {
       content: '';
@@ -145,6 +155,12 @@
       opacity: 0.025; mix-blend-mode: overlay; border-radius: inherit;
     }
     .glass { background: var(--bg-3); -webkit-backdrop-filter: var(--blur); backdrop-filter: var(--blur); box-shadow: var(--shadow-pill); position: relative; overflow: hidden; }
+    .micro-label {
+      font-family: ui-monospace, monospace;
+      font-size: 10.5px;
+      font-weight: 650;
+      color: var(--fg-faint);
+    }
 
     .accent-text {
       background: linear-gradient(120deg, var(--accent-a), var(--accent-b));
@@ -170,7 +186,6 @@
       font-family: ui-monospace, monospace;
       font-size: 11px;
       font-weight: 700;
-      text-transform: uppercase;
     }
     .status-pill::before {
       content: '';
@@ -413,6 +428,29 @@
       padding: 18px 4px 6px;
       -webkit-overflow-scrolling: touch;
     }
+    .focus-tabs {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 6px;
+      padding: 4px;
+      border-radius: 9999px;
+      background: rgba(120,120,128,0.11);
+      margin-bottom: 16px;
+    }
+    .focus-tab {
+      border: 0;
+      min-height: 34px;
+      border-radius: 9999px;
+      color: var(--fg-soft);
+      background: transparent;
+      font-size: 12.5px;
+      font-weight: 650;
+      cursor: pointer;
+      transition: color .18s ease, background-color .18s ease, transform .22s cubic-bezier(0.34,1.56,0.64,1);
+    }
+    .focus-tab:hover { color: var(--fg); background: rgba(120,120,128,0.10); }
+    .focus-tab[aria-selected="true"] { color: var(--fg); background: var(--bg-2); }
+    .focus-tab:active { transform: scale(.96); }
     .focus-metric-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -429,6 +467,73 @@
       border-radius: 20px;
       background: rgba(120,120,128,0.08);
       padding: 16px;
+    }
+    .packet-intro {
+      border-radius: 20px;
+      background: rgba(120,120,128,0.08);
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+    .packet-intro h3 {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.15;
+    }
+    .packet-intro p {
+      margin-top: 8px;
+      color: var(--fg-soft);
+      font-size: 13.5px;
+      line-height: 1.55;
+    }
+    .artifact-grid {
+      display: grid;
+      gap: 10px;
+    }
+    .artifact-tile {
+      display: grid;
+      grid-template-columns: 38px minmax(0, 1fr);
+      gap: 12px;
+      align-items: start;
+      border-radius: 20px;
+      padding: 14px;
+      background: rgba(120,120,128,0.08);
+      transition: background-color .2s ease, transform .24s cubic-bezier(0.34,1.56,0.64,1);
+    }
+    .artifact-tile:hover {
+      background: var(--bg-hover);
+      transform: translateY(-1px);
+    }
+    .artifact-icon {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: var(--accent-fill);
+      color: var(--accent-a);
+    }
+    .artifact-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      color: var(--fg-soft);
+      font-size: 12px;
+      font-weight: 650;
+    }
+    .artifact-name {
+      margin-top: 5px;
+      color: var(--fg);
+      font-size: 13.5px;
+      line-height: 1.35;
+      font-family: ui-monospace, monospace;
+      overflow-wrap: anywhere;
+    }
+    .artifact-note {
+      margin-top: 7px;
+      color: var(--fg-soft);
+      font-size: 12.5px;
+      line-height: 1.45;
     }
 
     /* Icon button */
@@ -544,7 +649,7 @@
     .step.done + .step .step-bar-done,
     .step-bar.done { background: var(--accent-a); opacity:.8; }
     .step-label { font-size:10px; font-family: ui-monospace, monospace;
-      text-transform: uppercase; letter-spacing:.12em; color: var(--fg-faint); white-space:nowrap; }
+      color: var(--fg-faint); white-space:nowrap; }
     .step.done .step-label, .step.current .step-label { color: var(--fg-soft); }
     .step.current .step-label { color: var(--accent-a); font-weight:700; }
     /* Final step turns green once the task is actually delivered */
@@ -555,7 +660,6 @@
     .badge {
       display:inline-flex; align-items:center; gap:5px;
       font-family: ui-monospace, monospace; font-size:10px; font-weight:700;
-      text-transform: uppercase; letter-spacing:.1em;
       padding: 3px 9px; border-radius: 9999px;
     }
     .badge.exact   { color: var(--ok); background: var(--ok-fill); }
@@ -601,7 +705,7 @@
     }
     #glossPop.show { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
     #glossPop .g-title { font-family: ui-monospace, monospace; font-size: 11px; font-weight: 700;
-      text-transform: uppercase; letter-spacing: .14em; color: var(--accent-a); margin-bottom: 4px; }
+      color: var(--accent-a); margin-bottom: 4px; }
     #glossPop .g-body { font-size: 13px; line-height: 1.5; color: var(--fg-soft); }
 
     /* Radial tooltip */
@@ -713,7 +817,7 @@
     @media (prefers-reduced-motion: reduce) {
       .card, .reveal, .node-anim, .arc-anim, .type-char, .dot.pulse,
       .btn-icon, .btn-pill, .btn-fab, .chip, .step-dot, .signal-chip,
-      .focus-overlay, .focus-sheet { animation: none !important; transition: opacity .3s ease !important; transform: none !important; }
+      .focus-overlay, .focus-sheet, .focus-tab, .artifact-tile { animation: none !important; transition: opacity .3s ease !important; transform: none !important; }
       .card { opacity: 1; }
       html { scroll-behavior: auto !important; }
     }
@@ -733,7 +837,7 @@
 
   <!-- Top chrome -->
   <header class="fixed top-3 left-0 right-0 z-40 flex justify-center px-4">
-    <div class="surf-2 flex items-center gap-2 px-3 py-2" style="border-radius:var(--r-pill)">
+    <div class="chrome-bar surf-2 flex items-center gap-2 px-3 py-2" style="border-radius:var(--r-pill)">
       <span class="hidden sm:inline-flex items-center pl-2 pr-1 text-[13px] font-semibold">Sanctum</span>
       <span class="hidden sm:block w-px h-4" style="background:var(--fg-faint);opacity:0.2"></span>
       <button id="worldBtn" aria-haspopup="menu" aria-expanded="false" aria-label="Switch world"
@@ -773,7 +877,7 @@
       <div class="w-full max-w-5xl">
         <section class="cockpit surf p-5 sm:p-7 md:p-9" style="border-radius:var(--r-card)" aria-label="World status cockpit">
           <div class="flex flex-wrap items-center justify-between gap-3">
-            <p id="heroKicker" class="font-mono text-[11px] uppercase" style="color:var(--fg-faint)">Korvin Merrow · AI Training Task Suite</p>
+            <p id="heroKicker" class="micro-label">Korvin Merrow · AI Training Task Suite</p>
             <span id="heroStatePill" class="status-pill">Loading</span>
           </div>
 
@@ -825,7 +929,7 @@
       <div class="signal-panel surf p-4 sm:p-5" style="border-radius:var(--r-card)">
         <div class="flex items-center justify-between gap-3">
           <div>
-            <p class="font-mono text-[10px] uppercase" style="color:var(--fg-faint)">Signal families</p>
+            <p class="micro-label">Signal families</p>
             <h2 id="signalHeadline" class="text-[18px] sm:text-[20px] font-semibold mt-1">Where the model breaks</h2>
           </div>
           <button id="openFirstSignal" class="btn-pill surf-2 px-3 py-2 text-[12px] font-medium inline-flex items-center gap-1.5" style="border-radius:var(--r-pill)">
@@ -840,11 +944,11 @@
     <div class="sticky top-16 z-30 px-3 sm:px-6 max-w-5xl mx-auto">
       <div class="surf-2 px-4 py-3 controls-inner flex flex-wrap items-center gap-x-5 gap-y-2 sm:gap-y-3 justify-between" style="border-radius:20px">
         <div class="controls-group flex items-center gap-2 flex-wrap" role="group" aria-label="Filter tasks by status">
-          <span class="font-mono text-[10px] uppercase pl-1" style="color:var(--fg-faint)">View</span>
+          <span class="micro-label pl-1">View</span>
           <div id="filterChips" class="chip-scroll flex items-center gap-2 flex-wrap"></div>
         </div>
         <div class="controls-group flex items-center gap-2 flex-wrap" role="group" aria-label="Sort tasks">
-          <span class="font-mono text-[10px] uppercase" style="color:var(--fg-faint)">Order</span>
+          <span class="micro-label">Order</span>
           <div id="sortChips" class="chip-scroll flex items-center gap-2 flex-wrap"></div>
         </div>
       </div>
@@ -857,7 +961,7 @@
     <!-- ═══ SUITE SUMMARY ═══ -->
     <section id="summary" class="px-3 sm:px-6 max-w-5xl mx-auto py-16 sm:py-20">
       <div class="surf p-6 sm:p-12" style="border-radius:var(--r-card)">
-        <p class="font-mono text-[12px] uppercase tracking-[0.24em] mb-6 sm:mb-8" style="color:var(--fg-faint)">Suite Summary</p>
+        <p class="micro-label mb-6 sm:mb-8">Suite summary</p>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-5 sm:gap-8">
           <div class="min-w-0">
             <div class="t-stat font-bold" id="deliveredCount">-</div>
@@ -907,7 +1011,7 @@
     <div class="focus-handle" aria-hidden="true"></div>
     <div class="focus-head">
       <div class="min-w-0">
-        <p id="focusEyebrow" class="font-mono text-[11px] uppercase" style="color:var(--fg-faint)"></p>
+        <p id="focusEyebrow" class="micro-label"></p>
         <h2 id="focusTitle" class="text-[24px] sm:text-[30px] font-semibold leading-tight mt-1"></h2>
       </div>
       <button id="focusClose" class="btn-icon surf-2 w-10 h-10 grid place-items-center" style="border-radius:var(--r-pill)" aria-label="Close task focus">
@@ -955,16 +1059,16 @@
     ],
     /* Status categories used by filter + pills */
     cats: {
-      planned:   { label:'Planned',          pill:'PLANNED' },
-      delivered: { label:'Delivered',        pill:'DELIVERED' },
-      ready:     { label:'Ready to deliver',  pill:'READY FOR DELIVERY' },
-      review:    { label:'In review',        pill:'IN HUMAN REVIEW' },
+      planned:   { label:'Planned',          pill:'Planned' },
+      delivered: { label:'Delivered',        pill:'Delivered' },
+      ready:     { label:'Ready to deliver',  pill:'Ready to deliver' },
+      review:    { label:'In review',        pill:'In human review' },
     },
     quality: {
-      exact:   { label:'EXACT',        plain:'All ten run scores are platform-confirmed.' },
-      approx:  { label:'APPROXIMATE',  plain:'Vector is approximate: the platform display was partly garbled. Key runs are transcript-confirmed.' },
-      partial: { label:'PARTIAL 5/10', plain:'Only five of ten runs are confirmed so far. Mean is provisional.' },
-      planned: { label:'PLANNED',      plain:'Task is an incoming placeholder. No pilot scores exist yet.' },
+      exact:   { label:'Exact',        plain:'All ten run scores are platform-confirmed.' },
+      approx:  { label:'Approximate',  plain:'Vector is approximate: the platform display was partly garbled. Key runs are transcript-confirmed.' },
+      partial: { label:'Partial 5/10', plain:'Only five of ten runs are confirmed so far. Mean is provisional.' },
+      planned: { label:'Planned',      plain:'Task is an incoming placeholder. No pilot scores exist yet.' },
     },
     reachability: {
       proven:  { label:'Proven',         plain:'At least one run scored 85+, so the ideal answer is demonstrably achievable.' },
@@ -1294,6 +1398,87 @@
       ],
     },
   };
+  const TASK_PACKETS = {
+    KM01: {
+      prompt:'prompt-task1-v5.txt',
+      files:['medication_safety_handoff_pharmacy_05232026.docx'],
+      golden:'golden-response-task1-v6.docx',
+      grader:'grader-guidelines-task1-v10.txt',
+    },
+    KM02: {
+      prompt:'prompt-task2-escalation.txt',
+      files:['discharge_summary_draft_incomplete_05242026.docx'],
+      golden:'golden-KM02-v5.docx',
+      grader:'grader-guidelines-task2.txt',
+    },
+    KM03: {
+      prompt:'prompt-task3-v2.2.txt',
+      files:['discharge_planning_summary_draft_05242026.docx'],
+      golden:'golden-KM03-v2.2.docx',
+      grader:'grader-guidelines-task3-v2.2.txt',
+    },
+    KM04: {
+      prompt:'prompt-task4-v2.txt',
+      files:['interdisciplinary_care_plan_draft_05242026.docx'],
+      golden:'golden-KM04-v2.docx',
+      grader:'grader-guidelines-task4-v2.txt',
+    },
+    KM05: {
+      prompt:'prompt-task5-v4.txt',
+      files:['transition_clinic_followup_note_draft_05312026.docx'],
+      golden:'golden-KM05-v4.docx',
+      grader:'grader-guidelines-task5-v4.txt',
+    },
+    KM06: {
+      prompt:'prompt-task6-v5.txt',
+      files:['post_discharge_followup_note_draft_06232026.docx'],
+      golden:'golden-KM06-v5.docx',
+      grader:'grader-guidelines-task6-v5.txt',
+    },
+    KM07: {
+      prompt:'prompt-task7-v4.txt',
+      files:['nephrology_referral_letter_started_05262026.docx'],
+      golden:'golden-KM07-v4.docx',
+      grader:'grader-guidelines-task7-v4.txt',
+    },
+    KM08: {
+      prompt:'prompt-task8-v7.txt',
+      files:[
+        'discharge_day_soap_addendum_started_05242026.docx',
+        'night_float_pain_sleep_signout_05242026.docx',
+        'bedside_photo_05242026.png',
+      ],
+      golden:'golden-KM08-v7.docx',
+      grader:'grader-guidelines-task8-v7.txt',
+    },
+    KM09: {
+      prompt:'prompt-task9-v2.txt',
+      files:['him_preliminary_inpatient_coding_summary_05252026.docx'],
+      golden:'golden-KM09-v2.docx',
+      grader:'grader-guidelines-task9-v2.txt',
+    },
+    KM10: {
+      prompt:'prompt-task10-v3.txt',
+      files:['cdi_query_memo_05262026.docx'],
+      golden:'golden-KM10-v3.docx',
+      grader:'grader-guidelines-task10-v3.txt',
+    },
+  };
+  Object.values(WORLDS).forEach(world => {
+    world.tasks.forEach(t => {
+      if (TASK_PACKETS[t.id]) {
+        t.packet = TASK_PACKETS[t.id];
+      } else {
+        t.packet = {
+          prompt:'Planned prompt',
+          files:['Planned task-level files'],
+          golden:'Planned golden reference',
+          grader:'Planned grader guidelines',
+          planned:true,
+        };
+      }
+    });
+  });
   const DEFAULT_WORLD = 'korvin-merrow';
   const NUMWORD = {1:'One',2:'Two',3:'Three',4:'Four',5:'Five',6:'Six',7:'Seven',8:'Eight',9:'Nine',10:'Ten',11:'Eleven',12:'Twelve'};
 
@@ -1531,6 +1716,20 @@
       return `<span class="badge ${t.quality}" title="${q.plain}">${q.label}</span>`;
     },
 
+    artifactTile(role, fileText, note, icon, status){
+      return `<article class="artifact-tile">
+        <div class="artifact-icon" aria-hidden="true"><i data-lucide="${icon}" style="width:17px;height:17px"></i></div>
+        <div class="min-w-0">
+          <div class="artifact-head">
+            <span>${U.esc(role)}</span>
+            <span>${U.esc(status)}</span>
+          </div>
+          <div class="artifact-name">${U.esc(fileText)}</div>
+          <p class="artifact-note">${U.esc(note)}</p>
+        </div>
+      </article>`;
+    },
+
     /* Reachability line */
     reachLine(t){
       const r = CONFIG.reachability[t.reach];
@@ -1584,8 +1783,8 @@
             <div class="min-w-0">
               <div class="flex flex-wrap items-center gap-2">
                 <span class="font-mono text-[12px] font-bold accent-text">${t.id}</span>
-                <span class="surf-2 px-3 py-1.5 text-[10px] font-mono uppercase inline-flex items-center gap-1.5" style="border-radius:var(--r-pill);color:var(--fg-soft)"><span class="pill-dot ${t.stage}"></span>${CONFIG.cats[t.stage].pill}</span>
-                <span class="font-mono text-[10px] uppercase" style="color:var(--fg-faint)">${U.esc(fam.label)}</span>
+                <span class="surf-2 px-3 py-1.5 text-[10px] font-mono inline-flex items-center gap-1.5" style="border-radius:var(--r-pill);color:var(--fg-soft)"><span class="pill-dot ${t.stage}"></span>${CONFIG.cats[t.stage].pill}</span>
+                <span class="micro-label">${U.esc(fam.label)}</span>
               </div>
               <h2 class="text-[19px] sm:text-[22px] font-semibold mt-2 leading-tight text-balance" style="max-width:min(34ch,100%)">${U.esc(t.name)}</h2>
               <div class="mt-3 flex flex-wrap gap-2" style="max-width:260px">${C.dots(t)}</div>
@@ -1593,9 +1792,9 @@
           </div>
           <div class="flex items-center gap-3 sm:ml-auto">
             <div class="score-capsule">
-              <div class="font-mono text-[10px] uppercase mb-1" style="color:var(--fg-faint)">${U.term('mean','Mean')}</div>
+              <div class="micro-label mb-1">${U.term('mean','Mean')}</div>
               <div class="font-mono font-bold text-[28px] leading-none" style="color:${tagColor}">${scoreLabel}${meanUnit}</div>
-              <div class="font-mono text-[10px] mt-1 uppercase" style="color:${tagColor}">${band.tag}</div>
+              <div class="font-mono text-[10px] mt-1" style="color:${tagColor}">${band.tag}</div>
             </div>
             <button class="openTaskBtn btn-icon surf-2 w-10 h-10 grid place-items-center open-task" style="border-radius:var(--r-pill)" aria-label="Open ${U.esc(t.id)} focus">
               <i data-lucide="arrow-up-right" style="width:17px;height:17px"></i>
@@ -1741,12 +1940,12 @@
     ctl.setAttribute('text-anchor','middle'); ctl.setAttribute('fill','var(--fg)');
     ctl.setAttribute('font-size','12'); ctl.setAttribute('font-family','var(--font-mono, monospace)');
     ctl.setAttribute('opacity','0.5'); ctl.setAttribute('letter-spacing','0');
-    ctl.textContent = scored.length ? 'SUITE MEAN' : 'INCOMING';
+    ctl.textContent = scored.length ? 'Suite mean' : 'Incoming';
     const ctl2 = document.createElementNS(NS,'text');
     ctl2.setAttribute('x',cx); ctl2.setAttribute('y',cy+20);
     ctl2.setAttribute('text-anchor','middle'); ctl2.setAttribute('fill','var(--fg)');
     ctl2.setAttribute('font-size','26'); ctl2.setAttribute('font-weight','700');
-    ctl2.textContent = scored.length ? (anyApprox?'≈':'') + mom.toFixed(1).replace(/\.0$/,'') + '%' : `${tasks.length} TASKS`;
+    ctl2.textContent = scored.length ? (anyApprox?'≈':'') + mom.toFixed(1).replace(/\.0$/,'') + '%' : `${tasks.length} tasks`;
     svg.appendChild(ctl); svg.appendChild(ctl2);
 
     pts.forEach((p,i)=>{
@@ -1834,16 +2033,31 @@
     const title = document.getElementById('focusTitle');
     const body = document.getElementById('focusBody');
     let activeId = null;
+    let activeTab = 'overview';
 
     function taskById(id){ return tasks.find(t=>t.id === id); }
     function metric(label, value, hint=''){
       return `<div class="focus-metric">
-        <div class="font-mono text-[10px] uppercase" style="color:var(--fg-faint)">${label}</div>
+        <div class="micro-label">${label}</div>
         <div class="mt-2 text-[22px] font-bold leading-none">${value}</div>
         ${hint ? `<div class="mt-2 text-[12px] leading-snug" style="color:var(--fg-soft)">${hint}</div>` : ''}
       </div>`;
     }
-    function content(t){
+    function sectionTitle(text){
+      return `<div class="micro-label mb-2">${text}</div>`;
+    }
+    function tabs(){
+      const items = [
+        ['overview', 'Overview'],
+        ['packet', 'Packet'],
+        ['runs', 'Runs'],
+        ['review', 'Review'],
+      ];
+      return `<div class="focus-tabs" role="tablist" aria-label="Task focus sections">
+        ${items.map(([id,label])=>`<button class="focus-tab" role="tab" data-focus-tab="${id}" aria-selected="${activeTab === id ? 'true' : 'false'}">${label}</button>`).join('')}
+      </div>`;
+    }
+    function overview(t){
       const k = U.counts(t);
       const band = U.meanBand(t.mean);
       const fam = CONFIG.failureFamilies[t.family] || { label:'Clinical signal', plain:'' };
@@ -1857,54 +2071,101 @@
         </div>
 
         <div class="focus-section">
-          <div class="font-mono text-[10px] uppercase mb-2" style="color:var(--fg-faint)">What this tests</div>
+          ${sectionTitle('What this tests')}
           <p class="text-[15px] leading-relaxed font-medium">${U.esc(t.plain)}</p>
         </div>
 
         <div class="focus-section">
-          <div class="font-mono text-[10px] uppercase mb-2" style="color:var(--fg-faint)">Failure family</div>
+          ${sectionTitle('Failure family')}
           <p class="text-[14px] leading-relaxed"><b>${U.esc(fam.label)}.</b> <span style="color:var(--fg-soft)">${U.esc(fam.plain || '')}</span></p>
         </div>
 
         <div class="focus-section">
-          <div class="font-mono text-[10px] uppercase mb-2" style="color:var(--fg-faint)">Verdict</div>
+          ${sectionTitle('Verdict')}
           <p class="text-[14px] leading-relaxed">${U.esc(t.verdict)}</p>
         </div>
 
         <div class="focus-section">
-          <div class="font-mono text-[10px] uppercase mb-2" style="color:var(--fg-faint)">Mechanism</div>
+          ${sectionTitle('Mechanism')}
           <p class="text-[13.5px] leading-relaxed" style="color:var(--fg-soft)">${U.esc(t.mechanism)}</p>
         </div>
-
+      `;
+    }
+    function packet(t){
+      const p = t.packet || {};
+      const status = p.planned ? 'Planned' : 'Current';
+      const fileList = Array.isArray(p.files) ? p.files : [];
+      return `<div class="packet-intro">
+          <h3>Task packet</h3>
+          <p>Four artifacts define the task. The dashboard shows roles and sanitized filenames only, so the teaching layer explains the build without exposing local file paths.</p>
+        </div>
+        <div class="artifact-grid">
+          ${C.artifactTile('Prompt', p.prompt || 'Planned prompt', 'The in-role request that sets the workflow and output boundary.', 'message-square-text', status)}
+          ${C.artifactTile('Task files', fileList.join(' + ') || 'No task file mounted', 'The mounted material the model must use or rebut. This is where format, noise, and fair traps live.', 'folder-open', status)}
+          ${C.artifactTile('Golden', p.golden || 'Planned golden reference', 'The physician reference answer. It defines the clinical target, not a script to copy.', 'badge-check', status)}
+          ${C.artifactTile('Grader', p.grader || 'Planned grader guidelines', 'The scoring rules. A good grader credits safe restraint and penalizes the central failure.', 'list-checks', status)}
+        </div>`;
+    }
+    function runs(t){
+      const k = U.counts(t);
+      const band = U.meanBand(t.mean);
+      const score = U.hasMean(t) ? U.fmtMean(t) + '%' : 'TBD';
+      return `<div class="focus-metric-grid">
+          ${metric('Mean', score, band.tag)}
+          ${metric('Catchers', String(k.catchers), '85 or higher')}
+          ${metric('Floors', String(k.floors), '40 or lower')}
+        </div>
         <div class="focus-section">
+          ${sectionTitle('Pilot runs')}
+          ${C.runDetail(t)}
+        </div>`;
+    }
+    function review(t){
+      return `<div class="focus-section">
+          ${sectionTitle('Lifecycle')}
           ${C.stepper(t)}
           <div class="mt-5 grid sm:grid-cols-2 gap-4">
             <div>
-              <div class="font-mono text-[10px] uppercase mb-2" style="color:var(--fg-faint)">Workflow</div>
+              ${sectionTitle('Workflow')}
               <div class="text-[14px] font-medium leading-snug">${U.esc(t.workflow)}</div>
             </div>
             <div>
-              <div class="font-mono text-[10px] uppercase mb-2" style="color:var(--fg-faint)">Reviewer</div>
+              ${sectionTitle('Reviewer')}
               <div class="text-[14px] font-medium">${U.esc(t.reviewer)}</div>
             </div>
           </div>
           <div class="mt-5">${C.reachLine(t)}</div>
         </div>
-
         <div class="focus-section">
-          <div class="font-mono text-[10px] uppercase mb-2" style="color:var(--fg-faint)">Pilot runs</div>
-          ${C.runDetail(t)}
-        </div>
-      `;
+          ${sectionTitle('Current judgment')}
+          <p class="text-[14px] leading-relaxed">${U.esc(t.verdict)}</p>
+        </div>`;
     }
+    function content(t){
+      const views = { overview, packet, runs, review };
+      return `${tabs()}<div class="focus-panel">${(views[activeTab] || overview)(t)}</div>`;
+    }
+    function renderActive(){
+      const t = taskById(activeId);
+      if (!t) return;
+      body.innerHTML = content(t);
+      lucide.createIcons();
+    }
+    body.addEventListener('click', e=>{
+      const btn = e.target.closest('[data-focus-tab]');
+      if (!btn) return;
+      activeTab = btn.dataset.focusTab;
+      renderActive();
+    });
     function open(id){
       const t = taskById(id);
       if (!t) return;
       activeId = id;
+      activeTab = 'overview';
       const fam = CONFIG.failureFamilies[t.family] || { label:'Clinical signal' };
       eyebrow.textContent = `${t.id} · ${fam.label}`;
       title.textContent = t.name;
-      body.innerHTML = content(t);
+      renderActive();
       overlay.hidden = false;
       sheet.hidden = false;
       document.body.style.overflow = 'hidden';

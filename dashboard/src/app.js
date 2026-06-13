@@ -232,6 +232,20 @@
       return `<span class="badge ${t.quality}" title="${q.plain}">${q.label}</span>`;
     },
 
+    artifactTile(role, fileText, note, icon, status){
+      return `<article class="artifact-tile">
+        <div class="artifact-icon" aria-hidden="true"><i data-lucide="${icon}" style="width:17px;height:17px"></i></div>
+        <div class="min-w-0">
+          <div class="artifact-head">
+            <span>${U.esc(role)}</span>
+            <span>${U.esc(status)}</span>
+          </div>
+          <div class="artifact-name">${U.esc(fileText)}</div>
+          <p class="artifact-note">${U.esc(note)}</p>
+        </div>
+      </article>`;
+    },
+
     /* Reachability line */
     reachLine(t){
       const r = CONFIG.reachability[t.reach];
@@ -285,8 +299,8 @@
             <div class="min-w-0">
               <div class="flex flex-wrap items-center gap-2">
                 <span class="font-mono text-[12px] font-bold accent-text">${t.id}</span>
-                <span class="surf-2 px-3 py-1.5 text-[10px] font-mono uppercase inline-flex items-center gap-1.5" style="border-radius:var(--r-pill);color:var(--fg-soft)"><span class="pill-dot ${t.stage}"></span>${CONFIG.cats[t.stage].pill}</span>
-                <span class="font-mono text-[10px] uppercase" style="color:var(--fg-faint)">${U.esc(fam.label)}</span>
+                <span class="surf-2 px-3 py-1.5 text-[10px] font-mono inline-flex items-center gap-1.5" style="border-radius:var(--r-pill);color:var(--fg-soft)"><span class="pill-dot ${t.stage}"></span>${CONFIG.cats[t.stage].pill}</span>
+                <span class="micro-label">${U.esc(fam.label)}</span>
               </div>
               <h2 class="text-[19px] sm:text-[22px] font-semibold mt-2 leading-tight text-balance" style="max-width:min(34ch,100%)">${U.esc(t.name)}</h2>
               <div class="mt-3 flex flex-wrap gap-2" style="max-width:260px">${C.dots(t)}</div>
@@ -294,9 +308,9 @@
           </div>
           <div class="flex items-center gap-3 sm:ml-auto">
             <div class="score-capsule">
-              <div class="font-mono text-[10px] uppercase mb-1" style="color:var(--fg-faint)">${U.term('mean','Mean')}</div>
+              <div class="micro-label mb-1">${U.term('mean','Mean')}</div>
               <div class="font-mono font-bold text-[28px] leading-none" style="color:${tagColor}">${scoreLabel}${meanUnit}</div>
-              <div class="font-mono text-[10px] mt-1 uppercase" style="color:${tagColor}">${band.tag}</div>
+              <div class="font-mono text-[10px] mt-1" style="color:${tagColor}">${band.tag}</div>
             </div>
             <button class="openTaskBtn btn-icon surf-2 w-10 h-10 grid place-items-center open-task" style="border-radius:var(--r-pill)" aria-label="Open ${U.esc(t.id)} focus">
               <i data-lucide="arrow-up-right" style="width:17px;height:17px"></i>
@@ -442,12 +456,12 @@
     ctl.setAttribute('text-anchor','middle'); ctl.setAttribute('fill','var(--fg)');
     ctl.setAttribute('font-size','12'); ctl.setAttribute('font-family','var(--font-mono, monospace)');
     ctl.setAttribute('opacity','0.5'); ctl.setAttribute('letter-spacing','0');
-    ctl.textContent = scored.length ? 'SUITE MEAN' : 'INCOMING';
+    ctl.textContent = scored.length ? 'Suite mean' : 'Incoming';
     const ctl2 = document.createElementNS(NS,'text');
     ctl2.setAttribute('x',cx); ctl2.setAttribute('y',cy+20);
     ctl2.setAttribute('text-anchor','middle'); ctl2.setAttribute('fill','var(--fg)');
     ctl2.setAttribute('font-size','26'); ctl2.setAttribute('font-weight','700');
-    ctl2.textContent = scored.length ? (anyApprox?'≈':'') + mom.toFixed(1).replace(/\.0$/,'') + '%' : `${tasks.length} TASKS`;
+    ctl2.textContent = scored.length ? (anyApprox?'≈':'') + mom.toFixed(1).replace(/\.0$/,'') + '%' : `${tasks.length} tasks`;
     svg.appendChild(ctl); svg.appendChild(ctl2);
 
     pts.forEach((p,i)=>{
@@ -535,16 +549,31 @@
     const title = document.getElementById('focusTitle');
     const body = document.getElementById('focusBody');
     let activeId = null;
+    let activeTab = 'overview';
 
     function taskById(id){ return tasks.find(t=>t.id === id); }
     function metric(label, value, hint=''){
       return `<div class="focus-metric">
-        <div class="font-mono text-[10px] uppercase" style="color:var(--fg-faint)">${label}</div>
+        <div class="micro-label">${label}</div>
         <div class="mt-2 text-[22px] font-bold leading-none">${value}</div>
         ${hint ? `<div class="mt-2 text-[12px] leading-snug" style="color:var(--fg-soft)">${hint}</div>` : ''}
       </div>`;
     }
-    function content(t){
+    function sectionTitle(text){
+      return `<div class="micro-label mb-2">${text}</div>`;
+    }
+    function tabs(){
+      const items = [
+        ['overview', 'Overview'],
+        ['packet', 'Packet'],
+        ['runs', 'Runs'],
+        ['review', 'Review'],
+      ];
+      return `<div class="focus-tabs" role="tablist" aria-label="Task focus sections">
+        ${items.map(([id,label])=>`<button class="focus-tab" role="tab" data-focus-tab="${id}" aria-selected="${activeTab === id ? 'true' : 'false'}">${label}</button>`).join('')}
+      </div>`;
+    }
+    function overview(t){
       const k = U.counts(t);
       const band = U.meanBand(t.mean);
       const fam = CONFIG.failureFamilies[t.family] || { label:'Clinical signal', plain:'' };
@@ -558,54 +587,101 @@
         </div>
 
         <div class="focus-section">
-          <div class="font-mono text-[10px] uppercase mb-2" style="color:var(--fg-faint)">What this tests</div>
+          ${sectionTitle('What this tests')}
           <p class="text-[15px] leading-relaxed font-medium">${U.esc(t.plain)}</p>
         </div>
 
         <div class="focus-section">
-          <div class="font-mono text-[10px] uppercase mb-2" style="color:var(--fg-faint)">Failure family</div>
+          ${sectionTitle('Failure family')}
           <p class="text-[14px] leading-relaxed"><b>${U.esc(fam.label)}.</b> <span style="color:var(--fg-soft)">${U.esc(fam.plain || '')}</span></p>
         </div>
 
         <div class="focus-section">
-          <div class="font-mono text-[10px] uppercase mb-2" style="color:var(--fg-faint)">Verdict</div>
+          ${sectionTitle('Verdict')}
           <p class="text-[14px] leading-relaxed">${U.esc(t.verdict)}</p>
         </div>
 
         <div class="focus-section">
-          <div class="font-mono text-[10px] uppercase mb-2" style="color:var(--fg-faint)">Mechanism</div>
+          ${sectionTitle('Mechanism')}
           <p class="text-[13.5px] leading-relaxed" style="color:var(--fg-soft)">${U.esc(t.mechanism)}</p>
         </div>
-
+      `;
+    }
+    function packet(t){
+      const p = t.packet || {};
+      const status = p.planned ? 'Planned' : 'Current';
+      const fileList = Array.isArray(p.files) ? p.files : [];
+      return `<div class="packet-intro">
+          <h3>Task packet</h3>
+          <p>Four artifacts define the task. The dashboard shows roles and sanitized filenames only, so the teaching layer explains the build without exposing local file paths.</p>
+        </div>
+        <div class="artifact-grid">
+          ${C.artifactTile('Prompt', p.prompt || 'Planned prompt', 'The in-role request that sets the workflow and output boundary.', 'message-square-text', status)}
+          ${C.artifactTile('Task files', fileList.join(' + ') || 'No task file mounted', 'The mounted material the model must use or rebut. This is where format, noise, and fair traps live.', 'folder-open', status)}
+          ${C.artifactTile('Golden', p.golden || 'Planned golden reference', 'The physician reference answer. It defines the clinical target, not a script to copy.', 'badge-check', status)}
+          ${C.artifactTile('Grader', p.grader || 'Planned grader guidelines', 'The scoring rules. A good grader credits safe restraint and penalizes the central failure.', 'list-checks', status)}
+        </div>`;
+    }
+    function runs(t){
+      const k = U.counts(t);
+      const band = U.meanBand(t.mean);
+      const score = U.hasMean(t) ? U.fmtMean(t) + '%' : 'TBD';
+      return `<div class="focus-metric-grid">
+          ${metric('Mean', score, band.tag)}
+          ${metric('Catchers', String(k.catchers), '85 or higher')}
+          ${metric('Floors', String(k.floors), '40 or lower')}
+        </div>
         <div class="focus-section">
+          ${sectionTitle('Pilot runs')}
+          ${C.runDetail(t)}
+        </div>`;
+    }
+    function review(t){
+      return `<div class="focus-section">
+          ${sectionTitle('Lifecycle')}
           ${C.stepper(t)}
           <div class="mt-5 grid sm:grid-cols-2 gap-4">
             <div>
-              <div class="font-mono text-[10px] uppercase mb-2" style="color:var(--fg-faint)">Workflow</div>
+              ${sectionTitle('Workflow')}
               <div class="text-[14px] font-medium leading-snug">${U.esc(t.workflow)}</div>
             </div>
             <div>
-              <div class="font-mono text-[10px] uppercase mb-2" style="color:var(--fg-faint)">Reviewer</div>
+              ${sectionTitle('Reviewer')}
               <div class="text-[14px] font-medium">${U.esc(t.reviewer)}</div>
             </div>
           </div>
           <div class="mt-5">${C.reachLine(t)}</div>
         </div>
-
         <div class="focus-section">
-          <div class="font-mono text-[10px] uppercase mb-2" style="color:var(--fg-faint)">Pilot runs</div>
-          ${C.runDetail(t)}
-        </div>
-      `;
+          ${sectionTitle('Current judgment')}
+          <p class="text-[14px] leading-relaxed">${U.esc(t.verdict)}</p>
+        </div>`;
     }
+    function content(t){
+      const views = { overview, packet, runs, review };
+      return `${tabs()}<div class="focus-panel">${(views[activeTab] || overview)(t)}</div>`;
+    }
+    function renderActive(){
+      const t = taskById(activeId);
+      if (!t) return;
+      body.innerHTML = content(t);
+      lucide.createIcons();
+    }
+    body.addEventListener('click', e=>{
+      const btn = e.target.closest('[data-focus-tab]');
+      if (!btn) return;
+      activeTab = btn.dataset.focusTab;
+      renderActive();
+    });
     function open(id){
       const t = taskById(id);
       if (!t) return;
       activeId = id;
+      activeTab = 'overview';
       const fam = CONFIG.failureFamilies[t.family] || { label:'Clinical signal' };
       eyebrow.textContent = `${t.id} · ${fam.label}`;
       title.textContent = t.name;
-      body.innerHTML = content(t);
+      renderActive();
       overlay.hidden = false;
       sheet.hidden = false;
       document.body.style.overflow = 'hidden';

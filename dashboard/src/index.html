@@ -50,7 +50,7 @@
 
   <!-- Top chrome -->
   <header class="fixed top-3 left-0 right-0 z-40 flex justify-center px-4">
-    <div class="surf-2 flex items-center gap-2 px-3 py-2" style="border-radius:var(--r-pill)">
+    <div class="chrome-bar surf-2 flex items-center gap-2 px-3 py-2" style="border-radius:var(--r-pill)">
       <span class="hidden sm:inline-flex items-center pl-2 pr-1 text-[13px] font-semibold">Sanctum</span>
       <span class="hidden sm:block w-px h-4" style="background:var(--fg-faint);opacity:0.2"></span>
       <button id="worldBtn" aria-haspopup="menu" aria-expanded="false" aria-label="Switch world"
@@ -90,7 +90,7 @@
       <div class="w-full max-w-5xl">
         <section class="cockpit surf p-5 sm:p-7 md:p-9" style="border-radius:var(--r-card)" aria-label="World status cockpit">
           <div class="flex flex-wrap items-center justify-between gap-3">
-            <p id="heroKicker" class="font-mono text-[11px] uppercase" style="color:var(--fg-faint)">Korvin Merrow · AI Training Task Suite</p>
+            <p id="heroKicker" class="micro-label">Korvin Merrow · AI Training Task Suite</p>
             <span id="heroStatePill" class="status-pill">Loading</span>
           </div>
 
@@ -142,7 +142,7 @@
       <div class="signal-panel surf p-4 sm:p-5" style="border-radius:var(--r-card)">
         <div class="flex items-center justify-between gap-3">
           <div>
-            <p class="font-mono text-[10px] uppercase" style="color:var(--fg-faint)">Signal families</p>
+            <p class="micro-label">Signal families</p>
             <h2 id="signalHeadline" class="text-[18px] sm:text-[20px] font-semibold mt-1">Where the model breaks</h2>
           </div>
           <button id="openFirstSignal" class="btn-pill surf-2 px-3 py-2 text-[12px] font-medium inline-flex items-center gap-1.5" style="border-radius:var(--r-pill)">
@@ -157,11 +157,11 @@
     <div class="sticky top-16 z-30 px-3 sm:px-6 max-w-5xl mx-auto">
       <div class="surf-2 px-4 py-3 controls-inner flex flex-wrap items-center gap-x-5 gap-y-2 sm:gap-y-3 justify-between" style="border-radius:20px">
         <div class="controls-group flex items-center gap-2 flex-wrap" role="group" aria-label="Filter tasks by status">
-          <span class="font-mono text-[10px] uppercase pl-1" style="color:var(--fg-faint)">View</span>
+          <span class="micro-label pl-1">View</span>
           <div id="filterChips" class="chip-scroll flex items-center gap-2 flex-wrap"></div>
         </div>
         <div class="controls-group flex items-center gap-2 flex-wrap" role="group" aria-label="Sort tasks">
-          <span class="font-mono text-[10px] uppercase" style="color:var(--fg-faint)">Order</span>
+          <span class="micro-label">Order</span>
           <div id="sortChips" class="chip-scroll flex items-center gap-2 flex-wrap"></div>
         </div>
       </div>
@@ -174,7 +174,7 @@
     <!-- ═══ SUITE SUMMARY ═══ -->
     <section id="summary" class="px-3 sm:px-6 max-w-5xl mx-auto py-16 sm:py-20">
       <div class="surf p-6 sm:p-12" style="border-radius:var(--r-card)">
-        <p class="font-mono text-[12px] uppercase tracking-[0.24em] mb-6 sm:mb-8" style="color:var(--fg-faint)">Suite Summary</p>
+        <p class="micro-label mb-6 sm:mb-8">Suite summary</p>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-5 sm:gap-8">
           <div class="min-w-0">
             <div class="t-stat font-bold" id="deliveredCount">-</div>
@@ -224,7 +224,7 @@
     <div class="focus-handle" aria-hidden="true"></div>
     <div class="focus-head">
       <div class="min-w-0">
-        <p id="focusEyebrow" class="font-mono text-[11px] uppercase" style="color:var(--fg-faint)"></p>
+        <p id="focusEyebrow" class="micro-label"></p>
         <h2 id="focusTitle" class="text-[24px] sm:text-[30px] font-semibold leading-tight mt-1"></h2>
       </div>
       <button id="focusClose" class="btn-icon surf-2 w-10 h-10 grid place-items-center" style="border-radius:var(--r-pill)" aria-label="Close task focus">
