@@ -273,6 +273,7 @@
     .badge.exact   { color: var(--ok); background: var(--ok-fill); }
     .badge.approx  { color: var(--warn); background: var(--warn-fill); }
     .badge.partial { color: var(--warn); background: var(--warn-fill); }
+    .badge.planned { color: var(--fg-soft); background: rgba(120,120,128,0.14); }
 
     /* Status pill dot: tiny semantic marker inside the status pill */
     .pill-dot {
@@ -282,6 +283,7 @@
     .pill-dot.delivered { background: var(--ok-soft); }
     .pill-dot.ready     { background: var(--warn-soft); }
     .pill-dot.review    { background: var(--accent-a); animation: pulse 2.4s ease-in-out infinite; }
+    .pill-dot.planned   { background: var(--fg-faint); }
 
     /* Summary stat label dot */
     .stat-dot {

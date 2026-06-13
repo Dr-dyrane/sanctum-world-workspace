@@ -21,6 +21,7 @@
     ],
     /* Pipeline stages, in order */
     stages: [
+      { id:'planned',   label:'Planned' },
       { id:'built',     label:'Built' },
       { id:'piloted',   label:'Piloted' },
       { id:'review',    label:'Review' },
@@ -28,6 +29,7 @@
     ],
     /* Status categories used by filter + pills */
     cats: {
+      planned:   { label:'Planned',          pill:'PLANNED' },
       delivered: { label:'Delivered',        pill:'DELIVERED' },
       ready:     { label:'Ready to deliver',  pill:'READY FOR DELIVERY' },
       review:    { label:'In review',        pill:'IN HUMAN REVIEW' },
@@ -36,12 +38,14 @@
       exact:   { label:'EXACT',        plain:'All ten run scores are platform-confirmed.' },
       approx:  { label:'APPROXIMATE',  plain:'Vector is approximate: the platform display was partly garbled. Key runs are transcript-confirmed.' },
       partial: { label:'PARTIAL 5/10', plain:'Only five of ten runs are confirmed so far. Mean is provisional.' },
+      planned: { label:'PLANNED',      plain:'Task is an incoming placeholder. No pilot scores exist yet.' },
     },
     reachability: {
       proven:  { label:'Proven',         plain:'At least one run scored 85+, so the ideal answer is demonstrably achievable.' },
       pending: { label:'Check pending',  plain:'No 85+ run yet. The ideal answer is structurally reachable; one final check (does the golden itself score high?) is outstanding.' },
       watch:   { label:'Watch',          plain:'No catcher observed yet. The failure looks legitimate, but reachability remains an explicit review watch.' },
       open:    { label:'Not yet shown',  plain:'No high run observed and the fairness check has not been done. Treat the score as provisional.' },
+      notstarted: { label:'Not piloted', plain:'This task is planned but has no pilot run yet.' },
     },
   };
 
@@ -69,18 +73,28 @@
      Snapshot of Project Sanctum / Mercor task data.
      Synced 2026-06-13. External AQC eval rows are excluded.
      Fields:
-       stage        'delivered' | 'ready' | 'review'  (filter category)
+       stage        'planned' | 'delivered' | 'ready' | 'review'  (filter category)
        plain        what this task tests, in plain English
        mechanism    the clinical trap, in clinical shorthand
        verdict      one-line judgment a non-specialist can act on
-       quality      'exact' | 'approx' | 'partial'
-       reach        'proven' | 'pending' | 'open'
+       quality      'planned' | 'exact' | 'approx' | 'partial'
+       reach        'notstarted' | 'proven' | 'pending' | 'open'
        spread       run scores; for partial data, only confirmed runs
        runsTotal    always 10; spread.length < 10 means unconfirmed remain
      ════════════════════════════════════════════════════════════ */
   /* WORLDS registry. To plug in a new world, add one block here with
      its own id, labels, meta, and tasks array. The header dropdown,
      hero, radial, cards, controls, and summary all render from this. */
+  const plannedTaskBase = {
+    stage: 'planned',
+    mean: null,
+    spread: [],
+    runsTotal: 10,
+    quality: 'planned',
+    reach: 'notstarted',
+    reviewer: 'Not staged',
+  };
+
   const WORLDS = {
     'korvin-merrow': {
       title: 'KM World Suite',
@@ -212,6 +226,113 @@
       quality:'exact', reach:'open',
       provNote:'The balanced query surface still produced 10 floor runs with no catcher. The FA was accepted clinically; the GA framing was corrected after reviewer feedback. A mount-coherence caveat remains documented in the Project Sanctum review record.',
     },
+      ],
+    },
+    'ondina-vasquell': {
+      title: 'Ondina Vasquell',
+      kicker: 'Incoming World · Limb-Threat Diabetic Foot Infection',
+      blurb: 'Ten planned tasks. No pilot scores yet. Built to track the next clinical suite without pretending the runs exist.',
+      driveUrl: null,
+      meta: {
+        world: 'Project Sanctum',
+        patient: 'Ondina Vasquell incoming clinical suite',
+        chart: 'Planned diabetic foot infection world, snapshot May 21, 2026 at 18:00',
+        writer: 'Alexander Udeogaranya, MD',
+        evidence: 'Brainstorm submission and local planning records',
+        dataSyncedOn: '2026-06-13',
+        provenance: 'Incoming placeholders only. No task has pilot scores, FA/GA, PL, or delivery status yet. Values shown as TBD are intentionally blank until a real platform run exists.',
+      },
+      tasks: [
+        {
+          ...plannedTaskBase,
+          id:'OV01', position:1,
+          name:'Discharge Medication Reconciliation Safety Table',
+          plain:'Reconcile discharge medications without carrying admission renal-dose logic into the current discharge plan.',
+          mechanism:'Renal antibiotic dosing under shifting eGFR, with ID and pharmacy notes overriding stale admission dosing.',
+          verdict:'Placeholder. This will become the first forced-inventory medication task after task setup is authorized.',
+          workflow:'Discharge Medication Reconciliation',
+        },
+        {
+          ...plannedTaskBase,
+          id:'OV02', position:2,
+          name:'Physician Coding Attestation',
+          plain:'Review the HIM worksheet without ratifying unsupported osteomyelitis or pressure-injury specificity.',
+          mechanism:'HIM severity pressure toward pressure-injury family and acute osteomyelitis POA without treating or pathologic support.',
+          verdict:'Placeholder. Planned as a forced coding inventory against an external HIM worksheet.',
+          workflow:'Inpatient Medical Coding and DRG Assignment',
+        },
+        {
+          ...plannedTaskBase,
+          id:'OV03', position:3,
+          name:'CDI Query Response',
+          plain:'Answer a CDI query while keeping equivocal osteomyelitis genuinely unsupported or unable to determine.',
+          mechanism:'CDI specificity pressure asks for acute osteomyelitis and severity language not established by the treating record.',
+          verdict:'Placeholder. Planned as an external ratify-or-refute documentation-integrity task.',
+          workflow:'Clinical Documentation Improvement (CDI) Query Response Review',
+        },
+        {
+          ...plannedTaskBase,
+          id:'OV04', position:4,
+          name:'SNF Authorization Denial Appeal',
+          plain:'Appeal a payer denial by showing why clinical improvement is not the same as safe home readiness.',
+          mechanism:'Payer denial omits offloading, stairs, caregiver limits, equipment gaps, and unresolved perfusion concerns.',
+          verdict:'Placeholder. Planned as a payer-facing appeal with the operational safety axis front and center.',
+          workflow:'Claims Denial Analysis and Appeal Preparation',
+        },
+        {
+          ...plannedTaskBase,
+          id:'OV05', position:5,
+          name:'Pharmacy Claim Rejection Response',
+          plain:'Respond to a formulary rejection without accepting an unsafe substitute or inventing culture finality.',
+          mechanism:'PBM substitute pressure conflicts with renal function, culture provenance, and infection-site needs.',
+          verdict:'Placeholder. Planned as a pharmacy-benefit ratify-or-refute task.',
+          workflow:'Pharmacy Insurance Claim Rejection Resolution',
+        },
+        {
+          ...plannedTaskBase,
+          id:'OV06', position:6,
+          name:'Continued-Stay Determination',
+          plain:'Decide whether inpatient care remains justified after debridement improvement but before safe limb-disposition barriers resolve.',
+          mechanism:'Concurrent-review note treats improving markers as level-of-care readiness despite unresolved operational limb-safety barriers.',
+          verdict:'Placeholder. Planned as a P1 determination task.',
+          workflow:'Utilization Review Concurrent Stay Documentation',
+        },
+        {
+          ...plannedTaskBase,
+          id:'OV07', position:7,
+          name:'Diabetes Quality-Measure Abstraction',
+          plain:'Fill abstraction fields without missing a quiet lookback date or exclusion.',
+          mechanism:'A buried outpatient lookback detail changes denominator or exclusion logic for naive diabetes-measure capture.',
+          verdict:'Placeholder. Planned as an extraction-to-schema task.',
+          workflow:'HEDIS Medical Record Chart Abstraction and Review',
+        },
+        {
+          ...plannedTaskBase,
+          id:'OV08', position:8,
+          name:'Vascular Surgery Referral Letter',
+          plain:'Write the vascular referral while keeping source control, perfusion, antibiotics, offloading, and follow-up statuses explicit.',
+          mechanism:'Referral pressure makes the case sound settled while ABI/TBI and vascular notes keep perfusion unresolved.',
+          verdict:'Placeholder. Planned as a synthesis task with a required disposition table.',
+          workflow:'Specialist Referral Letter and Documentation Preparation',
+        },
+        {
+          ...plannedTaskBase,
+          id:'OV09', position:9,
+          name:'Safety Event Root Cause Review',
+          plain:'Review a missed-offloading event without blaming the patient when the record points to system-level failures.',
+          mechanism:'Initial event framing blames nonadherence despite order timing, teaching, device, and home-layout failures.',
+          verdict:'Placeholder. Planned as a patient-safety investigation task.',
+          workflow:'Patient Safety Event Investigation and Root Cause Analysis',
+        },
+        {
+          ...plannedTaskBase,
+          id:'OV10', position:10,
+          name:'Finalize Discharge Instructions',
+          plain:'Complete the discharge instructions from a started draft while keeping offloading readiness unresolved unless the chart supports closure.',
+          mechanism:'Same-author draft uses a true placeholder so the model must synthesize the offloading readiness decision rather than inherit a planted falsehood.',
+          verdict:'Placeholder. Planned as the single completion task for this world.',
+          workflow:'Medical Transcription and Clinical Documentation Completion',
+        },
       ],
     },
   };

@@ -4,16 +4,21 @@
      ════════════════════════════════════════════════════════════ */
   const U = {
     runBand:  v => CONFIG.runBands.find(b => v >= b.min),
-    meanBand: m => CONFIG.meanBands.find(b => m >= b.min),
+    hasMean: t => Number.isFinite(t.mean),
+    meanBand: m => Number.isFinite(m)
+      ? CONFIG.meanBands.find(b => m >= b.min)
+      : { id:'pending', css:'b-pending', tag:'Pending', plain:'No pilot scores yet' },
+    scoreSortValue: t => Number.isFinite(t.mean) ? t.mean : null,
     isCatcher: v => v >= 85,
     isFloor:   v => v <= 40,
     counts(t){
-      const c = t.spread.filter(U.isCatcher).length;
-      const f = t.spread.filter(U.isFloor).length;
-      const sub70 = t.spread.filter(v => v < 70).length;
-      return { catchers:c, floors:f, sub70, confirmed:t.spread.length };
+      const spread = Array.isArray(t.spread) ? t.spread : [];
+      const c = spread.filter(U.isCatcher).length;
+      const f = spread.filter(U.isFloor).length;
+      const sub70 = spread.filter(v => v < 70).length;
+      return { catchers:c, floors:f, sub70, confirmed:spread.length };
     },
-    fmtMean: t => (t.approx ? '≈' : '') + t.mean,
+    fmtMean: t => U.hasMean(t) ? (t.approx ? '≈' : '') + t.mean : 'TBD',
     esc: s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'),
     /* Wrap known glossary keywords in already-safe strings (labels only, not freeform data) */
     term: (key, text) => `<button class="term" data-g="${key}">${text}</button>`,
@@ -21,7 +26,7 @@
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   Object.values(WORLDS).forEach(world => {
     world.tasks.forEach(t => {
-      if (Array.isArray(t.spread) && t.spread.length === t.runsTotal) {
+      if (Array.isArray(t.spread) && t.runsTotal > 0 && t.spread.length === t.runsTotal) {
         const computed = t.spread.reduce((sum, v) => sum + v, 0) / t.spread.length;
         t.mean = Number(computed.toFixed(1));
       }
@@ -91,6 +96,16 @@
     /* Score ring: task mean as a radial fill, color by mean band */
     scoreRing(t){
       const circ = 2 * Math.PI * 36;
+      if (!U.hasMean(t)) {
+        return `<div class="score-ring pending">
+          <svg width="92" height="92" viewBox="0 0 92 92" aria-hidden="true">
+            <circle class="ring-track" cx="46" cy="46" r="36" stroke-width="5"/>
+          </svg>
+          <div class="ring-val">
+            <span class="font-mono font-bold text-[1.05rem]" style="color:var(--fg-faint)">TBD</span>
+          </div>
+        </div>`;
+      }
       const offset = circ * (1 - t.mean/100);
       const band = U.meanBand(t.mean);
       const valColor = band.id==='soft' ? 'var(--accent-a)' : band.id==='mid' ? 'var(--accent-b)' : 'var(--warn)';
@@ -111,7 +126,8 @@
 
     /* Ten run dots; unknown runs render as hollow dots */
     dots(t){
-      const out = t.spread.map((v,i)=>{
+      const spread = Array.isArray(t.spread) ? t.spread : [];
+      const out = spread.map((v,i)=>{
         const b = U.runBand(v);
         const isFloor = b.id==='floor';
         const op = b.id==='catcher' ? 1 : b.id==='high' ? 0.6 : b.id==='mid' ? 0.35 : 0.5;
@@ -121,7 +137,7 @@
           title="Run ${i+1}: ${v}% · ${b.label}${t.approx?' (approximate)':''}"
           style="width:13px;height:13px;border-radius:9999px;display:inline-block;background:${bg};opacity:${op}"></span>`;
       });
-      for (let i = t.spread.length; i < t.runsTotal; i++){
+      for (let i = spread.length; i < t.runsTotal; i++){
         out.push(`<span class="dot empty" role="img" aria-label="Run ${i+1}: not yet confirmed"
           title="Run ${i+1}: not yet confirmed"
           style="width:13px;height:13px;border-radius:9999px;display:inline-block"></span>`);
@@ -149,7 +165,8 @@
 
     /* Pipeline stepper: where this task sits in the lifecycle */
     stepper(t){
-      const currentIdx = (t.stage === 'delivered' || t.stage === 'ready') ? 3 : 2;  /* all shown tasks are at least piloted */
+      const stageIdx = { planned:0, built:1, piloted:2, review:3, ready:4, delivered:4 };
+      const currentIdx = stageIdx[t.stage] ?? 3;
       const steps = CONFIG.stages.map((s,i)=>{
         const done = t.stage === 'delivered' ? true : i < currentIdx;
         const current = t.stage !== 'delivered' && i === currentIdx;
@@ -164,6 +181,8 @@
         ? `Accepted and handed off${t.delivered ? ' on ' + t.delivered : ''}.`
         : t.stage === 'ready'
         ? 'Reviewed and cleared; queued for delivery on the platform.'
+        : t.stage === 'planned'
+        ? 'Incoming task placeholder. No pilot data exists yet.'
         : 'Piloted; a human expert is reviewing the task before it can be accepted.';
       return `<div class="stepper stepper-labels-hide" role="img" aria-label="Pipeline: ${plain}">${steps}</div>`;
     },
@@ -171,7 +190,7 @@
     /* Counts strip: catchers / floors / sub-70, with glossary terms */
     countsStrip(t){
       const k = U.counts(t);
-      const denom = k.confirmed < t.runsTotal ? `${k.confirmed} confirmed` : `${t.runsTotal}`;
+      const denom = t.runsTotal ? (k.confirmed < t.runsTotal ? `${k.confirmed} confirmed` : `${t.runsTotal}`) : 'not started';
       const approx = t.approx ? '≈ ' : '';
       return `<div class="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-[12px]" style="color:var(--fg-soft)">
         <span>${approx}${U.term('catcher','Catchers')}: <b class="font-mono" ${k.catchers>0?'style="color:var(--ok)"':''}>${k.catchers}</b></span>
@@ -182,6 +201,17 @@
 
     /* Single visible data graphic: lower mean creates higher failure signal */
     signal(t){
+      if (!U.hasMean(t)) {
+        return `<div>
+          <div class="flex items-center justify-between gap-3 text-[12px] mb-2" style="color:var(--fg-soft);max-width:320px">
+            <span>Failure signal</span>
+            <span class="font-mono font-semibold" style="color:var(--fg-faint)">Pending</span>
+          </div>
+          <div class="signal-track" aria-hidden="true">
+            <div class="signal-fill" style="width:0"></div>
+          </div>
+        </div>`;
+      }
       const failure = Math.max(0, Math.min(100, 100 - t.mean));
       const band = U.meanBand(t.mean);
       const color = band.id === 'soft' ? 'var(--accent-a)' : 'var(--warn)';
@@ -205,8 +235,8 @@
     /* Reachability line */
     reachLine(t){
       const r = CONFIG.reachability[t.reach];
-      const icon = t.reach==='proven' ? 'check-circle-2' : t.reach==='watch' ? 'eye' : t.reach==='pending' ? 'clock' : 'help-circle';
-      const color = t.reach==='proven' ? 'var(--ok)' : 'var(--warn)';
+      const icon = t.reach==='proven' ? 'check-circle-2' : t.reach==='watch' ? 'eye' : t.reach==='pending' || t.reach==='notstarted' ? 'clock' : 'help-circle';
+      const color = t.reach==='proven' ? 'var(--ok)' : t.reach==='notstarted' ? 'var(--fg-faint)' : 'var(--warn)';
       return `<div class="flex items-center gap-1.5 text-[12.5px]" title="${r.plain}" style="color:${color}">
         <i data-lucide="${icon}" style="width:14px;height:14px"></i>
         ${U.term('reachability','Ideal answer reachable')}: <b>${r.label}</b>
@@ -215,7 +245,8 @@
 
     /* Run-detail grid + provenance block */
     runDetail(t){
-      const cells = t.spread.map((v,i)=>{
+      const spread = Array.isArray(t.spread) ? t.spread : [];
+      const cells = spread.map((v,i)=>{
         const b = U.runBand(v);
         const color = b.id==='floor' ? 'var(--warn)' : b.id==='mid' ? 'var(--fg-soft)' : null;
         const cls = color ? '' : 'accent-text';
@@ -224,7 +255,7 @@
           <div class="font-mono text-[15px] font-bold mt-0.5 ${cls}" ${color?`style="color:${color}"`:''}>${v}</div>
         </div>`;
       });
-      for (let i = t.spread.length; i < t.runsTotal; i++){
+      for (let i = spread.length; i < t.runsTotal; i++){
         cells.push(`<div class="surf-2 py-3 text-center" style="border-radius:14px;opacity:.55" title="Not yet confirmed">
           <div class="font-mono text-[10px]" style="color:var(--fg-faint)">R${i+1}</div>
           <div class="font-mono text-[15px] font-bold mt-0.5" style="color:var(--fg-faint)">?</div>
@@ -234,7 +265,7 @@
       return `<div class="grid grid-cols-5 sm:grid-cols-10 gap-2 pt-5">${cells.join('')}</div>
         ${prov}
         <p class="mt-3 font-mono text-[11px]" style="color:var(--fg-faint)">
-          ${U.term('job','Evidence')}: Project Sanctum / Mercor review records. Data ${CONFIG.quality[t.quality].label.toLowerCase()}.
+          ${U.term('job','Evidence')}: ${t.quality === 'planned' ? 'Planned task slate' : 'Project Sanctum / Mercor review records'}. Data ${CONFIG.quality[t.quality].label.toLowerCase()}.
         </p>`;
     },
 
@@ -242,7 +273,8 @@
     card(t){
       const band = U.meanBand(t.mean);
       const barColor = t.stage==='delivered' ? 'var(--accent-a)' : 'var(--accent-b)';
-      const tagColor = band.id==='soft' ? 'var(--accent-a)' : band.id==='mid' ? 'var(--accent-b)' : 'var(--warn)';
+      const tagColor = band.id==='pending' ? 'var(--fg-faint)' : band.id==='soft' ? 'var(--accent-a)' : band.id==='mid' ? 'var(--accent-b)' : 'var(--warn)';
+      const meanUnit = U.hasMean(t) ? '<span class="text-[15px]" style="color:var(--fg-faint)">%</span>' : '';
       return `
       <article class="card-inner card surf w-full px-5 sm:px-6 md:px-7 py-5 sm:py-6" style="border-radius:var(--r-card);--card-bar:${barColor}" tabindex="-1">
         <div class="grid lg:grid-cols-[1fr_180px] gap-5 sm:gap-6 items-start">
@@ -257,7 +289,7 @@
           </div>
           <div class="lg:text-right">
             <div class="font-mono text-[10px] uppercase mb-1" style="color:var(--fg-faint)">${U.term('mean','Mean')}</div>
-            <div class="font-mono font-bold text-[40px] leading-none" style="color:${tagColor}">${U.fmtMean(t)}<span class="text-[15px]" style="color:var(--fg-faint)">%</span></div>
+            <div class="font-mono font-bold text-[40px] leading-none" style="color:${tagColor}">${U.fmtMean(t)}${meanUnit}</div>
             <div class="font-mono text-[10px] mt-2 uppercase" style="color:${tagColor}">${band.tag}</div>
           </div>
         </div>
@@ -397,7 +429,14 @@
     svg.innerHTML = '';
     const NS = 'http://www.w3.org/2000/svg';
     const cx = 280, cy = 280, R = 190;
-    const sorted = [...tasks].sort((a,b)=>b.mean-a.mean);   /* strongest at 12 o'clock, sweep clockwise */
+    const scored = tasks.filter(U.hasMean);
+    const sorted = [...tasks].sort((a,b)=>{
+      const av = U.scoreSortValue(a), bv = U.scoreSortValue(b);
+      if (av === null && bv === null) return a.position - b.position;
+      if (av === null) return 1;
+      if (bv === null) return -1;
+      return bv - av;
+    });   /* strongest at 12 o'clock, sweep clockwise */
     const pts = sorted.map((t,i)=>{
       const ang = (-90 + i*(360/sorted.length)) * Math.PI/180;
       return { t, x: cx + R*Math.cos(ang), y: cy + R*Math.sin(ang) };
@@ -421,33 +460,36 @@
     if(!reduceMotion) arc.classList.add('arc-anim');
     svg.appendChild(arc);
 
-    /* center label: suite mean */
+    /* center label: suite mean when scored, incoming marker when not */
     const anyApprox = tasks.some(t=>t.approx);
-    const mom = tasks.reduce((s,t)=>s+t.mean,0)/tasks.length;
+    const mom = scored.length ? scored.reduce((s,t)=>s+t.mean,0)/scored.length : null;
     const ctl = document.createElementNS(NS,'text');
     ctl.setAttribute('x',cx); ctl.setAttribute('y',cy-10);
     ctl.setAttribute('text-anchor','middle'); ctl.setAttribute('fill','var(--fg)');
     ctl.setAttribute('font-size','12'); ctl.setAttribute('font-family','var(--font-mono, monospace)');
     ctl.setAttribute('opacity','0.5'); ctl.setAttribute('letter-spacing','0');
-    ctl.textContent = 'SUITE MEAN';
+    ctl.textContent = scored.length ? 'SUITE MEAN' : 'INCOMING';
     const ctl2 = document.createElementNS(NS,'text');
     ctl2.setAttribute('x',cx); ctl2.setAttribute('y',cy+20);
     ctl2.setAttribute('text-anchor','middle'); ctl2.setAttribute('fill','var(--fg)');
     ctl2.setAttribute('font-size','26'); ctl2.setAttribute('font-weight','700');
-    ctl2.textContent = (anyApprox?'≈':'') + mom.toFixed(1).replace(/\.0$/,'') + '%';
+    ctl2.textContent = scored.length ? (anyApprox?'≈':'') + mom.toFixed(1).replace(/\.0$/,'') + '%' : `${tasks.length} TASKS`;
     svg.appendChild(ctl); svg.appendChild(ctl2);
 
     pts.forEach((p,i)=>{
-      const failure = 100 - p.t.mean;
-      const r = 14 + failure*0.34;
-      const intensity = 0.30 + (failure/100)*0.70;
+      const hasMean = U.hasMean(p.t);
+      const failure = hasMean ? 100 - p.t.mean : 0;
+      const r = hasMean ? 14 + failure*0.34 : 24;
+      const intensity = hasMean ? 0.30 + (failure/100)*0.70 : 0.32;
 
       const g = document.createElementNS(NS,'g');
       g.setAttribute('class','node');
       g.style.cursor = 'pointer';
       g.setAttribute('tabindex','0');
       g.setAttribute('role','button');
-      g.setAttribute('aria-label', `${p.t.id}, ${p.t.name}, mean ${U.fmtMean(p.t)} percent, ${CONFIG.cats[p.t.stage].label}`);
+      g.setAttribute('aria-label', hasMean
+        ? `${p.t.id}, ${p.t.name}, mean ${U.fmtMean(p.t)} percent, ${CONFIG.cats[p.t.stage].label}`
+        : `${p.t.id}, ${p.t.name}, planned placeholder, ${CONFIG.cats[p.t.stage].label}`);
 
       const halo = document.createElementNS(NS,'circle');
       halo.setAttribute('cx',p.x); halo.setAttribute('cy',p.y); halo.setAttribute('r',r+10);
@@ -455,7 +497,8 @@
 
       const c = document.createElementNS(NS,'circle');
       c.setAttribute('cx',p.x); c.setAttribute('cy',p.y); c.setAttribute('r',r);
-      c.setAttribute('fill','var(--accent-a)'); c.setAttribute('opacity', intensity.toFixed(3));
+      c.setAttribute('fill', hasMean ? 'var(--accent-a)' : 'var(--fg-faint)');
+      c.setAttribute('opacity', intensity.toFixed(3));
       if(!reduceMotion){ c.classList.add('node-anim'); halo.classList.add('node-anim');
         c.style.animationDelay = (i*100)+'ms'; halo.style.animationDelay = (i*100)+'ms'; }
 
@@ -464,9 +507,11 @@
       lbl.setAttribute('text-anchor','middle'); lbl.setAttribute('fill','#fff');
       lbl.setAttribute('font-size','11'); lbl.setAttribute('font-weight','700');
       lbl.setAttribute('pointer-events','none');
-      lbl.textContent = p.t.id.replace('KM','');
+      lbl.textContent = p.t.id.replace(/^[A-Z]+/,'');
 
-      const tipLabel = `${p.t.id} · ${U.fmtMean(p.t)}% · ${CONFIG.cats[p.t.stage].pill}`;
+      const tipLabel = hasMean
+        ? `${p.t.id} · ${U.fmtMean(p.t)}% · ${CONFIG.cats[p.t.stage].pill}`
+        : `${p.t.id} · Planned · ${CONFIG.cats[p.t.stage].pill}`;
       const showTip = (mx, my)=>{
         radialTip.textContent = tipLabel;
         radialTip.classList.add('show');
@@ -526,9 +571,13 @@
 
       /* screen-reader table row */
       const k = U.counts(t);
+      const scoreText = U.hasMean(t) ? `${U.fmtMean(t)}%` : 'TBD';
+      const runText = k.confirmed
+        ? `${t.spread.join(', ')}${k.confirmed < t.runsTotal ? ` (${k.confirmed} of ${t.runsTotal} confirmed)` : ''}`
+        : 'No pilot scores yet';
       document.getElementById('srTable').insertAdjacentHTML('beforeend',
-        `<tr><td>${t.id}</td><td>${U.esc(t.name)}</td><td>${U.fmtMean(t)}%</td>
-         <td>${t.spread.join(', ')}${k.confirmed < t.runsTotal ? ` (${k.confirmed} of ${t.runsTotal} confirmed)` : ''}</td>
+        `<tr><td>${t.id}</td><td>${U.esc(t.name)}</td><td>${scoreText}</td>
+         <td>${runText}</td>
          <td>${CONFIG.cats[t.stage].label}</td><td>${CONFIG.quality[t.quality].label}</td></tr>`);
     });
 
@@ -566,8 +615,20 @@
     filterWrap.innerHTML = ''; sortWrap.innerHTML = '';
     const SORTS = {
       position: { label:'Order',   fn:(a,b)=> a.position-b.position },
-      high:     { label:'Highest', fn:(a,b)=> b.mean-a.mean },
-      low:      { label:'Lowest',  fn:(a,b)=> a.mean-b.mean },
+      high:     { label:'Highest', fn:(a,b)=> {
+        const av = U.scoreSortValue(a), bv = U.scoreSortValue(b);
+        if (av === null && bv === null) return a.position-b.position;
+        if (av === null) return 1;
+        if (bv === null) return -1;
+        return bv-av;
+      } },
+      low:      { label:'Lowest',  fn:(a,b)=> {
+        const av = U.scoreSortValue(a), bv = U.scoreSortValue(b);
+        if (av === null && bv === null) return a.position-b.position;
+        if (av === null) return 1;
+        if (bv === null) return -1;
+        return av-bv;
+      } },
     };
     const state = {
       filter: KMState.get('filter') || 'all',
@@ -673,34 +734,40 @@
     const delivered = tasks.filter(t=>t.stage==='delivered');
     const ready = tasks.filter(t=>t.stage==='ready');
     const review = tasks.filter(t=>t.stage==='review');
+    const planned = tasks.filter(t=>t.stage==='planned');
+    const scored = tasks.filter(U.hasMean);
     const anyApprox = tasks.some(t=>t.approx);
-    const mom = tasks.reduce((s,t)=>s+t.mean,0)/tasks.length;
-    const means = tasks.map(t=>t.mean);
+    const mom = scored.length ? scored.reduce((s,t)=>s+t.mean,0)/scored.length : null;
+    const means = scored.map(t=>t.mean);
     const allScores = tasks.flatMap(t=>t.spread);
     const sub70 = allScores.filter(v=>v < 70).length;
     const totalRuns = allScores.length;
-    const lo = tasks.reduce((a,b)=> a.mean<b.mean?a:b);
-    const hi = tasks.reduce((a,b)=> a.mean>b.mean?a:b);
+    const lo = scored.length ? scored.reduce((a,b)=> a.mean<b.mean?a:b) : null;
+    const hi = scored.length ? scored.reduce((a,b)=> a.mean>b.mean?a:b) : null;
 
     document.getElementById('deliveredCount').innerHTML = delivered.length+'<span class="unit">/ '+tasks.length+'</span>';
     document.getElementById('reviewCount').textContent = review.length;
-    document.getElementById('readyCount').textContent = ready.length;
-    document.getElementById('meanOfMeans').innerHTML = (anyApprox?'≈':'')+mom.toFixed(1).replace(/\.0$/,'')+'<span class="unit">%</span>';
-    document.getElementById('spreadRange').textContent = Math.min(...means)+' to '+Math.max(...means);
+    document.getElementById('readyCount').textContent = ready.length || planned.length;
+    document.getElementById('meanOfMeans').innerHTML = scored.length
+      ? (anyApprox?'≈':'')+mom.toFixed(1).replace(/\.0$/,'')+'<span class="unit">%</span>'
+      : 'TBD';
+    document.getElementById('spreadRange').textContent = scored.length ? Math.min(...means)+' to '+Math.max(...means) : 'pending';
 
-    document.getElementById('heroPrimaryMetric').textContent = `${sub70}/${totalRuns}`;
-    document.getElementById('heroPrimaryLabel').textContent = 'Sub-70 runs';
-    document.getElementById('heroPrimaryCaption').textContent =
-      `${sub70} scored attempts fell below 70. That is the suite's primary training signal.`;
+    document.getElementById('heroPrimaryMetric').textContent = totalRuns ? `${sub70}/${totalRuns}` : `${tasks.length}`;
+    document.getElementById('heroPrimaryLabel').textContent = totalRuns ? 'Sub-70 runs' : 'Task placeholders';
+    document.getElementById('heroPrimaryCaption').textContent = totalRuns
+      ? `${sub70} scored attempts fell below 70. That is the suite's primary training signal.`
+      : `${tasks.length} planned tasks are staged. Scores stay blank until real pilots exist.`;
     document.getElementById('heroDelivered').textContent = delivered.length+'/'+tasks.length;
     document.getElementById('heroReview').textContent = review.length;
-    document.getElementById('heroReady').textContent = ready.length;
-    document.getElementById('heroHardest').textContent = lo.id;
+    document.getElementById('heroReady').textContent = ready.length || planned.length;
+    document.getElementById('heroHardest').textContent = lo ? lo.id : 'TBD';
 
-    document.getElementById('summarySentence').innerHTML =
-      `${delivered.length} of ${tasks.length} tasks are delivered. ` +
-      `${lo.id} is currently the hardest at ${U.fmtMean(lo)}%; ${hi.id} is the gentlest at ${U.fmtMean(hi)}%. ` +
-      `Low scores matter only when the failure is fair and reachable.`;
+    document.getElementById('summarySentence').innerHTML = scored.length
+      ? `${delivered.length} of ${tasks.length} tasks are delivered. ` +
+        `${lo.id} is currently the hardest at ${U.fmtMean(lo)}%; ${hi.id} is the gentlest at ${U.fmtMean(hi)}%. ` +
+        `Low scores matter only when the failure is fair and reachable.`
+      : `${planned.length} planned tasks are staged for this incoming world. No pilot scores, FA/GA, preference labels, or delivery states are displayed yet.`;
 
     document.getElementById('provenance').textContent =
       `${tasks[0].id} to ${tasks[tasks.length-1].id}. Data synced ${M.dataSyncedOn}. ${M.world}. ${M.patient}. ` +
