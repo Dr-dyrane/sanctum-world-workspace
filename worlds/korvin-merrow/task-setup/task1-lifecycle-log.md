@@ -1,5 +1,7 @@
 # Task 1 Lifecycle Log - CANONICAL SOURCE OF TRUTH (Step 10/11+)
 
+CURRENT TASK 1 STATUS (2026-06-13): DELIVERED. Task 1 remains approved and delivered. The lifecycle details below are retained as provenance for the original build, rerun, FA/GA, and review path.
+
 Date: 2026-06-05. This file is the single canonical record for the Korvin Merrow Task 1 build and run. Other docs (docs/world-pipeline-playbook.md A2/A3/A4, docs/status-dashboard.md, worlds/korvin-merrow/file-review/time-strategy-and-state.md) carry summaries; on any conflict THIS FILE WINS. **CODEX: propagate updates from here into the playbook + dashboard; do not edit the scattered copies independently.**
 
 GOVERNING PRINCIPLE for all decisions in this workspace: docs/reasoning-discipline.md (the verification gate; Popper/Wason/Feynman/Pike/Bezos, verified sources). Verify the ground truth before one-way-door commits and before any "why did the system do X" claim; stay fast elsewhere. Most of Task 1's rework came from violating this; it is now backbone.

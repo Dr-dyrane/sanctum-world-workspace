@@ -1,6 +1,8 @@
 # TASK10-STATE
 
-## CURRENT (6/12 PM): AO second review returned the GA only. FA was accepted as okay; GA was incorrectly framed as grader advice while selecting Great. `fa-ga/FA-GA-current.md` now has the corrected GA: it judges the grader's 0.15 against the model output and golden, supports a Great rating, and explains why the item 2 central failure controls the score.
+## CURRENT (2026-06-13): READY FOR DELIVERY. AO round 3 final check accepted the corrected GA after the second-review GA-framing fix. FA/GA uses the v3 Attempt 3 failure, and no delivery action or RL Studio mutation proceeds without Alexander's exact authorization.
+
+Historical 6/12 context: AO second review returned the GA only. FA was accepted as okay; GA had been incorrectly framed as grader advice while selecting Great. `fa-ga/FA-GA-current.md` now judges the grader's 0.15 against the model output and golden, supports a Great rating, and explains why the item 2 central failure controls the score.
 
 V3 pilot remains the active evidence. Job `62fc109e-d57e-4b10-a3e9-ac0dfef3d278` scored 30,25,15,20,25,24,20,20,30,20, mean 22.9, min 15, max 30. Selected lowest run is Attempt 3, `aee6c24e-44d4-49af-b75a-75e378cf04f2`, score 0.15. Evidence record: `runs/KM10-v3-results-and-prereg-reconciliation.md`.
 

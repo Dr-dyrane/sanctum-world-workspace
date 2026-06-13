@@ -8,9 +8,9 @@ This repository organizes Project Sanctum World Building work: source-of-truth m
 
 Project Sanctum Worlds are realistic clinical environments that test frontier AI models on physician-level judgment: synthesis across messy documents, prioritization, uncertainty handling, medication reasoning, specialist conflict resolution, and safe decision-making.
 
-## Current Status (11 June 2026)
+## Current Status (13 June 2026)
 
-Korvin Merrow World is live as `Healthcare_247_Merrow` (26 files; World Spec approved by Stacey S; Final Files AutoQC 78/78 after three revisions). The world carries ten tasks. Six have completed first human review and are delivered (KM01 through KM06); the remaining four are under first human review (KM07 through KM10). KM07 is the nephrology referral, now in its fairness-corrected third version (a fair mid-range result pending the golden-reachability check); KM08 the gabapentin-uptitration progress note; KM09 the coding attestation; KM10 the documentation-integrity query response, whose reachability we are still confirming. The authoritative status is the platform board and the live records (`dashboard/km-world-dashboard.html`, `worlds/korvin-merrow/task-setup/KM-WORLD-PERFORMANCE-REPORT.md`, root `WORKSPACE_FILE_MAP.md`, and each active `TASKN-STATE.md`). This README is only the front door.
+Korvin Merrow World is live as `Healthcare_247_Merrow` (26 files; World Spec approved by Stacey S; Final Files AutoQC 78/78 after three revisions). The world carries ten tasks. KM01 through KM06 are delivered. KM07, KM08, and KM10 are Ready for Delivery. KM09 is Awaiting Final Review after wording-clean job `212c496b`, FA/GA, and three post-rerun preference labels. The authoritative status is the platform board and the live records (`dashboard/km-world-dashboard.html`, `worlds/korvin-merrow/task-setup/KM-WORLD-PERFORMANCE-REPORT.md`, root `WORKSPACE_FILE_MAP.md`, and each active `TASKN-STATE.md`). This README is only the front door.
 
 ## Current Boundary
 
@@ -28,7 +28,7 @@ Read this repo progressively. Do not try to absorb every locked package on the f
 4. Read [worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md>) before touching any task-stage work.
 5. Read the active `TASKN-STATE.md` before proposing, drafting, building, or uploading anything for that task.
 
-Current gate: KM07 pilot result pending and KM08 upload awaits exact Alexander authorization. All RL Studio actions still require exact authorization.
+Current gate: KM09 final human review is the remaining active review item for Korvin. Delivery actions for KM07, KM08, KM10, any KM09 final-review movement, and all RL Studio actions still require exact Alexander authorization.
 
 ## Source-Of-Truth Ladders
 

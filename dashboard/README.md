@@ -13,7 +13,7 @@ or served as a static file.
   task, tap-for-definition glossary terms, a pipeline stage stepper, data-quality
   badges (EXACT / APPROXIMATE / PARTIAL), and a reachability indicator. Includes
   status filtering, sorting, and shareable deep links via the URL hash.
-  Data synced 2026-06-11 from `task-setup/KM-WORLD-PERFORMANCE-REPORT.md`.
+  Data synced 2026-06-13 from `task-setup/KM-WORLD-PERFORMANCE-REPORT.md`.
 
 ## Deep links
 

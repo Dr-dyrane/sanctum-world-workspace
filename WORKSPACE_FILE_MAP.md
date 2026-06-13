@@ -1,5 +1,5 @@
 # Workspace File Map
-**Last updated: 2026-06-13 (KM07 ready for delivery after v4 true-placeholder pilot, FA/GA, and three PLs; KM08 v7 is Ready for Delivery after AO round 2 final check, FA/GA, and three PLs; KM09 v2 wording-clean Taiga rerun 212c496b scored 95,88,88,92,88,92,92,90,55,88, with FA/GA drafted from Attempt 9 and old PLs now historical pending any post-rerun PL redo; KM10 v3 is Ready for Delivery after AO second-review GA correction; King P legitimate-failure-over-score guidance added and numeric score gates demoted; Raising Task Difficulty worked example added to sources and doctrine; A0.4/A0.5 draft-fairness gates and Abi review protocol added; macOS tooling/render notes added; internal medicine next-world planning canvas added; new-world 30 world-level file minimum indexed; next-world diabetic foot selection packet and hour prep packet indexed; Ondina Vasquell Brainstorm submission copy and Mode A DOCX built; final local audit PASS with DOCX hash recorded; Brainstorm AutoQC per-task priority-label fix applied and passed per Alexander; 06_08 World Spec transcript rule indexed; Ondina Brainstorm Claude transcript built with share-link provenance and refined to chat-style code panels; Ondina World Spec Section 3 patched to current Source and Tool file-plan schema and rebuilt with SHA256 34632be5; Ondina Phase 3 media and lab/radiology result realism pass complete; Ondina task-build readiness audit filled the substrate arming map and reconciled stale Phase 2 open markers)**
+**Last updated: 2026-06-13 (KM07 ready for delivery after v4 true-placeholder pilot, FA/GA, and three PLs; KM08 v7 is Ready for Delivery after AO round 2 final check, FA/GA, and three PLs; KM09 v2 wording-clean Taiga rerun 212c496b scored 95,88,88,92,88,92,92,90,55,88, with FA/GA and three post-rerun PLs complete; KM09 now shows Awaiting Final Review; KM10 v3 is Ready for Delivery after AO second-review GA correction; King P legitimate-failure-over-score guidance added and numeric score gates demoted; Raising Task Difficulty worked example added to sources and doctrine; A0.4/A0.5 draft-fairness gates and Abi review protocol added; macOS tooling/render notes added; internal medicine next-world planning canvas added; new-world 30 world-level file minimum indexed; next-world diabetic foot selection packet and hour prep packet indexed; Ondina Vasquell Brainstorm submission copy and Mode A DOCX built; final local audit PASS with DOCX hash recorded; Brainstorm AutoQC per-task priority-label fix applied and passed per Alexander; 06_08 World Spec transcript rule indexed; Ondina Brainstorm Claude transcript built with share-link provenance and refined to chat-style code panels; Ondina World Spec Section 3 patched to current Source and Tool file-plan schema and rebuilt with SHA256 34632be5; Ondina Phase 3 media and lab/radiology result realism pass complete; Ondina task-build readiness audit filled the substrate arming map and reconciled stale Phase 2 open markers)**
 
 Single source of truth for repo structure, placement rules, and navigation.
 Read this + `AGENTS.md` at the start of any new session before touching files.
@@ -59,7 +59,7 @@ sanctum-world-workspace/
                                  local history.
   tools/                       ← all Python scripts (canonical home)
   worlds/
-    korvin-merrow/             ← World #1 (KM01-KM06 delivered; KM07, KM08, KM10 ready; KM09 wording-clean rerun FA/GA drafted)
+    korvin-merrow/             ← World #1 (KM01-KM06 delivered; KM07, KM08, KM10 ready; KM09 awaiting final review)
     ondina-vasquell/           ← World #2 (authorized 6/12 late): skeleton evolved to live
                                  cockpit. 00-START-HERE.md = world cockpit with decisions
                                  8-10 build doctrine (transcript from git hx; Custom Made
@@ -108,6 +108,7 @@ tools/
     build-docx-km09-v2.py
     build-docx-km10-v3.py
   verify/                      ← substrate verification scripts
+    verify_ondina.py           ← one-command Ondina pre-stage gate: DOCX leak, template, metadata, filename, and anchor consistency checks
     verify-km08-substrate.py
     verify-km08-pain.py
   archive/                     ← dead/superseded scripts (reference only, never execute)
@@ -175,7 +176,7 @@ task-setup/
     task6/current/             ← KM06: post-discharge follow-up, insulin (delivered)
     task7/current/             ← KM07 v4: nephrology referral letter, true placeholder; Ready for Delivery after db57dc63, FA/GA, and three PLs
     task8/current/             ← KM08 v7 discharge-day SOAP addendum plus night-float signout plus bedside photo; Ready for Delivery after AO round 2 final check, FA/GA, and three PLs
-    task9/current/             ← KM09 v2: physician review of HIM preliminary coding summary; wording-clean rerun 212c496b, FA/GA drafted from Attempt 9
+    task9/current/             ← KM09 v2: physician review of HIM preliminary coding summary; wording-clean rerun 212c496b, FA/GA and three post-rerun PLs complete
     task10/current/            ← KM10 v3: CDI query response with balanced query surface; pilot 62fc109e all-floor with no catcher
     task*/archive/             ← superseded platform sets (do not upload from archive)
   task1/                       ← fa-ga/, preference-labeling/, handoff/, trajectories/
@@ -219,7 +220,7 @@ Pilot preregistrations: `task7/runs/KM07-v2-pilot-preregistration.md`, `task8/ru
 
 ---
 
-## platform/task9/current/ - KM09 v2 physician review of HIM preliminary coding summary (wording-clean rerun 212c496b, FA/GA drafted)
+## platform/task9/current/ - KM09 v2 physician review of HIM preliminary coding summary (Awaiting Final Review)
 
 ```
 prompt-task9-v2.txt                             ← asks for physician review of the preliminary HIM summary, final code set, principal sequencing, rationales, DRG family
@@ -281,7 +282,7 @@ RUN-INSTRUCTIONS-v2.md                          ← Studio upload and first-traj
 
 ---
 
-## Active task status (6/12/2026)
+## Active task status (6/13/2026)
 
 Live status lives in `dashboard/km-world-dashboard.html`, `task-setup/KM-WORLD-PERFORMANCE-REPORT.md`, and each `taskN/TASKN-STATE.md`; this table is a convenience snapshot - trust those if they disagree.
 
@@ -293,9 +294,9 @@ Live status lives in `dashboard/km-world-dashboard.html`, `task-setup/KM-WORLD-P
 | KM04 | Delivered |
 | KM05 | Delivered |
 | KM06 | Delivered |
-| KM07 | Ready for Delivery as of 2026-06-12 per Alexander. v4 true-placeholder pilot job `db57dc63` produced spread 55,60,78,55,55,62,45,85,55,40. Trajectory Quality passed on rescore after an initial severity-calibration false alarm; Taiga QA and Feedback AutoQC passed. FA/GA used Attempt 10, score 0.40. Three PL backups drafted with recommendations A+, A+, plain B. Records: `task7/qa/KM07-v4-trajectory-quality-qcaud-3bd4de.md`, `task7/fa-ga/FA-GA-current.md`, `task7/preference-labeling/`. |
-| KM08 | Ready for Delivery as of 2026-06-12 board export. v7 piloted in job `062652b2`: 15,15,30,20,20,20,15,30,30,20, mean 21.5. The agent and grader both saw the PNG; Attempt 1 safely declined gabapentin escalation but falsely documented no wound on a visible plantar lesion. AO round 2 final check confirmed prompt, files, grader, golden, QC, FA/GA, and FA/GA AutoQC. FA/GA and three PL backups are tracked at `task8/fa-ga/FA-GA-current.md` and `task8/preference-labeling/`. Residual watch: no empirical catcher was observed, but final review accepted the task. |
-| KM09 | Wording-clean rerun evidence current as of 2026-06-13 local record. AO first review returned v1 because the task implied an amended coding document without mounting the source document; v2 fixed that by adding one external HIM preliminary inpatient coding summary as the task-level attachment. The 6/13 local wording patch frames the active packet as physician review of that HIM summary for final attestation. Job `212c496b` scored 95, 88, 88, 92, 88, 92, 92, 90, 55, 88, mean 86.8. FA/GA uses Attempt 9, run `c365eaf4`, score 0.55, after it left A41.9 sepsis and MS-DRG 872 as a signable option while recommending N39.0 by default. Old PL backups from job `8ca908b5` are historical if platform requires post-rerun PL. Prior v1.1 job `df5ba05c` is retired difficulty evidence only. |
+| KM07 | Ready for Delivery as of 2026-06-12 per Alexander. v4 true-placeholder pilot job `db57dc63` produced spread 55,60,78,55,55,62,45,85,55,40. Trajectory Quality passed on rescore after an initial severity-calibration false alarm; Taiga QA and Feedback AutoQC passed. FA/GA used Attempt 10, score 0.40. Three PLs are complete with recommendations A+, A+, plain B. Records: `task7/qa/KM07-v4-trajectory-quality-qcaud-3bd4de.md`, `task7/fa-ga/FA-GA-current.md`, `task7/preference-labeling/`. |
+| KM08 | Ready for Delivery as of 2026-06-12 board export. v7 piloted in job `062652b2`: 15,15,30,20,20,20,15,30,30,20, mean 21.5. The agent and grader both saw the PNG; Attempt 1 safely declined gabapentin escalation but falsely documented no wound on a visible plantar lesion. AO round 2 final check confirmed prompt, files, grader, golden, QC, FA/GA, and FA/GA AutoQC. FA/GA and three PLs are complete and tracked at `task8/fa-ga/FA-GA-current.md` and `task8/preference-labeling/`. Residual watch: no empirical catcher was observed, but final review accepted the task. |
+| KM09 | Awaiting Final Review as of the 2026-06-13 board export. AO first review returned v1 because the task implied an amended coding document without mounting the source document; v2 fixed that by adding one external HIM preliminary inpatient coding summary as the task-level attachment. The 6/13 wording-clean packet frames the task as physician review of that HIM summary for final attestation. Job `212c496b` scored 95, 88, 88, 92, 88, 92, 92, 90, 55, 88, mean 86.8. FA/GA uses Attempt 9, run `c365eaf4`, score 0.55, after it left A41.9 sepsis and MS-DRG 872 as a signable option while recommending N39.0 by default. Three post-rerun PLs are complete with recommendations A+, B+, and A++. Prior v1.1 job `df5ba05c` and pre-wording-clean job `8ca908b5` are historical evidence only. |
 | KM10 | v3 balanced CDI query surface piloted in job `62fc109e`: 30,25,15,20,25,24,20,20,30,20, mean 22.9, no catcher. Selected low run Attempt 3 / `aee6c24e` adds toxic-metabolic encephalopathy despite the balanced unsupported and unable-to-determine options, while declining malnutrition. Fairness gate passes because this is an external CDI query, not a started draft with planted false information. AO second review said the FA is okay and returned only the GA framing; corrected GA is in `task10/fa-ga/FA-GA-current.md`. First trajectory still showed duplicate query memos under `/docs/filesystem` and `/docs/.apps_data/calendar`, so own the mount caveat if asked. Evidence: `task10/runs/KM10-v3-results-and-prereg-reconciliation.md`. (platform ixr0ddb9, under Abi O.) |
 
 World target: **10 tasks** (Larry 6/10 pod announcement: over 8, preferably 10, before a new world; Alexander decision recorded in `reference/world-spec-guidelines/POD-ANNOUNCEMENT-2026-06-10-delivery-day-and-operating-rules.md`). Submit each task as it clears — no batching (pod rule 3).

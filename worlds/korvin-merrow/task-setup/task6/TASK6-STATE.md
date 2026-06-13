@@ -1,6 +1,6 @@
 # TASK6-STATE
 
-Status (6/9, COMPLETE / RFD): KM06 is Ready for Delivery. Prior local state was Abi approved -> PL; the live frontier has advanced and Tasks 1-6 are now RFD. Preserve the PL planner/backups under `task6/preference-labeling/` as evidence, but do not treat KM06 as the active blocker unless the live platform board explicitly contradicts this.
+Status (2026-06-13): KM06 DELIVERED. Prior local state was Abi approved -> PL and then Ready for Delivery; the live frontier has advanced and Tasks 1-6 are delivered. Preserve the PL planner/backups under `task6/preference-labeling/` as evidence, but do not treat KM06 as the active blocker unless the live platform board explicitly contradicts this.
 
 Status (6/9, prior APPROVED -> PL): Abi APPROVED KM06 (8:56 AM) - "Approved. Ready for PL." KM06 v5 moved into Preference Labeling. Decider = premature basal-insulin uptitration. PL planner: task6/preference-labeling/KM06-PL-recommended-verdicts-DRAFT.md. Abi tip recorded (see below): future tasks should NOT all be draft-and-finalize; client wants variety - drives the Task 7/8 pivot away from completion-genre (see TASK7-STATE / TASK8).
 
@@ -45,4 +45,4 @@ QA dispositions (job on 2zw95f4e): (1) identity_collisions flag is on weekend_cr
 Boundaries: no upload/AutoQC/agent-run/DOCX-build/locked-canon edit/live-world edit without explicit Alexander authorization for that exact step.
 
 
-UPDATE (6/9): Abi prompt correction uploaded; platform 2zw95f4e = RUNNING TAIGA TRAJECTORIES & QA on the fixed prompt. Pending: read the re-run spread (watch the tail - reconcile instruction may raise the mean), then re-pair the FA/GA on the new lowest run (old pairing was job 38fd1c2e).
+UPDATE (2026-06-13): KM06 is delivered. The 6/9 fixed-prompt running note is historical and superseded by the completed v5 insulin-uptitration path recorded above and on the current board.

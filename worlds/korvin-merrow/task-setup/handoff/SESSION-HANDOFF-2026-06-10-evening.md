@@ -1,8 +1,12 @@
 # SESSION HANDOFF - 2026-06-10 evening (written for continuation on another machine)
+
+SUPERSEDED STATUS NOTE, 2026-06-13: do not use the queue below as current task state. It is retained as the 6/10 recovery handoff only. Current Korvin state lives in `AGENTS.md`, root `WORKSPACE_FILE_MAP.md`, `KM-WORLD-PERFORMANCE-REPORT.md`, the dashboard, and the active `TASKN-STATE.md` files. Current board state: KM01 through KM06 delivered, KM07/KM08/KM10 Ready for Delivery, KM09 Awaiting Final Review after wording-clean job `212c496b`, FA/GA, and three post-rerun PLs.
+
 Purpose: full context for resuming work in a fresh session. Read this + AGENTS.md first, then handoff/EXECUTION-QUEUE-2026-06-10.md and TASK-RUNBOOK.md as needed. Branch: korvin-merrow-brainstorm, remote github.com/Dr-dyrane/sanctum-world-workspace.
 
 ## Suite snapshot (Healthcare_247_Merrow, target 10 tasks)
-- KM01 0.89 (fair clearer, banked) | KM02 0.59 | KM03 RFD (PLs queued) | KM04 PLs queued | KM05 0.36 (suite killer, PLs queued) | KM06 v5 0.60 bimodal (PLs queued, first human review in parallel)
+- Current 2026-06-13 board state: KM01 through KM06 delivered. KM07, KM08, and KM10 are Ready for Delivery. KM09 is Awaiting Final Review after wording-clean job `212c496b`, FA/GA, and three post-rerun PLs.
+- Historical 6/10 snapshot for provenance: KM01 0.89 (fair clearer, banked) | KM02 0.59 | KM03 RFD (PLs queued) | KM04 PLs queued | KM05 0.36 (suite killer, PLs queued) | KM06 v5 0.60 bimodal (PLs queued, first human review in parallel)
 - KM07 v2: piloted 6/10, mean ~0.36, 9/10 floors (bone-health closure propagated), one 0.78 catch. Shippable deep win. Watch item to raise proactively: no 0.85+ catcher. Both forecasts missed high (~70-72 vs actual 36) - cold-axis rule DEEPENED: med-list furniture propagates even in letters. See task7/runs/KM07-v2-results-and-prereg-reconciliation.md.
 - KM08 v4.1: piloted 6/10, mean ~0.65-0.70, clean bimodal: 0.10 floor (acknowledge-then-escalate gabapentin to BID), 0.55 hedge, 0.95 catchers. Fair clearer, complements KM07's inverse shape. See task8/runs/KM08-v41-results-and-prereg-reconciliation.md.
 - KM09 v1.1: staged, NOT entered. Re-centered 6/10 from MCC-capture (free-caution risk) to sepsis-to-principal sequencing trap (central), MCC demoted to secondary, per task9/design/KM09-bite-risk-assessment.md. Honest read: suite's least-certain bite; pilot-and-see; coder-worksheet ratify-or-refute lever pre-loaded if it clears >=85.

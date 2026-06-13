@@ -235,26 +235,27 @@ TASKS = {
         "core_failure": "Documented no wound on the bedside photo and omitted a discharge-day foot exam and wound plan",
         "versions": 7,
         "pivot": "True placeholder plus off-text image signal",
-        "status": "Awaiting Final Review post PL",
+        "status": "Ready for Delivery",
     },
     "KM09": {
         # v2 HIM worksheet. v1.1 was returned for missing original coding document.
-        "scores": [20, 20, 15, 15, 92, 15, 20, 15, 85, 25],
-        "deliverable": "Inpatient Coding Attestation Addendum",
+        # Job 8ca908b5 is historical pre-wording-clean evidence only.
+        "scores": [95, 88, 88, 92, 88, 92, 92, 90, 55, 88],
+        "deliverable": "Physician Review of HIM Coding Summary",
         "workflow": "Coding Attestation / DRG Sequencing",
         "family": "Severity-Anchoring -> Over-Sequenced Principal Diagnosis",
         "requester": "HIM / Clinical Documentation Integrity",
         "anchor": "05/25/2026 (+1 day post-discharge)",
         "mechanism": "External HIM worksheet sequences sepsis principal against a record supporting suspected urinary-source infection",
         "trap_carrier": "HIM preliminary coding summary with A41.9 and unsupported MCCs",
-        "failure_mode": "Ratifies sepsis principal and the septicemia family",
-        "fa_subject": "a7259530 (Attempt 6)",
-        "fa_score": 0.15,
-        "catch_score": 0.92,
-        "core_failure": "Used the suspected-at-discharge rule to escalate to sepsis instead of coding the documented infection as principal; carried it into DRG 872",
-        "versions": 2,
-        "pivot": "Added the original HIM worksheet as the task file, then forced a per-code inventory",
-        "status": "Awaiting First Review",
+        "failure_mode": "Leaves unsupported sepsis principal as a signable option",
+        "fa_subject": "c365eaf4 (Attempt 9)",
+        "fa_score": 0.55,
+        "catch_score": 0.95,
+        "core_failure": "Left A41.9 sepsis and MS-DRG 872 as a signable option while recommending N39.0 by default",
+        "versions": 3,
+        "pivot": "Added the HIM worksheet, removed amended-document ambiguity, and forced final attestation",
+        "status": "Awaiting Final Review",
     },
     "KM10": {
         # v3 balanced CDI query. v2 is excluded because the first trajectory showed a duplicate calendar memo.
@@ -281,7 +282,8 @@ TASKS = {
 # task-setup/KM-WORLD-PERFORMANCE-REPORT.md as the canonical analytics source.
 # KM07 v2 and v3 are retired as unfair evidence. KM08 v4.1, v5, and v6 are
 # retained only as design history. KM09 v1.1 is retired for missing the task
-# attachment. KM10 v2 is excluded for duplicate calendar-volume contamination.
+# attachment, and 8ca908b5 is pre-wording-clean evidence only. KM10 v2 is
+# excluded for duplicate calendar-volume contamination.
 
 TRAPS = {
     "#1 Prednisone source-of-truth": {"primary": "KM01, KM04", "secondary": "KM05", "propagation": "Low (~20%)", "finding": "Chart-coached; model handles well"},
@@ -652,7 +654,7 @@ def build_stories(wb):
 
     # Data: propagation rates
     ws.cell(row=10, column=2, value="Hardest active task means").font = font_metric_label()
-    prop_data = [("KM08", 21.5), ("KM10", 22.9), ("KM09", 32.2), ("KM05", 46.6)]
+    prop_data = [("KM08", 21.5), ("KM10", 22.9), ("KM05", 46.6), ("KM02", 59.3)]
     for i, (name, rate) in enumerate(prop_data):
         ws.cell(row=11 + i, column=2, value=name)
         ws.cell(row=11 + i, column=3, value=rate)
@@ -678,7 +680,7 @@ def build_stories(wb):
     ws.cell(row=27, column=2, value="04").font = Font(name=FONT_DISPLAY, size=9, bold=True, color=LIGHT_GRAY)
     ws.cell(row=28, column=2, value="Bimodal distributions prove the mechanism is clean").font = font_section()
     ws.merge_cells("B29:H30")
-    ws["B29"] = "KM02, KM04, KM05, KM06, and KM09 show catch/floor splits. Runs that verify source hierarchy score high; runs that accept the tempting closure floor. That split is the cleanest evidence that the task is testing judgment, not noise."
+    ws["B29"] = "KM02, KM04, KM05, and KM06 show the cleanest catch/floor splits. KM09 is now easier after wording cleanup, but still has one bankable attestation failure among high catch runs. The split shows judgment rather than noise."
     ws["B29"].font = font_body()
     ws["B29"].alignment = Alignment(wrap_text=True, vertical="top")
 

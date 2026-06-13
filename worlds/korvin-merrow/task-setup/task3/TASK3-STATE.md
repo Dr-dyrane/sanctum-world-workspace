@@ -1,6 +1,6 @@
 ﻿# TASK3-STATE
 
-Status (6/8 late, current): KM03 FA/GA AUTOQC PASSED / PL ACTIVE. Rerun job `8e97cdd7` against the restructured grader + elevated golden scored 80, 62, 90, 30, 90, 88, 82, 87, 85, 70; mean 76.4; all ten scored; single lowest Attempt 4 / run `c2eea662` at 0.30; second-lowest Attempt 2 at 0.62; two sub-70 and three sub-90. Alexander entered FA/GA on platform using Attempt 4; FA/GA AutoQC passed. PL #1-#3 are drafted locally under `preference-labeling/`, all with verdict A1 / plain A. Next: submit the three PLs under Alexander's direct platform operation, run PL AutoQC after each, then final human review (Sang).
+Status (2026-06-13): KM03 DELIVERED. Post-Sang rerun job `8e97cdd7` scored 80, 62, 90, 30, 90, 88, 82, 87, 85, 70; Alexander entered FA/GA on Attempt 4, completed the three PLs, passed the downstream checks, and the task is delivered on the current board. Older PL-active language below is preserved as lifecycle history only.
 
 Prior status: KM03 v2.2 cleared the Taiga difficulty gate after Task AutoQC pass and grading-transcript verification. Job `877aa204` scored 20, 25, 32, 68, 83, 85, 90, 95, 95, 97 with mean 69.0, four sub-70 runs, six sub-90 runs, and tail to 0.20. Grading transcripts are verified clean in `runs/KM03-v2.2-grading-transcripts-877aa204.md`: all reviewed sub-70 failures are intended CPAP-propagation failures, and the 0.97 comparator confirms correct CPAP withhold is rewarded. The pre-Sang local FA/GA draft used Attempt 9 at 0.20 with Attempt 8 at 0.97 as GA cross-check anchor; it is superseded by the post-Sang Attempt 4 platform entry. Prior v2.1 is difficulty-failed (Taiga job 58b5f3e3, 10 trajectories 90-97, mean ~93.6, zero sub-70, fails the difficulty gate). Lineage: v1 too easy -> v2.1 -> v2.1 also too easy -> v2.2 CPAP/OSA fabricated-objective-result mechanism built, AutoQC-passed, empirically cleared difficulty, transcript-verified, post-Sang rerun, FA/GA entered, FA/GA AutoQC passed, PL active. (Byte note: the captured `58b5f3e3` transcripts carry v1-era naming/audit prompt/golden-v1; recorded as v2.1 per Alexander, worth preserving but does not change the conclusion.) KM04 v1 failed the same gate (job 55ee209f, mean 0.912), so the whole "evaluate/reconcile a handed discharge document" family is too easy for this model.
 
@@ -10,7 +10,7 @@ v2.2 CURRENT PLATFORM SET: `../platform/task3/current/prompt-task3-v2.2.txt`, `.
 
 v2.2 PRIOR PLAN HISTORY (6/8): `build-phase-drafts/KM03-v2.2-FINAL-PLAN.md` and `build-phase-drafts/KM03-v2.2-reconciliation-6-8.md` preserve the Lenora weekday-morning supervision-fact mechanism and no-moderate correction, but they are no longer the primary plan after `KM03-v2.2-KM02-BAR-PLAN.md`. Preserve as review history; do not build from them unless Alexander explicitly re-selects that mechanism.
 
-Task: KM03 - discharge planning documentation escalation. Status: v2.2 active / Task AutoQC passed / Taiga difficulty cleared / grading transcripts verified.
+Task: KM03 - discharge planning documentation escalation. Status: delivered. v2.2 remains the evidence set for the completed review path.
 
 ## Current Material
 
@@ -22,9 +22,9 @@ Task: KM03 - discharge planning documentation escalation. Status: v2.2 active / 
 - `build-phase-drafts/KM03-golden-clinical-register-guide.md`: local clinical-register guide for Alexander's future golden wording polish. Support only; not golden text, not a DOCX build, and not platform-entered.
 - `build-phase-drafts/grader-guidelines-task3-RESTRUCTURED.txt`: local section-mapped grader helper for FA/GA reasoning against the active v2.2 grader. Draft/support only; not a platform-current grader replacement and not upload-ready.
 - `fa-ga/FA-GA-current.md`: FA/GA provenance. Pre-Sang Attempt 9 draft is superseded; post-Sang platform entry uses Attempt 4 (0.30), and FA/GA AutoQC passed.
-- `preference-labeling/KM03-PL1-A-vs-B.md`: local PL #1 draft for A 0.900 vs B 0.880, verdict A1 / plain A. Draft only until Alexander submits it.
-- `preference-labeling/KM03-PL2-A-vs-B.md`: local PL #2 draft for A 0.820 vs B 0.620, verdict A1 / plain A. Draft only until Alexander submits it.
-- `preference-labeling/KM03-PL3-A-vs-B.md`: local PL #3 draft for A 0.820 vs B 0.880, verdict A1 / plain A. Draft only until Alexander submits it.
+- `preference-labeling/KM03-PL1-A-vs-B.md`: local PL #1 evidence for A 0.900 vs B 0.880, verdict A1 / plain A.
+- `preference-labeling/KM03-PL2-A-vs-B.md`: local PL #2 evidence for A 0.820 vs B 0.620, verdict A1 / plain A.
+- `preference-labeling/KM03-PL3-A-vs-B.md`: local PL #3 evidence for A 0.820 vs B 0.880, verdict A1 / plain A.
 - `KM03-state-log.md`: live event log for KM03 after staging, including v1/v2.1 difficulty failures, v2.2 build, Task AutoQC pass, and trajectory/QA state.
 - `../platform/task3/current/`: current folder contains only the active v2.2 platform set plus `RUN-INSTRUCTIONS.md`. Active files are `prompt-task3-v2.2.txt`, `discharge_planning_summary_draft_05242026.docx`, `golden-KM03-v2.2.docx`, and `grader-guidelines-task3-v2.2.txt`.
 - `runs/KM03-v2.2-taiga-results-877aa204.md`: durable v2.2 trajectory result record. Job `877aa204` cleared the difficulty gate with mean 69.0 and four sub-70 runs.

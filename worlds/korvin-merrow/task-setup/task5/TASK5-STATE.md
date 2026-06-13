@@ -1,6 +1,6 @@
 # TASK5-STATE
 
-Status (6/8, current): KM05 v4 MULTI-FABRICATION PROPAGATION build STAGED in platform/task5/current, ready for Alexander upload. Built end-to-end (prompt + grader + 2 DOCX + RUN-INSTRUCTIONS) under full-checklist approval. Not yet uploaded, AutoQC-run, or piloted.
+Status (2026-06-13): KM05 DELIVERED. The active delivered path is the v4 post-fix cardiorenal restart task, post-fix job `0348a7dc`, FA/GA, three PLs, and Janette final review. The staged-build and pilot notes below are retained as history, not active blockers.
 
 NSAID v3 RETIRED (difficulty failure): job cdbc41f7 scored 98,97,98,97,97,95,75,98,96,95, mean 0.946, zero sub-70, and the 0.75 outlier still caught the NSAID. A single textbook contraindication (NSAID in CKD3/HFrEF with explicit nephrology avoid-NSAID) is caught nearly every time. NSAID set archived at platform/task5/archive/2026-06-08-nsaid-retired/.
 
@@ -48,4 +48,4 @@ Deprecated 6/7 build recommendation: HOLD, then staged clean pilot then escalati
 
 Draft artifacts in the proposal (not built): G1 prompt (authoring posture, de-authorized pre-chart, no enumerated domains, no no-fabrication instruction); EO shape; golden direction
 
-UPDATE (6/9): all 3 Preference Labels submitted (PL1 A++ 0.68v0.35, PL2 A++ 0.95v0.35, PL3 plain-A 0.20v0.15; backups in preference-labeling/). Platform b0tza971 = AWAITING FINAL REVIEW. Done pending final reviewer sign-off.
+UPDATE (2026-06-13): KM05 is delivered. The 6/9 awaiting-final-review note is historical; Janette final review and delivery are complete on the current board.

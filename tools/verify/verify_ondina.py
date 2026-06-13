@@ -16,7 +16,7 @@ from __future__ import annotations
 import sys, re, glob, zipfile
 from pathlib import Path
 
-REPO = Path(__file__).resolve().parents[1]
+REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO))
 from tools.mode_a_clone import verify_no_synthetic, verify_no_km_identifiers, _core_clean
 import warnings; warnings.filterwarnings("ignore")

@@ -1,4 +1,7 @@
 # Execution queue + throughput note + commit plan (6/10/2026 late)
+
+SUPERSEDED STATUS NOTE, 2026-06-13: this queue is historical and must not be executed as current platform guidance. Current Korvin state is: KM01 through KM06 delivered, KM07/KM08/KM10 Ready for Delivery, and KM09 Awaiting Final Review after wording-clean job `212c496b`, FA/GA, and three post-rerun PLs. Use `AGENTS.md`, root `WORKSPACE_FILE_MAP.md`, `KM-WORLD-PERFORMANCE-REPORT.md`, the dashboard, and active `TASKN-STATE.md` files for live work.
+
 Prepared under Alexander's "follow recommendations" direction. Three sections: the PL submission queue (ready now), the Slack throughput note (paste-ready), the real-environment commit plan.
 
 ## 1. PL submission queue - all twelve drafts ready, verified current-generation
@@ -12,9 +15,9 @@ Submission order (Alexander operates; run Preference Labels AutoQC after EACH pe
 4. KM06 PL1-3 -> first human review continues in parallel
 Each PL: paste the labeled-section + Summary format (PL keeps its dimension labels; only grader Section-letter references were removed). Read both transcripts end to end before entering the verdict, per the standing rule.
 
-## 2. Throughput note to Rose/Abi (paste-ready, verified numbers)
+## 2. Throughput note to Rose/Abi (historical 6/10 draft, do not paste as current)
 
-Quick delivery-context note from the Korvin Merrow world (Healthcare_247_Merrow). Current state: six tasks RFD or one PL-step from final review (KM01-06), one in pilot (KM07), three more fully staged for entry (KM08-10), target ten per the new guidance. Getting the six banked tasks past the no-moderate difficulty bar took repeated empirical redesign on a fixed world: across the suite we ran roughly twenty 10-trajectory pilot cycles (KM02 x3, KM03 x3, KM04 x3, KM05 x3, KM06 x5 including the all-catch rerun, KM07 x1, KM08 x1, plus KM01), retiring too-easy versions at 93-98 means until each task produced genuine clinical failures. The published timebox prices one task end-to-end at 8-10 hours; the redesign-to-bite reality on a fixed world ran well past that per task, with most build/verification work done off-clock. Sharing so tracked hours are read against delivered scope, and because the variety guidance for future worlds (which we have adopted: a structure-first dossier now gates our next brainstorm) should reduce redesign cycles substantially on World #2.
+Historical 6/10 draft: Quick delivery-context note from the Korvin Merrow world (Healthcare_247_Merrow). At that point, six tasks were RFD or one PL-step from final review, KM07 was in pilot, and KM08-KM10 were staged. Current 2026-06-13 state is materially later: KM01 through KM06 delivered, KM07/KM08/KM10 Ready for Delivery, and KM09 Awaiting Final Review after wording-clean job `212c496b`, FA/GA, and three post-rerun PLs. Use the board, dashboard, and task cockpits for any fresh throughput note.
 
 ## 3. Real-environment commit plan (sandbox does not commit; guardrail)
 

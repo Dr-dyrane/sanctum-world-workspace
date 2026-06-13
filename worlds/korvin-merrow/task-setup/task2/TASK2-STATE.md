@@ -1,6 +1,6 @@
 # TASK2-STATE
 
-Status: KM02 COMPLETE / RFD (Ready for Delivery). Final review completed by Janette 6/8 (final round checked Preference Labels only; all other content cleared in round 1). RLS: skim, ENV linter, FA/GA, PL all checked; Taiga: ENV linter, FA, PL checked; task tagged; marked RFD. First Korvin task taken fully through final review. Preference Labels submitted with verdict B / B++ (submitted under the prior single-PL rule, before the 6/7 three-PL pod guidance).
+Status (2026-06-13): KM02 DELIVERED. Final review completed by Janette 6/8 and the board now treats KM02 as delivered. The earlier RFD wording in this file is historical evidence for the delivery path, not an active blocker. Preference Labels were submitted with verdict B / B++ under the prior single-PL rule before the 6/7 three-PL pod guidance.
 
 Task: KM02 - Hospital Discharge Summary Generation.
 
@@ -23,7 +23,7 @@ The clean prompt is superseded and preserved under `platform/task2/hold/`.
 - Final FA/GA candidate: Attempt 8, score 0.30, job `8f393839`.
 - Task AutoQC / Taiga gates passed: `qcaud_5e`, `qcaud_4a`, `qcaud_ef`.
 - Preference Labeling submitted with verdict B / B++. The local `preference-labeling/` packet preserves A = 0.40 propagation run, B = 0.82 catch run, the draft/review text, byte evidence, and `inputs/` hash-matching copies of the KM02 v3 prompt, golden, grader, and mounted draft from `platform/task2/current/`.
-- Current external state: COMPLETE / RFD (Ready for Delivery), final review by Janette 6/8.
+- Current external state: DELIVERED. Final review by Janette 6/8; delivery tracked on the current board.
 
 ## Folder Map
 
