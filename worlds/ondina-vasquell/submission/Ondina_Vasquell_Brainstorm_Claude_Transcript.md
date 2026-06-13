@@ -34,12 +34,12 @@ The next world needs to start from the task layer, not from a generic patient ch
 3.
 Human
 ```text
-No ten repeated summaries. Give me ten complex internal medicine cases, then we check them against the Korvin lessons and pick the one that truly tests the model.
+No ten repeated summaries. Give me ten complex internal medicine cases, then we check them against the Korvin lessons and pick the one that truly stresses clinical judgment.
 ```
 
 Assistant
 ```text
-The strongest candidates are ordinary high-stakes admissions with messy documentation, competing specialties, and administrative surfaces. I would rank the slate this way:
+The strongest candidates are ordinary high-stakes admissions with messy documentation, competing specialties, and administrative surfaces. Against the Korvin lessons I am scoring each on four things: whether it supports ten genuinely different physician-facing workflows, whether its traps come from real source conflict rather than planted error, whether every task stays self-contained without public medical knowledge after July 31, 2025, and whether the world files can stay raw material instead of an answer key. I would rank the slate this way:
 
 1. Limb-threat diabetic foot infection with vascular disease, renal dosing, payer denial, wound care, offloading, coding, and quality abstraction.
 2. Decompensated cirrhosis with transplant, encephalopathy, infection uncertainty, renal injury, nutrition, and discharge placement tension.
@@ -52,7 +52,7 @@ The strongest candidates are ordinary high-stakes admissions with messy document
 9. Older adult fall with rhabdomyolysis, delirium, medication holds, and capacity questions.
 10. Severe anemia with CKD, occult bleeding concern, transfusion threshold, coding, and outpatient follow-up.
 
-Recommendation: choose diabetic foot infection with limb threat. It is common enough to be clinically fair, but it creates many non-textbook failure routes. The model will know diabetes in general, but it will not automatically reconcile culture hierarchy, equivocal osteomyelitis, perfusion uncertainty, offloading logistics, payer logic, and wound documentation together.
+Recommendation: choose diabetic foot infection with limb threat. It is common enough to be clinically fair, but it creates many non-textbook failure routes. A strong generalist will know diabetes in general, yet will not automatically reconcile culture hierarchy, equivocal osteomyelitis, perfusion uncertainty, offloading logistics, payer logic, and wound documentation together. The difficulty lives in holding all of those open at once, which is exactly the kind of judgment a single summary skips.
 ```
 
 4.
@@ -71,8 +71,8 @@ Limb-threatening diabetic foot infection in an older adult with neuropathy, CKD,
 System center:
 Hospital medicine is trying to close discharge. Podiatry, vascular surgery, infectious disease, pharmacy, case management, PT, OT, wound care, nursing, HIM, CDI, and a Medicare Advantage payer all create plausible but conflicting pressure.
 
-Model weakness:
-The model can summarize diabetic foot infection, but it often over-closes uncertainty, ratifies authoritative external documents, imports unsupported diagnoses, treats discharge readiness as medical stability alone, and misses source provenance.
+Where answers tend to fail:
+It is easy to summarize diabetic foot infection. The harder and commonly missed work is to resist over-closing uncertainty, to refuse to ratify an authoritative-looking external document, to avoid importing an unsupported diagnosis under documentation pressure, to separate medical stability from discharge readiness, and to keep track of which source outranks which. A confident summary that does all of those at once is usually wrong somewhere.
 
 Guardrail posture:
 The world files should later provide raw clinical material. No discharge summary should pre-answer all traps. Each task should have its own forced slot and its own task-level trap.
@@ -297,10 +297,11 @@ What the checklist can miss:
 
 Actionable fixes:
 
-1. Expand the comorbidity profile to at least ten conditions.
-2. Remove internal labels from the reviewer-facing version.
+1. Expand the comorbidity profile to at least ten conditions, written as a real problem list, so the case carries the load a single organ-system story would not.
+2. Remove internal labels and any task-design or platform vocabulary from the reviewer-facing version. The reviewer should read it as a clinical proposal, not as mechanics.
 3. Add per-task P0 or P1 priority labels, not just an aggregate note.
-4. Keep the Brainstorm at concept depth. Do not invent medication doses or final lab values here.
+4. Keep the Brainstorm at concept depth. Do not invent medication doses or final lab values here; those belong to the substrate stage where they can be ratified.
+5. Carry the Korvin lesson forward. Fairness is judged on what the built files actually say, not on what the plan intends, so every trap must stay refutable from the chart and no reviewer-facing file should leak internal or source register.
 ```
 
 11.
