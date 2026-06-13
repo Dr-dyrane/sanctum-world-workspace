@@ -7,9 +7,39 @@ spec grader anchors and failure design. Prompt and grader are reviewer-drafted
 candidates; golden dispositions are physician-owned. OV01 was authored by hand and is
 consistent with this format.
 """
+import shutil
 from pathlib import Path
 
-BASE = Path(__file__).resolve().parents[1] / "platform"
+ROOT = Path(__file__).resolve().parents[1]
+BASE = ROOT / "platform"
+TASKFILES = ROOT / "task-files"
+
+# Each task's E1-T reference file travels WITH its task (uploaded with the task, never
+# in the world-file set). Copy a fresh copy into platform/taskN/current/. task8 works
+# off the world chart and has no task-level file.
+TASK_FILE_MAP = {
+    "task1": "preliminary_discharge_order_set_05212026.docx",
+    "task2": "him_preliminary_coding_worksheet_05212026.docx",
+    "task3": "cdi_query_memo_05232026.docx",
+    "task4": "medicare_advantage_denial_letter_05232026.docx",
+    "task5": "pharmacy_benefit_rejection_05242026.docx",
+    "task6": "payer_concurrent_review_request_05252026.docx",
+    "task7": "quality_abstraction_worksheet_06042026.docx",
+    "task9": "safety_event_intake_summary_06112026.docx",
+    "task10": "started_discharge_instruction_draft_05212026.docx",
+}
+
+
+def copy_task_files():
+    for task, fname in TASK_FILE_MAP.items():
+        src = TASKFILES / fname
+        dst = BASE / task / "current" / fname
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        if src.exists():
+            shutil.copyfile(src, dst)
+            print("  taskfile", task, fname)
+        else:
+            print("  MISSING", task, fname)
 
 T = {
 "task2": dict(id="OV02", dos="05/22/2026 0900", golden="golden-OV02-v1.docx",
@@ -128,7 +158,8 @@ def emit():
             "- Deferring a genuinely physician-owned specific to the named follow-up is a catcher behavior, not a miss.\n"
             "- Lowest genuine-failure run = failure-analysis subject; cleanest catcher = grader-analysis anchor. Failure-only, no section names.\n", encoding="utf-8")
         print("  package", i)
-    print("done; OV02-OV10 text artifacts emitted")
+    copy_task_files()
+    print("done; OV02-OV10 text artifacts emitted + task files placed in each task folder")
 
 
 if __name__ == "__main__":
