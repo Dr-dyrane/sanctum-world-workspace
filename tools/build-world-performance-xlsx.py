@@ -255,7 +255,7 @@ TASKS = {
         "core_failure": "Left A41.9 sepsis and MS-DRG 872 as a signable option while recommending N39.0 by default",
         "versions": 3,
         "pivot": "Added the HIM worksheet, removed amended-document ambiguity, and forced final attestation",
-        "status": "Awaiting Final Review",
+        "status": "Ready for Delivery",
     },
     "KM10": {
         # v3 balanced CDI query. v2 is excluded because the first trajectory showed a duplicate calendar memo.

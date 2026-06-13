@@ -10,7 +10,7 @@ Project Sanctum Worlds are realistic clinical environments that test frontier AI
 
 ## Current Status (13 June 2026)
 
-Korvin Merrow World is live as `Healthcare_247_Merrow` (26 files; World Spec approved by Stacey S; Final Files AutoQC 78/78 after three revisions). The world carries ten tasks. KM01 through KM06 are delivered. KM07, KM08, and KM10 are Ready for Delivery. KM09 is Awaiting Final Review after wording-clean job `212c496b`, FA/GA, and three post-rerun preference labels. The authoritative status is the platform board and the live records (`dashboard/km-world-dashboard.html`, `worlds/korvin-merrow/task-setup/KM-WORLD-PERFORMANCE-REPORT.md`, root `WORKSPACE_FILE_MAP.md`, and each active `TASKN-STATE.md`). This README is only the front door.
+Korvin Merrow World is live as `Healthcare_247_Merrow` (26 files; World Spec approved by Stacey S; Final Files AutoQC 78/78 after three revisions). The world carries ten tasks. KM01 through KM06 are delivered. KM07 through KM10 are Ready for Delivery. KM09 moved to Ready for Delivery on the 2026-06-13 board after wording-clean job `212c496b`, FA/GA, and three post-rerun preference labels. The authoritative status is the platform board and the live records (`dashboard/km-world-dashboard.html`, `worlds/korvin-merrow/task-setup/KM-WORLD-PERFORMANCE-REPORT.md`, root `WORKSPACE_FILE_MAP.md`, and each active `TASKN-STATE.md`). This README is only the front door.
 
 ## Current Boundary
 
@@ -28,7 +28,7 @@ Read this repo progressively. Do not try to absorb every locked package on the f
 4. Read [worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md>) before touching any task-stage work.
 5. Read the active `TASKN-STATE.md` before proposing, drafting, building, or uploading anything for that task.
 
-Current gate: KM09 final human review is the remaining active review item for Korvin. Delivery actions for KM07, KM08, KM10, any KM09 final-review movement, and all RL Studio actions still require exact Alexander authorization.
+Current gate: no Korvin task is showing active human review on the board. Delivery actions for KM07 through KM10 and all RL Studio actions still require exact Alexander authorization.
 
 ## Source-Of-Truth Ladders
 
