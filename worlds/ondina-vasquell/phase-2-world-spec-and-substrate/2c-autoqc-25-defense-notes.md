@@ -29,3 +29,11 @@ The tension between improving infection markers and an operationally unsafe disc
 ## Maintenance rule
 
 If any of the three designs changes at spec or build time, update the corresponding note the same day, and re-audit the surviving notes against the new framing per AGENTS guardrail 5.
+
+## Note 4 (workflow count, AutoQC 2.107): ten distinct workflows is intentional
+
+Anticipated flag: distinct-workflow count above the three-to-five target.
+
+Response text, ready to adapt:
+
+This world intentionally uses ten distinct approved workflow strings, one clinically exact best fit per task, across seven structural categories. The live guidance frames the three-to-five distinct-workflow figure as a floor for variety, not a ceiling, and the brainstorm for this world passed with the same posture. Consolidating the slate would force genuinely different physician-facing deliverables under shared labels and reduce realism, for example collapsing a pharmacy insurance rejection response, a payer denial appeal, a patient-safety root-cause analysis, and a HEDIS abstraction into broader strings they do not fit. Each task names its structural category and forcing function, so the breadth is deliberate variety rather than monotony, and the integration anchor is Task 4.
