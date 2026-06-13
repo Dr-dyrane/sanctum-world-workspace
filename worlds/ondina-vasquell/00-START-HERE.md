@@ -1,6 +1,6 @@
 # Ondina Vasquell World (World #2) - Cockpit
 
-Status: PHASE 1 SUBMISSION-READY LOCALLY. Brainstorm DOCX built locally by Mode A clone on 6/12 after Alexander authorization, final local Brainstorm audit passed, and Alexander is submitting in Studio. Brainstorm AutoQC rerun 1 failed only the per-task workflow-priority label gate; source markdown and DOCX were patched to name Priority P0 or P1 on each task. World folder authorized by Alexander 6/12 late, superseding the planning-canvas scope lock. No substrate file, task artifact, image, upload, AutoQC run, or platform action without Alexander's explicit authorization for that exact step.
+Status: PHASE 1 BRAINSTORM AUTOQC PASSED per Alexander on 6/12. Brainstorm DOCX built locally by Mode A clone after Alexander authorization, final local Brainstorm audit passed, AutoQC first flagged only the per-task workflow-priority label gate, and the corrected upload passed after source markdown and DOCX named Priority P0 or P1 on each task. Human Brainstorm review is the next external gate. World folder authorized by Alexander 6/12 late, superseding the planning-canvas scope lock. No substrate file, task artifact, image, upload, AutoQC run, or platform action without Alexander's explicit authorization for that exact step.
 
 Patient: Ondina Vasquell, 68F, Spanish-preferred, insulin-dependent T2DM with diabetic peripheral neuropathy and mild diabetic retinopathy, CKD 3b with anemia of CKD, PAD, HFpEF, hypertension, dyslipidemia, obesity, OSA, knee osteoarthritis, limited mobility; second-floor walk-up; daughter support limited by night work; Medicare Advantage with Medicaid secondary. World: limb-threat diabetic foot infection, 6-day admission, snapshot May 21, 2026 at 18:00 (HD6 evening), medically improving but operationally unsafe. Branch posture: decision 7, stay on korvin-merrow-brainstorm until KM closes; cut ondina-vasquell-brainstorm at that boundary.
 
@@ -23,11 +23,11 @@ Patient: Ondina Vasquell, 68F, Spanish-preferred, insulin-dependent T2DM with di
 
 | Deliverable | State |
 |---|---|
-| Brainstorm content, 4 elements, 10 tasks, 7 structures | Submission copy controls; comorbidity depth expanded to 13 common conditions; final local audit PASS; Studio submission in progress by Alexander |
+| Brainstorm content, 4 elements, 10 tasks, 7 structures | Submission copy controls; comorbidity depth expanded to 13 common conditions; final local audit PASS; Brainstorm AutoQC passed in Studio per Alexander |
 | Brainstorm DOCX | Built at submission/Ondina_Vasquell_Brainstorm.docx by tools/build/build-docx-ondina-brainstorm.py; SHA256 e16934678722b523f2f2f9a9720a154dc63b47cc22512b6dc9b4213fe9a9914a; Mode A fingerprint clean; full LibreOffice render blocked by local dylib issue, Quick Look/textutil fallbacks clean |
-| Brainstorm self-QC + AutoQC + pod review | External Studio gate pending Alexander; no repo-side AutoQC or platform action authorized |
-| Claude transcript | Decision 8: assembled from git history at the end; simulated Claude transcript must have zero em dashes or en dashes |
-| World Spec | Phase 2; checklist at phase-2-world-spec-and-substrate/2b-spec-prep-checklist.md |
+| Brainstorm self-QC + AutoQC + pod review | Brainstorm AutoQC passed; human Brainstorm review pending |
+| Claude transcript | Decision 8: assembled from git history at World Spec package time unless Studio asks earlier; local source does not require a Brainstorm transcript; simulated Claude transcript must have zero em dashes or en dashes |
+| World Spec | Phase 2 after human Brainstorm GO and Alexander authorization; checklist at phase-2-world-spec-and-substrate/2b-spec-prep-checklist.md |
 | AutoQC 2.5 intentional-ambiguity defenses | Drafted same-day per KM lesson: phase-2-world-spec-and-substrate/2c-autoqc-25-defense-notes.md |
 | Reference templates, Custom Made, Mode A HIM/EMR | Phase 2/3 |
 | Writer-produced media | Codex imagegen prompt specs at file-plan time |
