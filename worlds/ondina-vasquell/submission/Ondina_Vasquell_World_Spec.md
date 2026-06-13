@@ -34,25 +34,25 @@ The world carries ten independent post-snapshot tasks spanning direct documentat
 | Active problem list | Limb-threatening left diabetic foot infection with deep soft tissue involvement; equivocal osteomyelitis, unconfirmed; acute kidney injury on CKD 3b, improving; anemia of CKD; perfusion adequacy unresolved (peripheral arterial disease); HFpEF, euvolemic at snapshot; insulin-managed diabetes with held oral agents; deconditioning with unsafe home-disposition picture |
 | Baseline clinical anchors | Outpatient creatinine 1.5 mg/dL, eGFR about 38 (CKD 3b); hemoglobin about 9.8 (anemia of CKD); HbA1c 8.6 percent; ambulates with a cane at home. These are comparators, not admission or hospital-course values, and distinguish chronic disease from the acute episode |
 
-### Home medication list (pre-admission baseline, with inpatient change)
+### Home medication list (pre-admission baseline, with inpatient status)
 
-| Medication (dose, route, frequency) | Indication | Inpatient change |
-|---|---|---|
-| Insulin glargine 26 units subcutaneous nightly | Diabetes, basal | Continued, intake-adjusted |
-| Insulin aspart sliding scale subcutaneous three times daily with meals | Diabetes, prandial | Continued per inpatient sliding scale |
-| Metformin 500 mg Oral twice daily | Diabetes | Held on admission, renal and acute-illness caution |
-| Empagliflozin 10 mg Oral daily | Diabetes, HFpEF, CKD | Held during acute infection |
-| Lisinopril 20 mg Oral daily | Hypertension, CKD | Held on admission for AKI risk |
-| Furosemide 20 mg Oral daily | HFpEF volume | Continued, volume-adjusted |
-| Atorvastatin 40 mg Oral nightly | Dyslipidemia, PAD | Continued |
-| Aspirin 81 mg Oral daily | PAD, secondary prevention | Continued |
-| Clopidogrel 75 mg Oral daily | PAD | Continued |
-| Gabapentin 300 mg Oral three times daily | Diabetic neuropathy | Continued, renally dose-checked |
-| Ferrous sulfate 325 mg Oral daily | Anemia of CKD | Continued |
-| Cholecalciferol 2000 units Oral daily | CKD, vitamin D | Continued |
-| Pantoprazole 40 mg Oral daily | GERD | Continued |
-| Acetaminophen 650 mg Oral three times daily as needed | Knee osteoarthritis, NSAIDs avoided in CKD | Continued |
-| CPAP nightly | Obstructive sleep apnea | Continued |
+| # | Medication | Dose | Route | Frequency | Indication | Inpatient status |
+|---|---|---|---|---|---|---|
+| 1 | Insulin glargine | 26 units | Subcutaneous | Nightly | Diabetes, basal | Continued, intake-adjusted |
+| 2 | Insulin aspart | Sliding scale | Subcutaneous | Three times daily with meals | Diabetes, prandial | Continued per inpatient sliding scale |
+| 3 | Metformin | 500 mg | Oral | Twice daily | Diabetes | Held on admission, renal and acute-illness caution |
+| 4 | Empagliflozin | 10 mg | Oral | Daily | Diabetes, HFpEF, CKD | Held during acute infection |
+| 5 | Lisinopril | 20 mg | Oral | Daily | Hypertension, CKD | Held on admission for AKI risk |
+| 6 | Furosemide | 20 mg | Oral | Daily | HFpEF volume | Continued, volume-adjusted |
+| 7 | Atorvastatin | 40 mg | Oral | Nightly | Dyslipidemia, PAD | Continued |
+| 8 | Aspirin | 81 mg | Oral | Daily | PAD, secondary prevention | Continued |
+| 9 | Clopidogrel | 75 mg | Oral | Daily | PAD | Continued |
+| 10 | Gabapentin | 300 mg | Oral | Three times daily | Diabetic neuropathy | Continued, renally dose-checked |
+| 11 | Ferrous sulfate | 325 mg | Oral | Daily | Anemia of CKD | Continued |
+| 12 | Cholecalciferol | 2000 units | Oral | Daily | CKD, vitamin D | Continued |
+| 13 | Pantoprazole | 40 mg | Oral | Daily | GERD | Continued |
+| 14 | Acetaminophen | 650 mg | Oral | Three times daily as needed | Knee osteoarthritis, NSAIDs avoided in CKD | Continued |
+| 15 | CPAP | Device | Mask | Nightly | Obstructive sleep apnea | Continued |
 
 ### Care Team Roster
 
