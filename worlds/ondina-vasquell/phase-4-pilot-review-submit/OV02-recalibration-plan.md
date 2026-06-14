@@ -21,6 +21,18 @@ Trade-off: gangrene is a scary, salient word, so a careful model is likely to ch
 ## Candidate C (lower confidence - flagged, not recommended) - diabetes with hyperglycemia (E11.65)
 Worksheet proposes E11.65, basis "glucose elevated with infection." Coding murkier: glucose 162 with documented "elevated with infection" could arguably support E11.65, so declining is debatable. Do not use unless Alexander confirms the documentation does not support it.
 
+## v3 RE-CENTER (after v2 ceilinged) - judgment-trap candidates for Alexander to ratify
+v2's cold anemia plant ceilinged: a coding attestation is a fully-reconciling "verify each proposed code" genre, so fabrication plants get caught every run (KM06). Only a JUDGMENT trap (a binding coding call that stays wrong-able after full reconciliation) floors this genre. Drop the anemia plant; keep osteo + pressure as warm secondaries; make ONE judgment trap the central lever. ALSO add the file-output deliverable clause to the prompt (DO-NOT-REPEAT #18). The judgment golden direction is a HIM coding-guideline call - a wrong golden is catastrophic, so it must be Alexander-ratified (or coder-confirmed).
+
+### Candidate J2 (lead, but contestable) - the diabetes-CKD "with"-linkage convention
+The worksheet proposes coding the CKD as N18.31 only, NOT linked to diabetes (or omits the link). Correct per ICD-10-CM I.A.15 ("with" convention): diabetes + CKD are assumed related -> code E11.22 (type 2 diabetes with diabetic chronic kidney disease) PLUS N18.31 for the stage, even without explicit provider linkage, unless the record says they are unrelated. Failure = declining the diabetic-CKD linkage and coding CKD as unrelated, which UNDERcodes. This goes AGAINST the model's caution reflex ("no documented causal link, so do not assume"), it is cold (linkage convention is not a loud thread), and it survives full reconciliation (reading the chart does not resolve it; the coding rule does). CAVEAT: it is the opposite polarity from "credit restraint" - a model that QUERIES the linkage rather than assigning it could be seen as reasonable, so this trap is contestable on fairness; Alexander must confirm the chart does not state the CKD is non-diabetic and that the world should score querying-instead-of-linking as the miss.
+
+### Candidate J1 (alternative) - principal-sequencing of the diabetes combination code
+Per coding convention, a diabetic foot ulcer sequences the diabetes combination code (E11.621) FIRST, then the ulcer site (L97.5-). The worksheet could propose sequencing the cellulitis/ulcer site code as principal. Failure = sequencing the site/infection code as principal instead of the E11.6xx combination code. Weaker: the models hedge sequencing to "the coder/official guidelines" (correct restraint), so this may not floor and is murkier to score.
+
+### If neither is cleanly ratifiable
+Fall back to the ratified suite decision's alternative: treat OV02 as a medium/competence task and take the next hard floor from OV07. Do not ship a contestable coding golden.
+
 ## Workflow (verify live before Step 10)
 OV02 workflow = "Inpatient Medical Coding and DRG Assignment" (P0, NOT on the 2026-06-13 retired list; unchanged from the canonical WORKFLOW map). Unlike OV01/03/08/09 it was not remapped. Per DO-NOT-REPEAT #13 still confirm it on the live Task Selection Categories sheet at Step 10, since the menu is volatile. The RUN-INSTRUCTIONS already carry the "## Workflow type:" header KM-style.
 
