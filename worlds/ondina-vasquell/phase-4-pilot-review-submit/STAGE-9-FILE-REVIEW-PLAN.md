@@ -1,6 +1,17 @@
 # OV Stage-9 file-review plan (Ready for Pipeline Fixes)
 
-Date: 2026-06-14. Use when the pipeline finishes and the task flips to "Ready for Pipeline Fixes." Distilled from KM's Stage-9 logs (file-review/, pipeline-output/.meta/) and Larry's 6/14 finalize note. Companion: KM-TASK-LESSONS.md, docs/anti-hallucination.md, DO-NOT-REPEAT.md.
+Date: 2026-06-14. Use when the pipeline finishes and the task flips to "Ready for Pipeline Fixes." Distilled from KM's Stage-9 logs (file-review/, pipeline-output/.meta/), the official Instruction Doc Section 5 (World File Generation and Editing Overview), and Larry's 6/14 finalize note. Companion: KM-TASK-LESSONS.md, docs/anti-hallucination.md, DO-NOT-REPEAT.md.
+
+## Official Section 5 sequence (the canonical process this plan executes)
+1. World spec submitted to pipeline (done).
+2. Synthetic files created (pipeline generates the world files from the spec).
+3. Files reviewed with AutoQC results (file integrity, schema, consistency).
+4. Files edited to address issues (writer resolves flagged findings + anything off).
+5. Revisions uploaded - upload ALL files, edited AND unedited; REMOVE every task-level file first (any file uploaded becomes part of the finished world; leaving a task file causes tasking errors).
+6. Final file AutoQC re-run; if it flags legitimate issues, back to step 4 (check with the reviewer if unsure a flag is valid).
+   Then: World finalized and created. NAME IT: `Healthcare_Vasquell_###` (format `Healthcare_[Patient Last Name]_[###]`; pick the next available ### from the world count in Studio). Note: this is NOT the old KM pattern `Healthcare_247_Merrow`; the ordering is last name then number.
+
+Official quick review checklist (Section 5): verify clinical content (dates, names, doses, cross-document consistency); confirm intended trap content survived generation; identify and correct any new inconsistencies; remove task files before upload; be 100% confident before finalizing. The steps below execute this checklist plus the KM-learned extras the doc does not mention.
 
 ## The reframe (why OV's Stage 9 is lighter than KM's)
 KM's files were Custom Made, so engineering GENERATED them and introduced the defects: answer-key/meta leakage, traps editorialized, selective bold added, letterhead drift. OV is Writer-produced, so engineering should NOT regenerate ours. Verified pre-pipeline (2026-06-14) on our 29 built world files: leakage tokens 0, task-level files in world set 0, content/value bold 0 (bold is structural-only and symmetric). So OV Stage 9 reduces to ONE decisive check, then a short confirm list.
