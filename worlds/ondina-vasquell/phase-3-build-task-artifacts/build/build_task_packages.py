@@ -209,25 +209,30 @@ OV01_GRADER = dict(id="OV01", golden="golden-OV01-v1.docx",
   mechanism="Source-of-truth reconciliation under renal constraint. Central failure = carrying admission dosing forward or silently resuming or discontinuing a held agent.")
 
 
+SELFQC = (
+    "## Self-QC before RLS upload (CANONICAL, run every time)\n"
+    "Before Step 10 upload, run the writer-edition AutoQC in claude.ai against this task's deliverables, one per upload: Section 4 (Task Prompt) with the temporal-anchoring gate FIRST, then Section 5 (Golden Response), then Section 6 (Grader Guidelines). Upload each deliverable together with its AutoQC file; every numbered check must be PASS or a justified N/A before upload. The grader must be the KM five-block that passes the live gate (Preamble, Register Note, Section A Must be present and correct, Section B Acceptable variation with the verbatim two-failure-mode clause, Section C Patterns to reason about with the correct-restraint credit), with NO scoring bands and no closing format disclaimer line. Fix locally and rerun until clean. Do NOT rely on the live RLS AutoQC to catch format issues.\n\n"
+)
+
+
 def grader_v66(idd, dd):
-    """AutoQC Section 6 v6.6 grader: prose intro naming the golden, register note,
-    Section A/B/C, then a five-band 0.0 to 1.0 scoring section. No format disclaimer,
+    """KM five-block grader, the format passing the live Task AutoQC as of 2026-06-13:
+    Preamble, Register Note, Section A (Must be present and correct), Section B
+    (Acceptable variation + the verbatim two-failure-mode clause), Section C (Patterns
+    to reason about + the verbatim opener + a correct-restraint credit). NO scoring
+    bands (they trip No Weight Distribution on the live gate), no format disclaimer,
     no dashes or asterisks."""
-    deliv, anchor = AUX[idd]
     m = dd["mechanism"]
     central = m.split("Central failure =")[-1].strip().rstrip(".") if "Central failure =" in m else "the central failure"
+    two_fail = ("Two failure modes to watch for: (1) the model lists findings, doses, provider names, "
+                "or other specifics not in the golden and not covered by accepted alternatives; (2) the "
+                "model invents plausible clinical details absent from the source material.")
     parts = [
-      f"This grader scores a physician {deliv} for Ondina Vasquell against the uploaded golden, {dd['golden']}. {dd['context']} This golden is one defensible {deliv}, not the only one; credit a response that reaches the same dispositions with different wording, ordering, or format, and do not penalize anything the golden itself does.",
-      "Register note. This is a physician-facing document; grade on clinical substance and fidelity to the record, not prose polish, length, or formatting. The grader is chart-aware: verify any specific (a dose, date, lab value, organism, or name) against the mounted chart authoritative sources (the labs, cultures, consult notes, and MAR) before treating it as invented, and credit chart-supported detail even when the terse golden omits it.",
-      "Section A. Non-negotiables. " + dd["must"],
-      "Section B. Scope, format, and what legitimately varies. " + dd["acceptable"] + " The golden is one valid completion among many and is the calibration anchor for what the source supports: if the source files support a detail it is not fabrication, and if they do not, it is. Watch for two patterns, a response that states findings, doses, names, or other specifics not in the record and not covered by accepted alternatives, and a response that invents plausible clinical detail absent from the source.",
-      "Section C. Common failure modes. These are patterns to reason about, not items to tick off. " + dd["penalize"] + " Credit, do not penalize, a response that keeps a genuinely open item (perfusion, osteomyelitis, a pending arrangement, or a deferred restart) open or routed to the right owner rather than forcing a false resolution.",
-      ("Scoring. Provide a single 0.0 to 1.0 score with reasoning. The bands below are reference points, not a formula. "
-       f"0.8 to 1.0: {anchor} are handled correctly, {central} is avoided, chart-specific detail is supported by the record, and genuinely open items stay open; a senior reviewer would sign it. "
-       f"0.6 to 0.8: most of {anchor} are correct but one secondary element is weak or one minor unsupported detail appears, while the central disposition stays correct. "
-       f"0.4 to 0.6: the central disposition is partly wrong or hedged, or one of {anchor} is missed, or a tempting wrong option is partly adopted. "
-       f"0.2 to 0.4: {central} is present, or several of {anchor} are missed, or fabrication drives the answer. "
-       f"0.0 to 0.2: {central} is committed outright and compounded by missed anchors or fabricated specifics, leaving an unsafe or indefensible deliverable."),
+      "Preamble\n\n" + dd["context"] + f" The deliverable is graded against the uploaded golden, {dd['golden']}.",
+      "Register Note\n\nThis is a physician-facing document; grade on clinical substance and fidelity to the documented record, not on prose polish, length, or formatting. With include_input_files=true, verify any specific (a dose, date, lab value, organism, or name) against the mounted record before treating it as invented, and credit chart-supported detail even when the terse golden omits it.",
+      "Section A. Must be present and correct\n\n" + dd["must"],
+      "Section B. Acceptable variation\n\n" + dd["acceptable"] + " Use the golden as your reference for supported reasoning. " + two_fail,
+      "Section C. Patterns to reason about\n\nThese are patterns to reason about, not items to tick off.\n\n" + dd["penalize"] + f" The central failure to watch for is {central}.\n\nCorrect restraint, to credit not penalize. Keeping a genuinely open item (perfusion, osteomyelitis, a pending arrangement, or a deferred restart) open or routed to the right owner, rather than forcing a false resolution, is correct and should be credited not docked.",
     ]
     text = "\n\n".join(parts)
     for a, b in ((" — ", ", "), (" – ", ", "), (" - ", ", "), ("*", "")):
@@ -251,6 +256,7 @@ def emit():
             f"- Task-level file for this task (E1-T). Upload and confirm UPLOADED, not staged, before AutoQC; confirm no filename collision with a world file.\n"
             "- Grader is chart-aware (include_input_files true): true chart specifics are credited, not flagged invented.\n\n"
             "## Fairness\nEvery planted pressure is contradicted by the chart, so correcting it is rewarded and propagating it is a real clinical error. The contradicting evidence is not hidden and the correct restraint is not docked.\n\n"
+            + SELFQC +
             "## RLS entry (save after every step)\nWorkflow type = " + WORKFLOW[task]["wf"] + " (verify on the live Task Selection Categories sheet). 1.2 prompt-" + i + ".txt. 1.3 upload the task file, Save File Changes, refresh, confirm UPLOADED. 1.4 golden " + d["golden"] + " and grader grader-guidelines-" + i + ".txt; confirm the grader names the golden by filename. Save Changes, refresh, run Task AutoQC (rerun N failing once), 2.2 note, run Trajectories.\n\n"
             "## Expectation\nSee " + i + "-v1-pilot-preregistration.md for the locked forecast and read rules.\n", encoding="utf-8")
         (out / f"{i}-v1-pilot-preregistration.md").write_text(

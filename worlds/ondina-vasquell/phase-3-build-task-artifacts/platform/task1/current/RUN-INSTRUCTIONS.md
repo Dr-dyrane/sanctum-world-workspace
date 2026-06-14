@@ -16,6 +16,9 @@ Source-of-truth reconciliation under renal constraint. The unreconciled order se
 ## Fairness (hard line)
 Every discrepancy in the order set is contradicted by the chart: the renal trend shows the improved GFR, the admission hold orders state the holds as decisions, and the deep-tissue culture outranks the swab. Correcting them is the right move and is rewarded; propagating them is a real clinical error. The held agents are NOT pre-resolved in any file (A0.4 confirmed), so deferring their restart is a genuine judgment, not a coached catch.
 
+## Self-QC before RLS upload (CANONICAL, run every time)
+Before Step 10 upload, run the writer-edition AutoQC in claude.ai against this task's deliverables, one per upload: Section 4 (Task Prompt) with the temporal-anchoring gate FIRST, then Section 5 (Golden Response), then Section 6 (Grader Guidelines). Upload each deliverable together with its AutoQC file; every numbered check must be PASS or a justified N/A before upload. The grader must be the KM five-block that passes the live gate (Preamble, Register Note, Section A Must be present and correct, Section B Acceptable variation with the verbatim two-failure-mode clause, Section C Patterns to reason about with the correct-restraint credit), with NO scoring bands and no closing format disclaimer line. Fix locally and rerun until clean. Do NOT rely on the live RLS AutoQC to catch format issues.
+
 ## RLS entry (1.1 to 1.4) - save after every step
 Workflow type = Medication Reconciliation at Care Transitions (verify on the live Task Selection Categories sheet).
 1.2 Prompt: prompt-OV01.txt.
