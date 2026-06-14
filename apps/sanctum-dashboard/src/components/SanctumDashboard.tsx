@@ -670,7 +670,7 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
                 <h1>Task Suite</h1>
                 <p>{world.blurb}</p>
                 <p className="hero-insight">
-                  {hardest ? `Sharpest signal: ${hardest.id}. ${hardest.plain}` : 'No pilot signal yet.'}
+                  {selected.mean === null ? `${selected.id}: pilot pending.` : `${selected.id}: ${selected.plain}`}
                 </p>
                 <button
                   type="button"
@@ -683,9 +683,9 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
               </div>
 
               <aside className="metric-pane">
-                <span>Lowest mean</span>
-                <strong>{hardest?.mean ?? 'TBD'}</strong>
-                <p>{hardest?.name ?? selected.name}</p>
+                <span>Selected mean</span>
+                <strong>{scoreText(selected)}</strong>
+                <p>{selected.name}</p>
               </aside>
             </div>
 
