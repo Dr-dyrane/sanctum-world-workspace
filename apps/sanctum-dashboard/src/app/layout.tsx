@@ -4,7 +4,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Sanctum Dashboard',
-  description: 'Project Sanctum world and task cockpit',
+  description: 'Clinical world and task cockpit',
   robots: {
     index: false,
     follow: false,

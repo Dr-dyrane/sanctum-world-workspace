@@ -806,14 +806,83 @@ button {
   font-size: 12px;
 }
 
-.doc-preview pre {
+.document-copy {
   max-height: 360px;
   margin: 0;
   padding: 15px;
   overflow: auto;
   background: rgba(245, 245, 247, 0.9);
   color: rgba(11, 10, 16, 0.82);
-  font: 13px/1.55 "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+.document-copy p,
+.document-copy h4,
+.document-copy blockquote,
+.document-copy pre {
+  position: relative;
+  z-index: 1;
+}
+
+.document-copy p {
+  margin: 0 0 10px;
+}
+
+.document-copy h4 {
+  margin: 14px 0 8px;
+  color: var(--fg);
+  font-size: 15px;
+  line-height: 1.25;
+}
+
+.document-copy h4:first-child {
+  margin-top: 0;
+}
+
+.document-copy blockquote {
+  margin: 10px 0;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(120, 120, 128, 0.1);
+  color: var(--fg-soft);
+}
+
+.document-copy .md-list,
+.document-copy .md-number {
+  padding-left: 18px;
+}
+
+.document-copy .md-list::before,
+.document-copy .md-number::before {
+  position: absolute;
+  left: 2px;
+  color: var(--accent-a);
+}
+
+.document-copy .md-list::before {
+  content: "";
+  top: 0.72em;
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background: var(--accent-a);
+}
+
+.document-copy .md-number::before {
+  content: "•";
+  top: 0;
+  font-weight: 700;
+}
+
+.document-copy .md-code {
+  margin: 10px 0;
+  padding: 12px;
+  overflow: auto;
+  border-radius: 12px;
+  background: rgba(11, 10, 16, 0.06);
+  color: rgba(11, 10, 16, 0.82);
+  font: 12.5px/1.55 "SF Mono", ui-monospace, Menlo, Consolas, monospace;
   white-space: pre-wrap;
 }
 

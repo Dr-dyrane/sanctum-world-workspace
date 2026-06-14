@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useEffect, useMemo, useState } from 'react';
-import type { CSSProperties } from 'react';
+import type { CSSProperties, ReactNode } from 'react';
 import logo from '@/app/logo.png';
 import type { TaskDocumentRow } from '@/lib/database';
 import type { Stage, Task, World } from '@/lib/sanctum-data';
@@ -60,13 +60,13 @@ function statusClass(stage: string) {
 
 function roleLabel(role: string) {
   const labels: Record<string, string> = {
-    prompt: 'Prompt',
-    task_file: 'Task file',
-    golden: 'Golden',
-    grader: 'Grader',
-    run_instructions: 'Run notes',
+    prompt: 'Task ask',
+    task_file: 'Source file',
+    golden: 'Reference answer',
+    grader: 'Review guide',
+    run_instructions: 'Run note',
   };
-  return labels[role] ?? 'Document';
+  return labels[role] ?? 'Source file';
 }
 
 function roleTone(role: string) {
@@ -77,7 +77,7 @@ function roleTone(role: string) {
   return 'gray';
 }
 
-function artifactCue(name: string) {
+function sourceCue(name: string) {
   const lower = name.toLowerCase();
   if (lower.includes('photo') || lower.endsWith('.png') || lower.endsWith('.jpg')) return 'Visual evidence';
   if (lower.includes('signout')) return 'Covering note';
@@ -85,11 +85,19 @@ function artifactCue(name: string) {
   if (lower.includes('query')) return 'Documentation query';
   if (lower.includes('coding') || lower.includes('him')) return 'Coding worksheet';
   if (lower.includes('draft') || lower.includes('started')) return 'Started document';
-  return 'Mounted file';
+  return 'Supporting file';
+}
+
+function sourceName(doc: DisplayDocument) {
+  if (doc.role === 'prompt') return 'Task ask';
+  if (doc.role === 'golden') return 'Reference answer';
+  if (doc.role === 'grader') return 'Review guide';
+  if (doc.role === 'run_instructions') return 'Run note';
+  return sourceCue(doc.filename);
 }
 
 function formatBytes(value: number | null) {
-  if (!value) return 'Not synced';
+  if (!value) return 'Preview pending';
   if (value < 1024) return `${value} B`;
   if (value < 1024 * 1024) return `${Math.round(value / 102.4) / 10} KB`;
   return `${Math.round(value / 1024 / 102.4) / 10} MB`;
@@ -121,7 +129,7 @@ function fallbackDocuments(worldId: string, task: Task): DisplayDocument[] {
       mimeType: 'text/plain',
       sha256: null,
       byteSize: null,
-      contentText: 'This packet has not been synced from Neon yet. Run npm run seed:docs from the Next app to load task documents.',
+      contentText: 'This task ask is not available for preview yet.',
       contentBase64: null,
       uploaded: false,
     },
@@ -135,7 +143,7 @@ function fallbackDocuments(worldId: string, task: Task): DisplayDocument[] {
       mimeType: 'application/octet-stream',
       sha256: null,
       byteSize: null,
-      contentText: `${artifactCue(file)}. Not synced from Neon yet.`,
+      contentText: `${sourceCue(file)}. Preview is not available yet.`,
       contentBase64: null,
       uploaded: false,
     })),
@@ -149,7 +157,7 @@ function fallbackDocuments(worldId: string, task: Task): DisplayDocument[] {
       mimeType: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
       sha256: null,
       byteSize: null,
-      contentText: 'Golden reference preview is waiting for Neon sync.',
+      contentText: 'Reference answer preview is not available yet.',
       contentBase64: null,
       uploaded: false,
     },
@@ -163,7 +171,7 @@ function fallbackDocuments(worldId: string, task: Task): DisplayDocument[] {
       mimeType: 'text/plain',
       sha256: null,
       byteSize: null,
-      contentText: 'Grader preview is waiting for Neon sync.',
+      contentText: 'Review guide preview is not available yet.',
       contentBase64: null,
       uploaded: false,
     },
@@ -173,6 +181,7 @@ function fallbackDocuments(worldId: string, task: Task): DisplayDocument[] {
 function uploadedDocuments(documents: TaskDocumentRow[], worldId: string, taskId: string): DisplayDocument[] {
   return documents
     .filter(doc => doc.worldId === worldId && doc.taskId === taskId)
+    .filter(doc => doc.role !== 'run_instructions')
     .map(doc => ({
       ...doc,
       sha256: doc.sha256,
@@ -183,9 +192,93 @@ function uploadedDocuments(documents: TaskDocumentRow[], worldId: string, taskId
 
 function previewText(doc: DisplayDocument) {
   if (doc.contentText) return doc.contentText;
-  if (doc.contentBase64) return 'Image payload synced to Neon. Preview renders from the database payload below.';
-  if (doc.uploaded) return 'This file is synced to Neon as binary metadata. No text preview is available for this type.';
-  return 'Not synced yet.';
+  if (doc.contentBase64) return 'Image ready for review.';
+  if (doc.uploaded) return 'Preview is not available for this file type.';
+  return 'Preview is not available yet.';
+}
+
+function isMarkdown(doc: DisplayDocument) {
+  return doc.mimeType === 'text/markdown' || doc.filename.toLowerCase().endsWith('.md');
+}
+
+function cleanInlineMarkdown(value: string) {
+  return value
+    .replace(/!\[([^\]]*)\]\([^)]+\)/g, '$1')
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/`([^`]+)`/g, '$1')
+    .replace(/\*\*([^*]+)\*\*/g, '$1')
+    .replace(/__([^_]+)__/g, '$1')
+    .replace(/\*([^*]+)\*/g, '$1')
+    .replace(/_([^_]+)_/g, '$1')
+    .trim();
+}
+
+function renderTextPreview(text: string, markdown: boolean) {
+  const lines = text.split('\n');
+  const nodes: ReactNode[] = [];
+  let codeLines: string[] = [];
+  let inCode = false;
+
+  function flushCode(key: string) {
+    if (!codeLines.length) return;
+    nodes.push(<pre className="md-code" key={key}>{codeLines.join('\n')}</pre>);
+    codeLines = [];
+  }
+
+  lines.forEach((line, index) => {
+    const trimmed = line.trim();
+
+    if (markdown && trimmed.startsWith('```')) {
+      if (inCode) flushCode(`code-${index}`);
+      inCode = !inCode;
+      return;
+    }
+
+    if (inCode) {
+      codeLines.push(line);
+      return;
+    }
+
+    if (!trimmed) {
+      return;
+    }
+
+    if (markdown) {
+      const heading = trimmed.match(/^(#{1,6})\s+(.+)$/);
+      if (heading) {
+        nodes.push(<h4 key={index}>{cleanInlineMarkdown(heading[2])}</h4>);
+        return;
+      }
+
+      const bullet = trimmed.match(/^[-*+]\s+(.+)$/);
+      if (bullet) {
+        nodes.push(<p className="md-list" key={index}>{cleanInlineMarkdown(bullet[1])}</p>);
+        return;
+      }
+
+      const numbered = trimmed.match(/^\d+[.)]\s+(.+)$/);
+      if (numbered) {
+        nodes.push(<p className="md-number" key={index}>{cleanInlineMarkdown(numbered[1])}</p>);
+        return;
+      }
+
+      const quote = trimmed.match(/^>\s+(.+)$/);
+      if (quote) {
+        nodes.push(<blockquote key={index}>{cleanInlineMarkdown(quote[1])}</blockquote>);
+        return;
+      }
+    }
+
+    nodes.push(<p key={index}>{markdown ? cleanInlineMarkdown(trimmed) : trimmed}</p>);
+  });
+
+  flushCode('code-final');
+
+  return <div className={markdown ? 'markdown-preview document-copy' : 'document-copy'}>{nodes}</div>;
+}
+
+function renderDocumentPreview(doc: DisplayDocument) {
+  return renderTextPreview(previewText(doc), isMarkdown(doc));
 }
 
 function primaryFailure(tasks: Task[]) {
@@ -238,12 +331,12 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
   }, [selected?.id, world?.id]);
 
   const summary = useMemo(() => {
-    if (!world) return { delivered: 0, ready: 0, review: 0, mean: null, docs: 0 };
+    if (!world) return { delivered: 0, ready: 0, review: 0, mean: null, sourceFiles: 0 };
     const delivered = world.tasks.filter(task => task.stage === 'delivered').length;
     const ready = world.tasks.filter(task => task.stage === 'ready').length;
     const review = world.tasks.filter(task => task.stage === 'review').length;
-    const docs = documents.filter(doc => doc.worldId === world.id).length;
-    return { delivered, ready, review, mean: meanOf(world.tasks), docs };
+    const sourceFiles = documents.filter(doc => doc.worldId === world.id).length;
+    return { delivered, ready, review, mean: meanOf(world.tasks), sourceFiles };
   }, [documents, world]);
 
   const visibleTasks = useMemo(() => {
@@ -288,7 +381,7 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
             ))}
           </div>
           <span className="chrome-separator" />
-          <span className="chrome-stat">{summary.docs ? `${summary.docs} docs` : databaseConfigured ? 'Neon linked' : 'Neon off'}</span>
+          <span className="chrome-stat">{summary.sourceFiles ? `${summary.sourceFiles} files` : databaseConfigured ? 'Sources ready' : 'Sources pending'}</span>
         </div>
       </header>
 
@@ -314,7 +407,7 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
                   className="primary-cta"
                   onClick={() => document.getElementById(`task-${selected.id}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' })}
                 >
-                  Inspect {selected.id} packet
+                  Inspect {selected.id} materials
                 </button>
               </div>
 
@@ -368,8 +461,8 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
 
         <section className="signal-panel surf" aria-label="Failure signal families">
           <div className="section-head">
-            <p className="micro-label">Signal families</p>
-            <h2>Where the model breaks</h2>
+                <p className="micro-label">Clinical challenge groups</p>
+                <h2>Where the model misses</h2>
           </div>
           <div className="signal-strip">
             {familySignals.map(signal => (
@@ -381,7 +474,7 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
               >
                 <span>{signal.family}</span>
                 <strong>{signal.mean ?? 'TBD'}</strong>
-                <small>{signal.tasks.length} tasks, {signal.floorCount} floors</small>
+                <small>{signal.tasks.length} tasks, {signal.floorCount} critical misses</small>
               </button>
             ))}
           </div>
@@ -433,9 +526,9 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
                   </div>
                   <div className="run-dots">{runDots(task)}</div>
                   <div className="counts-strip">
-                    <span>Catchers <strong>{taskCounts.catchers}</strong></span>
-                    <span>Floors <strong>{taskCounts.floors}</strong></span>
-                    <span>Sub-70 <strong>{taskCounts.sub70}/{task.runsTotal}</strong></span>
+                    <span>Safe runs <strong>{taskCounts.catchers}</strong></span>
+                    <span>Critical misses <strong>{taskCounts.floors}</strong></span>
+                    <span>Under 70 <strong>{taskCounts.sub70}/{task.runsTotal}</strong></span>
                   </div>
                 </div>
               </article>
@@ -443,10 +536,10 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
           })}
         </section>
 
-        <aside className="focus-sheet-panel surf" aria-label={`${selected.id} packet`}>
+        <aside className="focus-sheet-panel surf" aria-label={`${selected.id} materials`}>
           <div className="focus-head">
             <div>
-              <p className="micro-label">{selected.id} packet</p>
+              <p className="micro-label">{selected.id} materials</p>
               <h2>{selected.name}</h2>
             </div>
             <span className={statusClass(selected.stage)}>{statusLabels[selected.stage]}</span>
@@ -457,21 +550,21 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
               <p>{selected.plain}</p>
               <div className="detail-grid">
                 <div><span>Mean</span><strong>{scoreText(selected)}</strong></div>
-                <div><span>Floors</span><strong>{selectedCounts.floors}</strong></div>
-                <div><span>Docs</span><strong>{taskDocuments.length}</strong></div>
+                <div><span>Critical misses</span><strong>{selectedCounts.floors}</strong></div>
+                <div><span>Files</span><strong>{taskDocuments.length}</strong></div>
               </div>
               <div className="mechanism-box">
-                <span>Trap surface</span>
+                <span>Scored challenge</span>
                 <p>{selected.mechanism}</p>
               </div>
             </section>
 
             <section className="document-renderer">
               <div className="section-head compact">
-                <p className="micro-label">Packet renderer</p>
-                <h3>Actual task artifacts</h3>
+                <p className="micro-label">Task materials</p>
+                <h3>Review the source files</h3>
               </div>
-              <div className="doc-tabs" aria-label="Task packet documents">
+              <div className="doc-tabs" aria-label="Task source files">
                 {taskDocuments.map(doc => (
                   <button
                     key={doc.id}
@@ -481,7 +574,7 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
                   >
                     <span className={`role-dot ${roleTone(doc.role)}`} />
                     <strong>{roleLabel(doc.role)}</strong>
-                    <small>{doc.filename}</small>
+                    {sourceName(doc) !== roleLabel(doc.role) ? <small>{sourceName(doc)}</small> : null}
                   </button>
                 ))}
               </div>
@@ -491,20 +584,20 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
                   <header>
                     <div>
                       <span className="micro-label">{roleLabel(activeDoc.role)}</span>
-                      <strong>{activeDoc.filename}</strong>
+                      <strong>{sourceName(activeDoc)}</strong>
                     </div>
                     <span>{formatBytes(activeDoc.byteSize)}</span>
                   </header>
 
                   {activeDoc.contentBase64 ? (
-                    <img src={`data:${activeDoc.mimeType};base64,${activeDoc.contentBase64}`} alt={`${activeDoc.filename} preview`} />
+                    <img src={`data:${activeDoc.mimeType};base64,${activeDoc.contentBase64}`} alt={`${sourceName(activeDoc)} preview`} />
                   ) : (
-                    <pre>{previewText(activeDoc)}</pre>
+                    renderDocumentPreview(activeDoc)
                   )}
 
                   <footer>
-                    <span>{activeDoc.uploaded ? 'Synced from Neon' : 'Local fallback'}</span>
-                    <span>{activeDoc.sha256 ? `sha ${activeDoc.sha256.slice(0, 10)}` : 'No hash'}</span>
+                    <span>{activeDoc.uploaded ? 'Ready to view' : 'Preview pending'}</span>
+                    <span>{activeDoc.sha256 ? 'File checked' : 'Check pending'}</span>
                   </footer>
                 </article>
               )}
@@ -517,11 +610,11 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
           <div className="summary-grid">
             <div><strong>{summary.delivered}</strong><span>Delivered tasks</span></div>
             <div><strong>{summary.ready}</strong><span>Ready to deliver</span></div>
-            <div><strong>{summary.docs || '-'}</strong><span>Neon documents</span></div>
+            <div><strong>{summary.sourceFiles || '-'}</strong><span>Source files</span></div>
             <div><strong>{summary.mean ?? 'TBD'}</strong><span>Mean, 10 tasks</span></div>
           </div>
           <p className="summary-note">
-            Static dashboard language remains the visual base. Next adds live packet data, document previews, and a safer path to deployment.
+            Each task opens into its ask, supporting files, reference answer, and review guide.
           </p>
           <div className="journey-row">
             {journey.map(item => (
