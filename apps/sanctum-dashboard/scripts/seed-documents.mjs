@@ -9,7 +9,18 @@ const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const appRoot = path.resolve(scriptDir, '..');
 const repoRoot = path.resolve(appRoot, '../..');
 const envPath = path.join(appRoot, '.env.local');
-const platformRoot = path.join(repoRoot, 'worlds/korvin-merrow/task-setup/platform');
+const platformSets = [
+  {
+    worldId: 'korvin-merrow',
+    taskPrefix: 'KM',
+    platformRoot: path.join(repoRoot, 'worlds/korvin-merrow/task-setup/platform'),
+  },
+  {
+    worldId: 'ondina-vasquell',
+    taskPrefix: 'OV',
+    platformRoot: path.join(repoRoot, 'worlds/ondina-vasquell/phase-3-build-task-artifacts/platform'),
+  },
+];
 
 async function loadLocalEnv() {
   const raw = await fs.readFile(envPath, 'utf8');
@@ -43,6 +54,14 @@ function mimeFor(filename) {
   return 'application/octet-stream';
 }
 
+function shouldSeed(filename) {
+  const lower = filename.toLowerCase();
+  if (lower.startsWith('run-instructions')) return false;
+  if (lower.includes('fairness-check')) return false;
+  if (lower.includes('pilot-preregistration')) return false;
+  return true;
+}
+
 async function textFor(filename, buffer) {
   const lower = filename.toLowerCase();
   if (lower.endsWith('.txt') || lower.endsWith('.md')) return cleanText(buffer.toString('utf8'));
@@ -66,7 +85,7 @@ function cleanText(value) {
     .trim();
 }
 
-async function currentTaskDirs() {
+async function currentTaskDirs(platformRoot) {
   const entries = await fs.readdir(platformRoot, { withFileTypes: true });
   return entries
     .filter((entry) => entry.isDirectory() && /^task\d+$/.test(entry.name))
@@ -80,32 +99,35 @@ async function currentTaskDirs() {
 
 async function collectDocuments() {
   const documents = [];
-  for (const currentDir of await currentTaskDirs()) {
-    const taskNumber = Number(path.basename(path.dirname(currentDir)).replace('task', ''));
-    const taskId = `KM${String(taskNumber).padStart(2, '0')}`;
-    const files = await fs.readdir(currentDir, { withFileTypes: true });
+  for (const platformSet of platformSets) {
+    for (const currentDir of await currentTaskDirs(platformSet.platformRoot)) {
+      const taskNumber = Number(path.basename(path.dirname(currentDir)).replace('task', ''));
+      const taskId = `${platformSet.taskPrefix}${String(taskNumber).padStart(2, '0')}`;
+      const files = await fs.readdir(currentDir, { withFileTypes: true });
 
-    for (const file of files) {
-      if (!file.isFile()) continue;
-      const absolutePath = path.join(currentDir, file.name);
-      const relativePath = path.relative(repoRoot, absolutePath);
-      const buffer = await fs.readFile(absolutePath);
-      const sha256 = crypto.createHash('sha256').update(buffer).digest('hex');
-      const role = roleFor(file.name);
+      for (const file of files) {
+        if (!file.isFile()) continue;
+        if (!shouldSeed(file.name)) continue;
+        const absolutePath = path.join(currentDir, file.name);
+        const relativePath = path.relative(repoRoot, absolutePath);
+        const buffer = await fs.readFile(absolutePath);
+        const sha256 = crypto.createHash('sha256').update(buffer).digest('hex');
+        const role = roleFor(file.name);
 
-      documents.push({
-        id: `korvin-merrow:${taskId}:${role}:${file.name}`,
-        worldId: 'korvin-merrow',
-        taskId,
-        role,
-        filename: file.name,
-        relativePath,
-        mimeType: mimeFor(file.name),
-        sha256,
-        byteSize: buffer.length,
-        contentText: await textFor(file.name, buffer),
-        contentBase64: base64For(file.name, buffer),
-      });
+        documents.push({
+          id: `${platformSet.worldId}:${taskId}:${role}:${file.name}`,
+          worldId: platformSet.worldId,
+          taskId,
+          role,
+          filename: file.name,
+          relativePath,
+          mimeType: mimeFor(file.name),
+          sha256,
+          byteSize: buffer.length,
+          contentText: await textFor(file.name, buffer),
+          contentBase64: base64For(file.name, buffer),
+        });
+      }
     }
   }
   return documents;
@@ -138,6 +160,9 @@ async function main() {
   await sql`create index if not exists sanctum_documents_world_task_idx on sanctum_documents (world_id, task_id, role)`;
 
   const documents = await collectDocuments();
+  const worldIds = platformSets.map((item) => item.worldId);
+  await sql`delete from sanctum_documents where world_id = any(${worldIds})`;
+
   for (const doc of documents) {
     await sql`
       insert into sanctum_documents (
@@ -179,8 +204,14 @@ async function main() {
     `;
   }
 
-  const [count] = await sql`select count(*)::int as total from sanctum_documents where world_id = 'korvin-merrow'`;
-  console.log(`Seeded ${documents.length} current packet files. Neon now holds ${count.total} Korvin packet documents.`);
+  const counts = await sql`
+    select world_id, count(*)::int as total
+    from sanctum_documents
+    group by world_id
+    order by world_id
+  `;
+  const summary = counts.map((row) => `${row.world_id}: ${row.total}`).join(', ');
+  console.log(`Seeded ${documents.length} current packet files. Neon now holds ${summary}.`);
 }
 
 main().catch((error) => {

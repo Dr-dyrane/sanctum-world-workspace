@@ -14,6 +14,7 @@ type Props = {
 const stageIcons: Record<Stage, IconName> = {
   delivered: 'file-check',
   ready: 'shield',
+  built: 'folder-open',
   review: 'alert-triangle',
   planned: 'activity',
 };

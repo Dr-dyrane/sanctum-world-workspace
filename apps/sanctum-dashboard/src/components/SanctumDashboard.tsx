@@ -25,6 +25,7 @@ const filterLabels: Array<{ id: Filter; label: string }> = [
   { id: 'all', label: 'All' },
   { id: 'delivered', label: 'Delivered' },
   { id: 'ready', label: 'Ready' },
+  { id: 'built', label: 'Built' },
   { id: 'planned', label: 'Planned' },
   { id: 'review', label: 'Review' },
 ];
@@ -126,11 +127,12 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
   }, [proofOpen]);
 
   const summary = useMemo(() => {
-    if (!world) return { delivered: 0, ready: 0, review: 0, planned: 0, mean: null, sourceFiles: 0 };
+    if (!world) return { delivered: 0, ready: 0, review: 0, built: 0, planned: 0, mean: null, sourceFiles: 0 };
     return {
       delivered: world.tasks.filter(task => task.stage === 'delivered').length,
       ready: world.tasks.filter(task => task.stage === 'ready').length,
       review: world.tasks.filter(task => task.stage === 'review').length,
+      built: world.tasks.filter(task => task.stage === 'built').length,
       planned: world.tasks.filter(task => task.stage === 'planned').length,
       mean: meanOf(world.tasks),
       sourceFiles: documents.filter(doc => doc.worldId === world.id).length,
@@ -155,6 +157,7 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
     all: world.tasks.length,
     delivered: summary.delivered,
     ready: summary.ready,
+    built: summary.built,
     planned: summary.planned,
     review: summary.review,
   };

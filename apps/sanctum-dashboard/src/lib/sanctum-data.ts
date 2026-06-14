@@ -1,4 +1,4 @@
-export type Stage = 'planned' | 'delivered' | 'ready' | 'review';
+export type Stage = 'planned' | 'built' | 'delivered' | 'ready' | 'review';
 export type Reachability = 'proven' | 'watch' | 'open' | 'notstarted';
 export type Quality = 'exact' | 'planned';
 
@@ -56,6 +56,16 @@ const packets: Record<string, TaskPacket> = {
   KM08: { prompt:'prompt-task8-v7.txt', files:['discharge_day_soap_addendum_started_05242026.docx', 'night_float_pain_sleep_signout_05242026.docx', 'bedside_photo_05242026.png'], golden:'golden-KM08-v7.docx', grader:'grader-guidelines-task8-v7.txt' },
   KM09: { prompt:'prompt-task9-v2.txt', files:['him_preliminary_inpatient_coding_summary_05252026.docx'], golden:'golden-KM09-v2.docx', grader:'grader-guidelines-task9-v2.txt' },
   KM10: { prompt:'prompt-task10-v3.txt', files:['cdi_query_memo_05262026.docx'], golden:'golden-KM10-v3.docx', grader:'grader-guidelines-task10-v3.txt' },
+  OV01: { prompt:'prompt-OV01.txt', files:['preliminary_discharge_order_set_05212026.docx'], golden:'golden-OV01-v1.docx', grader:'grader-guidelines-OV01.txt' },
+  OV02: { prompt:'prompt-OV02.txt', files:['him_preliminary_coding_worksheet_05212026.docx'], golden:'golden-OV02-v1.docx', grader:'grader-guidelines-OV02.txt' },
+  OV03: { prompt:'prompt-OV03.txt', files:['cdi_query_memo_05232026.docx'], golden:'golden-OV03-v1.docx', grader:'grader-guidelines-OV03.txt' },
+  OV04: { prompt:'prompt-OV04.txt', files:['medicare_advantage_denial_letter_05232026.docx'], golden:'golden-OV04-v1.docx', grader:'grader-guidelines-OV04.txt' },
+  OV05: { prompt:'prompt-OV05.txt', files:['pharmacy_benefit_rejection_05242026.docx'], golden:'golden-OV05-v1.docx', grader:'grader-guidelines-OV05.txt' },
+  OV06: { prompt:'prompt-OV06.txt', files:['payer_concurrent_review_request_05252026.docx'], golden:'golden-OV06-v1.docx', grader:'grader-guidelines-OV06.txt' },
+  OV07: { prompt:'prompt-OV07.txt', files:['quality_abstraction_worksheet_06042026.docx'], golden:'golden-OV07-v1.docx', grader:'grader-guidelines-OV07.txt' },
+  OV08: { prompt:'prompt-OV08.txt', files:[], golden:'golden-OV08-v1.docx', grader:'grader-guidelines-OV08.txt' },
+  OV09: { prompt:'prompt-OV09.txt', files:['safety_event_intake_summary_06112026.docx'], golden:'golden-OV09-v1.docx', grader:'grader-guidelines-OV09.txt' },
+  OV10: { prompt:'prompt-OV10.txt', files:['started_discharge_instruction_draft_05212026.docx'], golden:'golden-OV10-v1.docx', grader:'grader-guidelines-OV10.txt' },
 };
 
 const plannedPacket: TaskPacket = {
@@ -74,6 +84,16 @@ const basePlanned = {
   quality: 'planned' as const,
   reach: 'notstarted' as const,
   reviewer: 'Not staged',
+};
+
+const baseBuilt = {
+  stage: 'built' as const,
+  mean: null,
+  spread: [],
+  runsTotal: 10,
+  quality: 'exact' as const,
+  reach: 'notstarted' as const,
+  reviewer: 'Alexander U',
 };
 
 export const worlds: World[] = [
@@ -105,37 +125,37 @@ export const worlds: World[] = [
   {
     id: 'ondina-vasquell',
     title: 'Ondina Vasquell',
-    kicker: 'Incoming world',
-    blurb: 'Limb-threat diabetic foot world. Planned suite. Pilots pending.',
+    kicker: 'File review in progress',
+    blurb: 'Limb-threat diabetic foot world. Blueprint accepted. Files revised. Task packets built. Pilots pending.',
     meta: {
-      patient: 'Ondina Vasquell incoming clinical suite',
-      chart: 'Planned diabetic foot infection world, snapshot May 21, 2026 at 18:00',
+      patient: 'Ondina Vasquell clinical suite',
+      chart: '34 revised world files, snapshot May 21, 2026 at 18:00',
       writer: 'Alexander Udeogaranya, MD',
-      evidence: 'Brainstorm submission and local planning records',
-      dataSyncedOn: '2026-06-13',
+      evidence: 'Blueprint accepted. File review active. Task packets built.',
+      dataSyncedOn: '2026-06-14',
     },
     tasks: [
-      ['OV01','Discharge Medication Reconciliation Safety Table','Renal antibiotic dosing under shifting eGFR.'],
-      ['OV02','Physician Coding Attestation','Unsupported osteomyelitis and pressure-injury specificity.'],
-      ['OV03','CDI Query Response','Equivocal osteomyelitis under CDI pressure.'],
-      ['OV04','SNF Authorization Denial Appeal','Clinical improvement vs safe home readiness.'],
-      ['OV05','Pharmacy Claim Rejection Response','Unsafe substitute and culture provenance pressure.'],
-      ['OV06','Continued-Stay Determination','Improving markers vs unresolved limb-safety barriers.'],
-      ['OV07','Diabetes Quality-Measure Abstraction','Quiet lookback and denominator logic.'],
-      ['OV08','Vascular Surgery Referral Letter','Perfusion unresolved despite referral pressure.'],
-      ['OV09','Safety Event Root Cause Review','System failure vs patient-blame framing.'],
-      ['OV10','Finalize Discharge Instructions','True placeholder for offloading readiness.'],
-    ].map(([id, name, mechanism], index) => ({
-      ...basePlanned,
+      ['OV01','Discharge Medication Reconciliation Safety Table','Renal antibiotic dosing under shifting eGFR.','Medication safety','Medication Reconciliation at Care Transitions'],
+      ['OV02','Physician Coding Attestation','Unsupported osteomyelitis and pressure-injury specificity.','Severity capture','Inpatient Medical Coding and DRG Assignment'],
+      ['OV03','CDI Query Response','Equivocal osteomyelitis under documentation pressure.','Documentation integrity','CDI-Coding DRG Reconciliation Review'],
+      ['OV04','SNF Authorization Denial Appeal','Clinical improvement vs safe home readiness.','Access and disposition','Claims Denial Analysis and Appeal Preparation'],
+      ['OV05','Pharmacy Claim Rejection Response','Unsafe substitute and culture provenance pressure.','Medication access','Pharmacy Insurance Claim Rejection Resolution'],
+      ['OV06','Continued-Stay Determination','Improving markers vs unresolved limb-safety barriers.','Utilization review','Utilization Review Concurrent Stay Documentation'],
+      ['OV07','Diabetes Quality-Measure Abstraction','Quiet lookback and denominator logic.','Measure abstraction','HEDIS Medical Record Chart Abstraction and Review'],
+      ['OV08','Vascular Surgery Referral Letter','Perfusion unresolved despite referral pressure.','Perfusion uncertainty','Referral Intake/Triage'],
+      ['OV09','Safety Event Root Cause Review','System failure vs patient-blame framing.','Safety review','Patient Safety Indicator (PSI) Analysis and Reporting'],
+      ['OV10','Finalize Discharge Instructions','True placeholder for offloading readiness.','Discharge readiness','Medical Transcription and Clinical Documentation Completion'],
+    ].map(([id, name, mechanism, family, workflow], index) => ({
+      ...baseBuilt,
       id,
       position: index + 1,
       name,
-      plain: 'Planned. Pilot pending.',
+      plain: 'Packet built. Pilot pending.',
       mechanism,
-      family: 'Planned signal',
-      workflow: 'Planned clinical workflow',
-      verdict: 'Awaiting build and pilot.',
-      packet: plannedPacket,
+      family,
+      workflow,
+      verdict: 'Built locally. Awaiting pilot.',
+      packet: packets[id],
     })),
   },
 ];
@@ -154,5 +174,6 @@ export const statusLabels: Record<Stage, string> = {
   delivered: 'Delivered',
   ready: 'Ready',
   review: 'Review',
+  built: 'Built',
   planned: 'Planned',
 };

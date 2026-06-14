@@ -704,6 +704,10 @@ html.dark .score-stage {
   background: var(--ready-soft);
 }
 
+.status-pill.built::before {
+  background: var(--accent-a);
+}
+
 .status-pill.delivered::before {
   background: var(--ok-soft);
 }
@@ -1209,6 +1213,10 @@ html.dark .primary-cta {
 
 .lens-dot.ready {
   background: var(--ready-soft);
+}
+
+.lens-dot.built {
+  background: var(--accent-a);
 }
 
 .lens-dot.review {
@@ -2631,6 +2639,11 @@ html.dark .score-squircle {
   box-shadow: 0 0 0 5px var(--ready-fill);
 }
 
+.score-squircle.built .score-meter span {
+  background: var(--accent-a);
+  box-shadow: 0 0 0 5px var(--accent-fill);
+}
+
 .score-squircle.delivered .score-meter span {
   background: var(--ok);
   box-shadow: 0 0 0 5px var(--ok-fill);
@@ -3255,6 +3268,10 @@ html.dark .score-squircle {
   background: var(--ready-soft);
 }
 
+.lens-dot.built {
+  background: var(--accent-a);
+}
+
 .lens-dot.review {
   background: var(--bad);
 }
@@ -3303,6 +3320,12 @@ html.dark .score-squircle {
   --task-state: var(--ready);
   --task-state-soft: var(--ready-soft);
   --task-state-fill: var(--ready-fill);
+}
+
+.simple-task-card.built {
+  --task-state: var(--accent-a);
+  --task-state-soft: var(--accent-b);
+  --task-state-fill: var(--accent-fill);
 }
 
 .simple-task-card.review {

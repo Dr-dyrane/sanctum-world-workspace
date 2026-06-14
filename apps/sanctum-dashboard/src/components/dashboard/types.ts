@@ -24,7 +24,7 @@ export type DisplayDocument = {
 
 export type Filter = 'all' | Stage;
 
-export type ReadinessTone = 'planned' | 'review' | 'delivered' | 'ready' | 'watch';
+export type ReadinessTone = 'planned' | 'built' | 'review' | 'delivered' | 'ready' | 'watch';
 
 export type Readiness = {
   label: string;

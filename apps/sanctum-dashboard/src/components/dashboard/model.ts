@@ -34,6 +34,7 @@ export function proofRunIndex(task: Task) {
 
 export function readinessFor(task: Task): Readiness {
   if (task.stage === 'planned') return { label: 'Not built', tone: 'planned' };
+  if (task.stage === 'built') return { label: 'Built', tone: 'built' };
   if (task.stage === 'review') return { label: 'Needs review', tone: 'review' };
   if (task.stage === 'delivered') return { label: 'Delivered', tone: 'delivered' };
   if (task.reach === 'watch' || task.reach === 'open') return { label: 'Ready with watch', tone: 'watch' };
@@ -50,13 +51,14 @@ export function reachLabel(task: Task) {
 export function readinessGates(task: Task): ReadinessGate[] {
   const taskCounts = counts(task);
   const built = task.stage !== 'planned';
+  const scored = task.spread.length > 0;
   const proofComplete = task.stage === 'delivered' || task.stage === 'ready';
   return [
     {
       icon: 'alert-triangle',
       label: 'Clinical miss',
-      value: built ? `${taskCounts.floors}/${task.runsTotal}` : 'Pending',
-      state: taskCounts.floors > 0 ? 'pass' : built ? 'watch' : 'pending',
+      value: scored ? `${taskCounts.floors}/${task.runsTotal}` : 'Pending',
+      state: taskCounts.floors > 0 ? 'pass' : scored ? 'watch' : 'pending',
     },
     {
       icon: 'shield',
