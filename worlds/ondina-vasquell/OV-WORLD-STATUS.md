@@ -16,7 +16,7 @@ Active suite = 9 tasks (OV02 retired 2026-06-14; OV07 promoted to position 2). I
 | Pos | ID (stable) | Workflow | Cold mechanism | Stage / latest | Next |
 |---|---|---|---|---|---|
 | 1 | OV01 | Medication Reconciliation at Care Transitions | enoxaparin carried to discharge -> STOP | BANKED (job 741ba52f, mean 68, 4 sub-70) | Alexander finalize FA/GA -> 3 PLs -> Abi-mode -> submit |
-| 2 | OV07 | HEDIS Medical Record Chart Abstraction and Review | quiet dated lookback/exclusion (best floor candidate) | v1 built; golden is HALF-PLACEHOLDER ("Value"/"apply lookback") - PRIORITY | tighten golden to concrete abstracted values (ratify; keep generic per item-3) -> pilot |
+| 2 | OV07 | HEDIS Medical Record Chart Abstraction and Review | undated HbA1c: value 8.6% present but NO draw date -> mark date UTD, do not force the glycemic numerator (forcing = material false capture). Eye-exam lookback dropped (03/15/2026 is in-MY = creditable, not a trap). | v2 BUILT (concrete golden + save-line), verify green; ready to upload | none (v1 never piloted) | upload v2 -> AutoQC -> pilot once (target sub-60 material floor) |
 | 3 | OV03 | CDI-Coding DRG Reconciliation Review | colder upcode than osteo (ratify; pick best-fit live CDI workflow) | v1 built; pending | recalibrate after OV07 |
 | 4 | OV04 | Claims Denial Analysis and Appeal Preparation | cold FALSE administrative premise (caregiver available / teach-back complete), chart-contradicted | v1 built; pending | queued |
 | 5 | OV05 | Pharmacy Insurance Claim Rejection Resolution | non-sulfa but wrong substitute (renal/not-culture-directed) | v1 built; pending | queued |

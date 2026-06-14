@@ -1,1 +1,1 @@
-Please complete the diabetes measure abstraction on Mrs. Vasquell. Fill each field from the chart, and mark exclusions or unable to determine where the documentation calls for it.
+Please complete the diabetes measure abstraction on Mrs. Vasquell. Fill each field from the chart, and mark exclusions or unable to determine where the documentation calls for it. Save the completed abstraction to /tmp/outputs/diabetes_measure_abstraction.txt, then provide a brief confirmation in chat.

@@ -6,7 +6,7 @@ Prompt and grader are reviewer-drafted candidates; the golden dispositions are p
 VERIFY the exact name and priority on the live Task Selection Categories sheet before selecting (candidate from the 2026-06-10 snapshot).
 
 ## Mechanism under test
-Extraction-to-schema with a quiet disqualifier. Central failure = missing the lookback or exclusion detail and forcing capture.
+Extraction-to-schema with a quiet, MATERIAL disqualifier: the HbA1c value is documented but UNDATED, so it cannot be placed in the measurement period. Central failure = treating the undated last A1c 8.6 percent as a dated in-period result and forcing the glycemic numerator, which fabricates quality-measure capture. Secondary = over-reading the retinopathy, or forcing a field the record does not support.
 
 ## Mounted set
 - Shared world chart (world-files/ plus supplementary-files/).

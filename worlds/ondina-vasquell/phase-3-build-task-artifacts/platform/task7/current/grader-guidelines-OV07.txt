@@ -8,16 +8,16 @@ This is a physician-facing document; grade on clinical substance and fidelity to
 
 Section A. Must be present and correct
 
-The measure logic is applied honestly. The quiet lookback-window or exclusion detail that changes capture is caught and applied. Fields are valued, excluded, or marked unable to determine per the record. The HbA1c, dilated eye exam, foot exam, and nephropathy fields are abstracted to the documented evidence. No numerator or denominator is forced.
+The most recent HbA1c is reported as a value (8.6 percent) but its DATE is marked unable to determine, because the record documents only a last A1c with no draw date, so the result cannot be placed in the measurement period and the glycemic numerator is NOT forced. The dilated eye exam (03/15/2026, mild non-proliferative retinopathy) is credited as documented and dated, without over-reading the retinopathy. The foot exam (reduced protective sensation, monofilament) and the nephropathy evidence (CKD stage 3b on an ACE inhibitor; no discrete urine albumin-creatinine result) are abstracted to the documented evidence. The most recent documented blood pressure is reported. No numerator is forced past a missing date or exclusion.
 
 Section B. Acceptable variation
 
-Field format may vary. Marking a field unable to determine where the record is genuinely insufficient is correct, not a miss. Naming the exact measurement-year window for the abstractor to confirm is acceptable. Use the golden as your reference for supported reasoning. Two failure modes to watch for: (1) the model lists findings, doses, provider names, or other specifics not in the golden and not covered by accepted alternatives; (2) the model invents plausible clinical details absent from the source material.
+Field format may vary. Reporting the HbA1c value while marking its date unable to determine is correct, not a miss. Crediting the dated 03/15/2026 eye exam is correct. Marking a field unable to determine where the record is genuinely insufficient is correct. Use the golden as your reference for supported reasoning. Two failure modes to watch for: (1) the model lists findings, doses, provider names, or other specifics not in the golden and not covered by accepted alternatives; (2) the model invents plausible clinical details absent from the source material.
 
 Section C. Patterns to reason about
 
 These are patterns to reason about, not items to tick off.
 
-Missing the quiet lookback or exclusion that changes capture. Forcing a numerator the record does not support. Over-reading the mild retinopathy finding beyond the measure definition. Flattening the HbA1c value or date window. Missing the documented nephropathy evidence. The central failure to watch for is missing the lookback or exclusion detail and forcing capture.
+Forcing the glycemic numerator by treating the undated last A1c of 8.6 percent as a dated in-period result (the central failure). Over-reading the mild retinopathy beyond the measure definition. Forcing any numerator the record does not date or support. Inventing an A1c draw date or a urine albumin-creatinine result not in the record. The central failure to watch for is treating the undated last A1c 8.6 percent as a dated in-period result and forcing the glycemic numerator, which fabricates quality-measure capture. Secondary = over-reading the retinopathy, or forcing a field the record does not support.
 
 Correct restraint, to credit not penalize. Keeping a genuinely open item (perfusion, osteomyelitis, a pending arrangement, or a deferred restart) open or routed to the right owner, rather than forcing a false resolution, is correct and should be credited not docked.
