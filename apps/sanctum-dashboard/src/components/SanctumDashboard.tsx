@@ -30,6 +30,13 @@ type DisplayDocument = {
 };
 
 type Filter = 'all' | Stage;
+type IconName =
+  | 'arrow-right'
+  | 'chevron-down'
+  | 'folder-open'
+  | 'moon'
+  | 'sun'
+  | 'x';
 
 const filterLabels: Array<{ id: Filter; label: string }> = [
   { id: 'all', label: 'All' },
@@ -38,6 +45,75 @@ const filterLabels: Array<{ id: Filter; label: string }> = [
   { id: 'planned', label: 'Planned' },
   { id: 'review', label: 'Review' },
 ];
+
+function Icon({ name, className = '' }: { name: IconName; className?: string }) {
+  const common = {
+    className: `lucide-icon ${className}`.trim(),
+    viewBox: '0 0 24 24',
+    fill: 'none',
+    stroke: 'currentColor',
+    strokeWidth: 2,
+    strokeLinecap: 'round' as const,
+    strokeLinejoin: 'round' as const,
+    'aria-hidden': true,
+  };
+
+  if (name === 'arrow-right') {
+    return (
+      <svg {...common}>
+        <path d="M5 12h14" />
+        <path d="m12 5 7 7-7 7" />
+      </svg>
+    );
+  }
+
+  if (name === 'chevron-down') {
+    return (
+      <svg {...common}>
+        <path d="m6 9 6 6 6-6" />
+      </svg>
+    );
+  }
+
+  if (name === 'folder-open') {
+    return (
+      <svg {...common}>
+        <path d="M6 14l1.5-3A2 2 0 0 1 9.3 10H20a2 2 0 0 1 1.8 2.9l-2.1 4.2A2 2 0 0 1 17.9 18H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h7a2 2 0 0 1 2 2v2" />
+      </svg>
+    );
+  }
+
+  if (name === 'moon') {
+    return (
+      <svg {...common}>
+        <path d="M12 3a6.8 6.8 0 0 0 8.9 8.9A9 9 0 1 1 12 3" />
+      </svg>
+    );
+  }
+
+  if (name === 'sun') {
+    return (
+      <svg {...common}>
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v2" />
+        <path d="M12 20v2" />
+        <path d="m4.93 4.93 1.41 1.41" />
+        <path d="m17.66 17.66 1.41 1.41" />
+        <path d="M2 12h2" />
+        <path d="M20 12h2" />
+        <path d="m6.34 17.66-1.41 1.41" />
+        <path d="m19.07 4.93-1.41 1.41" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg {...common}>
+      <path d="M18 6 6 18" />
+      <path d="m6 6 12 12" />
+    </svg>
+  );
+}
 
 function meanOf(tasks: Task[]) {
   const scored = tasks.filter(task => typeof task.mean === 'number');
@@ -316,6 +392,81 @@ function runDots(task: Task) {
   });
 }
 
+function RadialTaskMap({
+  tasks,
+  selectedId,
+  onSelect,
+}: {
+  tasks: Task[];
+  selectedId: string;
+  onSelect: (id: string) => void;
+}) {
+  const cx = 280;
+  const cy = 280;
+  const radius = 190;
+  const sorted = [...tasks].sort((a, b) => {
+    const av = typeof a.mean === 'number' ? a.mean : -1;
+    const bv = typeof b.mean === 'number' ? b.mean : -1;
+    if (av === bv) return a.position - b.position;
+    return bv - av;
+  });
+  const points = sorted.map((task, index) => {
+    const angle = (-90 + index * (360 / sorted.length)) * Math.PI / 180;
+    return {
+      task,
+      x: cx + radius * Math.cos(angle),
+      y: cy + radius * Math.sin(angle),
+    };
+  });
+  const path = points.map((point, index) => `${index === 0 ? 'M' : 'L'}${point.x.toFixed(1)} ${point.y.toFixed(1)}`).join(' ') + ' Z';
+  const scored = tasks.filter(task => typeof task.mean === 'number');
+  const suiteMean = scored.length ? meanOf(scored) : null;
+
+  return (
+    <div className="radial-wrap">
+      <svg className="radial-chart" viewBox="0 0 560 560" role="img" aria-label="Task map by mean score">
+        <defs>
+          <linearGradient id="radialArc" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="var(--accent-a)" />
+            <stop offset="100%" stopColor="var(--accent-b)" />
+          </linearGradient>
+        </defs>
+        <path className="radial-arc" d={path} />
+        <text className="radial-center-label" x={cx} y={cy - 12} textAnchor="middle">Suite mean</text>
+        <text className="radial-center-value" x={cx} y={cy + 22} textAnchor="middle">{suiteMean ?? 'TBD'}</text>
+        {points.map(({ task, x, y }) => {
+          const hasMean = typeof task.mean === 'number';
+          const failure = hasMean ? 100 - (task.mean ?? 0) : 0;
+          const nodeRadius = hasMean ? 14 + failure * 0.34 : 24;
+          const opacity = hasMean ? 0.32 + (failure / 100) * 0.62 : 0.34;
+          const active = selectedId === task.id;
+
+          return (
+            <g
+              key={task.id}
+              className={`radial-node ${task.stage} ${active ? 'active' : ''}`}
+              tabIndex={0}
+              role="button"
+              aria-label={`${task.id}. ${task.name}. Mean ${scoreText(task)}.`}
+              onClick={() => onSelect(task.id)}
+              onKeyDown={event => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                  event.preventDefault();
+                  onSelect(task.id);
+                }
+              }}
+            >
+              <circle className="radial-halo" cx={x} cy={y} r={nodeRadius + 10} opacity={opacity * 0.12} />
+              <circle className="radial-dot" cx={x} cy={y} r={active ? nodeRadius + 5 : nodeRadius} opacity={opacity} />
+              <text className="radial-node-label" x={x} y={y + 4} textAnchor="middle">{task.id.replace(/^[A-Z]+/, '')}</text>
+            </g>
+          );
+        })}
+      </svg>
+    </div>
+  );
+}
+
 export default function SanctumDashboard({ worlds, databaseConfigured, documents }: Props) {
   const [worldId, setWorldId] = useState(worlds[0]?.id ?? 'korvin-merrow');
   const [selectedId, setSelectedId] = useState<string | null>(null);
@@ -378,7 +529,7 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
 
     function onPointerDown(event: PointerEvent) {
       const target = event.target as HTMLElement | null;
-      if (!target?.closest('.world-menu-wrap')) setWorldMenuOpen(false);
+      if (!target?.closest('.world-menu-wrap, .world-menu-popover')) setWorldMenuOpen(false);
     }
 
     function onKeyDown(event: KeyboardEvent) {
@@ -411,12 +562,13 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
   }, [materialsOpen]);
 
   const summary = useMemo(() => {
-    if (!world) return { delivered: 0, ready: 0, review: 0, mean: null, sourceFiles: 0 };
+    if (!world) return { delivered: 0, ready: 0, review: 0, planned: 0, mean: null, sourceFiles: 0 };
     const delivered = world.tasks.filter(task => task.stage === 'delivered').length;
     const ready = world.tasks.filter(task => task.stage === 'ready').length;
     const review = world.tasks.filter(task => task.stage === 'review').length;
+    const planned = world.tasks.filter(task => task.stage === 'planned').length;
     const sourceFiles = documents.filter(doc => doc.worldId === world.id).length;
-    return { delivered, ready, review, mean: meanOf(world.tasks), sourceFiles };
+    return { delivered, ready, review, planned, mean: meanOf(world.tasks), sourceFiles };
   }, [documents, world]);
 
   const visibleTasks = useMemo(() => {
@@ -438,6 +590,13 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
   const activeDoc = taskDocuments.find(doc => doc.id === activeDocId) ?? taskDocuments[0];
   const selectedCounts = counts(selected);
   const sourceStatus = summary.sourceFiles ? `${summary.sourceFiles} files` : databaseConfigured ? 'Sources ready' : 'Sources pending';
+  const lensCounts: Record<Filter, number> = {
+    all: world.tasks.length,
+    delivered: summary.delivered,
+    ready: summary.ready,
+    planned: summary.planned,
+    review: summary.review,
+  };
 
   return (
     <>
@@ -456,31 +615,8 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
               onClick={() => setWorldMenuOpen(open => !open)}
             >
               <span>{world.title}</span>
-              <span className="menu-chevron" aria-hidden="true" />
+              <Icon name="chevron-down" className="menu-chevron" />
             </button>
-            {worldMenuOpen ? (
-              <div className="world-menu surf" role="menu" aria-label="Switch world">
-                {worlds.map(item => (
-                  <button
-                    key={item.id}
-                    type="button"
-                    role="menuitem"
-                    className={item.id === world.id ? 'active' : ''}
-                    onClick={() => {
-                      setWorldId(item.id);
-                      setSelectedId(null);
-                      setFilter('all');
-                      setMaterialsOpen(false);
-                      setActiveSignalFamily(null);
-                      setWorldMenuOpen(false);
-                    }}
-                  >
-                    <span>{item.title}</span>
-                    <small>{item.kicker}</small>
-                  </button>
-                ))}
-              </div>
-            ) : null}
           </div>
           <span className="chrome-separator" />
           <span className="chrome-stat">{sourceStatus}</span>
@@ -491,9 +627,32 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
             aria-pressed={darkMode}
             onClick={() => setDarkMode(value => !value)}
           >
-            <span className="theme-icon" aria-hidden="true" />
+            <Icon name={darkMode ? 'moon' : 'sun'} />
           </button>
         </div>
+        {worldMenuOpen ? (
+          <div className="world-menu world-menu-popover surf" role="menu" aria-label="Switch world">
+            {worlds.map(item => (
+              <button
+                key={item.id}
+                type="button"
+                role="menuitem"
+                className={item.id === world.id ? 'active' : ''}
+                onClick={() => {
+                  setWorldId(item.id);
+                  setSelectedId(null);
+                  setFilter('all');
+                  setMaterialsOpen(false);
+                  setActiveSignalFamily(null);
+                  setWorldMenuOpen(false);
+                }}
+              >
+                <span>{item.title}</span>
+                <small>{item.kicker}</small>
+              </button>
+            ))}
+          </div>
+        ) : null}
       </header>
 
       <main className="app-shell">
@@ -519,6 +678,7 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
                   onClick={() => setMaterialsOpen(true)}
                 >
                   Open {selected.id} materials
+                  <Icon name="folder-open" />
                 </button>
               </div>
 
@@ -554,22 +714,9 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
           <details className="native-details surf">
             <summary>
               <span>Task map</span>
-              <span>{world.tasks.length} tasks</span>
+              <span className="details-control">{world.tasks.length} tasks <Icon name="chevron-down" /></span>
             </summary>
-            <div className="map-grid">
-              {world.tasks.map(task => (
-                <button
-                  key={task.id}
-                  type="button"
-                  className={`map-cell ${task.stage}`}
-                  aria-label={`${task.id}. Mean ${scoreText(task)}.`}
-                  onClick={() => setSelectedId(task.id)}
-                >
-                  <span>{task.id}</span>
-                  <strong>{scoreText(task)}</strong>
-                </button>
-              ))}
-            </div>
+            <RadialTaskMap tasks={world.tasks} selectedId={selected.id} onSelect={setSelectedId} />
           </details>
         </section>
 
@@ -609,25 +756,29 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
                 }}
               >
                 View first task
+                <Icon name="arrow-right" />
               </button>
             </div>
           ) : null}
         </section>
 
-        <section className="view-options surf-2">
-          <div>
-            <p className="micro-label">Tasks</p>
-            <strong>{filter === 'all' ? 'All tasks' : `${statusLabels[filter]} tasks`}</strong>
+        <section className="task-lens-panel surf-2" aria-label="Task lens">
+          <div className="lens-meta">
+            <p className="micro-label">Task lens</p>
+            <strong>{filter === 'all' ? 'All tasks' : statusLabels[filter]}</strong>
           </div>
-          <div className="filter-chips" role="group" aria-label="Filter tasks by status">
+          <div className="lens-dock" role="group" aria-label="Choose task status lens">
             {filterLabels.map(item => (
               <button
                 key={item.id}
                 type="button"
-                className={filter === item.id ? 'active' : ''}
+                className={`lens-button ${filter === item.id ? 'active' : ''}`}
+                aria-pressed={filter === item.id}
                 onClick={() => setFilter(item.id)}
               >
-                {item.label}
+                <span className={`lens-dot ${item.id}`} />
+                <span>{item.label}</span>
+                <strong>{lensCounts[item.id]}</strong>
               </button>
             ))}
           </div>
@@ -648,10 +799,12 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
                   <span className="task-title-block">
                     <strong>{task.name}</strong>
                     <small>{task.family}</small>
+                    <span className="task-mini-runs">{runDots(task)}</span>
                   </span>
                   <span className="score-ring" style={{ '--score': scorePercent(task) } as CSSProperties}>
                     <strong>{scoreText(task)}</strong>
                   </span>
+                  <Icon name="chevron-down" className="task-chevron" />
                 </button>
                 {selected.id === task.id ? (
                   <div className="task-card-body" role="region" aria-label={`${task.id} summary`}>
@@ -667,6 +820,7 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
                     </div>
                     <button type="button" className="inline-action" onClick={() => setMaterialsOpen(true)}>
                       Open materials
+                      <Icon name="folder-open" />
                     </button>
                   </div>
                 ) : null}
@@ -707,6 +861,7 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
                 <span className={statusClass(selected.stage)}>{statusLabels[selected.stage]}</span>
                 <button type="button" className="close-button" aria-label="Close materials" onClick={() => setMaterialsOpen(false)}>
                   Close
+                  <Icon name="x" />
                 </button>
               </div>
             </div>

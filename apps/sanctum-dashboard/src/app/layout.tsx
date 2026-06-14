@@ -16,9 +16,22 @@ export default function RootLayout({
 }: Readonly<{
   children: ReactNode;
 }>) {
+  const loadDesignCdns = process.env.NODE_ENV === 'production';
+
   return (
     <html lang="en">
-      <body>{children}</body>
+      <head>
+        {loadDesignCdns ? (
+          <>
+            <script dangerouslySetInnerHTML={{ __html: "window.tailwind = window.tailwind || {}; window.tailwind.config = { darkMode: 'class' };" }} />
+            <script src="https://cdn.tailwindcss.com" defer />
+            <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer />
+          </>
+        ) : null}
+      </head>
+      <body>
+        {children}
+      </body>
     </html>
   );
 }
