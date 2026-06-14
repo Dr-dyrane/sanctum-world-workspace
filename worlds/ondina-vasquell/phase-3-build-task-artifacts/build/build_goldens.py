@@ -79,6 +79,7 @@ def OV02():
             ["Type 2 diabetes with foot complication", "Diabetes with complication", "Yes", "Retain. Documented throughout."],
             ["Chronic kidney disease stage 3b with acute kidney injury", "CKD with acute kidney injury", "Yes", "Retain. Documented in the renal trend."],
             ["Anemia of chronic kidney disease", "Anemia in CKD", "Yes", "Retain. Documented, hemoglobin 9.8."],
+            ["Acute blood loss anemia", "Not assigned", "n/a", "Decline. The hemoglobin is stable at 9.8 across the admission with no documented bleeding or transfusion; this is anemia of chronic kidney disease, not acute blood loss. Code anemia in chronic kidney disease only."],
             ["Peripheral arterial disease", "PAD", "Yes", "Retain. Documented; relevant to the limb threat."],
         ]),
         ("body", "I attest only to what the treating record establishes. I do not adopt the severity-forward framing of the preliminary worksheet and do not upcode to an unsupported tier."),

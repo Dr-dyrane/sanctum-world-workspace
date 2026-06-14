@@ -981,7 +981,7 @@
         label: 'Built packets',
         metric: String(tasks.length),
         caption: 'World is live. Local task packets are ready for authorized pilots.',
-        insight: `${tasks.length} task packets are built locally. Next move: pilot OV01 under authorization.`,
+        insight: `${tasks.length} task packets are built locally. Next move: authorize the next task gate.`,
         pill: 'Tasking',
         pillClass: 'built',
         action: 'View packets',
@@ -1070,7 +1070,7 @@
         `${lo.id} is currently the hardest at ${U.fmtMean(lo)}%; ${hi.id} is the gentlest at ${U.fmtMean(hi)}%. ` +
         `Low scores matter only when the failure is fair and reachable.`
       : tasks.every(t=>t.stage === 'built')
-      ? `${tasks.length} task packets are built locally. The world is live; pilot data appears only after real task runs.`
+      ? `${tasks.length} task packets are built locally. The world is live; pilot data appears only after clean task runs.`
       : `${planned.length} planned tasks are staged for this incoming world. No pilot scores, FA/GA, preference labels, or delivery states are displayed yet.`;
 
     document.getElementById('provenance').textContent =

@@ -1561,27 +1561,35 @@
     'ondina-vasquell': {
       title: 'Ondina Vasquell',
       kicker: 'World Live · Limb-Threat Diabetic Foot Infection',
-      blurb: 'Ten task packets built locally. Healthcare_297_Vasquell is live. OV01 is in Task Writing. Pilots pending.',
+      blurb: 'Healthcare_297_Vasquell is live. OV01 clean pilot banked. Review work is next.',
       driveUrl: null,
       meta: {
         world: 'Project Sanctum',
         patient: 'Ondina Vasquell clinical suite',
         chart: 'Healthcare_297_Vasquell, 34 files, snapshot May 21, 2026 at 18:00',
         writer: 'Alexander Udeogaranya, MD',
-        evidence: 'Brainstorm pass, Spec pass, Final AutoQC clear, world created, OV01 created',
+        evidence: 'Brainstorm pass, Spec pass, Final AutoQC clear, world created, OV01 clean pilot job 741ba52f',
         dataSyncedOn: '2026-06-14',
-        provenance: 'Task packets are built locally. OV01 is in Task Writing. No pilot scores, FA/GA, PL, or delivery status is displayed until real platform runs exist.',
+        provenance: 'OV01 displays the clean-mount pilot only. Dirty duplicate-mount job 9765ba91 is excluded. FA/GA draft is ready; PL and final review remain pending.',
       },
       tasks: [
         {
           ...plannedTaskBase,
           id:'OV01', position:1,
+          stage:'review',
           name:'Discharge Medication Reconciliation Safety Table',
-          plain:'Reconcile discharge medications without carrying admission renal-dose logic into the current discharge plan.',
-          mechanism:'Renal antibiotic dosing under shifting eGFR, with ID and pharmacy notes overriding stale admission dosing.',
+          plain:'Stop inpatient-only enoxaparin at discharge while keeping held renal agents deferred.',
+          mechanism:'External discharge orders carry inpatient VTE prophylaxis into discharge despite aspirin plus clopidogrel.',
           family:'med',
-          verdict:'Built locally. World is live. Pilot pending.',
-          workflow:'Discharge Medication Reconciliation',
+          verdict:'Clean pilot banked: mean 68.0 with four sub-70 runs and a 93 catcher. FA/GA draft ready; PL and final review pending.',
+          workflow:'Medication Reconciliation at Care Transitions',
+          reviewer:'Alexander U',
+          mean:68.0,
+          spread:[68,72,40,70,72,72,50,65,78,93],
+          runsTotal:10,
+          quality:'exact',
+          reach:'proven',
+          provNote:'Clean job 741ba52f mounted one order set, discharge_medication_orders_05212026.docx, under /docs/filesystem. Dirty job 9765ba91 is excluded because it mounted two same-purpose task files.',
         },
         {
           ...plannedTaskBase,
@@ -1740,6 +1748,12 @@
       files:['cdi_query_memo_05262026.docx'],
       golden:'golden-KM10-v3.docx',
       grader:'grader-guidelines-task10-v3.txt',
+    },
+    OV01: {
+      prompt:'prompt-OV01.txt',
+      files:['discharge_medication_orders_05212026.docx'],
+      golden:'golden-OV01-v1.docx',
+      grader:'grader-guidelines-OV01.txt',
     },
   };
   Object.values(WORLDS).forEach(world => {
@@ -2743,7 +2757,7 @@
         label: 'Built packets',
         metric: String(tasks.length),
         caption: 'World is live. Local task packets are ready for authorized pilots.',
-        insight: `${tasks.length} task packets are built locally. Next move: pilot OV01 under authorization.`,
+        insight: `${tasks.length} task packets are built locally. Next move: authorize the next task gate.`,
         pill: 'Tasking',
         pillClass: 'built',
         action: 'View packets',
@@ -2832,7 +2846,7 @@
         `${lo.id} is currently the hardest at ${U.fmtMean(lo)}%; ${hi.id} is the gentlest at ${U.fmtMean(hi)}%. ` +
         `Low scores matter only when the failure is fair and reachable.`
       : tasks.every(t=>t.stage === 'built')
-      ? `${tasks.length} task packets are built locally. The world is live; pilot data appears only after real task runs.`
+      ? `${tasks.length} task packets are built locally. The world is live; pilot data appears only after clean task runs.`
       : `${planned.length} planned tasks are staged for this incoming world. No pilot scores, FA/GA, preference labels, or delivery states are displayed yet.`;
 
     document.getElementById('provenance').textContent =

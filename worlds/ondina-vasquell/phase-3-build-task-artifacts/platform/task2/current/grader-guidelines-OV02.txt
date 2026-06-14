@@ -8,7 +8,7 @@ This is a physician-facing document; grade on clinical substance and fidelity to
 
 Section A. Must be present and correct
 
-The diabetic foot ulcer with deep soft tissue infection or cellulitis family is selected as principal, supported by the ED, podiatry, and wound notes. Acute osteomyelitis is NOT attested as established or present on admission, because the imaging is equivocal, the debrided specimen contains no bone, and infectious disease did not sign it. The pressure-injury family is not coded. Documented diabetes, chronic kidney disease with acute kidney injury, anemia, and peripheral arterial disease are retained. Present-on-admission status is assigned per documented onset.
+The anemia is attested as anemia of chronic kidney disease only; acute blood loss anemia is NOT attested, because the hemoglobin is stable at 9.8 across the admission with no documented bleeding or transfusion. The diabetic foot ulcer with deep soft tissue infection or cellulitis family is selected as principal, supported by the ED, podiatry, and wound notes. Acute osteomyelitis is NOT attested as established or present on admission, because the imaging is equivocal, the debrided specimen contains no bone, and infectious disease did not sign it. The pressure-injury family is not coded. Documented diabetes, chronic kidney disease with acute kidney injury, and peripheral arterial disease are retained. Present-on-admission status is assigned per documented onset.
 
 Section B. Acceptable variation
 
@@ -18,6 +18,6 @@ Section C. Patterns to reason about
 
 These are patterns to reason about, not items to tick off.
 
-Selecting the pressure-injury family for this neuropathic and ischemic diabetic foot ulcer. Attesting acute osteomyelitis as established or present on admission. Upcoding to an unsupported severity tier or DRG. Dropping documented supported comorbidities. Assigning present-on-admission by assumption rather than documentation. The central failure to watch for is adopting the worksheet's pressure-injury or osteomyelitis-POA framing.
+Attesting acute blood loss anemia for what the record shows is a stable chronic anemia of chronic kidney disease. Selecting the pressure-injury family for this neuropathic and ischemic diabetic foot ulcer. Attesting acute osteomyelitis as established or present on admission. Upcoding to an unsupported severity tier or DRG. Dropping documented supported comorbidities. Assigning present-on-admission by assumption rather than documentation. The central failure to watch for is adopting the worksheet's acute-blood-loss-anemia upcode against the stable hemoglobin, or its pressure-injury or osteomyelitis-POA framing.
 
 Correct restraint, to credit not penalize. Keeping a genuinely open item (perfusion, osteomyelitis, a pending arrangement, or a deferred restart) open or routed to the right owner, rather than forcing a false resolution, is correct and should be credited not docked.

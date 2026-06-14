@@ -299,6 +299,38 @@ FRICTIONS = {
     "Family vs Primary Team": {"primary": "KM03, KM05, KM06", "secondary": "KM02, KM04"},
 }
 
+ONDINA_TASKS = [
+    {
+        "task": "OV01",
+        "status": "Review",
+        "mean": 68.0,
+        "scores": "68, 72, 40, 70, 72, 72, 50, 65, 78, 93",
+        "evidence": "Clean pilot 741ba52f",
+        "next": "FA/GA read-own, three PLs, final review",
+        "task_file": "discharge_medication_orders_05212026.docx",
+    },
+    {
+        "task": "OV02",
+        "status": "Built",
+        "mean": None,
+        "scores": "",
+        "evidence": "Recalibration plan exists",
+        "next": "Ratify cold coding plant before pilot",
+        "task_file": "him_preliminary_coding_worksheet_05212026.docx",
+    },
+]
+
+for task_num in range(3, 11):
+    ONDINA_TASKS.append({
+        "task": f"OV{task_num:02d}",
+        "status": "Built",
+        "mean": None,
+        "scores": "",
+        "evidence": "Packet built locally",
+        "next": "Pilot later, one task at a time",
+        "task_file": "",
+    })
+
 
 def apply_sheet_base(ws):
     """Remove gridlines, set white background feel."""
@@ -776,6 +808,56 @@ def build_distribution(wb):
     ws.cell(row=32, column=2, value=f"Source: {sum(len(t['scores']) for t in TASKS.values() if t['scores'])} trajectory runs across {sum(1 for t in TASKS.values() if t['scores'])} scored tasks").font = font_metric_label()
 
 
+def build_ondina_status(wb):
+    ws = wb.create_sheet("Ondina Status")
+    apply_sheet_base(ws)
+
+    ws.merge_cells("B2:H2")
+    ws["B2"] = "Ondina Vasquell Status"
+    ws["B2"].font = font_title()
+    ws["B3"] = "Healthcare_297_Vasquell  /  live world  /  tasking in progress"
+    ws["B3"].font = font_subtitle()
+
+    write_metric_card(ws, 5, 2, "1 / 10", "piloted")
+    write_metric_card(ws, 5, 4, "68.0", "OV01 mean", is_focal=True)
+    write_metric_card(ws, 5, 6, "4", "OV01 sub-70")
+    write_metric_card(ws, 5, 8, "1", "catcher")
+
+    ws.cell(row=8, column=2, value="CURRENT GATE").font = font_section()
+    ws.merge_cells("B9:H11")
+    ws["B9"] = (
+        "OV01 is bankable from clean pilot job 741ba52f. Dirty duplicate-mount job 9765ba91 is excluded. "
+        "FA/GA draft exists. Three preference labels and final review are still pending."
+    )
+    ws["B9"].font = font_body()
+    ws["B9"].alignment = Alignment(wrap_text=True, vertical="top")
+
+    headers = ["Task", "Status", "Mean", "Evidence", "Next", "Task file"]
+    cols = [2, 3, 4, 5, 7, 9]
+    ws.cell(row=14, column=2, value="TASK STATUS").font = font_section()
+    write_table_header(ws, 15, cols, headers)
+
+    for i, data in enumerate(ONDINA_TASKS):
+        row = 16 + i
+        mean = data["mean"] if data["mean"] is not None else ""
+        write_table_row(
+            ws,
+            row,
+            cols,
+            [data["task"], data["status"], mean, data["evidence"], data["next"], data["task_file"]],
+            focal_col=2,
+        )
+        ws.cell(row=row, column=5).alignment = Alignment(wrap_text=True, vertical="top")
+        ws.cell(row=row, column=7).alignment = Alignment(wrap_text=True, vertical="top")
+        ws.cell(row=row, column=9).alignment = Alignment(wrap_text=True, vertical="top")
+
+    ws.cell(row=29, column=2, value="OV01 SCORE VECTOR").font = font_section()
+    ws["B30"] = ONDINA_TASKS[0]["scores"]
+    ws["B30"].font = font_body()
+    ws["B31"] = "Source: 00-START-HERE.md, OV01 results reconciliation, FA/GA draft, and current platform packet."
+    ws["B31"].font = font_metric_label()
+
+
 # === MAIN ===
 def main():
     wb = Workbook()
@@ -786,6 +868,7 @@ def main():
     build_mechanism(wb)
     build_stories(wb)
     build_distribution(wb)
+    build_ondina_status(wb)
 
     # Output path resolves relative to the repo root (script lives in tools/),
     # so the build works on any machine. Override with argv[1] if needed.

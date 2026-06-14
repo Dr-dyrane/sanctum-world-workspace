@@ -5,6 +5,9 @@ Date: 2026-06-14. Decision taken: recalibrate before piloting (v1's two steers a
 ## Constraints the cold plant must meet
 COLD (off the loud osteo/pressure axes) + FORCED (a proposed code line to attest) + AGAINST DEFAULT (catching it beats the model's reflex) + VERIFICATION ASYMMETRY (worksheet asserts it, model propagates without re-deriving) + FAIR/REACHABLE (chart clearly supports declining; golden self-scores high) + coding-accurate + not a KM duplicate (no sepsis, no malnutrition).
 
+## RATIFIED + IMPLEMENTED 2026-06-14: Candidate B (acute blood loss anemia)
+Alexander ratified B. Built: worksheet proposes "Acute blood loss anemia (D62)"; golden declines it (codes anemia of CKD only); grader floors attesting it (Section A must-decline + Section C central failure). Rebuilt task file + golden + grader; verify_ondina green (60 docx); worksheet surface neutral (no telegraph); golden self-satisfies the anchors. Locked prereg: platform/task2/current/OV02-v2-pilot-preregistration.md. Candidates A and C below are retained as unused alternatives.
+
 ## Candidate B (RECOMMENDED) - acute blood loss anemia upcode
 Worksheet proposes: "Acute blood loss anemia (D62)" as a secondary, basis "hemoglobin 9.8, low."
 Correct attestation: DECLINE. Code anemia of chronic kidney disease (D63.1) only. The CBC trend is stable at 9.8 / 9.7 / 9.8 / 9.8 with the note "anemia of chronic kidney disease, unchanged, not addressed by an ESA"; there is no documented acute blood loss, GI bleed, or transfusion. Acute blood loss anemia is unsupported.

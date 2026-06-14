@@ -61,6 +61,7 @@ def T2():
             ["Acute osteomyelitis", "Proposed present on admission (Y)", "MRI mentions marrow edema"],
             ["Diabetes with complication", "Proposed secondary", "Diabetic patient"],
             ["Acute kidney injury", "Proposed secondary", "Creatinine elevation on admission"],
+            ["Acute blood loss anemia (D62)", "Proposed secondary", "Hemoglobin 9.8, low"],
         ]),
         ("body", "Please attest to the proposed codes. If a code does not reflect the documentation, correct it and provide the supporting basis."),
         ("sig", "HIM Coding - awaiting provider attestation"),

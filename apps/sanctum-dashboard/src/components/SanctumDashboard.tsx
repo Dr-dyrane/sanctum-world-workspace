@@ -53,6 +53,32 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
   }, [selectedTask?.id, world?.id]);
 
   useEffect(() => {
+    const validWorldIds = new Set(worlds.map(item => item.id));
+    const validFilters = new Set(filterLabels.map(item => item.id));
+
+    function applyHashState() {
+      const params = new URLSearchParams(window.location.hash.replace(/^#/, ''));
+      const hashWorld = params.get('world');
+      const hashFilter = params.get('filter') as Filter | null;
+
+      if (hashWorld && validWorldIds.has(hashWorld)) {
+        setWorldId(hashWorld);
+        setSelectedId(null);
+        setExpandedTaskId(null);
+        setActiveFamily(null);
+      }
+
+      if (hashFilter && validFilters.has(hashFilter)) {
+        setFilter(hashFilter);
+      }
+    }
+
+    applyHashState();
+    window.addEventListener('hashchange', applyHashState);
+    return () => window.removeEventListener('hashchange', applyHashState);
+  }, [worlds]);
+
+  useEffect(() => {
     setActiveFamily(null);
   }, [world?.id]);
 
@@ -170,6 +196,19 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
     setProofOpen(false);
     setActiveFamily(null);
     setWorldMenuOpen(false);
+    const params = new URLSearchParams(window.location.hash.replace(/^#/, ''));
+    params.set('world', nextWorldId);
+    params.delete('filter');
+    window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}#${params.toString()}`);
+  }
+
+  function chooseFilter(nextFilter: Filter) {
+    setFilter(nextFilter);
+    const params = new URLSearchParams(window.location.hash.replace(/^#/, ''));
+    params.set('world', world.id);
+    if (nextFilter === 'all') params.delete('filter');
+    else params.set('filter', nextFilter);
+    window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}#${params.toString()}`);
   }
 
   function selectTask(taskId: string) {
@@ -231,7 +270,7 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
                 type="button"
                 className={`lens-button ${filter === item.id ? 'active' : ''}`}
                 aria-pressed={filter === item.id}
-                onClick={() => setFilter(item.id)}
+                onClick={() => chooseFilter(item.id)}
               >
                 <span className={`lens-dot ${item.id}`} />
                 <span>{item.label}</span>
