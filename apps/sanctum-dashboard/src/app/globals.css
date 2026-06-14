@@ -355,6 +355,314 @@ summary:focus-visible {
   gap: 14px;
 }
 
+.readiness-stage {
+  min-height: min(76vh, 720px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(20px, 4vw, 42px);
+  background:
+    radial-gradient(86% 72% at 86% 16%, rgba(124, 58, 237, 0.1), transparent 56%),
+    radial-gradient(70% 62% at 12% 84%, rgba(16, 185, 129, 0.1), transparent 58%),
+    var(--bg-2);
+}
+
+html.dark .readiness-stage {
+  background:
+    radial-gradient(86% 72% at 86% 16%, rgba(139, 92, 246, 0.18), transparent 56%),
+    radial-gradient(70% 62% at 12% 84%, rgba(52, 211, 153, 0.12), transparent 58%),
+    var(--bg-2);
+}
+
+.readiness-stage.watch {
+  background:
+    radial-gradient(86% 72% at 86% 16%, rgba(190, 18, 60, 0.08), transparent 56%),
+    radial-gradient(70% 62% at 12% 84%, rgba(59, 130, 246, 0.1), transparent 58%),
+    var(--bg-2);
+}
+
+.readiness-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.readiness-top > div > span {
+  display: block;
+  margin-top: 5px;
+  color: var(--fg-soft);
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.readiness-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(250px, 340px);
+  gap: clamp(28px, 5vw, 64px);
+  align-items: end;
+  margin-top: clamp(44px, 8vh, 92px);
+}
+
+.verdict-stack {
+  min-width: 0;
+}
+
+.task-token {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  margin-bottom: 18px;
+  padding: 0 14px;
+  border-radius: var(--r-pill);
+  background: rgba(120, 120, 128, 0.1);
+  color: var(--accent-a);
+  font-family: "SF Mono", ui-monospace, monospace;
+  font-size: 15px;
+  font-weight: 850;
+}
+
+.verdict-stack h1 {
+  max-width: 10ch;
+  margin: 0;
+  color: var(--fg);
+  font-size: clamp(4.4rem, 10vw, 7.4rem);
+  font-weight: 720;
+  line-height: 0.92;
+}
+
+.verdict-stack p {
+  max-width: 48ch;
+  margin: 22px 0 0;
+  color: var(--fg);
+  font-size: clamp(17px, 1.8vw, 22px);
+  font-weight: 520;
+  line-height: 1.42;
+}
+
+.readiness-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-top: 28px;
+}
+
+.quiet-link {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  padding: 0 12px;
+  border-radius: var(--r-pill);
+  color: var(--fg-soft);
+  font-size: 13px;
+  font-weight: 650;
+  text-decoration: none;
+  transition: background-color 180ms ease, color 180ms ease, transform 220ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.quiet-link:hover {
+  background: rgba(120, 120, 128, 0.1);
+  color: var(--fg);
+}
+
+.quiet-link:active {
+  transform: scale(0.97);
+}
+
+.score-stage {
+  min-height: 284px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(18px, 2.7vw, 28px);
+  border-radius: 30px;
+  background:
+    linear-gradient(155deg, rgba(120, 120, 128, 0.14), rgba(120, 120, 128, 0.04)),
+    rgba(255, 255, 255, 0.52);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.44);
+}
+
+html.dark .score-stage {
+  background:
+    linear-gradient(155deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.03)),
+    rgba(120, 120, 128, 0.12);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.score-stage span,
+.score-stage p {
+  color: var(--fg-soft);
+  font-size: 13px;
+}
+
+.score-stage strong {
+  margin-top: 12px;
+  color: var(--fg);
+  font-size: clamp(5.8rem, 13vw, 8.2rem);
+  font-weight: 800;
+  line-height: 0.84;
+}
+
+.score-stage p {
+  margin: 12px 0 0;
+  line-height: 1.3;
+}
+
+.trajectory-panel {
+  margin-top: clamp(34px, 6vh, 54px);
+}
+
+.trajectory-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: end;
+}
+
+.trajectory-head div {
+  min-width: 0;
+}
+
+.trajectory-head span,
+.trajectory-head strong {
+  display: block;
+}
+
+.trajectory-head span {
+  color: var(--fg-faint);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.trajectory-head strong {
+  margin-top: 4px;
+  color: var(--fg);
+  font-size: 16px;
+}
+
+.trajectory-strip {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  gap: clamp(6px, 1vw, 10px);
+  margin-top: 14px;
+}
+
+.run-cell {
+  --i: 0;
+  position: relative;
+  min-width: 0;
+  min-height: 78px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 22px;
+  background: rgba(120, 120, 128, 0.1);
+  color: var(--fg);
+  opacity: 0;
+  transform: translateY(10px) scale(0.98);
+  animation: bead-rise 520ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: calc(var(--i) * 38ms);
+}
+
+.run-cell::after {
+  content: "";
+  position: absolute;
+  inset: auto 9px 9px;
+  height: 6px;
+  border-radius: var(--r-pill);
+  background: currentColor;
+  opacity: 0.86;
+}
+
+.run-cell.floor {
+  color: var(--bad);
+  background: var(--bad-fill);
+}
+
+.run-cell.catcher {
+  color: var(--ok);
+  background: var(--ok-fill);
+}
+
+.run-cell.middle {
+  color: var(--ready);
+  background: var(--ready-fill);
+}
+
+.run-cell.pending {
+  color: var(--fg-faint);
+}
+
+.run-cell.proof {
+  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.2), var(--shadow-card);
+}
+
+.run-cell small {
+  color: var(--fg-soft);
+  font-family: "SF Mono", ui-monospace, monospace;
+  font-size: 10px;
+  font-weight: 750;
+}
+
+.run-cell strong {
+  margin-bottom: 11px;
+  color: var(--fg);
+  font-family: "SF Mono", ui-monospace, monospace;
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 850;
+  line-height: 1;
+}
+
+.gate-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.gate-card {
+  min-height: 92px;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 8px 10px;
+  align-content: center;
+  padding: 14px;
+  border-radius: 22px;
+  background: rgba(120, 120, 128, 0.085);
+}
+
+.gate-card .lucide-icon {
+  grid-row: span 2;
+  width: 19px;
+  height: 19px;
+}
+
+.gate-card.pass .lucide-icon {
+  color: var(--ok);
+}
+
+.gate-card.watch .lucide-icon {
+  color: var(--bad);
+}
+
+.gate-card.pending .lucide-icon {
+  color: var(--fg-faint);
+}
+
+.gate-card span {
+  color: var(--fg-soft);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.gate-card strong {
+  color: var(--fg);
+  font-size: 17px;
+  line-height: 1.05;
+}
+
 .cockpit {
   min-height: min(70vh, 680px);
   display: flex;
@@ -401,6 +709,10 @@ summary:focus-visible {
 }
 
 .status-pill.review::before {
+  background: var(--bad);
+}
+
+.status-pill.watch::before {
   background: var(--bad);
 }
 
@@ -1534,6 +1846,13 @@ html.dark .task-card {
   }
 }
 
+@keyframes bead-rise {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 .summary-panel {
   margin-top: 16px;
 }
@@ -1593,9 +1912,18 @@ html.dark .task-card {
     width: min(100% - 18px, 1024px);
   }
 
+  .readiness-grid,
   .cockpit-grid,
   .focus-grid {
     grid-template-columns: 1fr;
+  }
+
+  .score-stage {
+    min-height: 170px;
+  }
+
+  .gate-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .metric-pane {
@@ -1650,6 +1978,86 @@ html.dark .task-card {
     font-size: 3.05rem;
   }
 
+  .readiness-stage {
+    min-height: auto;
+    padding: 16px;
+  }
+
+  .readiness-grid {
+    gap: 22px;
+    margin-top: 34px;
+  }
+
+  .task-token {
+    min-height: 34px;
+    margin-bottom: 14px;
+    padding: 0 12px;
+    font-size: 13px;
+  }
+
+  .verdict-stack h1 {
+    max-width: 12ch;
+    font-size: 3.85rem;
+  }
+
+  .verdict-stack p {
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 1.38;
+  }
+
+  .readiness-actions {
+    margin-top: 20px;
+  }
+
+  .score-stage {
+    min-height: 132px;
+    padding: 16px;
+    border-radius: 24px;
+  }
+
+  .score-stage strong {
+    font-size: 4.1rem;
+  }
+
+  .trajectory-panel {
+    margin-top: 24px;
+  }
+
+  .trajectory-strip {
+    gap: 5px;
+  }
+
+  .run-cell {
+    min-height: 58px;
+    padding: 7px;
+    border-radius: 16px;
+  }
+
+  .run-cell strong {
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+
+  .run-cell small {
+    font-size: 9px;
+  }
+
+  .gate-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 7px;
+  }
+
+  .gate-card {
+    min-height: 70px;
+    padding: 11px;
+    border-radius: 17px;
+  }
+
+  .gate-card strong {
+    font-size: 15px;
+  }
+
   .hero-copy p {
     margin-top: 13px;
     font-size: 14.5px;
@@ -1688,6 +2096,10 @@ html.dark .task-card {
 
   .world-track {
     margin-top: 20px;
+  }
+
+  .track-step {
+    min-height: 26px;
   }
 
   .mini-stat-grid {
@@ -1837,5 +2249,88 @@ html.dark .task-card {
   .signal-popover {
     align-items: flex-start;
     flex-direction: column;
+  }
+}
+
+@media (max-width: 560px) {
+  .readiness-stage {
+    padding: 14px;
+  }
+
+  .readiness-grid {
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .verdict-stack p {
+    margin-top: 14px;
+    font-size: 15px;
+  }
+
+  .readiness-actions {
+    margin-top: 18px;
+  }
+
+  .score-stage {
+    min-height: 112px;
+    padding: 14px;
+  }
+
+  .score-stage strong {
+    font-size: 3.35rem;
+  }
+
+  .score-stage p {
+    margin-top: 7px;
+  }
+
+  .trajectory-panel {
+    margin-top: 18px;
+  }
+
+  .gate-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gate-card {
+    min-height: 58px;
+    padding: 9px;
+  }
+
+  .gate-card .lucide-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .gate-card span {
+    font-size: 11px;
+  }
+
+  .gate-card strong {
+    font-size: 14px;
+  }
+
+  .verdict-stack h1 {
+    font-size: 3rem;
+  }
+
+  .trajectory-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .run-cell {
+    min-height: 46px;
+    padding: 6px;
+    border-radius: 14px;
+  }
+
+  .run-cell strong {
+    margin-bottom: 7px;
+    font-size: 14px;
+  }
+
+  .run-cell small {
+    font-size: 8px;
   }
 }

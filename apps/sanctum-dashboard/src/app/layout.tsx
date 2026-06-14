@@ -3,8 +3,8 @@ import type { ReactNode } from 'react';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Sanctum Dashboard',
-  description: 'Clinical world and task cockpit',
+  title: 'Sanctum Task Readiness',
+  description: 'Clinical task delivery readiness',
   robots: {
     index: false,
     follow: false,

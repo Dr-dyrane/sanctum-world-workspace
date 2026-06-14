@@ -31,10 +31,15 @@ type DisplayDocument = {
 
 type Filter = 'all' | Stage;
 type IconName =
+  | 'activity'
   | 'arrow-right'
   | 'chevron-down'
+  | 'check-circle'
+  | 'eye'
+  | 'file-check'
   | 'folder-open'
   | 'moon'
+  | 'shield'
   | 'sun'
   | 'x';
 
@@ -58,6 +63,14 @@ function Icon({ name, className = '' }: { name: IconName; className?: string }) 
     'aria-hidden': true,
   };
 
+  if (name === 'activity') {
+    return (
+      <svg {...common}>
+        <path d="M22 12h-4l-3 8-6-16-3 8H2" />
+      </svg>
+    );
+  }
+
   if (name === 'arrow-right') {
     return (
       <svg {...common}>
@@ -75,6 +88,34 @@ function Icon({ name, className = '' }: { name: IconName; className?: string }) 
     );
   }
 
+  if (name === 'check-circle') {
+    return (
+      <svg {...common}>
+        <path d="M9 12l2 2 4-5" />
+        <circle cx="12" cy="12" r="9" />
+      </svg>
+    );
+  }
+
+  if (name === 'eye') {
+    return (
+      <svg {...common}>
+        <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z" />
+        <circle cx="12" cy="12" r="3" />
+      </svg>
+    );
+  }
+
+  if (name === 'file-check') {
+    return (
+      <svg {...common}>
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" />
+        <path d="M14 2v6h6" />
+        <path d="m9 15 2 2 4-5" />
+      </svg>
+    );
+  }
+
   if (name === 'folder-open') {
     return (
       <svg {...common}>
@@ -87,6 +128,15 @@ function Icon({ name, className = '' }: { name: IconName; className?: string }) 
     return (
       <svg {...common}>
         <path d="M12 3a6.8 6.8 0 0 0 8.9 8.9A9 9 0 1 1 12 3" />
+      </svg>
+    );
+  }
+
+  if (name === 'shield') {
+    return (
+      <svg {...common}>
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" />
+        <path d="m9 12 2 2 4-5" />
       </svg>
     );
   }
@@ -121,13 +171,75 @@ function meanOf(tasks: Task[]) {
   return Number((scored.reduce((sum, task) => sum + (task.mean ?? 0), 0) / scored.length).toFixed(1));
 }
 
+function criticalRunIndexes(task: Task) {
+  if (task.criticalRuns?.length) return task.criticalRuns;
+  return (task.spread ?? [])
+    .map((score, index) => score <= 40 ? index : -1)
+    .filter(index => index >= 0);
+}
+
 function counts(task: Task) {
   const spread = task.spread ?? [];
+  const criticalRuns = criticalRunIndexes(task);
   return {
     catchers: spread.filter(score => score >= 85).length,
-    floors: spread.filter(score => score <= 40).length,
+    floors: criticalRuns.length,
     sub70: spread.filter(score => score < 70).length,
   };
+}
+
+function lowestRunIndex(task: Task) {
+  const criticalRuns = criticalRunIndexes(task);
+  if (criticalRuns.length) return criticalRuns[0];
+  if (!task.spread.length) return -1;
+  return task.spread.reduce((lowestIndex, score, index) => score < task.spread[lowestIndex] ? index : lowestIndex, 0);
+}
+
+function readinessFor(task: Task) {
+  if (task.stage === 'planned') return { label: 'Not built', tone: 'planned' };
+  if (task.stage === 'review') return { label: 'Needs review', tone: 'review' };
+  if (task.stage === 'delivered') return { label: 'Delivered', tone: 'delivered' };
+  if (task.reach === 'watch' || task.reach === 'open') return { label: 'Ready with watch', tone: 'watch' };
+  return { label: 'Ready', tone: 'ready' };
+}
+
+function reachLabel(task: Task) {
+  if (task.reach === 'proven') return 'Proven';
+  if (task.reach === 'watch') return 'Watch';
+  if (task.reach === 'open') return 'Open';
+  return 'Pending';
+}
+
+function readinessGates(task: Task) {
+  const taskCounts = counts(task);
+  const built = task.stage !== 'planned';
+  const proofComplete = task.stage === 'delivered' || task.stage === 'ready';
+  return [
+    {
+      icon: 'activity' as IconName,
+      label: 'Clinical miss',
+      value: built ? `${taskCounts.floors}/${task.runsTotal}` : 'Pending',
+      state: taskCounts.floors > 0 ? 'pass' : built ? 'watch' : 'pending',
+    },
+    {
+      icon: 'shield' as IconName,
+      label: 'Fairness',
+      value: built ? 'Clean' : 'Pending',
+      state: built ? 'pass' : 'pending',
+    },
+    {
+      icon: 'eye' as IconName,
+      label: 'Reach',
+      value: reachLabel(task),
+      state: task.reach === 'proven' ? 'pass' : task.reach === 'notstarted' ? 'pending' : 'watch',
+    },
+    {
+      icon: 'file-check' as IconName,
+      label: 'Proof',
+      value: proofComplete ? 'Complete' : 'Pending',
+      state: proofComplete ? 'pass' : 'pending',
+    },
+  ];
 }
 
 function statusClass(stage: string) {
@@ -381,15 +493,24 @@ function families(tasks: Task[]) {
 function runDots(task: Task) {
   return Array.from({ length: task.runsTotal }).map((_, index) => {
     const value = task.spread[index];
-    const className = typeof value !== 'number'
+    const state = runScoreClass(value, task, index);
+    const className = state === 'pending'
       ? 'dot empty'
-      : value <= 40
+      : state === 'floor'
         ? 'dot floor'
-        : value >= 85
+        : state === 'catcher'
           ? 'dot catcher'
           : 'dot mid';
     return <span key={`${task.id}-${index}`} className={className} title={typeof value === 'number' ? `Run ${index + 1}: ${value}` : `Run ${index + 1}: pending`} />;
   });
+}
+
+function runScoreClass(value: number | undefined, task?: Task, index?: number) {
+  if (task && typeof index === 'number' && criticalRunIndexes(task).includes(index)) return 'floor';
+  if (typeof value !== 'number') return 'pending';
+  if (value <= 40) return 'floor';
+  if (value >= 85) return 'catcher';
+  return 'middle';
 }
 
 function RadialTaskMap({
@@ -481,7 +602,11 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
 
   const world = worlds.find(item => item.id === worldId) ?? worlds[0];
   const hardest = world ? primaryFailure(world.tasks) : null;
-  const selected = world?.tasks.find(task => task.id === selectedId) ?? hardest ?? world?.tasks.find(task => task.stage === 'ready') ?? world?.tasks[0];
+  const defaultTask = world?.tasks.find(task => task.stage === 'ready' && (task.reach === 'watch' || task.reach === 'open'))
+    ?? world?.tasks.find(task => task.stage === 'ready')
+    ?? hardest
+    ?? world?.tasks[0];
+  const selected = world?.tasks.find(task => task.id === selectedId) ?? defaultTask;
 
   useEffect(() => {
     setActiveDocId(null);
@@ -597,6 +722,10 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
     planned: summary.planned,
     review: summary.review,
   };
+  const selectedReadiness = readinessFor(selected);
+  const selectedGates = readinessGates(selected);
+  const selectedLowestRun = lowestRunIndex(selected);
+  const selectedRunCount = counts(selected);
 
   return (
     <>
@@ -657,36 +786,75 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
 
       <main className="app-shell">
         <section className="hero-section">
-          <div className="cockpit surf" aria-label="World status cockpit">
-            <div className="cockpit-top">
-              <p className="micro-label">{world.title} | {world.kicker}</p>
-              <span className={statusClass(summary.ready ? 'ready' : 'planned')}>
-                {summary.ready ? `${summary.ready} ready` : 'Planning'}
-              </span>
+          <div className={`readiness-stage surf ${selectedReadiness.tone}`} aria-label="Task readiness">
+            <div className="readiness-top">
+              <div>
+                <p className="micro-label">{world.title}</p>
+                <span>Task readiness</span>
+              </div>
+              <span className={statusClass(selectedReadiness.tone)}>{selectedReadiness.label}</span>
             </div>
 
-            <div className="cockpit-grid">
-              <div className="hero-copy">
-                <h1>Task Suite</h1>
-                <p>{world.blurb}</p>
-                <p className="hero-insight">
-                  {selected.mean === null ? `${selected.id}: pilot pending.` : `${selected.id}: ${selected.plain}`}
-                </p>
-                <button
-                  type="button"
-                  className="primary-cta"
-                  onClick={() => setMaterialsOpen(true)}
-                >
-                  Open {selected.id}
-                  <Icon name="folder-open" />
-                </button>
+            <div className="readiness-grid">
+              <div className="verdict-stack">
+                <span className="task-token">{selected.id}</span>
+                <h1>{selectedReadiness.label}</h1>
+                <p>{selected.plain}</p>
+                <div className="readiness-actions">
+                  <button type="button" className="primary-cta" onClick={() => setMaterialsOpen(true)}>
+                    Open proof
+                    <Icon name="folder-open" />
+                  </button>
+                  <a className="quiet-link" href={`#task-${selected.id}`}>View task</a>
+                </div>
               </div>
 
-              <aside className="metric-pane">
-                <span>Selected mean</span>
+              <aside className="score-stage" aria-label={`${selected.id} score`}>
+                <span>Mean</span>
                 <strong>{scoreText(selected)}</strong>
                 <p>{selected.name}</p>
               </aside>
+            </div>
+
+            <div className="trajectory-panel" aria-label="Trajectory score shape">
+              <div className="trajectory-head">
+                <div>
+                  <span>Score shape</span>
+                  <strong>{selectedRunCount.sub70}/{selected.runsTotal} under 70</strong>
+                </div>
+                <div>
+                  <span>Critical misses</span>
+                  <strong>{selectedRunCount.floors}</strong>
+                </div>
+              </div>
+              <div className="trajectory-strip">
+                {Array.from({ length: selected.runsTotal }).map((_, index) => {
+                  const value = selected.spread[index];
+                  const state = runScoreClass(value, selected, index);
+                  return (
+                    <span
+                      key={`${selected.id}-run-${index}`}
+                      className={`run-cell ${state} ${index === selectedLowestRun ? 'proof' : ''}`}
+                      style={{ '--i': index } as CSSProperties}
+                      aria-label={typeof value === 'number' ? `Run ${index + 1}: ${value}` : `Run ${index + 1}: pending`}
+                      title={typeof value === 'number' ? `Run ${index + 1}: ${value}` : `Run ${index + 1}: pending`}
+                    >
+                      <small>{index + 1}</small>
+                      <strong>{typeof value === 'number' ? value : '-'}</strong>
+                    </span>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div className="gate-grid" aria-label="Readiness gates">
+              {selectedGates.map(gate => (
+                <div key={gate.label} className={`gate-card ${gate.state}`}>
+                  <Icon name={gate.icon} />
+                  <span>{gate.label}</span>
+                  <strong>{gate.value}</strong>
+                </div>
+              ))}
             </div>
 
             <div className="world-track" aria-label="Task status timeline">
@@ -701,13 +869,6 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
                   onClick={() => setSelectedId(task.id)}
                 />
               ))}
-            </div>
-
-            <div className="mini-stat-grid">
-              <div className="mini-stat"><strong>{summary.delivered}/{world.tasks.length}</strong><span>Delivered</span></div>
-              <div className="mini-stat"><strong>{summary.ready}</strong><span>Ready</span></div>
-              <div className="mini-stat"><strong>{summary.review}</strong><span>Review</span></div>
-              <div className="mini-stat"><strong>{summary.mean ?? 'TBD'}</strong><span>Suite mean</span></div>
             </div>
           </div>
 
