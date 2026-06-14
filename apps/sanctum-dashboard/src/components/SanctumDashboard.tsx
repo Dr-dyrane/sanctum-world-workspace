@@ -1,9 +1,11 @@
 'use client';
 
+import Image from 'next/image';
 import { useEffect, useMemo, useState } from 'react';
 import type { CSSProperties } from 'react';
+import logo from '@/app/logo.png';
 import type { TaskDocumentRow } from '@/lib/database';
-import type { Task, World } from '@/lib/sanctum-data';
+import type { Stage, Task, World } from '@/lib/sanctum-data';
 import { journey, statusLabels } from '@/lib/sanctum-data';
 
 type Props = {
@@ -27,23 +29,33 @@ type DisplayDocument = {
   uploaded: boolean;
 };
 
+type Filter = 'all' | Stage;
+
+const filterLabels: Array<{ id: Filter; label: string }> = [
+  { id: 'all', label: 'All' },
+  { id: 'delivered', label: 'Delivered' },
+  { id: 'ready', label: 'Ready' },
+  { id: 'planned', label: 'Planned' },
+  { id: 'review', label: 'Review' },
+];
+
 function meanOf(tasks: Task[]) {
   const scored = tasks.filter(task => typeof task.mean === 'number');
   if (!scored.length) return null;
-  return Math.round(scored.reduce((sum, task) => sum + (task.mean ?? 0), 0) / scored.length);
+  return Number((scored.reduce((sum, task) => sum + (task.mean ?? 0), 0) / scored.length).toFixed(1));
 }
 
-function countFloors(task: Task) {
-  return task.spread.filter(score => score <= 40).length;
-}
-
-function scorePercent(task: Task) {
-  if (typeof task.mean !== 'number') return '0%';
-  return `${Math.max(0, Math.min(100, task.mean))}%`;
+function counts(task: Task) {
+  const spread = task.spread ?? [];
+  return {
+    catchers: spread.filter(score => score >= 85).length,
+    floors: spread.filter(score => score <= 40).length,
+    sub70: spread.filter(score => score < 70).length,
+  };
 }
 
 function statusClass(stage: string) {
-  return `status ${stage}`;
+  return `status-pill ${stage}`;
 }
 
 function roleLabel(role: string) {
@@ -60,7 +72,7 @@ function roleLabel(role: string) {
 function roleTone(role: string) {
   if (role === 'prompt') return 'blue';
   if (role === 'task_file') return 'green';
-  if (role === 'golden') return 'gold';
+  if (role === 'golden') return 'amber';
   if (role === 'grader') return 'purple';
   return 'gray';
 }
@@ -83,8 +95,22 @@ function formatBytes(value: number | null) {
   return `${Math.round(value / 1024 / 102.4) / 10} MB`;
 }
 
+function scoreText(task: Task) {
+  return typeof task.mean === 'number' ? String(task.mean) : 'TBD';
+}
+
+function scorePercent(task: Task) {
+  if (typeof task.mean !== 'number') return '0%';
+  return `${Math.max(0, Math.min(100, task.mean))}%`;
+}
+
+function failurePercent(task: Task) {
+  if (typeof task.mean !== 'number') return '0%';
+  return `${Math.max(0, Math.min(100, 100 - task.mean))}%`;
+}
+
 function fallbackDocuments(worldId: string, task: Task): DisplayDocument[] {
-  const docs: DisplayDocument[] = [
+  return [
     {
       id: `${task.id}:prompt:fallback`,
       worldId,
@@ -142,8 +168,6 @@ function fallbackDocuments(worldId: string, task: Task): DisplayDocument[] {
       uploaded: false,
     },
   ];
-
-  return docs;
 }
 
 function uploadedDocuments(documents: TaskDocumentRow[], worldId: string, taskId: string): DisplayDocument[] {
@@ -170,26 +194,64 @@ function primaryFailure(tasks: Task[]) {
   return scored.reduce((lowest, task) => (task.mean ?? 100) < (lowest.mean ?? 100) ? task : lowest, scored[0]);
 }
 
+function families(tasks: Task[]) {
+  const byFamily = new Map<string, Task[]>();
+  for (const task of tasks) {
+    const list = byFamily.get(task.family) ?? [];
+    list.push(task);
+    byFamily.set(task.family, list);
+  }
+  return Array.from(byFamily.entries()).map(([family, list]) => {
+    const scored = list.filter(task => typeof task.mean === 'number');
+    const mean = scored.length ? meanOf(scored) : null;
+    const floorCount = list.reduce((sum, task) => sum + counts(task).floors, 0);
+    return { family, tasks: list, mean, floorCount };
+  });
+}
+
+function runDots(task: Task) {
+  return Array.from({ length: task.runsTotal }).map((_, index) => {
+    const value = task.spread[index];
+    const className = typeof value !== 'number'
+      ? 'dot empty'
+      : value <= 40
+        ? 'dot floor'
+        : value >= 85
+          ? 'dot catcher'
+          : 'dot mid';
+    return <span key={`${task.id}-${index}`} className={className} title={typeof value === 'number' ? `Run ${index + 1}: ${value}` : `Run ${index + 1}: pending`} />;
+  });
+}
+
 export default function SanctumDashboard({ worlds, databaseConfigured, documents }: Props) {
   const [worldId, setWorldId] = useState(worlds[0]?.id ?? 'korvin-merrow');
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [activeDocId, setActiveDocId] = useState<string | null>(null);
+  const [filter, setFilter] = useState<Filter>('all');
 
   const world = worlds.find(item => item.id === worldId) ?? worlds[0];
-  const selected = world?.tasks.find(task => task.id === selectedId) ?? world?.tasks.find(task => task.stage === 'ready') ?? world?.tasks[0];
-  const lowest = world ? primaryFailure(world.tasks) : null;
+  const hardest = world ? primaryFailure(world.tasks) : null;
+  const selected = world?.tasks.find(task => task.id === selectedId) ?? hardest ?? world?.tasks.find(task => task.stage === 'ready') ?? world?.tasks[0];
 
   useEffect(() => {
     setActiveDocId(null);
   }, [selected?.id, world?.id]);
 
   const summary = useMemo(() => {
-    if (!world) return { delivered: 0, ready: 0, mean: null, docs: 0 };
+    if (!world) return { delivered: 0, ready: 0, review: 0, mean: null, docs: 0 };
     const delivered = world.tasks.filter(task => task.stage === 'delivered').length;
     const ready = world.tasks.filter(task => task.stage === 'ready').length;
+    const review = world.tasks.filter(task => task.stage === 'review').length;
     const docs = documents.filter(doc => doc.worldId === world.id).length;
-    return { delivered, ready, mean: meanOf(world.tasks), docs };
+    return { delivered, ready, review, mean: meanOf(world.tasks), docs };
   }, [documents, world]);
+
+  const visibleTasks = useMemo(() => {
+    if (!world) return [];
+    return world.tasks.filter(task => filter === 'all' || task.stage === filter);
+  }, [filter, world]);
+
+  const familySignals = useMemo(() => world ? families(world.tasks) : [], [world]);
 
   const taskDocuments = useMemo(() => {
     if (!world || !selected) return [];
@@ -200,191 +262,274 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
   if (!world || !selected) return null;
 
   const activeDoc = taskDocuments.find(doc => doc.id === activeDocId) ?? taskDocuments[0];
+  const selectedCounts = counts(selected);
 
   return (
-    <main className="app-shell">
-      <nav className="topbar" aria-label="World navigation">
-        <div className="brand-mark">
-          <span>Sanctum</span>
-        </div>
-        <div className="topbar-title">
-          <span className="caption">Project Sanctum</span>
-          <strong>{world.title}</strong>
-        </div>
-        <div className="world-switcher">
-          {worlds.map(item => (
-            <button
-              key={item.id}
-              type="button"
-              className={item.id === world.id ? 'active' : ''}
-              onClick={() => {
-                setWorldId(item.id);
-                setSelectedId(null);
-              }}
-            >
-              {item.title}
-            </button>
-          ))}
-        </div>
-      </nav>
-
-      <section className="focus-hero">
-        <div className="focus-copy">
-          <span className="caption">{world.kicker}</span>
-          <h1>{summary.ready ? `${summary.ready} tasks ready` : 'World in planning'}</h1>
-          <p>{world.blurb}</p>
-          <div className="hero-actions" aria-label="Primary actions">
-            <button type="button" className="primary-action" onClick={() => setSelectedId(selected.id)}>
-              Inspect {selected.id} packet
-            </button>
-            <span>{databaseConfigured && summary.docs ? `${summary.docs} docs in Neon` : 'Neon sync pending'}</span>
-          </div>
-        </div>
-
-        <aside className="signal-card">
-          <span className="caption">Primary inference</span>
-          <strong>{lowest?.name ?? selected.name}</strong>
-          <p>{lowest?.plain ?? selected.plain}</p>
-          <div className="signal-meter">
-            <span>Lowest mean</span>
-            <strong>{lowest?.mean ?? 'TBD'}</strong>
-          </div>
-        </aside>
-
-        <div className="metric-ribbon" aria-label="World metrics">
-          <div>
-            <span>Delivered</span>
-            <strong>{summary.delivered}/{world.tasks.length}</strong>
-          </div>
-          <div>
-            <span>Ready</span>
-            <strong>{summary.ready}</strong>
-          </div>
-          <div>
-            <span>Suite mean</span>
-            <strong>{summary.mean ?? 'TBD'}</strong>
-          </div>
-          <div>
-            <span>Neon</span>
-            <strong>{summary.docs ? `${summary.docs} docs` : databaseConfigured ? 'Linked' : 'Off'}</strong>
-          </div>
-        </div>
-      </section>
-
-      <section className="story-strip" aria-label="World journey">
-        <div>
-          <span className="caption">World journey</span>
-          <h2>Build the world, then stress it task by task.</h2>
-        </div>
-        <div className="journey-track">
-          {journey.map(item => (
-            <article key={item.label} className={`journey-step ${item.status}`}>
-              <span>{item.status}</span>
-              <strong>{item.label}</strong>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="workspace-grid">
-        <div className="task-list-panel">
-          <div className="section-head">
-            <span className="caption">Task queue</span>
-            <h2>One chart. Ten forced moves.</h2>
-          </div>
-          <div className="task-list">
-            {world.tasks.map(task => (
+    <>
+      <header className="top-chrome" aria-label="World navigation">
+        <div className="chrome-bar">
+          <Image src={logo} alt="Sanctum" className="logo-mark" width={28} height={28} priority />
+          <strong>Sanctum</strong>
+          <span className="chrome-separator" />
+          <div className="world-switcher" aria-label="Switch world">
+            {worlds.map(item => (
               <button
-                key={task.id}
+                key={item.id}
                 type="button"
-                className={`task-row ${selected.id === task.id ? 'selected' : ''}`}
-                style={{ '--score': scorePercent(task) } as CSSProperties}
-                onClick={() => setSelectedId(task.id)}
+                className={item.id === world.id ? 'active' : ''}
+                onClick={() => {
+                  setWorldId(item.id);
+                  setSelectedId(null);
+                  setFilter('all');
+                }}
               >
-                <span className={statusClass(task.stage)}>{statusLabels[task.stage]}</span>
-                <span className="task-main">
-                  <span>{task.id}</span>
-                  <strong>{task.name}</strong>
-                  <small>{task.family}</small>
-                </span>
-                <span className="task-score">
-                  <strong>{task.mean ?? 'TBD'}</strong>
-                  <small>{countFloors(task)} floors</small>
-                </span>
-                <span className="score-track" aria-hidden="true"><span /></span>
+                {item.title}
               </button>
             ))}
           </div>
+          <span className="chrome-separator" />
+          <span className="chrome-stat">{summary.docs ? `${summary.docs} docs` : databaseConfigured ? 'Neon linked' : 'Neon off'}</span>
         </div>
+      </header>
 
-        <aside className="detail-panel" aria-label={`${selected.id} detail`}>
-          <div className="detail-header">
-            <span className={statusClass(selected.stage)}>{statusLabels[selected.stage]}</span>
-            <span>{selected.workflow}</span>
-          </div>
-          <h2>{selected.name}</h2>
-          <p className="lede">{selected.plain}</p>
-
-          <div className="detail-grid">
-            <div><span>Mean</span><strong>{selected.mean ?? 'TBD'}</strong></div>
-            <div><span>Reach</span><strong>{selected.reach}</strong></div>
-            <div><span>Docs</span><strong>{taskDocuments.length}</strong></div>
-          </div>
-
-          <section className="mechanism-panel">
-            <span className="caption">Trap surface</span>
-            <p>{selected.mechanism}</p>
-          </section>
-
-          <section className="document-renderer">
-            <div className="section-head compact">
-              <span className="caption">Packet renderer</span>
-              <h3>Read the actual task artifacts.</h3>
+      <main className="app-shell">
+        <section className="hero-section">
+          <div className="cockpit surf" aria-label="World status cockpit">
+            <div className="cockpit-top">
+              <p className="micro-label">{world.title} | {world.kicker}</p>
+              <span className={statusClass(summary.ready ? 'ready' : 'planned')}>
+                {summary.ready ? `${summary.ready} ready` : 'Planning'}
+              </span>
             </div>
 
-            <div className="doc-tabs" aria-label="Task packet documents">
-              {taskDocuments.map(doc => (
+            <div className="cockpit-grid">
+              <div className="hero-copy">
+                <h1>Task Suite</h1>
+                <p>{world.blurb}</p>
+                <p className="hero-insight">
+                  {hardest ? `${hardest.id} is the sharpest signal right now: ${hardest.plain}` : 'No pilot signal exists yet.'}
+                </p>
                 <button
-                  key={doc.id}
                   type="button"
-                  className={activeDoc?.id === doc.id ? 'active' : ''}
-                  onClick={() => setActiveDocId(doc.id)}
+                  className="primary-cta"
+                  onClick={() => document.getElementById(`task-${selected.id}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' })}
                 >
-                  <span className={`role-dot ${roleTone(doc.role)}`} />
-                  <strong>{roleLabel(doc.role)}</strong>
-                  <small>{doc.filename}</small>
+                  Inspect {selected.id} packet
                 </button>
+              </div>
+
+              <aside className="metric-pane">
+                <span>Lowest mean</span>
+                <strong>{hardest?.mean ?? 'TBD'}</strong>
+                <p>{hardest?.name ?? selected.name}</p>
+              </aside>
+            </div>
+
+            <div className="world-track" aria-label="Task status timeline">
+              {world.tasks.map(task => (
+                <button
+                  key={task.id}
+                  type="button"
+                  className={`track-step ${task.stage} ${selected.id === task.id ? 'active' : ''}`}
+                  title={`${task.id}: ${task.name}`}
+                  onClick={() => setSelectedId(task.id)}
+                />
               ))}
             </div>
 
-            {activeDoc && (
-              <article className="doc-preview">
-                <header>
-                  <div>
-                    <span className="caption">{roleLabel(activeDoc.role)}</span>
-                    <strong>{activeDoc.filename}</strong>
+            <div className="mini-stat-grid">
+              <div className="mini-stat"><strong>{summary.delivered}/{world.tasks.length}</strong><span>Delivered</span></div>
+              <div className="mini-stat"><strong>{summary.ready}</strong><span>Ready</span></div>
+              <div className="mini-stat"><strong>{summary.review}</strong><span>Review</span></div>
+              <div className="mini-stat"><strong>{summary.mean ?? 'TBD'}</strong><span>Suite mean</span></div>
+            </div>
+          </div>
+
+          <details className="native-details surf">
+            <summary>
+              <span>Task map</span>
+              <span>{world.tasks.length} tasks</span>
+            </summary>
+            <div className="map-grid">
+              {world.tasks.map(task => (
+                <button
+                  key={task.id}
+                  type="button"
+                  className={`map-cell ${task.stage}`}
+                  onClick={() => setSelectedId(task.id)}
+                >
+                  <span>{task.id}</span>
+                  <strong>{scoreText(task)}</strong>
+                </button>
+              ))}
+            </div>
+          </details>
+        </section>
+
+        <section className="signal-panel surf" aria-label="Failure signal families">
+          <div className="section-head">
+            <p className="micro-label">Signal families</p>
+            <h2>Where the model breaks</h2>
+          </div>
+          <div className="signal-strip">
+            {familySignals.map(signal => (
+              <button
+                key={signal.family}
+                type="button"
+                className="signal-chip"
+                onClick={() => setSelectedId(signal.tasks[0]?.id ?? null)}
+              >
+                <span>{signal.family}</span>
+                <strong>{signal.mean ?? 'TBD'}</strong>
+                <small>{signal.tasks.length} tasks, {signal.floorCount} floors</small>
+              </button>
+            ))}
+          </div>
+        </section>
+
+        <section className="view-options surf-2">
+          <div>
+            <p className="micro-label">Tasks</p>
+            <strong>{filter === 'all' ? 'All tasks, ordered' : `${statusLabels[filter]} tasks`}</strong>
+          </div>
+          <div className="filter-chips" role="group" aria-label="Filter tasks by status">
+            {filterLabels.map(item => (
+              <button
+                key={item.id}
+                type="button"
+                className={filter === item.id ? 'active' : ''}
+                onClick={() => setFilter(item.id)}
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
+        </section>
+
+        <section className="task-card-list" aria-label="Task cards">
+          {visibleTasks.map(task => {
+            const taskCounts = counts(task);
+            return (
+              <article
+                id={`task-${task.id}`}
+                key={task.id}
+                className={`task-card surf ${selected.id === task.id ? 'selected' : ''}`}
+              >
+                <button type="button" className="task-card-button" onClick={() => setSelectedId(task.id)}>
+                  <span className="task-id">{task.id}</span>
+                  <span className={statusClass(task.stage)}>{statusLabels[task.stage]}</span>
+                  <span className="task-title-block">
+                    <strong>{task.name}</strong>
+                    <small>{task.family}</small>
+                  </span>
+                  <span className="score-ring" style={{ '--score': scorePercent(task) } as CSSProperties}>
+                    <strong>{scoreText(task)}</strong>
+                  </span>
+                </button>
+                <div className="task-card-body">
+                  <p>{task.plain}</p>
+                  <div className="signal-track" aria-label="Failure signal">
+                    <span style={{ width: failurePercent(task) }} />
                   </div>
-                  <span>{formatBytes(activeDoc.byteSize)}</span>
-                </header>
-
-                {activeDoc.contentBase64 ? (
-                  <img
-                    src={`data:${activeDoc.mimeType};base64,${activeDoc.contentBase64}`}
-                    alt={`${activeDoc.filename} preview`}
-                  />
-                ) : (
-                  <pre>{previewText(activeDoc)}</pre>
-                )}
-
-                <footer>
-                  <span>{activeDoc.uploaded ? 'Synced from Neon' : 'Local fallback'}</span>
-                  <span>{activeDoc.sha256 ? `sha ${activeDoc.sha256.slice(0, 10)}` : 'No hash'}</span>
-                </footer>
+                  <div className="run-dots">{runDots(task)}</div>
+                  <div className="counts-strip">
+                    <span>Catchers <strong>{taskCounts.catchers}</strong></span>
+                    <span>Floors <strong>{taskCounts.floors}</strong></span>
+                    <span>Sub-70 <strong>{taskCounts.sub70}/{task.runsTotal}</strong></span>
+                  </div>
+                </div>
               </article>
-            )}
-          </section>
+            );
+          })}
+        </section>
+
+        <aside className="focus-sheet-panel surf" aria-label={`${selected.id} packet`}>
+          <div className="focus-head">
+            <div>
+              <p className="micro-label">{selected.id} packet</p>
+              <h2>{selected.name}</h2>
+            </div>
+            <span className={statusClass(selected.stage)}>{statusLabels[selected.stage]}</span>
+          </div>
+
+          <div className="focus-grid">
+            <section className="focus-summary">
+              <p>{selected.plain}</p>
+              <div className="detail-grid">
+                <div><span>Mean</span><strong>{scoreText(selected)}</strong></div>
+                <div><span>Floors</span><strong>{selectedCounts.floors}</strong></div>
+                <div><span>Docs</span><strong>{taskDocuments.length}</strong></div>
+              </div>
+              <div className="mechanism-box">
+                <span>Trap surface</span>
+                <p>{selected.mechanism}</p>
+              </div>
+            </section>
+
+            <section className="document-renderer">
+              <div className="section-head compact">
+                <p className="micro-label">Packet renderer</p>
+                <h3>Actual task artifacts</h3>
+              </div>
+              <div className="doc-tabs" aria-label="Task packet documents">
+                {taskDocuments.map(doc => (
+                  <button
+                    key={doc.id}
+                    type="button"
+                    className={activeDoc?.id === doc.id ? 'active' : ''}
+                    onClick={() => setActiveDocId(doc.id)}
+                  >
+                    <span className={`role-dot ${roleTone(doc.role)}`} />
+                    <strong>{roleLabel(doc.role)}</strong>
+                    <small>{doc.filename}</small>
+                  </button>
+                ))}
+              </div>
+
+              {activeDoc && (
+                <article className="doc-preview">
+                  <header>
+                    <div>
+                      <span className="micro-label">{roleLabel(activeDoc.role)}</span>
+                      <strong>{activeDoc.filename}</strong>
+                    </div>
+                    <span>{formatBytes(activeDoc.byteSize)}</span>
+                  </header>
+
+                  {activeDoc.contentBase64 ? (
+                    <img src={`data:${activeDoc.mimeType};base64,${activeDoc.contentBase64}`} alt={`${activeDoc.filename} preview`} />
+                  ) : (
+                    <pre>{previewText(activeDoc)}</pre>
+                  )}
+
+                  <footer>
+                    <span>{activeDoc.uploaded ? 'Synced from Neon' : 'Local fallback'}</span>
+                    <span>{activeDoc.sha256 ? `sha ${activeDoc.sha256.slice(0, 10)}` : 'No hash'}</span>
+                  </footer>
+                </article>
+              )}
+            </section>
+          </div>
         </aside>
-      </section>
-    </main>
+
+        <section className="summary-panel surf">
+          <p className="micro-label">Suite summary</p>
+          <div className="summary-grid">
+            <div><strong>{summary.delivered}</strong><span>Delivered tasks</span></div>
+            <div><strong>{summary.ready}</strong><span>Ready to deliver</span></div>
+            <div><strong>{summary.docs || '-'}</strong><span>Neon documents</span></div>
+            <div><strong>{summary.mean ?? 'TBD'}</strong><span>Mean, 10 tasks</span></div>
+          </div>
+          <p className="summary-note">
+            Static dashboard language remains the visual base. Next adds live packet data, document previews, and a safer path to deployment.
+          </p>
+          <div className="journey-row">
+            {journey.map(item => (
+              <span key={item.label}>{item.label}</span>
+            ))}
+          </div>
+        </section>
+      </main>
+    </>
   );
 }
