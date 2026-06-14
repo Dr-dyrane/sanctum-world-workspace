@@ -1,5 +1,7 @@
 # Reasoning Discipline - the verification gate (workspace backbone)
 
+> Companion: `docs/anti-hallucination.md` (added 2026-06-14) concentrates the anti-hallucination doctrine, distilled from the Ondina sessions: the dominant failure is STALE truth, not invention, so read the latest primary artifact and its correction history, not the oldest doc describing it.
+
 Date: 2026-06-06. Status: BACKBONE doc. Cross-world, not Korvin-specific. Applies to every decision Claude makes in this workspace. Distilled from the Task 1 (KM01) retrospective and grounded in published sources (verified, not recalled). NO em dashes in any user-facing text remains a standing rule.
 
 ## THE LAW (6/6, governs every task from KM02 on - read this first)
