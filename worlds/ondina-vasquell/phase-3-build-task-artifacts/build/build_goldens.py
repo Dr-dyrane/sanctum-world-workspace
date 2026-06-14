@@ -176,7 +176,7 @@ def OV07():
     return ("golden-OV07-v1.docx", "ed", "DIABETES MEASURE ABSTRACTION ATTESTATION", "06/04/2026", [
         ("title", "DIABETES MEASURE ABSTRACTION - PHYSICIAN REVIEW AND ATTESTATION"),
         ("filing", "Author: Lillian Everet, MD - Hospital Medicine | Date of Service: 06/04/2026 0900 | Status: Draft for physician sign"),
-        ("body", "I have reviewed the quality department's diabetes measure abstraction worksheet against the record and attest to each measure field as documented, acting as the reviewing physician. I do not force a numerator the documentation does not support."),
+        ("body", "I have reviewed the diabetes measure abstraction against the record and attest to each field as the documentation supports. I do not force a numerator the record does not support."),
         ("section", "ATTESTATION BY MEASURE FIELD"),
         ("table", [
             ["Measure field", "Value, exclusion, or unable to determine", "Source"],
