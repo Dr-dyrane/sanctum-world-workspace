@@ -1,0 +1,84 @@
+{
+  "spine_issues": [
+    {
+      "category": "numeric",
+      "description": "The nursing offloading flowsheet file constraint requires 'PENDING' but the clinical_data.offloading_flowsheet entries use 'Per protocol', 'Heel-protect boot intermittent', etc. \u2014 none contain the word 'PENDING'. The 'PENDING' concept appears in the case_management_screen (DME pending) but the offloading flowsheet itself does not contain this term in its spine data. This is a minor mismatch between file must_contain constraints and the spine's own data for the flowsheet, though it could be resolved at generation time since the flowsheet file could incorporate DME pending status.",
+      "facts_involved": [
+        "nursing_offloading_flowsheet must_contain 'PENDING'",
+        "clinical_data.offloading_flowsheet entries"
+      ],
+      "suggested_fix": "Add a 'DME pending' or 'device PENDING' notation to the offloading_flowsheet data in the spine, or adjust the must_contain constraint to match what the flowsheet actually records."
+    },
+    {
+      "category": "cross_reference",
+      "description": "The nursing offloading flowsheet file must_contain 'night shift' and 'neuropathy', but the offloading_flowsheet data in the spine contains neither of these terms \u2014 it only records device use, repositioning, and teaching attempts. These facts exist elsewhere in the spine (patient profile, comorbidity list, emergency contact) but not in the offloading flowsheet data itself.",
+      "facts_involved": [
+        "nursing_offloading_flowsheet must_contain 'night shift'",
+        "nursing_offloading_flowsheet must_contain 'neuropathy'",
+        "clinical_data.offloading_flowsheet"
+      ],
+      "suggested_fix": "Either add contextual notes about neuropathy risk and caregiver night-shift availability to the offloading_flowsheet data, or remove these from the must_contain list if the flowsheet is meant to be a narrow device-tracking document."
+    },
+    {
+      "category": "cross_reference",
+      "description": "The quality abstraction worksheet (E1-T7) must_contain 'uACR' and 'UNABLE-TO-DETERMINE', but the spine's task 7 grader anchors describe nephropathy as captured via 'documented CKD stage 3b + proteinuria evidence' from EW17 and EW23. The must_contain 'UNABLE-TO-DETERMINE' and the grader anchor stating nephropathy IS captured create a tension \u2014 the worksheet form must contain 'UNABLE-TO-DETERMINE' (presumably for some field) while the grader anchors say the nephropathy field IS captured. This is reconcilable if UNABLE-TO-DETERMINE applies to a different field (e.g., blood pressure or statin use), but the spine doesn't specify which field gets this marking.",
+      "facts_involved": [
+        "E1-T7 must_contain 'UNABLE-TO-DETERMINE'",
+        "Task 7 grader anchors on nephropathy capture"
+      ],
+      "suggested_fix": "Clarify in the spine which specific abstraction field is marked UNABLE-TO-DETERMINE, to avoid confusion with the nephropathy field that is documented as captured."
+    },
+    {
+      "category": "cross_reference",
+      "description": "The quality abstraction worksheet (E1-T7) must_contain 'MEMBER-LEVEL EXCLUSION' but must_not_contain 'exclusion does not apply'. Meanwhile, the task 7 grader anchors say to APPLY the Advanced Illness + Frailty exclusion. The must_contain and must_not_contain are consistent with each other and with the grader anchors \u2014 this is actually fine. No issue here upon closer review.",
+      "facts_involved": [],
+      "suggested_fix": "N/A \u2014 withdrawn upon review."
+    },
+    {
+      "category": "timeline",
+      "description": "The E1-T2 HIM preliminary coding worksheet is dated 05/21/2026 in the file inventory, but the timeline states 'External documents issued: HIM coding worksheet, CDI query memo, Medicare Advantage SNF denial letter' on 05/23/2026. The file itself is dated 05/21 while the timeline says it was issued 05/23.",
+      "facts_involved": [
+        "E1-T2 date: 2026-05-21",
+        "timeline entry 2026-05-23: External documents issued including HIM coding worksheet"
+      ],
+      "suggested_fix": "Align the E1-T2 file date to 05/23/2026 to match the timeline, or update the timeline to reflect that the HIM worksheet was prepared on 05/21 (which would be consistent with it being a preliminary internal document prepared at snapshot time, distinct from the CDI query and denial letter)."
+    },
+    {
+      "category": "cross_reference",
+      "description": "Task 8 (Vascular Surgery Referral Letter) has task_level_files listed as an empty array [], meaning it relies solely on world-level files. This is consistent with the spec which says 'Task-level files: none. World-level files only.' No issue here.",
+      "facts_involved": [],
+      "suggested_fix": "N/A \u2014 withdrawn upon review."
+    },
+    {
+      "category": "entity",
+      "description": "The care_team entry for Vivienne Karras, MD lists her role as 'Physician advisor (utilization review)' and she appears_in_tasks [6]. However, she is not listed in the expert spec's care team roster table. She is an invented fact. This is acceptable per the invented_facts_note. No inconsistency.",
+      "facts_involved": [],
+      "suggested_fix": "N/A \u2014 withdrawn upon review."
+    },
+    {
+      "category": "numeric",
+      "description": "Patient age_at_admission is stated as 68. DOB is 1958-03-14 and admission date is 2026-05-16. From March 14, 1958 to May 16, 2026 is 68 years and 2 months \u2014 age 68 is correct.",
+      "facts_involved": [],
+      "suggested_fix": "N/A \u2014 no issue, verified correct."
+    },
+    {
+      "category": "numeric",
+      "description": "BMI is stated as 34.1 for height 157 cm and weight 84 kg. Calculated: 84 / (1.57)^2 = 84 / 2.4649 = 34.08, which rounds to 34.1. Correct.",
+      "facts_involved": [],
+      "suggested_fix": "N/A \u2014 verified correct."
+    },
+    {
+      "category": "cross_reference",
+      "description": "The home_med_list file (EW22) must_contain 'HELD' but this is the pre-admission home medication list (dated 05/16, described as 'EMR pre-admission home medication list'). The home medication list should show baseline home medications, not their inpatient hold status. However, the spine's home_medications table does include 'inpatient_status' with HELD for three agents, and the must_contain for this file includes 'HELD'. This suggests the file is a reconciled intake document that shows both home meds and their inpatient dispositions, which is common in EMR workflows. Reconcilable.",
+      "facts_involved": [],
+      "suggested_fix": "N/A \u2014 withdrawn upon review; the EMR med list at intake commonly shows both home status and admission disposition."
+    },
+    {
+      "category": "cross_reference",
+      "description": "The preliminary discharge order set (E1-T1) must_contain 'ibuprofen' (lowercase) as a trap \u2014 it presents ibuprofen as a tempting NSAID option. However, the admission H&P (EW2) must_not_contain 'ibuprofen'. This is intentionally consistent: the trap is that the unreconciled order set introduces ibuprofen while the admission documentation explicitly avoids NSAIDs. No issue.",
+      "facts_involved": [],
+      "suggested_fix": "N/A \u2014 this is the intended trap design."
+    }
+  ],
+  "constraint_gaps": []
+}

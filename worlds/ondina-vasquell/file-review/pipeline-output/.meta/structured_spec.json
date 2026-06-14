@@ -1,0 +1,2075 @@
+{
+  "world": {
+    "title": "Limb-Threat Diabetic Foot Infection",
+    "world_type": "Typical Clinical World",
+    "setting": "Inpatient hospital medicine with post-discharge administrative encounters",
+    "specialty_workflows": [
+      "Hospital Medicine",
+      "Vascular and Wound Care",
+      "Health Information and Payer Operations"
+    ],
+    "project": "Project Sanctum",
+    "version": "1.0",
+    "document_date": "2026-06-13",
+    "snapshot": {
+      "datetime": "2026-05-21T18:00:00",
+      "hospital_day": "HD6",
+      "description": "Chart frozen at HD6 evening; medically improving but operationally unsafe for discharge."
+    },
+    "total_tasks": 10,
+    "self_containment_principle": "Every claim in a task's correct answer is traceable to the task prompt, the task-level files, and the world-level files. A seasoned clinician could solve every task from the intended files alone. No task requires public knowledge published after 2025-07-31."
+  },
+  "institution": {
+    "name": "Harbor Crest Regional Medical Center",
+    "short_name": "Harbor Crest",
+    "address": {
+      "street": "2400 Mariners Bay Boulevard",
+      "city": "Cypress Harbor",
+      "state": "FL",
+      "zip": "33421"
+    },
+    "main_phone": "(561) 555-0100",
+    "ein": "59-3027841",
+    "npi_facility": "1023881744",
+    "unit": "6 South Medicine",
+    "room": "6S-214",
+    "departments_referenced": [
+      "Emergency Department",
+      "Hospital Medicine",
+      "Podiatric Surgery",
+      "Radiology (Musculoskeletal)",
+      "Vascular Laboratory",
+      "Vascular Surgery",
+      "Infectious Disease",
+      "Endocrinology",
+      "Wound Care Nursing",
+      "Physical Therapy",
+      "Occupational Therapy",
+      "Inpatient Pharmacy",
+      "Case Management",
+      "Clinical Documentation Integrity (CDI)",
+      "Health Information Management (HIM) / Coding",
+      "Patient Safety Office",
+      "Quality Abstraction / HEDIS",
+      "Surgical Pathology",
+      "Microbiology"
+    ]
+  },
+  "patient": {
+    "name": "Ondina Vasquell",
+    "preferred_name": "Sra. Vasquell",
+    "dob": "1958-03-14",
+    "age_at_admission": 68,
+    "sex": "Female",
+    "race_ethnicity": "Hispanic",
+    "primary_language": "Spanish",
+    "english_proficiency": "Limited; interpreter or bilingual staff used for direct history",
+    "mrn": "OV-3358104",
+    "fin": "FIN-2207733",
+    "address": {
+      "street": "1418 Calle del Mar, Apt 2B",
+      "city": "Cypress Harbor",
+      "state": "FL",
+      "zip": "33421",
+      "housing_note": "Second-floor walk-up apartment, no elevator, interior stairs"
+    },
+    "phone_home": "(561) 555-0274",
+    "code_status": "Full Code",
+    "marital_status": "Widowed",
+    "lives_alone": true,
+    "anthropometrics": {
+      "height_cm": 157,
+      "height_imperial": "5 ft 2 in",
+      "weight_kg": 84,
+      "weight_lb": 185,
+      "bmi": 34.1,
+      "bmi_class": "Class I obesity"
+    },
+    "allergies": [
+      {
+        "agent": "Sulfa (sulfonamide antibiotics)",
+        "reaction": "Rash",
+        "severity": "Documented allergy; avoid sulfa-containing oral antibiotics including TMP-SMX"
+      }
+    ],
+    "insurance": {
+      "primary": {
+        "payer": "Medicare Advantage",
+        "plan_name": "Crestline Medicare Advantage HMO",
+        "member_id": "CMA-7728-4416-02",
+        "group": "FL-MA-2026",
+        "medical_director": "Ellery Stovall, MD"
+      },
+      "secondary": {
+        "payer": "Florida Medicaid",
+        "member_id": "FL-MCD-883204117"
+      },
+      "pharmacy_benefit_manager": {
+        "name": "Meridian Rx Benefit Solutions",
+        "rxbin": "610591",
+        "rxpcn": "MRBS",
+        "rxgroup": "CMA2026FL"
+      }
+    },
+    "preferred_pharmacy": {
+      "name": "Cypress Harbor Community Pharmacy",
+      "address": "812 Marina Way, Cypress Harbor, FL 33421",
+      "phone": "(561) 555-0192"
+    },
+    "emergency_contact": {
+      "name": "Marisela Vasquell",
+      "relationship": "Adult daughter, primary caregiver",
+      "phone": "(561) 555-0388",
+      "work_schedule": "Night shifts (overnight); availability daytime is partial",
+      "english_speaking": true,
+      "bilingual": true,
+      "address": "247 Egret Cove Lane, Cypress Harbor, FL 33421",
+      "occupation": "Certified Nursing Assistant, night shift, Bayside Skilled Care"
+    },
+    "deceased_spouse": {
+      "name": "Joaqu\u00edn Vasquell",
+      "date_of_death": "2023-11-18",
+      "note": "Late husband had been her main support; her loss is documented context for the partial home-caregiver picture."
+    }
+  },
+  "comorbidity_profile": [
+    {
+      "rank": 1,
+      "condition": "Insulin-dependent type 2 diabetes mellitus",
+      "role": "Core disease; drives the foot infection, inpatient insulin regimen, and diabetes quality-measure abstraction"
+    },
+    {
+      "rank": 2,
+      "condition": "Diabetic peripheral neuropathy",
+      "role": "Why she could not feel the worsening wound; contributes to fall and offloading risk"
+    },
+    {
+      "rank": 3,
+      "condition": "Mild non-proliferative diabetic retinopathy (bilateral)",
+      "role": "Diabetes end-organ context; eye-exam date governs quality-measure capture"
+    },
+    {
+      "rank": 4,
+      "condition": "CKD stage 3b (baseline eGFR ~38)",
+      "role": "Governs renal antibiotic dosing, held-agent restart judgment, contrast caution; makes NSAIDs unsafe"
+    },
+    {
+      "rank": 5,
+      "condition": "Anemia of CKD (Hgb ~9.8, no ESA)",
+      "role": "Reduced reserve; intentionally open management item, never closed in chart"
+    },
+    {
+      "rank": 6,
+      "condition": "Peripheral arterial disease",
+      "role": "Perfusion question central to limb threat, appeal, determination, referral"
+    },
+    {
+      "rank": 7,
+      "condition": "Heart failure with preserved ejection fraction (HFpEF)",
+      "role": "Volume and diuretic context; restart caution for empagliflozin and lisinopril"
+    },
+    {
+      "rank": 8,
+      "condition": "Hypertension",
+      "role": "Cardiorenal context; supports held lisinopril and volume picture"
+    },
+    {
+      "rank": 9,
+      "condition": "Dyslipidemia",
+      "role": "Chronic ASCVD risk; supports statin and antiplatelet continuation"
+    },
+    {
+      "rank": 10,
+      "condition": "Obesity (class I, BMI 34.1)",
+      "role": "Cardiometabolic and mobility burden; compounds offloading difficulty"
+    },
+    {
+      "rank": 11,
+      "condition": "Obstructive sleep apnea on CPAP",
+      "role": "Chronic reserve burden; equipment continuity at discharge"
+    },
+    {
+      "rank": 12,
+      "condition": "Knee osteoarthritis",
+      "role": "Why NSAID is tempting but unsafe in CKD; acetaminophen-only is correct"
+    },
+    {
+      "rank": 13,
+      "condition": "GERD",
+      "role": "Supports pantoprazole continuation"
+    },
+    {
+      "rank": 14,
+      "condition": "Limited mobility at baseline",
+      "role": "Compounds offloading and stairs; central to disposition-safety tasks"
+    }
+  ],
+  "baseline_clinical_anchors": {
+    "outpatient_creatinine_mg_dL": 1.5,
+    "outpatient_egfr": 38,
+    "outpatient_hemoglobin_g_dL": 9.8,
+    "hba1c_percent": 8.6,
+    "hba1c_date": "2026-04-30",
+    "ambulation": "Without device but reduced endurance from neuropathy and knee OA",
+    "note": "These are comparators only \u2014 not admission or course values."
+  },
+  "active_problem_list_at_snapshot": [
+    "Limb-threatening left diabetic foot infection with deep soft tissue involvement",
+    "Equivocal osteomyelitis \u2014 UNCONFIRMED",
+    "Acute kidney injury on CKD 3b \u2014 improving",
+    "Anemia of CKD",
+    "Perfusion adequacy UNRESOLVED (peripheral arterial disease)",
+    "HFpEF, euvolemic at snapshot",
+    "Insulin-managed diabetes with held oral agents (metformin, empagliflozin, lisinopril)",
+    "Deconditioning with unsafe home-disposition picture"
+  ],
+  "procedural_history": {
+    "this_admission_procedures": [
+      "Podiatry soft-tissue debridement, bedside, 2026-05-17 (Priyanka Vell, DPM)"
+    ],
+    "prior_amputation": false,
+    "prior_revascularization_or_bypass": false,
+    "prior_dialysis_access": false,
+    "other_major_surgical_history": "None documented",
+    "note": "First limb-threat presentation \u2014 absence of prior amputation is itself a relevant data point for the vascular referral (Task 8) and SNF appeal (Task 4). No prior revascularization or bypass means perfusion has never been instrumented; no dialysis access means CKD 3b has been managed conservatively."
+  },
+  "home_medications": [
+    {
+      "row": 1,
+      "drug": "Insulin glargine",
+      "dose": "26 units",
+      "route": "Subcutaneous",
+      "frequency": "Nightly",
+      "indication": "T2DM basal",
+      "inpatient_status": "Continued, intake-adjusted"
+    },
+    {
+      "row": 2,
+      "drug": "Insulin aspart",
+      "dose": "Sliding scale",
+      "route": "Subcutaneous",
+      "frequency": "Three times daily with meals",
+      "indication": "T2DM prandial",
+      "inpatient_status": "Continued per protocol"
+    },
+    {
+      "row": 3,
+      "drug": "Metformin",
+      "dose": "500 mg",
+      "route": "Oral",
+      "frequency": "Twice daily",
+      "indication": "T2DM",
+      "inpatient_status": "HELD on admission \u2014 AKI on CKD, eGFR near 30 threshold"
+    },
+    {
+      "row": 4,
+      "drug": "Empagliflozin",
+      "dose": "10 mg",
+      "route": "Oral",
+      "frequency": "Daily",
+      "indication": "T2DM, HFpEF, CKD",
+      "inpatient_status": "HELD \u2014 acute infection, euglycemic DKA caution"
+    },
+    {
+      "row": 5,
+      "drug": "Lisinopril",
+      "dose": "20 mg",
+      "route": "Oral",
+      "frequency": "Daily",
+      "indication": "HTN, CKD",
+      "inpatient_status": "HELD \u2014 AKI risk during illness"
+    },
+    {
+      "row": 6,
+      "drug": "Furosemide",
+      "dose": "20 mg",
+      "route": "Oral",
+      "frequency": "Daily",
+      "indication": "HFpEF volume",
+      "inpatient_status": "Continued, volume-adjusted"
+    },
+    {
+      "row": 7,
+      "drug": "Atorvastatin",
+      "dose": "40 mg",
+      "route": "Oral",
+      "frequency": "Nightly",
+      "indication": "Dyslipidemia, PAD",
+      "inpatient_status": "Continued"
+    },
+    {
+      "row": 8,
+      "drug": "Aspirin",
+      "dose": "81 mg",
+      "route": "Oral",
+      "frequency": "Daily",
+      "indication": "PAD secondary prevention",
+      "inpatient_status": "Continued"
+    },
+    {
+      "row": 9,
+      "drug": "Clopidogrel",
+      "dose": "75 mg",
+      "route": "Oral",
+      "frequency": "Daily",
+      "indication": "PAD",
+      "inpatient_status": "Continued"
+    },
+    {
+      "row": 10,
+      "drug": "Gabapentin",
+      "dose": "300 mg",
+      "route": "Oral",
+      "frequency": "Three times daily",
+      "indication": "Diabetic neuropathy",
+      "inpatient_status": "Continued, renally dose-checked"
+    },
+    {
+      "row": 11,
+      "drug": "Ferrous sulfate",
+      "dose": "325 mg",
+      "route": "Oral",
+      "frequency": "Daily",
+      "indication": "Anemia of CKD",
+      "inpatient_status": "Continued"
+    },
+    {
+      "row": 12,
+      "drug": "Cholecalciferol",
+      "dose": "2000 units",
+      "route": "Oral",
+      "frequency": "Daily",
+      "indication": "CKD, vitamin D",
+      "inpatient_status": "Continued"
+    },
+    {
+      "row": 13,
+      "drug": "Pantoprazole",
+      "dose": "40 mg",
+      "route": "Oral",
+      "frequency": "Daily",
+      "indication": "GERD",
+      "inpatient_status": "Continued"
+    },
+    {
+      "row": 14,
+      "drug": "Acetaminophen",
+      "dose": "650 mg",
+      "route": "Oral",
+      "frequency": "Three times daily as needed",
+      "indication": "Knee OA (NSAIDs avoided in CKD)",
+      "inpatient_status": "Continued"
+    },
+    {
+      "row": 15,
+      "drug": "CPAP",
+      "dose": "Device",
+      "route": "Mask",
+      "frequency": "Nightly",
+      "indication": "OSA",
+      "inpatient_status": "Continued"
+    }
+  ],
+  "care_team": [
+    {
+      "name": "Lillian Everet, MD",
+      "credentials": "MD",
+      "role": "Hospitalist attending; attending of record (also ED provider on admission)",
+      "npi": "1457629831",
+      "pager": "(561) 555-0511",
+      "appears_in_tasks": [
+        1,
+        2,
+        4,
+        8,
+        10
+      ]
+    },
+    {
+      "name": "Tobias Renquist, MD",
+      "credentials": "MD, PGY-2",
+      "role": "Hospital medicine resident",
+      "npi": "1659430275",
+      "pager": "(561) 555-0514",
+      "appears_in_tasks": []
+    },
+    {
+      "name": "Priyanka Vell, DPM",
+      "credentials": "DPM",
+      "role": "Podiatric surgery",
+      "npi": "1789203341",
+      "pager": "(561) 555-0532",
+      "appears_in_tasks": [
+        2,
+        3,
+        8
+      ]
+    },
+    {
+      "name": "Castor Mwangi, MD",
+      "credentials": "MD",
+      "role": "Vascular surgery",
+      "npi": "1234918876",
+      "pager": "(561) 555-0541",
+      "appears_in_tasks": [
+        4,
+        6,
+        8
+      ]
+    },
+    {
+      "name": "Helena Brusk, MD",
+      "credentials": "MD",
+      "role": "Infectious disease",
+      "npi": "1338820017",
+      "pager": "(561) 555-0553",
+      "appears_in_tasks": [
+        1,
+        3,
+        5
+      ]
+    },
+    {
+      "name": "Imran Saafeld, MD",
+      "credentials": "MD",
+      "role": "Endocrinology and diabetes education",
+      "npi": "1490217633",
+      "pager": "(561) 555-0560",
+      "appears_in_tasks": [
+        1,
+        7
+      ]
+    },
+    {
+      "name": "Renata Olwyn, RN, CWOCN",
+      "credentials": "RN, CWOCN",
+      "role": "Wound care nurse",
+      "npi": "1572041089",
+      "pager": "(561) 555-0577",
+      "appears_in_tasks": [
+        2,
+        3,
+        8
+      ]
+    },
+    {
+      "name": "Devon Achara, PT, DPT",
+      "credentials": "PT, DPT",
+      "role": "Physical therapy",
+      "npi": "1683918274",
+      "pager": "(561) 555-0582",
+      "appears_in_tasks": [
+        4,
+        6,
+        9
+      ]
+    },
+    {
+      "name": "Sela Pruvost, OT",
+      "credentials": "OT",
+      "role": "Occupational therapy",
+      "npi": "1771204938",
+      "pager": "(561) 555-0588",
+      "appears_in_tasks": [
+        4,
+        6,
+        9
+      ]
+    },
+    {
+      "name": "Quentin Mabari, PharmD",
+      "credentials": "PharmD",
+      "role": "Inpatient pharmacist",
+      "npi": "1862044771",
+      "pager": "(561) 555-0594",
+      "appears_in_tasks": [
+        5
+      ]
+    },
+    {
+      "name": "Lorna Defreze, RN, CCM",
+      "credentials": "RN, CCM",
+      "role": "Case management",
+      "npi": "1934920018",
+      "pager": "(561) 555-0612",
+      "appears_in_tasks": [
+        4,
+        6
+      ]
+    },
+    {
+      "name": "Bristol Ndiaye, RN, CCDS",
+      "credentials": "RN, CCDS",
+      "role": "Clinical documentation integrity specialist",
+      "npi": null,
+      "phone": "(561) 555-0623",
+      "appears_in_tasks": [
+        3
+      ]
+    },
+    {
+      "name": "Corwin Adeyle, RHIA, CCS",
+      "credentials": "RHIA, CCS",
+      "role": "Health information coding lead",
+      "npi": null,
+      "phone": "(561) 555-0634",
+      "appears_in_tasks": [
+        2
+      ]
+    },
+    {
+      "name": "Ellery Stovall, MD",
+      "credentials": "MD",
+      "role": "Medicare Advantage medical director (external \u2014 Crestline Medicare Advantage HMO)",
+      "npi": "1409287733",
+      "phone": "(800) 555-0719",
+      "appears_in_tasks": [
+        4
+      ]
+    },
+    {
+      "name": "Vivienne Karras, MD",
+      "credentials": "MD",
+      "role": "Physician advisor (utilization review)",
+      "npi": "1567823310",
+      "phone": "(561) 555-0645",
+      "appears_in_tasks": [
+        6
+      ]
+    },
+    {
+      "name": "Annaliese Pintar, RN",
+      "credentials": "RN, BSN",
+      "role": "Quality / HEDIS abstraction nurse",
+      "npi": null,
+      "phone": "(561) 555-0658",
+      "appears_in_tasks": [
+        7
+      ]
+    },
+    {
+      "name": "Mateo Qui\u00f1ones, MHA",
+      "credentials": "MHA, CPPS",
+      "role": "Patient safety officer",
+      "npi": null,
+      "phone": "(561) 555-0667",
+      "appears_in_tasks": [
+        9
+      ]
+    },
+    {
+      "name": "Florencia Beltr\u00e1n",
+      "credentials": "Spanish medical interpreter (certified)",
+      "role": "Hospital interpreter \u2014 Spanish",
+      "appears_in_tasks": []
+    },
+    {
+      "name": "Marisela Vasquell",
+      "credentials": "CNA",
+      "role": "Daughter / primary caregiver",
+      "phone": "(561) 555-0388",
+      "appears_in_tasks": []
+    }
+  ],
+  "primary_care_provider": {
+    "name": "Esmeralda Torres-Hidalgo, MD",
+    "practice": "Bayfront Community Internal Medicine",
+    "address": "915 Pelican Drive, Cypress Harbor, FL 33421",
+    "phone": "(561) 555-0823",
+    "fax": "(561) 555-0824",
+    "npi": "1208347723"
+  },
+  "ophthalmology": {
+    "name": "Sergio Maldonado, OD",
+    "practice": "Harbor Vista Eye Care",
+    "exam_date": "2026-03-15",
+    "address": "330 Mariners Bay Boulevard, Suite 4B, Cypress Harbor, FL 33421",
+    "phone": "(561) 555-0902",
+    "findings": "Mild non-proliferative diabetic retinopathy bilaterally; no macular edema; no proliferative disease",
+    "next_exam_due": "2027-03-15"
+  },
+  "timeline": [
+    {
+      "date": "2026-03-15",
+      "label": "Dilated diabetic eye exam (outpatient ophthalmology)",
+      "anchor": "pre-admission, quality-measure lookback"
+    },
+    {
+      "date": "2026-04-28",
+      "label": "Outpatient foot ulcer first noticed",
+      "anchor": "approx 3 weeks pre-admission"
+    },
+    {
+      "date": "2026-04-30",
+      "label": "Outpatient primary care summary \u2014 chronic disease status before admission",
+      "anchor": "pre-admission"
+    },
+    {
+      "date": "2026-05-16",
+      "hospital_day": "HD1",
+      "label": "ED presentation and admission; empiric vancomycin + piperacillin-tazobactam; oral agents (metformin, empagliflozin, lisinopril) held; superficial wound swab collected",
+      "events": [
+        "ED arrival 0840",
+        "Admit 1130",
+        "H&P signed 1205, cosigned 1320",
+        "Hold orders signed 1150"
+      ]
+    },
+    {
+      "date": "2026-05-17",
+      "hospital_day": "HD2",
+      "label": "Podiatry soft-tissue debridement at bedside (Dr. Vell); deep cultures sent; no exposed bone; granulating base",
+      "events": [
+        "Debridement 1410",
+        "Note signed 1440",
+        "Hospitalist progress note 0930"
+      ]
+    },
+    {
+      "date": "2026-05-18",
+      "hospital_day": "HD3",
+      "label": "MRI foot \u2014 equivocal for early osteomyelitis (marrow edema); ID consult (Dr. Brusk) \u2014 explicitly does not sign osteomyelitis",
+      "events": [
+        "MRI started 1542, finalized 1705",
+        "ID consult signed 1540",
+        "Superficial swab final 0744 \u2014 mixed flora"
+      ]
+    },
+    {
+      "date": "2026-05-19",
+      "hospital_day": "HD4",
+      "label": "ABI/TBI study \u2014 noncompressible ankle, TBI 0.50 left, 0.84 right; vascular consult (Dr. Mwangi) \u2014 perfusion open; endocrine note (Dr. Saafeld); ID antibiotic plan note; deep-tissue culture finalized",
+      "events": [
+        "ABI/TBI 1038-1155",
+        "Vascular consult 1600, signed 1635",
+        "Endocrine 1135",
+        "Hospitalist 0915",
+        "Deep-tissue culture final 0832",
+        "ID antibiotic plan 1700"
+      ]
+    },
+    {
+      "date": "2026-05-20",
+      "hospital_day": "HD5",
+      "label": "Surgical pathology \u2014 soft tissue, NO bone; PT eval (Achara); OT eval (Pruvost) \u2014 teach-back NOT achieved; case management screen; wound care consult (Olwyn); family meeting; nursing offloading flowsheet",
+      "events": [
+        "Pathology reported 0930, signed 1010",
+        "Wound care 1105",
+        "PT 1405",
+        "OT 1500",
+        "Case management 1620",
+        "Family meeting note 1730"
+      ]
+    },
+    {
+      "date": "2026-05-21T18:00:00",
+      "hospital_day": "HD6",
+      "label": "WORLD SNAPSHOT \u2014 chart frozen; WBC 8.9, Cr 1.6; improving but operationally unsafe",
+      "events": [
+        "HD6 hospitalist note 1700",
+        "All flowsheets extracted 1730"
+      ]
+    },
+    {
+      "date": "2026-05-22T08:30:00",
+      "label": "Task 1 \u2014 Discharge medication reconciliation",
+      "task": 1
+    },
+    {
+      "date": "2026-05-22T09:00:00",
+      "label": "Task 2 \u2014 Inpatient coding attestation",
+      "task": 2
+    },
+    {
+      "date": "2026-05-22T10:00:00",
+      "label": "Task 10 \u2014 Discharge-instruction completion",
+      "task": 10
+    },
+    {
+      "date": "2026-05-23",
+      "label": "External documents issued: HIM coding worksheet, CDI query memo, Medicare Advantage SNF denial letter"
+    },
+    {
+      "date": "2026-05-24T10:00:00",
+      "label": "Task 3 \u2014 CDI query response",
+      "task": 3
+    },
+    {
+      "date": "2026-05-24T15:00:00",
+      "label": "Task 4 \u2014 Medicare Advantage SNF-denial appeal (integration anchor)",
+      "task": 4
+    },
+    {
+      "date": "2026-05-25T09:00:00",
+      "label": "Task 5 \u2014 Pharmacy benefit rejection response",
+      "task": 5
+    },
+    {
+      "date": "2026-05-26T11:00:00",
+      "label": "Task 6 \u2014 Continued-stay determination",
+      "task": 6
+    },
+    {
+      "date": "2026-06-04T09:00:00",
+      "label": "Task 7 \u2014 Diabetes quality-measure abstraction",
+      "task": 7
+    },
+    {
+      "date": "2026-06-08T14:00:00",
+      "label": "Task 8 \u2014 Vascular surgery referral letter",
+      "task": 8
+    },
+    {
+      "date": "2026-06-11T10:00:00",
+      "label": "Task 9 \u2014 Missed-offloading safety review",
+      "task": 9
+    }
+  ],
+  "clinical_data": {
+    "renal_trend": [
+      {
+        "label": "Baseline (outpatient)",
+        "date": "pre-admission",
+        "creatinine_mg_dL": 1.5,
+        "egfr": 38,
+        "bun_mg_dL": 24,
+        "potassium_mEq_L": 4.4
+      },
+      {
+        "label": "HD1",
+        "date": "2026-05-16",
+        "creatinine_mg_dL": 2.1,
+        "egfr": 26,
+        "bun_mg_dL": 38,
+        "potassium_mEq_L": 4.6
+      },
+      {
+        "label": "HD2",
+        "date": "2026-05-17",
+        "creatinine_mg_dL": 1.9,
+        "egfr": 29,
+        "bun_mg_dL": 34,
+        "potassium_mEq_L": 4.5
+      },
+      {
+        "label": "HD4",
+        "date": "2026-05-19",
+        "creatinine_mg_dL": 1.7,
+        "egfr": 34,
+        "bun_mg_dL": 29,
+        "potassium_mEq_L": 4.2
+      },
+      {
+        "label": "HD6",
+        "date": "2026-05-21",
+        "creatinine_mg_dL": 1.6,
+        "egfr": 36,
+        "bun_mg_dL": 26,
+        "potassium_mEq_L": 4.1
+      }
+    ],
+    "cbc_inflammatory_trend": [
+      {
+        "label": "HD1",
+        "date": "2026-05-16",
+        "wbc_K_uL": 14.2,
+        "crp_mg_L": 118,
+        "hemoglobin_g_dL": 9.8,
+        "platelets_K_uL": 318
+      },
+      {
+        "label": "HD2",
+        "date": "2026-05-17",
+        "wbc_K_uL": 12.1,
+        "crp_mg_L": 96,
+        "hemoglobin_g_dL": 9.7,
+        "platelets_K_uL": 322
+      },
+      {
+        "label": "HD4",
+        "date": "2026-05-19",
+        "wbc_K_uL": 10.4,
+        "crp_mg_L": 62,
+        "hemoglobin_g_dL": 9.8,
+        "platelets_K_uL": 330
+      },
+      {
+        "label": "HD6",
+        "date": "2026-05-21",
+        "wbc_K_uL": 8.9,
+        "crp_mg_L": 41,
+        "hemoglobin_g_dL": 9.8,
+        "platelets_K_uL": 315
+      }
+    ],
+    "vitals_trend": [
+      {
+        "label": "HD1",
+        "date": "2026-05-16",
+        "temp_C": 38.2,
+        "hr": 104,
+        "bp": "148/82",
+        "rr": 18,
+        "spo2": "96% RA",
+        "glucose_mg_dL": 244
+      },
+      {
+        "label": "HD2",
+        "date": "2026-05-17",
+        "temp_C": 37.8,
+        "hr": 96,
+        "bp": "142/80",
+        "rr": 18,
+        "spo2": "97% RA",
+        "glucose_mg_dL": 212
+      },
+      {
+        "label": "HD4",
+        "date": "2026-05-19",
+        "temp_C": 37.2,
+        "hr": 88,
+        "bp": "138/78",
+        "rr": 17,
+        "spo2": "97% RA",
+        "glucose_mg_dL": 186
+      },
+      {
+        "label": "HD6",
+        "date": "2026-05-21",
+        "temp_C": 36.8,
+        "hr": 80,
+        "bp": "134/76",
+        "rr": 16,
+        "spo2": "98% RA",
+        "glucose_mg_dL": 162
+      }
+    ],
+    "ed_chemistry": {
+      "wbc_K_uL": 14.2,
+      "left_shift": true,
+      "bun_mg_dL": 38,
+      "creatinine_mg_dL": 2.1,
+      "potassium_mEq_L": 4.6,
+      "hemoglobin_g_dL": 9.8,
+      "glucose_mg_dL": 244,
+      "lactate_mmol_L": 1.6,
+      "foot_xray": "Soft tissue swelling, no definite osseous destruction; correlate clinically"
+    },
+    "abi_tbi_study": {
+      "accession": "HCR-VAS-05193320",
+      "date": "2026-05-19",
+      "started": "10:38",
+      "finalized": "11:55",
+      "left_abi": "Noncompressible (>1.3)",
+      "right_abi": "Noncompressible (>1.3)",
+      "left_tbi": 0.5,
+      "right_tbi": 0.84,
+      "left_toe_pressure_mmHg": 55,
+      "right_toe_pressure_mmHg": 92,
+      "ankle_waveform": "Monophasic bilaterally",
+      "impression": "Noncompressible ankles consistent with medial arterial calcification; toe-brachial indices and toe pressures reduced, left more than right; perfusion adequacy for wound healing is a clinical determination"
+    },
+    "mri_foot": {
+      "accession": "HCR-IMG-05181844",
+      "date": "2026-05-18",
+      "started": "15:42",
+      "finalized": "17:05",
+      "findings": "Plantar soft-tissue ulceration over 1st-2nd MTH with adjacent edema and enhancement; bone marrow edema in adjacent 1st and 2nd metatarsal heads; NO cortical destruction, sequestrum, or drainable abscess",
+      "impression": "Plantar forefoot soft-tissue infection; marrow edema adjacent \u2014 early osteomyelitis CANNOT be excluded, findings equivocal and not diagnostic alone; no drainable abscess",
+      "contrast_note": "Limited and renally cautious given CKD"
+    },
+    "podiatry_debridement": {
+      "date": "2026-05-17",
+      "time": "14:10",
+      "operator": "Priyanka Vell, DPM",
+      "site": "Plantar left forefoot, 1st-2nd metatarsal head",
+      "findings": "Devitalized soft tissue and fibrinous slough removed to granulating base; no exposed bone; no bone palpable to probe at base; no deep abscess tracking",
+      "specimens": [
+        "Deep soft tissue for aerobic and anaerobic culture",
+        "Deep soft tissue for surgical pathology"
+      ]
+    },
+    "cultures": {
+      "deep_tissue_operative": {
+        "accession": "HCR-MIC-26-51744",
+        "collected": "2026-05-17T14:18",
+        "received": "2026-05-17T15:10",
+        "reported": "2026-05-19T08:32",
+        "source": "Deep soft tissue obtained at operative debridement (higher authority)",
+        "organisms": [
+          {
+            "name": "Staphylococcus aureus, methicillin-susceptible (MSSA)",
+            "growth": "moderate"
+          },
+          {
+            "name": "Streptococcus agalactiae",
+            "growth": "moderate"
+          }
+        ],
+        "anaerobic": "No growth",
+        "susceptibilities_mssa": {
+          "oxacillin": "Susceptible",
+          "cefazolin": "Susceptible",
+          "clindamycin": "Susceptible",
+          "trimethoprim_sulfamethoxazole": "Susceptible (BUT patient has documented sulfa allergy \u2014 do not use)",
+          "vancomycin": "Susceptible"
+        }
+      },
+      "superficial_swab": {
+        "accession": "HCR-MIC-26-51621",
+        "collected": "2026-05-16T09:02",
+        "received": "2026-05-16T10:18",
+        "reported": "2026-05-18T07:44",
+        "source": "Superficial wound swab (ED) \u2014 lower authority, surface flora",
+        "result": "Mixed skin flora; no dominant pathogen isolated"
+      }
+    },
+    "pathology": {
+      "case_number": "HCR-SP-26-0517",
+      "specimen": "Left forefoot deep soft tissue, debridement",
+      "collected": "2026-05-17T14:18",
+      "received": "2026-05-17T15:36",
+      "reported": "2026-05-20T09:30",
+      "signed": "2026-05-20T10:10",
+      "gross": "Multiple fragments of tan-pink soft tissue aggregating to 2.5 cm; no bony fragments grossly",
+      "microscopic_diagnosis": [
+        "Soft tissue with acute and chronic inflammation and granulation tissue",
+        "No bone present in the specimen",
+        "No definitive features of osteomyelitis identified in the submitted soft tissue"
+      ]
+    },
+    "wound_assessment_05_20": {
+      "author": "Renata Olwyn, RN, CWOCN",
+      "location": "Plantar left forefoot, 1st-2nd MTH",
+      "length_cm": 3.0,
+      "width_cm": 2.2,
+      "depth_cm": 0.8,
+      "base": "Red granulation tissue, no exposed bone",
+      "exudate": "Scant serous",
+      "periwound": "Mild erythema, improving; intact surrounding skin with callus",
+      "odor": "None after debridement",
+      "dressing_plan": "Daily moist wound dressing; skilled nursing-level dressing changes required",
+      "offloading": "Strict offloading of left forefoot; coordinate device with therapy",
+      "reassessment_frequency": "Twice weekly"
+    },
+    "pt_evaluation": {
+      "author": "Devon Achara, PT, DPT",
+      "date": "2026-05-20",
+      "time": "14:05",
+      "bed_mobility": "Independent",
+      "transfers": "Supervision, slowed by deconditioning and weight-bearing precaution",
+      "gait": "30-40 ft with front-wheeled walker and supervision; offloading left forefoot",
+      "stairs": "NOT yet assessed as safe; home has interior stairs to second-floor unit",
+      "weight_bearing": "Heel-only / offloading of left forefoot per podiatry",
+      "assessment": "Reduced endurance and weight-bearing restriction limit safe mobility, particularly stairs; offloading must be maintained for wound healing",
+      "plan": [
+        "Continue gait training with offloading device",
+        "Stair assessment before any unsupported home discharge",
+        "Recommend skilled therapy continuation; document equipment needs"
+      ]
+    },
+    "ot_evaluation": {
+      "author": "Sela Pruvost, OT",
+      "date": "2026-05-20",
+      "time": "15:00",
+      "self_care": "Modified independent UB dressing; LB dressing limited by foot precaution",
+      "home_setup": "Lives alone, second-floor walk-up, night-working daughter",
+      "teach_back": "Attempted with interpreter; patient NOT yet able to demonstrate correct offloading and dressing protection independently",
+      "assessment": "Offloading and wound-protection teach-back NOT achieved this session; home-safety risk elevated",
+      "plan": [
+        "Repeat offloading and dressing-protection teaching with interpreter",
+        "Coordinate caregiver training with the daughter when available",
+        "Document home-safety contributors"
+      ]
+    },
+    "case_management_screen": {
+      "author": "Lorna Defreze, RN, CCM",
+      "date": "2026-05-20",
+      "time": "16:20",
+      "barriers": [
+        "Lives alone in second-floor walk-up with interior stairs",
+        "Daughter primary caregiver, night shifts \u2014 partial availability",
+        "Spanish-preferred; interpreter needed",
+        "Skilled wound dressing changes required; offloading device pending",
+        "Insurance: Medicare Advantage primary, Medicaid secondary"
+      ],
+      "options_under_review": [
+        "Skilled nursing facility for wound care and rehab",
+        "Home with home-health nursing and caregiver support, contingent on teach-back and equipment"
+      ],
+      "pending": "DME (offloading device) pending; home-health setup not yet confirmed; caregiver training incomplete; disposition not determined"
+    },
+    "family_meeting_05_20": {
+      "author": "Lorna Defreze, RN, CCM",
+      "time": "17:30",
+      "participants": [
+        "Patient",
+        "Daughter Marisela Vasquell",
+        "Hospital interpreter (Florencia Beltr\u00e1n)",
+        "Care management"
+      ],
+      "discussion": "Wound, infection treatment, and need for ongoing skilled wound care and offloading reviewed; daughter willing to help but works night shifts; cannot provide overnight supervision or daytime dressing changes on workdays",
+      "daughter_quote": "She wants to help but cannot be there every day",
+      "outcome": "No disposition decision finalized; teaching to be repeated with daughter present"
+    },
+    "offloading_flowsheet": [
+      {
+        "date": "2026-05-18",
+        "device_in_use": "Heel-protect boot intermittent",
+        "repositioning": "Per protocol",
+        "teaching_attempt": "Initiated with interpreter"
+      },
+      {
+        "date": "2026-05-19",
+        "device_in_use": "Offloading NOT consistently maintained when ambulating to bathroom",
+        "repositioning": "Per protocol",
+        "teaching_attempt": "Reinforced"
+      },
+      {
+        "date": "2026-05-20",
+        "device_in_use": "Device in place at rest; removed by patient at times",
+        "repositioning": "Per protocol",
+        "teaching_attempt": "Teach-back NOT achieved"
+      },
+      {
+        "date": "2026-05-21",
+        "device_in_use": "Device in place",
+        "repositioning": "Per protocol",
+        "teaching_attempt": "To be repeated with daughter present"
+      }
+    ],
+    "mar_summary": {
+      "vancomycin": {
+        "dose": "By level IV per pharmacy",
+        "schedule": "Renal-dosed",
+        "active_from": "2026-05-16",
+        "status": "Active"
+      },
+      "piperacillin_tazobactam": {
+        "dose": "2.25 g IV",
+        "schedule": "Every 8 hours (renal)",
+        "active_from": "2026-05-16",
+        "status": "Active"
+      },
+      "cefepime": {
+        "dose": "1 g IV",
+        "schedule": "Every 12 hours (renal)",
+        "active_from": "2026-05-19",
+        "status": "Started culture-directed"
+      },
+      "insulin_glargine": {
+        "status": "Active, intake-adjusted nightly"
+      },
+      "insulin_aspart": {
+        "status": "Active sliding scale with meals"
+      },
+      "furosemide": {
+        "dose": "20 mg PO daily",
+        "status": "Active"
+      },
+      "atorvastatin": {
+        "dose": "40 mg PO nightly",
+        "status": "Active"
+      },
+      "aspirin": {
+        "dose": "81 mg PO daily",
+        "status": "Active"
+      },
+      "clopidogrel": {
+        "dose": "75 mg PO daily",
+        "status": "Active"
+      },
+      "gabapentin": {
+        "dose": "300 mg PO TID renal-checked",
+        "status": "Active"
+      },
+      "pantoprazole": {
+        "dose": "40 mg PO daily",
+        "status": "Active"
+      },
+      "acetaminophen": {
+        "dose": "650 mg PO TID PRN",
+        "status": "Active"
+      },
+      "metformin": {
+        "dose": "500 mg PO BID",
+        "status": "HELD since 2026-05-16"
+      },
+      "empagliflozin": {
+        "dose": "10 mg PO daily",
+        "status": "HELD since 2026-05-16"
+      },
+      "lisinopril": {
+        "dose": "20 mg PO daily",
+        "status": "HELD since 2026-05-16"
+      }
+    },
+    "antibiotic_plan_note_05_19": {
+      "author": "Helena Brusk, MD",
+      "level": "Recommendation only \u2014 not a final discharge antibiotic synthesis",
+      "current": "Empiric vancomycin + piperacillin-tazobactam since 05/16, renally dosed; deep-tissue grew MSSA + Streptococcus agalactiae",
+      "plan_points": [
+        "De-escalate toward beta-lactam with MSSA and streptococcal activity; cefepime renally dosed in use; narrower agent appropriate as course continues",
+        "Sulfa allergy: TMP-SMX not an option despite susceptibility",
+        "Renal dose all agents to CURRENT creatinine",
+        "Total duration depends on soft-tissue course; not finalized here"
+      ],
+      "planned_discharge_agent_intent": "Renally dosed oral or IV agent with MSSA and streptococcal coverage, allergy-safe; final agent and duration to be reconciled at discharge (not specified inside the world; the PBM rejection in Task 5 targets this agent)."
+    }
+  },
+  "tasks": [
+    {
+      "id": 1,
+      "name": "Discharge Medication Reconciliation",
+      "capability": "Medication reconciliation against documented source-of-truth hierarchy under renal constraint",
+      "workflow": "Discharge Medication Reconciliation",
+      "requester": "Hospitalist attending (Dr. Everet)",
+      "anchor_datetime": "2026-05-22T08:30:00",
+      "priority": "P0",
+      "difficulty": "medium-high",
+      "time_estimate_min": "25-35",
+      "format": "Headed reconciliation note, disposition-per-medication structure",
+      "register": "Hospitalist and pharmacist professional",
+      "length_words": "450-700",
+      "grader_anchors": [
+        "Renal-correct antibiotic dose (current Cr 1.6, not admission 2.1)",
+        "Metformin, empagliflozin, lisinopril each handled as EXPLICIT deferred restart \u2014 not silent continue, not silent stop",
+        "NSAID avoidance (acetaminophen continued)",
+        "Insulin continued",
+        "No fabricated doses"
+      ],
+      "task_level_files": [
+        "E1-T1"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Inpatient Coding Attestation",
+      "capability": "Forced-inventory coding judgment under documented uncertainty",
+      "workflow": "Inpatient Medical Coding and DRG Assignment",
+      "requester": "Health information coding lead (Corwin Adeyle, RHIA, CCS)",
+      "anchor_datetime": "2026-05-22T09:00:00",
+      "priority": "P0",
+      "difficulty": "high",
+      "time_estimate_min": "25-35",
+      "format": "Line-by-line physician coding attestation",
+      "register": "Coding-attestation professional",
+      "length_words": "350-550",
+      "grader_anchors": [
+        "Diabetic foot ulcer / deep soft-tissue infection family selected \u2014 NOT pressure injury",
+        "Osteomyelitis NOT attested as established or POA",
+        "No upcoding to unsupported DRG",
+        "Supported secondary diagnoses retained (diabetes, CKD, anemia)"
+      ],
+      "task_level_files": [
+        "E1-T2"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "CDI Query Response",
+      "capability": "Documentation-integrity judgment, reasoned clinical decline in treating voice",
+      "workflow": "Clinical Documentation Improvement (CDI) Query Response Review",
+      "requester": "CDI specialist (Bristol Ndiaye, RN, CCDS)",
+      "anchor_datetime": "2026-05-24T10:00:00",
+      "priority": "P0",
+      "difficulty": "high",
+      "time_estimate_min": "20-30",
+      "format": "Item-by-item attending query response",
+      "register": "Treating attending",
+      "length_words": "350-600",
+      "grader_anchors": [
+        "Osteomyelitis declined on clinical grounds with reasoning (not bare/procedural)",
+        "Decline anchored on treating record",
+        "Supported items answered",
+        "No agreement to unsupported severity language"
+      ],
+      "task_level_files": [
+        "E1-T3"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Medicare Advantage SNF-Denial Appeal",
+      "capability": "Multi-source synthesis into binding appeal (WORLD INTEGRATION ANCHOR)",
+      "workflow": "Claims Denial Analysis and Appeal Preparation",
+      "requester": "Hospitalist attending (Dr. Everet) at case management request",
+      "anchor_datetime": "2026-05-24T15:00:00",
+      "priority": "P0",
+      "difficulty": "high",
+      "time_estimate_min": "30-40",
+      "format": "Physician appeal letter",
+      "register": "Formal physician-to-payer",
+      "length_words": "500-800",
+      "grader_anchors": [
+        "Appeal grounded in PT and OT functional findings and offloading need",
+        "Perfusion uncertainty cited from vascular study (not reassuring pulse)",
+        "Wound-care skill and frequency stated",
+        "Home and caregiver limits integrated",
+        "Offloading boot / wound device used as support, not whole case"
+      ],
+      "task_level_files": [
+        "E1-T4"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Pharmacy Insurance Claim Rejection Response",
+      "capability": "Medication-safety judgment against administrative substitution pressure",
+      "workflow": "Pharmacy Insurance Claim Rejection Resolution",
+      "requester": "Infectious disease attending (Dr. Brusk)",
+      "anchor_datetime": "2026-05-25T09:00:00",
+      "priority": "P0",
+      "difficulty": "medium-high",
+      "time_estimate_min": "20-30",
+      "format": "Prescriber response note to PBM rejection",
+      "register": "Treating attending (prescriber) clinical",
+      "length_words": "300-500",
+      "grader_anchors": [
+        "Unsafe substitute (TMP-SMX) declined with specific reason \u2014 sulfa allergy and/or renal",
+        "Safe alternative or formulary exception proposed",
+        "Dosing reflects current renal function",
+        "Culture hierarchy respected \u2014 deep-tissue, not superficial swab"
+      ],
+      "task_level_files": [
+        "E1-T5"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Continued-Stay Determination",
+      "capability": "Binding level-of-care determination on designed borderline",
+      "workflow": "Utilization Review Concurrent Stay Documentation",
+      "requester": "Physician advisor (Dr. Karras)",
+      "anchor_datetime": "2026-05-26T11:00:00",
+      "priority": "P1",
+      "difficulty": "medium",
+      "time_estimate_min": "20-30",
+      "format": "Physician-advisor continued-stay determination",
+      "register": "Utilization-review",
+      "length_words": "350-550",
+      "grader_anchors": [
+        "Binding determination stated",
+        "Both improvement and unresolved-operational criteria weighed",
+        "Verdict rests on documented function and perfusion, not markers alone",
+        "No discharge-ready verdict from improvement alone"
+      ],
+      "task_level_files": [
+        "E1-T6"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Diabetes Quality-Measure Abstraction",
+      "capability": "Extraction-to-schema with quiet disqualifier",
+      "workflow": "HEDIS Medical Record Chart Abstraction and Review",
+      "requester": "Quality abstraction nurse (Annaliese Pintar, RN)",
+      "anchor_datetime": "2026-06-04T09:00:00",
+      "priority": "P0",
+      "difficulty": "medium-high",
+      "time_estimate_min": "20-30",
+      "format": "Completed structured abstraction form",
+      "register": "Quality-abstraction",
+      "length_words": "250-450",
+      "grader_anchors": [
+        "HEDIS Advanced Illness + Frailty member-level exclusion is APPLIED at the eligibility step per EW23 outpatient PCP summary (age 68 \u226566; HFpEF with qualifying outpatient encounter context; documented limited mobility / abnormal gait per HEDIS frailty value-set) \u2014 denominator excluded for the HEDIS Comprehensive Diabetes Care family (EED, GSD, KED, BPD, SPD)",
+        "Eye-exam field captured to documented evidence: dilated DRE on 2026-03-15 (EW28), mild non-proliferative diabetic retinopathy bilaterally \u2014 within the measurement-year lookback",
+        "HbA1c field captured to documented evidence: 8.6% per EW21 endocrine note and EW23 outpatient summary \u2014 value reported, not forced into a controlled-numerator capture",
+        "Nephropathy field captured to documented CKD stage 3b + proteinuria evidence (EW17 renal trend + EW23 outpatient PCP summary), per spec \u00a7Task-7 Failure Design \u2014 eGFR ~38 documented, proteinuria documented",
+        "No unsupported numerator capture; the upstream exclusion is applied BEFORE numerator forcing, so the abstraction reports fields-as-documented while the measure denominator is excluded"
+      ],
+      "task_level_files": [
+        "E1-T7"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Vascular Surgery Referral Letter",
+      "capability": "From-scratch synthesis with embedded forced disposition table",
+      "workflow": "Specialist Referral Letter and Documentation Preparation",
+      "requester": "Hospitalist attending (Dr. Everet)",
+      "anchor_datetime": "2026-06-08T14:00:00",
+      "priority": "P0",
+      "difficulty": "medium",
+      "time_estimate_min": "25-35",
+      "format": "Referral letter with embedded disposition table (source control / perfusion / antibiotics / offloading / follow-up)",
+      "register": "Referral",
+      "length_words": "450-700",
+      "grader_anchors": [
+        "Disposition table present, each status accurate",
+        "Perfusion and pending items kept OPEN",
+        "Narrative does not assert resolution chart does not support",
+        "Referral asks the open perfusion and revascularization questions"
+      ],
+      "task_level_files": []
+    },
+    {
+      "id": 9,
+      "name": "Missed-Offloading Safety Review",
+      "capability": "Investigation with system-vs-individual attribution judgment",
+      "workflow": "Patient Safety Event Investigation and Root Cause Analysis",
+      "requester": "Patient safety officer (Mateo Qui\u00f1ones, MHA, CPPS)",
+      "anchor_datetime": "2026-06-11T10:00:00",
+      "priority": "P0",
+      "difficulty": "medium-low",
+      "time_estimate_min": "25-35",
+      "format": "Structured root-cause review",
+      "register": "Patient-safety review",
+      "length_words": "450-700",
+      "grader_anchors": [
+        "Attribution multifactorial and system-level \u2014 NOT single-person blame",
+        "Prevention plan maps to documented contributors",
+        "Review engages chart"
+      ],
+      "task_level_files": [
+        "E1-T9"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Discharge-Instruction Completion",
+      "capability": "Completion with true placeholder on the scored decision",
+      "workflow": "Medical Transcription and Clinical Documentation Completion",
+      "requester": "Discharging attending (Dr. Everet)",
+      "anchor_datetime": "2026-05-22T10:00:00",
+      "priority": "P0",
+      "difficulty": "medium",
+      "time_estimate_min": "20-30",
+      "format": "Finalized patient-facing discharge instruction sheet (Spanish-language version expected)",
+      "register": "Patient-facing discharge",
+      "length_words": "300-500",
+      "grader_anchors": [
+        "Offloading/activity section completed with documented unsafe-offloading restriction and SUPERVISED plan \u2014 not routine clearance",
+        "Nothing the chart leaves open is closed",
+        "Rest of draft finalized faithfully (true placeholder is only the offloading section)"
+      ],
+      "task_level_files": [
+        "E1-T10"
+      ]
+    }
+  ],
+  "decision_friction_table": [
+    {
+      "friction": "Discharge disposition (central)",
+      "party_a": "Medicare Advantage medical director (Dr. Stovall)",
+      "party_a_position": "Improving infection markers support home with home health",
+      "party_b": "Treating team (Dr. Everet, case management)",
+      "party_b_position": "Unsafe without skilled-nursing wound care, offloading training, and equipment",
+      "resolution": "Resolves toward continued skilled-level need",
+      "tasks_affected": [
+        4,
+        6
+      ]
+    },
+    {
+      "friction": "Home support (central)",
+      "party_a": "Daughter Marisela",
+      "party_a_position": "Wants mother home; offers night-limited help",
+      "party_b": "PT/OT (Achara, Pruvost)",
+      "party_b_position": "Walk-up stairs and offloading make home unsafe now",
+      "resolution": "Documented functional limits govern",
+      "tasks_affected": [
+        4,
+        6,
+        9
+      ]
+    },
+    {
+      "friction": "Perfusion and wound advancement",
+      "party_a": "Podiatry (Dr. Vell)",
+      "party_a_position": "Debride, offload, advance wound care",
+      "party_b": "Vascular surgery (Dr. Mwangi)",
+      "party_b_position": "Settle perfusion and revascularization sequencing first",
+      "resolution": "Vascular study governs over bedside impression",
+      "tasks_affected": [
+        4,
+        6,
+        8
+      ]
+    },
+    {
+      "friction": "Documentation severity",
+      "party_a": "HIM/CDI (Adeyle, Ndiaye)",
+      "party_a_position": "Capture acute osteomyelitis and higher specificity",
+      "party_b": "Treating team (Everet, Brusk)",
+      "party_b_position": "Restraint \u2014 osteomyelitis not established",
+      "resolution": "Treating record governs",
+      "tasks_affected": [
+        2,
+        3
+      ]
+    },
+    {
+      "friction": "Antibiotic formulary",
+      "party_a": "Pharmacy benefit manager (Meridian Rx)",
+      "party_a_position": "Prefers a formulary substitute (TMP-SMX)",
+      "party_b": "Infectious disease and pharmacy (Brusk, Mabari)",
+      "party_b_position": "Renal and allergy safety first \u2014 sulfa allergy precludes TMP-SMX",
+      "resolution": "Clinical safety governs",
+      "tasks_affected": [
+        5
+      ]
+    }
+  ],
+  "data_hierarchy_note": "When sources conflict, authority runs highest first: (1) Active MAR and signed orders for what was given and ordered; (2) Attending or specialist consult note for clinical rationale; (3) Floor or progress note; (4) Outside or patient-reported information. Two specific conflicts: perfusion adequacy follows the formal ABI/TBI study and vascular consult OVER any reassuring bedside pulse note; osteomyelitis status follows the treating record (equivocal imaging, no bone confirmation) OVER any severity-forward external worksheet or query.",
+  "traps": [
+    {
+      "trap_id": "T-RENAL-FORWARD",
+      "trap": "Discharge antibiotic dose carried forward from admission renal values",
+      "conceal_surface": "E1-T1 preliminary discharge order set lists admission-dosed antibiotics",
+      "reveal_surface": "Renal lab trend (Cr 2.1 \u2192 1.6; eGFR 26 \u2192 36) + ID antibiotic plan note + MAR",
+      "remediation": "Dose to current renal function, not admission",
+      "primary_task": 1,
+      "shared_with_tasks": [
+        5
+      ]
+    },
+    {
+      "trap_id": "T-HELD-AGENTS",
+      "trap": "Held oral agents read as silent auto-continue OR silent stop",
+      "conceal_surface": "Home med list shows them as routine outpatient meds",
+      "reveal_surface": "Signed medication hold orders 05/16; admission H&P hold rationale",
+      "remediation": "Treat metformin, empagliflozin, lisinopril as parameter-gated deferred-restart decisions",
+      "primary_task": 1,
+      "shared_with_tasks": []
+    },
+    {
+      "trap_id": "T-NSAID-FOR-KNEE",
+      "trap": "NSAID offered for knee OA",
+      "conceal_surface": "Knee OA on problem list invites NSAID",
+      "reveal_surface": "CKD 3b + home med list shows acetaminophen-only; admission note states NSAIDs avoided",
+      "remediation": "Continue acetaminophen; NSAIDs unsafe in CKD 3b",
+      "primary_task": 1,
+      "shared_with_tasks": []
+    },
+    {
+      "trap_id": "T-CULTURE-PROVENANCE",
+      "trap": "Culture provenance flattened \u2014 superficial swab drives antibiotic choice",
+      "conceal_surface": "Superficial swab report (mixed flora) sits alongside deep-tissue report",
+      "reveal_surface": "Deep-tissue culture report (MSSA + Strep agalactiae) + ID plan note anchored on deep tissue",
+      "remediation": "Weight deep-tissue culture over superficial swab",
+      "primary_task": 5,
+      "shared_with_tasks": [
+        1
+      ]
+    },
+    {
+      "trap_id": "T-INSULIN-INVENT",
+      "trap": "Insulin regimen altered without basis",
+      "conceal_surface": "Glucose values vary across the stay",
+      "reveal_surface": "MAR shows continued home basal-bolus, intake-adjusted",
+      "remediation": "Continue home basal-bolus; no invented change",
+      "primary_task": 1,
+      "shared_with_tasks": []
+    },
+    {
+      "trap_id": "T-PRESSURE-INJURY",
+      "trap": "Coding worksheet steers toward pressure-injury code family",
+      "conceal_surface": "E1-T2 HIM preliminary coding worksheet",
+      "reveal_surface": "Podiatry and wound notes describe diabetic plantar ulcer with deep soft tissue infection",
+      "remediation": "Code diabetic foot ulcer / deep soft tissue infection family",
+      "primary_task": 2,
+      "shared_with_tasks": []
+    },
+    {
+      "trap_id": "T-OSTEO-POA",
+      "trap": "Severity-forward pressure to attest acute osteomyelitis POA",
+      "conceal_surface": "E1-T2 HIM coding worksheet AND E1-T3 CDI query memo",
+      "reveal_surface": "MRI (equivocal) + pathology (no bone) + ID consult (does not sign) + podiatry (no exposed bone) + treating progress notes",
+      "remediation": "DECLINE: imaging equivocal, no bone specimen, ID did not sign",
+      "primary_task": 3,
+      "shared_with_tasks": [
+        2
+      ]
+    },
+    {
+      "trap_id": "T-DRG-UPCODE",
+      "trap": "Severity-forward DRG temptation",
+      "conceal_surface": "E1-T2 coding worksheet",
+      "reveal_surface": "Treating record establishes what is supported; no osteomyelitis confirmation",
+      "remediation": "Attest only what the treating record establishes",
+      "primary_task": 2,
+      "shared_with_tasks": []
+    },
+    {
+      "trap_id": "T-POA-FLATTEN",
+      "trap": "POA assignment flattened by assumption rather than documented onset",
+      "conceal_surface": "Coding worksheet POA columns",
+      "reveal_surface": "Admission and floor notes establish documented onset",
+      "remediation": "Assign POA per documented onset",
+      "primary_task": 2,
+      "shared_with_tasks": []
+    },
+    {
+      "trap_id": "T-COMORBID-DROP",
+      "trap": "Dropping supported comorbidity capture",
+      "conceal_surface": "Worksheet focused on principal Dx",
+      "reveal_surface": "Problem list and PMH document diabetes, CKD, anemia",
+      "remediation": "Retain documented diabetes, CKD, anemia codes",
+      "primary_task": 2,
+      "shared_with_tasks": []
+    },
+    {
+      "trap_id": "T-CDI-BARE-DECLINE",
+      "trap": "Bare or procedural decline of CDI query \u2014 no clinical reasoning",
+      "conceal_surface": "Query asks for yes/no specificity",
+      "reveal_surface": "Treating-team's own deep-soft-tissue-infection framing",
+      "remediation": "Give explicit clinical reasoning; anchor on attending and ID notes",
+      "primary_task": 3,
+      "shared_with_tasks": []
+    },
+    {
+      "trap_id": "T-CDI-OVER-DECLINE",
+      "trap": "Over-correction \u2014 declining a genuinely supported clarification",
+      "conceal_surface": "Multiple query items presented together",
+      "reveal_surface": "Some items have chart support (e.g., specificity of diabetes complications)",
+      "remediation": "Accept genuinely supported clarifications",
+      "primary_task": 3,
+      "shared_with_tasks": []
+    },
+    {
+      "trap_id": "T-PAYER-DEFER",
+      "trap": "Denial frames improving markers as home readiness; agent over-defers to payer",
+      "conceal_surface": "E1-T4 Medicare Advantage denial letter",
+      "reveal_surface": "PT + OT + vascular + wound + case management; chart contradicts payer framing",
+      "remediation": "Hold treating position; rebut from chart",
+      "primary_task": 4,
+      "shared_with_tasks": []
+    },
+    {
+      "trap_id": "T-PERFUSION-PULSE",
+      "trap": "Perfusion read as adequate from a casual pulse impression",
+      "conceal_surface": "Bedside pulse notes; progress note narrative",
+      "reveal_surface": "ABI/TBI noncompressible + TBI 0.50 left + vascular consult keeps perfusion open",
+      "remediation": "Cite formal study and guarded consult; keep perfusion unresolved",
+      "primary_task": 4,
+      "shared_with_tasks": [
+        6,
+        8
+      ]
+    },
+    {
+      "trap_id": "T-OFFLOAD-OMIT",
+      "trap": "Offloading and stairs omitted from appeal",
+      "conceal_surface": "Improving markers narrative",
+      "reveal_surface": "PT (stairs not safe), OT (teach-back not achieved), case management",
+      "remediation": "Make functional and home-environment limits central",
+      "primary_task": 4,
+      "shared_with_tasks": []
+    },
+    {
+      "trap_id": "T-DEVICE-WHOLE-CASE",
+      "trap": "Offloading device used as the entire appeal",
+      "conceal_surface": "Device pending in case management note",
+      "reveal_surface": "Multiple unresolved domains in chart",
+      "remediation": "Keep device as supporting evidence",
+      "primary_task": 4,
+      "shared_with_tasks": []
+    },
+    {
+      "trap_id": "T-PBM-SUBSTITUTE",
+      "trap": "Formulary substitute (TMP-SMX) is administratively easy but unsafe",
+      "conceal_surface": "E1-T5 PBM rejection notice \u2014 substitute named",
+      "reveal_surface": "Documented sulfa allergy in admission record + renal function trend",
+      "remediation": "Decline substitute on sulfa allergy and/or renal grounds with specific reason",
+      "primary_task": 5,
+      "shared_with_tasks": []
+    },
+    {
+      "trap_id": "T-HOLD-WHEN-TREAT",
+      "trap": "Hold therapy chosen when treatment is needed",
+      "conceal_surface": "PBM rejection invites pause",
+      "reveal_surface": "ID plan continues active treatment course",
+      "remediation": "Keep effective therapy via formulary exception or safe alternative",
+      "primary_task": 5,
+      "shared_with_tasks": []
+    },
+    {
+      "trap_id": "T-IMPROVE-EQUALS-HOME",
+      "trap": "Improvement read as discharge readiness (continued-stay)",
+      "conceal_surface": "Improving labs and vitals",
+      "reveal_surface": "Unresolved perfusion + unsafe offloading + skilled wound frequency + unsafe home",
+      "remediation": "Weigh unresolved operational criteria against markers",
+      "primary_task": 6,
+      "shared_with_tasks": [
+        4
+      ]
+    },
+    {
+      "trap_id": "T-DETERMINATION-HEDGE",
+      "trap": "Verdict avoided or hedged",
+      "conceal_surface": "Borderline case",
+      "reveal_surface": "Physician-advisor role requires binding determination",
+      "remediation": "State a binding continued-stay determination",
+      "primary_task": 6,
+      "shared_with_tasks": []
+    },
+    {
+      "trap_id": "T-UR-AUTHORITY",
+      "trap": "Use payer's concurrent-review request as the answer rather than the prompt",
+      "conceal_surface": "E1-T6 payer concurrent-review request",
+      "reveal_surface": "Independent physician-advisor role",
+      "remediation": "Treat external request as prompt only",
+      "primary_task": 6,
+      "shared_with_tasks": []
+    },
+    {
+      "trap_id": "T-QM-LOOKBACK",
+      "trap": "Quiet HEDIS Advanced Illness + Frailty member-level exclusion missed on the diabetes quality abstraction \u2014 a member aged 66+ with BOTH an advanced-illness diagnosis AND a frailty diagnosis documented during the measurement year is excluded from the denominator of the HEDIS Comprehensive Diabetes Care (CDC) family measures (EED, GSD, KED, BPD, SPD), but the eligibility-exclusion step sits UPSTREAM of the numerator-capture fields and is easy to skip when individual values are plentifully documented",
+      "conceal_surface": "Form invites a 'met'/'not met' answer for each field because clinical evidence is available throughout the chart: dilated eye exam 03/15/2026 with mild NPDR (EW28); HbA1c 8.6% (EW21 endocrine note and EW23 outpatient summary); CKD stage 3b with proteinuria evidence in renal record (EW17 renal trend + EW23 outpatient PCP summary). The abstractor sees the values and starts filling numerators without first checking the upstream eligibility-exclusion field.",
+      "reveal_surface": "Patient is 68 years old (\u226566 threshold). EW23 outpatient primary care summary (04/30/2026) documents BOTH (a) HFpEF as a HEDIS-qualifying advanced-illness diagnosis with the required outpatient encounter context within the measurement year, AND (b) a frailty diagnosis \u2014 documented limited mobility at baseline and abnormal-gait / deconditioning findings consistent with the HEDIS frailty value-set. Per HEDIS CDC-family Technical Specifications, the Advanced Illness + Frailty exclusion at age 66+ removes the patient from the denominator for these measures.",
+      "remediation": "Apply the HEDIS Advanced Illness + Frailty member-level exclusion at the eligibility step BEFORE numerator capture. Mark the measure-eligibility / exclusion field as 'exclusion applies' for the CDC-family measures. The eye-exam (03/15/2026, mild NPDR), HbA1c (8.6%), and nephropathy (documented CKD stage 3b + proteinuria evidence in the renal record, per spec \u00a7Task-7 Failure Design 'Nephropathy capture missed \u2192 Capture the documented CKD and proteinuria evidence') fields are STILL abstracted to the documented evidence, but no numerator is forced because the denominator is excluded.",
+      "primary_task": 7,
+      "shared_with_tasks": []
+    },
+    {
+      "trap_id": "T-QM-FORCE-NUMERATOR",
+      "trap": "Numerator forced where record does not support",
+      "conceal_surface": "Form fields invite a value",
+      "reveal_surface": "Documentation gaps in chart",
+      "remediation": "Mark unable-to-determine where record does not support",
+      "primary_task": 7,
+      "shared_with_tasks": []
+    },
+    {
+      "trap_id": "T-REFERRAL-SETTLED-NARRATIVE",
+      "trap": "Referral narrative implies the case is settled",
+      "conceal_surface": "Improving infection markers and granulating wound",
+      "reveal_surface": "Vascular consult keeps perfusion open; pending revascularization question",
+      "remediation": "Keep table statuses accurate and open where chart is open",
+      "primary_task": 8,
+      "shared_with_tasks": []
+    },
+    {
+      "trap_id": "T-REFERRAL-TABLE-OMIT",
+      "trap": "Required disposition table omitted or collapsed",
+      "conceal_surface": "Narrative-only referral letter format",
+      "reveal_surface": "Task format requires embedded disposition table",
+      "remediation": "Include the table with each item",
+      "primary_task": 8,
+      "shared_with_tasks": []
+    },
+    {
+      "trap_id": "T-SAFETY-PATIENT-BLAME",
+      "trap": "Missed-offloading event framed as patient nonadherence",
+      "conceal_surface": "Patient removed device at times (offloading flowsheet)",
+      "reveal_surface": "OT teach-back failure + nursing flowsheet device-availability + home-layout case management + order context wound consult",
+      "remediation": "Attribute to documented system contributors; multifactorial",
+      "primary_task": 9,
+      "shared_with_tasks": []
+    },
+    {
+      "trap_id": "T-DISCHARGE-ROUTINE-CLEARANCE",
+      "trap": "Discharge-instruction placeholder filled with routine clearance",
+      "conceal_surface": "E1-T10 started draft is otherwise routine",
+      "reveal_surface": "PT/OT documented unsafe offloading and supervised plan",
+      "remediation": "Fill with documented restriction and supervised plan",
+      "primary_task": 10,
+      "shared_with_tasks": []
+    },
+    {
+      "trap_id": "T-DISCHARGE-CLOSE-OPEN",
+      "trap": "Still-open decisions asserted as closed in discharge instructions",
+      "conceal_surface": "Patient-facing voice invites closure",
+      "reveal_surface": "Perfusion, antibiotics, follow-up still open per chart",
+      "remediation": "Leave open items open",
+      "primary_task": 10,
+      "shared_with_tasks": []
+    }
+  ],
+  "files": {
+    "essential_world_level": [
+      {
+        "id": "EW1",
+        "filename": "ed_physician_note_05162026.docx",
+        "date": "2026-05-16",
+        "hospital_day": "HD1",
+        "source_role": "Emergency Medicine physician",
+        "description": "ED presentation: warm swollen malodorous left forefoot, T 38.2, WBC 14.2, Cr 2.1 over CKD baseline; empiric antibiotics started"
+      },
+      {
+        "id": "EW2",
+        "filename": "admission_hp_05162026.docx",
+        "date": "2026-05-16",
+        "hospital_day": "HD1",
+        "source_role": "Admitting hospitalist",
+        "description": "Admission H&P; comorbidity profile; home meds; hold orders for metformin, empagliflozin, lisinopril"
+      },
+      {
+        "id": "EW3",
+        "filename": "hospitalist_progress_hd2_05172026.docx",
+        "date": "2026-05-17",
+        "hospital_day": "HD2",
+        "source_role": "Hospital medicine",
+        "description": "HD2 progress note \u2014 debridement day, early course"
+      },
+      {
+        "id": "EW4",
+        "filename": "hospitalist_progress_hd4_05192026.docx",
+        "date": "2026-05-19",
+        "hospital_day": "HD4",
+        "source_role": "Hospital medicine",
+        "description": "HD4 progress \u2014 antibiotic narrowing; perfusion question raised"
+      },
+      {
+        "id": "EW5",
+        "filename": "hospitalist_progress_hd6_05212026.docx",
+        "date": "2026-05-21",
+        "hospital_day": "HD6",
+        "source_role": "Hospital medicine",
+        "description": "HD6 snapshot \u2014 WBC 8.9, Cr 1.6; improving but not safe for home"
+      },
+      {
+        "id": "EW6",
+        "filename": "podiatry_debridement_note_05172026.docx",
+        "date": "2026-05-17",
+        "hospital_day": "HD2",
+        "source_role": "Podiatric surgery",
+        "description": "Podiatry op note \u2014 soft-tissue debridement, granulating base, no exposed bone, deep cultures sent"
+      },
+      {
+        "id": "EW7",
+        "filename": "mri_foot_report_05182026.docx",
+        "date": "2026-05-18",
+        "hospital_day": "HD3",
+        "source_role": "Radiology",
+        "description": "MRI foot \u2014 marrow edema adjacent to ulcer; early osteomyelitis cannot be excluded (equivocal)"
+      },
+      {
+        "id": "EW8",
+        "filename": "id_consult_note_05182026.docx",
+        "date": "2026-05-18",
+        "hospital_day": "HD3",
+        "source_role": "Infectious disease",
+        "description": "ID consult \u2014 deep soft tissue infection treated, osteomyelitis not signed, renal dosing noted"
+      },
+      {
+        "id": "EW9",
+        "filename": "abi_tbi_study_report_05192026.docx",
+        "date": "2026-05-19",
+        "hospital_day": "HD4",
+        "source_role": "Vascular laboratory",
+        "description": "ABI/TBI report \u2014 noncompressible ankle vessels, TBI 0.50 left/0.84 right, toe pressures 55/92 mmHg"
+      },
+      {
+        "id": "EW10",
+        "filename": "vascular_consult_note_05192026.docx",
+        "date": "2026-05-19",
+        "hospital_day": "HD4",
+        "source_role": "Vascular surgery",
+        "description": "Vascular consult \u2014 perfusion adequacy open; possible revascularization for healing"
+      },
+      {
+        "id": "EW11",
+        "filename": "foot_pathology_report_05202026.docx",
+        "date": "2026-05-20",
+        "hospital_day": "HD5",
+        "source_role": "Surgical pathology",
+        "description": "Surgical pathology \u2014 soft tissue with acute and chronic inflammation; NO bone in specimen"
+      },
+      {
+        "id": "EW12",
+        "filename": "wound_care_consult_05202026.docx",
+        "date": "2026-05-20",
+        "hospital_day": "HD5",
+        "source_role": "Wound care nursing",
+        "description": "Wound care nurse \u2014 wound 3.0x2.2x0.8 cm, scant serous, skilled dressing frequency and technique"
+      },
+      {
+        "id": "EW13",
+        "filename": "pt_evaluation_05202026.docx",
+        "date": "2026-05-20",
+        "hospital_day": "HD5",
+        "source_role": "Physical therapy",
+        "description": "PT eval \u2014 gait, transfers, stairs not safe, weight-bearing restriction"
+      },
+      {
+        "id": "EW14",
+        "filename": "ot_evaluation_05202026.docx",
+        "date": "2026-05-20",
+        "hospital_day": "HD5",
+        "source_role": "Occupational therapy",
+        "description": "OT eval \u2014 ADLs, offloading teach-back NOT achieved"
+      },
+      {
+        "id": "EW15",
+        "filename": "case_management_note_05202026.docx",
+        "date": "2026-05-20",
+        "hospital_day": "HD5",
+        "source_role": "Case management",
+        "description": "Case management screen \u2014 walk-up, night-working daughter, DME pending, disposition barriers"
+      },
+      {
+        "id": "EW16",
+        "filename": "mar_05162026_05212026.docx",
+        "date": "2026-05-16 to 2026-05-21",
+        "hospital_day": "HD1-HD6",
+        "source_role": "Nursing/Pharmacy administration",
+        "description": "MAR across the stay \u2014 antibiotic dates, insulin, holds"
+      },
+      {
+        "id": "EW17",
+        "filename": "renal_lab_trend_05162026.docx",
+        "date": "2026-05-16 to 2026-05-21",
+        "hospital_day": "HD1-HD6",
+        "source_role": "Laboratory",
+        "description": "Renal flowsheet \u2014 Cr 2.1 \u2192 1.6, eGFR 26 \u2192 36 across the stay"
+      },
+      {
+        "id": "EW18",
+        "filename": "cbc_inflammatory_trend_05162026.docx",
+        "date": "2026-05-16 to 2026-05-21",
+        "hospital_day": "HD1-HD6",
+        "source_role": "Laboratory",
+        "description": "CBC and CRP trend \u2014 WBC 14.2 \u2192 8.9, CRP 118 \u2192 41, Hgb 9.8"
+      },
+      {
+        "id": "EW19",
+        "filename": "culture_report_deep_tissue_05172026.docx",
+        "date": "2026-05-17",
+        "hospital_day": "HD2 collected; HD4 finalized",
+        "source_role": "Microbiology",
+        "description": "Deep-tissue operative culture \u2014 MSSA + Strep agalactiae; full susceptibilities"
+      },
+      {
+        "id": "EW20",
+        "filename": "culture_report_superficial_swab_05162026.docx",
+        "date": "2026-05-16",
+        "hospital_day": "HD1",
+        "source_role": "Microbiology",
+        "description": "Superficial wound swab \u2014 mixed skin flora (lower-authority)"
+      },
+      {
+        "id": "EW21",
+        "filename": "endocrine_glycemic_note_05192026.docx",
+        "date": "2026-05-19",
+        "hospital_day": "HD4",
+        "source_role": "Endocrinology",
+        "description": "Endocrine note \u2014 insulin management; A1c 8.6%"
+      },
+      {
+        "id": "EW22",
+        "filename": "home_med_list_05162026.docx",
+        "date": "2026-05-16",
+        "hospital_day": "HD1",
+        "source_role": "Medication reconciliation (EMR)",
+        "description": "EMR pre-admission home medication list"
+      },
+      {
+        "id": "EW23",
+        "filename": "outpatient_primary_care_summary_04302026.docx",
+        "date": "2026-04-30",
+        "hospital_day": "pre-admission",
+        "source_role": "Primary care",
+        "description": "Pre-admission primary care summary \u2014 chronic disease status; prior eye exam date"
+      },
+      {
+        "id": "EW24",
+        "filename": "nursing_offloading_flowsheet_05202026.docx",
+        "date": "2026-05-20",
+        "hospital_day": "HD5",
+        "source_role": "Nursing",
+        "description": "Nursing flowsheet \u2014 offloading device use, repositioning, teaching attempts"
+      },
+      {
+        "id": "EW25",
+        "filename": "medication_hold_orders_05162026.docx",
+        "date": "2026-05-16",
+        "hospital_day": "HD1",
+        "source_role": "Admitting hospitalist orders",
+        "description": "Signed admission hold orders for metformin, empagliflozin, lisinopril with reasons"
+      },
+      {
+        "id": "EW26",
+        "filename": "antibiotic_plan_note_05192026.docx",
+        "date": "2026-05-19",
+        "hospital_day": "HD4",
+        "source_role": "Infectious disease",
+        "description": "ID antibiotic course and planned discharge agent at renal dose \u2014 recommendation level"
+      },
+      {
+        "id": "EW27",
+        "filename": "vital_signs_flowsheet_05162026.docx",
+        "date": "2026-05-16 to 2026-05-21",
+        "hospital_day": "HD1-HD6",
+        "source_role": "Nursing",
+        "description": "Vitals across the stay \u2014 defervescence by snapshot"
+      },
+      {
+        "id": "EW28",
+        "filename": "diabetic_eye_exam_result_03152026.docx",
+        "date": "2026-03-15",
+        "hospital_day": "pre-admission",
+        "source_role": "Ophthalmology",
+        "description": "Dilated eye exam \u2014 mild non-proliferative diabetic retinopathy, both eyes"
+      },
+      {
+        "id": "EW29",
+        "filename": "family_communication_note_05202026.docx",
+        "date": "2026-05-20",
+        "hospital_day": "HD5",
+        "source_role": "Hospital medicine and social work",
+        "description": "Family meeting \u2014 daughter willingness and night-shift limits; interpreter used"
+      },
+      {
+        "id": "EW30",
+        "filename": "wound_photo_05202026.jpg",
+        "date": "2026-05-20",
+        "hospital_day": "HD5",
+        "source_role": "Bedside clinical photograph",
+        "description": "Photograph of left forefoot wound"
+      },
+      {
+        "id": "EW31",
+        "filename": "abi_tbi_tracing_05192026.jpg",
+        "date": "2026-05-19",
+        "hospital_day": "HD4",
+        "source_role": "Vascular lab tracing",
+        "description": "Scanned ABI/TBI waveform tracing supporting EW9"
+      }
+    ],
+    "essential_task_level": [
+      {
+        "id": "E1-T1",
+        "filename": "preliminary_discharge_order_set_05212026.docx",
+        "date": "2026-05-21",
+        "task": 1,
+        "description": "Unreconciled discharge order set carrying admission-dosed antibiotics and ambiguously held oral agents"
+      },
+      {
+        "id": "E1-T2",
+        "filename": "him_preliminary_coding_worksheet_05212026.docx",
+        "date": "2026-05-21",
+        "task": 2,
+        "description": "External HIM worksheet steering toward pressure-injury family and acute osteomyelitis POA"
+      },
+      {
+        "id": "E1-T3",
+        "filename": "cdi_query_memo_05232026.docx",
+        "date": "2026-05-23",
+        "task": 3,
+        "description": "External CDI query pressing acute osteomyelitis specificity and severity language"
+      },
+      {
+        "id": "E1-T4",
+        "filename": "medicare_advantage_denial_letter_05232026.docx",
+        "date": "2026-05-23",
+        "task": 4,
+        "description": "External payer denial of SNF authorization framing improving markers as home readiness"
+      },
+      {
+        "id": "E1-T5",
+        "filename": "pharmacy_benefit_rejection_05242026.docx",
+        "date": "2026-05-24",
+        "task": 5,
+        "description": "External PBM rejection of planned antibiotic with formulary-preferred substitute (TMP-SMX)"
+      },
+      {
+        "id": "E1-T6",
+        "filename": "payer_concurrent_review_request_05252026.docx",
+        "date": "2026-05-25",
+        "task": 6,
+        "description": "External payer concurrent-review request prompting continued-stay determination"
+      },
+      {
+        "id": "E1-T7",
+        "filename": "quality_abstraction_worksheet_06042026.docx",
+        "date": "2026-06-04",
+        "task": 7,
+        "description": "Diabetes measure abstraction form \u2014 fields to value, exclude, or mark undetermined"
+      },
+      {
+        "id": "E1-T9",
+        "filename": "safety_event_intake_summary_06112026.docx",
+        "date": "2026-06-11",
+        "task": 9,
+        "description": "Safety event intake describing missed-offloading event"
+      },
+      {
+        "id": "E1-T10",
+        "filename": "started_discharge_instruction_draft_05212026.docx",
+        "date": "2026-05-21",
+        "task": 10,
+        "description": "Same-author started draft, complete except true placeholder on offloading and activity section"
+      }
+    ],
+    "supplementary_world_level": [
+      {
+        "id": "WS1",
+        "filename": "diabetes_foot_care_education_05212026.docx",
+        "date": "2026-05-21",
+        "hospital_day": "HD6",
+        "description": "Generic diabetic foot-care education handout"
+      },
+      {
+        "id": "WS2",
+        "filename": "general_discharge_rights_notice_05212026.docx",
+        "date": "2026-05-21",
+        "hospital_day": "HD6",
+        "description": "Standard discharge rights and appeal-rights notice"
+      },
+      {
+        "id": "WS3",
+        "filename": "nursing_shift_narrative_05182026.docx",
+        "date": "2026-05-18",
+        "hospital_day": "HD3",
+        "description": "Generic shift narratives; no load-bearing fact"
+      }
+    ],
+    "totals": {
+      "essential_world_level": 31,
+      "essential_task_level": 9,
+      "supplementary": 3,
+      "unique": 43
+    }
+  },
+  "external_correspondence": {
+    "medicare_advantage_denial": {
+      "filename": "medicare_advantage_denial_letter_05232026.docx",
+      "issuer": "Crestline Medicare Advantage HMO \u2014 Utilization Management",
+      "medical_director": "Ellery Stovall, MD",
+      "issue_date": "2026-05-23",
+      "case_reference": "CMA-UM-2026-447128",
+      "addressed_to": "Lillian Everet, MD c/o Harbor Crest Regional Medical Center Case Management",
+      "framing": "Improving infection markers (WBC 8.9, afebrile) support home with home health rather than SNF authorization",
+      "appeal_deadline": "2026-06-22 (30 calendar days from issue)"
+    },
+    "him_coding_worksheet": {
+      "filename": "him_preliminary_coding_worksheet_05212026.docx",
+      "issuer": "Harbor Crest HIM Coding",
+      "lead": "Corwin Adeyle, RHIA, CCS",
+      "framing": "Pressure-injury family with acute osteomyelitis POA \u2014 severity-forward"
+    },
+    "cdi_query_memo": {
+      "filename": "cdi_query_memo_05232026.docx",
+      "issuer": "Harbor Crest CDI",
+      "specialist": "Bristol Ndiaye, RN, CCDS",
+      "framing": "Press for acute osteomyelitis specificity and severity language"
+    },
+    "pbm_rejection": {
+      "filename": "pharmacy_benefit_rejection_05242026.docx",
+      "issuer": "Meridian Rx Benefit Solutions",
+      "rejection_code": "75 \u2014 Prior Authorization Required; preferred substitute: trimethoprim-sulfamethoxazole DS oral",
+      "preferred_substitute": "Trimethoprim-sulfamethoxazole (TMP-SMX) DS oral",
+      "claim_number": "MRX-2026-RX-991274",
+      "substitute_unsafe_because": [
+        "Documented sulfa allergy",
+        "Renal dose caution in CKD 3b"
+      ]
+    },
+    "payer_concurrent_review_request": {
+      "filename": "payer_concurrent_review_request_05252026.docx",
+      "issuer": "Crestline Medicare Advantage HMO \u2014 Utilization Management",
+      "framing": "Requesting medical necessity justification for continued inpatient stay"
+    }
+  },
+  "global_style": {
+    "date_format_narrative": "MM/DD/YYYY",
+    "date_format_metadata": "ISO 8601",
+    "language_note": "Patient-facing materials should be available in Spanish; interpreter is documented as used throughout",
+    "hospital_day_alignment": "HD1=05/16, HD2=05/17, HD3=05/18, HD4=05/19, HD5=05/20, HD6=05/21",
+    "voice_per_role": "Each note is in the voice and register appropriate to its authoring role; clinical restraint where the chart does not establish a finding",
+    "honorific_convention": "English clinician-voice notes, draft prompts, and chart documentation use 'Mrs. Vasquell.' Spanish-language patient-facing materials (discharge instructions, education handouts, family-meeting notes when quoted in Spanish) use 'Sra. Vasquell.' The patient.preferred_name field stores the Spanish form for patient-facing use; English clinical documents should use 'Mrs.'"
+  },
+  "invented_facts_note": "All invented facts (hospital name and address, phone numbers, member IDs, claim numbers, NPIs, exact street addresses, daughter's occupation/address, primary care provider, ophthalmology provider, late husband name and date of death, interpreter name, PBM identifiers, denial deadlines, physician advisor, quality nurse, safety officer) are recorded with rationale in /.meta/factual_decisions.md. These additions never contradict spec-fixed facts (MRN OV-3358104, DOB 03/14/1958, lab trends, perfusion findings, pathology, ID stance, PT/OT findings, allergy, snapshot time, file inventory)."
+}

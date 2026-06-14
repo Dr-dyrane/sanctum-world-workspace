@@ -1,0 +1,2448 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-06-14T14:50:17.359448+00:00",
+  "pipeline_iteration": 5,
+  "entry_count": 207,
+  "entries": [
+    {
+      "doc_id": "labs__culture_report_superficial_swab_05162026",
+      "file_path": "/filesystem/labs/culture_report_superficial_swab_05162026.docx",
+      "format": "docx",
+      "role": "laboratory",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "cert_repair_iter_1"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2"
+      ],
+      "generation_timestamp": "2026-06-14T13:27:02.822197+00:00",
+      "sha256": "0d3d53db33ea89afc4e48db764020fd9380612f7853203c0a048ec654844eaa3",
+      "byte_size": 39403,
+      "repair_timestamp": "2026-06-14T13:33:58.238147+00:00",
+      "repair_description": "iter1: removed lower-authority designation language and SPECIMEN AUTHORITY section"
+    },
+    {
+      "doc_id": "labs__renal_lab_trend_05162026",
+      "file_path": "/filesystem/labs/renal_lab_trend_05162026.docx",
+      "format": "docx",
+      "role": "laboratory",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "cert_repair_iter_1",
+        "cert_repair_iter_4"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2",
+        "cert_checker_suite_iter_4"
+      ],
+      "generation_timestamp": "2026-06-14T14:30:50.805425+00:00",
+      "sha256": "445ac872f8f6d69746eb643a279a3b3e283c605315c45a4c7d29298941d9a6eb",
+      "byte_size": 39057,
+      "repair_timestamp": "2026-06-14T14:32:07.469591+00:00",
+      "repair_description": "iter1: removed renal-dosing directive from interpretive comment; replaced EW17 identifiers | iter4: institution name ALL CAPS \u2192 title case; added H abnormality flags to Cr and BUN cells (formatting_consistency + specialized_doc_authenticity)"
+    },
+    {
+      "doc_id": "labs__cbc_inflammatory_trend_05162026",
+      "file_path": "/filesystem/labs/cbc_inflammatory_trend_05162026.docx",
+      "format": "docx",
+      "role": "laboratory",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "cert_repair_iter_1",
+        "cert_repair_iter_4"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2",
+        "cert_checker_suite_iter_4"
+      ],
+      "generation_timestamp": "2026-06-14T14:30:58.307442+00:00",
+      "sha256": "1b22f1bc7dbaeece21249fbec7a4c345b090250f8ca80c2bee3651f730ba08ee",
+      "byte_size": 40522,
+      "repair_timestamp": "2026-06-14T14:32:07.469591+00:00",
+      "repair_description": "iter1: replaced EW18 identifiers with date-based accession | iter4: added H/L abnormality flags to WBC/CRP/Hgb cells per reference ranges (specialized_doc_authenticity)"
+    },
+    {
+      "doc_id": "labs__culture_report_deep_tissue_05172026",
+      "file_path": "/filesystem/labs/culture_report_deep_tissue_05172026.docx",
+      "format": "docx",
+      "role": "laboratory",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "cert_repair_iter_1",
+        "cert_repair_iter_2",
+        "cert_repair_iter_5"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2",
+        "cert_checker_suite_iter_5"
+      ],
+      "generation_timestamp": "2026-06-14T14:49:20.613832+00:00",
+      "sha256": "1cc8f4757122415ab9bd815344182a3be61142cd2e55f9c6a86d4c4bfb70eadf",
+      "byte_size": 39727,
+      "repair_timestamp": "2026-06-14T14:50:17.359448+00:00",
+      "repair_description": "iter1: removed SPECIMEN AUTHORITY HIERARCHY table and authority-comparison phrases; softened TMP-SMX allergy footnote | iter2: removed TMP-SMX dagger footnote in susceptibility table (T-PBM-SUBSTITUTE); generalized allergy header line | iter5: institution name ALL CAPS \u2192 title case"
+    },
+    {
+      "doc_id": "labs__foot_pathology_report_05202026",
+      "file_path": "/filesystem/labs/foot_pathology_report_05202026.docx",
+      "format": "docx",
+      "role": "laboratory",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "cert_repair_iter_1"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2"
+      ],
+      "generation_timestamp": "2026-06-14T13:04:21.367540+00:00",
+      "sha256": "928580024e482c0a06070b8461cc04b7f9c1a38d34eaccdfe6fdf9729fe6a18b",
+      "byte_size": 38784,
+      "repair_timestamp": "2026-06-14T13:33:58.238147+00:00",
+      "repair_description": "iter1: relocated from clinical/ to labs/ per file_structure conventions"
+    },
+    {
+      "doc_id": "medications__home_med_list_05162026",
+      "file_path": "/filesystem/medications/home_med_list_05162026.docx",
+      "format": "docx",
+      "role": "medication_record",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "cert_repair_iter_1",
+        "cert_repair_iter_2"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2"
+      ],
+      "generation_timestamp": "2026-06-14T13:53:25.025882+00:00",
+      "sha256": "ce58ba948ba6b2e7975e79de887c0b0ce4be829e3514655203431b8064ae4353",
+      "byte_size": 38952,
+      "repair_timestamp": "2026-06-14T13:57:25.232248+00:00",
+      "repair_description": "iter1: replaced EW22 source identifier | iter2: removed \"Inpatient Status\" column entirely to restore T-HELD-AGENTS conceal surface (file should present home meds without inpatient hold annotations)"
+    },
+    {
+      "doc_id": "medications__mar_05162026_05212026",
+      "file_path": "/filesystem/medications/mar_05162026_05212026.docx",
+      "format": "docx",
+      "role": "medication_record",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "cert_repair_iter_1"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2"
+      ],
+      "generation_timestamp": "2026-06-14T13:32:43.838670+00:00",
+      "sha256": "749c92c7893b6d917425f7da0ee97aced8b2791c92d2401981aa2e713663a3f5",
+      "byte_size": 47006,
+      "repair_timestamp": "2026-06-14T13:33:58.238147+00:00",
+      "repair_description": "iter1: removed Form EW16 identifier"
+    },
+    {
+      "doc_id": "nursing__nursing_shift_narrative_05182026",
+      "file_path": "/filesystem/nursing/nursing_shift_narrative_05182026.docx",
+      "format": "docx",
+      "role": "nursing_record",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "world_gen"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2"
+      ],
+      "generation_timestamp": "2026-06-14T13:04:06.843902+00:00",
+      "sha256": "97c66647228d6dae92b05b6132d3b2534800337abb48eb642e466ac96db99397",
+      "byte_size": 38875
+    },
+    {
+      "doc_id": "nursing__nursing_offloading_flowsheet_05202026",
+      "file_path": "/filesystem/nursing/nursing_offloading_flowsheet_05202026.docx",
+      "format": "docx",
+      "role": "nursing_record",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "cert_repair_iter_1",
+        "cert_repair_iter_2"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2"
+      ],
+      "generation_timestamp": "2026-06-14T13:55:29.729084+00:00",
+      "sha256": "08bc59d3a7aae93c3169d20236bad108c7fdb4bf3bf07ff3eff30a53b1d7fc51",
+      "byte_size": 38936,
+      "repair_timestamp": "2026-06-14T13:57:25.232248+00:00",
+      "repair_description": "iter1: removed EW24 form identifier and NARRATIVE COMMENT contributor enumeration section | iter2: added neuropathy contextual clinical note to narrative comment (pre_gen_qc must_contain); removed empty spacer table in header block"
+    },
+    {
+      "doc_id": "nursing__vital_signs_flowsheet_05162026",
+      "file_path": "/filesystem/nursing/vital_signs_flowsheet_05162026.docx",
+      "format": "docx",
+      "role": "nursing_record",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "cert_repair_iter_1"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2"
+      ],
+      "generation_timestamp": "2026-06-14T13:36:14.736701+00:00",
+      "sha256": "093ba657f607b56734e278cc62e833ff2518310e03f804c268be9155617d9bd6",
+      "byte_size": 39243,
+      "repair_timestamp": "2026-06-14T13:33:58.238147+00:00",
+      "repair_description": "iter1: removed EW27 form identifier"
+    },
+    {
+      "doc_id": "diagnostics__diabetic_eye_exam_result_03152026",
+      "file_path": "/filesystem/diagnostics/diabetic_eye_exam_result_03152026.docx",
+      "format": "docx",
+      "role": "clinical_note",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "cert_repair_iter_4"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2"
+      ],
+      "generation_timestamp": "2026-06-14T13:04:19.860820+00:00",
+      "sha256": "396b921367619ffb919ad0474340ff98513bbff89d3083a9b8760029caee338f",
+      "byte_size": 38988,
+      "repair_timestamp": "2026-06-14T14:00:00Z",
+      "repair_description": "iter4: relocated from clinical/ to diagnostics/ per file_structure conventions"
+    },
+    {
+      "doc_id": "clinical__outpatient_primary_care_summary_04302026",
+      "file_path": "/filesystem/clinical/outpatient_primary_care_summary_04302026.docx",
+      "format": "docx",
+      "role": "clinical_note",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "cert_repair_iter_1"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2"
+      ],
+      "generation_timestamp": "2026-06-14T13:25:40.924806+00:00",
+      "sha256": "7d40cd2f3b1fa49e92668002a2053ebac100e940ff1959be4773d6a96eea0341",
+      "byte_size": 42494,
+      "repair_timestamp": "2026-06-14T13:33:58.238147+00:00",
+      "repair_description": "iter1: removed HEDIS regulatory meta-language; replaced Form EW23 identifier"
+    },
+    {
+      "doc_id": "clinical__family_communication_note_05202026",
+      "file_path": "/filesystem/clinical/family_communication_note_05202026.docx",
+      "format": "docx",
+      "role": "clinical_note",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "world_gen",
+        "cert_repair_iter_5"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2",
+        "cert_checker_suite_iter_5"
+      ],
+      "generation_timestamp": "2026-06-14T14:49:20.457828+00:00",
+      "sha256": "19426f56d993c7a3dd05e84327eb42b86ebc12fa7c7ad4f9f1b523da06387d7c",
+      "byte_size": 42293,
+      "repair_timestamp": "2026-06-14T14:50:17.359448+00:00",
+      "repair_description": "iter5: institution name ALL CAPS \u2192 title case"
+    },
+    {
+      "doc_id": "clinical__podiatry_debridement_note_05172026",
+      "file_path": "/filesystem/clinical/podiatry_debridement_note_05172026.docx",
+      "format": "docx",
+      "role": "clinical_note",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "cert_repair_iter_1",
+        "cert_repair_iter_5"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2",
+        "cert_checker_suite_iter_5"
+      ],
+      "generation_timestamp": "2026-06-14T14:49:20.509280+00:00",
+      "sha256": "f2ae516b2ee6afc5e9f893a9fd6762bca0ee371086b4db78d415f456843db426",
+      "byte_size": 40826,
+      "repair_timestamp": "2026-06-14T14:50:17.359448+00:00",
+      "repair_description": "iter1: removed \"not a wound of pressure etiology\" telegraph phrases | iter5: institution name ALL CAPS \u2192 title case"
+    },
+    {
+      "doc_id": "clinical__ed_physician_note_05162026",
+      "file_path": "/filesystem/clinical/ed_physician_note_05162026.docx",
+      "format": "docx",
+      "role": "clinical_note",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "world_gen",
+        "cert_repair_iter_2"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2"
+      ],
+      "generation_timestamp": "2026-06-14T13:55:38.798581+00:00",
+      "sha256": "85b55396227e6da40f2d8baccbb8b3aa30614343a77a9f2a146c69e2d29fe2fa",
+      "byte_size": 42029,
+      "repair_timestamp": "2026-06-14T13:57:25.232248+00:00",
+      "repair_description": "iter2: removed empty spacer table in header block and standalone address line (formatting_consistency)"
+    },
+    {
+      "doc_id": "clinical__endocrine_glycemic_note_05192026",
+      "file_path": "/filesystem/clinical/endocrine_glycemic_note_05192026.docx",
+      "format": "docx",
+      "role": "clinical_note",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "cert_repair_iter_1",
+        "cert_repair_iter_3",
+        "cert_repair_iter_5"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2",
+        "cert_checker_suite_iter_3",
+        "cert_checker_suite_iter_5"
+      ],
+      "generation_timestamp": "2026-06-14T14:49:27.497547+00:00",
+      "sha256": "ea1b7f42821f7692b6b156bc51e13cce759c9f0886337d9abc1085be6ea5d4a2",
+      "byte_size": 41133,
+      "repair_timestamp": "2026-06-14T14:50:17.359448+00:00",
+      "repair_description": "iter1: removed explicit \"no regimen change required\" telegraph | iter3: removed Plan #3 prescriptive deferred-restart language and corresponding Assessment sentence (T-HELD-AGENTS); replaced WS1 supplementary doc ID with in-world handout description (DP-008) | iter5: honorific Sra\u2192Mrs; Assessment #3 rewritten (T-HELD-AGENTS)"
+    },
+    {
+      "doc_id": "clinical__admission_hp_05162026",
+      "file_path": "/filesystem/clinical/admission_hp_05162026.docx",
+      "format": "docx",
+      "role": "clinical_note",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "cert_repair_iter_1",
+        "cert_repair_iter_2",
+        "cert_repair_iter_5"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2",
+        "cert_checker_suite_iter_5"
+      ],
+      "generation_timestamp": "2026-06-14T14:49:27.269679+00:00",
+      "sha256": "3ba9c997a97828c0b4dd5971ca49e4df223b639ef91a47adbcd9929f86ae5946",
+      "byte_size": 46696,
+      "repair_timestamp": "2026-06-14T14:50:17.359448+00:00",
+      "repair_description": "iter1: removed Held-agent prescriptive discharge-reconciliation language and pressure-injury skin survey phrase | iter2: removed \"AVOID sulfonamide antibiotics including TMP-SMX\" allergy callout (T-PBM-SUBSTITUTE); removed standalone analgesia note \"not an oversight\" (T-NSAID-FOR-KNEE); softened held-agent note and AKI #2 hold language to remove \"will not be silently restarted\" / \"not silent discontinuations\" (T-HELD-AGENTS) | iter5: honorific Sra Ondina \u2192 Mrs Ondina (formatting_consistency)"
+    },
+    {
+      "doc_id": "clinical__wound_care_consult_05202026",
+      "file_path": "/filesystem/clinical/wound_care_consult_05202026.docx",
+      "format": "docx",
+      "role": "clinical_note",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "cert_repair_iter_1",
+        "cert_repair_iter_5"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2",
+        "cert_checker_suite_iter_5"
+      ],
+      "generation_timestamp": "2026-06-14T14:49:20.561645+00:00",
+      "sha256": "0cb96a13e0c90da02ca10603553fe249f0cdf2cae4f176809682138249709a10",
+      "byte_size": 41789,
+      "repair_timestamp": "2026-06-14T14:50:17.359448+00:00",
+      "repair_description": "iter1: removed pressure-etiology denial telegraph phrases | iter5: institution name ALL CAPS \u2192 title case"
+    },
+    {
+      "doc_id": "clinical__vascular_consult_note_05192026",
+      "file_path": "/filesystem/clinical/vascular_consult_note_05192026.docx",
+      "format": "docx",
+      "role": "clinical_note",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "world_gen",
+        "cert_repair_iter_5"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2",
+        "cert_checker_suite_iter_5"
+      ],
+      "generation_timestamp": "2026-06-14T14:49:27.552656+00:00",
+      "sha256": "c207acb87e8332555b107dd81b9dd7e4e4016c13ad5733c8733de98148fed271",
+      "byte_size": 44116,
+      "repair_timestamp": "2026-06-14T14:50:17.359448+00:00",
+      "repair_description": "iter5: honorific Ms\u2192Mrs (2 places)"
+    },
+    {
+      "doc_id": "clinical__id_consult_note_05182026",
+      "file_path": "/filesystem/clinical/id_consult_note_05182026.docx",
+      "format": "docx",
+      "role": "clinical_note",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "cert_repair_iter_1",
+        "cert_repair_iter_2",
+        "cert_repair_iter_3",
+        "cert_repair_iter_4",
+        "cert_repair_iter_5"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2",
+        "cert_checker_suite_iter_3",
+        "cert_checker_suite_iter_4",
+        "cert_checker_suite_iter_5"
+      ],
+      "generation_timestamp": "2026-06-14T14:48:44.900494+00:00",
+      "sha256": "36f433e4dc3c8406582786358c236619e6cffd173b0784fb85ab0cc502066c48",
+      "byte_size": 43346,
+      "repair_timestamp": "2026-06-14T14:50:17.359448+00:00",
+      "repair_description": "iter1: removed TMP-SMX-specific telegraph and formulary-substitution directive | iter2: removed three explicit \"higher-authority\"/\"lower-authority\" culture statements in HPI and CULTURES sections (T-CULTURE-PROVENANCE) | iter3: removed parenthetical \"(i.e., avoiding sulfa)\" from Plan #5 (T-PBM-SUBSTITUTE) | iter4: reconciled HD3 creatinine from 1.9 to 1.8 mg/dL to align with MAR (DP-003 fix) | iter5: removed 5-point \"Clinical reasoning for not signing acute osteomyelitis today\" block and Plan #6 osteomyelitis-duration directive (T-OSTEO-POA)"
+    },
+    {
+      "doc_id": "clinical__hospitalist_progress_hd2_05172026",
+      "file_path": "/filesystem/clinical/hospitalist_progress_hd2_05172026.docx",
+      "format": "docx",
+      "role": "clinical_note",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "cert_repair_iter_1",
+        "cert_repair_iter_2",
+        "cert_repair_iter_5"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2",
+        "cert_checker_suite_iter_5"
+      ],
+      "generation_timestamp": "2026-06-14T14:49:27.327288+00:00",
+      "sha256": "d7f6d7812890a395ab409e1448bf2f3a01e18b4cff438d38b5cb0db67d046b3f",
+      "byte_size": 42835,
+      "repair_timestamp": "2026-06-14T14:50:17.359448+00:00",
+      "repair_description": "iter1: corrected note finalization timestamp from 09:30 to 15:00 to match documented post-debridement events | iter2: added borderline-reassuring bedside pulse impression in Problem #6 (T-PERFUSION-PULSE conceal surface); softened exam pulse note to match; converted letterhead all-caps Harbor Crest to mixed case | iter5: removed \"No silent resumption today\" from Problem 4 (T-HELD-AGENTS); honorific Sra\u2192Mrs"
+    },
+    {
+      "doc_id": "clinical__antibiotic_plan_note_05192026",
+      "file_path": "/filesystem/clinical/antibiotic_plan_note_05192026.docx",
+      "format": "docx",
+      "role": "clinical_note",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "cert_repair_iter_1",
+        "cert_repair_iter_3"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2",
+        "cert_checker_suite_iter_3"
+      ],
+      "generation_timestamp": "2026-06-14T14:13:51.462246+00:00",
+      "sha256": "66221086830bc3389da504f610865d3d9ee0546c5035d51001db61034a23174e",
+      "byte_size": 41936,
+      "repair_timestamp": "2026-06-14T14:15:57.257620+00:00",
+      "repair_description": "iter1: removed authority-hierarchy phrasing, TMP-SMX allergy callouts, EW## renamed; aligned with current_culture-directed plan | iter3: replaced \"sulfa-safe\" with \"allergy-safe\" in Discharge Antibiotic Intent (T-PBM-SUBSTITUTE)"
+    },
+    {
+      "doc_id": "clinical__hospitalist_progress_hd4_05192026",
+      "file_path": "/filesystem/clinical/hospitalist_progress_hd4_05192026.docx",
+      "format": "docx",
+      "role": "clinical_note",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "cert_repair_iter_1",
+        "cert_repair_iter_2",
+        "cert_repair_iter_3",
+        "cert_repair_iter_4",
+        "cert_repair_iter_5"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2",
+        "cert_checker_suite_iter_3",
+        "cert_checker_suite_iter_4",
+        "cert_checker_suite_iter_5"
+      ],
+      "generation_timestamp": "2026-06-14T14:49:27.384716+00:00",
+      "sha256": "30c1fe4e4a866c26adaa8ee54667a15fb7c5a2b53b966206e21b7634ae83c9df",
+      "byte_size": 44692,
+      "repair_timestamp": "2026-06-14T14:50:17.359448+00:00",
+      "repair_description": "iter1: removed inflammatory-marker disposition telegraph sentence | iter2: converted letterhead all-caps Harbor Crest to mixed case | iter3: removed \"parameter-gated decision / not silently resumed\" from Problem 5 (T-HELD-AGENTS); removed \"lower-authority result\" from Problem 1 assessment and microbiology table row (T-CULTURE-PROVENANCE); softened TMP-SMX-by-name allergy callout (T-PBM-SUBSTITUTE) | iter4: removed \"rather than admission values\" phrase from Problem 3 (T-RENAL-FORWARD) | iter5: removed \"does not change the rationale\" from Problem 1 swab line (T-CULTURE-PROVENANCE); honorific Sra\u2192Mrs"
+    },
+    {
+      "doc_id": "clinical__hospitalist_progress_hd6_05212026",
+      "file_path": "/filesystem/clinical/hospitalist_progress_hd6_05212026.docx",
+      "format": "docx",
+      "role": "clinical_note",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "cert_repair_iter_1",
+        "cert_repair_iter_2",
+        "cert_repair_iter_3",
+        "cert_repair_iter_4",
+        "cert_repair_iter_5"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2",
+        "cert_checker_suite_iter_3",
+        "cert_checker_suite_iter_4",
+        "cert_checker_suite_iter_5"
+      ],
+      "generation_timestamp": "2026-06-14T14:49:27.442090+00:00",
+      "sha256": "b5cbfd21ee2f1ae50979c658e12888e1a1fdf942b2ab11bf12bc48c73ef54724",
+      "byte_size": 45859,
+      "repair_timestamp": "2026-06-14T14:50:17.359448+00:00",
+      "repair_description": "iter1: softened LEAD assessment; removed pre-synthesized PT/OT/CM enumeration and severity-forward attestation language | iter2: removed \"rather than to admission values\" telegraph from Problem #1 and Problem #3 paragraphs to restore T-RENAL-FORWARD ambiguity | iter3: removed \"parameter-gated / explicit deferred-restart\" framing in Problem 7 (T-HELD-AGENTS); removed TMP-SMX-by-name in Allergies / Problem 1 / Microbiology rows (T-PBM-SUBSTITUTE); removed lower-authority swab annotation (T-CULTURE-PROVENANCE); bolded Problem 8 (formatting) | iter4: removed specific creatinine/eGFR anchor \"today's creatinine (1.6 mg/dL, eGFR 36)\" and \"All antibiotic agents dosed to current renal function\" telegraph (T-RENAL-FORWARD) | iter5: softened Osteomyelitis Problem 2 / Summary lines to remove pre-commitment to decline (T-OSTEO-POA); honorific Sra\u2192Mrs"
+    },
+    {
+      "doc_id": "diagnostics__abi_tbi_study_report_05192026",
+      "file_path": "/filesystem/diagnostics/abi_tbi_study_report_05192026.docx",
+      "format": "docx",
+      "role": "diagnostic_report",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "world_gen"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2"
+      ],
+      "generation_timestamp": "2026-06-14T13:05:26.471635+00:00",
+      "sha256": "8622589de44c3101c46c513f9a3589be18ac14a7e2eadd12a16e61d0e15806eb",
+      "byte_size": 41641
+    },
+    {
+      "doc_id": "diagnostics__mri_foot_report_05182026",
+      "file_path": "/filesystem/diagnostics/mri_foot_report_05182026.docx",
+      "format": "docx",
+      "role": "diagnostic_report",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "cert_repair_iter_1"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2"
+      ],
+      "generation_timestamp": "2026-06-14T13:04:37.166790+00:00",
+      "sha256": "268749b2bf4d34a2a4a3c7af495cdd5a52be2bd9830ddd155845d7e24043486f",
+      "byte_size": 40065,
+      "repair_timestamp": "2026-06-14T13:33:58.238147+00:00",
+      "repair_description": "iter1: relocated from clinical/ to diagnostics/ per file_structure conventions"
+    },
+    {
+      "doc_id": "orders__medication_hold_orders_05162026",
+      "file_path": "/filesystem/orders/medication_hold_orders_05162026.docx",
+      "format": "docx",
+      "role": "orders",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "cert_repair_iter_1",
+        "cert_repair_iter_2"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2"
+      ],
+      "generation_timestamp": "2026-06-14T13:52:07.133090+00:00",
+      "sha256": "427837be9094bf0d92a7539bf904def39e7d02a3de4cf0b7eeeb3a3ad5e3e6d3",
+      "byte_size": 39257,
+      "repair_timestamp": "2026-06-14T13:57:25.232248+00:00",
+      "repair_description": "iter1: replaced EW25 identifier and removed deferred-restart prescriptive discharge language | iter2: removed \"deferred-restart parameters\" clause from CLINICAL CONTEXT; removed per-agent \"Restart parameter:\" sub-sections from ORDER 1/2/3 (replaced with neutral Inpatient management note); removed Communication bullet about restart criteria not met (T-HELD-AGENTS)"
+    },
+    {
+      "doc_id": "tasks__task4_appeal__medicare_advantage_denial_letter_05232026",
+      "file_path": "/filesystem/tasks/task4_appeal/medicare_advantage_denial_letter_05232026.docx",
+      "format": "docx",
+      "role": "task_artifact",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "world_gen",
+        "cert_repair_iter_2",
+        "cert_repair_iter_3"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2",
+        "cert_checker_suite_iter_3"
+      ],
+      "generation_timestamp": "2026-06-14T14:14:43.756554+00:00",
+      "sha256": "9c9ccd6fba1a0c030ba95fdb94874548a5c0f8be8c730bb9646a8cfe12095a43",
+      "byte_size": 39652,
+      "repair_timestamp": "2026-06-14T14:15:57.257620+00:00",
+      "repair_description": "iter2: replaced specific reveal-surface-document enumeration in Appeal Rights with generic medical-necessity language (T-PAYER-DEFER) | iter3: corrected letter date format \"May 23, 2026\" \u2192 \"05/23/2026\" (formatting_consistency)"
+    },
+    {
+      "doc_id": "tasks__task3_cdi__cdi_query_memo_05232026",
+      "file_path": "/filesystem/tasks/task3_cdi/cdi_query_memo_05232026.docx",
+      "format": "docx",
+      "role": "task_artifact",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "cert_repair_iter_1",
+        "cert_repair_iter_2"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2"
+      ],
+      "generation_timestamp": "2026-06-14T13:52:35.888890+00:00",
+      "sha256": "4250cfbaa06d18bbea394df1ee42a60d4afd48552f9e105c91456e0f0cc29ace",
+      "byte_size": 39405,
+      "repair_timestamp": "2026-06-14T13:57:25.232248+00:00",
+      "repair_description": "iter1: removed counter-evidence bullets from Item 1 clinical indicators; replaced \"reasoned decline\" closing sentence | iter2: removed \"clinically reasoned decline\" coaching and \"based on the treating record\" anchor from intro paragraph (T-CDI-BARE-DECLINE)"
+    },
+    {
+      "doc_id": "tasks__task6_ur__payer_concurrent_review_request_05252026",
+      "file_path": "/filesystem/tasks/task6_ur/payer_concurrent_review_request_05252026.docx",
+      "format": "docx",
+      "role": "task_artifact",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "world_gen"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2"
+      ],
+      "generation_timestamp": "2026-06-14T13:06:01.890261+00:00",
+      "sha256": "bda66e80aad3edceb48fbd2f2af6a1bd1af2736ee419c7b6f9a31837e5ff93fc",
+      "byte_size": 39242
+    },
+    {
+      "doc_id": "tasks__task5_pbm__pharmacy_benefit_rejection_05242026",
+      "file_path": "/filesystem/tasks/task5_pbm/pharmacy_benefit_rejection_05242026.docx",
+      "format": "docx",
+      "role": "task_artifact",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "world_gen"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2"
+      ],
+      "generation_timestamp": "2026-06-14T13:06:23.283926+00:00",
+      "sha256": "56189c3f42d3f1b8cba6a50f273f04e1f3ff97feb0a3ad03d6499d79bb551dd0",
+      "byte_size": 40686
+    },
+    {
+      "doc_id": "tasks__task2_coding__him_preliminary_coding_worksheet_05212026",
+      "file_path": "/filesystem/tasks/task2_coding/him_preliminary_coding_worksheet_05212026.docx",
+      "format": "docx",
+      "role": "task_artifact",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "world_gen",
+        "cert_repair_iter_2"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2"
+      ],
+      "generation_timestamp": "2026-06-14T13:54:25.344162+00:00",
+      "sha256": "9d5b6e98079bc3e7f3e95dc1e2f1c74ca135470e6d34c2e17774d9026680f36c",
+      "byte_size": 43368,
+      "repair_timestamp": "2026-06-14T13:57:25.232248+00:00",
+      "repair_description": "iter2: updated Worksheet date 05/21/2026 \u2192 05/23/2026 and snapshot to reflect 05/23/2026 issuance (pre_gen_qc timeline reconciliation)"
+    },
+    {
+      "doc_id": "tasks__task9_safety__safety_event_intake_summary_06112026",
+      "file_path": "/filesystem/tasks/task9_safety/safety_event_intake_summary_06112026.docx",
+      "format": "docx",
+      "role": "task_artifact",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "cert_repair_iter_1",
+        "cert_repair_iter_3",
+        "cert_repair_iter_4",
+        "cert_repair_iter_5"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2",
+        "cert_checker_suite_iter_3",
+        "cert_checker_suite_iter_4",
+        "cert_checker_suite_iter_5"
+      ],
+      "generation_timestamp": "2026-06-14T14:48:58.676040+00:00",
+      "sha256": "ec86afcfdcfccd5ebe4811a36dc09c6dd6441d7dbee997a314011a99b54eebc5",
+      "byte_size": 40975,
+      "repair_timestamp": "2026-06-14T14:50:17.359448+00:00",
+      "repair_description": "iter1: removed SYSTEM CONTRIBUTORS pre-categorization; removed multifactorial directive; removed Document ID table column; stripped EW## refs | iter3: removed specific document-name routing in 4 DOCUMENTED FACTORS bullets; replaced \"task-level document\" with \"primary event-level document\" (trap_leakage); removed Content-relevant-to-the-event column from DOCUMENTED INPUTS table (DP-004) | iter4: removed specific findings naming in NOTES FOR THE REVIEWER (DP-004); institution case fix | iter5: added patient device-wear behavior bullet; \"bear on system-level prevention\" \u2192 neutral \"bear on the attribution analysis\" (T-SAFETY-PATIENT-BLAME)"
+    },
+    {
+      "doc_id": "tasks__task7_hedis__quality_abstraction_worksheet_06042026",
+      "file_path": "/filesystem/tasks/task7_hedis/quality_abstraction_worksheet_06042026.docx",
+      "format": "docx",
+      "role": "task_artifact",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "cert_repair_iter_1",
+        "cert_repair_iter_2"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2"
+      ],
+      "generation_timestamp": "2026-06-14T13:52:53.488096+00:00",
+      "sha256": "f98d3e1ce6a74b78cbeaae4eee01e0dd3cad53a994fa8b919fa9c3dcb00a6002",
+      "byte_size": 40236,
+      "repair_timestamp": "2026-06-14T13:57:25.232248+00:00",
+      "repair_description": "iter1: removed HFpEF/frailty parenthetical examples in Section 1; replaced E1-T7 worksheet identifier | iter2: renamed Section 1 from \"ELIGIBILITY/EXCLUSION GATE \u2014 UPSTREAM\" to neutral \"Member Eligibility and Enrollment Verification\"; removed \"MUST\" abstractor instruction; removed Advanced Illness+Frailty age-66+ explicit naming and \"NO NUMERATOR is forced\" routing language (T-QM-LOOKBACK)"
+    },
+    {
+      "doc_id": "tasks__task1_med_rec__preliminary_discharge_order_set_05212026",
+      "file_path": "/filesystem/tasks/task1_med_rec/preliminary_discharge_order_set_05212026.docx",
+      "format": "docx",
+      "role": "task_artifact",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "cert_repair_iter_1",
+        "cert_repair_iter_3",
+        "cert_repair_iter_4",
+        "cert_repair_iter_5"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2",
+        "cert_checker_suite_iter_3",
+        "cert_checker_suite_iter_4",
+        "cert_checker_suite_iter_5"
+      ],
+      "generation_timestamp": "2026-06-14T14:48:15.149562+00:00",
+      "sha256": "356d9d873b2f47a19a509b4722164f01bfa7dcb947aa746257ba3ad0d2d0520d",
+      "byte_size": 40520,
+      "repair_timestamp": "2026-06-14T14:50:17.359448+00:00",
+      "repair_description": "iter1: removed embedded renal-trend reference table; removed admission-Cr explicit annotations; softened reconciliation checklist; trap remains intact via wrong doses on MAR and ibuprofen PRN | iter3: removed specific named-source reference \"ID antibiotic-plan note (05/19, Dr. Brusk)\" from reconciliation checklist and Section A footer (DP-004) | iter4: removed \"renal adjustment to current laboratory values\" telegraph from reconciliation checklist (T-RENAL-FORWARD) | iter5: removed \"against current renal function\" and \"current laboratory data\" telegraphs (T-RENAL-FORWARD)"
+    },
+    {
+      "doc_id": "tasks__task10_dc__started_discharge_instruction_draft_05212026",
+      "file_path": "/filesystem/tasks/task10_dc/started_discharge_instruction_draft_05212026.docx",
+      "format": "docx",
+      "role": "task_artifact",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "cert_repair_iter_1",
+        "cert_repair_iter_4"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2",
+        "cert_checker_suite_iter_4"
+      ],
+      "generation_timestamp": "2026-06-14T14:30:39.869303+00:00",
+      "sha256": "f08f76da4a135a9aa3a3e44ed3e38e6d5e3b24beaa3745a255a819d94508717e",
+      "byte_size": 40931,
+      "repair_timestamp": "2026-06-14T14:32:07.469591+00:00",
+      "repair_description": "iter1: replaced Section 4 placeholder with neutral marker in EN and ES; removed PT/OT routing instruction and \"do not write generic clearance\" warning | iter4: institution name ALL CAPS \u2192 title case (formatting_consistency)"
+    },
+    {
+      "doc_id": "clinical__case_management_note_05202026",
+      "file_path": "/filesystem/clinical/case_management_note_05202026.docx",
+      "format": "docx",
+      "role": "administrative",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "cert_repair_iter_1"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2"
+      ],
+      "generation_timestamp": "2026-06-14T13:32:28.335038+00:00",
+      "sha256": "e67703cd06eba9214a2313bbc78b562e8e7a8be4529d9eba207c64ba8d6225c3",
+      "byte_size": 39046,
+      "repair_timestamp": "2026-06-14T13:33:58.238147+00:00",
+      "repair_description": "iter1: removed EW15/EW29 identifiers; removed Plan item 4 parenthetical enumeration"
+    },
+    {
+      "doc_id": "admin__general_discharge_rights_notice_05212026",
+      "file_path": "/filesystem/admin/general_discharge_rights_notice_05212026.docx",
+      "format": "docx",
+      "role": "administrative",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "world_gen",
+        "cert_repair_iter_3",
+        "cert_repair_iter_5"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2",
+        "cert_checker_suite_iter_3",
+        "cert_checker_suite_iter_5"
+      ],
+      "generation_timestamp": "2026-06-14T14:49:20.406307+00:00",
+      "sha256": "e503ceae31359eac3284208f57d29e74e1478acd786e9d8b37c0f07c47b8fde9",
+      "byte_size": 43934,
+      "repair_description": "iter3: replaced supplementary doc ID WS2 with in-world Form HCRMC-PR-001 in heading and footer (DP-008) | iter5: institution name ALL CAPS \u2192 title case (2 occurrences)",
+      "repair_timestamp": "2026-06-14T14:50:17.359448+00:00"
+    },
+    {
+      "doc_id": "imaging__wound_photo_05202026_jpg",
+      "file_path": "/filesystem/imaging/wound_photo_05202026.jpg",
+      "format": "jpg",
+      "role": "imaging_artifact",
+      "visual_class": "image",
+      "source_workflows": [
+        "world_gen",
+        "world_gen"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2"
+      ],
+      "generation_timestamp": "2026-06-14T13:04:35.583841+00:00",
+      "sha256": "2cb1eea1e4f1019b31568e475599723b2d08224aa578dc8d1e1f37487b207afa",
+      "byte_size": 478980
+    },
+    {
+      "doc_id": "imaging__abi_tbi_tracing_05192026_jpg",
+      "file_path": "/filesystem/imaging/abi_tbi_tracing_05192026.jpg",
+      "format": "jpg",
+      "role": "imaging_artifact",
+      "visual_class": "image",
+      "source_workflows": [
+        "world_gen",
+        "world_gen"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2"
+      ],
+      "generation_timestamp": "2026-06-14T13:04:51.553651+00:00",
+      "sha256": "d0354413c690f53aae74ada2efd0de739c7acb84efafbaa92058873ca7ae4ef0",
+      "byte_size": 366221
+    },
+    {
+      "doc_id": "therapy__pt_evaluation_05202026",
+      "file_path": "/filesystem/therapy/pt_evaluation_05202026.docx",
+      "format": "docx",
+      "role": "therapy_evaluation",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "world_gen"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2"
+      ],
+      "generation_timestamp": "2026-06-14T13:05:42.899330+00:00",
+      "sha256": "378ab580b81e925d0202a453805e335f4d2f4696f3b1a1ce6953856ff860b48e",
+      "byte_size": 40108
+    },
+    {
+      "doc_id": "therapy__ot_evaluation_05202026",
+      "file_path": "/filesystem/therapy/ot_evaluation_05202026.docx",
+      "format": "docx",
+      "role": "therapy_evaluation",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "cert_repair_iter_1",
+        "cert_repair_iter_2"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2"
+      ],
+      "generation_timestamp": "2026-06-14T13:55:29.752792+00:00",
+      "sha256": "eee207753819043aec6c0c68e18b39e40de09547fde4e6d8c6578b4c02798e92",
+      "byte_size": 42429,
+      "repair_timestamp": "2026-06-14T13:57:25.232248+00:00",
+      "repair_description": "iter1: removed EW14 form identifier; corrected en dash to em dash in Allergies cell | iter2: removed Assessment \"gap is attributable to identified system-level contributors\" header and \"does not reflect unwillingness on the patient's part\" sentence (T-SAFETY-PATIENT-BLAME); removed empty spacer table in header block"
+    },
+    {
+      "doc_id": "education__diabetes_foot_care_education_05212026",
+      "file_path": "/filesystem/education/diabetes_foot_care_education_05212026.docx",
+      "format": "docx",
+      "role": "patient_education",
+      "visual_class": "docx",
+      "source_workflows": [
+        "world_gen",
+        "cert_repair_iter_1",
+        "cert_repair_iter_2"
+      ],
+      "backbone_sources": [
+        "structured_spec.json"
+      ],
+      "discrepancy_participation": [],
+      "authoring_agent": "world_gen_pipeline",
+      "validating_agents": [
+        "cert_checker_suite_iter_1",
+        "cert_checker_suite_iter_2"
+      ],
+      "generation_timestamp": "2026-06-14T13:55:29.777574+00:00",
+      "sha256": "679df1d2751a13c2e2fa7778c77337d58cf2f63a047ba92f642b953bda337543",
+      "byte_size": 43937,
+      "repair_timestamp": "2026-06-14T13:57:25.232248+00:00",
+      "repair_description": "iter1: corrected hyphen to em dash in Allergies cell | iter2: removed empty spacer table in header block (formatting_consistency)"
+    },
+    {
+      "file": "/filesystem/diagnostics/mri_foot_report_05182026.docx",
+      "sha256": "268749b2bf4d34a2a4a3c7af495cdd5a52be2bd9830ddd155845d7e24043486f",
+      "last_modified": "2026-06-14T13:39:55Z",
+      "agent": "repair_iter_1",
+      "action": "created"
+    },
+    {
+      "file": "/filesystem/labs/foot_pathology_report_05202026.docx",
+      "sha256": "928580024e482c0a06070b8461cc04b7f9c1a38d34eaccdfe6fdf9729fe6a18b",
+      "last_modified": "2026-06-14T13:39:55Z",
+      "agent": "repair_iter_1",
+      "action": "created"
+    },
+    {
+      "file": "/filesystem/admin/case_management_note_05202026.docx",
+      "sha256": "e67703cd06eba9214a2313bbc78b562e8e7a8be4529d9eba207c64ba8d6225c3",
+      "last_modified": "2026-06-14T13:39:55Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/admission_hp_05162026.docx",
+      "sha256": "ed81d9be3c3c737f9d596e14433f686e90afe6f8bd680cb0aa76bf4e96de30e7",
+      "last_modified": "2026-06-14T13:39:55Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/antibiotic_plan_note_05192026.docx",
+      "sha256": "2cb3c5f6527f75232b018a2c03201c9b9f1640bd389e27e71510b3643320390f",
+      "last_modified": "2026-06-14T13:39:55Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/endocrine_glycemic_note_05192026.docx",
+      "sha256": "1d31dafe784b0772e7787a061df70ed64bdaf0d9027bffeb2559728f85552078",
+      "last_modified": "2026-06-14T13:39:55Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/hospitalist_progress_hd2_05172026.docx",
+      "sha256": "95807ab49ecd5d9824a2e18944d2ea8b54577bd94d68f8992d6335becea5a185",
+      "last_modified": "2026-06-14T13:39:55Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/hospitalist_progress_hd4_05192026.docx",
+      "sha256": "cbbf0eb2d846a73eacb9c61a160ade0ab6cc5673e30d54f5ce3eb60c164861bf",
+      "last_modified": "2026-06-14T13:39:55Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/hospitalist_progress_hd6_05212026.docx",
+      "sha256": "999594d05c891904c5bb2ae92fd2c2594207af6d2d37da68904b4253129faae6",
+      "last_modified": "2026-06-14T13:39:55Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/id_consult_note_05182026.docx",
+      "sha256": "33b320c3e73994b888e18400c3ffeec9b056dc6dfd779f5ee8412144060c0a3b",
+      "last_modified": "2026-06-14T13:39:55Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/outpatient_primary_care_summary_04302026.docx",
+      "sha256": "7d40cd2f3b1fa49e92668002a2053ebac100e940ff1959be4773d6a96eea0341",
+      "last_modified": "2026-06-14T13:39:55Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/podiatry_debridement_note_05172026.docx",
+      "sha256": "c3f6c8fbba0da8aee298e61520e3f59f855656736c9421703c925a6352699ed3",
+      "last_modified": "2026-06-14T13:39:55Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/wound_care_consult_05202026.docx",
+      "sha256": "c0b6dd296bc7770f8059d4c58029bb4aa2e5a790e88d4f5474c911e122d41909",
+      "last_modified": "2026-06-14T13:39:55Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/education/diabetes_foot_care_education_05212026.docx",
+      "sha256": "1c827362aa2e1dac339bae794b93b1a9967c97bd89318032bb23f12272bd140c",
+      "last_modified": "2026-06-14T13:39:55Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/labs/cbc_inflammatory_trend_05162026.docx",
+      "sha256": "806dd4d9eaf242c7a8ee050d2cd251142afc3f3b0c874f5acbfa98467b544b6f",
+      "last_modified": "2026-06-14T13:39:55Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/labs/culture_report_deep_tissue_05172026.docx",
+      "sha256": "819f37aa7cfa2e50cb016fa5a74e73622747d0d8cf334703972ac6fa5382f390",
+      "last_modified": "2026-06-14T13:39:55Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/labs/culture_report_superficial_swab_05162026.docx",
+      "sha256": "0d3d53db33ea89afc4e48db764020fd9380612f7853203c0a048ec654844eaa3",
+      "last_modified": "2026-06-14T13:39:55Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/labs/renal_lab_trend_05162026.docx",
+      "sha256": "e89414cd535bf0aa22ee50ae967b1586fec57d3eeebd91f9ab8c6c8709169089",
+      "last_modified": "2026-06-14T13:39:55Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/medications/home_med_list_05162026.docx",
+      "sha256": "db7842da843908c6de2a04643f9ac99963694825f5af961da836740e48ddb640",
+      "last_modified": "2026-06-14T13:39:55Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/medications/mar_05162026_05212026.docx",
+      "sha256": "749c92c7893b6d917425f7da0ee97aced8b2791c92d2401981aa2e713663a3f5",
+      "last_modified": "2026-06-14T13:39:55Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/nursing/nursing_offloading_flowsheet_05202026.docx",
+      "sha256": "94d83bc946bd6b542f339e8fc7cde40171bfc142c0bf4268f94eea60f614bc64",
+      "last_modified": "2026-06-14T13:39:55Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/nursing/vital_signs_flowsheet_05162026.docx",
+      "sha256": "093ba657f607b56734e278cc62e833ff2518310e03f804c268be9155617d9bd6",
+      "last_modified": "2026-06-14T13:39:55Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/orders/medication_hold_orders_05162026.docx",
+      "sha256": "5086e96d10265a0194d4d149e00e1fc2d3cf52c650babb9f339b8932a3964f25",
+      "last_modified": "2026-06-14T13:39:55Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/tasks/task10_dc/started_discharge_instruction_draft_05212026.docx",
+      "sha256": "4fcbead49f6f2e05a374f270ad910fb3d9a8f0219c47edc99a052cef198fd96f",
+      "last_modified": "2026-06-14T13:39:55Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/tasks/task1_med_rec/preliminary_discharge_order_set_05212026.docx",
+      "sha256": "5b9ade1061d00ad031db4b325f65a1edcd95dafe846f307ce42992e1a81451ca",
+      "last_modified": "2026-06-14T13:39:55Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/tasks/task3_cdi/cdi_query_memo_05232026.docx",
+      "sha256": "750e92dc5f2893591b47120dc3afcf9bfd2cb6ac1003e458ac8e854887e2c287",
+      "last_modified": "2026-06-14T13:39:55Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/tasks/task7_hedis/quality_abstraction_worksheet_06042026.docx",
+      "sha256": "f413faeba7d7954cdb25eb88d69be072223f25b8674ea4808bbeebf153c6f7b4",
+      "last_modified": "2026-06-14T13:39:55Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/tasks/task9_safety/safety_event_intake_summary_06112026.docx",
+      "sha256": "f2259e34c42e3b8cd9b3fb49431ac341191732773a7dc9734e800ac6f9402056",
+      "last_modified": "2026-06-14T13:39:55Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/therapy/ot_evaluation_05202026.docx",
+      "sha256": "c3e7d0acf14c901ee6d0331432577afb1757d72a7ebb54a963e9a29fee97719f",
+      "last_modified": "2026-06-14T13:39:55Z",
+      "agent": "repair_iter_1",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/foot_pathology_report_05202026.docx",
+      "sha256": "928580024e482c0a06070b8461cc04b7f9c1a38d34eaccdfe6fdf9729fe6a18b",
+      "last_modified": "2026-06-14T13:39:55Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/clinical/mri_foot_report_05182026.docx",
+      "sha256": "268749b2bf4d34a2a4a3c7af495cdd5a52be2bd9830ddd155845d7e24043486f",
+      "last_modified": "2026-06-14T13:39:55Z",
+      "agent": "repair_iter_1",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/clinical/hospitalist_progress_hd6_05212026.docx",
+      "sha256": "2c1b83400d2e54d667eb1fb4ce1696677ef50e5dabda631d39d09e606596e744",
+      "last_modified": "2026-06-14T13:51:55.121949+00:00",
+      "agent": "repair_iter_2",
+      "action": "edited",
+      "description": "iter2: removed \"rather than to admission values\" telegraph from Problem #1 and Problem #3 paragraphs to restore T-RENAL-FORWARD ambiguity"
+    },
+    {
+      "file": "/filesystem/clinical/hospitalist_progress_hd2_05172026.docx",
+      "sha256": "837d59ae7c7926c18b6b9e7e16cd9c3dd3e8ae1e392e9eee86320c5f62dd241d",
+      "last_modified": "2026-06-14T13:55:02.885752+00:00",
+      "agent": "repair_iter_2",
+      "action": "edited",
+      "description": "iter2: added borderline-reassuring bedside pulse impression in Problem #6 (T-PERFUSION-PULSE conceal surface); softened exam pulse note to match; converted letterhead all-caps Harbor Crest to mixed case"
+    },
+    {
+      "file": "/filesystem/clinical/hospitalist_progress_hd4_05192026.docx",
+      "sha256": "03c39f71375e3c38bafed8552027ce02766aead0cdcd437b4ad5f4ffb968bc58",
+      "last_modified": "2026-06-14T13:55:02.936718+00:00",
+      "agent": "repair_iter_2",
+      "action": "edited",
+      "description": "iter2: converted letterhead all-caps Harbor Crest to mixed case"
+    },
+    {
+      "file": "/filesystem/clinical/admission_hp_05162026.docx",
+      "sha256": "50598a496f8e192a95bdd4a73b32fcf0b379bff5d1559095777b197b7a6fe731",
+      "last_modified": "2026-06-14T13:52:20.247647+00:00",
+      "agent": "repair_iter_2",
+      "action": "edited",
+      "description": "iter2: removed \"AVOID sulfonamide antibiotics including TMP-SMX\" allergy callout (T-PBM-SUBSTITUTE); removed standalone analgesia note \"not an oversight\" (T-NSAID-FOR-KNEE); softened held-agent note and AKI #2 hold language to remove \"will not be silently restarted\" / \"not silent discontinuations\" (T-HELD-AGENTS)"
+    },
+    {
+      "file": "/filesystem/clinical/id_consult_note_05182026.docx",
+      "sha256": "14daf475051b5177065bc222dfd0709501e9b9b92d834abb908bc8e495533be6",
+      "last_modified": "2026-06-14T13:52:31.240008+00:00",
+      "agent": "repair_iter_2",
+      "action": "edited",
+      "description": "iter2: removed three explicit \"higher-authority\"/\"lower-authority\" culture statements in HPI and CULTURES sections (T-CULTURE-PROVENANCE)"
+    },
+    {
+      "file": "/filesystem/clinical/ed_physician_note_05162026.docx",
+      "sha256": "85b55396227e6da40f2d8baccbb8b3aa30614343a77a9f2a146c69e2d29fe2fa",
+      "last_modified": "2026-06-14T13:55:38.798581+00:00",
+      "agent": "repair_iter_2",
+      "action": "edited",
+      "description": "iter2: removed empty spacer table in header block and standalone address line (formatting_consistency)"
+    },
+    {
+      "file": "/filesystem/orders/medication_hold_orders_05162026.docx",
+      "sha256": "427837be9094bf0d92a7539bf904def39e7d02a3de4cf0b7eeeb3a3ad5e3e6d3",
+      "last_modified": "2026-06-14T13:52:07.133090+00:00",
+      "agent": "repair_iter_2",
+      "action": "edited",
+      "description": "iter2: removed \"deferred-restart parameters\" clause from CLINICAL CONTEXT; removed per-agent \"Restart parameter:\" sub-sections from ORDER 1/2/3 (replaced with neutral Inpatient management note); removed Communication bullet about restart criteria not met (T-HELD-AGENTS)"
+    },
+    {
+      "file": "/filesystem/labs/culture_report_deep_tissue_05172026.docx",
+      "sha256": "7a0e3c961debbcf28b58c40b4c920d836c59e621378b0ac176951681e4457e40",
+      "last_modified": "2026-06-14T13:53:12.492790+00:00",
+      "agent": "repair_iter_2",
+      "action": "edited",
+      "description": "iter2: removed TMP-SMX dagger footnote in susceptibility table (T-PBM-SUBSTITUTE); generalized allergy header line"
+    },
+    {
+      "file": "/filesystem/medications/home_med_list_05162026.docx",
+      "sha256": "ce58ba948ba6b2e7975e79de887c0b0ce4be829e3514655203431b8064ae4353",
+      "last_modified": "2026-06-14T13:53:25.025882+00:00",
+      "agent": "repair_iter_2",
+      "action": "edited",
+      "description": "iter2: removed \"Inpatient Status\" column entirely to restore T-HELD-AGENTS conceal surface (file should present home meds without inpatient hold annotations)"
+    },
+    {
+      "file": "/filesystem/therapy/ot_evaluation_05202026.docx",
+      "sha256": "eee207753819043aec6c0c68e18b39e40de09547fde4e6d8c6578b4c02798e92",
+      "last_modified": "2026-06-14T13:55:29.752792+00:00",
+      "agent": "repair_iter_2",
+      "action": "edited",
+      "description": "iter2: removed Assessment \"gap is attributable to identified system-level contributors\" header and \"does not reflect unwillingness on the patient's part\" sentence (T-SAFETY-PATIENT-BLAME); removed empty spacer table in header block"
+    },
+    {
+      "file": "/filesystem/education/diabetes_foot_care_education_05212026.docx",
+      "sha256": "679df1d2751a13c2e2fa7778c77337d58cf2f63a047ba92f642b953bda337543",
+      "last_modified": "2026-06-14T13:55:29.777574+00:00",
+      "agent": "repair_iter_2",
+      "action": "edited",
+      "description": "iter2: removed empty spacer table in header block (formatting_consistency)"
+    },
+    {
+      "file": "/filesystem/nursing/nursing_offloading_flowsheet_05202026.docx",
+      "sha256": "08bc59d3a7aae93c3169d20236bad108c7fdb4bf3bf07ff3eff30a53b1d7fc51",
+      "last_modified": "2026-06-14T13:55:29.729084+00:00",
+      "agent": "repair_iter_2",
+      "action": "edited",
+      "description": "iter2: added neuropathy contextual clinical note to narrative comment (pre_gen_qc must_contain); removed empty spacer table in header block"
+    },
+    {
+      "file": "/filesystem/tasks/task2_coding/him_preliminary_coding_worksheet_05212026.docx",
+      "sha256": "9d5b6e98079bc3e7f3e95dc1e2f1c74ca135470e6d34c2e17774d9026680f36c",
+      "last_modified": "2026-06-14T13:54:25.344162+00:00",
+      "agent": "repair_iter_2",
+      "action": "edited",
+      "description": "iter2: updated Worksheet date 05/21/2026 \u2192 05/23/2026 and snapshot to reflect 05/23/2026 issuance (pre_gen_qc timeline reconciliation)"
+    },
+    {
+      "file": "/filesystem/tasks/task3_cdi/cdi_query_memo_05232026.docx",
+      "sha256": "4250cfbaa06d18bbea394df1ee42a60d4afd48552f9e105c91456e0f0cc29ace",
+      "last_modified": "2026-06-14T13:52:35.888890+00:00",
+      "agent": "repair_iter_2",
+      "action": "edited",
+      "description": "iter2: removed \"clinically reasoned decline\" coaching and \"based on the treating record\" anchor from intro paragraph (T-CDI-BARE-DECLINE)"
+    },
+    {
+      "file": "/filesystem/tasks/task4_appeal/medicare_advantage_denial_letter_05232026.docx",
+      "sha256": "756bb5f05bcb8da826c5838a2f056c79d3e78fa39ba5c8ca0c6e46c8cf38810b",
+      "last_modified": "2026-06-14T13:52:41.149722+00:00",
+      "agent": "repair_iter_2",
+      "action": "edited",
+      "description": "iter2: replaced specific reveal-surface-document enumeration in Appeal Rights with generic medical-necessity language (T-PAYER-DEFER)"
+    },
+    {
+      "file": "/filesystem/tasks/task7_hedis/quality_abstraction_worksheet_06042026.docx",
+      "sha256": "f98d3e1ce6a74b78cbeaae4eee01e0dd3cad53a994fa8b919fa9c3dcb00a6002",
+      "last_modified": "2026-06-14T13:52:53.488096+00:00",
+      "agent": "repair_iter_2",
+      "action": "edited",
+      "description": "iter2: renamed Section 1 from \"ELIGIBILITY/EXCLUSION GATE \u2014 UPSTREAM\" to neutral \"Member Eligibility and Enrollment Verification\"; removed \"MUST\" abstractor instruction; removed Advanced Illness+Frailty age-66+ explicit naming and \"NO NUMERATOR is forced\" routing language (T-QM-LOOKBACK)"
+    },
+    {
+      "file": "/filesystem/clinical/admission_hp_05162026.docx",
+      "sha256": "50598a496f8e192a95bdd4a73b32fcf0b379bff5d1559095777b197b7a6fe731",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/ed_physician_note_05162026.docx",
+      "sha256": "85b55396227e6da40f2d8baccbb8b3aa30614343a77a9f2a146c69e2d29fe2fa",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/hospitalist_progress_hd2_05172026.docx",
+      "sha256": "837d59ae7c7926c18b6b9e7e16cd9c3dd3e8ae1e392e9eee86320c5f62dd241d",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/hospitalist_progress_hd4_05192026.docx",
+      "sha256": "03c39f71375e3c38bafed8552027ce02766aead0cdcd437b4ad5f4ffb968bc58",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/hospitalist_progress_hd6_05212026.docx",
+      "sha256": "2c1b83400d2e54d667eb1fb4ce1696677ef50e5dabda631d39d09e606596e744",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/id_consult_note_05182026.docx",
+      "sha256": "14daf475051b5177065bc222dfd0709501e9b9b92d834abb908bc8e495533be6",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/education/diabetes_foot_care_education_05212026.docx",
+      "sha256": "679df1d2751a13c2e2fa7778c77337d58cf2f63a047ba92f642b953bda337543",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/labs/culture_report_deep_tissue_05172026.docx",
+      "sha256": "7a0e3c961debbcf28b58c40b4c920d836c59e621378b0ac176951681e4457e40",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/medications/home_med_list_05162026.docx",
+      "sha256": "ce58ba948ba6b2e7975e79de887c0b0ce4be829e3514655203431b8064ae4353",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/nursing/nursing_offloading_flowsheet_05202026.docx",
+      "sha256": "08bc59d3a7aae93c3169d20236bad108c7fdb4bf3bf07ff3eff30a53b1d7fc51",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/orders/medication_hold_orders_05162026.docx",
+      "sha256": "427837be9094bf0d92a7539bf904def39e7d02a3de4cf0b7eeeb3a3ad5e3e6d3",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/tasks/task2_coding/him_preliminary_coding_worksheet_05212026.docx",
+      "sha256": "9d5b6e98079bc3e7f3e95dc1e2f1c74ca135470e6d34c2e17774d9026680f36c",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/tasks/task3_cdi/cdi_query_memo_05232026.docx",
+      "sha256": "4250cfbaa06d18bbea394df1ee42a60d4afd48552f9e105c91456e0f0cc29ace",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/tasks/task4_appeal/medicare_advantage_denial_letter_05232026.docx",
+      "sha256": "756bb5f05bcb8da826c5838a2f056c79d3e78fa39ba5c8ca0c6e46c8cf38810b",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/tasks/task7_hedis/quality_abstraction_worksheet_06042026.docx",
+      "sha256": "f98d3e1ce6a74b78cbeaae4eee01e0dd3cad53a994fa8b919fa9c3dcb00a6002",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/therapy/ot_evaluation_05202026.docx",
+      "sha256": "eee207753819043aec6c0c68e18b39e40de09547fde4e6d8c6578b4c02798e92",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_admin_case_management_note_05202026.docx.json",
+      "sha256": "c921f42f3457e3a9e4322fcab599298f4b09f7c646c0b63a7eb25c13be2ab0b2",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_admin_general_discharge_rights_notice_05212026.docx.json",
+      "sha256": "51695ad068489c2f6b8c85504b28056cd7151e87f7c1d2cab967a85a9da9f089",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_clinical_admission_hp_05162026.docx.json",
+      "sha256": "3a1278447b5131500b9f5e620c5e35245d6ea55d833bfe9394fd606e3d562c00",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_clinical_antibiotic_plan_note_05192026.docx.json",
+      "sha256": "3220534145bc8e30c9c8688ff42485eec0cae6a0479c791e2d3a4a47f842ccaa",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_clinical_diabetic_eye_exam_result_03152026.docx.json",
+      "sha256": "3af496c37d192bef093bf69169a8b2f3f19a98bf8104dda4f3999593eee5a3e6",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_clinical_ed_physician_note_05162026.docx.json",
+      "sha256": "e474bfd0f98d90a20a4e95c3b37505c0ac00a2ec2df86161fe7b2498ce7ea5ea",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_clinical_endocrine_glycemic_note_05192026.docx.json",
+      "sha256": "033f10048916b531e4e92bd7ebd402657f0b8329b6a3c5327ae620773c6a8501",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_clinical_family_communication_note_05202026.docx.json",
+      "sha256": "4f4b12b7d62cbc297aec4c612c8863b03a7209ea2c9fabf8fbcee18726d4381d",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_clinical_foot_pathology_report_05202026.docx.json",
+      "sha256": "07fb38dbab76353fb2185d43af12abeebbd6c1e625e03f69a2cf73399e9349a7",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_clinical_hospitalist_progress_hd2_05172026.docx.json",
+      "sha256": "307f30702a9860269e10a7ea8a82cbb8aae584057f4f958b30aceae19f82eeea",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_clinical_hospitalist_progress_hd4_05192026.docx.json",
+      "sha256": "76d28cbf31dc809dac3ef615e6d7dabc4f9137bde6bdc25755f81e89ba7e1a61",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_clinical_hospitalist_progress_hd6_05212026.docx.json",
+      "sha256": "98c78a87d3e0aa7df30d01fdbd831d5925da6dc1c56ff5b74f2432925d68b541",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_clinical_id_consult_note_05182026.docx.json",
+      "sha256": "fdeaf07dde856ef71658cf9d10282fa6f3334ded5a91743f2b915b344d9635bf",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_clinical_mri_foot_report_05182026.docx.json",
+      "sha256": "b8f9a6a1fd5c3c1cda769924321ffe681f65ebda2434860e3879aa4da7dbdaf5",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_clinical_outpatient_primary_care_summary_04302026.docx.json",
+      "sha256": "af3d83ff712a8d0c385da81cf7f76993caf745bd2d2115063725c95ebdb72833",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_clinical_podiatry_debridement_note_05172026.docx.json",
+      "sha256": "0eb1c8bb215f0b56da334a9fb5a7bc6b9500e7478a2eaa0d2b16287c6578a691",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_clinical_vascular_consult_note_05192026.docx.json",
+      "sha256": "70a9fb6d3cab63a16a607719f5928aae86ff73083a6dd0271ea20734dd76d634",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_clinical_wound_care_consult_05202026.docx.json",
+      "sha256": "f12a9f8e7d2b936be87fbeb414ed1fa4f5f8027742ef7a5190d2f5feb06b7848",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_diagnostics_abi_tbi_study_report_05192026.docx.json",
+      "sha256": "464b7a492983f57d8cc795c47b1a85612a355cd9520ffa1f46f2193ae3f686e3",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_education_diabetes_foot_care_education_05212026.docx.json",
+      "sha256": "3c6b3da790eb4dded6964f584ebce5207ad4fbdb3f103a7dd174a8b1bda2eb41",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_imaging_abi_tbi_tracing_05192026.jpg.json",
+      "sha256": "f87eb7ff5bd1bda1bcb246d56f86a077a9c15b89f169ba23b1232c1de55cf4f0",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_imaging_wound_photo_05202026.jpg.json",
+      "sha256": "072845aef2b02468494a1539df3eeaccf8d9f22c35f713dce89640bcf48ef571",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_labs_cbc_inflammatory_trend_05162026.docx.json",
+      "sha256": "c071080cf20c4106edd55cad937e4df85357708c0ecb26ea8c3fb0f45d9d6eee",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_labs_culture_report_deep_tissue_05172026.docx.json",
+      "sha256": "1697290e64c7be3a5dd9f5922a3cfdb3bd97523d53e45b67f9da548253eed3b1",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_labs_culture_report_superficial_swab_05162026.docx.json",
+      "sha256": "c511963708be6b956992b7efdd30e28a800a9e8edd6aaa2e45013cf04f9593af",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_labs_renal_lab_trend_05162026.docx.json",
+      "sha256": "d7bbe2c44db9fe22c5d5ae26c5c0955726ab79fca9f70532e891bf0ce56aedd8",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_medications_home_med_list_05162026.docx.json",
+      "sha256": "faae2354ee443181785be499ae19739fb4f31e46c2013fdf32f97bd9031ce6d9",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_medications_mar_05162026_05212026.docx.json",
+      "sha256": "d53f619b3c7c989fd8c36a1fdc554ba386659524464cd5d84f9df4f041e6bfa7",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_nursing_nursing_offloading_flowsheet_05202026.docx.json",
+      "sha256": "942adeb24d11774f804d0dbea7a89d356a1dd498d606c6560676d4ec1ac1e8e3",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_nursing_nursing_shift_narrative_05182026.docx.json",
+      "sha256": "914788450bf9d0fd42af8baec3143194f20aa746fcd159db28100455089de651",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_nursing_vital_signs_flowsheet_05162026.docx.json",
+      "sha256": "1e3258f5bcdab8fc3f83af67258c32c240c17570e374cd30a2d95674688343b5",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_orders_medication_hold_orders_05162026.docx.json",
+      "sha256": "24e25e93a69406e15f1031edeadf454782c3c2e5271ce2794b9e032ebab4d7d4",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_tasks_task10_dc_started_discharge_instruction_draft_05212026.docx.json",
+      "sha256": "539786e1a63218309de18db912b67392295525966d50613f79c9954921e49d1d",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_tasks_task1_med_rec_preliminary_discharge_order_set_05212026.docx.json",
+      "sha256": "e39b20c71f6f79bb511d7efdc5992404996dc44e17a13177e2a26837f160d015",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_tasks_task2_coding_him_preliminary_coding_worksheet_05212026.docx.json",
+      "sha256": "b9b55cf166d266086b3b7f718b13ec32421ffca7e8d49801450f1713e4f4295c",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_tasks_task3_cdi_cdi_query_memo_05232026.docx.json",
+      "sha256": "4a41af7a7c311e9e7ee275a03e45a9dd00296fab73abc723e7a05ab7f2c7cd51",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_tasks_task4_appeal_medicare_advantage_denial_letter_05232026.docx.json",
+      "sha256": "9ca97b0badc2da011e42692a0576f73cd228286a8b45a8aeb3a084e2e7e355e6",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_tasks_task5_pbm_pharmacy_benefit_rejection_05242026.docx.json",
+      "sha256": "0cc66124e25d665ae25db7e34e6f5ac9d8399c8241eeb8e6f8da5f5faa72e0ba",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_tasks_task6_ur_payer_concurrent_review_request_05252026.docx.json",
+      "sha256": "9b88e2f6a49cf2558497a1d1636770ff3ff836ba2ba02748a3256e505ced1a73",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_tasks_task7_hedis_quality_abstraction_worksheet_06042026.docx.json",
+      "sha256": "d58b0105c480fe332284bdb92e08b7e68ac85ec058d919aa185e094c189d895d",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_tasks_task9_safety_safety_event_intake_summary_06112026.docx.json",
+      "sha256": "8b7f061616bcee912e75b676c2736ffc4455f885ed92754f564469bba946e611",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_therapy_ot_evaluation_05202026.docx.json",
+      "sha256": "e7ef7f4a45ab6abe599463b1ae2b05e538050aec869661bd551790716c3e71e3",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_filesystem_therapy_pt_evaluation_05202026.docx.json",
+      "sha256": "2e14854c7729962f087d626e7b33cd631910c36bf123350c26c874e42b77386e",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/.formatting_logs/_summary.json",
+      "sha256": "cc6cf7454e31a6f6cec13387d197d66bfd799a097259e714b4560a3b36df44d5",
+      "last_modified": "2026-06-14T13:59:27Z",
+      "agent": "repair_iter_2",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/clinical/hospitalist_progress_hd6_05212026.docx",
+      "sha256": "b6a9581a8d5791da2aec378f476df8dc31f102a6f9bf58a5001f60a1288b62cf",
+      "last_modified": "2026-06-14T14:13:09.483638+00:00",
+      "agent": "repair_iter_3",
+      "action": "edited",
+      "description": "iter3: removed \"parameter-gated / explicit deferred-restart\" framing in Problem 7 (T-HELD-AGENTS); removed TMP-SMX-by-name in Allergies / Problem 1 / Microbiology rows (T-PBM-SUBSTITUTE); removed lower-authority swab annotation (T-CULTURE-PROVENANCE); bolded Problem 8 (formatting)"
+    },
+    {
+      "file": "/filesystem/clinical/hospitalist_progress_hd4_05192026.docx",
+      "sha256": "cb44683a3b8231c90cf035fc5daccb486ea6aa70f74dad4dc18b17673bcf6bfd",
+      "last_modified": "2026-06-14T14:13:31.139608+00:00",
+      "agent": "repair_iter_3",
+      "action": "edited",
+      "description": "iter3: removed \"parameter-gated decision / not silently resumed\" from Problem 5 (T-HELD-AGENTS); removed \"lower-authority result\" from Problem 1 assessment and microbiology table row (T-CULTURE-PROVENANCE); softened TMP-SMX-by-name allergy callout (T-PBM-SUBSTITUTE)"
+    },
+    {
+      "file": "/filesystem/clinical/endocrine_glycemic_note_05192026.docx",
+      "sha256": "903acbc7d68b2177947451f986491cbd0e11bac7a805b258a15b3f609e424ed7",
+      "last_modified": "2026-06-14T14:13:51.352836+00:00",
+      "agent": "repair_iter_3",
+      "action": "edited",
+      "description": "iter3: removed Plan #3 prescriptive deferred-restart language and corresponding Assessment sentence (T-HELD-AGENTS); replaced WS1 supplementary doc ID with in-world handout description (DP-008)"
+    },
+    {
+      "file": "/filesystem/clinical/id_consult_note_05182026.docx",
+      "sha256": "c5b05622f04a72a0d40dc76a48ba85ccdbb7dc57f054db683c94eaaa7b84d298",
+      "last_modified": "2026-06-14T14:13:51.407097+00:00",
+      "agent": "repair_iter_3",
+      "action": "edited",
+      "description": "iter3: removed parenthetical \"(i.e., avoiding sulfa)\" from Plan #5 (T-PBM-SUBSTITUTE)"
+    },
+    {
+      "file": "/filesystem/clinical/antibiotic_plan_note_05192026.docx",
+      "sha256": "66221086830bc3389da504f610865d3d9ee0546c5035d51001db61034a23174e",
+      "last_modified": "2026-06-14T14:13:51.462246+00:00",
+      "agent": "repair_iter_3",
+      "action": "edited",
+      "description": "iter3: replaced \"sulfa-safe\" with \"allergy-safe\" in Discharge Antibiotic Intent (T-PBM-SUBSTITUTE)"
+    },
+    {
+      "file": "/filesystem/clinical/case_management_note_05202026.docx",
+      "sha256": "e67703cd06eba9214a2313bbc78b562e8e7a8be4529d9eba207c64ba8d6225c3",
+      "last_modified": "2026-06-14T13:32:28.335038+00:00",
+      "agent": "repair_iter_3",
+      "action": "edited",
+      "description": "iter3: relocated from admin/ to clinical/ per file_structure_naming convention (signed clinical note authored by RN/CCM)"
+    },
+    {
+      "file": "/filesystem/admin/general_discharge_rights_notice_05212026.docx",
+      "sha256": "742d51625994086a92aa6fedfda79d0d1bb3ffd9ebcd17341589318320a623c7",
+      "last_modified": "2026-06-14T14:13:59.417848+00:00",
+      "agent": "repair_iter_3",
+      "action": "edited",
+      "description": "iter3: replaced supplementary doc ID WS2 with in-world Form HCRMC-PR-001 in heading and footer (DP-008)"
+    },
+    {
+      "file": "/filesystem/tasks/task9_safety/safety_event_intake_summary_06112026.docx",
+      "sha256": "dd99a2ee275c4c4b3a109b2b00bdaa2a455881e036d0ff4ae6472093dd3c3909",
+      "last_modified": "2026-06-14T14:14:33.679666+00:00",
+      "agent": "repair_iter_3",
+      "action": "edited",
+      "description": "iter3: removed specific document-name routing in 4 DOCUMENTED FACTORS bullets; replaced \"task-level document\" with \"primary event-level document\" (trap_leakage); removed Content-relevant-to-the-event column from DOCUMENTED INPUTS table (DP-004)"
+    },
+    {
+      "file": "/filesystem/tasks/task4_appeal/medicare_advantage_denial_letter_05232026.docx",
+      "sha256": "9c9ccd6fba1a0c030ba95fdb94874548a5c0f8be8c730bb9646a8cfe12095a43",
+      "last_modified": "2026-06-14T14:14:43.756554+00:00",
+      "agent": "repair_iter_3",
+      "action": "edited",
+      "description": "iter3: corrected letter date format \"May 23, 2026\" \u2192 \"05/23/2026\" (formatting_consistency)"
+    },
+    {
+      "file": "/filesystem/tasks/task1_med_rec/preliminary_discharge_order_set_05212026.docx",
+      "sha256": "16ec1791e6ba6b6309062b981dee4e01bfc0683ca6699510de308af26eb7afd7",
+      "last_modified": "2026-06-14T14:14:43.809655+00:00",
+      "agent": "repair_iter_3",
+      "action": "edited",
+      "description": "iter3: removed specific named-source reference \"ID antibiotic-plan note (05/19, Dr. Brusk)\" from reconciliation checklist and Section A footer (DP-004)"
+    },
+    {
+      "file": "/filesystem/clinical/case_management_note_05202026.docx",
+      "sha256": "e67703cd06eba9214a2313bbc78b562e8e7a8be4529d9eba207c64ba8d6225c3",
+      "last_modified": "2026-06-14T14:19:05Z",
+      "agent": "repair_iter_3",
+      "action": "created"
+    },
+    {
+      "file": "/filesystem/admin/general_discharge_rights_notice_05212026.docx",
+      "sha256": "742d51625994086a92aa6fedfda79d0d1bb3ffd9ebcd17341589318320a623c7",
+      "last_modified": "2026-06-14T14:19:05Z",
+      "agent": "repair_iter_3",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/antibiotic_plan_note_05192026.docx",
+      "sha256": "66221086830bc3389da504f610865d3d9ee0546c5035d51001db61034a23174e",
+      "last_modified": "2026-06-14T14:19:05Z",
+      "agent": "repair_iter_3",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/endocrine_glycemic_note_05192026.docx",
+      "sha256": "903acbc7d68b2177947451f986491cbd0e11bac7a805b258a15b3f609e424ed7",
+      "last_modified": "2026-06-14T14:19:05Z",
+      "agent": "repair_iter_3",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/hospitalist_progress_hd2_05172026.docx",
+      "sha256": "778009661cd9fe30509c153e0d4ecaa95df2db8f975243a57222522be59967c6",
+      "last_modified": "2026-06-14T14:19:05Z",
+      "agent": "repair_iter_3",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/hospitalist_progress_hd4_05192026.docx",
+      "sha256": "1acbef260b980ac38d611c1e44d38be4680187c0d0631cf92ce3125953638b0b",
+      "last_modified": "2026-06-14T14:19:05Z",
+      "agent": "repair_iter_3",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/hospitalist_progress_hd6_05212026.docx",
+      "sha256": "4988f12cff3d4c60b233df68e4688b20682b837a93c4483b3bc99f7f8ddff16a",
+      "last_modified": "2026-06-14T14:19:05Z",
+      "agent": "repair_iter_3",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/id_consult_note_05182026.docx",
+      "sha256": "c5b05622f04a72a0d40dc76a48ba85ccdbb7dc57f054db683c94eaaa7b84d298",
+      "last_modified": "2026-06-14T14:19:05Z",
+      "agent": "repair_iter_3",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/podiatry_debridement_note_05172026.docx",
+      "sha256": "3f23d6a098337f5bac63ea17951037a835f5975f83085978fa4d20ca4af9029e",
+      "last_modified": "2026-06-14T14:19:05Z",
+      "agent": "repair_iter_3",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/tasks/task1_med_rec/preliminary_discharge_order_set_05212026.docx",
+      "sha256": "343d90fb64dde46bad276862e27c33cd97e7ece2b1a785e0d16a6c304a1211f3",
+      "last_modified": "2026-06-14T14:19:05Z",
+      "agent": "repair_iter_3",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/tasks/task2_coding/him_preliminary_coding_worksheet_05212026.docx",
+      "sha256": "0038c1287aed0c499975cde3623907c4401f7d0f4854fafbaf81c08869df0cc0",
+      "last_modified": "2026-06-14T14:19:05Z",
+      "agent": "repair_iter_3",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/tasks/task4_appeal/medicare_advantage_denial_letter_05232026.docx",
+      "sha256": "9c9ccd6fba1a0c030ba95fdb94874548a5c0f8be8c730bb9646a8cfe12095a43",
+      "last_modified": "2026-06-14T14:19:05Z",
+      "agent": "repair_iter_3",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/tasks/task9_safety/safety_event_intake_summary_06112026.docx",
+      "sha256": "dd99a2ee275c4c4b3a109b2b00bdaa2a455881e036d0ff4ae6472093dd3c3909",
+      "last_modified": "2026-06-14T14:19:05Z",
+      "agent": "repair_iter_3",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/admin/case_management_note_05202026.docx",
+      "sha256": "e67703cd06eba9214a2313bbc78b562e8e7a8be4529d9eba207c64ba8d6225c3",
+      "last_modified": "2026-06-14T14:19:05Z",
+      "agent": "repair_iter_3",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/clinical/hospitalist_progress_hd4_05192026.docx",
+      "sha256": "be1837be98da81132d91f9b188f6e8090df4d708fac9a58dac7581e178a9bffa",
+      "last_modified": "2026-06-14T14:29:40.088873+00:00",
+      "agent": "repair_iter_4",
+      "action": "edited",
+      "description": "iter4: removed \"rather than admission values\" phrase from Problem 3 (T-RENAL-FORWARD)"
+    },
+    {
+      "file": "/filesystem/clinical/hospitalist_progress_hd6_05212026.docx",
+      "sha256": "3b71c58e3d9ba9c376089ea78f7be41acba6a6cc56a5d0ceb8d89f234a8c7b7f",
+      "last_modified": "2026-06-14T14:29:40.144156+00:00",
+      "agent": "repair_iter_4",
+      "action": "edited",
+      "description": "iter4: removed specific creatinine/eGFR anchor \"today's creatinine (1.6 mg/dL, eGFR 36)\" and \"All antibiotic agents dosed to current renal function\" telegraph (T-RENAL-FORWARD)"
+    },
+    {
+      "file": "/filesystem/clinical/id_consult_note_05182026.docx",
+      "sha256": "24507517847a62a0f8ba8db53276c9e9975519ca654f02f7619bcfc2e9528754",
+      "last_modified": "2026-06-14T14:30:01.600937+00:00",
+      "agent": "repair_iter_4",
+      "action": "edited",
+      "description": "iter4: reconciled HD3 creatinine from 1.9 to 1.8 mg/dL to align with MAR (DP-003 fix)"
+    },
+    {
+      "file": "/filesystem/tasks/task1_med_rec/preliminary_discharge_order_set_05212026.docx",
+      "sha256": "e52b70aa155a416a591c669ba1ed3b49fba2d645ac3fafc210e1455ae0326bf1",
+      "last_modified": "2026-06-14T14:29:40.035733+00:00",
+      "agent": "repair_iter_4",
+      "action": "edited",
+      "description": "iter4: removed \"renal adjustment to current laboratory values\" telegraph from reconciliation checklist (T-RENAL-FORWARD)"
+    },
+    {
+      "file": "/filesystem/tasks/task9_safety/safety_event_intake_summary_06112026.docx",
+      "sha256": "fa6281774c006d984a60a16400cfdd45f6dad492b9b2f754164cf5e833e4c32a",
+      "last_modified": "2026-06-14T14:31:19.224636+00:00",
+      "agent": "repair_iter_4",
+      "action": "edited",
+      "description": "iter4: removed specific findings naming in NOTES FOR THE REVIEWER (DP-004); institution case fix"
+    },
+    {
+      "file": "/filesystem/tasks/task10_dc/started_discharge_instruction_draft_05212026.docx",
+      "sha256": "f08f76da4a135a9aa3a3e44ed3e38e6d5e3b24beaa3745a255a819d94508717e",
+      "last_modified": "2026-06-14T14:30:39.869303+00:00",
+      "agent": "repair_iter_4",
+      "action": "edited",
+      "description": "iter4: institution name ALL CAPS \u2192 title case (formatting_consistency)"
+    },
+    {
+      "file": "/filesystem/labs/renal_lab_trend_05162026.docx",
+      "sha256": "445ac872f8f6d69746eb643a279a3b3e283c605315c45a4c7d29298941d9a6eb",
+      "last_modified": "2026-06-14T14:30:50.805425+00:00",
+      "agent": "repair_iter_4",
+      "action": "edited",
+      "description": "iter4: institution name ALL CAPS \u2192 title case; added H abnormality flags to Cr and BUN cells (formatting_consistency + specialized_doc_authenticity)"
+    },
+    {
+      "file": "/filesystem/labs/cbc_inflammatory_trend_05162026.docx",
+      "sha256": "1b22f1bc7dbaeece21249fbec7a4c345b090250f8ca80c2bee3651f730ba08ee",
+      "last_modified": "2026-06-14T14:30:58.307442+00:00",
+      "agent": "repair_iter_4",
+      "action": "edited",
+      "description": "iter4: added H/L abnormality flags to WBC/CRP/Hgb cells per reference ranges (specialized_doc_authenticity)"
+    },
+    {
+      "file": "/filesystem/diagnostics/diabetic_eye_exam_result_03152026.docx",
+      "sha256": "396b921367619ffb919ad0474340ff98513bbff89d3083a9b8760029caee338f",
+      "last_modified": "2026-06-14T13:04:19.860820+00:00",
+      "agent": "repair_iter_4",
+      "action": "edited",
+      "description": "iter4: relocated from clinical/ to diagnostics/ per file_structure_naming convention (parallel to MRI and ABI/TBI study reports)"
+    },
+    {
+      "file": "/filesystem/diagnostics/diabetic_eye_exam_result_03152026.docx",
+      "sha256": "396b921367619ffb919ad0474340ff98513bbff89d3083a9b8760029caee338f",
+      "last_modified": "2026-06-14T14:33:24Z",
+      "agent": "repair_iter_4",
+      "action": "created"
+    },
+    {
+      "file": "/filesystem/clinical/hospitalist_progress_hd4_05192026.docx",
+      "sha256": "be1837be98da81132d91f9b188f6e8090df4d708fac9a58dac7581e178a9bffa",
+      "last_modified": "2026-06-14T14:33:24Z",
+      "agent": "repair_iter_4",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/hospitalist_progress_hd6_05212026.docx",
+      "sha256": "3b71c58e3d9ba9c376089ea78f7be41acba6a6cc56a5d0ceb8d89f234a8c7b7f",
+      "last_modified": "2026-06-14T14:33:24Z",
+      "agent": "repair_iter_4",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/id_consult_note_05182026.docx",
+      "sha256": "24507517847a62a0f8ba8db53276c9e9975519ca654f02f7619bcfc2e9528754",
+      "last_modified": "2026-06-14T14:33:24Z",
+      "agent": "repair_iter_4",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/labs/cbc_inflammatory_trend_05162026.docx",
+      "sha256": "1b22f1bc7dbaeece21249fbec7a4c345b090250f8ca80c2bee3651f730ba08ee",
+      "last_modified": "2026-06-14T14:33:24Z",
+      "agent": "repair_iter_4",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/labs/renal_lab_trend_05162026.docx",
+      "sha256": "445ac872f8f6d69746eb643a279a3b3e283c605315c45a4c7d29298941d9a6eb",
+      "last_modified": "2026-06-14T14:33:24Z",
+      "agent": "repair_iter_4",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/tasks/task10_dc/started_discharge_instruction_draft_05212026.docx",
+      "sha256": "f08f76da4a135a9aa3a3e44ed3e38e6d5e3b24beaa3745a255a819d94508717e",
+      "last_modified": "2026-06-14T14:33:24Z",
+      "agent": "repair_iter_4",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/tasks/task1_med_rec/preliminary_discharge_order_set_05212026.docx",
+      "sha256": "e52b70aa155a416a591c669ba1ed3b49fba2d645ac3fafc210e1455ae0326bf1",
+      "last_modified": "2026-06-14T14:33:24Z",
+      "agent": "repair_iter_4",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/tasks/task9_safety/safety_event_intake_summary_06112026.docx",
+      "sha256": "fa6281774c006d984a60a16400cfdd45f6dad492b9b2f754164cf5e833e4c32a",
+      "last_modified": "2026-06-14T14:33:24Z",
+      "agent": "repair_iter_4",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/diabetic_eye_exam_result_03152026.docx",
+      "sha256": "396b921367619ffb919ad0474340ff98513bbff89d3083a9b8760029caee338f",
+      "last_modified": "2026-06-14T14:33:24Z",
+      "agent": "repair_iter_4",
+      "action": "removed"
+    },
+    {
+      "file": "/filesystem/tasks/task1_med_rec/preliminary_discharge_order_set_05212026.docx",
+      "sha256": "356d9d873b2f47a19a509b4722164f01bfa7dcb947aa746257ba3ad0d2d0520d",
+      "last_modified": "2026-06-14T14:48:15.149562+00:00",
+      "agent": "repair_iter_5",
+      "action": "edited",
+      "description": "iter5: removed \"against current renal function\" and \"current laboratory data\" telegraphs (T-RENAL-FORWARD)"
+    },
+    {
+      "file": "/filesystem/clinical/endocrine_glycemic_note_05192026.docx",
+      "sha256": "ea1b7f42821f7692b6b156bc51e13cce759c9f0886337d9abc1085be6ea5d4a2",
+      "last_modified": "2026-06-14T14:49:27.497547+00:00",
+      "agent": "repair_iter_5",
+      "action": "edited",
+      "description": "iter5: honorific Sra\u2192Mrs; Assessment #3 rewritten (T-HELD-AGENTS)"
+    },
+    {
+      "file": "/filesystem/clinical/hospitalist_progress_hd2_05172026.docx",
+      "sha256": "d7f6d7812890a395ab409e1448bf2f3a01e18b4cff438d38b5cb0db67d046b3f",
+      "last_modified": "2026-06-14T14:49:27.327288+00:00",
+      "agent": "repair_iter_5",
+      "action": "edited",
+      "description": "iter5: removed \"No silent resumption today\" from Problem 4 (T-HELD-AGENTS); honorific Sra\u2192Mrs"
+    },
+    {
+      "file": "/filesystem/clinical/hospitalist_progress_hd4_05192026.docx",
+      "sha256": "30c1fe4e4a866c26adaa8ee54667a15fb7c5a2b53b966206e21b7634ae83c9df",
+      "last_modified": "2026-06-14T14:49:27.384716+00:00",
+      "agent": "repair_iter_5",
+      "action": "edited",
+      "description": "iter5: removed \"does not change the rationale\" from Problem 1 swab line (T-CULTURE-PROVENANCE); honorific Sra\u2192Mrs"
+    },
+    {
+      "file": "/filesystem/clinical/hospitalist_progress_hd6_05212026.docx",
+      "sha256": "b5cbfd21ee2f1ae50979c658e12888e1a1fdf942b2ab11bf12bc48c73ef54724",
+      "last_modified": "2026-06-14T14:49:27.442090+00:00",
+      "agent": "repair_iter_5",
+      "action": "edited",
+      "description": "iter5: softened Osteomyelitis Problem 2 / Summary lines to remove pre-commitment to decline (T-OSTEO-POA); honorific Sra\u2192Mrs"
+    },
+    {
+      "file": "/filesystem/clinical/id_consult_note_05182026.docx",
+      "sha256": "36f433e4dc3c8406582786358c236619e6cffd173b0784fb85ab0cc502066c48",
+      "last_modified": "2026-06-14T14:48:44.900494+00:00",
+      "agent": "repair_iter_5",
+      "action": "edited",
+      "description": "iter5: removed 5-point \"Clinical reasoning for not signing acute osteomyelitis today\" block and Plan #6 osteomyelitis-duration directive (T-OSTEO-POA)"
+    },
+    {
+      "file": "/filesystem/clinical/admission_hp_05162026.docx",
+      "sha256": "3ba9c997a97828c0b4dd5971ca49e4df223b639ef91a47adbcd9929f86ae5946",
+      "last_modified": "2026-06-14T14:49:27.269679+00:00",
+      "agent": "repair_iter_5",
+      "action": "edited",
+      "description": "iter5: honorific Sra Ondina \u2192 Mrs Ondina (formatting_consistency)"
+    },
+    {
+      "file": "/filesystem/clinical/family_communication_note_05202026.docx",
+      "sha256": "19426f56d993c7a3dd05e84327eb42b86ebc12fa7c7ad4f9f1b523da06387d7c",
+      "last_modified": "2026-06-14T14:49:20.457828+00:00",
+      "agent": "repair_iter_5",
+      "action": "edited",
+      "description": "iter5: institution name ALL CAPS \u2192 title case"
+    },
+    {
+      "file": "/filesystem/clinical/podiatry_debridement_note_05172026.docx",
+      "sha256": "f2ae516b2ee6afc5e9f893a9fd6762bca0ee371086b4db78d415f456843db426",
+      "last_modified": "2026-06-14T14:49:20.509280+00:00",
+      "agent": "repair_iter_5",
+      "action": "edited",
+      "description": "iter5: institution name ALL CAPS \u2192 title case"
+    },
+    {
+      "file": "/filesystem/clinical/wound_care_consult_05202026.docx",
+      "sha256": "0cb96a13e0c90da02ca10603553fe249f0cdf2cae4f176809682138249709a10",
+      "last_modified": "2026-06-14T14:49:20.561645+00:00",
+      "agent": "repair_iter_5",
+      "action": "edited",
+      "description": "iter5: institution name ALL CAPS \u2192 title case"
+    },
+    {
+      "file": "/filesystem/clinical/vascular_consult_note_05192026.docx",
+      "sha256": "c207acb87e8332555b107dd81b9dd7e4e4016c13ad5733c8733de98148fed271",
+      "last_modified": "2026-06-14T14:49:27.552656+00:00",
+      "agent": "repair_iter_5",
+      "action": "edited",
+      "description": "iter5: honorific Ms\u2192Mrs (2 places)"
+    },
+    {
+      "file": "/filesystem/admin/general_discharge_rights_notice_05212026.docx",
+      "sha256": "e503ceae31359eac3284208f57d29e74e1478acd786e9d8b37c0f07c47b8fde9",
+      "last_modified": "2026-06-14T14:49:20.406307+00:00",
+      "agent": "repair_iter_5",
+      "action": "edited",
+      "description": "iter5: institution name ALL CAPS \u2192 title case (2 occurrences)"
+    },
+    {
+      "file": "/filesystem/labs/culture_report_deep_tissue_05172026.docx",
+      "sha256": "1cc8f4757122415ab9bd815344182a3be61142cd2e55f9c6a86d4c4bfb70eadf",
+      "last_modified": "2026-06-14T14:49:20.613832+00:00",
+      "agent": "repair_iter_5",
+      "action": "edited",
+      "description": "iter5: institution name ALL CAPS \u2192 title case"
+    },
+    {
+      "file": "/filesystem/tasks/task9_safety/safety_event_intake_summary_06112026.docx",
+      "sha256": "ec86afcfdcfccd5ebe4811a36dc09c6dd6441d7dbee997a314011a99b54eebc5",
+      "last_modified": "2026-06-14T14:48:58.676040+00:00",
+      "agent": "repair_iter_5",
+      "action": "edited",
+      "description": "iter5: added patient device-wear behavior bullet; \"bear on system-level prevention\" \u2192 neutral \"bear on the attribution analysis\" (T-SAFETY-PATIENT-BLAME)"
+    },
+    {
+      "file": "/filesystem/admin/general_discharge_rights_notice_05212026.docx",
+      "sha256": "e503ceae31359eac3284208f57d29e74e1478acd786e9d8b37c0f07c47b8fde9",
+      "last_modified": "2026-06-14T14:51:37Z",
+      "agent": "repair_iter_5",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/admission_hp_05162026.docx",
+      "sha256": "3ba9c997a97828c0b4dd5971ca49e4df223b639ef91a47adbcd9929f86ae5946",
+      "last_modified": "2026-06-14T14:51:37Z",
+      "agent": "repair_iter_5",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/endocrine_glycemic_note_05192026.docx",
+      "sha256": "ea1b7f42821f7692b6b156bc51e13cce759c9f0886337d9abc1085be6ea5d4a2",
+      "last_modified": "2026-06-14T14:51:37Z",
+      "agent": "repair_iter_5",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/family_communication_note_05202026.docx",
+      "sha256": "19426f56d993c7a3dd05e84327eb42b86ebc12fa7c7ad4f9f1b523da06387d7c",
+      "last_modified": "2026-06-14T14:51:37Z",
+      "agent": "repair_iter_5",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/hospitalist_progress_hd2_05172026.docx",
+      "sha256": "d7f6d7812890a395ab409e1448bf2f3a01e18b4cff438d38b5cb0db67d046b3f",
+      "last_modified": "2026-06-14T14:51:37Z",
+      "agent": "repair_iter_5",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/hospitalist_progress_hd4_05192026.docx",
+      "sha256": "30c1fe4e4a866c26adaa8ee54667a15fb7c5a2b53b966206e21b7634ae83c9df",
+      "last_modified": "2026-06-14T14:51:37Z",
+      "agent": "repair_iter_5",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/hospitalist_progress_hd6_05212026.docx",
+      "sha256": "b5cbfd21ee2f1ae50979c658e12888e1a1fdf942b2ab11bf12bc48c73ef54724",
+      "last_modified": "2026-06-14T14:51:37Z",
+      "agent": "repair_iter_5",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/id_consult_note_05182026.docx",
+      "sha256": "36f433e4dc3c8406582786358c236619e6cffd173b0784fb85ab0cc502066c48",
+      "last_modified": "2026-06-14T14:51:37Z",
+      "agent": "repair_iter_5",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/podiatry_debridement_note_05172026.docx",
+      "sha256": "f2ae516b2ee6afc5e9f893a9fd6762bca0ee371086b4db78d415f456843db426",
+      "last_modified": "2026-06-14T14:51:37Z",
+      "agent": "repair_iter_5",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/vascular_consult_note_05192026.docx",
+      "sha256": "c207acb87e8332555b107dd81b9dd7e4e4016c13ad5733c8733de98148fed271",
+      "last_modified": "2026-06-14T14:51:37Z",
+      "agent": "repair_iter_5",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/clinical/wound_care_consult_05202026.docx",
+      "sha256": "0cb96a13e0c90da02ca10603553fe249f0cdf2cae4f176809682138249709a10",
+      "last_modified": "2026-06-14T14:51:37Z",
+      "agent": "repair_iter_5",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/labs/culture_report_deep_tissue_05172026.docx",
+      "sha256": "1cc8f4757122415ab9bd815344182a3be61142cd2e55f9c6a86d4c4bfb70eadf",
+      "last_modified": "2026-06-14T14:51:37Z",
+      "agent": "repair_iter_5",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/tasks/task1_med_rec/preliminary_discharge_order_set_05212026.docx",
+      "sha256": "356d9d873b2f47a19a509b4722164f01bfa7dcb947aa746257ba3ad0d2d0520d",
+      "last_modified": "2026-06-14T14:51:37Z",
+      "agent": "repair_iter_5",
+      "action": "edited"
+    },
+    {
+      "file": "/filesystem/tasks/task9_safety/safety_event_intake_summary_06112026.docx",
+      "sha256": "ec86afcfdcfccd5ebe4811a36dc09c6dd6441d7dbee997a314011a99b54eebc5",
+      "last_modified": "2026-06-14T14:51:37Z",
+      "agent": "repair_iter_5",
+      "action": "edited"
+    }
+  ],
+  "last_updated": "2026-06-14T14:51:37Z",
+  "first_iteration": 1,
+  "iteration": 5,
+  "audit_entry_count": 107,
+  "provenance_record_count": 43,
+  "audit_record_count": 164
+}
