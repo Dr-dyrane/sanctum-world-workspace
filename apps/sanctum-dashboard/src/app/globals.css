@@ -154,7 +154,7 @@ summary:focus-visible {
 .chrome-stat {
   white-space: nowrap;
   font-size: 13px;
-  font-weight: 650;
+  font-weight: 600;
 }
 
 .chrome-stat {
@@ -191,7 +191,7 @@ summary:focus-visible {
   color: var(--fg-soft);
   cursor: pointer;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 540;
   transition: background-color 180ms ease, color 180ms ease, transform 220ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -285,7 +285,7 @@ summary:focus-visible {
 
 .world-menu button span {
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 580;
 }
 
 .world-menu button small {
@@ -393,7 +393,7 @@ html.dark .readiness-stage {
   margin-top: 5px;
   color: var(--fg-soft);
   font-size: 13px;
-  font-weight: 650;
+  font-weight: 560;
 }
 
 .readiness-grid {
@@ -419,7 +419,7 @@ html.dark .readiness-stage {
   color: var(--accent-a);
   font-family: "SF Mono", ui-monospace, monospace;
   font-size: 15px;
-  font-weight: 850;
+  font-weight: 660;
 }
 
 .verdict-stack h1 {
@@ -427,7 +427,7 @@ html.dark .readiness-stage {
   margin: 0;
   color: var(--fg);
   font-size: clamp(4.4rem, 10vw, 7.4rem);
-  font-weight: 720;
+  font-weight: 680;
   line-height: 0.92;
 }
 
@@ -456,7 +456,7 @@ html.dark .readiness-stage {
   border-radius: var(--r-pill);
   color: var(--fg-soft);
   font-size: 13px;
-  font-weight: 650;
+  font-weight: 560;
   text-decoration: none;
   transition: background-color 180ms ease, color 180ms ease, transform 220ms cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -500,7 +500,7 @@ html.dark .score-stage {
   margin-top: 12px;
   color: var(--fg);
   font-size: clamp(5.8rem, 13vw, 8.2rem);
-  font-weight: 800;
+  font-weight: 700;
   line-height: 0.84;
 }
 
@@ -532,7 +532,7 @@ html.dark .score-stage {
 .trajectory-head span {
   color: var(--fg-faint);
   font-size: 12px;
-  font-weight: 650;
+  font-weight: 540;
 }
 
 .trajectory-head strong {
@@ -603,7 +603,7 @@ html.dark .score-stage {
   color: var(--fg-soft);
   font-family: "SF Mono", ui-monospace, monospace;
   font-size: 10px;
-  font-weight: 750;
+  font-weight: 580;
 }
 
 .run-cell strong {
@@ -611,7 +611,7 @@ html.dark .score-stage {
   color: var(--fg);
   font-family: "SF Mono", ui-monospace, monospace;
   font-size: clamp(18px, 2vw, 24px);
-  font-weight: 850;
+  font-weight: 700;
   line-height: 1;
 }
 
@@ -688,7 +688,7 @@ html.dark .score-stage {
   color: var(--fg-soft);
   font-family: "SF Mono", ui-monospace, monospace;
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 560;
   white-space: nowrap;
 }
 
@@ -759,7 +759,7 @@ html.dark .score-stage {
   color: #fff;
   cursor: pointer;
   font-size: 14px;
-  font-weight: 650;
+  font-weight: 600;
   box-shadow: 0 12px 26px rgba(24, 24, 27, 0.14);
 }
 
@@ -792,7 +792,7 @@ html.dark .primary-cta {
   color: var(--fg);
   font-size: clamp(4.5rem, 12vw, 7.4rem);
   line-height: 0.86;
-  font-weight: 760;
+  font-weight: 700;
 }
 
 .world-track {
@@ -972,13 +972,13 @@ html.dark .primary-cta {
   fill: var(--fg-faint);
   font-family: "SF Mono", ui-monospace, monospace;
   font-size: 12px;
-  font-weight: 650;
+  font-weight: 540;
 }
 
 .radial-center-value {
   fill: var(--fg);
   font-size: 28px;
-  font-weight: 760;
+  font-weight: 660;
 }
 
 .radial-node {
@@ -1030,7 +1030,7 @@ html.dark .primary-cta {
   fill: #fff;
   font-family: "SF Mono", ui-monospace, monospace;
   font-size: 11px;
-  font-weight: 800;
+  font-weight: 620;
   pointer-events: none;
 }
 
@@ -1304,7 +1304,7 @@ html.dark .task-card {
   color: var(--accent-a);
   font-family: "SF Mono", ui-monospace, monospace;
   font-size: 13px;
-  font-weight: 800;
+  font-weight: 620;
 }
 
 .task-card-button .status-pill {
@@ -1344,7 +1344,7 @@ html.dark .task-card {
   background: rgba(120, 120, 128, 0.1);
   color: var(--fg-soft);
   font-size: 12.5px;
-  font-weight: 650;
+  font-weight: 520;
 }
 
 .task-mini-runs {
@@ -1378,13 +1378,13 @@ html.dark .task-card {
   color: var(--fg-faint);
   font-family: "SF Mono", ui-monospace, monospace;
   font-size: 9.5px;
-  font-weight: 750;
+  font-weight: 540;
 }
 
 .score-ring strong {
   font-family: "SF Mono", ui-monospace, monospace;
   font-size: 24px;
-  font-weight: 800;
+  font-weight: 660;
   line-height: 1;
 }
 
@@ -2400,7 +2400,7 @@ html.dark .verdict-hero {
   margin-top: 6px;
   color: var(--fg-soft);
   font-size: 14px;
-  font-weight: 650;
+  font-weight: 560;
 }
 
 .hero-stage-grid {
@@ -2415,7 +2415,7 @@ html.dark .verdict-hero {
   margin: 0;
   color: var(--fg);
   font-size: 104px;
-  font-weight: 780;
+  font-weight: 680;
   line-height: 0.9;
 }
 
@@ -2424,7 +2424,7 @@ html.dark .verdict-hero {
   margin: 28px 0 0;
   color: var(--fg);
   font-size: 21px;
-  font-weight: 560;
+  font-weight: 470;
   line-height: 1.36;
 }
 
@@ -2520,7 +2520,7 @@ html.dark .score-squircle {
   color: var(--fg-faint);
   font-family: "SF Mono", ui-monospace, monospace;
   font-size: 11px;
-  font-weight: 750;
+  font-weight: 620;
 }
 
 .score-scale span {
@@ -2546,14 +2546,14 @@ html.dark .score-squircle {
 .proof-run-callout span {
   color: var(--fg-soft);
   font-size: 13px;
-  font-weight: 650;
+  font-weight: 560;
 }
 
 .score-squircle strong {
   margin-top: 18px;
   color: var(--fg);
   font-size: 116px;
-  font-weight: 820;
+  font-weight: 700;
   line-height: 0.82;
 }
 
@@ -2584,7 +2584,7 @@ html.dark .score-squircle {
   cursor: pointer;
   font-family: "SF Mono", ui-monospace, monospace;
   font-size: 12px;
-  font-weight: 800;
+  font-weight: 660;
   transition: background-color 180ms ease, color 180ms ease, transform 220ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -2620,7 +2620,7 @@ html.dark .score-squircle {
   margin: 0;
   color: var(--fg-faint);
   font-size: 13px;
-  font-weight: 650;
+  font-weight: 560;
 }
 
 .trajectory-surface {
@@ -2638,7 +2638,7 @@ html.dark .score-squircle {
   margin: 0;
   color: var(--fg);
   font-size: 98px;
-  font-weight: 800;
+  font-weight: 680;
   line-height: 0.9;
 }
 
@@ -2646,7 +2646,7 @@ html.dark .score-squircle {
   margin: 16px 0 0;
   color: var(--fg-soft);
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 480;
 }
 
 .proof-run-callout {
@@ -2697,7 +2697,7 @@ html.dark .score-squircle {
   color: var(--fg-faint);
   font-family: "SF Mono", ui-monospace, monospace;
   font-size: 11px;
-  font-weight: 750;
+  font-weight: 620;
 }
 
 .score-bar {
@@ -2814,7 +2814,7 @@ html.dark .score-squircle {
 .bar-caption span {
   color: var(--fg-soft);
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 560;
 }
 
 .bar-caption strong {
@@ -2822,7 +2822,7 @@ html.dark .score-squircle {
   color: var(--fg);
   font-family: "SF Mono", ui-monospace, monospace;
   font-size: 25px;
-  font-weight: 850;
+  font-weight: 700;
   line-height: 1;
 }
 
@@ -2924,7 +2924,7 @@ html.dark .score-squircle {
   margin: 46px 0 0;
   color: var(--fg);
   font-size: 48px;
-  font-weight: 760;
+  font-weight: 640;
   line-height: 0.98;
 }
 
@@ -2967,12 +2967,13 @@ html.dark .score-squircle {
 .gate-row > span:not(.gate-icon) {
   color: var(--fg-soft);
   font-size: 13px;
-  font-weight: 650;
+  font-weight: 540;
 }
 
 .gate-row strong {
   color: var(--fg);
   font-size: 17px;
+  font-weight: 620;
 }
 
 .lens-surface {
@@ -2985,6 +2986,7 @@ html.dark .score-squircle {
   margin-top: 6px;
   color: var(--fg);
   font-size: 28px;
+  font-weight: 640;
   line-height: 1;
 }
 
@@ -3007,7 +3009,7 @@ html.dark .score-squircle {
   color: var(--fg-soft);
   cursor: pointer;
   font-size: 12px;
-  font-weight: 650;
+  font-weight: 540;
   transition: background-color 180ms ease, color 180ms ease, transform 220ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -3031,6 +3033,7 @@ html.dark .score-squircle {
   color: var(--fg);
   font-family: "SF Mono", ui-monospace, monospace;
   font-size: 13px;
+  font-weight: 620;
 }
 
 .lens-dot {
@@ -3108,7 +3111,7 @@ html.dark .score-squircle {
   margin: 0;
   color: var(--fg);
   font-size: 21px;
-  font-weight: 700;
+  font-weight: 620;
   line-height: 1.12;
 }
 
@@ -3116,7 +3119,7 @@ html.dark .score-squircle {
   grid-column: 1 / -1;
   color: var(--fg-soft);
   font-size: 13px;
-  font-weight: 620;
+  font-weight: 520;
 }
 
 .task-score {
@@ -3130,13 +3133,14 @@ html.dark .score-squircle {
   color: var(--fg);
   font-family: "SF Mono", ui-monospace, monospace;
   font-size: 30px;
+  font-weight: 680;
   line-height: 1;
 }
 
 .task-score span {
   color: var(--fg-soft);
   font-size: 12px;
-  font-weight: 650;
+  font-weight: 540;
 }
 
 .simple-task-detail {
@@ -3156,13 +3160,14 @@ html.dark .score-squircle {
   background: rgba(120, 120, 128, 0.085);
   color: var(--fg-soft);
   font-size: 12px;
-  font-weight: 650;
+  font-weight: 540;
 }
 
 .simple-task-detail strong {
   color: var(--fg);
   font-family: "SF Mono", ui-monospace, monospace;
   font-size: 20px;
+  font-weight: 660;
 }
 
 .simple-task-detail .primary-cta {
@@ -3184,6 +3189,7 @@ html.dark .score-squircle {
 .quiet-surface h2 {
   margin-top: 6px;
   font-size: 34px;
+  font-weight: 620;
   line-height: 1.05;
 }
 
@@ -3290,18 +3296,19 @@ html.dark .score-squircle {
 .signal-copy span {
   color: var(--fg-soft);
   font-size: 13px;
-  font-weight: 650;
+  font-weight: 540;
 }
 
 .signal-copy strong {
   color: var(--fg);
   font-size: 28px;
+  font-weight: 640;
 }
 
 .signal-copy small {
   color: var(--fg-soft);
   font-size: 12px;
-  font-weight: 650;
+  font-weight: 520;
 }
 
 .signal-drawer {
@@ -3316,6 +3323,7 @@ html.dark .score-squircle {
 .signal-drawer h3 {
   margin: 0;
   font-size: 24px;
+  font-weight: 620;
 }
 
 .signal-drawer ul {
@@ -3336,7 +3344,7 @@ html.dark .score-squircle {
   color: var(--fg);
   cursor: pointer;
   text-align: left;
-  font-weight: 650;
+  font-weight: 560;
 }
 
 .journey-surface {
