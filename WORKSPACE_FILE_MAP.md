@@ -16,6 +16,8 @@ sanctum-world-workspace/
   WORKSPACE_FILE_MAP.md        ← this file
   .gitignore                   ← updated 6/9
   _archive/                    ← dead root folders (gitignored); do not read for active work
+  apps/
+    sanctum-dashboard/         ← Next.js Sanctum cockpit for Vercel; local secrets live only in ignored .env.local
   dashboard/                   ← modular dashboard source in src/ plus generated km-world-dashboard.html
   docs/                        ← lessons, playbooks, domain knowledge, tooling and DOCX render doctrine
   reference/                   ← Sanctum source docs, templates, guidelines

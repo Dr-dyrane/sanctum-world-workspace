@@ -78,6 +78,15 @@ reference/world-spec-examples/
 # Temporary files
 tmp/
 temp/
+
+# Web app dependencies and builds
+node_modules/
+.next/
+apps/*/.next/
+apps/*/out/
+.vercel/
+apps/*/.vercel/
+*.tsbuildinfo
 *.cache
 *.tmp
 *.temp
