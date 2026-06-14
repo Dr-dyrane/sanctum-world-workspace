@@ -25,6 +25,8 @@ from pathlib import Path
 from docx import Document
 from docx.oxml.ns import qn
 from docx.oxml import OxmlElement
+from docx.enum.section import WD_ORIENT, WD_SECTION
+from docx.shared import Inches
 
 REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO))
@@ -102,6 +104,35 @@ def set_borders(table, outer: str, inner: str) -> None:
     table._tbl.tblPr.append(borders)
 
 
+# File-plan 7-col widths (inches), sized for the landscape text area (~9.8in):
+# # | ID | Filename.type | Date | Reference File Origin | Description | Pearls
+FILEPLAN_W = [0.3, 0.55, 1.7, 1.05, 2.2, 2.3, 1.7]
+
+
+def set_section(section, *, landscape: bool, margin: float) -> None:
+    if landscape:
+        section.orientation = WD_ORIENT.LANDSCAPE
+        section.page_width, section.page_height = Inches(11), Inches(8.5)
+    else:
+        section.orientation = WD_ORIENT.PORTRAIT
+        section.page_width, section.page_height = Inches(8.5), Inches(11)
+    section.left_margin = section.right_margin = Inches(margin)
+    section.top_margin = section.bottom_margin = Inches(margin)
+
+
+def set_fixed_widths(table, widths) -> None:
+    """Fixed table layout with per-column widths so no column clips in Word."""
+    table.autofit = False
+    table.allow_autofit = False
+    tblPr = table._tbl.tblPr
+    layout = OxmlElement("w:tblLayout")
+    layout.set(qn("w:type"), "fixed")
+    tblPr.append(layout)
+    for r in range(len(table.rows)):
+        for c, w in enumerate(widths):
+            table.cell(r, c).width = Inches(w)
+
+
 def add_data_table(doc, rows, *, meta=False) -> None:
     if not rows:
         return
@@ -133,6 +164,8 @@ def add_data_table(doc, rows, *, meta=False) -> None:
                     fmt_runs(cell, color=BODY, size=SMALL_SZ, bold=False)  # 6.5pt filenames
                 else:
                     fmt_runs(cell, color=BODY, size=SZ, bold=False)
+        if is_fileplan and ncol == len(FILEPLAN_W):
+            set_fixed_widths(t, FILEPLAN_W)
 
 
 def add_box(doc, text: str, *, fill: str, color: str, bold: bool, size: str, border: str) -> None:
@@ -213,7 +246,13 @@ def build() -> None:
             first_table_seen = True
             continue
         if ln.startswith("# "):
-            doc.add_paragraph(ln[2:].strip(), style="Heading 1")
+            title = ln[2:].strip()
+            # KM pattern: wide file-plan tables go in a landscape section so no column clips.
+            if title.startswith("3. World File Plan"):
+                set_section(doc.add_section(WD_SECTION.NEW_PAGE), landscape=True, margin=0.6)
+            elif title.startswith("4. World Summary"):
+                set_section(doc.add_section(WD_SECTION.NEW_PAGE), landscape=False, margin=1.0)
+            doc.add_paragraph(title, style="Heading 1")
         elif ln.startswith("## "):
             doc.add_paragraph(ln[3:].strip(), style="Heading 2")
         elif ln.startswith("### "):
