@@ -12,7 +12,7 @@ Update this file at every step (build, upload, pilot, bank, FA/GA, PL, review, s
 | Task | Workflow (verify live @ Step 10) | Cold mechanism | Stage | Latest pilot | Next step |
 |---|---|---|---|---|---|
 | OV01 | Medication Reconciliation at Care Transitions (REMAPPED) | enoxaparin VTE prophylaxis carried to discharge -> STOP | BANKED | job 741ba52f clean mount: 68/72/40/70/72/72/50/65/78/93, mean 68.0, 4 sub-70 | Alexander finalize FA/GA -> 3 PLs -> Abi-mode -> AutoQC -> submit |
-| OV02 | Inpatient Medical Coding and DRG Assignment | acute blood loss anemia upcode vs stable Hgb 9.8 -> DECLINE | BUILT v2, uploaded, at Task AutoQC | none yet | AutoQC -> pilot once -> mount-gate + read |
+| OV02 | Inpatient Medical Coding and DRG Assignment | acute blood loss anemia upcode (CEILINGED - caught by all runs; re-center to a judgment trap) | v2 PILOTED, near-ceiling, NOT bankable | job afa44ac7: 93/92/93/88/83/62/92/82/95/90, mean 87, 1 sub-70 (noise, pending transcript) | read 0.62 grading transcript -> re-center (judgment trap) or accept-medium |
 | OV03 | CDI-Coding DRG Reconciliation Review (REMAPPED) | colder upcode than osteo (e.g. AKI->ATN unsupported) - NOT yet built | v1 built; recalibration pending | none | design cold plant (ratify) after OV02 |
 | OV04 | Claims Denial Analysis and Appeal Preparation | cold plant in the denial - NOT yet built | v1 built; recalibration pending | none | queued |
 | OV05 | Pharmacy Insurance Claim Rejection Resolution | non-sulfa substitute wrong for renal/not-culture reasons - NOT yet built | v1 built; recalibration pending | none | queued |
@@ -39,3 +39,4 @@ One cold verification-asymmetry plant on a distinct axis (physician-ratified, co
 - 2026-06-14 KM FA/GA format audit: undelivered KM07-10 already failure-only; delivered KM01-06 old-format (revise only on re-entry).
 - 2026-06-14 OV02 recalibrate-now decided; candidate B (acute blood loss anemia) ratified; built worksheet/golden/grader; verify green; v2 prereg locked; uploaded to Studio; at Task AutoQC.
 - 2026-06-14 Created this status file (was missing; prior tracking was point-in-time only).
+- 2026-06-14 OV02 v2 piloted (job afa44ac7, clean mount): mean 87, one sub-70 (0.62). Anemia plant CAUGHT by all runs (the 0.62 itself rejected D62) -> ceilinged, not bankable. Coding-attestation is a fully-reconciling genre (KM06): needs a judgment trap, not a fabrication plant. The 0.62 is provisionally over-specification grader-noise; pending the attempt-6 grading transcript before deciding. Results record: OV02-v2-results-and-prereg-reconciliation.md.

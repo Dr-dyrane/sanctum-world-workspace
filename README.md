@@ -203,7 +203,7 @@ AI may organize, critique, audit, and format. AI must not originate final clinic
 
 ## Privacy And Confidentiality
 
-Keep this repository private. Do not publish Mercor, Sanctum, RL Studio, internal templates, proprietary guide content, authenticated links, credentials, browser exports, or any real patient data.
+This repository may be pushed to a public GitHub remote after Alexander explicitly marks the current tree public-safe. Public-safe means no credentials, real patient data, authenticated-only links, browser exports, session material, or prohibited proprietary downloads are tracked.
 
 Korvin Merrow and all future patient identities must be fictional.
 
@@ -220,13 +220,13 @@ git diff
 git restore --source <commit> -- <path>
 ```
 
-## Do Not Commit Publicly
+## Do Not Commit Or Publish
 
-Do not commit publicly:
+Do not commit or publish:
 
 - Credentials, tokens, API keys, cookies, browser profiles, or session exports
 - Real patient data or PHI
 - Authenticated-only links that expose private work
-- Raw proprietary downloads unless intentionally approved for private reference storage
+- Raw proprietary downloads unless intentionally approved for repository storage
 - RL Studio exports containing sensitive reviewer or platform information without review
 - Work that violates the current phase boundary
