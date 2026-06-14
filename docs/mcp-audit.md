@@ -22,7 +22,7 @@ Addendum: 2026-06-11. Installed and enabled `omni-analytics@openai-curated` from
 | Documents | DOCX creation/editing/rendering workflow. | Highly useful for Brainstorm and World Spec artifacts. | Installed plugin cache: `openai-primary-runtime/documents`. | Keep. Now strengthened by LibreOffice and Python packages. |
 | Spreadsheets | XLSX/CSV handling. | Useful for the Task Selection tracker and future workflow mapping. | Installed plugin cache: `openai-primary-runtime/spreadsheets`. | Keep. |
 | Presentations | PPTX/slide workflow. | Low usefulness for current Sanctum onboarding. | Installed plugin cache: `openai-primary-runtime/presentations`. | Keep, not needed now. |
-| GitHub | Repository/PR/issue workflows. | Useful only if Alexander decides to use a private GitHub remote. Do not publish without approval. | Installed plugin cache: `openai-curated/github`. | Keep. Confirm remote privacy before use. |
+| GitHub | Repository/PR/issue workflows. | Useful when Alexander decides to use an approved GitHub remote. Do not publish without approval. | Installed plugin cache: `openai-curated/github`. | Keep. Confirm public-safe or private-safe status before use. |
 | Omni Analytics | Data and analytics connector for querying Omni through the team's semantic model and permissions. | Useful if Alexander connects an Omni workspace for structured performance or operational analytics. Not a replacement for local chart-byte verification. | Installed 2026-06-11 with `codex plugin add omni-analytics@openai-curated`; enabled in `/Users/dyrane/.codex/config.toml`. | Keep if authenticated and useful; otherwise remove. |
 | Build Web Apps | Frontend app tooling. | Not needed for current Sanctum document workflow. | Installed plugin cache: `openai-curated/build-web-apps`. | Keep, no action. |
 | Vercel | Deployment and web app tooling. | Not needed for Sanctum onboarding. | Installed plugin cache: `openai-curated/vercel`. | Keep, no action. |
@@ -38,5 +38,5 @@ Addendum: 2026-06-11. Installed and enabled `omni-analytics@openai-curated` from
 - Do not install additional MCPs now.
 - Use Python plus Documents/Spreadsheets plugins for Sanctum artifacts.
 - Use Chrome automation only after explicit authorization and bridge verification.
-- Keep GitHub usage private-only and require Alexander approval before pushing.
+- Keep GitHub usage approval-gated and confirm the current tree is public-safe or private-safe before pushing.
 - Re-audit MCPs if new connectors are added or if RL Studio browser operation becomes active again.

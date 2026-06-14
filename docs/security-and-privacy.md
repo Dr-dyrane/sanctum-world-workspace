@@ -1,8 +1,8 @@
 # Security And Privacy
 
-## Private Repository Only
+## Public-Safe Repository Policy
 
-Keep this repository private. Do not publish Mercor, Project Sanctum, RL Studio, source guides, templates, reviewer feedback, or internal process materials publicly.
+This repository may be pushed to a public GitHub remote after Alexander explicitly marks the current tree public-safe. Public-safe means no credentials, real patient data, authenticated-only links, browser exports, session material, or prohibited proprietary downloads are tracked.
 
 ## Do Not Commit Secrets
 
@@ -30,7 +30,7 @@ Korvin Merrow is fictional.
 
 ## Mercor / Sanctum Source Documents
 
-Source documents and templates are for authorized project work only. Keep them under `reference/` and do not publish them outside approved channels.
+Source documents and templates are for authorized project work only. Keep them under `reference/` only when approved for repository storage. Do not add new source downloads unless Alexander has confirmed they are safe for the current remote.
 
 ## Sanitizing Exports
 
@@ -43,7 +43,6 @@ Before sharing or publishing any export:
 5. Confirm source documents are permitted for the destination.
 6. Confirm the current project phase allows the artifact.
 
-## Public Remote Warning
+## Public Remote Gate
 
-Before pushing to any remote, verify the remote is private and Alexander has approved the push. When in doubt, do not push.
-
+Before pushing to any remote, verify Alexander has approved the current tree as public-safe or private-safe. Confirm secrets and local exports are ignored, then push only the approved branch. When in doubt, pause.

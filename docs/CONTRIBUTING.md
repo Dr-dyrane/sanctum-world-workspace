@@ -1,6 +1,6 @@
 # Contributing
 
-This is a private working repository for Project Sanctum onboarding and future project work. Contributions should preserve clinical authorship, phase boundaries, and source integrity.
+This is a public-safe working repository for Project Sanctum onboarding and future project work. Contributions should preserve clinical authorship, phase boundaries, source integrity, and the no-secrets rule.
 
 ## Branch Naming
 

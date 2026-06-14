@@ -1,6 +1,6 @@
 # Git Workflow
 
-Git is used for local checkpoints, rollback, and change review. Do not push or publish unless Alexander confirms the target remote is private and safe.
+Git is used for local checkpoints, rollback, and change review. Do not push or publish unless Alexander confirms the target remote is safe for the current tree, whether public or private.
 
 ## Running git from the agent sandbox - the deletion-grant lesson (2026-06-11)
 
@@ -23,7 +23,7 @@ Alternative: the environment also assigns git+delete to Codex; if the agent is n
 
 ## Recommended Branches
 
-- `main`: stable private baseline.
+- `main`: stable baseline.
 - `korvin-merrow-brainstorm`: current Brainstorm work and submitted artifacts.
 - `korvin-merrow-world-spec`: future World Spec work after Brainstorm GO.
 - `reviewer-fixes/*`: human reviewer feedback revisions.
@@ -123,7 +123,7 @@ Final reports must state what changed, what did not change, current status, next
 
 This workspace currently has an `origin` remote configured. Before any push, verify:
 
-- remote is private
+- remote is approved as public-safe or private-safe for the current tree
 - no prohibited source docs or secrets are staged
 - `.gitignore` protects credentials and local exports
 - Alexander approves the push
