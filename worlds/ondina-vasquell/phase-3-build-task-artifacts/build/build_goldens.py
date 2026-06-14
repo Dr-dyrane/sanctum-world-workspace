@@ -24,7 +24,7 @@ def OV01():
         ("title", "DISCHARGE MEDICATION RECONCILIATION"),
         ("filing", "Author: Lillian Everet, MD - Hospital Medicine | Date of Service: 05/22/2026 0830 | Status: Draft for physician sign"),
         ("section", "SOURCES REVIEWED"),
-        ("body", "Home medication list, medication administration record, admission medication-hold orders, renal function trend, infectious disease notes, and the preliminary unreconciled discharge order set."),
+        ("body", "Home medication list, medication administration record, admission medication-hold orders, renal function trend, infectious disease notes, and the discharge medication order set pending signature."),
         ("section", "RECONCILED MEDICATIONS"),
         ("table", [
             ["Medication", "Disposition", "Rationale"],
