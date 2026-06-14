@@ -210,7 +210,7 @@ def _progress(fn, hd, dos, vitals, subj, obj_bullets, ap_bullets):
 
 
 def EW3():
-    return _progress("hospitalist_progress_hd2_05172026.docx", "HD2", "05/17/2026 0930",
+    return _progress("hospitalist_progress_hd2_05172026.docx", "HD2", "05/17/2026 1700",
         "T 37.8 C, HR 96, BP 142/80, RR 18, SpO2 97 percent RA, glucose 212",
         "Day of podiatric debridement. Patient reports the foot is less painful after the procedure. Through the interpreter she asks when she can go home; counseled that infection treatment and wound care are ongoing.",
         ["WBC 12.1 K/uL (from 14.2)", "Creatinine 1.9 mg/dL (from 2.1)", "Left foot post-debridement: granulating base, dressing clean, drainage decreased", "Cultures from deep tissue pending"],
@@ -221,7 +221,7 @@ def EW3():
 
 
 def EW4():
-    return _progress("hospitalist_progress_hd4_05192026.docx", "HD4", "05/19/2026 0915",
+    return _progress("hospitalist_progress_hd4_05192026.docx", "HD4", "05/19/2026 1730",
         "T 37.2 C, HR 88, BP 138/78, RR 17, SpO2 97 percent RA, glucose 186",
         "Patient more comfortable, eating better. Daughter present this morning through interpreter; expresses concern about managing the wound at home given her night shifts.",
         ["WBC 10.4 K/uL", "Creatinine 1.7 mg/dL", "ID following: antibiotics being tailored to deep-tissue culture", "ABI and TBI study obtained today; vascular consulted regarding perfusion", "Wound: granulating, decreased drainage"],
@@ -297,7 +297,7 @@ def EW8():
     R = ROSTER
     return ("id_consult_note_05182026.docx", "consult", "CONSULTATION", "05/18/2026", [
         ("title", "INFECTIOUS DISEASE CONSULTATION"),
-        ("filing", f"Author: {R['id_md']} - Infectious Disease | Date of Service: 05/18/2026 1500 | Status: Signed"),
+        ("filing", f"Author: {R['id_md']} - Infectious Disease | Date of Service: 05/18/2026 1730 | Status: Signed"),
         ("section", "REASON FOR CONSULTATION"),
         ("body", "Antimicrobial management of limb-threatening diabetic foot infection with renal impairment."),
         ("section", "HISTORY AND SOURCE REVIEW"),
@@ -313,7 +313,7 @@ def EW8():
             "Do not commit to an osteomyelitis-duration course at this time; the marrow finding is equivocal and pathology is pending.",
             "Reassess antibiotic plan after cultures and pathology; coordinate renal dosing with pharmacy.",
         ]),
-        ("sig", f"Electronically signed by {R['id_md']} on 05/18/2026 1540"),
+        ("sig", f"Electronically signed by {R['id_md']} on 05/18/2026 1745"),
     ])
 
 

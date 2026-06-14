@@ -25,7 +25,7 @@ def T1():
     R = ROSTER
     return ("preliminary_discharge_order_set_05212026.docx", "mar", [
         ("title", "PRELIMINARY DISCHARGE ORDER SET (DRAFT - NOT RECONCILED)"),
-        ("filing", f"Filed 05/21/2026 1800 | Status: Draft, pending reconciliation | {RE}"),
+        ("filing", f"Filed 05/21/2026 1830 | Status: Draft, pending reconciliation | {RE}"),
         ("body", "Auto-populated draft discharge orders carried forward from active inpatient orders. Not yet reconciled against home medications or current renal function."),
         ("section", "MEDICATIONS CARRIED FORWARD"),
         ("table", [
@@ -45,14 +45,14 @@ def T1():
             ["Lisinopril", "20 mg Oral daily", "Status ambiguous: held inpatient, not marked resume or continue-hold"],
         ]),
         ("body", "This draft has not been reconciled. The intravenous antibiotic line, the held oral agents, and the insulin dose require clinician reconciliation before discharge. No reconciliation decision is recorded here."),
-        ("sig", "Preliminary order set filed on 05/21/2026 1800"),
+        ("sig", "Preliminary order set filed on 05/21/2026 1830"),
     ])
 
 
 def T2():
     return ("him_preliminary_coding_worksheet_05212026.docx", "mar", [
         ("title", "HEALTH INFORMATION MANAGEMENT - PRELIMINARY CODING WORKSHEET"),
-        ("filing", "Author: Corwin Adeyle, RHIA, CCS - HIM Coding | Date: 05/21/2026 | Status: Draft for provider attestation | " + RE),
+        ("filing", "Author: Corwin Adeyle, RHIA, CCS - HIM Coding | Date: 05/21/2026 1830 | Status: Draft for provider attestation | " + RE),
         ("body", "Preliminary code assignment for provider review and attestation. Please confirm or correct."),
         ("section", "PROPOSED DIAGNOSES"),
         ("table", [
@@ -168,7 +168,7 @@ def T10():
     R = ROSTER
     return ("started_discharge_instruction_draft_05212026.docx", "primarycare", [
         ("title", "DISCHARGE INSTRUCTIONS (DRAFT - INCOMPLETE)"),
-        ("filing", f"Author: {R['resident']} | Started 05/21/2026 | Status: Draft, incomplete | {RE}"),
+        ("filing", f"Author: {R['resident']} | Started 05/21/2026 1830 | Status: Draft, incomplete | {RE}"),
         ("section", "YOUR DIAGNOSIS"),
         ("body", "You were treated in the hospital for a serious infection of your left foot related to diabetes."),
         ("section", "MEDICATIONS"),

@@ -18,5 +18,12 @@ Downloaded the post-revision filesystem from Studio and diffed it against our so
 - metadata-dirty 0; Spanish 0; eval-leakage 0.
 The only prior AutoQC fail (task-2 ICD codes) left the world with the task files. The coding worksheet error was never in our source (our version uses code families, L89, not specific codes); no correction needed on our end. If specific codes are wanted at Step 10, correct ones are M86.172 (left-foot osteo) and E11.3293 (bilateral mild NPDR without ME).
 
+## Temporal-ordering fix (added 2026-06-14, Final AutoQC "Document Chronology and Sequencing")
+Final AutoQC flagged three notes signed BEFORE the same-day events they describe. Fixed at the source (clinical_data.py) by shifting each citing note after its cited event:
+- HD2 progress 05/17 0930 -> 1700 (after debridement 1440).
+- ID consult 05/18 1540 -> 1745 (after MRI finalized 1705).
+- HD4 progress 05/19 0915 -> 1730 (after vascular consult 1635).
+Swept every same-day cluster (05/16-05/21); no other conflicts. Also made the three 05/21 task files strictly after the 18:00 close so tasking has no date ambiguity (KM had repeated date corrections at tasking): T1 order set 1800 -> 1830, T2 coding worksheet and T10 started draft dated 05/21 1830. Rebuilt world + task files, regenerated revision/filesystem, gate green; HD2 1700 / ID 1745 / HD4 1730 confirmed in the revision.
+
 ## Next
 Final file AutoQC on the revised world; if green, finalize and create the world as Healthcare_Vasquell_### (next available number in Studio). Task files and workflow remaps are handled at Step 10 per WORKFLOW-MAP.md and STAGE-9-FILE-REVIEW-PLAN.md.
