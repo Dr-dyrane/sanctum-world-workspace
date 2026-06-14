@@ -506,7 +506,7 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
               <article
                 id={`task-${task.id}`}
                 key={task.id}
-                className={`task-card surf ${selected.id === task.id ? 'selected' : ''}`}
+                className={`task-card surf ${task.stage} ${selected.id === task.id ? 'selected' : ''}`}
               >
                 <button type="button" className="task-card-button" onClick={() => setSelectedId(task.id)}>
                   <span className="task-id">{task.id}</span>
