@@ -535,6 +535,8 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
                   key={task.id}
                   type="button"
                   className={`track-step ${task.stage} ${selected.id === task.id ? 'active' : ''}`}
+                  aria-label={`${task.id}. ${task.name}. ${statusLabels[task.stage]}.`}
+                  aria-current={selected.id === task.id ? 'true' : undefined}
                   title={`${task.id}: ${task.name}`}
                   onClick={() => setSelectedId(task.id)}
                 />
@@ -560,6 +562,7 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
                   key={task.id}
                   type="button"
                   className={`map-cell ${task.stage}`}
+                  aria-label={`${task.id}. Mean ${scoreText(task)}.`}
                   onClick={() => setSelectedId(task.id)}
                 >
                   <span>{task.id}</span>

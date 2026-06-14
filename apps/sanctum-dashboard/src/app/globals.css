@@ -109,9 +109,9 @@ button {
 }
 
 .app-shell {
-  width: min(1080px, calc(100% - 24px));
+  width: min(980px, calc(100% - 24px));
   margin: 0 auto;
-  padding: 96px 0 64px;
+  padding: 88px 0 56px;
 }
 
 .top-chrome {
@@ -359,11 +359,11 @@ html.dark .theme-icon {
 }
 
 .cockpit {
-  min-height: min(70vh, 680px);
+  min-height: min(62vh, 600px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: clamp(20px, 4vw, 36px);
+  padding: clamp(18px, 3.4vw, 32px);
 }
 
 .cockpit-top {
@@ -413,16 +413,16 @@ html.dark .theme-icon {
 
 .cockpit-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 330px;
-  gap: clamp(28px, 5vw, 46px);
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 300px);
+  gap: clamp(22px, 4vw, 38px);
   align-items: end;
-  margin-top: 56px;
+  margin-top: 44px;
 }
 
 .hero-copy h1 {
   max-width: 13ch;
   margin: 0;
-  font-size: clamp(4.6rem, 10vw, 5.8rem);
+  font-size: clamp(3.8rem, 8vw, 5.15rem);
   line-height: 0.98;
   font-weight: 650;
 }
@@ -442,6 +442,7 @@ html.dark .theme-icon {
 .primary-cta {
   display: inline-flex;
   align-items: center;
+  gap: 9px;
   margin-top: 28px;
   padding: 11px 16px;
   border-radius: var(--r-pill);
@@ -452,10 +453,31 @@ html.dark .theme-icon {
   font-weight: 650;
 }
 
+.primary-cta::before,
+.inline-action:not(.compact)::before {
+  content: "";
+  width: 15px;
+  height: 13px;
+  flex: 0 0 15px;
+  border: 1.7px solid currentColor;
+  border-top-width: 5px;
+  border-radius: 4px;
+}
+
+.inline-action.compact::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  flex: 0 0 8px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(-45deg);
+}
+
 .metric-pane {
-  min-height: 260px;
-  border-radius: 22px;
-  padding: 24px;
+  min-height: 220px;
+  border-radius: 20px;
+  padding: 22px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -481,23 +503,28 @@ html.dark .theme-icon {
 .world-track {
   display: grid;
   grid-template-columns: repeat(10, minmax(0, 1fr));
-  gap: 6px;
-  margin-top: 40px;
+  gap: clamp(5px, 0.8vw, 8px);
+  margin-top: 34px;
 }
 
 .track-step {
-  height: 8px;
+  position: relative;
+  height: clamp(8px, 1vw, 10px);
+  min-width: 0;
+  padding: 0;
+  border: 0;
   border-radius: 999px;
   background: rgba(120, 120, 128, 0.18);
   cursor: pointer;
   overflow: hidden;
+  line-height: 0;
+  appearance: none;
 }
 
 .track-step::after {
   content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  inset: 0;
   background: var(--fg-faint);
   opacity: 0.78;
 }
@@ -515,21 +542,22 @@ html.dark .theme-icon {
 }
 
 .track-step.active {
-  box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.28);
+  outline: 3px solid rgba(124, 58, 237, 0.28);
+  outline-offset: 2px;
 }
 
 .mini-stat-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
-  margin-top: 22px;
+  gap: 10px;
+  margin-top: 20px;
 }
 
 .mini-stat {
-  min-height: 76px;
-  padding: 14px;
-  border-radius: 18px;
-  background: rgba(120, 120, 128, 0.09);
+  min-height: 64px;
+  padding: 10px 2px 0;
+  border-top: 1px solid rgba(120, 120, 128, 0.18);
+  background: transparent;
 }
 
 .mini-stat strong {
@@ -540,10 +568,39 @@ html.dark .theme-icon {
 }
 
 .mini-stat span {
-  display: block;
-  margin-top: 8px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-top: 7px;
   color: var(--fg-soft);
   font-size: 12.5px;
+}
+
+.mini-stat span::before,
+.counts-strip span::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  flex: 0 0 7px;
+  border-radius: 50%;
+  background: var(--accent-a);
+  opacity: 0.7;
+}
+
+.mini-stat:nth-child(1) span::before {
+  background: var(--ok-soft);
+}
+
+.mini-stat:nth-child(2) span::before {
+  background: var(--ready-soft);
+}
+
+.mini-stat:nth-child(3) span::before {
+  background: var(--bad);
+}
+
+.mini-stat:nth-child(4) span::before {
+  background: var(--accent-a);
 }
 
 .native-details {
@@ -574,6 +631,7 @@ html.dark .theme-icon {
 
 .map-cell {
   min-height: 72px;
+  padding: 0;
   border-radius: 18px;
   background: rgba(120, 120, 128, 0.1);
   color: var(--fg);
@@ -600,8 +658,8 @@ html.dark .theme-icon {
 .signal-panel,
 .view-options,
 .summary-panel {
-  margin-top: 14px;
-  padding: 18px;
+  margin-top: 12px;
+  padding: 16px;
 }
 
 .section-head h2,
@@ -793,11 +851,11 @@ html.dark .theme-icon {
 .task-card-button {
   display: grid;
   width: 100%;
-  min-height: 92px;
-  grid-template-columns: 62px 108px minmax(0, 1fr) 74px;
-  gap: 16px;
+  min-height: 84px;
+  grid-template-columns: 60px 104px minmax(0, 1fr) 70px;
+  gap: 14px;
   align-items: center;
-  padding: 16px 18px 16px 20px;
+  padding: 14px 16px 14px 20px;
   background: transparent;
   color: var(--fg);
   cursor: pointer;
@@ -843,10 +901,10 @@ html.dark .theme-icon {
   --score: 0%;
   justify-self: end;
   display: grid;
-  width: 68px;
-  height: 54px;
+  width: 64px;
+  height: 48px;
   place-items: center;
-  border-radius: 18px;
+  border-radius: 16px;
   background: rgba(120, 120, 128, 0.1);
 }
 
@@ -922,10 +980,28 @@ html.dark .theme-icon {
 .counts-strip {
   display: flex;
   flex-wrap: wrap;
-  gap: 18px;
+  gap: 14px;
   margin-top: 14px;
   color: var(--fg-soft);
   font-size: 12px;
+}
+
+.counts-strip span {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.counts-strip span:nth-child(1)::before {
+  background: var(--ok-soft);
+}
+
+.counts-strip span:nth-child(2)::before {
+  background: var(--warn-soft);
+}
+
+.counts-strip span:nth-child(3)::before {
+  background: var(--accent-a);
 }
 
 .counts-strip strong {
@@ -945,6 +1021,7 @@ html.dark .theme-icon {
 }
 
 .inline-action {
+  gap: 8px;
   margin-top: 16px;
   padding: 9px 13px;
   background: var(--fg);
@@ -1328,7 +1405,11 @@ html.dark .theme-icon {
   }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 760px) {
+  .app-shell {
+    padding: 78px 0 42px;
+  }
+
   .chrome-bar {
     max-width: 100%;
   }
@@ -1344,7 +1425,40 @@ html.dark .theme-icon {
   }
 
   .hero-copy h1 {
-    font-size: 4rem;
+    font-size: 3.25rem;
+  }
+
+  .hero-copy p {
+    margin-top: 13px;
+    font-size: 14.5px;
+    line-height: 1.48;
+  }
+
+  .primary-cta {
+    margin-top: 20px;
+  }
+
+  .cockpit {
+    min-height: auto;
+    padding: 16px;
+  }
+
+  .cockpit-grid {
+    gap: 18px;
+    margin-top: 32px;
+  }
+
+  .metric-pane {
+    min-height: 128px;
+    padding: 16px;
+  }
+
+  .metric-pane strong {
+    font-size: 4.1rem;
+  }
+
+  .world-track {
+    margin-top: 24px;
   }
 
   .mini-stat-grid,
