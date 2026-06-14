@@ -63,6 +63,7 @@ Use the smallest ladder that answers your question.
 
 Use templates and methods by purpose, not by browsing.
 
+- Repeatable brainstorm-to-spec recipe (READ FIRST for a new world): `docs/world-factory-playbook.md` - the deterministic spine vs the six physician decision gates, distilled from the Ondina run.
 - Official World Spec template: `reference/templates/World_Spec_Template_05_06.docx`.
 - Official AutoQC templates: `reference/templates/AutoQC_Section_2_World_Spec_v6.3_writer.docx`, `AutoQC_Section_3_World_Files_v6.6_writer.docx`, and `AutoQC_Section_4_Task_Prompts_v6.6_writer.docx`.
 - Brainstorm templates: `reference/templates/brainstorm.docx` and `reference/templates/brainstorm.md`.

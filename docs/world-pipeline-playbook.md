@@ -1,5 +1,7 @@
 # World Pipeline Playbook (post-Korvin, for future stages and future worlds)
 
+> SEE ALSO: `docs/world-factory-playbook.md` supersedes the brainstorm-to-spec portion of this doc with the Ondina-run recipe (deterministic spine vs physician decision gates). Read it first for new-world build; this doc remains the source for the KM forward pipeline (stages 6-17) and the longer-form B-section method notes.
+
 Date: 2026-06-04. Written at Korvin Merrow spec-submission (108/109, prednisone-by-design). Two purposes: (1) what happens next for Korvin, (2) the repeatable recipe for World #2+.
 
 ## A. Korvin: forward pipeline (stages 7-17)
