@@ -321,8 +321,12 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [activeDocId, setActiveDocId] = useState<string | null>(null);
   const [materialsOpen, setMaterialsOpen] = useState(false);
+  const [worldMenuOpen, setWorldMenuOpen] = useState(false);
   const [activeSignalFamily, setActiveSignalFamily] = useState<string | null>(null);
   const [filter, setFilter] = useState<Filter>('all');
+  const [darkMode, setDarkMode] = useState(false);
+  const [themeReady, setThemeReady] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   const world = worlds.find(item => item.id === worldId) ?? worlds[0];
   const hardest = world ? primaryFailure(world.tasks) : null;
@@ -335,6 +339,60 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
   useEffect(() => {
     setActiveSignalFamily(null);
   }, [world?.id]);
+
+  useEffect(() => {
+    const stored = window.localStorage.getItem('sanctum-theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const nextDark = stored ? stored === 'dark' : prefersDark;
+    setDarkMode(nextDark);
+    document.documentElement.classList.toggle('dark', nextDark);
+    document.documentElement.style.colorScheme = nextDark ? 'dark' : 'light';
+    setThemeReady(true);
+  }, []);
+
+  useEffect(() => {
+    if (!themeReady) return;
+    document.documentElement.classList.toggle('dark', darkMode);
+    document.documentElement.style.colorScheme = darkMode ? 'dark' : 'light';
+    window.localStorage.setItem('sanctum-theme', darkMode ? 'dark' : 'light');
+  }, [darkMode, themeReady]);
+
+  useEffect(() => {
+    function updateProgress() {
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      setScrollProgress(maxScroll > 0 ? Math.min(100, Math.max(0, (window.scrollY / maxScroll) * 100)) : 0);
+    }
+
+    updateProgress();
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    window.addEventListener('resize', updateProgress);
+
+    return () => {
+      window.removeEventListener('scroll', updateProgress);
+      window.removeEventListener('resize', updateProgress);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!worldMenuOpen) return;
+
+    function onPointerDown(event: PointerEvent) {
+      const target = event.target as HTMLElement | null;
+      if (!target?.closest('.world-menu-wrap')) setWorldMenuOpen(false);
+    }
+
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key === 'Escape') setWorldMenuOpen(false);
+    }
+
+    document.addEventListener('pointerdown', onPointerDown);
+    window.addEventListener('keydown', onKeyDown);
+
+    return () => {
+      document.removeEventListener('pointerdown', onPointerDown);
+      window.removeEventListener('keydown', onKeyDown);
+    };
+  }, [worldMenuOpen]);
 
   useEffect(() => {
     if (!materialsOpen) return;
@@ -379,32 +437,62 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
 
   const activeDoc = taskDocuments.find(doc => doc.id === activeDocId) ?? taskDocuments[0];
   const selectedCounts = counts(selected);
+  const sourceStatus = summary.sourceFiles ? `${summary.sourceFiles} files` : databaseConfigured ? 'Sources ready' : 'Sources pending';
 
   return (
     <>
+      <div className="scroll-progress" style={{ width: `${scrollProgress}%` }} />
       <header className="top-chrome" aria-label="World navigation">
         <div className="chrome-bar">
           <Image src={logo} alt="Sanctum" className="logo-mark" width={28} height={28} priority />
           <strong>Sanctum</strong>
           <span className="chrome-separator" />
-          <div className="world-switcher" aria-label="Switch world">
-            {worlds.map(item => (
-              <button
-                key={item.id}
-                type="button"
-                className={item.id === world.id ? 'active' : ''}
-                onClick={() => {
-                  setWorldId(item.id);
-                  setSelectedId(null);
-                  setFilter('all');
-                }}
-              >
-                {item.title}
-              </button>
-            ))}
+          <div className="world-menu-wrap">
+            <button
+              type="button"
+              className="world-menu-button"
+              aria-haspopup="menu"
+              aria-expanded={worldMenuOpen}
+              onClick={() => setWorldMenuOpen(open => !open)}
+            >
+              <span>{world.title}</span>
+              <span className="menu-chevron" aria-hidden="true" />
+            </button>
+            {worldMenuOpen ? (
+              <div className="world-menu surf" role="menu" aria-label="Switch world">
+                {worlds.map(item => (
+                  <button
+                    key={item.id}
+                    type="button"
+                    role="menuitem"
+                    className={item.id === world.id ? 'active' : ''}
+                    onClick={() => {
+                      setWorldId(item.id);
+                      setSelectedId(null);
+                      setFilter('all');
+                      setMaterialsOpen(false);
+                      setActiveSignalFamily(null);
+                      setWorldMenuOpen(false);
+                    }}
+                  >
+                    <span>{item.title}</span>
+                    <small>{item.kicker}</small>
+                  </button>
+                ))}
+              </div>
+            ) : null}
           </div>
           <span className="chrome-separator" />
-          <span className="chrome-stat">{summary.sourceFiles ? `${summary.sourceFiles} files` : databaseConfigured ? 'Sources ready' : 'Sources pending'}</span>
+          <span className="chrome-stat">{sourceStatus}</span>
+          <button
+            type="button"
+            className="theme-toggle"
+            aria-label={darkMode ? 'Use light appearance' : 'Use dark appearance'}
+            aria-pressed={darkMode}
+            onClick={() => setDarkMode(value => !value)}
+          >
+            <span className="theme-icon" aria-hidden="true" />
+          </button>
         </div>
       </header>
 

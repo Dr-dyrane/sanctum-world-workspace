@@ -31,6 +31,36 @@
   --blur: blur(22px) saturate(170%);
 }
 
+html.dark {
+  color-scheme: dark;
+  --bg: #101012;
+  --bg-2: #1c1c1e;
+  --bg-3: rgba(44, 44, 46, 0.88);
+  --bg-hover: rgba(139, 92, 246, 0.1);
+  --bg-press: rgba(139, 92, 246, 0.2);
+  --fg: #f4f2fa;
+  --fg-soft: rgba(244, 242, 250, 0.6);
+  --fg-faint: rgba(244, 242, 250, 0.36);
+  --accent-a: #8b5cf6;
+  --accent-b: #c4b5fd;
+  --accent-fill: rgba(139, 92, 246, 0.18);
+  --warn: #fbbf24;
+  --warn-soft: #f59e0b;
+  --warn-fill: rgba(245, 158, 11, 0.16);
+  --ready: #60a5fa;
+  --ready-soft: #38bdf8;
+  --ready-fill: rgba(56, 189, 248, 0.16);
+  --ok: #34d399;
+  --ok-soft: #10b981;
+  --ok-fill: rgba(52, 211, 153, 0.16);
+  --bad: #fb7185;
+  --bad-fill: rgba(251, 113, 133, 0.16);
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.32);
+  --shadow-lift: 0 10px 32px rgba(0, 0, 0, 0.34);
+  --shadow-focus: 0 22px 56px rgba(0, 0, 0, 0.38);
+  --liquid: rgba(44, 44, 46, 0.7);
+}
+
 * {
   box-sizing: border-box;
   letter-spacing: 0 !important;
@@ -38,10 +68,20 @@
 
 html {
   min-height: 100%;
-  background: var(--bg);
+  background:
+    radial-gradient(90% 62% at 50% -18%, rgba(124, 58, 237, 0.12), transparent 62%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), transparent 380px),
+    var(--bg);
   color: var(--fg);
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", system-ui, sans-serif;
   scroll-behavior: smooth;
+}
+
+html.dark {
+  background:
+    radial-gradient(92% 66% at 50% -18%, rgba(139, 92, 246, 0.2), transparent 62%),
+    linear-gradient(180deg, rgba(28, 28, 30, 0.68), transparent 420px),
+    var(--bg);
 }
 
 body {
@@ -55,6 +95,17 @@ body {
 button {
   border: 0;
   font: inherit;
+}
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  height: 2px;
+  border-radius: 0 var(--r-pill) var(--r-pill) 0;
+  background: linear-gradient(90deg, var(--accent-a), var(--accent-b));
+  transition: width 120ms linear;
 }
 
 .app-shell {
@@ -118,22 +169,15 @@ button {
   opacity: 0.22;
 }
 
-.world-switcher {
-  display: flex;
-  gap: 2px;
-  max-width: min(52vw, 390px);
-  overflow-x: auto;
-  scrollbar-width: none;
+.world-menu-wrap {
+  position: relative;
+  min-width: 0;
 }
 
-.world-switcher::-webkit-scrollbar {
-  display: none;
-}
-
-.world-switcher button,
+.world-menu-button,
+.theme-toggle,
 .filter-chips button {
   flex: 0 0 auto;
-  padding: 7px 11px;
   border-radius: var(--r-pill);
   background: transparent;
   color: var(--fg-soft);
@@ -143,13 +187,127 @@ button {
   transition: background-color 180ms ease, color 180ms ease, transform 220ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.world-switcher button:hover,
+.world-menu-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  max-width: min(42vw, 310px);
+  height: 34px;
+  padding: 0 12px;
+}
+
+.world-menu-button > span:first-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.menu-chevron {
+  width: 7px;
+  height: 7px;
+  border-right: 1.6px solid currentColor;
+  border-bottom: 1.6px solid currentColor;
+  transform: translateY(-1px) rotate(45deg);
+  transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.world-menu-button[aria-expanded="true"] .menu-chevron {
+  transform: translateY(2px) rotate(225deg);
+}
+
+.theme-toggle {
+  position: relative;
+  display: inline-grid;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  place-items: center;
+}
+
+.theme-icon {
+  width: 15px;
+  height: 15px;
+  border-radius: 999px;
+  background: currentColor;
+  box-shadow: 0 0 0 4px transparent, inset -5px -4px 0 var(--bg-3);
+  transition: box-shadow 220ms ease, transform 220ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html.dark .theme-icon {
+  box-shadow:
+    0 -9px 0 -6px currentColor,
+    0 9px 0 -6px currentColor,
+    9px 0 0 -6px currentColor,
+    -9px 0 0 -6px currentColor,
+    6px 6px 0 -6px currentColor,
+    -6px 6px 0 -6px currentColor,
+    6px -6px 0 -6px currentColor,
+    -6px -6px 0 -6px currentColor;
+}
+
+.filter-chips button {
+  padding: 7px 11px;
+}
+
+.world-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  z-index: 70;
+  width: min(320px, calc(100vw - 34px));
+  padding: 8px;
+  border-radius: 18px;
+  animation: popover-in 220ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.world-menu button {
+  display: block;
+  width: 100%;
+  border-radius: 13px;
+  padding: 10px 11px;
+  background: transparent;
+  color: var(--fg);
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 180ms ease, transform 220ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.world-menu button:hover,
+.world-menu button.active {
+  background: var(--bg-hover);
+}
+
+.world-menu button:active,
+.theme-toggle:active,
+.world-menu-button:active,
+.filter-chips button:active {
+  transform: scale(0.97);
+}
+
+.world-menu button span,
+.world-menu button small {
+  display: block;
+}
+
+.world-menu button span {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.world-menu button small {
+  margin-top: 2px;
+  color: var(--fg-soft);
+  font-size: 12px;
+}
+
+.world-menu-button:hover,
+.theme-toggle:hover,
 .filter-chips button:hover {
   background: rgba(120, 120, 128, 0.12);
   color: var(--fg);
 }
 
-.world-switcher button.active,
+.world-menu-button[aria-expanded="true"],
 .filter-chips button.active {
   background: var(--bg-2);
   color: var(--fg);
@@ -287,8 +445,8 @@ button {
   margin-top: 28px;
   padding: 11px 16px;
   border-radius: var(--r-pill);
-  background: linear-gradient(135deg, var(--fg), rgba(11, 10, 16, 0.78));
-  color: #fff;
+  background: var(--fg);
+  color: var(--bg-2);
   cursor: pointer;
   font-size: 14px;
   font-weight: 650;
@@ -900,7 +1058,7 @@ button {
   min-height: 66px;
   border-radius: 14px;
   padding: 11px;
-  background: rgba(255, 255, 255, 0.58);
+  background: rgba(120, 120, 128, 0.1);
   color: var(--fg);
   cursor: pointer;
   text-align: left;
@@ -957,7 +1115,7 @@ button {
 .doc-preview {
   margin-top: 10px;
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(120, 120, 128, 0.08);
   overflow: hidden;
 }
 
@@ -985,8 +1143,8 @@ button {
   margin: 0;
   padding: 15px;
   overflow: auto;
-  background: rgba(245, 245, 247, 0.9);
-  color: rgba(11, 10, 16, 0.82);
+  background: rgba(120, 120, 128, 0.08);
+  color: var(--fg);
   font-size: 13.5px;
   line-height: 1.6;
 }
@@ -1054,8 +1212,8 @@ button {
   padding: 12px;
   overflow: auto;
   border-radius: 12px;
-  background: rgba(11, 10, 16, 0.06);
-  color: rgba(11, 10, 16, 0.82);
+  background: rgba(120, 120, 128, 0.14);
+  color: var(--fg);
   font: 12.5px/1.55 "SF Mono", ui-monospace, Menlo, Consolas, monospace;
   white-space: pre-wrap;
 }
@@ -1065,7 +1223,7 @@ button {
   width: 100%;
   max-height: 460px;
   object-fit: contain;
-  background: #f5f5f7;
+  background: var(--bg);
 }
 
 @keyframes sheet-in {
@@ -1181,8 +1339,8 @@ button {
     display: none;
   }
 
-  .world-switcher {
-    max-width: calc(100vw - 88px);
+  .world-menu-button {
+    max-width: calc(100vw - 112px);
   }
 
   .hero-copy h1 {
