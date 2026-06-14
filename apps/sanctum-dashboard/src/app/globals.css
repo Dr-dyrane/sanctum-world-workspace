@@ -479,6 +479,11 @@ button {
   background: var(--bg-hover);
 }
 
+.signal-chip.active {
+  background: var(--bg-2);
+  box-shadow: var(--shadow-card);
+}
+
 .signal-chip:active {
   transform: scale(0.98);
   transition-duration: 80ms;
@@ -495,6 +500,33 @@ button {
   display: block;
   margin: 12px 0 4px;
   font-size: 25px;
+}
+
+.signal-popover {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  margin-top: 10px;
+  padding: 14px;
+  animation: popover-in 220ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.signal-popover strong,
+.signal-popover span {
+  display: block;
+}
+
+.signal-popover strong {
+  margin-top: 4px;
+  font-size: 18px;
+}
+
+.signal-popover span {
+  margin-top: 4px;
+  color: var(--fg-soft);
+  font-family: "SF Mono", ui-monospace, monospace;
+  font-size: 12px;
 }
 
 .view-options {
@@ -743,9 +775,65 @@ button {
   font-family: "SF Mono", ui-monospace, monospace;
 }
 
-.focus-sheet-panel {
-  margin-top: 18px;
+.inline-action,
+.close-button {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  border-radius: var(--r-pill);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.inline-action {
+  margin-top: 16px;
+  padding: 9px 13px;
+  background: var(--fg);
+  color: var(--bg-2);
+}
+
+.inline-action.compact {
+  margin-top: 0;
+}
+
+.close-button {
+  padding: 8px 12px;
+  background: rgba(120, 120, 128, 0.12);
+  color: var(--fg);
+}
+
+.modal-root {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.22);
+  cursor: default;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.materials-modal {
+  width: min(1080px, 100%);
+  max-height: min(820px, calc(100vh - 36px));
   padding: 24px;
+  overflow: auto;
+  animation: sheet-in 360ms cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.18);
+}
+
+.modal-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .focus-head {
@@ -980,6 +1068,30 @@ button {
   background: #f5f5f7;
 }
 
+@keyframes sheet-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes popover-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.99);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 .summary-panel {
   margin-top: 16px;
 }
@@ -1133,5 +1245,26 @@ button {
   .doc-tabs,
   .detail-grid {
     grid-template-columns: 1fr;
+  }
+
+  .modal-root {
+    align-items: end;
+    padding: 10px;
+  }
+
+  .materials-modal {
+    max-height: calc(100vh - 20px);
+    padding: 18px;
+    border-radius: 24px 24px var(--r-card) var(--r-card);
+  }
+
+  .modal-actions {
+    align-items: flex-end;
+    flex-direction: column;
+  }
+
+  .signal-popover {
+    align-items: flex-start;
+    flex-direction: column;
   }
 }

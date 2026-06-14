@@ -320,6 +320,8 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
   const [worldId, setWorldId] = useState(worlds[0]?.id ?? 'korvin-merrow');
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [activeDocId, setActiveDocId] = useState<string | null>(null);
+  const [materialsOpen, setMaterialsOpen] = useState(false);
+  const [activeSignalFamily, setActiveSignalFamily] = useState<string | null>(null);
   const [filter, setFilter] = useState<Filter>('all');
 
   const world = worlds.find(item => item.id === worldId) ?? worlds[0];
@@ -329,6 +331,26 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
   useEffect(() => {
     setActiveDocId(null);
   }, [selected?.id, world?.id]);
+
+  useEffect(() => {
+    setActiveSignalFamily(null);
+  }, [world?.id]);
+
+  useEffect(() => {
+    if (!materialsOpen) return;
+
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key === 'Escape') setMaterialsOpen(false);
+    }
+
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', onKeyDown);
+
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', onKeyDown);
+    };
+  }, [materialsOpen]);
 
   const summary = useMemo(() => {
     if (!world) return { delivered: 0, ready: 0, review: 0, mean: null, sourceFiles: 0 };
@@ -345,6 +367,7 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
   }, [filter, world]);
 
   const familySignals = useMemo(() => world ? families(world.tasks) : [], [world]);
+  const activeSignal = familySignals.find(signal => signal.family === activeSignalFamily) ?? null;
 
   const taskDocuments = useMemo(() => {
     if (!world || !selected) return [];
@@ -405,9 +428,9 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
                 <button
                   type="button"
                   className="primary-cta"
-                  onClick={() => document.getElementById(`task-${selected.id}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' })}
+                  onClick={() => setMaterialsOpen(true)}
                 >
-                  Inspect {selected.id} materials
+                  Open {selected.id} materials
                 </button>
               </div>
 
@@ -469,8 +492,9 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
               <button
                 key={signal.family}
                 type="button"
-                className="signal-chip"
-                onClick={() => setSelectedId(signal.tasks[0]?.id ?? null)}
+                className={`signal-chip ${activeSignalFamily === signal.family ? 'active' : ''}`}
+                aria-expanded={activeSignalFamily === signal.family}
+                onClick={() => setActiveSignalFamily(activeSignalFamily === signal.family ? null : signal.family)}
               >
                 <span>{signal.family}</span>
                 <strong>{signal.mean ?? 'TBD'}</strong>
@@ -478,6 +502,25 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
               </button>
             ))}
           </div>
+          {activeSignal ? (
+            <div className="signal-popover surf-2" role="region" aria-label={`${activeSignal.family} details`}>
+              <div>
+                <p className="micro-label">{activeSignal.family}</p>
+                <strong>{activeSignal.mean ?? 'TBD'} mean</strong>
+                <span>{activeSignal.tasks.map(task => task.id).join(', ')}</span>
+              </div>
+              <button
+                type="button"
+                className="inline-action compact"
+                onClick={() => {
+                  setSelectedId(activeSignal.tasks[0]?.id ?? null);
+                  setActiveSignalFamily(null);
+                }}
+              >
+                View first task
+              </button>
+            </div>
+          ) : null}
         </section>
 
         <section className="view-options surf-2">
@@ -519,91 +562,27 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
                     <strong>{scoreText(task)}</strong>
                   </span>
                 </button>
-                <div className="task-card-body">
-                  <p>{task.plain}</p>
-                  <div className="signal-track" aria-label="Failure signal">
-                    <span style={{ width: failurePercent(task) }} />
+                {selected.id === task.id ? (
+                  <div className="task-card-body" role="region" aria-label={`${task.id} summary`}>
+                    <p>{task.plain}</p>
+                    <div className="signal-track" aria-label="Failure signal">
+                      <span style={{ width: failurePercent(task) }} />
+                    </div>
+                    <div className="run-dots">{runDots(task)}</div>
+                    <div className="counts-strip">
+                      <span>Safe runs <strong>{taskCounts.catchers}</strong></span>
+                      <span>Critical misses <strong>{taskCounts.floors}</strong></span>
+                      <span>Under 70 <strong>{taskCounts.sub70}/{task.runsTotal}</strong></span>
+                    </div>
+                    <button type="button" className="inline-action" onClick={() => setMaterialsOpen(true)}>
+                      Open materials
+                    </button>
                   </div>
-                  <div className="run-dots">{runDots(task)}</div>
-                  <div className="counts-strip">
-                    <span>Safe runs <strong>{taskCounts.catchers}</strong></span>
-                    <span>Critical misses <strong>{taskCounts.floors}</strong></span>
-                    <span>Under 70 <strong>{taskCounts.sub70}/{task.runsTotal}</strong></span>
-                  </div>
-                </div>
+                ) : null}
               </article>
             );
           })}
         </section>
-
-        <aside className="focus-sheet-panel surf" aria-label={`${selected.id} materials`}>
-          <div className="focus-head">
-            <div>
-              <p className="micro-label">{selected.id} materials</p>
-              <h2>{selected.name}</h2>
-            </div>
-            <span className={statusClass(selected.stage)}>{statusLabels[selected.stage]}</span>
-          </div>
-
-          <div className="focus-grid">
-            <section className="focus-summary">
-              <p>{selected.plain}</p>
-              <div className="detail-grid">
-                <div><span>Mean</span><strong>{scoreText(selected)}</strong></div>
-                <div><span>Critical misses</span><strong>{selectedCounts.floors}</strong></div>
-                <div><span>Files</span><strong>{taskDocuments.length}</strong></div>
-              </div>
-              <div className="mechanism-box">
-                <span>Scored challenge</span>
-                <p>{selected.mechanism}</p>
-              </div>
-            </section>
-
-            <section className="document-renderer">
-              <div className="section-head compact">
-                <p className="micro-label">Task materials</p>
-                <h3>Review the source files</h3>
-              </div>
-              <div className="doc-tabs" aria-label="Task source files">
-                {taskDocuments.map(doc => (
-                  <button
-                    key={doc.id}
-                    type="button"
-                    className={activeDoc?.id === doc.id ? 'active' : ''}
-                    onClick={() => setActiveDocId(doc.id)}
-                  >
-                    <span className={`role-dot ${roleTone(doc.role)}`} />
-                    <strong>{roleLabel(doc.role)}</strong>
-                    {sourceName(doc) !== roleLabel(doc.role) ? <small>{sourceName(doc)}</small> : null}
-                  </button>
-                ))}
-              </div>
-
-              {activeDoc && (
-                <article className="doc-preview">
-                  <header>
-                    <div>
-                      <span className="micro-label">{roleLabel(activeDoc.role)}</span>
-                      <strong>{sourceName(activeDoc)}</strong>
-                    </div>
-                    <span>{formatBytes(activeDoc.byteSize)}</span>
-                  </header>
-
-                  {activeDoc.contentBase64 ? (
-                    <img src={`data:${activeDoc.mimeType};base64,${activeDoc.contentBase64}`} alt={`${sourceName(activeDoc)} preview`} />
-                  ) : (
-                    renderDocumentPreview(activeDoc)
-                  )}
-
-                  <footer>
-                    <span>{activeDoc.uploaded ? 'Ready to view' : 'Preview pending'}</span>
-                    <span>{activeDoc.sha256 ? 'File checked' : 'Check pending'}</span>
-                  </footer>
-                </article>
-              )}
-            </section>
-          </div>
-        </aside>
 
         <section className="summary-panel surf">
           <p className="micro-label">Suite summary</p>
@@ -623,6 +602,85 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
           </div>
         </section>
       </main>
+
+      {materialsOpen ? (
+        <div className="modal-root" role="presentation">
+          <button type="button" className="modal-backdrop" aria-label="Dismiss materials" onClick={() => setMaterialsOpen(false)} />
+          <section className="materials-modal surf" role="dialog" aria-modal="true" aria-label={`${selected.id} materials`}>
+            <div className="focus-head">
+              <div>
+                <p className="micro-label">{selected.id} materials</p>
+                <h2>{selected.name}</h2>
+              </div>
+              <div className="modal-actions">
+                <span className={statusClass(selected.stage)}>{statusLabels[selected.stage]}</span>
+                <button type="button" className="close-button" aria-label="Close materials" onClick={() => setMaterialsOpen(false)}>
+                  Close
+                </button>
+              </div>
+            </div>
+
+            <div className="focus-grid">
+              <section className="focus-summary">
+                <p>{selected.plain}</p>
+                <div className="detail-grid">
+                  <div><span>Mean</span><strong>{scoreText(selected)}</strong></div>
+                  <div><span>Critical misses</span><strong>{selectedCounts.floors}</strong></div>
+                  <div><span>Files</span><strong>{taskDocuments.length}</strong></div>
+                </div>
+                <div className="mechanism-box">
+                  <span>Scored challenge</span>
+                  <p>{selected.mechanism}</p>
+                </div>
+              </section>
+
+              <section className="document-renderer">
+                <div className="section-head compact">
+                  <p className="micro-label">Task materials</p>
+                  <h3>Review the source files</h3>
+                </div>
+                <div className="doc-tabs" aria-label="Task source files">
+                  {taskDocuments.map(doc => (
+                    <button
+                      key={doc.id}
+                      type="button"
+                      className={activeDoc?.id === doc.id ? 'active' : ''}
+                      onClick={() => setActiveDocId(doc.id)}
+                    >
+                      <span className={`role-dot ${roleTone(doc.role)}`} />
+                      <strong>{roleLabel(doc.role)}</strong>
+                      {sourceName(doc) !== roleLabel(doc.role) ? <small>{sourceName(doc)}</small> : null}
+                    </button>
+                  ))}
+                </div>
+
+                {activeDoc && (
+                  <article className="doc-preview">
+                    <header>
+                      <div>
+                        <span className="micro-label">{roleLabel(activeDoc.role)}</span>
+                        <strong>{sourceName(activeDoc)}</strong>
+                      </div>
+                      <span>{formatBytes(activeDoc.byteSize)}</span>
+                    </header>
+
+                    {activeDoc.contentBase64 ? (
+                      <img src={`data:${activeDoc.mimeType};base64,${activeDoc.contentBase64}`} alt={`${sourceName(activeDoc)} preview`} />
+                    ) : (
+                      renderDocumentPreview(activeDoc)
+                    )}
+
+                    <footer>
+                      <span>{activeDoc.uploaded ? 'Ready to view' : 'Preview pending'}</span>
+                      <span>{activeDoc.sha256 ? 'File checked' : 'Check pending'}</span>
+                    </footer>
+                  </article>
+                )}
+              </section>
+            </div>
+          </section>
+        </div>
+      ) : null}
     </>
   );
 }
