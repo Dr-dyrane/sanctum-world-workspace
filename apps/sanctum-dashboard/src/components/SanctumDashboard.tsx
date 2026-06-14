@@ -97,7 +97,7 @@ function sourceName(doc: DisplayDocument) {
 }
 
 function formatBytes(value: number | null) {
-  if (!value) return 'Preview pending';
+  if (!value) return 'No preview';
   if (value < 1024) return `${value} B`;
   if (value < 1024 * 1024) return `${Math.round(value / 102.4) / 10} KB`;
   return `${Math.round(value / 1024 / 102.4) / 10} MB`;
@@ -129,7 +129,7 @@ function fallbackDocuments(worldId: string, task: Task): DisplayDocument[] {
       mimeType: 'text/plain',
       sha256: null,
       byteSize: null,
-      contentText: 'This task ask is not available for preview yet.',
+      contentText: 'Task ask preview pending.',
       contentBase64: null,
       uploaded: false,
     },
@@ -143,7 +143,7 @@ function fallbackDocuments(worldId: string, task: Task): DisplayDocument[] {
       mimeType: 'application/octet-stream',
       sha256: null,
       byteSize: null,
-      contentText: `${sourceCue(file)}. Preview is not available yet.`,
+      contentText: `${sourceCue(file)}. Preview pending.`,
       contentBase64: null,
       uploaded: false,
     })),
@@ -157,7 +157,7 @@ function fallbackDocuments(worldId: string, task: Task): DisplayDocument[] {
       mimeType: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
       sha256: null,
       byteSize: null,
-      contentText: 'Reference answer preview is not available yet.',
+      contentText: 'Reference answer preview pending.',
       contentBase64: null,
       uploaded: false,
     },
@@ -171,7 +171,7 @@ function fallbackDocuments(worldId: string, task: Task): DisplayDocument[] {
       mimeType: 'text/plain',
       sha256: null,
       byteSize: null,
-      contentText: 'Review guide preview is not available yet.',
+      contentText: 'Review guide preview pending.',
       contentBase64: null,
       uploaded: false,
     },
@@ -192,9 +192,9 @@ function uploadedDocuments(documents: TaskDocumentRow[], worldId: string, taskId
 
 function previewText(doc: DisplayDocument) {
   if (doc.contentText) return doc.contentText;
-  if (doc.contentBase64) return 'Image ready for review.';
-  if (doc.uploaded) return 'Preview is not available for this file type.';
-  return 'Preview is not available yet.';
+  if (doc.contentBase64) return 'Image ready.';
+  if (doc.uploaded) return 'No preview for this file type.';
+  return 'Preview pending.';
 }
 
 function isMarkdown(doc: DisplayDocument) {
@@ -511,7 +511,7 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
                 <h1>Task Suite</h1>
                 <p>{world.blurb}</p>
                 <p className="hero-insight">
-                  {hardest ? `${hardest.id} is the sharpest signal right now: ${hardest.plain}` : 'No pilot signal exists yet.'}
+                  {hardest ? `Sharpest signal: ${hardest.id}. ${hardest.plain}` : 'No pilot signal yet.'}
                 </p>
                 <button
                   type="button"
@@ -573,7 +573,7 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
         <section className="signal-panel surf" aria-label="Failure signal families">
           <div className="section-head">
                 <p className="micro-label">Clinical challenge groups</p>
-                <h2>Where the model misses</h2>
+                <h2>Model miss map</h2>
           </div>
           <div className="signal-strip">
             {familySignals.map(signal => (
@@ -614,7 +614,7 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
         <section className="view-options surf-2">
           <div>
             <p className="micro-label">Tasks</p>
-            <strong>{filter === 'all' ? 'All tasks, ordered' : `${statusLabels[filter]} tasks`}</strong>
+            <strong>{filter === 'all' ? 'All tasks' : `${statusLabels[filter]} tasks`}</strong>
           </div>
           <div className="filter-chips" role="group" aria-label="Filter tasks by status">
             {filterLabels.map(item => (
@@ -681,7 +681,7 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
             <div><strong>{summary.mean ?? 'TBD'}</strong><span>Mean, 10 tasks</span></div>
           </div>
           <p className="summary-note">
-            Each task opens into its ask, supporting files, reference answer, and review guide.
+            Open the ask, source files, reference answer, and review guide.
           </p>
           <div className="journey-row">
             {journey.map(item => (
@@ -725,7 +725,7 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
               <section className="document-renderer">
                 <div className="section-head compact">
                   <p className="micro-label">Task materials</p>
-                  <h3>Review the source files</h3>
+                  <h3>Source packet</h3>
                 </div>
                 <div className="doc-tabs" aria-label="Task source files">
                   {taskDocuments.map(doc => (
@@ -759,8 +759,8 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
                     )}
 
                     <footer>
-                      <span>{activeDoc.uploaded ? 'Ready to view' : 'Preview pending'}</span>
-                      <span>{activeDoc.sha256 ? 'File checked' : 'Check pending'}</span>
+                      <span>{activeDoc.uploaded ? 'Ready' : 'Pending'}</span>
+                      <span>{activeDoc.sha256 ? 'Checked' : 'Unchecked'}</span>
                     </footer>
                   </article>
                 )}
