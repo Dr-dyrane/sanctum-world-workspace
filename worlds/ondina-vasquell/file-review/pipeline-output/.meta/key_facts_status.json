@@ -1,9 +1,0 @@
-{
-  "status": "produced",
-  "mode": "in_loop",
-  "path": "/filesystem/00_admin/key_facts.docx",
-  "bytes": 43201,
-  "error_class": null,
-  "error_message": null,
-  "agent_cost_usd": 5.63
-}

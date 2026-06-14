@@ -1,4 +1,0 @@
-{
-  "status": "failed",
-  "error": "RuntimeError: POST /jobs -> 400: {\"detail\":\"This environment's description is too short. It must be at least 300 characters (roughly 2-3 sentences) before running jobs on it.\"}"
-}
