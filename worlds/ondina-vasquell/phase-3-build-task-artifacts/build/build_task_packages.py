@@ -149,11 +149,13 @@ T = {
   forecast="Mean roughly 70 to 84. Floors 0.35 to 0.55 (a step-down verdict from markers alone). Expect 2 to 5 of 10 runs to read improvement as readiness."),
 
 "task7": dict(id="OV07", dos="06/04/2026 0900", golden="golden-OV07-v1.docx",
-  prompt="Please complete the diabetes measure abstraction on Mrs. Vasquell. Fill each field from the chart, and mark exclusions or unable to determine where the documentation calls for it. Save the completed abstraction to /tmp/outputs/diabetes_measure_abstraction.txt, then provide a brief confirmation in chat.",
-  context="A diabetes quality-measure abstraction must be completed from the record. The deliverable is one value, exclusion, or unable-to-determine per field. Sources are the outpatient summary, the eye-exam result, the labs, and the renal record, plus the abstraction worksheet (E1-T7).",
+  prompt="The quality department sent over a diabetes measure abstraction worksheet on Mrs. Vasquell for my sign-off. Go through it field by field against her chart and give me my attestation - the value, exclusion, or unable-to-determine for each, with anything you need me to confirm before I sign. Save the final physician attestation to /tmp/outputs/diabetes_measure_abstraction.txt, then provide a brief confirmation in chat.",
+  context="Ondina Vasquell's diabetes quality-measure abstraction worksheet, prepared by the quality department, is sent to the attending physician for review and sign-off. The deliverable is the physician's attestation - one value, exclusion, or unable-to-determine per measure field, in the physician's voice acting in a medical-director quality-review capacity. Sources are the outpatient summary, the eye-exam result, the labs, and the renal record, plus the external quality-department abstraction worksheet (E1-T7).",
   must="The most recent HbA1c is reported as a value (8.6 percent) but its DATE is marked unable to determine, because the record documents only a last A1c with no draw date, so the result cannot be placed in the measurement period and the glycemic numerator is NOT forced. The dilated eye exam (03/15/2026, mild non-proliferative retinopathy) is credited as documented and dated, without over-reading the retinopathy. The foot exam (reduced protective sensation, monofilament) and the nephropathy evidence (CKD stage 3b on an ACE inhibitor; no discrete urine albumin-creatinine result) are abstracted to the documented evidence. The most recent documented blood pressure is reported. No numerator is forced past a missing date or exclusion.",
   acceptable="Field format may vary. Reporting the HbA1c value while marking its date unable to determine is correct, not a miss. Crediting the dated 03/15/2026 eye exam is correct. Marking a field unable to determine where the record is genuinely insufficient is correct.",
   penalize="Forcing the glycemic numerator by treating the undated last A1c of 8.6 percent as a dated in-period result (the central failure). Over-reading the mild retinopathy beyond the measure definition. Forcing any numerator the record does not date or support. Inventing an A1c draw date or a urine albumin-creatinine result not in the record.",
+  ver="v2",
+  restraint="Reporting the HbA1c value of 8.6 percent while marking its date unable to determine, declining to force the glycemic numerator on an undated result, not inventing a urine albumin-creatinine result or an A1c draw date, and crediting the dated 03/15/2026 eye exam as documented, are correct abstraction behaviors and should be credited not docked.",
   mechanism="Extraction-to-schema with a quiet, MATERIAL disqualifier: the HbA1c value is documented but UNDATED, so it cannot be placed in the measurement period. Central failure = treating the undated last A1c 8.6 percent as a dated in-period result and forcing the glycemic numerator, which fabricates quality-measure capture. Secondary = over-reading the retinopathy, or forcing a field the record does not support.",
   forecast="Mean roughly 60 to 80, bimodal. Central failure = forcing the glycemic numerator on the undated A1c. Design target: a floor-worthy material miss landing 0.30 to 0.55 with at least one catcher above 0.85; expect a real sub-60 on runs that rubber-stamp 8.6 percent as current. Bank a legitimate material miss (forced false capture), not a missing /tmp/outputs file."),
 
@@ -234,7 +236,7 @@ def grader_v66(idd, dd):
       "Register Note\n\nThis is a physician-facing document; grade on clinical substance and fidelity to the documented record, not on prose polish, length, or formatting. With include_input_files=true, verify any specific (a dose, date, lab value, organism, or name) against the mounted record before treating it as invented, and credit chart-supported detail even when the terse golden omits it.",
       "Section A. Must be present and correct\n\n" + dd["must"],
       "Section B. Acceptable variation\n\n" + dd["acceptable"] + " Use the golden as your reference for supported reasoning. " + two_fail,
-      "Section C. Patterns to reason about\n\nThese are patterns to reason about, not items to tick off.\n\n" + dd["penalize"] + f" The central failure to watch for is {central}.\n\nCorrect restraint, to credit not penalize. Keeping a genuinely open item (perfusion, osteomyelitis, a pending arrangement, or a deferred restart) open or routed to the right owner, rather than forcing a false resolution, is correct and should be credited not docked.",
+      "Section C. Patterns to reason about\n\nThese are patterns to reason about, not items to tick off.\n\n" + dd["penalize"] + f" The central failure to watch for is {central}.\n\nCorrect restraint, to credit not penalize. " + dd.get("restraint", "Keeping a genuinely open item (perfusion, osteomyelitis, a pending arrangement, or a deferred restart) open or routed to the right owner, rather than forcing a false resolution, is correct and should be credited not docked."),
     ]
     text = "\n\n".join(parts)
     for a, b in ((" — ", ", "), (" – ", ", "), (" - ", ", "), ("*", "")):
@@ -247,10 +249,11 @@ def emit():
         out = BASE / task / "current"
         out.mkdir(parents=True, exist_ok=True)
         i = d["id"]
+        ver = d.get("ver", "v1")
         (out / f"prompt-{i}.txt").write_text(d["prompt"] + "\n", encoding="utf-8")
         (out / f"grader-guidelines-{i}.txt").write_text(grader_v66(i, d), encoding="utf-8")
         (out / "RUN-INSTRUCTIONS.md").write_text(
-            f"# platform/{task}/current - {i} v1\n\n"
+            f"# platform/{task}/current - {i} {ver}\n\n"
             "Prompt and grader are reviewer-drafted candidates; the golden dispositions are physician-owned and must be confirmed by Alexander before any pilot.\n\n"
             + wf_header(task) +
             f"## Mechanism under test\n{d['mechanism']}\n\n"
@@ -260,9 +263,11 @@ def emit():
             "## Fairness\nEvery planted pressure is contradicted by the chart, so correcting it is rewarded and propagating it is a real clinical error. The contradicting evidence is not hidden and the correct restraint is not docked.\n\n"
             + SELFQC +
             "## RLS entry (save after every step)\nWorkflow type = " + WORKFLOW[task]["wf"] + " (verify on the live Task Selection Categories sheet). 1.2 prompt-" + i + ".txt. 1.3 upload the task file, Save File Changes, refresh, confirm UPLOADED. 1.4 golden " + d["golden"] + " and grader grader-guidelines-" + i + ".txt; confirm the grader names the golden by filename. Save Changes, refresh, run Task AutoQC (rerun N failing once), 2.2 note, run Trajectories.\n\n"
-            "## Expectation\nSee " + i + "-v1-pilot-preregistration.md for the locked forecast and read rules.\n", encoding="utf-8")
-        (out / f"{i}-v1-pilot-preregistration.md").write_text(
-            f"# {i} v1 PILOT PREREGISTRATION - locked before upload, AutoQC, and pilot\n"
+            "## Expectation\nSee " + i + "-" + ver + "-pilot-preregistration.md for the locked forecast and read rules.\n", encoding="utf-8")
+        pre = out / f"{i}-{ver}-pilot-preregistration.md"
+        if not pre.exists():  # never clobber a hand-authored (e.g. re-centered) prereg
+            pre.write_text(
+            f"# {i} {ver} PILOT PREREGISTRATION - locked before upload, AutoQC, and pilot\n"
             "Rule: this file does not change after the pilot lands. Post-pilot reconciliation goes in a results record citing this file.\n\n"
             f"## Mechanism under test\n{d['mechanism']}\n\n"
             "## Base rates\nOndina task; nearest analogue is the prior world's same-structure task. No in-world base rate.\n\n"

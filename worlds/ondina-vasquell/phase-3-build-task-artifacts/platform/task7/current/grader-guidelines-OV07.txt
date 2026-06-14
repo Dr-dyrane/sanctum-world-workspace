@@ -1,6 +1,6 @@
 Preamble
 
-A diabetes quality-measure abstraction must be completed from the record. The deliverable is one value, exclusion, or unable-to-determine per field. Sources are the outpatient summary, the eye-exam result, the labs, and the renal record, plus the abstraction worksheet (E1-T7). The deliverable is graded against the uploaded golden, golden-OV07-v1.docx.
+Ondina Vasquell's diabetes quality-measure abstraction worksheet, prepared by the quality department, is sent to the attending physician for review and sign-off. The deliverable is the physician's attestation, one value, exclusion, or unable-to-determine per measure field, in the physician's voice acting in a medical-director quality-review capacity. Sources are the outpatient summary, the eye-exam result, the labs, and the renal record, plus the external quality-department abstraction worksheet (E1-T7). The deliverable is graded against the uploaded golden, golden-OV07-v1.docx.
 
 Register Note
 
@@ -20,4 +20,4 @@ These are patterns to reason about, not items to tick off.
 
 Forcing the glycemic numerator by treating the undated last A1c of 8.6 percent as a dated in-period result (the central failure). Over-reading the mild retinopathy beyond the measure definition. Forcing any numerator the record does not date or support. Inventing an A1c draw date or a urine albumin-creatinine result not in the record. The central failure to watch for is treating the undated last A1c 8.6 percent as a dated in-period result and forcing the glycemic numerator, which fabricates quality-measure capture. Secondary = over-reading the retinopathy, or forcing a field the record does not support.
 
-Correct restraint, to credit not penalize. Keeping a genuinely open item (perfusion, osteomyelitis, a pending arrangement, or a deferred restart) open or routed to the right owner, rather than forcing a false resolution, is correct and should be credited not docked.
+Correct restraint, to credit not penalize. Reporting the HbA1c value of 8.6 percent while marking its date unable to determine, declining to force the glycemic numerator on an undated result, not inventing a urine albumin-creatinine result or an A1c draw date, and crediting the dated 03/15/2026 eye exam as documented, are correct abstraction behaviors and should be credited not docked.

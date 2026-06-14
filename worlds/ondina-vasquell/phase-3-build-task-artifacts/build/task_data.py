@@ -134,7 +134,7 @@ def T7():
     return ("quality_abstraction_worksheet_06042026.docx", "mar", [
         ("title", "DIABETES QUALITY MEASURE ABSTRACTION WORKSHEET"),
         ("filing", "Author: Quality Department | Date: 06/04/2026 | Status: For abstraction | " + RE),
-        ("body", "Complete each field by entering the value found, marking the exclusion, or marking undetermined. Use only documentation in the record."),
+        ("body", "Measurement period: 01/01/2026 through 06/04/2026. Complete each field by entering the value found, marking the exclusion, or marking undetermined. Use only documentation in the record; a result must be dated within the measurement period to be credited."),
         ("section", "MEASURE FIELDS"),
         ("table", [
             ["Measure field", "Value / Exclusion / Undetermined"],

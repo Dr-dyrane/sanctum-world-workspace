@@ -8,6 +8,9 @@ v1's golden was half-placeholder ("Value...", "apply the lookback") and its inte
 ## Mechanism under test (v2) - undated HbA1c
 The chart documents the HbA1c only as "last A1c 8.6 percent" (admission H&P, endocrine note, outpatient summary) with NO draw date anywhere. The worksheet field is "most recent HbA1c AND date." The correct abstraction reports the value (8.6 percent) but marks the DATE unable to determine, because an undated result cannot be placed in the measurement period, and does NOT force the glycemic numerator. The central failure = treating the undated "last A1c 8.6 percent" as a dated in-period result and forcing the numerator - fabricated quality-measure capture, a material integrity failure (not a 1-of-5 deduction). This is cold (date-absence is quiet; the default is to credit a documented value), against default, survives full reconciliation, and is version-independent (any measure needs a dated test in the period - stays item-3-clean). uACR is also absent (nephropathy handled factually via CKD + ACE inhibitor, not a second trap). Other fields are clean/creditable: eye exam 03/15/2026 (do not over-read retinopathy), foot exam documented, BP 134/76.
 
+## Deliverable framing (physician-produced) + self-containment
+The deliverable is the PHYSICIAN's review and attestation of the quality department's abstraction (authored by Lillian Everet, MD, medical-director quality-review capacity; "Draft for physician sign"), not an abstractor-authored document - fixes the v1 All-Tasks-Physician-Produced fail. The quality-department worksheet is the external INPUT (E1-T7), like the HIM coder worksheet in OV02. The worksheet defines the measurement period (01/01/2026 to 06/04/2026), so no external HEDIS measurement-year knowledge is needed (item-3 clean) and the eye exam is clearly in-window.
+
 ## File-output
 Prompt saves the completed abstraction to /tmp/outputs/diabetes_measure_abstraction.txt then confirms in chat (DO-NOT-REPEAT #18).
 

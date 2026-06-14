@@ -173,25 +173,26 @@ def OV06():
 
 
 def OV07():
-    return ("golden-OV07-v1.docx", "ed", "DIABETES MEASURE ABSTRACTION", "06/04/2026", [
-        ("title", "DIABETES QUALITY MEASURE ABSTRACTION"),
-        ("filing", "Author: Quality Abstraction | Date of Service: 06/04/2026 0900 | Status: Draft for abstractor confirm"),
-        ("section", "ABSTRACTED FIELDS"),
+    return ("golden-OV07-v1.docx", "ed", "DIABETES MEASURE ABSTRACTION ATTESTATION", "06/04/2026", [
+        ("title", "DIABETES MEASURE ABSTRACTION - PHYSICIAN REVIEW AND ATTESTATION"),
+        ("filing", "Author: Lillian Everet, MD - Hospital Medicine | Date of Service: 06/04/2026 0900 | Status: Draft for physician sign"),
+        ("body", "I have reviewed the quality department's diabetes measure abstraction worksheet against the record and attest to each measure field as documented, acting as the reviewing physician. I do not force a numerator the documentation does not support."),
+        ("section", "ATTESTATION BY MEASURE FIELD"),
         ("table", [
             ["Measure field", "Value, exclusion, or unable to determine", "Source"],
-            ["Most recent HbA1c and date", "8.6 percent; DATE unable to determine. The record documents only a last A1c of 8.6 percent with no draw date, so the result cannot be placed in the measurement period. Report the value but do not credit the glycemic numerator on an undated result.", "Admission H&P, endocrine note, and outpatient summary (all last A1c 8.6 percent, undated)"],
-            ["Dilated diabetic eye exam in the measurement period", "Completed 03/15/2026, mild non-proliferative retinopathy. An exam is documented and dated within the measurement year; creditable as documented. Do not over-read the retinopathy beyond the measure definition.", "Eye exam result and outpatient summary"],
+            ["Most recent HbA1c and date", "8.6 percent; DATE unable to determine. The record documents only a last A1c of 8.6 percent with no draw date, so the result cannot be placed in the measurement period (01/01/2026 to 06/04/2026). Report the value but do not credit the glycemic numerator on an undated result.", "Admission H&P, endocrine note, and outpatient summary (all last A1c 8.6 percent, undated)"],
+            ["Dilated diabetic eye exam in the measurement period", "Completed 03/15/2026, mild non-proliferative retinopathy. The exam is documented and dated within the measurement period (01/01/2026 to 06/04/2026); creditable as documented. Do not over-read the retinopathy beyond the measure definition.", "Eye exam result and outpatient summary"],
             ["Diabetic foot exam documented", "Documented. Reduced protective sensation on monofilament testing.", "Admission H&P and outpatient summary"],
             ["Nephropathy screening or evidence", "Evidence present: chronic kidney disease stage 3b documented and on an ACE inhibitor (lisinopril). No discrete urine albumin-creatinine result in the record.", "Renal trend, problem list, and medication record"],
             ["Most recent blood pressure", "Most recent documented 134 over 76 (05/21).", "Vital signs flowsheet"],
         ]),
-        ("body", "Fields are abstracted to the documented evidence. The most recent HbA1c value is present but undated, so its measurement-period capture cannot be confirmed: report the value and mark the date unable to determine rather than forcing the glycemic numerator. Do not force any numerator the record does not date or support, and do not invent a draw date or a urine albumin result that is not in the record."),
-        ("section", "FLAGS FOR ABSTRACTOR BEFORE SUBMIT"),
+        ("body", "Each field is attested to the documented evidence. The most recent HbA1c value is present but undated, so its measurement-period capture cannot be confirmed: I report the value and mark the date unable to determine rather than forcing the glycemic numerator. I do not force any numerator the record does not date or support, and do not invent a draw date or a urine albumin result that is not in the record."),
+        ("section", "FLAGS FOR PHYSICIAN BEFORE SIGN"),
         ("bullets", [
             "The HbA1c value (8.6 percent) is documented only as a last A1c with no draw date; a dated result in the measurement period is required before the glycemic numerator can be credited.",
             "Confirm any documented exclusion that removes the patient from a denominator.",
         ]),
-        ("sig", "Prepared by Quality Abstraction | 06/04/2026 0900"),
+        ("sig", "Electronically signed by Lillian Everet, MD | Hospital Medicine | 06/04/2026 0900"),
     ])
 
 

@@ -1,4 +1,4 @@
-# platform/task7/current - OV07 v1
+# platform/task7/current - OV07 v2
 
 Prompt and grader are reviewer-drafted candidates; the golden dispositions are physician-owned and must be confirmed by Alexander before any pilot.
 
@@ -23,4 +23,4 @@ Before Step 10 upload, run the writer-edition AutoQC in claude.ai against this t
 Workflow type = HEDIS Medical Record Chart Abstraction and Review (verify on the live Task Selection Categories sheet). 1.2 prompt-OV07.txt. 1.3 upload the task file, Save File Changes, refresh, confirm UPLOADED. 1.4 golden golden-OV07-v1.docx and grader grader-guidelines-OV07.txt; confirm the grader names the golden by filename. Save Changes, refresh, run Task AutoQC (rerun N failing once), 2.2 note, run Trajectories.
 
 ## Expectation
-See OV07-v1-pilot-preregistration.md for the locked forecast and read rules.
+See OV07-v2-pilot-preregistration.md for the locked forecast and read rules.
