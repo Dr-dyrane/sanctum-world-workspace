@@ -2356,6 +2356,7 @@ html.dark .task-card {
 
 .verdict-hero,
 .story-surface,
+.story-nav-surface,
 .lens-surface,
 .task-list-surface,
 .quiet-surface,
@@ -2574,6 +2575,20 @@ html.dark .score-squircle {
   backdrop-filter: var(--blur);
 }
 
+.story-nav-surface {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 16px;
+  align-items: center;
+  padding: 14px;
+}
+
+.story-nav-surface .task-rail {
+  min-width: 0;
+  background: rgba(120, 120, 128, 0.07);
+  box-shadow: none;
+}
+
 .rail-item {
   min-height: 44px;
   display: grid;
@@ -2609,6 +2624,7 @@ html.dark .score-squircle {
 }
 
 .story-surface,
+.story-nav-surface,
 .lens-surface,
 .task-list-surface,
 .quiet-surface,
@@ -2616,11 +2632,65 @@ html.dark .score-squircle {
   padding: 36px;
 }
 
+.story-nav-surface {
+  padding: 16px 18px;
+}
+
 .surface-kicker {
   margin: 0;
   color: var(--fg-faint);
   font-size: 13px;
   font-weight: 560;
+}
+
+.story-header {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.story-header.compact {
+  gap: 10px;
+}
+
+.story-header > div {
+  min-width: 0;
+}
+
+.story-header strong {
+  display: block;
+  margin-top: 4px;
+  color: var(--fg);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.08;
+}
+
+.story-header.compact strong {
+  font-size: 14px;
+  font-weight: 560;
+}
+
+.story-number {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  flex: 0 0 34px;
+  place-items: center;
+  border-radius: 14px;
+  background: rgba(120, 120, 128, 0.095);
+  color: var(--fg-soft);
+  font-family: "SF Mono", ui-monospace, monospace;
+  font-size: 11px;
+  font-weight: 560;
+}
+
+.story-header.compact .story-number {
+  width: 28px;
+  height: 28px;
+  flex-basis: 28px;
+  border-radius: 12px;
+  font-size: 10px;
 }
 
 .trajectory-surface {
@@ -3068,6 +3138,10 @@ html.dark .score-squircle {
   gap: 12px;
 }
 
+.task-list-header {
+  margin-bottom: 2px;
+}
+
 .simple-task-card {
   border-radius: 30px;
   background: rgba(120, 120, 128, 0.065);
@@ -3177,20 +3251,10 @@ html.dark .score-squircle {
 }
 
 .quiet-surface {
-  background: transparent;
-  box-shadow: none;
-}
-
-.quiet-surface > .surface-kicker,
-.quiet-surface > h2 {
-  margin-left: 2px;
-}
-
-.quiet-surface h2 {
-  margin-top: 6px;
-  font-size: 34px;
-  font-weight: 620;
-  line-height: 1.05;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.46), rgba(255, 255, 255, 0)),
+    var(--bg-3);
+  box-shadow: var(--shadow-card);
 }
 
 .signal-grid {
@@ -3348,12 +3412,15 @@ html.dark .score-squircle {
 }
 
 .journey-surface {
-  background: transparent;
-  box-shadow: none;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0)),
+    var(--bg-3);
+  box-shadow: var(--shadow-card);
 }
 
 .journey-row {
   gap: 10px;
+  margin-top: 20px;
 }
 
 .journey-row span {
@@ -3406,6 +3473,7 @@ html.dark .score-squircle {
 
   .verdict-hero,
   .story-surface,
+  .story-nav-surface,
   .lens-surface,
   .task-list-surface,
   .quiet-surface,
@@ -3415,6 +3483,7 @@ html.dark .score-squircle {
 
   .verdict-hero,
   .story-surface,
+  .story-nav-surface,
   .lens-surface,
   .task-list-surface,
   .quiet-surface,
@@ -3432,6 +3501,12 @@ html.dark .score-squircle {
 
   .hero-stage-grid {
     gap: 34px;
+  }
+
+  .story-nav-surface {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 16px;
   }
 
   .hero-verdict-copy h1 {

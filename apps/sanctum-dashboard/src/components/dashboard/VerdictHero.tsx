@@ -17,9 +17,12 @@ export function VerdictHero({ world, selected, onOpenProof }: Props) {
   return (
     <section className={`verdict-hero surf ${selected.readiness.tone}`} aria-label="Task readiness verdict">
       <div className="hero-meta-row">
-        <div>
-          <p className="micro-label">{world.title}</p>
-          <span>Task readiness</span>
+        <div className="story-header compact">
+          <span className="story-number">01</span>
+          <div>
+            <p className="micro-label">{world.title}</p>
+            <strong>Task readiness</strong>
+          </div>
         </div>
         <span className={statusClass(selected.readiness.tone)}>{selected.readiness.label}</span>
       </div>

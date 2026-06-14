@@ -30,7 +30,13 @@ export function TrajectorySurface({ selected }: Props) {
 
   return (
     <section className="story-surface trajectory-surface surf" aria-label="Trajectory score shape">
-      <div className="surface-kicker">Score shape</div>
+      <div className="story-header">
+        <span className="story-number">03</span>
+        <div>
+          <p className="surface-kicker">Score shape</p>
+          <strong>Where the miss appears</strong>
+        </div>
+      </div>
       <div className="trajectory-hero">
         <div>
           <h2>{selected.counts.floors} miss{selected.counts.floors === 1 ? '' : 'es'}</h2>

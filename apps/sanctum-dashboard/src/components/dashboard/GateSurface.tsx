@@ -8,7 +8,13 @@ type Props = {
 export function GateSurface({ selected }: Props) {
   return (
     <section className="story-surface gate-surface surf" aria-label="Readiness gates">
-      <div className="surface-kicker">Pass logic</div>
+      <div className="story-header">
+        <span className="story-number">04</span>
+        <div>
+          <p className="surface-kicker">Pass logic</p>
+          <strong>Clear gates</strong>
+        </div>
+      </div>
       <h2>Why it can move</h2>
       <div className="gate-list">
         {selected.gates.map(gate => (

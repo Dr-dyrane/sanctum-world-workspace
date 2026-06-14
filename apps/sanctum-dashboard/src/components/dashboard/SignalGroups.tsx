@@ -25,8 +25,13 @@ export function SignalGroups({ tasks, activeFamily, onToggleFamily, onSelectTask
 
   return (
     <section className="quiet-surface surf" aria-label="Challenge groups">
-      <div className="surface-kicker">Challenge groups</div>
-      <h2>Where tasks break</h2>
+      <div className="story-header">
+        <span className="story-number">07</span>
+        <div>
+          <p className="surface-kicker">Challenge groups</p>
+          <strong>Where tasks break</strong>
+        </div>
+      </div>
       <div className="signal-grid">
         {signals.map(signal => (
           <button

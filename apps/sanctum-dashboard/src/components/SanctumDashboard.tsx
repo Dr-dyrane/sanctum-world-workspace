@@ -187,7 +187,16 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
 
       <main className="product-shell">
         <VerdictHero world={world} selected={selected} onOpenProof={() => setProofOpen(true)} />
-        <TaskRail tasks={world.tasks} selectedId={selectedTask.id} onSelect={selectTask} />
+        <section className="story-nav-surface surf-2" aria-label="Choose task scene">
+          <div className="story-header compact">
+            <span className="story-number">02</span>
+            <div>
+              <p className="surface-kicker">Task rail</p>
+              <strong>Choose the scene</strong>
+            </div>
+          </div>
+          <TaskRail tasks={world.tasks} selectedId={selectedTask.id} onSelect={selectTask} />
+        </section>
 
         <div className="story-grid">
           <TrajectorySurface selected={selected} />
@@ -195,9 +204,12 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
         </div>
 
         <section className="lens-surface surf-2" aria-label="Task view">
-          <div>
-            <p className="surface-kicker">Task index</p>
-            <strong>{filter === 'all' ? 'All tasks' : statusLabels[filter as Stage]}</strong>
+          <div className="story-header compact">
+            <span className="story-number">05</span>
+            <div>
+              <p className="surface-kicker">Task index</p>
+              <strong>{filter === 'all' ? 'All tasks' : statusLabels[filter as Stage]}</strong>
+            </div>
           </div>
           <div className="lens-dock" role="group" aria-label="Choose task status lens">
             {filterLabels.map(item => (
@@ -231,7 +243,13 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
         />
 
         <section className="journey-surface surf" aria-label="World path">
-          <div className="surface-kicker">Build path</div>
+          <div className="story-header">
+            <span className="story-number">08</span>
+            <div>
+              <p className="surface-kicker">Build path</p>
+              <strong>From idea to files</strong>
+            </div>
+          </div>
           <div className="journey-row">
             {journey.map(item => (
               <span key={item.label}>{item.label}</span>

@@ -13,6 +13,13 @@ type Props = {
 export function TaskList({ tasks, selectedId, onSelect, onOpenProof }: Props) {
   return (
     <section className="task-list-surface" aria-label="Task list">
+      <div className="story-header task-list-header">
+        <span className="story-number">06</span>
+        <div>
+          <p className="surface-kicker">Task cards</p>
+          <strong>Open one proof</strong>
+        </div>
+      </div>
       {tasks.map(task => {
         const taskCounts = counts(task);
         const selected = selectedId === task.id;
