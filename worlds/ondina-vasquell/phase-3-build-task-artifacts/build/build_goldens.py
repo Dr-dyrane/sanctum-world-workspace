@@ -80,6 +80,7 @@ def OV02():
             ["Chronic kidney disease stage 3b with acute kidney injury", "CKD with acute kidney injury", "Yes", "Retain. Documented in the renal trend."],
             ["Anemia of chronic kidney disease", "Anemia in CKD", "Yes", "Retain. Documented, hemoglobin 9.8."],
             ["Acute blood loss anemia", "Not assigned", "n/a", "Decline. The hemoglobin is stable at 9.8 across the admission with no documented bleeding or transfusion; this is anemia of chronic kidney disease, not acute blood loss. Code anemia in chronic kidney disease only."],
+            ["Debridement depth", "Excisional debridement of skin and subcutaneous tissue only", "n/a", "Decline muscle, fascia, tendon, or bone depth. The operative note documents bedside sharp debridement of nonviable soft tissue to a granulating base with no exposed or palpable bone, and pathology found no bone in the deep soft tissue specimen. The deep soft tissue specimen describes what was sent, not the excision plane. Attest excisional debridement at the subcutaneous level only; do not support a deeper surgical severity tier."],
             ["Peripheral arterial disease", "PAD", "Yes", "Retain. Documented; relevant to the limb threat."],
         ]),
         ("body", "I attest only to what the treating record establishes. I do not adopt the severity-forward framing of the preliminary worksheet and do not upcode to an unsupported tier."),

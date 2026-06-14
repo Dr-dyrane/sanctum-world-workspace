@@ -1,1 +1,1 @@
-This is the preliminary coding worksheet on Mrs. Vasquell before we finalize. Go through the chart and give me your attestation line by line, principal diagnosis, present on admission, and the code families you support.
+This is the preliminary coding worksheet on Mrs. Vasquell before we finalize. Go through the chart and give me your attestation line by line, principal diagnosis, present on admission, and the code families you support. Save the final physician coding attestation to /tmp/outputs/physician_coding_attestation.txt, then provide a brief confirmation in chat.
