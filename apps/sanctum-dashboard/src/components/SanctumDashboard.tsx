@@ -677,7 +677,7 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
                   className="primary-cta"
                   onClick={() => setMaterialsOpen(true)}
                 >
-                  Open {selected.id} materials
+                  Open {selected.id}
                   <Icon name="folder-open" />
                 </button>
               </div>
@@ -722,8 +722,8 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
 
         <section className="signal-panel surf" aria-label="Failure signal families">
           <div className="section-head">
-                <p className="micro-label">Clinical challenge groups</p>
-                <h2>Model miss map</h2>
+                <p className="micro-label">Challenge groups</p>
+                <h2>Where models stumble</h2>
           </div>
           <div className="signal-strip">
             {familySignals.map(signal => (
@@ -762,9 +762,9 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
           ) : null}
         </section>
 
-        <section className="task-lens-panel surf-2" aria-label="Task lens">
+        <section className="task-lens-panel surf-2" aria-label="Task view">
           <div className="lens-meta">
-            <p className="micro-label">Task lens</p>
+            <p className="micro-label">View</p>
             <strong>{filter === 'all' ? 'All tasks' : statusLabels[filter]}</strong>
           </div>
           <div className="lens-dock" role="group" aria-label="Choose task status lens">
@@ -793,7 +793,13 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
                 key={task.id}
                 className={`task-card surf ${task.stage} ${selected.id === task.id ? 'selected' : ''}`}
               >
-                <button type="button" className="task-card-button" onClick={() => setSelectedId(task.id)}>
+                <button
+                  type="button"
+                  className="task-card-button"
+                  aria-expanded={selected.id === task.id}
+                  aria-controls={selected.id === task.id ? `task-${task.id}-summary` : undefined}
+                  onClick={() => setSelectedId(task.id)}
+                >
                   <span className="task-id">{task.id}</span>
                   <span className={statusClass(task.stage)}>{statusLabels[task.stage]}</span>
                   <span className="task-title-block">
@@ -807,7 +813,7 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
                   <Icon name="chevron-down" className="task-chevron" />
                 </button>
                 {selected.id === task.id ? (
-                  <div className="task-card-body" role="region" aria-label={`${task.id} summary`}>
+                  <div id={`task-${task.id}-summary`} className="task-card-body" role="region" aria-label={`${task.id} summary`}>
                     <p>{task.plain}</p>
                     <div className="signal-track" aria-label="Failure signal">
                       <span style={{ width: failurePercent(task) }} />
@@ -819,7 +825,7 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
                       <span>Under 70 <strong>{taskCounts.sub70}/{task.runsTotal}</strong></span>
                     </div>
                     <button type="button" className="inline-action" onClick={() => setMaterialsOpen(true)}>
-                      Open materials
+                      Open packet
                       <Icon name="folder-open" />
                     </button>
                   </div>
@@ -830,11 +836,11 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
         </section>
 
         <section className="summary-panel surf">
-          <p className="micro-label">Suite summary</p>
+          <p className="micro-label">Snapshot</p>
           <div className="summary-grid">
             <div><strong>{summary.delivered}</strong><span>Delivered tasks</span></div>
             <div><strong>{summary.ready}</strong><span>Ready to deliver</span></div>
-            <div><strong>{summary.sourceFiles || '-'}</strong><span>Source files</span></div>
+            <div><strong>{summary.sourceFiles || '-'}</strong><span>Files</span></div>
             <div><strong>{summary.mean ?? 'TBD'}</strong><span>Mean, 10 tasks</span></div>
           </div>
           <p className="summary-note">
