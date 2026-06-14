@@ -10,7 +10,7 @@ Source-of-truth reconciliation under renal constraint. The unreconciled order se
 
 ## Mounted set
 - Shared world chart (world-files/ plus supplementary-files/), which the model reads to reconcile.
-- Task-level file: preliminary_discharge_order_set_05212026.docx (E1-T1). Upload and confirm it shows UPLOADED, not staged, before AutoQC. Confirm no filename collision with a world file (verified: none).
+- Task-level file: discharge_medication_orders_05212026.docx (E1-T1). Upload and confirm it shows UPLOADED, not staged, before AutoQC. Confirm no filename collision with a world file (verified: none).
 - Grader is chart-aware (include_input_files true): the deliverable is built from the chart, so true chart specifics are credited, not flagged as invented.
 
 ## Fairness (hard line)

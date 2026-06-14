@@ -41,12 +41,12 @@ All docx on the canonical Epic template and BYTE-DETERMINISTIC (build_all.py; ti
 | Task | medicare_advantage_denial_letter_05232026.docx | 2591b111e9162ebe |
 | Task | payer_concurrent_review_request_05252026.docx | 2031628bd18f6a4d |
 | Task | pharmacy_benefit_rejection_05242026.docx | 01a539a609c1dc41 |
-| Task | preliminary_discharge_order_set_05212026.docx | 4250d7f53dadaac8 |
+| Task | discharge_medication_orders_05212026.docx | 4250d7f53dadaac8 |
 | Task | quality_abstraction_worksheet_06042026.docx | f4eb9e7eff835c3d |
 | Task | safety_event_intake_summary_06112026.docx | dd73e5d2b032c616 |
 | Task | started_discharge_instruction_draft_05212026.docx | b234610bf407123a |
 | Golden | golden-OV01-v1.docx | 670ed3f7c0b0c730 |
-| Golden | preliminary_discharge_order_set_05212026.docx | 4250d7f53dadaac8 |
+| Golden | discharge_medication_orders_05212026.docx | 4250d7f53dadaac8 |
 | Golden | golden-OV10-v1.docx | dbb4150677c87264 |
 | Golden | started_discharge_instruction_draft_05212026.docx | b234610bf407123a |
 | Golden | golden-OV02-v1.docx | 7a4a2f4db10baff6 |

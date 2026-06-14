@@ -23,7 +23,7 @@ RE = f"RE: {PT['name']} | MRN {PT['mrn']} | {ENC['csn']}"
 
 def T1():
     R = ROSTER
-    return ("preliminary_discharge_order_set_05212026.docx", "mar", [
+    return ("discharge_medication_orders_05212026.docx", "mar", [
         ("title", "DISCHARGE MEDICATION ORDERS"),
         ("filing", f"Queued 05/21/2026 1830 | Status: Pending physician signature | {RE}"),
         ("body", "Discharge medication orders prepared for the discharging physician's review and signature."),

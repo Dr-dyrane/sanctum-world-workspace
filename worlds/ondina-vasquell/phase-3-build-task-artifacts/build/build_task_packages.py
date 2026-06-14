@@ -18,7 +18,7 @@ TASKFILES = ROOT / "task-files"
 # in the world-file set). Copy a fresh copy into platform/taskN/current/. task8 works
 # off the world chart and has no task-level file.
 TASK_FILE_MAP = {
-    "task1": "preliminary_discharge_order_set_05212026.docx",
+    "task1": "discharge_medication_orders_05212026.docx",
     "task2": "him_preliminary_coding_worksheet_05212026.docx",
     "task3": "cdi_query_memo_05232026.docx",
     "task4": "medicare_advantage_denial_letter_05232026.docx",
