@@ -56,7 +56,7 @@ const packets: Record<string, TaskPacket> = {
   KM08: { prompt:'prompt-task8-v7.txt', files:['discharge_day_soap_addendum_started_05242026.docx', 'night_float_pain_sleep_signout_05242026.docx', 'bedside_photo_05242026.png'], golden:'golden-KM08-v7.docx', grader:'grader-guidelines-task8-v7.txt' },
   KM09: { prompt:'prompt-task9-v2.txt', files:['him_preliminary_inpatient_coding_summary_05252026.docx'], golden:'golden-KM09-v2.docx', grader:'grader-guidelines-task9-v2.txt' },
   KM10: { prompt:'prompt-task10-v3.txt', files:['cdi_query_memo_05262026.docx'], golden:'golden-KM10-v3.docx', grader:'grader-guidelines-task10-v3.txt' },
-  OV01: { prompt:'prompt-OV01.txt', files:['preliminary_discharge_order_set_05212026.docx'], golden:'golden-OV01-v1.docx', grader:'grader-guidelines-OV01.txt' },
+  OV01: { prompt:'prompt-OV01.txt', files:['discharge_medication_orders_05212026.docx'], golden:'golden-OV01-v1.docx', grader:'grader-guidelines-OV01.txt' },
   OV02: { prompt:'prompt-OV02.txt', files:['him_preliminary_coding_worksheet_05212026.docx'], golden:'golden-OV02-v1.docx', grader:'grader-guidelines-OV02.txt' },
   OV03: { prompt:'prompt-OV03.txt', files:['cdi_query_memo_05232026.docx'], golden:'golden-OV03-v1.docx', grader:'grader-guidelines-OV03.txt' },
   OV04: { prompt:'prompt-OV04.txt', files:['medicare_advantage_denial_letter_05232026.docx'], golden:'golden-OV04-v1.docx', grader:'grader-guidelines-OV04.txt' },
@@ -126,16 +126,34 @@ export const worlds: World[] = [
     id: 'ondina-vasquell',
     title: 'Ondina Vasquell',
     kicker: 'World live. Tasking started.',
-    blurb: 'Limb-threat diabetic foot world. World is live. OV01 is in Task Writing. Pilots pending.',
+    blurb: 'Limb-threat diabetic foot world. OV01 clean pilot banked. Review work is next.',
     meta: {
       patient: 'Ondina Vasquell clinical suite',
       chart: 'Healthcare_297_Vasquell, 34 files, snapshot May 21, 2026 at 18:00',
       writer: 'Alexander Udeogaranya, MD',
-      evidence: 'World created. OV01 created. Pilots pending.',
+      evidence: 'World created. OV01 clean pilot job 741ba52f banked.',
       dataSyncedOn: '2026-06-14',
     },
     tasks: [
-      ['OV01','Discharge Medication Reconciliation Safety Table','Renal antibiotic dosing under shifting eGFR.','Medication safety','Medication Reconciliation at Care Transitions'],
+      {
+        ...baseBuilt,
+        id: 'OV01',
+        position: 1,
+        stage: 'review',
+        name: 'Discharge Medication Reconciliation Safety Table',
+        plain: 'Stop inpatient-only enoxaparin at discharge while keeping held renal agents deferred.',
+        mechanism: 'External discharge orders carry inpatient VTE prophylaxis into discharge despite aspirin plus clopidogrel.',
+        family: 'Medication safety',
+        workflow: 'Medication Reconciliation at Care Transitions',
+        verdict: 'Clean pilot banked: mean 68.0 with four sub-70 runs and a 93 catcher. FA/GA draft ready; PL and final review pending.',
+        mean: 68.0,
+        spread: [68,72,40,70,72,72,50,65,78,93],
+        runsTotal: 10,
+        quality: 'exact',
+        reach: 'proven',
+        packet: packets.OV01,
+      },
+      ...[
       ['OV02','Physician Coding Attestation','Unsupported osteomyelitis and pressure-injury specificity.','Severity capture','Inpatient Medical Coding and DRG Assignment'],
       ['OV03','CDI Query Response','Equivocal osteomyelitis under documentation pressure.','Documentation integrity','CDI-Coding DRG Reconciliation Review'],
       ['OV04','SNF Authorization Denial Appeal','Clinical improvement vs safe home readiness.','Access and disposition','Claims Denial Analysis and Appeal Preparation'],
@@ -148,7 +166,7 @@ export const worlds: World[] = [
     ].map(([id, name, mechanism, family, workflow], index) => ({
       ...baseBuilt,
       id,
-      position: index + 1,
+      position: index + 2,
       name,
       plain: 'Packet built locally. Waiting on pilot.',
       mechanism,
@@ -157,6 +175,7 @@ export const worlds: World[] = [
       verdict: 'Built locally. World is live. Pilot pending.',
       packet: packets[id],
     })),
+    ],
   },
 ];
 
@@ -168,8 +187,9 @@ export const journey = [
   { label:'Blueprint check', status:'complete', detail:'Current schema patched.' },
   { label:'Task build', status:'complete', detail:'Ondina packets built.' },
   { label:'File review', status:'complete', detail:'Final files clear.' },
-  { label:'Tasking', status:'active', detail:'OV01 created.' },
-  { label:'Pilot', status:'gated', detail:'No runs yet.' },
+  { label:'Tasking', status:'complete', detail:'OV01 created.' },
+  { label:'Pilot', status:'complete', detail:'OV01 clean pilot banked.' },
+  { label:'Review', status:'active', detail:'FA/GA ready. PL and final review pending.' },
 ];
 
 export const statusLabels: Record<Stage, string> = {

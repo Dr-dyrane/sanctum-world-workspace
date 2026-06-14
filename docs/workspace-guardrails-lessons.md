@@ -1,6 +1,6 @@
 # Workspace Guardrails - Hard-Won Lessons (Korvin Merrow Execution Phase)
 
-Date: 2026-06-04, extended 2026-06-14 (Ondina spec-review and pod-guidance lessons, guardrails 14-16). Standing guardrails distilled from real failures during World Spec / artifact generation. Every rule here was paid for. Collaborators (Claude, Codex, writers) must follow these. AGENTS.md should reference this file.
+Date: 2026-06-04, extended 2026-06-14 (Ondina spec-review, pod-guidance, and task-mount lessons, guardrails 14-17). Standing guardrails distilled from real failures during World Spec / artifact generation. Every rule here was paid for. Collaborators (Claude, Codex, writers) must follow these. AGENTS.md should reference this file.
 
 ## 1. Environment split: sandbox view is NOT ground truth
 **Struggle:** The Claude sandbox mount repeatedly served truncated copies of real files (AGENTS.md cut mid-word, a 25 KB World Spec DOCX missing its ZIP central directory) while the same files were complete in the real environment. We nearly "restored" healthy files and nearly committed truncated ones.
@@ -65,3 +65,7 @@ Date: 2026-06-04, extended 2026-06-14 (Ondina spec-review and pod-guidance lesso
 ## 16. The spec doc and transcripts are sources the gate does not scan
 **Struggle:** A ratified-value change (attending rename, baseline ambulation) propagated to clinical_data.py, the built world files, and the goldens, but not to the spec markdown - a separate hand-maintained source - and Spec AutoQC caught the cross-section contradiction. verify_ondina scans world/task/golden docx only.
 **Rules:** On ANY ratified-value change, sweep EVERY source for the old value: the spec md/docx, the transcripts, and planning docs, not just clinical_data and the builders. Spec file table follows the KM 7-column format (no Source/Tool, a Date column, origin tagged with the four-option convention plus filename), with wide tables in a landscape section; files already engineered are tagged Writer produced so engineering does not regenerate them.
+
+## 17. Task-file mount hygiene outranks filename-only duplicate checks
+**Struggle:** OV01 job `9765ba91` looked like a world-file leak, but the actual failure was two task files mounted together: the stale old order set under `/docs/filesystem` and the new renamed order set under `/docs/.apps_data/calendar`. Because the filenames differed, duplicate-name AutoQC did not catch the same-purpose duplicate. The dirty run was invalid until Alexander deleted the old task file and re-added the current one as a plain Filesystem file.
+**Rules:** Before banking any pilot, read the first trajectory's `find /docs` tree. Exactly one intended task file should appear under `/docs/filesystem`; no task-specific file should appear under `/docs/.apps_data`; no stale old filename should remain. If any item fails, delete every file from the Studio Task Files card, re-add only the current file, save, refresh, and rerun. Do not prescribe world-file fixes until the layer is proven.

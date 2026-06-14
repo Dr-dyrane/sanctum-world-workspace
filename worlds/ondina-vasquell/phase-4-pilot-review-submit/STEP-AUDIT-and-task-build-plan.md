@@ -26,7 +26,7 @@ Date: 2026-06-12. Purpose: because decisions 11 to 13 collapsed the review gates
 
 | Step | Status | Note |
 |---|---|---|
-| Substrate proposal pack, all values ratified | DONE | substrate-proposal-pack.md, Alexander ratified 6/13 |
+| Substrate proposal pack, all values ratified | DONE | `phase-2-world-spec-and-substrate/world-spec-prep/locked/substrate-proposal-pack.md`, Alexander ratified 6/13 |
 | World Spec (4 sections, 10 tasks, file plan) | DONE | built, multi-pass audited |
 | Spec authoring-time preflight | DONE | spec-audit-record + AutoQC-25 defense notes |
 | World Spec Claude transcript | DONE | built, expanded, sanitized |

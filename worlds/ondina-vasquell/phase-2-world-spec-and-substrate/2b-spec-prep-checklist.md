@@ -8,7 +8,7 @@ Purpose: the complete World Spec preparation map, pre-loaded with every correcti
 |---|---|---|---|
 | A1 | Patient name unmistakably fictional (Stacey A1; James Carter rejected) | Ondina Vasquell locked, consistent everywhere, non-generic, non-trademarked | DONE 6/12 |
 | A2 | Comorbidity expansion (Stacey send-back: approved expansion required) | Brainstorm patient profile expanded beyond 10 interacting common conditions: insulin-dependent T2DM, diabetic peripheral neuropathy, mild diabetic retinopathy, CKD 3b, anemia of CKD, PAD, HFpEF, hypertension, dyslipidemia, obesity, OSA, knee osteoarthritis, and limited mobility. Spec phase must keep these coherent and common, with no rare-diagnosis stack and no invented medication doses | DONE 6/12 |
-| A3 | Medication specificity (Stacey send-back: every med with dose, route, frequency, indication; KM medication-expansion package precedent) | Full home list with dose/route/frequency/indication for every drug, insulin regimen in full detail, temporally labeled lists (home baseline vs inpatient MAR vs discharge). Values were proposed in `world-spec-prep/substrate-proposal-pack.md`, ratified by Alexander on 2026-06-13, and consumed by the World Spec and file builders | DONE 6/13 |
+| A3 | Medication specificity (Stacey send-back: every med with dose, route, frequency, indication; KM medication-expansion package precedent) | Full home list with dose/route/frequency/indication for every drug, insulin regimen in full detail, temporally labeled lists (home baseline vs inpatient MAR vs discharge). Values were proposed in `phase-2-world-spec-and-substrate/world-spec-prep/locked/substrate-proposal-pack.md`, ratified by Alexander on 2026-06-13, and consumed by the World Spec and file builders | DONE 6/13 |
 | A4 | World-type and identity fixes (Stacey) | Header table single values: typical clinical world; Ondina Vasquell; inpatient; hospital medicine; 10 tasks; version; date | Templated, fill at spec |
 | A5 | No project-artifact field names in clinical files (Abi, Task 1: the Date / Anchor lesson) | Mode A HIM/EMR templates use real clinical headers only (Date of Service, Hospital Day, Encounter Date) | Doctrine locked (decision 9) |
 | A6 | Task files must not teach the answer (Abi, Task 1) | Task-context files exist only when realistic, necessary, non-duplicative; defaults to none | Carried into 1c/1d |
@@ -60,7 +60,7 @@ MM/DD/YYYY display dates everywhere including DOB; zero em dashes, en dashes, ar
 
 ## I. Order of operations from here
 
-1. Alexander supplied and ratified the open values in one sitting; see `world-spec-prep/substrate-proposal-pack.md`.
+1. Alexander supplied and ratified the open values in one sitting; see `phase-2-world-spec-and-substrate/world-spec-prep/locked/substrate-proposal-pack.md`.
 2. 2a arming map filled from the canvas trap ledger against the now-real timeline.
 3. Spec drafted per the official template, self-QC completed against the current index, and 2.5 notes from 2c held ready.
 4. Mode A HIM/EMR reference templates and writer-produced media built per doctrine.

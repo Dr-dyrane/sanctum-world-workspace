@@ -44,5 +44,5 @@ Use `reference/world-spec-guidelines/` (01 required structure, 02 rubric checkli
 
 ## Task-build watch items from byte audit
 
-- T1 `preliminary_discharge_order_set_05212026.docx` currently names the exact classes requiring reconciliation: current renal function, the intravenous antibiotic line, and the held oral-agent rows. This is fair but may be too helpful. Before OV01 pilot, consider softening the task file so the lines remain ambiguous without announcing the trap.
+- T1 watch resolved 2026-06-14: `preliminary_discharge_order_set_05212026.docx` was renamed to `discharge_medication_orders_05212026.docx`, the loud unreconciled language was removed, and the v2 clean-mount pilot banked on the colder enoxaparin continuation axis. Future reruns still require the mount gate: one task file under `/docs/filesystem`, no `/docs/.apps_data`, no stale old filename.
 - T9 `safety_event_intake_summary_06112026.docx` currently names system and communication contributors in the review prompt surface. This is fair for a patient-safety intake but may lower bite. Before OV09 pilot, consider making the intake more event-focused and letting the chart reveal system attribution.

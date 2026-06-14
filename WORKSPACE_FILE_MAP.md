@@ -1,5 +1,5 @@
 # Workspace File Map
-**Last updated: 2026-06-14 (Ondina Vasquell Brainstorm and Spec passed in Studio; World Gen run #1 completed 2026-06-14 04:11 PDT; Stage 9 restored the verified 34-file writer-produced world and removed all task files; Final AutoQC cleared; world `Healthcare_297_Vasquell` created 2026-06-14 10:58 PDT as `world_ab51f33a691648d08f5ca681375fe2a1`; OV01 created in Task Writing; Next.js and legacy dashboard data now mark Ondina as live with tasking started and pilots pending; prior KM status remains KM01-KM06 delivered and KM07-KM10 Ready for Delivery)**
+**Last updated: 2026-06-14 (Ondina Vasquell Brainstorm and Spec passed in Studio; World Gen run #1 completed 2026-06-14 04:11 PDT; Stage 9 restored the verified 34-file writer-produced world and removed all task files; Final AutoQC cleared; world `Healthcare_297_Vasquell` created 2026-06-14 10:58 PDT as `world_ab51f33a691648d08f5ca681375fe2a1`; OV01 v2 clean-mount pilot banked in job `741ba52f-bae9-4594-a25c-ef5ae0e8bcdc`, FA/GA draft ready, preference labels and final review pending; prior KM status remains KM01-KM06 delivered and KM07-KM10 Ready for Delivery)**
 
 Single source of truth for repo structure, placement rules, and navigation.
 Read this + `AGENTS.md` at the start of any new session before touching files.
@@ -73,9 +73,12 @@ sanctum-world-workspace/
                                  with T1/T9 difficulty-leak watch items), 2b-spec-prep-checklist.md
                                  (KM reviewer-correction inheritance: comorbidity expansion
                                  and medication specificity resolved by Alexander-ratified
-                                 substrate pack), and 2c-autoqc-25-defense-notes.md
+                                 substrate pack), 2c-autoqc-25-defense-notes.md
                                  (osteo, perfusion-conflict, borderline-stay defenses,
-                                 drafted same-day per the KM lesson). Brainstorm DOCX
+                                 drafted same-day per the KM lesson), and
+                                 world-spec-prep/locked/substrate-proposal-pack.md plus
+                                 world-spec-prep/reviews/spec-audit-record-2026-06-13.md.
+                                 Brainstorm DOCX
                                  built at worlds/ondina-vasquell/submission/
                                  Ondina_Vasquell_Brainstorm.docx, SHA prefix e1693467,
                                  final local audit PASS; Brainstorm AutoQC passed per Alexander;
@@ -90,8 +93,14 @@ sanctum-world-workspace/
                                  World Gen run #1 complete, Final AutoQC clean, world
                                  created as Healthcare_297_Vasquell
                                  (`world_ab51f33a691648d08f5ca681375fe2a1`), OV01
-                                 created in Task Writing. Current gate is tasking and pilot,
-                                 not Final Files.
+                                 created in Task Writing. OV01 v2 clean-mount pilot banked:
+                                 `741ba52f` scores 68,72,40,70,72,72,50,65,78,93,
+                                 Attempt 3 selected for FA/GA. Current gate is OV01
+                                 preference labels and final review, not Final Files.
+                                 Hygiene rule: inspect first-trajectory `find /docs`
+                                 before banking any pilot. Exactly one task file under
+                                 `/docs/filesystem`, no task-specific `/docs/.apps_data`,
+                                 no stale same-purpose filename.
                                  Brainstorm Claude transcript
                                  lives beside it as markdown and DOCX with Claude share
                                  provenance and chat-style code panels for later World Spec submission.
@@ -243,15 +252,15 @@ RUN-INSTRUCTIONS-v2.md                          ← Studio upload and first-traj
 
 ## Navigation ladder (read in this order for any new session)
 
-0. `DO-NOT-REPEAT.md` (repo root) — the cold-start mistakes ledger; read it before the ladder so you inherit the scar tissue without re-paying for it.
-1. `AGENTS.md` — operating instructions and guardrails
-2. `WORKSPACE_FILE_MAP.md` — this file; structure + placement rules
-3. `worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md` — before any task-stage work
-4. `worlds/korvin-merrow/task-setup/taskN/TASKN-STATE.md` — for the task you are working
-5. `worlds/korvin-merrow/task-setup/platform/taskN/current/` — active uploadable set
-6. `docs/grader-guidelines-lessons.md` — before editing any grader
-7. `docs/reasoning-discipline.md` — before any one-way-door decision
-8. `docs/task-structure-dossier.md` — before brainstorming any new world or task slate (Abi variety mandate, 6/10: every world carries at least 5 distinct structural categories; sheet snapshot at `reference/source/task-selection-categories-snapshot-2026-06-10.csv`)
+0. `DO-NOT-REPEAT.md` (repo root) - the cold-start mistakes ledger; read it before the ladder so you inherit the scar tissue without re-paying for it.
+1. `AGENTS.md` - operating instructions and guardrails
+2. `WORKSPACE_FILE_MAP.md` - this file; structure + placement rules
+3. `worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md` - before any task-stage work
+4. `worlds/korvin-merrow/task-setup/taskN/TASKN-STATE.md` - for the task you are working
+5. `worlds/korvin-merrow/task-setup/platform/taskN/current/` - active uploadable set
+6. `docs/grader-guidelines-lessons.md` - before editing any grader
+7. `docs/reasoning-discipline.md` - before any one-way-door decision
+8. `docs/task-structure-dossier.md` - before brainstorming any new world or task slate (Abi variety mandate, 6/10: every world carries at least 5 distinct structural categories; sheet snapshot at `reference/source/task-selection-categories-snapshot-2026-06-10.csv`)
 9. `reference/workflows/internal-medicine-world-planning-canvas.md` - before drafting a new internal medicine Brainstorm; this is the task/trap/source/fairness playground and no-build gate
 10. `reference/workflows/next-world-selection-proposal.md`, `reference/workflows/next-world-candidate-scorecard.md`, `reference/workflows/next-world-diabetic-foot-planning-canvas.md`, and `reference/workflows/next-world-dfi-hour-prep-packet.md` - current next-world planning packet; planning only, no build authority
 11. `reference/checklists/world-spec-checklist.md` - before drafting a new World Spec; includes the 06/10 minimum of 30 world-level files for new worlds
@@ -275,19 +284,19 @@ RUN-INSTRUCTIONS-v2.md                          ← Studio upload and first-traj
 | Task state + history | `task-setup/taskN/` subfolders |
 | Dead root packages | `_archive/` (gitignored) |
 | Pipeline build history | `korvin-merrow/_pipeline-history/` |
-| Loose planning docs | `task-setup/taskN/design/` or `runs/` or `fa-ga/` — never at folder root |
+| Loose planning docs | `task-setup/taskN/design/` or `runs/` or `fa-ga/` - never at folder root |
 | Dashboard + perf report | Update on every pilot gate clear or status change |
 
 ---
 
 ## Contribution hygiene rules (enforced on every commit)
 
-1. **No .py files outside `tools/`** — ever. Live in `tools/build/` or `tools/verify/`; dead in `tools/archive/`.
-2. **No loose .md files at folder roots** — planning docs go in `design/`, run records in `runs/`, annotations in `fa-ga/` or `preference-labeling/` or `handoff/`.
-3. **No task artifacts outside `platform/taskN/current/`** — superseded sets move to `platform/taskN/archive/YYYY-MM-DD-reason/` immediately.
-4. **No new root-level folders** — dead packages go in `_archive/` (gitignored).
-5. **Dashboard + report updated on every pilot gate clear** — `dashboard/km-world-dashboard.html` and `task-setup/KM-WORLD-PERFORMANCE-REPORT.md` are always current.
-6. **One canonical home per artifact type** — if you can't name the exact folder, check this file before creating.
+1. **No .py files outside `tools/`** - ever. Live in `tools/build/` or `tools/verify/`; dead in `tools/archive/`.
+2. **No loose .md files at folder roots** - planning docs go in `design/`, run records in `runs/`, annotations in `fa-ga/` or `preference-labeling/` or `handoff/`.
+3. **No task artifacts outside `platform/taskN/current/`** - superseded sets move to `platform/taskN/archive/YYYY-MM-DD-reason/` immediately.
+4. **No new root-level folders** - dead packages go in `_archive/` (gitignored).
+5. **Dashboard + report updated on every pilot gate clear** - `dashboard/km-world-dashboard.html` and `task-setup/KM-WORLD-PERFORMANCE-REPORT.md` are always current.
+6. **One canonical home per artifact type** - if you can't name the exact folder, check this file before creating.
 
 ---
 
@@ -308,4 +317,4 @@ Live status lives in `dashboard/km-world-dashboard.html`, `task-setup/KM-WORLD-P
 | KM09 | Ready for Delivery as of the 2026-06-13 board export. AO first review returned v1 because the task implied an amended coding document without mounting the source document; v2 fixed that by adding one external HIM preliminary inpatient coding summary as the task-level attachment. The 6/13 wording-clean packet frames the task as physician review of that HIM summary for final attestation. Job `212c496b` scored 95, 88, 88, 92, 88, 92, 92, 90, 55, 88, mean 86.8. FA/GA uses Attempt 9, run `c365eaf4`, score 0.55, after it left A41.9 sepsis and MS-DRG 872 as a signable option while recommending N39.0 by default. Three post-rerun PLs are complete with recommendations A+, B+, and A++. Prior v1.1 job `df5ba05c` and pre-wording-clean job `8ca908b5` are historical evidence only. |
 | KM10 | v3 balanced CDI query surface piloted in job `62fc109e`: 30,25,15,20,25,24,20,20,30,20, mean 22.9, no catcher. Selected low run Attempt 3 / `aee6c24e` adds toxic-metabolic encephalopathy despite the balanced unsupported and unable-to-determine options, while declining malnutrition. Fairness gate passes because this is an external CDI query, not a started draft with planted false information. AO second review said the FA is okay and returned only the GA framing; corrected GA is in `task10/fa-ga/FA-GA-current.md`. First trajectory still showed duplicate query memos under `/docs/filesystem` and `/docs/.apps_data/calendar`, so own the mount caveat if asked. Evidence: `task10/runs/KM10-v3-results-and-prereg-reconciliation.md`. (platform ixr0ddb9, under Abi O.) |
 
-World target: **10 tasks** (Larry 6/10 pod announcement: over 8, preferably 10, before a new world; Alexander decision recorded in `reference/world-spec-guidelines/POD-ANNOUNCEMENT-2026-06-10-delivery-day-and-operating-rules.md`). Submit each task as it clears — no batching (pod rule 3).
+World target: **10 tasks** (Larry 6/10 pod announcement: over 8, preferably 10, before a new world; Alexander decision recorded in `reference/world-spec-guidelines/POD-ANNOUNCEMENT-2026-06-10-delivery-day-and-operating-rules.md`). Submit each task as it clears - no batching (pod rule 3).

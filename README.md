@@ -12,7 +12,7 @@ Project Sanctum Worlds are realistic clinical environments that test frontier AI
 
 Korvin Merrow World is live as `Healthcare_247_Merrow` (26 files; World Spec approved by Stacey S; Final Files AutoQC 78/78 after three revisions). The world carries ten tasks. KM01 through KM06 are delivered. KM07 through KM10 are Ready for Delivery. KM09 moved to Ready for Delivery on the 2026-06-13 board after wording-clean job `212c496b`, FA/GA, and three post-rerun preference labels. The authoritative status is the platform board and the live records (`dashboard/km-world-dashboard.html`, `worlds/korvin-merrow/task-setup/KM-WORLD-PERFORMANCE-REPORT.md`, root `WORKSPACE_FILE_MAP.md`, and each active `TASKN-STATE.md`). This README is only the front door.
 
-Ondina Vasquell is live as `Healthcare_297_Vasquell` (`world_ab51f33a691648d08f5ca681375fe2a1`). Brainstorm and Spec passed in Studio, World Gen run #1 completed on 2026-06-14 at 04:11 PDT, Stage 9 restored the writer-produced 34-file world, Final AutoQC cleared, and the world was created on 2026-06-14 at 10:58 PDT. OV01 has been created in Task Writing. Task packets remain local build inputs until each task is explicitly uploaded, piloted, labeled, and reviewed under Alexander authorization.
+Ondina Vasquell is live as `Healthcare_297_Vasquell` (`world_ab51f33a691648d08f5ca681375fe2a1`). Brainstorm and Spec passed in Studio, World Gen run #1 completed on 2026-06-14 at 04:11 PDT, Stage 9 restored the writer-produced 34-file world, Final AutoQC cleared, and the world was created on 2026-06-14 at 10:58 PDT. OV01 has a bankable clean-mount pilot, job `741ba52f-bae9-4594-a25c-ef5ae0e8bcdc`, and a draft FA/GA. Preference labels, final review, and submission movement remain pending explicit Alexander authorization.
 
 ## Current Boundary
 
@@ -20,46 +20,51 @@ Onboarding Steps 1-6 are complete for Korvin. Later production-pipeline work has
 
 Historical onboarding-only checklists are archived. Root `WORKSPACE_FILE_MAP.md`, `AGENTS.md`, `worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md`, active `TASKN-STATE.md` files, the dashboard, and `worlds/korvin-merrow/task-setup/KM-WORLD-PERFORMANCE-REPORT.md` govern the live task phase.
 
+## Task File Mount Hygiene
+
+For any task upload or rerun, read the first trajectory's `find /docs` tree before treating scores as evidence. There must be exactly the intended task file under `/docs/filesystem`, no task-specific file under `/docs/.apps_data`, and no stale same-purpose filename. If the gate fails, delete every file in the Studio Task Files card, re-add only the current plain Filesystem file, save, refresh, and rerun. OV01 job `9765ba91` proved that a renamed task file can dodge duplicate-name AutoQC while still mounting two order sets.
+
 ## New Collaborator Quickstart
 
 Read this repo progressively. Do not try to absorb every locked package on the first pass.
 
-1. Read [AGENTS.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/AGENTS.md>) for operating guardrails and current boundaries.
-2. Read [WORKSPACE_FILE_MAP.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/WORKSPACE_FILE_MAP.md>) for the live phase, active task frontier, and file placement rules.
-3. Read [worlds/korvin-merrow/00-MASTER-NARRATIVE.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/00-MASTER-NARRATIVE.md>) to understand how the world was built and what Task 1 taught us.
-4. Read [worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md>) before touching any task-stage work.
+1. Read [AGENTS.md](</Users/dyrane/Documents/Builds/sanctum-world-workspace/AGENTS.md>) for operating guardrails and current boundaries.
+2. Read [WORKSPACE_FILE_MAP.md](</Users/dyrane/Documents/Builds/sanctum-world-workspace/WORKSPACE_FILE_MAP.md>) for the live phase, active task frontier, and file placement rules.
+3. Read [worlds/korvin-merrow/00-MASTER-NARRATIVE.md](</Users/dyrane/Documents/Builds/sanctum-world-workspace/worlds/korvin-merrow/00-MASTER-NARRATIVE.md>) to understand how the world was built and what Task 1 taught us.
+4. Read [worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md](</Users/dyrane/Documents/Builds/sanctum-world-workspace/worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md>) before touching any task-stage work.
 5. Read the active `TASKN-STATE.md` before proposing, drafting, building, or uploading anything for that task.
 
-Current gate: no Korvin task is showing active human review on the board. Ondina is in tasking, with OV01 created and pilots still pending. Delivery actions for KM07 through KM10, Ondina task uploads, pilots, labels, reviews, and all RL Studio actions still require exact Alexander authorization.
+Current gate: no Korvin task is showing active human review on the board. Ondina is in tasking. OV01 has a clean bankable pilot and draft FA/GA; three preference labels and final review are next. Delivery actions for KM07 through KM10, Ondina task uploads, pilots, labels, reviews, and all Studio actions still require exact Alexander authorization.
 
 ## Source-Of-Truth Ladders
 
 Use the smallest ladder that answers your question.
 
 **Live phase and permissions:**
-- [AGENTS.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/AGENTS.md>)
-- [WORKSPACE_FILE_MAP.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/WORKSPACE_FILE_MAP.md>)
-- [dashboard/km-world-dashboard.html](</C:/Users/Dyrane/Documents/sanctum-world-workspace/dashboard/km-world-dashboard.html>)
-- [worlds/korvin-merrow/task-setup/KM-WORLD-PERFORMANCE-REPORT.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/task-setup/KM-WORLD-PERFORMANCE-REPORT.md>)
+- [AGENTS.md](</Users/dyrane/Documents/Builds/sanctum-world-workspace/AGENTS.md>)
+- [WORKSPACE_FILE_MAP.md](</Users/dyrane/Documents/Builds/sanctum-world-workspace/WORKSPACE_FILE_MAP.md>)
+- [dashboard/km-world-dashboard.html](</Users/dyrane/Documents/Builds/sanctum-world-workspace/dashboard/km-world-dashboard.html>)
+- [worlds/korvin-merrow/task-setup/KM-WORLD-PERFORMANCE-REPORT.md](</Users/dyrane/Documents/Builds/sanctum-world-workspace/worlds/korvin-merrow/task-setup/KM-WORLD-PERFORMANCE-REPORT.md>)
 
 **Readable continuity:**
-- [worlds/korvin-merrow/00-MASTER-NARRATIVE.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/00-MASTER-NARRATIVE.md>)
-- [worlds/korvin-merrow/task-setup/task1-lifecycle-log.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/task-setup/task1-lifecycle-log.md>)
-- [docs/reasoning-discipline.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/docs/reasoning-discipline.md>)
+- [worlds/korvin-merrow/00-MASTER-NARRATIVE.md](</Users/dyrane/Documents/Builds/sanctum-world-workspace/worlds/korvin-merrow/00-MASTER-NARRATIVE.md>)
+- [worlds/korvin-merrow/task-setup/task1-lifecycle-log.md](</Users/dyrane/Documents/Builds/sanctum-world-workspace/worlds/korvin-merrow/task-setup/task1-lifecycle-log.md>)
+- [docs/reasoning-discipline.md](</Users/dyrane/Documents/Builds/sanctum-world-workspace/docs/reasoning-discipline.md>)
 
 **Current task work:**
-- [worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md>)
-- [worlds/korvin-merrow/task-setup/CHECKPOINT-AUDIT-pre-task2.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/task-setup/CHECKPOINT-AUDIT-pre-task2.md>)
-- [worlds/korvin-merrow/task-setup/task2/KM02-design-plan-for-review.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/task-setup/task2/KM02-design-plan-for-review.md>) for Task 2 study only.
+- [worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md](</Users/dyrane/Documents/Builds/sanctum-world-workspace/worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md>)
+- [worlds/korvin-merrow/task-setup/CHECKPOINT-AUDIT-pre-task2.md](</Users/dyrane/Documents/Builds/sanctum-world-workspace/worlds/korvin-merrow/task-setup/CHECKPOINT-AUDIT-pre-task2.md>)
+- [worlds/korvin-merrow/task-setup/task2/KM02-design-plan-for-review.md](</Users/dyrane/Documents/Builds/sanctum-world-workspace/worlds/korvin-merrow/task-setup/task2/KM02-design-plan-for-review.md>) for Task 2 study only.
+- [worlds/ondina-vasquell/00-START-HERE.md](</Users/dyrane/Documents/Builds/sanctum-world-workspace/worlds/ondina-vasquell/00-START-HERE.md>) for Ondina tasking state.
 
 **Clinical canon lookup:**
-- [worlds/korvin-merrow/world-spec-construction/locked/world-spec-v1.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/world-spec-construction/locked/world-spec-v1.md>)
-- [worlds/korvin-merrow/file-inventory/locked/file-inventory-v1.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/file-inventory/locked/file-inventory-v1.md>)
+- [worlds/korvin-merrow/world-spec-construction/locked/world-spec-v1.md](</Users/dyrane/Documents/Builds/sanctum-world-workspace/worlds/korvin-merrow/world-spec-construction/locked/world-spec-v1.md>)
+- [worlds/korvin-merrow/file-inventory/locked/file-inventory-v1.md](</Users/dyrane/Documents/Builds/sanctum-world-workspace/worlds/korvin-merrow/file-inventory/locked/file-inventory-v1.md>)
 - Locked packages and ratifications under `worlds/korvin-merrow/world-spec-prep/` only when a specific clinical-canon question requires them.
 
 **Workspace structure and duplication:**
-- [WORKSPACE_FILE_MAP.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/WORKSPACE_FILE_MAP.md>)
-- [worlds/korvin-merrow/README.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/README.md>)
+- [WORKSPACE_FILE_MAP.md](</Users/dyrane/Documents/Builds/sanctum-world-workspace/WORKSPACE_FILE_MAP.md>)
+- [worlds/korvin-merrow/README.md](</Users/dyrane/Documents/Builds/sanctum-world-workspace/worlds/korvin-merrow/README.md>)
 
 ## Template And Method Index
 
@@ -70,15 +75,17 @@ Use templates and methods by purpose, not by browsing.
 - Official AutoQC templates: `reference/templates/AutoQC_Section_2_World_Spec_v6.3_writer.docx`, `AutoQC_Section_3_World_Files_v6.6_writer.docx`, and `AutoQC_Section_4_Task_Prompts_v6.6_writer.docx`.
 - Brainstorm templates: `reference/templates/brainstorm.docx` and `reference/templates/brainstorm.md`.
 - Template links and provenance: `reference/templates/template-links.md`.
-- DOCX operating method: [docs/docx-generation-method.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/docs/docx-generation-method.md>).
-- Reference-file design system: [worlds/korvin-merrow/reference-file-design/epic-note-design-system.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/reference-file-design/epic-note-design-system.md>).
+- DOCX operating method: [docs/docx-generation-method.md](</Users/dyrane/Documents/Builds/sanctum-world-workspace/docs/docx-generation-method.md>).
+- Reference-file design system: [worlds/korvin-merrow/reference-file-design/epic-note-design-system.md](</Users/dyrane/Documents/Builds/sanctum-world-workspace/worlds/korvin-merrow/reference-file-design/epic-note-design-system.md>).
 - Reference-file generator: `tools/generate_reference_files.py`.
 - Golden response shell for task-stage platform work: `worlds/korvin-merrow/task-setup/platform/_templates/golden-template-worldstyle.docx`.
 - Preflight checklists: `reference/checklists/`, especially `spec-autoqc-preflight.md`.
 
-## Active World
+## Active Worlds
 
 Korvin Merrow is an Emergency Medicine / Internal Medicine acute hospital world. The approved Brainstorm centers on a 62-year-old male with diabetes, hypertension, CKD stage 3, HFrEF/CAD, polypharmacy, PMR with unclear prednisone taper, suspected urinary-source sepsis, AKI, medication-management tension, and discharge-readiness complexity.
+
+Ondina Vasquell is an Internal Medicine diabetic foot infection world. It centers on limb-threat infection, equivocal osteomyelitis, PAD with noncompressible ABI, CKD 3b, diabetes, polypharmacy, payer friction, and discharge safety.
 
 The clinical design principle is realistic hospital complexity, not a rare disease puzzle.
 
@@ -142,20 +149,20 @@ worlds/
 
 For a new collaborator or a future AI session, use this order:
 
-1. [AGENTS.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/AGENTS.md>) for operating instructions.
-2. [WORKSPACE_FILE_MAP.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/WORKSPACE_FILE_MAP.md>) for live state, structure, and task frontier.
-3. [worlds/korvin-merrow/00-MASTER-NARRATIVE.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/00-MASTER-NARRATIVE.md>) for the readable end-to-end story.
-4. [dashboard/km-world-dashboard.html](</C:/Users/Dyrane/Documents/sanctum-world-workspace/dashboard/km-world-dashboard.html>) for the visual dashboard.
-5. [worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md>) before any future task setup.
+1. [AGENTS.md](</Users/dyrane/Documents/Builds/sanctum-world-workspace/AGENTS.md>) for operating instructions.
+2. [WORKSPACE_FILE_MAP.md](</Users/dyrane/Documents/Builds/sanctum-world-workspace/WORKSPACE_FILE_MAP.md>) for live state, structure, and task frontier.
+3. [worlds/korvin-merrow/00-MASTER-NARRATIVE.md](</Users/dyrane/Documents/Builds/sanctum-world-workspace/worlds/korvin-merrow/00-MASTER-NARRATIVE.md>) for the readable end-to-end story.
+4. [dashboard/km-world-dashboard.html](</Users/dyrane/Documents/Builds/sanctum-world-workspace/dashboard/km-world-dashboard.html>) for the visual dashboard.
+5. [worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md](</Users/dyrane/Documents/Builds/sanctum-world-workspace/worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md>) before any future task setup.
 6. The active `TASKN-STATE.md` for the task you are working.
 
 Do not start by browsing every prep file. Most prep files are supporting memory, not active instructions.
 
 ## How To Use This Repo
 
-1. Read [AGENTS.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/AGENTS.md>) and [WORKSPACE_FILE_MAP.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/WORKSPACE_FILE_MAP.md>) first.
+1. Read [AGENTS.md](</Users/dyrane/Documents/Builds/sanctum-world-workspace/AGENTS.md>) and [WORKSPACE_FILE_MAP.md](</Users/dyrane/Documents/Builds/sanctum-world-workspace/WORKSPACE_FILE_MAP.md>) first.
 2. Check the active `TASKN-STATE.md`, `TASK-RUNBOOK.md`, and any task-specific plan before acting.
-3. Check [WORKSPACE_FILE_MAP.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/WORKSPACE_FILE_MAP.md>) before creating, moving, renaming, or deleting files.
+3. Check [WORKSPACE_FILE_MAP.md](</Users/dyrane/Documents/Builds/sanctum-world-workspace/WORKSPACE_FILE_MAP.md>) before creating, moving, renaming, or deleting files.
 4. Confirm the current phase gate.
 5. Use official templates from `reference/templates/`.
 6. Keep source/reference material separate from authored work.
@@ -169,6 +176,7 @@ Do not start by browsing every prep file. Most prep files are supporting memory,
 - Keep current project/task state in root `WORKSPACE_FILE_MAP.md`, active `TASKN-STATE.md` files, the dashboard, and the performance report.
 - Keep durable documentation under `docs/`.
 - Keep world-specific authored/canonical work under `worlds/korvin-merrow/` lifecycle folders; `active/` is historical/current-authored context, not the only active surface.
+- Keep Ondina work under `worlds/ondina-vasquell/` phase folders. Do not recreate loose phase pockets at the world root when a phase folder already exists.
 - Keep world-specific historical artifacts under `worlds/korvin-merrow/history/`.
 - Keep reviewer remediation briefs under `worlds/korvin-merrow/remediation/`.
 - Keep review artifacts in `worlds/korvin-merrow/reviews/`.
