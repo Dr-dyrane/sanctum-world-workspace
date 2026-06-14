@@ -2018,7 +2018,7 @@ html.dark .task-card {
 
 .summary-grid span,
 .summary-note,
-.journey-row {
+.journey-timeline {
   color: var(--fg-soft);
 }
 
@@ -2027,20 +2027,6 @@ html.dark .task-card {
   margin: 24px 0 0;
   font-size: 14px;
   line-height: 1.55;
-}
-
-.journey-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 20px;
-  font-size: 12px;
-}
-
-.journey-row span {
-  padding: 7px 10px;
-  border-radius: var(--r-pill);
-  background: rgba(120, 120, 128, 0.09);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -3754,25 +3740,116 @@ html.dark .score-squircle {
   box-shadow: var(--shadow-card);
 }
 
-.journey-row {
+.journey-timeline {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
-  gap: 10px;
-  margin-top: 24px;
+  gap: 12px;
+  margin: 30px 0 8px;
+  padding: 30px 0 24px;
+  list-style: none;
 }
 
-.journey-row span {
-  min-height: 46px;
+.journey-timeline::before {
+  content: "";
+  position: absolute;
+  left: 6%;
+  right: 6%;
+  top: 78px;
+  height: 2px;
+  border-radius: var(--r-pill);
+  background:
+    linear-gradient(90deg, transparent, rgba(120, 120, 128, 0.26) 8%, rgba(120, 120, 128, 0.26) 92%, transparent);
+}
+
+.journey-step {
+  --journey-tone: var(--fg-soft);
+  --journey-fill: rgba(120, 120, 128, 0.085);
+  position: relative;
+  z-index: 1;
+  min-height: 168px;
   display: grid;
-  place-items: center;
-  padding: 10px;
-  border-radius: 18px;
+  grid-template-rows: auto 1fr;
+  gap: 14px;
+  padding: 14px;
+  border-radius: 28px;
   background: var(--bg-2);
   box-shadow: var(--shadow-card);
+  animation: path-rise 440ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: calc(var(--step-index) * 40ms);
+}
+
+.journey-step.complete {
+  --journey-tone: var(--ok);
+  --journey-fill: var(--ok-fill);
+}
+
+.journey-step.active {
+  --journey-tone: var(--ready);
+  --journey-fill: var(--ready-fill);
+}
+
+.journey-step.gated {
+  --journey-tone: var(--bad);
+  --journey-fill: var(--bad-fill);
+}
+
+.journey-step.dip {
+  translate: 0 30px;
+}
+
+.journey-node {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 17px;
+  background: var(--journey-fill);
+  color: var(--journey-tone);
+}
+
+.journey-node svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2.15;
+}
+
+.journey-copy {
+  min-width: 0;
+  display: grid;
+  align-content: end;
+  gap: 6px;
+}
+
+.journey-copy small {
+  color: var(--fg-faint);
+  font-family: "SF Mono", ui-monospace, monospace;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.journey-copy strong {
+  color: var(--fg);
+  font-size: 15px;
+  font-weight: 520;
+  line-height: 1.12;
+}
+
+.journey-copy span {
   color: var(--fg-soft);
   font-size: 12px;
-  font-weight: 560;
-  text-align: center;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+@keyframes path-rise {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .proof-sheet-grid {
@@ -3808,7 +3885,7 @@ html.dark .score-squircle {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .journey-row {
+  .journey-timeline {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
@@ -4040,8 +4117,37 @@ html.dark .score-squircle {
     grid-template-columns: 1fr;
   }
 
-  .journey-row {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .journey-timeline {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 22px;
+    padding: 10px 0 0;
+  }
+
+  .journey-timeline::before {
+    left: 21px;
+    right: auto;
+    top: 16px;
+    bottom: 16px;
+    width: 2px;
+    height: auto;
+    background: linear-gradient(180deg, transparent, rgba(120, 120, 128, 0.26) 8%, rgba(120, 120, 128, 0.26) 92%, transparent);
+  }
+
+  .journey-step {
+    min-height: 0;
+    grid-template-columns: 42px minmax(0, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    padding: 14px;
+  }
+
+  .journey-step.dip {
+    translate: 0;
+  }
+
+  .journey-copy {
+    align-content: center;
   }
 }
 
@@ -4076,7 +4182,7 @@ html.dark .score-squircle {
     grid-template-columns: 1fr;
   }
 
-  .journey-row {
-    grid-template-columns: 1fr;
+  .journey-step {
+    border-radius: 24px;
   }
 }

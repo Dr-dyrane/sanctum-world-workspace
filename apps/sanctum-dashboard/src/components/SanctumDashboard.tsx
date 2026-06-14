@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from 'react';
 import type { Stage } from '@/lib/sanctum-data';
 import { journey, statusLabels } from '@/lib/sanctum-data';
 import { GateSurface } from './dashboard/GateSurface';
+import { JourneyTimeline } from './dashboard/JourneyTimeline';
 import { ProofSheet } from './dashboard/ProofSheet';
 import { SignalGroups } from './dashboard/SignalGroups';
 import { TaskList } from './dashboard/TaskList';
@@ -259,11 +260,7 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
               <strong>From idea to files</strong>
             </div>
           </div>
-          <div className="journey-row">
-            {journey.map(item => (
-              <span key={item.label}>{item.label}</span>
-            ))}
-          </div>
+          <JourneyTimeline items={journey} />
         </section>
       </main>
 
