@@ -13,6 +13,14 @@ Date: 2026-06-14. Use when the pipeline finishes and the task flips to "Ready fo
 
 Official quick review checklist (Section 5): verify clinical content (dates, names, doses, cross-document consistency); confirm intended trap content survived generation; identify and correct any new inconsistencies; remove task files before upload; be 100% confident before finalizing. The steps below execute this checklist plus the KM-learned extras the doc does not mention.
 
+## Operational procedure (How to Do Pipeline Fixes - exact UI flow)
+1. Open the pipeline run in 3.1) Run Pipeline (World Gen latest, run #1, 6/14 4:11 AM PDT).
+2. Output > Output Files: download the "filesystem" folder; open the AutoQC card. MANDATORY validations: (a) read every world file that contains "key facts"; (b) read all files relevant to completing EACH of the 10 tasks in the spec (go task by task).
+3. Edit the downloaded "filesystem": fix every AutoQC flag AND independently refine (synthetic output is not 100% reliable). REMOVE any task-specific file from the world / Golden World Files (task files cause data leakage and break tasking).
+4. Upload revisions: in the same pipeline run, the Revisions card, re-upload the ENTIRE revised folder named exactly "filesystem" (whole folder, edited AND unedited; never individual files, or it errors).
+5. Click "Apply to Task" in the revision - this populates 4.1) Golden World Files. (KM lesson: apply from the revision card, not a run-page Actions button that can revert; then verify the 4.1 file count and spot-check content.)
+6. Run the final file AutoQC over the revised world files; if legitimate flags, edit again; check with the reviewer if unsure. Then finalize and create the world as Healthcare_Vasquell_### (next available number).
+
 ## The reframe (why OV's Stage 9 is lighter than KM's)
 KM's files were Custom Made, so engineering GENERATED them and introduced the defects: answer-key/meta leakage, traps editorialized, selective bold added, letterhead drift. OV is Writer-produced, so engineering should NOT regenerate ours. Verified pre-pipeline (2026-06-14) on our 29 built world files: leakage tokens 0, task-level files in world set 0, content/value bold 0 (bold is structural-only and symmetric). So OV Stage 9 reduces to ONE decisive check, then a short confirm list.
 
