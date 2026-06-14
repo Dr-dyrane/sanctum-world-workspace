@@ -144,3 +144,4 @@ worlds/korvin-merrow/task-setup/task*/build-phase-drafts/*.zip
 
 # Pipeline-history folder is tracked (read-only history, no active use)
 # worlds/korvin-merrow/_pipeline-history/ — committed, not ignored
+.vercel
