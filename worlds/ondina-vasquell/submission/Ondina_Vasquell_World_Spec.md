@@ -32,7 +32,7 @@ The world carries ten independent post-snapshot tasks spanning direct documentat
 | Allergies / MRN | Sulfa, sulfonamide antibiotics, documented rash / OV-3358104 |
 | Pre-existing conditions | Insulin-dependent type 2 diabetes; diabetic peripheral neuropathy; mild non-proliferative diabetic retinopathy; CKD stage 3b; anemia of chronic kidney disease; peripheral arterial disease; HFpEF; hypertension; dyslipidemia; obesity; obstructive sleep apnea on CPAP; knee osteoarthritis |
 | Active problem list | Limb-threatening left diabetic foot infection with deep soft tissue involvement; equivocal osteomyelitis, unconfirmed; acute kidney injury on CKD 3b, improving; anemia of CKD; perfusion adequacy unresolved (peripheral arterial disease); HFpEF, euvolemic at snapshot; insulin-managed diabetes with held oral agents; deconditioning with unsafe home-disposition picture |
-| Baseline clinical anchors | Outpatient creatinine 1.5 mg/dL, eGFR about 38 (CKD 3b); hemoglobin about 9.8 (anemia of CKD); HbA1c 8.6 percent; ambulates with a cane at home. These are comparators, not admission or hospital-course values, and distinguish chronic disease from the acute episode |
+| Baseline clinical anchors | Outpatient creatinine 1.5 mg/dL, eGFR about 38 (CKD 3b); hemoglobin about 9.8 (anemia of CKD); HbA1c 8.6 percent; ambulates without a device but with reduced endurance from neuropathy and knee osteoarthritis at baseline. These are comparators, not admission or hospital-course values, and distinguish chronic disease from the acute episode |
 
 ### Home medication list (pre-admission baseline, with inpatient status)
 
@@ -58,7 +58,7 @@ The world carries ten independent post-snapshot tasks spanning direct documentat
 
 | Provider | Role / Service | Appears in |
 |---|---|---|
-| Dr. Marisol Everet, MD | Hospitalist attending, attending of record | World notes, Tasks 1, 2, 4, 8, 10 |
+| Dr. Lillian Everet, MD | Hospitalist attending, attending of record | World notes, Tasks 1, 2, 4, 8, 10 |
 | Dr. Tobias Renquist, MD | Hospital medicine resident, PGY-2 | World progress notes |
 | Dr. Priyanka Vell, DPM | Podiatry | Debridement and wound notes, Tasks 2, 3, 8 |
 | Dr. Castor Mwangi, MD | Vascular surgery | Perfusion consult, Tasks 4, 6, 8 |

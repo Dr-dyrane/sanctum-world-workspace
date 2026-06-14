@@ -106,7 +106,7 @@ def set_borders(table, outer: str, inner: str) -> None:
 
 # File-plan 7-col widths (inches), sized for the landscape text area (~9.8in):
 # # | ID | Filename.type | Date | Reference File Origin | Description | Pearls
-FILEPLAN_W = [0.3, 0.55, 1.7, 1.05, 2.2, 2.3, 1.7]
+FILEPLAN_W = [0.25, 0.48, 1.7, 1.0, 2.15, 2.42, 1.8]
 
 
 def set_section(section, *, landscape: bool, margin: float) -> None:
