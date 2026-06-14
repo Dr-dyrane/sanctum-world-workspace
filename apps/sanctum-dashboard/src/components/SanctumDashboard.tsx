@@ -31,6 +31,7 @@ const filterLabels: Array<{ id: Filter; label: string }> = [
 export default function SanctumDashboard({ worlds, databaseConfigured, documents }: DashboardProps) {
   const [worldId, setWorldId] = useState(worlds[0]?.id ?? 'korvin-merrow');
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [expandedTaskId, setExpandedTaskId] = useState<string | null>(null);
   const [activeDocId, setActiveDocId] = useState<string | null>(null);
   const [proofOpen, setProofOpen] = useState(false);
   const [worldMenuOpen, setWorldMenuOpen] = useState(false);
@@ -160,6 +161,7 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
   function chooseWorld(nextWorldId: string) {
     setWorldId(nextWorldId);
     setSelectedId(null);
+    setExpandedTaskId(null);
     setFilter('all');
     setProofOpen(false);
     setActiveFamily(null);
@@ -169,6 +171,13 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
   function selectTask(taskId: string) {
     if (!taskId) return;
     setSelectedId(taskId);
+    setExpandedTaskId(taskId);
+  }
+
+  function toggleTaskCard(taskId: string) {
+    if (!taskId) return;
+    setSelectedId(taskId);
+    setExpandedTaskId(current => current === taskId ? null : taskId);
   }
 
   return (
@@ -230,8 +239,8 @@ export default function SanctumDashboard({ worlds, databaseConfigured, documents
 
         <TaskList
           tasks={visibleTasks}
-          selectedId={selectedTask.id}
-          onSelect={selectTask}
+          selectedId={expandedTaskId}
+          onSelect={toggleTaskCard}
           onOpenProof={() => setProofOpen(true)}
         />
 

@@ -6,7 +6,7 @@ import type { IconName } from './types';
 
 type Props = {
   tasks: Task[];
-  selectedId: string;
+  selectedId: string | null;
   onSelect: (taskId: string) => void;
   onOpenProof: () => void;
 };
@@ -42,7 +42,7 @@ export function TaskList({ tasks, selectedId, onSelect, onOpenProof }: Props) {
               type="button"
               className="simple-task-button"
               aria-expanded={selected}
-              aria-label={`Inspect ${task.id}. ${task.name}. ${statusLabels[task.stage]}.`}
+              aria-label={`${selected ? 'Close' : 'Inspect'} ${task.id}. ${task.name}. ${statusLabels[task.stage]}.`}
               onClick={() => onSelect(task.id)}
             >
               <div className="simple-task-main">
@@ -60,7 +60,7 @@ export function TaskList({ tasks, selectedId, onSelect, onOpenProof }: Props) {
                   <span>Mean</span>
                 </span>
                 <span className="task-open-cue">
-                  <span>{selected ? 'Viewing' : 'Inspect'}</span>
+                  <span>{selected ? 'Close' : 'Inspect'}</span>
                   <Icon name={selected ? 'chevron-down' : 'arrow-right'} />
                 </span>
               </span>
