@@ -2811,15 +2811,19 @@ html.dark .score-squircle {
 .story-number {
   width: 34px;
   height: 34px;
-  display: grid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex: 0 0 34px;
-  place-items: center;
   border-radius: 14px;
   background: rgba(120, 120, 128, 0.095);
   color: var(--fg-soft);
   font-family: "SF Mono", ui-monospace, monospace;
   font-size: 11px;
   font-weight: 400;
+  font-variant-numeric: tabular-nums;
+  line-height: 34px;
+  text-align: center;
 }
 
 .story-header.compact .story-number {
@@ -2828,6 +2832,7 @@ html.dark .score-squircle {
   flex-basis: 28px;
   border-radius: 12px;
   font-size: 10px;
+  line-height: 28px;
 }
 
 .trajectory-surface {
@@ -3783,6 +3788,18 @@ html.dark .score-squircle {
   }
 }
 
+@media (max-width: 920px) {
+  .story-nav-surface {
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+
+  .story-nav-surface .task-rail {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    border-radius: 24px;
+  }
+}
+
 @media (max-width: 760px) {
   .product-shell {
     width: min(100% - 18px, 1180px);
@@ -3823,7 +3840,6 @@ html.dark .score-squircle {
   }
 
   .story-nav-surface {
-    grid-template-columns: 1fr;
     gap: 12px;
     padding: 16px;
   }
@@ -3847,9 +3863,8 @@ html.dark .score-squircle {
   }
 
   .task-rail {
-    grid-template-columns: repeat(10, 48px);
-    overflow-x: auto;
-    justify-content: start;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    overflow: visible;
     border-radius: 26px;
   }
 
