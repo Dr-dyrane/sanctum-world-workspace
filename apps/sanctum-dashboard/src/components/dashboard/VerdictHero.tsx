@@ -1,4 +1,5 @@
 import type { World } from '@/lib/sanctum-data';
+import type { CSSProperties } from 'react';
 import type { SelectedTaskState } from './types';
 import { Icon } from './Icon';
 import { scoreText, statusClass } from './model';
@@ -11,6 +12,7 @@ type Props = {
 
 export function VerdictHero({ world, selected, onOpenProof }: Props) {
   const task = selected.task;
+  const scorePosition = typeof task.mean === 'number' ? `${Math.max(0, Math.min(100, task.mean))}%` : '0%';
 
   return (
     <section className={`verdict-hero surf ${selected.readiness.tone}`} aria-label="Task readiness verdict">
@@ -37,8 +39,8 @@ export function VerdictHero({ world, selected, onOpenProof }: Props) {
         </div>
 
         <aside className="score-squircle" aria-label={`${task.id} mean score`}>
-          <div className="score-meter" aria-hidden="true">
-            <span style={{ transform: `scaleX(${typeof task.mean === 'number' ? task.mean / 100 : 0})` }} />
+          <div className="score-meter" style={{ '--score': scorePosition } as CSSProperties} aria-hidden="true">
+            <span />
           </div>
           <span>Mean</span>
           <strong>{scoreText(task)}</strong>
