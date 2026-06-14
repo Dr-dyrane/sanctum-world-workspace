@@ -53,3 +53,11 @@ Order set rewritten to a routine "DISCHARGE MEDICATION ORDERS" pending-signature
 
 ## AO/Abi-mode review pass, 2026-06-14
 Ran the full nine-lens + mechanical Abi-mode review on the de-telegraphed v2 packet (record: abi-mode-review-OV01-2026-06-14.md). Fairness PASS (external order set + correction-licensing prompt). Two residuals caught and fixed: (1) the filename still read "preliminary" -> renamed; (2) golden source/rationale still called it "preliminary unreconciled" -> neutralized. Difficulty verdict UNPROVEN: the row-level reconcile-and-correct prompt is a known difficulty-killer (KM06), so a re-pilot ceiling remains plausible; OV07 fallback stands. Open before banking: golden self-score under its own grader (reachability anchor); first-trajectory mount-hygiene gate (find /docs, no .apps_data dup, no "preliminary" in path).
+
+## Clean-mount rerun and final OV01 calibration, 2026-06-14
+
+The clean rerun banked the v2 mechanism. Job `741ba52f-bae9-4594-a25c-ef5ae0e8bcdc` scored 68, 72, 40, 70, 72, 72, 50, 65, 78, 93. Mean 68.0. Four runs were sub-70, with hard floors at 0.40 and 0.50 and a catcher at 0.93.
+
+Mount gate: first-trajectory `find /docs` showed one order set, `discharge_medication_orders_05212026.docx`, under `/docs/filesystem`, 34 world files, no `/docs/.apps_data`, and no `preliminary` file. The prior bimodal job `9765ba91` is excluded from shipping evidence because it mounted two same-purpose task files. The old ceiling job `20965cc6` remains historical pre-v2 evidence.
+
+Disposition: OV01 is now bankable. The validated floor is the model carrying inpatient-only enoxaparin into discharge, or leaving it alive as confirm, despite the chart supporting only inpatient prophylaxis and the patient already taking aspirin plus clopidogrel. Use `OV01-results-and-prereg-reconciliation.md` as the clean results record and `fa-ga/FA-GA-OV01-current.md` as the current FA/GA draft.
