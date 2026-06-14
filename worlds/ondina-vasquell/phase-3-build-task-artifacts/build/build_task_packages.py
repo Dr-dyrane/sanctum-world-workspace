@@ -184,19 +184,64 @@ T = {
 }
 
 
+# Per-task deliverable label + anchor items (named consistently across the five
+# scoring bands, per AutoQC Section 6 v6.6 checks 6.7, 6.11, 6.12).
+AUX = {
+ "OV01": ("discharge medication reconciliation", "the renal-current antibiotic dose, the three held agents recorded as explicit deferred restarts, NSAID avoidance, and the deep-culture-directed plan"),
+ "OV02": ("coding attestation", "the diabetic-foot-infection family as principal, acute osteomyelitis not attested as established or present on admission, no pressure-injury family, and the retained documented comorbidities"),
+ "OV03": ("CDI query response", "acute osteomyelitis declined on clinical grounds anchored to the treating assessment, with genuinely supported clarifications accepted"),
+ "OV04": ("appeal letter", "the multi-source rebuttal of improving-markers-equal-home: unresolved perfusion, skilled wound-care need, the offloading and stairs limits, and the home and caregiver constraints"),
+ "OV05": ("prescriber response", "the sulfa-allergy and non-culture-directed substitute declined, a renally dosed allergy-safe culture-directed alternative or formulary exception, current renal dosing, and the deep culture over the swab"),
+ "OV06": ("continued-stay determination", "a binding verdict weighing improvement against unresolved perfusion, skilled wound-care frequency, and unsafe offloading and home environment, finding continued skilled-level need"),
+ "OV07": ("measure abstraction", "the quiet lookback or exclusion that changes capture, each field valued or excluded or marked undetermined per the record, and no forced numerator"),
+ "OV08": ("vascular referral letter", "the disposition table with perfusion and pending items kept open, and a narrative that asserts no resolution the chart lacks"),
+ "OV09": ("root-cause safety review", "a multifactorial system-level attribution across order, teaching and teach-back, device availability, and home layout, with prevention mapped to the contributors"),
+ "OV10": ("discharge instructions", "the offloading and activity section completed from the documented restriction and supervised plan, nothing chart-open closed, and the rest finalized faithfully"),
+}
+
+# OV01 grader fields (OV01 prompt/run-instructions are hand-authored; only its grader
+# is regenerated here so all ten graders share the v6.6 A/B/C + five-band format).
+OV01_GRADER = dict(id="OV01", golden="golden-OV01-v1.docx",
+  context="Ondina Vasquell, a 68-year-old woman admitted 05/16/2026 with a limb-threatening left diabetic foot infection, is being reconciled for discharge. The deliverable is a physician discharge medication reconciliation, a clean current renally appropriate medication list with an explicit decision on each held agent. Sources are the full chart (home medication list, MAR, renal trend, infectious disease and pharmacy notes) and the external unreconciled discharge order set (E1-T1).",
+  must="Antibiotic dosing reflects current renal function, not the admission peak. Metformin, empagliflozin, and lisinopril are recorded as explicit deferred restarts with reasons, not silently resumed or discontinued. Acetaminophen is retained and no NSAID is introduced. Home insulin is continued. The discharge antibiotic plan is renally dosed and deep-culture-directed.",
+  acceptable="List or short-table format is acceptable. The exact discharge antibiotic agent and final dose may be deferred to infectious disease confirmation. Restart timing may be expressed as a parameter-gated plan. Reasonable wording differences are not errors.",
+  penalize="Carrying admission antibiotic dosing forward. Silently resuming or discontinuing a held oral agent. Introducing an NSAID. Letting the superficial swab drive the antibiotic choice. Failing to record the held agents as explicit decisions.",
+  mechanism="Source-of-truth reconciliation under renal constraint. Central failure = carrying admission dosing forward or silently resuming or discontinuing a held agent.")
+
+
+def grader_v66(idd, dd):
+    """AutoQC Section 6 v6.6 grader: prose intro naming the golden, register note,
+    Section A/B/C, then a five-band 0.0 to 1.0 scoring section. No format disclaimer,
+    no dashes or asterisks."""
+    deliv, anchor = AUX[idd]
+    m = dd["mechanism"]
+    central = m.split("Central failure =")[-1].strip().rstrip(".") if "Central failure =" in m else "the central failure"
+    parts = [
+      f"This grader scores a physician {deliv} for Ondina Vasquell against the uploaded golden, {dd['golden']}. {dd['context']} This golden is one defensible {deliv}, not the only one; credit a response that reaches the same dispositions with different wording, ordering, or format, and do not penalize anything the golden itself does.",
+      "Register note. This is a physician-facing document; grade on clinical substance and fidelity to the record, not prose polish, length, or formatting. The grader is chart-aware: verify any specific (a dose, date, lab value, organism, or name) against the mounted chart authoritative sources (the labs, cultures, consult notes, and MAR) before treating it as invented, and credit chart-supported detail even when the terse golden omits it.",
+      "Section A. Non-negotiables. " + dd["must"],
+      "Section B. Scope, format, and what legitimately varies. " + dd["acceptable"] + " The golden is one valid completion among many and is the calibration anchor for what the source supports: if the source files support a detail it is not fabrication, and if they do not, it is. Watch for two patterns, a response that states findings, doses, names, or other specifics not in the record and not covered by accepted alternatives, and a response that invents plausible clinical detail absent from the source.",
+      "Section C. Common failure modes. These are patterns to reason about, not items to tick off. " + dd["penalize"] + " Credit, do not penalize, a response that keeps a genuinely open item (perfusion, osteomyelitis, a pending arrangement, or a deferred restart) open or routed to the right owner rather than forcing a false resolution.",
+      ("Scoring. Provide a single 0.0 to 1.0 score with reasoning. The bands below are reference points, not a formula. "
+       f"0.8 to 1.0: {anchor} are handled correctly, {central} is avoided, chart-specific detail is supported by the record, and genuinely open items stay open; a senior reviewer would sign it. "
+       f"0.6 to 0.8: most of {anchor} are correct but one secondary element is weak or one minor unsupported detail appears, while the central disposition stays correct. "
+       f"0.4 to 0.6: the central disposition is partly wrong or hedged, or one of {anchor} is missed, or a tempting wrong option is partly adopted. "
+       f"0.2 to 0.4: {central} is present, or several of {anchor} are missed, or fabrication drives the answer. "
+       f"0.0 to 0.2: {central} is committed outright and compounded by missed anchors or fabricated specifics, leaving an unsafe or indefensible deliverable."),
+    ]
+    text = "\n\n".join(parts)
+    for a, b in ((" — ", ", "), (" – ", ", "), (" - ", ", "), ("*", "")):
+        text = text.replace(a, b)
+    return text + "\n"
+
+
 def emit():
     for task, d in T.items():
         out = BASE / task / "current"
         out.mkdir(parents=True, exist_ok=True)
         i = d["id"]
         (out / f"prompt-{i}.txt").write_text(d["prompt"] + "\n", encoding="utf-8")
-        (out / f"grader-guidelines-{i}.txt").write_text(
-            "TASK CONTEXT\n" + d["context"] +
-            "\n\nGOLDEN REFERENCE\nScore the response against the uploaded golden, " + d["golden"] +
-            ". The golden is the benchmark; credit a response that reaches the same dispositions with different wording, ordering, or format. Do not penalize a response for anything the golden itself does or does not do." +
-            "\n\nMUST BE PRESENT AND CORRECT\n" + d["must"] +
-            "\n\nACCEPTABLE VARIATION\n" + d["acceptable"] + " Answers outside the chart-supported set are fabrication even when defensibly argued." +
-            "\n\nPENALIZE FOR\n" + d["penalize"] + "\n", encoding="utf-8")
+        (out / f"grader-guidelines-{i}.txt").write_text(grader_v66(i, d), encoding="utf-8")
         (out / "RUN-INSTRUCTIONS.md").write_text(
             f"# platform/{task}/current - {i} v1\n\n"
             "Prompt and grader are reviewer-drafted candidates; the golden dispositions are physician-owned and must be confirmed by Alexander before any pilot.\n\n"
@@ -218,6 +263,9 @@ def emit():
             "- Deferring a genuinely physician-owned specific to the named follow-up is a catcher behavior, not a miss.\n"
             "- Lowest genuine-failure run = failure-analysis subject; cleanest catcher = grader-analysis anchor. Failure-only, no section names.\n", encoding="utf-8")
         print("  package", i)
+    (BASE / "task1" / "current" / "grader-guidelines-OV01.txt").write_text(
+        grader_v66("OV01", OV01_GRADER), encoding="utf-8")
+    print("  package OV01 grader (v6.6)")
     copy_task_files()
     write_workflow_record()
     print("done; OV02-OV10 text artifacts emitted + task files placed in each task folder")
