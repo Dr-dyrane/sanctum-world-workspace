@@ -42,9 +42,15 @@ export function TaskList({ tasks, selectedId, onSelect, onOpenProof }: Props) {
                 <h3>{task.name}</h3>
                 <small>{task.family}</small>
               </div>
-              <span className="task-score">
-                <strong>{scoreText(task)}</strong>
-                <span>Mean</span>
+              <span className="task-action-stack">
+                <span className="task-score">
+                  <strong>{scoreText(task)}</strong>
+                  <span>Mean</span>
+                </span>
+                <span className="task-open-cue">
+                  <span>{selected ? 'Viewing' : 'Open'}</span>
+                  <Icon name={selected ? 'chevron-down' : 'arrow-right'} />
+                </span>
               </span>
             </button>
 
