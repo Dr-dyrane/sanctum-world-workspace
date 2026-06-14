@@ -2591,22 +2591,52 @@ html.dark .score-squircle {
   line-height: 1;
 }
 
-.score-bead-strip {
+.score-skyline {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(10, minmax(0, 1fr));
   gap: 12px;
+  height: 250px;
   margin-top: 40px;
+  padding: 18px 16px 16px;
+  border-radius: 32px;
+  background:
+    linear-gradient(180deg, rgba(120, 120, 128, 0.08), rgba(120, 120, 128, 0.045)),
+    rgba(120, 120, 128, 0.04);
 }
 
-.score-bead {
+.score-skyline::before {
+  content: "";
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  top: 30%;
+  height: 1px;
+  border-radius: var(--r-pill);
+  background: rgba(120, 120, 128, 0.2);
+}
+
+.score-threshold {
+  position: absolute;
+  top: calc(30% - 9px);
+  right: 20px;
+  color: var(--fg-faint);
+  font-family: "SF Mono", ui-monospace, monospace;
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.score-bar {
   --i: 0;
-  min-height: 118px;
+  --score: 6%;
+  position: relative;
+  z-index: 1;
+  min-width: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 14px;
-  border-radius: 28px;
-  background: rgba(120, 120, 128, 0.08);
+  justify-content: flex-end;
+  align-items: center;
+  gap: 9px;
   color: var(--fg-soft);
   opacity: 0;
   transform: translateY(12px) scale(0.98);
@@ -2614,47 +2644,82 @@ html.dark .score-squircle {
   animation-delay: calc(var(--i) * 36ms);
 }
 
-.score-bead small {
+.score-bar i {
+  width: min(100%, 46px);
+  height: var(--score);
+  min-height: 12px;
+  border-radius: 22px;
+  background: currentColor;
+  opacity: 0.72;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.score-bar small {
+  order: 2;
   color: currentColor;
   font-family: "SF Mono", ui-monospace, monospace;
   font-size: 11px;
   font-weight: 780;
 }
 
-.score-bead strong {
+.score-bar strong {
+  order: 1;
   color: var(--fg);
   font-family: "SF Mono", ui-monospace, monospace;
-  font-size: 25px;
+  font-size: 19px;
   font-weight: 850;
+  line-height: 1;
 }
 
-.score-bead.critical {
-  background: var(--bad-fill);
+.score-bar.critical {
   color: var(--bad);
 }
 
-.score-bead.weak {
-  background: var(--warn-fill);
+.score-bar.critical i {
+  background: linear-gradient(180deg, rgba(251, 113, 133, 0.94), rgba(190, 18, 60, 0.74));
+  opacity: 1;
+}
+
+.score-bar.weak {
   color: var(--warn);
 }
 
-.score-bead.middle {
-  background: var(--ready-fill);
+.score-bar.weak i {
+  opacity: 0.82;
+}
+
+.score-bar.middle {
   color: var(--ready);
 }
 
-.score-bead.safe {
-  background: var(--ok-fill);
+.score-bar.safe {
   color: var(--ok);
 }
 
-.score-bead.pending {
+.score-bar.safe i {
+  opacity: 0.82;
+}
+
+.score-bar.pending {
   color: var(--fg-faint);
 }
 
-.score-bead.proof {
+.score-bar.proof {
   transform: translateY(-8px) scale(1);
+}
+
+.score-bar.proof i {
   box-shadow: 0 0 0 5px rgba(124, 58, 237, 0.18), var(--shadow-card);
+}
+
+.score-bar.proof small {
+  min-width: 26px;
+  min-height: 26px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--r-pill);
+  background: var(--fg);
+  color: var(--bg-2);
 }
 
 .gate-surface h2 {
@@ -3123,14 +3188,14 @@ html.dark .score-squircle {
     font-size: 66px;
   }
 
-  .score-bead-strip {
+  .score-skyline {
     grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 8px;
+    height: 300px;
   }
 
-  .score-bead {
-    min-height: 86px;
-    border-radius: 22px;
+  .score-bar i {
+    width: min(100%, 42px);
   }
 
   .gate-surface h2 {
