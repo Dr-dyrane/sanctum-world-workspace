@@ -3383,9 +3383,12 @@ html.dark .score-squircle {
 }
 
 .state-badge {
+  width: fit-content;
+  max-width: 152px;
   min-height: 32px;
   display: inline-flex;
   align-items: center;
+  justify-self: start;
   gap: 7px;
   padding: 0 11px;
   border-radius: var(--r-pill);
@@ -3395,11 +3398,14 @@ html.dark .score-squircle {
   font-size: 11px;
   font-weight: 500;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .state-badge svg {
   width: 14px;
   height: 14px;
+  flex: 0 0 14px;
   stroke-width: 2.2;
 }
 
@@ -3579,8 +3585,9 @@ html.dark .score-squircle {
   position: relative;
   min-height: 154px;
   display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   grid-template-rows: auto minmax(0, 1fr);
-  gap: 18px;
+  gap: 18px 16px;
   align-items: start;
   padding: 20px;
   border-radius: 30px;
@@ -3634,6 +3641,7 @@ html.dark .score-squircle {
 .signal-glyph {
   position: relative;
   z-index: 1;
+  grid-column: 1;
   width: 46px;
   height: 46px;
   display: grid;
@@ -3663,6 +3671,7 @@ html.dark .score-squircle {
 .signal-copy {
   position: relative;
   z-index: 1;
+  grid-column: 1;
   display: grid;
   align-self: end;
   gap: 5px;
@@ -3671,19 +3680,35 @@ html.dark .score-squircle {
 .signal-copy span {
   color: var(--fg-soft);
   font-size: 13px;
-  font-weight: 540;
-}
-
-.signal-copy strong {
-  color: var(--fg);
-  font-size: 30px;
-  font-weight: 620;
+  font-weight: 440;
 }
 
 .signal-copy small {
   color: var(--fg-soft);
   font-size: 12px;
-  font-weight: 520;
+  font-weight: 400;
+}
+
+.signal-value {
+  position: relative;
+  z-index: 1;
+  grid-column: 2;
+  grid-row: 1 / -1;
+  align-self: center;
+  justify-self: end;
+  min-width: 70px;
+  min-height: 70px;
+  display: grid;
+  place-items: center;
+  padding: 12px;
+  border-radius: 24px;
+  background: rgba(120, 120, 128, 0.085);
+  color: var(--fg);
+  font-family: "SF Mono", ui-monospace, monospace;
+  font-size: 24px;
+  font-weight: 560;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
 }
 
 .signal-drawer {
@@ -3956,9 +3981,36 @@ html.dark .score-squircle {
     min-height: 52px;
   }
 
+  .task-list-surface {
+    padding-inline: 0;
+  }
+
+  .task-list-header {
+    padding-inline: 22px;
+  }
+
+  .simple-task-card {
+    border-radius: 24px;
+  }
+
   .simple-task-button {
     align-items: flex-start;
     flex-direction: column;
+    gap: 18px;
+    min-height: 0;
+    padding: 16px;
+    border-radius: 24px;
+  }
+
+  .simple-task-button > div:first-child {
+    width: 100%;
+    grid-template-columns: minmax(0, auto) minmax(0, 1fr);
+  }
+
+  .state-badge {
+    max-width: min(138px, 100%);
+    justify-self: start;
+    padding-inline: 9px;
   }
 
   .task-action-stack {
@@ -3976,6 +4028,7 @@ html.dark .score-squircle {
 
   .simple-task-detail {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 0 16px 16px;
   }
 
   .simple-task-detail .primary-cta {

@@ -45,9 +45,9 @@ export function SignalGroups({ tasks, activeFamily, onToggleFamily, onSelectTask
             </span>
             <span className="signal-copy">
               <span>{signal.family}</span>
-              <strong>{signal.mean ?? 'TBD'}</strong>
               <small>{signal.floorCount} misses</small>
             </span>
+            <strong className="signal-value">{signal.mean ?? 'TBD'}</strong>
           </button>
         ))}
       </div>
