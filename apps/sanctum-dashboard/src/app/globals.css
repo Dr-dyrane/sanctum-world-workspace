@@ -1704,10 +1704,51 @@ html.dark .task-card {
   overflow-wrap: anywhere;
 }
 
-.doc-preview header > span,
 .doc-preview footer {
   color: var(--fg-soft);
   font-size: 12px;
+}
+
+.doc-file-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  flex: 0 0 auto;
+  color: var(--fg-soft);
+  font-size: 12px;
+}
+
+.download-link {
+  min-height: 34px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 12px;
+  border-radius: var(--r-pill);
+  background: var(--fg);
+  color: var(--bg-2);
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.12);
+  transition: transform 0.22s var(--ease-out), box-shadow 0.22s var(--ease-out), opacity 0.22s var(--ease-out);
+}
+
+.download-link:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.16);
+}
+
+.download-link:focus-visible {
+  outline: 3px solid rgba(10, 132, 255, 0.34);
+  outline-offset: 3px;
+}
+
+.download-link .lucide-icon {
+  width: 14px;
+  height: 14px;
 }
 
 .doc-preview-frame {

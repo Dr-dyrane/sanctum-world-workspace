@@ -45,6 +45,7 @@ export type IconName =
   | 'alert-triangle'
   | 'arrow-right'
   | 'chevron-down'
+  | 'download'
   | 'eye'
   | 'file-check'
   | 'folder-open'

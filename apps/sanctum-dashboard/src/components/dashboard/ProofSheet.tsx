@@ -50,6 +50,18 @@ function decodeBase64ToArrayBuffer(value: string) {
   return bytes.buffer;
 }
 
+function downloadHref(doc: DisplayDocument) {
+  if (doc.contentBase64) {
+    return `data:${doc.mimeType || 'application/octet-stream'};base64,${doc.contentBase64}`;
+  }
+
+  if (doc.contentText) {
+    return `data:text/plain;charset=utf-8,${encodeURIComponent(doc.contentText)}`;
+  }
+
+  return null;
+}
+
 function TextSourceView({ doc }: { doc: DisplayDocument }) {
   const text = useMemo(() => {
     if (doc.contentBase64) return decodeBase64ToText(doc.contentBase64);
@@ -148,6 +160,7 @@ export function ProofSheet({ open, task, documents, activeDocId, onSelectDoc, on
   if (!open) return null;
 
   const activeDoc = documents.find(doc => doc.id === activeDocId) ?? documents[0];
+  const activeDownloadHref = activeDoc ? downloadHref(activeDoc) : null;
 
   return (
     <div className="modal-root" role="presentation">
@@ -190,7 +203,15 @@ export function ProofSheet({ open, task, documents, activeDocId, onSelectDoc, on
                   <span className="micro-label">{roleLabel(activeDoc.role)}</span>
                   <strong>{sourceName(activeDoc)}</strong>
                 </div>
-                <span>{formatBytes(activeDoc.byteSize)}</span>
+                <div className="doc-file-actions">
+                  <span>{formatBytes(activeDoc.byteSize)}</span>
+                  {activeDownloadHref ? (
+                    <a className="download-link" href={activeDownloadHref} download={activeDoc.filename}>
+                      Download
+                      <Icon name="download" />
+                    </a>
+                  ) : null}
+                </div>
               </header>
 
               <div className="doc-preview-frame">
