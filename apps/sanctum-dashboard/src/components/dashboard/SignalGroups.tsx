@@ -1,5 +1,7 @@
 import type { Task } from '@/lib/sanctum-data';
 import { families } from './model';
+import { Icon } from './Icon';
+import type { IconName } from './types';
 
 type Props = {
   tasks: Task[];
@@ -11,6 +13,15 @@ type Props = {
 export function SignalGroups({ tasks, activeFamily, onToggleFamily, onSelectTask }: Props) {
   const signals = families(tasks);
   const active = signals.find(signal => signal.family === activeFamily) ?? null;
+  const iconFor = (family: string): IconName => {
+    const lower = family.toLowerCase();
+    if (lower.includes('medication')) return 'shield';
+    if (lower.includes('closure')) return 'file-check';
+    if (lower.includes('report')) return 'eye';
+    if (lower.includes('off-text')) return 'activity';
+    if (lower.includes('severity')) return 'alert-triangle';
+    return 'shield';
+  };
 
   return (
     <section className="quiet-surface surf" aria-label="Challenge groups">
@@ -24,9 +35,14 @@ export function SignalGroups({ tasks, activeFamily, onToggleFamily, onSelectTask
             className={`signal-tile ${activeFamily === signal.family ? 'active' : ''}`}
             onClick={() => onToggleFamily(signal.family)}
           >
-            <span>{signal.family}</span>
-            <strong>{signal.mean ?? 'TBD'}</strong>
-            <small>{signal.floorCount} misses</small>
+            <span className="signal-glyph" aria-hidden="true">
+              <Icon name={iconFor(signal.family)} />
+            </span>
+            <span className="signal-copy">
+              <span>{signal.family}</span>
+              <strong>{signal.mean ?? 'TBD'}</strong>
+              <small>{signal.floorCount} misses</small>
+            </span>
           </button>
         ))}
       </div>

@@ -1,6 +1,8 @@
 import type { SelectedTaskState } from './types';
 import type { CSSProperties } from 'react';
+import { Icon } from './Icon';
 import { runState } from './model';
+import type { IconName } from './types';
 
 type Props = {
   selected: SelectedTaskState;
@@ -9,6 +11,22 @@ type Props = {
 export function TrajectorySurface({ selected }: Props) {
   const task = selected.task;
   const proofScore = selected.proofRunIndex >= 0 ? task.spread[selected.proofRunIndex] : null;
+
+  const stateLabel = (state: string) => {
+    if (state === 'critical') return 'Clinical miss';
+    if (state === 'weak') return 'Under 70';
+    if (state === 'safe') return 'Safe run';
+    if (state === 'middle') return 'Borderline';
+    return 'Pending';
+  };
+
+  const stateIcon = (state: string): IconName => {
+    if (state === 'critical') return 'alert-triangle';
+    if (state === 'safe') return 'shield';
+    if (state === 'middle') return 'eye';
+    if (state === 'weak') return 'activity';
+    return 'x';
+  };
 
   return (
     <section className="story-surface trajectory-surface surf" aria-label="Trajectory score shape">
@@ -36,14 +54,23 @@ export function TrajectorySurface({ selected }: Props) {
             <span
               key={`${task.id}-${index}`}
               role="listitem"
+              tabIndex={0}
               className={`score-bar ${state} ${proof ? 'proof' : ''}`}
               style={{ '--i': index, '--score': height } as CSSProperties}
               aria-label={typeof value === 'number' ? `Run ${index + 1}: ${value}` : `Run ${index + 1}: pending`}
               title={typeof value === 'number' ? `Run ${index + 1}: ${value}` : `Run ${index + 1}: pending`}
             >
-              <i aria-hidden="true" />
-              <small>{index + 1}</small>
-              <strong>{typeof value === 'number' ? value : '-'}</strong>
+              <span className="bar-track" aria-hidden="true">
+                <i />
+              </span>
+              <span className="run-state-icon" aria-hidden="true">
+                <Icon name={stateIcon(state)} />
+              </span>
+              <span className="bar-caption" aria-hidden="true">
+                <small>Run {index + 1}</small>
+                <strong>{typeof value === 'number' ? value : '-'}</strong>
+                <span>{stateLabel(state)}</span>
+              </span>
             </span>
           );
         })}
