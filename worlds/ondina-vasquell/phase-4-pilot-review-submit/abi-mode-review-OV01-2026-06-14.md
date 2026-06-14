@@ -2,6 +2,7 @@
 
 Scope, in cold-read order: prompt-OV01.txt -> task_data.py T1 (the mounted order set, read on the built bytes) -> OV01-v2-pilot-preregistration.md -> build_goldens.py OV01 golden -> OV01_GRADER. Reviewer posture: read cold before opening golden/grader: yes.
 Verdict: SEND BACK (one de-telegraph residual) + difficulty UNPROVEN (re-pilot required).
+RESOLUTION (same day): finding 1 fixed (file renamed to discharge_medication_orders_05212026.docx, cascade complete, commit 573469c); finding 2 fixed (golden source + rationale neutralized, commits 5ff531f / 573469c). verify_ondina green (60 docx), de-telegraph intact. Difficulty remains UNPROVEN pending the re-pilot; the two blocking surface residuals are now closed.
 
 ## Findings (blocking)
 
