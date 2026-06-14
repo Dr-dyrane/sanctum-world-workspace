@@ -32,6 +32,7 @@ export function VerdictHero({ world, selected, onOpenProof }: Props) {
           <span className="task-token">{task.id}</span>
           <h1>{selected.readiness.label}</h1>
           <p>{task.plain}</p>
+          <p className="hero-world-blurb">{world.blurb}</p>
           <div className="hero-actions">
             <button type="button" className="primary-cta" onClick={onOpenProof}>
               Open proof

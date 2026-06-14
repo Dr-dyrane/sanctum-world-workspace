@@ -125,13 +125,13 @@ export const worlds: World[] = [
   {
     id: 'ondina-vasquell',
     title: 'Ondina Vasquell',
-    kicker: 'File review in progress',
-    blurb: 'Limb-threat diabetic foot world. Blueprint accepted. Files revised. Task packets built. Pilots pending.',
+    kicker: 'World live. Tasking started.',
+    blurb: 'Limb-threat diabetic foot world. World is live. OV01 is in Task Writing. Pilots pending.',
     meta: {
       patient: 'Ondina Vasquell clinical suite',
-      chart: '34 revised world files, snapshot May 21, 2026 at 18:00',
+      chart: 'Healthcare_297_Vasquell, 34 files, snapshot May 21, 2026 at 18:00',
       writer: 'Alexander Udeogaranya, MD',
-      evidence: 'Blueprint accepted. File review active. Task packets built.',
+      evidence: 'World created. OV01 created. Pilots pending.',
       dataSyncedOn: '2026-06-14',
     },
     tasks: [
@@ -150,11 +150,11 @@ export const worlds: World[] = [
       id,
       position: index + 1,
       name,
-      plain: 'Packet built. Pilot pending.',
+      plain: 'Packet built locally. Waiting on pilot.',
       mechanism,
       family,
       workflow,
-      verdict: 'Built locally. Awaiting pilot.',
+      verdict: 'Built locally. World is live. Pilot pending.',
       packet: packets[id],
     })),
   },
@@ -166,8 +166,10 @@ export const journey = [
   { label:'Lead review', status:'complete', detail:'Submission copy audited.' },
   { label:'World blueprint', status:'complete', detail:'Case plan ready. Source plan ready.' },
   { label:'Blueprint check', status:'complete', detail:'Current schema patched.' },
-  { label:'Task build', status:'active', detail:'Korvin ready. Ondina next.' },
-  { label:'Shareable files', status:'gated', detail:'Clean files only.' },
+  { label:'Task build', status:'complete', detail:'Ondina packets built.' },
+  { label:'File review', status:'complete', detail:'Final files clear.' },
+  { label:'Tasking', status:'active', detail:'OV01 created.' },
+  { label:'Pilot', status:'gated', detail:'No runs yet.' },
 ];
 
 export const statusLabels: Record<Stage, string> = {

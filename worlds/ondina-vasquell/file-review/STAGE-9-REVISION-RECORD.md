@@ -1,4 +1,4 @@
-# OV Stage-9 revision record (Ready for Pipeline Fixes)
+# OV Stage-9 revision record (Final Files closed)
 
 Date: 2026-06-14. Pipeline run: World Gen (latest) run #1, world_gen_latest, completed 2026-06-14 04:11 PDT.
 
@@ -26,4 +26,11 @@ Final AutoQC flagged three notes signed BEFORE the same-day events they describe
 Swept every same-day cluster (05/16-05/21); no other conflicts. Also made the three 05/21 task files strictly after the 18:00 close so tasking has no date ambiguity (KM had repeated date corrections at tasking): T1 order set 1800 -> 1830, T2 coding worksheet and T10 started draft dated 05/21 1830. Rebuilt world + task files, regenerated revision/filesystem, gate green; HD2 1700 / ID 1745 / HD4 1730 confirmed in the revision.
 
 ## Next
-Final file AutoQC on the revised world; if green, finalize and create the world as Healthcare_Vasquell_### (next available number in Studio). Task files and workflow remaps are handled at Step 10 per WORKFLOW-MAP.md and STAGE-9-FILE-REVIEW-PLAN.md.
+Final Studio provenance is recorded at `worlds/ondina-vasquell/submission/STUDIO-PROVENANCE.md`: Final AutoQC cleared, the world was created as Healthcare_297_Vasquell (`world_ab51f33a691648d08f5ca681375fe2a1`) on 2026-06-14 at 10:58 PDT, with 34 world files and the expected model and judge configuration.
+
+Next eligible platform sequence, under Alexander authorization only:
+1. Use Healthcare_297_Vasquell as the Ondina tasking world.
+2. Start with OV01 per PRE-PILOT-RECOMMENDATIONS.md.
+3. Run the Section 4/5/6 self-QC before each upload.
+4. Upload only the task-level files for the specific task being built.
+5. Run Task AutoQC, trajectories, FA/GA, preference labels, and review one authorized step at a time.

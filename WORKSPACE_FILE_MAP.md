@@ -1,5 +1,5 @@
 # Workspace File Map
-**Last updated: 2026-06-13 (KM07 ready for delivery after v4 true-placeholder pilot, FA/GA, and three PLs; KM08 v7 is Ready for Delivery after AO round 2 final check, FA/GA, and three PLs; KM09 v2 wording-clean Taiga rerun 212c496b scored 95,88,88,92,88,92,92,90,55,88, with FA/GA and three post-rerun PLs complete; KM09 now shows Ready for Delivery; KM10 v3 is Ready for Delivery after AO second-review GA correction; King P legitimate-failure-over-score guidance added and numeric score gates demoted; Raising Task Difficulty worked example added to sources and doctrine; A0.4/A0.5 draft-fairness gates and Abi review protocol added; macOS tooling/render notes added; internal medicine next-world planning canvas added; new-world 30 world-level file minimum indexed; next-world diabetic foot selection packet and hour prep packet indexed; Ondina Vasquell Brainstorm submission copy and Mode A DOCX built; final local audit PASS with DOCX hash recorded; Brainstorm AutoQC per-task priority-label fix applied and passed per Alexander; 06_08 World Spec transcript rule indexed; Ondina Brainstorm Claude transcript built with share-link provenance and refined to chat-style code panels; Ondina World Spec Section 3 patched to current Source and Tool file-plan schema and rebuilt with SHA256 34632be5; Ondina Phase 3 media and lab/radiology result realism pass complete; Ondina task-build readiness audit filled the substrate arming map and reconciled stale Phase 2 open markers)**
+**Last updated: 2026-06-14 (Ondina Vasquell Brainstorm and Spec passed in Studio; World Gen run #1 completed 2026-06-14 04:11 PDT; Stage 9 restored the verified 34-file writer-produced world and removed all task files; Final AutoQC cleared; world `Healthcare_297_Vasquell` created 2026-06-14 10:58 PDT as `world_ab51f33a691648d08f5ca681375fe2a1`; OV01 created in Task Writing; Next.js and legacy dashboard data now mark Ondina as live with tasking started and pilots pending; prior KM status remains KM01-KM06 delivered and KM07-KM10 Ready for Delivery)**
 
 Single source of truth for repo structure, placement rules, and navigation.
 Read this + `AGENTS.md` at the start of any new session before touching files.
@@ -18,7 +18,7 @@ sanctum-world-workspace/
   _archive/                    ← dead root folders (gitignored); do not read for active work
   apps/
     sanctum-dashboard/         ← Next.js Sanctum cockpit for Vercel; local secrets live only in ignored .env.local.
-                                 `npm run seed:docs` uploads current Korvin task packet docs to Neon.
+                                 `npm run seed:docs` uploads current Korvin and Ondina task packet docs to Neon.
   dashboard/                   ← modular dashboard source in src/ plus generated km-world-dashboard.html
   docs/                        ← lessons, playbooks, domain knowledge, tooling and DOCX render doctrine
   reference/                   ← Sanctum source docs, templates, guidelines
@@ -86,7 +86,12 @@ sanctum-world-workspace/
                                  Phase 3 lab/radiology realism pass added EMR accession,
                                  order, specimen, source, collection, and report metadata to
                                  report-style DOCX files.
-                                 External Studio review status requires Alexander confirmation.
+                                 Studio status 2026-06-14: Brainstorm pass, Spec pass,
+                                 World Gen run #1 complete, Final AutoQC clean, world
+                                 created as Healthcare_297_Vasquell
+                                 (`world_ab51f33a691648d08f5ca681375fe2a1`), OV01
+                                 created in Task Writing. Current gate is tasking and pilot,
+                                 not Final Files.
                                  Brainstorm Claude transcript
                                  lives beside it as markdown and DOCX with Claude share
                                  provenance and chat-style code panels for later World Spec submission.

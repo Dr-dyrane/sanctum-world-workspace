@@ -2559,6 +2559,15 @@ html.dark .verdict-hero {
   line-height: 1.36;
 }
 
+.hero-verdict-copy .hero-world-blurb {
+  max-width: 42ch;
+  margin-top: 16px;
+  color: var(--fg-soft);
+  font-size: 15px;
+  font-weight: 420;
+  line-height: 1.45;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;

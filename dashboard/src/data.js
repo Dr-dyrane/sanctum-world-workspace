@@ -30,6 +30,7 @@
     /* Status categories used by filter + pills */
     cats: {
       planned:   { label:'Planned',          pill:'Planned' },
+      built:     { label:'Built locally',    pill:'Built locally' },
       delivered: { label:'Delivered',        pill:'Delivered' },
       ready:     { label:'Ready to deliver',  pill:'Ready to deliver' },
       review:    { label:'In review',        pill:'In human review' },
@@ -39,6 +40,7 @@
       approx:  { label:'Approximate',  plain:'Vector is approximate: the platform display was partly garbled. Key runs are transcript-confirmed.' },
       partial: { label:'Partial 5/10', plain:'Only five of ten runs are confirmed so far. Mean is provisional.' },
       planned: { label:'Planned',      plain:'Task is an incoming placeholder. No pilot scores exist yet.' },
+      built:   { label:'Built',        plain:'Task packet is built locally. No pilot scores exist yet.' },
     },
     reachability: {
       proven:  { label:'Proven',         plain:'At least one run scored 85+, so the ideal answer is demonstrably achievable.' },
@@ -98,13 +100,13 @@
      its own id, labels, meta, and tasks array. The header dropdown,
      hero, radial, cards, controls, and summary all render from this. */
   const plannedTaskBase = {
-    stage: 'planned',
+    stage: 'built',
     mean: null,
     spread: [],
     runsTotal: 10,
-    quality: 'planned',
+    quality: 'built',
     reach: 'notstarted',
-    reviewer: 'Not staged',
+    reviewer: 'Not piloted',
   };
 
   const WORLDS = {
@@ -252,17 +254,17 @@
     },
     'ondina-vasquell': {
       title: 'Ondina Vasquell',
-      kicker: 'Incoming World · Limb-Threat Diabetic Foot Infection',
-      blurb: 'Ten planned tasks. No pilot scores yet. Built to track the next clinical suite without pretending the runs exist.',
+      kicker: 'World Live · Limb-Threat Diabetic Foot Infection',
+      blurb: 'Ten task packets built locally. Healthcare_297_Vasquell is live. OV01 is in Task Writing. Pilots pending.',
       driveUrl: null,
       meta: {
         world: 'Project Sanctum',
-        patient: 'Ondina Vasquell incoming clinical suite',
-        chart: 'Planned diabetic foot infection world, snapshot May 21, 2026 at 18:00',
+        patient: 'Ondina Vasquell clinical suite',
+        chart: 'Healthcare_297_Vasquell, 34 files, snapshot May 21, 2026 at 18:00',
         writer: 'Alexander Udeogaranya, MD',
-        evidence: 'Brainstorm submission and local planning records',
-        dataSyncedOn: '2026-06-13',
-        provenance: 'Incoming placeholders only. No task has pilot scores, FA/GA, PL, or delivery status yet. Values shown as TBD are intentionally blank until a real platform run exists.',
+        evidence: 'Brainstorm pass, Spec pass, Final AutoQC clear, world created, OV01 created',
+        dataSyncedOn: '2026-06-14',
+        provenance: 'Task packets are built locally. OV01 is in Task Writing. No pilot scores, FA/GA, PL, or delivery status is displayed until real platform runs exist.',
       },
       tasks: [
         {
@@ -272,7 +274,7 @@
           plain:'Reconcile discharge medications without carrying admission renal-dose logic into the current discharge plan.',
           mechanism:'Renal antibiotic dosing under shifting eGFR, with ID and pharmacy notes overriding stale admission dosing.',
           family:'med',
-          verdict:'Placeholder. This will become the first forced-inventory medication task after task setup is authorized.',
+          verdict:'Built locally. World is live. Pilot pending.',
           workflow:'Discharge Medication Reconciliation',
         },
         {
@@ -282,7 +284,7 @@
           plain:'Review the HIM worksheet without ratifying unsupported osteomyelitis or pressure-injury specificity.',
           mechanism:'HIM severity pressure toward pressure-injury family and acute osteomyelitis POA without treating or pathologic support.',
           family:'coding',
-          verdict:'Placeholder. Planned as a forced coding inventory against an external HIM worksheet.',
+          verdict:'Built locally. World is live. Pilot pending.',
           workflow:'Inpatient Medical Coding and DRG Assignment',
         },
         {
@@ -292,7 +294,7 @@
           plain:'Answer a CDI query while keeping equivocal osteomyelitis genuinely unsupported or unable to determine.',
           mechanism:'CDI specificity pressure asks for acute osteomyelitis and severity language not established by the treating record.',
           family:'query',
-          verdict:'Placeholder. Planned as an external ratify-or-refute documentation-integrity task.',
+          verdict:'Built locally. World is live. Pilot pending.',
           workflow:'Clinical Documentation Improvement (CDI) Query Response Review',
         },
         {
@@ -302,7 +304,7 @@
           plain:'Appeal a payer denial by showing why clinical improvement is not the same as safe home readiness.',
           mechanism:'Payer denial omits offloading, stairs, caregiver limits, equipment gaps, and unresolved perfusion concerns.',
           family:'appeal',
-          verdict:'Placeholder. Planned as a payer-facing appeal with the operational safety axis front and center.',
+          verdict:'Built locally. World is live. Pilot pending.',
           workflow:'Claims Denial Analysis and Appeal Preparation',
         },
         {
@@ -312,7 +314,7 @@
           plain:'Respond to a formulary rejection without accepting an unsafe substitute or inventing culture finality.',
           mechanism:'PBM substitute pressure conflicts with renal function, culture provenance, and infection-site needs.',
           family:'med',
-          verdict:'Placeholder. Planned as a pharmacy-benefit ratify-or-refute task.',
+          verdict:'Built locally. World is live. Pilot pending.',
           workflow:'Pharmacy Insurance Claim Rejection Resolution',
         },
         {
@@ -322,7 +324,7 @@
           plain:'Decide whether inpatient care remains justified after debridement improvement but before safe limb-disposition barriers resolve.',
           mechanism:'Concurrent-review note treats improving markers as level-of-care readiness despite unresolved operational limb-safety barriers.',
           family:'appeal',
-          verdict:'Placeholder. Planned as a P1 determination task.',
+          verdict:'Built locally. World is live. Pilot pending.',
           workflow:'Utilization Review Concurrent Stay Documentation',
         },
         {
@@ -332,7 +334,7 @@
           plain:'Fill abstraction fields without missing a quiet lookback date or exclusion.',
           mechanism:'A buried outpatient lookback detail changes denominator or exclusion logic for naive diabetes-measure capture.',
           family:'measure',
-          verdict:'Placeholder. Planned as an extraction-to-schema task.',
+          verdict:'Built locally. World is live. Pilot pending.',
           workflow:'HEDIS Medical Record Chart Abstraction and Review',
         },
         {
@@ -342,7 +344,7 @@
           plain:'Write the vascular referral while keeping source control, perfusion, antibiotics, offloading, and follow-up statuses explicit.',
           mechanism:'Referral pressure makes the case sound settled while ABI/TBI and vascular notes keep perfusion unresolved.',
           family:'closure',
-          verdict:'Placeholder. Planned as a synthesis task with a required disposition table.',
+          verdict:'Built locally. World is live. Pilot pending.',
           workflow:'Specialist Referral Letter and Documentation Preparation',
         },
         {
@@ -352,7 +354,7 @@
           plain:'Review a missed-offloading event without blaming the patient when the record points to system-level failures.',
           mechanism:'Initial event framing blames nonadherence despite order timing, teaching, device, and home-layout failures.',
           family:'safety',
-          verdict:'Placeholder. Planned as a patient-safety investigation task.',
+          verdict:'Built locally. World is live. Pilot pending.',
           workflow:'Patient Safety Event Investigation and Root Cause Analysis',
         },
         {
@@ -362,7 +364,7 @@
           plain:'Complete the discharge instructions from a started draft while keeping offloading readiness unresolved unless the chart supports closure.',
           mechanism:'Same-author draft uses a true placeholder so the model must synthesize the offloading readiness decision rather than inherit a planted falsehood.',
           family:'closure',
-          verdict:'Placeholder. Planned as the single completion task for this world.',
+          verdict:'Built locally. World is live. Pilot pending.',
           workflow:'Medical Transcription and Clinical Documentation Completion',
         },
       ],

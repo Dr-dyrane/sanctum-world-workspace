@@ -205,6 +205,8 @@
         ? `Accepted and handed off${t.delivered ? ' on ' + t.delivered : ''}.`
         : t.stage === 'ready'
         ? 'Reviewed and cleared; queued for delivery on the platform.'
+        : t.stage === 'built'
+        ? 'Task packet built locally. Pilot pending.'
         : t.stage === 'planned'
         ? 'Incoming task placeholder. No pilot data exists yet.'
         : 'Piloted; a human expert is reviewing the task before it can be accepted.';
@@ -960,6 +962,7 @@
     const M = WorldCtl.world.meta;
     const delivered = tasks.filter(t=>t.stage==='delivered');
     const ready = tasks.filter(t=>t.stage==='ready');
+    const built = tasks.filter(t=>t.stage==='built');
     const review = tasks.filter(t=>t.stage==='review');
     const planned = tasks.filter(t=>t.stage==='planned');
     const scored = tasks.filter(U.hasMean);
@@ -973,7 +976,18 @@
     const hi = scored.length ? scored.reduce((a,b)=> a.mean>b.mean?a:b) : null;
 
     let primary;
-    if (planned.length === tasks.length) {
+    if (built.length === tasks.length) {
+      primary = {
+        label: 'Built packets',
+        metric: String(tasks.length),
+        caption: 'World is live. Local task packets are ready for authorized pilots.',
+        insight: `${tasks.length} task packets are built locally. Next move: pilot OV01 under authorization.`,
+        pill: 'Tasking',
+        pillClass: 'built',
+        action: 'View packets',
+        filter: 'built',
+      };
+    } else if (planned.length === tasks.length) {
       primary = {
         label: 'Planned tasks',
         metric: String(tasks.length),
@@ -1055,6 +1069,8 @@
       ? `${delivered.length} of ${tasks.length} tasks are delivered. ` +
         `${lo.id} is currently the hardest at ${U.fmtMean(lo)}%; ${hi.id} is the gentlest at ${U.fmtMean(hi)}%. ` +
         `Low scores matter only when the failure is fair and reachable.`
+      : tasks.every(t=>t.stage === 'built')
+      ? `${tasks.length} task packets are built locally. The world is live; pilot data appears only after real task runs.`
       : `${planned.length} planned tasks are staged for this incoming world. No pilot scores, FA/GA, preference labels, or delivery states are displayed yet.`;
 
     document.getElementById('provenance').textContent =

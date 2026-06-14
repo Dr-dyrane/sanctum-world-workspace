@@ -8,9 +8,11 @@ This repository organizes Project Sanctum World Building work: source-of-truth m
 
 Project Sanctum Worlds are realistic clinical environments that test frontier AI models on physician-level judgment: synthesis across messy documents, prioritization, uncertainty handling, medication reasoning, specialist conflict resolution, and safe decision-making.
 
-## Current Status (13 June 2026)
+## Current Status (14 June 2026)
 
 Korvin Merrow World is live as `Healthcare_247_Merrow` (26 files; World Spec approved by Stacey S; Final Files AutoQC 78/78 after three revisions). The world carries ten tasks. KM01 through KM06 are delivered. KM07 through KM10 are Ready for Delivery. KM09 moved to Ready for Delivery on the 2026-06-13 board after wording-clean job `212c496b`, FA/GA, and three post-rerun preference labels. The authoritative status is the platform board and the live records (`dashboard/km-world-dashboard.html`, `worlds/korvin-merrow/task-setup/KM-WORLD-PERFORMANCE-REPORT.md`, root `WORKSPACE_FILE_MAP.md`, and each active `TASKN-STATE.md`). This README is only the front door.
+
+Ondina Vasquell is live as `Healthcare_297_Vasquell` (`world_ab51f33a691648d08f5ca681375fe2a1`). Brainstorm and Spec passed in Studio, World Gen run #1 completed on 2026-06-14 at 04:11 PDT, Stage 9 restored the writer-produced 34-file world, Final AutoQC cleared, and the world was created on 2026-06-14 at 10:58 PDT. OV01 has been created in Task Writing. Task packets remain local build inputs until each task is explicitly uploaded, piloted, labeled, and reviewed under Alexander authorization.
 
 ## Current Boundary
 
@@ -28,7 +30,7 @@ Read this repo progressively. Do not try to absorb every locked package on the f
 4. Read [worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md](</C:/Users/Dyrane/Documents/sanctum-world-workspace/worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md>) before touching any task-stage work.
 5. Read the active `TASKN-STATE.md` before proposing, drafting, building, or uploading anything for that task.
 
-Current gate: no Korvin task is showing active human review on the board. Delivery actions for KM07 through KM10 and all RL Studio actions still require exact Alexander authorization.
+Current gate: no Korvin task is showing active human review on the board. Ondina is in tasking, with OV01 created and pilots still pending. Delivery actions for KM07 through KM10, Ondina task uploads, pilots, labels, reviews, and all RL Studio actions still require exact Alexander authorization.
 
 ## Source-Of-Truth Ladders
 
