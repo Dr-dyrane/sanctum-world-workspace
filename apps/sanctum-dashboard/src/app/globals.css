@@ -140,8 +140,8 @@ summary:focus-visible {
   align-items: center;
   gap: 7px;
   max-width: min(100%, 760px);
-  min-height: 44px;
-  padding: 7px 9px;
+  min-height: 52px;
+  padding: 4px 7px;
   border-radius: var(--r-pill);
   background: var(--liquid);
   box-shadow: var(--shadow-lift);
@@ -200,8 +200,8 @@ summary:focus-visible {
   align-items: center;
   gap: 8px;
   max-width: min(42vw, 310px);
-  height: 34px;
-  padding: 0 12px;
+  height: 44px;
+  padding: 0 14px;
 }
 
 .world-menu-button > span:first-child {
@@ -224,9 +224,9 @@ summary:focus-visible {
 .theme-toggle {
   position: relative;
   display: inline-grid;
-  width: 34px;
-  height: 34px;
-  flex: 0 0 34px;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
   place-items: center;
 }
 
@@ -2458,7 +2458,9 @@ html.dark .score-squircle {
   height: 10px;
   margin-bottom: auto;
   border-radius: var(--r-pill);
-  background: rgba(120, 120, 128, 0.16);
+  background:
+    linear-gradient(90deg, rgba(190, 18, 60, 0.11) 0 70%, rgba(16, 185, 129, 0.12) 70% 100%),
+    rgba(120, 120, 128, 0.12);
 }
 
 .score-meter::before {
@@ -2483,6 +2485,50 @@ html.dark .score-squircle {
   background: var(--fg);
   transform: translate(-50%, -50%);
   box-shadow: 0 0 0 5px rgba(124, 58, 237, 0.16);
+}
+
+.score-squircle.watch .score-meter span,
+.score-squircle.review .score-meter span {
+  background: var(--bad);
+  box-shadow: 0 0 0 5px var(--bad-fill);
+}
+
+.score-squircle.ready .score-meter span {
+  background: var(--ready);
+  box-shadow: 0 0 0 5px var(--ready-fill);
+}
+
+.score-squircle.delivered .score-meter span {
+  background: var(--ok);
+  box-shadow: 0 0 0 5px var(--ok-fill);
+}
+
+.score-scale {
+  position: relative;
+  height: 18px;
+  margin-top: 10px;
+  color: var(--fg-faint);
+  font-family: "SF Mono", ui-monospace, monospace;
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.score-scale span {
+  position: absolute;
+  top: 0;
+}
+
+.score-scale span:nth-child(1) {
+  left: 0;
+}
+
+.score-scale span:nth-child(2) {
+  left: 70%;
+  transform: translateX(-50%);
+}
+
+.score-scale span:nth-child(3) {
+  right: 0;
 }
 
 .score-squircle > span,

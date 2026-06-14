@@ -38,9 +38,14 @@ export function VerdictHero({ world, selected, onOpenProof }: Props) {
           </div>
         </div>
 
-        <aside className="score-squircle" aria-label={`${task.id} mean score`}>
+        <aside className={`score-squircle ${selected.readiness.tone}`} aria-label={`${task.id} mean score`}>
           <div className="score-meter" style={{ '--score': scorePosition } as CSSProperties} aria-hidden="true">
             <span />
+          </div>
+          <div className="score-scale" aria-hidden="true">
+            <span>0</span>
+            <span>70</span>
+            <span>100</span>
           </div>
           <span>Mean</span>
           <strong>{scoreText(task)}</strong>
