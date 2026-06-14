@@ -23,5 +23,6 @@ Source of truth: the 06/13/2026 PDF Task Selection Tracker (Abi, #channel 3:37 P
 
 No OV workflow was retired. The 6/13 remap (OV01/03/08/09) still holds; all targets are on the approved list.
 
-## Item-3 knowledge-cutoff check for OV (do before each pilot)
-The DFI world rests on long-established clinical knowledge (enoxaparin/metformin/empagliflozin/lisinopril/pip-tazo/cefepime/vancomycin; debridement; CKD/AKI; ICD-10-CM/MS-DRG principles) - low risk. Spot-check two: OV07 (HEDIS) and OV03 (coding) prompts/goldens must NOT require a specific post-July-2025 measure-year spec or guideline update. General abstraction/coding logic is fine; "per the 2026 HEDIS spec / 2026 guideline" is not. OV02 v3 procedure-depth (PCS depth) and OV01 (med rec) are pre-2025 knowledge - fine.
+## Item-3 knowledge-cutoff check for OV - DONE 2026-06-14: ALL TEN CLEAN
+Scanned all 10 prompts + goldens + graders for post-July-2025 knowledge dependencies (FDA/approval, named guideline/spec, HEDIS MY20xx, IDSA/KDIGO/ADA/AHA, ICD-10 2026, "latest/per the 2026..."). No violations. Two benign hits: OV02 defers exact codes "per official coding guidelines and the coder's review" (defers specificity, does not require a 2026 guideline); OV07 references the generic "measure-year lookback / measurement period" (a long-standing pre-2025 HEDIS concept, no named MY20xx spec). The DFI substrate is all long-established clinical knowledge. CLOSED.
+Build-note for the OV07 rework (half-placeholder golden): keep the measure logic generic; do NOT pin it to a named 2026 HEDIS spec, so it stays item-3-clean.
