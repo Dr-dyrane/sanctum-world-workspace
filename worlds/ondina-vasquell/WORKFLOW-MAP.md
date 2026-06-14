@@ -5,7 +5,6 @@ Single source: build/build_task_packages.py WORKFLOW. This is the canonical Step
 | Task | ID | Workflow to select | Priority | Status |
 |---|---|---|---|---|
 | task1 | OV01 | Medication Reconciliation at Care Transitions | P0 | REMAPPED (was Discharge Medication Reconciliation (hca-discharge-med-recon)) |
-| task2 | OV02 | Inpatient Medical Coding and DRG Assignment | P0 | unchanged (open) |
 | task3 | OV03 | CDI-Coding DRG Reconciliation Review | P1 | REMAPPED (was CDI Query Response Review (hca-clinical-doc-improvement-query)) |
 | task4 | OV04 | Claims Denial Analysis and Appeal Preparation | P0 | unchanged (open) |
 | task5 | OV05 | Pharmacy Insurance Claim Rejection Resolution | P0 | unchanged (open) |
@@ -15,7 +14,6 @@ Single source: build/build_task_packages.py WORKFLOW. This is the canonical Step
 | task9 | OV09 | Patient Safety Indicator (PSI) Analysis and Reporting | P2 | REMAPPED (was Patient Safety Event Investigation and Root Cause Analysis (hca-patient-safety-event)) |
 | task10 | OV10 | Medical Transcription and Clinical Documentation Completion | P0 | unchanged (open) |
 
-Remapped: task1, task3, task8, task9. task8 and task9 swaps shift framing slightly; task1 and task3 are near-equivalent. The other six are unchanged and were not on the retired list.
+Remapped: task1, task3, task8, task9. task8 and task9 swaps shift framing slightly; task1 and task3 are near-equivalent.
 
-## Verified against the 06/13/2026 PDF tracker (Abi)
-All ten OV workflows are on the new approved list; none retired. Use EXACT tracker names at Step 10. Corrections: OV08 full name is "Referral Intake, Triage, and Scheduling Coordination" (not the abbreviated "Referral Intake/Triage"). OV03: several CDI workflows are now listed (incl. "Clinical Documentation Improvement (CDI) Query Response Review" P0); pick the best-fit live one when building OV03 - current "CDI-Coding DRG Reconciliation Review" (P1) is valid. Tiers confirmed: P0 = OV01/02/04/05/07/10; P1 = OV03/06/08; P2 = OV09. Full guidance: reference/approved-workflows-and-guidance-2026-06-13.md.
+ACTIVE SUITE = 9 tasks. OV02 (Inpatient Medical Coding and DRG Assignment) RETIRED 2026-06-14 (model-strong genre, ceilinged x3); archived at platform/_retired/. Suite ORDER (positions) promotes OV07 to #2: OV01, OV07, OV03, OV04, OV05, OV06, OV08, OV09, OV10. Internal IDs/folders kept stable. Verified vs the 06/13 PDF Task Selection Tracker - all present, none retired; use EXACT names (OV08 = 'Referral Intake, Triage, and Scheduling Coordination'). Full guidance + suite order: reference/approved-workflows-and-guidance-2026-06-13.md and OV-WORLD-STATUS.md.

@@ -93,7 +93,9 @@ def write_workflow_record():
         lines.append(f"| {task} | {m['id']} | {m['wf']} | {m['prio']} | {status} |")
     lines += [
         "",
-        "Remapped: task1, task3, task8, task9. task8 and task9 swaps shift framing slightly; task1 and task3 are near-equivalent. The other six are unchanged and were not on the retired list.",
+        "Remapped: task1, task3, task8, task9. task8 and task9 swaps shift framing slightly; task1 and task3 are near-equivalent.",
+        "",
+        "ACTIVE SUITE = 9 tasks. OV02 (Inpatient Medical Coding and DRG Assignment) RETIRED 2026-06-14 (model-strong genre, ceilinged x3); archived at platform/_retired/. Suite ORDER (positions) promotes OV07 to #2: OV01, OV07, OV03, OV04, OV05, OV06, OV08, OV09, OV10. Internal IDs/folders kept stable. Verified vs the 06/13 PDF Task Selection Tracker - all present, none retired; use EXACT names (OV08 = 'Referral Intake, Triage, and Scheduling Coordination'). Full guidance + suite order: reference/approved-workflows-and-guidance-2026-06-13.md and OV-WORLD-STATUS.md.",
         "",
     ]
     (ROOT.parent / "WORKFLOW-MAP.md").write_text("\n".join(lines), encoding="utf-8")
@@ -276,6 +278,12 @@ def emit():
     write_workflow_record()
     print("done; OV02-OV10 text artifacts emitted + task files placed in each task folder")
 
+
+# OV02 (coding attestation) RETIRED 2026-06-14 - model-strong genre, ceilinged x3 (v1/v2/v3).
+# Source entries kept above for possible commitment-trap revival; popped here so the active
+# suite is 9 tasks and rebuilds do not resurrect platform/task2.
+for _ret in ("task2",):
+    T.pop(_ret, None); WORKFLOW.pop(_ret, None); TASK_FILE_MAP.pop(_ret, None)
 
 if __name__ == "__main__":
     emit()

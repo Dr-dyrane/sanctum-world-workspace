@@ -187,4 +187,5 @@ def T10():
     ])
 
 
-TASK_FILES = [T1, T2, T3, T4, T5, T6, T7, T9, T10]
+# OV02 (T2, coding attestation) RETIRED 2026-06-14 - model-strong genre, ceilinged x3. def T2 kept above for possible commitment-trap revival; excluded from the active 9-task suite.
+TASK_FILES = [T1, T3, T4, T5, T6, T7, T9, T10]
