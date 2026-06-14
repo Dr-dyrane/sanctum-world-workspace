@@ -100,3 +100,10 @@ A bankable deep task is BIMODAL: a clear floor (the propagators) AND clear catch
 ## 8. One-line summary
 
 Difficulty is a property of the idea: a cold, chart-contradicted, forced move that inverts what the model polices. Fairness is independent: the failure must be the model's own fault, not a planted lie it was never told to correct, and the correct answer must be reachable. A task ships when the trajectory content shows a legitimate clinical or material deliverable failure and the construction is fair. Everything else (voice, structure, length) is for passing review.
+
+## Floor depth: target <0.60, not <0.70 (writer insight, 2026-06-14)
+A trap is only "biting" when triggering it lands a strong answer CLEARLY below 0.60. Empirical: OV01 banked on its 0.40/0.50 runs (material enoxaparin safety failure), not its 0.65/0.68; OV02's only sub-70 was a 0.62 that was file-output NOISE, not a clinical miss; KM's bankable tasks floored 0.15-0.40, and the one coding task that limped to 0.55 (KM09) was the weakest in the world. Why: a deep floor requires the missed item to be CENTRAL and material AND the grader to floor it hard in Section A; a miss that only costs ~30 points (lands 0.62-0.68) is partial-credit, lenient grading, or noise. The 0.60-0.74 band is mush (borderline answers + artifacts like the missing-/tmp/outputs file).
+RULES going forward:
+- Prereg forecast: set the floor band ~0.25-0.55 and the TARGET <0.60. "At least one sub-70" is too loose; aim for at least one sub-60.
+- Read rule: a 0.60-0.74 run is BORDERLINE - verify it is a real material clinical miss before treating it as the banked floor; never bank noise in that band.
+- Design rule: the cold/central trap's missed item must be material enough that omitting it alone tanks the score, and Section A must name it a hard error. If the best you can force is a graze (0.62-0.68), the mechanism is too soft - re-center or retire (do not tune the grader to manufacture depth).
