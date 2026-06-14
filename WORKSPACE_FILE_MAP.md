@@ -17,7 +17,8 @@ sanctum-world-workspace/
   .gitignore                   ← updated 6/9
   _archive/                    ← dead root folders (gitignored); do not read for active work
   apps/
-    sanctum-dashboard/         ← Next.js Sanctum cockpit for Vercel; local secrets live only in ignored .env.local
+    sanctum-dashboard/         ← Next.js Sanctum cockpit for Vercel; local secrets live only in ignored .env.local.
+                                 `npm run seed:docs` uploads current Korvin task packet docs to Neon.
   dashboard/                   ← modular dashboard source in src/ plus generated km-world-dashboard.html
   docs/                        ← lessons, playbooks, domain knowledge, tooling and DOCX render doctrine
   reference/                   ← Sanctum source docs, templates, guidelines

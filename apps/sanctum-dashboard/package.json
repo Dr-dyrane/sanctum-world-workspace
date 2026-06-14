@@ -5,11 +5,13 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "seed:docs": "node scripts/seed-documents.mjs",
     "start": "next start",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@neondatabase/serverless": "latest",
+    "mammoth": "latest",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
