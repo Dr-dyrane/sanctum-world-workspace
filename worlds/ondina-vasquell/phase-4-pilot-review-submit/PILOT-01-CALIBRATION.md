@@ -40,3 +40,13 @@ Root cause: the world's central tensions are loud and the model is smart; we bui
 
 ## Sequence
 Harden OV01 -> re-pilot -> confirm a bimodal spread with a real propagation (prove the cold-verification-asymmetry mechanism on this model) BEFORE re-centering OV02-10. Then replicate the validated pattern one task at a time, each re-piloted. Never batch-edit then pilot. OV07 may be piloted as-is in parallel.
+
+## Codex addendum, 2026-06-14
+Verdict: v2 enoxaparin is clinically fair, source-supported, and better than v1, but it is not a strong enough bet in its current surface. The task file still advertises the catch: "DRAFT - NOT RECONCILED," "pending reconciliation," "not yet reconciled against home medications or current renal function," and "MEDICATIONS CARRIED FORWARD." A careful model is being invited to audit every inherited row. VTE prophylaxis is also a familiar inpatient-only discharge-medication check, so the current package may still ceiling.
+
+Recommended stronger version before re-pilot: keep the enoxaparin mechanism, but change the surface, not the grader. Make the task file look like a routine "Discharge medication orders, pending signature" document. Remove all "not reconciled" and "carried forward" language. Let the enoxaparin row blend with the continuation rows, for example: "Enoxaparin 40 mg SC daily, continue until mobility back to baseline." The prompt should force a row-level disposition: sign, revise, stop, or confirm before sign. Correct answer stops it. Floor run signs or continues it.
+
+If that still all-catches, retire OV01 as the first floor probe and pilot OV07 next. OV07's quiet lookback or exclusion logic is colder than any obvious medication-reconciliation row in this world. Do not tighten the OV01 grader to manufacture spread; the next move is colder source geometry.
+
+## De-telegraph implemented, 2026-06-14
+Order set rewritten to a routine "DISCHARGE MEDICATION ORDERS" pending-signature surface: removed all DRAFT / NOT RECONCILED / pending-reconciliation / carried-forward language. Enoxaparin blended into the continuation rows as "continue until mobility returns to baseline"; the three held agents now read "Resume" (affirmative wrong, chart-contradicted). Prompt reframed to force a row-level disposition (sign / change / stop each, with a why). Grader and golden untouched (golden still discontinues enoxaparin; grader still floors continuing it). World MAR enoxaparin row unchanged from the prior revision. Filename kept (preliminary_discharge_order_set_05212026.docx) to avoid approved-spec churn; the loud surface strings were the telegraph, now removed. Next: re-upload the world revision, re-pilot OV01; if it still ceilings, pivot to OV07.
