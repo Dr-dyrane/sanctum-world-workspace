@@ -1,4 +1,6 @@
-import type { ReactNode } from 'react';
+'use client';
+
+import { useEffect, useMemo, useState } from 'react';
 import type { Task } from '@/lib/sanctum-data';
 import { statusLabels } from '@/lib/sanctum-data';
 import type { DisplayDocument } from './types';
@@ -14,93 +16,132 @@ type Props = {
   onClose: () => void;
 };
 
-function previewText(doc: DisplayDocument) {
-  if (doc.contentText) return doc.contentText;
-  if (doc.contentBase64) return 'Image ready.';
-  if (doc.uploaded) return 'No preview for this file type.';
-  return 'Preview pending.';
+function extensionFor(filename: string) {
+  const index = filename.lastIndexOf('.');
+  return index === -1 ? '' : filename.slice(index + 1).toLowerCase();
 }
 
-function isMarkdown(doc: DisplayDocument) {
-  return doc.mimeType === 'text/markdown' || doc.filename.toLowerCase().endsWith('.md');
+function isImage(doc: DisplayDocument) {
+  return doc.mimeType.startsWith('image/');
 }
 
-function cleanInlineMarkdown(value: string) {
-  return value
-    .replace(/!\[([^\]]*)\]\([^)]+\)/g, '$1')
-    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
-    .replace(/`([^`]+)`/g, '$1')
-    .replace(/\*\*([^*]+)\*\*/g, '$1')
-    .replace(/__([^_]+)__/g, '$1')
-    .replace(/\*([^*]+)\*/g, '$1')
-    .replace(/_([^_]+)_/g, '$1')
-    .trim();
+function isDocx(doc: DisplayDocument) {
+  return doc.mimeType === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+    || extensionFor(doc.filename) === 'docx';
 }
 
-function renderTextPreview(text: string, markdown: boolean) {
-  const lines = text.split('\n');
-  const nodes: ReactNode[] = [];
-  let codeLines: string[] = [];
-  let inCode = false;
+function isTextLike(doc: DisplayDocument) {
+  const extension = extensionFor(doc.filename);
+  return doc.mimeType.startsWith('text/') || extension === 'md' || extension === 'txt';
+}
 
-  function flushCode(key: string) {
-    if (!codeLines.length) return;
-    nodes.push(<pre className="md-code" key={key}>{codeLines.join('\n')}</pre>);
-    codeLines = [];
+function decodeBase64ToText(value: string) {
+  const binary = window.atob(value);
+  const bytes = Uint8Array.from(binary, character => character.charCodeAt(0));
+  return new TextDecoder('utf-8').decode(bytes);
+}
+
+function decodeBase64ToArrayBuffer(value: string) {
+  const binary = window.atob(value);
+  const bytes = new Uint8Array(binary.length);
+  for (let index = 0; index < binary.length; index += 1) {
+    bytes[index] = binary.charCodeAt(index);
+  }
+  return bytes.buffer;
+}
+
+function TextSourceView({ doc }: { doc: DisplayDocument }) {
+  const text = useMemo(() => {
+    if (doc.contentBase64) return decodeBase64ToText(doc.contentBase64);
+    return doc.contentText ?? 'No preview available.';
+  }, [doc.contentBase64, doc.contentText]);
+
+  return (
+    <pre className="source-text" aria-label={`${sourceName(doc)} source text`}>
+      {text}
+    </pre>
+  );
+}
+
+function DocxSourceView({ doc }: { doc: DisplayDocument }) {
+  const [html, setHtml] = useState('');
+  const [state, setState] = useState<'loading' | 'ready' | 'fallback'>('loading');
+
+  useEffect(() => {
+    let active = true;
+    setHtml('');
+    setState(doc.contentBase64 ? 'loading' : 'fallback');
+
+    if (!doc.contentBase64) return () => {
+      active = false;
+    };
+
+    async function convert() {
+      try {
+        const mammoth = await import('mammoth');
+        const result = await mammoth.convertToHtml(
+          { arrayBuffer: decodeBase64ToArrayBuffer(doc.contentBase64 ?? '') },
+          {
+            styleMap: [
+              "p[style-name='Title'] => h1:fresh",
+              "p[style-name='Subtitle'] => h2:fresh",
+              "p[style-name='Heading 1'] => h2:fresh",
+              "p[style-name='Heading 2'] => h3:fresh",
+              "p[style-name='Heading 3'] => h4:fresh",
+            ],
+          },
+        );
+        if (!active) return;
+        setHtml(result.value);
+        setState('ready');
+      } catch {
+        if (!active) return;
+        setState('fallback');
+      }
+    }
+
+    void convert();
+
+    return () => {
+      active = false;
+    };
+  }, [doc.contentBase64]);
+
+  if (state === 'loading') {
+    return <div className="render-state">Opening document.</div>;
   }
 
-  lines.forEach((line, index) => {
-    const trimmed = line.trim();
+  if (state === 'fallback') {
+    return <TextSourceView doc={doc} />;
+  }
 
-    if (markdown && trimmed.startsWith('```')) {
-      if (inCode) flushCode(`code-${index}`);
-      inCode = !inCode;
-      return;
-    }
-
-    if (inCode) {
-      codeLines.push(line);
-      return;
-    }
-
-    if (!trimmed) return;
-
-    if (markdown) {
-      const heading = trimmed.match(/^(#{1,6})\s+(.+)$/);
-      if (heading) {
-        nodes.push(<h4 key={index}>{cleanInlineMarkdown(heading[2])}</h4>);
-        return;
-      }
-
-      const bullet = trimmed.match(/^[-*+]\s+(.+)$/);
-      if (bullet) {
-        nodes.push(<p className="md-list" key={index}>{cleanInlineMarkdown(bullet[1])}</p>);
-        return;
-      }
-
-      const numbered = trimmed.match(/^\d+[.)]\s+(.+)$/);
-      if (numbered) {
-        nodes.push(<p className="md-number" key={index}>{cleanInlineMarkdown(numbered[1])}</p>);
-        return;
-      }
-
-      const quote = trimmed.match(/^>\s+(.+)$/);
-      if (quote) {
-        nodes.push(<blockquote key={index}>{cleanInlineMarkdown(quote[1])}</blockquote>);
-        return;
-      }
-    }
-
-    nodes.push(<p key={index}>{markdown ? cleanInlineMarkdown(trimmed) : trimmed}</p>);
-  });
-
-  flushCode('code-final');
-
-  return <div className={markdown ? 'markdown-preview document-copy' : 'document-copy'}>{nodes}</div>;
+  return (
+    <div
+      className="word-preview"
+      aria-label={`${sourceName(doc)} Word preview`}
+      dangerouslySetInnerHTML={{ __html: html }}
+    />
+  );
 }
 
-function renderDocumentPreview(doc: DisplayDocument) {
-  return renderTextPreview(previewText(doc), isMarkdown(doc));
+function BinaryFileView({ doc }: { doc: DisplayDocument }) {
+  return (
+    <div className="render-state">
+      <strong>{extensionFor(doc.filename).toUpperCase() || 'File'}</strong>
+      <span>Preview unavailable.</span>
+    </div>
+  );
+}
+
+function SourceRenderer({ doc }: { doc: DisplayDocument }) {
+  if (isImage(doc) && doc.contentBase64) {
+    return <img src={`data:${doc.mimeType};base64,${doc.contentBase64}`} alt={`${sourceName(doc)} preview`} />;
+  }
+
+  if (isDocx(doc)) return <DocxSourceView doc={doc} />;
+  if (isTextLike(doc)) return <TextSourceView doc={doc} />;
+
+  return <BinaryFileView doc={doc} />;
 }
 
 export function ProofSheet({ open, task, documents, activeDocId, onSelectDoc, onClose }: Props) {
@@ -152,14 +193,12 @@ export function ProofSheet({ open, task, documents, activeDocId, onSelectDoc, on
                 <span>{formatBytes(activeDoc.byteSize)}</span>
               </header>
 
-              {activeDoc.contentBase64 ? (
-                <img src={`data:${activeDoc.mimeType};base64,${activeDoc.contentBase64}`} alt={`${sourceName(activeDoc)} preview`} />
-              ) : (
-                renderDocumentPreview(activeDoc)
-              )}
+              <div className="doc-preview-frame">
+                <SourceRenderer doc={activeDoc} />
+              </div>
 
               <footer>
-                <span>{activeDoc.uploaded ? 'Ready' : 'Pending'}</span>
+                <span>{activeDoc.contentBase64 ? 'Original file' : activeDoc.uploaded ? 'Text only' : 'Pending'}</span>
                 <span>{activeDoc.sha256 ? 'Checked' : 'Unchecked'}</span>
               </footer>
             </article>

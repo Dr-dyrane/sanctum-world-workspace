@@ -42,10 +42,7 @@ export async function getTaskDocuments(): Promise<TaskDocumentRow[]> {
         mime_type,
         sha256,
         byte_size,
-        case
-          when content_text is null then null
-          else left(content_text, 2800)
-        end as content_text,
+        content_text,
         content_base64,
         updated_at
       from sanctum_documents

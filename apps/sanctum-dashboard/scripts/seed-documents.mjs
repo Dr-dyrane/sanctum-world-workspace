@@ -54,9 +54,7 @@ async function textFor(filename, buffer) {
 }
 
 function base64For(filename, buffer) {
-  const lower = filename.toLowerCase();
-  if (!lower.endsWith('.png') && !lower.endsWith('.jpg') && !lower.endsWith('.jpeg')) return null;
-  if (buffer.length > 3_000_000) return null;
+  if (buffer.length > 8_000_000) return null;
   return buffer.toString('base64');
 }
 
