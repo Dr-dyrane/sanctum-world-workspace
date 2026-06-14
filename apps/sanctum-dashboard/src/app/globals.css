@@ -3143,9 +3143,15 @@ html.dark .score-squircle {
 }
 
 .simple-task-card {
+  --task-state: var(--fg-soft);
+  --task-state-soft: var(--fg-faint);
+  --task-state-fill: rgba(120, 120, 128, 0.1);
   position: relative;
   border-radius: 30px;
-  background: rgba(120, 120, 128, 0.065);
+  background:
+    radial-gradient(circle at 94% 18%, var(--task-state-fill), transparent 36%),
+    linear-gradient(135deg, var(--task-state-fill), transparent 42%),
+    rgba(120, 120, 128, 0.065);
   overflow: hidden;
   transition:
     background-color 180ms ease,
@@ -3153,14 +3159,44 @@ html.dark .score-squircle {
     transform 260ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.simple-task-card.delivered {
+  --task-state: var(--ok);
+  --task-state-soft: var(--ok-soft);
+  --task-state-fill: var(--ok-fill);
+}
+
+.simple-task-card.ready {
+  --task-state: var(--ready);
+  --task-state-soft: var(--ready-soft);
+  --task-state-fill: var(--ready-fill);
+}
+
+.simple-task-card.review {
+  --task-state: var(--bad);
+  --task-state-soft: var(--bad);
+  --task-state-fill: var(--bad-fill);
+}
+
+.simple-task-card.planned {
+  --task-state: var(--fg-soft);
+  --task-state-soft: var(--fg-faint);
+  --task-state-fill: rgba(120, 120, 128, 0.08);
+}
+
 .simple-task-card.selected {
-  background: var(--bg-2);
+  background:
+    radial-gradient(circle at 94% 18%, var(--task-state-fill), transparent 38%),
+    linear-gradient(135deg, var(--task-state-fill), transparent 46%),
+    var(--bg-2);
   box-shadow: var(--shadow-card);
 }
 
 .simple-task-card:hover,
 .simple-task-card:has(.simple-task-button:focus-visible) {
-  background: var(--bg-2);
+  background:
+    radial-gradient(circle at 94% 18%, var(--task-state-fill), transparent 38%),
+    linear-gradient(135deg, var(--task-state-fill), transparent 46%),
+    var(--bg-2);
   box-shadow: var(--shadow-card);
   transform: translateY(-2px);
 }
@@ -3194,7 +3230,29 @@ html.dark .score-squircle {
   min-height: 32px;
   margin: 0;
   padding: 0 10px;
+  color: var(--task-state);
   font-size: 12px;
+}
+
+.state-badge {
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 11px;
+  border-radius: var(--r-pill);
+  background: var(--task-state-fill);
+  color: var(--task-state);
+  font-family: "SF Mono", ui-monospace, monospace;
+  font-size: 11px;
+  font-weight: 560;
+  white-space: nowrap;
+}
+
+.state-badge svg {
+  width: 14px;
+  height: 14px;
+  stroke-width: 2.2;
 }
 
 .simple-task-button h3 {
@@ -3249,8 +3307,8 @@ html.dark .score-squircle {
   justify-content: center;
   gap: 8px;
   border-radius: var(--r-pill);
-  background: rgba(120, 120, 128, 0.1);
-  color: var(--fg-soft);
+  background: var(--task-state-fill);
+  color: var(--task-state);
   font-size: 12px;
   font-weight: 560;
   transition:
@@ -3282,22 +3340,45 @@ html.dark .score-squircle {
 
 .simple-task-detail {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr)) auto;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
   gap: 10px;
   padding: 0 20px 20px;
   animation: body-reveal 220ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.simple-task-detail span {
+.simple-task-detail .detail-metric {
   min-height: 54px;
-  display: grid;
-  align-content: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   padding: 10px 12px;
   border-radius: 18px;
   background: rgba(120, 120, 128, 0.085);
   color: var(--fg-soft);
-  font-size: 12px;
-  font-weight: 540;
+}
+
+.detail-metric > svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+}
+
+.detail-metric.critical > svg {
+  color: var(--bad);
+}
+
+.detail-metric.weak > svg {
+  color: var(--ready);
+}
+
+.detail-metric.safe > svg {
+  color: var(--ok);
+}
+
+.detail-metric > span {
+  min-width: 0;
+  display: grid;
+  gap: 2px;
 }
 
 .simple-task-detail strong {
@@ -3305,6 +3386,12 @@ html.dark .score-squircle {
   font-family: "SF Mono", ui-monospace, monospace;
   font-size: 20px;
   font-weight: 660;
+}
+
+.simple-task-detail small {
+  color: var(--fg-soft);
+  font-size: 11px;
+  font-weight: 540;
 }
 
 .simple-task-detail .primary-cta {
