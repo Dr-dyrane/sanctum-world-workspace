@@ -2426,6 +2426,12 @@ html.dark .verdict-hero {
   margin-top: 34px;
 }
 
+.hero-actions .primary-cta,
+.hero-actions .quiet-link {
+  min-height: 44px;
+  margin-top: 0;
+}
+
 .score-squircle {
   min-height: 348px;
   display: flex;
