@@ -2777,7 +2777,7 @@ html.dark .score-squircle {
   margin: 0;
   color: var(--fg-faint);
   font-size: 13px;
-  font-weight: 560;
+  font-weight: 400;
 }
 
 .story-header {
@@ -2799,13 +2799,13 @@ html.dark .score-squircle {
   margin-top: 4px;
   color: var(--fg);
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 560;
   line-height: 1.08;
 }
 
 .story-header.compact strong {
   font-size: 14px;
-  font-weight: 560;
+  font-weight: 500;
 }
 
 .story-number {
@@ -2819,7 +2819,7 @@ html.dark .score-squircle {
   color: var(--fg-soft);
   font-family: "SF Mono", ui-monospace, monospace;
   font-size: 11px;
-  font-weight: 560;
+  font-weight: 400;
 }
 
 .story-header.compact .story-number {
@@ -3388,7 +3388,7 @@ html.dark .score-squircle {
   color: var(--task-state);
   font-family: "SF Mono", ui-monospace, monospace;
   font-size: 11px;
-  font-weight: 560;
+  font-weight: 500;
   white-space: nowrap;
 }
 
@@ -3401,17 +3401,30 @@ html.dark .score-squircle {
 .simple-task-button h3 {
   grid-column: 1 / -1;
   margin: 0;
-  color: var(--fg);
-  font-size: 22px;
-  font-weight: 600;
-  line-height: 1.12;
+  color: color-mix(in srgb, var(--fg) 82%, transparent);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.16;
+  letter-spacing: 0;
+  transition: color 180ms ease, font-size 220ms cubic-bezier(0.16, 1, 0.3, 1), font-weight 180ms ease;
 }
 
 .simple-task-button small {
   grid-column: 1 / -1;
-  color: var(--fg-soft);
+  color: var(--fg-faint);
   font-size: 13px;
-  font-weight: 520;
+  font-weight: 400;
+}
+
+.simple-task-card.selected .simple-task-button h3,
+.simple-task-card:has(.simple-task-button:focus-visible) .simple-task-button h3 {
+  color: var(--fg);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.simple-task-card.selected .simple-task-button small {
+  color: var(--fg-soft);
 }
 
 .task-score {
@@ -3439,7 +3452,7 @@ html.dark .score-squircle {
 .task-score span {
   color: var(--fg-soft);
   font-size: 12px;
-  font-weight: 540;
+  font-weight: 400;
 }
 
 .task-open-cue {
@@ -3453,7 +3466,7 @@ html.dark .score-squircle {
   background: var(--task-state-fill);
   color: var(--task-state);
   font-size: 12px;
-  font-weight: 560;
+  font-weight: 500;
   transition:
     background-color 180ms ease,
     color 180ms ease,
@@ -3534,7 +3547,7 @@ html.dark .score-squircle {
 .simple-task-detail small {
   color: var(--fg-soft);
   font-size: 11px;
-  font-weight: 540;
+  font-weight: 400;
 }
 
 .simple-task-detail .primary-cta {
