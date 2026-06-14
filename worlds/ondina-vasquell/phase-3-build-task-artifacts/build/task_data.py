@@ -40,6 +40,7 @@ def T1():
             ["Gabapentin", "300 mg Oral three times daily", "Continue; renal check"],
             ["Pantoprazole", "40 mg Oral daily", "Continue"],
             ["Acetaminophen", "650 mg Oral three times daily as needed", "Continue"],
+            ["Enoxaparin", "40 mg Subcutaneous daily", "Carried forward from active inpatient orders"],
             ["Metformin", "500 mg Oral twice daily", "Status ambiguous: held inpatient, not marked resume or continue-hold"],
             ["Empagliflozin", "10 mg Oral daily", "Status ambiguous: held inpatient, not marked resume or continue-hold"],
             ["Lisinopril", "20 mg Oral daily", "Status ambiguous: held inpatient, not marked resume or continue-hold"],

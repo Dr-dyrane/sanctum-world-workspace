@@ -8,7 +8,7 @@ This is a physician-facing document; grade on clinical substance and fidelity to
 
 Section A. Must be present and correct
 
-Antibiotic dosing reflects current renal function, not the admission peak. Metformin, empagliflozin, and lisinopril are recorded as explicit deferred restarts with reasons, not silently resumed or discontinued. Acetaminophen is retained and no NSAID is introduced. Home insulin is continued. The discharge antibiotic plan is renally dosed and deep-culture-directed.
+The inpatient enoxaparin VTE prophylaxis carried forward in the order set is discontinued at discharge; it is an inpatient-only prophylactic agent, not a home medication, and continuing it adds bleeding risk on aspirin and clopidogrel. Antibiotic dosing reflects current renal function, not the admission peak. Metformin, empagliflozin, and lisinopril are recorded as explicit deferred restarts with reasons, not silently resumed or discontinued. Acetaminophen is retained and no NSAID is introduced. Home insulin is continued. The discharge antibiotic plan is renally dosed and deep-culture-directed.
 
 Section B. Acceptable variation
 
@@ -18,6 +18,6 @@ Section C. Patterns to reason about
 
 These are patterns to reason about, not items to tick off.
 
-Carrying admission antibiotic dosing forward. Silently resuming or discontinuing a held oral agent. Introducing an NSAID. Letting the superficial swab drive the antibiotic choice. Failing to record the held agents as explicit decisions. The central failure to watch for is carrying admission dosing forward or silently resuming or discontinuing a held agent.
+Continuing the carried-forward inpatient enoxaparin VTE prophylaxis at discharge. Carrying admission antibiotic dosing forward. Silently resuming or discontinuing a held oral agent. Introducing an NSAID. Letting the superficial swab drive the antibiotic choice. Failing to record the held agents as explicit decisions. The central failure to watch for is continuing the carried-forward inpatient VTE prophylaxis (enoxaparin) at discharge, or carrying admission antibiotic dosing forward, or silently resuming or discontinuing a held agent.
 
 Correct restraint, to credit not penalize. Keeping a genuinely open item (perfusion, osteomyelitis, a pending arrangement, or a deferred restart) open or routed to the right owner, rather than forcing a false resolution, is correct and should be credited not docked.

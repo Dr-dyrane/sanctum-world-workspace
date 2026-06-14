@@ -528,6 +528,7 @@ def EW16():
             ["Gabapentin", "300 mg Oral", "Three times daily (renal checked)", "Active"],
             ["Pantoprazole", "40 mg Oral", "Daily", "Active"],
             ["Acetaminophen", "650 mg Oral", "Three times daily as needed", "Active"],
+            ["Enoxaparin", "40 mg Subcutaneous", "Daily, VTE prophylaxis", "Active from 05/16"],
             ["Metformin", "500 mg Oral", "Twice daily", "HELD since 05/16"],
             ["Empagliflozin", "10 mg Oral", "Daily", "HELD since 05/16"],
             ["Lisinopril", "20 mg Oral", "Daily", "HELD since 05/16"],

@@ -187,7 +187,7 @@ T = {
 # Per-task deliverable label + anchor items (named consistently across the five
 # scoring bands, per AutoQC Section 6 v6.6 checks 6.7, 6.11, 6.12).
 AUX = {
- "OV01": ("discharge medication reconciliation", "the renal-current antibiotic dose, the three held agents recorded as explicit deferred restarts, NSAID avoidance, and the deep-culture-directed plan"),
+ "OV01": ("discharge medication reconciliation", "the discontinuation of the carried-forward inpatient enoxaparin VTE prophylaxis, the renal-current antibiotic dose, the three held agents as explicit deferred restarts, and NSAID avoidance"),
  "OV02": ("coding attestation", "the diabetic-foot-infection family as principal, acute osteomyelitis not attested as established or present on admission, no pressure-injury family, and the retained documented comorbidities"),
  "OV03": ("CDI query response", "acute osteomyelitis declined on clinical grounds anchored to the treating assessment, with genuinely supported clarifications accepted"),
  "OV04": ("appeal letter", "the multi-source rebuttal of improving-markers-equal-home: unresolved perfusion, skilled wound-care need, the offloading and stairs limits, and the home and caregiver constraints"),
@@ -203,10 +203,10 @@ AUX = {
 # is regenerated here so all ten graders share the v6.6 A/B/C + five-band format).
 OV01_GRADER = dict(id="OV01", golden="golden-OV01-v1.docx",
   context="Ondina Vasquell, a 68-year-old woman admitted 05/16/2026 with a limb-threatening left diabetic foot infection, is being reconciled for discharge. The deliverable is a physician discharge medication reconciliation, a clean current renally appropriate medication list with an explicit decision on each held agent. Sources are the full chart (home medication list, MAR, renal trend, infectious disease and pharmacy notes) and the external unreconciled discharge order set (E1-T1).",
-  must="Antibiotic dosing reflects current renal function, not the admission peak. Metformin, empagliflozin, and lisinopril are recorded as explicit deferred restarts with reasons, not silently resumed or discontinued. Acetaminophen is retained and no NSAID is introduced. Home insulin is continued. The discharge antibiotic plan is renally dosed and deep-culture-directed.",
+  must="The inpatient enoxaparin VTE prophylaxis carried forward in the order set is discontinued at discharge; it is an inpatient-only prophylactic agent, not a home medication, and continuing it adds bleeding risk on aspirin and clopidogrel. Antibiotic dosing reflects current renal function, not the admission peak. Metformin, empagliflozin, and lisinopril are recorded as explicit deferred restarts with reasons, not silently resumed or discontinued. Acetaminophen is retained and no NSAID is introduced. Home insulin is continued. The discharge antibiotic plan is renally dosed and deep-culture-directed.",
   acceptable="List or short-table format is acceptable. The exact discharge antibiotic agent and final dose may be deferred to infectious disease confirmation. Restart timing may be expressed as a parameter-gated plan. Reasonable wording differences are not errors.",
-  penalize="Carrying admission antibiotic dosing forward. Silently resuming or discontinuing a held oral agent. Introducing an NSAID. Letting the superficial swab drive the antibiotic choice. Failing to record the held agents as explicit decisions.",
-  mechanism="Source-of-truth reconciliation under renal constraint. Central failure = carrying admission dosing forward or silently resuming or discontinuing a held agent.")
+  penalize="Continuing the carried-forward inpatient enoxaparin VTE prophylaxis at discharge. Carrying admission antibiotic dosing forward. Silently resuming or discontinuing a held oral agent. Introducing an NSAID. Letting the superficial swab drive the antibiotic choice. Failing to record the held agents as explicit decisions.",
+  mechanism="Source-of-truth reconciliation under renal constraint with a cold carried-forward item. Central failure = continuing the carried-forward inpatient VTE prophylaxis (enoxaparin) at discharge, or carrying admission antibiotic dosing forward, or silently resuming or discontinuing a held agent.")
 
 
 SELFQC = (
