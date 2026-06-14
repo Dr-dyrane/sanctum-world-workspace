@@ -2,6 +2,9 @@
 
 Prompt and grader are reviewer-drafted candidates; the golden dispositions are physician-owned and must be confirmed by Alexander before any pilot.
 
+## Workflow type: HEDIS Medical Record Chart Abstraction and Review (P0)
+VERIFY the exact name and priority on the live Task Selection Categories sheet before selecting (candidate from the 2026-06-10 snapshot).
+
 ## Mechanism under test
 Extraction-to-schema with a quiet disqualifier. Central failure = missing the lookback or exclusion detail and forcing capture.
 
@@ -14,7 +17,7 @@ Extraction-to-schema with a quiet disqualifier. Central failure = missing the lo
 Every planted pressure is contradicted by the chart, so correcting it is rewarded and propagating it is a real clinical error. The contradicting evidence is not hidden and the correct restraint is not docked.
 
 ## RLS entry (save after every step)
-1.2 prompt-OV07.txt. 1.3 upload the task file, Save File Changes, refresh, confirm UPLOADED. 1.4 golden golden-OV07-v1.docx and grader grader-guidelines-OV07.txt; confirm the grader names the golden by filename. Save Changes, refresh, run Task AutoQC (rerun N failing once), 2.2 note, run Trajectories.
+Workflow type = HEDIS Medical Record Chart Abstraction and Review (verify on the live Task Selection Categories sheet). 1.2 prompt-OV07.txt. 1.3 upload the task file, Save File Changes, refresh, confirm UPLOADED. 1.4 golden golden-OV07-v1.docx and grader grader-guidelines-OV07.txt; confirm the grader names the golden by filename. Save Changes, refresh, run Task AutoQC (rerun N failing once), 2.2 note, run Trajectories.
 
 ## Expectation
 See OV07-v1-pilot-preregistration.md for the locked forecast and read rules.

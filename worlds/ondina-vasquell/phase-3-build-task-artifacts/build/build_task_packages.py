@@ -41,6 +41,65 @@ def copy_task_files():
         else:
             print("  MISSING", task, fname)
 
+
+# CANONICAL WORKFLOW MAP - single source of truth for the RLS Step-10 workflow per task,
+# and the official record the spec and brainstorm adopt on any resubmit. Four originals
+# were retired from the platform menu on 2026-06-13 (Ed/Abi) and are remapped to the
+# nearest still-open workflow. Candidates are from the 2026-06-10 snapshot - VERIFY each
+# exact name + priority on the LIVE Task Selection Categories sheet before selecting.
+# Change a target here once and rebuild; never hardcode a workflow anywhere else.
+WORKFLOW = {
+    "task1":  dict(id="OV01", title="Discharge medication reconciliation", wf="Medication Reconciliation at Care Transitions", prio="P0",
+                   retired="Discharge Medication Reconciliation (hca-discharge-med-recon)"),
+    "task2":  dict(id="OV02", title="Inpatient coding attestation", wf="Inpatient Medical Coding and DRG Assignment", prio="P0", retired=None),
+    "task3":  dict(id="OV03", title="CDI query response", wf="CDI-Coding DRG Reconciliation Review", prio="P1",
+                   retired="CDI Query Response Review (hca-clinical-doc-improvement-query)"),
+    "task4":  dict(id="OV04", title="Payer denial appeal", wf="Claims Denial Analysis and Appeal Preparation", prio="P0", retired=None),
+    "task5":  dict(id="OV05", title="Pharmacy rejection response", wf="Pharmacy Insurance Claim Rejection Resolution", prio="P0", retired=None),
+    "task6":  dict(id="OV06", title="Continued-stay determination", wf="Utilization Review Concurrent Stay Documentation", prio="P1", retired=None),
+    "task7":  dict(id="OV07", title="Quality measure abstraction", wf="HEDIS Medical Record Chart Abstraction and Review", prio="P0", retired=None),
+    "task8":  dict(id="OV08", title="Vascular referral", wf="Referral Intake/Triage", prio="P1",
+                   retired="Specialist Referral Letter and Documentation Preparation (hca-specialist-referral-letter)"),
+    "task9":  dict(id="OV09", title="Safety event review", wf="Patient Safety Indicator (PSI) Analysis and Reporting", prio="P2",
+                   retired="Patient Safety Event Investigation and Root Cause Analysis (hca-patient-safety-event)"),
+    "task10": dict(id="OV10", title="Discharge-instruction completion", wf="Medical Transcription and Clinical Documentation Completion", prio="P0", retired=None),
+}
+
+
+def wf_header(task):
+    """KM-style '## Workflow type:' header block for a RUN-INSTRUCTIONS.md."""
+    m = WORKFLOW[task]
+    line = f"## Workflow type: {m['wf']} ({m['prio']})\n"
+    if m["retired"]:
+        line += (f"REMAPPED 2026-06-13: original workflow {m['retired']} was retired from the platform menu; "
+                 "this is the nearest open analogue. Deliverable framing may need a light adjustment to fit it. ")
+    line += "VERIFY the exact name and priority on the live Task Selection Categories sheet before selecting (candidate from the 2026-06-10 snapshot).\n\n"
+    return line
+
+
+def write_workflow_record():
+    """Emit the official human-facing workflow record (generated from WORKFLOW)."""
+    lines = [
+        "# Ondina Vasquell - official workflow map (all artifacts)",
+        "",
+        "Single source: build/build_task_packages.py WORKFLOW. This is the canonical Step-10 workflow per task and the mapping the spec (Section 2) and brainstorm adopt if either is resubmitted. Four originals were retired from the platform menu on 2026-06-13 (Ed/Abi) and are remapped to the nearest open workflow. VERIFY every target on the LIVE Task Selection Categories sheet before use; candidates are from the 2026-06-10 snapshot.",
+        "",
+        "| Task | ID | Workflow to select | Priority | Status |",
+        "|---|---|---|---|---|",
+    ]
+    for task in sorted(WORKFLOW, key=lambda t: int(t[4:])):
+        m = WORKFLOW[task]
+        status = f"REMAPPED (was {m['retired']})" if m["retired"] else "unchanged (open)"
+        lines.append(f"| {task} | {m['id']} | {m['wf']} | {m['prio']} | {status} |")
+    lines += [
+        "",
+        "Remapped: task1, task3, task8, task9. task8 and task9 swaps shift framing slightly; task1 and task3 are near-equivalent. The other six are unchanged and were not on the retired list.",
+        "",
+    ]
+    (ROOT.parent / "WORKFLOW-MAP.md").write_text("\n".join(lines), encoding="utf-8")
+    print("  wrote WORKFLOW-MAP.md")
+
+
 T = {
 "task2": dict(id="OV02", dos="05/22/2026 0900", golden="golden-OV02-v1.docx",
   prompt="This is the preliminary coding worksheet on Mrs. Vasquell before we finalize. Go through the chart and give me your attestation line by line, principal diagnosis, present on admission, and the code families you support.",
@@ -141,12 +200,13 @@ def emit():
         (out / "RUN-INSTRUCTIONS.md").write_text(
             f"# platform/{task}/current - {i} v1\n\n"
             "Prompt and grader are reviewer-drafted candidates; the golden dispositions are physician-owned and must be confirmed by Alexander before any pilot.\n\n"
+            + wf_header(task) +
             f"## Mechanism under test\n{d['mechanism']}\n\n"
             "## Mounted set\n- Shared world chart (world-files/ plus supplementary-files/).\n"
             f"- Task-level file for this task (E1-T). Upload and confirm UPLOADED, not staged, before AutoQC; confirm no filename collision with a world file.\n"
             "- Grader is chart-aware (include_input_files true): true chart specifics are credited, not flagged invented.\n\n"
             "## Fairness\nEvery planted pressure is contradicted by the chart, so correcting it is rewarded and propagating it is a real clinical error. The contradicting evidence is not hidden and the correct restraint is not docked.\n\n"
-            "## RLS entry (save after every step)\n1.2 prompt-" + i + ".txt. 1.3 upload the task file, Save File Changes, refresh, confirm UPLOADED. 1.4 golden " + d["golden"] + " and grader grader-guidelines-" + i + ".txt; confirm the grader names the golden by filename. Save Changes, refresh, run Task AutoQC (rerun N failing once), 2.2 note, run Trajectories.\n\n"
+            "## RLS entry (save after every step)\nWorkflow type = " + WORKFLOW[task]["wf"] + " (verify on the live Task Selection Categories sheet). 1.2 prompt-" + i + ".txt. 1.3 upload the task file, Save File Changes, refresh, confirm UPLOADED. 1.4 golden " + d["golden"] + " and grader grader-guidelines-" + i + ".txt; confirm the grader names the golden by filename. Save Changes, refresh, run Task AutoQC (rerun N failing once), 2.2 note, run Trajectories.\n\n"
             "## Expectation\nSee " + i + "-v1-pilot-preregistration.md for the locked forecast and read rules.\n", encoding="utf-8")
         (out / f"{i}-v1-pilot-preregistration.md").write_text(
             f"# {i} v1 PILOT PREREGISTRATION - locked before upload, AutoQC, and pilot\n"
@@ -159,6 +219,7 @@ def emit():
             "- Lowest genuine-failure run = failure-analysis subject; cleanest catcher = grader-analysis anchor. Failure-only, no section names.\n", encoding="utf-8")
         print("  package", i)
     copy_task_files()
+    write_workflow_record()
     print("done; OV02-OV10 text artifacts emitted + task files placed in each task folder")
 
 
