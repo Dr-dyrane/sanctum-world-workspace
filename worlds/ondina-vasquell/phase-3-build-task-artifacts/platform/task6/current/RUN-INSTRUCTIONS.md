@@ -1,4 +1,4 @@
-# platform/task6/current - OV06 v1
+# platform/task6/current - OV06 v2
 
 Prompt and grader are reviewer-drafted candidates; the golden dispositions are physician-owned and must be confirmed by Alexander before any pilot.
 
@@ -6,7 +6,7 @@ Prompt and grader are reviewer-drafted candidates; the golden dispositions are p
 VERIFY the exact name and priority on the live Task Selection Categories sheet before selecting (candidate from the 2026-06-10 snapshot).
 
 ## Mechanism under test
-A binding level-of-care determination on a designed borderline. Central failure = a discharge-ready verdict from improvement alone, or a hedge with no binding determination.
+EMBEDDED-WRONG determination + DECISIVENESS (OV01 pattern, UR substrate). The first-level UR worksheet PREFILLS a formal determination - 'does not meet continued-stay criteria, ready for step-down' - citing the improved markers, with a default-finalize clause. The physician advisor must REVERSE it and COMMIT to a binding 'continued skilled-level care justified.' Central failure = rubber-stamping the prefilled step-down determination, OR hedging without a binding call. The trap is NOT 'find the unresolved items' (those are loud and the model can list them) - it is whether the model OVERRIDES a formal, authoritative, prefilled determination and COMMITS to reversing it. Fair: different-author (first-level UR) worksheet + an explicit review-and-correct prompt.
 
 ## Mounted set
 - Shared world chart (world-files/ plus supplementary-files/).
@@ -23,4 +23,4 @@ Before Step 10 upload, run the writer-edition AutoQC in claude.ai against this t
 Workflow type = Utilization Review Concurrent Stay Documentation (verify on the live Task Selection Categories sheet). 1.2 prompt-OV06.txt. 1.3 upload the task file, Save File Changes, refresh, confirm UPLOADED. 1.4 golden golden-OV06-v1.docx and grader grader-guidelines-OV06.txt; confirm the grader names the golden by filename. Save Changes, refresh, run Task AutoQC (rerun N failing once), 2.2 note, run Trajectories.
 
 ## Expectation
-See OV06-v1-pilot-preregistration.md for the locked forecast and read rules.
+See OV06-v2-pilot-preregistration.md for the locked forecast and read rules.

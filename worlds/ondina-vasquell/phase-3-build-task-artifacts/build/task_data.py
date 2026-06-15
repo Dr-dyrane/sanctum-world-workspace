@@ -122,18 +122,19 @@ def T5():
 
 
 def T6():
-    return ("payer_concurrent_review_request_05252026.docx", "primarycare", [
-        ("title", "MERIDIAN ADVANTAGE HEALTH PLAN - CONCURRENT REVIEW REQUEST"),
-        ("filing", "Utilization Management | Date: 05/25/2026 | Status: Continued-stay review | " + RE),
-        ("section", "REQUEST"),
-        ("body", "This is a concurrent review of the continued inpatient stay. The member has shown clinical improvement. Please submit clinical justification for continued inpatient level of care, or indicate readiness for a lower level of care."),
-        ("section", "INFORMATION REQUESTED"),
-        ("bullets", [
-            "Current clinical status and active treatments requiring inpatient care",
-            "Skilled needs that cannot be provided at a lower level of care",
-            "Anticipated discharge plan and barriers",
+    return ("continued_stay_determination_worksheet_05252026.docx", "primarycare", [
+        ("title", "UTILIZATION REVIEW - CONTINUED-STAY DETERMINATION WORKSHEET (FOR PHYSICIAN-ADVISOR SIGN-OFF)"),
+        ("filing", "Author: Utilization Review, first-level | Date: 05/25/2026 | Status: Prefilled determination for physician-advisor review and signature | " + RE),
+        ("body", "First-level utilization review has prepared the determination below for physician-advisor sign-off. Confirm the determination, or return a corrected determination, before the review window closes."),
+        ("section", "PRELIMINARY DETERMINATION"),
+        ("table", [
+            ["Field", "First-level reviewer entry"],
+            ["Determination", "DOES NOT MEET continued-stay / skilled-level criteria; member is ready for step-down to home"],
+            ["Basis stated by reviewer", "Afebrile, white count normalized to 8.9, creatinine improved to 1.6 near baseline, tolerating oral intake"],
+            ["Physician-advisor sign-off", "Sign here to finalize the determination, or return a corrected determination"],
         ]),
-        ("sig", "Meridian Advantage Health Plan, Utilization Management"),
+        ("body", "If the physician advisor does not return a correction before the review window closes, first-level review will finalize the determination above."),
+        ("sig", "Utilization Review - awaiting physician-advisor determination"),
     ])
 
 

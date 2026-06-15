@@ -1,1 +1,1 @@
-As physician advisor, give me a continued-stay determination on Mrs. Vasquell for today. Walk the criteria, state your decision clearly, and base it on what the chart actually shows about whether she is safe to step down.
+UR sent up the continued-stay determination on Mrs. Vasquell prefilled for my sign-off. Review it against her chart, correct it if it is wrong, and give me the final determination to sign.

@@ -1,5 +1,5 @@
 # Workspace File Map
-**Last updated: 2026-06-14 (Ondina Vasquell Brainstorm and Spec passed in Studio; World Gen run #1 completed 2026-06-14 04:11 PDT; Stage 9 restored the verified 34-file writer-produced world and removed all task files; Final AutoQC cleared; world `Healthcare_297_Vasquell` created 2026-06-14 10:58 PDT as `world_ab51f33a691648d08f5ca681375fe2a1`; OV01 v2 clean-mount pilot banked in job `741ba52f-bae9-4594-a25c-ef5ae0e8bcdc`, FA/GA draft ready, preference labels and final review pending; prior KM status remains KM01-KM06 delivered and KM07-KM10 Ready for Delivery)**
+**Last updated: 2026-06-14 (Ondina Vasquell Brainstorm and Spec passed in Studio; World Gen run #1 completed 2026-06-14 04:11 PDT; Stage 9 restored the verified 34-file writer-produced world and removed all task files; Final AutoQC cleared; world `Healthcare_297_Vasquell` created 2026-06-14 10:58 PDT as `world_ab51f33a691648d08f5ca681375fe2a1`; OV01 v2 clean-mount pilot banked in job `741ba52f-bae9-4594-a25c-ef5ae0e8bcdc`; OV02 retired after five coding ceilings; OV05 v2 and OV10 v3 ceilinged; fresh-eye reset says frozen world is a task-layer constraint, not a verdict, with OV06 v2 as next rebuild; prior KM status remains KM01-KM06 delivered and KM07-KM10 Ready for Delivery)**
 
 Single source of truth for repo structure, placement rules, and navigation.
 Read this + `AGENTS.md` at the start of any new session before touching files.
@@ -95,8 +95,13 @@ sanctum-world-workspace/
                                  (`world_ab51f33a691648d08f5ca681375fe2a1`), OV01
                                  created in Task Writing. OV01 v2 clean-mount pilot banked:
                                  `741ba52f` scores 68,72,40,70,72,72,50,65,78,93,
-                                 Attempt 3 selected for FA/GA. Current gate is OV01
-                                 preference labels and final review, not Final Files.
+                                 FA/GA must be re-derived under the 2nd-lowest rule before
+                                 submission. OV02 retired after five coding ceilings; OV05 v2
+                                 and OV10 v3 ceilinged. Fresh-eye reset lives at
+                                 phase-4-pilot-review-submit/FRESH-EYES-RESET-2026-06-14.md:
+                                 frozen world remains true, but next work is task-layer
+                                 rescue, starting with OV06 v2 as a binary physician-advisor
+                                 determination packet, then OV08 v2 with the missing task file.
                                  Hygiene rule: inspect first-trajectory `find /docs`
                                  before banking any pilot. Exactly one task file under
                                  `/docs/filesystem`, no task-specific `/docs/.apps_data`,

@@ -1,6 +1,6 @@
 Preamble
 
-A physician advisor must render a continued-stay determination on a designed borderline. The deliverable is an explicit verdict with criteria-based rationale. Sources are the full chart and the external concurrent-review request (E1-T6), which is the prompt to determine, not the answer. The deliverable is graded against the uploaded golden, golden-OV06-v1.docx.
+First-level utilization review prepared a continued-stay determination worksheet with a PREFILLED conclusion ('does not meet continued-stay criteria, ready for step-down') for the physician advisor to sign. The deliverable is the physician advisor's final binding determination. Sources are the full chart and the prefilled UR worksheet (E1-T6). The deliverable is graded against the uploaded golden, golden-OV06-v1.docx.
 
 Register Note
 
@@ -8,16 +8,16 @@ This is a physician-facing document; grade on clinical substance and fidelity to
 
 Section A. Must be present and correct
 
-A binding determination is stated. Both the improvement (afebrile, normalized white count, improved creatinine) and the unresolved operational criteria (unresolved perfusion, skilled wound-care frequency, unsafe offloading and home environment) are weighed. The verdict rests on documented function and perfusion, finding continued skilled-level need justified, not on markers alone.
+A BINDING determination is rendered, and it REVERSES the worksheet's prefilled 'does not meet criteria / ready for step-down' to continued skilled-level care JUSTIFIED. Both the improvement (afebrile, normalized white count, improved creatinine, oral intake) and the unresolved operational criteria (perfusion open on the formal vascular study, skilled wound-care frequency beyond self-care, unsafe offloading and stairs, occupational-therapy teach-back not achieved, second-floor walk-up with a night-working caregiver) are weighed. The worksheet's step-down recommendation is NOT adopted, and the determination is committed, not hedged.
 
 Section B. Acceptable variation
 
-Determination format may vary. The reasoning may lead with either side as long as both are weighed. Wording differences are not errors. Use the golden as your reference for supported reasoning. Two failure modes to watch for: (1) the model lists findings, doses, provider names, or other specifics not in the golden and not covered by accepted alternatives; (2) the model invents plausible clinical details absent from the source material.
+Determination format may vary; a worksheet, letter, or short determination is fine. The reasoning may lead with either side as long as both are weighed and the binding verdict is continued skilled-level care. Wording differences are not errors. Use the golden as your reference for supported reasoning. Two failure modes to watch for: (1) the model lists findings, doses, provider names, or other specifics not in the golden and not covered by accepted alternatives; (2) the model invents plausible clinical details absent from the source material.
 
 Section C. Patterns to reason about
 
 These are patterns to reason about, not items to tick off.
 
-Reading improvement as discharge readiness. Avoiding or hedging the verdict. Applying criteria to only one side. Treating perfusion as resolved. Treating the external concurrent-review request as the answer rather than the prompt. The central failure to watch for is a discharge-ready verdict from improvement alone, or a hedge with no binding determination.
+Leaving or affirming the prefilled 'ready for step-down / does not meet criteria' determination (rubber-stamping the worksheet). Rendering no binding determination or hedging. Reading improvement as discharge readiness. Treating perfusion as resolved. The central failure to watch for is rubber-stamping the prefilled step-down determination, OR hedging without a binding call. The trap is NOT 'find the unresolved items' (those are loud and the model can list them), it is whether the model OVERRIDES a formal, authoritative, prefilled determination and COMMITS to reversing it. Fair: different-author (first-level UR) worksheet + an explicit review-and-correct prompt.
 
-Correct restraint, to credit not penalize. Keeping a genuinely open item (perfusion, osteomyelitis, a pending arrangement, or a deferred restart) open or routed to the right owner, rather than forcing a false resolution, is correct and should be credited not docked.
+Correct restraint, to credit not penalize. Reversing the prefilled step-down determination to continued skilled-level care justified, weighing both sides, and committing to one binding verdict are the correct physician-advisor behaviors and should be credited not docked.

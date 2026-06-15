@@ -159,7 +159,7 @@ def OV06():
         ("title", "PHYSICIAN-ADVISOR CONTINUED-STAY DETERMINATION"),
         ("filing", "Author: Physician Advisor, Utilization Review | Date of Service: 05/26/2026 1100 | Status: Draft for physician sign"),
         ("section", "DETERMINATION"),
-        ("body", "Continued skilled-level care is justified as of 05/26/2026. The patient does not yet meet criteria for a safe step-down to an unsupported home setting."),
+        ("body", "Continued skilled-level care is justified as of 05/26/2026. I do not adopt the first-level worksheet's step-down recommendation; the patient does not yet meet criteria for a safe step-down to an unsupported home setting."),
         ("section", "CRITERIA APPLIED, BOTH SIDES"),
         ("bullets", [
             "Improvement: afebrile, white count normalized to 8.9, creatinine improved to 1.6 near baseline. These show a treated infection and a recovering kidney injury.",
