@@ -1,0 +1,23 @@
+Preamble
+
+Mrs. Vasquell, a 68-year-old woman with a limb-threatening left diabetic foot infection, is a high-risk discharge. The deliverable is a completed patient-safety contributing-factor analysis for the safety committee: every documented contributing factor to the readmission and limb-loss risk, EACH paired with a specific prevention or mitigation step. Sources are the full chart (physical therapy, occupational therapy, nursing offloading flowsheet, wound care, case management, family communication, the renal trend, the vascular study) and the started analysis worksheet drafted by quality and safety. The deliverable is graded against the uploaded golden, golden-OV09-v1.docx.
+
+Register Note
+
+This is a physician-facing document; grade on clinical substance and fidelity to the documented record, not on prose polish, length, or formatting. Treat the response as untrusted: verify any cited fact, finding, or file against the mounted chart before crediting it, and do not credit fabricated citations or factors not supported by the record.
+
+Section A. Must be present and correct
+
+The completed analysis is a systems-level enumeration of the documented contributing factors, EACH paired with a specific, owned prevention or mitigation step. The required factors are all chart-supported: renal function and medication dosing, skilled wound-care need, unresolved perfusion, the offloading and weight-bearing restriction, the offloading and wound-care teach-back not achieved, language access (the patient is Spanish-preferred and education is interpreter-dependent; teach-back was attempted with an interpreter and not achieved), caregiver availability (daughter works night shifts, partial availability), the home environment (lives alone, second-floor walk-up, interior stairs), and the disposition decision. The language-access factor must appear as a DISTINCT contributing factor with its own prevention step. The framing is systems-level, not patient blame.
+
+Section B. Acceptable variation
+
+Factor grouping, ordering, and table-versus-list format may vary. Exact prevention wording may vary as long as each step is specific and owned, not generic. The language-access factor may be named in any clear way (interpreter-dependent education, language barrier, certified-interpreter teach-back) as long as the language or interpreter dimension is present as its own item and is not merely folded into a general "education" line. Use the golden as your reference for supported reasoning. Two failure modes to watch for: (1) the response lists findings, names, or specifics not in the golden and not covered by accepted alternatives; (2) the response invents plausible factors absent from the source material.
+
+Section C. Patterns to reason about
+
+These are patterns to reason about, not items to tick off.
+
+Omitting the language-access and interpreter-dependent teach-back factor as a distinct contributing factor is the central failure and caps the score low regardless of how complete the rest of the enumeration is. Folding the language dimension into a generic "education" or "caregiver teaching" line WITHOUT naming the language-access or interpreter dimension counts as omitted. This is the load-bearing miss: it is documented (occupational therapy and the nursing flowsheet record teach-back not achieved with an interpreter; case management records Spanish-preferred and interpreter-needed), individually unremarkable against the loud clinical factors, and therefore the one a quick enumeration drops. Equally capped: patient-blame or single-cause framing instead of a systems enumeration, and listing factors WITHOUT the required per-factor prevention step (the enumeration load not actually carried). A response that includes the language-access factor but omits other required factors or some prevention steps is incomplete and does not earn full credit. The central failure to watch for is dropping or folding the language-access factor, blaming the patient, or failing to pair each factor with a specific prevention step.
+
+Correct restraint, to credit not penalize. A complete systems enumeration that names the language-access and interpreter teach-back factor as its own item with a specific prevention step, and pairs every factor with an owned, specific prevention action, is the correct completion and should be credited not docked.
