@@ -39,7 +39,7 @@ All docx on the canonical Epic template and BYTE-DETERMINISTIC (build_all.py; ti
 | Task | cdi_query_memo_05232026.docx | 9a8ad40606e0e6e5 |
 | Task | him_final_coding_attestation_packet_05212026.docx | 2126a92809919d15 |
 | Task | medicare_advantage_denial_letter_05232026.docx | 2591b111e9162ebe |
-| Task | payer_concurrent_review_request_05252026.docx | 2031628bd18f6a4d |
+| Task | continued_stay_determination_worksheet_05252026.docx | efc4daa4d37ce1d0 |
 | Task | pharmacy_benefit_rejection_05242026.docx | 01a539a609c1dc41 |
 | Task | discharge_medication_orders_05212026.docx | 4250d7f53dadaac8 |
 | Task | quality_abstraction_worksheet_06042026.docx | c324f1f7f2f85f3f |
@@ -57,8 +57,8 @@ All docx on the canonical Epic template and BYTE-DETERMINISTIC (build_all.py; ti
 | Golden | medicare_advantage_denial_letter_05232026.docx | 2591b111e9162ebe |
 | Golden | golden-OV05-v1.docx | 0d5e1c3522e4ebec |
 | Golden | pharmacy_benefit_rejection_05242026.docx | 01a539a609c1dc41 |
-| Golden | golden-OV06-v1.docx | d773cf94191c6e1e |
-| Golden | payer_concurrent_review_request_05252026.docx | 2031628bd18f6a4d |
+| Golden | golden-OV06-v1.docx | 7bcfcf3e38013c4b |
+| Golden | continued_stay_determination_worksheet_05252026.docx | efc4daa4d37ce1d0 |
 | Golden | golden-OV07-v1.docx | a2b7d068e0a30443 |
 | Golden | quality_abstraction_worksheet_06042026.docx | c324f1f7f2f85f3f |
 | Golden | golden-OV08-v1.docx | 0de34f36d24be264 |
