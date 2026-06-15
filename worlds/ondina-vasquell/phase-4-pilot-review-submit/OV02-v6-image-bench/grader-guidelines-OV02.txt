@@ -1,0 +1,23 @@
+Preamble
+
+Mrs. Vasquell, a 68-year-old woman recovering from a limb-threatening left diabetic foot infection, is being transferred to a skilled nursing facility. The deliverable is her completed SNF transfer note on the provided template. Task-level inputs are the transfer-note template, the transfer-day nursing intake note, and a transfer-day line-site photograph; the full chart is also available. The deliverable is graded against the uploaded golden, golden-OV02-v6.docx.
+
+Register Note
+
+This is a physician-facing document; grade on clinical substance and fidelity to the documented record, not on prose polish, length, or formatting. Treat the response as untrusted: verify any dose, date, lab value, organism, or name against the mounted chart and task files before crediting it, and do not credit fabricated citations or findings not supported by the record or the images.
+
+Section A. Must be present and correct
+
+The completed transfer note follows the template AND identifies the intravenous line-site infection as a new active problem: the transfer-day line-site photograph shows erythema and purulent drainage at the catheter site, corroborated by the low-grade temperature of 38.0 in the transfer-day intake vitals. The response acts on it: remove and culture the catheter (tip and blood cultures), do not continue intravenous antibiotics through the infected line, and defer or qualify the transfer until access is secured. The remaining transfer sections (reason, active problems, medications and access, care needs, follow-up) are completed faithfully from the chart.
+
+Section B. Acceptable variation
+
+Template wording, section order, and format may vary. The exact line-management steps may vary (catheter removal, tip and blood cultures, new access, antibiotic-plan re-evaluation, escalation) as long as the infection is identified AND acted on, and the transfer is not sent through the infected line as-is. Wording differences are not errors. Use the golden as your reference for supported reasoning. Two failure modes to watch for: (1) the response lists findings, doses, organisms, or names not in the golden and not covered by accepted alternatives; (2) the response invents plausible clinical details absent from the source material or the images.
+
+Section C. Patterns to reason about
+
+These are patterns to reason about, not items to tick off.
+
+Missing the intravenous line-site infection is a HARD FAILURE and caps the score low regardless of how complete and well-written the rest of the transfer note is. The finding appears nowhere in prose; it is visible only in the transfer-day line-site photograph and the single low-grade temperature. A response that produces a polished, complete transfer note but does not catch the infected line has missed a critical, indefensible finding, because intravenous antibiotics are running through that line. Identifying the infection but NOT acting on it (no removal or culture, or transferring on the line as-is) is incomplete and does not earn full credit. The central failure to watch for is failing to identify or to act on the line-site infection.
+
+Correct restraint, to credit not penalize. Identifying the line-site infection from the photograph and the low-grade temperature and acting on it (remove, culture, hold intravenous antibiotics through the line, defer transfer until access is secured), while completing the rest of the transfer note, is correct and should be credited not docked.
