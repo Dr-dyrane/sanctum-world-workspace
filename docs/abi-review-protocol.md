@@ -63,7 +63,7 @@ Source: Task 1 first review (prompt referred to deleted files); KM07 v3 pilot 1 
 
 ### 9. Mechanism precision and self-standing records
 Question: do all claims about how the platform, grader, or pipeline works match the actual mechanism, and does every annotation stand on its own reasoning?
-Test: describe the grader as scoring output against the golden and guidelines, never as independently investigating. QA dispositions need substantive, fact-referenced rebuttals (cite the job, the runs, the observed behavior), never "the reviewer said it's okay" or a bare "tech issue". FA/GA is failure-only, natural prose, complete sentences, no bullets, no headers, no section names, single lowest run, each part under about 1000 characters.
+Test: describe the grader as scoring output against the golden and guidelines, never as independently investigating. QA dispositions need substantive, fact-referenced rebuttals (cite the job, the runs, the observed behavior), never "the reviewer said it's okay" or a bare "tech issue". FA/GA is failure-only, natural prose, complete sentences, no bullets, no headers, no section names, the 2nd-LOWEST scoring run (King P 2026-06-14 / DO-NOT-REPEAT #20; supersedes the earlier "single lowest run"), each part under about 1000 characters, bound to the selected run in Studio.
 Source: Task 1 grader-mechanism correction; the Taiga QA Feedback failure on the bare tech-issue annotation (KM07, 6/11); Abi's FA/GA format directions (6/06 and 6/09).
 
 ## Mechanical pass (run before the judgment pass)

@@ -24,10 +24,27 @@ VISPAT = re.compile(r"(photo|photograph|image)\w*\s+\w{0,12}\s*(show|confirm|dem
                     r"|corroborat\w*[^.]{0,40}(erythema|purulent|drainage|cellulitis|edema|infection)"
                     r"|(shows|reveals|demonstrates)\s+(erythema|purulent|cellulitis)", re.I)
 PROMPT_META = re.compile(r"\b(grader|rubric|golden|trap|do not credit|penaliz|rubric|score the)\b", re.I)
+FA_GA_DIR = REPO / "worlds/ondina-vasquell/phase-4-pilot-review-submit/fa-ga"
+# FA/GA must be failure-only (Abi 6/09) + no grader-section names (King P 6/14); flag the old both-sides format.
+BOTHSIDES = re.compile(r"what the model did well|what the grader (got right|did well)"
+                       r"|the grader credited|it credited the|credited the (useful|complete|model|correct)"
+                       r"|did much of .{0,30}carefully", re.I)
+SECNAME = re.compile(r"\bSection [ABC]\b")
 
 
 def golden_text(p):
     return " ".join(VIS.findall(zipfile.ZipFile(p).read("word/document.xml").decode()))
+
+
+def check_fa_ga():
+    out = []
+    for p in sorted(FA_GA_DIR.glob("FA-GA-*.md")):
+        t = p.read_text(errors="ignore")
+        if BOTHSIDES.search(t):
+            out.append((p.name, "FA/GA in both-sides format - use failure-only (Abi 6/09)"))
+        if SECNAME.search(t):
+            out.append((p.name, "FA/GA names a grader section - state the content instead (no section names)"))
+    return out
 
 
 def check_task(d: Path):
@@ -88,6 +105,12 @@ def main():
                 print(f"   - {f}")
         else:
             print(f"PASS {tag}")
+    faga = check_fa_ga()
+    if faga:
+        anyflag = True
+        print("FLAG fa-ga:")
+        for n, f in faga:
+            print(f"   - {n}: {f}")
     print("\npre-submit gate:",
           "FLAGS FOUND - fix before submit" if anyflag else "all tasks clean (mechanizable checks; human review still applies)")
     return 1 if anyflag else 0
