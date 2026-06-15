@@ -5,6 +5,7 @@ Single source: build/build_task_packages.py WORKFLOW. This is the canonical Step
 | Task | ID | Workflow to select | Priority | Status |
 |---|---|---|---|---|
 | task1 | OV01 | Medication Reconciliation at Care Transitions | P0 | REMAPPED (was Discharge Medication Reconciliation (hca-discharge-med-recon)) |
+| task2 | OV02 | Inpatient Medical Coding and DRG Assignment | P0 | unchanged (open) |
 | task3 | OV03 | CDI-Coding DRG Reconciliation Review | P1 | REMAPPED (was CDI Query Response Review (hca-clinical-doc-improvement-query)) |
 | task4 | OV04 | Claims Denial Analysis and Appeal Preparation | P0 | unchanged (open) |
 | task5 | OV05 | Pharmacy Insurance Claim Rejection Resolution | P0 | unchanged (open) |
@@ -16,4 +17,4 @@ Single source: build/build_task_packages.py WORKFLOW. This is the canonical Step
 
 Remapped: task1, task3, task8, task9. task8 and task9 swaps shift framing slightly; task1 and task3 are near-equivalent.
 
-ACTIVE SUITE = 9 tasks. OV02 (Inpatient Medical Coding and DRG Assignment) RETIRED 2026-06-14 (model-strong genre, ceilinged x3); archived at platform/_retired/. Suite ORDER (positions) promotes OV07 to #2: OV01, OV07, OV03, OV04, OV05, OV06, OV08, OV09, OV10. Internal IDs/folders kept stable. Verified vs the 06/13 PDF Task Selection Tracker - all present, none retired; use EXACT names (OV08 = 'Referral Intake, Triage, and Scheduling Coordination'). Full guidance + suite order: reference/approved-workflows-and-guidance-2026-06-13.md and OV-WORLD-STATUS.md.
+ACTIVE SUITE = 10 tasks. OV02 (Inpatient Medical Coding and DRG Assignment) REVIVED 2026-06-14 on the KM09 EMBEDDED wrong-principal lever (AKI-on-CKD pre-sequenced as principal; physician re-sequences the limb-threat DFI as principal). Suite ORDER: OV01, OV07, OV03, OV04, OV05, OV06, OV08, OV09, OV10, OV02. Internal IDs/folders kept stable. Verified vs the 06/13 PDF Task Selection Tracker - all present; use EXACT names (OV08 = 'Referral Intake, Triage, and Scheduling Coordination'). Full guidance + suite order: reference/approved-workflows-and-guidance-2026-06-13.md and OV-WORLD-STATUS.md.

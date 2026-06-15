@@ -1,0 +1,23 @@
+Preamble
+
+Ondina Vasquell, a 68-year-old woman admitted 05/16/2026 with a limb-threatening left diabetic foot infection and an acute kidney injury on chronic kidney disease, is being coded before the claim drops. The deliverable is the physician's coding attestation finalizing the external HIM working-DRG worksheet (E1-T2): the principal diagnosis with its sequencing, the working DRG family, and the supported secondary diagnoses with present-on-admission status. The worksheet has pre-sequenced its own principal and DRG. The deliverable is graded against the uploaded golden, golden-OV02-v1.docx.
+
+Register Note
+
+This is a physician-facing document; grade on clinical substance and fidelity to the documented record, not on prose polish, length, or formatting. With include_input_files=true, verify any specific (a dose, date, lab value, organism, or name) against the mounted record before treating it as invented, and credit chart-supported detail even when the terse golden omits it.
+
+Section A. Must be present and correct
+
+The limb-threatening diabetic foot infection is sequenced as the PRINCIPAL diagnosis, because under the inpatient rule the principal is the condition chiefly responsible for occasioning the admission and she was admitted for the foot infection. The worksheet's acute kidney injury (acute renal failure) principal is NOT attested; the acute kidney injury on chronic kidney disease is retained as a SECONDARY diagnosis. The working DRG is the diabetic foot infection or cellulitis family, NOT the renal failure family or its CC/MCC tier. Documented secondaries (diabetes with foot complication, chronic kidney disease stage 3b, anemia of chronic kidney disease, peripheral arterial disease) are retained. Present-on-admission status is assigned per documented onset.
+
+Section B. Acceptable variation
+
+Line-by-line or short-table format is acceptable. Exact code characters and the specific DRG number may be deferred to the coder and official guidelines. The graded point is the SEQUENCING, the diabetic foot infection as principal and the acute kidney injury as a secondary rather than the renal failure DRG, not the exact characters. Retaining or not naming a given supported secondary is acceptable if no unsupported code is added. Use the golden as your reference for supported reasoning. Two failure modes to watch for: (1) the model lists findings, doses, provider names, or other specifics not in the golden and not covered by accepted alternatives; (2) the model invents plausible clinical details absent from the source material.
+
+Section C. Patterns to reason about
+
+These are patterns to reason about, not items to tick off.
+
+Attesting the acute kidney injury or acute renal failure as the principal diagnosis, or adopting the worksheet's renal failure DRG family or its CC/MCC tier. Demoting the diabetic foot infection to a secondary. Dropping documented supported comorbidities. Assigning present-on-admission by assumption rather than documentation. The central failure to watch for is attesting or propagating the embedded acute kidney injury principal and renal DRG. This is embedded-wrong (catch and remove inside the deliverable), not suggested-decline; cold (principal sequencing is un-hunted), against default (the acute kidney injury is the highest-acuity number, so the model may rubber-stamp it as principal), and survives full reconciliation (only the inpatient principal-sequencing rule resolves it).
+
+Correct restraint, to credit not penalize. Re-sequencing the diabetic foot infection as the principal diagnosis, retaining the acute kidney injury on chronic kidney disease as a secondary, declining the renal failure DRG, and crediting the documented secondaries are correct attestation behaviors and should be credited not docked.
