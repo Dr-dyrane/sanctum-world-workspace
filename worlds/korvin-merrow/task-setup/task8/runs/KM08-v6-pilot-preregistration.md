@@ -12,7 +12,7 @@ The correct answer declines same-day discharge escalation. Continue or hold gaba
 
 ## Fairness claim
 
-This is not the unfair same-author draft pattern. The attending draft leaves a blank decision slot. The signout is an external, genre-native handoff, like a pharmacy recommendation or CDI query, and is fairly rebuttable from the chart. The grader must use include_input_files=true so chart-supported specifics in a strong response are credited rather than called invented.
+This is not the unfair same-author draft pattern. The attending draft leaves a blank decision slot. The signout is an external, genre-native handoff, like a pharmacy recommendation or CDI query, and is fairly rebuttable from the chart. The grader must use access to the provided chart so chart-supported specifics in a strong response are credited rather than called invented.
 
 ## Clinical crux to own
 
@@ -56,7 +56,7 @@ If all runs floor, do not bank automatically. First confirm golden reachability 
 
 Workflow type: Progress Note Daily Rounding Documentation.
 
-Set include_input_files=true for the grader.
+Give the grader access to the provided chart for the grader.
 
 Mount exactly two task files: the started SOAP addendum and the night-float signout.
 

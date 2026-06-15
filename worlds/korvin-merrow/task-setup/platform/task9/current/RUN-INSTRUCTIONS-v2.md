@@ -21,7 +21,7 @@ The HIM worksheet is an external preliminary coding summary for physician review
 2. Prompt: prompt-task9-v2.txt.
 3. Mount exactly one task file: him_preliminary_inpatient_coding_summary_05252026.docx.
 4. Golden: golden-KM09-v2.docx.
-5. Grader: grader-guidelines-task9-v2.txt, with include_input_files=true.
+5. Grader: grader-guidelines-task9-v2.txt, with access to the provided chart.
 6. Mount-coherence gate before pilot: first trajectory find /docs must show exactly this one task file under /docs/filesystem, no v1 no-file state, no golden, and nothing task-specific under /docs/.apps_data.
 
 ## How to read the pilot

@@ -33,6 +33,7 @@ export function proofRunIndex(task: Task) {
 }
 
 export function readinessFor(task: Task): Readiness {
+  if (task.reach === 'retired') return { label: 'Retired', tone: 'watch' };
   if (task.stage === 'planned') return { label: 'Not built', tone: 'planned' };
   if (task.stage === 'built') return { label: 'Built', tone: 'built' };
   if (task.stage === 'review') return { label: 'Needs review', tone: 'review' };
@@ -45,6 +46,7 @@ export function reachLabel(task: Task) {
   if (task.reach === 'proven') return 'Proven';
   if (task.reach === 'watch') return 'Watch';
   if (task.reach === 'open') return 'Open';
+  if (task.reach === 'retired') return 'Retired';
   return 'Pending';
 }
 

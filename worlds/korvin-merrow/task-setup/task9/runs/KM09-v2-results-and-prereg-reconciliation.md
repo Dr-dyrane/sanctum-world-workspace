@@ -36,7 +36,7 @@ Reachability: PROVEN by live catchers at 0.92 and 0.85, not by a golden self-sco
 
 Mount: Attempt 6's `find /docs` showed the 26 world files plus exactly one task file, `him_preliminary_inpatient_coding_summary_05252026.docx`, under `/docs/filesystem`; `ls /docs` showed only `filesystem`, no `/docs/.apps_data` duplicate, and no golden in the agent-visible set. The single-file mount is clean; the KM07 calendar-volume ghost did not recur.
 
-Grader chart-awareness: include_input_files=true is working as intended. The 0.92 catcher's added codes (I13.0, E11.22) and chart specifics (Morse 65, PSG 2019, mid-LAD DES, glargine 18 units) were credited as true chart detail rather than flagged invented. This validates the closure of the v1 grader-access gap.
+Grader chart-awareness: access to the provided chart is working as intended. The 0.92 catcher's added codes (I13.0, E11.22) and chart specifics (Morse 65, PSG 2019, mid-LAD DES, glargine 18 units) were credited as true chart detail rather than flagged invented. This validates the closure of the v1 grader-access gap.
 
 ## Disposition
 

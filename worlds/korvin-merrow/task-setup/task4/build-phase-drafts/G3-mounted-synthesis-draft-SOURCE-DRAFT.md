@@ -2,7 +2,7 @@
 
 Status: SOURCE DRAFT FOR REVIEW ONLY. Do not build DOCX from this until the frame, content, and fairness pass are approved.
 
-Future mounted filename concept: `interdisciplinary_consultant_synthesis_draft_05242026.docx`
+Future provided filename concept: `interdisciplinary_consultant_synthesis_draft_05242026.docx`
 
 Future author concept: Ines Travyn, MD, Hospital Medicine resident, for Elian Vossmere, MD attending review.
 

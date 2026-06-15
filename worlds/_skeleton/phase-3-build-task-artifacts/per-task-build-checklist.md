@@ -23,7 +23,7 @@ Prompt, golden, and grader are WRITER-authored (the physician owns the clinical 
 ## Grader (Sang five-block)
 
 - [ ] Preamble names the golden file by its exact uploaded filename.
-- [ ] Register Note (chart-aware: include_input_files=true whenever the deliverable is built from the chart; say true chart and photo detail is credited, not flagged invented).
+- [ ] Register Note tells the grader to verify specific chart or photo details against the provided materials before calling them invented.
 - [ ] Section A: must be present and correct (the non-negotiables), self-contained wording.
 - [ ] Section B: acceptable variation, including the verbatim two-failure-mode clause; self-contained wording.
 - [ ] Section C: patterns to reason about, central failure first, plus a credit-correct-restraint line; self-contained wording.

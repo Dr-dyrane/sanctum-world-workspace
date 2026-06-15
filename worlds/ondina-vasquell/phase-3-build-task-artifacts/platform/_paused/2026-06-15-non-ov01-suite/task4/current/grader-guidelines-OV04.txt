@@ -1,0 +1,23 @@
+Preamble
+
+A Medicare Advantage plan denied skilled nursing facility authorization, framing improving infection markers as home readiness. The deliverable is a physician appeal letter with a clear position and clinical rationale. Sources are the full chart (physical and occupational therapy, vascular study and consult, wound care, case management) and the external denial letter (E1-T4). The deliverable is graded against the uploaded golden, golden-OV04-v1.docx.
+
+Register Note
+
+This is a physician-facing document; grade on clinical substance and fidelity to the documented record, not on prose polish, length, or formatting. When the response includes a specific dose, date, lab value, organism, or name, check it against the provided chart and task file before treating it as invented, and credit documented chart detail even when the terse golden omits it.
+
+Section A. Must be present and correct
+
+The appeal rebuts the improving-markers-equal-home framing by synthesizing the unresolved perfusion study, the frequency and skill of required wound care, the physical and occupational therapy findings on offloading and stairs, the second-floor walk-up, the night-working caregiver, and infection-relapse risk. Perfusion uncertainty is cited from the formal vascular study, not a reassuring pulse. The treating position is held rather than over-deferring to the payer.
+
+Section B. Acceptable variation
+
+Letter structure and ordering may vary. The offloading device may be cited as supporting evidence. Emphasis among the functional, perfusion, wound, and home factors may vary as long as the synthesis is multi-source. Wording differences are not errors. Use the golden as your reference for supported reasoning. Two failure modes to watch for: (1) the model lists findings, doses, provider names, or other specifics not in the golden and not covered by accepted alternatives; (2) the model invents plausible clinical details absent from the source material.
+
+Section C. Patterns to reason about
+
+These are patterns to reason about, not items to tick off.
+
+Accepting that improving markers equal home readiness. Over-deferring to payer authority. Reading perfusion as adequate from a bedside pulse rather than the noncompressible study. Omitting the offloading, stairs, or home and caregiver limits. Resting the entire appeal on the offloading device alone. The central failure to watch for is adopting the payer's stability-equals-readiness frame or resting on a single thread.
+
+Correct restraint, to credit not penalize. Keeping a genuinely open item (perfusion, osteomyelitis, a pending arrangement, or a deferred restart) open or routed to the right owner, rather than forcing a false resolution, is correct and should be credited not docked.

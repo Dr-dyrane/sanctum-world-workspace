@@ -22,9 +22,9 @@ Purpose at the time: de-risk the pre-bank platform check (does golden-KM07-v2.do
 - Correct restraint to credit: all four named behaviors (keep alendronate open, ask nephrology to confirm renal trajectory, staged restart preserved, held agents not restarted) are present.
 
 ## Predicted band and what a miss would mean
-Predicted ~0.90 (0.85-0.95). The golden satisfies every Section A requirement, exhibits zero Section C patterns, and contains no specific the record does not support. If the platform check lands materially below 0.85, the cause is almost certainly configuration, not content - first suspect include_input_files not actually set (the golden-only failure mode of pilot cf00b80c penalized true chart specifics), second suspect register/format judgment drift. Neither would indicate a golden defect; both are grader-side.
+Predicted ~0.90 (0.85-0.95). The golden satisfies every Section A requirement, exhibits zero Section C patterns, and contains no specific the record does not support. If the platform check lands materially below 0.85, the cause is almost certainly configuration, not content - first suspect chart access not actually set (the golden-only failure mode of pilot cf00b80c penalized true chart specifics), second suspect register/format judgment drift. Neither would indicate a golden defect; both are grader-side.
 
 ## Conditions for the platform check
-1. include_input_files=true confirmed on the task before the run (expect + justify the Self-Contained AutoQC warning, KM03/KM04 precedent).
+1. access to the provided chart confirmed on the task before the run (expect + justify the Self-Contained AutoQC warning, KM03/KM04 precedent).
 2. Grader file byte-identical to platform/task7/current/grader-guidelines-task7-v2.txt (the 6/11 chart-aware version, 663 words).
 3. Read the grader transcript, not just the score, and verify it credited the keep-open behavior under Section C "correct restraint."

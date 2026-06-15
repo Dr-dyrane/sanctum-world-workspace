@@ -4,7 +4,7 @@ Ondina Vasquell, a 68-year-old woman admitted 05/16/2026 with a limb-threatening
 
 Register Note
 
-This is a physician-facing document; grade on clinical substance and fidelity to the documented record, not on prose polish, length, or formatting. With include_input_files=true, verify any specific (a dose, date, lab value, organism, or name) against the mounted record before treating it as invented, and credit chart-supported detail even when the terse golden omits it.
+This is a physician-facing document; grade on clinical substance and fidelity to the documented record, not on prose polish, length, or formatting. When the response includes a specific dose, date, lab value, organism, or name, check it against the provided chart and task file before treating it as invented, and credit documented chart detail even when the terse golden omits it.
 
 Section A. Must be present and correct
 

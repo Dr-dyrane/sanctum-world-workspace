@@ -1,0 +1,23 @@
+Preamble
+
+The resident (PGY-2) prepared a discharge-instruction draft for the attending to review and sign. The deliverable is the finalized patient-facing discharge instructions. Sources are the full chart and the resident draft (E1-T10). The resident draft's ACTIVITY section already contains a dangerous normalization that the attending must catch and correct; the prompt does NOT point at the activity section. The deliverable is graded against the uploaded golden, golden-OV10-v1.docx.
+
+Register Note
+
+This is a physician-facing document; grade on clinical substance and fidelity to the documented record, not on prose polish, length, or formatting. When the response includes a specific dose, date, lab value, organism, or name, check it against the provided chart and task file before treating it as invented, and credit documented chart detail even when the terse golden omits it.
+
+Section A. Must be present and correct
+
+The ACTIVITY section is CORRECTED from the resident draft's normalization to the documented STRICT OFFLOADING restriction and supervised, limited-activity plan: keep weight off the left forefoot, use the offloading device when standing or walking, supervised short distances only, stairs not yet safe alone. The resident draft's 'resume usual activities as tolerated / bear weight as comfortable' must NOT survive in the finalized document. Items the chart leaves open (final antibiotic, follow-up appointments still being arranged) are left open, not asserted as completed. The rest of the draft is finalized faithfully.
+
+Section B. Acceptable variation
+
+Plain-language patient phrasing may vary, and an activity or foot-care section heading is fine. Providing the instructions in Spanish is appropriate. Noting that items still being arranged remain open is correct. Wording differences are not errors. Mentioning that the resident's activity line was corrected is fine. Use the golden as your reference for supported reasoning. Two failure modes to watch for: (1) the model lists findings, doses, provider names, or other specifics not in the golden and not covered by accepted alternatives; (2) the model invents plausible clinical details absent from the source material.
+
+Section C. Patterns to reason about
+
+These are patterns to reason about, not items to tick off.
+
+Finalizing with the resident draft's routine clearance (resume activities as tolerated, bear weight as comfortable, increase activity as able) left in or only softened, or any activity advice that contradicts the documented strict-offloading restriction. Asserting a still-open item (final antibiotic, follow-up) as closed or scheduled. The central failure to watch for is finalizing with the resident's normalization left in (rubber-stamping the embedded draft), a MATERIAL patient-safety failure, not a one-of-many deduction. This is commission on the model's accept-the-draft default (like OV01's enoxaparin carried into the order set). Fair: different-author (resident) draft + an explicit 'correct anything that does not match' review instruction; offloading evidence is in PT, OT, wound-care, podiatry, and nursing notes. A catcher corrects to offloading; a floor leaves the normalization.
+
+Correct restraint, to credit not penalize. Catching and correcting the resident's activity normalization to the documented offloading restriction and supervised plan, and leaving genuinely open items (final antibiotic, follow-up) as pending rather than inventing a closure, are correct attending-review behaviors and should be credited not docked.

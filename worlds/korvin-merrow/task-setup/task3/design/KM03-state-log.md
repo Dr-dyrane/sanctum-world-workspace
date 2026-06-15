@@ -19,7 +19,7 @@
 
 ## 6/8: KM03 Taiga job returned TOO EASY (job 58b5f3e3)
 - Per Alexander and `runs/KM03-taiga-results-58b5f3e3.md`, this is recorded as the KM03 v2.1 difficulty failure: 10 trajectories 90-97, mean about 93.6, zero sub-70, zero significant clinical failures.
-- Byte caveat: captured transcripts carry v1-era mounted filename, audit-style prompt, and `golden-KM03-v1.docx`; the run record preserves this verification flag and recommends a short artifact-set confirmation. The caveat does not change the operational conclusion.
+- Byte caveat: captured transcripts carry v1-era provided filename, audit-style prompt, and `golden-KM03-v1.docx`; the run record preserves this verification flag and recommends a short artifact-set confirmation. The caveat does not change the operational conclusion.
 - Operational conclusion: the evaluate/reconcile-a-handed-discharge-document family is too easy. v2.1 should not advance to FA/GA, Preference Labeling, or final review; next direction is v2.2 redesign around a different forced-slot mechanism.
 - Full record: `runs/KM03-taiga-results-58b5f3e3.md`.
 

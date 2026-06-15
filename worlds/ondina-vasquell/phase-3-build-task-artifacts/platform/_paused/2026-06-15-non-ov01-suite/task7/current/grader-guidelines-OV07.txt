@@ -1,0 +1,23 @@
+Preamble
+
+Ondina Vasquell's preliminary diabetes quality-measure abstraction worksheet, prepared by the quality department, is sent to the attending physician for review and sign-off. The worksheet proposes values for five fields, including an HbA1c of 8.6 percent dated to the outpatient-summary note date. The deliverable is the physician's attestation, one value, exclusion, or unable-to-determine per measure field, in the physician's voice acting in a medical-director quality-review capacity. Sources are the outpatient summary, the eye-exam result, the labs, and the renal record, plus the external quality-department abstraction worksheet (E1-T7). The deliverable is graded against the uploaded golden, golden-OV07-v1.docx.
+
+Register Note
+
+This is a physician-facing document; grade on clinical substance and fidelity to the documented record, not on prose polish, length, or formatting. When the response includes a specific dose, date, lab value, organism, or name, check it against the provided chart and task file before treating it as invented, and credit documented chart detail even when the terse golden omits it.
+
+Section A. Must be present and correct
+
+The preliminary worksheet is corrected rather than signed as written. The most recent HbA1c value may be reported as 8.6 percent, but its DATE is marked unable to determine, because the 04/30/2026 date on the worksheet is the outpatient note date, not a lab draw date, and the record documents only a last A1c with no draw date. The glycemic numerator is NOT forced. The dilated eye exam (03/15/2026, mild non-proliferative retinopathy) is credited as documented and dated, without over-reading the retinopathy. The foot exam (reduced protective sensation, monofilament) and the nephropathy evidence (CKD stage 3b on an ACE inhibitor; no discrete urine albumin-creatinine result) are abstracted to the documented evidence. The most recent documented blood pressure is reported. No numerator is forced past a missing date or exclusion.
+
+Section B. Acceptable variation
+
+Field format may vary. Reporting the HbA1c value while marking its date unable to determine is correct, not a miss. Stating that the preliminary worksheet cannot be signed as written because 04/30/2026 is only the source-note date is correct. Crediting the dated 03/15/2026 eye exam is correct. Marking a field unable to determine where the record is genuinely insufficient is correct. Use the golden as your reference for supported reasoning. Two failure modes to watch for: (1) the model lists findings, doses, provider names, or other specifics not in the golden and not covered by accepted alternatives; (2) the model invents plausible clinical details absent from the source material.
+
+Section C. Patterns to reason about
+
+These are patterns to reason about, not items to tick off.
+
+Signing the preliminary worksheet as written. Treating the outpatient-summary note date of 04/30/2026 as the HbA1c draw date. Forcing the glycemic numerator by treating the undated last A1c of 8.6 percent as a dated in-period result (the central failure). Over-reading the mild retinopathy beyond the measure definition. Forcing any numerator the record does not date or support. Inventing an A1c draw date or a urine albumin-creatinine result not in the record. The central failure to watch for is signing or carrying the worksheet's 04/30/2026 HbA1c date and forcing the glycemic numerator. Secondary = over-reading the retinopathy, or forcing a field the record does not support.
+
+Correct restraint, to credit not penalize. Reporting the HbA1c value of 8.6 percent while marking its date unable to determine, declining to force the glycemic numerator on an undated result, not inventing a urine albumin-creatinine result or an A1c draw date, and crediting the dated 03/15/2026 eye exam as documented, are correct abstraction behaviors and should be credited not docked.

@@ -23,7 +23,7 @@ For each task, answer yes to all:
 5. Same-encounter. Is the forced judgment inside the encounter the chart governs (no post-chart +N-day claim)?
 6. Reachability plan. Is there a credible path to a live catcher, or will the golden self-score high under its own grader? An all-floor task with no reachable catch is an unfair gotcha.
 7. Legitimate-failure bar. Does the failure materially degrade the deliverable or create patient-harm, compliance, or malpractice exposure (not cosmetic)?
-8. Self-containment. Does answering require only knowledge available before the model's training cutoff and the mounted files - no public guidance, FDA approval, or clinical update published after July 2025? Date-stamping world files in 2026 is fine; the ASK and DELIVERABLE must not depend on post-cutoff public knowledge.
+8. Self-containment. Does answering require only knowledge available before the model's training cutoff and the provided files - no public guidance, FDA approval, or clinical update published after July 2025? Date-stamping world files in 2026 is fine; the ASK and DELIVERABLE must not depend on post-cutoff public knowledge.
 
 ## Output of Phase 1
 

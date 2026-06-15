@@ -2,7 +2,7 @@
 
 Status: SOURCE DRAFT FOR REVIEW ONLY. Do not build DOCX from this until the frame, content, and fairness pass are approved.
 
-Future mounted filename concept: `transition_clinic_followup_prechart_draft_05312026.docx`
+Future provided filename concept: `transition_clinic_followup_prechart_draft_05312026.docx`
 
 Future author concept: Mercy Vale Primary Care transition-clinic pre-chart draft for Talia Quenor, MD review.
 

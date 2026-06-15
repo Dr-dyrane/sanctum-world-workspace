@@ -56,7 +56,7 @@ Last updated: 2026-06-14. Sources distilled here: `docs/task-difficulty-lessons.
 
 ## 6. Grader
 
-- Ran a golden-only grader on a SYNTHESIS task, so it flagged true chart detail as fabrication and turned the spread into noise (KM07 v3: identical behavior scored 0.30 vs 0.70). FIX: chart-aware grader (include_input_files=true) whenever the deliverable is built from the chart; golden-only only for a planted-artifact catch. (`docs/grader-guidelines-lessons.md` Lesson 3)
+- Ran a golden-only grader on a SYNTHESIS task, so it flagged true chart detail as fabrication and turned the spread into noise (KM07 v3: identical behavior scored 0.30 vs 0.70). FIX: the grader must be able to read the provided chart whenever the deliverable is built from the chart; golden-only only for a planted-artifact catch. (`docs/grader-guidelines-lessons.md` Lesson 3)
 - Wrote the grader in the instruction-doc A/B/C format and tripped the AutoQC gate (KM01). FIX: the Sang five-block - Preamble (names the golden file verbatim) / Register Note / Section A / Section B (with the verbatim two-failure-mode clause) / Section C (verbatim "patterns to reason about" opener, central failure first, plus a credit-correct-restraint pattern). ~1 page, no numeric weights / score caps / pass bands.
 - Let the grader penalize something the golden itself does, or dock a correct withhold. FIX: never penalize what the golden does; explicitly credit keeping the trap item open/unverified.
 - Let prompt/golden/grader quality vary while testing the trap (Sang: "the whole frame matters"). FIX: build all four surfaces to standard before reading a pilot, or the spread does not reflect the trap.

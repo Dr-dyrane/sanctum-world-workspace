@@ -41,7 +41,7 @@ This task asks the physician to review the HIM preliminary inpatient coding summ
 
 Register Note
 
-This is a physician-facing coding attestation document. Tabular or list structure and coding shorthand are expected. Grade on fidelity to the documented record, not on prose polish, length, or formatting. The preliminary HIM summary is not authoritative; the physician review may accept or reject it. With include_input_files=true, verify specifics against the mounted record before calling them invented.
+This is a physician-facing coding attestation document. Tabular or list structure and coding shorthand are expected. Grade on fidelity to the documented record, not on prose polish, length, or formatting. The preliminary HIM summary is not authoritative; the physician review may accept or reject it. Verify specifics against the provided chart before calling them invented.
 
 Section A. Must be present and correct
 
@@ -88,7 +88,7 @@ The HIM worksheet is an external preliminary coding summary for physician review
 2. Prompt: prompt-task9-v2.txt.
 3. Mount exactly one task file: him_preliminary_inpatient_coding_summary_05252026.docx.
 4. Golden: golden-KM09-v2.docx.
-5. Grader: grader-guidelines-task9-v2.txt, with include_input_files=true.
+5. Grader: grader-guidelines-task9-v2.txt, with access to the provided chart.
 6. Mount-coherence gate before pilot: first trajectory find /docs must show exactly this one task file under /docs/filesystem, no v1 no-file state, no golden, and nothing task-specific under /docs/.apps_data.
 
 ## How to read the pilot

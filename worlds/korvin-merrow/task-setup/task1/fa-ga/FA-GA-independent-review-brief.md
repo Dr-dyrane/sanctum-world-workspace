@@ -14,7 +14,7 @@ World: Healthcare_247_Merrow (a multimorbid internal-medicine discharge case). T
 
 ## Batch v2 results (the evidence)
 10 trajectory scores: 78, 72, 92, 95, 93, 92, 92, 92, 90, 94. Mean 89%, range 72-95, ZERO below 70.
-Taiga QA: Env Linter clean; one Data Quality false positive (enable_anthropic_api) dismissed as tech issue. Grading infra verified correct (golden absent from rollout container, no reward hacking).
+Taiga QA: Env Linter clean; one Data Quality false positive (model-access preflight) dismissed as tech issue. Grading infra verified correct (golden absent from rollout container, no reward hacking).
 Platform calibration heuristic: <70% = task stumps the model (good); >70% = task may be too easy.
 
 Two trajectories were read in full initially and both looked clinically strong on trap handling: no fabrication, prednisone not fixed to a bogus home dose, full cardiorenal restart reasoning, buried OT/nursing evidence surfaced, lispro excluded, antibiotic disposition addressed.

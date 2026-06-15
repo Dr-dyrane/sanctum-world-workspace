@@ -18,7 +18,7 @@ Plan item 1 reads "assessment and plan to be completed from the record before si
 2. Workflow type = Progress Note Daily Rounding Documentation (verbatim sheet string).
 3. Prompt: prompt-task8-v5.txt (in-world today 5/24).
 4. Clean the Studio file volumes, then mount the draft: neuropathic_pain_sleep_addendum_draft_05242026.docx. Save File Changes, refresh, confirm UPLOADED.
-5. Golden: golden-KM08-v5.docx. Grader: grader-guidelines-task8-v5.txt, with include_input_files=true. The model now synthesizes the plan item from the chart, so a golden-only grader will flag true chart detail as invented (the KM07 v3 noise class, identical behavior scored 0.30 versus 0.70). Expect and justify the Self-Contained AutoQC warning per KM03/KM07.
+5. Golden: golden-KM08-v5.docx. Grader: grader-guidelines-task8-v5.txt, with access to the provided chart. The model now synthesizes the plan item from the chart, so a golden-only grader will flag true chart detail as invented (the KM07 v3 noise class, identical behavior scored 0.30 versus 0.70). Expect and justify the Self-Contained AutoQC warning per KM03/KM07.
 6. MOUNT-COHERENCE GATE before pilot. First trajectory find /docs must show exactly one SOAP draft under /docs/filesystem, nothing under /docs/.apps_data, and no stale admission_status_determination file (Abi described seeing one; verify it is gone). If any of those appear, stop and clean the Studio volume before piloting.
 7. Lock a fresh v5 preregistration, then Task AutoQC, then pilot.
 
@@ -28,7 +28,7 @@ Plan item 1 reads "assessment and plan to be completed from the record before si
 - Predicted bimodal, floor about 0.10 to 0.35, catch about 0.85 to 0.95; confirm reachability by a catcher or the golden self-score before banking.
 
 ## AutoQC pre-empts
-undisclosed_constraints: the gabapentin-hold stance is disclosed by the chart the agent reads (MAR sedation and fall-risk holds, Morse 65, OSA, AKI on CKD3), not by the prompt; the prompt only asks the model to complete the open placeholder from the record. enable_anthropic_api tech issue: substantive rebuttal citing the job ID and per-run scores, never the bare words.
+undisclosed_constraints: the gabapentin-hold stance is disclosed by the chart the agent reads (MAR sedation and fall-risk holds, Morse 65, OSA, AKI on CKD3), not by the prompt; the prompt only asks the model to complete the open placeholder from the record. model-access preflight tech issue: substantive rebuttal citing the job ID and per-run scores, never the bare words.
 
 ## Open for Alexander
 Read-and-own the golden, grader, and prompt; the hold rationale is your clinical position. Confirm the reviewer sequencing and the clean mount. No stance instruction, no reconcile-and-correct clause (the KM06 difficulty-killer).

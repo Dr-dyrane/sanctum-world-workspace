@@ -1,18 +1,17 @@
-# OV01 FA/GA - clean-mount pilot (DRAFT for Alexander to finalize)
+# OV01 FA/GA - Attempt 6 new rerun draft
 
-> SUBJECT MUST CHANGE per King P 2026-06-14: FA/GA now uses the 2nd-LOWEST % run, not the lowest. OV01's lowest is 0.40 (attempt 3, used below); the 2nd-lowest is 0.50 (attempt 7, job 741ba52f). RE-DERIVE this FA/GA from the 0.50 run (need its output + grading transcript) before submission. The 0.40-based text below is retained only until the re-derivation. DO-NOT-REPEAT #20.
+Status 2026-06-15: Larry E returned OV01 for grader wording cleanup and wrong-run FA/GA association. The active grader wording has been corrected locally. Alexander reran trajectories, and the current FA/GA subject is now the second-lowest run from job `aa949641-e849-4d84-8a60-4d4642eb61ed`: Attempt 6, run `28a61869-fdee-465f-a59a-ca65cf8f4bd0`, score 0.50. Evidence came from the Studio exports attached 2026-06-15: Attempt 6 has visible output and saved `/tmp/outputs/Vasquell_discharge_med_review.md`.
 
-
-Status 2026-06-14: paste-ready draft for the clean-mount bankable pilot. Job `741ba52f-bae9-4594-a25c-ef5ae0e8bcdc` scored 68, 72, 40, 70, 72, 72, 50, 65, 78, 93 (mean 68.0; four sub-70). FA subject: the single lowest genuine-failure run, Attempt 3, run `24acdfc4-37e2-4d1c-9aca-38c2a11c13a3`, trajectory `traj_e6faef3`, score 0.40. Recommended grader rating: Great. Format per ABI 2026-06-09: failure-only, single run, no grader-section names, no bullets, no headers, each part under about 1000 characters, physician voice, no dashes.
+Before paste: select Attempt 6, score 0.50, in Studio. Confirm the FA/GA text box is associated with run `28a61869`. Do not paste this against Attempt 4 or any older `741ba52f` run.
 
 ## Failure Analysis
 
-On Attempt 3 the failure is the enoxaparin decision. The order set carried enoxaparin 40 mg daily into discharge, but the chart supports it only as inpatient venous thromboembolism prophylaxis; the correct reconciliation stops it at discharge because it is not a home medication and it adds bleeding risk on aspirin plus clopidogrel. The model instead called it reasonable now, marked it confirm rather than discontinue, included it in the patient instructions as a daily shot while she is not walking normally, and asked the physician to confirm continuing it.
+On Attempt 6, the model did much of the medication review carefully. It stopped the IV piperacillin-tazobactam order, kept metformin and empagliflozin from restarting during active infection and renal recovery, avoided NSAIDs, and wrote patient-facing instructions.
 
-It also did not record metformin, empagliflozin, and lisinopril as explicit deferred restarts, leaving them as ambiguous confirm verdicts and calling lisinopril the most clearly supported to resume, which drifts toward resuming an agent held for acute kidney injury rather than holding it. The reconciliation was delivered inline only and not saved as the required output deliverable.
+The miss is enoxaparin. The order set carried enoxaparin 40 mg daily into discharge, and the model treated that as reasonable because her mobility was still limited. The chart supports it only as inpatient prophylaxis. At discharge it should be stopped, especially with aspirin and clopidogrel already on board. The model instead left it as a confirmation item, asked for a home injection plan, and described it in the patient instructions as a shot to take while she was moving less.
 
 ## Grader Analysis
 
-The grader scored the run against the golden and the 0.40 placement supports a Great rating. It caught the central defect, that the golden discontinues enoxaparin at discharge while this run left it alive as a possible discharge medication, and it read the held agents as ambiguous rather than the explicit deferred restarts the golden records, including the lisinopril resume drift; its credit for the antibiotic correction, culture hierarchy, insulin, and NSAID avoidance tracks the golden, so the floor is targeted and not blanket.
+The grader's 0.50 is fair. It credited the useful parts of the review, including antibiotic correction, held oral agents, insulin clarification, NSAID avoidance, and the missing home medications, while still treating enoxaparin as the deciding error.
 
-The wording weakness is that the grader at points says the model continued enoxaparin outright, when the final answer was hedged to confirm rather than sign. That hedge does not cure the error, because the run still called home enoxaparin reasonable, gave injection instructions, and asked to continue it on aspirin and clopidogrel. A deeper floor would overstate it and a higher score would miss the central prophylaxis error, so the placement is right.
+The explanation should stay that concrete. The model did not simply sign enoxaparin without comment; it made it a confirmation item and raised bleeding concerns. But it still called prophylaxis reasonable, requested a home plan, and put the shot in the patient instructions. Since the golden requires stopping inpatient-only prophylaxis at discharge, the 0.50 score is justified.

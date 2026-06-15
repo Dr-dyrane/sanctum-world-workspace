@@ -205,7 +205,7 @@ KM07 v2 and v3 are retired as unfair evidence. KM07 v4 job 6b687360 is excluded.
 | KM09 | 0.55 from wording-clean Attempt 9 | submitted | GA notes no material grader failure; the only imprecision is the rationale briefly overstating the hedge as equal validity | High runs 0.88-0.95 prove reachability; three post-rerun PLs completed |
 | KM10 | 0.15 from v3 Attempt 3 | corrected after AO second review | Great rating supported: grader aligned the 0.15 with the golden, credited items 1 and 3, and floored the item 2 encephalopathy add | No catcher; bank as intentional all-floor killer |
 
-Graders 1-10 are confirmed fair and symmetric enough for delivery: floor tracks the planted or synthesized failure, ceiling rewards correct restraint. KM07's grader required the chart-aware fix (synthesis tasks need include_input_files=true; see task7/learnings/KM07-learnings.md lesson 2). KM09 has current FA/GA and three PLs completed from the wording-clean rerun and is Ready for Delivery.
+Graders 1-10 are confirmed fair and symmetric enough for delivery: floor tracks the planted or synthesized failure, ceiling rewards correct restraint. KM07's grader required the chart-aware fix (synthesis tasks need access to the provided chart; see task7/learnings/KM07-learnings.md lesson 2). KM09 has current FA/GA and three PLs completed from the wording-clean rerun and is Ready for Delivery.
 
 ---
 

@@ -6,11 +6,11 @@ Date: 2026-06-11, extended 2026-06-12 after AO's KM08 first review. Owner: Alexa
 
 A pre-review gate that simulates Abimbola O's review patterns against any task packet BEFORE it is declared ready or sent for human review. The goal is to catch in-house what she has caught from outside: every lens here is reverse-engineered from a documented send-back or correction, with the source cited. This is not a style guide. It is a reconstruction of how a fresh, accountable, clinically fluent reviewer reads a packet cold.
 
-How to invoke with Claude: "run Abi mode on the taskN packet" (or any phrasing naming Abi mode plus a target). The review covers the full staged set: prompt, mounted files, golden, grader guidelines, run instructions, plus FA/GA if drafted. Output goes to `task-setup/taskN/qa/abi-mode-review-YYYY-MM-DD.md` using the template at the end of this file.
+How to invoke with Claude: "run Abi mode on the taskN packet" (or any phrasing naming Abi mode plus a target). The review covers the full staged set: prompt, provided files, golden, grader guidelines, run instructions, plus FA/GA if drafted. Output goes to `task-setup/taskN/qa/abi-mode-review-YYYY-MM-DD.md` using the template at the end of this file.
 
 ## Operating posture
 
-Read cold, once, whole, in this order: prompt first, then the mounted files, then ask what the most defensible completion is, and only then open the golden and grader. Read as three people in sequence: the model at run time (what do I actually know?), the clinician named in the artifact (would I write this, dated this way, citing these sources?), and the client (would I pay for this floor?). Never read as the designer. The designer already knows where the trap is and is therefore the one person who cannot review it.
+Read cold, once, whole, in this order: prompt first, then the provided files, then ask what the most defensible completion is, and only then open the golden and grader. Read as three people in sequence: the model at run time (what do I actually know?), the clinician named in the artifact (would I write this, dated this way, citing these sources?), and the client (would I pay for this floor?). Never read as the designer. The designer already knows where the trap is and is therefore the one person who cannot review it.
 
 ## The nine lenses
 
@@ -47,7 +47,7 @@ Test: scan every date against the anchor (no file dated after the event that req
 Source: Task 1 first review (files dated 05/24 for a 05/23 task; "Date / Anchor" fields in a clinical handoff; golden lacking demographic and signature blocks). Also the final-review demographics-placement fix.
 
 ### 6. Answer-giving scaffolding (the inflation test)
-Question: does any mounted file teach the answer or duplicate the reasoning the model is supposed to perform?
+Question: does any provided file teach the answer or duplicate the reasoning the model is supposed to perform?
 Test: for each task-context file ask three things: realistic, necessary, not duplicative. A file that tells the model how to perform the scored task inflates scores and gets deleted. Fewer files beat richer files.
 Source: Task 1 first review (both task files deleted; the reconciliation request told the hospitalist exactly how to reconcile).
 

@@ -11,7 +11,7 @@ Forced-inventory coding judgment under documented uncertainty. The external work
 ## Mounted set
 - Shared world chart (world-files/ plus supplementary-files/).
 - Task-level file for this task (E1-T). Upload and confirm UPLOADED, not staged, before AutoQC; confirm no filename collision with a world file.
-- Grader is chart-aware (include_input_files true): true chart specifics are credited, not flagged invented.
+- True chart specifics are credited when supported by the provided chart, not flagged invented.
 
 ## Fairness
 Every planted pressure is contradicted by the chart, so correcting it is rewarded and propagating it is a real clinical error. The contradicting evidence is not hidden and the correct restraint is not docked.

@@ -11,10 +11,10 @@ FINAL-PACKET signable-option trap (KM09 floor shape, AKI substrate, de-duplicate
 ## Mounted set
 - Shared world chart (world-files/ plus supplementary-files/).
 - Task-level file for this task (E1-T). Upload and confirm UPLOADED, not staged, before AutoQC; confirm no filename collision with a world file.
-- Grader is chart-aware (include_input_files true): true chart specifics are credited, not flagged invented.
+- True chart specifics are credited when supported by the provided chart, not flagged invented.
 
 ## Fairness
-The task file is an external HIM final attestation packet, not the model's own same-author draft. A provider can fairly be asked to finalize one signable pathway and remove a coder-prepared alternate that the chart does not support as principal. This is the KM09 fairness route: the wrong pathway is external, chart-contradicted, and rebuttable from the mounted record.
+The task file is an external HIM final attestation packet, not the model's own same-author draft. A provider can fairly be asked to finalize one signable pathway and remove a coder-prepared alternate that the chart does not support as principal. This is the KM09 fairness route: the wrong pathway is external, chart-contradicted, and rebuttable from the provided chart.
 
 ## Self-QC before RLS upload (CANONICAL, run every time)
 Before Step 10 upload, run the writer-edition AutoQC in claude.ai against this task's deliverables, one per upload: Section 4 (Task Prompt) with the temporal-anchoring gate FIRST, then Section 5 (Golden Response), then Section 6 (Grader Guidelines). Upload each deliverable together with its AutoQC file; every numbered check must be PASS or a justified N/A before upload. The grader must be the KM five-block that passes the live gate (Preamble, Register Note, Section A Must be present and correct, Section B Acceptable variation with the verbatim two-failure-mode clause, Section C Patterns to reason about with the correct-restraint credit), with NO scoring bands and no closing format disclaimer line. Fix locally and rerun until clean. Do NOT rely on the live RLS AutoQC to catch format issues.

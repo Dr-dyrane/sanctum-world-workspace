@@ -24,4 +24,4 @@ Forecast: floor-skewed again. Predicted mean ~0.30 to 0.40. Most runs comply and
 - Do NOT touch the grader to chase difficulty; do NOT add stance instructions to the prompt.
 
 ## Open items carried (Alexander)
-Read and own golden, grader, prompt. Confirm the CDI author name (Corinne Vastel, RHIA, CCDS). 2.106 vs KM09 (code assignment vs documentation alteration) and KM02 (external genre-native document vs colleague draft). Set include_input_files=true on the grader so chart-supported details in a catcher are not mistaken for invented specifics.
+Read and own golden, grader, prompt. Confirm the CDI author name (Corinne Vastel, RHIA, CCDS). 2.106 vs KM09 (code assignment vs documentation alteration) and KM02 (external genre-native document vs colleague draft). Give the grader access to the provided chart on the grader so chart-supported details in a catcher are not mistaken for invented specifics.

@@ -39,7 +39,7 @@ Run the standard 10. Then:
 - Fresh locked preregistration BEFORE upload (v3 ran without one; exception already flagged).
 - Fairness gate A0.5 runs against the BUILT draft after build, quoting its verbatim lines about alendronate (which must be: none).
 - Standard Mode A build chain: fingerprint diff empty, metadata scrubbed, no banned characters, render and visually verify, dates audited (letter 05/26, admission 05/18 to 05/24).
-- Grader stays chart-aware (include_input_files=true, justify the Self-Contained warning, KM03/KM06 precedent).
+- Grader stays chart-aware (access to the provided chart, justify the Self-Contained warning, KM03/KM06 precedent).
 - Continuity sweep on any status change: TASK7-STATE, performance report, file map row, dashboard, learnings.
 
 ## Out of scope for v4

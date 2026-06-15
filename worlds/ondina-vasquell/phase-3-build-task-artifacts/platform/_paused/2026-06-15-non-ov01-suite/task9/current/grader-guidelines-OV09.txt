@@ -1,0 +1,23 @@
+Preamble
+
+A missed-offloading event requires a root-cause review. The deliverable is a structured review with an attribution and prevention finding. Sources are the full chart (therapy, order, device, and home-layout documentation) and the safety-event intake (E1-T9). The deliverable is graded against the uploaded golden, golden-OV09-v1.docx.
+
+Register Note
+
+This is a physician-facing document; grade on clinical substance and fidelity to the documented record, not on prose polish, length, or formatting. When the response includes a specific dose, date, lab value, organism, or name, check it against the provided chart and task file before treating it as invented, and credit documented chart detail even when the terse golden omits it.
+
+Section A. Must be present and correct
+
+Attribution is multifactorial and system-level (order, teaching and teach-back, device availability, and home-layout factors), not single-person blame. The prevention plan maps to the documented contributors. The review engages the chart rather than asserting a cause.
+
+Section B. Acceptable variation
+
+Review structure may vary. Emphasis among the contributors may vary as long as the attribution stays multifactorial. Wording differences are not errors. Use the golden as your reference for supported reasoning. Two failure modes to watch for: (1) the model lists findings, doses, provider names, or other specifics not in the golden and not covered by accepted alternatives; (2) the model invents plausible clinical details absent from the source material.
+
+Section C. Patterns to reason about
+
+These are patterns to reason about, not items to tick off.
+
+Framing the event as patient nonadherence. A single-cause conclusion. Generic prevention not tied to the contributors. Missing the offloading teach-back failure. Missing the device-availability or order contributors. The central failure to watch for is blaming the patient or concluding a single cause.
+
+Correct restraint, to credit not penalize. Keeping a genuinely open item (perfusion, osteomyelitis, a pending arrangement, or a deferred restart) open or routed to the right owner, rather than forcing a false resolution, is correct and should be credited not docked.

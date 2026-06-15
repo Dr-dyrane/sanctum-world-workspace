@@ -9,4 +9,4 @@
 - The same 26 world files, PLUS exactly ONE task-level file: the committed-clearance mounted note (case_management_discharge_readiness_clearance_05242026.docx), rendered through the world builder from G3-mounted-note source, mounted in 1.3.
 - No other task-level files. FI-S03 stays a world file (no action; it is clean). FI-T03 holdback is NOT mounted as-is (it is neutral; the mounted note is new closure content authored for the slot).
 - Filename must not collide with any of the 26 world files or the 7 holdback request files (collision = blank trajectories). "case_management_discharge_readiness_clearance_05242026.docx" is unique.
-- Clean vs escalation differ only by that one mounted file. Both sets pinned here so the no-leak/date audits apply to exactly the right files.
+- Clean vs escalation differ only by that one provided file. Both sets pinned here so the no-leak/date audits apply to exactly the right files.

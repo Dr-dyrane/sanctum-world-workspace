@@ -1,5 +1,5 @@
 # Workspace File Map
-**Last updated: 2026-06-14 (Ondina Vasquell Brainstorm and Spec passed in Studio; World Gen run #1 completed 2026-06-14 04:11 PDT; Stage 9 restored the verified 34-file writer-produced world and removed all task files; Final AutoQC cleared; world `Healthcare_297_Vasquell` created 2026-06-14 10:58 PDT as `world_ab51f33a691648d08f5ca681375fe2a1`; OV01 v2 clean-mount pilot banked in job `741ba52f-bae9-4594-a25c-ef5ae0e8bcdc`; OV02 retired after five coding ceilings; OV05 v2 and OV10 v3 ceilinged; fresh-eye reset says frozen world is a task-layer constraint, not a verdict, with OV06 v2 as next rebuild; prior KM status remains KM01-KM06 delivered and KM07-KM10 Ready for Delivery)**
+**Last updated: 2026-06-15 (Ondina OV01 Larry-return cleanup logged: active surface remains OV01 only; current FA/GA subject is review rerun job `aa949641`, Attempt 6, run `28a61869`, score 0.50; old planning and pilot churn archived under `worlds/ondina-vasquell/archive/2026-06-15-cleanup/`; non-OV01 task packets parked under `worlds/ondina-vasquell/phase-3-build-task-artifacts/platform/_paused/2026-06-15-non-ov01-suite/`; reviewer-facing grader wording scrubbed so canonical graders say the clinical verification rule, not implementation language. Prior KM status remains KM01-KM06 delivered and KM07-KM10 Ready for Delivery.)**
 
 Single source of truth for repo structure, placement rules, and navigation.
 Read this + `AGENTS.md` at the start of any new session before touching files.
@@ -63,52 +63,29 @@ sanctum-world-workspace/
   tools/                       ← all Python scripts (canonical home)
   worlds/
     korvin-merrow/             ← World #1 (KM01-KM06 delivered; KM07-KM10 ready)
-    ondina-vasquell/           ← World #2 (authorized 6/12 late): skeleton evolved to live
-                                 cockpit. 00-START-HERE.md = world cockpit with decisions
-                                 8-10 build doctrine (transcript from git hx; Custom Made
-                                 origin + Mode A HIM/EMR; Codex imagegen delegation).
-                                 phase-1 worksheets FILLED from the hour packet (1a slate,
-                                 1c pairings + fairness gates, 1d forecasts). phase-2 holds
-                                 2a-substrate-arming-map.md (now filled for all ten tasks
-                                 with T1/T9 difficulty-leak watch items), 2b-spec-prep-checklist.md
-                                 (KM reviewer-correction inheritance: comorbidity expansion
-                                 and medication specificity resolved by Alexander-ratified
-                                 substrate pack), 2c-autoqc-25-defense-notes.md
-                                 (osteo, perfusion-conflict, borderline-stay defenses,
-                                 drafted same-day per the KM lesson), and
-                                 world-spec-prep/locked/substrate-proposal-pack.md plus
-                                 world-spec-prep/reviews/spec-audit-record-2026-06-13.md.
-                                 Brainstorm DOCX
-                                 built at worlds/ondina-vasquell/submission/
-                                 Ondina_Vasquell_Brainstorm.docx, SHA prefix e1693467,
-                                 final local audit PASS; Brainstorm AutoQC passed per Alexander;
-                                 World Spec DOCX rebuilt after 6/13 deep audit patched Section 3
-                                 to the current Source and Tool file-plan schema, SHA prefix
-                                 34632be5. EW30 wound photo and EW31 ABI/TBI tracing are complete,
-                                 metadata-stripped, visually verified, and copied into world-files/.
-                                 Phase 3 lab/radiology realism pass added EMR accession,
-                                 order, specimen, source, collection, and report metadata to
-                                 report-style DOCX files.
-                                 Studio status 2026-06-14: Brainstorm pass, Spec pass,
-                                 World Gen run #1 complete, Final AutoQC clean, world
-                                 created as Healthcare_297_Vasquell
-                                 (`world_ab51f33a691648d08f5ca681375fe2a1`), OV01
-                                 created in Task Writing. OV01 v2 clean-mount pilot banked:
-                                 `741ba52f` scores 68,72,40,70,72,72,50,65,78,93,
-                                 FA/GA must be re-derived under the 2nd-lowest rule before
-                                 submission. OV02 retired after five coding ceilings; OV05 v2
-                                 and OV10 v3 ceilinged. Fresh-eye reset lives at
-                                 phase-4-pilot-review-submit/FRESH-EYES-RESET-2026-06-14.md:
-                                 frozen world remains true, but next work is task-layer
-                                 rescue, starting with OV06 v2 as a binary physician-advisor
-                                 determination packet, then OV08 v2 with the missing task file.
-                                 Hygiene rule: inspect first-trajectory `find /docs`
-                                 before banking any pilot. Exactly one task file under
-                                 `/docs/filesystem`, no task-specific `/docs/.apps_data`,
-                                 no stale same-purpose filename.
-                                 Brainstorm Claude transcript
-                                 lives beside it as markdown and DOCX with Claude share
-                                 provenance and chat-style code panels for later World Spec submission.
+    ondina-vasquell/           ← World #2. Active cockpit is 00-START-HERE.md and
+                                 OV-WORLD-STATUS.md. Studio world is
+                                 Healthcare_297_Vasquell
+                                 (`world_ab51f33a691648d08f5ca681375fe2a1`).
+                                 Current operating focus is OV01 only after the
+                                 2026-06-15 cleanup pass. Larry-return FA/GA is
+                                 ready for job `aa949641`, Attempt 6, run
+                                 `28a61869`, score 0.50. Active packet:
+                                 phase-3-build-task-artifacts/platform/task1/current/.
+                                 Active result + FA/GA:
+                                 phase-4-pilot-review-submit/OV01-results-and-prereg-reconciliation.md
+                                 and phase-4-pilot-review-submit/fa-ga/FA-GA-OV01-current.md.
+                                 Non-OV01 task packets are parked under
+                                 phase-3-build-task-artifacts/platform/_paused/
+                                 2026-06-15-non-ov01-suite/. OV02 coding history is
+                                 retired under platform/_retired/. Planning history and
+                                 pilot churn are archived under archive/2026-06-15-cleanup/.
+                                 The world files remain frozen and clean: 34 final files,
+                                 no task files in the world. For any grader guideline,
+                                 write the clinical rule plainly: verify specific doses,
+                                 dates, labs, organisms, and names against the provided
+                                 chart before calling them invented. Do not paste platform
+                                 setup language into reviewer-facing graders.
 ```
 
 ---
@@ -232,7 +209,7 @@ discharge_day_soap_addendum_started_05242026.docx  ← attending draft; true pla
 night_float_pain_sleep_signout_05242026.docx   ← external signout suggests gabapentin TID, fair handoff temptation
 bedside_photo_05242026.png                      ← nursing bedside photo; off-text diabetic foot wound signal
 golden-KM08-v7.docx                            ← Mode A clone, declines signout escalation and addresses photo wound
-grader-guidelines-task8-v7.txt                 ← chart-aware and photo-aware; include_input_files=true required
+grader-guidelines-task8-v7.txt                 ← chart-aware and photo-aware; provided chart access required
 RUN-INSTRUCTIONS-v7.md                         ← workflow = Progress Note Daily Rounding Documentation
 ```
 
@@ -249,7 +226,7 @@ Pilot preregistrations: `task7/runs/KM07-v2-pilot-preregistration.md`, `task8/ru
 prompt-task9-v2.txt                             ← asks for physician review of the preliminary HIM summary, final code set, principal sequencing, rationales, DRG family
 him_preliminary_inpatient_coding_summary_05252026.docx  ← task-level external preliminary coding surface for physician review
 golden-KM09-v2.docx                             ← Mode A signed physician coding attestation
-grader-guidelines-task9-v2.txt                  ← chart-aware; include_input_files=true required
+grader-guidelines-task9-v2.txt                  ← chart-aware; provided chart access required
 RUN-INSTRUCTIONS-v2.md                          ← Studio upload and first-trajectory mount gates
 ```
 

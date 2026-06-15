@@ -4,7 +4,7 @@ This task asks the physician to finalize a discharge-day SOAP addendum for Korvi
 
 Register Note
 
-This is a physician-facing inpatient progress-note addendum. Clinical shorthand and a problem-oriented format are expected. Grade on clinical substance and fidelity to the source record, not on prose polish, length, or formatting. The model worked from the mounted chart and task files; before treating any specific dose, date, laboratory value, provider name, fall-risk score, photo finding, or other detail as invented, verify it against those files. A chart-supported or photo-supported specific is true detail and should be credited even when absent from the terse golden.
+This is a physician-facing inpatient progress-note addendum. Clinical shorthand and a problem-oriented format are expected. Grade on clinical substance and fidelity to the source record, not on prose polish, length, or formatting. The model worked from the provided chart and task files; before treating any specific dose, date, laboratory value, provider name, fall-risk score, photo finding, or other detail as invented, verify it against those files. A chart-supported or photo-supported specific is true detail and should be credited even when absent from the terse golden.
 
 Section A. Must be present and correct
 

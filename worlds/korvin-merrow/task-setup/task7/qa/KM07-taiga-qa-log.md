@@ -4,23 +4,23 @@
 
 Status 2026-06-11 PM: v3 was ruled unfair on the built bytes. The QA notes below are retained only for the substantive tech-issue-response lesson. Do not rerun this QA for acceptance; current KM07 is v4 and needs its own authorized checks after read-and-own and preregistration.
 
-### Flag 1 (Technical): enable_anthropic_api False - thumbs DOWN, but the bare "tech issue" annotation FAILED Feedback review
+### Flag 1 (Technical): model-access preflight warning - thumbs DOWN, but the bare "tech issue" annotation FAILED Feedback review
 The Taiga QA Feedback review rejected the two-word "tech issue" annotation as dismissive deflection (does not engage the finding's substance). The old two-field rule (KM03-era) is CORRECTED: a tech-issue disagree needs a substantive, fact-referenced rebuttal. Historical replacement reasoning, not for v3 entry:
 
-"The grader did not fail or fall through on this task. The selected grader is the model grader, and on the trajectory pilot (job dba6c34f) it executed normally and returned valid, discriminating per-run scores across all ten runs (0.45 to 0.60). enable_anthropic_api=False is a static configuration-preflight signal that does not reflect the actual grading run; the completed pilot empirically contradicts the predicted cannot-call-the-model / will-fail-or-fall-through. No grading failure occurred, so the finding does not apply to this task."
+"The grader did not fail or fall through on this task. The selected grader is the model grader, and on the trajectory pilot (job dba6c34f) it executed normally and returned valid, discriminating per-run scores across all ten runs (0.45 to 0.60). model-access preflight warning is a static configuration-preflight signal that does not reflect the actual grading run; the completed pilot empirically contradicts the predicted cannot-call-the-model / will-fail-or-fall-through. No grading failure occurred, so the finding does not apply to this task."
 
 ### Flag 2 (Non-technical): undisclosed_constraints - thumbs DOWN, substantive rebuttal ALREADY PASSES review
 Accurate but intended; justified, not fixed. The required stances (keep bone-health open, staged restart, held agents not restarted) are disclosed by the chart the agent reads (MAR: alendronate not administered inpatient, reconcile at discharge; held agents charted restart-not-ordered). The prompt is intentionally a minimal in-role completion instruction per pod prompt guidance; restating the stances would telegraph the judgment the task tests (the KM06 reconcile-clause difficulty-killer). Do NOT add stance instructions to the prompt.
 
 ### Expected on any re-run: Self-Contained Guidelines warning
-The chart-aware grader requires include_input_files=true, so expect the Self-Contained AutoQC warning; justify with the include_input_files evidence exactly as on KM03/KM04.
+The chart-aware grader requires access to the provided chart, so expect the Self-Contained AutoQC warning; justify with the chart access evidence exactly as on KM03/KM04.
 
 ---
 
 ## HISTORICAL: v1-era batch QA report (job ~6/9, Env Linter clean, Data Quality 2 warnings) - responses entered 6/10
 NOTE 6/11: the two-field "tech issue" treatment recorded below was the standard at the time but FAILED the 6/11 Feedback review; see CURRENT section for the corrected substantive approach. Kept for history.
 
-### Flag 1 (Technical): "Agentic grader configured but enable_anthropic_api is False"
+### Flag 1 (Technical): "Agentic grader configured but model-access preflight is False"
 Disposition: thumbs DOWN. The recurring false positive (Task 1 / KM02 / KM03 / KM06 precedent).
 TWO-FIELD RULE (KM03 correction, mandatory): the annotation/comment field takes EXACTLY the two words below, nothing else - any narrative there fails the Feedback AutoQC. The reasoning sentence goes ONLY in the dedicated dismissal-reasoning field.
 
@@ -28,7 +28,7 @@ Annotation field (exact):
 tech issue
 
 Dedicated dismissal-reasoning field (one sentence):
-The agentic grader executed and returned scores on all ten trajectories in this batch, so the enable_anthropic_api setting did not affect grading for this task; the flag reflects an environment configuration outside the task definition.
+The agentic grader executed and returned scores on all ten trajectories in this batch, so the model-access preflight setting did not affect grading for this task; the flag reflects an environment configuration outside the task definition.
 
 ### Flag 2 (Non-technical): "undisclosed_constraints - prompt asks only to state the reason for the referral with no warning [that the staged-restart framing is required]"
 Disposition: thumbs DOWN + substantive rebuttal (client-visible). Chart citations byte-verified against the agent-read nephrology consultation and discharge-facing plan.

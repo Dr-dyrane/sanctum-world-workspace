@@ -33,7 +33,7 @@ READ THE PILOT:
 
 UPLOAD-TIME CHECKS:
 - Golden filename in the grader (golden-KM05-v2.docx) byte-matches the uploaded golden filename; if the platform sanitizes dots/underscores, confirm the reference still resolves.
-- Expect the Self-Contained Guidelines AutoQC warning; justify with include_input_files, as on KM03/KM04.
+- Expect the Self-Contained Guidelines AutoQC warning; justify with chart access, as on KM03/KM04.
 - Date audit: 05/31/2026 is the correct visit date (allowed); hospitalization references are 05/18 to 05/24. Confirm no fabricated objective result is dated between 05/25 and 05/31; labs are ordered and pending only.
 
 ALLOCATION NOTE: this is the second KM01-family task (shallow safety clearer). The deep slot is KM06 (omission + red-herring mechanism).

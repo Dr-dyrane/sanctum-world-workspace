@@ -58,7 +58,7 @@ Target 10 tasks. Use at least 5 distinct structures from `docs/task-structure-do
 
 Grader mode choices:
 
-- Chart-aware: needed when the model synthesizes from mounted records.
+- Chart-aware: needed when the model synthesizes from provided charts.
 - Golden-only: only safe when the task is a planted-artifact catch and the golden contains the complete scoring target.
 - Vision or audio aware: required when a photo, scan, handwritten note, or audio transcript is central.
 

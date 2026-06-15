@@ -240,7 +240,7 @@ def grader_v66(idd, dd):
                 "model invents plausible clinical details absent from the source material.")
     parts = [
       "Preamble\n\n" + dd["context"] + f" The deliverable is graded against the uploaded golden, {dd['golden']}.",
-      "Register Note\n\nThis is a physician-facing document; grade on clinical substance and fidelity to the documented record, not on prose polish, length, or formatting. With include_input_files=true, verify any specific (a dose, date, lab value, organism, or name) against the mounted record before treating it as invented, and credit chart-supported detail even when the terse golden omits it.",
+      "Register Note\n\nThis is a physician-facing document; grade on clinical substance and fidelity to the documented record, not on prose polish, length, or formatting. When the response includes a specific dose, date, lab value, organism, or name, check it against the provided chart and task file before treating it as invented, and credit documented chart detail even when the terse golden omits it.",
       "Section A. Must be present and correct\n\n" + dd["must"],
       "Section B. Acceptable variation\n\n" + dd["acceptable"] + " Use the golden as your reference for supported reasoning. " + two_fail,
       "Section C. Patterns to reason about\n\nThese are patterns to reason about, not items to tick off.\n\n" + dd["penalize"] + f" The central failure to watch for is {central}.\n\nCorrect restraint, to credit not penalize. " + dd.get("restraint", "Keeping a genuinely open item (perfusion, osteomyelitis, a pending arrangement, or a deferred restart) open or routed to the right owner, rather than forcing a false resolution, is correct and should be credited not docked."),
@@ -266,7 +266,7 @@ def emit():
             f"## Mechanism under test\n{d['mechanism']}\n\n"
             "## Mounted set\n- Shared world chart (world-files/ plus supplementary-files/).\n"
             f"- Task-level file for this task (E1-T). Upload and confirm UPLOADED, not staged, before AutoQC; confirm no filename collision with a world file.\n"
-            "- Grader is chart-aware (include_input_files true): true chart specifics are credited, not flagged invented.\n\n"
+            "- Grader should credit documented chart specifics and should not treat true chart details as invented just because the terse golden omits them.\n\n"
             "## Fairness\n" + d.get("fairness", "Every planted pressure is contradicted by the chart, so correcting it is rewarded and propagating it is a real clinical error. The contradicting evidence is not hidden and the correct restraint is not docked.") + "\n\n"
             + SELFQC +
             "## RLS entry (save after every step)\nWorkflow type = " + WORKFLOW[task]["wf"] + " (verify on the live Task Selection Categories sheet). 1.2 prompt-" + i + ".txt. 1.3 upload the task file, Save File Changes, refresh, confirm UPLOADED. 1.4 golden " + d["golden"] + " and grader grader-guidelines-" + i + ".txt; confirm the grader names the golden by filename. Save Changes, refresh, run Task AutoQC (rerun N failing once), 2.2 note, run Trajectories.\n\n"

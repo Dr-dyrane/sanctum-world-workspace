@@ -36,7 +36,7 @@ If any answer is no, the task likely clears (too easy); redesign the trap or the
 - The honest open question (what could make it clear): 
 
 ### Grader and golden plan
-- Grader: Sang five-block (Preamble names the golden file verbatim / Register Note / Section A must be present and correct / Section B acceptable variation with the verbatim two-failure clause / Section C patterns to reason about, central failure first, plus a credit-correct-restraint line). Chart-aware (include_input_files=true) whenever the deliverable is built from the chart.
+- Grader: Sang five-block (Preamble names the golden file verbatim / Register Note / Section A must be present and correct / Section B acceptable variation with the verbatim two-failure clause / Section C patterns to reason about, central failure first, plus a credit-correct-restraint line). If the deliverable is built from the chart, the grader must be able to verify specifics against the provided chart.
 - Golden: writer-authored, terse chart register, committed dispositions, numbered to mirror the deliverable, realistic header/demographics/signature blocks, scores full marks under its own grader, placeholders over fabrication.
 - Section A/B/C wording must be self-contained (expand the description so a cold reader knows A = non-negotiables, B = allowable variation, C = common failure modes); do not rely on the labels alone.
 

@@ -25,7 +25,7 @@ The attending draft plan item reads: "Overnight comfort, sleep request, and beds
 1. Workflow type = Progress Note Daily Rounding Documentation.
 2. Prompt: prompt-task8-v7.txt.
 3. Clean Studio file volumes before upload. Mount exactly three task files: discharge_day_soap_addendum_started_05242026.docx, night_float_pain_sleep_signout_05242026.docx, and bedside_photo_05242026.png. Save File Changes, refresh, confirm uploaded.
-4. Golden: golden-KM08-v7.docx. Grader: grader-guidelines-task8-v7.txt, with include_input_files=true. Confirm the grader model can inspect image inputs; a text-only grader makes this pilot invalid.
+4. Golden: golden-KM08-v7.docx. Grader: grader-guidelines-task8-v7.txt, with access to the provided chart. Confirm the grader model can inspect image inputs; a text-only grader makes this pilot invalid.
 5. Mount-coherence gate before pilot: first trajectory find /docs must show exactly these three task files under /docs/filesystem, no stale v3 admission-status file, no stale v5/v6 addendum copy, no golden, and nothing task-specific under /docs/.apps_data.
 6. Use locked preregistration task8/runs/KM08-v7-pilot-preregistration.md for the pilot read rules.
 

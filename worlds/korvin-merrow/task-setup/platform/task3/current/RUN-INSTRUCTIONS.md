@@ -23,7 +23,7 @@ Status: ACTIVE / uploaded by Alexander / Task AutoQC PASS / Taiga held. Built pe
 
 ## Upload-time checks (Claude.ai build review 6/8)
 - GOLDEN FILENAME MATCH (required): locally the grader names `golden-KM03-v2.2.docx` and the file on disk is exactly `golden-KM03-v2.2.docx` (verified byte-name match). At the 1.4 upload step, confirm the platform keeps that exact name. If the platform sanitizes the dot to an underscore (uploads as `golden-KM03-v2_2.docx`), edit the grader's golden reference to match the uploaded name BEFORE running AutoQC, or the golden-reference lookup can break.
-- EXPECTED AutoQC "Self-Contained Guidelines" warning: the grader intentionally cross-references the chart (the explicit unsupported-fact pointer) for the CPAP fabrication check. Justify this in the AutoQC notes via the include_input_files evidence; do NOT "fix" it by making the grader golden-only.
+- EXPECTED AutoQC "Self-Contained Guidelines" warning: the grader intentionally cross-references the chart (the explicit unsupported-fact pointer) for the CPAP fabrication check. Justify this in the AutoQC notes via the chart access evidence; do NOT "fix" it by making the grader golden-only.
 - Fabrication clause is chart-aware (6/8 fix): the grader penalizes only specifics UNSUPPORTED BY THE CHART, not specifics merely absent from the terse golden (per the Task 1 lesson). CPAP recency/adherence is unsupported by the chart, so the CPAP penalty is fully intact.
 - Active set is Alexander-owned. Do not edit or re-upload without explicit Alexander authorization.
 

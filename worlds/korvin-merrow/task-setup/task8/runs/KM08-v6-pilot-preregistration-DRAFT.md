@@ -23,4 +23,4 @@ Forecast: aim under 60, predicted bimodal and wide. Disciplined models decline a
 - Reachability: the golden declines and self-scores high under its own grader, so the catch is reachable; the pilot tests whether any model takes the floor.
 
 ## Open items carried (Alexander)
-Read and own the golden, grader, and the clinical pivot that deferring the same-day TID is the standard, so flooring adoption is a real error and not a penalty for defensible care. Sequence the new mechanism with Abi before upload. Confirm the new name Mira Lasken. Set include_input_files=true on the grader. Two task files mounted, no .apps_data duplicate, no stale v5 draft. Lock this prereg before any run.
+Read and own the golden, grader, and the clinical pivot that deferring the same-day TID is the standard, so flooring adoption is a real error and not a penalty for defensible care. Sequence the new mechanism with Abi before upload. Confirm the new name Mira Lasken. Give the grader access to the provided chart on the grader. Two task files mounted, no .apps_data duplicate, no stale v5 draft. Lock this prereg before any run.

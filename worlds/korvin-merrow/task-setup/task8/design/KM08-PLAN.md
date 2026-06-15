@@ -148,7 +148,7 @@ Locked pilot preregistration: `task8/runs/KM08-v7-pilot-preregistration.md`.
 1. **2.106 adjacency to KM06 - CLEARED** by Alexander 6/9. Capability-distinct accepted.
 2. **Workflow category - RESOLVED:** exact string is Progress Note Daily Rounding Documentation.
 3. **Mount coherence - REQUIRED before pilot:** Studio must show exactly three v7 task files under `/docs/filesystem`, the discharge-day SOAP addendum, the night-float signout, and the bedside photo, with no stale admission-status file, no stale v5/v6 file, no golden, and no `.apps_data/calendar` duplicate.
-4. **Vision validity - REQUIRED before reading scores:** the agent must see the PNG, and the grader must be able to inspect the PNG with include_input_files=true. A text-only agent or grader invalidates the pilot.
+4. **Vision validity - REQUIRED before reading scores:** the agent must see the PNG, and the grader must be able to inspect the PNG with access to the provided chart. A text-only agent or grader invalidates the pilot.
 
 ## Build-time discipline (carry into the build)
 
@@ -156,7 +156,7 @@ Locked pilot preregistration: `task8/runs/KM08-v7-pilot-preregistration.md`.
 - **No reconcile clause, unless Alexander deliberately chooses the difficulty-killer route** - it killed KM06 v4 at about 0.98.
 - **Build standard** - Mode A clone of KM02 base, styles byte-identical, metadata scrubbed, render and view before staging, no synthetic tokens, no em/en-dash in task-facing text.
 - **Physician voice** - deliverable and prompt in physician voice.
-- **Grader access** - set `include_input_files=true`; v7 asks the model to synthesize from chart, signout, and photo, so the grader must verify chart citations and photo findings against the mounted record before calling them unsupported.
+- **Grader access** - set `access to the provided chart`; v7 asks the model to synthesize from chart, signout, and photo, so the grader must verify chart citations and photo findings against the provided chart before calling them unsupported.
 - **Fresh evidence** - v7 preregistration is locked; pilot from a clean mount, then use a catcher or golden self-score to prove reachability.
 
 **Boundaries:** no additional upload, AutoQC, pilot, QA response, final review action, or RL Studio mutation without explicit Alexander authorization for that exact step.

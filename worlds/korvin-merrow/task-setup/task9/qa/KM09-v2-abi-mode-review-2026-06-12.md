@@ -28,7 +28,7 @@ None.
 
 7. Difficulty and symmetric spread: reachability PASS, floor pending re-pilot. v1.1 job df5ba05c was bimodal with scores 20, 15, 15, 15, 85, 15, 93, 20, 15, 20. v2 is a new construction and needs a fresh pilot; v1.1's banked pilot is retired.
 
-8. Alignment after change: PASS. Prompt references the mounted summary; golden reviews and declines it; grader names the HIM worksheet; Register Note states the summary is not authoritative; run instructions and prereg require include_input_files=true. v1.1 FA/GA is stale and must be rebuilt from the v2 pilot.
+8. Alignment after change: PASS. Prompt references the mounted summary; golden reviews and declines it; grader names the HIM worksheet; Register Note states the summary is not authoritative; run instructions and prereg require access to the provided chart. v1.1 FA/GA is stale and must be rebuilt from the v2 pilot.
 
 9. Mechanism precision and self-standing records: PASS. Grader scores against golden-KM09-v2.docx plus chart verification, not independent investigation. FA/GA should be rebuilt failure-only from the v2 pilot.
 
@@ -45,7 +45,7 @@ None.
 - Metadata: PASS. Core author and last_modified_by are empty on golden and worksheet.
 - Prompt-to-file reference: PASS. Prompt names the preliminary coding summary and one matching file is mounted.
 - Workflow string: Inpatient Medical Coding and DRG Assignment. Confirm against the live tracker sheet at upload.
-- Grader chart-access: PASS. include_input_files=true is specified in run instructions and preregistration.
+- Grader chart-access: PASS. access to the provided chart is specified in run instructions and preregistration.
 - Names: PASS. Ilyana Rook, CCS has no collision in the 26 world files.
 - Register and architecture leak: PASS. No trap, anchor, snapshot, placeholder, or architecture words in either docx.
 

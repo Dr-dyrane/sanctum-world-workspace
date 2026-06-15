@@ -1,5 +1,5 @@
 export type Stage = 'planned' | 'built' | 'delivered' | 'ready' | 'review';
-export type Reachability = 'proven' | 'watch' | 'open' | 'notstarted';
+export type Reachability = 'proven' | 'watch' | 'open' | 'notstarted' | 'retired';
 export type Quality = 'exact' | 'planned';
 
 export type TaskPacket = {
@@ -126,13 +126,13 @@ export const worlds: World[] = [
     id: 'ondina-vasquell',
     title: 'Ondina Vasquell',
     kicker: 'World live. Tasking started.',
-    blurb: 'Limb-threat diabetic foot world. OV01 clean pilot banked. OV02 v5 is the active coding packet after a v4 ceiling.',
+    blurb: 'Limb-threat diabetic foot world. OV01 is in review cleanup. FA/GA is ready.',
     meta: {
       patient: 'Ondina Vasquell clinical suite',
       chart: 'Healthcare_297_Vasquell, 34 files, snapshot May 21, 2026 at 18:00',
       writer: 'Alexander Udeogaranya, MD',
-      evidence: 'World created. OV01 clean pilot job 741ba52f banked. OV02 v4 ceiling job be4edca2 documented. OV02 v5 rebuilt locally.',
-      dataSyncedOn: '2026-06-14',
+      evidence: 'World created. OV01 clean pilot job 741ba52f banked. Review rerun job aa949641 selects Attempt 6 at 0.50.',
+      dataSyncedOn: '2026-06-15',
     },
     tasks: [
       {
@@ -145,7 +145,7 @@ export const worlds: World[] = [
         mechanism: 'External discharge orders carry inpatient VTE prophylaxis into discharge despite aspirin plus clopidogrel.',
         family: 'Medication safety',
         workflow: 'Medication Reconciliation at Care Transitions',
-        verdict: 'Clean pilot banked: mean 68.0 with four sub-70 runs and a 93 catcher. FA/GA draft ready; PL and final review pending.',
+        verdict: 'Clean pilot banked: mean 68.0 with four sub-70 runs and a 93 catcher. Review-return FA/GA is ready on Attempt 6 at 0.50; PL and final review pending.',
         mean: 68.0,
         spread: [68,72,40,70,72,72,50,65,78,93],
         runsTotal: 10,
@@ -190,15 +190,15 @@ export const worlds: World[] = [
         id: 'OV02',
         position: 10,
         name: 'Physician Coding Attestation',
-        plain: 'Finalize one signable coding pathway and remove the renal-failure alternate.',
-        mechanism: 'HIM packet carries Pathway A as AKI principal with renal-failure DRG and Pathway B as DFI principal. The floor is leaving Pathway A alive.',
+        plain: 'Retired after repeated coding-attestation ceilings.',
+        mechanism: 'Coding-attestation packets repeatedly ceilinged, including the v4 and v5 embedded-pathway attempts.',
         family: 'Severity capture',
         workflow: 'Inpatient Medical Coding and DRG Assignment',
-        verdict: 'v5 built locally after v4 ceilinged at 0.92 to 0.97. Self-QC and upload pending.',
+        verdict: 'Retired. v4 and v5 both ceilinged with no material failure. Archive retained for provenance only.',
         mean: 94.7,
         spread: [96,95,95,92,96,95,92,97,92,97],
         quality: 'exact',
-        reach: 'open',
+        reach: 'retired',
         packet: packets.OV02,
       },
     ],
@@ -215,7 +215,7 @@ export const journey = [
   { label:'File review', status:'complete', detail:'Final files clear.' },
   { label:'Tasking', status:'complete', detail:'OV01 created.' },
   { label:'Pilot', status:'complete', detail:'OV01 clean pilot banked.' },
-  { label:'Review', status:'active', detail:'FA/GA ready. PL and final review pending.' },
+  { label:'Review', status:'active', detail:'OV01 FA/GA ready on Attempt 6. PL and final review pending.' },
 ];
 
 export const statusLabels: Record<Stage, string> = {

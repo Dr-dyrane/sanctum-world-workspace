@@ -5,7 +5,7 @@ Distilled from the Korvin Merrow task-setup tree (TASK-RUNBOOK, TASKn-STATE, run
 ## 1. End-to-end sequence + gates
 Step 10 entry -> Task AutoQC -> Trajectories (10) + Taiga QA -> Trajectory AutoQC + Taiga QA Feedback -> FA/GA -> 3 Preference Labels -> reviewer round -> delivery.
 - Step 10 entry: paste prompt; upload task file and click the SEPARATE "Save File Changes" (not just top Save); upload golden as a file; paste grader; Save; refresh; confirm all four survive untruncated and the task file shows UPLOADED (not staged). Mount gate on first trajectory: `find /docs` = one task file under /docs/filesystem, nothing under /docs/.apps_data, no name collision with a world file (blank trajectories otherwise).
-- Task AutoQC: rerun only N failing, never full reruns. Expected justifiable residuals on synthesis tasks: "Self-Contained Guidelines" (chart-aware grader, include_input_files true) and sometimes "No Weight Distribution" (clinical-severity language). Justify with the exact flagged text; never flatten the grader to chase a clean board.
+- Task AutoQC: rerun only N failing, never full reruns. Expected justifiable residuals on synthesis tasks: "Self-Contained Guidelines" when the grader needs the provided chart, and sometimes "No Weight Distribution" for clinical-severity language. Justify with the exact flagged text; never flatten the grader to chase a clean board.
 - Trajectories: 10 completed with scores; read by mechanism, not score. GATE (legitimate-failure, King P 6/12): at least one trajectory shows a defensible critical/material failure. No numeric <70/<60 requirement; do not bank a cosmetic/unfair miss.
 - Taiga QA / EnvLinter: respond to EVERY flag with a fact-referenced rebuttal (cite job id + per-run scores); never a bare "tech issue"/"known issue"/"reviewer said ok" (KM07 6/11).
 - FA/GA: see section 3.
@@ -21,6 +21,7 @@ Step 10 entry -> Task AutoQC -> Trajectories (10) + Taiga QA -> Trajectory AutoQ
 ## 3. FA/GA (UPDATED King P 2026-06-14)
 - SUBJECT = the 2nd-LOWEST % trajectory, NOT the lowest (the lowest is often the noisy outlier). It must still be a legitimate material failure; if the 2nd-lowest is cosmetic/noise, record rationale and pick the nearest legitimate failure with Alexander. (DO-NOT-REPEAT #20.)
 - PULL THE GRADING TRANSCRIPT for that run before writing (KM01: inferring from output alone produced 4 wrong failure modes; the real miss was a silent metformin omission).
+- Studio binds the FA/GA text box to the selected run. Select the subject run first, then verify the visible or downloaded output. If the selected run has no visible answer, write the FA/GA on that missing deliverable rather than borrowing another run.
 - FA = failure-only, what the MODEL did poorly; GA = failure-only, how the GRADER scored that run (descriptive, do not prescribe). No praise paragraph, no grader-section names (state the content), two paragraphs each, ~<=1000 chars, physician voice, NO em/en dashes.
 - Recommended grader rating (Great/Good/etc.). Affirming a correct grader IS the GA when warranted.
 

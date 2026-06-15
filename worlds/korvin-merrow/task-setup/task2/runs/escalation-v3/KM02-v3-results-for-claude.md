@@ -18,7 +18,7 @@ Attempt 8 (0.30) is NOT a grader misfire. Its trajectory (steps 48-49) shows it 
 5. FA/GA: previous batch's verified FA/GA is attached (subject was old run 7, 0.35, propagation). The new writeups must be the same form (two short prose paragraphs each, no bullets, no headers, no em dashes, under ~1000 chars) but re-anchored to the NEW subject's bytes. Nothing carries over unverified.
 
 ## Taiga status (for the record)
-One flag this batch: "Agentic grader configured but enable_anthropic_api is False." Recurring infra false positive (all 10 runs scored, so the grader demonstrably had API access). Handled per protocol: thumbs down, annotation exactly "tech issue", saved and verified. Feedback AutoQC triggered.
+One flag this batch: "Agentic grader configured but model-access preflight is False." Recurring infra false positive (all 10 runs scored, so the grader demonstrably had API access). Handled per protocol: thumbs down, annotation exactly "tech issue", saved and verified. Feedback AutoQC triggered.
 
 ## Bundle contents
 This file; prior FA/GA (FA-GA-current.md, v2 batch, VERIFIED against old run 7; style + continuity reference, content superseded); v2 results packet (KM02-escalation-results.md) with your prior sign-off questions; golden-KM02-v5.docx (re-dated); grader-guidelines-task2.txt; escalation prompt; mounted draft. Run artifacts (Attempt 8 output + grading transcript, Attempt 2 output + transcript, Attempts 1/7 transcripts) to be added on download from RLS.

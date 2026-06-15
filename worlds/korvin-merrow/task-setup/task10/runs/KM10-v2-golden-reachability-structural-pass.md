@@ -17,7 +17,7 @@ Purpose: the plan and run-instructions gate banking on "confirm a catcher exists
 Predicted ~0.90 (0.85 to 0.95). The golden satisfies all of Section A, exhibits the credited restraint, and triggers zero Section C failure patterns. So the catch is STRUCTURALLY REACHABLE: the grader credits exactly the reasoned decline the golden performs. This closes the "is the correct answer scoreable" half of the v1 all-floor flag. It does NOT settle the empirical half (will any AGENT decline) - that is the pilot's job.
 
 ## Two findings for Alexander before the pilot
-1. Grader chart-access. Set include_input_files=true. The key chart facts a reasoned-decline catcher would cite are already embedded in the grader, but a catcher may cite other true chart detail; the grader now tells it to verify specifics against the mounted record before calling them invented.
+1. Grader chart-access. Give the grader access to the provided chart. The key chart facts a reasoned-decline catcher would cite are already embedded in the grader, but a catcher may cite other true chart detail; the grader now tells it to verify specifics against the provided chart before calling them invented.
 2. The all-floor remedy is the query surface, not the grader. V3 applies this remedy by making the query balanced, with explicit record-does-not-support and unable-to-determine paths. That both improves CDI compliance and gives the decline an offered path.
 
 ## Conditions for the empirical confirmation (the pilot)

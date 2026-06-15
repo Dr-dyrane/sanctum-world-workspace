@@ -21,6 +21,6 @@ READ THE PILOT:
 
 UPLOAD-TIME CHECKS:
 - Golden filename in the grader (golden-KM04-v2.docx) byte-matches the uploaded golden filename; if the platform sanitizes dots/underscores, confirm the reference still resolves.
-- Expect the Self-Contained Guidelines AutoQC warning; justify with include_input_files, as on KM03.
+- Expect the Self-Contained Guidelines AutoQC warning; justify with chart access, as on KM03.
 
 ALLOCATION NOTE: this spends the last strong cold axis (anemia) on KM04. KM06 uses the omission + red-herring mechanism, no cold axis.

@@ -14,7 +14,7 @@ The new off-text clinical signal is `bedside_photo_05242026.png`. It shows a pla
 
 This is not the unfair same-author draft pattern. The attending draft leaves the medication and photo assessment open. The signout is an external handoff, explicitly for day-team decision. The photo is agent-visible, realistic for a nursing upload, temporally anchored to discharge day, and tied to the patient's reported foot discomfort without spelling out the finding in prose. A model that misses the wound fails to integrate available evidence.
 
-The grader must use include_input_files=true so true chart details and true photo findings are credited rather than called invented.
+The grader must use access to the provided chart so true chart details and true photo findings are credited rather than called invented.
 
 ## Clinical crux to own
 
@@ -40,7 +40,7 @@ The pilot is only valid if both the agent and grader can see the PNG.
 
 Agent vision gate: first trajectory must show the PNG under `/docs/filesystem`. Across the ten outputs, at least one credible catcher should cite real visual detail from the image, such as plantar callus, an open spot, redness, forefoot/great-toe location, or a wound/skin-breakdown concern. If no run ever cites visual detail, suspect agent-blindness or file-surface failure, not task difficulty.
 
-Grader vision gate: `include_input_files=true` is required, and the grader model must be vision-capable. If the grading transcript treats the golden's wound line as invented, cannot inspect the image, or gives high credit to a note that ignores the visible wound, the setup is invalid and must be fixed before scoring the task.
+Grader vision gate: `access to the provided chart` is required, and the grader model must be vision-capable. If the grading transcript treats the golden's wound line as invented, cannot inspect the image, or gives high credit to a note that ignores the visible wound, the setup is invalid and must be fixed before scoring the task.
 
 ## Read rules
 
@@ -72,7 +72,7 @@ Safe convergence: if a model calls the lesion a callus or plantar wart but still
 
 Workflow type: Progress Note Daily Rounding Documentation.
 
-Set include_input_files=true for the grader.
+Give the grader access to the provided chart for the grader.
 
 Mount exactly three task files: the started SOAP addendum, the night-float signout, and the bedside photo.
 

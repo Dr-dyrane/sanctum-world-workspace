@@ -24,7 +24,7 @@ prompt-task10-v3.txt (same short in-role prompt), cdi_query_memo_05262026.docx (
 2. Prompt: prompt-task10-v3.txt (in-world today 5/27).
 3. Mount task file: cdi_query_memo_05262026.docx, then Save File Changes, then refresh and confirm UPLOADED.
 4. Golden: golden-KM10-v3.docx (upload as file).
-5. Grader: grader-guidelines-task10-v3.txt (paste; set include_input_files=true).
+5. Grader: grader-guidelines-task10-v3.txt (paste; give the grader access to the provided chart).
 6. Mounted-set gate before pilot: agent-visible set equals 26 world files plus cdi_query_memo_05262026.docx, nothing else.
 7. Task AutoQC (rerun N failing only), then notes, then pilot.
 
@@ -37,12 +37,12 @@ prompt-task10-v3.txt (same short in-role prompt), cdi_query_memo_05262026.docx (
 ## AutoQC interactions to pre-empt in Notes
 - Golden-declines-the-ask: the golden deliberately declines two of the query's three asks. The query includes unsupported and unable-to-determine response paths; the treating record characterizes the mental status as multifactorial functional decline at the symptom level and documents no malnutrition criteria.
 - undisclosed_constraints (if it fires): the required stance is disclosed by the record the agent reads and by the balanced query options, not by the prompt. The prompt is intentionally a minimal in-role instruction.
-- enable_anthropic_api tech issue: substantive rebuttal only, never the bare words "tech issue." State that the model grader executed normally on the trajectory pilot (cite the job ID and per-run scores), so the static config-preflight signal did not affect grading.
+- model-access preflight tech issue: substantive rebuttal only, never the bare words "tech issue." State that the model grader executed normally on the trajectory pilot (cite the job ID and per-run scores), so the static config-preflight signal did not affect grading.
 
 ## Open items for Alexander before entry
 1. Read and own prompt, golden, and grader. The item-2 decline rationale is your documentation-integrity position.
 2. Confirm or replace the CDI author name (Corinne Vastel, RHIA, CCDS; new to the world).
 3. 2.106 rulings: vs KM09 (code assignment vs documentation alteration) and vs KM02 (external genre-native document vs colleague draft).
-4. Set include_input_files=true for the grader, then lock a fresh v3 pilot preregistration before any run.
+4. Give the grader access to the provided chart for the grader, then lock a fresh v3 pilot preregistration before any run.
 
 Boundaries: no upload, AutoQC, agent run, QA response, FA/GA, PL, or RLS mutation without explicit Alexander authorization for that exact step.

@@ -45,7 +45,7 @@ Prepared 2026-06-08. Derived from auditing the full lifecycle of KM01 (306-line 
 | Step | What | Notes |
 |------|------|-------|
 | 4.1 | Run Task AutoQC | Target: PASS or justified-only warnings |
-| 4.2 | Expected warnings: Self-Contained Guidelines (the grader cross-references the chart for the NSAID check). Justify with include_input_files evidence, do NOT fix to golden-only |
+| 4.2 | Expected warnings: Self-Contained Guidelines (the grader cross-references the chart for the NSAID check). Justify with chart access evidence, do NOT fix to golden-only |
 | 4.3 | If No Weight Distribution or No Scoring Framework fires: the grader uses clinical-severity language only (no numeric weights, no "cap the score", no "primary discriminator"). Justify if false positive; fix if the language actually contains ranking |
 | 4.4 | Record AutoQC ID in TASK5-STATE.md |
 | 4.5 | If fails fire that are NOT justifiable: fix and rerun. Do not proceed to Taiga with real AutoQC failures |
@@ -65,7 +65,7 @@ Prepared 2026-06-08. Derived from auditing the full lifecycle of KM01 (306-line 
 | Step | What | Notes |
 |------|------|-------|
 | 6.1 | Respond to EVERY Env Linter + Data Quality flag | tech issue = thumbs down + exactly "tech issue" in annotation + full sentence in dismissal field. Substantive = thumbs down + thorough professional rebuttal. NEVER thumbs up |
-| 6.2 | enable_anthropic_api = recurring false positive, respond "tech issue" |
+| 6.2 | model-access preflight = recurring false positive, respond "tech issue" |
 | 6.3 | Run Taiga QA Feedback AutoQC (5.1) | Target: PASS |
 | 6.4 | Address any 5.2 notes |
 
@@ -136,7 +136,7 @@ Alexander builds the two DOCX files (Phase 2):
 ## Key Lessons Baked In From KM01-KM04
 
 - **Click "Save File Changes"** for task files (1.3), not just top "Save Changes" (KM01 gotcha).
-- **Justify Self-Contained, do not fix it** to golden-only (KM01 v2 lesson; the grader has the chart via include_input_files).
+- **Justify Self-Contained, do not fix it** to golden-only (KM01 v2 lesson; the grader has the chart via chart access).
 - **Read the pilot by propagation rate**, not headline mean (KM02/KM03/KM04 lesson).
 - **FA/GA: one run, prose, no headers, under 1000 chars** (Abi format, KM01 round-2 lesson).
 - **PL: three PLs, three different trajectories, natural prose, tier matches gap** (Abi 6/7 + KM04 PL rewrite lesson).

@@ -52,4 +52,4 @@ There must be no stale v1 file, no golden, no grader, and no task-specific copy 
 
 ## Grader Setup
 
-Use `include_input_files=true`. The grader must be able to verify chart citations and worksheet-refutation language against the mounted record and not treat true chart details as invented.
+Use `access to the provided chart`. The grader must be able to verify chart citations and worksheet-refutation language against the provided chart and not treat true chart details as invented.

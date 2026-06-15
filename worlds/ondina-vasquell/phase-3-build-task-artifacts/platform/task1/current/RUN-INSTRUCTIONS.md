@@ -1,6 +1,6 @@
 # platform/task1/current - OV01 v2 clean-mount packet (Medication Reconciliation)
 
-This is the current OV01 packet. V1 ceilinged. V2 added the cold enoxaparin verification-asymmetry trap, de-telegraphed the order-set filename and body, then banked on the clean-mount pilot job `741ba52f-bae9-4594-a25c-ef5ae0e8bcdc`.
+This is the current OV01 packet. V1 ceilinged. V2 added the cold enoxaparin verification-asymmetry trap, de-telegraphed the order-set filename and body, then banked on the clean-mount pilot job `741ba52f-bae9-4594-a25c-ef5ae0e8bcdc`. Larry's 2026-06-15 review required grader wording cleanup and correct FA/GA run binding; after cleanup Alexander reran trajectories, and current FA/GA uses job `aa949641-e849-4d84-8a60-4d4642eb61ed`, Attempt 6, run `28a61869`, score 0.50.
 
 ## Workflow type: Medication Reconciliation at Care Transitions (P0)
 REMAPPED 2026-06-13: original workflow Discharge Medication Reconciliation (hca-discharge-med-recon) was retired from the platform menu; this is the nearest open analogue. Deliverable framing may need a light adjustment to fit it. VERIFY the exact name and priority on the live Task Selection Categories sheet before selecting (candidate from the 2026-06-10 snapshot).
@@ -13,7 +13,7 @@ Central failure = leaving enoxaparin alive as a discharge or home medication, wh
 ## Mounted set
 - Shared world chart (world-files/ plus supplementary-files/), which the model reads to reconcile.
 - Task-level file: discharge_medication_orders_05212026.docx (E1-T1). Upload and confirm it shows UPLOADED, not staged, before AutoQC. Confirm no filename collision with a world file (verified: none).
-- Grader is chart-aware (include_input_files true): the deliverable is built from the chart, so true chart specifics are credited, not flagged as invented.
+- Grader should credit documented chart specifics and should not treat true chart details as invented just because the terse golden omits them.
 
 ## Fairness (hard line)
 Every discrepancy in the order set is contradicted by the chart. The MAR supports enoxaparin only as inpatient VTE prophylaxis. The home medication list excludes it. The antiplatelet regimen makes discharge continuation clinically risky. The renal trend, hold orders, culture hierarchy, and home list support the other reconciliation moves. Correcting the order set is the right move and is rewarded; propagating it is a real clinical error.
@@ -43,4 +43,4 @@ Workflow type = Medication Reconciliation at Care Transitions (verify on the liv
 Top Save Changes, refresh, run Task AutoQC (rerun N failing once before disputing), 2.2 note, run Taiga Trajectories.
 
 ## Expectation
-Use `OV01-v2-pilot-preregistration.md` plus `phase-4-pilot-review-submit/OV01-results-and-prereg-reconciliation.md`. The locked prereg forecast matched the clean pilot. Read Attempt 3 against the chart as the FA/GA subject, and do not use the dirty duplicate-mount job for shipping evidence.
+Use `OV01-v2-pilot-preregistration.md` plus `phase-4-pilot-review-submit/OV01-results-and-prereg-reconciliation.md`. The locked prereg forecast matched the clean pilot, and the post-cleanup rerun preserved the same enoxaparin failure. Under the 2026-06-14 second-lowest-run rule, current FA/GA subject is job `aa949641`, Attempt 6, score 0.50, run `28a61869`. Before pasting FA/GA in Studio, select Attempt 6 in the run selector and verify the text box is associated with run `28a61869`. Do not use the dirty duplicate-mount job, the old Attempt 3 draft, or the superseded Attempt 7 draft for shipping evidence.

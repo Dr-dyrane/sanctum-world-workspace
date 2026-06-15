@@ -36,6 +36,6 @@ If all runs floor, do not bank automatically. Confirm whether the golden still s
 
 ## Required platform settings
 
-Set include_input_files=true for the grader. The output may cite chart details not listed in the golden, and the grader needs the mounted record to verify them before calling them invented.
+Give the grader access to the provided chart for the grader. The output may cite chart details not listed in the golden, and the grader needs the provided chart to verify them before calling them invented.
 
 Boundaries: no upload, AutoQC, pilot, QA response, FA/GA, PL, or RLS mutation without Alexander's exact authorization.

@@ -7,13 +7,13 @@ Date: 2026-06-07. Parallels the Task 1 QA record in task1-lifecycle-log.md. Prot
 
 ## Data Quality (2 flags, both Technical/Warning)
 
-### Flag 1: "Agentic grader configured but enable_anthropic_api is False"
+### Flag 1: "Agentic grader configured but model-access preflight is False"
 Classification: TECH ISSUE (platform-side, not task content). Same recurring flag as Task 1.
-Evidence it is real, not just a false positive: the agentic grader produced model scores on 9 of 10 trajectories; run 8 returned no score and no grading transcript, consistent with the grader failing to reach the API on that run. enable_anthropic_api is an environment setting outside the task definition.
+Evidence it is real, not just a false positive: the agentic grader produced model scores on 9 of 10 trajectories; run 8 returned no score and no grading transcript, consistent with the grader failing to reach the API on that run. model-access preflight is an environment setting outside the task definition.
 Response (field, exact, MANDATORY): tech issue
 CORRECTION (6/7): the first attempt put the reasoning narrative in the annotation field and the Taiga QA Feedback AutoQC FAILED it ("Clean 'tech issue' Only": any restatement, evidence, or justification in the field is a prohibited variation). The field must contain ONLY the two words "tech issue", nothing before or after. All reasoning goes to Slack ONLY, never the annotation. (Task 1 did exactly this and passed.)
 Slack (sanctum-rls-tech-issues): run-8 no-score noted as likely consequence; asked whether it needs enabling platform-side.
-TWO-FIELD RULE (Task 1 precedent, recurs at Preference Labels via "AutoQC Dismissal Justification"): the enable_anthropic_api flag has TWO boxes. (1) Annotation/comment field = bare "tech issue" only. (2) Dedicated dismissal-reasoning field = a complete sentence. Do not confuse them.
+TWO-FIELD RULE (Task 1 precedent, recurs at Preference Labels via "AutoQC Dismissal Justification"): the model-access preflight flag has TWO boxes. (1) Annotation/comment field = bare "tech issue" only. (2) Dedicated dismissal-reasoning field = a complete sentence. Do not confuse them.
 KM02 dismissal-reasoning sentence (accurate to 9 of 10, NOT the Task 1 "all ten scored" wording): "This flag does not apply to the task: the agentic grader had model access at grading time and returned numeric scores on nine of the ten trajectories, so the warning reflects the linter's static configuration context rather than a grading failure. The single trajectory that returned no score is consistent with an intermittent platform grader issue and is a tooling matter outside the task definition."
 
 ### Flag 2: "answer_leakage: the draft states a finalized urine culture result (E. coli, sensitive to ceftriaxone)"
