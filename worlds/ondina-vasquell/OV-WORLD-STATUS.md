@@ -11,7 +11,7 @@ Update this file at every step (build, upload, pilot, bank, FA/GA, PL, review, s
 ## Per-task status
 | Task | Workflow (verify live @ Step 10) | Cold mechanism | Stage | Latest pilot | Next step |
 |---|---|---|---|---|---|
-Active suite = 9 tasks (OV02 retired 2026-06-14; OV07 promoted to position 2). Internal IDs/folders kept STABLE (OV01, OV03-OV10) to protect banked OV01 and avoid rename errors; "Pos" is the active suite order. DECIDED 2026-06-14: keep stable IDs (no cosmetic renumber); Studio tasks are created in the position order, spec-vs-folder divergence is fine (KM precedent).
+Active suite = 10 tasks (OV02 REVIVED 2026-06-14 as the 10th on the KM09 embedded lever; OV07 kept at position 2). Internal IDs/folders kept STABLE (OV01, OV03-OV10) to protect banked OV01 and avoid rename errors; "Pos" is the active suite order. DECIDED 2026-06-14: keep stable IDs (no cosmetic renumber); Studio tasks are created in the position order, spec-vs-folder divergence is fine (KM precedent).
 
 | Pos | ID (stable) | Workflow | Cold mechanism | Stage / latest | Next |
 |---|---|---|---|---|---|
