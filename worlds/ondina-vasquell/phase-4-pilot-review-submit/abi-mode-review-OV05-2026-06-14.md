@@ -1,0 +1,7 @@
+# OV05 v2 - AO / Abi-mode review (prompt + fairness) - 2026-06-14
+Verdict: PASS, with one clinical point for Alexander to ratify.
+- COLD lever: the floor is accepting the oral fluoroquinolone (non-sulfa, formulary-preferred). Nothing in the chart says not to use it; catching it needs pharmacology knowledge (FQ not culture-directed for MSSA + Strep soft-tissue; not on the deep-tissue susceptibility panel; tendon/QT/renal cautions in elderly CKD). The sulfa decline is a WARM secondary (allergy is in every header) and is NOT the floor. This is the OV01-style cold shape.
+- No telegraph: the prompt lists the generic decision options (substitute/appeal/hold/exception) but does NOT point at the fluoroquinolone or "culture-directed."
+- Fairness: external PBM rejection (different source) + the prescriber must respond from the chart; declining a non-culture-directed preferred agent is a real prescriber judgment, not a planted same-author claim. A0.6 fair.
+- Physician voice; document-to-sign; no literal path; no dashes.
+- RATIFY (clinical): confirm that declining the oral fluoroquinolone in favor of a culture-directed beta-lactam/clindamycin (renally dosed) is defensibly correct here. It is grounded (FQ absent from the susceptibility panel; gram-positive soft-tissue; elderly CKD cautions), but it is a judgment call softer than the sulfa contraindication - so physician ratification before pilot, since a wrong golden is worse than none.
