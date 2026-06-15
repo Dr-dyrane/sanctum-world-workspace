@@ -16,8 +16,6 @@ VERDICT: A1 (A slightly better). Button = plain A (no plus sign).
 
 ## Justification
 
-Scale Selection: A
-
 Preferred output: A
 
 Justification: The central failure for OV01 is continuing the carried-forward inpatient enoxaparin VTE prophylaxis at discharge. Neither output discontinues it, so both give a partial handling and the pair is decided on which partial handling is marginally less wrong. B articulates the correct underlying principle, that enoxaparin is prophylaxis and not a home medication, more explicitly than A, but B's verdict is "Sign with conditions," it calls the rationale "sound," and it endorses signing the inpatient-only agent if she goes home. A does not name the principle but reaches a marginally more cautious verdict, "CHANGE, confirm it is still indicated at discharge, with a defined stop criterion," which leans away from continuation. Because the designed failure is continuation, A's verdict is the marginally safer of the two. The margin is plain A, not A+, because neither discontinues the agent and B makes no discrete factual error here.
@@ -43,4 +41,4 @@ Summary: A is preferred at plain A by a narrow margin. The decider is the centra
 6. Transcript A is the same 0.900 trajectory used in PL1; Transcript B here (0.850) is a different, stronger trajectory than PL1's B (0.720). PL 2 of 3 for OV01.
 
 ## Submit mechanics
-Select plain A (no plus sign), paste the justification from "Scale Selection: A" through the Summary into Comments, submit the preference, confirm it appears in submission history, then run Preference Labels AutoQC. Do not submit until Alexander authorizes this exact step.
+Select plain A (no plus sign), paste the justification from "Preferred output: A" through the Summary into Comments, submit the preference, confirm it appears in submission history, then run Preference Labels AutoQC. Do not submit until Alexander authorizes this exact step.

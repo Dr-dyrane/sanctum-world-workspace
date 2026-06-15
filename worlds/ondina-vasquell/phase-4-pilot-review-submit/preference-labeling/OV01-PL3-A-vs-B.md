@@ -16,8 +16,6 @@ VERDICT: A2 (A better). Button = A+ (one plus sign).
 
 ## Justification
 
-Scale Selection: A+
-
 Preferred output: A
 
 Justification: The central failure for OV01 is continuing the carried-forward inpatient enoxaparin VTE prophylaxis at discharge. Neither output discontinues it, so both commit a version of the central failure, and the pair is decided on which version is less wrong. A recognizes that enoxaparin is inpatient VTE prophylaxis and not a home medication, treats it as a change requiring a renal dose and a concrete stop plan, and flags that an SNF transfer would change whether prophylaxis continues at all. B calls the same order a "good call clinically" and places it under "confirm, then likely sign," endorsing continuation without recognizing it is inpatient-only. A is therefore the more cautious and principle-aware handling of the central item, which is why A passes at 0.55 while B floors at 0.45. The margin is A+, not A++, because A still calls the prophylaxis "likely appropriate" and does not make the golden's affirmative move of discontinuing it.
@@ -43,4 +41,4 @@ Summary: A is preferred at A+ because it handles the central enoxaparin item mor
 6. PL 3 of 3 for OV01. Transcripts A (0.550) and B (0.450) are both distinct from the PL1 and PL2 trajectories.
 
 ## Submit mechanics
-Select A+ (one plus sign), paste the justification from "Scale Selection: A+" through the Summary into Comments, submit the preference, confirm it appears in submission history, then run Preference Labels AutoQC. Do not submit until Alexander authorizes this exact step.
+Select A+ (one plus sign), paste the justification from "Preferred output: A" through the Summary into Comments, submit the preference, confirm it appears in submission history, then run Preference Labels AutoQC. Do not submit until Alexander authorizes this exact step.

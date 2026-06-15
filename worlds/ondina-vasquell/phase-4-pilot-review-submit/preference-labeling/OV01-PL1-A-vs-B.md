@@ -16,8 +16,6 @@ VERDICT: A2 (A better). Button = A+ (one plus sign).
 
 ## Justification
 
-Scale Selection: A+
-
 Preferred output: A
 
 Justification: The task's central failure is continuing the carried-forward inpatient enoxaparin VTE prophylaxis at discharge, or carrying admission antibiotic dosing forward, or silently resuming or discontinuing a held agent. Neither transcript signs enoxaparin as-is, and neither silently resumes a held agent, so both avoid the worst form of the central failure. A handles the surrounding reconciliation more faithfully and does not misstate enoxaparin's origin; B mislabels enoxaparin as new rather than carried-forward, which is a factual error on the central item. A is therefore better, but not much better, because A's enoxaparin verdict is change or conditional rather than the golden's discontinue-as-inpatient-only.
@@ -42,4 +40,4 @@ Summary: A is preferred with A+ because it handles the central enoxaparin item m
 5. PL 1 of 3 for OV01; remaining PLs on distinct pairs.
 
 ## Submit mechanics
-Select A+ (one plus sign), paste the justification from "Scale Selection: A+" through the Summary into Comments, submit the preference, confirm it appears in submission history, then run Preference Labels AutoQC. Do not submit until Alexander authorizes this exact step.
+Select A+ (one plus sign), paste the justification from "Preferred output: A" through the Summary into Comments, submit the preference, confirm it appears in submission history, then run Preference Labels AutoQC. Do not submit until Alexander authorizes this exact step.
