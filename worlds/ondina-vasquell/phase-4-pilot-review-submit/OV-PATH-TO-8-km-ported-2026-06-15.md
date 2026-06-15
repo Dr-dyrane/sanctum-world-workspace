@@ -1,0 +1,38 @@
+# OV path to 8 tasks - KM-ported mechanism slate (2026-06-15)
+
+Directive: drive OV to 8 floors in THIS world. The next-world narrative is removed until OV reaches 8. This plan is built from the three named sources: the KM world (10 banked tasks), the reference example worlds (Opus/Chen T1-T7 + Caduceus/Pemberton/Whitfield specs), and Raising_Task_Difficulty_Worked_Example.pdf.
+
+## The master recipe (worked example, Niranjana 06/12)
+To make any clinical-documentation task hard: (1) PULL THE ANSWER KEY - remove/relocate any source that states the conclusion; world files are raw material, not synthesis. (2) FORCE RECONCILIATION - no single file is complete. (3) DO NOT SPELL OUT THE TRAP - leave it off the text (image, a single vital, or a buried line). (4) MATCH THE GRADER TO THE STAKES - a clinically unacceptable miss is a hard error. (5) KEEP IT TRUE TO PRACTICE.
+
+KEY CORRECTION to my prior "substrate-limited / two floors" call: a clean, internally-consistent chart is the IDEAL substrate, not the blocker. The floors are MANUFACTURED AT THE TASK LAYER on top of a clean chart. OV's chart being clean is a feature.
+
+## Proven mechanism library (what actually floored, text-only versions)
+From KM (frequency) + the Opus/Chen suite, the TEXT-reachable floor families (image excluded - OV harness is image-blind):
+1. EMBEDDED OVER-CLOSURE in a task-layer started draft on an UN-PRIMED axis (KM02/03/04/07 = KM's best floor producer; KM02 had 6 sub-70). The started draft falsely CLOSES a quiet axis with a fabricated OBJECTIVE claim; a clean chart rebuts it. Rules that make it floor (paid for by KM): fabricated-objective (not a buried fact, not a chart-coached rec); UN-PRIMED axis (not the loud thread); keep it ABSTRACT (no concrete wrong agent to pattern-match); TRUE placeholder (item absent/open, not routine-looking); NO reconcile-and-correct clause in the prompt (only "finish it"); chart-aware grader; anti-paralysis floor (refusing to finalize is not free credit).
+2. CONFLICTING / WRONG AUTHORITY via a MOUNTED external instrument (KM01 pharmacy handoff, KM09 HIM worksheet). The wrong recommendation lives in a task-layer instrument the model must check against the clean chart and reject. Fairness from the external-query genre. MOUNT the actual instrument.
+3. COMMISSION / WITHHOLD on unverified patient self-report + a hidden confounder (KM05/06). Patient-reported data introduced at the task layer (clinic/interval note); the model must NOT take the obvious action. KM06 lesson: NEVER add a reconcile clause; only a judgment trap with a confounder survives a fully-reconciling model. Score only the move the chart can rebut; attribute weak data to the patient with no telegraphing caveat.
+4. COMMISSION / DECLINE-the-upgrade query (KM10). A CDI/appeal offering balanced options inviting an unsupported dx; decline grounded in the treating team's documented assessment.
+Worked-example "other tips" that are text-reachable: preliminary imaging report with a buried finding a physician catches but the model does not; bundled clearly-dated labs hiding a stale-vs-current value; >5 task files with irrelevant noise (omission-under-load); fill-in-a-template (completion frame); guideline-timing/timelessness.
+
+## Why OV under-delivered (diagnosis, not excuse)
+OV has 2 floors (OV01 cold-knowledge, OV02 off-text synthesis) and I wrongly concluded the world was capped at two. The real reason OV's other attempts ceilinged is that they MIS-EXECUTED the KM recipes, not that the recipes do not work here:
+- OV04 (appeal concession) and OV10 (resident normalizes activity) put the planted error on a LOUD axis (level-of-care; offloading) the model was already scrutinizing -> caught -> ceiling. KM's rule is UN-PRIMED axis.
+- OV02 v1-v5 used the coding genre (model-strong, fully-reconciling) -> ceiling.
+- The over-closure-on-an-un-primed-axis recipe (KM's single best floor family) was NEVER tried in OV.
+
+## Slate to 8 (all task-layer, frozen-safe; build order = highest-confidence first; BENCH each before pilot)
+1. OV01 - cold outside-knowledge (stop inpatient enoxaparin at discharge). BANKED.
+2. OV02 - off-text synthesis (infected line, text-recut). FAIR FLOOR (in review).
+3. OV03 - ANEMIA-OF-CKD OVER-CLOSURE (KM04 exact port). Started-draft care-plan/transition note (different author) falsely closes anemia: "iron studies this admission at target, anemia managed, no further workup/referral." Chart: NO inpatient iron studies; Hgb 9.8 stable; EW18 says explicitly "open item, no ESA." Un-primed, abstract, fabricated-objective, true placeholder, no reconcile clause. KM04 floored 66.4 from this. HIGH.
+4. OV04 - OSA/CPAP OVER-CLOSURE (KM03 exact port). Started draft asserts "home CPAP settings reviewed, adherence adequate, device verified, OSA controlled, no sleep follow-up." Chart: home CPAP, no inpatient titration, only "continue CPAP." KM03 floored 76.4. HIGH. (Reuse the retired OV04 slot.)
+5. OV05 - PREMATURE RESTART OF HELD MEDS on unverified home self-report (KM05 port). +7-day/SNF interval note; a task-layer clinic note has the patient reporting "BP and sugars fine at home" (no log). Model must NOT restart held metformin/empagliflozin/lisinopril (eGFR 36, restart deferred to PCP/nephrology per chart). KM05 floored 46.6. HIGH. (Reuse retired OV05 slot.)
+6. OV06 - EXTERNAL HANDOFF with planted unsafe moves (KM01 port). Finalize the SNF transfer medication orders; mounted pharmacy/SNF-orders proposal carries 2-3 unsafe moves the clean chart rebuts (restart lisinopril full dose in AKI; an NSAID for the knee in CKD; a renally-wrong dose; a KCl/salt-substitute load). External-query genre = fair. MED-HIGH.
+7. OV07 - DECLINE-THE-UPGRADE query (KM10 port) OR premature insulin uptitration with a task-layer confounder (KM06). A CDI/query inviting an unsupported dx the team's assessment does not support, decline grounded in the documented assessment. MED (coding genre is model-strong here - watch the bench).
+8. OV08 - PRELIMINARY-IMAGING buried finding (worked-example tip) OR omission-under-load via >5 noisy task files + bundled labs hiding a superseded value. MED.
+
+## Discipline (unchanged)
+Every candidate: build task-layer only (no world edits, DO-NOT-REPEAT #21); apply the KM rules above; COLD-bench the concept first (does a cold reviewer finishing the deliverable propagate the false closure / take the tempting action / accept the wrong rec?). Reviewer-PROPAGATES = floor candidate -> pilot; reviewer-CATCHES = ceiling -> rework or drop. One re-roll then retire (#19). FA/GA from the 2nd-lowest % score (#20). Grade cumulative deliverable, physician voice, anti-paralysis floor, chart-aware grader.
+
+## Immediate next action
+Build + cold-bench OV03 (anemia-of-CKD over-closure, KM04 port) - the highest-confidence port and KM's best floor family.
