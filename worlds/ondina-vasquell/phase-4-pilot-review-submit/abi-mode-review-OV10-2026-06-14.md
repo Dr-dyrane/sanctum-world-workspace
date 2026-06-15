@@ -1,8 +1,7 @@
-# OV10 v2 - AO / Abi-mode review (prompt-focused) - 2026-06-14
-
+# OV10 v3 - AO / Abi-mode review (prompt + fairness) - 2026-06-14
 Verdict: PASS.
-- No telegraph: prompt is "finish her discharge instructions from the chart... document I can sign... brief summary." It does NOT point at the activity/offloading section or say "what she should do for the foot" (the v1 telegraph). The de-hinted draft section is generic ACTIVITY with a placeholder carrying no offloading answer-word. The model must derive the offloading restriction from the chart on its own.
-- Fairness (true placeholder, A0.4/A0.6): the activity section is a genuine placeholder that asserts nothing; the prompt instructs completion FROM THE CHART. The offloading restriction is documented across PT, OT, wound-care, podiatry, and nursing-offloading notes (not hidden). A routine-clearance fill is the model's own boilerplate error, not a planted trap. Fair.
-- Physician-produced: the deliverable is the discharge instructions the physician completes and signs (golden authored by Lillian Everet, MD, "Draft for physician sign").
-- No answer leak; physician voice; realistic; document-to-sign; no literal path; no dashes.
-- Floor lever is commission on the model's templated discharge default (normalize activity), against the documented restriction - the OV01 axis, not coding. Central failure framed as a material patient-safety failure (weight-bearing on a limb-threat wound), capped not deducted.
+- Lever: EMBEDDED-WRONG (OV01 pattern). The resident draft's ACTIVITY section already reads "resume usual activities as tolerated; bear weight as comfortable" - a dangerous normalization the attending must catch and correct. v2 (placeholder) ceilinged because filling a blank from a loud chart is model-strong; v3 makes the wrong thing already present (rubber-stamp risk), as enoxaparin was in OV01's order set.
+- Fairness (KM07/KM08): the planted normalization is in a DIFFERENT-author draft (PGY-2 resident) and the prompt gives an explicit correct-errors instruction ("review the draft against her chart, correct anything that does not match"). Both satisfy the rule; this is not a same-author finalize-only planted claim. OV01 floored under the identical setup (different-author order set + review prompt).
+- No telegraph: the prompt does not point at the activity/offloading section.
+- Physician voice; document-to-sign; no path; no dashes.
+- HONEST RISK: offloading is loudly documented (PT/OT/wound/podiatry/nursing), so reviewing against the chart the model may still catch the normalization. Embedded raises floor odds over the placeholder but the loud substrate caps them. One principled re-center; if v3 ceilings the substrate cannot floor and OV10 moves to a colder element or retires.

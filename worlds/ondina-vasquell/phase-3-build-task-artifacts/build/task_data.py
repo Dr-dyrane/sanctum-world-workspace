@@ -176,8 +176,8 @@ def T9():
 def T10():
     R = ROSTER
     return ("started_discharge_instruction_draft_05212026.docx", "primarycare", [
-        ("title", "DISCHARGE INSTRUCTIONS (DRAFT - INCOMPLETE)"),
-        ("filing", f"Author: {R['resident']} | Started 05/21/2026 1830 | Status: Draft, incomplete | {RE}"),
+        ("title", "DISCHARGE INSTRUCTIONS (RESIDENT DRAFT FOR ATTENDING REVIEW)"),
+        ("filing", f"Author: {R['resident']} | Drafted 05/21/2026 1830 | Status: Resident draft for attending review and signature | {RE}"),
         ("section", "YOUR DIAGNOSIS"),
         ("body", "You were treated in the hospital for a serious infection of your left foot related to diabetes."),
         ("section", "MEDICATIONS"),
@@ -185,12 +185,12 @@ def T10():
         ("section", "WOUND CARE"),
         ("body", "Keep your dressing clean and dry. A nurse will help arrange your dressing changes."),
         ("section", "ACTIVITY"),
-        ("body", "PENDING: activity instructions to be completed by the discharging clinician before discharge."),
+        ("body", "Resume your usual activities as tolerated. You may walk and bear weight on the foot as comfortable, and increase your activity gradually as you feel able."),
         ("section", "FOLLOW-UP"),
         ("body", "Follow up with your primary care provider and the specialists as arranged by the care team."),
         ("section", "WHEN TO SEEK CARE"),
         ("body", "Call your care team or seek care for increasing redness, drainage, odor, fever, or worsening foot pain."),
-        ("sig", "Draft started; sections remain to be completed prior to discharge."),
+        ("sig", "Resident draft prepared for the attending to review against the chart, correct, and sign."),
     ])
 
 
