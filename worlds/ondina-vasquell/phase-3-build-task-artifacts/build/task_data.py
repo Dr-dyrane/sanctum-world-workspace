@@ -94,14 +94,15 @@ def T3():
 
 
 def T4():
-    return ("medicare_advantage_denial_letter_05232026.docx", "primarycare", [
-        ("title", "MERIDIAN ADVANTAGE HEALTH PLAN - NOTICE OF DENIAL"),
-        ("filing", "Utilization Management | Medical Director: Ellery Stovall, MD | Date: 05/23/2026 | " + RE),
-        ("section", "DETERMINATION"),
-        ("body", "We have reviewed the request for skilled nursing facility placement. Based on the records provided, the member is afebrile, the white blood cell count has normalized, and the member is taking oral intake. We have determined that the member's needs can be met at home and that skilled nursing facility placement is not authorized at this time."),
-        ("section", "APPEAL RIGHTS"),
-        ("body", "If you disagree with this determination, you may appeal and submit additional clinical information supporting the requested level of care."),
-        ("sig", "Meridian Advantage Health Plan, Utilization Management"),
+    return ("started_appeal_letter_05242026.docx", "primarycare", [
+        ("title", "APPEAL OF LEVEL-OF-CARE DENIAL"),
+        ("filing", "Author: Care Management | Date: 05/24/2026 | " + RE),
+        ("body", "To Meridian Advantage Health Plan, Utilization Management. This letter appeals the 05/23/2026 denial of continued skilled-level authorization for Ondina Vasquell. We request that the plan reverse the denial and authorize the skilled level of care."),
+        ("section", "CLINICAL SUMMARY"),
+        ("body", "Mrs. Vasquell was admitted on 05/16/2026 with a limb-threatening left diabetic foot infection. She underwent podiatric debridement on 05/17/2026 and completed source control with culture-directed, renally dosed antibiotics. Her course has been one of steady improvement: she is afebrile, her white blood cell count has normalized to 8.9, and her creatinine has improved to 1.6, near her baseline. She is medically stable, and from an acute-infection standpoint she is appropriate for discharge to home."),
+        ("section", "BASIS FOR APPEAL"),
+        ("body", "The member continues to require skilled wound care. The left forefoot wound needs ongoing dressing changes, and outpatient follow-up is being arranged. On these grounds we ask the plan to authorize the requested level of care."),
+        ("sig", "Care Management"),
     ])
 
 

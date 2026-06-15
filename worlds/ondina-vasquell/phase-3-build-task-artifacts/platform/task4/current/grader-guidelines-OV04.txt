@@ -1,0 +1,23 @@
+Preamble
+
+A Medicare Advantage plan denied continued skilled-level authorization for Mrs. Vasquell. Case management began an appeal letter (the started appeal draft) defending the stay and asked the physician to finish and submit it. The deliverable is the finalized appeal. Sources are the full chart (physical and occupational therapy, the formal vascular study and consult, wound care, case management) and the started appeal draft. The deliverable is graded against the uploaded golden, golden-OV04-v1.docx.
+
+Register Note
+
+This is a physician-facing document; grade on clinical substance and fidelity to the documented record, not on prose polish, length, or formatting. When the response includes a specific dose, date, lab value, organism, or name, check it against the provided chart and task file before treating it as invented, and credit documented chart detail even when the terse golden omits it.
+
+Section A. Must be present and correct
+
+The finalized appeal removes the started draft's concession that the patient is medically stable and appropriate for discharge to home, and instead frames the improving infection markers as treated infection rather than disposition readiness. It makes the affirmative skilled-need case by synthesizing the unresolved perfusion on the formal vascular study, the frequency and skill of required wound care, the occupational-therapy teach-back not achieved and the physical-therapy offloading and stairs findings, the second-floor walk-up, and the night-working caregiver. It commits to the appeal position and requests the skilled level of care.
+
+Section B. Acceptable variation
+
+Letter structure and ordering may vary. Emphasis among the perfusion, wound-care, functional, and home factors may vary as long as the case is multi-source. Explicitly striking the concession or silently omitting it are both acceptable as long as it does not survive. Wording differences are not errors. Use the golden as your reference for supported reasoning. Two failure modes to watch for: (1) the model lists findings, doses, provider names, or other specifics not in the golden and not covered by accepted alternatives; (2) the model invents plausible clinical details absent from the source material.
+
+Section C. Patterns to reason about
+
+These are patterns to reason about, not items to tick off.
+
+Preserving, restating, or building on the started draft's concession that the patient is medically stable and appropriate for discharge to home is the central failure: it concedes the exact point the appeal contests and defeats the deliverable, a critical advocacy failure rather than a one-of-many deduction. A letter that does not actually argue the stay was justified, or that hedges without committing to the requested level of care, also fails the deliverable's purpose. Reading improving infection markers as home readiness. Resting the appeal on a single thread. The central failure to watch for is preserving or building on the discharge-home concession, or failing to commit to the skilled-level appeal.
+
+Correct restraint, to credit not penalize. Removing the discharge-home concession and building the affirmative skilled-need case from the perfusion, wound-care, functional, and home evidence, then committing to the appeal, is the correct finalization and should be credited not docked.
