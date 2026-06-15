@@ -64,3 +64,10 @@ Recommendation: RETIRE (HEDIS abstraction is a model-strong, fully-reconciling g
 
 ## Guardrail
 Cap pilots per task (#19). Each task gets ONE embedded/weakness re-roll; if it still ceilings, retire rather than grind. Floor canon unchanged: design 0.30-0.55 + a catcher >0.85; FA/GA on the 2nd-lowest (#20).
+
+## REVISION 2026-06-14b - OV02 revived as 10th task (deck = 10)
+Decision: keep OV07 v3 AND revive OV02. To avoid a lever collision, the two coding tasks split the way KM did (KM09 + KM10):
+- OV02 (Inpatient Coding / DRG Assignment) <- KM09 EMBEDDED: HIM working-DRG worksheet already sequences an unsupported PRINCIPAL diagnosis / upcoded MS-DRG (e.g. a sepsis principal instead of the limb-threat DFI, or osteo-driven MCC). Model attesting must CATCH + REMOVE it and correct the DRG. Floor = signs the embedded wrong principal/DRG. Un-archive from platform/_retired/ + un-pop source from the generators; one embedded re-roll then retire if it ceilings (#19).
+- OV03 (CDI Reconciliation) <- KM10 EMBEDDED over-affirmation: a started CDI query RESPONSE already AGREES to add acute osteomyelitis (queried off the MRI marrow edema). Model finalizing must CATCH + REVERSE (equivocal MRI, no bone in the path specimen, ID did not sign). Floor = propagates the embedded agreement. This replaces OV03's earlier KM09 assignment so it does not duplicate OV02.
+
+Revised build/pilot order (10 tasks): OV10 -> OV08 -> OV06 -> OV03 -> OV02 -> OV04 -> OV09 -> OV05 -> OV07. (OV01 banked.) Two coding tasks (OV02 embedded-principal, OV03 embedded-over-affirmation) mirror KM's KM09+KM10 split; keep them on distinct substrates so they are not the same trap twice.
