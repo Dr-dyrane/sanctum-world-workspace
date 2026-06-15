@@ -58,7 +58,7 @@ Each phase lists: INPUT, SPINE (automatable), GATE (physician), OUTPUT, PASS (th
 ### Phase 6 - Task setup (Step 10, post spec GO)
 - INPUT: approved spec + live world.
 - SPINE: package each task (prompt, golden-as-file, grader, run-instructions, prereg, A0.5) and copy the uploadable set into `platform/taskN/current/`; the deterministic build of every docx.
-- GATE: PHYSICIAN owns prompts, goldens, grader standards. Difficulty is PROVEN by piloting (a fair, bankable, sub-ceiling failure), not asserted. This phase is held until the spec is approved.
+- GATE: PHYSICIAN owns prompts, goldens, grader standards. Prompt firewall is mandatory: use only attached chart and attached policy/reference files; no "latest/current" guideline, approval, coding, payer-policy, or measure-spec dependency unless the exact source is attached and realistic for the workflow. Difficulty is PROVEN by piloting (a fair, bankable, sub-ceiling failure), not asserted. This phase is held until the spec is approved.
 - PASS: Task AutoQC; a fair bimodal pilot with a legitimate clinical failure.
 
 ## 3. The invariants the factory encodes (no judgment, always true)
@@ -69,6 +69,7 @@ Each phase lists: INPUT, SPINE (automatable), GATE (physician), OUTPUT, PASS (th
 - The KM 7-column file table + four-option origin convention + landscape section for wide tables.
 - 30+ world-level files; task-level files separate and never in the world bucket.
 - Temporal law: every task encounter and deliverable strictly after the world snapshot; nothing future-dated past the real present.
+- Prompt law: the task prompt cannot require public knowledge after July 2025; it must constrain the model to the attached chart and any attached policy/reference files when guideline, drug-approval, coding, payer-policy, or quality-measure knowledge could otherwise drift in.
 - Deterministic build: pinned zip timestamps + core dates, pinned toolchain (`requirements.txt`), LF line endings.
 - Sanitized transcripts; scrubbed metadata on every docx.
 - The one-command gate green before any stage.
