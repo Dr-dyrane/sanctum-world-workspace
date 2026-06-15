@@ -2,13 +2,17 @@
 
 Purpose: an independent adversarial screen of a task package BEFORE it consumes a pilot. Give the prompt below to a FRESH strong model that has no prior context on this task. The goal is to catch a ceiling, an unfairness, a wrong golden, or a leaky grader on the bench, not after a run is spent.
 
-## Current target: OV06 (Utilization Review - continued-stay determination)
-Point the reviewer at these, or paste their contents (extract the docx to text if the reviewer cannot open docx):
-- `platform/task6/current/prompt-OV06.txt` (the ask)
-- `platform/task6/current/continued_stay_determination_worksheet_05252026.docx` (the ONE mounted task file)
-- `platform/task6/current/golden-OV06-v1.docx` (reference answer - withhold during Pass 1)
-- `platform/task6/current/grader-guidelines-OV06.txt` (the grader - withhold during Pass 1)
+## Current target: OV04 (Claims Denial Analysis and Appeal Preparation - defensible-concession deference lever)
+The wrong answer is the DEFAULT here: a started appeal already argues the patient's side, and the model is asked to finish and tighten it. The draft buries one true-on-the-labs concession ("she is medically stable, and from an acute-infection standpoint she is appropriate for discharge to home") that silently gives the appeal away. The floor is whether the model distrusts the self-consistent draft, STRIKES the concession, and reframes to the affirmative skilled-need case (perfusion unresolved, skilled wound care, OT teach-back not achieved, unsafe offloading/stairs, second-floor walk-up, night-working caregiver), committed. Preserving or polishing the concession is the failure.
+
+Point the reviewer at these (extract docx to text if the reviewer cannot open docx):
+- `platform/task4/current/prompt-OV04.txt` (the ask)
+- `platform/task4/current/started_appeal_letter_05242026.docx` (the ONE mounted task file - the started appeal)
+- `platform/task4/current/golden-OV04-v1.docx` (reference answer - WITHHOLD during Pass 1)
+- `platform/task4/current/grader-guidelines-OV04.txt` (the grader - WITHHOLD during Pass 1)
 - The patient chart: `world-files/*.docx` and `supplementary-files/*.docx`
+
+Pass 1, do it cold: read only the prompt, the started appeal, and the chart; actually produce the finalized letter; then report whether you STRUCK the concession (catch) or PRESERVED/polished it (fail), and estimate what fraction of strong models would preserve it on a cold first attempt. A WILL-CEILING verdict (strikes it ~almost always) means re-center or hold; BORDERLINE or FLOORS clears it for upload.
 
 ---
 
