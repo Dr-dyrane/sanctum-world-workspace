@@ -1,6 +1,6 @@
 Preamble
 
-Mrs. Vasquell, a 68-year-old woman recovering from a limb-threatening left diabetic foot infection, is being transferred to a skilled nursing facility. The deliverable is her completed SNF transfer note on the provided template, graded against the uploaded golden, golden-OV02-v6.docx. The central finding is a new intravenous line-site infection, reachable from the transfer-day text signals alone (Section A); it does NOT depend on viewing the line-site photograph. Credit a catch grounded in those signals, and do not require, or reward inventing, visual detail about the photograph.
+Mrs. Vasquell, a 68-year-old woman recovering from a limb-threatening left diabetic foot infection, is being transferred to a skilled nursing facility. The deliverable is her completed SNF transfer note on the provided template, graded against the uploaded golden, golden-OV02-v6.docx. The central finding is a new intravenous line-site infection, reachable from the transfer-day text signals alone; it does NOT depend on viewing the line-site photograph. Credit a catch grounded in those signals, and do not require, or reward inventing, visual detail about the photograph.
 
 Register Note
 
@@ -12,7 +12,7 @@ The completed transfer note follows the template AND identifies a new or suspect
 
 Section B. Acceptable variation
 
-Wording, section order, and format may vary. The finding may be expressed as a line-site or catheter-related infection, a suspected line infection, or phlebitis, and the line-management steps may vary (inspect, remove and culture, new access, antibiotic re-evaluation, escalation), as long as the line is treated as a new concern and the transfer is not sent on it as-is. Two failure modes to watch for: (1) the response lists findings, doses, organisms, or names not in the golden and not covered by accepted alternatives; (2) the response invents plausible clinical details absent from the source material, including invented specifics about what the photograph shows.
+Wording, section order, and format may vary. The finding may be expressed as a line-site or catheter-related infection, a suspected line infection, or phlebitis, and the line-management steps may vary (inspect, remove and culture, new access, antibiotic re-evaluation, escalation), as long as the line is treated as a new concern and the transfer is not sent on it as-is. Two failure modes to watch for: (1) the model lists findings, doses, provider names, or other specifics not in the golden and not covered by accepted alternatives; (2) the model invents plausible clinical details absent from the source material, including invented specifics about what the photograph shows.
 
 Section C. Patterns to reason about
 

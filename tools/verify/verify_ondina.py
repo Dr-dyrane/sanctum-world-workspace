@@ -41,6 +41,13 @@ FORBIDDEN = [
 MRN = "OV-3358104"
 GRADER_WORD_CAP = 540  # Sang/Kathy: grader ~1 page (~480-520 words); fail on length drift
 
+# Sang five-block sectioning canon (docs/grader-guidelines-lessons.md)
+SECTION_HEADERS = ["Preamble", "Register Note", "Section A", "Section B", "Section C"]
+SECC_OPENER = "These are patterns to reason about, not items to tick off."
+SECB_CLAUSE_1 = ("the model lists findings, doses, provider names, or other specifics "
+                 "not in the golden and not covered by accepted alternatives")
+SECB_CLAUSE_2 = "the model invents plausible clinical details absent from the source material"
+
 
 def vis(f):
     return " ".join(re.findall(r"<w:t[^>]*>([^<]*)</w:t>",
@@ -89,6 +96,52 @@ def task_consistency_fails():
     return out
 
 
+def grader_section_fails():
+    """Lint grader sectioning vs the Sang five-block (docs/grader-guidelines-lessons.md):
+    five labeled blocks in order, golden named in the Preamble, a chart-aware Register Note,
+    the verbatim Section B two-failure-mode clause, the verbatim Section C opener, and a
+    credit-restraint pattern. Active platform/task*/current -> fail; _paused/_retired -> warn
+    (closes the scope hole where parked graders were never checked)."""
+    active = sorted(glob.glob(str(P3 / "platform/task*/current")))
+    parked = (sorted(glob.glob(str(P3 / "platform/_paused/*/task*/current")))
+              + sorted(glob.glob(str(P3 / "platform/_retired/*/current"))))
+    reg_aware = re.compile(r"(verify|check)\b[^.]{0,80}\bagainst\b"
+                           r"|against the (mounted |provided )?(chart|record)", re.I)
+    restraint = re.compile(r"credit(ed)? not (penalize|docked)|to credit not penalize", re.I)
+    fails, warns = [], []
+    for parked_flag, scope in ((False, active), (True, parked)):
+        bucket = warns if parked_flag else fails
+        for dpath in scope:
+            for gpath in sorted(Path(dpath).glob("grader-guidelines-*.txt")):
+                t = gpath.read_text(encoding="utf-8", errors="ignore")
+                nm = gpath.name
+                if parked_flag and len(t.split()) > GRADER_WORD_CAP:
+                    bucket.append((nm, "grader-too-long", f"{len(t.split())} words > {GRADER_WORD_CAP}"))
+                positions, missing = [], []
+                for h in SECTION_HEADERS:
+                    m = re.search(r"(?m)^\s*" + re.escape(h), t)
+                    positions.append(m.start()) if m else missing.append(h)
+                if missing:
+                    bucket.append((nm, "missing-block", ", ".join(missing)))
+                elif positions != sorted(positions):
+                    bucket.append((nm, "block-order", "five blocks out of order"))
+                pre = t.split("Register Note")[0]
+                if not re.search(r"golden-[\w.\-]+\.docx", pre):
+                    bucket.append((nm, "golden-unnamed", "Preamble does not name golden-*.docx"))
+                reg = t
+                if "Register Note" in t:
+                    reg = re.split(r"(?m)^\s*Section A", t.split("Register Note", 1)[1])[0]
+                if not reg_aware.search(reg):
+                    bucket.append((nm, "register-not-chart-aware", "no 'verify ... against the chart/record'"))
+                if SECB_CLAUSE_1 not in t or SECB_CLAUSE_2 not in t:
+                    bucket.append((nm, "sectionB-clause", "missing/paraphrased two-failure-mode clause"))
+                if SECC_OPENER not in t:
+                    bucket.append((nm, "sectionC-opener", "missing verbatim 'patterns to reason about' line"))
+                if not restraint.search(t):
+                    bucket.append((nm, "no-restraint", "no credit-restraint pattern"))
+    return fails, warns
+
+
 def main():
     fails = []
     files = []
@@ -124,14 +177,21 @@ def main():
             if m != MRN: fails.append((Path(f).name, "mrn-variant", m))
     # task-level golden/grader consistency + grader length (Kathy G 6/15)
     fails += task_consistency_fails()
+    # grader sectioning lint (Sang five-block); parked graders -> non-blocking warnings
+    sec_fails, sec_warns = grader_section_fails()
+    fails += sec_fails
     # report
     print(f"verify_ondina: {len(files)} docx checked across world, supplementary, task, goldens")
+    if sec_warns:
+        print(f"WARN: {len(sec_warns)} grader-sectioning issue(s) in _paused/_retired (non-blocking):")
+        for n, k, d in sec_warns[:40]:
+            print(f"  {n:46} {k:24} {d}")
     if fails:
         print("FAIL:")
         for n, k, d in fails[:60]:
-            print(f"  {n:46} {k:18} {d}")
+            print(f"  {n:46} {k:24} {d}")
         return 1
-    print("PASS: all gates green (synthetic, prior-world, banned, metadata, template parity, filenames, anchor consistency, grader length, golden-grader consistency)")
+    print("PASS: all gates green (synthetic, prior-world, banned, metadata, template parity, filenames, anchor consistency, grader length, golden-grader consistency, grader sectioning)")
     return 0
 
 

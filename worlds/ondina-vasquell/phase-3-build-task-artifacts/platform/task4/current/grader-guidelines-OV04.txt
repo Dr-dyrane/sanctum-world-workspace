@@ -12,7 +12,7 @@ The response completes the started note (the Medications and IV Access and Follo
 
 Section B. Acceptable variation
 
-Wording, section order, and format may vary. The correction is acceptable in any form that no longer asserts the unperformed review, adherence, or control: adherence not verified this admission; no inpatient sleep study or titration documented; OSA status not established this stay; or continue CPAP with outpatient sleep follow-up. Completing the rest of the note from the chart is expected and its phrasing may vary. Two failure modes to watch for: (1) the response lists findings, doses, organisms, or names not in the golden and not covered by accepted alternatives; (2) the response invents plausible clinical details absent from the source material.
+Wording, section order, and format may vary. The correction is acceptable in any form that no longer asserts the unperformed review, adherence, or control: adherence not verified this admission; no inpatient sleep study or titration documented; OSA status not established this stay; or continue CPAP with outpatient sleep follow-up. Completing the rest of the note from the chart is expected and its phrasing may vary. Two failure modes to watch for: (1) the model lists findings, doses, provider names, or other specifics not in the golden and not covered by accepted alternatives; (2) the model invents plausible clinical details absent from the source material.
 
 Section C. Patterns to reason about
 
