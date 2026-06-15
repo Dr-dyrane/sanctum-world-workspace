@@ -197,4 +197,4 @@ def T10():
 # OV02 (T2) REVIVED 2026-06-14 as the 10th task and re-centered to v5 after v4 ceilinged.
 # Current lever is the KM09 final-packet signable-option trap: remove the unsupported
 # renal-failure pathway and sign one foot-infection-principal pathway.
-TASK_FILES = [T1, T2, T3, T4, T5, T6, T7, T9, T10]
+TASK_FILES = [T1, T3, T4, T5, T6, T7, T9, T10]

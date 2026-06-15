@@ -5,7 +5,6 @@ Single source: build/build_task_packages.py WORKFLOW. This is the canonical Step
 | Task | ID | Workflow to select | Priority | Status |
 |---|---|---|---|---|
 | task1 | OV01 | Medication Reconciliation at Care Transitions | P0 | REMAPPED (was Discharge Medication Reconciliation (hca-discharge-med-recon)) |
-| task2 | OV02 | Inpatient Medical Coding and DRG Assignment | P0 | unchanged (open) |
 | task3 | OV03 | CDI-Coding DRG Reconciliation Review | P1 | REMAPPED (was CDI Query Response Review (hca-clinical-doc-improvement-query)) |
 | task4 | OV04 | Claims Denial Analysis and Appeal Preparation | P0 | unchanged (open) |
 | task5 | OV05 | Pharmacy Insurance Claim Rejection Resolution | P0 | unchanged (open) |

@@ -278,7 +278,7 @@ def OV10():
     ])
 
 
-GOLDENS = {"task1": OV01, "task2": OV02, "task3": OV03, "task4": OV04, "task5": OV05,
+GOLDENS = {"task1": OV01, "task3": OV03, "task4": OV04, "task5": OV05,
            "task6": OV06, "task7": OV07, "task8": OV08, "task9": OV09, "task10": OV10}
 
 if __name__ == "__main__":
