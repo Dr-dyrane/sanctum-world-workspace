@@ -12,7 +12,7 @@ The chart documents the HbA1c only as "last A1c 8.6 percent" (admission H&P, end
 The deliverable is the PHYSICIAN's review and attestation of the quality department's abstraction (authored by Lillian Everet, MD, medical-director quality-review capacity; "Draft for physician sign"), not an abstractor-authored document - fixes the v1 All-Tasks-Physician-Produced fail. The quality-department worksheet is the external INPUT (E1-T7), like the HIM coder worksheet in OV02. The worksheet defines the measurement period (01/01/2026 to 06/04/2026), so no external HEDIS measurement-year knowledge is needed (item-3 clean) and the eye exam is clearly in-window.
 
 ## File-output
-Prompt saves the completed abstraction to /tmp/outputs/diabetes_measure_abstraction.txt then confirms in chat (DO-NOT-REPEAT #18).
+Prompt asks for the attestation as a document the physician can sign (natural voice, no literal path); the harness routes saved documents to /tmp/outputs, so file-save is requested without breaking the physician voice (DO-NOT-REPEAT #18 voice correction).
 
 ## Forecast (floor canon: design 0.30-0.55 + catcher >0.85)
 Bimodal. Floor 0.30 to 0.55 = forces the glycemic numerator on the undated A1c (fabricated capture). Catcher >0.85 = reports the value, marks the date unable to determine, credits the dated eye exam, abstracts the rest honestly. Mean roughly 60 to 80; target at least one genuine sub-60 material miss. Approval needs one legitimate critical/material failure, not a numeric threshold.
