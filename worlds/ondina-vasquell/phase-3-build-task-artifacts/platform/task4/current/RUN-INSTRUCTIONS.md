@@ -6,8 +6,8 @@ STATUS 2026-06-15 (v2, fairness re-pilot REQUIRED): the v1 build piloted bimodal
 - Pod: Vagus.
 - Workflow: Medical Transcription and Clinical Documentation Completion (confirm exact name live).
 - Created from a synthetic task base: No.
-- enable_anthropic_api = True (the model/agentic grader needs API access at grading time; QA jqxv7246 technical warning).
 - Then prompt + task file + grader + golden (below).
+- No backend flags for the writer to set. The QA Technical warning "agentic grader configured but enable_anthropic_api / model-access preflight is False" is a recurring infra FALSE POSITIVE, dispositioned at AutoQC (Step 7), not a task input you toggle.
 
 ## Upload set (what goes where)
 - PROMPT (paste) prompt-OV04.txt, the v2 corrected text:
@@ -22,9 +22,9 @@ STATUS 2026-06-15 (v2, fairness re-pilot REQUIRED): the v1 build piloted bimodal
 2. Paste the v2 prompt (above).
 3. Upload the ONE task file (the started draft); click the separate Save File Changes (not just top Save); refresh; confirm UPLOADED, not staged.
 4. Upload golden-OV04-v1.docx to the golden slot (unchanged).
-5. Paste/upload grader-guidelines-OV04.txt; confirm it names the golden by filename; set enable_anthropic_api = True. No image input.
+5. Paste/upload grader-guidelines-OV04.txt; confirm it names the golden by filename. No image input.
 6. Save; refresh; confirm prompt, the one task file, golden, grader all survive untruncated.
-7. Run Task AutoQC (rerun only failing). Expected justified residual: Self-Contained Guidelines (the grader needs the mounted chart to verify the over-closure). Justify with the exact flagged text; do not flatten the grader.
+7. Run Task AutoQC (rerun only failing). Two expected residuals to DISPOSITION (not fix): (a) Self-Contained Guidelines - the grader needs the mounted chart to verify the over-closure; justify with the exact flagged text, do not flatten the grader. (b) Technical "agentic grader configured but enable_anthropic_api / model-access preflight is False" - recurring infra FALSE POSITIVE (KM02, KM07), not a writer-flippable flag. Disposition with a substantive, fact-referenced justification (NOT a bare "tech issue", which failed QA feedback in KM07): the agentic grader has model access at grading time and returns numeric scores on the trajectories (every OV04 pilot scored all ten, 0.10 to 0.85); the warning reflects the linter's static configuration context, outside the task definition. Save and verify.
 8. Move to Trajectories/Taiga (this locks the fields) and run 10.
 
 ## First-trajectory mount gate (before trusting any score)
