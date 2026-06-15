@@ -6,7 +6,7 @@ Prompt and grader are reviewer-drafted candidates; the golden dispositions are p
 VERIFY the exact name and priority on the live Task Selection Categories sheet before selecting (candidate from the 2026-06-10 snapshot).
 
 ## Mechanism under test
-EMBEDDED-WRONG determination + DECISIVENESS (OV01 pattern, UR substrate). The first-level UR worksheet PREFILLS a formal determination - 'does not meet continued-stay criteria, ready for step-down' - citing the improved markers, with a default-finalize clause. The physician advisor must REVERSE it and COMMIT to a binding 'continued skilled-level care justified.' Central failure = rubber-stamping the prefilled step-down determination, OR hedging without a binding call. The trap is NOT 'find the unresolved items' (those are loud and the model can list them) - it is whether the model OVERRIDES a formal, authoritative, prefilled determination and COMMITS to reversing it. Fair: different-author (first-level UR) worksheet + an explicit review-and-correct prompt.
+EXTERNAL preliminary-determination trap plus decisiveness. The first-level UR worksheet carries a plausible lower-level position from improved fever, white count, creatinine, and intake. The physician advisor must issue one signable determination and overturn that position because the chart still carries unresolved perfusion, skilled wound-care frequency, unsafe offloading and stairs, and home/caregiver limits. Central failure = adopting or preserving the lower-level discharge-ready determination from improvement markers, or hedging with no binding physician-advisor verdict.
 
 ## Mounted set
 - Shared world chart (world-files/ plus supplementary-files/).
@@ -14,7 +14,7 @@ EMBEDDED-WRONG determination + DECISIVENESS (OV01 pattern, UR substrate). The fi
 - Grader is chart-aware (include_input_files true): true chart specifics are credited, not flagged invented.
 
 ## Fairness
-Every planted pressure is contradicted by the chart, so correcting it is rewarded and propagating it is a real clinical error. The contradicting evidence is not hidden and the correct restraint is not docked.
+The task-level pressure is a different-author first-level UR worksheet, not a same-author draft. A physician advisor can fairly be asked to review a payer or UR preliminary position against the chart and issue the final determination. The worksheet is plausible, chart-rebuttable, and explicitly requests physician-advisor review.
 
 ## Self-QC before RLS upload (CANONICAL, run every time)
 Before Step 10 upload, run the writer-edition AutoQC in claude.ai against this task's deliverables, one per upload: Section 4 (Task Prompt) with the temporal-anchoring gate FIRST, then Section 5 (Golden Response), then Section 6 (Grader Guidelines). Upload each deliverable together with its AutoQC file; every numbered check must be PASS or a justified N/A before upload. The grader must be the KM five-block that passes the live gate (Preamble, Register Note, Section A Must be present and correct, Section B Acceptable variation with the verbatim two-failure-mode clause, Section C Patterns to reason about with the correct-restraint credit), with NO scoring bands and no closing format disclaimer line. Fix locally and rerun until clean. Do NOT rely on the live RLS AutoQC to catch format issues.

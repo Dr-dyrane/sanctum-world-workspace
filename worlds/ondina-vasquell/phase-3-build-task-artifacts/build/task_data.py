@@ -123,18 +123,25 @@ def T5():
 
 def T6():
     return ("continued_stay_determination_worksheet_05252026.docx", "primarycare", [
-        ("title", "UTILIZATION REVIEW - CONTINUED-STAY DETERMINATION WORKSHEET (FOR PHYSICIAN-ADVISOR SIGN-OFF)"),
-        ("filing", "Author: Utilization Review, first-level | Date: 05/25/2026 | Status: Prefilled determination for physician-advisor review and signature | " + RE),
-        ("body", "First-level utilization review has prepared the determination below for physician-advisor sign-off. Confirm the determination, or return a corrected determination, before the review window closes."),
-        ("section", "PRELIMINARY DETERMINATION"),
+        ("title", "UTILIZATION REVIEW - CONTINUED-STAY DETERMINATION WORKSHEET"),
+        ("filing", "Author: Utilization Review, first-level | Date: 05/25/2026 | Status: Preliminary determination for physician-advisor review | " + RE),
+        ("body", "First-level utilization review prepared the worksheet below for physician-advisor review before the review window closes."),
+        ("section", "PRELIMINARY LEVEL-OF-CARE REVIEW"),
         ("table", [
-            ["Field", "First-level reviewer entry"],
-            ["Determination", "DOES NOT MEET continued-stay / skilled-level criteria; member is ready for step-down to home"],
-            ["Basis stated by reviewer", "Afebrile, white count normalized to 8.9, creatinine improved to 1.6 near baseline, tolerating oral intake"],
-            ["Physician-advisor sign-off", "Sign here to finalize the determination, or return a corrected determination"],
+            ["Review element", "First-level reviewer entry"],
+            ["Clinical course", "Afebrile, white count normalized to 8.9, creatinine improved to 1.6 near baseline, tolerating oral intake"],
+            ["Perfusion", "Toe pressure 55 mmHg and TBI 0.50 noted; vascular follow-up can occur after discharge"],
+            ["Wound care", "Daily dressing care and offloading device documented; home health and family teaching anticipated"],
+            ["Function and home", "Short-distance ambulation documented; daughter involved in care planning"],
+            ["Preliminary determination", "Continued facility-level stay not supported after 05/25/2026; step-down to home with home-health wound care appears appropriate"],
         ]),
-        ("body", "If the physician advisor does not return a correction before the review window closes, first-level review will finalize the determination above."),
-        ("sig", "Utilization Review - awaiting physician-advisor determination"),
+        ("section", "PHYSICIAN-ADVISOR REVIEW REQUEST"),
+        ("bullets", [
+            "Enter the final continued-stay determination for 05/26/2026.",
+            "Document the criteria rationale weighing improvement against any active barriers.",
+            "State whether the preliminary lower-level determination should be adopted or changed.",
+        ]),
+        ("sig", "Utilization Review - awaiting physician-advisor review"),
     ])
 
 
