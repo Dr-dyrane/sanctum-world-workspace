@@ -11,6 +11,7 @@ EXTERNAL preliminary-determination trap plus decisiveness. The first-level UR wo
 ## Mounted set
 - Shared world chart (world-files/ plus supplementary-files/).
 - Task-level file for this task (E1-T). Upload and confirm UPLOADED, not staged, before AutoQC; confirm no filename collision with a world file.
+- FIRST-TRAJECTORY MOUNT GATE (DO-NOT-REPEAT #16): before trusting any score, inspect the first trajectory's `find /docs`. Require exactly ONE task file, `continued_stay_determination_worksheet_05252026.docx`, under `/docs/filesystem`, with no `/docs/.apps_data` and no stale filename. If it fails, clear the Studio Task Files card, re-add only the current worksheet, and rerun.
 - Grader should credit documented chart specifics and should not treat true chart details as invented just because the terse golden omits them.
 
 ## Fairness

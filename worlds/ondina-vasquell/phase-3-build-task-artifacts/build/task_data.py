@@ -129,11 +129,11 @@ def T6():
         ("section", "PRELIMINARY LEVEL-OF-CARE REVIEW"),
         ("table", [
             ["Review element", "First-level reviewer entry"],
-            ["Clinical course", "Afebrile, white count normalized to 8.9, creatinine improved to 1.6 near baseline, tolerating oral intake"],
-            ["Perfusion", "Toe pressure 55 mmHg and TBI 0.50 noted; vascular follow-up can occur after discharge"],
-            ["Wound care", "Daily dressing care and offloading device documented; home health and family teaching anticipated"],
-            ["Function and home", "Short-distance ambulation documented; daughter involved in care planning"],
-            ["Preliminary determination", "Continued facility-level stay not supported after 05/25/2026; step-down to home with home-health wound care appears appropriate"],
+            ["Clinical course", "Afebrile beyond 48 hours, white count normalized to 8.9, creatinine improved to 1.6 near baseline, tolerating oral intake and transitioned to oral antibiotics. Acute inpatient medical-necessity criteria no longer met."],
+            ["Perfusion", "Toe pressure 55 mmHg and TBI 0.50 noted; vascular following, outpatient workup adequate. Not an acute barrier to a lower level of care."],
+            ["Wound care", "Wound granulating post-debridement; dressing changes within home-health nursing scope; offloading boot dispensed; daughter available to assist. Manageable in the home setting."],
+            ["Function and home", "Ambulates short distances with assistance; home-health and family support arranged for the residence. No continued skilled facility-level need identified."],
+            ["Preliminary determination", "Continued facility-level stay not supported as of 05/26/2026. Patient meets criteria for step-down to home with home-health wound care and outpatient vascular follow-up; recommend discharge."],
         ]),
         ("section", "PHYSICIAN-ADVISOR REVIEW REQUEST"),
         ("bullets", [
