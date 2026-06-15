@@ -53,7 +53,7 @@ def T2():
     return ("him_working_drg_worksheet_05212026.docx", "mar", [
         ("title", "HEALTH INFORMATION MANAGEMENT - WORKING DRG WORKSHEET"),
         ("filing", "Author: Corwin Adeyle, RHIA, CCS - HIM Coding | Date: 05/21/2026 1830 | Status: Draft for provider attestation | " + RE),
-        ("body", "Preliminary sequencing and working DRG for provider review and attestation. Please confirm the principal diagnosis and the working DRG family, or correct any line and provide the supporting basis."),
+        ("body", "Preliminary code sequencing and working DRG prepared by HIM coding, routed for provider attestation."),
         ("section", "PRELIMINARY SEQUENCING"),
         ("table", [
             ["Field", "Coder preliminary entry", "Basis stated by coder"],
@@ -65,7 +65,7 @@ def T2():
             ["Secondary", "Anemia of chronic kidney disease", "Hemoglobin 9.8"],
             ["Secondary", "Peripheral arterial disease", "On the problem list"],
         ]),
-        ("body", "Open items for attending review: please confirm the final principal diagnosis sequencing and the working DRG family, and correct any line that does not reflect the documentation."),
+        ("body", "Working DRG assigned on the sequencing above. Routed to the attending for attestation to finalize the claim."),
         ("sig", "HIM Coding - awaiting provider attestation"),
     ])
 
