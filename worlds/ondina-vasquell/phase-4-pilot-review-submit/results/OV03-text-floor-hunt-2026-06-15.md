@@ -1,5 +1,7 @@
 # OV03 text-reachable floor hunt - result: NO-GO (2026-06-15)
 
+> SUPERSEDED (2026-06-15): the "no de-correlated third floor / world substrate-capped" conclusion below is WRONG. This hunt searched the FROZEN CHART for a buried gap and never tried the KM over-closure recipe on an UN-PRIMED axis; that recipe (CPAP/OSA over-closure) then bench-floored 3/3. The candidate-by-candidate analysis is kept for history. Canonical: worlds/ondina-vasquell/OV-FLOOR-MECHANISM-LIBRARY.md.
+
 User chose "hunt a text-reachable OV03" after the image-miss OV03 draft was rejected (blind harness). I read the full canonical chart (build/clinical_data.py, all 29 world files + 3 supplementary) and looked for a floor that is: text-reachable (no image dependence), fair (penalizing the miss is defensible), reliably missed by a cold text reviewer (reviewer-miss = floor; reviewer-catch = ceiling), and de-correlated from OV01 (cold drug-stop) and OV02 (off-text line-infection synthesis).
 
 Result: no candidate clears all four bars.

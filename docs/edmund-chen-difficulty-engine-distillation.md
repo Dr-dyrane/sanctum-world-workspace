@@ -1,4 +1,7 @@
 # Edmund/Chen example world - difficulty-engine distillation
+
+> SUPERSEDED IN PART (2026-06-15): the mechanism EXTRACTION below is valid and useful. But the OV-specific IMPLICATIONS - that OV is "substrate-limited," "closes at 1-2 floors," and that the move is to "build the next world conflict-first" / "one conflicting authority outfloors five embeds" - are WRONG and superseded. OV reaches 8 floors IN-WORLD by manufacturing floors AT THE TASK LAYER (over-closure on un-primed axes; CPAP bench-confirmed 3/3). Canonical reference: worlds/ondina-vasquell/OV-FLOOR-MECHANISM-LIBRARY.md.
+
 Date: 2026-06-15. Author: Claude (cowork), from a full read of the six-task Edmund/Chen example package (prompts + goldens + graders for T1-T6). The raw example docx live at `reference/world-spec-examples/edmund-chen/` but that path is GITIGNORED (line 66), so this distillation is the committable record of what the examples teach. Purpose: correct and deepen the OV floor-engineering model with evidence from a built suite that floors on this model.
 
 ## The world in one line
