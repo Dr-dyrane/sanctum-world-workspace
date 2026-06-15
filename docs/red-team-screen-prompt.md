@@ -48,6 +48,7 @@ Do not soften your conclusions. If the task will ceiling or is unfair, say so pl
 ---
 
 ## How to read the result
+- DECISIVE RULE (OV04 lesson, 2026-06-15): if the cold reviewer CAUGHT the trap in Pass 1, treat it as WILL CEILING, regardless of any "but ~X percent of models would miss it" estimate. That fraction-estimate is unreliable optimism. OV04 was screened BORDERLINE on a 30-45 percent preserve estimate and then ceilinged 10 of 10 on pilot, because this model cross-checks the chart at least as well as a careful reviewer. Only a trap the cold reviewer GENUINELY MISSED, or visibly struggled to catch, is a floor candidate.
 - A WILL CEILING verdict in Pass 1 is a stop sign: re-center the trap before spending the pilot, do not upload to "see what happens."
 - BLOCKER or FIX-BEFORE-UPLOAD items get fixed locally and re-screened.
 - Treat a fairness or wrong-golden finding as more serious than a difficulty finding: an unfair task that floors is worse than a fair task that ceilings.

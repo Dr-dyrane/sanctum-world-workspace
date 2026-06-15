@@ -295,7 +295,7 @@ def emit():
 # OV02 (coding attestation) RETIRED 2026-06-14 - model-strong genre, ceilinged x3 (v1/v2/v3).
 # Source entries kept above for possible commitment-trap revival; popped here so the active
 # suite is 9 tasks and rebuilds do not resurrect platform/task2.
-for _ret in ("task2",):  # OV02 RE-RETIRED 2026-06-14: coding genre model-strong, ceilinged x5 (v1-v5)
+for _ret in ("task2", "task4"):  # OV02 coding ceilinged x5 (v1-v5); OV04 appeal-concession ceilinged 2026-06-15 (job 9f78c971, 0.92-0.97, 10/10 caught) - both retired
     T.pop(_ret, None); WORKFLOW.pop(_ret, None); TASK_FILE_MAP.pop(_ret, None)
 
 if __name__ == "__main__":
