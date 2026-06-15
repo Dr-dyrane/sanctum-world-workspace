@@ -36,14 +36,48 @@ def golden_text(p):
     return " ".join(VIS.findall(zipfile.ZipFile(p).read("word/document.xml").decode()))
 
 
+BANNED_GLYPHS = "—–→•°×⁹"
+
+
+def _fa_ga_section(t, name):
+    """Body under '## <name>' up to the next '## ' header (or EOF); None if absent."""
+    body, cap = [], False
+    for ln in t.splitlines():
+        if re.match(r"^##+\s+", ln):
+            if re.sub(r"^##+\s+", "", ln).strip().lower() == name.lower():
+                cap = True; continue
+            if cap:
+                break
+        elif cap:
+            body.append(ln)
+    return "\n".join(body).strip() if cap else None
+
+
 def check_fa_ga():
+    """FA/GA house format (Abi 6/09 + King P 6/14 + KM09): failure-only, no grader-section
+    names, no banned glyphs, and each of Failure Analysis / Grader Analysis is exactly two
+    paragraphs under about 1000 characters. The two-paragraph + cap checks are what let the
+    earlier single-paragraph OV02 draft through; they are now enforced."""
     out = []
     for p in sorted(FA_GA_DIR.glob("FA-GA-*.md")):
         t = p.read_text(errors="ignore")
         if BOTHSIDES.search(t):
-            out.append((p.name, "FA/GA in both-sides format - use failure-only (Abi 6/09)"))
+            out.append((p.name, "both-sides format - use failure-only (Abi 6/09)"))
         if SECNAME.search(t):
-            out.append((p.name, "FA/GA names a grader section - state the content instead (no section names)"))
+            out.append((p.name, "names a grader section - state the content instead (no section names)"))
+        bad = {c for c in BANNED_GLYPHS if c in t}
+        if bad:
+            out.append((p.name, f"banned glyph(s) {sorted(bad)} - use plain hyphens, 'C' not degree sign"))
+        for label in ("Failure Analysis", "Grader Analysis"):
+            body = _fa_ga_section(t, label)
+            if body is None:
+                out.append((p.name, f"missing '## {label}' section"))
+                continue
+            paras = [b for b in re.split(r"\n\s*\n", body) if b.strip()]
+            if len(paras) != 2:
+                out.append((p.name, f"{label} must be two paragraphs (found {len(paras)}) - KM09 house format"))
+            if len(body) > 1000:
+                out.append((p.name, f"{label} is {len(body)} chars > 1000 (each part under about 1000)"))
     return out
 
 
