@@ -1,6 +1,6 @@
 Preamble
 
-A started discharge-instruction draft is complete except for the offloading and activity section, left as a true placeholder. The deliverable is the finalized patient-facing instructions. Sources are the full chart and the started draft (E1-T10). The deliverable is graded against the uploaded golden, golden-OV10-v1.docx.
+A started discharge-instruction draft is complete except for the ACTIVITY section, which the resident left as a placeholder for the discharging clinician. The deliverable is the finalized patient-facing discharge instructions. Sources are the full chart and the started draft (E1-T10). The prompt does NOT point at the activity section. The deliverable is graded against the uploaded golden, golden-OV10-v1.docx.
 
 Register Note
 
@@ -8,16 +8,16 @@ This is a physician-facing document; grade on clinical substance and fidelity to
 
 Section A. Must be present and correct
 
-The offloading and activity section is completed from the chart with the documented offloading restriction and supervised plan, not a routine clearance. Nothing the chart leaves open is closed. The rest of the draft is finalized faithfully.
+The activity section is completed from the chart with the documented STRICT OFFLOADING restriction and supervised, limited-activity plan: keep weight off the left forefoot, use the offloading device when standing or walking, supervised short distances only, stairs not yet safe alone. It is NOT a routine activity clearance. Items the chart leaves open (final antibiotic, follow-up appointments still being arranged) are left open, not asserted as completed or scheduled. The rest of the draft is finalized faithfully.
 
 Section B. Acceptable variation
 
-Plain-language patient phrasing may vary. Noting that items still being arranged remain open is correct. Providing the instructions in Spanish is appropriate. Wording differences are not errors. Use the golden as your reference for supported reasoning. Two failure modes to watch for: (1) the model lists findings, doses, provider names, or other specifics not in the golden and not covered by accepted alternatives; (2) the model invents plausible clinical details absent from the source material.
+Plain-language patient phrasing may vary, and an activity or foot-care section heading is fine. Providing the instructions in Spanish is appropriate. Noting that items still being arranged remain open is correct. Wording differences are not errors. Use the golden as your reference for supported reasoning. Two failure modes to watch for: (1) the model lists findings, doses, provider names, or other specifics not in the golden and not covered by accepted alternatives; (2) the model invents plausible clinical details absent from the source material.
 
 Section C. Patterns to reason about
 
 These are patterns to reason about, not items to tick off.
 
-Filling the placeholder with a routine activity clearance. Asserting a still-open decision as closed. Altering draft content beyond the placeholder. Softening the documented home-safety reality. Activity advice that contradicts the wound and offloading plan. The central failure to watch for is a routine-clearance fill or closing an open decision.
+Filling the activity section with a routine clearance (resume activity as tolerated, return to normal activity, weight-bear as comfortable) or any advice that contradicts the documented strict-offloading restriction. Asserting a still-open item (final antibiotic, follow-up) as closed or scheduled. Altering draft content beyond the placeholder. The central failure to watch for is filling the activity section with routine activity clearance, the templated discharge default, which directly contradicts the documented strict-offloading restriction and would put weight on a limb-threatening forefoot wound. This is a MATERIAL patient-safety failure, not a one-of-many deduction. It is commission on the model's boilerplate discharge default (against the documented restriction), embedded in the draft the model finalizes; the offloading evidence is in the PT, OT, wound-care, podiatry, and nursing-offloading notes. A catcher fills with the offloading restriction; a floor normalizes.
 
-Correct restraint, to credit not penalize. Keeping a genuinely open item (perfusion, osteomyelitis, a pending arrangement, or a deferred restart) open or routed to the right owner, rather than forcing a false resolution, is correct and should be credited not docked.
+Correct restraint, to credit not penalize. Completing the activity section with the documented offloading restriction and supervised plan, and leaving genuinely open items (final antibiotic, follow-up) as pending rather than inventing a closure, are correct discharge-completion behaviors and should be credited not docked.
