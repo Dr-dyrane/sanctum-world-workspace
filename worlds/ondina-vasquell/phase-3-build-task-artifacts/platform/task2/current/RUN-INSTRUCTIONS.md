@@ -9,16 +9,16 @@ Select "Medical Transcription and Clinical Documentation Completion" (P0): the d
 OV02-id reuse versus a fresh id. OV02 coding was earlier marked do-not-build-on; reusing the OV02 RLS task id is fine if intended (it carries prior coding runs), otherwise create a fresh id. This is a one-time choice at Step 10.
 
 ## Upload set (what goes where)
-- TASK FILES (mount, upload all three from the task/ subfolder): task/snf_transfer_note_template_05242026.docx, task/transfer_day_nursing_intake_05242026.docx, task/iv_line_site_photo_05242026.jpg.
+- TASK FILES (mount, upload all three): snf_transfer_note_template_05242026.docx, transfer_day_nursing_intake_05242026.docx, iv_line_site_photo_05242026.jpg.
 - PROMPT: prompt-OV02.txt.
 - GOLDEN: golden-OV02-v6.docx.
 - GRADER: grader-guidelines-OV02.txt. CRITICAL: the grader is a model and the finding is image-only - the image MUST be attached as a grader input. The grader file's top block states this as a blocking requirement. If your harness cannot attach the image to the grader, do not score.
-- DO NOT upload the meta files (prereg, A0.5, codex-image-prompt) - they spell out the answer.
+- DO NOT upload the meta files (prereg, A0.5, RUN-INSTRUCTIONS) - they are local-only. Upload only the prompt, the three task files, the golden, and the grader.
 
 ## Step-10 sequence
 1. Select the workflow (above). Confirm exact name on the live sheet.
 2. Paste prompt-OV02.txt.
-3. Upload the three task/ files; click the separate Save File Changes (not just top Save); refresh; confirm all three show UPLOADED, not staged.
+3. Upload the three task files (template, intake note, photo); click the separate Save File Changes (not just top Save); refresh; confirm all three show UPLOADED, not staged.
 4. Upload golden-OV02-v6.docx to the golden slot.
 5. Paste/upload grader-guidelines-OV02.txt; ATTACH iv_line_site_photo_05242026.jpg as a grader input; confirm the grader names the golden by filename.
 6. Save; refresh; confirm prompt, three task files, golden, grader all survive untruncated.
