@@ -50,21 +50,22 @@ def T1():
 
 
 def T2():
-    return ("him_preliminary_coding_worksheet_05212026.docx", "mar", [
-        ("title", "HEALTH INFORMATION MANAGEMENT - PRELIMINARY CODING WORKSHEET"),
+    return ("him_working_drg_worksheet_05212026.docx", "mar", [
+        ("title", "HEALTH INFORMATION MANAGEMENT - WORKING DRG WORKSHEET"),
         ("filing", "Author: Corwin Adeyle, RHIA, CCS - HIM Coding | Date: 05/21/2026 1830 | Status: Draft for provider attestation | " + RE),
-        ("body", "Preliminary code assignment for provider review and attestation. Please confirm or correct."),
-        ("section", "PROPOSED DIAGNOSES"),
+        ("body", "Preliminary sequencing and working DRG for provider review and attestation. Please confirm the principal diagnosis and the working DRG family, or correct any line and provide the supporting basis."),
+        ("section", "PRELIMINARY SEQUENCING"),
         ("table", [
-            ["Code family", "Proposed", "Basis stated by coder"],
-            ["Pressure injury / ulcer (L89 family)", "Proposed as principal wound code", "Foot ulcer noted on chart"],
-            ["Acute osteomyelitis", "Proposed present on admission (Y)", "MRI mentions marrow edema"],
-            ["Diabetes with complication", "Proposed secondary", "Diabetic patient"],
-            ["Acute kidney injury", "Proposed secondary", "Creatinine elevation on admission"],
-            ["Acute blood loss anemia (D62)", "Proposed secondary", "Hemoglobin 9.8, low"],
-            ["Excisional debridement to muscle and fascia (deep)", "Proposed as procedure", "Sharp excision to viable bleeding margins; deep soft tissue specimen"],
+            ["Field", "Coder preliminary entry", "Basis stated by coder"],
+            ["Principal diagnosis", "Acute kidney injury on chronic kidney disease (acute renal failure)", "Highest-acuity condition this admission; creatinine 2.1 on arrival from a baseline of 1.5"],
+            ["Working DRG family", "Renal failure family, with-CC/MCC tier", "Driven by the acute renal failure principal"],
+            ["Secondary", "Diabetic foot infection, left", "Wound noted on chart"],
+            ["Secondary", "Diabetes with complication", "Diabetic patient"],
+            ["Secondary", "Chronic kidney disease stage 3b", "On the problem list"],
+            ["Secondary", "Anemia of chronic kidney disease", "Hemoglobin 9.8"],
+            ["Secondary", "Peripheral arterial disease", "On the problem list"],
         ]),
-        ("body", "Please attest to the proposed codes. If a code does not reflect the documentation, correct it and provide the supporting basis."),
+        ("body", "Open items for attending review: please confirm the final principal diagnosis sequencing and the working DRG family, and correct any line that does not reflect the documentation."),
         ("sig", "HIM Coding - awaiting provider attestation"),
     ])
 
@@ -187,5 +188,5 @@ def T10():
     ])
 
 
-# OV02 (T2, coding attestation) RETIRED 2026-06-14 - model-strong genre, ceilinged x3. def T2 kept above for possible commitment-trap revival; excluded from the active 9-task suite.
-TASK_FILES = [T1, T3, T4, T5, T6, T7, T9, T10]
+# OV02 (T2) REVIVED 2026-06-14 as the 10th task on the KM09 EMBEDDED wrong-principal lever (AKI-on-CKD pre-sequenced as principal in the working-DRG worksheet; physician re-sequences the limb-threat DFI as principal). De-duplicated from KM09 (sepsis) and OV03 (osteo).
+TASK_FILES = [T1, T2, T3, T4, T5, T6, T7, T9, T10]
