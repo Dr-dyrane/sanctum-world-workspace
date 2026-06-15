@@ -1,6 +1,8 @@
 # OV04 v1 (CPAP/OSA over-closure) - RLS / Studio upload runbook
 
-STATUS 2026-06-15: GO for pilot. Mechanism = embedded over-closure on an un-primed axis (KM03 port; KM03's CPAP over-closure banked ~76.4). Cold bench = FLOOR (3/3 reviewers propagated the fabricated closure under a completion frame). Build-side complete and rendered through the canonical Epic renderer; remaining steps are Studio upload + pilot. TEXT lever - no image, no vision dependency.
+STATUS 2026-06-15: PILOTED -> FAIR BIMODAL FLOOR, BANKED PENDING REVIEW (job e620866f). Scores 0.08/0.10/0.15/0.82/0.10/0.10/0.10/0.08/0.20/0.15, mean 0.188: 9/10 floored propagating the OSA over-closure, 1 catcher (Attempt 4, 0.82) corrected it. OV's third floor; the over-closure engine is pilot-confirmed. Results: phase-4-pilot-review-submit/results/OV04-pilot-2026-06-15-job-e620866f.md; FA/GA: phase-4-pilot-review-submit/fa-ga/FA-GA-OV04-current.md (subject = Attempt 6, run cbe71165, 0.10). DO NOT re-tune or re-pilot. NEXT (Alexander): bind FA/GA to Attempt 6, confirm transcript, then review -> bank. The notes below are retained for upload-mechanics history.
+
+PRIOR STATUS (superseded): GO for pilot. Mechanism = embedded over-closure on an un-primed axis (KM03 port; KM03's CPAP over-closure banked ~76.4). Cold bench = FLOOR (3/3 reviewers propagated the fabricated closure under a completion frame). Build-side complete and rendered through the canonical Epic renderer; remaining steps are Studio upload + pilot. TEXT lever - no image, no vision dependency.
 
 ## Workflow (confirm live)
 "Medical Transcription and Clinical Documentation Completion" (the deliverable is completing a started clinical documentation note). Confirm the exact name on the live Task Selection Categories sheet. OV04 slot was the retired appeal-concession lever; decide OV04-id reuse vs a fresh id at Step 10.
