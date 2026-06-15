@@ -37,7 +37,7 @@ All docx on the canonical Epic template and BYTE-DETERMINISTIC (build_all.py; ti
 | Supplementary | general_discharge_rights_notice_05212026.docx | 60156c9bd10707b6 |
 | Supplementary | nursing_shift_narrative_05182026.docx | 04972ffc072650a5 |
 | Task | cdi_query_memo_05232026.docx | 9a8ad40606e0e6e5 |
-| Task | him_preliminary_coding_worksheet_05212026.docx | e8d3e71f36ef8f7c |
+| Task | him_final_coding_attestation_packet_05212026.docx | 2126a92809919d15 |
 | Task | medicare_advantage_denial_letter_05232026.docx | 2591b111e9162ebe |
 | Task | payer_concurrent_review_request_05252026.docx | 2031628bd18f6a4d |
 | Task | pharmacy_benefit_rejection_05242026.docx | 01a539a609c1dc41 |
@@ -49,8 +49,8 @@ All docx on the canonical Epic template and BYTE-DETERMINISTIC (build_all.py; ti
 | Golden | discharge_medication_orders_05212026.docx | 4250d7f53dadaac8 |
 | Golden | golden-OV10-v1.docx | dbb4150677c87264 |
 | Golden | started_discharge_instruction_draft_05212026.docx | b234610bf407123a |
-| Golden | golden-OV02-v1.docx | 7a4a2f4db10baff6 |
-| Golden | him_preliminary_coding_worksheet_05212026.docx | e8d3e71f36ef8f7c |
+| Golden | golden-OV02-v1.docx | c8424e1726275270 |
+| Golden | him_final_coding_attestation_packet_05212026.docx | 2126a92809919d15 |
 | Golden | cdi_query_memo_05232026.docx | 9a8ad40606e0e6e5 |
 | Golden | golden-OV03-v1.docx | e5dfeaed59217b56 |
 | Golden | golden-OV04-v1.docx | 6d608782a8f723f0 |
