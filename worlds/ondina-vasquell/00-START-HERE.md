@@ -4,10 +4,10 @@ Status (2026-06-15): WORLD OPEN FOR TASKING. Three confirmed floors and a proven
 
 Three floors:
 - OV01 - cold outside-knowledge (stop inpatient enoxaparin). Banked; in human review (FA/GA on job aa949641, Attempt 6, run 28a61869, 0.50).
-- OV02 - off-text synthesis (infected IV line, Path A text-recut). Fair floor (pilot 10/10 ~0.10). BACK FROM HUMAN REVIEW - handling next.
-- OV04 - CPAP/OSA over-closure (KM03 port). Fair bimodal floor (job e620866f, 9/10 floor + 0.82 catcher). Banked pending review; FA/GA ready (Attempt 6, run cbe71165).
+- OV02 - off-text synthesis (infected IV line, Path A text-recut). Fair floor (pilot 10/10 ~0.10). Kathy G review fixes applied (golden consistency + grader trim to 1pg); needs re-AutoQC + re-pilot (golden/grader changed, #22) then resubmit.
+- OV04 - CPAP/OSA over-closure (KM03 port). Fair bimodal floor (job e620866f, 9/10 floor + 0.82 catcher). Grader trimmed to 1pg (806->530); needs a confirming re-pilot before bank (#22). FA/GA ready (Attempt 6, run cbe71165).
 
-Next: handle OV02's review (save feedback verbatim, classify, Alexander decides clinical, apply, resubmit - per reviewer-response-protocol.md); then bench the next un-primed-axis over-closure (bone-health/CKD-MBD) toward 8. Writing discipline: graders <=1 page (Sang), FA/GA failure-only/no-dashes, tight prose everywhere. Canonical running record = OV-WORLD-STATUS.md.
+Next: handle OV02's review (save feedback verbatim, classify, Alexander decides clinical, apply, resubmit - per reviewer-response-protocol.md); then bench the next un-primed-axis over-closure (bone-health/CKD-MBD) toward 8. Writing discipline: graders <=1 page (Sang), FA/GA failure-only/no-dashes, tight prose everywhere. Rule: any golden/grader change => re-run trajectories (DO-NOT-REPEAT #22). Backbone gates (run both before any upload): tools/verify/verify_ondina.py (now also grader length + golden-grader consistency) and tools/verify/presubmit_task_gate.py (per-task reviewer-failure-patterns). Canonical running record = OV-WORLD-STATUS.md.
 
 Patient: Ondina Vasquell, 68F, Spanish-preferred, insulin-dependent T2DM with diabetic peripheral neuropathy and mild diabetic retinopathy, CKD 3b with anemia of CKD, PAD, HFpEF, hypertension, dyslipidemia, obesity, OSA, knee osteoarthritis, limited mobility; second-floor walk-up; daughter support limited by night work; Medicare Advantage with Medicaid secondary. World: limb-threat diabetic foot infection, 6-day admission, snapshot May 21, 2026 at 18:00 (HD6 evening), medically improving but operationally unsafe. Branch posture: decision 7, stay on korvin-merrow-brainstorm until KM closes; cut ondina-vasquell-brainstorm at that boundary.
 

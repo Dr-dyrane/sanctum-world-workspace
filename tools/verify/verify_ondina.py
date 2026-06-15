@@ -39,6 +39,7 @@ FORBIDDEN = [
     ("KM-6427819", "prior-world MRN"),
 ]
 MRN = "OV-3358104"
+GRADER_WORD_CAP = 540  # Sang/Kathy: grader ~1 page (~480-520 words); fail on length drift
 
 
 def vis(f):
@@ -56,6 +57,36 @@ def fills_colors(f):
     d = zipfile.ZipFile(f).read("word/document.xml").decode()
     return (set(re.findall(r'w:fill="([^"]+)"', d)),
             set(re.findall(r'<w:color w:val="([^"]+)"', d)))
+
+
+def task_consistency_fails():
+    """Per task (platform/task*/current): grader length cap + golden-vs-grader
+    'do not credit visual detail' consistency. Catches the Kathy-G class (golden
+    asserts a finding the grader says not to credit) and grader-length drift (Sang)."""
+    out = []
+    trig = re.compile(r"do not (require|reward|credit)[^.]{0,80}(visual|photo|image)"
+                      r"|without (seeing|viewing) the (photo|image)"
+                      r"|does not depend on viewing"
+                      r"|reachable from the[^.]{0,40}text", re.I)
+    vispat = re.compile(r"(photo|photograph|image)\w*\s+\w{0,12}\s*(show|confirm|demonstrat|reveal|depict)"
+                        r"|corroborat\w*[^.]{0,40}(erythema|purulent|drainage|cellulitis|edema|infection)"
+                        r"|(shows|reveals|demonstrates)\s+(erythema|purulent|cellulitis)", re.I)
+    for dpath in sorted(glob.glob(str(P3 / "platform/task*/current"))):
+        d = Path(dpath)
+        graders = sorted(d.glob("grader-guidelines-*.txt"))
+        goldens = sorted(d.glob("golden-*.docx"))
+        for gpath in graders:
+            gtxt = gpath.read_text(encoding="utf-8", errors="ignore")
+            wc = len(gtxt.split())
+            if wc > GRADER_WORD_CAP:
+                out.append((gpath.name, "grader-too-long", f"{wc} words > {GRADER_WORD_CAP} (Sang: ~1 page)"))
+            if trig.search(gtxt):
+                for goldp in goldens:
+                    m = vispat.search(vis(str(goldp)))
+                    if m:
+                        out.append((goldp.name, "golden-grader-conflict",
+                                    f"golden asserts visual detail grader forbids: {m.group(0)[:36]!r}"))
+    return out
 
 
 def main():
@@ -91,6 +122,8 @@ def main():
             if tok.lower() in t.lower(): fails.append((Path(f).name, "drift", f"{tok!r}: {why}"))
         for m in set(re.findall(r"OV-\d{6,}", t)):
             if m != MRN: fails.append((Path(f).name, "mrn-variant", m))
+    # task-level golden/grader consistency + grader length (Kathy G 6/15)
+    fails += task_consistency_fails()
     # report
     print(f"verify_ondina: {len(files)} docx checked across world, supplementary, task, goldens")
     if fails:
@@ -98,7 +131,7 @@ def main():
         for n, k, d in fails[:60]:
             print(f"  {n:46} {k:18} {d}")
         return 1
-    print("PASS: all gates green (synthetic, prior-world, banned, metadata, template parity, filenames, anchor consistency)")
+    print("PASS: all gates green (synthetic, prior-world, banned, metadata, template parity, filenames, anchor consistency, grader length, golden-grader consistency)")
     return 0
 
 
