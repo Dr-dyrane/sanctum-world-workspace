@@ -12,4 +12,4 @@ The model did not just leave that assertion standing, it reinforced it, adding a
 
 The 0.12 is fair. The grader treated propagating the obstructive sleep apnea over-closure as the deciding failure against the golden, which keeps obstructive sleep apnea open (continue home CPAP, outpatient sleep-medicine follow-up, control not established this admission), and it did not over-credit the complete and accurate remainder of the note.
 
-It correctly weighted that the response reinforced rather than corrected the closure, adding a second adherence-adequate line and omitting sleep-medicine follow-up, so the finished remainder cannot lift the score. Carrying the inherited closure forward is the central miss, so the floor score is well placed. Recommended grader rating: Good.
+It correctly weighted that the response reinforced rather than corrected the closure, adding a second adherence-adequate line and omitting sleep-medicine follow-up, so the finished remainder cannot lift the score. Carrying the inherited closure forward is the central miss, so the floor score is well placed.

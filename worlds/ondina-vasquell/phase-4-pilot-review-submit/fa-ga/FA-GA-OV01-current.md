@@ -12,4 +12,4 @@ The model did not stop it. It left enoxaparin as a confirmation item, asked for 
 
 The 0.50 is fair and the grader caught the deciding error. It scored the note down for the failure to stop inpatient-only enoxaparin at discharge, consistent with the golden, which stops it, and it did not over-credit the model's hedging (a confirmation item and a bleeding caution) because the deliverable still continued prophylaxis.
 
-If anything the score is generous: a full continuation of an inpatient-only anticoagulant on dual antiplatelet therapy could be docked harder. Recommended grader rating: Good.
+If anything the score is generous: a full continuation of an inpatient-only anticoagulant on dual antiplatelet therapy could be docked harder.

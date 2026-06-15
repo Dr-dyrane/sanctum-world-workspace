@@ -68,6 +68,8 @@ def check_fa_ga():
         bad = {c for c in BANNED_GLYPHS if c in t}
         if bad:
             out.append((p.name, f"banned glyph(s) {sorted(bad)} - use plain hyphens, 'C' not degree sign"))
+        if re.search(r"recommended grader rating|grader rating\s*:", t, re.I):
+            out.append((p.name, "drop the grader-rating line - not part of failure-only FA/GA prose (it is a Studio field, not the paste)"))
         for label in ("Failure Analysis", "Grader Analysis"):
             body = _fa_ga_section(t, label)
             if body is None:

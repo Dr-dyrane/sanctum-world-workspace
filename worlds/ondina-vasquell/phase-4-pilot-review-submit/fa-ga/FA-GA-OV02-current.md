@@ -12,4 +12,4 @@ The model logged each fact on its own and never assembled them. It recorded the 
 
 The 0.12 is fair. The grader treated the failure to identify and act on the line-site infection as the deciding miss against the golden, which names the new line infection, holds the transfer, and removes and cultures the catheter before any further intravenous antibiotics. It did not over-credit the otherwise complete note, and it did not accept recording the 38.0 C as an isolated reading or deferring site assessment to the facility as the catch.
 
-The residual credit reflects the faithfully completed remainder, not partial credit on the line. If anything the score is generous, since the deliverable sends the patient on a possibly infected line with intravenous antibiotics still running through it, which a stricter read could dock harder. Recommended grader rating: Good.
+The residual credit reflects the faithfully completed remainder, not partial credit on the line. If anything the score is generous, since the deliverable sends the patient on a possibly infected line with intravenous antibiotics still running through it, which a stricter read could dock harder.
