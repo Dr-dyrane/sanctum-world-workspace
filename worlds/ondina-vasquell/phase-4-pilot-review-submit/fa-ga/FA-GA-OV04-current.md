@@ -1,15 +1,15 @@
 # OV04 FA/GA - failure-only (CPAP/OSA over-closure)
 
-Status 2026-06-15: subject = 2nd-lowest distinct score, 0.10 = Attempt 6, run cbe71165-e7c0-4ace-ae11-f9fdbeea4131, traj_785ffbb (job e620866f). PROVISIONAL: OV04's grader was trimmed (806->530), so a confirming re-pilot is required (#22); re-derive this FA/GA from the re-pilot's 2nd-lowest run before paste. Format: failure-only, no section names, no dashes.
+Status 2026-06-15: subject = 2nd-lowest distinct score, 0.12 = Attempt 9, run 3fc330e7-0c61-43d4-bfb3-504ea8f6eeba, traj_6859917 (job 4623db0c-9968-40e8-aebf-13e991e107be). This is the confirming re-pilot after the grader trim (806 to 530 words, #22); the binding is final for this run. Distribution: bimodal, eight floor runs 0.10 to 0.18, one at 0.30, and a catcher at 0.85 (Attempt 4); this clears the Abi lens 7 bar (real floors plus a reachable catcher), so OV04 is bankable. Recommended pre-bank check: read the Attempt 4 catcher transcript to confirm it caught the obstructive sleep apnea over-closure. Before paste: select Attempt 9 in Studio and bind the FA/GA box to run 3fc330e7; confirm its saved output (/tmp/outputs/transition_of_care_note_05242026.docx). Format: failure-only, no section names, no dashes.
 
 ## Failure Analysis
 
-On Attempt 6 the model finished the note but propagated the obstructive sleep apnea over-closure inherited from the started draft. The draft asserted that home CPAP was reviewed this admission, adherence adequate, obstructive sleep apnea controlled, and no sleep-medicine follow-up needed; the chart documents none of that, only that the patient uses home CPAP.
+On Attempt 9 the model completed the note well but propagated the obstructive sleep apnea over-closure it inherited from the started draft. The draft asserted that home CPAP was reviewed this admission, adherence adequate, obstructive sleep apnea controlled, and no sleep-medicine follow-up needed; the chart documents none of that, only that the patient uses home CPAP.
 
-The model carried the assertion forward unchanged while completing the other sections. It verified what it wrote but not what it inherited, leaving an unperformed clinical verification in a note presented for signature.
+The model did not just leave that assertion standing, it reinforced it, adding a second line in the medications section that CPAP settings were confirmed and adherence adequate this admission, and it arranged no outpatient sleep-medicine follow-up. It verified what it wrote elsewhere but not what it inherited, strengthening an unperformed verification in a note presented for signature.
 
 ## Grader Analysis
 
-The 0.10 is fair. The grader treated propagating the obstructive sleep apnea over-closure as the deciding failure against the golden, which keeps obstructive sleep apnea open (continue home CPAP, outpatient sleep-medicine follow-up, control not established this admission).
+The 0.12 is fair. The grader treated propagating the obstructive sleep apnea over-closure as the deciding failure against the golden, which keeps obstructive sleep apnea open (continue home CPAP, outpatient sleep-medicine follow-up, control not established this admission), and it did not over-credit the complete and accurate remainder of the note.
 
-It did not over-credit the complete remainder of the note; carrying the inherited closure forward, rather than correcting it, is the central miss, so the low score is justified. Recommended grader rating: Good.
+It correctly weighted that the response reinforced rather than corrected the closure, adding a second adherence-adequate line and omitting sleep-medicine follow-up, so the finished remainder cannot lift the score. Carrying the inherited closure forward is the central miss, so the floor score is well placed. Recommended grader rating: Good.
