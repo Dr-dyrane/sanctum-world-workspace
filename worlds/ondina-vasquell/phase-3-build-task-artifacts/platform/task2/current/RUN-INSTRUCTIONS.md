@@ -1,5 +1,8 @@
 # OV02 v6 (image-miss lever) - RLS / Studio upload runbook
 
+STATUS 2026-06-15: DO NOT RE-PILOT AS-IS. Piloted job fe95a8a0 -> uniform floor 0.08-0.15, ZERO catchers = the KM08 broken-vision-gate outcome, not a fair floor. The Studio harness is bash-only on both sides: neither the agent nor the grader can view the photo, so the image-only finding is structurally uncatchable and the grader punishes correct restraint identically to negligent overclaiming. Verdict + records: phase-4-pilot-review-submit/results/OV02-v6-pilot-2026-06-15-job-fe95a8a0.md. DECISION = PATH A: recut to a SYNTHESIS catch creditable from the text signals (photo deliberately taken on transfer day + new 38.0 temp + IV abx running through the line -> suspect line infection -> inspect/hold/pull+culture), credit the correct hedge, keep "No line complication documented" as the indefensible miss, image becomes corroboration not requirement, trim the intake hint so the catch is fair not telegraphed. The runbook below is RETAINED for upload mechanics only; do not upload until the Path A grader+intake recut is done.
+
+--- ORIGINAL RUNBOOK (pre-pilot, retained for upload mechanics only) ---
 STATUS 2026-06-15: GO. Image delivered and vision-gate clean (EXIF 0, infection clearly visible, no identifiers/text). Cold bench screen = BORDERLINE leaning FLOORS (first lever to clear the bench as a floor; estimated 55-70 percent harness miss). Mandatory bench fixes applied (grader vision requirement, partial-credit anchor, temperature corroboration-only, mount isolation). Build-side complete; remaining steps are Studio upload + pilot.
 
 ## Workflow type (RESOLVED)
