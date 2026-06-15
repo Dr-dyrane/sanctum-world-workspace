@@ -27,7 +27,7 @@ The image does not exist yet (Codex to generate from codex-image-prompt-OV02-v6.
 Cold screen AFTER the image exists: does a fresh strong model, finishing the transfer note, CATCH the infected line or MISS it? Because models read images poorly, a reviewer MISS is the FLOOR signal here - the inverse of the prose levers. Proceed to pilot ONLY on a floor (reviewer-miss) verdict. If the cold reviewer reliably catches it, even the image lever ceilings and OV closes at one floor.
 
 ## Workflow
-Content is an SNF transfer/admission note, so the approved workflow at Step 10 is "Referral Intake, Triage, and Scheduling Coordination" (or "Medical Transcription and Clinical Documentation Completion"), NOT "Inpatient Medical Coding and DRG Assignment" (the old OV02 string). Verify the exact name live at Step 10.
+RESOLVED: "Medical Transcription and Clinical Documentation Completion" (the deliverable is completing a clinical documentation template, the SNF transfer note). Fallback if a unique string is required: "Referral Intake, Triage, and Scheduling Coordination". NOT "Inpatient Medical Coding and DRG Assignment" (the old OV02 string). Verify the exact name live at Step 10.
 
 ## Mount
 Three intended task-level files (per the worked-example noise + format design): snf_transfer_note_template_05242026.docx, transfer_day_nursing_intake_05242026.docx, iv_line_site_photo_05242026.jpg, plus the world chart. First-trajectory find /docs must show exactly these three task files under /docs/filesystem, no /docs/.apps_data, no stale/collision.
