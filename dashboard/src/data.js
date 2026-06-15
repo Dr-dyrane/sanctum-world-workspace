@@ -255,16 +255,16 @@
     'ondina-vasquell': {
       title: 'Ondina Vasquell',
       kicker: 'World Live · Limb-Threat Diabetic Foot Infection',
-      blurb: 'Healthcare_297_Vasquell is live. OV01 clean pilot banked. Review work is next.',
+      blurb: 'Healthcare_297_Vasquell is live. OV01 clean pilot banked. OV07 has been re-centered after a ceilinged v2 pilot.',
       driveUrl: null,
       meta: {
         world: 'Project Sanctum',
         patient: 'Ondina Vasquell clinical suite',
         chart: 'Healthcare_297_Vasquell, 34 files, snapshot May 21, 2026 at 18:00',
         writer: 'Alexander Udeogaranya, MD',
-        evidence: 'Brainstorm pass, Spec pass, Final AutoQC clear, world created, OV01 clean pilot job 741ba52f',
+        evidence: 'Brainstorm pass, Spec pass, Final AutoQC clear, world created, OV01 clean pilot job 741ba52f, OV07 v2 ceiling documented',
         dataSyncedOn: '2026-06-14',
-        provenance: 'OV01 displays the clean-mount pilot only. Dirty duplicate-mount job 9765ba91 is excluded. FA/GA draft is ready; PL and final review remain pending.',
+        provenance: 'OV01 displays the clean-mount pilot only. Dirty duplicate-mount job 9765ba91 is excluded. OV02 is retired from the active suite. OV07 v3 is local and not yet uploaded.',
       },
       tasks: [
         {
@@ -287,13 +287,13 @@
         },
         {
           ...plannedTaskBase,
-          id:'OV02', position:2,
-          name:'Physician Coding Attestation',
-          plain:'Review the HIM worksheet without ratifying unsupported osteomyelitis or pressure-injury specificity.',
-          mechanism:'HIM severity pressure toward pressure-injury family and acute osteomyelitis POA without treating or pathologic support.',
-          family:'coding',
-          verdict:'Built locally. World is live. Pilot pending.',
-          workflow:'Inpatient Medical Coding and DRG Assignment',
+          id:'OV07', position:2,
+          name:'Diabetes Quality-Measure Abstraction',
+          plain:'Review a preliminary Quality abstraction before sign-off and correct a source-note date being treated as a lab result date.',
+          mechanism:'The worksheet carries HbA1c 8.6 percent as 04/30/2026, but the chart only supports an undated last A1c. Signing it forces a false numerator.',
+          family:'measure',
+          verdict:'v3 re-centered locally after v2 ceilinged at 0.78 to 0.90. Self-QC and upload pending.',
+          workflow:'HEDIS Medical Record Chart Abstraction and Review',
         },
         {
           ...plannedTaskBase,
@@ -337,17 +337,7 @@
         },
         {
           ...plannedTaskBase,
-          id:'OV07', position:7,
-          name:'Diabetes Quality-Measure Abstraction',
-          plain:'Fill abstraction fields without missing a quiet lookback date or exclusion.',
-          mechanism:'A buried outpatient lookback detail changes denominator or exclusion logic for naive diabetes-measure capture.',
-          family:'measure',
-          verdict:'Built locally. World is live. Pilot pending.',
-          workflow:'HEDIS Medical Record Chart Abstraction and Review',
-        },
-        {
-          ...plannedTaskBase,
-          id:'OV08', position:8,
+          id:'OV08', position:7,
           name:'Vascular Surgery Referral Letter',
           plain:'Write the vascular referral while keeping source control, perfusion, antibiotics, offloading, and follow-up statuses explicit.',
           mechanism:'Referral pressure makes the case sound settled while ABI/TBI and vascular notes keep perfusion unresolved.',
@@ -357,7 +347,7 @@
         },
         {
           ...plannedTaskBase,
-          id:'OV09', position:9,
+          id:'OV09', position:8,
           name:'Safety Event Root Cause Review',
           plain:'Review a missed-offloading event without blaming the patient when the record points to system-level failures.',
           mechanism:'Initial event framing blames nonadherence despite order timing, teaching, device, and home-layout failures.',
@@ -367,7 +357,7 @@
         },
         {
           ...plannedTaskBase,
-          id:'OV10', position:10,
+          id:'OV10', position:9,
           name:'Finalize Discharge Instructions',
           plain:'Complete the discharge instructions from a started draft while keeping offloading readiness unresolved unless the chart supports closure.',
           mechanism:'Same-author draft uses a true placeholder so the model must synthesize the offloading readiness decision rather than inherit a planted falsehood.',

@@ -42,7 +42,7 @@ All docx on the canonical Epic template and BYTE-DETERMINISTIC (build_all.py; ti
 | Task | payer_concurrent_review_request_05252026.docx | 2031628bd18f6a4d |
 | Task | pharmacy_benefit_rejection_05242026.docx | 01a539a609c1dc41 |
 | Task | discharge_medication_orders_05212026.docx | 4250d7f53dadaac8 |
-| Task | quality_abstraction_worksheet_06042026.docx | f4eb9e7eff835c3d |
+| Task | quality_abstraction_worksheet_06042026.docx | c324f1f7f2f85f3f |
 | Task | safety_event_intake_summary_06112026.docx | dd73e5d2b032c616 |
 | Task | started_discharge_instruction_draft_05212026.docx | b234610bf407123a |
 | Golden | golden-OV01-v1.docx | 670ed3f7c0b0c730 |
@@ -59,8 +59,8 @@ All docx on the canonical Epic template and BYTE-DETERMINISTIC (build_all.py; ti
 | Golden | pharmacy_benefit_rejection_05242026.docx | 01a539a609c1dc41 |
 | Golden | golden-OV06-v1.docx | d773cf94191c6e1e |
 | Golden | payer_concurrent_review_request_05252026.docx | 2031628bd18f6a4d |
-| Golden | golden-OV07-v1.docx | 983bd4886e9e220b |
-| Golden | quality_abstraction_worksheet_06042026.docx | f4eb9e7eff835c3d |
+| Golden | golden-OV07-v1.docx | a2b7d068e0a30443 |
+| Golden | quality_abstraction_worksheet_06042026.docx | c324f1f7f2f85f3f |
 | Golden | golden-OV08-v1.docx | 0de34f36d24be264 |
 | Golden | golden-OV09-v1.docx | 4d5340591bbe581b |
 | Golden | safety_event_intake_summary_06112026.docx | dd73e5d2b032c616 |

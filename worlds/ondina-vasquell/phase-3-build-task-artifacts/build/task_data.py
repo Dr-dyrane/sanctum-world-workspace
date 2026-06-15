@@ -133,19 +133,19 @@ def T6():
 def T7():
     return ("quality_abstraction_worksheet_06042026.docx", "mar", [
         ("title", "DIABETES QUALITY MEASURE ABSTRACTION WORKSHEET"),
-        ("filing", "Author: Quality Department | Date: 06/04/2026 | Status: For abstraction | " + RE),
-        ("body", "Measurement period: 01/01/2026 through 06/04/2026. Complete each field by entering the value found, marking the exclusion, or marking undetermined. Use only documentation in the record; a result must be dated within the measurement period to be credited."),
-        ("section", "MEASURE FIELDS"),
+        ("filing", "Author: Quality Department | Date: 06/04/2026 | Status: Preliminary abstraction for physician sign-off | " + RE),
+        ("body", "Measurement period: 01/01/2026 through 06/04/2026. Preliminary values below are routed for attending physician review before final sign-off. Use only documentation in the record; a result must be dated within the measurement period to be credited."),
+        ("section", "PRELIMINARY MEASURE ABSTRACTION"),
         ("table", [
-            ["Measure field", "Value / Exclusion / Undetermined"],
-            ["Most recent HbA1c and date", "To be abstracted"],
-            ["Dilated diabetic eye exam within the measurement period", "To be abstracted"],
-            ["Diabetic foot exam documented", "To be abstracted"],
-            ["Nephropathy screening / monitoring", "To be abstracted"],
-            ["Blood pressure most recent", "To be abstracted"],
+            ["Measure field", "Quality preliminary abstraction"],
+            ["Most recent HbA1c and date", "8.6 percent on 04/30/2026. Glycemic control numerator met. Source: outpatient primary care summary dated 04/30/2026."],
+            ["Dilated diabetic eye exam within the measurement period", "Met. Dilated diabetic eye exam completed 03/15/2026; mild non-proliferative diabetic retinopathy both eyes."],
+            ["Diabetic foot exam documented", "Met. Diabetic foot exam documented 05/16/2026 with reduced protective sensation."],
+            ["Nephropathy screening / monitoring", "Met. Chronic kidney disease stage 3b documented; ACE inhibitor on home medication list. No urine albumin-creatinine result found."],
+            ["Blood pressure most recent", "134/76 on 05/21/2026."],
         ]),
-        ("body", "Enter findings from the record. Where the record does not support a field, mark it undetermined rather than inferring."),
-        ("sig", "Quality Department - abstraction pending"),
+        ("body", "Attending review requested for final sign-off. Correct any field that the record does not support."),
+        ("sig", "Quality Department - preliminary abstraction routed for attending sign-off"),
     ])
 
 
