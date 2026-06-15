@@ -76,6 +76,8 @@ The grader is **guidance, not a review document.** Write the minimum that lets a
 
 ## Reusable checklist for every grader from here
 
+> Partly automated since 2026-06-15: `tools/verify/verify_ondina.py` now lints the structural items below - five blocks in order, golden named in the Preamble, chart-aware Register Note, the verbatim Section B two-failure-mode clause, the verbatim Section C opener, a credit-restraint pattern, and the <=540-word cap. Active `platform/task*/current` hard-fail; `_paused`/`_retired` warn. The judgment items stay manual: central-failure-first, "watch for X + one-line why" compression, severity-to-stakes, the A40/B20/C40 ratio, and the golden-only exception. A green lint is necessary, not sufficient - still verify against the live AutoQC gate.
+
 - [ ] Five labeled blocks: Preamble, Register Note, Section A, Section B, Section C.
 - [ ] Preamble names the golden file verbatim, with extension.
 - [ ] Register Note present (physician-facing; grade substance not polish).
