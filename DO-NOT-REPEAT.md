@@ -63,7 +63,7 @@ Last updated: 2026-06-14. Sources distilled here: `docs/task-difficulty-lessons.
 
 ## 7. FA / GA / PL / QA annotations
 
-- Wrote FA/GA in the both-sides format and named "Section A/B/C" (pre-Abi 6/9). FIX: failure-only (what the model did poorly / what the grader did poorly); spell out the section's content, never its name; single lowest run; each part under ~1000 chars.
+- Wrote FA/GA in the both-sides format and named "Section A/B/C" (pre-Abi 6/9). FIX: failure-only (what the model did poorly / what the grader did poorly); spell out the section's content, never its name; the 2nd-LOWEST DISTINCT scoring run (King P 6/14 / #20, supersedes the earlier "single lowest run"); two paragraphs each; no grader-rating line in the prose (it is a Studio field); each part under ~1000 chars.
 - Wrote FA around the lowest score when the score did not represent the real failure. FIX: read the output and grading transcript first. FA needs a defensible clinical or material deliverable failure; if the lowest run is cosmetic but another trajectory carries the real miss, escalate and document the selection rationale before writing.
 - Used the bare words "tech issue" / "known issue" / "N/A" on a QA flag - failed as dismissive deflection (KM07 6/11). FIX: substantive, fact-referenced rebuttal in both boxes, citing that the grader actually ran (job id + per-run scores).
 - Justified a QA thumbs-down with "the reviewer said it's okay." FIX: annotations are client-visible and must stand on their own reasoning.
