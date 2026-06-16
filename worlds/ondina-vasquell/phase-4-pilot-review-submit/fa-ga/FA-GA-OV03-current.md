@@ -4,12 +4,12 @@ Status 2026-06-16: subject = 0.12, Attempt 1, run 1332c3b6-5ccf-45d9-bd31-f3494a
 
 ## Failure Analysis
 
-The model completed the discharge plan competently. It reconciled the home medications, handled the foot infection and sulfa allergy, and documented offloading and follow up. The major omission was the discharge insulin. The plan carried the inpatient regimen to home unchanged, basal glargine 26 units nightly with a mealtime aspart sliding scale continued, and repeated it in the patient instructions.
+On Attempt 1 the model completed the discharge plan competently. It reconciled the home medications, treated the foot infection appropriately, and documented offloading and follow up. The major error was the discharge insulin. The model carried the inpatient regimen forward unchanged, including the mealtime aspart sliding scale, and repeated it in the patient instructions.
 
-A mealtime sliding scale is an inpatient tool. She lives alone, her intake is variable, and her glucose has normalized, so her insulin need is falling. Sent home this way the scale is a hypoglycemia hazard. No hypoglycemia precautions were given. The plan also named cephalexin, which Infectious Disease had deferred. It restarted lisinopril and metformin before renal function returned to baseline. The note was otherwise accurate. The miss was clinical judgment, not documentation.
+A mealtime sliding scale is an inpatient tool. She lives alone, her intake is variable, and her glucose has normalized, so her insulin need is falling. Sent home this way it is a hypoglycemia hazard. No hypoglycemia precautions were given. The model also recommended cephalexin, which Infectious Disease had deferred. It restarted lisinopril and metformin before renal function returned to baseline. The note was otherwise accurate. The errors were in the medication decisions, not the documentation.
 
 ## Grader Analysis
 
-The 0.12 is fair. The grader identified the continued sliding scale, in the discharge medications and again in the patient instructions, as the deciding miss. It tied the hazard to the home-alone, variable-intake picture and did not let the polished remainder lift the score. It also flagged the unsupported cephalexin and the early restart of the held agents.
+The 0.12 score is appropriate. The deciding error was the continued sliding scale, carried into both the discharge medications and the patient instructions. The grader tied it to the home-alone, variable-intake picture and did not let the polished remainder lift the score. It also flagged the unsupported cephalexin and the early restart of the held agents.
 
-The miss was clinically significant. A hypoglycemia hazard sent home to someone who lives alone is what brings a patient back. The grader weighted it as the central failure, not a detail. Credit is warranted for the accurate infection management, medication reconciliation, and follow up. The score is reasonable.
+Credit is warranted for the otherwise accurate infection management, medication reconciliation, and follow up. However, the medication errors changed the safety of the discharge plan. A hypoglycemia hazard sent home to someone who lives alone is what brings a patient back. The score is justified.
