@@ -1,5 +1,7 @@
 # OV path to 8 tasks - KM-ported mechanism slate (2026-06-15)
 
+> UPDATE 2026-06-16: this doc is SUPERSEDED as the live plan by worlds/ondina-vasquell/OV-FLOOR-MECHANISM-LIBRARY.md section 6. Status since: OV04 BANKED (off-text CPAP image); OV05 CEILINGED + RETIRED (the med-rec genre primes the bottle photo, so it was not off-text; job eb1665ba, 10/10 caught); next build = #5 patient-education offloading (against-the-grain, not image/detection-dependent). The over-closure-centric slate below is HISTORICAL.
+
 Directive: drive OV to 8 floors in THIS world. The next-world narrative is removed until OV reaches 8. This plan is built from the three named sources: the KM world (10 banked tasks), the reference example worlds (Opus/Chen T1-T7 + Caduceus/Pemberton/Whitfield specs), and Raising_Task_Difficulty_Worked_Example.pdf.
 
 ## The master recipe (worked example, Niranjana 06/12)
