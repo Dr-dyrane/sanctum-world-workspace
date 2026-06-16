@@ -1,6 +1,6 @@
 # Ondina Vasquell World (World #2) - Cockpit
 
-Status (2026-06-15): WORLD OPEN FOR TASKING. Current board: OV01 in review, OV02 Path A in review, OV04 v3 bankable, OV05 active build. The world files are frozen. OV05 now carries the medication-reconciliation axis through a task-level home-medication-bottle photo, not through a world-file change. Design source of truth: OV-FLOOR-MECHANISM-LIBRARY.md and the running record in OV-WORLD-STATUS.md.
+Status (2026-06-15): WORLD OPEN FOR TASKING. Current board: OV01 in review, OV02 Path A in review, OV04 v3 bankable, OV05 active build. The world files are frozen. OV05 now carries the medication-reconciliation axis through a task-level home-medication-bottle photo, not through a world-file change. Design source of truth: OV-FLOOR-MECHANISM-LIBRARY.md and the running record in OV-WORLD-STATUS.md. WHAT TO TEST NEXT (the floor-candidate backlog we work through one at a time; READ THIS AFTER ANY CONTEXT REFRESH so the queue is not lost): OV-CANDIDATE-QUEUE.md.
 
 Current lanes:
 - OV01 - cold outside-knowledge (stop inpatient enoxaparin). Banked; in human review (FA/GA on job aa949641, Attempt 6, run 28a61869, 0.50).

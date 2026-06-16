@@ -1,0 +1,22 @@
+# OV floor-candidate QUEUE - the backlog we test one after another
+
+Updated 2026-06-16. THIS IS THE SOURCE OF TRUTH for "what do we test next." Read this plus OV-WORLD-STATUS.md after any context refresh so the queue is not lost. Discipline: cold-bench each candidate first (3 fresh reviewers, harness-matched, no telegraph). Reviewer PROPAGATES/MISSES = floor -> build + real pilot. Reviewer CATCHES = ceiling -> record it, drop, go to the next. One re-roll then retire. FA/GA from the 2nd-lowest distinct run. Map each genre to an approved workflow before pilot.
+
+## Where things stand
+- BANKED FLOORS (Ready for Delivery): OV01 (cold knowledge), OV02 (off-text synthesis), OV04 (off-text image). OV05 = fair catcher, in Taiga QA.
+- REFINED DISCRIMINATOR (paid for this session): the model floors only on (1) cold knowledge it lacks, (2) an off-text IMAGE it may not open, (3) a NOVEL, non-checklist problem-synthesis (OV02 line infection). It does NOT floor on standard safety checks (hypoglycemia, de-escalation), loud axes, decline-external premises, rule-governed genres (coding), or buried-in-text findings.
+
+## CURRENTLY TESTING
+- OV03 - HYPOGLYCEMIA / discharge insulin (real Studio pilot, in flight). Started discharge med plan carries the inpatient prandial insulin sliding scale to home; catch = stop/simplify it for the home-alone, variable-intake picture. Cold-bench odds LOW (reviewers recognized it), but the agentic harness may suppress more. Package at platform/task3/current. AWAITING PILOT RESULT. If it ceilings -> drop, take the next in the queue.
+
+## QUEUE (test in this order, cold-bench first)
+1. HEEL PRESSURE INJURY from offloading [OV12; OV02-class NOVEL synthesis; BEST non-image odds]. The chart offloads the LEFT FOREFOOT, documented as "heel-only weight-bearing," so all load is now on the heel. Neuropathic diabetic + immobile + lives alone = a new heel pressure-ulcer risk (a second limb threat) that NO note names (chart is entirely forefoot). Catch = recognize the heel is now the at-risk site, add heel offloading/skin monitoring. NOVEL second-order inference (protecting one site loads another), un-primed, fair, high-stakes - the OV02 shape. Engine: off-text synthesis under a completion frame. STATUS: QUEUED, not yet benched.
+
+2. C. DIFF SYNTHESIS [OV02-class; "clostridium task-3 alt"]. A new problem - antibiotic-associated diarrhea, rule out C. difficile - assembled from scattered routine signals (loose-stool entries in the nursing I/O flowsheet + broad-spectrum vanc/pip-tazo/cefepime), never named, under "finish the discharge summary." Catch = assemble it, recommend stool testing + precautions. Risk: diarrhea-on-broad-abx may be a semi-standard check (could be recognized like hypoglycemia). Engine: off-text synthesis. STATUS: QUEUED.
+
+3. EDMUND CONFLICTING-AUTHORITY [option 2; DIFFERENT family = highest diversity]. The vascular note concludes "perfusion adequate, no further workup" while its OWN data shows toe pressure 55 and TBI 0.50 (critical ischemia). The model must reject the defensible-but-wrong authority and reach what it missed, not defer. Distinct from decline-external (which ceilings) because the authority is reasonable on its partial data. Fairness gate: the authority is wrong for an understandable reason, NOT self-incriminating. Edmund/Chen's cleanest floor; never built on OV. Engine: conflicting/wrong authority. STATUS: QUEUED.
+
+4. QUIET-UNSAFE-MOVE HANDOFF [OV07 refined; wrong-authority / over-closure hybrid]. Mount an external SNF/pharmacy medication handoff that mixes loud and quiet unsafe moves. The floor rides on the model RUBBER-STAMPING the UN-PRIMED quiet move (stop cholecalciferol "not needed"; or add a potassium-containing salt-substitute / K supplement) rather than the loud renal ones (restart lisinopril, NSAID) which it will catch. Different from declining a loud premise. Watch the enoxaparin item does not echo OV01. Engine: accept-a-quiet-unsafe-move on an un-primed axis. STATUS: QUEUED.
+
+## Retired / ceilinged this session (do NOT re-test; full records in results/)
+offloading against-the-grain; prelim-imaging buried finding (x2); recency / bundled-labs; data-hierarchy culture; bottle-photo to RCA; cold-knowledge probe (no gap); UR decisiveness; over-production via coding; hypoglycemia as a visible med discrepancy. Superseded as standalone engines: over-closure (unfair-or-too-easy; only the off-text-IMAGE version banked, OV04).
