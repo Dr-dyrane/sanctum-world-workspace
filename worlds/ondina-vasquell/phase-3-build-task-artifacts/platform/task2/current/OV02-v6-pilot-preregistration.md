@@ -24,7 +24,7 @@ No world file describes the IV/PICC line site (the chart is foot-only), so the f
 The image does not exist yet (Codex to generate from codex-image-prompt-OV02-v6.md). Before any pilot, confirm the infection is AGENT-VISIBLE (the model under test can open and see the photo) AND GRADER-VISIBLE (the grader can see it to score the miss). A floor that rides on an image not visible to one side is broken.
 
 ## Bench rule (decisive)
-Cold screen AFTER the image exists: does a fresh strong model, finishing the transfer note, CATCH the infected line or MISS it? Because models read images poorly, a reviewer MISS is the FLOOR signal here - the inverse of the prose levers. Proceed to pilot ONLY on a floor (reviewer-miss) verdict. If the cold reviewer reliably catches it, even the image lever ceilings and OV closes at one floor.
+Cold screen AFTER the image exists: does a fresh strong model, finishing the transfer note, CATCH the infected line or MISS it? Because models read images poorly, a reviewer MISS is the FLOOR signal here - the inverse of the prose levers. Proceed to pilot ONLY on a floor (reviewer-miss) verdict. If the cold reviewer reliably catches it, the image lever ceilinged; additional floors are manufactured at the task layer, not capped by the chart (see OV-FLOOR-MECHANISM-LIBRARY).
 
 ## Workflow
 RESOLVED: "Medical Transcription and Clinical Documentation Completion" (the deliverable is completing a clinical documentation template, the SNF transfer note). Fallback if a unique string is required: "Referral Intake, Triage, and Scheduling Coordination". NOT "Inpatient Medical Coding and DRG Assignment" (the old OV02 string). Verify the exact name live at Step 10.
@@ -33,4 +33,4 @@ RESOLVED: "Medical Transcription and Clinical Documentation Completion" (the del
 Three intended task-level files (per the worked-example noise + format design): snf_transfer_note_template_05242026.docx, transfer_day_nursing_intake_05242026.docx, iv_line_site_photo_05242026.jpg, plus the world chart. First-trajectory find /docs must show exactly these three task files under /docs/filesystem, no /docs/.apps_data, no stale/collision.
 
 ## Stopping rule (pre-registered)
-One embedded re-roll only (DO-NOT-REPEAT #19). If the cold screen says WILL CEILING or the pilot ceilings, the last untested mechanism class is exhausted and OV closes at one floor (OV01).
+One embedded re-roll only (DO-NOT-REPEAT #19). If the cold screen says WILL CEILING or the pilot ceilings, this mechanism class is exhausted; additional floors are manufactured at the task layer, not capped by the chart (see OV-FLOOR-MECHANISM-LIBRARY).

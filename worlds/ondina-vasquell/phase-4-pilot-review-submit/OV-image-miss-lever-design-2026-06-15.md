@@ -26,7 +26,7 @@ Grader (KM five-block; CAP, don't deduct): missing the infected line is a HARD F
 Confirm the infection is AGENT-VISIBLE (the model under test can open and see the image) AND GRADER-VISIBLE (the grader can see it to score the miss). A task whose floor rides on an image that does not render to one side is broken. Verify both before spending a pilot.
 
 ## Bench rule (decisive)
-Cold screen: does a fresh strong model, finishing the transfer note, CATCH the infected line or MISS it? Because models read images poorly, a reviewer MISS is the FLOOR signal here - the inverse of the prose levers, where the reviewer caught everything. Proceed to pilot ONLY on a floor (reviewer-miss) verdict. If the cold reviewer reliably catches it, even this ceilings and OV closes at one floor.
+Cold screen: does a fresh strong model, finishing the transfer note, CATCH the infected line or MISS it? Because models read images poorly, a reviewer MISS is the FLOOR signal here - the inverse of the prose levers, where the reviewer caught everything. Proceed to pilot ONLY on a floor (reviewer-miss) verdict. If the cold reviewer reliably catches it, this lever ceilinged; additional floors are manufactured at the task layer, not capped by the chart (see OV-FLOOR-MECHANISM-LIBRARY).
 
 ## Codex image spec (hand to Codex imagegen; decision-10 delegation)
 - Subject: a close, clinical photograph of a peripheral intravenous or PICC catheter insertion site on an older adult's forearm or upper arm, showing clear early infection: erythema (redness) spreading around the insertion site, purulent or cloudy exudate at the site, mild swelling; optionally faint proximal streaking. The catheter/dressing is visible. Realistic ward-photo look.

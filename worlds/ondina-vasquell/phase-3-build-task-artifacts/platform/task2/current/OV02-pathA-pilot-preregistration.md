@@ -32,4 +32,4 @@ No world file describes the IV/PICC line site (chart is foot-only), so the findi
 Same three task-level files: snf_transfer_note_template_05242026.docx, transfer_day_nursing_intake_05242026.docx, iv_line_site_photo_05242026.jpg (retained as corroboration; harmless if the harness cannot render it), plus the world chart. First-trajectory find /docs must show exactly these three task files under /docs/filesystem, no /docs/.apps_data, no stale/collision. The grader no longer requires the image as a grader input.
 
 ## Stopping rule (pre-registered)
-One re-roll only (DO-NOT-REPEAT #19). If the cold bench says WILL CEILING, or the re-pilot ceilings, the synthesis lever - the last fair shot for OV02 on this chart - is exhausted and OV closes at one floor (OV01).
+One re-roll only (DO-NOT-REPEAT #19). If the cold bench says WILL CEILING, or the re-pilot ceilings, the OV02 synthesis lever is exhausted; additional floors are manufactured at the task layer, not capped by the chart (see OV-FLOOR-MECHANISM-LIBRARY).

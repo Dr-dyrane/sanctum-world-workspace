@@ -1,6 +1,6 @@
 # OV-ABX v1 PILOT PREREGISTRATION - locked before upload, AutoQC, and pilot
 
-STATUS 2026-06-15: BENCH-SCREENED -> WILL CEILING / REWORK. NOT built into a slot, NOT piloted, no spend. An independent cold reviewer withheld cleanly (committed a short soft-tissue course and declined osteomyelitis) with no pull toward overtreatment: the chart resolves the osteo question four ways (negative probe-to-bone, no-osteo pathology, ID "do not commit to an osteomyelitis-duration course", improving markers) against one equivocal MRI line, and ID pre-writes the catch in the record - so the THOROUGH move is the catch and the completeness-into-overtreatment trap collapses. This is the pre-registered "OV closes at one floor" trigger (see Reroll policy). Package retained in scratch as a record only.
+STATUS 2026-06-15: BENCH-SCREENED -> WILL CEILING / REWORK. NOT built into a slot, NOT piloted, no spend. An independent cold reviewer withheld cleanly (committed a short soft-tissue course and declined osteomyelitis) with no pull toward overtreatment: the chart resolves the osteo question four ways (negative probe-to-bone, no-osteo pathology, ID "do not commit to an osteomyelitis-duration course", improving markers) against one equivocal MRI line, and ID pre-writes the catch in the record - so the THOROUGH move is the catch and the completeness-into-overtreatment trap collapses. This lever ceilinged; additional floors are manufactured at the task layer, not capped by the chart (see OV-FLOOR-MECHANISM-LIBRARY). Package retained in scratch as a record only.
 
 Rule: this file does not change after the pilot lands. Post-pilot reconciliation goes in a results record citing this file.
 
@@ -25,4 +25,4 @@ Treating possible osteomyelitis is TEMPTING and DEFENSIBLE: real MRI marrow edem
 No frozen world file states a soft-tissue duration. The antibiotic-plan note leaves duration "not finalized here ... depends on whether osteomyelitis is later established" (the desired open state). The answer is NOT handed over.
 
 ## Reroll policy
-One embedded re-roll only (DO-NOT-REPEAT #19). If OV-ABX ceilings on pilot, this confirms completeness-resistance is also model-strong and OV closes at one floor (OV01).
+One embedded re-roll only (DO-NOT-REPEAT #19). If OV-ABX ceilings on pilot, this confirms completeness-resistance is also model-strong for this lever; additional floors are manufactured at the task layer, not capped by the chart (see OV-FLOOR-MECHANISM-LIBRARY).

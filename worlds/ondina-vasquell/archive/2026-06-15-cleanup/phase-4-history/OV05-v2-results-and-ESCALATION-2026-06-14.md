@@ -10,7 +10,7 @@ OV01 BANKED (cold enoxaparin). OV02 x5, OV07 x1, OV10 x2, OV05 x1 = all ceilinge
 The chart was built first - thorough, internally consistent, well-documented - and the traps were armed onto it afterward. That is exactly the #1 mistake ("built the world/chart FIRST and chose task structures AFTER, so difficulty had only the wrapper left"). A thoroughly consistent chart leaves almost no COLD gaps: for nearly every issue, some world file states the correction, so the strong-clinician model transcribes it (warm -> ceiling). The ONE floor (OV01) exists only because a cold substrate (enoxaparin) was PLANTED in the MAR before the world froze. We cannot plant more: the world is FROZEN (King P 6/14), and frozen world files contradict any task-file cold plant, turning it warm.
 
 ## Realistic outcome
-Floorable in-world set is OV01 + at most OV06 (untested; rides the model's HEDGE tendency, a different axis than chart-coldness, modest odds). OV03/04/08/09 are warm and will ceiling. This is structurally a 1-to-2 floor world as currently frozen.
+Chart-cold floorable set on the frozen chart is OV01 + at most OV06 (untested; rides the model's HEDGE tendency, a different axis than chart-coldness, modest odds). OV03/04/08/09 are warm on the frozen chart and will ceiling as chart-gap levers. Additional floors are manufactured at the task layer, not capped by the chart (see OV-FLOOR-MECHANISM-LIBRARY).
 
 ## Decision needed (Alexander / King P)
 1. Pilot OV06 as the last in-world shot (decisiveness/hedge lever), then stop.
