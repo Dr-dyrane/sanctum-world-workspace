@@ -65,3 +65,17 @@ Before finalizing any paragraph ask: could an attending say this out loud during
 ## Final test
 
 A reader should conclude: this was written by a physician reviewing a chart. They should never conclude: this was written by an AI explaining what happened.
+
+## Worked exemplar - accepted FA/GA (OV04)
+
+This is the accepted standard. It names the failure mechanism in plain clinical language, leads with what the note did well, ties the omission to its clinical consequence, and credits the accurate parts. It does not carry evaluation scaffolding.
+
+Failure Analysis
+
+On Attempt 9, the model produced a solid note from the chart, correctly reconciling medications, summarizing the patient's hospital course, and documenting appropriate follow up plans. However, it missed the main finding in this case. The CPAP compliance report was available as an image file, but the model never opened or reviewed it. Because the report was not reviewed, the model missed the patient's poor CPAP adherence and the evidence of ongoing obstructive sleep apnea. The note stated the patient would continue home CPAP and did not raise any adherence concerns or recommend sleep medicine follow up. Since this information was only present in the device report, the final note was missing an important part of the patient's overall assessment.
+
+Grader Analysis
+
+The 0.20 score is appropriate. The note accurately captured most aspects of the hospitalization but failed to identify the poor CPAP adherence documented in the compliance report. As a result, the patient's obstructive sleep apnea was presented as stable on home CPAP despite evidence of inadequate treatment. Credit is warranted for the otherwise accurate medication reconciliation, hospital course, and follow up planning. However, the missed CPAP finding was clinically significant and affected the overall assessment, making the assigned score reasonable.
+
+Acceptable, because it is the clinical mechanism: the report was an image file the model never opened or reviewed. Not acceptable, because it is evaluation scaffolding: OCR, "saw it in the directory listing," "confirmed from the transcript," and run or job IDs.

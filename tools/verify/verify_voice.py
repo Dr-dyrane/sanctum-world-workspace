@@ -25,11 +25,15 @@ BANNED = ["Furthermore", "Moreover", "Consequently", "Notably", "In addition",
           "salient finding", "critical insight", "robust analysis", "comprehensive review"]
 BANNED_RE = re.compile("|".join(r"\b" + re.escape(b) + r"\b" for b in BANNED), re.I)
 
-# Process narration: reviews/FA/GA state the clinical omission, not the model's process
-PROCESS_RE = re.compile(
-    r"\bOCR\b|\bnavigat(?:e|ed|ing|ion)\b"
-    r"|the model (?:failed to|did not) (?:review|open|read|parse|access|locate|find|click)"
-    r"|the model (?:then )?(?:clicked|opened|navigated|ran the tool|called the tool)", re.I)
+# Narrative eval-process tells. Reviews/FA/GA may name the clinical mechanism (e.g. "the
+# report was an image file the model never opened or reviewed") - that is acceptable. What
+# is not acceptable is NARRATING the eval plumbing: OCR, directory listing, tool calls, or
+# "confirmed from the transcript". Provenance IDs and the PL "Transcript A/B" comparison
+# label are domain content, not narration, so they are not flagged.
+SCAFFOLD_RE = re.compile(
+    r"\bOCR\b|\bdirectory listing\b|\bin the directory\b|\bfile navigation\b"
+    r"|\bsaw the file\b|\bran the tool\b|\bcalled the tool\b|bind the FA/GA box"
+    r"|(?:from|in) the transcript|the transcript (?:show|confirm|reveal)", re.I)
 
 PARK = ("/archive/", "_retired", "_paused", "_pipeline-history", "build-phase-drafts",
         "/design/", "/_t/", "/handoff/")
@@ -64,7 +68,8 @@ def text_of(f):
 
 
 def unquote(t):
-    """Drop quoted human/model text so it does not trip the gate."""
+    """Drop HTML comments and quoted human/model text so they do not trip the gate."""
+    t = re.sub(r"<!--.*?-->", " ", t, flags=re.S)
     t = "\n".join(l for l in t.splitlines() if not l.lstrip().startswith(">"))
     t = re.sub(r'"[^"]*"', " ", t)
     t = re.sub(r"[“”][^“”]*[“”]", " ", t)
@@ -86,9 +91,9 @@ def scan():
                 for m in sorted({x.lower() for x in BANNED_RE.findall(t)}):
                     bucket.append((Path(f).name, "ai-transition", f"{m!r}  ({rel})"))
                 if proc:
-                    pm = PROCESS_RE.search(t)
+                    pm = SCAFFOLD_RE.search(t)
                     if pm:
-                        warns.append((Path(f).name, "process-narration", f"{pm.group(0)[:30]!r}  ({rel})"))
+                        warns.append((Path(f).name, "scaffolding", f"{pm.group(0)[:30]!r}  ({rel})"))
     return fails, warns, n
 
 
