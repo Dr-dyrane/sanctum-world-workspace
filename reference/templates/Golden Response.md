@@ -1,3 +1,5 @@
+> Voice: write to the Dr. Alexander output-text standard (`docs/alexander-voice-dna.md`), enforced by `tools/verify/verify_voice.py`.
+
 **CDI: Physician Query Set**  
 **Patient:** Quill, Zephyrus
 

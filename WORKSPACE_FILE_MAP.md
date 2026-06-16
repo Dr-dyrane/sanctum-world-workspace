@@ -1,5 +1,8 @@
 # Workspace File Map
-**Last updated: 2026-06-15 (Ondina OV01 Larry-return cleanup logged: active surface remains OV01 only; current FA/GA subject is review rerun job `aa949641`, Attempt 6, run `28a61869`, score 0.50; old planning and pilot churn archived under `worlds/ondina-vasquell/archive/2026-06-15-cleanup/`; non-OV01 task packets parked under `worlds/ondina-vasquell/phase-3-build-task-artifacts/platform/_paused/2026-06-15-non-ov01-suite/`; reviewer-facing grader wording scrubbed so canonical graders say the clinical verification rule, not implementation language. Prior KM status remains KM01-KM06 delivered and KM07-KM10 Ready for Delivery.)**
+
+> Output-voice standard: `docs/alexander-voice-dna.md` (enforced by `tools/verify/verify_voice.py`) governs all output text - prompts, goldens, graders, FA/GA, PLs, reviews.
+
+**Last updated: 2026-06-15 (Ondina active board: OV01 in review, OV02 Path A in review, OV04 v3 bankable after the CPAP report image pilot, OV05 active build with task-level home-medication-bottle photo staged as `home_medication_bottles_05242026.jpg`; old planning and pilot churn archived under `worlds/ondina-vasquell/archive/2026-06-15-cleanup/`; other non-OV task packets remain parked under `worlds/ondina-vasquell/phase-3-build-task-artifacts/platform/_paused/2026-06-15-non-ov01-suite/`; reviewer-facing grader wording scrubbed so canonical graders say the clinical verification rule, not implementation language. Prior KM status remains KM01-KM06 delivered and KM07-KM10 Ready for Delivery.)**
 
 Single source of truth for repo structure, placement rules, and navigation.
 Read this + `AGENTS.md` at the start of any new session before touching files.
@@ -67,15 +70,22 @@ sanctum-world-workspace/
                                  OV-WORLD-STATUS.md. Studio world is
                                  Healthcare_297_Vasquell
                                  (`world_ab51f33a691648d08f5ca681375fe2a1`).
-                                 Current operating focus is OV01 only after the
-                                 2026-06-15 cleanup pass. Larry-return FA/GA is
-                                 ready for job `aa949641`, Attempt 6, run
-                                 `28a61869`, score 0.50. Active packet:
-                                 phase-3-build-task-artifacts/platform/task1/current/.
-                                 Active result + FA/GA:
+                                 Current operating focus: OV01 review, OV02 review,
+                                 OV04 review, and OV05 build. OV01 Larry-return FA/GA is ready
+                                 for job `aa949641`, Attempt 6, run `28a61869`, score
+                                 0.50. Active packets:
+                                 phase-3-build-task-artifacts/platform/task1/current/,
+                                 phase-3-build-task-artifacts/platform/task2/current/,
+                                 phase-3-build-task-artifacts/platform/task4/current/,
+                                 and phase-3-build-task-artifacts/platform/task5/current/.
+                                 OV04 v3 includes task-level image
+                                 `cpap_compliance_report_05242026.jpg`; it is not a
+                                 world file. OV05 includes task-level image
+                                 `home_medication_bottles_05242026.jpg`; it is not a
+                                 world file. Active result + FA/GA:
                                  phase-4-pilot-review-submit/OV01-results-and-prereg-reconciliation.md
                                  and phase-4-pilot-review-submit/fa-ga/FA-GA-OV01-current.md.
-                                 Non-OV01 task packets are parked under
+                                 Other non-OV task packets are parked under
                                  phase-3-build-task-artifacts/platform/_paused/
                                  2026-06-15-non-ov01-suite/. OV02 coding history is
                                  retired under platform/_retired/. Planning history and

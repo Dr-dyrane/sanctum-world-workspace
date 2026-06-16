@@ -1,3 +1,5 @@
+> Voice: write to the Dr. Alexander output-text standard (`docs/alexander-voice-dna.md`), enforced by `tools/verify/verify_voice.py`.
+
 **Task 3 Grader: CDI Physician Query Set**
 
 Deliverable: a CDI physician query set authored by Marsh of the CDI program, as a retrospective pre bill review of the index admission, built from the full chart and the wound consult. The output is a set of compliant queries with chart traceable indicators, an addressee, a query type, non leading language, balanced options, and a coding or quality impact. CDI templates and compliance phrasing are authentic voice. 

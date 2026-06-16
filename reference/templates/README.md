@@ -1,5 +1,7 @@
 # Reference Templates - what is here and how to use it
 
+> Voice: all output text built from these templates follows `docs/alexander-voice-dna.md`. Enforced by `tools/verify/verify_voice.py`.
+
 This folder holds two different kinds of reference material. Know which you are reading.
 
 ## 1. The client's latest-guidance WORKED EXAMPLE (Quill CDI) - added 2026-06-11

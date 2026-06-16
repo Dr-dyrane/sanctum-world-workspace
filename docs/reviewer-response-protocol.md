@@ -1,5 +1,7 @@
 # Reviewer Response Protocol
 
+> Voice: write reviews in the Dr. Alexander voice (`docs/alexander-voice-dna.md`) - state the omission, why it matters clinically, the consequence. No process narration. Enforced by `tools/verify/verify_voice.py`.
+
 This is the STANDING protocol for processing any reviewer decision (Brainstorm, World Spec, or per-task human review). It is not a status file - for current status read `dashboard/km-world-dashboard.html`, `task-setup/KM-WORLD-PERFORMANCE-REPORT.md`, and the active `TASKN-STATE.md`. (Korvin Merrow is long past Brainstorm/Spec GO; the world is live and all 10 tasks have piloted. The GO/SEND-BACK workflows below apply identically at the per-task review stage.)
 
 ## GO Workflow

@@ -1,5 +1,7 @@
 # Phase 3 - Per-task build checklist (golden, grader, prompt, task files)
 
+> Voice gate: every authored artifact (prompt, golden, grader, FA/GA, PL) follows `docs/alexander-voice-dna.md`. Run `tools/verify/verify_voice.py` before handoff.
+
 One pass per task, after its substrate is armed (Phase 2). Templates: `reference/templates/` (Golden Response, Grader Guidelines, Task prompt, FA_GA). Full build gates: `task-setup/TASK-RUNBOOK.md` (gates A0.4 design-time and A0.5 against built bytes), `docs/grader-guidelines-lessons.md`, `docs/clinical-voice-lessons.md`, `docs/docx-generation-method.md`.
 
 ## Authorship boundary (non-negotiable)

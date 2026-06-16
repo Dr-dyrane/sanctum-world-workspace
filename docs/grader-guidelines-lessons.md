@@ -1,5 +1,7 @@
 # Grader Guidelines Lessons - structure and length (Trigeminus pod / Sang)
 
+> Voice: prose inside the five blocks follows `docs/alexander-voice-dna.md` (declarative, no AI transitions, no process narration). Enforced by `tools/verify/verify_voice.py`.
+
 Date: 2026-06-08, extended 2026-06-12. Source: Sang N (Pod Lead, Trigeminus) human review of KM03 and KM04, plus King P's 6/12 severity guidance. Companion docs: `docs/clinical-voice-lessons.md` (golden voice), `docs/reviewer-response-protocol.md` (how we process feedback), `reference/checklists/reviewer-failure-patterns.md`.
 
 ## Lesson 1 - the required grader structure (KM03 review)

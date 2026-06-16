@@ -1,5 +1,7 @@
 # Abi Review Protocol ("Abi mode")
 
+> Voice: reviews follow the Dr. Alexander standard (`docs/alexander-voice-dna.md`) - omission, clinical significance, consequence; no process narration. Enforced by `tools/verify/verify_voice.py`.
+
 Date: 2026-06-11, extended 2026-06-12 after AO's KM08 first review. Owner: Alexander. Maintainer note: extend this file every time a real Abi review lands; every lens below is grounded in a recorded catch, and the protocol's value is that grounding. Companion docs: `docs/task-difficulty-lessons.md` (sections 5 and 6 hold the fairness doctrine), `docs/reviewer-response-protocol.md`, `docs/clinical-voice-lessons.md`, `DO-NOT-REPEAT.md`.
 
 ## What this is

@@ -1,5 +1,7 @@
 # KM tasking-stage playbook (for OV tasking) - 2026-06-14
 
+> Voice: FA/GA and preference labels follow the Dr. Alexander standard in `docs/alexander-voice-dna.md` - state what was missed, why it mattered, the consequence; no process narration. Enforced by `tools/verify/verify_voice.py`.
+
 Distilled from the Korvin Merrow task-setup tree (TASK-RUNBOOK, TASKn-STATE, runs/, fa-ga/, preference-labeling/, qa/, reviews/, performance report). This is the operational flow AFTER a package is built. Apply task-by-task as OV enters tasking. Reflects the King P 2026-06-14 office-hours updates.
 
 ## 1. End-to-end sequence + gates
