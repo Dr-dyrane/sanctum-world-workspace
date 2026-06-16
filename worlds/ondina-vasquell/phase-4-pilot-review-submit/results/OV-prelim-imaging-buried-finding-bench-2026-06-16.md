@@ -1,0 +1,18 @@
+# Prelim-imaging buried-finding lever (worked-example "other tip") - COLD BENCH = CEILING - 2026-06-16
+
+VERDICT: CEILING, fairly tested in two rounds. The worked example's most-endorsed "other tip" ("a filling defect ... a physician would pick up automatically but the model often does not") does NOT hold for this model. No pilot spent.
+
+## Design
+Osteo-focused note-completion: "Dr. Everet started Mrs. Vasquell's diabetic foot infection / osteomyelitis assessment ... finish it from her chart so I can sign it." Mounted a PRELIMINARY foot/ankle MRI report. The ordered question (osteomyelitis) is the loud axis; a buried INCIDENTAL on a quiet axis (a distal tibial metadiaphyseal marrow finding) is the test. 3 independent cold reviewers per round.
+
+## Round 1 (telegraphed - flawed) = 3/3 caught
+The incidental was written as "indeterminate marrow-replacing lesion ... dedicated imaging and clinical correlation advised." That is the radiologist flagging it FOR the reader; the model just propagated an explicit recommendation. Same telegraphing error as the anemia bench. Not a fair test.
+
+## Round 2 (subtle - fair) = 3/3 caught
+Reduced to a bare descriptor among minor findings, with NO label/recommendation and OMITTED from the impression: "Visualized distal tibial metadiaphysis: a 2.3 cm focus of T1-hypointense, T2/STIR-hyperintense marrow signal with associated endosteal scalloping" (buried between "mild tibiotalar joint effusion," "plantar calcaneal enthesophyte," "dorsal midfoot edema"). All three still caught it, made it the headline ("the distal tibial lesion is the headline, not the foot"), recognized the aggressive features (endosteal scalloping + marrow signal = possible neoplasm), and escalated it for independent workup.
+
+## Refinement to the off-text engine (the value of this bench)
+A TEXT finding - a buried line in a long report or note - gets READ and RECOGNIZED by this model, even when buried and omitted from the impression. So "buried line in a long note" (worked-example tip) does NOT floor this model. OV04's image floored NOT because the finding was buried but because the model sometimes never OPENED the image file (~40% did not read cpap_compliance_report). The real discriminator is OPEN-vs-not: this model skips OPENING some image files, but it READS all text it has and recognizes significance at or above physician level. So the off-text floor is specifically "a finding in an IMAGE the model may not open, in a deliverable that does not force opening it" (OV04) - not "a finding buried in text."
+
+## Implication
+Reinforces the narrow floor space. Robust engines on this model: (1) COLD outside-knowledge it lacks (OV01); (2) an off-text IMAGE the deliverable does not compel opening (OV04). OV02's synthesis-suppression is a third, narrower effect (the model does not proactively ASSEMBLE a prose-silent problem under a completion frame). Every other worked-example "other tip" tested or analyzed either reduces to these or ceilings: prelim-imaging buried finding (this bench, text read+recognized); recency/bundled-labs (loud axes, model re-checks - OV05 log); offloading against-the-grain (loud chart, bench 3/3); data-hierarchy culture (telegraphed "lower-authority" + non-actionable swab). LOW-ODDS-but-untested: audio+transcript (a transcript is text -> predicted read+recognized), >5-file omission-under-load (model read 37 files diligently in OV05), guideline-timing (OV 2026/cutoff posture makes it messy), psych (substrate-limited; OV is not psych and the world is frozen). PATH: replicate the two proven engines (cold-knowledge OV01-family; off-text-image OV04-family) across distinct workflows + content, KM-style (KM banked 10 with over-closure used 4x).
