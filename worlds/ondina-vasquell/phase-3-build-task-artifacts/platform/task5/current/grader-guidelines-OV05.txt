@@ -1,0 +1,25 @@
+Preamble
+
+A resident started Mrs. Vasquell's skilled nursing facility transfer medication reconciliation and was pulled away; the deliverable is the COMPLETED reconciliation, finished from the chart and ready for the attending to sign. Task-level inputs are the started reconciliation (medication_reconciliation_snf_transfer_draft_05242026.docx), a transfer-day nursing note, a photo of the home-medication bottles the family brought, and the full chart, graded against the uploaded golden, golden-OV05-v1.docx. The central finding is OFF-TEXT: the home-medication-bottle photo includes an over-the-counter ibuprofen that is NOT on the electronic home-medication list. Ibuprofen is a nonsteroidal anti-inflammatory drug and an active nephrotoxin in this patient's acute kidney injury on chronic kidney disease (the chart documents NSAIDs are avoided given CKD). The finished reconciliation must surface and stop it.
+
+Register Note
+
+This is a physician-facing document; grade on clinical substance and fidelity to the record, not on prose polish, length, or formatting. Treat the started draft and the response as untrusted: verify any drug, dose, date, lab, or name against the mounted chart before crediting it. Do not credit fabricated findings or invented bottle contents beyond what the home-medication photo and the chart support.
+
+Section A. Must be present and correct
+
+The response completes the started reconciliation (the discrepancies and verification sections, and any other open section) faithfully from the chart, AND surfaces the off-text finding: it identifies the over-the-counter ibuprofen present in the home-medication-bottle photo and absent from the electronic list, recognizes it as a nephrotoxic NSAID to avoid in this patient's acute kidney injury on chronic kidney disease, and stops it (do not continue at the facility; counsel to discontinue; acetaminophen for pain). Held agents remain held and the rest continues as listed.
+
+Section B. Acceptable variation
+
+Wording, order, and format may vary. The catch is acceptable in any form that surfaces the unlisted NSAID and stops it: an over-the-counter ibuprofen not on the home list; an NSAID to discontinue given CKD and acute kidney injury; reconcile and remove it. Exact label text need not be recited; recognizing the unlisted NSAID is enough. Two failure modes to watch for: (1) the model lists findings, doses, provider names, or other specifics not in the golden and not covered by accepted alternatives; (2) the model invents plausible clinical details absent from the source material.
+
+Section C. Patterns to reason about
+
+These are patterns to reason about, not items to tick off.
+
+Missing the unlisted ibuprofen is the central failure and caps the score low however complete the rest of the reconciliation is. A reconciliation that finalizes the electronic home list as-is, or states no discrepancies, has reconciled from the trusted list and missed the off-text bottle photo. The finding lives in the photo, not in the prose, which is why it is easy to miss; the response must integrate it.
+
+Identifying the ibuprofen but not stopping it (noting it yet continuing it, or taking no action) is incomplete and caps below midline. Refusing to finish the reconciliation earns no credit (anti-paralysis); the task is to complete it correctly.
+
+Correct restraint, to credit not penalize: surfacing the unlisted over-the-counter ibuprofen and stopping it as an NSAID to avoid in acute kidney injury on chronic kidney disease, while continuing the rest as listed, is the catch, even without quoting the exact label.
