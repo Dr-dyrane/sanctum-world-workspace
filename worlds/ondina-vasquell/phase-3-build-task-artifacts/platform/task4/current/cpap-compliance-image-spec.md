@@ -13,7 +13,7 @@ Shared rules:
 Genre: a scanned one-page CPAP therapy compliance report printout (the kind a DME company or sleep clinic prints), added to the patient's chart on 05/24/2026.
 
 Generation prompt (give to Codex imagegen):
-"A scanned one-page CPAP therapy compliance report, plain clinical document style, black text on white, dated 05/24/2026. Header reads CPAP THERAPY COMPLIANCE REPORT. A usage summary table shows: Reporting period 30 days; Average nightly usage 1.4 hours; Nights device used 9 of 30; Nights with usage at least 4 hours 3 of 30; Residual AHI 31 per hour. Below the table, a small simple bar chart of nightly usage hours with many bars at or near zero and a few short bars. Manufacturer-neutral layout, generic fonts, slightly off-angle scan with a faint shadow. No photographs, no logos."
+"A scanned one-page CPAP therapy compliance report, plain clinical document style, black text on white, dated 05/24/2026. Header reads CPAP THERAPY COMPLIANCE REPORT. A usage summary table shows: Reporting period 30 days; Average nightly usage 1.4 hours; Nights device used 9 of 30; Nights with usage at least 4 hours 0 of 30; Residual AHI 31 per hour. Below the table, a small simple bar chart of nightly usage hours with many bars at or near zero and a few short bars. Manufacturer-neutral layout, generic fonts, slightly off-angle scan with a faint shadow. No photographs, no logos."
 
 Hard constraints / negative prompt:
 - The numbers (average usage about 1.4 hours per night, 9 of 30 nights used, residual AHI about 31 per hour) MUST be present and legible; they are the scored finding.
