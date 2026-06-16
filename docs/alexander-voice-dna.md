@@ -4,6 +4,8 @@ The standard for ALL output text in this repo. Every artifact a reviewer or grad
 
 Enforced by `tools/verify/verify_voice.py`: banned AI transitions hard-fail active deliverables (graders, prompts, goldens, FA/GA, PLs); reviews, templates, and archived copies warn. Run it before any upload or handoff.
 
+Effective 2026-06-16, this standard governs every newly authored or re-entered note. Already-saved and delivered notes are grandfathered and are not retro-fixed; revise them only on re-entry (same rule as the FA/GA-format and KM old-format changes). `verify_voice` warnings on existing artifacts are informational, not cleanup tasks.
+
 ## Scope and how it layers
 
 This voice governs output text. It does not replace the structural canons; it sits on top of them.

@@ -112,9 +112,28 @@ supports. Hold to these:
 - Summary: restate the preference, the tier, and why it is not one step higher or
   lower.
 
-## The house format (two easy ways to get it wrong)
+## Clinical voice (Dr. Alexander voice DNA)
 
-Copy `references/pl-format-template.md` and fill every field. Two recurring breaks:
+The justification prose must read like a physician doing chart review, not an AI
+explaining what it did. This is enforced repo-wide by `tools/verify/verify_voice.py`
+(see `docs/alexander-voice-dna.md`), which checks every PL.
+
+- State the omission, why it matters clinically, and the consequence. Short
+  declarative sentences. "The note missed the poor CPAP adherence. This affects the
+  OSA assessment and follow up."
+- Name the clinical mechanism, not the eval plumbing. "The compliance report was an
+  image file the model never opened or reviewed" is fine. Narrating OCR, directory
+  listings, tool calls, binarizing, or "the transcript shows" is scaffolding the
+  gate flags; do not write it.
+- No banned AI transitions: Furthermore, Moreover, Consequently, Notably, In
+  addition, salient finding, critical insight, robust analysis, comprehensive
+  review. These hard-fail the gate.
+- Keep the house PL structure and the scoring logic; the voice applies to the prose
+  inside it.
+
+## The house format (three easy ways to get it wrong)
+
+Copy `references/pl-format-template.md` and fill every field. Three recurring breaks:
 
 - No "Scale Selection" line. The house PLs do not carry the rating as pasted text;
   it lives in the `VERDICT` line and the Button. The pasted comment starts at
@@ -122,6 +141,10 @@ Copy `references/pl-format-template.md` and fill every field. Two recurring brea
   common format break; do not.
 - No em dashes or en dashes anywhere, in this file or any deliverable. Use plain
   hyphens and commas. (Run a quick scan for the characters before you finish.)
+- No eval-scaffolding narration in the prose (OCR, directory listing, tool calls,
+  "the transcript shows"); use the clinical mechanism instead. Run
+  `python3 tools/verify/verify_voice.py` before finishing; it must come back clean
+  (no banned transitions, no scaffolding warns on the PL).
 
 ## Guardrails to put in every label
 

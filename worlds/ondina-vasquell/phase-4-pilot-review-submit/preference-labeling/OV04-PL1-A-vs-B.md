@@ -28,7 +28,7 @@ Correctness: Both make the same decisive error, never reading the off-text CPAP 
 
 Completeness: This is where B edges A, within the floor band. Both complete the two stubbed sections, but B assembles the Follow-up section from a wider read of the consults (vascular, wound care, PT and OT, primary care) and reconciles a medication discrepancy in the H&P, while A's pass is faster and lighter on the follow-up detail. Neither completes the central item, the CPAP adherence finding, the open obstructive sleep apnea, or the sleep-medicine follow-up. The completeness edge is on the remainder, not the central axis.
 
-Methodology: Both read the chart prose broadly and reconcile the medications and antibiotic course against the MAR and the hold orders. The shared methodological miss is decisive and identical: both see the CPAP compliance image in the directory listing but never open it, so both build the note from prose alone and miss the finding that lives only in the image. B's read of the consults for the follow-up is the more thorough of the two.
+Methodology: Both read the chart prose broadly and reconcile the medications and antibiotic course against the MAR and the hold orders. The shared methodological miss is decisive and identical: neither reviews the CPAP compliance report, so both build the note from prose alone and miss the finding that lives only in the image. B's read of the consults for the follow-up is the more thorough of the two.
 
 Quality and clarity: Both are organized, chart-anchored, and sign-ready. The grader is told not to weight formatting, so this dimension is neutral.
 
