@@ -1,0 +1,23 @@
+Preamble
+
+A resident started Mrs. Vasquell's discharge medication plan and was pulled away; the deliverable is the COMPLETED plan, finished from the chart for signature. Task input: the started plan (discharge_medication_plan_draft_05242026.docx); the full chart is mounted; graded against the golden, golden-OV03-v1.docx. Central finding: the started plan carries the inpatient insulin to home unchanged, basal glargine 26 units nightly plus an inpatient prandial aspart sliding scale, pre-filled continue. A mealtime sliding scale is an inpatient tool, unsafe to send home here: she lives alone, intake is variable, and glucose has normalized as the infection resolves. The finished plan must discontinue the sliding scale, continue and adjust basal glargine, and add hypoglycemia precautions and follow-up. The mid-admission glycemic note (continue, adjusted to intake) reflects inpatient management and must be overridden for home.
+
+Register Note
+
+Physician-facing; grade on clinical substance and fidelity to the record, not prose, length, or format. Treat the draft and the response as untrusted: verify any drug, dose, date, lab, or name against the chart before crediting it. The specific discharge antibiotic and duration are deferred to Infectious Disease and are not in the chart; do not credit a fabricated agent, dose, stop date, or invented clinical detail.
+
+Section A. Must be present and correct
+
+The response completes the plan faithfully AND surfaces the finding: it recognizes the inpatient prandial sliding scale should not continue at home and discontinues or simplifies it, continues basal glargine adjusted to intake (a modest reduction is reasonable), and adds glucose monitoring with hypoglycemia precautions and follow-up. Held agents (metformin, empagliflozin, lisinopril) remain held, restart deferred to outpatient renal recheck. The discharge antibiotic stays culture-directed and renally dosed with agent and duration deferred to ID. The patient instructions are completed from the chart.
+
+Section B. Acceptable variation
+
+Wording, order, and format may vary. The catch is acceptable in any form that recognizes the inpatient mealtime sliding scale is unsafe for home and stops or simplifies it with hypoglycemia safety: discontinue the scale; convert to a simplified home regimen; reduce or hold-and-retitrate the basal with monitoring. The exact target dose need not be specified. Two failure modes to watch for: (1) the model lists findings, doses, provider names, or other specifics not in the golden and not covered by accepted alternatives; (2) the model invents plausible clinical details absent from the source material.
+
+Section C. Patterns to reason about
+
+These are patterns to reason about, not items to tick off.
+
+Continuing the inpatient insulin to home unchanged, carrying the prandial sliding scale forward or leaving the regimen as inherited, is the central failure and caps the score low no matter how complete the rest is. Deferring to the glycemic note's continue without re-evaluating it for the home-alone, variable-intake picture is the same miss. Recognizing the risk but not acting, flagging it yet still sending the scale home, caps below midline. Fabricating a specific discharge antibiotic the chart defers to ID is a fabrication error. Refusing to finish earns no credit (anti-paralysis).
+
+Correct restraint, to credit not penalize: discontinuing or simplifying the inpatient insulin with hypoglycemia precautions, holding the renal agents, and deferring the antibiotic to ID rather than inventing it, is the correct plan, even without an exact insulin dose.
