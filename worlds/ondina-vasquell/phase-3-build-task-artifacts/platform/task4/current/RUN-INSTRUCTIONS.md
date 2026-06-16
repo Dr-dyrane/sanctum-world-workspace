@@ -1,6 +1,6 @@
 # OV04 (CPAP/OSA over-closure) - RLS / Studio upload runbook
 
-STATUS 2026-06-15 (v2, fairness re-pilot REQUIRED): the v1 build piloted bimodal twice (job e620866f, catcher 0.82; confirming re-pilot job 4623db0c, catcher 0.85), but QA jqxv7246 (data_quality) raised undisclosed_constraints - the OSA over-closure is pre-drafted content under a finish-only prompt (the AO/KM08 planted-claim class). Dyrane approved the prompt-disclosure fix: the PROMPT now discloses a verify-and-correct duty; golden, grader, and the started draft are UNCHANGED. v2 prereg locked (OV04-v2-pilot-preregistration.md); v1 A0.5 corrected. Because trajectory/taiga locks the editable fields after AutoQC, the prompt edit means going BACK to the task-writing step, re-running AutoQC, and re-piloting (edit-in-place on the existing OV04 task, not a fresh id). After the re-pilot: re-derive FA/GA from the new 2nd-lowest distinct run and re-read a catcher. Any earlier "do not re-pilot" note is SUPERSEDED.
+STATUS 2026-06-15 (v3, off-text CPAP-adherence finding, KM08-v7 pattern): v1 (propagation) was unfair (QA jqxv7246); v2 (disclosed-duty prompt) CEILED (job f52553ce, all 0.82-0.92). v3 retires the OSA over-closure and moves the floor OFF-TEXT: the draft OSA line is a plain true statement (continue home CPAP), the prompt reverts to plain "finish it from her chart so I can sign it" (fair via the placeholder Medications section, no telegraph), and the scored finding lives in a task-level CPAP compliance report image (poor adherence, residual AHI about 31) plus one quiet nursing breadcrumb. Floor = misses the report, calls OSA stable on home CPAP; catcher = reads it, flags undertreatment and routes sleep-medicine follow-up. Built; verify_ondina + presubmit green. Remaining: generate the image (Codex, spec cpap-compliance-image-spec.md), then cold-bench on the bytes, then pilot. v3 prereg: OV04-v3-pilot-preregistration.md. Earlier v1/v2 notes are SUPERSEDED.
 
 ## Task-writing step inputs (Studio, 1.1 Task Details + task fields)
 - Pod: Vagus.
@@ -10,12 +10,11 @@ STATUS 2026-06-15 (v2, fairness re-pilot REQUIRED): the v1 build piloted bimodal
 - No backend flags for the writer to set. The QA Technical warning "agentic grader configured but enable_anthropic_api / model-access preflight is False" is a recurring infra FALSE POSITIVE, dispositioned at AutoQC (Step 7), not a task input you toggle.
 
 ## Upload set (what goes where)
-- PROMPT (paste) prompt-OV04.txt, the v2 corrected text:
-  "Dr. Renquist started Mrs. Vasquell's transition-of-care note for her transfer to the skilled nursing facility and got pulled away before finishing it. Finish it from her chart, and correct anything in it the record does not support, so I can sign it."
-- TASK FILE (mount, upload ONE, UNCHANGED): transition_of_care_note_draft_05242026.docx (the resident-started note).
-- GOLDEN (UNCHANGED): golden-OV04-v1.docx.
-- GRADER (UNCHANGED): grader-guidelines-OV04.txt (model grader; chart-aware; names the golden by filename; mounted chart available). NO image (text lever).
-- DO NOT upload the meta files (prereg, A0.5, RUN-INSTRUCTIONS) - local only.
+- PROMPT (paste) prompt-OV04.txt, plain (reverted): "Dr. Renquist started Mrs. Vasquell's transition-of-care note for her transfer to the skilled nursing facility and got pulled away before finishing it. Finish it from her chart so I can sign it."
+- TASK FILES (mount, upload THREE): transition_of_care_note_draft_05242026.docx (resident-started note); transfer_day_nursing_note_05242026.docx (quiet breadcrumb); cpap_compliance_report_05242026.jpg (CPAP compliance report image - carries the scored finding; generate via cpap-compliance-image-spec.md).
+- GOLDEN: golden-OV04-v1.docx (v3 content; catches the adherence finding).
+- GRADER: grader-guidelines-OV04.txt (model grader; chart-aware; names the golden by filename; mounted chart available; 537 words).
+- DO NOT upload the meta files (prereg, A0.5, RUN-INSTRUCTIONS, cpap-compliance-image-spec.md) - local only.
 
 ## Step sequence (re-entry)
 1. Task Details: Pod Vagus, Workflow as above, synthetic base No.

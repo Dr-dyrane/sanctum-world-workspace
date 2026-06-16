@@ -37,7 +37,7 @@ Bimodal, miss-heavy. Floor below ~0.30 = the finished note documents OSA as stab
 5. verify_ondina + presubmit gate; cold bench on the built bytes; then pilot.
 
 ## Mount / workflow / stopping rule
-Task files: the started draft + ONE image (the CPAP compliance report); plus the world chart. Workflow: Medical Transcription and Clinical Documentation Completion (confirm live). First-trajectory find /docs must show exactly the draft + the one image, no /docs/.apps_data, no stale/collision. Stopping rule: if it ceilings, tighten/quiet the breadcrumb; if it floors uniformly with no catcher, make the report cleaner/more legible so a careful read can catch it. One pilot after a clean cold bench on the built bytes.
+Task files: the started draft + a transfer-day nursing note (breadcrumb) + ONE image (the CPAP compliance report); plus the world chart. Workflow: Medical Transcription and Clinical Documentation Completion (confirm live). First-trajectory find /docs must show exactly the draft + the one image, no /docs/.apps_data, no stale/collision. Stopping rule: if it ceilings, tighten/quiet the breadcrumb; if it floors uniformly with no catcher, make the report cleaner/more legible so a careful read can catch it. One pilot after a clean cold bench on the built bytes.
 
 ## RESERVED IDEA (for a future OV slot - do not burn on OV04)
 Med-reconciliation-by-photo: the daughter brings the home-medication bottles; a task-level photo reveals a drug the chart's verified list omits and that is dangerous here (e.g., OTC ibuprofen vs the chart's "NSAIDs avoided," or a hidden potassium/salt-substitute for an acute hyperkalemia hazard). Off-text, un-primed, distinct from OV01/OV02. Hold for a later task.
