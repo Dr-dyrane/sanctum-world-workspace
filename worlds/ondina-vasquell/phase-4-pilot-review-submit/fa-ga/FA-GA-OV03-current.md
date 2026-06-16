@@ -10,6 +10,6 @@ A mealtime sliding scale is an inpatient tool. She lives alone, her intake is va
 
 ## Grader Analysis
 
-The 0.12 is fair. The grader credited the otherwise accurate plan but identified the continued sliding scale, in the discharge medications and again in the patient instructions, as the deciding miss. It tied the hazard to the home-alone, variable-intake picture and did not let the polished remainder lift the score. It also flagged the unsupported cephalexin and the early restart of the held agents.
+The 0.12 is fair. The grader identified the continued sliding scale, in the discharge medications and again in the patient instructions, as the deciding miss. It tied the hazard to the home-alone, variable-intake picture and did not let the polished remainder lift the score. It also flagged the unsupported cephalexin and the early restart of the held agents.
 
 The miss was clinically significant. A hypoglycemia hazard sent home to someone who lives alone is what brings a patient back. The grader weighted it as the central failure, not a detail. Credit is warranted for the accurate infection management, medication reconciliation, and follow up. The score is reasonable.
