@@ -1,34 +1,36 @@
 # Ondina Vasquell - workflow map
 
-Updated 2026-06-16. Lane names from reference/approved-workflows-and-guidance-2026-06-13.md (Abi 06/13 tracker, Vagus pod). Confirm the exact workflow string live at Step 10.
+Updated 2026-06-16, reconciled to the LIVE Studio board (Alexander). Lane names from reference/approved-workflows-and-guidance-2026-06-13.md.
 
-State: four tasks are built and kept (OV01, OV02, OV04, OV05). Seven approved lanes are open. Floors are manufactured at the task layer. Each open lane gets built with the proven engine. Target is eight tasks in this world.
+State: four tasks built. Three are Ready for Delivery (OV01, OV02, OV04). One is in Taiga QA (OV05). Two approved lanes are in use; eight are open. Target is eight tasks; the remaining four each take a distinct open lane for coverage.
 
-## Held (built, kept)
+## Held (live Studio state)
 
-| Task | Workflow | Tier | What it is |
+| Task | Studio ID | Workflow as selected in Studio | Status |
 |---|---|---|---|
-| OV01 | Medication Reconciliation at Care Transitions | P0 | Floor, banked. Discharge med rec; the model carries inpatient enoxaparin forward to home. |
-| OV02 | Inpatient Medical Coding and DRG Assignment | P0 | Floor. Off-text synthesis; the model does not assemble the unaddressed line infection. |
-| OV04 | Medical Transcription and Clinical Documentation Completion | P0 | Floor, banked. Off-text CPAP compliance image the model does not open. |
-| OV05 | Medication Reconciliation at Care Transitions | P0 | Catcher, kept. Home-medication-bottle image (unlisted ibuprofen). Shares OV01's lane. |
+| OV01 | Task 1 | Medication Reconciliation at Care Transitions | Ready for Delivery |
+| OV02 | rpfl3eac | Medical Transcription and Clinical Documentation Completion | Ready for Delivery |
+| OV04 | jqxv7246 | Medical Transcription and Clinical Documentation Completion | Ready for Delivery |
+| OV05 | aoe3bfe1 | Medical Transcription and Clinical Documentation Completion | Taiga Trajectories & QA |
 
-## OV05 lane settlement
+Two lanes in use: Medication Reconciliation (OV01) and Medical Transcription and Clinical Documentation Completion (OV02, OV04, OV05). The Transcription lane carries three tasks. That is the real concentration. For coverage, no new task should reuse Transcription or Medication Reconciliation.
 
-OV01 and OV05 are both medication reconciliation. OV01 is the floor in this lane. OV05 is the catcher and the home for its ibuprofen image. One lane can carry one floor plus one catcher. The rule that matters is one FLOOR per lane, and OV01 is the only floor here, so OV05 stays as the catcher. No future floor task reuses the Medication Reconciliation lane. If a distinct lane is required at delivery, reframe the ibuprofen image into an open lane at that point.
-
-## Open (build these right, one distinct lane each)
+## Open (build the remaining tasks here, one distinct lane each)
 
 | Workflow | Tier |
 |---|---|
+| Inpatient Medical Coding and DRG Assignment | P0 |
 | Claims Denial Analysis and Appeal Preparation | P0 |
 | Pharmacy Insurance Claim Rejection Resolution | P0 |
 | HEDIS Medical Record Chart Abstraction and Review | P0 |
-| CDI Query Response Review (or DRG Reconciliation Review) | P1 |
+| CDI Query Response Review | P1 |
 | Utilization Review Concurrent Stay Documentation | P1 |
 | Referral Intake, Triage, and Scheduling Coordination | P1 |
 | Patient Safety Indicator (PSI) Analysis and Reporting | P2 |
 
 ## Build rule
 
-Four more floor tasks reach eight, each in a distinct open lane. Each pairs a completion deliverable with a high-stakes step it does not force, on a quiet axis, with the index data in a task-level artifact that does not state it cleanly: the off-text image handle (OV04 family) or the synthesis-suppression handle (OV02 family). Cold-bench before any pilot. See OV-APPROACH-MEMO.md and OV-FLOOR-MECHANISM-LIBRARY.md.
+Four more tasks reach eight, each in a distinct open lane. Each pairs a completion deliverable with a high-stakes step it does not force, on a quiet axis, with the index data in a task-level artifact that does not state it cleanly: the off-text image handle (OV04 family) or the synthesis-suppression handle (OV02 family). Cold-bench before any pilot. See OV-APPROACH-MEMO.md and OV-FLOOR-MECHANISM-LIBRARY.md.
+
+## Open reviewer item to clear before delivery
+- OV01 (Larry, round 2): remove accidental templating language in the grader ("With include_input_files=true, verify any specific..."), and set the FA/GA to the 2nd-lowest scoring run with the run output visible. Confirm done.
