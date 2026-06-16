@@ -13,7 +13,7 @@ STATUS 2026-06-15: BUILT, gates green (verify_ondina + presubmit task5), image i
 - TASK FILES (mount, upload THREE): medication_reconciliation_snf_transfer_draft_05242026.docx (started deliverable); transfer_day_nursing_note_05242026.docx (quiet breadcrumb); home_medication_bottles_05242026.jpg (the photo - carries the scored finding).
 - GOLDEN: golden-OV05-v1.docx (captures and stops the unlisted ibuprofen).
 - GRADER: grader-guidelines-OV05.txt (model grader; chart-aware; names the golden by filename; 540 words).
-- DO NOT upload the meta files (prereg, A0.5, med-bottle-image-spec, RUN-INSTRUCTIONS) - local only.
+- DO NOT upload the meta files (prereg, A0.5, abi-mode-review, med-bottle-image-spec, RUN-INSTRUCTIONS) - local only.
 
 ## Step sequence
 1. Task Details: Pod Vagus, Workflow as above, synthetic base No.
