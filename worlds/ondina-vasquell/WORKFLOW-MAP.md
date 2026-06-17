@@ -1,8 +1,8 @@
 # Ondina Vasquell - workflow map
 
-Updated 2026-06-16, reconciled to the LIVE Studio board (Alexander). Lane names from reference/approved-workflows-and-guidance-2026-06-13.md.
+Updated 2026-06-17, reconciled to the live Studio board screenshot from Alexander. Lane names from reference/approved-workflows-and-guidance-2026-06-13.md.
 
-State: six tasks built or in flight (OV01-OV06). OV01/OV02/OV04 Ready for Delivery; OV05 in Taiga QA (v3 re-pilot pending); OV03 floored (FA/GA done, bank pending self-score); OV06 just built (awaiting pilot). OV06 opens the Referral lane, so THREE lanes are now in use and SEVEN are open. Target is eight tasks; OV07 and OV08 each take a distinct open lane for coverage.
+State: six OV slots are accounted for. OV01, OV02, OV03, and OV04 are Ready for Delivery. OV05 is retired. OV06 v2 FLOORED (de-telegraphed re-pilot job 577effae: mean 0.39, bimodal, 7/10 sub-0.70); it is the world's fifth confirmed floor (OV01, OV02, OV03, OV04, OV06) and banks pending golden self-score plus FA/GA. Three lanes are in use: Medication Reconciliation, Medical Transcription and Clinical Documentation Completion, and Referral Intake, Triage, and Scheduling Coordination. Target is eight shippable tasks; the next live task after OV06 should use a distinct open lane if possible.
 
 ## Held (live Studio state)
 
@@ -10,12 +10,12 @@ State: six tasks built or in flight (OV01-OV06). OV01/OV02/OV04 Ready for Delive
 |---|---|---|---|
 | OV01 | Task 1 | Medication Reconciliation at Care Transitions | Ready for Delivery |
 | OV02 | rpfl3eac | Medical Transcription and Clinical Documentation Completion | Ready for Delivery |
+| OV03 | ckrz3598 | Medical Transcription and Clinical Documentation Completion | Ready for Delivery |
 | OV04 | jqxv7246 | Medical Transcription and Clinical Documentation Completion | Ready for Delivery |
-| OV05 | aoe3bfe1 | Medical Transcription and Clinical Documentation Completion (reconciliation deliverable) | RETIRED 2026-06-16 (3rd ceiling; salt-substitute trap mis-placed vs KM01) |
-| OV03 | ckrz3598 | Documentation Completion (discharge med plan; confirm vs Medication Reconciliation) | Floored v2; FA/GA done; bank pending self-score |
-| OV06 | new | Referral Intake, Triage, and Scheduling Coordination | BUILT; awaiting pilot |
+| OV05 | none live | Medical Transcription and Clinical Documentation Completion (retired packet) | Retired 2026-06-16 after repeated ceilings |
+| OV06 | Task 1rqn2959 | Referral Intake, Triage, and Scheduling Coordination | FLOORED v2 (de-telegraphed; mean 0.39, bimodal, 7/10 sub-0.70, job 577effae); banks pending golden self-score + FA/GA |
 
-Three lanes in use: Medication Reconciliation (OV01), Medical Transcription and Clinical Documentation Completion (OV02, OV04, OV05, and OV03 if filed there), and Referral Intake, Triage, and Scheduling Coordination (OV06, new). The Transcription lane carries three to four tasks. That is the real concentration. For coverage, OV07 and OV08 must each take a fresh open lane, and OV05 (a reconciliation) and OV03 (a med plan) should be confirmed or relabeled so the Transcription lane is not overloaded.
+Three lanes in use: Medication Reconciliation (OV01), Medical Transcription and Clinical Documentation Completion (OV02, OV03, OV04, retired OV05 history), and Referral Intake, Triage, and Scheduling Coordination (OV06). The Transcription lane carries the concentration. For coverage, OV07 and OV08 should each take a fresh open lane unless OV06 needs one more repair first.
 
 ## Open (build the remaining tasks here, one distinct lane each)
 
@@ -31,7 +31,7 @@ Three lanes in use: Medication Reconciliation (OV01), Medical Transcription and 
 
 ## Build rule
 
-Four more tasks reach eight, each in a distinct open lane. Each pairs a completion deliverable with a high-stakes step it does not force, on a quiet axis, with the index data in a task-level artifact that does not state it cleanly: the off-text image handle (OV04 family) or the synthesis-suppression handle (OV02 family). Cold-bench before any pilot. See OV-APPROACH-MEMO.md and OV-FLOOR-MECHANISM-LIBRARY.md.
+Four Ready for Delivery tasks are banked. OV06 v2 is the current build lane. Future tasks should pair the chosen workflow with a high-stakes step it does not force, on a quiet axis, with the index data in a task-level artifact that does not state it cleanly: the off-text image handle (OV04 family), the synthesis-suppression handle (OV02 family), or a KM-proven embedded wrong element placed away from the obvious error cluster. Cold-bench lightly, then pilot in Studio. See `OV-APPROACH-MEMO.md` and `OV-FLOOR-MECHANISM-LIBRARY.md`.
 
 ## Open reviewer item to clear before delivery
-- OV01 (Larry, round 2): remove accidental templating language in the grader ("With include_input_files=true, verify any specific..."), and set the FA/GA to the 2nd-lowest scoring run with the run output visible. Confirm done.
+- OV01 Larry round 2 cleared on 2026-06-15. Board now shows Ready for Delivery.
