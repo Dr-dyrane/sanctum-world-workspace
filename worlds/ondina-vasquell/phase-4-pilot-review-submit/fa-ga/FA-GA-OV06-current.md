@@ -1,6 +1,6 @@
 # OV06 FA/GA - failure-only (vascular referral closed against the chart)
 
-Status 2026-06-17 (final, per pod lead Ahmad G + reviewer-language pass): paste-ready for job 577effae. Scored 0.10, 0.50, 0.10, 0.40, 0.82, 0.82, 0.08, 0.88, 0.10, 0.10. Mean 0.39, three high runs (0.82, 0.82, 0.88). FA subject: Attempt 10, run c5758060, traj_245278a, score 0.10 (second-lowest distinct). Failure-only FA in clinical voice (specific and accessible). GA in grader-evaluation register per the 06_09 standard: 4 to 6 sentences, what the grader got right and, with more weight, what it missed (a miss, not a mis-score, here), ending with a concrete add-to-failure-modes edit; grader-guideline content described, not named. Two short paragraphs, no bullets.
+Status 2026-06-17 (final, per pod lead Ahmad G + reviewer-language pass): paste-ready for job 577effae. Scored 0.10, 0.50, 0.10, 0.40, 0.82, 0.82, 0.08, 0.88, 0.10, 0.10. Mean 0.39, three high runs (0.82, 0.82, 0.88). FA subject: Attempt 10, run c5758060, traj_245278a, score 0.10 (second-lowest distinct). Failure-only FA in clinical voice (specific and accessible). GA in grader-evaluation register per the 06_09 standard: 4 to 6 sentences, what the grader judged correctly and, with more weight, what it missed (a miss, not a mis-score, here), ending with a concrete add-to-failure-modes edit; grader-guideline content described, not named. Two short paragraphs, no bullets.
 
 ## Failure Analysis
 

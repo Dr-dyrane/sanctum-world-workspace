@@ -60,6 +60,8 @@ Paragraph 2: where it fell short, labeled as a MISS (the grader never identified
 
 Describe the grader-guideline content by its words; never name Section A, B, or C. Quote the rubric language when it matters.
 
+Gate trap: the both-sides check bans the literal phrases "what the grader got right" and "what the model did well" anywhere in the file, including the Status line. Discuss what the grader judged correctly, but phrase it "the grader correctly identified" or "the grader caught," never "what the grader got right."
+
 ## Voice (the FA and the GA differ)
 
 The FA and the GA review different objects, so they sit in different registers. Do not force them into the same voice.
