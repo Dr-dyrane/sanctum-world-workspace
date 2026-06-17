@@ -1,75 +1,42 @@
-# FA/GA format template (KM7-10 house style)
+# FA/GA format template
 
-Copy the skeleton, fill every field, then run the gates. The Status line carries
-the metadata so the prose can stay clinical. The FA and GA are each two paragraphs,
-no bullets, about 1000 characters.
+Copy the skeleton, fill every field, then run the gates. The Status line carries the metadata so the prose stays clinical. The FA and GA are each two paragraphs, no bullets, about 1000 characters, no em dashes.
 
 ## Skeleton
 
 ```
-# <TASK> FA/GA - failure-only (<lever, e.g. discharge insulin / hypoglycemia>)
+# <TASK> FA/GA - failure-only (<lever in plain clinical terms>)
 
-Status <date>: paste-ready draft for <job id>. Scored <s1, s2, ... s10>. Mean ~<m>,
-<all low / bimodal>, <no catcher / N catchers>. FA subject: Attempt <n>, run <run
-id>, <traj id>, score <x> (<note if not the strict second-lowest distinct; offer to
-rebind>). Guidance applied: KM7-10 house style, one trajectory, failure-only prose,
-no grader-section names, no bullets, each field about 1000 characters.
+Status <date>: paste-ready for <job id>. Scored <s1, s2, ... s10>. Mean ~<m>. FA subject: Attempt <n>, run <run id>, <traj id>, score <x> (second-lowest distinct; if not, say so and offer to rebind). Failure-only, two paragraphs each, no bullets, about 1000 characters, no em dashes.
 
 ## Failure Analysis
 
-<Paragraph 1: open by naming the bound run by number ("On trajectory N..." or "On
-Attempt N..."), never a numberless opener. FAILURE-ONLY (pod lead Ahmad): lead with
-the failure itself, named specifically and tied to the golden. No competent-baseline
-paragraph. You may note the model had the evidence and failed anyway, framed as
-failure not praise. One connected argument about this ONE trajectory, not a list of
-"It did X. It did Y." sentences.>
+<Paragraph 1: open by naming the bound run by number ("On trajectory N..." or "On Attempt N..."). Lead with the failure: what the response did and why it was wrong, tied to the chart. No competent-baseline or praise paragraph. You may note the response had the evidence and failed anyway, framed as failure.>
 
-<Paragraph 2: spell out the mechanism and the consequences in several sentences (the
-harm to the patient), add any secondary failures, and name the central failure. Keep
-the run distribution OUT of the FA; it belongs in the GA. Err toward more detail when
-the pod lead asks.>
+<Paragraph 2: why it matters clinically, the consequence stated at the level the chart supports (do not escalate it), any secondary errors, then the central failure restated.>
 
 ## Grader Analysis
 
-<Paragraph 1: the score is appropriate for an otherwise usable deliverable that
-misses the central item; then how the grader got there (compared to golden, found
-the failure, applied the cap rule, gave appropriate credit, flagged secondaries).>
+<Paragraph 1: why the score is appropriate and the requirement that was missed, in clinical terms. A brief plain acknowledgment of the competent remainder is fine to set up the cap; do not write "the grader credited".>
 
-<Paragraph 2: the calibration holds across the run set; then the close - a deep
-floor would overstate, a high score would ignore the hazard, so the band is well
-placed. End: the score is justified.>
+<Paragraph 2: why the miss remains decisive and why the correct secondary work does not overcome it, in clinical terms (the deliverable is unsafe or incomplete for its purpose). Close on the clinical point. Do not argue the scoring framework ("a deep floor would overstate", "the band is well placed").>
 ```
 
-## The across-trajectory line (when a reviewer asks the FA to justify the low average)
+## What to keep out of the prose
 
-Put one sentence at the end of FA paragraph two that names the pattern and ties it
-to the whole distribution. It does not need a third paragraph:
+| Do not write | Why | Write instead |
+|---|---|---|
+| the grader credited / it credited the / credited the correct | both-sides crediting (gate fails) | gave appropriate credit for; or just name the competent items |
+| Section A / B / C | self-containment | state the requirement itself |
+| Recommended grader rating: ... | the rating lives in the Studio field | omit it |
+| em dash or en dash | house rule | plain hyphen or comma |
+| Furthermore / Moreover / Consequently / Notably / In addition | AI transition (gate fails) | start the sentence plainly |
+| golden, grader, rubric, additive checklist, scored 0.NN | eval register in reviewer-facing prose | the chart, the requirement, the score |
+| floor, catcher, bimodal, mechanism, bankable, score cap | builder language | describe the clinical failure and the score plainly |
+| a higher score would imply..., the rubric is not additive | defending the score | state the clinical reason the miss is decisive |
 
-> The inpatient insulin carry-forward is the central failure pattern, and it drives
-> the low band across all ten runs, 0.05 to 0.20.
-
-## The GA calibration close (the KM move)
-
-> A deep floor would overstate an otherwise complete plan, and a high score would
-> ignore a hypoglycemia hazard sent home to a patient who lives alone, so the low
-> band is well placed. The score is justified.
-
-## Phrases that trip the gate (use the right column)
-
-| Do not write (gate rejects) | Write instead |
-|---|---|
-| the grader credited the accurate parts | gave appropriate credit for the accurate parts |
-| it credited the correct renal course | credited correctly the renal course -> reword: noted the correct renal course |
-| credited the correct / useful / complete / model ... | gave appropriate credit for ... |
-| what the model did well | (lead the FA with the specific competent items instead) |
-| Section A / Section B / Section C | (state the content, not the section name) |
-| Recommended grader rating: Great | (omit; the rating lives in the Studio field) |
-| em dash or en dash | plain hyphen or comma |
-| Furthermore / Moreover / Consequently / Notably / In addition | (drop it; start the sentence plainly) |
+The builder and reviewer-register terms are legitimate in internal docs (task state, preregs, runbooks, design notes); they are flagged only in reviewer-facing FA/GA, PL, and reviews, at warn level for now (`verify_voice`).
 
 ## Length check
 
-KM7 fields run about 1035 and 1081 characters, so "about 1000" is the target. Aim
-at or just under 1000 so the gate stays clean. If the gate flags a field a little
-over 1000 and trimming would cost real clinical content, matching KM at ~1050 is
-acceptable; say so in the Status line.
+Aim at or just under 1000 characters per field so the gate stays clean. If a field runs a little over and trimming would cost real clinical content, matching the KM range of about 1050 is acceptable; note it in the Status line.

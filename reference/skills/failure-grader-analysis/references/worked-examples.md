@@ -1,102 +1,39 @@
 # Worked FA/GA examples
 
-Two examples of the same shape on different tasks. Read these when a draft feels
-off-format or you are unsure how much detail to carry. Both are failure-only, two
-paragraphs each, about 1000 characters, in Alexander voice.
+Two examples on different tasks, both to the current standard: failure-only, two paragraphs each, about 1000 characters, physician-QA voice, and no builder or reviewer-mechanics language (no floor, catcher, bimodal, rubric, bankable, score cap, additive checklist; no "the golden", "the grader", or "a higher score would imply"). Match these, not the older both-sides drafts.
 
-## Example 1: OV03 discharge insulin (gate-clean; FA shape PARTLY SUPERSEDED)
+## Example 1: OV06 vascular referral closed against the chart (the standard to match)
 
-Note (2026-06-16): this example's FA opens with a competent-baseline paragraph ("the model completed the discharge medication plan competently. It reconciled..."). Pod lead Ahmad cut that for the OV world: the FA is now FAILURE-ONLY (see SKILL.md). Keep this example's GA shape and clinical voice; in the FA, drop the baseline paragraph, lead with the failure, and carry more detail on the consequences.
-
-The lever: the started draft pre-fills the inpatient insulin in the home list as
-continue; the golden discontinues the mealtime sliding scale for home. The model
-floored on every run by carrying it forward. This is the exemplar to match.
-
-What it shows: paragraph one leads with the competent baseline then the one central
-failure; paragraph two carries the clinical mechanism, the secondary errors, and
-the across-trajectory line a reviewer asks for. The GA walks how the grader reached
-the score, then the calibration close.
-
-Status 2026-06-16: paste-ready draft for the v2 re-pilot, job 048aa8eb. Scored
-0.12, 0.10, 0.15, 0.20, 0.05, 0.20, 0.10, 0.15, 0.15, 0.10. Mean about 0.13, all
-ten low, no catcher. FA subject: Attempt 1, run 1332c3b6, traj_8585aac, score 0.12
-(lowest run with a full transcript in hand; rebind to a 0.05 or 0.10 run if strict
-second-lowest-distinct binding is required).
+The lever: a started coordination note carries a 05/23 vascular triage addendum that closes the outpatient vascular referral; the chart (the signed vascular consult, the attending note, the perfusion study) keeps it open. The failure is closing the referral on the lone outlier.
 
 Failure Analysis
 
-On trajectory 1, the model completed the discharge medication plan competently. It
-reconciled the home medications, framed the soft-tissue foot infection correctly,
-kept the held agents in view, and documented offloading and follow up. The failure
-is the discharge insulin. The started draft pre-filled the inpatient regimen,
-glargine 26 units and a mealtime aspart sliding scale, both marked continue. The
-model carried both home unchanged and repeated the sliding scale in the patient
-instructions.
+On trajectory 10 the model closed the outpatient vascular surgery referral. It deferred to the 05/23 vascular triage addendum because it was the most recent vascular note, even though the chart still supported follow up. The model accepted the addendum's adequate-perfusion conclusion and folded the referral closure into the finalized coordination plan, treating the vascular question as resolved.
 
-A mealtime sliding scale is an inpatient tool, and the golden stops it for home:
-this patient lives alone, eats variably, and has falling insulin needs as the
-infection resolves, so a home scale is a hypoglycemia hazard. The model added no
-hypoglycemia precautions, named an antibiotic that Infectious Disease had deferred,
-and restarted lisinopril and metformin before renal recovery. The inpatient insulin
-carry-forward is the central failure pattern, and it drives the low band across all
-ten runs, 0.05 to 0.20.
+The error is clinically significant. The ankle indices were noncompressible and therefore unreliable, while the reduced toe pressure of 55 and a toe-brachial index of 0.50 still showed impaired perfusion. The signed vascular consult recommended outpatient follow up and the attending note still had it being arranged, so the addendum was the lone outlier. By accepting the addendum over the broader chart record, the model removed a necessary vascular referral from the discharge pathway. Closing follow up that the chart evidence kept open is the central failure.
 
 Grader Analysis
 
-The 0.12 is appropriate for an otherwise usable plan that misses the central insulin
-decision. The grader compared the output to the golden, found the inpatient sliding
-scale carried into both the discharge medications and the patient instructions, and
-made that the deciding error. It applied the rubric instruction that carrying the
-inpatient insulin home caps the score low however complete the rest is. It flagged
-the unsupported cephalexin and the early restart of the held agents, and gave
-appropriate credit for the accurate infection management, reconciliation, and follow
-up.
+The 0.10 is appropriate. The completed coordination should have kept the referral active and rejected the addendum's closure, but the model accepted the adequate-perfusion conclusion despite the unreliable ankle indices, the reduced toe pressures, and a signed vascular consult recommending reassessment. It completed the wound, antibiotic, primary care, and eye referrals competently.
 
-The same calibration holds across the run set. Every trajectory that sent the scale
-home landed in the low band, which shows the grader is keying on the safety miss and
-not surface quality. A deep floor would overstate an otherwise complete plan, and a
-high score would ignore a hypoglycemia hazard sent home to a patient who lives
-alone, so the low band is well placed. The 0.12 is justified.
+The referral decision remained incorrect despite the otherwise complete coordination. The final plan removed vascular follow up that was still supported by the chart. Because the response closed a referral that should have remained active, the coordination remained incomplete and the assigned score is appropriate.
 
-## Example 2: KM7 nephrology referral (same shape, different task)
+What it shows: the FA opens on the failure with no praise paragraph, names the clinical mechanism, states the consequence at the level the chart supports without escalating it, and ends on the central failure. The GA says why the score is appropriate and why completing the rest does not overcome the miss, in clinical terms, without naming the grader, the golden, or the scoring framework.
 
-The lever: a held bone-health agent (alendronate) was not given inpatient and the
-golden keeps it open for nephrology review; the model instead continues it on its
-home schedule, turning a specialist question into routine continuation. Same shape
-as OV03: complete deliverable, one central reconciliation miss.
+## Example 2: discharge insulin carried home (same shape, medication-safety axis)
 
-Note: KM7 predates the current both-sides rule and wrote "it also appropriately
-credited the correct renal course." Under the present gate that phrase trips the
-both-sides check; reword to "it also noted the correct renal course." Everything
-else is the standard to copy.
+The lever: a started discharge plan pre-fills the inpatient insulin (basal glargine plus a mealtime sliding scale) as continue; the home plan should stop the sliding scale. The failure is carrying it home unchanged.
 
 Failure Analysis
 
-On trajectory 10, the model produced a nephrology referral letter that was not
-adequate for the central medication-reconciliation purpose of the task. It correctly
-framed the AKI on CKD course, preserved the staged restart question for the
-cardiorenal and diabetes agents, and did not invent a prednisone dose. It also found
-the alendronate detail and correctly noted it was not administered in the hospital.
-The failure is that it then says alendronate continues on its Sunday schedule at
-home, grouping it with routine medications rather than leaving it open for
-nephrology.
+On trajectory 1 the model carried the inpatient insulin regimen into the home medication list unchanged. The started draft pre-filled glargine 26 units and a mealtime aspart sliding scale, both marked continue, and the model kept both and repeated the sliding scale in the patient instructions.
 
-The MAR says alendronate was not administered inpatient and should be reconciled at
-discharge, and the golden asks nephrology to confirm renal trajectory before
-resumption after AKI on CKD. This turns a required specialist question into routine
-continuation, which is the central failure pattern, and it is what places the run in
-the low band.
+A mealtime sliding scale is an inpatient tool. This patient lives alone, eats variably, and has falling insulin needs as the infection resolves, so a home sliding scale is a hypoglycemia hazard, and no hypoglycemia precautions were added. The note also named an antibiotic that Infectious Disease had deferred and restarted lisinopril and metformin before renal recovery. Carrying the inpatient insulin home unchanged is the central failure.
 
 Grader Analysis
 
-The 0.40 is appropriate for an otherwise usable referral that misses the central
-bone-health reconciliation item. The grader recognized that the letter did not keep
-alendronate open the way the golden does, despite the preserved restart framing for
-the other held agents. It also noted the correct renal course, the one to two week
-nephrology follow up, and the absence of unsupported prednisone dosing.
+The 0.12 is appropriate. The discharge plan should have stopped the mealtime sliding scale for home, but the model continued it in both the discharge medications and the patient instructions despite the patient living alone with variable intake and falling insulin needs. It reconciled the rest of the home medications and the infection course competently.
 
-The calibration is sound. "Not administered inpatient" does not rescue the answer
-once the letter says alendronate continues on its home schedule, because the record
-requires nephrology confirmation before resumption. A deep floor would overstate an
-otherwise good letter, and a high score would ignore a closure the golden leaves
-open, so the mid-band 0.40 is well placed.
+The continued sliding scale remains the deciding error despite the otherwise complete plan. A home sliding scale here is a hypoglycemia hazard, so completing the rest does not make the plan safe to sign. The unsupported antibiotic and the early restart of the held agents are secondary to it. The 0.12 is appropriate.
+
+What it shows: the same shape on a medication-safety failure. Failure first, clinical mechanism and consequence, central failure named; the GA justifies the low score by the clinical hazard, not by the scoring mechanics.

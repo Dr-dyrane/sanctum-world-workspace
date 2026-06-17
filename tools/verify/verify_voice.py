@@ -35,6 +35,15 @@ SCAFFOLD_RE = re.compile(
     r"|\bsaw the file\b|\bran the tool\b|\bcalled the tool\b|bind the FA/GA box"
     r"|(?:from|in) the transcript|the transcript (?:show|confirm|reveal)", re.I)
 
+# Builder/reviewer register (Dyrane 2026-06-17). These read as eval-internal in a
+# reviewer-facing FA/GA, PL, or review. WARN only, not a hard fail: the same words are
+# legitimate in internal docs (task state, preregs, runbooks, design notes), and 'floor'
+# and 'mechanism' have clinical senses. Let a few clean cycles pass, then promote to fail
+# if no legitimate reviewer-facing use remains. Only checked on the proc classes below.
+REGISTER_RE = re.compile(
+    r"\bfloor(?:ed|s)?\b|\bcatchers?\b|\bbimodal\b|\bmechanism\b|\bbankable\b"
+    r"|\bscore cap\b|\brubric\b|\badditive checklist\b|\bdesigned to test\b", re.I)
+
 PARK = ("/archive/", "_retired", "_paused", "_pipeline-history", "build-phase-drafts",
         "/design/", "/_t/", "/handoff/")
 
@@ -94,6 +103,8 @@ def scan():
                     pm = SCAFFOLD_RE.search(t)
                     if pm:
                         warns.append((Path(f).name, "scaffolding", f"{pm.group(0)[:30]!r}  ({rel})"))
+                    for m in sorted({x.lower() for x in REGISTER_RE.findall(t)}):
+                        warns.append((Path(f).name, "register(warn)", f"{m!r}  ({rel})"))
     return fails, warns, n
 
 
