@@ -105,3 +105,16 @@ DISCIPLINE (the ~12-ceiling lesson): BENCH every candidate cold before a pilot; 
 - OV slate + bench detail: phase-4-pilot-review-submit/OV-PATH-TO-8-km-ported-2026-06-15.md.
 - KM mechanism extraction + example-world extraction: captured in OV-WORLD-STATUS activity log (2026-06-15 entries) and this file.
 - SUPERSEDED (kept for history, banners added): docs/edmund-chen-difficulty-engine-distillation.md (mechanism extraction valid; "OV substrate-limited / next-world" implications wrong); phase-4-pilot-review-submit/results/OV03-text-floor-hunt-2026-06-15.md (no-go conclusion wrong - over-closure was the untried recipe).
+
+================================================================
+## KM TRAP-PLACEMENT DISCRIMINATOR (from KM01 via the KM runbook, 2026-06-16) - why OV05 ceilinged 3x and RETIRED
+================================================================
+KM Task 1 (delivered, banked) floors on the SAME potassium-based salt-substitute hyperkalemia trap that OV05 v3 ceilinged on. The mechanism is proven; PLACEMENT is the whole game. The KM runbook discriminator:
+
+A medication-safety or reconciliation deliverable PRIMES the model into maximal find-the-error mode, so anything that pattern-matches as an error gets caught. THE TRAP MUST NOT LOOK LIKE AN ERROR. KM made it work by (a) disguising the salt substitute as routine low-sodium-diet COUNSELING (not a flagged med decision), (b) burying it in the SAFE-items cluster, away from the obvious errors, (c) requiring INTEGRATION to reject (salt substitute -> potassium load -> hyperkalemia with the held ACE inhibitor), not recall, and (d) carrying it on an EXTERNAL pharmacy handoff so declining it is fair.
+
+OV05 v3 did the opposite: listed the salt substitute as a DECISION beside the loud ibuprofen and lisinopril errors. That primed error-hunting and swept it up. 3rd OV05 ceiling (ibuprofen x2, salt substitute x1). OV05 RETIRED 2026-06-16 (Dyrane: trajectory keeps failing).
+
+WHAT DOES NOT FLOOR (KM runbook, two red-teams): a buried fact alone (a strong model finds it); a chart-COACHED wrong rec (the model sides with the chart); a famous-fact error in a safety task (error-hunting sweeps it). FAIRNESS (KM A0.6): finishing a SAME-AUTHOR draft with a planted false line is UNFAIR (needs placeholder or correct-errors framing); responding to an EXTERNAL query/handoff with an unsupported option is FAIR to decline - the genre carries the fairness. OV06 (external vascular addendum) is on the fair side; OV05 v3's same-author resident draft was borderline.
+
+RULE for OV07+: in any error-hunting genre, the discriminator must NOT look like an error, must require integration to reject, and must sit in the safe/routine cluster AWAY from obvious errors; prefer an external adversarial authority for fairness. The KM difficulty gate is mean at or below ~70 with several sub-70 runs and a low tail (~0.15-0.30) plus at least one trajectory with a real FA-able failure; "a score below 70 is useful evidence but not required." Source: worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md.

@@ -11,7 +11,7 @@ State: six tasks built or in flight (OV01-OV06). OV01/OV02/OV04 Ready for Delive
 | OV01 | Task 1 | Medication Reconciliation at Care Transitions | Ready for Delivery |
 | OV02 | rpfl3eac | Medical Transcription and Clinical Documentation Completion | Ready for Delivery |
 | OV04 | jqxv7246 | Medical Transcription and Clinical Documentation Completion | Ready for Delivery |
-| OV05 | aoe3bfe1 | Medical Transcription and Clinical Documentation Completion (reconciliation deliverable; relabel candidate) | Taiga QA (v3 quiet-K-load) |
+| OV05 | aoe3bfe1 | Medical Transcription and Clinical Documentation Completion (reconciliation deliverable) | RETIRED 2026-06-16 (3rd ceiling; salt-substitute trap mis-placed vs KM01) |
 | OV03 | ckrz3598 | Documentation Completion (discharge med plan; confirm vs Medication Reconciliation) | Floored v2; FA/GA done; bank pending self-score |
 | OV06 | new | Referral Intake, Triage, and Scheduling Coordination | BUILT; awaiting pilot |
 
