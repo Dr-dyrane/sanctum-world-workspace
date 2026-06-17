@@ -34,7 +34,7 @@ Never write FA/GA from memory, task design notes, preregistration, or score alon
 
 Failure Analysis answers: "What was wrong with the response?"
 
-Grader Analysis answers: "Why is the assigned score justified?"
+Grader Analysis answers: "Did the grader score this correctly?" - what the grader got right, what it missed or mis-scored, and the concrete edit the grader guidelines need. It is not a defense of the number.
 
 Do not explain how the task was built. Do not explain how the grading system works.
 
@@ -46,21 +46,29 @@ Paragraph 2: Why it matters clinically. What consequence follows. Restate the ce
 
 Pattern: wrong action, clinical significance, consequence.
 
-## Grader Analysis structure
+Be specific (name the drug, lab, finding, and the consequence) and accessible: the 06_09 standard says the FA is read by non-medical engineers, so explain the mechanism, avoid unexplained jargon, and name the documents that verify the failure.
 
-Paragraph 1: State why the score is appropriate. State the requirement that was missed.
+FAILURE-ONLY, by pod-lead override. The 06_09 template lists "What the Agent Got Right" as an FA component, but Ahmad (Trigeminus, more recent than 06_09) told us to cut it and focus on what the model did wrong. Keep our FAs failure-only unless the pod lead says otherwise.
 
-Paragraph 2: Explain why the miss remains decisive. Explain why correct secondary work does not overcome it.
+## Grader Analysis structure (06_09 standard)
 
-Map to the grader's clinical content. Never reference Section A, Section B, or Section C. State the requirement itself.
+Four to six sentences total, kept as two short paragraphs so the local gate passes (it wants two; two short ones are still the single tight write-up the client asks for).
 
-## Voice
+Paragraph 1: what the grader got RIGHT, named specifically - which non-negotiable it caught, that it did not let the polished rest inflate the score - and whether the score is fair.
 
-Write like a physician reviewing a chart. Not a task designer, a pod lead, an AutoQC reviewer, or an AI explaining reasoning.
+Paragraph 2: where it fell short, labeled as a MISS (the grader never identified a failure) or a MIS-SCORE (it identified the failure but the number is off), stated concretely. Then a recommended edit in the "add X to the failure modes" form, not a vague concern.
 
-The reader should think "a physician reviewed this note," not "someone explained how the evaluation worked."
+Describe the grader-guideline content by its words; never name Section A, B, or C. Quote the rubric language when it matters.
 
-Focus on: missed follow up, missed findings, unsafe recommendations, unsupported conclusions, incorrect assessment, patient safety implications.
+## Voice (the FA and the GA differ)
+
+The FA and the GA review different objects, so they sit in different registers. Do not force them into the same voice.
+
+FA voice: a physician reviewing a chart. Specific clinical reasoning, named drugs, labs, and findings, with the consequence stated. The 06_09 standard adds that the FA is read by non-medical engineers too, so write it so a general internist or a technically informed non-physician can follow: explain the mechanism, avoid unexplained jargon. Specific and accessible, not terse shorthand meant only for another attending.
+
+GA voice: a reviewer auditing the grader, not the patient. Its subject is the scoring, so its natural vocabulary is the grader, the score, the band, what the grader caught and missed, and the failure mode to add. That is the correct register, not a lapse; forcing the GA into bedside prose reads wrong, and the 06_09 appendix examples are written exactly this way. Clinical voice is the FA's job, not the GA's.
+
+What both share (the Alexander discipline): short, direct sentences; no AI transitions (Furthermore, Moreover, Notably); no narrating tool calls or the grading plumbing; name the clinical anchors specifically. verify_voice enforces the no-AI-transitions and no-scaffolding part on both.
 
 ## Avoid
 
