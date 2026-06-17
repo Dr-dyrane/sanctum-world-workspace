@@ -2,7 +2,7 @@
 
 Updated 2026-06-17, reconciled to the live Studio board screenshot from Alexander. Lane names from reference/approved-workflows-and-guidance-2026-06-13.md.
 
-State: six OV slots are accounted for. OV01, OV02, OV03, and OV04 are Ready for Delivery. OV05 is retired. OV06 v2 FLOORED (de-telegraphed re-pilot job 577effae: mean 0.39, bimodal, 7/10 sub-0.70); it is the world's fifth confirmed floor (OV01, OV02, OV03, OV04, OV06) and banks pending golden self-score plus FA/GA. Three lanes are in use: Medication Reconciliation, Medical Transcription and Clinical Documentation Completion, and Referral Intake, Triage, and Scheduling Coordination. Target is eight shippable tasks; the next live task after OV06 should use a distinct open lane if possible.
+State (2026-06-17): six confirmed floors. OV01, OV02, OV04 Ready for Delivery; OV03 floored (FA/GA done); OV06 floored (FA/GA final, banking); OV07 floored (off-text image on Claims Denial, FA/GA done). OV05 retired. TARGET RAISED (Dyrane 2026-06-17) to 8 to 10 shippable tasks across 6 to 7 distinct workflows: a workflow may carry 2 or more tasks, so reusing a strong lane to hit the count is acceptable, and Coding/DRG and CDI Query are back in play as candidate lanes. Four lanes in use; OV08 = Utilization Review Concurrent Stay Documentation (in progress, 5th lane).
 
 ## Held (live Studio state)
 
