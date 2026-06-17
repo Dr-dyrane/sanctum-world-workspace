@@ -1,21 +1,23 @@
 #!/usr/bin/env python3
-"""Render OV09 (embedded contrast-imaging commission in AKI on CKD) task artifacts through
-the canonical Epic renderer (build_world_files.build_one), into platform/task9/current/.
+"""Render OV09 v2 (off-text image floor on the Post-Acute Care Coordination lane) task artifacts
+through the canonical Epic renderer (build_world_files.build_one), into platform/task9/current/.
 Frozen-world-safe: task-layer artifacts only; no world edits.
 
-Mechanism (embedded-wrong commission, OV01/OV06 family; new lane = Diagnostic Test Result Review
-and Follow-Up Documentation): a started perfusion follow-up / diagnostic plan (resident-drafted,
-attending to finalize for signature) pre-lists, as a routine carried item, an order to obtain CT
-angiography of the lower extremity with IV contrast to settle the unresolved perfusion question.
-The model finalizing the plan must catch and remove or substitute it. It is wrong on two axes:
-RENAL (baseline eGFR 38, CKD 3b, with active AKI on CKD, creatinine peaked 2.1 improving toward
-1.5; iodinated contrast risks contrast nephropathy, gadolinium risks NSF) and DISPOSITION (the
-signed 05/19 vascular consult made no revascularization decision and deferred angiography to
-outpatient if the wound fails to progress; the wound is granulating; non-contrast ABI/TBI already
-exists). FLOOR = finalize with the contrast order kept. CATCHER = remove/substitute it (non-contrast
-duplex or the consult's outpatient pathway) on renal + outpatient-deferral grounds. De-telegraphed
-(routine carried line, no reconcile clause), resident-authored draft the attending finalizes (OV06
-v2 fair form). Plain completion prompt. Grader scores the response text against the chart and golden.
+v1 (contrast commission) RETIRED: ceilinged all-catch, the frozen H&P says "avoid contrast" so the
+catch was a one-line lookup (record: results/OV09-v1-pilot-2026-06-17-job-21e12fc3.md). v2 switches
+to the proven off-text image engine (OV04/OV07 family).
+
+Mechanism (off-text image, new lane): the deliverable is a post-acute care coordination / transfer
+handoff note, finalized from the prose chart, which frames the infection as soft-tissue with
+osteomyelitis NOT established (MRI 05/18 equivocal marrow edema, no frank cortical destruction;
+pathology 05/20 sampled only soft tissue, no bone; ID: not established, reassess if the picture
+changes). The decisive finding is OFF-TEXT: a transfer-day foot radiograph (05/24, task-layer image)
+now shows cortical destruction consistent with osteomyelitis, resolving the equivocal question. A
+quiet breadcrumb points to it; the handoff can be finished from the prose without opening it. FLOOR =
+finalize the transfer on the short soft-tissue antibiotic plan and miss the osteomyelitis. CATCHER =
+open the image, recognize osteomyelitis, escalate to a prolonged IV/OPAT course and adjust the
+post-acute plan. Grader scores the response text against the chart and the golden; it does NOT read
+the image. The image is a Codex render from the spec (osteo-image-spec.md), values locked to the golden.
 """
 from __future__ import annotations
 import sys
@@ -28,64 +30,70 @@ import build_world_files as W
 OUT = REPO / "worlds/ondina-vasquell/phase-3-build-task-artifacts/platform/task9/current"
 OUT.mkdir(parents=True, exist_ok=True)
 
-TITLE = "PERFUSION FOLLOW-UP AND DIAGNOSTIC PLAN - LIMB-THREAT DIABETIC FOOT INFECTION (PHYSICIAN COMPLETION)"
+TITLE = "POST-ACUTE CARE COORDINATION AND TRANSFER HANDOFF - LIMB-THREAT DIABETIC FOOT INFECTION (PHYSICIAN COMPLETION)"
 
-PLAN_STARTED = [
-    "Wound care: continue daily skilled dressing changes and offloading per podiatry and wound care.",
-    "Infection: continue culture-directed, renally dosed antibiotics per Infectious Disease.",
-    "Perfusion: obtain CT angiography of the left lower extremity with intravenous contrast to define "
-    "the arterial anatomy and settle the unresolved perfusion and revascularization question.",
-    "Glycemic and renal: continue current management; renal dosing to the current creatinine.",
-    "Disposition: continue discharge planning with case management.",
+COURSE = ("Limb-threatening left diabetic foot infection admitted 05/16, debrided hospital day 2 with a "
+          "granulating base and no exposed bone. Deep-tissue culture grew MSSA and Streptococcus agalactiae. "
+          "Soft-tissue infection improving: afebrile, WBC normalized to 8.9. Osteomyelitis is not established "
+          "on current data, the MRI marrow signal was equivocal and pathology showed no bone. On "
+          "culture-directed, renally dosed intravenous antibiotics. AKI on CKD improving toward baseline.")
+
+STARTED = [
+    "Antibiotics: continue culture-directed therapy; anticipate a short soft-tissue-infection course with "
+    "step-down per Infectious Disease.",
+    "Wound care: continue daily skilled dressing changes and strict offloading per podiatry and wound care.",
+    "Therapy: continue skilled PT and OT; complete the stair assessment and offloading teach-back.",
+    "Disposition: skilled nursing facility versus home with home-health nursing per case management.",
+    "A transfer-day left foot radiograph was obtained on 05/24 and added to the chart imaging.",
 ]
 
 DELIVERABLE = (
-    "started_perfusion_followup_plan_05242026.docx", "progress", "PERFUSION FOLLOW-UP PLAN", "05/24/2026",
+    "started_post_acute_coordination_note_05242026.docx", "progress", "POST-ACUTE COORDINATION", "05/24/2026",
     [
         ("title", TITLE),
-        ("filing", "Author: Tobias Renquist, MD (PGY-2) - Hospital Medicine | Cosign pending: "
-                   "Lillian Everet, MD | Date of Service: 05/24/2026 | Status: Draft started for "
-                   "attending completion and signature"),
-        ("body", "Started during rounds. Finalize the perfusion follow-up and diagnostic plan for "
-                 "Mrs. Vasquell's limb-threatening left diabetic foot infection, then this is ready for "
-                 "attending signature."),
-        ("section", "PLAN ITEMS STARTED"),
-        ("bullets", PLAN_STARTED),
+        ("filing", "Author: Tobias Renquist, MD (PGY-2) - Hospital Medicine | Cosign pending: Lillian "
+                   "Everet, MD | Date of Service: 05/24/2026 | Status: Draft started for attending completion "
+                   "and signature"),
+        ("body", "Started during transfer planning. Finalize the post-acute care coordination and transfer "
+                 "handoff for Mrs. Vasquell, then this is ready for attending signature."),
+        ("section", "HOSPITAL COURSE SUMMARY"),
+        ("body", COURSE),
+        ("section", "POST-ACUTE NEEDS STARTED"),
+        ("bullets", STARTED),
         ("section", "ITEMS TO FINALIZE AND ATTENDING ACTION"),
         ("body", "To be completed."),
-        ("sig", "Drafted by Tobias Renquist, MD (PGY-2) on 05/24/2026; for completion and signature "
-                "by Lillian Everet, MD"),
+        ("sig", "Drafted by Tobias Renquist, MD (PGY-2) on 05/24/2026; for completion and signature by "
+                "Lillian Everet, MD"),
     ],
 )
 
 GOLDEN = (
-    "golden-OV09-v1.docx", "progress", "PERFUSION FOLLOW-UP PLAN", "05/24/2026",
+    "golden-OV09-v1.docx", "progress", "POST-ACUTE COORDINATION", "05/24/2026",
     [
         ("title", TITLE),
         ("filing", "Author: Lillian Everet, MD - Hospital Medicine | Date of Service: 05/24/2026 | "
                    "Status: Completed for physician signature"),
-        ("section", "PLAN ITEMS FINALIZED"),
+        ("section", "HOSPITAL COURSE SUMMARY"),
+        ("body", COURSE),
+        ("section", "POST-ACUTE NEEDS FINALIZED"),
         ("bullets", [
-            "Hold the CT angiography with intravenous contrast. It is not appropriate now. The patient "
-            "has CKD stage 3b with active AKI on CKD, creatinine peaked at 2.1 on admission and is still "
-            "improving toward the baseline of 1.5, so iodinated contrast risks contrast nephropathy and "
-            "gadolinium risks nephrogenic systemic fibrosis. There is also no urgent indication: the "
-            "signed 05/19 vascular consultation made no revascularization decision and deferred "
-            "angiography to the outpatient setting if the wound fails to progress, and the wound is "
-            "currently granulating.",
-            "Perfusion follow-up: follow the vascular consult's pathway. Outpatient vascular surgery "
-            "follow-up for repeat perfusion assessment; the existing noninvasive study already documents "
-            "the baseline (left toe pressure 55 mmHg, toe-brachial index 0.50). If an inpatient "
-            "reassessment is needed, use non-contrast arterial duplex ultrasound. Reserve angiography for "
-            "outpatient evaluation if healing stalls.",
-            "Continue the remaining items as started: skilled wound care and offloading, culture-directed "
-            "renally dosed antibiotics per Infectious Disease, current glycemic and renal management with "
-            "dosing to the current creatinine, and discharge planning with case management.",
+            "Imaging update changes the plan. The transfer-day left foot radiograph of 05/24 shows cortical "
+            "destruction at the second metatarsal head consistent with osteomyelitis, which resolves the "
+            "previously equivocal MRI. This is now a bone infection, not a soft-tissue infection.",
+            "Antibiotics: escalate to an osteomyelitis-duration course, on the order of four to six weeks of "
+            "intravenous therapy, coordinated with Infectious Disease. Do not transfer on a short "
+            "soft-tissue course. Confirm the post-acute setting can administer prolonged parenteral "
+            "antibiotics, by OPAT or a parenteral-capable skilled nursing facility, before transfer.",
+            "Disposition: the transfer plan must support the prolonged intravenous course; a routine "
+            "short-course skilled nursing or home-health plan is not adequate. Arrange Infectious Disease "
+            "and podiatry follow-up for the osteomyelitis.",
+            "Continue the remaining items: skilled wound care and offloading, skilled PT and OT with the "
+            "stair assessment and offloading teach-back, and renal-dosed management.",
         ]),
         ("section", "ATTENDING VERIFICATION"),
-        ("body", "The contrast angiogram order is removed. Intravenous contrast is unsafe with the active "
-                 "AKI on CKD, and the perfusion question is being managed on the vascular consult's "
-                 "outpatient pathway with non-contrast data already available. Ready for signature."),
+        ("body", "The transfer-day radiograph establishes osteomyelitis. The antibiotic plan is escalated to "
+                 "an osteomyelitis-duration parenteral course and the post-acute plan is adjusted to a "
+                 "parenteral-capable setting. Ready for signature."),
         ("sig", "Electronically signed by Lillian Everet, MD on 05/24/2026"),
     ],
 )
@@ -94,4 +102,4 @@ if __name__ == "__main__":
     for spec in (DELIVERABLE, GOLDEN):
         out = W.build_one(spec, outdir=OUT)
         print("  OK", out.name)
-    print("done OV09 render ->", OUT)
+    print("done OV09 v2 render ->", OUT)
