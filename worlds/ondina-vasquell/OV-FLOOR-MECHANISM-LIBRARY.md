@@ -120,3 +120,26 @@ WHAT DOES NOT FLOOR (KM runbook, two red-teams): a buried fact alone (a strong m
 RULE for OV07+: in any error-hunting genre, the discriminator must NOT look like an error, must require integration to reject, and must sit in the safe/routine cluster AWAY from obvious errors; prefer an external adversarial authority for fairness. The KM difficulty gate is mean at or below ~70 with several sub-70 runs and a low tail (~0.15-0.30) plus at least one trajectory with a real FA-able failure; "a score below 70 is useful evidence but not required." Source: worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md.
 
 UPDATE (2026-06-16, OV06 v2 FLOOR job 577effae): "a chart-coached wrong rec does not floor" is too strong. It holds only when the model SCRUTINIZES (a review genre, or a telegraphed "reconcile before finalizing"). Under a COMPLETION frame with NO telegraph, the model does NOT re-derive from the chart; it rubber-stamps the pre-filled wrong item. OV06 v1 (telegraphed) ceilinged 0.90-0.95; OV06 v2 (de-telegraphed, referral pre-closed as a routine started item) FLOORED 0.39 mean, bimodal, on the SAME chart-coached perfusion content with the SAME golden/grader. LESSON: the telegraph, not the chart-coaching, was the blocker. Never telegraph; let the completion frame suppress scrutiny. This is the OV01/OV03 engine (completion frame + un-forced high-stakes step) reaching the conflicting-authority family.
+
+================================================================
+## 8. PRODUCT READINESS LESSON FROM KM AND OV06 V2 (2026-06-17)
+================================================================
+OV06 v2 answers the mood question. The task did not fail because the world was weak. It floored once the prompt stopped telling the model where to look. Same chart. Same golden. Same grader. Only the telegraph was removed.
+
+A perfect score is a failed difficulty task. KM was never supposed to produce perfect notes. KM proved the product by making a strong model fail on real physician judgment. Every clean task that merely asked the model to write the note correctly ceilinged. The score dropped only when the task forced one wrong move on an axis the model had no reflex to police.
+
+Read every 0.90 OV pilot the same way. The model passed a test that was too easy. The world did not fail. OV05 and OV06 v1 were both evidence of this, and OV06 v2 is the correction.
+
+The model's strengths are now mapped. It reads the chart, builds a source-traceable fact base, polices provenance, source hierarchy, held medications, and fabrication, declines a wrong external premise when asked to review it, runs rule-governed analysis cleanly, and finds buried text. Those strengths ceiling tasks.
+
+The exploitable weakness is narrower. It does not reliably re-verify content it inherited under a completion frame. It treats a pre-filled claim as vetted. It has authority bias toward structured documents. It can treat unverified data as objective. It misses off-text or image findings when the workflow does not force opening them. It rubber-stamps an embedded wrong element when the prompt asks it to finish, not audit.
+
+Fair hard tests use six rules:
+1. Put the catch on a cold axis the model is not already hunting.
+2. Force one wrong move so caution is not free.
+3. Make the chart contradict the wrong move when inspected. Do not rely on chart silence alone.
+4. Put the wrong move in a draft the model finalizes, or in an external document that is wrong by genre.
+5. Do not telegraph. Do not add a reconcile clause.
+6. Prove fairness with a catcher or a clean bimodal split.
+
+OV06 paid for the telegraph lesson twice. v1 told the model to reconcile, and ceilinged. v2 let the wrong closure sit as routine started content, and floored. Keep that rule close.

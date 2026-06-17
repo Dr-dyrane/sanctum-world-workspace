@@ -2,7 +2,7 @@
 
 > Output-voice standard: `docs/alexander-voice-dna.md` (enforced by `tools/verify/verify_voice.py`) governs all output text - prompts, goldens, graders, FA/GA, PLs, reviews.
 
-**Last updated: 2026-06-15 (Ondina active board: OV01 in review, OV02 Path A in review, OV04 v3 bankable after the CPAP report image pilot, OV05 active build with task-level home-medication-bottle photo staged as `home_medication_bottles_05242026.jpg`; old planning and pilot churn archived under `worlds/ondina-vasquell/archive/2026-06-15-cleanup/`; other non-OV task packets remain parked under `worlds/ondina-vasquell/phase-3-build-task-artifacts/platform/_paused/2026-06-15-non-ov01-suite/`; reviewer-facing grader wording scrubbed so canonical graders say the clinical verification rule, not implementation language. Prior KM status remains KM01-KM06 delivered and KM07-KM10 Ready for Delivery.)**
+**Last updated: 2026-06-17 (Ondina active board: OV01, OV02, OV03, and OV04 Ready for Delivery; OV05 retired and archived; OV06 v2 still in Task Writing as `Task 1rqn2959`, with de-telegraphed pilot job `577effae` floored at mean 0.39 and seven of ten runs below 0.70. OV07 TS7 is in build prep under `worlds/ondina-vasquell/phase-3-build-task-artifacts/platform/task7/current/`, with the task-level transfer-day wound image staged as `wound_photo_05242026.jpg`. Old planning and pilot churn remain archived under `worlds/ondina-vasquell/archive/2026-06-15-cleanup/`; other non-live task packets remain parked under `worlds/ondina-vasquell/phase-3-build-task-artifacts/platform/_paused/2026-06-15-non-ov01-suite/`. Prior KM status remains KM01-KM06 delivered and KM07-KM10 Ready for Delivery.)**
 
 Single source of truth for repo structure, placement rules, and navigation.
 Read this + `AGENTS.md` at the start of any new session before touching files.
@@ -70,22 +70,24 @@ sanctum-world-workspace/
                                  OV-WORLD-STATUS.md. Studio world is
                                  Healthcare_297_Vasquell
                                  (`world_ab51f33a691648d08f5ca681375fe2a1`).
-                                 Current operating focus: OV01 review, OV02 review,
-                                 OV04 review, and OV05 build. OV01 Larry-return FA/GA is ready
-                                 for job `aa949641`, Attempt 6, run `28a61869`, score
-                                 0.50. Active packets:
+                                 Current operating focus: bank OV06 v2 after its
+                                 de-telegraphed floor (job 577effae), then choose
+                                 the next fresh lane.
+                                 OV01, OV02, OV03, and OV04 are Ready for Delivery.
+                                 OV05 is retired; its last packet was moved to
+                                 phase-3-build-task-artifacts/platform/task5/archive/
+                                 2026-06-16-retired/. Active packets:
                                  phase-3-build-task-artifacts/platform/task1/current/,
                                  phase-3-build-task-artifacts/platform/task2/current/,
+                                 phase-3-build-task-artifacts/platform/task3/current/,
                                  phase-3-build-task-artifacts/platform/task4/current/,
-                                 and phase-3-build-task-artifacts/platform/task5/current/.
-                                 OV04 v3 includes task-level image
-                                 `cpap_compliance_report_05242026.jpg`; it is not a
-                                 world file. OV05 includes task-level image
-                                 `home_medication_bottles_05242026.jpg`; it is not a
-                                 world file. Active result + FA/GA:
-                                 phase-4-pilot-review-submit/OV01-results-and-prereg-reconciliation.md
-                                 and phase-4-pilot-review-submit/fa-ga/FA-GA-OV01-current.md.
-                                 Other non-OV task packets are parked under
+                                 phase-3-build-task-artifacts/platform/task6/current/,
+                                 and phase-3-build-task-artifacts/platform/task7/current/.
+                                 OV02, OV04, retired OV05, and OV07 use task-level images;
+                                 none of those images are world files. Active result,
+                                 FA/GA, and PL backups live under
+                                 phase-4-pilot-review-submit/.
+                                 Other non-live task packets are parked under
                                  phase-3-build-task-artifacts/platform/_paused/
                                  2026-06-15-non-ov01-suite/. OV02 coding history is
                                  retired under platform/_retired/. Planning history and
