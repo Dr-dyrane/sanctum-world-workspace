@@ -17,8 +17,11 @@ no grader-section names, no bullets, each field about 1000 characters.
 
 ## Failure Analysis
 
-<Paragraph 1: lead with what the model did right, named specifically, then the one
-central failure, named specifically and tied to the golden.>
+<Paragraph 1: open by naming the bound run by number ("On trajectory N..." or "On
+Attempt N..."), never a numberless opener. Lead with what the model did right,
+named specifically, then the one central failure as a TURN (the model had the
+contradicting evidence and failed anyway), tied to the golden. One connected
+argument about this ONE trajectory, not a list of "It did X. It did Y." sentences.>
 
 <Paragraph 2: why it matters clinically (mechanism + consequence), any secondary
 errors briefly, name the central failure pattern, and tie it to the distribution

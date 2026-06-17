@@ -47,12 +47,15 @@ failure is sending it home unchanged"). That sentence governs both write-ups.
 
 ## Run-binding (which trajectory the FA describes)
 
-The FA is bound to one run, named in the Status line. The house rule is the
-second-lowest distinct score, not the absolute lowest (DO-NOT-REPEAT #20), so a
-single anomalous floor does not drive the analysis. The KM7-10 examples bound to
-the single lowest run; if you follow that, say so. Bind to a run you have a full
-transcript for, and if it is not the strict second-lowest distinct, note that in
-the Status line and offer to rebind.
+The FA is bound to ONE run, named in the Status line, and it describes that one
+trajectory only. The CURRENT rule is the second-lowest DISTINCT score, not the
+absolute lowest (OV / DO-NOT-REPEAT #20), so a single anomalous floor does not
+drive the analysis. This changed from the older KM practice, which bound to the
+single lowest run, so the KM7-10 examples you copy use the lowest while the current
+OV standard is second-lowest distinct. Read the grading transcript for the bound run
+before you write (the KM01 rule: do not infer the failure from the output alone).
+Bind to a run you have a full transcript for, and if it is not the strict
+second-lowest distinct, say so in the Status line and offer to rebind.
 
 ## The house format (KM7-10)
 
@@ -70,26 +73,50 @@ not a hard 1000. Aim at or just under 1000 so the gate stays clean; matching KM 
 
 ### Failure Analysis: the two moves
 
-Paragraph one leads with what the model did right, named specifically (it
-reconciled the home medications, framed the infection correctly, kept the held
-agents in view), then states the one central failure, named specifically and tied
-to the golden. Leading with the competent baseline is the KM7-10 shape; it is not
+Always open paragraph one by naming the bound run by its number: "On trajectory
+10..." or "On Attempt 10...", matching the FA subject in the Status line. Never use
+a numberless opener like "On this trajectory." The FA describes that ONE trajectory
+only. Never compare runs, never write "the two lowest," and keep all cross-run
+material out of the FA except the single justifying line at the end of paragraph
+two (Abi house rule: one trajectory, not all).
+
+Lead with what the model did right on that run, named specifically (it reconciled
+the home medications, framed the infection correctly, kept the held agents in
+view), then state the one central failure, named specifically and tied to the
+golden. Leading with the competent baseline is the KM7-10 shape; it is not
 both-sides crediting (see the gate phrases below).
 
-Paragraph two says why it matters clinically (the mechanism and the consequence,
-in Alexander voice), lists any secondary errors briefly, names the central failure
-pattern, and ties it to the distribution. The line that justifies the low average
-across all trajectories lives here: "this carry-forward is the central failure
-pattern, and it drives the low band across all ten runs, 0.05 to 0.20." That one
-sentence is what a reviewer means when they ask the FA to justify the low average.
+Write it as one connected argument, not a list of facts. The failure should land as
+a TURN: the strongest FA shows the model had what it needed and failed anyway. When
+the run read the contradicting evidence and still made the miss, say exactly that
+("it even read the perfusion study correctly, noting the reduced toe pressures, then
+closed the referral anyway"). Avoid a staccato string of separate "It did X. It did
+Y. The failure is Z." sentences; each should follow from the last. Read it aloud: if
+it sounds like a list rather than an attending talking through the chart, connect it.
+
+Paragraph two says why it matters clinically (the mechanism and the consequence, in
+Alexander voice), in short declaratives that build to the consequence. List any
+secondary errors on that run briefly, name the central failure pattern, and tie it
+to the distribution in one sentence: "this carry-forward is the central failure
+pattern, and it drives the low band across all ten runs, 0.05 to 0.20." That single
+line is the only place the FA leaves the one trajectory, and it is what a reviewer
+means by "justify the low average." On a bimodal task, tie the pattern to the
+floored band, not all ten runs.
 
 ### Grader Analysis: the two moves
 
 Paragraph one says the score is appropriate for an otherwise usable deliverable
-that misses the central item, then walks how the grader got there: it compared the
-output to the golden, found the failure, applied the cap rule (the rubric says the
-central miss caps the score low however complete the rest is), and gave appropriate
-credit for the accurate parts and flagged the secondary errors.
+that misses the central item, then walks how the grader got there: it set the
+output against the golden, found the failure, applied the cap rule (the rubric says
+the central miss caps the score low however complete the rest is), gave appropriate
+credit for the accurate parts, and flagged the secondary errors.
+
+The GA EVALUATES what the grader did; it does not ADVISE the grader what it should
+have done. This is AO's KM10 correction: a GA that mostly tells the grader how to
+score is wrong even with the right verdict. Judge the grader's actual number against
+this run's output and the golden, say whether it identified the central failure,
+applied the cap, credited the right parts, and calibrated the score, and do not
+narrate the grader's exploration ("the grader went into the chart").
 
 Paragraph two confirms the calibration holds across the run set (every trajectory
 that made the miss landed in the same band, so the grader is keying on the safety
@@ -127,6 +154,13 @@ it did. This is enforced repo-wide by `tools/verify/verify_voice.py` (see
 - Two paragraphs each, no bullets, each field about 1000 characters.
 - No em dashes or en dashes anywhere. Use plain hyphens and commas. Avoid the
   banned glyphs the gate lists.
+- One trajectory only (Abi house rule). The FA and GA describe a single run. Never
+  compare runs or write "the two lowest"; the only cross-run sentences are the
+  across-trajectory line in FA paragraph two and the calibration line in GA
+  paragraph two.
+- Never narrate the grader's exploration ("the grader went into the chart") and
+  never use first-person "what I missed." Describe the model's behavior and the
+  grader's scoring, not the eval mechanics (Abi/AO house rules).
 
 ## Run the gates before you hand it back
 
