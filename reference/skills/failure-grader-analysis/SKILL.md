@@ -34,7 +34,7 @@ Never write FA/GA from memory, task design notes, preregistration, or score alon
 
 Failure Analysis answers: "What was wrong with the response?"
 
-Grader Analysis answers: "Did the grader score this correctly?" - what the grader got right, what it missed or mis-scored, and the concrete edit the grader guidelines need. It is not a defense of the number.
+Grader Analysis answers: "Did the grader score this correctly?" It is a grader audit: what the grader evaluated correctly, what it missed or mis-scored, why the score still holds, and the concrete edit the grader guidelines need. It is not a defense of the number, and it is not a second failure analysis.
 
 Do not explain how the task was built. Do not explain how the grading system works.
 
@@ -52,11 +52,14 @@ FAILURE-ONLY, by pod-lead override. The 06_09 template lists "What the Agent Got
 
 ## Grader Analysis structure (06_09 standard)
 
-Four to six sentences total, kept as two short paragraphs so the local gate passes (it wants two; two short ones are still the single tight write-up the client asks for).
+This is a grader AUDIT, not a second failure analysis. Ahmad's correction (2026-06-17): do not re-narrate the model's failure here. Audit the grader against four questions:
 
-Paragraph 1: what the grader got RIGHT, named specifically - which non-negotiable it caught, that it did not let the polished rest inflate the score - and whether the score is fair.
+1. What did the grader evaluate correctly? (the central failure it caught, and that it was not distracted by the otherwise complete rest of the response)
+2. What did the grader miss?
+3. Why is the score still reasonable?
+4. How could the grader improve? (a concrete "add X to the failure modes" edit, not a vague concern)
 
-Paragraph 2: where it fell short, labeled as a MISS (the grader never identified a failure) or a MIS-SCORE (it identified the failure but the number is off), stated concretely. Then a recommended edit in the "add X to the failure modes" form, not a vague concern.
+About six to eight sentences across two short paragraphs (two so the local gate passes). Paragraph 1 carries (1) and (3): what the grader got correct and that the score holds. Paragraph 2 carries (2) and (4): the miss and the concrete fix. Label a shortfall as a MISS (the grader never identified the failure) or a MIS-SCORE (it identified the failure but the number is off). When the miss did not change the score (the failure already capped the run), say so, then give the case where the same gap would matter.
 
 Describe the grader-guideline content by its words; never name Section A, B, or C. Quote the rubric language when it matters.
 
