@@ -77,33 +77,33 @@ Always open paragraph one by naming the bound run by its number: "On trajectory
 10..." or "On Attempt 10...", matching the FA subject in the Status line. Never use
 a numberless opener like "On this trajectory." The FA describes that ONE trajectory
 only. Never compare runs, never write "the two lowest," and keep all cross-run
-material out of the FA except the single justifying line at the end of paragraph
-two (Abi house rule: one trajectory, not all).
+material out of the FA entirely; the run distribution and calibration belong in the
+GA, not the FA (Abi house rule: one trajectory, not all).
 
-Lead with what the model did right on that run, named specifically (it reconciled
-the home medications, framed the infection correctly, kept the held agents in
-view), then state the one central failure, named specifically and tied to the
-golden. Leading with the competent baseline is the KM7-10 shape; it is not
-both-sides crediting (see the gate phrases below).
+FAILURE-ONLY (pod lead Ahmad G, 2026-06-16, Trigeminus). Do NOT open with a
+competent-baseline paragraph. The earlier KM7-10 shape led with what the model did
+well; Ahmad cut that for the OV world: "we don't need this at all, it should just
+focus on what the model doesn't do well." Lead paragraph one with the failure
+itself, named specifically and tied to the golden, and give the model no credit
+paragraph anywhere.
 
-Write it as one connected argument, not a list of facts. The failure should land as
-a TURN: the strongest FA shows the model had what it needed and failed anyway. When
-the run read the contradicting evidence and still made the miss, say exactly that
-("it even read the perfusion study correctly, noting the reduced toe pressures, then
-closed the referral anyway"). Avoid a staccato string of separate "It did X. It did
-Y. The failure is Z." sentences; each should follow from the last. Read it aloud: if
-it sounds like a list rather than an attending talking through the chart, connect it.
+You may still show that the model had the evidence and failed anyway, but FRAME it
+as failure, not praise: "it closed the referral even after reading the perfusion
+study and quoting the toe pressures" is failure-framing; "it read the study well" is
+the credit paragraph Ahmad rejects. Write it as one connected argument, not a
+staccato list of "It did X. It did Y." sentences; it should sound like an attending
+naming what went wrong, not a balanced review.
 
-Paragraph two says why it matters clinically (the mechanism and the consequence, in
-Alexander voice), in short declaratives that build to the consequence. List any
-secondary errors on that run briefly, name the central failure pattern, and close by
-placing THIS run in the low band, KM7 style: "deferring to the addendum is the
-central failure, and it is what puts this run in the low band." Do NOT enumerate the
-run distribution in the FA by default ("drives the floored runs from 0.08 to 0.50"
-is cross-run language that belongs in the GA, not the FA). The run set lives in the
-GA calibration line. Add an explicit distribution sentence ("it drives the low band
-across all ten runs, 0.05 to 0.20") ONLY when a reviewer asks the FA to justify the
-low average, and even then keep it to that one sentence.
+Paragraph two carries the clinical detail Ahmad asks for: spell out the mechanism and
+the consequences in several sentences, in Alexander voice, building to the harm. Name
+what the wrong move does to the patient (a limb-threat foot discharged with no
+vascular follow-up, the path to a nonhealing ulcer and amputation) and add any
+secondary failures (it folded the closure into the attending verification as a
+confirmed item). End by naming the central failure. Err toward MORE detail when the
+pod lead asks for it, even past about 1000 characters; the gate length note is
+non-blocking. Keep the run distribution OUT of the FA ("drives the floored runs from
+0.08 to 0.50" is cross-run language that belongs in the GA); the FA stays on one
+trajectory.
 
 ### Grader Analysis: the two moves
 
@@ -119,6 +119,16 @@ score is wrong even with the right verdict. Judge the grader's actual number aga
 this run's output and the golden, say whether it identified the central failure,
 applied the cap, credited the right parts, and calibrated the score, and do not
 narrate the grader's exploration ("the grader went into the chart").
+
+Explain WHY the low score holds despite the competent parts (pod lead Ahmad G,
+2026-06-16). A reviewer will ask why a run that did several things well still scores
+0.1; answer it head on. The rubric is safety-weighted, not additive: a critical miss
+caps the score because it makes the deliverable unsafe to sign, so the competent
+parts do not lift it off the floor. Use the catchers as proof: the runs that got the
+central call right scored high (0.82 to 0.88) on the same competent work, so the
+whole distance between the floor and the catchers is the weight of that one decision.
+A higher score would imply the deliverable is usable when it is not. Say this; do not
+leave the low number unexplained.
 
 Paragraph two confirms the calibration holds across the run set (every trajectory
 that made the miss landed in the same band, so the grader is keying on the safety

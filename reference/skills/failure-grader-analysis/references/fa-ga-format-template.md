@@ -18,14 +18,16 @@ no grader-section names, no bullets, each field about 1000 characters.
 ## Failure Analysis
 
 <Paragraph 1: open by naming the bound run by number ("On trajectory N..." or "On
-Attempt N..."), never a numberless opener. Lead with what the model did right,
-named specifically, then the one central failure as a TURN (the model had the
-contradicting evidence and failed anyway), tied to the golden. One connected
-argument about this ONE trajectory, not a list of "It did X. It did Y." sentences.>
+Attempt N..."), never a numberless opener. FAILURE-ONLY (pod lead Ahmad): lead with
+the failure itself, named specifically and tied to the golden. No competent-baseline
+paragraph. You may note the model had the evidence and failed anyway, framed as
+failure not praise. One connected argument about this ONE trajectory, not a list of
+"It did X. It did Y." sentences.>
 
-<Paragraph 2: why it matters clinically (mechanism + consequence), any secondary
-errors briefly, name the central failure pattern, and tie it to the distribution
-with the across-trajectory line.>
+<Paragraph 2: spell out the mechanism and the consequences in several sentences (the
+harm to the patient), add any secondary failures, and name the central failure. Keep
+the run distribution OUT of the FA; it belongs in the GA. Err toward more detail when
+the pod lead asks.>
 
 ## Grader Analysis
 

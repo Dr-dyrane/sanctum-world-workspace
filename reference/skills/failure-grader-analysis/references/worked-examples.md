@@ -4,7 +4,9 @@ Two examples of the same shape on different tasks. Read these when a draft feels
 off-format or you are unsure how much detail to carry. Both are failure-only, two
 paragraphs each, about 1000 characters, in Alexander voice.
 
-## Example 1: OV03 discharge insulin (current standard, gate-clean)
+## Example 1: OV03 discharge insulin (gate-clean; FA shape PARTLY SUPERSEDED)
+
+Note (2026-06-16): this example's FA opens with a competent-baseline paragraph ("the model completed the discharge medication plan competently. It reconciled..."). Pod lead Ahmad cut that for the OV world: the FA is now FAILURE-ONLY (see SKILL.md). Keep this example's GA shape and clinical voice; in the FA, drop the baseline paragraph, lead with the failure, and carry more detail on the consequences.
 
 The lever: the started draft pre-fills the inpatient insulin in the home list as
 continue; the golden discontinues the mealtime sliding scale for home. The model
