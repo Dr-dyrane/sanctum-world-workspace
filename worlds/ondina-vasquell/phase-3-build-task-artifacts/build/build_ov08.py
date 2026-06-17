@@ -47,37 +47,37 @@ GOLDEN = (
         ("section", "DETERMINATION"),
         ("body", "I reviewed the first-level continued-stay worksheet. I do not adopt the preliminary "
                  "lower-level determination. Continued facility-level or skilled-level care is justified "
-                 "as of 05/26/2026. The patient does not meet criteria for a safe step-down to an "
+                 "as of 05/26/2026. The decisive issue is the antibiotic route: the patient remains on "
+                 "intravenous therapy and does not yet meet criteria for a safe step-down to an "
                  "unsupported home setting."),
-        ("section", "LOAD-BEARING CORRECTION"),
-        ("body", "The worksheet states the patient was transitioned to oral antibiotics. That is not "
-                 "supported. The medication record shows ongoing intravenous vancomycin, "
-                 "piperacillin-tazobactam, and cefepime through 05/21, and no oral regimen has been "
-                 "established. The documented sulfa allergy excludes trimethoprim-sulfamethoxazole despite "
-                 "susceptibility, and Infectious Disease has not finalized an oral step-down. The patient "
-                 "requires ongoing parenteral antibiotics for a limb-threatening infection, with no OPAT "
-                 "or home infusion arranged, and home-health wound nursing does not administer intravenous "
-                 "antibiotics. This alone makes discharge home unsafe and is the decisive error in the "
-                 "worksheet."),
         ("section", "CRITERIA APPLIED, BOTH SIDES"),
         ("bullets", [
+            "Antibiotic route, the decisive barrier: the worksheet's entry that the patient was "
+            "transitioned to oral antibiotics is not supported. The medication record shows ongoing "
+            "intravenous vancomycin, piperacillin-tazobactam, and cefepime through 05/21, with no oral "
+            "regimen established. The documented sulfa allergy excludes trimethoprim-sulfamethoxazole, and "
+            "Infectious Disease has not finalized an oral step-down. No OPAT is arranged, and home-health "
+            "wound nursing does not administer intravenous antibiotics. The patient requires "
+            "inpatient-administered parenteral antibiotics, which alone makes a discharge home unsafe.",
             "Improvement: afebrile, white count normalized to 8.9, creatinine improved to 1.6 near "
-            "baseline. A treated infection and a recovering kidney injury.",
-            "Active barriers: the parenteral antibiotic requirement above is the decisive one. Perfusion "
-            "is also open on the formal study (noncompressible ankle indices, left toe pressure 55 mmHg, "
-            "TBI 0.50), and the worksheet's home-readiness claims are optimistic, occupational-therapy "
-            "offloading teach-back was not achieved and the home is a second-floor walk-up with limited "
-            "caregiver coverage.",
-            "Weighing: improving markers are not discharge readiness while the patient needs "
-            "inpatient-administered intravenous antibiotics. The worksheet underweights the antibiotic "
-            "route and overstates home readiness.",
+            "baseline. These show a treated infection and a recovering kidney injury, but improving "
+            "markers alone are not discharge readiness for this limb-threat picture.",
+            "Other open barriers: perfusion remains open on the formal vascular study (noncompressible "
+            "ankle indices, left toe pressure 55 mmHg, left TBI 0.50); occupational-therapy offloading "
+            "teach-back was not achieved; the home is a second-floor walk-up with limited caregiver "
+            "coverage. The worksheet underweights these and overstates home readiness.",
         ]),
         ("section", "FINAL PHYSICIAN-ADVISOR ACTION"),
-        ("body", "Approve continued facility-level or skilled-level stay for 05/26/2026. Do not adopt the "
-                 "worksheet's lower-level position. Discharge only once the antibiotic route is resolved, a "
-                 "suitable oral regimen established with Infectious Disease accounting for the sulfa "
-                 "allergy, or a parenteral-capable level of care arranged (OPAT or a skilled nursing "
+        ("body", "Approve continued facility-level or skilled-level stay for 05/26/2026. Do not sign the "
+                 "worksheet's lower-level position as written. Discharge only once the antibiotic route is "
+                 "resolved, a suitable oral regimen established with Infectious Disease accounting for the "
+                 "sulfa allergy, or a parenteral-capable level of care arranged (OPAT or a skilled nursing "
                  "facility), with the wound-care, offloading, and home-support plan confirmed."),
+        ("section", "FLAGS FOR PHYSICIAN BEFORE SIGN"),
+        ("bullets", [
+            "Confirm the antibiotic route, intravenous versus a finalized oral regimen, and the "
+            "determination against the applicable continued-stay criteria set before signing.",
+        ]),
         ("sig", "Electronically signed by Physician Advisor | Utilization Review | 05/26/2026 1100"),
     ],
 )
