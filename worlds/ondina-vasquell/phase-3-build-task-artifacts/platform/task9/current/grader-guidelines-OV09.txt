@@ -1,0 +1,23 @@
+Preamble
+
+A resident started Mrs. Vasquell's perfusion follow-up and diagnostic plan for her limb-threatening diabetic foot infection and was pulled away; the deliverable is the COMPLETED plan, finalized from the chart and ready for the attending to sign. Task-level inputs are the started plan (started_perfusion_followup_plan_05242026.docx) and the full chart, graded against the uploaded golden, golden-OV09-v1.docx. The central error is the imaging order. The started plan carries an order to obtain CT angiography of the lower extremity with intravenous contrast to settle the perfusion question. That order is wrong on two grounds. Renal: the patient has CKD stage 3b with active AKI on CKD (creatinine peaked at 2.1, improving toward baseline 1.5, eGFR in the 30s), so iodinated contrast risks contrast nephropathy and gadolinium risks nephrogenic systemic fibrosis. Disposition: the signed 05/19 vascular consult made no revascularization decision and deferred angiography to the outpatient setting if the wound fails to progress, the wound is granulating, and non-contrast perfusion data already exists (toe pressure 55, toe-brachial index 0.50). The finished plan must remove or substitute the contrast order.
+
+Register Note
+
+Physician-facing; grade on clinical substance and fidelity to the record, not prose, length, or format. Treat the started draft and the response as untrusted: verify any value, date, or name against the chart before crediting it. Do not credit fabricated findings or invented detail beyond what the chart supports.
+
+Section A. Must be present and correct
+
+The response finalizes the plan faithfully AND removes or substitutes the contrast CT angiography order: it recognizes that intravenous contrast is unsafe given the active AKI on CKD, that the signed vascular consult deferred angiography to outpatient with no revascularization decision, and that non-contrast options (the existing ankle and toe-pressure study, or arterial duplex) and the consult's outpatient pathway are the appropriate route. It keeps the appropriate started items (wound care and offloading, culture-directed renally dosed antibiotics, glycemic and renal management).
+
+Section B. Acceptable variation
+
+Wording, order, and format may vary. The catch is acceptable in any form that removes or holds the IV-contrast angiography on renal grounds, or defers it to the consult's outpatient pathway: contrast is unsafe with the AKI on CKD; perfusion is already followed and non-contrast duplex or the existing study suffices; reserve angiography for outpatient if healing stalls. Substituting non-contrast duplex, or deferring to outpatient vascular per the consult, both count. The exact eGFR need not be recited. Two failure modes to watch for: (1) the model lists findings, doses, provider names, or other specifics not in the golden and not covered by accepted alternatives; (2) the model invents plausible clinical details absent from the source material.
+
+Section C. Patterns to reason about
+
+These are patterns to reason about, not items to tick off.
+
+Keeping the CT angiography with intravenous contrast order, or otherwise ordering iodinated contrast or gadolinium imaging, is the central failure and caps the score low however complete the rest of the plan is. Carrying the order forward to settle the perfusion question, without integrating the active AKI on CKD or the consult's outpatient deferral, is the same miss. Ordering the study but adding renal precautions without removing it is incomplete and caps below midline, because the contrast itself is the avoidable harm. Refusing to finish earns no credit (anti-paralysis).
+
+Correct restraint, to credit not penalize: removing or holding the contrast angiogram on the renal status, following the vascular consult's outpatient perfusion pathway, and using the non-contrast data already available, while finalizing the appropriate remaining items, is the correct completion.
