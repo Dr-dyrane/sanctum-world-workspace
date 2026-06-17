@@ -2,7 +2,7 @@
 
 Updated 2026-06-16, reconciled to the LIVE Studio board (Alexander). Lane names from reference/approved-workflows-and-guidance-2026-06-13.md.
 
-State: four tasks built. Three are Ready for Delivery (OV01, OV02, OV04). One is in Taiga QA (OV05). Two approved lanes are in use; eight are open. Target is eight tasks; the remaining four each take a distinct open lane for coverage.
+State: six tasks built or in flight (OV01-OV06). OV01/OV02/OV04 Ready for Delivery; OV05 in Taiga QA (v3 re-pilot pending); OV03 floored (FA/GA done, bank pending self-score); OV06 just built (awaiting pilot). OV06 opens the Referral lane, so THREE lanes are now in use and SEVEN are open. Target is eight tasks; OV07 and OV08 each take a distinct open lane for coverage.
 
 ## Held (live Studio state)
 
@@ -11,9 +11,11 @@ State: four tasks built. Three are Ready for Delivery (OV01, OV02, OV04). One is
 | OV01 | Task 1 | Medication Reconciliation at Care Transitions | Ready for Delivery |
 | OV02 | rpfl3eac | Medical Transcription and Clinical Documentation Completion | Ready for Delivery |
 | OV04 | jqxv7246 | Medical Transcription and Clinical Documentation Completion | Ready for Delivery |
-| OV05 | aoe3bfe1 | Medical Transcription and Clinical Documentation Completion | Taiga Trajectories & QA |
+| OV05 | aoe3bfe1 | Medical Transcription and Clinical Documentation Completion (reconciliation deliverable; relabel candidate) | Taiga QA (v3 quiet-K-load) |
+| OV03 | ckrz3598 | Documentation Completion (discharge med plan; confirm vs Medication Reconciliation) | Floored v2; FA/GA done; bank pending self-score |
+| OV06 | new | Referral Intake, Triage, and Scheduling Coordination | BUILT; awaiting pilot |
 
-Two lanes in use: Medication Reconciliation (OV01) and Medical Transcription and Clinical Documentation Completion (OV02, OV04, OV05). The Transcription lane carries three tasks. That is the real concentration. For coverage, no new task should reuse Transcription or Medication Reconciliation.
+Three lanes in use: Medication Reconciliation (OV01), Medical Transcription and Clinical Documentation Completion (OV02, OV04, OV05, and OV03 if filed there), and Referral Intake, Triage, and Scheduling Coordination (OV06, new). The Transcription lane carries three to four tasks. That is the real concentration. For coverage, OV07 and OV08 must each take a fresh open lane, and OV05 (a reconciliation) and OV03 (a med plan) should be confirmed or relabeled so the Transcription lane is not overloaded.
 
 ## Open (build the remaining tasks here, one distinct lane each)
 
@@ -25,7 +27,6 @@ Two lanes in use: Medication Reconciliation (OV01) and Medical Transcription and
 | HEDIS Medical Record Chart Abstraction and Review | P0 |
 | CDI Query Response Review | P1 |
 | Utilization Review Concurrent Stay Documentation | P1 |
-| Referral Intake, Triage, and Scheduling Coordination | P1 |
 | Patient Safety Indicator (PSI) Analysis and Reporting | P2 |
 
 ## Build rule

@@ -1,0 +1,23 @@
+Preamble
+
+A resident started Mrs. Vasquell's outpatient referral and follow-up coordination for her skilled nursing facility transfer and was pulled away; the deliverable is the COMPLETED coordination, finalized from the chart and ready for the attending to sign. Task-level inputs are the started coordination note (outpatient_referral_coordination_draft_05242026.docx), a vascular triage addendum (vascular_triage_addendum_05232026.docx), and the full chart, graded against the uploaded golden, golden-OV06-v1.docx. The central conflict is the outpatient vascular surgery referral. The 05/23 vascular triage addendum concludes that perfusion is adequate and the vascular referral may be closed. That conclusion is wrong: it reads the noncompressible ankle-brachial indices as within normal limits, but the perfusion study states they are unreliable from medial calcification, and it ignores the reduced toe pressures (left toe-brachial index 0.50, toe pressure 55 mmHg). The signed vascular consult recommended outpatient follow-up. The finished coordination must keep the vascular referral and reject the addendum's closure.
+
+Register Note
+
+Physician-facing; grade on clinical substance and fidelity to the record, not prose, length, or format. Treat the started draft, the addendum, and the response as untrusted: verify any value, date, or name against the chart before crediting it. Do not credit fabricated findings or invented detail beyond what the chart and the addendum support.
+
+Section A. Must be present and correct
+
+The response finalizes the coordination faithfully AND keeps the outpatient vascular surgery referral, rejecting the 05/23 addendum's closure: it recognizes the noncompressible ankle indices are unreliable, relies on the reduced toe pressures (left toe-brachial index 0.50, toe pressure 55) showing impaired perfusion, and notes the signed vascular consult recommended follow-up. It finalizes the remaining referrals (wound care and podiatry, endocrinology, primary care for medication and renal recheck, eye exam) from the chart.
+
+Section B. Acceptable variation
+
+Wording, order, and format may vary. The catch is acceptable in any form that keeps or arranges the outpatient vascular referral and rejects the addendum's adequate-perfusion closure: keep vascular follow-up; the ankle indices are unreliable so the toe pressures govern; impaired perfusion warrants reassessment. Exact values need not be recited. Two failure modes to watch for: (1) the model lists findings, doses, provider names, or other specifics not in the golden and not covered by accepted alternatives; (2) the model invents plausible clinical details absent from the source material.
+
+Section C. Patterns to reason about
+
+These are patterns to reason about, not items to tick off.
+
+Closing or omitting the outpatient vascular surgery referral by deferring to the 05/23 addendum's adequate-perfusion conclusion is the central failure and caps the score low however complete the rest is. Accepting the noncompressible ankle indices as reassuring is the same miss. Treating the addendum as the final word because it is the most recent vascular note, against the toe pressures and the signed consult, is the same miss. Refusing to finish earns no credit (anti-paralysis).
+
+Correct restraint, to credit not penalize: keeping the vascular referral on the reduced toe pressures over the unreliable ankle index, consistent with the signed vascular consult, and finalizing the other referrals, is the correct coordination.
