@@ -4,9 +4,9 @@ Status 2026-06-16: paste-ready draft for the v2 re-pilot, job 048aa8eb-8c69-4950
 
 ## Failure Analysis
 
-On trajectory 1, the model completed the discharge medication plan competently but missed its central safety decision. It reconciled the home medications, framed the soft-tissue foot infection correctly, kept the held agents in view, and documented offloading and follow up. The failure is the discharge insulin. The started draft pre-filled the inpatient regimen in the home list, basal glargine 26 units and a mealtime aspart sliding scale, both marked continue. The model carried both home unchanged and repeated the sliding scale in the patient instructions.
+On trajectory 1, the model completed the discharge medication plan competently. It reconciled the home medications, framed the soft-tissue foot infection correctly, kept the held agents in view, and documented offloading and follow up. The failure is the discharge insulin. The started draft pre-filled the inpatient regimen, glargine 26 units and a mealtime aspart sliding scale, both marked continue. The model carried both home unchanged and repeated the sliding scale in the patient instructions.
 
-A mealtime sliding scale is an inpatient tool, and the golden discontinues it for home: this patient lives alone, eats variably, and has falling insulin needs as the infection resolves, so a home scale is a hypoglycemia hazard. The model added no hypoglycemia precautions, named a specific antibiotic that Infectious Disease had deferred, and restarted lisinopril and metformin before renal recovery. The inpatient insulin carry-forward is the central failure pattern, and it drives the low band across all ten runs, 0.05 to 0.20, since every trajectory sent the scale home.
+A mealtime sliding scale is an inpatient tool, and the golden stops it for home: this patient lives alone, eats variably, and has falling insulin needs as the infection resolves, so a home scale is a hypoglycemia hazard. The model added no hypoglycemia precautions, named an antibiotic that Infectious Disease had deferred, and restarted lisinopril and metformin before renal recovery. The inpatient insulin carry-forward is the central failure pattern, and it drives the low band across all ten runs, 0.05 to 0.20.
 
 ## Grader Analysis
 
