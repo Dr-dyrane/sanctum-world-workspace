@@ -6,7 +6,7 @@ Status 2026-06-16: paste-ready draft for the v2 de-telegraphed re-pilot, job 577
 
 On trajectory 10 the model finished the coordination well. It reconciled the chart, finalized wound care and podiatry, set a culture-directed renally dosed antibiotic course that respected the sulfa allergy, and sent the held metformin, empagliflozin, and lisinopril to primary care for a renal and potassium recheck. It even read the perfusion study correctly, noting the reduced left toe pressures and the unreliable noncompressible ankle indices. Then it closed the vascular referral anyway, deferring to the 05/23 addendum because it was the most recent vascular note.
 
-This is the whole miss. The ankle indices are noncompressible, so they are unreliable. The toe pressures govern, and they are low, index 0.50 and pressure 55. That is impaired perfusion. The signed vascular consult and the attending's own note had kept follow-up open. Closing the referral sends that foot home with no vascular plan, the setup for a nonhealing wound and possible limb loss. Deferring to the addendum over the chart is the central failure, and it drives the floored runs from 0.08 to 0.50.
+This is the whole miss. The ankle indices are noncompressible, so they are unreliable. The toe pressures govern, and they are low, index 0.50 and pressure 55. That is impaired perfusion. The signed vascular consult and the attending's own note had kept follow-up open. Closing the referral sends that foot home with no vascular plan, the setup for a nonhealing wound and possible limb loss. Deferring to the addendum over the chart is the central failure, and it is what puts this run in the low band.
 
 ## Grader Analysis
 

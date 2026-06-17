@@ -96,12 +96,14 @@ it sounds like a list rather than an attending talking through the chart, connec
 
 Paragraph two says why it matters clinically (the mechanism and the consequence, in
 Alexander voice), in short declaratives that build to the consequence. List any
-secondary errors on that run briefly, name the central failure pattern, and tie it
-to the distribution in one sentence: "this carry-forward is the central failure
-pattern, and it drives the low band across all ten runs, 0.05 to 0.20." That single
-line is the only place the FA leaves the one trajectory, and it is what a reviewer
-means by "justify the low average." On a bimodal task, tie the pattern to the
-floored band, not all ten runs.
+secondary errors on that run briefly, name the central failure pattern, and close by
+placing THIS run in the low band, KM7 style: "deferring to the addendum is the
+central failure, and it is what puts this run in the low band." Do NOT enumerate the
+run distribution in the FA by default ("drives the floored runs from 0.08 to 0.50"
+is cross-run language that belongs in the GA, not the FA). The run set lives in the
+GA calibration line. Add an explicit distribution sentence ("it drives the low band
+across all ten runs, 0.05 to 0.20") ONLY when a reviewer asks the FA to justify the
+low average, and even then keep it to that one sentence.
 
 ### Grader Analysis: the two moves
 
