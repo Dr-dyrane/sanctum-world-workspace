@@ -14,7 +14,7 @@ State: six OV slots are accounted for. OV01, OV02, OV03, and OV04 are Ready for 
 | OV04 | jqxv7246 | Medical Transcription and Clinical Documentation Completion | Ready for Delivery |
 | OV05 | none live | Medical Transcription and Clinical Documentation Completion (retired packet) | Retired 2026-06-16 after repeated ceilings |
 | OV06 | Task 1rqn2959 | Referral Intake, Triage, and Scheduling Coordination | FLOORED v2 (de-telegraphed; mean 0.39, bimodal, 7/10 sub-0.70, job 577effae); FA/GA final per Ahmad; banking |
-| OV07 | (pending Studio upload) | Claims Denial Analysis and Appeal Preparation | BUILT v1 (off-text image, 2.0 cm wound undermining); Codex image rendered + QA-passed; awaiting pilot |
+| OV07 | (pending Studio upload) | Claims Denial Analysis and Appeal Preparation | FLOORED v1 (off-text image; bimodal mean 0.51, 6 floors 0.20-0.30 + 4 catchers 0.85-0.95, job a33db3d0); FA/GA pending a floor-run transcript |
 
 Four lanes in use: Medication Reconciliation (OV01), Medical Transcription and Clinical Documentation Completion (OV02, OV03, OV04, retired OV05 history), Referral Intake, Triage, and Scheduling Coordination (OV06), and Claims Denial Analysis and Appeal Preparation (OV07). The Transcription lane carries the concentration. For coverage, OV08 should take another distinct fresh open lane.
 
