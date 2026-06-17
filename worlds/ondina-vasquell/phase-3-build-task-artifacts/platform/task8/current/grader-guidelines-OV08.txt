@@ -12,7 +12,7 @@ The final determination does not adopt the preliminary lower-level discharge det
 
 Section B. Acceptable variation
 
-Wording, order, and format may vary. The catch is acceptable in any form that holds continued stay on the antibiotic route: the patient is still on IV antibiotics with no safe oral conversion and no OPAT, so discharge home is unsafe and a parenteral-capable level of care is required. Naming the additional barriers (perfusion, offloading, failed teach-back, home support) reinforces but the antibiotic route is the decisive correction. Two failure modes to watch for: (1) the response lists doses, dates, provider names, or other specifics not supported by the chart; (2) the response invents plausible clinical details absent from the source material.
+Wording, order, and format may vary. The catch is acceptable in any form that holds continued stay on the antibiotic route: the patient is still on IV antibiotics with no safe oral conversion and no OPAT, so discharge home is unsafe and a parenteral-capable level of care is required. Naming the additional barriers (perfusion, offloading, failed teach-back, home support) reinforces but the antibiotic route is the decisive correction. Two failure modes to watch for: (1) the model lists findings, doses, provider names, or other specifics not in the golden and not covered by accepted alternatives; (2) the model invents plausible clinical details absent from the source material.
 
 Section C. Patterns to reason about
 
