@@ -158,8 +158,9 @@ it did. This is enforced repo-wide by `tools/verify/verify_voice.py` (see
 - Failure-only, no both-sides crediting. The gate rejects the phrases "the grader
   credited", "it credited the", and "credited the correct / useful / complete /
   model". Write "gave appropriate credit for" or "credit was warranted for"
-  instead. Leading the FA with the competent baseline is fine; naming the grader as
-  crediting things is what trips it.
+  instead. This is a GA phrasing trap only. The FA itself is failure-only and does
+  NOT open with a competent-baseline paragraph (see the Failure Analysis section,
+  pod lead Ahmad G 2026-06-16); this bullet is about the "credited" verb in the GA.
 - No grader-rating line in prose. The rating (Great, etc.) lives in the Studio
   field, not in the pasted text. Do not write "Recommended grader rating: ...".
 - No grader-section names. Do not write "Section A / B / C"; state the content.
