@@ -152,3 +152,20 @@ qlmanage -t -s 1600 -o /tmp/docx-preview "$F"
 ```
 
 If a run fails: do NOT tweak blindly. Re-run recon on the failing output, diff against target, fix the specific numbers, re-gate, re-render. The loop converges in <=3 iterations when driven by measurements; it never converges when driven by taste.
+
+## 5. Off-text report images: render through the renderer, never hand-draw (added 2026-06-17, OV09)
+
+An off-text image whose finding can plausibly live in a REPORT or printout (a radiology report, a device printout, a labs page, an outside study, a downtime note) is AUTHORED through the canonical renderer and RENDERED to an image. Do NOT hand-draw it with PIL and do NOT assume it needs a generative model. The rendered image then carries the exact house chrome (masthead, blue bar, patient storyboard, PATIENT/ENCOUNTER block, footer) and is indistinguishable from the other charts, because it is the same template.
+
+Method (`worlds/ondina-vasquell/phase-3-build-task-artifacts/build/render_ov09_image.py` is the reference):
+
+1. Author the report content as a normal house-style note through `build_one` (`epic.py`): title, filing line (Author with department, so the masthead dept parses), sections, signature. It inherits the masthead, storyboard, encounter block, and footer for free, and passes GUARD plus the metadata scrub.
+2. `soffice --headless --convert-to pdf --outdir <tmp> report.docx`, then `pdftoppm -png -r 150 -f 1 -l 1 report.pdf pg`. Crop trailing whitespace with PIL `ImageOps.invert(im.convert("L")).getbbox()` and save as JPG.
+3. Mount ONLY the image. The off-text floor needs an image the model may not open; a text docx is always read and ceilings (see `OV-FLOOR-MECHANISM-LIBRARY.md`). The report docx is a render source, not a mounted artifact.
+4. QA: OCR the JPG (`tesseract`) to confirm the finding is legible and the banned-glyph count is 0; view page 1.
+
+`soffice` runs in the build sandbox (LibreOffice present); it is dependency-broken on the Mac, so render in the sandbox, not locally.
+
+Reserve a generative render (Codex / Nanobanana, from an image spec like OV07's `wound-photo-image-spec.md`) ONLY for genuine PHOTOGRAPHS or true imaging-modality films (a wound photo, a pill bottle, a raw radiograph) that a document renderer cannot produce. PIL and epic+soffice render document layouts, never photographs.
+
+FAIRNESS CAVEAT (the "why is this report an image" test): a report-as-image is only realistic when the genre is naturally an image. A device printout (OV04 CPAP report) or a SCANNED OUTSIDE study is naturally an image; an INTERNAL dictated report (radiology, labs) is normally text in the EHR, so rendering it as an image is borderline and a reviewer can flag it. If the off-text finding is an internal report, either frame it as a scanned outside study (different letterhead, scan look) to justify the image format, or use the actual film/photo (a generative render). Making the image match the internal house style exactly makes the "why an image" question sharper, not softer.
