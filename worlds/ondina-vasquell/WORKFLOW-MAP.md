@@ -2,7 +2,7 @@
 
 Updated 2026-06-17, reconciled to the live Studio board screenshot from Alexander. Lane names from reference/approved-workflows-and-guidance-2026-06-13.md.
 
-State (2026-06-17): six confirmed floors. OV01, OV02, OV04 Ready for Delivery; OV03 floored (FA/GA done); OV06 floored (FA/GA final, banking); OV07 floored (off-text image on Claims Denial, FA/GA done). OV05 retired. TARGET RAISED (Dyrane 2026-06-17) to 8 to 10 shippable tasks across 6 to 7 distinct workflows: a workflow may carry 2 or more tasks, so reusing a strong lane to hit the count is acceptable, and Coding/DRG and CDI Query are back in play as candidate lanes. Four lanes in use; OV08 = Utilization Review Concurrent Stay Documentation (in progress, 5th lane).
+State (2026-06-17): seven confirmed floors. OV01, OV02, OV04 Ready for Delivery; OV03 floored (FA/GA done); OV06 floored (FA/GA final, banking); OV07 floored (off-text image on Claims Denial, FA/GA done); OV08 floored (bimodal, mean 0.63, Utilization Review Concurrent Stay, FA/GA done, 5th lane). OV05 retired. TARGET RAISED (Dyrane 2026-06-17) to 8 to 10 shippable tasks across 6 to 7 distinct workflows: a workflow may carry 2 or more tasks, so reusing a strong lane to hit the count is acceptable, and Coding/DRG and CDI Query are back in play as candidate lanes. Six lanes in use; OV09 = Post-Acute Care Coordination Documentation (v3 embedded-wrong carry-forward on offloading and disposition, pilot-ready, 6th lane; contrast v1 and off-text osteo image v2 retired). Dyrane is testing OV09 by trajectory directly, no cold bench.
 
 ## Held (live Studio state)
 
