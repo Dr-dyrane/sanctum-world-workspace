@@ -38,6 +38,8 @@ The GA assesses HOW WELL THE GRADER SCORED THE WORK. It is not a second justific
 The grader RATING (Great / Good / Mediocre / Poor) is entered directly in the Studio field, never written anywhere in the FA/GA file. The gate rejects a rating line even in the Status line, so carry the rating to the writer separately, not in the paste.
 
 ## Writer's score (project guidance, 2026-06-18)
+Verbatim project guidance: "New Failure Analysis guidance. Please submit a score with your failure analysis about how you think the model did in your task. This score should be your own score, not the trajectory score, and will be compared against the agentic grader."
+
 Submit your OWN score of how the model did, alongside the FA. It is the writer's independent assessment of the model's task performance on the 0.0 to 1.0 scale, NOT the trajectory score (the agentic grader's number), and it is compared against the agentic grader to calibrate human-versus-grader agreement. Score the run on the task's own logic: the central failure caps it low, give partial credit for the accurate items, no credit for refusing to finish. Judge it independently; do not copy the trajectory number. It usually lands near the grader when the grader is calibrated; when it diverges, the GA's calibration move should explain why. Placement: the writer's score goes in the Studio score field AND in the Status-line metadata (for example, Writer score 0.15 vs grader 0.12). This is distinct from the banned grader-rating line and IS allowed in the Status line; keep it out of the FA and GA prose. Bind it to the same run the FA analyzes.
 
 ## Guardrails (gate-enforced; presubmit_task_gate.py + verify_voice.py)
