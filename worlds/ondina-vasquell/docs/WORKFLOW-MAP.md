@@ -10,14 +10,14 @@ For live task status and lifecycle, docs/WORLD-STATUS.md governs. This file maps
 | OV02 | rpfl3eac | Medical Transcription and Clinical Documentation Completion | FLOOR ~0.10 | Delivered |
 | OV03 | ckrz3598 | Medical Transcription and Clinical Documentation Completion | FLOOR 0.05-0.20 | Delivered |
 | OV04 | jqxv7246 | Medical Transcription and Clinical Documentation Completion | FLOOR bimodal | Delivered |
-| OV05 | 37cd058a | Referral Intake, Triage, and Scheduling Coordination | running Taiga | Running Taiga trajectories |
+| OV05 | retired | Referral Intake, Triage, and Scheduling Coordination | CEILING all-catch 0.88-0.92 | Retired 2026-06-18 (cannot floor; headline axis + frozen consult) |
 | OV06 | 1rqn2959 | Referral Intake, Triage, and Scheduling Coordination | FLOOR 0.39 | Delivered |
 | OV07 | ah6e821b | Claims Denial Analysis and Appeal Preparation | FLOOR 0.51 | In first human review (Larry) |
 | OV08 | l6jo01e4 | Utilization Review Concurrent Stay Documentation | FLOOR 0.63 | Awaiting first human review |
 | OV09 | ebv61af9 | Post-Acute Care Coordination Documentation | FLOOR ~0.62 | Awaiting first human review |
-| OV10 | ilsjf671 | Discharge Summary | running Taiga | Running Taiga trajectories |
+| OV10 | ilsjf671 | Discharge Summary | FLOOR ~0.15 uniform | Awaiting first human review; FA/GA submitted |
 
-Seven distinct lanes. Two carry more than one task: Referral Intake/Triage (OV06 + OV05) and Medical Transcription (OV02, OV03, OV04). A workflow may carry 2 or more tasks, so reusing a strong lane to hit the count is acceptable (Dyrane 2026-06-17 target of 8 to 10 tasks across 6 to 7 lanes, met).
+Seven distinct lanes. Medical Transcription carries three (OV02, OV03, OV04); the other six lanes carry one each. OV05 (Referral) retired 2026-06-18 after an all-catch ceiling; the Referral lane keeps OV06. A workflow may carry 2 or more tasks (Dyrane 2026-06-17 target of 8 to 10 tasks across 6 to 7 lanes, met).
 
 ## Open lanes (candidates if more tasks are wanted)
 

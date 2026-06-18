@@ -54,6 +54,8 @@ Two short paragraphs (so the local gate passes). The structure:
 
 The grader RATING (Great / Good / Mediocre / Poor) is entered in the Studio field. Do NOT write it anywhere in the file, not even the Status line; the gate rejects a rating line. Tell the writer the rating separately.
 
+WRITER'S SCORE (project guidance, 2026-06-18). Separately from the grader rating, submit your OWN score of how the model did on the task, alongside the FA: your independent 0.0 to 1.0 assessment of the model's performance, NOT the trajectory score, compared against the agentic grader. Score on the task's own logic (central failure caps low, partial credit for accurate items, no credit for refusing). It usually lands near the grader; when it diverges, say why in the GA's calibration move. The writer's score goes in the Studio score field and in the Status-line metadata (e.g., Writer score 0.15 vs grader 0.12); it is distinct from the grader-rating line and IS allowed in the Status line, but keep it out of the FA and GA prose.
+
 ## Voice (FA and GA differ)
 - FA voice: a physician reviewing a chart. Named drugs, labs, findings, the consequence stated. Specific and accessible.
 - GA voice: a reviewer auditing the grader. Its subject is the scoring, so the grader, the score, what it caught and missed, and the failure mode to add are the right vocabulary, not bedside prose.

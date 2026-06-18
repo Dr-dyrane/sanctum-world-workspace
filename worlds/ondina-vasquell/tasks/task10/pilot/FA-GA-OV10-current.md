@@ -1,6 +1,6 @@
 # OV10 FA/GA - Discharge Summary, bone-health over-closure
 
-Status: Job a611e19f. Ten runs 0.12 to 0.18 (0.12, 0.15 several times, 0.18), mean about 0.15, uniformly low with no high outlier. FA bound to the run saved verbatim at runs/OV10-attempt4-job-a611e19f.md: Attempt 4, run 697ff6f6, trajectory traj_2e0e568, score 0.12. The second-lowest distinct is 0.15; the spread is uniform, so this run is representative, not the anomalous low that the second-lowest-distinct rule guards against.
+Status: Job a611e19f. Ten runs 0.12 to 0.18 (0.12, 0.15 several times, 0.18), mean about 0.15, uniformly low with no high outlier. FA bound to the run saved verbatim at runs/OV10-attempt4-job-a611e19f.md: Attempt 4, run 697ff6f6, trajectory traj_2e0e568, score 0.12. The second-lowest distinct is 0.15; the spread is uniform, so this run is representative, not the anomalous low that the second-lowest-distinct rule guards against. Writer score: 0.15 (my own assessment of the model's performance, against the grader's 0.12; both bottom-band, the small gap is because the rest of the summary is fully faithful, but the missed central catch holds it low).
 
 ## Failure Analysis
 
