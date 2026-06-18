@@ -16,7 +16,7 @@ For live task status and lifecycle, docs/WORLD-STATUS.md governs. This file maps
 | OV08 | l6jo01e4 | Utilization Review Concurrent Stay Documentation | FLOOR 0.63 | Awaiting first human review |
 | OV09 | ebv61af9 | Post-Acute Care Coordination Documentation | FLOOR ~0.62 | Awaiting first human review |
 | OV10 | ilsjf671 | Discharge Summary | FLOOR ~0.15 uniform | Awaiting first human review; FA/GA submitted |
-| OV11 | (at upload) | care-transition / doc-completion (verify live sheet) | built, pilot-ready | A3 immunization over-closure; task5-slot replacement |
+| OV11 | a74188e2 | care-transition / doc-completion (verify live sheet) | FLOOR ~0.12 uniform | A3 immunization over-closure; FA/GA drafted, awaiting review |
 
 Seven distinct lanes. Medical Transcription carries three (OV02, OV03, OV04); the other six lanes carry one each. OV05 (Referral) retired 2026-06-18 after an all-catch ceiling; the Referral lane keeps OV06. A workflow may carry 2 or more tasks (Dyrane 2026-06-17 target of 8 to 10 tasks across 6 to 7 lanes, met).
 
