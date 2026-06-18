@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Render the OV09 v2 off-text image through the canonical Epic renderer (build_one) + LibreOffice,
+"""REFERENCE IMPLEMENTATION. OV09 moved off the image engine in v3 (now an embedded-wrong
+carry-forward, no image), so this script no longer feeds a live task. It is kept as the canonical
+reference for rendering off-text REPORT images in-repo, cited by docs/docx-generation-method.md
+section 5, AGENTS.md rule 1, and OV-FLOOR-MECHANISM-LIBRARY.md.
+
+Render an off-text report image through the canonical Epic renderer (build_one) + LibreOffice,
 so the radiograph report image carries the EXACT world house chrome (masthead, blue bar, patient
 storyboard, PATIENT/ENCOUNTER block), indistinguishable from the other charts. Build a DIAGNOSTIC
 IMAGING REPORT docx, convert to PDF then PNG, crop to content, save as
