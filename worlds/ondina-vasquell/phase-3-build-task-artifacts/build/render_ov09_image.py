@@ -1,55 +1,59 @@
 #!/usr/bin/env python3
-"""Render the OV09 v2 off-text image IN-REPO (no Codex / Nanobanara needed), as a transfer-day
-foot radiograph report in the world's study-as-image style (matches abi_tbi_tracing JPG). The
-finding is locked to golden-OV09-v1.docx: cortical destruction at the second metatarsal head,
-new versus the equivocal 05/18 MRI, consistent with osteomyelitis. No banned glyphs; no real ids.
-Output: platform/task9/current/foot_radiograph_05242026.jpg
+"""Render the OV09 v2 off-text image through the canonical Epic renderer (build_one) + LibreOffice,
+so the radiograph report image carries the EXACT world house chrome (masthead, blue bar, patient
+storyboard, PATIENT/ENCOUNTER block), indistinguishable from the other charts. Build a DIAGNOSTIC
+IMAGING REPORT docx, convert to PDF then PNG, crop to content, save as
+platform/task9/current/foot_radiograph_05242026.jpg. Finding locked to golden-OV09-v1.docx.
+No Codex. Needs soffice + pdftoppm (present in the build sandbox; broken on the Mac).
 """
+from __future__ import annotations
+import sys, subprocess, tempfile
 from pathlib import Path
-from PIL import Image, ImageDraw, ImageFont
+REPO = Path(__file__).resolve().parents[4]
+sys.path.insert(0, str(REPO)); sys.path.insert(0, str(Path(__file__).resolve().parent))
+import warnings; warnings.filterwarnings("ignore")
+import build_world_files as W
+from PIL import Image, ImageOps
 
-OUT = Path(__file__).resolve().parents[1] / "platform/task9/current/foot_radiograph_05242026.jpg"
-W, H = 1000, 820
-img = Image.new("RGB", (W, H), "white"); d = ImageDraw.Draw(img)
-REG = "/usr/share/fonts/truetype/crosextra/Carlito-Regular.ttf"
-BLD = "/usr/share/fonts/truetype/crosextra/Carlito-Bold.ttf"
-def f(sz, bold=False): return ImageFont.truetype(BLD if bold else REG, sz)
-y = 46
-def line(t, sz=22, bold=False, gap=8, color=(20, 20, 20), x=60):
-    global y; d.text((x, y), t, font=f(sz, bold), fill=color); y += sz + gap
-def rule(c=(150, 150, 150)):
-    global y; y += 6; d.line((60, y, W - 60, y), fill=c, width=2); y += 14
+T9 = REPO / "worlds/ondina-vasquell/phase-3-build-task-artifacts/platform/task9/current"
+OUT = T9 / "foot_radiograph_05242026.jpg"
+tmp = Path(tempfile.mkdtemp())
 
-line("HARBOR CREST REGIONAL MEDICAL CENTER", 26, True, 4, (15, 40, 90))
-line("DIAGNOSTIC RADIOLOGY", 20, True, 4, (15, 40, 90))
-line("Confidential", 16, False, 6, (120, 120, 120))
-rule()
-line("DIAGNOSTIC IMAGING REPORT", 22, True, 10)
-for t in ["Patient: Ondina Vasquell, 68 y        MRN: OV-3358104",
-          "DOB: 03/14/1958        Sex: Female        CSN: CSN-308852140",
-          "Study Date: 05/24/2026 0915        Status: Final        Accession HCR-XR-26-0731",
-          "Ordering: Hospital Medicine, transfer evaluation",
-          "Author: Radiology"]:
-    line(t, 19, False, 6, (40, 40, 40))
-rule()
-line("EXAMINATION", 19, True, 6); line("Left foot, two views (AP and oblique).", 20, False, 12)
-line("CLINICAL HISTORY", 19, True, 6)
-line("Diabetic foot infection, plantar forefoot ulcer. Evaluate for osteomyelitis prior to transfer.", 20, False, 4)
-line("Prior MRI 05/18/2026 reported marrow edema, equivocal for osteomyelitis.", 20, False, 12)
-line("FINDINGS", 19, True, 6)
-for t in ["There is new cortical destruction at the second metatarsal head with a moth-eaten",
-          "lucent appearance and loss of the normal cortical margin, not present on the prior study.",
-          "Adjacent plantar soft-tissue swelling is noted. The remaining metatarsals, the tarsals,",
-          "and the phalanges are intact, with no additional erosion or fracture. No radiopaque",
-          "foreign body. Postsurgical changes from recent debridement are seen in the soft tissues."]:
-    line(t, 20, False, 4)
-y += 8
-line("IMPRESSION", 19, True, 6, (15, 40, 90))
-for t in ["Cortical destruction at the second metatarsal head, new compared with the prior MRI,",
-          "consistent with osteomyelitis.",
-          "Recommend correlation with infectious disease for an osteomyelitis treatment course."]:
-    line(t, 21, True, 4)
-y += 18; rule()
-line("Electronically signed by Radiology on 05/24/2026 1005", 17, False, 4, (90, 90, 90))
-img.save(str(OUT), "JPEG", quality=88)
-print("rendered", OUT, img.size)
+REPORT = (
+    "foot_radiograph_report_05242026.docx", "progress", "DIAGNOSTIC IMAGING REPORT", "05/24/2026",
+    [
+        ("title", "LEFT FOOT RADIOGRAPH - DIABETIC FOOT INFECTION"),
+        ("filing", "Author: Radiology - Diagnostic Imaging | Date of Service: 05/24/2026 0915 | "
+                   "Status: Final | Accession HCR-XR-26-0731"),
+        ("section", "EXAMINATION"),
+        ("body", "Left foot, two views (AP and oblique)."),
+        ("section", "CLINICAL HISTORY"),
+        ("body", "Diabetic foot infection, plantar forefoot ulcer. Evaluate for osteomyelitis prior to "
+                 "transfer. Prior MRI 05/18/2026 reported marrow edema, equivocal for osteomyelitis."),
+        ("section", "FINDINGS"),
+        ("body", "There is new cortical destruction at the second metatarsal head with a moth-eaten lucent "
+                 "appearance and loss of the normal cortical margin, not present on the prior study. Adjacent "
+                 "plantar soft-tissue swelling is noted. The remaining metatarsals, tarsals, and phalanges are "
+                 "intact, with no additional erosion or fracture. No radiopaque foreign body. Postsurgical "
+                 "changes from recent debridement are present in the soft tissues."),
+        ("section", "IMPRESSION"),
+        ("body", "Cortical destruction at the second metatarsal head, new compared with the prior MRI, "
+                 "consistent with osteomyelitis. Recommend correlation with Infectious Disease for an "
+                 "osteomyelitis treatment course."),
+        ("sig", "Electronically signed by Radiology on 05/24/2026 1005"),
+    ],
+)
+
+docx = W.build_one(REPORT, outdir=tmp)
+subprocess.run(["soffice", "--headless", "--convert-to", "pdf", "--outdir", str(tmp), str(docx)],
+               check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=120)
+pdf = tmp / (docx.stem + ".pdf")
+subprocess.run(["pdftoppm", "-png", "-r", "150", "-f", "1", "-l", "1", str(pdf), str(tmp / "pg")],
+               check=True, timeout=60)
+im = Image.open(tmp / "pg-1.png").convert("RGB")
+# crop trailing whitespace: bbox of non-white content on an inverted grayscale copy
+bbox = ImageOps.invert(im.convert("L")).getbbox()
+if bbox:
+    im = im.crop((0, 0, im.width, min(im.height, bbox[3] + 55)))
+im.save(str(OUT), "JPEG", quality=88)
+print("rendered via epic+soffice ->", OUT, im.size)
