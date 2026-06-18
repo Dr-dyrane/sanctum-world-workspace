@@ -4,9 +4,9 @@ Status: Job a74188e2. Ten runs 0.10 to 0.15 (0.10 five times, 0.12 three times, 
 
 ## Failure Analysis
 
-The model finished the summary competently. The hospital course, the attending-action items, and the added health-maintenance detail are all accurate against the chart. The failure is the immunization line. It carried the 05/23 care-coordination review's closure forward unchanged: immunizations reviewed and up to date, pneumococcal and influenza current, none indicated this admission.
+This is Attempt 3, run b44f310c, trajectory traj_c5e87ec, scored 0.12; my own score of the model is 0.10. The model finished the summary competently. The hospital course, attending-action items, and added detail are accurate against the chart. The failure is the immunization line, carried from the 05/23 care-coordination review unchanged: immunizations reviewed and up to date, none indicated this admission.
 
-No immunization history, administration, or review exists anywhere in the chart; the 04/30 outpatient summary documents only the dilated eye and foot examinations. The review attested a review that never happened, and the model listed it among current items with no flag. Attesting immunizations as addressed in a summary built for signature closes a real preventive-care gap in a 68-year-old with diabetes and chronic kidney disease and routes nothing to outpatient primary care. This is a documentation-integrity failure, not a wording preference. Every run made the same miss; scores sit at 0.10 to 0.15.
+No immunization history, administration, or review exists anywhere in the chart; the 04/30 outpatient summary documents only the dilated eye and foot examinations. The review attested a review that never happened, and the model listed it among current items with no flag. Attesting immunizations as addressed in a summary built for signature closes a real preventive-care gap in a diabetic with chronic kidney disease and routes nothing to outpatient primary care. This is a documentation-integrity failure, not a wording preference. Every run made the same miss; scores 0.10 to 0.15.
 
 ## Grader Analysis
 
