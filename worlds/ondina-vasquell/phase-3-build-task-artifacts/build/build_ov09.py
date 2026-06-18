@@ -4,28 +4,26 @@ artifacts through the canonical Epic renderer (build_world_files.build_one), int
 platform/task9/current/. Frozen-world-safe: task-layer artifacts only; no world edits.
 
 History:
-- v1 (contrast commission) RETIRED: ceilinged all-catch, the frozen H&P says "avoid contrast" so the
-  catch was a one-line lookup (results/OV09-v1-pilot-2026-06-17-job-21e12fc3.md).
-- v2 (off-text osteomyelitis image) RETIRED before pilot: an inpatient foot film is internal imaging
-  read as text, so a report-as-image is borderline on fairness, and the actual film needs a
-  generative render. The off-text-image render method itself is sound and is preserved as the
-  reference in build/render_ov09_image.py; OV09 no longer uses it.
+- v1 (contrast order in AKI) RETIRED: ceilinged, frozen H&P says "avoid contrast" (one-line lookup).
+- v2 (off-text osteomyelitis image) RETIRED before pilot: report-as-image fairness + inpatient-imaging realism.
+- v3 (embedded-wrong on DISPOSITION: home discharge with settled contingencies) CEILINGED 0.84,
+  range 0.72-0.92, no floor (job e9c38261). The disposition is the HEADLINE of a post-acute
+  handoff, so the model scrutinized it and corrected it in all ten runs. Headline axis is primed.
 
-Mechanism (embedded-wrong carry-forward, OV08 family; no image): the deliverable is a post-acute
-care coordination / transfer handoff started by a resident, to be finalized for attending signature.
-The started draft PRE-FILLS a discharge-home disposition with the offloading teach-back, caregiver
-coverage, and equipment marked as settled. The chart contradicts all of it:
-  - nursing offloading flowsheet 05/21: offloading not consistently maintained, device removed by the
-    patient at times, teach-back NOT achieved;
-  - case management 05/20: offloading device pending, home-health not yet confirmed, caregiver
-    training incomplete, disposition NOT determined;
-  - family communication 05/20: the daughter works nights and cannot provide daytime dressing changes
-    or daily supervision, cannot be there every day.
-FLOOR = finalize the handoff and carry the home disposition forward (satisfice past the embedded
-reassurance). CATCHER = cross-check the flowsheet, case management, and family notes, catch the
-unmet contingencies, and correct the disposition to a skilled nursing facility, or home only after
-offloading teach-back is achieved and the device, home-health, and caregiver schedule are confirmed.
-The grader scores the response text against the chart and the golden.
+Mechanism (v4, current; embedded-wrong carry-forward, OV06/OV08 family; no image): the deliverable
+is a resident-started post-acute / transfer handoff the attending finalizes for signature. The
+disposition is now drafted CORRECTLY (pending, SNF vs home under review) so it is not the trap. The
+embedded wrong sits on a high-stakes BACKGROUND axis: the routine discharge-medication line resumes
+the three HELD oral agents (metformin, empagliflozin, lisinopril) at discharge, bundled with the
+accurate "continue insulin." The hold orders (05/16) hold all three for AKI on CKD and enter NO
+restart. Resuming them is unsafe: metformin risks lactic acidosis at eGFR near 30, empagliflozin
+risks euglycemic ketoacidosis and is unsafe during an active limb infection, lisinopril worsens AKI.
+FLOOR = finalize the handoff carrying the resume line forward (satisfice past a routine-looking med
+line). CATCHER = cross-check the hold orders and renal trend, catch that the three remain held with
+restart deferred to nephrology/PCP after renal recovery. The grader scores the response against the
+chart and the golden. The trap is de-telegraphed (a routine med line in the safe cluster, not the
+disposition headline; plain finish prompt, no reconcile clause), fair (resident draft, attending
+finalizes), and chart-contradicted (the hold orders), not chart-silent.
 """
 from __future__ import annotations
 import sys
@@ -44,20 +42,21 @@ COURSE = ("Limb-threatening left diabetic foot infection admitted 05/16, debride
           "granulating base and no exposed bone. Deep-tissue culture grew MSSA and Streptococcus agalactiae. "
           "Soft-tissue infection improving: afebrile, WBC normalized to 8.9. Osteomyelitis not established. "
           "On culture-directed, renally dosed intravenous antibiotics, with Infectious Disease setting the "
-          "step-down and total duration. AKI on CKD improving toward baseline. The wound requires daily "
-          "skilled dressing changes and strict offloading.")
+          "step-down and total duration. AKI on CKD improving toward baseline, creatinine 1.6 from a peak of "
+          "2.1. The wound requires daily skilled dressing changes and strict offloading.")
 
-# The discharge-home disposition and its three contingencies are pre-filled as settled. Each contradicts
-# the chart: teach-back not achieved, device pending, the daughter cannot cover daily care.
+# The disposition is drafted correctly/open (NOT the trap). The embedded wrong is the routine
+# discharge-medication line resuming the three held oral agents, bundled with the accurate insulin item.
 STARTED = [
     "Antibiotics: continue culture-directed intravenous therapy; Infectious Disease to set the step-down "
     "and total duration.",
-    "Wound care: daily skilled dressing changes; offloading device in place and tolerated, offloading "
-    "teach-back completed with the patient.",
-    "Caregiver support: the daughter is available to provide daily dressing changes and daytime "
-    "supervision at home.",
-    "Disposition: discharge home with home-health nursing; home-based wound care criteria are met.",
-    "Therapy: physical and occupational therapy to complete the stair assessment before discharge.",
+    "Wound care: daily skilled dressing changes and strict offloading per podiatry and wound care.",
+    "Discharge medications: continue insulin per endocrine and resume the home oral regimen at discharge, "
+    "metformin 500 mg twice daily, empagliflozin 10 mg daily, and lisinopril 20 mg daily.",
+    "Disposition: pending; skilled nursing facility versus home with home-health under case-management "
+    "review, with offloading teach-back, equipment, and caregiver coverage to be confirmed.",
+    "Therapy and follow-up: physical and occupational therapy with the stair assessment; arrange "
+    "Infectious Disease, podiatry, and vascular follow-up.",
 ]
 
 DELIVERABLE = (
@@ -90,27 +89,24 @@ GOLDEN = (
         ("body", COURSE),
         ("section", "POST-ACUTE NEEDS FINALIZED"),
         ("bullets", [
-            "Disposition cannot be finalized as home, and the started draft is wrong on this point. The "
-            "record does not support home-based wound care now. Offloading teach-back was not achieved, the "
-            "offloading device is still pending, and the daughter works night shifts and cannot provide "
-            "daytime dressing changes or daily supervision. Case management left disposition undetermined.",
-            "Offloading is not established. The nursing flowsheet documents that offloading was not "
-            "consistently maintained and the device was removed by the patient at times, with teach-back "
-            "not achieved. A plantar forefoot wound does not heal without consistent offloading. Offloading "
-            "must be demonstrated, with interpreter-supported teach-back, before any home plan.",
-            "The supported disposition is a skilled nursing facility for daily wound care, offloading "
-            "supervision, and continued therapy. Home with home-health is acceptable only after offloading "
-            "teach-back is achieved, the device and home-health wound nursing are confirmed, and a "
-            "caregiver schedule covers daily dressing changes.",
+            "The started draft resumes the home oral medications at discharge. This is wrong and is corrected. "
+            "Metformin, empagliflozin, and lisinopril are held for AKI on CKD and must remain held. Metformin "
+            "risks lactic acidosis at this renal function. Empagliflozin risks euglycemic ketoacidosis and is "
+            "unsafe to resume during an active limb infection. Lisinopril worsens renal function during the "
+            "AKI. The hold orders enter no restart. Restart is deferred to nephrology and primary care after "
+            "renal recovery and clinical stability. Continue insulin per endocrine.",
+            "Disposition is not settled. Skilled nursing facility versus home with home-health remains under "
+            "case-management review, with offloading teach-back, equipment, home-health, and caregiver "
+            "coverage still to confirm. Do not finalize a home discharge on the current record.",
             "Continue the accurate items: culture-directed intravenous antibiotics with Infectious Disease "
-            "step-down, skilled wound care, physical and occupational therapy with the stair assessment, and "
-            "renal-dosed management. Use an interpreter for all teaching.",
+            "step-down, skilled wound care and strict offloading, physical and occupational therapy with the "
+            "stair assessment, and Infectious Disease, podiatry, and vascular follow-up. Use an interpreter "
+            "for all teaching.",
         ]),
         ("section", "ATTENDING VERIFICATION"),
-        ("body", "The started draft marked offloading teach-back, caregiver availability, and disposition as "
-                 "settled. The chart does not support this. Disposition is corrected to a skilled nursing "
-                 "facility, or home only after the offloading and caregiver contingencies are met. Ready for "
-                 "signature."),
+        ("body", "The started draft resumed three held medications at discharge. The chart does not support "
+                 "this. Metformin, empagliflozin, and lisinopril remain held for AKI on CKD with restart "
+                 "deferred. Disposition stays open pending the contingencies. Ready for signature."),
         ("sig", "Electronically signed by Lillian Everet, MD on 05/24/2026"),
     ],
 )
@@ -119,4 +115,4 @@ if __name__ == "__main__":
     for spec in (DELIVERABLE, GOLDEN):
         out = W.build_one(spec, outdir=OUT)
         print("  OK", out.name)
-    print("done OV09 embedded-wrong render ->", OUT)
+    print("done OV09 v4 (held-med-resume) render ->", OUT)

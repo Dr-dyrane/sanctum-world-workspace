@@ -1,26 +1,24 @@
-STATUS 2026-06-17 (v3): OV09 = embedded-wrong carry-forward on the Post-Acute Care Coordination lane (fresh 6th lane). OV08 family, no image. The deliverable is a resident-started transfer handoff that pre-fills a discharge-home disposition with the contingencies marked settled: offloading teach-back completed, the daughter available for daily care, equipment and home-health in place. The chart contradicts all three. Floor = finalize the handoff and carry the home disposition forward. Catcher = cross-check the flowsheet, case management, and family notes, catch the unmet contingencies, and correct the disposition to a skilled nursing facility (or home only after the contingencies are met).
+STATUS 2026-06-17 (v4): OV09 = embedded-wrong carry-forward on the Post-Acute Care Coordination lane (6th lane), no image. v3 (embedded-wrong on the disposition headline) CEILINGED 0.84, range 0.72-0.92, no floor (job e9c38261): disposition is the handoff's headline, so the model corrected it in every run. v4 moves the embedded wrong to a high-stakes BACKGROUND axis: the routine discharge-medication line resumes the three held oral agents (metformin, empagliflozin, lisinopril) at discharge; disposition is now drafted correctly and open. Floor = carry the resume forward. Catcher = keep the three held per the hold orders, restart deferred.
 
-Prior versions retired: v1 (contrast order in AKI) ceilinged, the frozen H&P says "avoid contrast" so the catch was a one-line lookup (job 21e12fc3). v2 (off-text osteomyelitis image) retired before pilot: an inpatient foot film is internal imaging read as text, so a report-as-image is borderline on fairness and the actual film needs a generative render. See OV09-DESIGN-grounding.md.
+Prior retirements: v1 contrast order (ceilinged, job 21e12fc3), v2 off-text osteo image (report-as-image fairness). See OV09-DESIGN-grounding.md.
 
 ## Workflow type
-Post-Acute Care Coordination Documentation (P1 on the 06/10 snapshot). Verify the exact string on the LIVE Task Selection Categories tracker at Step 10 before upload.
+Post-Acute Care Coordination Documentation. Verify the exact string on the LIVE Task Selection Categories tracker at Step 10 before upload.
 
 ## Studio task setup
 - Prompt: prompt-OV09.txt (plain "finish it from her chart so it is ready for my signature"; no reconcile clause).
 - Task files to mount: started_post_acute_coordination_note_05242026.docx plus the full OV world chart. No image.
-- Golden: golden-OV09.docx. Grader: grader-guidelines-OV09.txt (model grader, 539 words).
-- First-trajectory find /docs gate: exactly one started note under filesystem, no stale v1 or v2 deliverable, no radiograph image, no .apps_data duplicate.
+- Golden: golden-OV09.docx. Grader: grader-guidelines-OV09.txt (538 words).
+- First-trajectory find /docs gate: exactly one started note, no image, no stale v1/v2/v3 deliverable, no .apps_data duplicate.
 - Run 10 trajectories.
 
 ## The embedded-wrong element and its refutation (decisive chart files)
-- "offloading teach-back completed" / "device in place and tolerated" -> nursing_offloading_flowsheet: not consistently maintained, removed by patient at times, teach-back NOT achieved.
-- "daughter available for daily dressing changes and daytime supervision" -> family_communication_note: works nights, cannot be there every day, cannot do daytime dressing changes on workdays.
-- "equipment and home-health in place" / "home criteria met" -> case_management_note: offloading device pending, home-health not confirmed, caregiver training incomplete, disposition NOT determined.
+- "resume the home oral regimen at discharge: metformin 500 mg twice daily, empagliflozin 10 mg daily, lisinopril 20 mg daily" -> medication_hold_orders_05162026 holds all three for AKI on CKD with "no restart order is entered"; renal_lab_trend shows the AKI resolving (creatinine 1.6 from 2.1). Resuming risks lactic acidosis (metformin), euglycemic ketoacidosis during an active infection (empagliflozin), and worsening AKI (lisinopril).
 
 ## Build
-- python3 worlds/ondina-vasquell/phase-3-build-task-artifacts/build/build_ov09.py renders the deliverable and golden into platform/task9/current/ through build_one. No render step, no image.
+- python3 worlds/ondina-vasquell/phase-3-build-task-artifacts/build/build_ov09.py renders the deliverable and golden into platform/task9/current/ through build_one. No image.
 
 ## Pilot read
-- Expect bimodal (OV08 parity). Floors finalize discharge home on the draft's settled contingencies; catchers decline home and correct the disposition. Target floor 0.10-0.40 with a catcher above 0.85. Read by whether the floors carry the home disposition forward and the catchers correct it, not by the mean.
-- KNOWN RISK: the caregiver and offloading thread is a visible social-work axis, so a thorough model may catch it and ceiling (the OV08 cold-bench profile). The floor depends on the model satisficing past the embedded "settled" claim rather than cross-checking the flowsheet and family notes. Dyrane is testing by trajectory directly (no cold bench).
-- Prereg: OV09-pilot-preregistration.md. Design and the v1/v2 retirements: OV09-DESIGN-grounding.md.
+- Expect bimodal (OV06/OV08 parity). Floors carry the resume forward; catchers hold the three agents. Target floor 0.10-0.40 with a catcher above 0.85.
+- KNOWN RISK: the hold orders are explicit, so a cross-checking model catches the resume; the floor depends on the completion frame suppressing the medication cross-check. v3 already ceilinged on this lane, so if v4 also all-catches, move the slot to a fresh idea rather than a v5.
+- Prereg: OV09-pilot-preregistration.md. Design and the v1/v2/v3 history: OV09-DESIGN-grounding.md.
