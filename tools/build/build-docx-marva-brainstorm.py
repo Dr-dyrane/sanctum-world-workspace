@@ -58,6 +58,25 @@ def extract_section(text: str, heading: str) -> list[str]:
     return lines
 
 
+def extract_preamble(text: str) -> list[str]:
+    lines = text.splitlines()
+    out: list[str] = []
+    seen_title = False
+    for line in lines:
+        if line.startswith("# "):
+            seen_title = True
+            continue
+        if seen_title and line.startswith("## "):
+            break
+        if seen_title:
+            out.append(line.rstrip())
+    while out and not out[0].strip():
+        out.pop(0)
+    while out and not out[-1].strip():
+        out.pop()
+    return out
+
+
 def table_cells(line: str) -> list[str] | None:
     stripped = line.strip()
     if not stripped.startswith("|") or not stripped.endswith("|"):
@@ -65,7 +84,7 @@ def table_cells(line: str) -> list[str] | None:
     cells = [cell.strip() for cell in stripped.strip("|").split("|")]
     if all(cell and set(cell) <= {"-", ":", " "} for cell in cells):
         return []
-    if cells and cells[0] in {"Field", "Friction", "Trap", "ID"}:
+    if cells and cells[0] in {"Field", "Friction", "Trap", "ID", "#"}:
         return []
     return cells
 
@@ -91,10 +110,13 @@ def convert_markdown(lines: list[str]) -> list[str]:
                 out.append(f"{cells[0]}: {cells[1]}")
                 out.append(f"Fair catcher: {cells[2]}")
             elif len(cells) >= 5:
-                out.append(f"{cells[0]}. {cells[1]}")
-                out.append(f"Workflow: {cells[2]}")
-                out.append(f"Task-level file: {cells[3]}")
-                out.append(f"Central catch: {cells[4]}")
+                out.append(f"{cells[0]}. {cells[2]}")
+                out.append(f"Requester: {cells[1]}")
+                out.append(f"Workflow: {cells[3]}")
+                out.append(f"Priority and structure: {cells[4]}, {cells[5]}")
+                out.append(f"Forced decision: {cells[6]}")
+                out.append(f"Planned trap: {cells[7]}")
+                out.append(f"Anchor: {cells[8]}")
             else:
                 out.append(" | ".join(cells))
             continue
@@ -122,13 +144,11 @@ def build() -> None:
     set_text(doc.paragraphs[0], "Marva Lydell World Brainstorm")
     set_text(doc.paragraphs[1], "Document date: June 18, 2026")
 
-    concept = convert_markdown(extract_section(text, "Concept pitch"))
+    concept = convert_markdown(extract_preamble(text))
     world_setup = concept + [""] + convert_markdown(extract_section(text, "1. World setup"))
     frictions = convert_markdown(extract_section(text, "2. Major friction points"))
     traps = convert_markdown(extract_section(text, "3. Major traps"))
     tasks = convert_markdown(extract_section(text, "4. Rough task ideas"))
-    tasks += [""] + convert_markdown(extract_section(text, "5. Why this should be harder than a generic cardiology world"))
-    tasks += [""] + convert_markdown(extract_section(text, "6. Brainstorm guardrails"))
 
     table = doc.tables[0]
     fill_cell(table.cell(0, 0), ["Element"])

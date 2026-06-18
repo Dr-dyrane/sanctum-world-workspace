@@ -1,77 +1,49 @@
-# Marva Lydell Brainstorm
+# Brainstorm: Marva Lydell Cardiorenal Respiratory Transition
 
-Status: built draft for Brainstorm upload preparation. This is the source text mirrored into `worlds/marva-lydell/submission/Marva_Lydell_Brainstorm.md`.
-
-## Concept pitch
-
-Build a cardiopulmonary transition world around Marva Lydell, a 72-year-old Black woman admitted with acute decompensated heart failure, cardiorenal acute kidney injury, COPD and obstructive sleep apnea overlap, atrial fibrillation on anticoagulation, diabetes, and limited home support. The world closes when she is medically improving but not yet transition-safe. Her resting oxygen saturation looks acceptable, the creatinine is improving, and the discharge plan reads clean at a glance. The real work is in the contradictions: exertional hypoxemia, incomplete oxygen equipment delivery, unresolved volume risk, renal-dose medication decisions, anticoagulation source hierarchy, and a home setting that cannot absorb a premature handoff.
-
-The world should test whether a model can move from chart summarization to transition judgment. A strong answer must not merely list cardiology, nephrology, respiratory therapy, therapy, and case-management facts. It must decide what is safe to sign, what remains open, which owner must act, and which external document is wrong.
+Concept pitch for Team Lead review. World Type: Typical Clinical World (inpatient hospital medicine with post-discharge administrative and transition encounters). Snapshot: June 10, 2026 at 18:00. Patient: Marva Lydell, 72F. June 18, 2026.
 
 ## 1. World setup
 
-| Field | Plan |
-| --- | --- |
-| World type | Typical clinical world |
-| Patient | Marva Lydell, 72-year-old Black woman in the United States |
-| Core admission | Acute decompensated heart failure with hypoxemia, cardiorenal acute kidney injury, atrial fibrillation, COPD/OSA overlap, diabetes, and functional decline |
-| Snapshot close | 06/10/2026 at 18:00, after improvement on inpatient diuresis but before safe post-acute execution is complete |
-| Task window | 06/11/2026 through 06/17/2026. All tasks occur after the world snapshot and use task-level files for post-snapshot prompts, denials, drafts, reports, or follow-up notes |
-| World file strategy | At least 30 world-level files. Hospital course, cardiology, nephrology, respiratory therapy, PT/OT, case management, pharmacy, labs, weights, oxygen testing, sleep equipment notes, medication lists, discharge planning notes, and family communication. No task answers in world files |
-| Knowledge boundary | No task requires post-July 2025 medical knowledge. The clinical reasoning is standard transition-of-care reasoning, and every needed fact is in the mounted chart or task-level file |
-| Product thesis | The patient is not a data visualization. The product is readiness. Each task asks whether the record supports a safe next move |
+This is an inpatient hospital medicine world: a 7-day admission for acute decompensated heart failure with hypoxemia and cardiorenal acute kidney injury in Marva Lydell, a 72-year-old Black woman with chronic heart failure, atrial fibrillation on anticoagulation, CKD stage 3b to 4, COPD and obstructive sleep apnea overlap, type 2 diabetes, hypertension, obesity, and limited mobility. She presents with dyspnea, edema, rising weight, exertional intolerance, and worsening kidney function after several days of worsening symptoms at home. The course runs ED evaluation, admission for IV diuresis and oxygen assessment, cardiology and nephrology consultation, respiratory therapy testing, therapy evaluation, medication adjustment, and discharge planning.
+
+The world snapshot closes on June 10, 2026 at 18:00, at the point of realistic tension: she is clinically improved at rest, but transition safety remains unresolved. Creatinine is improving, resting oxygen saturation looks acceptable, and the discharge plan appears close. The unresolved issues are exertional oxygen need, portable oxygen delivery, diuretic and renal-medication follow-up, anticoagulation source hierarchy, functional tolerance, and the limits of home support. Every task is an independent encounter anchored after the snapshot. Each task can be answered from the planned chart, payer, respiratory therapy, pharmacy, case management, therapy, quality, and post-acute materials available to that requester.
 
 ## 2. Major friction points
 
-| Friction | Why it works |
-| --- | --- |
-| Hospital medicine and cardiology versus payer medical director | The patient appears clinically improved, but the payer sees only stable resting vitals and misses exertional oxygen need, unresolved equipment, and post-acute skilled needs |
-| Cardiology versus nephrology | Diuresis, kidney recovery, potassium, ACE inhibitor or SGLT2 restart, and anticoagulation all require ownership and timing. A model that treats improvement as resolution will close too much |
-| Respiratory therapy and pulmonary versus case management and DME vendor | Resting oxygen and exertional oxygen tell different stories. DME status can look complete in one note while a vendor log shows portable equipment was not delivered |
-| Patient and family preference versus functional safety | Marva wants home. A daughter can help intermittently. Therapy notes, stairs, fatigue, oxygen equipment, and medication complexity may still make the first plan unsafe |
-| Pharmacy and SNF intake versus the inpatient chart | External medication or intake documents can carry forward the wrong anticoagulation dose, duplicate therapy, or stale renal dosing. The task should require source hierarchy, not transcription |
-| Quality reviewer versus clinician author | A reviewer may ask for a clean documentation conclusion, while the right clinical answer is to leave control, equipment, or follow-up open with the correct owner |
+- Hospital medicine and cardiology versus the payer medical director (central): the payer reads stable resting vitals and improvement after diuresis as readiness for home with home health; the treating team reads the same admission as unsafe without reliable oxygen equipment, functional tolerance, and post-acute support.
+- Cardiology versus nephrology: cardiology prioritizes decongestion, heart-failure protection, and readmission prevention; nephrology prioritizes kidney recovery, potassium safety, and careful timing for ACE inhibitor, SGLT2 inhibitor, metformin, and diuretic changes.
+- Respiratory therapy and pulmonary versus case management and the DME vendor: respiratory testing identifies exertional oxygen need, while case management and vendor documentation may describe equipment as arranged before all usable pieces are actually delivered.
+- Patient and family versus PT/OT and discharge planning: Marva wants to go home and her daughter can check in, but therapy findings, stairs, oxygen logistics, fatigue, and medication complexity may exceed that support.
+- Pharmacy and SNF intake versus the inpatient chart: outside medication or intake documents can carry a stale anticoagulation dose, duplicate therapy, or renal-dose error that conflicts with the active inpatient record.
+- Quality reviewer versus clinician author: administrative review often wants a clean closure, while the clinically correct answer may be to leave oxygen control, volume status, or follow-up ownership explicitly open.
 
 ## 3. Major traps
 
-| Trap | Intended model miss | Fair catcher |
-| --- | --- | --- |
-| Resting oxygen hides exertional hypoxemia | Model writes that oxygen is stable because resting saturation is acceptable | Reads the walk-test or therapy signal and recognizes that exertional desaturation still needs oxygen planning |
-| Equipment delivery over-closure | Model accepts "DME arranged" from discharge planning prose | Checks the vendor or delivery note showing the portable oxygen piece is not delivered or not functional |
-| Volume status over-closure | Model treats improving creatinine or lower BNP as readiness | Reconciles weight, intake/output, edema, orthopnea, and renal trend before signing readiness |
-| Renal-med restart drift | Model restarts ACE inhibitor, SGLT2 inhibitor, or metformin because discharge is near | Keeps restart deferred until renal and volume parameters are met, with a clear owner |
-| Anticoagulation source hierarchy | Model follows an external intake or SNF list with a wrong dose or duplicate antiplatelet | Uses the chart, renal function, indication, bleeding history, and active orders to choose the safer reconciliation |
-| Home support inflation | Model converts "daughter can check in" into a safe daily-care plan | Preserves the actual support limits and connects them to oxygen, stairs, medication complexity, and follow-up reliability |
-| Sleep and respiratory control over-closure | Model writes COPD or OSA is controlled because the chart says home devices exist | Looks for actual device use, oxygen need, symptoms, or follow-up gaps before closing control |
-| Denial-letter authority bias | Model softens the appeal because the payer denial is structured and official | Refutes the denial using the chart facts that make skilled or equipment-level care necessary |
-| Readmission attribution shortcut | Model blames nonadherence after a bounceback | Finds the system failure, such as incomplete equipment delivery, unsafe medication handoff, or missing monitoring plan |
+- Resting oxygen versus exertional oxygen. Contradictory and buried information: resting saturation looks safe in routine vitals, while therapy or respiratory testing documents exertional desaturation. Requires synthesis across vitals, respiratory therapy testing, PT/OT tolerance, and discharge planning. World-level substrate; denial and continued-stay tasks can force the distinction.
+- DME arranged versus DME delivered. Source-of-truth ambiguity: a case-management note may say oxygen was arranged, while vendor documentation shows that portable oxygen was not delivered, not functional, or not teach-backed. Requires synthesis across case management, vendor, nursing, and family communication. World-level substrate with post-snapshot administrative surfaces.
+- Improving kidney function versus medication readiness. Temporal complexity: creatinine and potassium improve after diuresis, but that does not automatically make held renal or diabetes medications safe to restart. Requires synthesis across nephrology, cardiology, medication administration record, renal trend, and discharge medication list. World-level substrate; medication reconciliation and follow-up tasks force the decision.
+- Volume status improvement versus transition readiness. Buried significant information: lower weight, improved edema, and better dyspnea coexist with orthopnea, exertional intolerance, and borderline renal recovery. Requires synthesis across progress notes, weights, intake/output, nursing notes, and therapy findings. World-level substrate.
+- Anticoagulation dose and duplicate-therapy risk. Source-of-truth ambiguity: inpatient orders, home medication history, renal function, and post-acute intake documents may conflict on anticoagulation dose or antiplatelet overlap. Requires synthesis across MAR, discharge med list, renal trend, fill history, and SNF intake. World-level substrate; medication tasks and post-acute handoff tasks can force the stance.
+- Home support overestimated. SDOH and functional context: daughter support is real but intermittent, and the home setting may include stairs, limited transportation, oxygen equipment burden, and complex medication changes. Requires synthesis across PT/OT, case management, nursing education, and family communication. World-level substrate.
+- Respiratory control over-closed. Source-of-truth ambiguity: COPD or OSA may be described as stable because the patient owns home equipment, while the record does not prove effective use, exertional control, or adequate follow-up. Requires synthesis across respiratory therapy, sleep-equipment history, oxygen testing, and follow-up planning. World-level substrate.
+- Payer denial authority bias. External-source conflict: a structured denial letter can sound definitive while omitting the clinical facts that support skilled care or equipment-level need. Requires synthesis across the denial, therapy data, oxygen testing, case-management notes, and physician documentation. Task-level surface.
+- Readmission attribution shortcut. Retrospective review risk: a bounceback can be framed as patient nonadherence when the chart shows incomplete equipment delivery, unclear medication ownership, or an unsafe transition plan. Requires synthesis across discharge materials, vendor records, follow-up communication, and readmission documentation. Task-level surface.
 
 ## 4. Rough task ideas
 
-| ID | Working title | Workflow fit | Task-level file shape | Central catch |
-| --- | --- | --- | --- | --- |
-| ML01 | Oxygen and SNF denial appeal | Claims Denial Analysis and Appeal Preparation | Payer denial plus quiet transfer-day oxygen or therapy addendum | Resting saturation does not answer exertional oxygen need or skilled transition risk |
-| ML02 | Discharge medication reconciliation | Discharge Medication Reconciliation at Care Transitions | External discharge medication list or SNF intake list | Stop or correct a stale renal or anticoagulation item while keeping open renal restarts open |
-| ML03 | Continued-stay review | Utilization Review Concurrent Stay Documentation | Utilization review worksheet with tempting "medically stable" language | Medical improvement is not transition readiness when oxygen equipment and exertional function remain unresolved |
-| ML04 | Transition note completion | Medical Transcription and Clinical Documentation Completion | Started transition note with true blanks and one weak external claim | Complete the note without closing oxygen, volume, or follow-up items that are still open |
-| ML05 | Post-acute coordination plan | Post-Acute Care Coordination Documentation | Case-management handoff draft and DME vendor status | Identify the missing equipment and owner before signing the transfer plan |
-| ML06 | Cardiorenal follow-up letter | Specialist Referral Letter and Documentation Preparation | Started cardiology-nephrology follow-up note | Route diuretic, kidney-function, potassium, anticoagulation, and restart decisions to the right follow-up owner |
-| ML07 | Home health versus SNF appeal | Claims Denial Analysis and Appeal Preparation | Home-health denial response packet | Show why home health does not meet oxygen, monitoring, and functional needs without overstating the chart |
-| ML08 | Safety event review after bounceback | Patient Safety Event Investigation and Root Cause Analysis | Readmission event note and equipment delivery record | Attribute the event to the unsafe transition gap, not patient nonadherence |
-| ML09 | Quality abstraction review | HEDIS Medical Record Chart Abstraction and Review | Abstractor worksheet with source conflicts | Abstract the documented measure only, and do not award a clean transition when key evidence is missing |
-| ML10 | Documentation query response | Clinical Documentation Improvement Query Response Review | CDI query about acute hypoxic respiratory failure or cardiorenal AKI | Answer with supported specificity while rejecting unsupported over-claims |
+Ten tasks, each an independent post-snapshot encounter, each named with requester, deliverable, workflow family, priority, structure, forced decision, planned trap, and anchor.
 
-## 5. Why this should be harder than a generic cardiology world
+| # | Requester | Deliverable | Workflow | Priority | Structure | Forced decision | Planned trap | Anchor |
+|---|---|---|---|---|---|---|---|---|
+| 1 | Hospitalist attending for case management | Oxygen and SNF denial appeal | Claims Denial Analysis and Appeal Preparation | P0 | External position review | Appeal, accept, or narrow the denial | Denial relies on resting oxygen and ignores exertional oxygen need and transition risk | June 11, 2026 at 09:00 |
+| 2 | Hospitalist attending | Discharge medication reconciliation | Discharge Medication Reconciliation at Care Transitions | P0 | Forced inventory | Continue, hold, change, stop, or defer per medication row | Outside list carries stale renal or anticoagulation logic despite updated kidney function and active orders | June 11, 2026 at 10:00 |
+| 3 | Physician advisor | Continued-stay review | Utilization Review Concurrent Stay Documentation | P0 | Determination | Approve continued stay, narrow, or deny | Review worksheet treats improvement after diuresis as readiness despite unresolved oxygen equipment and exertional tolerance | June 11, 2026 at 14:00 |
+| 4 | Discharging attending | Transition note completion | Medical Transcription and Clinical Documentation Completion | P0 | Completion, the single completion task | Finish open sections without falsely closing readiness | Started note leaves oxygen, volume, and follow-up ownership open against a reassuring draft tone | June 12, 2026 at 08:30 |
+| 5 | Case manager | Post-acute coordination plan | Post-Acute Care Coordination Documentation | P0 | Coordination synthesis | Assign owner, status, and next action for each transition item | Case-management prose says DME arranged while vendor status leaves portable oxygen unresolved | June 12, 2026 at 13:00 |
+| 6 | Hospitalist attending | Cardiorenal follow-up letter | Specialist Referral Letter and Documentation Preparation | P0 | Specialist handoff | Route diuretic, renal labs, potassium, anticoagulation, and restart decisions to the correct owner | Follow-up draft makes the plan sound settled while renal and volume decisions remain conditional | June 13, 2026 at 11:00 |
+| 7 | Hospitalist attending for utilization management | Home health versus SNF appeal | Claims Denial Analysis and Appeal Preparation | P0 | External position review | Support skilled need or accept home-health pathway | Denial treats home health as sufficient despite stairs, oxygen burden, functional limits, and medication complexity | June 15, 2026 at 10:00 |
+| 8 | Patient safety officer | Safety review after bounceback | Patient Safety Event Investigation and Root Cause Analysis | P0 | Investigation | Identify likely cause and prevention steps | Initial event note blames nonadherence while the record supports equipment or handoff failure | June 16, 2026 at 09:00 |
+| 9 | Quality abstraction nurse | Heart-failure transition quality abstraction | HEDIS Medical Record Chart Abstraction and Review | P1 | Extraction to schema | Record documented value, exclusion, or unable-to-determine per field | Abstractor worksheet rewards a clean transition although oxygen or follow-up evidence is incomplete | June 17, 2026 at 09:00 |
+| 10 | CDI specialist | Documentation query response | Clinical Documentation Improvement (CDI) Query Response Review | P1 | Query response | Agree, decline, or clarify supported specificity | Query asks for over-specific acute respiratory failure or cardiorenal diagnosis language beyond the treating record | June 17, 2026 at 12:00 |
 
-The model will be strong at reading heart-failure notes, pulling labs, naming the medication classes, and writing a polished discharge plan. That is not enough here. The failure axis is readiness under contradiction. The world should force the model to decide whether an apparently clean plan can be signed when one quiet fact changes the transition.
-
-The target shape is bimodal. Catcher runs should open the task-level file, reconcile the hidden conflict, and make a safe next move. Floor runs should summarize the chart accurately but sign the wrong thing because they trusted the most recent or most official-looking document.
-
-## 6. Brainstorm guardrails
-
-- Keep race clinically contextual, not decorative and not used as a biological shortcut.
-- Do not make the patient unsafe by silence alone. The chart must contradict the wrong move.
-- Do not build traps that require public web search or post-July 2025 knowledge.
-- Use task-level files for post-snapshot denials, drafts, vendor notes, reports, or event notes.
-- Keep world files free of task answers.
-- Prefer one forced wrong move per task. The rest of the work can be ordinary, realistic clinical completion.
+Structure spread: external position review x2, forced inventory, determination, completion x1, coordination synthesis, specialist handoff, investigation, extraction to schema, and query response. The shared chart stays raw, with no single summary that states the final readiness conclusion. Later administrative, quality, referral, and safety tasks branch independently from the same approved world snapshot and their own requester materials; they are not sequential outputs of earlier tasks.
