@@ -88,12 +88,14 @@ These are the only places a human is required. The generator emits each as an ex
 ## 5. The toolchain map
 
 - `tools/mode_a_clone.py` - clone, clear body, rebuild headers/footers, scrub metadata, verify no-synthetic / no-prior-world, `make_deterministic`.
-- `build/epic.py` - the canonical Epic renderer (masthead, blue bar, storyboard, PATIENT/ENCOUNTER block, blue table headers).
-- `build/clinical_data.py` + `build/task_data.py` - single source of truth.
-- `build/build_world_files.py` / `build_task_files.py` / `build_goldens.py` / `build_task_packages.py` - all route through `build_one`.
+- `tools/build/bootstrap_world_factory.py` - canonical new-world bootstrap. It creates the world doc tree and installs a world-local factory from the OV pattern, with blank physician-gated source files.
+- `build/epic.py` - the world-local canonical Epic renderer (masthead, blue bar, storyboard, PATIENT/ENCOUNTER block, blue table headers).
+- `build/clinical_data.py` + `build/task_data.py` - world-local single source of truth.
+- `build/build_world_files.py` / `build_task_files.py` / `build_goldens.py` / `build_task_packages.py` - world-local builders. All route through `build_one`.
 - `tools/build/build-docx-*-worldspec.py` and the transcript builders - spec + transcripts, 7-col + landscape.
-- `build/build_all.py` - one-command deterministic rebuild + gate.
-- `tools/verify/verify_ondina.py` - the one-command gate (generalize to `verify_world.py` parameterized by the substrate, per DO-NOT-REPEAT 12).
+- `build/build_all.py` - world-local one-command deterministic rebuild + gate.
+- `tools/verify/verify_world_factory.py` - reusable mechanical gate for any bootstrapped world.
+- `tools/verify/verify_ondina.py` - Ondina-specific gate retained as the proven predecessor and current OV gate.
 
 ## 6. What made Ondina fast (the reusable accelerators)
 
@@ -104,6 +106,40 @@ These are the only places a human is required. The generator emits each as an ex
 - Deterministic builds, so rebuilds never churned SHAs or re-introduced drift.
 - A filled planning canvas before any document existed.
 
-## 7. Next step - the generator
+## 6a. 2026-06-18 reference-example addendum - why planned traps kept failing
 
-This doc is the spec. The generator (`tools/new_world.py`, proposed) takes a case note and emits: the folder skeleton, a templated brainstorm and spec pre-filled with all the Section 3 invariants and the `<<PHYSICIAN>>` decision markers, the wired builders and a `clinical_data.py` stub, and a green gate from the first commit. The physician fills the six gates; everything downstream is one command and byte-reproducible. Build the generator only after this recipe is ratified, so it implements an agreed spine rather than a guessed one.
+The example worlds changed the read. Harold, Marcus, Quill, and Opus do not win by naming clever facts. They win by building source geometry before prose. Each strong task has a native output structure, a forced slot, a realistic wrong authority or incomplete source, and a source chain that makes the correct answer reachable but not pre-synthesized.
+
+Apply this to every future world:
+
+- A trap is not an idea. It is a source route plus a forced slot plus a wrong move the model can plausibly make.
+- If one world file states the complete answer, the task becomes transcription.
+- If the task headline names the intended trap, the model scrutinizes it.
+- If the deliverable is a review or coding genre, the model enters verification mode and catches many restraint traps.
+- If an image or scanned report is central to the workflow, the model may inspect it hard. Off-text works only when the workflow does not force opening it.
+- External documents work best when they are wrong by genre: payer denial, vendor handoff, pharmacy sheet, CDI query, UR worksheet, or case-management closure.
+
+World 3 therefore starts with a pre-brainstorm cockpit, not a narrative. The selected thesis is Candidate 3 reframed as cardiorenal respiratory transition readiness. First-priority source geometry: oxygen qualification, DME delivery, exertional physiology, anticoagulation transition, renal recovery, and system ownership at discharge.
+
+## 7. Canonical bootstrap command
+
+Use the real bootstrap tool, not a hand-made copy:
+
+```bash
+python3 tools/build/bootstrap_world_factory.py worlds/<new-world-slug> --display-name "<World Display Name>"
+```
+
+The tool creates the canonical tree, installs the world-local build factory, copies the OV-proven Epic renderer, writes blank `clinical_data.py` and `task_data.py` stubs, and adds a verification note. It refuses to overwrite an existing world unless `--adopt-existing` is passed for a pre-brainstorm scaffold. In adoption mode it preserves `00-START-HERE.md` and installs the factory layer. It does not invent clinical values, build DOCX, or create uploadable task artifacts.
+
+For an already-created planning scaffold:
+
+```bash
+python3 tools/build/bootstrap_world_factory.py worlds/<new-world-slug> --display-name "<World Display Name>" --adopt-existing
+```
+
+After bootstrap, the required order is unchanged:
+
+1. Name and task architecture approved.
+2. Phase A substrate ratified in `build/clinical_data.py`.
+3. Phase B task file plan ratified in `build/task_data.py`.
+4. Only then run the world-local `build/build_all.py`.

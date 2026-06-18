@@ -2,7 +2,7 @@
 
 > Output-voice standard: `docs/alexander-voice-dna.md` (enforced by `tools/verify/verify_voice.py`) governs all output text - prompts, goldens, graders, FA/GA, PLs, reviews.
 
-**Last updated: 2026-06-17 (Ondina active board: OV01, OV02, OV03, and OV04 Ready for Delivery; OV05 retired and archived; OV06 v2 still in Task Writing as `Task 1rqn2959`, with de-telegraphed pilot job `577effae` floored at mean 0.39 and seven of ten runs below 0.70. OV07 TS7 is in build prep under `worlds/ondina-vasquell/phase-3-build-task-artifacts/platform/task7/current/`, with the task-level transfer-day wound image staged as `wound_photo_05242026.jpg`. Old planning and pilot churn remain archived under `worlds/ondina-vasquell/archive/2026-06-15-cleanup/`; other non-live task packets remain parked under `worlds/ondina-vasquell/phase-3-build-task-artifacts/platform/_paused/2026-06-15-non-ov01-suite/`. Prior KM status remains KM01-KM06 delivered and KM07-KM10 Ready for Delivery.)**
+**Last updated: 2026-06-18 (World 3 is now `worlds/marva-lydell/`, approved as a Black older adult woman with cardiorenal respiratory transition-readiness as the product thesis. The canonical OV-style factory is installed, and a Brainstorm bootstrap draft exists. No clinical substrate, DOCX, task, upload, prompt, golden, grader, or trajectory work has started. Ondina live state is governed by `worlds/ondina-vasquell/docs/WORLD-STATUS.md`; prior KM status remains KM01-KM06 delivered and KM07-KM10 Ready for Delivery.)**
 
 Single source of truth for repo structure, placement rules, and navigation.
 Read this + `AGENTS.md` at the start of any new session before touching files.
@@ -98,6 +98,22 @@ sanctum-world-workspace/
                                  dates, labs, organisms, and names against the provided
                                  chart before calling them invented. Do not paste platform
                                  setup language into reviewer-facing graders.
+    marva-lydell/
+                               ← World #3 pre-brainstorm scaffold. Active cockpit is
+                                 00-START-HERE.md. Approved patient-world name:
+                                 Marva Lydell. Product thesis: cardiorenal
+                                 respiratory transition readiness, not generic HF
+                                 management. Current planning files:
+                                 docs/WORLD-STATUS.md, docs/REFERENCE-AUDIT.md,
+                                 docs/PLANNING-CANVAS.md,
+                                 docs/BRAINSTORM-BUILD-LIVE-AUDIT.md,
+                                 docs/NAME-SHORTLIST.md, docs/BRAINSTORM-DRAFT.md, and
+                                 submission/Marva_Lydell_Brainstorm_DRAFT.md.
+                                 build/ contains the canonical placeholder-gated
+                                 factory installed by bootstrap_world_factory.py
+                                 --adopt-existing. No clinical values, DOCX files,
+                                 task files, prompts, goldens, graders, uploads,
+                                 or trajectories are authorized yet.
 ```
 
 ---
@@ -112,6 +128,7 @@ tools/
   generate_reference_files.py  ← LIVE: reference file generator (do NOT use for task artifacts)
   build-world-performance-xlsx.py  ← LIVE: performance spreadsheet builder
   build/                       ← LIVE build scripts (one per task, current version only)
+    bootstrap_world_factory.py ← CANONICAL: starts or adopts a world from the OV factory pattern
     build-docx-ondina-brainstorm.py
     build-docx-ondina-brainstorm-claude-transcript.py
     build-docx-km07-draft-fairfix.py
@@ -120,6 +137,7 @@ tools/
     build-docx-km10-v3.py
     build-dashboard.py          ← builds dashboard/km-world-dashboard.html from dashboard/src/
   verify/                      ← substrate verification scripts
+    verify_world_factory.py    ← generic mechanical gate for bootstrapped worlds
     verify_ondina.py           ← one-command Ondina pre-stage gate: DOCX leak, template, metadata, filename, and anchor consistency checks
     verify-km08-substrate.py
     verify-km08-pain.py
@@ -145,7 +163,7 @@ worlds/korvin-merrow/
                                  autoqc/, *-architecture/, execution-preparation/,
                                  submission-preparation/, remediation/, etc.
   active/                      ← brainstorm.md, clinical-logic.md, task-map.md (stale placeholders
-                                 → _pipeline-history/active-placeholders/, 6/10)
+                                 moved to _pipeline-history/active-placeholders/, 6/10)
   planning/                    ← KORVIN_MERROW_PASS_PLAN.md (pre-build pass plan, historical)
   file-inventory/              ← locked file inventory
   file-review/                 ← upload/filesystem/ = AGENT-READ chart DOCXs (26 files)
@@ -198,10 +216,10 @@ task-setup/
                                  cited by relative ../ paths in locked design docs) + fa-ga/, runs/, design/
   task5/                       ← TASK5-STATE.md + KM05-prebuild-review-and-build-gates.md (same reason)
                                  + fa-ga/, runs/, design/ (incl. KM05-LIFECYCLE-GUIDE.md), preference-labeling/;
-                                 superseded v2/v3 plans → design/archive/ (6/10)
+                                 superseded v2/v3 plans moved to design/archive/ (6/10)
   task6/                       ← TASK6-STATE.md + fa-ga/ (FA-GA-current.md is canonical; conflicting
-                                 FA-GA-v5.md → fa-ga/archive/), runs/, design/ (retired v1/v3 plans →
-                                 design/archive/), preference-labeling/, handoff/ (NOTE-FOR-ABI-task6.md)
+                                 FA-GA-v5.md moved to fa-ga/archive/), runs/, design/ (retired v1/v3 plans
+                                 moved to design/archive/), preference-labeling/, handoff/ (NOTE-FOR-ABI-task6.md)
   task7/                       ← TASK7-STATE.md + design/ (v2-PLAN, v3-placeholder-plan, v4 true-placeholder
                                  plan), runs/ (v2 + v3 retired evidence), fa-ga/, preference-labeling/,
                                  qa/ (Abi-mode byte review),

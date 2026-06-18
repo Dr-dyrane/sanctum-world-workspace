@@ -4,19 +4,24 @@ All Python scripts for this workspace live here. Do not create `.py` files insid
 
 ## Subfolders
 
-- `build/` — live build scripts, one per task, current version only. Run from repo root: `py tools/build/build-docx-kmNN-vX.py`
-- `verify/` — substrate verification scripts (read-only, no mutations)
-- `archive/` — dead/superseded scripts kept for reference; never execute
+- `build/` - live build scripts, one per task, current version only. Run from repo root: `py tools/build/build-docx-kmNN-vX.py`
+- `verify/` - substrate verification scripts (read-only, no mutations)
+- `archive/` - dead/superseded scripts kept for reference; never execute
 
 ## Root-level scripts
 
-- `mode_a_clone.py` — Mode A clone engine; imported by all build scripts
-- `generate_reference_files.py` — reference file generator (NOT for task artifacts; see AGENTS.md guardrail 1)
-- `build-world-performance-xlsx.py` — world performance spreadsheet builder
+- `mode_a_clone.py` - Mode A clone engine; imported by all build scripts
+- `generate_reference_files.py` - reference file generator (NOT for task artifacts; see AGENTS.md guardrail 1)
+- `build-world-performance-xlsx.py` - world performance spreadsheet builder
 
 ## Current non-task build script
 
-- `build/build-docx-ondina-brainstorm.py` — Mode A clone build for `worlds/ondina-vasquell/submission/Ondina_Vasquell_Brainstorm.docx`
+- `build/bootstrap_world_factory.py` - canonical new-world bootstrap from the Ondina factory pattern. Creates the doc tree and world-local build factory with physician-gated stubs. Use `--adopt-existing` only for a pre-brainstorm scaffold that already has a cockpit.
+- `build/build-docx-ondina-brainstorm.py` - Mode A clone build for `worlds/ondina-vasquell/submission/Ondina_Vasquell_Brainstorm.docx`
+
+## Current reusable verification script
+
+- `verify/verify_world_factory.py` - generic mechanical gate for any bootstrapped world. Checks generated DOCX and text files for synthetic tokens, prior-world identifiers, banned characters, physician-placeholder leakage in DOCX, and task artifacts in `world-files/`.
 
 ## macOS document-tool note, 2026-06-11
 

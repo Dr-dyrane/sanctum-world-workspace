@@ -120,6 +120,10 @@ dist/
 build/
 !tools/build/
 !tools/build/*.py
+!worlds/*/build/
+!worlds/*/build/*.py
+!worlds/*/build/README.md
+!worlds/*/build/.gitkeep
 coverage/
 *.sqlite-shm
 *.sqlite-wal
@@ -142,5 +146,5 @@ worlds/korvin-merrow/task-setup/task*/bundles/*.zip
 worlds/korvin-merrow/task-setup/task*/build-phase-drafts/*.zip
 
 # Pipeline-history folder is tracked (read-only history, no active use)
-# worlds/korvin-merrow/_pipeline-history/ — committed, not ignored
+# worlds/korvin-merrow/_pipeline-history/ - committed, not ignored
 .vercel
