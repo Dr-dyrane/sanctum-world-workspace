@@ -101,7 +101,9 @@ Use parallel agents or parallel read passes if available. Every lane writes find
 | 2026-06-18 | Female patient is locked. Marva Lydell is the approved name. | Active |
 | 2026-06-18 | The repo slug must match the patient-world name. This is already done: `worlds/marva-lydell/`. | Done |
 | 2026-06-18 | The Brainstorm should stay task-first, then substrate, then spec. | Active |
-| 2026-06-18 | Brainstorm values now proposed: 72-year-old Black woman, snapshot 06/10/2026 at 18:00, task window 06/11/2026 through 06/17/2026. These are planning values until Phase A ratifies them. | Active |
+| 2026-06-18 | Brainstorm values now proposed: 72-year-old Black woman, snapshot 07/10/2025 at 18:00, task window 07/11/2025 through 07/17/2025. These are planning values until Phase A ratifies them. | Active |
+| 2026-06-18 | New date doctrine: accepted KM and OV artifacts are grandfathered, but Marva and all future or reopened clinical artifacts must keep evaluator-visible narrative dates on or before 07/31/2025. | Active |
+| 2026-06-18 | Reviewer-facing Brainstorm language must not expose local task IDs, build codes, priority codes, or harness terms. Number tasks plainly and keep the table clinical. | Active |
 | 2026-06-18 | Transcript is a scaffold, not a true Claude export. It cannot be uploaded as a real Claude transcript until Alexander provides or confirms the share/export. | Active |
 
 ## Build Record - 2026-06-18

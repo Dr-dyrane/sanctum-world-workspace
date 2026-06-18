@@ -8,7 +8,7 @@ Last updated: 2026-06-18.
 
 Marva Lydell is approved as the patient-world name. Candidate 3 is selected from the internal medicine candidate list, with the post-audit product thesis: cardiorenal respiratory transition readiness.
 
-The Brainstorm source and DOCX are built. The working concept uses a 72-year-old Black woman, a 06/10/2026 snapshot, and a 06/11/2026 through 06/17/2026 task window. These values are Brainstorm-level planning values, not Phase A substrate until explicitly ratified.
+The Brainstorm source and DOCX are built. The working concept uses a 72-year-old Black woman, a 07/10/2025 snapshot, and a 07/11/2025 through 07/17/2025 task window. These values are Brainstorm-level planning values, not Phase A substrate until explicitly ratified. The July 2025 date spine follows the 2026-06-18 reviewer-driven rule that new and reopened clinical artifacts must not place their narrative present after 07/31/2025.
 
 There are no world files, task files, prompts, goldens, graders, uploads, trajectories, or platform actions. The current work is human edit, provenance cleanup, and Phase A substrate planning.
 
@@ -28,6 +28,7 @@ The canonical build factory is installed at `build/` from the Ondina pattern. It
 - 2026-06-18: Built `submission/Marva_Lydell_Brainstorm.docx` with `tools/build/build-docx-marva-brainstorm.py` using the Korvin Brainstorm Mode A clone path. Fingerprint gate passed.
 - 2026-06-18: Built `submission/Marva_Lydell_Brainstorm_Claude_Transcript.md` and `.docx` as a marked transcript scaffold. It is not upload-ready until a real Claude share/export is pasted or reconciled.
 - 2026-06-18: Mechanical gates passed: Marva world factory gate, active voice gate, banned dash and arrow scan, and Python compile for the new builders. Visual DOCX render is blocked locally because bundled LibreOffice still needs `libfontconfig.1.dylib`.
+- 2026-06-18: Updated workspace canon after a new reviewer failure example: current accepted KM and OV artifacts are grandfathered, but Marva and all future or reopened clinical artifacts must keep world-file, task-file, golden, prompt, and grader chart dates on or before 07/31/2025. Recut the Brainstorm snapshot to 07/10/2025 and task anchors to 07/11/2025 through 07/17/2025. Removed local task-code and priority-code surface language from the Brainstorm table.
 
 ## Open Decisions
 
@@ -46,7 +47,8 @@ The canonical build factory is installed at `build/` from the Ondina pattern. It
 - No warm headline-axis trap as the central bite.
 - No task-layer file inside world files.
 - No prompt telegraph.
-- No post-July-2025 public knowledge dependency unless the reference is attached and realistic.
+- No evaluator-visible clinical narrative date after 07/31/2025 for Marva or any future/reopened work.
+- No post-07/31/2025 public knowledge dependency unless the reference is attached and realistic.
 - No `build/build_all.py` until placeholders are gone and Phase A is approved.
 - Do not use race as a scoring lever, shortcut, or unstated explanation. The chart must carry every scored fact.
 - Do not upload the transcript scaffold as a real Claude transcript.

@@ -18,7 +18,7 @@ Each phase lists: INPUT, SPINE (automatable), GATE (physician), OUTPUT, PASS (th
 ### Phase 0 - Pre-brainstorm
 - INPUT: a case note of choice (the right entry point - richer than a bare title).
 - SPINE: copy the world folder skeleton; snapshot the live instruction doc and the live Task Selection Categories sheet; open the planning canvas.
-- GATE: confirm the domain is worth a world; pick 5+ distinct task structures BEFORE the patient (cap completion/draft tasks at 1-2); declare the snapshot date and a varied post-snapshot anchor per task; verify every workflow string verbatim against the LIVE categories sheet and note claim counts.
+- GATE: confirm the domain is worth a world; pick 5+ distinct task structures BEFORE the patient (cap completion/draft tasks at 1-2); declare the snapshot date and a varied post-snapshot anchor per task, all on or before 07/31/2025 for new or reopened work; verify every workflow string verbatim against the LIVE categories sheet and note claim counts.
 - OUTPUT: a filled planning canvas; a structures-first task slate.
 - PASS: brainstorm checklist variety + canvas + temporal-anchor gates.
 
@@ -68,8 +68,8 @@ Each phase lists: INPUT, SPINE (automatable), GATE (physician), OUTPUT, PASS (th
 - Single source of truth: each clinical value lives once in `clinical_data.py` / `task_data.py`, ratified from the substrate pack; change once, rebuild, re-gate.
 - The KM 7-column file table + four-option origin convention + landscape section for wide tables.
 - 30+ world-level files; task-level files separate and never in the world bucket.
-- Temporal law: every task encounter and deliverable strictly after the world snapshot; nothing future-dated past the real present.
-- Prompt law: the task prompt cannot require public knowledge after July 2025; it must constrain the model to the attached chart and any attached policy/reference files when guideline, drug-approval, coding, payer-policy, or quality-measure knowledge could otherwise drift in.
+- Temporal law: every task encounter and deliverable strictly after the world snapshot; nothing future-dated past the real present; for any new or reopened work after 2026-06-18, every evaluator-visible clinical narrative date is on or before 07/31/2025. Current accepted KM and OV artifacts are grandfathered unless review reopens them.
+- Prompt law: the task prompt cannot require public knowledge after 07/31/2025; it must constrain the model to the attached chart and any attached policy/reference files when guideline, drug-approval, coding, payer-policy, or quality-measure knowledge could otherwise drift in.
 - Deterministic build: pinned zip timestamps + core dates, pinned toolchain (`requirements.txt`), LF line endings.
 - Sanitized transcripts; scrubbed metadata on every docx.
 - The one-command gate green before any stage.

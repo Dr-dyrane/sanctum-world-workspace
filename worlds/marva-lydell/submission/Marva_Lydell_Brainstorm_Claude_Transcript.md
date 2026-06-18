@@ -128,9 +128,9 @@ Set the snapshot. It needs to create tension without needing future dates.
 
 Assistant
 ```text
-Use 06/10/2026 at 18:00.
+Use 07/10/2025 at 18:00.
 
-That lets the admission show improvement after inpatient diuresis and stabilization while leaving transition execution open. The task window can run 06/11 through 06/17, all before the current build date. World files stay at or before the snapshot. Task-level files carry post-snapshot denials, drafts, vendor notes, reports, and event notes.
+That lets the admission show improvement after inpatient diuresis and stabilization while leaving transition execution open. The task window can run 07/11 through 07/17, all before the July 31, 2025 cutoff. World files stay at or before the snapshot. Task-level files carry post-snapshot denials, drafts, vendor notes, reports, and event notes.
 ```
 
 10.

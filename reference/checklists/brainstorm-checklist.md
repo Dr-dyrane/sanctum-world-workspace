@@ -54,7 +54,8 @@ Use this checklist before Brainstorm AutoQC and Human Brainstorm Review.
 - Each task should name a concrete deliverable, not an open-ended question.
 - Each task should identify which world elements, frictions, or traps it tests.
 - Task-level traps should be distinct from world-level traps when possible.
-- TEMPORAL ANCHOR IS A NON-NEGOTIABLE (instruction doc 06_02 + 06_08, verbatim): every task encounter AND deliverable falls STRICTLY AFTER the world snapshot and at or before the present real-world date. A task anchored at or before the snapshot is not acceptable even if precisely stated; a late-entry note or addendum documenting a pre-snapshot encounter also fails; a future-dated task is not acceptable. Anchor tasks at varied post-snapshot timepoints. No world document may be dated after any task anchor.
+- Use plain clinical task numbering in the reviewer-facing Brainstorm. Do not introduce local codes such as `ML01`, `ML02`, or internal build IDs unless the official template requires them.
+- TEMPORAL ANCHOR IS A NON-NEGOTIABLE (instruction doc 06_02 + 06_08, plus workspace update 2026-06-18): every task encounter AND deliverable falls STRICTLY AFTER the world snapshot and at or before the present real-world date. For any new or reopened work after 2026-06-18, every evaluator-visible clinical narrative date must also be on or before 07/31/2025. A task anchored at or before the snapshot is not acceptable even if precisely stated; a late-entry note or addendum documenting a pre-snapshot encounter also fails; a future-dated task is not acceptable. Anchor tasks at varied post-snapshot timepoints. No world document may be dated after any task anchor.
 
 ## Lead Review Expectations
 

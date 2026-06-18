@@ -27,7 +27,7 @@ def _to_world_spec(spec):
         dos = f"{m.group(1)}/{m.group(2)}/{m.group(3)}"
     else:
         fm = re.search(r"_(\d{2})(\d{2})(\d{4})", fname)
-        dos = f"{fm.group(1)}/{fm.group(2)}/{fm.group(3)}" if fm else "01/01/2026"
+        dos = f"{fm.group(1)}/{fm.group(2)}/{fm.group(3)}" if fm else "01/01/2025"
     return (fname, base_key, note_type, dos, blocks)
 
 

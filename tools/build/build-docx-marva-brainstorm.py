@@ -108,15 +108,15 @@ def convert_markdown(lines: list[str]) -> list[str]:
                 out.append(f"{cells[0]}: {cells[1]}")
             elif len(cells) == 3:
                 out.append(f"{cells[0]}: {cells[1]}")
-                out.append(f"Fair catcher: {cells[2]}")
-            elif len(cells) >= 5:
+                out.append(f"Supporting record: {cells[2]}")
+            elif len(cells) >= 8:
                 out.append(f"{cells[0]}. {cells[2]}")
                 out.append(f"Requester: {cells[1]}")
                 out.append(f"Workflow: {cells[3]}")
-                out.append(f"Priority and structure: {cells[4]}, {cells[5]}")
-                out.append(f"Forced decision: {cells[6]}")
-                out.append(f"Planned trap: {cells[7]}")
-                out.append(f"Anchor: {cells[8]}")
+                out.append(f"Structure: {cells[4]}")
+                out.append(f"Required decision: {cells[5]}")
+                out.append(f"Clinical trap: {cells[6]}")
+                out.append(f"Anchor: {cells[7]}")
             else:
                 out.append(" | ".join(cells))
             continue
@@ -142,7 +142,7 @@ def build() -> None:
 
     doc = Document(str(tmp))
     set_text(doc.paragraphs[0], "Marva Lydell World Brainstorm")
-    set_text(doc.paragraphs[1], "Document date: June 18, 2026")
+    set_text(doc.paragraphs[1], "Document date: July 18, 2025")
 
     concept = convert_markdown(extract_preamble(text))
     world_setup = concept + [""] + convert_markdown(extract_section(text, "1. World setup"))
