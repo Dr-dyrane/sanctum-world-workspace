@@ -1,6 +1,6 @@
 # Marva Lydell World - Cockpit
 
-Status: pre-brainstorm scaffold, renamed to approved patient-world slug 2026-06-18.
+Status: Brainstorm package built locally, pending human edit and real transcript provenance.
 
 Approved patient-world name: Marva Lydell.
 
@@ -66,14 +66,17 @@ No-repeat receipt:
 - `docs/PLANNING-CANVAS.md` - World 3 task-first canvas.
 - `docs/BRAINSTORM-BUILD-LIVE-AUDIT.md` - living resume doc for Brainstorm, transcript, checklist, and leak-control work.
 - `docs/NAME-SHORTLIST.md` - deterministic name shortlist for approval.
-- `docs/BRAINSTORM-DRAFT.md` - draft Brainstorm content, not a submission artifact.
-- `submission/Marva_Lydell_Brainstorm_DRAFT.md` - Brainstorm bootstrap copy, not a DOCX and not upload-ready.
+- `docs/BRAINSTORM-DRAFT.md` - working Brainstorm source and audit copy.
+- `submission/Marva_Lydell_Brainstorm.md` - canonical Brainstorm markdown for DOCX build.
+- `submission/Marva_Lydell_Brainstorm.docx` - Mode A Brainstorm DOCX built from the approved Korvin Brainstorm template.
+- `submission/Marva_Lydell_Brainstorm_Claude_Transcript.md` - transcript scaffold, not upload-ready until a real Claude share/export is pasted or confirmed.
+- `submission/Marva_Lydell_Brainstorm_Claude_Transcript.docx` - transcript scaffold DOCX, built and metadata-scrubbed.
+- `submission/Marva_Lydell_Brainstorm_DRAFT.md` - draft pointer, kept so older references do not break.
 - `build/` - canonical OV-style factory installed by `tools/build/bootstrap_world_factory.py --adopt-existing`; placeholders block any build.
 
 ## Forbidden Until Explicit Authorization
 
-- No patient-specific clinical values are final.
-- No DOCX build.
+- No patient-specific clinical values beyond the Brainstorm concept are final.
 - No image generation.
 - No world file generation.
 - No task prompt, golden, or grader drafting.
@@ -89,11 +92,11 @@ Do not run `build/build_all.py` yet. It is intentionally not runnable until the 
 
 ## Next Eligible Step
 
-Alexander approves or edits:
+Alexander edits or approves:
 
-1. Task architecture in `docs/PLANNING-CANVAS.md`.
-2. Live audit findings in `docs/BRAINSTORM-BUILD-LIVE-AUDIT.md`.
-3. Brainstorm direction in `docs/BRAINSTORM-DRAFT.md`.
-4. Bootstrap Brainstorm copy in `submission/Marva_Lydell_Brainstorm_DRAFT.md`.
+1. Brainstorm source in `submission/Marva_Lydell_Brainstorm.md`.
+2. Transcript scaffold in `submission/Marva_Lydell_Brainstorm_Claude_Transcript.md`, or replaces it with a real Claude export.
+3. Task architecture in `docs/PLANNING-CANVAS.md`.
+4. Live audit findings in `docs/BRAINSTORM-BUILD-LIVE-AUDIT.md`.
 
-After that, build the Brainstorm submission artifact only with explicit authorization.
+After that, run Brainstorm AutoQC only with explicit authorization. Do not upload a transcript scaffold as if it were a real Claude share.

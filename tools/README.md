@@ -18,6 +18,8 @@ All Python scripts for this workspace live here. Do not create `.py` files insid
 
 - `build/bootstrap_world_factory.py` - canonical new-world bootstrap from the Ondina factory pattern. Creates the doc tree and world-local build factory with physician-gated stubs. Use `--adopt-existing` only for a pre-brainstorm scaffold that already has a cockpit.
 - `build/build-docx-ondina-brainstorm.py` - Mode A clone build for `worlds/ondina-vasquell/submission/Ondina_Vasquell_Brainstorm.docx`
+- `build/build-docx-marva-brainstorm.py` - Mode A clone build for `worlds/marva-lydell/submission/Marva_Lydell_Brainstorm.docx`
+- `build/build-docx-marva-brainstorm-claude-transcript.py` - deterministic transcript scaffold build for `worlds/marva-lydell/submission/Marva_Lydell_Brainstorm_Claude_Transcript.docx`
 
 ## Current reusable verification script
 
@@ -33,7 +35,7 @@ The bundled runtime also provides `soffice`, `pdfinfo`, and `pdftoppm` under:
 
 `/Users/dyrane/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/`
 
-Current Mac caveat: bundled `soffice` is present but fails because LibreOffice dylibs expect Homebrew libraries under `/opt/homebrew/opt/` for `little-cms2`, `fontconfig`, and `freetype`. That is a local dependency failure, not a DOCX defect. With Alexander approval, the clean fix is to install Homebrew and run `brew install little-cms2 fontconfig freetype`.
+Current Mac caveat: bundled `soffice` is present but fails because LibreOffice dylibs expect Homebrew libraries under `/opt/homebrew/opt/` for `little-cms2`, `fontconfig`, and `freetype`. Local user-cache patching can redirect `little-cms2` and `freetype`, but `fontconfig` is still absent in the bundled runtime. That is a local dependency failure, not a DOCX defect. With Alexander approval, the clean fix is to install Homebrew and run `brew install little-cms2 fontconfig freetype`.
 
 Until that is fixed, these built-in macOS tools are useful for sanity checks only:
 

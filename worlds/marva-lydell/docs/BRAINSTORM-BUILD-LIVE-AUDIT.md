@@ -1,6 +1,6 @@
 # Marva Lydell Brainstorm Build Live Audit
 
-Status: living resume doc. Update this before and after every Brainstorm edit.
+Status: living resume doc. Brainstorm package built locally, pending human edit and provenance cleanup.
 
 Date opened: 2026-06-18.
 
@@ -8,7 +8,7 @@ Date opened: 2026-06-18.
 
 Marva Lydell is the approved patient-world name. The repo folder is `worlds/marva-lydell/`.
 
-Current phase: pre-Brainstorm DOCX. The only authorized work is planning, audit, and draft refinement. No DOCX build, Claude transcript DOCX, AutoQC, Studio action, task artifact, world file, prompt, golden, grader, image generation, or trajectory is authorized from this checkpoint.
+Current phase: post-local Brainstorm build. The only authorized work is human edit, provenance cleanup, and Phase A planning. No AutoQC, Studio action, task artifact, world file, prompt, golden, grader, image generation, or trajectory is authorized from this checkpoint.
 
 Current product thesis: a Black older adult woman with a cardiopulmonary admission that improves at rest but remains unsafe at transition unless oxygen, DME, exertional physiology, renal recovery, anticoagulation, and handoff ownership are reconciled.
 
@@ -17,8 +17,12 @@ Current product thesis: a Black older adult woman with a cardiopulmonary admissi
 - Cockpit: `worlds/marva-lydell/00-START-HERE.md`
 - Live status: `worlds/marva-lydell/docs/WORLD-STATUS.md`
 - Planning canvas: `worlds/marva-lydell/docs/PLANNING-CANVAS.md`
-- Brainstorm draft: `worlds/marva-lydell/docs/BRAINSTORM-DRAFT.md`
-- Bootstrap copy: `worlds/marva-lydell/submission/Marva_Lydell_Brainstorm_DRAFT.md`
+- Brainstorm draft and audit copy: `worlds/marva-lydell/docs/BRAINSTORM-DRAFT.md`
+- Canonical Brainstorm markdown: `worlds/marva-lydell/submission/Marva_Lydell_Brainstorm.md`
+- Brainstorm DOCX: `worlds/marva-lydell/submission/Marva_Lydell_Brainstorm.docx`
+- Transcript scaffold markdown: `worlds/marva-lydell/submission/Marva_Lydell_Brainstorm_Claude_Transcript.md`
+- Transcript scaffold DOCX: `worlds/marva-lydell/submission/Marva_Lydell_Brainstorm_Claude_Transcript.docx`
+- Draft pointer: `worlds/marva-lydell/submission/Marva_Lydell_Brainstorm_DRAFT.md`
 - Factory: `worlds/marva-lydell/build/`
 - Repo spine: `WORKSPACE_FILE_MAP.md`
 
@@ -97,14 +101,45 @@ Use parallel agents or parallel read passes if available. Every lane writes find
 | 2026-06-18 | Female patient is locked. Marva Lydell is the approved name. | Active |
 | 2026-06-18 | The repo slug must match the patient-world name. This is already done: `worlds/marva-lydell/`. | Done |
 | 2026-06-18 | The Brainstorm should stay task-first, then substrate, then spec. | Active |
+| 2026-06-18 | Brainstorm values now proposed: 72-year-old Black woman, snapshot 06/10/2026 at 18:00, task window 06/11/2026 through 06/17/2026. These are planning values until Phase A ratifies them. | Active |
+| 2026-06-18 | Transcript is a scaffold, not a true Claude export. It cannot be uploaded as a real Claude transcript until Alexander provides or confirms the share/export. | Active |
+
+## Build Record - 2026-06-18
+
+Built artifacts:
+
+- `worlds/marva-lydell/submission/Marva_Lydell_Brainstorm.md`
+- `worlds/marva-lydell/submission/Marva_Lydell_Brainstorm.docx`
+- `worlds/marva-lydell/submission/Marva_Lydell_Brainstorm_Claude_Transcript.md`
+- `worlds/marva-lydell/submission/Marva_Lydell_Brainstorm_Claude_Transcript.docx`
+
+Build tools:
+
+- `tools/build/build-docx-marva-brainstorm.py`
+- `tools/build/build-docx-marva-brainstorm-claude-transcript.py`
+
+Verification:
+
+- Brainstorm DOCX Mode A fingerprint gate passed: styles, fills, borders, palette, metadata, banned dash/arrow, synthetic token, and banner checks.
+- `tools/verify/verify_world_factory.py worlds/marva-lydell` passed for 2 DOCX files and 12 text files.
+- `tools/verify/verify_voice.py worlds/marva-lydell/submission worlds/marva-lydell/docs` passed active deliverables. Existing older archived warnings elsewhere in the repo remain non-blocking.
+- Python compile passed for both new Marva DOCX builders.
+- Banned dash and arrow scan passed on Marva submission and docs markdown.
+
+Render status:
+
+- Visual DOCX render attempted with the documents render helper.
+- First blocker was `liblcms2.2.dylib`; local user-cache patch redirected that and bundled freetype successfully.
+- Render is still blocked on missing `libfontconfig.1.dylib` in the bundled LibreOffice runtime.
+- Page-image QA is not passed. Do not claim rendered visual approval until fontconfig is installed or a working LibreOffice renderer is available.
 
 ## Next Authorized Work When Resuming
 
-1. Deep-ransack the repo for Brainstorm templates, OV build scripts, transcript builders, AutoQC and reviewer guidance.
-2. Update this live audit with source findings.
-3. Rewrite `docs/BRAINSTORM-DRAFT.md` for clinical sharpness.
-4. Sync `submission/Marva_Lydell_Brainstorm_DRAFT.md`.
-5. Only after Alexander approves the markdown, build Brainstorm DOCX and Claude transcript artifacts.
+1. Human edit the Brainstorm text.
+2. Replace or reconcile the transcript scaffold with a real Claude share/export.
+3. Fix local LibreOffice fontconfig or render on a machine with a working DOCX renderer.
+4. Inspect rendered pages before upload.
+5. Only after Alexander authorizes it, run Brainstorm AutoQC or upload.
 
 ## Mechanical Gates Before Any Brainstorm DOCX
 
@@ -113,3 +148,4 @@ Use parallel agents or parallel read passes if available. Every lane writes find
 - Confirm no banned dash or arrow characters in active Marva docs.
 - Confirm no old slug, old name, or prior-world patient identifier remains.
 - Confirm every future DOCX build uses the correct Mode A or document builder path, not ad hoc Word construction.
+- Confirm the transcript source is real before any platform upload.

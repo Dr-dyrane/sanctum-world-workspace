@@ -1,7 +1,5 @@
 # Marva Lydell Brainstorm
 
-Status: built draft for Brainstorm upload preparation. This is the source text mirrored into `worlds/marva-lydell/submission/Marva_Lydell_Brainstorm.md`.
-
 ## Concept pitch
 
 Build a cardiopulmonary transition world around Marva Lydell, a 72-year-old Black woman admitted with acute decompensated heart failure, cardiorenal acute kidney injury, COPD and obstructive sleep apnea overlap, atrial fibrillation on anticoagulation, diabetes, and limited home support. The world closes when she is medically improving but not yet transition-safe. Her resting oxygen saturation looks acceptable, the creatinine is improving, and the discharge plan reads clean at a glance. The real work is in the contradictions: exertional hypoxemia, incomplete oxygen equipment delivery, unresolved volume risk, renal-dose medication decisions, anticoagulation source hierarchy, and a home setting that cannot absorb a premature handoff.
