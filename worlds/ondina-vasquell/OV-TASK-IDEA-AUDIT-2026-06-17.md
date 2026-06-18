@@ -16,7 +16,7 @@ Seven confirmed floors built and floored. OV09 is the pilot-ready eighth. OV05 r
 | OV06 | Referral Intake, Triage, and Scheduling Coordination | embedded wrong, de-telegraphed (perfusion closure) | FLOOR 0.39 (job 577effae) |
 | OV07 | Claims Denial Analysis and Appeal Preparation | off-text image (wound undermining) | FLOOR 0.51 (job a33db3d0) |
 | OV08 | Utilization Review Concurrent Stay Documentation | embedded wrong (antibiotic route, no OPAT) | FLOOR 0.63 (job d4eaa31b) |
-| OV09 | Post-Acute Care Coordination Documentation | v3 embedded wrong on disposition CEILINGED 0.84 (headline axis); v4 re-cut to held-med-resume (background axis) | v4 PILOT-READY |
+| OV09 | Post-Acute Care Coordination Documentation | v3 on disposition CEILINGED 0.84 (headline); v4 held-med-resume (background) FLOORED bimodal ~0.62, FA/GA done | FLOOR (banking) |
 
 Mechanism coverage so far: cold-knowledge x1, off-text text synthesis x1, off-text image x2, embedded-wrong carry-forward x3 (OV03, OV06, OV08), plus OV09 embedded-wrong pending.
 
