@@ -71,6 +71,7 @@ WRITER'S SCORE (project guidance, 2026-06-18). Verbatim project guidance: "New F
 - Single-run rule (Abi 6/05). Analyze ONE run, named by its trajectory number ("On trajectory N"). Cite only that run's score and the writer's own score; do not mention other runs' scores or the distribution in the FA or GA body. The distribution lives in the Status line.
 - No em dashes or en dashes. Plain hyphens and commas.
 - Two paragraphs per field, no bullets, each field at or under about 1000 characters. Completeness of the components beats hitting the count, but stay under 1000 so the gate is clean.
+- Self-check before handing back: run `python3 tools/verify/lint_fa_ga.py <the FA/GA file>` and clear every FAIL. It enforces this skill mechanically (opens "On trajectory N", single run only, first-person self-score, two paragraphs, under 1000 chars, no dashes, no rating word, no banned phrases) and warns on semicolons and sentences over 24 words. Fix until it prints "clean".
 
 ## Avoid (builder and reviewer jargon)
 floor, catcher, bimodal, mechanism, lane, bankable, score cap; rubric, grading framework, designed to test, additive checklist.
@@ -82,6 +83,7 @@ Above the two fields, record: the job id, the full score distribution, the mean,
 FA: opens with "On trajectory N" (the 1-10 count); leads with a brief competent baseline; names the central failure as a turn; states the clinical mechanism, consequence, and severity tier; names the document(s); states the writer's own score in the body; references only this run, never other runs' scores; failure-only.
 GA: names what the grader got correct; names what it got wrong or could improve (NOT optional); judges calibration; no rating line.
 Both: no section names, no banned credit phrases, no dashes, plain clinical speech, second-lowest distinct run, gates clean.
+Self-check: `python3 tools/verify/lint_fa_ga.py <file>` prints "clean" (no FAILs) before you hand back.
 
 Worked examples in `references/worked-examples.md`: the OV09 held-medication GA shows the grader-audit shape with the improvement move; the OV04 image FA/GA shows the simpler clinical form. Read them when a draft feels off-format.
 

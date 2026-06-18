@@ -60,3 +60,4 @@ The platform allows up to half a page / 10-12 sentences for the FA and 4-6 sente
 FA: opens with "On trajectory N" (the 1-10 count); leads with what the model did right; names the central failure as a turn; states the clinical mechanism and consequence with a severity tier; names the document(s); states the writer's own score in the body; references only this run, never other runs' scores.
 GA: names what the grader got right; names what the grader got wrong or could improve (NOT optional); judges calibration; rating only in Status, not prose.
 Both: failure-only, no section names, no rating line in prose, no dashes, plain clinical speech, second-lowest distinct run, gates clean.
+Self-check: run `python3 tools/verify/lint_fa_ga.py <file>` and clear every FAIL (it enforces the "On trajectory N" opener, single-run-only, first-person self-score, and the structure rules; it warns on semicolons and long sentences).
