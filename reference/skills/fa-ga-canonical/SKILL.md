@@ -29,6 +29,8 @@ Then it judges calibration. An affirm-only GA (move 1 plus "the score is justifi
 ## Primary sources first (never write from memory)
 Before drafting, read in this order: (1) the selected trajectory output, (2) its grading transcript, (3) the current grader guidelines, (4) the golden. Do not infer the failure from the score or the output alone; KM task1 guessed four wrong failure modes, and the grading transcript showed the real miss. The golden's Section A names the non-negotiable move; the grader's failure-modes section names the central failure.
 
+SAVE the run verbatim FIRST. When the pilot returns, copy the selected run exactly (the trajectory output and its grading transcript, as pasted from Studio) into the task's pilot/runs/ folder, named by job and attempt, and cite that file in the Status line, BEFORE writing a word of the FA/GA. The write-up must be derived from that saved primary source, not from chat memory. A run that lives only in the chat is gone at compaction; the next pass would be from memory, which is exactly where invented detail enters. Saved-run-first is what makes "never from memory" real and the FA/GA auditable.
+
 ## Run binding
 Bind the FA to ONE run, named in the Status line: the SECOND-lowest distinct score (King P, 2026-06-14; supersedes the older "lowest run"). A single anomalous floor should not drive the analysis. If the strict second-lowest distinct has no full transcript, bind to the nearest run you do have and say so in the Status line.
 

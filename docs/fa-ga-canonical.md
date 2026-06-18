@@ -12,6 +12,8 @@ This is the locked standard. Read it before writing or revising any FA/GA. It su
 ## Run binding
 Bind the FA to ONE run, named in the Status line: the second-lowest distinct score. Pull that run's full output AND its grading transcript before writing. Do not infer the failure from the output alone (KM task1 guessed four wrong failure modes; the transcript showed the real miss).
 
+SAVE the run verbatim FIRST, before drafting. When a pilot returns, copy the selected run exactly (the trajectory output and its grading transcript, as pasted from Studio) into `tasks/taskN/pilot/runs/` named by job and attempt, and cite that file in the Status line. The FA/GA is then provably derived from a saved primary source, not from chat memory. This is the only way the never-from-memory rule is enforceable: it makes the write-up auditable and revisable after the chat ends, and it satisfies the verify-the-primary-artifact guardrail. A run that lives only in the chat is gone at compaction, and the next pass would be from memory, which is where invented detail creeps in.
+
 ## Failure Analysis - the four components (EXP Step 14)
 Cover all four, in prose, organized by severity (clinical first, then administrative, then style):
 1. What the agent got RIGHT - a brief competent baseline, one or two sentences, named specifically, as the setup for the turn. Lead with it but keep it short. Ahmad (Trigeminus, more recent than 06_09) cut the standalone "what the agent got right" paragraph: the FA stays failure-only, no praise paragraph.
