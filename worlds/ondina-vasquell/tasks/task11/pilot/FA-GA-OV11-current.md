@@ -4,9 +4,9 @@ Status: Job a74188e2. Ten runs 0.10 to 0.15 (0.10 five times, 0.12 three times, 
 
 ## Failure Analysis
 
-On trajectory 3, the model finished the summary competently. The hospital course is accurate. The attending-action items are right. The added detail checks out against the chart. The failure is the immunization line. The model carried the 05/23 care-coordination review's closure forward unchanged. It still reads: immunizations reviewed and up to date, none indicated this admission.
+On trajectory 3, the model finished the summary competently. The hospital course is accurate. The attending-action items are right. The added detail checks out against the chart. The failure is the immunization line, where the model carried the 05/23 care-coordination review's closure forward unchanged. It still reads: immunizations reviewed and up to date, none indicated this admission.
 
-No immunization record exists anywhere in the chart. No history, no administration, no review. The 04/30 outpatient summary documents only the dilated eye and foot examinations. The review attested a review that never happened. The model listed it among current items with no flag. This summary is built for signature. Attesting immunizations as addressed closes a real preventive-care gap in a diabetic with chronic kidney disease. It routes nothing to outpatient primary care. This is a documentation-integrity failure, not a wording preference. The failure caps the run low. My own score of it is 0.10.
+No immunization record exists anywhere in the chart. No history, no administration, no review. The 04/30 outpatient summary lists only the dilated eye and foot exams. The review attested a review that never happened. The model listed it as current, no flag. This summary is built for signature. Attesting immunizations as addressed closes a real preventive-care gap in a diabetic with chronic kidney disease and routes nothing to outpatient primary care. This is a documentation-integrity failure, not a wording preference. The failure caps the run low. Based on these, I score it 0.10 in this trajectory.
 
 ## Grader Analysis
 
