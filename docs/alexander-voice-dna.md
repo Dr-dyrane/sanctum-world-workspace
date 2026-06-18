@@ -81,3 +81,7 @@ Grader Analysis
 The 0.20 score is appropriate. The note accurately captured most aspects of the hospitalization but failed to identify the poor CPAP adherence documented in the compliance report. As a result, the patient's obstructive sleep apnea was presented as stable on home CPAP despite evidence of inadequate treatment. Credit is warranted for the otherwise accurate medication reconciliation, hospital course, and follow up planning. However, the missed CPAP finding was clinically significant and affected the overall assessment, making the assigned score reasonable.
 
 Acceptable, because it is the clinical mechanism: the report was an image file the model never opened or reviewed. Not acceptable, because it is evaluation scaffolding: OCR, "saw it in the directory listing," "confirmed from the transcript," and run or job IDs.
+
+## Plain clinical language, not compressed nomenclature (added 2026-06-18, Dyrane)
+
+Write the way an attending speaks, not in stacked hyphenated tokens that read like a variable name or a rubric label. Say "only noted that the attending should decide on restart," not "added a decide-restart-versus-hold instruction." Prefer the actual scores or "the low scores" over "the low band," and "leaving the agent resumed" over "the carry-forward." If a phrase looks like code or eval shorthand, rewrite it as speech. The compression rule applies: if an attending would not say it out loud during chart review, reword it.
