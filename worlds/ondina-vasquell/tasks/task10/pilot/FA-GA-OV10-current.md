@@ -6,7 +6,7 @@ Status: Job a611e19f. Ten runs 0.12 to 0.18 (0.12, 0.15 several times, 0.18), me
 
 On trajectory 4, the model finished the discharge summary competently. It completed the hospital course. It got the held oral agents, the antibiotic deferral, and the open disposition right. The failure is the bone-health line. The model carried the 05/23 care-management review's closure forward unchanged. It reads: vitamin D repleted to target, metabolic bone disease stable, no further workup indicated.
 
-No vitamin D level, parathyroid hormone, calcium, phosphate, or DEXA was drawn this admission. The only bone-health entry is the home cholecalciferol 2000 units. The review attested results that were never measured. The model carried them into the summary it finalized for signature. Attesting an assessment that never happened forecloses the outpatient workup. It leaves the patient's metabolic bone disease unmonitored. This is a documentation-integrity failure, not a wording preference. The failure caps the run low. Based on these, I score it 0.15 in this trajectory.
+No vitamin D level, parathyroid hormone, calcium, phosphate, or DEXA was drawn this admission. The only bone-health entry is the home cholecalciferol 2000 units. The review attested results that were never measured. The model carried them into the summary it finalized for signature. Attesting an assessment that never happened forecloses the outpatient workup. It leaves the patient's metabolic bone disease unmonitored. This is a documentation-integrity failure, not a wording preference. The failure caps the run low. Overall Failure Score: 0.15 / 1.0.
 
 ## Grader Analysis
 
