@@ -22,4 +22,4 @@ Indefensible to miss: transferring osteomyelitis as a soft-tissue infection on a
 - Off-text image: foot_radiograph_05242026.jpg (Codex render from osteo-image-spec.md; cortical destruction at the second metatarsal head, consistent with osteomyelitis, dated 05/24/2026, locked to the golden).
 - Golden: golden-OV09-v1.docx. Grader: grader-guidelines-OV09.txt. Prompt: prompt-OV09.txt (plain "finish it from her chart", no telegraph).
 - Full OV world chart mounted. Build/regen: build/build_ov09.py renders the deliverable and golden through build_one.
-- RENDER GATE before pilot: Codex must produce foot_radiograph_05242026.jpg matching the locked finding, QA the legible impression strip, then mount it with the task files.
+- RENDER: foot_radiograph_05242026.jpg is RENDERED IN-REPO (build/render_ov09_image.py, no Codex), as a transfer-day radiograph report in the world's study-as-image style. Present and QA'd: OCR confirms the osteomyelitis impression is legible, zero banned glyphs. No external render dependency; OV09 v2 is self-contained and pilot-ready. Mount it with the task files.
