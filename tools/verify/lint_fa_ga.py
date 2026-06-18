@@ -10,8 +10,8 @@ This complements presubmit_task_gate.py. The gate checks the whole task* tree fo
 structural basics (two paragraphs, <=1000 chars, dashes, banned credit phrases, rating
 line). This linter checks the SINGLE file being drafted, including the voice rules the
 gate does not enforce: the FA opens with "On trajectory N", only the analyzed run is
-named (no other-run scores or distribution in the body), the writer's own score is stated
-in the body in the first person, and sentences stay short enough to read in one breath.
+named (no other-run scores or distribution in the body), the writer's own score appears
+as the required Overall Failure Score line, and sentences stay short enough to read in one breath.
 
 The Status line above "## Failure Analysis" is internal metadata. It legitimately carries
 the full distribution and the run hashes, so the single-run and distribution checks run
@@ -29,9 +29,7 @@ OTHER_RUNS = re.compile(r'\b(every|all|each|several|other|both|two|three|four|fi
 SCORE_RANGE = re.compile(r'0\.\d{1,2}\s*(?:to|through|-|and)\s*0\.\d{1,2}')
 DISTRIB = re.compile(r'\b(distribution|uniformly|bimodal|across runs|no high outlier|'
                      r'mean (?:of |about )?0?\.?\d)\b', re.I)
-SELF_SCORE = re.compile(r'\b(I score|I scored|my own score|my score|I rate|I rated|'
-                        r'I put it at|I would score)\b', re.I)
-SCORE_NUM = re.compile(r'0\.\d{1,2}')
+OVERALL_SCORE = re.compile(r'Overall Failure Score:\s*(?:0(?:\.\d{1,2})?|1(?:\.0{1,2})?)\s*/\s*1\.0')
 SENT_WARN = 24  # words; the breath rule aims for ~15, warn past 24
 
 def section(t: str, name: str):
@@ -88,8 +86,8 @@ def lint(path: str):
     if fa:
         if not fa.startswith("On trajectory "):
             fails.append("FA must open with 'On trajectory N' (the 1-10 count, not the run hash)")
-        if not (SELF_SCORE.search(fa) and SCORE_NUM.search(fa)):
-            fails.append("FA must state the writer's own score in the body, first person (e.g., 'Based on these, I score this trajectory 0.10')")
+        if not OVERALL_SCORE.search(fa):
+            fails.append("FA must include the writer's own score line: 'Overall Failure Score: X.XX / 1.0'")
     if ga and 'trajectory' not in ga.lower():
         warns.append("GA does not name the trajectory; the house form is 'The grader scored trajectory N at X'")
 

@@ -18,7 +18,7 @@ description: >-
 
 # Failure and Grader Analysis (FA/GA) - skill guide
 
-> CANONICAL (LOCKED): `docs/fa-ga-canonical.md` is the single standard, derived from the EXP 06_09 instruction doc and the approved KM FA/GAs. Read it first. If this guide or any skill-cache template disagrees, the canonical wins. The GA is a grader AUDIT and MUST name both what the grader got correct AND what it got wrong or could improve, then judge calibration. An affirm-only GA that ends "the score is justified" without the improvement move is incomplete and will be sent back.
+> CANONICAL (LOCKED): `docs/fa-ga-canonical.md` is the single standard, derived from the EXP 06_09 instruction doc, approved KM FA/GAs, and Vagus 2026-06-18 guidance. Read it first. If this guide or any skill-cache template disagrees, the canonical wins. The GA is a grader AUDIT and MUST name both what the grader identified correctly AND what it missed or mis-scored, then judge calibration. An affirm-only GA that ends "the score is justified" without the improvement move is incomplete and will be sent back.
 
 ## Primary sources first
 
@@ -123,10 +123,11 @@ If yes, submit.
 
 These carry the metadata so the prose stays clinical; they are not part of the pasted FA/GA voice.
 
-- Status line: above the two fields, record the job id, the full score distribution, the mean, and the FA subject (Attempt, run id, trajectory, score). Bind the FA to one run, the second-lowest distinct score (DO-NOT-REPEAT #20), and read that run's grading transcript before writing.
+- Status line: above the two fields, record the job id, the full score distribution, the mean, and the FA subject (Attempt, run id, trajectory, score). Bind the FA to one run, the second-lowest distinct score in the latest valid run set (DO-NOT-REPEAT #20), and read that run's grading transcript before writing. If trajectories and QA are rerun, redo FA/GA from the latest run set.
 - Format: two paragraphs each, no bullets, about 1000 characters each. No em dashes or en dashes anywhere; use plain hyphens and commas.
 - Gates before handback, both clean: `python3 tools/verify/verify_voice.py` and `python3 tools/verify/presubmit_task_gate.py task<N>`.
 - Boundaries: draft for the writer to read and own. No submission, paste, AutoQC, or platform action without the writer's explicit authorization for that exact step. One FA/GA per task.
+- Writer score: FA must include Alexander's own score, not the trajectory score, and end with `Overall Failure Score: X.XX / 1.0`. Larry's 2026-06-18 guidance says FA/GA cannot be AI-authored. Use this skill only as scratch support; Alexander must own the final platform text.
 
 ## Worked example
 

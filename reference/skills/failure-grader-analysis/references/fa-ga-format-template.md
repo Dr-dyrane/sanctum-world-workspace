@@ -7,13 +7,13 @@ Copy the skeleton, fill every field, then run the gates. The Status line carries
 ```
 # <TASK> FA/GA - failure-only (<lever in plain clinical terms>)
 
-Status <date>: paste-ready for <job id>. Scored <s1, s2, ... s10>. Mean ~<m>. FA subject: Attempt <n>, run <run id>, <traj id>, score <x> (second-lowest distinct; if not, say so and offer to rebind). Failure-only, two paragraphs each, no bullets, about 1000 characters, no em dashes.
+Status <date>: paste-ready for <job id>. Scored <s1, s2, ... s10>. Mean ~<m>. FA subject: Attempt <n>, run <run id>, <traj id>, score <x> (second-lowest distinct in the latest valid run set; if not, say so and offer to rebind). Writer score: <x.xx>. Failure-only, two paragraphs each, no bullets, about 1000 characters, no em dashes.
 
 ## Failure Analysis
 
 <Paragraph 1: open by naming the bound run by number ("On trajectory N..." or "On Attempt N..."). Lead with the failure: what the response did and why it was wrong, tied to the chart. No competent-baseline or praise paragraph. You may note the response had the evidence and failed anyway, framed as failure.>
 
-<Paragraph 2: why it matters clinically, the consequence stated at the level the chart supports (do not escalate it), any secondary errors, then the central failure restated.>
+<Paragraph 2: why it matters clinically, the consequence stated at the level the chart supports (do not escalate it), any secondary errors, then the central failure restated. End with: Overall Failure Score: X.XX / 1.0. This is the writer's own score, not the trajectory score.>
 
 ## Grader Analysis
 
@@ -31,7 +31,7 @@ Status <date>: paste-ready for <job id>. Scored <s1, s2, ... s10>. Mean ~<m>. FA
 | Recommended grader rating: ... | the rating lives in the Studio field | omit it |
 | em dash or en dash | house rule | plain hyphen or comma |
 | Furthermore / Moreover / Consequently / Notably / In addition | AI transition (gate fails) | start the sentence plainly |
-| golden, grader, rubric, additive checklist, scored 0.NN | eval register in reviewer-facing prose | the chart, the requirement, the score |
+| golden, grader, rubric, additive checklist | eval register in reviewer-facing prose | the chart, the requirement, the score |
 | floor, catcher, bimodal, mechanism, bankable, score cap | builder language | describe the clinical failure and the score plainly |
 | a higher score would imply..., the rubric is not additive | defending the score | state the clinical reason the miss is decisive |
 

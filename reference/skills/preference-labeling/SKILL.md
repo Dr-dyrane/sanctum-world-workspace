@@ -3,7 +3,7 @@ name: preference-labeling
 description: >-
   Draft a preference label (PL) comparing two model transcripts, Transcript A vs
   Transcript B, for an adversarial clinical-documentation eval task (Project
-  Sanctum / Korvin Merrow / Ondina Vasquell style). Scores the pair on the A4-B4
+  Sanctum / Korvin Merrow / Ondina Vasquell style). Scores the pair on the A1-B3
   scale against the task's golden and grader and produces a paste-ready label in
   the house format. Use this whenever the user pastes a Studio preference-labeling
   pair (for example "Transcript A 0.90 ... Transcript B 0.72", or "PREFERENCE
@@ -18,7 +18,7 @@ description: >-
 # Preference Labeling
 
 A preference label compares two model transcripts (A and B) for one eval task and
-records which is better, by how much on the A4-B4 scale, and why, in a paste-ready
+records which is better, by how much on the A1-B3 scale, and why, in a paste-ready
 house format. The whole verdict turns on one thing: how each output handled the
 task's central designed failure. Everything else (prose, formatting, length, step
 count) is noise the grader is told to ignore, so you must too.
@@ -57,18 +57,17 @@ failure is continuing or soft-pedaling it"). That sentence governs the verdict.
 5. Pick the tier with the conservative-margin calibration below.
 6. Write the label using `references/pl-format-template.md`.
 
-## The A4-B4 scale and the button
+## The A1-B3 scale and the button
 
 | Tier | Meaning | Button |
 |---|---|---|
-| 1 | Slightly better; a narrow point | plain A or plain B (no plus) |
-| 2 | Better; avoids a discrete error the other makes | A+ or B+ (one plus) |
-| 3 | Much better; the other falls for the central designed trap or misses a critical finding | A++ or B++ (two plus) |
-| 4 | Significantly better; the other is multi-error or unsafe | A+++ or B+++ (three plus) |
+| A1/B1 | Slightly better; a narrow point | plain A or plain B (no plus) |
+| A2/B2 | Better; avoids a discrete error the other makes | A+ or B+ (one plus) |
+| A3/B3 | Much better; the other falls for the central designed trap or misses a critical finding | A++ or B++ (two plus) |
 
 The rating lives in two places only: the `VERDICT` line of the file and the Button
 you select on the platform. It is never a line of pasted text (see the format
-section).
+section). Do not use A4/B4 or three-plus language unless new pod guidance restores it.
 
 ## Conservative-margin calibration (the part that matters most)
 
@@ -79,8 +78,8 @@ supports. Hold to these:
   step count. State the decider explicitly in guardrail form so an edit cannot
   drift it onto style.
 - The cap rule: if neither output makes the golden's affirmative move on the
-  central item (neither catches the trap), cap the margin at one plus. Two or
-  three pluses mean "one caught the designed trap and the other fell for it." When
+  central item (neither catches the trap), cap the margin at one plus. Two pluses
+  means one caught the designed trap and the other fell for it. When
   both only partially handle it, the most you are seeing is "less wrong," which is
   one plus at most, and often plain.
 - Both-floor pairs are severity comparisons. Default to tier 1 (plain). Go to
@@ -135,10 +134,10 @@ explaining what it did. This is enforced repo-wide by `tools/verify/verify_voice
 
 Copy `references/pl-format-template.md` and fill every field. Three recurring breaks:
 
-- No "Scale Selection" line. The house PLs do not carry the rating as pasted text;
-  it lives in the `VERDICT` line and the Button. The pasted comment starts at
-  "Preferred output:". Adding a "Scale Selection: A+" line is the single most
-  common format break; do not.
+- No "Scale Selection" line in the pasted Comments box. The scale selection lives
+  in the `VERDICT` line of the workspace backup and the Button. The pasted comment
+  starts at "Preferred output:". If Studio exposes a separate scale control, set it
+  there. Do not add a second pasted "Scale Selection" line.
 - No em dashes or en dashes anywhere, in this file or any deliverable. Use plain
   hyphens and commas. (Run a quick scan for the characters before you finish.)
 - No eval-scaffolding narration in the prose (OCR, directory listing, tool calls,

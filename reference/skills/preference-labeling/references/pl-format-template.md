@@ -1,7 +1,8 @@
 # PL format template (house format)
 
 Copy this for each preference label. Replace every `<...>`. Keep the field labels
-exactly as written. Do not add a "Scale Selection" line. Do not use em or en dashes.
+exactly as written. Do not add a "Scale Selection" line in the pasted Comments box.
+Do not use em or en dashes.
 
 The paste-ready part is the `## Justification` block, from "Preferred output:"
 through the end of "Summary:". That is what goes in the platform Comments box. The
@@ -24,7 +25,7 @@ Evidence read: both deliverable summaries read against `golden-<TASK>.docx` and 
 
 KEY FINDING: <Who is better and why, in a paragraph. Name what both got right, then the central item, then the single decider, then the margin reasoning (why this tier and not one step up or down).>
 
-VERDICT: <A1/A2/A3/A4 or B1/B2/B3/B4> (<A or B> better). Button = <plain A | A+ | A++ | A+++ | plain B | B+ | B++ | B+++>.
+VERDICT: <A1/A2/A3 or B1/B2/B3> (<A or B> better). Button = <plain A | A+ | A++ | plain B | B+ | B++>.
 
 ## Justification
 
@@ -55,5 +56,5 @@ Summary: <Restate the preference, the tier, and why it is not one step higher or
 6. PL <N> of 3 for <TASK>. <Note distinct trajectories.>
 
 ## Submit mechanics
-Select <Button> (no plus / one plus / etc.), paste the justification from "Preferred output: <A or B>" through the Summary into Comments, submit the preference, confirm it appears in submission history, then run Preference Labels AutoQC. Do not submit until the writer authorizes this exact step.
+Select <Button> (no plus / one plus / two plus), paste the justification from "Preferred output: <A or B>" through the Summary into Comments, submit the preference, confirm it appears in submission history, then run Preference Labels AutoQC. Do not submit until the writer authorizes this exact step.
 ```

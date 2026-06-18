@@ -92,6 +92,15 @@ EnvLinter (Taiga QA) thumbs-down annotations must EXPLAIN THE ACTUAL RATIONALE f
 ## TECH-ISSUE QA DISPOSITION - the 6/11 correction (KM07)
 The bare words "tech issue" / "known issue" / "N/A" now FAIL the Taiga QA Feedback review as dismissive deflection - it does not engage the finding's substance. A tech-issue disagree needs a SUBSTANTIVE, fact-referenced rebuttal in BOTH the annotation box and the dismissal box: state the concrete cause and cite evidence the grader actually ran. Worked example for the recurring `model-access preflight warning` false positive: "The grader did not fail or fall through. The model grader executed normally on the trajectory pilot (job <ID>) and returned valid per-run scores across all ten runs (<range>); model-access preflight warning is a static configuration-preflight signal that does not reflect the actual grading run, which empirically contradicts the predicted cannot-call-the-model failure." This supersedes the older two-field "exactly tech issue" rule (KM03-era). See AGENTS.md guardrail 4 and TASK-RUNBOOK section D step 4.
 
+## TECHNICAL ROUTING - Abi O pinned Vagus update, 2026-06-18
+For QC or Taiga errors, first paste the exact error into a review note or Claude and decide whether the writer can fix it. Writer-fixable means prompt, task files, golden, grader, upload state, or QA response can resolve it. If not writer-fixable, treat it as technical and route it with the task or world link:
+
+- `taiga-envlinter-autoqc-clarifications`: AutoQC or Taiga errors, flags, and what-to-do questions.
+- `#sanctumhelp`: Insightful, Okta, Slack, Claude reimbursement, and general help. Tag Maven, not Maven bot.
+- `sanctum-rls-tech-issues`: RLS tech issues not related to Taiga QA or AutoQC. Tag `aribot`.
+
+Nontechnical project questions go in the world thread for pod leads and EPMs. Do not DM pod leads or start a fresh Vagus post. Keep the answer attached to the world record.
+
 ## RE-RUN RULE - golden/grader change => re-pilot (2026-06-15)
 Any change to a task's golden OR grader requires re-running trajectories before bank/submit, however behavior-neutral the edit looks (DO-NOT-REPEAT #22). After the edit: re-AutoQC, re-run the pilot, then derive FA/GA and the bank decision from the new run. Never resubmit on the strength of "scoring logic unchanged."
 Pre-submit gates (run both, fix flags before upload): `tools/verify/verify_ondina.py` (adds grader length cap + golden-grader consistency) and `tools/verify/presubmit_task_gate.py` (per-task reviewer-failure-patterns).
