@@ -18,6 +18,8 @@ description: >-
 
 # Failure and Grader Analysis (FA/GA) - skill guide
 
+> CANONICAL (LOCKED): `docs/fa-ga-canonical.md` is the single standard, derived from the EXP 06_09 instruction doc and the approved KM FA/GAs. Read it first. If this guide or any skill-cache template disagrees, the canonical wins. The GA is a grader AUDIT and MUST name both what the grader got correct AND what it got wrong or could improve, then judge calibration. An affirm-only GA that ends "the score is justified" without the improvement move is incomplete and will be sent back.
+
 ## Primary sources first
 
 Before writing:
