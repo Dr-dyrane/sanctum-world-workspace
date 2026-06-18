@@ -4,7 +4,7 @@ Status 2026-06-18: paste-ready draft for job cc337773-c5c6-4a19-9df7-bfebd12fa59
 
 ## Failure Analysis
 
-On Attempt 10, the model finished the handoff competently. It kept the disposition open, continued insulin, and preserved the accurate antibiotic, wound, therapy, and follow-up items. The failure is the medication line. It left the started draft's resume of metformin, empagliflozin, and lisinopril at discharge in place and added only a decide-restart-versus-hold instruction. It had the hold orders in hand and resumed them anyway.
+On Attempt 10, the model finished the handoff competently. It kept the disposition open, continued insulin, and preserved the accurate antibiotic, wound, therapy, and follow-up items. The failure is the medication line. It left the started draft's resume of metformin, empagliflozin, and lisinopril at discharge in place and added only a decide-restart-versus-hold instruction. It had the hold orders in hand and resumed them.
 
 These three are held for acute kidney injury on chronic kidney disease, creatinine 1.6 from a peak of 2.1. Metformin near an eGFR of 30 risks lactic acidosis, empagliflozin risks euglycemic ketoacidosis during an active infection, and lisinopril worsens the recovering renal function. The note also contradicts itself, calling the agents held in one section and resumed in another, leaving the unsafe option live for the signing physician. This carry-forward is the central failure, and it drives the low band, 0.25 to 0.35, while the runs that remove it reach 0.92.
 
