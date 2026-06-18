@@ -13,7 +13,7 @@ from pathlib import Path
 import warnings; warnings.filterwarnings("ignore")
 
 REPO = Path(__file__).resolve().parents[2]
-P3 = REPO / "worlds/ondina-vasquell/phase-3-build-task-artifacts"
+OV = REPO / "worlds/ondina-vasquell"
 CAP = 540  # grader ~1 page (Sang/Kathy)
 
 VIS = re.compile(r"<w:t[^>]*>([^<]*)</w:t>")
@@ -24,7 +24,7 @@ VISPAT = re.compile(r"(photo|photograph|image)\w*\s+\w{0,12}\s*(show|confirm|dem
                     r"|corroborat\w*[^.]{0,40}(erythema|purulent|drainage|cellulitis|edema|infection)"
                     r"|(shows|reveals|demonstrates)\s+(erythema|purulent|cellulitis)", re.I)
 PROMPT_META = re.compile(r"\b(grader|rubric|golden|trap|do not credit|penaliz|rubric|score the)\b", re.I)
-FA_GA_DIR = REPO / "worlds/ondina-vasquell/phase-4-pilot-review-submit/fa-ga"
+# FA/GA now live per task under tasks/taskN/pilot/ (see check_fa_ga)
 # FA/GA must be failure-only (Abi 6/09) + no grader-section names (King P 6/14); flag the old both-sides format.
 BOTHSIDES = re.compile(r"what the model did well|what the grader (got right|did well)"
                        r"|the grader credited|it credited the|credited the (useful|complete|model|correct)"
@@ -59,7 +59,7 @@ def check_fa_ga():
     paragraphs under about 1000 characters. The two-paragraph + cap checks are what let the
     earlier single-paragraph OV02 draft through; they are now enforced."""
     out = []
-    for p in sorted(FA_GA_DIR.glob("FA-GA-*.md")):
+    for p in sorted(OV.glob("tasks/task*/pilot/FA-GA-*.md")):
         t = p.read_text(errors="ignore")
         if BOTHSIDES.search(t):
             out.append((p.name, "both-sides format - use failure-only (Abi 6/09)"))
@@ -126,9 +126,9 @@ def check_task(d: Path):
 
 def main():
     sel = sys.argv[1] if len(sys.argv) > 1 else "task*"
-    dirs = sorted(glob.glob(str(P3 / f"platform/{sel}/current")))
+    dirs = sorted(glob.glob(str(OV / f"tasks/{sel}/current")))
     if not dirs:
-        print(f"no task dirs matched platform/{sel}/current"); return 1
+        print(f"no task dirs matched tasks/{sel}/current"); return 1
     anyflag = False
     for dpath in dirs:
         d = Path(dpath)

@@ -106,9 +106,9 @@ DISCIPLINE (the ~12-ceiling lesson): BENCH every candidate cold before a pilot; 
 ## 7. SOURCES + EVIDENCE FILES
 ================================================================
 - General playbooks (correct, cite): docs/task-difficulty-lessons.md (names this recipe at its section 3), docs/km-tasking-playbook.md, reference/source/Raising_Task_Difficulty_Worked_Example.pdf.
-- OV slate + bench detail: phase-4-pilot-review-submit/OV-PATH-TO-8-km-ported-2026-06-15.md.
+- OV slate + bench detail: docs/history/OV-PATH-TO-8-km-ported-2026-06-15.md.
 - KM mechanism extraction + example-world extraction: captured in OV-WORLD-STATUS activity log (2026-06-15 entries) and this file.
-- SUPERSEDED (kept for history, banners added): docs/edmund-chen-difficulty-engine-distillation.md (mechanism extraction valid; "OV substrate-limited / next-world" implications wrong); phase-4-pilot-review-submit/results/OV03-text-floor-hunt-2026-06-15.md (no-go conclusion wrong - over-closure was the untried recipe).
+- SUPERSEDED (kept for history, banners added): docs/edmund-chen-difficulty-engine-distillation.md (mechanism extraction valid; "OV substrate-limited / next-world" implications wrong); tasks/task3/pilot/OV03-text-floor-hunt-2026-06-15.md (no-go conclusion wrong - over-closure was the untried recipe).
 
 ================================================================
 ## KM TRAP-PLACEMENT DISCRIMINATOR (from KM01 via the KM runbook, 2026-06-16) - why OV05 ceilinged 3x and RETIRED

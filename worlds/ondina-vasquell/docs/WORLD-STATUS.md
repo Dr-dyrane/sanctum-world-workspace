@@ -36,11 +36,11 @@ Medication Reconciliation (OV01); Medical Transcription (OV02, OV03, OV04); Refe
 
 ## Working files (per task)
 
-- Packets: `phase-3-build-task-artifacts/platform/task{1..10}/current/` (task5 = revived OV05, task6 = OV06).
-- FA/GA: `phase-4-pilot-review-submit/fa-ga/FA-GA-OV{01..09}-current.md` (OV05 and OV10 pending their pilots).
-- Preference labels: `phase-4-pilot-review-submit/preference-labeling/`.
-- Results: `phase-4-pilot-review-submit/results/`.
-- OV05 retired bottle-photo packet: `platform/task5/archive/2026-06-16-retired/`.
+- Packets: `tasks/task{1..10}/current/` (task5 = revived OV05, task6 = OV06).
+- FA/GA: `tasks/taskN/pilot/FA-GA-OVNN-current.md` (OV01-04 and 06-09 done; OV05 and OV10 pending their pilots).
+- Preference labels: `tasks/taskN/pilot/OVNN-PLx-A-vs-B.md`.
+- Results: `tasks/taskN/pilot/` per task; cross-task benches in `tasks/_benches/`.
+- OV05 retired bottle-photo packet: `tasks/task5/archive/2026-06-16-retired/`.
 - Cleanup archives: `archive/2026-06-15-cleanup/`, `archive/2026-06-18-cleanup/`.
 
 ## Validated build template (apply to every task, from OV01)
@@ -73,4 +73,5 @@ The 2026-06-14 dirty rerun was not a world leak. It was a two-task-file mount: a
 - 2026-06-18 OV05 revived; rebuilt on the Referral lane as a skilled-wound-care downgrade (OV06 conflicting-authority engine, 2nd task on the lane); gated and prereg.
 - 2026-06-18 Five Studio uploads live: OV05 (37cd058a) and OV10 (ilsjf671) running Taiga; OV07 (ah6e821b) in review; OV08 (l6jo01e4) and OV09 (ebv61af9) awaiting review.
 - 2026-06-18 OV01, OV02, OV03, OV04, OV06 transitioned to Delivered on the board.
+- 2026-06-18 Canonical tree migration: 8 root design docs moved into docs/ with generic names; phase-3 build dirs flattened to the world root (build, world-files, supplementary-files, synthetic-files, task-files); platform/taskN renamed to tasks/taskN, each with a per-task pilot/ (FA/GA, preference labels, results); cross-task benches in tasks/_benches/; phase-3 and phase-4 wrappers removed. Build scripts and the three gates repointed; verify_ondina and verify_voice green, presubmit byte-identical to baseline. The world root now holds only 00-START-HERE.md plus folders.
 - 2026-06-18 Clean-house pass: status consolidated to this file as the single source of truth; four audit reports landed in `cleanup-2026-06-18/`; the four empty `.gitkeep` stub dirs under phase-3 removed; AGENTS.md now cross-references `docs/fa-ga-canonical.md`; supersede and pointer banners added to WORKFLOW-MAP, 00-START-HERE, OV-CANDIDATE-QUEUE, OV-TASK-IDEA-AUDIT, OV-FRESH-TASK-IDEAS, OV-FLOOR-MECHANISM-LIBRARY.

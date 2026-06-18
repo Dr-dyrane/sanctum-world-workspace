@@ -25,9 +25,9 @@ try:
 except Exception:
     Document = None
 
-P3 = REPO / "worlds/ondina-vasquell/phase-3-build-task-artifacts"
+P3 = REPO / "worlds/ondina-vasquell"
 GROUPS = ["world-files/*.docx", "supplementary-files/*.docx", "task-files/*.docx",
-          "platform/task*/current/*.docx"]
+          "tasks/task*/current/*.docx"]
 BANNED = set("—–→•°×⁹")
 
 # ratified anchors that must stay consistent; forbidden variants indicate drift
@@ -67,7 +67,7 @@ def fills_colors(f):
 
 
 def task_consistency_fails():
-    """Per task (platform/task*/current): grader length cap + golden-vs-grader
+    """Per task (tasks/task*/current): grader length cap + golden-vs-grader
     'do not credit visual detail' consistency. Catches the Kathy-G class (golden
     asserts a finding the grader says not to credit) and grader-length drift (Sang)."""
     out = []
@@ -78,7 +78,7 @@ def task_consistency_fails():
     vispat = re.compile(r"(photo|photograph|image)\w*\s+\w{0,12}\s*(show|confirm|demonstrat|reveal|depict)"
                         r"|corroborat\w*[^.]{0,40}(erythema|purulent|drainage|cellulitis|edema|infection)"
                         r"|(shows|reveals|demonstrates)\s+(erythema|purulent|cellulitis)", re.I)
-    for dpath in sorted(glob.glob(str(P3 / "platform/task*/current"))):
+    for dpath in sorted(glob.glob(str(P3 / "tasks/task*/current"))):
         d = Path(dpath)
         graders = sorted(d.glob("grader-guidelines-*.txt"))
         goldens = sorted(d.glob("golden-*.docx"))
@@ -100,11 +100,11 @@ def grader_section_fails():
     """Lint grader sectioning vs the Sang five-block (docs/grader-guidelines-lessons.md):
     five labeled blocks in order, golden named in the Preamble, a chart-aware Register Note,
     the verbatim Section B two-failure-mode clause, the verbatim Section C opener, and a
-    credit-restraint pattern. Active platform/task*/current -> fail; _paused/_retired -> warn
+    credit-restraint pattern. Active tasks/task*/current -> fail; _paused/_retired -> warn
     (closes the scope hole where parked graders were never checked)."""
-    active = sorted(glob.glob(str(P3 / "platform/task*/current")))
-    parked = (sorted(glob.glob(str(P3 / "platform/_paused/*/task*/current")))
-              + sorted(glob.glob(str(P3 / "platform/_retired/*/current"))))
+    active = sorted(glob.glob(str(P3 / "tasks/task*/current")))
+    parked = (sorted(glob.glob(str(P3 / "tasks/_paused/*/task*/current")))
+              + sorted(glob.glob(str(P3 / "tasks/_retired/*/current"))))
     reg_aware = re.compile(r"(verify|check)\b[^.]{0,80}\bagainst\b"
                            r"|against the (mounted |provided )?(chart|record)", re.I)
     restraint = re.compile(r"credit(ed)? not (penalize|docked)|to credit not penalize", re.I)
