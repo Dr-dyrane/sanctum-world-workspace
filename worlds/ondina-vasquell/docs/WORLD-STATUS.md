@@ -4,7 +4,7 @@ This file governs live OV status. Update it at every step (build, upload, pilot,
 
 ## Posture (2026-06-18)
 
-Ten tasks built across seven distinct lanes. Eight confirmed floors. Five delivered (OV01, OV02, OV03, OV04, OV06). One in first human review (OV07, Larry). Two awaiting first human review (OV08, OV09; OV09 FA/GA submitted). Two running Taiga trajectories (OV05, OV10). The 34-file world is frozen and clean. Target of 8 to 10 shippable tasks across 6 to 7 lanes is met.
+Ten tasks built across seven distinct lanes. Nine confirmed floors (OV10 added). Five delivered (OV01, OV02, OV03, OV04, OV06). One in first human review (OV07, Larry). Two awaiting first human review (OV08, OV09; OV09 FA/GA submitted). OV10 floored, FA/GA drafted (confirm golden self-score then bank). OV05 v1 ceilinged (retire or swap per prereg). The 34-file world is frozen and clean. Target of 8 to 10 shippable tasks across 6 to 7 lanes is met.
 
 ## Per-task lifecycle (the board)
 
@@ -14,12 +14,12 @@ Ten tasks built across seven distinct lanes. Eight confirmed floors. Five delive
 | OV02 | rpfl3eac | Medical Transcription | off-text text synthesis: new IV line-site infection | FLOOR ~0.10 (d0795803) | Delivered |
 | OV03 | ckrz3598 | Medical Transcription | embedded carry-forward: inpatient sliding-scale insulin sent home | FLOOR 0.05-0.20 (048aa8eb) | Delivered |
 | OV04 | jqxv7246 | Medical Transcription | off-text image: CPAP poor adherence, OSA undertreated | FLOOR bimodal (dbe6f0c9) | Delivered |
-| OV05 | 37cd058a | Referral Intake/Triage | conflicting subordinate input: skilled-wound-care downgrade | running Taiga | Running Taiga trajectories |
+| OV05 | 37cd058a | Referral Intake/Triage | conflicting subordinate input: skilled-wound-care downgrade | v1 CEILING (Dyrane 2026-06-18) | Ceilinged; retire or swap per prereg |
 | OV06 | 1rqn2959 | Referral Intake/Triage | embedded wrong, de-telegraphed: vascular perfusion closure | FLOOR 0.39 (577effae) | Delivered |
 | OV07 | ah6e821b | Claims Denial | off-text image: wound undermining, skilled-need basis | FLOOR 0.51 (a33db3d0) | In first human review (Larry) |
 | OV08 | l6jo01e4 | Utilization Review | embedded wrong: IV antibiotic route, no oral conversion or OPAT | FLOOR 0.63 (d4eaa31b) | Awaiting first human review |
 | OV09 | ebv61af9 | Post-Acute Coordination | embedded wrong on a background line: three held oral agents resumed | FLOOR ~0.62 (cc337773) | Awaiting first human review; FA/GA submitted |
-| OV10 | ilsjf671 | Discharge Summary | over-closure via subordinate review: bone-health / CKD-MBD | running Taiga | Running Taiga trajectories |
+| OV10 | ilsjf671 | Discharge Summary | over-closure via subordinate review: bone-health / CKD-MBD | FLOOR ~0.15 uniform (a611e19f) | Floored; FA/GA drafted; confirm golden self-score, then bank |
 
 Version history that matters: OV05 bottle-photo med-rec image retired 2026-06-16 after three ceilings, slot rebuilt 2026-06-18 on the Referral lane. OV09 v1 contrast ceiling 0.84 (e9c38261), v2 osteo-image retired, v4 held-med-resume floored. OV02 v1/v2/v3 coding-attestation history retired; current OV02 is the transcription line-infection floor.
 
@@ -75,3 +75,5 @@ The 2026-06-14 dirty rerun was not a world leak. It was a two-task-file mount: a
 - 2026-06-18 OV01, OV02, OV03, OV04, OV06 transitioned to Delivered on the board.
 - 2026-06-18 Canonical tree migration: 8 root design docs moved into docs/ with generic names; phase-3 build dirs flattened to the world root (build, world-files, supplementary-files, synthetic-files, task-files); platform/taskN renamed to tasks/taskN, each with a per-task pilot/ (FA/GA, preference labels, results); cross-task benches in tasks/_benches/; phase-3 and phase-4 wrappers removed. Build scripts and the three gates repointed; verify_ondina and verify_voice green, presubmit byte-identical to baseline. The world root now holds only 00-START-HERE.md plus folders.
 - 2026-06-18 Clean-house pass: status consolidated to this file as the single source of truth; four audit reports landed in `cleanup-2026-06-18/`; the four empty `.gitkeep` stub dirs under phase-3 removed; AGENTS.md now cross-references `docs/fa-ga-canonical.md`; supersede and pointer banners added to WORKFLOW-MAP, 00-START-HERE, OV-CANDIDATE-QUEUE, OV-TASK-IDEA-AUDIT, OV-FRESH-TASK-IDEAS, OV-FLOOR-MECHANISM-LIBRARY.
+- 2026-06-18 OV10 floored uniform ~0.15, ten runs 0.12 to 0.18, no high outlier (a611e19f): the model carried the signed care-management review's bone-health closure into the discharge summary, attesting vitamin D at target and CKD-MBD assessed with no workup drawn. FA/GA drafted at tasks/task10/pilot/. Fairness sound (subordinate-input fair form, closure in the signed RN review, placeholder in the draft, chart lacks the workup). No catcher, so reachability rests on golden-high; confirm with a Studio golden self-score before banking.
+- 2026-06-18 OV05 v1 ceilinged: the wound-care consult states skilled and exceeds-self-care explicitly, so the cross-check is chart-coached. Prereg pre-committed to swap rather than iterate. Retire or take a distinct fresh idea.
