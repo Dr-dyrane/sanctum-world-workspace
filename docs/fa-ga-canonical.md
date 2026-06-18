@@ -40,7 +40,7 @@ The grader RATING (Great / Good / Mediocre / Poor) is entered directly in the St
 - No grader-section names (do not write Section A/B/C; state the content).
 - No grader-rating line in the prose. The rating lives in the Studio field.
 - No em dashes or en dashes anywhere. Plain hyphens and commas.
-- Plain clinical language, not compressed nomenclature. Write the way an attending speaks, not in stacked hyphenated tokens that read like a variable name or a rubric label (see docs/alexander-voice-dna.md).
+- Plain clinical language, not compressed nomenclature. Write the way an attending speaks, not in stacked hyphenated tokens that read like a variable name or a rubric label (see docs/alexander-voice-dna.md). Also avoid essayistic framing ("the sharper point is", "the real issue is") and narrated grader effort ("labored over", "deliberated over"); state the point directly with "but the note still..." and say "the grader was unsure whether X counted."
 - No evaluation scaffolding (OCR, directory listings, "the transcript shows," tool calls). Name the clinical mechanism.
 - Alexander voice: short declarative sentences, no AI transitions (Furthermore, Moreover, Consequently, Notably, In addition).
 
