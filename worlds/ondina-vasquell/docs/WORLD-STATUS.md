@@ -4,7 +4,7 @@ This file governs live OV status. Update it at every step (build, upload, pilot,
 
 ## Posture (2026-06-18)
 
-Nine floored tasks across seven distinct lanes. Five delivered (OV01, OV02, OV03, OV04, OV06). One in first human review (OV07, Larry). Three awaiting first human review (OV08, OV09, OV10; OV09 and OV10 FA/GA submitted). OV05 retired 2026-06-18: the skilled-wound-care downgrade ceilinged all-catch and cannot floor on the frozen chart. The 34-file world is frozen and clean. Target of 8 to 10 shippable tasks across 6 to 7 lanes is met.
+Nine floored tasks across seven distinct lanes. Five delivered (OV01, OV02, OV03, OV04, OV06). One in first human review (OV07, Larry). Three awaiting first human review (OV08, OV09, OV10; OV09 and OV10 FA/GA submitted). OV05 retired 2026-06-18: the skilled-wound-care downgrade ceilinged all-catch and cannot floor on the frozen chart. OV11 built and pilot-ready (task5-slot replacement: immunization / health-maintenance over-closure, A3, the proven OV10 engine on a fresh silent axis). The 34-file world is frozen and clean. Target of 8 to 10 shippable tasks across 6 to 7 lanes is met.
 
 ## Per-task lifecycle (the board)
 
@@ -20,6 +20,7 @@ Nine floored tasks across seven distinct lanes. Five delivered (OV01, OV02, OV03
 | OV08 | l6jo01e4 | Utilization Review | embedded wrong: IV antibiotic route, no oral conversion or OPAT | FLOOR 0.63 (d4eaa31b) | Awaiting first human review |
 | OV09 | ebv61af9 | Post-Acute Coordination | embedded wrong on a background line: three held oral agents resumed | FLOOR ~0.62 (cc337773) | Awaiting first human review; FA/GA submitted |
 | OV10 | ilsjf671 | Discharge Summary | over-closure via subordinate review: bone-health / CKD-MBD | FLOOR ~0.15 uniform (a611e19f) | Awaiting first human review; FA/GA submitted |
+| OV11 | pilot-ready | care-transition (verify at upload) | over-closure via subordinate review: immunization / health-maintenance | built + gated | Pilot-ready (task5-slot replacement; A3) |
 
 Version history that matters: OV05 bottle-photo med-rec image retired 2026-06-16 after three ceilings, slot rebuilt 2026-06-18 on the Referral lane. OV09 v1 contrast ceiling 0.84 (e9c38261), v2 osteo-image retired, v4 held-med-resume floored. OV02 v1/v2/v3 coding-attestation history retired; current OV02 is the transcription line-infection floor.
 
@@ -80,3 +81,4 @@ The 2026-06-14 dirty rerun was not a world leak. It was a two-task-file mount: a
 - 2026-06-18 OV05 RETIRED: skilled-wound-care downgrade ceilinged all-catch 0.88-0.92 (02ac4697); the catch is on the headline axis and the frozen wound care consult states the skilled need explicitly, so it cannot floor (de-telegraphing the started note does not help; the prompt forces a chart read). Packet moved to tasks/_retired/2026-06-18-task5-skilled-wound-downgrade-ceiling/ with the ceiling evidence in its pilot/runs/. Slate now 9 floors across 7 lanes. Per the prereg swap-on-ceiling pre-commitment.
 - 2026-06-18 OV10 FA/GA submitted for first human review.
 - 2026-06-18 New FA guidance adopted as canonical (docs/fa-ga-canonical.md + the fa-ga-canonical skill): the FA submission now carries the writer's OWN model-performance score (not the trajectory score), entered in the Studio score field and the Status-line metadata, compared against the agentic grader. Applied to OV10 (writer score 0.15 vs grader 0.12).
+- 2026-06-18 OV11 built (task5-slot replacement, A3): immunization / health-maintenance over-closure, the proven OV04/OV10 engine on a chart-silent axis (zero immunization records anywhere). Distinct deliverable (primary-care transition summary) and subordinate (preventive-care review) from OV10. build_ov11.py into tasks/task11/current/; five-block grader at or under 540 words, golden satisfies Section A (reachable), gates green. Pilot-ready; lane chosen at upload. Forecast: uniform floor like OV10, confirm golden self-score before banking, retire if all-catch.
