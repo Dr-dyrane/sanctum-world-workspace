@@ -20,4 +20,4 @@ Date created: 2026-06-14.
 Live Studio convention is name-LAST: Healthcare_[###]_[Last Name] (e.g. Healthcare_247_Merrow, Healthcare_246_Gutey, Healthcare_Hyperammonemia_Quill). The instruction-doc Section 5 string "Healthcare_[Patient Last Name]_[###]" is stale on ordering. Confirm against adjacent Studio worlds, not the doc.
 
 ## Tasking
-- Task 1 created 2026-06-14 (Task Writing). Workflow remaps in WORKFLOW-MAP.md; graders KM-latest five-block; run Section 4/5/6 self-QC before each upload; use writer-produced task files; pilot OV01 first per PRE-PILOT-RECOMMENDATIONS.md.
+- Task 1 created 2026-06-14 (Task Writing). Workflow remaps in docs/WORKFLOW-MAP.md; graders KM-latest five-block; run Section 4/5/6 self-QC before each upload; use writer-produced task files; pilot OV01 first per PRE-PILOT-RECOMMENDATIONS.md.

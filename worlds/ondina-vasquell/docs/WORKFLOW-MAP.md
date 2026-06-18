@@ -1,6 +1,6 @@
 # Ondina Vasquell - workflow map
 
-For live task status and lifecycle, OV-WORLD-STATUS.md governs. This file maps each task to its approved workflow label (lane) and tracks which lanes are used versus open. Lane names from reference/approved-workflows-and-guidance-2026-06-13.md. Updated 2026-06-18.
+For live task status and lifecycle, docs/WORLD-STATUS.md governs. This file maps each task to its approved workflow label (lane) and tracks which lanes are used versus open. Lane names from reference/approved-workflows-and-guidance-2026-06-13.md. Updated 2026-06-18.
 
 ## Lanes in use (7 distinct)
 
@@ -33,7 +33,7 @@ Utilization Review Concurrent Stay Documentation is now used by OV08, so it has 
 
 ## Build rule
 
-Future tasks pair the chosen workflow with a high-stakes step it does not force, on a quiet axis, with the index datum in a task-level artifact that does not state it cleanly: the off-text image handle (OV04/OV07 family), the off-text text-synthesis handle (OV02 family), the conflicting-subordinate-input handle (OV06/OV05/OV08/OV10 family), or a background embedded-wrong placed away from the obvious error cluster (OV09). Cold-bench lightly, then pilot in Studio. See OV-FLOOR-MECHANISM-LIBRARY.md and OV-APPROACH-MEMO.md.
+Future tasks pair the chosen workflow with a high-stakes step it does not force, on a quiet axis, with the index datum in a task-level artifact that does not state it cleanly: the off-text image handle (OV04/OV07 family), the off-text text-synthesis handle (OV02 family), the conflicting-subordinate-input handle (OV06/OV05/OV08/OV10 family), or a background embedded-wrong placed away from the obvious error cluster (OV09). Cold-bench lightly, then pilot in Studio. See docs/FLOOR-MECHANISM-LIBRARY.md and docs/APPROACH-MEMO.md.
 
 ## Open reviewer item
 - OV07 in first human review with Larry (ah6e821b). OV01 cleared Larry round 2 on 2026-06-15.

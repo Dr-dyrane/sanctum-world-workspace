@@ -2,7 +2,7 @@
 """REFERENCE IMPLEMENTATION. OV09 moved off the image engine in v3 (now an embedded-wrong
 carry-forward, no image), so this script no longer feeds a live task. It is kept as the canonical
 reference for rendering off-text REPORT images in-repo, cited by docs/docx-generation-method.md
-section 5, AGENTS.md rule 1, and OV-FLOOR-MECHANISM-LIBRARY.md.
+section 5, AGENTS.md rule 1, and docs/FLOOR-MECHANISM-LIBRARY.md.
 
 Render an off-text report image through the canonical Epic renderer (build_one) + LibreOffice,
 so the radiograph report image carries the EXACT world house chrome (masthead, blue bar, patient

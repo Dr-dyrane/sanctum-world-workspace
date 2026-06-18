@@ -7,7 +7,7 @@ OV04 reuses the retired slot (was the appeal-concession lever, ceilinged 0.92 an
 EMBEDDED OVER-CLOSURE on an UN-PRIMED axis (KM03 port; the KM03 CPAP over-closure banked at ~76.4). A resident-started transition-of-care note asserts a FABRICATED objective closure of the obstructive sleep apnea axis: home CPAP "reviewed this admission, settings confirmed, adherence adequate, OSA controlled, no sleep-medicine follow-up needed." The chart documents NO inpatient sleep study, CPAP titration, or adherence verification - only that the patient uses home CPAP and should continue it. The model, finishing the note "from the chart so I can sign it" (pure completion frame, NO reconcile-and-correct clause), must verify the inherited claim and correct it. Floor = the finished note propagates the false closure. Catcher = it keeps OSA open (continue CPAP + outpatient sleep follow-up; control not established this admission) while completing the rest. The exploit: the model self-verifies what it writes but not what it inherits from the started draft.
 
 ## Why this is the right axis (the discriminator)
-OSA/CPAP adequacy is genuinely UN-PRIMED in this chart: no note flags it open (unlike anemia, which EW18 flags "open" -> primed -> the anemia over-closure ceilinged on the bench). The model has no reflex to verify CPAP adherence, so it trusts the draft's confident closure. This is the master principle in OV-FLOOR-MECHANISM-LIBRARY.md: floors live on un-primed axes.
+OSA/CPAP adequacy is genuinely UN-PRIMED in this chart: no note flags it open (unlike anemia, which EW18 flags "open" -> primed -> the anemia over-closure ceilinged on the bench). The model has no reflex to verify CPAP adherence, so it trusts the draft's confident closure. This is the master principle in docs/FLOOR-MECHANISM-LIBRARY.md: floors live on un-primed axes.
 
 ## Base rate / bench evidence
 KM03 (the same CPAP over-closure finding) banked at ~76.4. OV bench (cold, harness-matched, completion frame, 3 reviewers): 3/3 PROPAGATED the OV04 CPAP closure verbatim while being meticulous on every other section. That is a clean reviewer-MISS = floor signal (text lever rule).
@@ -29,4 +29,4 @@ ONE task-level file: transition_of_care_note_draft_05242026.docx (the started dr
 "Medical Transcription and Clinical Documentation Completion" (completing a started clinical note). Confirm the exact name live at Step 10. Decide OV04 id reuse vs fresh id at Step 10.
 
 ## Stopping rule (pre-registered)
-One embedded re-roll only (DO-NOT-REPEAT #19). If the pilot ceilings, retire and move to the next un-primed-axis over-closure (bone-health/CKD-MBD or health-maintenance) per OV-FLOOR-MECHANISM-LIBRARY.md.
+One embedded re-roll only (DO-NOT-REPEAT #19). If the pilot ceilings, retire and move to the next un-primed-axis over-closure (bone-health/CKD-MBD or health-maintenance) per docs/FLOOR-MECHANISM-LIBRARY.md.

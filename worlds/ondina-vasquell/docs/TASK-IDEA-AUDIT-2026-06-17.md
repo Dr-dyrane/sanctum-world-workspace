@@ -1,6 +1,6 @@
 # OV Task-Idea Audit and Workflow Map (2026-06-17)
 
-SNAPSHOT 2026-06-17, SUPERSEDED 2026-06-18: this is a dated point-in-time audit. For live counts and status see OV-WORLD-STATUS.md (OV10 was built and OV05 revived after this snapshot, so the slate is now ten tasks across seven lanes with eight floors). Deep audit of the Ondina Vasquell slate. Sources reconciled: WORKFLOW-MAP.md, OV-FLOOR-MECHANISM-LIBRARY.md, DO-NOT-REPEAT.md, OV-FRESH-TASK-IDEAS.md, reference/approved-workflows-and-guidance-2026-06-13.md, every results/ pilot log, and the platform task mounts. World is frozen; all candidates are task-layer only.
+SNAPSHOT 2026-06-17, SUPERSEDED 2026-06-18: this is a dated point-in-time audit. For live counts and status see docs/WORLD-STATUS.md (OV10 was built and OV05 revived after this snapshot, so the slate is now ten tasks across seven lanes with eight floors). Deep audit of the Ondina Vasquell slate. Sources reconciled: docs/WORKFLOW-MAP.md, docs/FLOOR-MECHANISM-LIBRARY.md, DO-NOT-REPEAT.md, docs/FRESH-TASK-IDEAS.md, reference/approved-workflows-and-guidance-2026-06-13.md, every results/ pilot log, and the platform task mounts. World is frozen; all candidates are task-layer only.
 
 ## 1. Where we stand
 

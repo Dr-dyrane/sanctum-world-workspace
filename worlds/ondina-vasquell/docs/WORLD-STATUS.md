@@ -50,7 +50,7 @@ One cold verification-asymmetry plant on a distinct axis (physician-ratified, cl
 ## Key linked records
 
 - FA/GA standard (LOCKED): `docs/fa-ga-canonical.md`. Use the `fa-ga-canonical` skill, not the older `failure-grader-analysis`.
-- Floor design: `OV-FLOOR-MECHANISM-LIBRARY.md`. Workflow labels: `WORKFLOW-MAP.md`. Mistakes ledger: `DO-NOT-REPEAT.md`.
+- Floor design: `docs/FLOOR-MECHANISM-LIBRARY.md`. Workflow labels: `docs/WORKFLOW-MAP.md`. Mistakes ledger: `DO-NOT-REPEAT.md`.
 - Voice standard: `docs/alexander-voice-dna.md` (enforced by `tools/verify/verify_voice.py`).
 - Clean-house pass (2026-06-18) audit reports and next-world starter: `cleanup-2026-06-18/A1-guardrail-compliance.md`, `A2-file-tree.md`, `A3-status-logs.md`, `A4-canonicals-nextworld.md`.
 

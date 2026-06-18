@@ -95,11 +95,11 @@ def write_workflow_record():
         "",
         "Remapped: task1, task3, task8, task9. task8 and task9 swaps shift framing slightly; task1 and task3 are near-equivalent.",
         "",
-        "ACTIVE SUITE = 10 tasks. OV02 (Inpatient Medical Coding and DRG Assignment) REVIVED 2026-06-14 and re-centered to v5 after v4 ceilinged. Current lever: KM09 final-packet signable-option trap, where the physician must select one foot-infection-principal pathway and remove the unsupported renal-failure pathway. Suite ORDER: OV01, OV07, OV03, OV04, OV05, OV06, OV08, OV09, OV10, OV02. Internal IDs/folders kept stable. Verified vs the 06/13 PDF Task Selection Tracker - all present; use EXACT names (OV08 = 'Referral Intake, Triage, and Scheduling Coordination'). Full guidance + suite order: reference/approved-workflows-and-guidance-2026-06-13.md and OV-WORLD-STATUS.md.",
+        "ACTIVE SUITE = 10 tasks. OV02 (Inpatient Medical Coding and DRG Assignment) REVIVED 2026-06-14 and re-centered to v5 after v4 ceilinged. Current lever: KM09 final-packet signable-option trap, where the physician must select one foot-infection-principal pathway and remove the unsupported renal-failure pathway. Suite ORDER: OV01, OV07, OV03, OV04, OV05, OV06, OV08, OV09, OV10, OV02. Internal IDs/folders kept stable. Verified vs the 06/13 PDF Task Selection Tracker - all present; use EXACT names (OV08 = 'Referral Intake, Triage, and Scheduling Coordination'). Full guidance + suite order: reference/approved-workflows-and-guidance-2026-06-13.md and docs/WORLD-STATUS.md.",
         "",
     ]
-    (ROOT.parent / "WORKFLOW-MAP.md").write_text("\n".join(lines), encoding="utf-8")
-    print("  wrote WORKFLOW-MAP.md")
+    (ROOT.parent / "docs/WORKFLOW-MAP.md").write_text("\n".join(lines), encoding="utf-8")
+    print("  wrote docs/WORKFLOW-MAP.md")
 
 
 T = {
