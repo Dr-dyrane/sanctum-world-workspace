@@ -1,6 +1,6 @@
 # OV floor-candidate QUEUE - the backlog we test one after another
 
-Updated 2026-06-16. THIS IS THE SOURCE OF TRUTH for "what do we test next." Read this plus OV-WORLD-STATUS.md after any context refresh so the queue is not lost. Discipline: cold-bench each candidate first (3 fresh reviewers, harness-matched, no telegraph). Reviewer PROPAGATES/MISSES = floor -> build + real pilot. Reviewer CATCHES = ceiling -> record it, drop, go to the next. One re-roll then retire. FA/GA from the 2nd-lowest distinct run. Map each genre to an approved workflow before pilot.
+Updated 2026-06-16. SUPERSEDED for live status by OV-WORLD-STATUS.md, which governs task lifecycle and the board. This file is the idea backlog of what to test next, not a status record. As of 2026-06-18 the slate has moved on (OV05 through OV10 are built and most floored), so treat the specific candidates below as historical and reconcile against OV-WORLD-STATUS.md before acting. Discipline: cold-bench each candidate first (3 fresh reviewers, harness-matched, no telegraph). Reviewer PROPAGATES/MISSES = floor -> build + real pilot. Reviewer CATCHES = ceiling -> record it, drop, go to the next. One re-roll then retire. FA/GA from the 2nd-lowest distinct run. Map each genre to an approved workflow before pilot.
 
 ## Where things stand
 - BANKED FLOORS (Ready for Delivery): OV01 (cold knowledge), OV02 (off-text synthesis), OV04 (off-text image). OV05 = fair catcher, in Taiga QA.

@@ -1,6 +1,6 @@
 # OV Floor-Mechanism Library and Difficulty Reference (CANONICAL)
 
-Date: 2026-06-15. Purpose: the single OV-specific reference for designing floor tasks, built from the three sources Alexander named (the KM world's 10 banked tasks, the reference example worlds, and Raising_Task_Difficulty_Worked_Example.pdf) PLUS OV's own bench evidence. Read this before designing any new OV task.
+Date: 2026-06-15. Purpose: the single OV-specific reference for designing floor tasks, built from the three sources Alexander named (the KM world's 10 banked tasks, the reference example worlds, and Raising_Task_Difficulty_Worked_Example.pdf) PLUS OV's own bench evidence. Read this before designing any new OV task. This is a design reference, not a status tracker; for live task status and lifecycle, OV-WORLD-STATUS.md governs.
 
 This file SUPERSEDES the earlier OV inferences that the world is "substrate-limited / capped at one-two floors" and that the move is to "build a conflict-first next world." Those were wrong: they came from measuring OV against its own mis-executed attempts instead of the KM recipes. A clean, internally-consistent chart is the IDEAL substrate; floors are MANUFACTURED AT THE TASK LAYER on top of it. Goal: 8 floors in THIS world.
 
@@ -12,7 +12,7 @@ General playbooks this builds on (do not duplicate, cite): docs/task-difficulty-
 This model reads a clean chart EXTREMELY well and reflexively polices the things clinicians police. It therefore CEILINGS whenever the catch sits on a PRIMED/LOUD axis - one the model is already scrutinizing - and FLOORS only when the catch sits on an UN-PRIMED axis where the model has no reflex pulling it there.
 
 - PRIMED / LOUD axes (model scrutinizes -> catches -> CEILING): vitals (it always re-reads a number against the trend), the deliverable's headline problem, any item the chart explicitly flags open/unresolved, patient identity (it guards against mix-ups), "don't restart meds without labs," "don't fabricate," "don't over-treat."
-- UN-PRIMED axes (model has no reflex -> trusts/───skips -> FLOOR): cold outside-knowledge it lacks; a quiet axis the chart is SILENT on the status of; a finding that requires proactive synthesis the completion frame suppresses.
+- UN-PRIMED axes (model has no reflex -> trusts or skips -> FLOOR): cold outside-knowledge it lacks; a quiet axis the chart is SILENT on the status of; a finding that requires proactive synthesis the completion frame suppresses.
 
 Every OV result below is explained by this one axis. Design rule: put the catch on an UN-PRIMED axis, and never telegraph it.
 

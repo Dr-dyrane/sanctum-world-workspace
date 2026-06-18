@@ -1,17 +1,20 @@
 # Ondina Vasquell World (World #2) - Cockpit
 
-Status (2026-06-17): WORLD OPEN FOR TASKING. Studio board synced from Healthcare_297_Vasquell: OV01, OV02, OV03, and OV04 are Ready for Delivery. OV05 is retired after repeated ceilings. OV06 v2 is still in Task Writing as `Task 1rqn2959`, but its de-telegraphed re-pilot floored on job `577effae` (mean 0.39, seven of ten below 0.70, clean bimodal). It is OV's fifth confirmed floor. Bank steps are golden self-score and run-bound FA/GA. The world files are frozen and must not change. Design source of truth: `OV-FLOOR-MECHANISM-LIBRARY.md` and the running record in `OV-WORLD-STATUS.md`. WHAT TO TEST NEXT (the floor-candidate backlog we work through one at a time; READ THIS AFTER ANY CONTEXT REFRESH so the queue is not lost): `OV-CANDIDATE-QUEUE.md`.
+Status (2026-06-18): live status is governed by `OV-WORLD-STATUS.md` (single source of truth), read it first. Summary: ten tasks built across seven lanes, eight confirmed floors. Five delivered (OV01, OV02, OV03, OV04, OV06); OV07 in first human review (Larry); OV08 and OV09 awaiting first human review (OV09 FA/GA submitted); OV05 and OV10 running Taiga trajectories. The 34 world files are frozen and must not change. Design source of truth: `OV-FLOOR-MECHANISM-LIBRARY.md`. FA/GA standard (LOCKED): `docs/fa-ga-canonical.md`. Idea backlog if more tasks are wanted: `OV-CANDIDATE-QUEUE.md` (reconcile against the status file first).
 
-Current lanes:
-- OV01 - cold discharge-medication reconciliation (stop inpatient enoxaparin). Ready for Delivery after Larry round 2.
-- OV02 - off-text synthesis (infected IV line from transfer-day signals). Ready for Delivery after Kathy round 2.
-- OV03 - discharge medication plan completion (do not send inpatient prandial sliding scale home). Ready for Delivery after Larry round 1.
-- OV04 - CPAP report image route (keep OSA open). Ready for Delivery after Ahmad and Janette review.
-- OV05 - home-medication-bottle and later salt-substitute routes. Retired 2026-06-16; packet archived under `phase-3-build-task-artifacts/platform/task5/archive/2026-06-16-retired/`.
-- OV06 - outpatient referral coordination (vascular referral closure conflict). v2 floored in Task Writing under `Task 1rqn2959` after removing the telegraph.
-- OV07 - Claims Denial Appeal, TS7. Build prep active at `phase-3-build-task-artifacts/platform/task7/current/`; task-level transfer-day wound image staged as `wound_photo_05242026.jpg`. It is not a world file.
+Current lanes (live status in `OV-WORLD-STATUS.md`):
+- OV01 - Medication Reconciliation: stop inpatient enoxaparin at discharge. Delivered.
+- OV02 - Medical Transcription: off-text new IV line-site infection from transfer-day signals. Delivered.
+- OV03 - Medical Transcription: do not send the inpatient prandial sliding scale home. Delivered.
+- OV04 - Medical Transcription: off-text CPAP image, keep OSA open. Delivered.
+- OV05 - Referral Intake/Triage: skilled-wound-care downgrade in a subordinate home-health intake. Revived 2026-06-18 (the bottle-photo route is retired under `phase-3-build-task-artifacts/platform/task5/archive/2026-06-16-retired/`). Running Taiga (37cd058a).
+- OV06 - Referral Intake/Triage: vascular referral closure conflict, de-telegraphed. Delivered (1rqn2959).
+- OV07 - Claims Denial: off-text wound undermining as the skilled-need basis. Floored (a33db3d0); in first human review (ah6e821b, Larry).
+- OV08 - Utilization Review: IV antibiotic route with no oral conversion or OPAT. Floored (d4eaa31b); awaiting first human review (l6jo01e4).
+- OV09 - Post-Acute Coordination: three held oral agents resumed on a background med line. Floored (cc337773); awaiting first human review (ebv61af9); FA/GA submitted.
+- OV10 - Discharge Summary: bone-health / CKD-MBD over-closure via a subordinate chronic-disease review. Running Taiga (ilsjf671).
 
-Next: bank OV06 v2 with golden self-score and run-bound FA/GA, or select the next fresh lane from the candidate queue. Do not revive OV05 without a new explicit design decision. Do not retune OV01 through OV04. Writing discipline: graders <=1 page (Sang), FA/GA failure-only/no-dashes, tight prose everywhere. Rule: any golden/grader change requires new trajectories (DO-NOT-REPEAT #22). Backbone gates before upload: `tools/verify/verify_ondina.py` and `tools/verify/presubmit_task_gate.py`. Canonical running record = `OV-WORLD-STATUS.md`.
+Next: await the OV05 and OV10 Taiga trajectories, then write each FA/GA via the `fa-ga-canonical` skill and bank or swap per the prereg read rules; clear the OV07 first human review with Larry. Do not retune delivered tasks (OV01 through OV04, OV06). Writing discipline: graders one page or less, FA/GA failure-only and no dashes, tight prose everywhere. Rule: any golden or grader change requires new trajectories (DO-NOT-REPEAT #22). Backbone gates before upload: `tools/verify/verify_ondina.py`, `tools/verify/presubmit_task_gate.py`, `tools/verify/verify_voice.py`. Canonical running record and live status: `OV-WORLD-STATUS.md`.
 
 Patient: Ondina Vasquell, 68F, Spanish-preferred, insulin-dependent T2DM with diabetic peripheral neuropathy and mild diabetic retinopathy, CKD 3b with anemia of CKD, PAD, HFpEF, hypertension, dyslipidemia, obesity, OSA, knee osteoarthritis, limited mobility; second-floor walk-up; daughter support limited by night work; Medicare Advantage with Medicaid secondary. World: limb-threat diabetic foot infection, 6-day admission, snapshot May 21, 2026 at 18:00 (HD6 evening), medically improving but operationally unsafe. Branch posture: decision 7, stay on korvin-merrow-brainstorm until KM closes; cut ondina-vasquell-brainstorm at that boundary.
 
@@ -51,8 +54,8 @@ Patient: Ondina Vasquell, 68F, Spanish-preferred, insulin-dependent T2DM with di
 - BRAINSTORM: passed in Studio and advanced straight to Spec, no reviewer-feedback round.
 - SPEC: passed in Studio after the physician-produced Task 5 framing fix and current file-plan schema patch.
 - PIPELINE AND FINAL FILES: complete. Stage 9 restored the verified source world, Final AutoQC cleared, and the world was created as Healthcare_297_Vasquell on 2026-06-14 at 10:58 PDT.
-- TASKING: OV01, OV02, OV03, and OV04 are Ready for Delivery. OV05 is retired. OV06 v2 is still in Task Writing as `Task 1rqn2959`, but job `577effae` proved the floor.
-- NEXT ELIGIBLE ACTION: bank OV06 v2, or choose the next fresh lane from `OV-CANDIDATE-QUEUE.md`, with explicit authorization for the exact platform step.
+- TASKING (2026-06-18): five delivered (OV01, OV02, OV03, OV04, OV06); OV07 in first human review; OV08 and OV09 awaiting first human review; OV05 and OV10 running Taiga trajectories. See `OV-WORLD-STATUS.md` for the live board.
+- NEXT ELIGIBLE ACTION: await the OV05 and OV10 trajectories and write their FA/GA, and clear the OV07 first human review, each with explicit authorization for the exact platform step.
 
 ## OV01 hygiene rule
 
