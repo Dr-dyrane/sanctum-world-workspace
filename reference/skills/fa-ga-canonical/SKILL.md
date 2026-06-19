@@ -43,7 +43,7 @@ Cover four things, in prose, organized by severity (clinical first, then adminis
 
 Writing standards (all required, because non-physician engineers read this too):
 - Be specific, not generic. Not "got the med list wrong" but "listed metformin as active despite Endocrinology holding it until creatinine returns to baseline, risking lactic acidosis."
-- Name the document(s) a reviewer should open to verify.
+- Name the SPECIFIC source documents a reviewer opens to verify, by author or date (e.g. "the wound-care consult (Olwyn, CWOCN, 05/20)"), never a generic reference. The QA rubric requires specific documents and sections, and lint_fa_ga.py FAILS an FA that carries no dated citation.
 - Separate clinical error from formatting preference; do not conflate.
 - Write for a non-specialist; explain any jargon.
 
@@ -73,7 +73,7 @@ HUMAN OWNERSHIP. Larry's 2026-06-18 guidance says FA/GA cannot be AI-authored. U
 - Single-run rule (Abi 6/05). Analyze ONE run, named by its trajectory number ("On trajectory N"). Cite only that run's score and the writer's own score; do not mention other runs' scores or the distribution in the FA or GA body. The distribution lives in the Status line.
 - No em dashes or en dashes. Plain hyphens and commas.
 - Two paragraphs per field, no bullets, each field at or under about 1000 characters. Completeness of the components beats hitting the count, but stay under 1000 so the gate is clean.
-- Self-check before handing back: run `python3 tools/verify/lint_fa_ga.py <the FA/GA file>` and clear every FAIL. It enforces this skill mechanically (opens "On trajectory N", single run only, `Overall Failure Score` line, two paragraphs, under 1000 chars, no dashes, no rating word, no banned phrases) and warns on semicolons and sentences over 24 words. Fix until it prints "clean".
+- Self-check before handing back: run `python3 tools/verify/lint_fa_ga.py <the FA/GA file>` and clear every FAIL. It enforces this skill mechanically (opens "On trajectory N", single run only, `Overall Failure Score` line, a dated source-document citation, two paragraphs, under 1000 chars, no dashes, no rating word, no banned phrases) and warns on semicolons and sentences over 24 words. Fix until it prints "clean".
 
 ## Avoid (builder and reviewer jargon)
 floor, catcher, bimodal, mechanism, lane, bankable, score cap; rubric, grading framework, designed to test, additive checklist.
@@ -82,7 +82,7 @@ floor, catcher, bimodal, mechanism, lane, bankable, score cap; rubric, grading f
 Above the two fields, record: the job id, the full score distribution, the mean, whether it is all-low or bimodal, and the FA subject (Attempt, run id, trajectory, score, with a note if it is not the strict second-lowest distinct). No rating line.
 
 ## Final checklist before handing back
-FA: opens with "On trajectory N" (the 1-10 count); leads with a brief competent baseline; names the central failure as a turn; states the clinical mechanism, consequence, and severity tier; names the document(s); ends with `Overall Failure Score: X.XX / 1.0`; references only this run, never other runs' scores; failure-only.
+FA: opens with "On trajectory N" (the 1-10 count); leads with a brief competent baseline; names the central failure as a turn; states the clinical mechanism, consequence, and severity tier; names the specific source documents by author or date (not a generic reference); ends with `Overall Failure Score: X.XX / 1.0`; references only this run, never other runs' scores; failure-only.
 GA: names what the grader got correct; names what it got wrong or could improve (NOT optional); judges calibration; no rating line.
 Both: no section names, no banned credit phrases, no dashes, plain clinical speech, second-lowest distinct run, gates clean.
 Self-check: `python3 tools/verify/lint_fa_ga.py <file>` prints "clean" (no FAILs) before you hand back.

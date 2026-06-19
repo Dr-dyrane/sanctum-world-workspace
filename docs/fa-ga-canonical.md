@@ -24,7 +24,7 @@ Cover all four, in prose, organized by severity (clinical first, then administra
 
 Writing standards (EXP), all required:
 - Be specific, not generic. Not "got the med list wrong" but "listed metformin as active despite Endocrinology holding it until creatinine returns to baseline, risking lactic acidosis."
-- Name the document(s) a reviewer should check to verify the analysis.
+- Name the SPECIFIC source documents a reviewer opens to verify, by author or date (e.g. "the wound-care consult (Olwyn, CWOCN, 05/20)"), not a generic reference. The QA rubric requires specific documents and sections, not generic references, and lint_fa_ga.py FAILS an FA that carries no dated citation.
 - Separate clinical error from formatting preference. Do not conflate.
 - Quantify the consequence when possible.
 - Write for a non-specialist. Explain any jargon.
@@ -58,7 +58,7 @@ Submit your OWN score of how the model did, alongside the FA. It is the writer's
 The platform allows up to half a page / 10-12 sentences for the FA and 4-6 sentences for the GA. The local gate caps each field at about 1000 characters and two paragraphs. Treat the local cap as the working bound: a compressed but complete version that still carries all four FA components and both mandatory GA moves. Completeness of components beats hitting a character count.
 
 ## The locked checklist (run before handing back)
-FA: opens with "On trajectory N" (the 1-10 count); leads with what the model did right; names the central failure as a turn; states the clinical mechanism and consequence with a severity tier; names the document(s); ends with `Overall Failure Score: X.XX / 1.0`; references only this run, never other runs' scores.
+FA: opens with "On trajectory N" (the 1-10 count); leads with what the model did right; names the central failure as a turn; states the clinical mechanism and consequence with a severity tier; names the specific source documents by author or date (not a generic reference); ends with `Overall Failure Score: X.XX / 1.0`; references only this run, never other runs' scores.
 GA: names what the grader identified correctly; names what the grader missed or mis-scored (NOT optional); recommends the relevant rubric or scoring clarification when needed; judges calibration; rating only in Studio, never in the file.
 Both: failure-only, no section names, no rating line in prose, no dashes, plain clinical speech, second-lowest distinct run from the latest valid run set, gates clean.
-Self-check: run `python3 tools/verify/lint_fa_ga.py <file>` and clear every FAIL (it enforces the "On trajectory N" opener, single-run-only, score-line, and the structure rules; it warns on semicolons and long sentences).
+Self-check: run `python3 tools/verify/lint_fa_ga.py <file>` and clear every FAIL (it enforces the "On trajectory N" opener, single-run-only, the score-line, a dated source-document citation, and the structure rules; it warns on semicolons and long sentences).

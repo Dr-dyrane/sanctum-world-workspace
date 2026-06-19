@@ -30,6 +30,7 @@ SCORE_RANGE = re.compile(r'0\.\d{1,2}\s*(?:to|through|-|and)\s*0\.\d{1,2}')
 DISTRIB = re.compile(r'\b(distribution|uniformly|bimodal|across runs|no high outlier|'
                      r'mean (?:of |about )?0?\.?\d)\b', re.I)
 OVERALL_SCORE = re.compile(r'Overall Failure Score:\s*(?:0(?:\.\d{1,2})?|1(?:\.0{1,2})?)\s*/\s*1\.0')
+CITES = re.compile(r'\b\d{1,2}/\d{1,2}(?:/\d{2,4})?\b')  # a dated source-document reference; the FA must name at least one
 SENT_WARN = 24  # words; the breath rule aims for ~15, warn past 24
 
 def section(t: str, name: str):
@@ -88,6 +89,10 @@ def lint(path: str):
             fails.append("FA must open with 'On trajectory N' (the 1-10 count, not the run hash)")
         if not OVERALL_SCORE.search(fa):
             fails.append("FA must include the writer's own score line: 'Overall Failure Score: X.XX / 1.0'")
+        if not CITES.search(fa):
+            fails.append("FA cites no specific source document; name the consult, order, or note by author or date "
+                         "(e.g. 'the wound-care consult (Olwyn, CWOCN, 05/20)') so a reviewer can verify. "
+                         "The rubric requires specific documents, not generic references")
     if ga and 'trajectory' not in ga.lower():
         warns.append("GA does not name the trajectory; the house form is 'The grader scored trajectory N at X'")
 

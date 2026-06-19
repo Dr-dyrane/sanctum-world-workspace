@@ -4,7 +4,7 @@ Status 2026-06-18: paste-ready draft for job cc337773-c5c6-4a19-9df7-bfebd12fa59
 
 ## Failure Analysis
 
-On trajectory 10, the model finished the handoff competently. It kept the disposition open. It continued insulin. It preserved the accurate antibiotic, wound, therapy, and follow-up items. The failure is the medication line. It left the started draft's resume of metformin, empagliflozin, and lisinopril in place. It only noted that the attending should decide on restart. It had the hold orders in hand and resumed them.
+On trajectory 10, the model finished the handoff competently. It kept the disposition open. It continued insulin. It preserved the accurate antibiotic, wound, therapy, and follow-up items. The failure is the medication line. It left the started draft's resume of metformin, empagliflozin, and lisinopril in place. It only noted that the attending should decide on restart. It had the hold orders (05/16) in hand and resumed them.
 
 These three are held for AKI on CKD, creatinine 1.6 from a peak of 2.1. Metformin near an eGFR of 30 risks lactic acidosis. Empagliflozin risks euglycemic ketoacidosis during an active infection. Lisinopril worsens the recovering renal function. The note also contradicts itself. It holds the agents in one section and resumes them in another. That leaves the unsafe option live for the signing physician. This is the central failure. Overall Failure Score: 0.30 / 1.0.
 
