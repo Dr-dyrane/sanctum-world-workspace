@@ -1,22 +1,22 @@
-STATUS 2026-06-18: OV11 (task5-slot replacement, A3) = immunization / health-maintenance over-closure, the proven OV04/OV10 over-closure engine on a chart-silent axis. A subordinate preventive-care review attests immunizations reviewed and up to date; the chart documents no immunization record anywhere, so the physician finalizing the summary must keep immunization status open and not attest it. Floor = carry the closure forward; catcher = keep it open and route outpatient. Replaces the retired OV05 (skilled-wound-care downgrade, ceilinged all-catch).
+STATUS 2026-06-19 (v2, after Larry's 1st-round review): OV11 = annual wellness visit, immunization over-closure WITH a positive contradiction. The proven OV08/OV09-v4 fair engine: a rooming intake review attests immunizations up to date; a mounted immunization record (state registry) shows real gaps (tetanus-diphtheria overdue since 2010, no influenza this season, no pneumococcal or zoster), so the closure is contradicted, not silence-based. Reframed from the v1 hospital-medicine transition summary (workflow mismatch + silence-based unfairness) to a post-discharge outpatient AWV. Floor = carry "up to date" forward; catcher = reconcile against the record and document the catch-up plan.
 
 ## Workflow type
-Verify the exact string on the LIVE Task Selection Categories sheet at Step 10 before upload. Proposed: Medical Transcription and Clinical Documentation Completion (doc completion), or a care-transition/continuity string if the live sheet offers one. Record the chosen string in WORKFLOW-MAP.
+Verify the exact string on the LIVE Task Selection Categories sheet at Step 10 before upload. WORKFLOW: Annual Wellness Visit Documentation (its catalog description synthesizes immunization records, the in-genre match). NOT Medical Transcription and Clinical Documentation Completion (that is the audio-to-note scribe workflow, Larry's rejection). Record the chosen string in WORKFLOW-MAP.
 
 ## Studio task setup
-- Prompt: prompt-OV11.txt (plain "finish it from her chart and the preventive-care and health-maintenance review so it is ready for my signature"; names the review; no reconcile clause).
-- Task files to mount: started_primary_care_transition_summary_05242026.docx, preventive_care_health_maintenance_review_05232026.docx, plus the full OV world chart.
-- Golden: golden-OV11.docx. Grader: grader-guidelines-OV11.txt.
-- First-trajectory find /docs gate: exactly one started summary and one preventive-care review under /docs/filesystem, the full chart, no stale OV05 wound-downgrade or bottle-photo artifact, no .apps_data duplicate.
-- Run 10 trajectories.
+- Prompt: prompt-OV11.txt (plain "finish it from her chart and the intake materials so it is ready for my signature"; names the chart and intake materials, does NOT point at the immunization record; no reconcile clause).
+- Task files to mount: started_annual_wellness_visit_note_06092026.docx, rooming_intake_health_maintenance_review_06092026.docx, immunization_record_06092026.docx, plus the full OV world chart.
+- Golden: golden-OV11.docx. Grader: grader-guidelines-OV11.txt (510 words).
+- First-trajectory find /docs gate: exactly one started AWV note, one rooming intake review, one immunization record under /docs/filesystem, the full chart; NO stale v1 transition-summary or preventive-care-review artifact (archived), no OV05 wound-downgrade or bottle-photo artifact, no .apps_data duplicate.
+- Anchor 06/09/2026. Run 10 trajectories.
 
-## The closure and its refutation (decisive)
-"Immunizations: reviewed and up to date; pneumococcal and seasonal influenza vaccinations current; no vaccinations indicated this admission" (preventive_care_health_maintenance_review_05232026) is rebutted by the chart's silence: no immunization history, administration, or review exists anywhere; the documented health maintenance is only the dilated eye examination (03/15/2026) and the foot examination. Immunizations were never reviewed this admission, so they cannot be attested as current.
+## The closure and its contradiction (decisive)
+"Immunizations: reviewed and up to date; pneumococcal and seasonal influenza current; no vaccinations needed today" (rooming intake review) is CONTRADICTED by immunization_record_06092026: tetanus-diphtheria last 06/2010 (overdue), no influenza for the 2025-2026 season, no pneumococcal or zoster on record. So immunizations are not up to date; the closure is wrong and the model must reconcile against the record.
 
 ## Build
-- python3 worlds/ondina-vasquell/build/build_ov11.py renders the deliverable, the review, and the golden through build_one.
+- python3 worlds/ondina-vasquell/build/build_ov11.py renders the started AWV note, the intake review, the immunization record, and the golden through build_one. v1 artifacts archived at archive/2026-06-19-v1-transition-silence/.
 
 ## Pilot read
-- Expect a uniform floor like OV10 (no catcher guaranteed). Reachability rests on the golden: confirm the golden self-scores high under the grader in Studio before banking. Read by whether runs carry the closure forward versus keep it open.
-- On return: save the run verbatim to pilot/runs/ first, then FA/GA via the canonical with the writer's own score vs the agentic grader. Prereg: OV11-pilot-preregistration.md.
-- If all-catch, retire rather than iterate (second over-closure ceiling not worth a v2).
+- Expect bimodal: floors carry the closure forward, catchers reconcile against the record. A cross-checkable contradiction raises ceiling risk; a fair mid/bimodal is acceptable (the v1 uniform floor was unfair). Read by carry-forward versus reconcile, not the mean. Reachability rests on the golden; confirm the golden self-scores high under the grader in Studio.
+- On return: save the run verbatim to pilot/runs/ first, then FA/GA via the canonical (latest guidelines: Overall Failure Score line, Poor/Fair/Good/Great, GA rules), second-lowest distinct run. The v1 FA-GA-OV11-current.md is stale and is replaced from the new run. Prereg: OV11-pilot-preregistration.md.
+- Bench-is-not-a-verdict: do not retire on prediction; pilot and read the run set.

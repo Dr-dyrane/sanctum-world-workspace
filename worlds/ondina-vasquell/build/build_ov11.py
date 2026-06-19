@@ -1,35 +1,36 @@
 #!/usr/bin/env python3
-"""Render OV11 (A3: immunization / health-maintenance over-closure) task artifacts through the
-canonical Epic renderer (build_world_files.build_one), into tasks/task11/current/. OV11 is the
-task5-slot replacement after OV05 (skilled-wound-care downgrade) retired. Frozen-world-safe:
-task-layer artifacts only; no world edits.
+"""Render OV11 v2 (annual wellness visit, immunization over-closure WITH a positive contradiction)
+task artifacts through the canonical Epic renderer (build_world_files.build_one), into
+tasks/task11/current/. Frozen-world-safe: task-layer artifacts only; no world edits.
 
-Mechanism (embedded over-closure on an un-primed axis, the OV04/OV10 fair form): the deliverable is
-a resident-started primary-care transition and health-maintenance summary the attending finalizes
-for signature. The headline is the acute diabetic foot infection. A SUBORDINATE input, a care-
-coordination preventive-care and health-maintenance review (05/23), closes a quiet background axis
-with a fabricated objective claim: it attests that immunizations are reviewed and up to date,
-pneumococcal and influenza current, no vaccinations indicated this admission. The chart rebuts this:
-it documents NO immunization history, NO vaccine administration, and NO immunization review anywhere
-(verified silent across all world files); the only documented health maintenance is the dilated eye
-examination (03/15/2026) and the foot examination. So immunizations were never reviewed this stay and
-cannot be attested as current. FLOOR = finalize the summary and carry the review's immunization
-closure forward, attesting a review that never happened. CATCHER = reject the closure, recognize the
-chart has no immunization record so status is unknown, keep it open and route to outpatient primary
-care to review and update age- and condition-appropriate immunizations, and complete the rest faithfully.
+v2 REBUILD (2026-06-19, Larry 1st-round review). The v1 design (a hospital-medicine "primary-care
+transition summary" with an immunization closure resting on chart SILENCE) had two flaws Larry named
+and our own floor doctrine confirms:
+  1. Workflow. The deliverable's content is health-maintenance / preventive care, which maps to
+     "Annual Wellness Visit Documentation", not the audio-to-note "Medical Transcription and Clinical
+     Documentation Completion". v2 reframes the encounter to an outpatient post-hospitalization AWV /
+     establish-care visit so the workflow and the content agree.
+  2. Fairness. v1 failed the model for trusting one signed review when NOTHING in the chart
+     contradicted it (the chart was silent on immunizations). Floor-library section 8 rule 3: make the
+     chart contradict the wrong move; do not rely on chart silence alone. v2 mounts an immunization
+     record that shows real GAPS, so the intake review's "up to date" is positively contradicted, not
+     merely unsupported by an absent record.
 
-Distinct from OV10 (deliberate, same engine, the user accepted the low lane novelty): OV10 is a
-DISCHARGE SUMMARY with a BONE-HEALTH/CKD-MBD closure via a chronic-disease-management review by a CCM.
-OV11 is a PRIMARY-CARE TRANSITION summary with an IMMUNIZATION closure via a preventive-care review by
-a different care-coordination role. Different deliverable, different subordinate input, different
-silent axis; the over-closure engine is the same.
+Mechanism (the OV08/OV09-v4 fair engine): a started AWV note the PCP finalizes for signature. The
+headline is the post-hospitalization wellness and chronic-disease picture. A rooming intake review
+closes a quiet BACKGROUND health-maintenance line with "immunizations reviewed and up to date." A
+mounted immunization record (registry query) shows the truth: influenza not given this season,
+pneumococcal never administered, tetanus-diphtheria overdue since 2010. FLOOR = finalize the note and
+carry the intake's "up to date" forward without reconciling it against the immunization record.
+CATCHER = reconcile the two, recognize the record shows real gaps, decline to attest currency, and
+document the catch-up plan. Fair both ways: the contradiction is a mounted source a careful model can
+cross-check (catcher path), but a background line under a plain finish-for-signature prompt lets a
+satisficing model rubber-stamp it (floor). Anchor 06/09/2026, a post-discharge outpatient visit after
+the 05/21 snapshot and the 05/24 discharge, before the present date.
 
-Fairness: the false closure rides an EXTERNAL subordinate review the physician reviews, not the
-model's own draft, and the chart positively lacks any immunization record (you cannot attest a review
-that is not documented), not mere silence-as-trap. Un-primed: nothing in the chart flags immunizations
-as open or addressed. Plain finish-for-signature prompt, no reconcile clause. The catch sits as one
-quiet line in a multi-section summary whose headline is the foot infection (background axis, the OV10
-geometry that floored, not the OV05/OV09-v3 headline geometry that ceilinged).
+Workflow at upload: "Annual Wellness Visit Documentation" (verbatim on the live sheet). The v1
+artifacts (started_primary_care_transition_summary, preventive_care_health_maintenance_review) are
+superseded; remove them from the mount before re-pilot.
 """
 from __future__ import annotations
 import sys
@@ -42,101 +43,127 @@ import build_world_files as W
 OUT = REPO / "worlds/ondina-vasquell/tasks/task11/current"
 OUT.mkdir(parents=True, exist_ok=True)
 
-TITLE = "PRIMARY CARE TRANSITION AND HEALTH MAINTENANCE SUMMARY - LIMB-THREAT DIABETIC FOOT INFECTION (PHYSICIAN COMPLETION)"
+TITLE = "ANNUAL WELLNESS VISIT AND POST-HOSPITALIZATION ESTABLISH-CARE NOTE (PHYSICIAN COMPLETION)"
 
-COURSE = ("Limb-threatening left diabetic foot infection admitted 05/16, debrided hospital day 2 with a "
-          "granulating base and no exposed bone. Deep-tissue culture grew MSSA and Streptococcus agalactiae. "
-          "Soft-tissue infection improving: afebrile, WBC normalized to 8.9. Osteomyelitis not established. "
-          "On culture-directed, renally dosed intravenous antibiotics, with Infectious Disease setting the "
-          "step-down and total duration. AKI on CKD improving toward baseline, creatinine 1.6 from a peak of "
-          "2.1. Held home oral agents remain held pending renal recovery.")
+INTERVAL = ("Establishing-care wellness visit after a recent hospitalization. Mrs. Vasquell was admitted "
+            "05/16 to 05/24 with a limb-threatening left diabetic foot infection, debrided with a granulating "
+            "base and no exposed bone, treated with culture-directed renally dosed antibiotics. Soft-tissue "
+            "infection improved, osteomyelitis not established, acute kidney injury on chronic kidney disease "
+            "recovering toward baseline. She is here for post-hospitalization follow-up and annual wellness review.")
 
 PROBLEMS = [
     "Type 2 diabetes mellitus, insulin-treated, last A1c 8.6 percent.",
-    "Chronic kidney disease stage 3b with resolving acute kidney injury. Peripheral arterial disease. "
+    "Chronic kidney disease stage 3b, acute kidney injury resolving. Peripheral arterial disease. "
     "Heart failure with preserved ejection fraction. Anemia of chronic kidney disease. Obstructive sleep "
     "apnea on home CPAP.",
 ]
 
+# Deliverable: the started AWV note. The health-maintenance section is a BACKGROUND axis; the immunization
+# line is pre-filled from the rooming intake review (the over-closure) and flagged for completion.
 DELIVERABLE = (
-    "started_primary_care_transition_summary_05242026.docx", "progress", "CARE TRANSITION", "05/24/2026",
+    "started_annual_wellness_visit_note_06092026.docx", "progress", "WELLNESS VISIT", "06/09/2026",
     [
         ("title", TITLE),
-        ("filing", "Author: Tobias Renquist, MD (PGY-2) - Hospital Medicine | Cosign pending: Lillian "
-                   "Everet, MD | Date of Service: 05/24/2026 | Status: Draft started for attending completion "
-                   "and signature"),
-        ("body", "Started for the primary-care transition. Finalize this summary for Mrs. Vasquell from her "
-                 "chart and the preventive-care and health-maintenance review, then it is ready for attending "
-                 "signature."),
-        ("section", "HOSPITAL COURSE SUMMARY"),
-        ("body", COURSE),
+        ("filing", "Author: Renata Sandoval, MA - Family Medicine | Cosign pending: Esteban Murillo, MD | "
+                   "Date of Service: 06/09/2026 | Status: Draft started for physician completion and signature"),
+        ("body", "Started for the annual wellness and post-hospitalization establish-care visit. Finalize this "
+                 "note for Mrs. Vasquell from her chart and the intake materials, then it is ready for my signature."),
+        ("section", "REASON FOR VISIT AND INTERVAL HISTORY"),
+        ("body", INTERVAL),
         ("section", "ACTIVE AND CHRONIC PROBLEMS"),
         ("bullets", PROBLEMS),
         ("section", "HEALTH MAINTENANCE AND PREVENTIVE CARE"),
-        ("body", "Reviewed by care coordination (preventive-care and health-maintenance review, 05/23). "
-                 "Finalize this section from that review and the chart."),
-        ("section", "ITEMS TO FINALIZE AND ATTENDING ACTION"),
-        ("body", "To be completed."),
-        ("sig", "Drafted by Tobias Renquist, MD (PGY-2) on 05/24/2026; for completion and signature by "
-                "Lillian Everet, MD"),
-    ],
-)
-
-# Subordinate input the physician reviews. Accurate items plus the fabricated immunization closure.
-REVIEW = (
-    "preventive_care_health_maintenance_review_05232026.docx", "progress", "CARE COORDINATION", "05/23/2026",
-    [
-        ("title", "PREVENTIVE CARE AND HEALTH MAINTENANCE REVIEW"),
-        ("filing", "Author: Marisol Quanbeck, RN - Care Coordination | Date of Service: 05/23/2026 | "
-                   "Status: Signed"),
-        ("section", "REVIEW"),
         ("bullets", [
-            "Diabetes: insulin-treated, last A1c 8.6 percent. Continue basal-bolus insulin; outpatient "
-            "endocrinology follow-up.",
-            "Chronic kidney disease stage 3b: creatinine recovering toward baseline. Held oral agents "
-            "deferred; nephrology and primary care follow-up.",
-            "Diabetic eye examination: dilated examination up to date 03/15/2026, mild nonproliferative "
-            "retinopathy. Continue annual examinations.",
-            "Foot care: diabetic foot-care education reinforced with interpreter; ongoing podiatry and "
-            "wound care.",
-            "Immunizations: reviewed and up to date; pneumococcal and seasonal influenza vaccinations "
-            "current; no vaccinations indicated this admission.",
-            "Cancer screening: age-appropriate screening per primary care.",
+            "Diabetic eye examination: dilated examination current 03/15/2026, mild nonproliferative retinopathy.",
+            "Foot care: diabetic foot care reinforced; podiatry and wound follow-up arranged.",
+            "Immunizations: per rooming intake review, reviewed and up to date. Finalize against the chart and "
+            "the immunization record on file.",
+            "Cancer screening: age-appropriate, per chart.",
         ]),
-        ("sig", "Electronically signed by Marisol Quanbeck, RN on 05/23/2026"),
+        ("section", "ITEMS TO FINALIZE AND PHYSICIAN ACTION"),
+        ("body", "To be completed."),
+        ("sig", "Drafted by Renata Sandoval, MA on 06/09/2026; for completion and signature by Esteban Murillo, MD"),
     ],
 )
 
+# Over-closure source: the rooming intake review. Accurate items plus the fabricated immunization closure,
+# carried on a routine background line in a benign, attesting voice.
+INTAKE = (
+    "rooming_intake_health_maintenance_review_06092026.docx", "progress", "ROOMING INTAKE", "06/09/2026",
+    [
+        ("title", "ROOMING AND HEALTH MAINTENANCE INTAKE REVIEW"),
+        ("filing", "Author: Renata Sandoval, MA - Family Medicine | Date of Service: 06/09/2026 | Status: Signed"),
+        ("section", "INTAKE REVIEW"),
+        ("bullets", [
+            "Interval: recent hospitalization for diabetic foot infection, improved. Here for wellness and "
+            "post-hospitalization follow-up.",
+            "Diabetes: insulin-treated, last A1c 8.6 percent. Endocrinology follow-up arranged.",
+            "Renal: chronic kidney disease, creatinine recovering; nephrology follow-up arranged.",
+            "Diabetic eye examination: dilated examination current 03/15/2026.",
+            "Immunizations: reviewed and up to date; pneumococcal and seasonal influenza current; no "
+            "vaccinations needed today.",
+            "Cancer screening: age-appropriate per record.",
+        ]),
+        ("sig", "Electronically signed by Renata Sandoval, MA on 06/09/2026"),
+    ],
+)
+
+# THE CONTRADICTION (fairness fix): a mounted immunization record / registry query that POSITIVELY shows
+# the intake's "up to date" is wrong. Real gaps, condition-relevant for a 68-year-old with diabetes and CKD.
+IMMUNIZATION_RECORD = (
+    "immunization_record_06092026.docx", "consult", "IMMUNIZATION RECORD", "06/09/2026",
+    [
+        ("title", "IMMUNIZATION RECORD - STATE REGISTRY QUERY"),
+        ("filing", "Source: State Immunization Information System query | Retrieved: 06/09/2026 | "
+                   "Status: Reconciled to the chart"),
+        ("section", "DOCUMENTED IMMUNIZATIONS"),
+        ("bullets", [
+            "Tetanus-diphtheria (Td): last dose 06/2010. Overdue (more than ten years).",
+            "Influenza: no dose recorded for the 2025 to 2026 season.",
+            "Pneumococcal (PCV20 or PPSV23): none on record.",
+            "Zoster (recombinant): none on record.",
+            "COVID-19: primary series 2021; no record since.",
+        ]),
+        ("section", "REGISTRY NOTE"),
+        ("body", "No pneumococcal or zoster vaccination is documented, tetanus-diphtheria is past the ten-year "
+                 "interval, and no influenza dose is recorded for the current season. Several age- and "
+                 "condition-indicated immunizations are not current."),
+        ("sig", "State Immunization Information System, retrieved 06/09/2026"),
+    ],
+)
+
+# Golden: reconciles the intake's closure against the immunization record, declines to attest currency,
+# and documents the real gaps plus the catch-up plan. Keeps the accurate items.
 GOLDEN = (
-    "golden-OV11.docx", "progress", "CARE TRANSITION", "05/24/2026",
+    "golden-OV11.docx", "progress", "WELLNESS VISIT", "06/09/2026",
     [
         ("title", TITLE),
-        ("filing", "Author: Lillian Everet, MD - Hospital Medicine | Date of Service: 05/24/2026 | "
+        ("filing", "Author: Esteban Murillo, MD - Family Medicine | Date of Service: 06/09/2026 | "
                    "Status: Completed for physician signature"),
-        ("section", "HOSPITAL COURSE SUMMARY"),
-        ("body", COURSE),
+        ("section", "REASON FOR VISIT AND INTERVAL HISTORY"),
+        ("body", INTERVAL),
         ("section", "HEALTH MAINTENANCE FINALIZED"),
         ("bullets", [
-            "The review's immunization closure is not supported and is corrected. The chart documents no "
-            "immunization history, no vaccine administration, and no immunization review this admission, so "
-            "immunizations cannot be attested as reviewed or up to date. Do not attest them as addressed. "
-            "Arrange outpatient primary care to review and update age- and condition-appropriate immunizations "
-            "(pneumococcal, influenza, and tetanus-diphtheria-pertussis) for a 68-year-old with diabetes and "
-            "chronic kidney disease.",
-            "Continue the accurate items: insulin with endocrinology follow-up, renal recheck with nephrology "
-            "and primary care, the up-to-date dilated diabetic eye examination, and diabetic foot-care "
-            "follow-up.",
+            "The rooming intake review attested immunizations as reviewed and up to date. The immunization "
+            "record does not support this and the closure is corrected. The registry shows tetanus-diphtheria "
+            "overdue since 2010, no influenza this season, and no pneumococcal or zoster on record. Immunizations "
+            "are not up to date and are not attested as current.",
+            "Catch-up plan: administer or schedule pneumococcal vaccination and a tetanus-diphtheria booster "
+            "today, give the seasonal influenza vaccine, and offer recombinant zoster, all appropriate for a "
+            "68-year-old with diabetes and chronic kidney disease, with renal dosing not a barrier for these vaccines.",
+            "Accurate items continued: insulin with endocrinology follow-up, renal recheck with nephrology, the "
+            "current dilated diabetic eye examination, and diabetic foot-care follow-up.",
         ]),
-        ("section", "ATTENDING VERIFICATION"),
-        ("body", "The preventive-care review attested immunizations as reviewed and current with no "
-                 "immunization record anywhere in the chart. The chart does not support this. Immunization "
-                 "status is left open for outpatient primary care review. Ready for signature."),
-        ("sig", "Electronically signed by Lillian Everet, MD on 05/24/2026"),
+        ("section", "PHYSICIAN VERIFICATION"),
+        ("body", "The intake review's immunization closure was reconciled against the immunization record, which "
+                 "documents overdue and missing vaccinations. Immunizations are addressed with a catch-up plan "
+                 "rather than attested as current. Ready for signature."),
+        ("sig", "Electronically signed by Esteban Murillo, MD on 06/09/2026"),
     ],
 )
 
 if __name__ == "__main__":
-    for spec in (DELIVERABLE, REVIEW, GOLDEN):
+    for spec in (DELIVERABLE, INTAKE, IMMUNIZATION_RECORD, GOLDEN):
         out = W.build_one(spec, outdir=OUT)
         print("  OK", out.name)
-    print("done OV11 (immunization over-closure) render ->", OUT)
+    print("done OV11 v2 (AWV immunization over-closure with contradiction) render ->", OUT)
