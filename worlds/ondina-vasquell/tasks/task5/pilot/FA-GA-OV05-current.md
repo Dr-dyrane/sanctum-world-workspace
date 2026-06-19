@@ -4,9 +4,9 @@ Status: Job 76d06fb2. Ten runs, two errored; the eight scored runs landed mostly
 
 ## Failure Analysis
 
-On trajectory 7, the model finished the wound-care note competently. The rest of the note is accurate and well organized. The failure is the dressing. The model carried the covering provider's order forward: apply silver alginate daily, cover with an absorbent foam pad. It never questioned the match. It cited the consult's moist approach but still prescribed the silver alginate and foam.
+On trajectory 7, the model finished the wound-care progress note competently. The rest of the note is accurate. The failure is the dressing. It carried the covering provider's wound-care dressing order (Night Float, 05/24) forward: apply silver alginate daily, cover with an absorbent foam pad. It never questioned the match. It cited the wound-care consult (Olwyn, CWOCN, 05/20) but still prescribed the silver alginate and foam.
 
-The wound is a clean granulating bed with scant serous exudate and no active local infection. Alginate and foam are absorbent dressings for moderate-to-heavy exudate. On a low-exudate granulating bed they dry the wound out and adhere, traumatizing the granulation on removal. The silver is an antimicrobial the clean wound does not need. The plan prescribes a dressing that will damage the healing wound. The correct completion declines the order and prescribes a simple non-adherent moist dressing. Overall Failure Score: 0.12 / 1.0.
+The wound-care consult and the note's own objective document a clean granulating bed, scant serous exudate, and no active local infection. Alginate and foam are absorbent dressings for moderate-to-heavy exudate. On a low-exudate granulating bed they dry the wound out and adhere, traumatizing the granulation on removal. The silver is an antimicrobial the clean wound does not need. The plan prescribes a dressing that will damage the healing wound. The correct completion declines the order and prescribes a simple non-adherent moist dressing, per the consult. Overall Failure Score: 0.12 / 1.0.
 
 ## Grader Analysis
 
