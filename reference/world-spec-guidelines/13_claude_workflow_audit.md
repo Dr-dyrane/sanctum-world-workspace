@@ -1,6 +1,6 @@
 # Claude Workflow Audit
 
-Source scope: `reference/source/New Writers Version - Instruction Guide (05_24).md`, local template/link indexes under `reference/templates/`, and source-derived World Spec guideline files. This audit does not use clinical authored content as source-of-truth evidence for expected workflow.
+Source scope: `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md`, local template/link indexes under `reference/templates/`, and source-derived World Spec guideline files. This audit does not use clinical authored content as source-of-truth evidence for expected workflow.
 
 ## Executive Finding
 
@@ -12,25 +12,25 @@ The guide describes Project Sanctum as Claude-collaborative, with the physician 
 
 Evidence:
 
-- `reference/source/New Writers Version - Instruction Guide (05_24).md:241-243` introduces how Claude and other LLMs fit into the workflow.
-- `reference/source/New Writers Version - Instruction Guide (05_24).md:250-254` says AI is a tool, not the driver, and the physician is the ultimate expert.
-- `reference/source/New Writers Version - Instruction Guide (05_24).md:355-365` says Sanctum is Claude-collaborative, but the writer owns quality and professional judgment overrides AI.
+- `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md:241-243` introduces how Claude and other LLMs fit into the workflow.
+- `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md:250-254` says AI is a tool, not the driver, and the physician is the ultimate expert.
+- `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md:355-365` says Sanctum is Claude-collaborative, but the writer owns quality and professional judgment overrides AI.
 
 ### The guide expects a Claude Project with persistent project instructions.
 
 Evidence:
 
-- `reference/source/New Writers Version - Instruction Guide (05_24).md:1213-1219` introduces Claude Project setup for brainstorming and World Spec drafts.
-- `reference/source/New Writers Version - Instruction Guide (05_24).md:1228-1234` says the project instructions anchor Claude behavior across every conversation and should be pasted once into the Claude Project Instructions.
-- `reference/source/New Writers Version - Instruction Guide (05_24).md:1239-1265` begins the copy-paste project instruction block and defines collaboration style, World, world types, world snapshot, and task independence.
+- `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md:1213-1219` introduces Claude Project setup for brainstorming and World Spec drafts.
+- `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md:1228-1234` says the project instructions anchor Claude behavior across every conversation and should be pasted once into the Claude Project Instructions.
+- `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md:1239-1265` begins the copy-paste project instruction block and defines collaboration style, World, world types, world snapshot, and task independence.
 
 ### Brainstorm creation has an official Claude prompt starter.
 
 Evidence:
 
-- `reference/source/New Writers Version - Instruction Guide (05_24).md:1377` says the Brainstorm starter prompt is for the first Claude Project chat when ready to brainstorm and that Claude will conduct a structured interview, run an audit, and then draft the brainstorm DOCX.
-- `reference/source/New Writers Version - Instruction Guide (05_24).md:1379-1381` says to open a new Claude Project chat, paste the copy-paste block, attach the Brainstorm template as a PDF, and push back if Claude skips phases.
-- `reference/source/New Writers Version - Instruction Guide (05_24).md:1386-1509` provides the Brainstorm prompt block and phase sequence.
+- `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md:1377` says the Brainstorm starter prompt is for the first Claude Project chat when ready to brainstorm and that Claude will conduct a structured interview, run an audit, and then draft the brainstorm DOCX.
+- `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md:1379-1381` says to open a new Claude Project chat, paste the copy-paste block, attach the Brainstorm template as a PDF, and push back if Claude skips phases.
+- `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md:1386-1509` provides the Brainstorm prompt block and phase sequence.
 
 Expected Brainstorm Claude interaction:
 
@@ -51,11 +51,11 @@ Expected Brainstorm Claude interaction:
 
 Evidence:
 
-- `reference/source/New Writers Version - Instruction Guide (05_24).md:1714` says the World Spec starter prompt assumes Brainstorm signoff and walks through every World Spec Template section before drafting.
-- `reference/source/New Writers Version - Instruction Guide (05_24).md:1718` says to have the approved Brainstorm ready, open a fresh Claude Project chat, paste the copy-paste block, and Claude will ask for the Brainstorm in Phase 1.
-- `reference/source/New Writers Version - Instruction Guide (05_24).md:1905-1912` says Claude should ask for the World Summary.
-- `reference/source/New Writers Version - Instruction Guide (05_24).md:1914-1939` says Claude must run a systematic audit before drafting and wait for confirmation before Phase 7.
-- `reference/source/New Writers Version - Instruction Guide (05_24).md:1941-1950` says Claude drafts the spec in DOCX format using the World Spec Template structure after confirmation.
+- `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md:1714` says the World Spec starter prompt assumes Brainstorm signoff and walks through every World Spec Template section before drafting.
+- `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md:1718` says to have the approved Brainstorm ready, open a fresh Claude Project chat, paste the copy-paste block, and Claude will ask for the Brainstorm in Phase 1.
+- `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md:1905-1912` says Claude should ask for the World Summary.
+- `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md:1914-1939` says Claude must run a systematic audit before drafting and wait for confirmation before Phase 7.
+- `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md:1941-1950` says Claude drafts the spec in DOCX format using the World Spec Template structure after confirmation.
 
 Expected World Spec Claude interaction:
 
@@ -75,10 +75,10 @@ Expected World Spec Claude interaction:
 
 Evidence:
 
-- `reference/source/New Writers Version - Instruction Guide (05_24).md:2402` says to use Claude Project to package and produce template files and notes OPUS is recommended for this step.
-- `reference/source/New Writers Version - Instruction Guide (05_24).md:2410-2417` says to open a new Claude Project chat, paste the exact prompt starter, and not modify wording.
-- `reference/source/New Writers Version - Instruction Guide (05_24).md:2420-2424` says to attach the System Prompt for Template/Reference File generation and provides the system prompt text.
-- `reference/source/New Writers Version - Instruction Guide (05_24).md:2427-2434` says to attach the finalized World Spec `.docx` and DataBank `.docx`; Claude returns individual template/reference files.
+- `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md:2402` says to use Claude Project to package and produce template files and notes OPUS is recommended for this step.
+- `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md:2410-2417` says to open a new Claude Project chat, paste the exact prompt starter, and not modify wording.
+- `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md:2420-2424` says to attach the System Prompt for Template/Reference File generation and provides the system prompt text.
+- `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md:2427-2434` says to attach the finalized World Spec `.docx` and DataBank `.docx`; Claude returns individual template/reference files.
 
 Expected template/reference Claude interaction:
 
@@ -97,10 +97,10 @@ Expected template/reference Claude interaction:
 
 Evidence:
 
-- `reference/source/New Writers Version - Instruction Guide (05_24).md:361` says platform AutoQC is required and formalized.
-- `reference/source/New Writers Version - Instruction Guide (05_24).md:363` says self-check with Claude is encouraged but not required before upload.
-- `reference/source/New Writers Version - Instruction Guide (05_24).md:2621-2629` gives a Claude QC workflow and prompt: ask Claude to use the QC checklist to review the World Spec document, walk through every check, and flag Blockers, Majors, then Minors.
-- `reference/source/New Writers Version - Instruction Guide (05_24).md:2644-2651` says to attach the deliverable and corresponding AutoQC files; for World Spec, the supplemental documents are the World Spec AutoQC file, the Brainstorm document, and templates/reference files.
+- `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md:361` says platform AutoQC is required and formalized.
+- `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md:363` says self-check with Claude is encouraged but not required before upload.
+- `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md:2621-2629` gives a Claude QC workflow and prompt: ask Claude to use the QC checklist to review the World Spec document, walk through every check, and flag Blockers, Majors, then Minors.
+- `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md:2644-2651` says to attach the deliverable and corresponding AutoQC files; for World Spec, the supplemental documents are the World Spec AutoQC file, the Brainstorm document, and templates/reference files.
 
 Expected AutoQC Claude interaction:
 
@@ -114,18 +114,18 @@ Expected AutoQC Claude interaction:
 
 Evidence:
 
-- Brainstorm prompt block: `reference/source/New Writers Version - Instruction Guide (05_24).md:1386-1509`.
-- World Spec prompt block: `reference/source/New Writers Version - Instruction Guide (05_24).md:1714-1950`.
-- Template/reference prompt starter and system prompt: `reference/source/New Writers Version - Instruction Guide (05_24).md:2410-2424`.
-- Claude QC prompt: `reference/source/New Writers Version - Instruction Guide (05_24).md:2627-2629`.
+- Brainstorm prompt block: `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md:1386-1509`.
+- World Spec prompt block: `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md:1714-1950`.
+- Template/reference prompt starter and system prompt: `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md:2410-2424`.
+- Claude QC prompt: `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md:2627-2629`.
 
 ### AI tools other than Claude are discussed.
 
 Evidence:
 
-- `reference/source/New Writers Version - Instruction Guide (05_24).md:241-243` frames Claude and other LLMs.
-- `reference/source/New Writers Version - Instruction Guide (05_24).md:2424` mentions Nano Banana Pro, ElevenLabs, GarageBand, Photoshop, clinical data generators, and similar tools for writer-produced media.
-- `reference/source/New Writers Version - Instruction Guide (05_24).md:2504` says Nano Banana Pro or ChatGPT may be used to generate photos.
+- `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md:241-243` frames Claude and other LLMs.
+- `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md:2424` mentions Nano Banana Pro, ElevenLabs, GarageBand, Photoshop, clinical data generators, and similar tools for writer-produced media.
+- `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md:2504` says Nano Banana Pro or ChatGPT may be used to generate photos.
 
 ## PLAUSIBLE
 
@@ -133,10 +133,10 @@ Evidence:
 
 Evidence:
 
-- Brainstorm instructions say "Open a new chat in your Claude Project" for Brainstorm at `reference/source/New Writers Version - Instruction Guide (05_24).md:1379-1381`.
-- World Spec instructions say a fresh chat is recommended so the World Spec session is self-contained at `reference/source/New Writers Version - Instruction Guide (05_24).md:1718`.
-- Template/reference instructions say to open a new Claude Project chat at `reference/source/New Writers Version - Instruction Guide (05_24).md:2410-2414`.
-- QC instructions say to start a new chat at `reference/source/New Writers Version - Instruction Guide (05_24).md:2621-2629`.
+- Brainstorm instructions say "Open a new chat in your Claude Project" for Brainstorm at `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md:1379-1381`.
+- World Spec instructions say a fresh chat is recommended so the World Spec session is self-contained at `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md:1718`.
+- Template/reference instructions say to open a new Claude Project chat at `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md:2410-2414`.
+- QC instructions say to start a new chat at `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md:2621-2629`.
 
 Impact:
 
@@ -150,7 +150,7 @@ Action:
 
 Evidence:
 
-- `reference/source/New Writers Version - Instruction Guide (05_24).md:314` links a video titled "Uploading World Spec/Template Files/Claude Transcript + AutoQC".
+- `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md:314` links a video titled "Uploading World Spec/Template Files/Claude Transcript + AutoQC".
 
 Impact:
 
@@ -172,7 +172,7 @@ The guide provides prompt starters and process instructions, but no complete exa
 
 Not found.
 
-The term "Claude Transcript" appears in a video title at `reference/source/New Writers Version - Instruction Guide (05_24).md:314`, but no transcript example appears in the local text source.
+The term "Claude Transcript" appears in a video title at `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md:314`, but no transcript example appears in the local text source.
 
 ### Transcript exports are shown in local text source.
 

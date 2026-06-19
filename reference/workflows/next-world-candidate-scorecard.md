@@ -55,3 +55,20 @@ Off-text evidence distributed as substrate across tasks, all mounted agent-and-g
 ## Next step
 
 If Alexander ratifies Candidate 1, use `next-world-diabetic-foot-planning-canvas.md` as the local cockpit and work the remaining canvas sections there. No world folder, substrate, task artifact, prompt, golden, grader, file upload, or platform action follows until Alexander explicitly authorizes that phase.
+
+## 2026-06-18 update - World 3 selection
+
+Candidate 1 became World 2, Ondina Vasquell. It proved the factory method and also proved the main difficulty lesson: planned traps do not matter until the task surface, source geometry, and forced slot make the wrong move attractive.
+
+For World 3, select Candidate 3, originally "HF exacerbation, CKD, AFib, COPD/OSA." The selected product thesis is narrower and stronger: cardiorenal respiratory transition readiness. The world should test discharge safety when the patient is clinically improving at rest but oxygen qualification, DME delivery, exertional physiology, anticoagulation, renal recovery, and post-acute ownership remain unresolved.
+
+This is not approval to build clinical files, task files, prompts, goldens, graders, uploads, or trajectories. It is approval to plan Candidate 3 using the same task-first factory discipline that made Ondina faster.
+
+Post-KM and post-OV caveats:
+
+- Do not make generic HF management the bite. It will ceiling.
+- Do not make CPAP adherence the headline. It is spent by KM03 and OV04.
+- Do not make generic medication restart or diuresis the central trap. The model is primed for those.
+- Do not rely on buried text. This model reads text.
+- Do not place the wrong move on the deliverable headline. OV05 and OV09 show that headline-axis traps get caught.
+- Start with oxygen and DME readiness, because that family is fresh, realistic, multimodal, and naturally supports payer, vendor, UR, discharge-summary, RCA, and post-acute workflows.

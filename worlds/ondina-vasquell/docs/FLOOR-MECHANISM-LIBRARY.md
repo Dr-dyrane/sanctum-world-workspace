@@ -4,7 +4,7 @@ Date: 2026-06-15. Purpose: the single OV-specific reference for designing floor 
 
 This file SUPERSEDES the earlier OV inferences that the world is "substrate-limited / capped at one-two floors" and that the move is to "build a conflict-first next world." Those were wrong: they came from measuring OV against its own mis-executed attempts instead of the KM recipes. A clean, internally-consistent chart is the IDEAL substrate; floors are MANUFACTURED AT THE TASK LAYER on top of it. Goal: 8 floors in THIS world.
 
-General playbooks this builds on (do not duplicate, cite): docs/task-difficulty-lessons.md (the KM difficulty playbook - already correct; it names this recipe), docs/km-tasking-playbook.md, reference/source/Raising_Task_Difficulty_Worked_Example.pdf.
+General playbooks this builds on (do not duplicate, cite): docs/task-difficulty-lessons.md (the KM difficulty playbook - already correct; it names this recipe), docs/km-tasking-playbook.md, reference/source/worked-examples/Raising_Task_Difficulty_Worked_Example.pdf.
 
 ================================================================
 ## 1. THE MASTER PRINCIPLE (the one thing) - PRIMED vs UN-PRIMED axis
@@ -105,7 +105,7 @@ DISCIPLINE (the ~12-ceiling lesson): BENCH every candidate cold before a pilot; 
 ================================================================
 ## 7. SOURCES + EVIDENCE FILES
 ================================================================
-- General playbooks (correct, cite): docs/task-difficulty-lessons.md (names this recipe at its section 3), docs/km-tasking-playbook.md, reference/source/Raising_Task_Difficulty_Worked_Example.pdf.
+- General playbooks (correct, cite): docs/task-difficulty-lessons.md (names this recipe at its section 3), docs/km-tasking-playbook.md, reference/source/worked-examples/Raising_Task_Difficulty_Worked_Example.pdf.
 - OV slate + bench detail: docs/history/OV-PATH-TO-8-km-ported-2026-06-15.md.
 - KM mechanism extraction + example-world extraction: captured in OV-WORLD-STATUS activity log (2026-06-15 entries) and this file.
 - SUPERSEDED (kept for history, banners added): docs/edmund-chen-difficulty-engine-distillation.md (mechanism extraction valid; "OV substrate-limited / next-world" implications wrong); tasks/task3/pilot/OV03-text-floor-hunt-2026-06-15.md (no-go conclusion wrong - over-closure was the untried recipe).

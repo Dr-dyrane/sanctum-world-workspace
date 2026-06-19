@@ -89,5 +89,5 @@ The honest part, recorded on purpose: Task 1 took most of a day and three rounds
 - Task 1 record: `task-setup/task1-lifecycle-log.md` (canonical); reviews: `task-setup/reviews/`.
 - Lessons and rules: `docs/reasoning-discipline.md`, `docs/clinical-voice-lessons.md`, `docs/docx-generation-method.md`, `docs/world-pipeline-playbook.md`, `task-setup/TASK-RUNBOOK.md`.
 - Task 2 pre-flight: `task-setup/CHECKPOINT-AUDIT-pre-task2.md`.
-- Source/reference updates: `reference/source/World 004 QA + Failure + Grader Analysis.docx` and the 05/24 + 06/02 instruction materials inform the current task-stage doctrine.
+- Source/reference updates: `reference/source/worked-examples/World 004 QA + Failure + Grader Analysis.docx` and the 05/24 + 06/02 instruction materials inform the current task-stage doctrine.
 - Forward: Tasks 2 to 6 (KM02 discharge summary is partly drafted in `task-setup/platform/task2/`), run per the runbook, deep stumping concentrated in KM04 and KM06. Task 2 remains blocked until Alexander authorizes the exact platform step.

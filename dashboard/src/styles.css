@@ -167,6 +167,7 @@
     .status-pill.ready::before { background: var(--ready-soft); }
     .status-pill.delivered::before { background: var(--ok-soft); }
     .status-pill.review::before { background: var(--bad); }
+    .status-pill.retired::before { background: var(--fg-faint); }
     .status-pill.planned::before { background: var(--fg-faint); }
 
     .primary-cta {
@@ -220,6 +221,7 @@
     .track-step.delivered::after { background: var(--ok-soft); }
     .track-step.ready::after { background: var(--ready-soft); }
     .track-step.review::after { background: var(--bad); }
+    .track-step.retired::after { background: var(--fg-faint); opacity: .58; }
     .track-step.planned::after { background: var(--fg-faint); opacity: .5; }
 
     .mini-stat {
@@ -880,6 +882,7 @@
     .pill-dot.delivered { background: var(--ok-soft); }
     .pill-dot.ready     { background: var(--ready-soft); }
     .pill-dot.review    { background: var(--bad); animation: pulse 2.4s ease-in-out infinite; }
+    .pill-dot.retired   { background: var(--fg-faint); }
     .pill-dot.planned   { background: var(--fg-faint); }
 
     /* Summary stat label dot */

@@ -2,7 +2,7 @@
 
 Date: 2026-06-10. Mandate source, Abi (pod lead), verbatim: "would recommend future task not all follow the same structure of draft and finalize. We want to see a variety of tasks in your world and not a monotony, this is also an ask of the client."
 
-Standing rule (Alexander, 6/10): **every world carries at least 5 distinct structural categories.** Sheet snapshot this dossier maps against: `reference/source/task-selection-categories-snapshot-2026-06-10.csv` (232 workflows with claim counts; confirm against the live sheet at claim time). Companions: `docs/task-difficulty-lessons.md` (the cold-axis playbook, now extended with `reference/source/Raising_Task_Difficulty_Worked_Example.pdf`), `worlds/korvin-merrow/task-setup/task8/design/KM08-PLAN.md` (the derived floor rule).
+Standing rule (Alexander, 6/10): **every world carries at least 5 distinct structural categories.** Sheet snapshot this dossier maps against: `reference/source/_superseded/task-selection-categories/task-selection-categories-snapshot-2026-06-10.csv` (232 workflows with claim counts; confirm against the live sheet at claim time). Companions: `docs/task-difficulty-lessons.md` (the cold-axis playbook, now extended with `reference/source/worked-examples/Raising_Task_Difficulty_Worked_Example.pdf`), `worlds/korvin-merrow/task-setup/task8/design/KM08-PLAN.md` (the derived floor rule).
 
 ## 1. The KM autopsy: why ideas got hard
 

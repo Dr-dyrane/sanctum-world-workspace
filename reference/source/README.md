@@ -1,19 +1,33 @@
-# Source Material
+# Source Material - source-of-truth index
 
-This folder is reserved for external or reference materials that Alexander has authorized for local use.
+External and official Sanctum materials Alexander has authorized for local use. The Instruction Document and the Task Selection Categories are re-released roughly weekly, so this folder is organized by PURPOSE. Within each family the CURRENT version sits in its folder; prior versions live under `_superseded/`.
 
-Keep source material separate from authored work. Do not mix copied source content directly into World drafts without clear permission and attribution.
+Rules:
 
-Current official source artifacts:
+- Cite the current file named below. Never cite a `_superseded/` file as current guidance. Stale reads are the dominant hallucination source here (`docs/anti-hallucination.md`, lever 2).
+- Do not edit source artifacts in place. Derived guidance belongs in `reference/checklists/`, `reference/workflows/`, or `reference/world-spec-guidelines/`.
+- When a new version arrives: drop it in the matching folder, move the prior file into `_superseded/<family>/`, and update this table.
 
-- `[EXP] Project Sanctum Instruction Document (06_02).docx`
-- `New Writers Version - Instruction Guide (05_24).docx`
-- `New Writers Version - Instruction Guide (05_24).md`
-- `World 004 QA + Failure + Grader Analysis.docx`
-- `Raising_Task_Difficulty_Worked_Example.pdf`
-- `How to Upload Your Clod Transcript.mp4`
-- `_Task Selection Categories For Team.xlsx`
+## Folder map
 
-Do not edit source artifacts in place. Derived guidance belongs in `reference/checklists/`, `reference/workflows/`, or `reference/world-spec-guidelines/`.
+| Folder | Holds | CURRENT source of truth (verified 2026-06-19) |
+|---|---|---|
+| `instruction-doc/` | The Project Sanctum instruction document (the weekly master guide) | `[EXP] Project Sanctum Instruction Document (06_09).md` |
+| `task-selection-categories/` | The approved workflow / task-category menu + companions | `Sanctum_Task_Selection_Categories_Combined_06_19.docx` (companions: `Project_Sanctum_Task_Categories_with_Difficulty_Suggestions.docx`, `Project_Sanctum_Resources_by_Category.docx`) |
+| `phase-3-evaluating/` | Current capture of the instruction doc's Phase 3 (Evaluating): trajectories, TaigaQA, FA/GA, preference ranking, plus the 2026-06-19 "updated guidelines" screenshots | `phase-3-instructions-2026-06.md` |
+| `autoqc-section-guides/` | Official AutoQC section writer-docs held locally (Sections 5-6; Sections 2-4 are in `reference/templates/`) | `AutoQC_Section_5_Golden_Response_v6.6_writer.docx.pdf`, `AutoQC_Section_6_Grader_Guidelines_v6.6_writer.docx` |
+| `worked-examples/` | Filled reference instances + the difficulty worked example (not weekly-updated) | `FA_GA.md`, `FA_GA-2.md`, `FA_GA Template [05_14_26].docx`, `World 004 QA + Failure + Grader Analysis.docx`, `Raising_Task_Difficulty_Worked_Example.pdf`, `Grader Guidelines.md` |
+| `media/` | Video walkthroughs | `How to Upload Your Clod Transcript.mp4` |
+| `_superseded/` | Prior versions of the weekly families. Provenance only, never current. | see `_superseded/README.md` |
 
-Derived local guidance from `Raising_Task_Difficulty_Worked_Example.pdf` is incorporated into `docs/task-difficulty-lessons.md`, `worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md`, `DO-NOT-REPEAT.md`, and `docs/task-structure-dossier.md`. Core lesson: remove answer-key synthesis from world files, force cross-document reconciliation, add realistic task-level noise or format constraints, consider off-text clinical signals such as images when realistic, and align the grader with the clinical stakes.
+## The live sheet still wins
+
+Even the current Task Selection Categories file is a local snapshot. The menu changes mid-flight, so per AGENTS.md guardrail 13, verify each task's workflow string against the LIVE sheet at Step 10, not against any saved copy.
+
+## FA/GA worked examples are LIVE
+
+`worked-examples/FA_GA.md` and `FA_GA-2.md` are the two official worked examples cited by `docs/fa-ga-canonical.md`. They are reference instances, not stale versions.
+
+## Open follow-up for Alexander
+
+Derived guidance under `reference/world-spec-guidelines/` (notably `11_transcript_requirements.md` and `12_required_upload_inventory.md`) still cites the archived 05_24 guide and 06_08 doc by line number. Those resolve to `_superseded/instruction-doc/` and stay accurate to those versions. Re-deriving them against 06_09 is a content task, not done in this reorg.

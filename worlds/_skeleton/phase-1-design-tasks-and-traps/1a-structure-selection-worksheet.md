@@ -1,6 +1,6 @@
 # 1a - Structure selection worksheet (do this FIRST, no substrate yet)
 
-Goal: choose at least 5 DISTINCT task structures for this world before any chart exists. Full taxonomy and forcing functions: `docs/task-structure-dossier.md`. Sheet-mapped workflow strings (prefer P0, 0 claims; re-verify live): `reference/source/task-selection-categories-snapshot-2026-06-10.csv`.
+Goal: choose at least 5 DISTINCT task structures for this world before any chart exists. Full taxonomy and forcing functions: `docs/task-structure-dossier.md`. Sheet-mapped workflow strings (prefer P0, 0 claims; re-verify live): `reference/source/_superseded/task-selection-categories/task-selection-categories-snapshot-2026-06-10.csv`.
 
 ## The eight structures (one-line reminder; read the dossier for each forcing function)
 

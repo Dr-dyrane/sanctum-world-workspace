@@ -1,6 +1,6 @@
 # Onboarding Pipeline
 
-Source indexed: `reference/source/New Writers Version - Instruction Guide (05_24).md`
+Source indexed: `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md`
 
 This workflow captures the original onboarding scope and operational gates. It is preserved as historical/source-derived workflow guidance. For Korvin's live phase after onboarding, use `project/STATUS.md`, `project/PHASE_MAP.md`, `docs/status-dashboard.md`, and `docs/world-pipeline-playbook.md`.
 

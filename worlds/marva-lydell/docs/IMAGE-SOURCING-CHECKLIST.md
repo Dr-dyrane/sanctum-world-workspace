@@ -1,6 +1,6 @@
 # World 3 Image Sourcing Checklist (Marva Lydell)
 
-Date 2026-06-18. Standing rule for any off-text image asset in World 3. Carries the OV and KM image lessons and the 06/18 Project Sanctum resource list (reference/source/Project_Sanctum_Resources_by_Category.docx). Planning guidance only; no world file, task artifact, prompt, grader, or image is authorized at the current Brainstorm checkpoint.
+Date 2026-06-18. Standing rule for any off-text image asset in World 3. Carries the OV and KM image lessons and the 06/18 Project Sanctum resource list (reference/source/task-selection-categories/Project_Sanctum_Resources_by_Category.docx). Planning guidance only; no world file, task artifact, prompt, grader, or image is authorized at the current Brainstorm checkpoint.
 
 ## Why this exists
 The 06/12 worked example shows the off-text image is the single strongest difficulty lever: a critical finding visible only in an image plus one quiet vital did most of the work. That example used a Nanobanana (AI) render, and Larry's 06/18 rule bans AI-generated imaging. This is how World 3 keeps the lever without an AI render and without copyrighted images.

@@ -3,8 +3,8 @@
 This is the locked standard. Read it before writing or revising any FA/GA. It supersedes any divergent wording in the failure-grader-analysis skill cache. If the skill and this doc disagree, this doc wins. Prompt, golden, and grader are already locked; this locks the FA/GA so we stop re-deriving it.
 
 ## Provenance (the authoritative chain)
-- `reference/source/[EXP] Project Sanctum Instruction Document (06_09).md`, Step 14: "Failure Analysis (FA) - what the agent got wrong + why" and "Grader Analysis (GA) - how well the grader scored the agent's work." FA = half a page, 3 paragraphs, 10-12 sentences, covering four components. GA = 4-6 sentences.
-- `reference/source/FA_GA.md` and `reference/source/FA_GA-2.md`: the two official worked examples. Both GAs end with constructive feedback to the grader.
+- `reference/source/instruction-doc/[EXP] Project Sanctum Instruction Document (06_09).md`, Step 14: "Failure Analysis (FA) - what the agent got wrong + why" and "Grader Analysis (GA) - how well the grader scored the agent's work." FA = half a page, 3 paragraphs, 10-12 sentences, covering four components. GA = 4-6 sentences.
+- `reference/source/worked-examples/FA_GA.md` and `reference/source/worked-examples/FA_GA-2.md`: the two official worked examples. Both GAs end with constructive feedback to the grader.
 - `worlds/korvin-merrow/task-setup/task1/fa-ga/FA-GA-final.md`: the DELIVERED, Abi-approved FA/GA, GA rated Great. Uses "what the model did well / what it failed" and "what the grader got right / what the grader got wrong or could improve."
 - `worlds/korvin-merrow/task-setup/task9/fa-ga/FA-GA-current.md`: prose-paragraph form, grader audit + one weakness + calibration close.
 - King P, 2026-06-14 (DO-NOT-REPEAT #20): bind to the SECOND-lowest distinct run, not the strict lowest. This supersedes the EXP doc's "lowest-scoring run."

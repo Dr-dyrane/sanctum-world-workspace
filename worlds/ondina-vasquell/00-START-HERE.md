@@ -20,10 +20,10 @@ Patient: Ondina Vasquell, 68F, Spanish-preferred, insulin-dependent T2DM with di
 
 ## Read order for this world
 
-1. reference/workflows/next-world-dfi-decision-record-2026-06-12.md (physician-originated decisions 1 to 10)
+1. reference/workflows/_history-ondina-dfi/next-world-dfi-decision-record-2026-06-12.md (physician-originated decisions 1 to 10)
 2. worlds/ondina-vasquell/submission/Ondina_Vasquell_Brainstorm.md (reviewer-facing Brainstorm source for DOCX; twice reviewed, residuals fixed)
-3. reference/workflows/next-world-dfi-hour-prep-packet.md (options history, worksheet sources, live-guidance gate)
-4. reference/workflows/live-guidance-delta-memo-2026-06-12.md (live doc and sheet verification; Phase 2+ residual gates)
+3. reference/workflows/_history-ondina-dfi/next-world-dfi-hour-prep-packet.md (options history, worksheet sources, live-guidance gate)
+4. reference/workflows/_history-ondina-dfi/live-guidance-delta-memo-2026-06-12.md (live doc and sheet verification; Phase 2+ residual gates)
 5. `docs/WORLD-STATUS.md`, `docs/WORKFLOW-MAP.md`, `tasks/task1/current/`, `tasks/task2/current/`, `tasks/task3/current/`, `tasks/task4/current/`, `tasks/task6/current/`, `tasks/task7/current/`, and the per-task `tasks/taskN/pilot/` folders (FA/GA, preference labels, results). Use `archive/2026-06-15-cleanup/` only when investigating old design history.
 
 ## Standing build doctrine for this world (Alexander, 6/12)

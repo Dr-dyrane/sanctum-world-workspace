@@ -19,7 +19,7 @@ Local reading order used:
 3. `AGENTS.md`
 4. `reference/world-spec-guidelines/POD-ANNOUNCEMENT-2026-06-10-delivery-day-and-operating-rules.md`
 5. `reference/world-spec-guidelines/POLICY-2026-06-07-selfcontainment-and-file-separation.md`
-6. `reference/workflows/next-world-diabetic-foot-planning-canvas.md`
+6. `reference/workflows/_history-ondina-dfi/next-world-diabetic-foot-planning-canvas.md`
 7. `reference/workflows/next-world-candidate-scorecard.md`
 8. `reference/workflows/next-world-selection-proposal.md`
 9. `reference/workflows/internal-medicine-world-planning-canvas.md`
@@ -28,7 +28,7 @@ Local reading order used:
 12. `docs/abi-review-protocol.md`
 13. `reference/checklists/brainstorm-checklist.md`
 14. `reference/checklists/world-spec-checklist.md`
-15. `reference/source/task-selection-categories-snapshot-2026-06-10.csv`
+15. `reference/source/_superseded/task-selection-categories/task-selection-categories-snapshot-2026-06-10.csv`
 
 No-repeat receipt carried into this packet:
 

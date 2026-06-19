@@ -1,6 +1,6 @@
 # Reviewer Failure Patterns
 
-Source indexed: `reference/source/New Writers Version - Instruction Guide (05_24).md`
+Source indexed: `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md`
 
 Use this as a pre-review audit list.
 

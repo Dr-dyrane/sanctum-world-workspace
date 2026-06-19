@@ -15,6 +15,7 @@ const stageIcons: Record<Stage, IconName> = {
   delivered: 'file-check',
   ready: 'shield',
   built: 'folder-open',
+  retired: 'x',
   review: 'alert-triangle',
   planned: 'activity',
 };

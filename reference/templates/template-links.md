@@ -1,6 +1,6 @@
 # Official Template Links
 
-Source: `reference/source/New Writers Version - Instruction Guide (05_24).md`
+Source: `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md`
 
 ## Brainstorm
 

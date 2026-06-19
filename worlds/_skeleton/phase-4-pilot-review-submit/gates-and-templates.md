@@ -16,7 +16,7 @@ Lock a prereg per task in `phase-4-pilot-review-submit/` with: the mechanism und
 
 ## FA / GA (failure-only, natural prose)
 
-- FA: the single lowest genuine-failure run; what the MODEL did poorly. GA: what the GRADER did right or wrong in scoring that output against the golden (descriptive, not prescriptive; do not tell the grader what to do). Each part under about 1000 characters, complete sentences, no bullets, no headers, no section names. Template: `reference/templates/FA_GA.md` and `reference/source/FA_GA Template [05_14_26].docx`.
+- FA: the single lowest genuine-failure run; what the MODEL did poorly. GA: what the GRADER did right or wrong in scoring that output against the golden (descriptive, not prescriptive; do not tell the grader what to do). Each part under about 1000 characters, complete sentences, no bullets, no headers, no section names. Template: `reference/templates/FA_GA.md` and `reference/source/worked-examples/FA_GA Template [05_14_26].docx`.
 
 ## Preference labels (three per task, each a different trajectory)
 

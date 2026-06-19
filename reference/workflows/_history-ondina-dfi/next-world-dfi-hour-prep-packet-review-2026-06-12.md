@@ -35,8 +35,8 @@ PASS. No blocking findings. Packet accepted as the Brainstorm-prep planning surf
  M reference/workflows/internal-medicine-world-planning-canvas.md
  M worlds/korvin-merrow/task-setup/TASK-RUNBOOK.md
 ?? reference/workflows/next-world-candidate-scorecard.md
-?? reference/workflows/next-world-dfi-hour-prep-packet.md
-?? reference/workflows/next-world-diabetic-foot-planning-canvas.md
+?? reference/workflows/_history-ondina-dfi/next-world-dfi-hour-prep-packet.md
+?? reference/workflows/_history-ondina-dfi/next-world-diabetic-foot-planning-canvas.md
 ?? reference/workflows/next-world-selection-proposal.md
 ```
 

@@ -708,6 +708,10 @@ html.dark .score-stage {
   background: var(--accent-a);
 }
 
+.status-pill.retired::before {
+  background: var(--fg-faint);
+}
+
 .status-pill.delivered::before {
   background: var(--ok-soft);
 }
@@ -851,6 +855,11 @@ html.dark .primary-cta {
 
 .track-step.review::after {
   background: var(--bad);
+}
+
+.track-step.retired::after {
+  background: var(--fg-faint);
+  opacity: 0.58;
 }
 
 .track-step.active {
@@ -1217,6 +1226,10 @@ html.dark .primary-cta {
 
 .lens-dot.built {
   background: var(--accent-a);
+}
+
+.lens-dot.retired {
+  background: var(--fg-faint);
 }
 
 .lens-dot.review {
@@ -2653,6 +2666,11 @@ html.dark .score-squircle {
   box-shadow: 0 0 0 5px var(--accent-fill);
 }
 
+.score-squircle.retired .score-meter span {
+  background: var(--fg-faint);
+  box-shadow: 0 0 0 5px rgba(120, 120, 128, 0.12);
+}
+
 .score-squircle.delivered .score-meter span {
   background: var(--ok);
   box-shadow: 0 0 0 5px var(--ok-fill);
@@ -3335,6 +3353,12 @@ html.dark .score-squircle {
   --task-state: var(--accent-a);
   --task-state-soft: var(--accent-b);
   --task-state-fill: var(--accent-fill);
+}
+
+.simple-task-card.retired {
+  --task-state: var(--fg-soft);
+  --task-state-soft: var(--fg-faint);
+  --task-state-fill: rgba(120, 120, 128, 0.08);
 }
 
 .simple-task-card.review {

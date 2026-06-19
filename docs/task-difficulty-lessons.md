@@ -1,6 +1,6 @@
 # Task Difficulty Lessons - what makes an RL eval task hard (Korvin Merrow, tasks 1-10)
 
-Date: 2026-06-08, extended 2026-06-12 (KM07-KM10 evidence + the fairness doctrine, including AO's KM08 draft-fairness rule + the Raising Task Difficulty worked example + King P's legitimate-failure score guidance). Source: the full KM01-KM10 build/pilot history plus `reference/source/Raising_Task_Difficulty_Worked_Example.pdf`. Companion: `docs/grader-guidelines-lessons.md` (structure + length), `docs/task-structure-dossier.md` (the 8 structures + variety mandate), `docs/clinical-voice-lessons.md` (golden register), `docs/reviewer-response-protocol.md`. This is the difficulty playbook: read it before designing any new task. Two axes govern a task and they are independent - DIFFICULTY (does it floor a strong model) lives in sections 1-4 and 7; FAIRNESS (is the floor the model's fault) lives in sections 5-6. A task ships only when it is BOTH hard AND fair; the suite paid for both rules in reseeds.
+Date: 2026-06-08, extended 2026-06-12 (KM07-KM10 evidence + the fairness doctrine, including AO's KM08 draft-fairness rule + the Raising Task Difficulty worked example + King P's legitimate-failure score guidance). Source: the full KM01-KM10 build/pilot history plus `reference/source/worked-examples/Raising_Task_Difficulty_Worked_Example.pdf`. Companion: `docs/grader-guidelines-lessons.md` (structure + length), `docs/task-structure-dossier.md` (the 8 structures + variety mandate), `docs/clinical-voice-lessons.md` (golden register), `docs/reviewer-response-protocol.md`. This is the difficulty playbook: read it before designing any new task. Two axes govern a task and they are independent - DIFFICULTY (does it floor a strong model) lives in sections 1-4 and 7; FAIRNESS (is the floor the model's fault) lives in sections 5-6. A task ships only when it is BOTH hard AND fair; the suite paid for both rules in reseeds.
 
 ## 1. The core principle: the IDEA is the lever, not the writing
 
@@ -25,7 +25,7 @@ Two important successors learned later: (1) the bare planted-fabrication form is
 
 ## 3a. Worked Example #1 hardening pattern: remove the answer key, force reconciliation, add off-text signal
 
-Source: `reference/source/Raising_Task_Difficulty_Worked_Example.pdf`. The example moved an SNF admission-note task from near-universal high scores to repeated clinical failures by changing the information geometry, not by making the prose louder. The transferable pattern:
+Source: `reference/source/worked-examples/Raising_Task_Difficulty_Worked_Example.pdf`. The example moved an SNF admission-note task from near-universal high scores to repeated clinical failures by changing the information geometry, not by making the prose louder. The transferable pattern:
 
 1. Pull the answer key out of world files. A world-level discharge summary or consultant synthesis that states the conclusion turns the task into transcription. World files should provide raw material, not the completed synthesis. If a later task truly needs the summary, mount it as a task-level file scoped to that task, and make the prompt explain why the user does not already have it.
 2. Force reconciliation. No single source should be complete. The model should have to cross-check vitals, MAR, consults, nursing notes, imaging, photos, forms, and templates to get the non-negotiables right.

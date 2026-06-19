@@ -11,8 +11,8 @@ Everything the playground links to, with what each is for. Read DO-NOT-REPEAT an
 ## Phase 1 (design tasks and traps)
 
 - `phase-1-design-tasks-and-traps/1a` structure selection, `1b` trap library, `1c` pairing and fairness gate, `1d` per-task architecture and forecast.
-- `docs/task-difficulty-lessons.md` - the cold-axis playbook and the fairness doctrine (sections 5-6), extended by `reference/source/Raising_Task_Difficulty_Worked_Example.pdf`.
-- `reference/source/task-selection-categories-snapshot-2026-06-10.csv` - sheet-mapped workflow strings (re-verify live).
+- `docs/task-difficulty-lessons.md` - the cold-axis playbook and the fairness doctrine (sections 5-6), extended by `reference/source/worked-examples/Raising_Task_Difficulty_Worked_Example.pdf`.
+- `reference/source/_superseded/task-selection-categories/task-selection-categories-snapshot-2026-06-10.csv` - sheet-mapped workflow strings (re-verify live).
 
 ## Phase 2 (world spec and substrate)
 

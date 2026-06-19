@@ -2,7 +2,7 @@
 
 ## Source-Of-Truth Rule
 
-Source guide: `reference/source/New Writers Version - Instruction Guide (05_24).md`
+Source guide: `reference/source/_superseded/instruction-doc/New Writers Version - Instruction Guide (05_24).md`
 
 Official local template: `reference/templates/World_Spec_Template_05_06.docx`
 

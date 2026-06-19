@@ -13,6 +13,7 @@
       delivered: 'var(--ok-soft)',
       ready: 'var(--ready-soft)',
       review: 'var(--bad)',
+      retired: 'var(--fg-faint)',
       planned: 'var(--fg-faint)',
     }[stage] || 'var(--fg-faint)'),
     artifactKind(name){
@@ -189,7 +190,7 @@
 
     /* Pipeline stepper: where this task sits in the lifecycle */
     stepper(t){
-      const stageIdx = { planned:0, built:1, piloted:2, review:3, ready:4, delivered:4 };
+      const stageIdx = { planned:0, built:1, retired:1, piloted:2, review:3, ready:4, delivered:4 };
       const currentIdx = stageIdx[t.stage] ?? 3;
       const steps = CONFIG.stages.map((s,i)=>{
         const done = t.stage === 'delivered' ? true : i < currentIdx;
@@ -207,6 +208,8 @@
         ? 'Reviewed and cleared; queued for delivery on the platform.'
         : t.stage === 'built'
         ? 'Task packet built locally. Pilot pending.'
+        : t.stage === 'retired'
+        ? 'Retired after ceilinging or route withdrawal.'
         : t.stage === 'planned'
         ? 'Incoming task placeholder. No pilot data exists yet.'
         : 'Piloted; a human expert is reviewing the task before it can be accepted.';
