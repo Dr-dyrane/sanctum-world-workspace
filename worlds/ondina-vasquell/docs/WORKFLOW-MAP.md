@@ -10,7 +10,7 @@ For live task status and lifecycle, docs/WORLD-STATUS.md governs. This file maps
 | OV02 | rpfl3eac | Medical Transcription and Clinical Documentation Completion | FLOOR ~0.10 | Delivered |
 | OV03 | ckrz3598 | Medical Transcription and Clinical Documentation Completion | FLOOR 0.05-0.20 | Delivered |
 | OV04 | jqxv7246 | Medical Transcription and Clinical Documentation Completion | FLOOR bimodal | Delivered |
-| OV05 | pilot-ready | Wound Care SOAP / Clinical Progress Note (new lane, verify live sheet) | v2 wound-dressing commission (cytotoxic wet-to-dry vs clean granulating bed) | Built off A1; gates green; awaiting pilot |
+| OV05 | v3 re-pilot pending | Wound Care SOAP / Clinical Progress Note (new lane, verify live sheet) | v3 silver alginate commission (v2 Dakin's ceilinged 0.72-0.92) | Subtler re-roll; gates green; awaiting re-pilot |
 | OV06 | 1rqn2959 | Referral Intake, Triage, and Scheduling Coordination | FLOOR 0.39 | Delivered |
 | OV07 | re-pilot pending | Claims Denial Analysis and Appeal Preparation | v2 embedded-wrong closure (AI image removed) | Rebuilt off the photo; gates green; awaiting re-pilot |
 | OV08 | l6jo01e4 | Utilization Review Concurrent Stay Documentation | FLOOR 0.63 | Awaiting first human review |

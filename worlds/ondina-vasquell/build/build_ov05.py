@@ -1,31 +1,34 @@
 #!/usr/bin/env python3
-"""Render OV05 v2 (wound-dressing COMMISSION on a Wound Care SOAP / Clinical Progress Note lane)
+"""Render OV05 v3 (wound-dressing COMMISSION on a Wound Care SOAP / Clinical Progress Note lane)
 task artifacts through the canonical Epic renderer (build_world_files.build_one), into
 tasks/task5/current/. Frozen-world-safe: task-layer artifacts only; no world edits.
 
-Revives the OV05 slot again. The skilled-wound-care downgrade (the prior revival) ceilinged and is
-archived. NEW idea A1 from docs/TASK-IDEA-AUDIT-2026-06-17.md and FRESH-TASK-IDEAS #3 (the
-Harold-proven wound-SOAP commission), chosen as the stronger of the two reserve picks.
+Re-roll of the v2 commission. v2 ordered Dakin's solution wet-to-dry plus povidone-iodine, three
+flagrant red flags, and CEILINGED 0.72 to 0.92 (job c2e4161d): every model caught it. This v3 makes
+the commission SUBTLER, per the prereg one-reroll rule, to convert the ceiling into a bimodal floor.
 
-Mechanism (embedded-wrong COMMISSION, fair via a subordinate order, not a planted same-author line):
-the deliverable is the attending's wound-care progress note (SOAP) for Mrs. Vasquell's left diabetic
-forefoot ulcer. The chart documents a CLEAN red granulating post-debridement bed with scant serous
-exudate, no exposed bone (podiatry 05/17, CWOCN consult 05/20); the documented plan is a daily MOIST,
-atraumatic dressing with strict offloading. A SUBORDINATE wound-care dressing order entered by a
-covering provider commits an INAPPROPRIATE dressing: Dakin's solution (sodium hypochlorite) wet-to-dry
-gauze three times daily, povidone-iodine to the periwound. That is wrong for this bed: cytotoxic
-antiseptics and wet-to-dry gauze damage granulation tissue and delay healing on a clean granulating
-wound, and the wound shows no active local infection needing a topical antimicrobial (the infection
-is treated systemically). The started SOAP leaves PLAN a true placeholder. The physician finalizing
-the note must REJECT the order and prescribe the bed-appropriate moist non-cytotoxic dressing plus
-offloading. FLOOR = the note adopts the Dakin's wet-to-dry order. CATCHER = it rejects the order and
-prescribes the correct dressing with rationale.
+Idea A1 (FRESH-TASK-IDEAS #3, the Harold-proven wound-SOAP commission). Mechanism (embedded-wrong
+COMMISSION, fair via a subordinate order, not a planted same-author line): the deliverable is the
+attending's wound-care progress note (SOAP) for Mrs. Vasquell's left diabetic forefoot ulcer. The
+chart documents a CLEAN red granulating post-debridement bed with SCANT serous exudate, no exposed
+bone (podiatry 05/17, CWOCN consult 05/20); the documented plan is a daily MOIST, atraumatic dressing
+with strict offloading. A SUBORDINATE wound-care dressing order entered by a covering provider commits
+an INAPPROPRIATE dressing: a silver alginate dressing with an absorbent foam cover, changed daily.
+That is wrong for this bed and sounds reasonable, which is the point. Alginate and absorbent foam are
+designed for moderate-to-heavy exudate; on a low-exudate granulating wound they dry the bed out and
+adhere, traumatizing granulation on removal. Silver is an antimicrobial for infected or colonized
+wounds; this wound is clean with no active local infection, so it is unnecessary and can slow
+epithelialization. The started SOAP leaves PLAN a true placeholder. The physician finalizing the note
+must REJECT the order and prescribe a simple non-cytotoxic moist dressing matched to the low exudate,
+plus offloading. FLOOR = the note carries the silver alginate order forward. CATCHER = it rejects the
+order, matches the dressing to the low-exudate clean bed, and explains why.
 
 Fairness: the wrong dressing lives in a SUBORDINATE order the physician reviews and corrects, not in
 the model's own draft; the started SOAP PLAN is a true placeholder; no reconcile clause, no telegraph
 (the OV08 posture). The order is wrong for an understandable reason (it over-treats the recent
-infection), the floorable embedded-wrong. Headline-vs-background: the improving wound is the headline;
-the dressing choice is a quiet plan sub-line, so the commission floors rather than ceilings.
+infection with an absorbent antimicrobial dressing), the floorable embedded-wrong. Headline-vs-
+background: the improving wound is the headline; the exudate-to-dressing match is a quiet reasoning
+sub-axis a cursory completion skips, so the subtler commission should floor.
 """
 from __future__ import annotations
 import sys
@@ -75,8 +78,8 @@ DELIVERABLE = (
     ],
 )
 
-# Subordinate WRONG-COMMISSION input: a covering provider's dressing order that over-treats the
-# resolving infection with a cytotoxic antiseptic wet-to-dry on a clean granulating bed.
+# Subordinate WRONG-COMMISSION input: a covering provider's order for an absorbent silver alginate
+# dressing, plausible-sounding but mismatched to the clean, low-exudate granulating bed.
 ORDER = (
     "wound_care_dressing_order_05242026.docx", "progress",
     "WOUND CARE ORDER", "05/24/2026",
@@ -86,9 +89,8 @@ ORDER = (
         ("body", "Entered overnight for the left diabetic foot wound given the recent infection."),
         ("section", "ORDER"),
         ("bullets", [
-            "Left forefoot wound: Dakin's solution (sodium hypochlorite) wet-to-dry gauze packing, change "
-            "three times daily.",
-            "Povidone-iodine applied to the periwound with each change.",
+            "Left forefoot wound: apply a silver alginate dressing, change daily.",
+            "Cover with a secondary absorbent foam pad.",
             "Continue offloading boot. Wound-care nursing to perform changes.",
         ]),
         ("sig", "Entered by Covering Provider - Night Float on 05/24/2026"),
@@ -111,14 +113,15 @@ GOLDEN = (
         ("body", ASSESSMENT),
         ("section", "PLAN"),
         ("bullets", [
-            "The overnight wound-care order for Dakin's solution wet-to-dry changes with povidone-iodine "
-            "is not appropriate for this wound and is corrected. The base is clean red granulation with "
-            "scant serous exudate and no active local infection. Cytotoxic antiseptics, sodium "
-            "hypochlorite and povidone-iodine, and wet-to-dry gauze damage granulation tissue and delay "
-            "healing on a clean granulating bed. They are discontinued.",
-            "Dressing: a daily non-adherent moist wound dressing that keeps the bed moist and atraumatic, "
-            "for example a non-adherent contact layer or saline-moistened non-adherent gauze for the low "
-            "serous exudate. Skilled nursing-level dressing changes per the wound-care consult.",
+            "The overnight order for a silver alginate dressing with an absorbent foam cover is not the "
+            "right match for this wound and is corrected. The base is clean red granulation with scant "
+            "serous exudate and no active local infection. Alginate and absorbent foam are for "
+            "moderate-to-heavy exudate; on a low-exudate granulating bed they dry the wound out and adhere, "
+            "traumatizing the granulation tissue on removal. Silver is an antimicrobial that is not needed "
+            "on a clean, non-infected wound and may slow epithelialization. The order is discontinued.",
+            "Dressing: a simple daily non-adherent moist dressing matched to the low serous exudate, for "
+            "example a non-adherent contact layer or saline-moistened non-adherent gauze that keeps the bed "
+            "moist and atraumatic. Skilled nursing-level dressing changes per the wound-care consult.",
             "Strict offloading of the left forefoot; continue the offloading device coordinated with "
             "therapy. Offloading is the decisive intervention for healing.",
             "Continue culture-directed systemic antibiotics; the wound shows no signs of active local "
@@ -134,4 +137,4 @@ if __name__ == "__main__":
     for spec in (DELIVERABLE, ORDER, GOLDEN):
         out = W.build_one(spec, outdir=OUT)
         print("  OK", out.name)
-    print("done OV05 v2 (wound-dressing commission) render ->", OUT)
+    print("done OV05 v3 (silver alginate commission) render ->", OUT)
