@@ -14,6 +14,7 @@ Rules:
 |---|---|---|
 | `instruction-doc/` | The Project Sanctum instruction document (the weekly master guide) | `[EXP] Project Sanctum Instruction Document (06_09).md` |
 | `task-selection-categories/` | The approved workflow / task-category menu + companions | `Sanctum_Task_Selection_Categories_Combined_06_19.docx` (companions: `Project_Sanctum_Task_Categories_with_Difficulty_Suggestions.docx`, `Project_Sanctum_Resources_by_Category.docx`) |
+| `phase-1-brainstorm/` | Current capture of the instruction doc's Part 1 (Brainstorm): World Setup + Rough Task Ideas writing standards, Common Mistakes, and the Studio upload/AutoQC/submit flow (2026-06-19 screenshots) | `phase-1-brainstorm-instructions-2026-06.md` |
 | `phase-3-evaluating/` | Current capture of the instruction doc's Phase 3 (Evaluating): trajectories, TaigaQA, FA/GA, preference ranking, plus the 2026-06-19 "updated guidelines" screenshots | `phase-3-instructions-2026-06.md` |
 | `autoqc-section-guides/` | Official AutoQC section writer-docs held locally (Sections 5-6; Sections 2-4 are in `reference/templates/`) | `AutoQC_Section_5_Golden_Response_v6.6_writer.docx.pdf`, `AutoQC_Section_6_Grader_Guidelines_v6.6_writer.docx` |
 | `worked-examples/` | Filled reference instances + the difficulty worked example (not weekly-updated) | `FA_GA.md`, `FA_GA-2.md`, `FA_GA Template [05_14_26].docx`, `World 004 QA + Failure + Grader Analysis.docx`, `Raising_Task_Difficulty_Worked_Example.pdf`, `Grader Guidelines.md` |
