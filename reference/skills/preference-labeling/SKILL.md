@@ -27,6 +27,26 @@ The output is a workspace backup file that the writer reads and owns. You draft 
 You never submit it, enter it on the platform, or run Preference Labels AutoQC
 without the writer's explicit authorization for that exact step.
 
+## Four non-negotiable rules (official Part 7 doc)
+
+1. Judge the work product as a clinician. Decide on the two deliverables you would
+   prefer to deliver or receive, not on the agent's reasoning steps or how the
+   trajectory narrated its thinking. Do not justify a preference from what the
+   trajectory did (for example "it opened the image file"); judge what the finished
+   note, appeal, or summary says or omits.
+2. Ignore the grading scores. The preference comes from your own reading of the work
+   product. Never write "this one scored higher, so it is better," and never put a
+   grader score in the pasted prose. The scores stay in the workspace-backup Status
+   and pair lines only, for internal tracking. The grader's direction is at most a
+   private sanity check.
+3. Reference the golden and grader content specifically, never vaguely, never the
+   number. Name the finding, passage, or requirement you rely on (for example "B
+   contradicts the endocrine consult and the golden's position that steroid
+   hyperglycemia self-corrects"), not "A is closer to the golden."
+4. The writer authors the feedback, not AI. This skill organizes evidence and drafts
+   a backup the writer reads, rewrites, and owns before any paste. The final pasted
+   text is the writer's.
+
 ## Before you label: pin the central failure
 
 Do not label from memory. The pair is decided against the task's central capped
@@ -57,17 +77,24 @@ failure is continuing or soft-pedaling it"). That sentence governs the verdict.
 5. Pick the tier with the conservative-margin calibration below.
 6. Write the label using `references/pl-format-template.md`.
 
-## The A1-B3 scale and the button
+## The scale and the button (we cap at A1-B3)
 
-| Tier | Meaning | Button |
-|---|---|---|
-| A1/B1 | Slightly better; a narrow point | plain A or plain B (no plus) |
-| A2/B2 | Better; avoids a discrete error the other makes | A+ or B+ (one plus) |
-| A3/B3 | Much better; the other falls for the central designed trap or misses a critical finding | A++ or B++ (two plus) |
+The platform exposes the full A4-B4 scale (eight buttons, A+++ through B+++). We
+deliberately cap our verdicts at A1-B3, plain through two plus, per the standing pod
+call. Do not select A+++ or B+++ (three plus, significantly better); if a pair seems
+to need it, it is almost always an A3/B3 with one central failure, which is two plus.
 
-The rating lives in two places only: the `VERDICT` line of the file and the Button
-you select on the platform. It is never a line of pasted text (see the format
-section). Do not use A4/B4 or three-plus language unless new pod guidance restores it.
+| Tier | When to use | Button | Scale Selection language |
+|---|---|---|---|
+| A1/B1 | Both close; one edges ahead on a narrow point | plain A or plain B (no plus) | marginally better |
+| A2/B2 | Meaningfully better; avoids a discrete error the other makes, or handles a key step the other does not | A+ or B+ (one plus) | slightly better |
+| A3/B3 | The other falls for the central designed trap or misses a critical finding | A++ or B++ (two plus) | moderately better |
+
+The Scale Selection language follows the official Part 7 template example
+("A++ (moderately better)"). The Part 7 Step 3 table names the tiers differently
+(slightly / better / much better); when they disagree, the pasted Scale Selection
+line uses the template language in the table above. The rating is set by the Button
+and stated once in the pasted Scale Selection line, never elsewhere in the prose.
 
 ## Conservative-margin calibration (the part that matters most)
 
@@ -88,16 +115,21 @@ supports. Hold to these:
 - Discrete error vs degree. A discrete factual or clinical error that one side
   makes and the other avoids earns one plus. A difference only of caution,
   emphasis, or completeness, with no discrete error, stays plain.
-- Use the grader as evidence, not gospel. Align with its direction unless it made
-  a clear error. The score gap hints at magnitude (a 0.05 gap is plain, a 0.15 to
-  0.20 gap is usually one plus), but the central-item reasoning governs, not the
-  raw number.
+- The score is not evidence in the label. Do not cite the grader scores in the
+  pasted prose, and never argue "scored higher so better" (Part 7 Rule 2). Decide
+  from the work product against the golden and grader content. The score gap can be
+  a private sanity check on your own read, but it never appears in the Scale
+  Selection line, the Justification, or the Summary; the numbers live only in the
+  workspace-backup Status and pair lines.
 - Be fair to the loser. Credit a correct principle even in the worse output; do
   not penalize a side for being right about something. The decider is the outcome
   on the central item, not who phrased the principle more nicely.
 
-## The seven sections
+## The pasted sections (Scale Selection first)
 
+- Scale Selection: one line, the Button and the language, for example
+  "A++ (moderately better)". This is the lead line of the pasted block, restored per
+  the official Part 7 template. Language only, no numeric score, no tier letter-number.
 - Preferred output: which one, and the single sentence that decides it.
 - Justification: why this tier. Carry the central-item argument and the cap
   reasoning (why not a higher or lower tier).
@@ -134,10 +166,11 @@ explaining what it did. This is enforced repo-wide by `tools/verify/verify_voice
 
 Copy `references/pl-format-template.md` and fill every field. Three recurring breaks:
 
-- No "Scale Selection" line in the pasted Comments box. The scale selection lives
-  in the `VERDICT` line of the workspace backup and the Button. The pasted comment
-  starts at "Preferred output:". If Studio exposes a separate scale control, set it
-  there. Do not add a second pasted "Scale Selection" line.
+- Lead the pasted Comments box with the Scale Selection line, restored per the
+  official Part 7 template, for example "Scale Selection: A++ (moderately better)".
+  The pasted block runs from that line through "Summary:". Use the language only, not
+  a numeric or tier score (Part 7: do not reference the preference score). Set the
+  Button to match.
 - No em dashes or en dashes anywhere, in this file or any deliverable. Use plain
   hyphens and commas. (Run a quick scan for the characters before you finish.)
 - No eval-scaffolding narration in the prose (OCR, directory listing, tool calls,
