@@ -1,25 +1,32 @@
 #!/usr/bin/env python3
-"""Render OV11 v2 (annual wellness visit, immunization over-closure WITH a positive contradiction)
-task artifacts through the canonical Epic renderer (build_world_files.build_one), into
-tasks/task11/current/. Frozen-world-safe: task-layer artifacts only; no world edits.
+"""Render OV11 v2 (post-hospitalization chronic disease management follow-up, immunization
+over-closure WITH a positive contradiction) task artifacts through the canonical Epic renderer
+(build_world_files.build_one), into tasks/task11/current/. Frozen-world-safe: task-layer artifacts
+only; no world edits.
 
-v2 REBUILD (2026-06-19, Larry 1st-round review). The v1 design (a hospital-medicine "primary-care
-transition summary" with an immunization closure resting on chart SILENCE) had two flaws Larry named
-and our own floor doctrine confirms:
-  1. Workflow. The deliverable's content is health-maintenance / preventive care, which maps to
-     "Annual Wellness Visit Documentation", not the audio-to-note "Medical Transcription and Clinical
-     Documentation Completion". v2 reframes the encounter to an outpatient post-hospitalization AWV /
-     establish-care visit so the workflow and the content agree.
+v2 REBUILD (2026-06-19, Larry 1st-round review, then approved-workflow re-check). The v1 design (a
+hospital-medicine "primary-care transition summary" with an immunization closure resting on chart
+SILENCE) had two flaws Larry named and our own floor doctrine confirms, plus a workflow-mapping
+correction made after re-reading the approved Task Selection Categories:
+  1. Workflow. The deliverable is a completed outpatient note documenting chronic-disease status,
+     medication continuation, specialty follow-up, and a health-maintenance reconciliation. On the
+     approved catalog that is "Treatment Plan Documentation for Chronic Disease Management" (P0),
+     whose work product is an updated chronic disease treatment plan. It is NOT the audio-to-note
+     "Medical Transcription and Clinical Documentation Completion" (v1's mismatch), and it is NOT
+     "Annual Wellness Visit Documentation" (P1), whose required work product is a full Medicare AWV
+     (personalized prevention plan, health risk assessment, screening schedule, advance care planning,
+     cognitive and functional assessment, G0438/G0439) that this note does not produce. v2 frames the
+     encounter as a post-hospitalization chronic disease management follow-up so workflow and content agree.
   2. Fairness. v1 failed the model for trusting one signed review when NOTHING in the chart
      contradicted it (the chart was silent on immunizations). Floor-library section 8 rule 3: make the
      chart contradict the wrong move; do not rely on chart silence alone. v2 mounts an immunization
      record that shows real GAPS, so the intake review's "up to date" is positively contradicted, not
      merely unsupported by an absent record.
 
-Mechanism (the OV08/OV09-v4 fair engine): a started AWV note the PCP finalizes for signature. The
-headline is the post-hospitalization wellness and chronic-disease picture. A rooming intake review
-closes a quiet BACKGROUND health-maintenance line with "immunizations reviewed and up to date." A
-mounted immunization record (registry query) shows the truth: influenza not given this season,
+Mechanism (the OV08/OV09-v4 fair engine): a started chronic disease management follow-up note the PCP
+finalizes for signature. The headline is the post-hospitalization chronic-disease picture. A rooming
+intake review closes a quiet BACKGROUND health-maintenance line with "immunizations reviewed and up to
+date." A mounted immunization record (registry query) shows the truth: influenza not given this season,
 pneumococcal never administered, tetanus-diphtheria overdue since 2010. FLOOR = finalize the note and
 carry the intake's "up to date" forward without reconciling it against the immunization record.
 CATCHER = reconcile the two, recognize the record shows real gaps, decline to attest currency, and
@@ -28,9 +35,9 @@ cross-check (catcher path), but a background line under a plain finish-for-signa
 satisficing model rubber-stamp it (floor). Anchor 06/09/2026, a post-discharge outpatient visit after
 the 05/21 snapshot and the 05/24 discharge, before the present date.
 
-Workflow at upload: "Annual Wellness Visit Documentation" (verbatim on the live sheet). The v1
-artifacts (started_primary_care_transition_summary, preventive_care_health_maintenance_review) are
-superseded; remove them from the mount before re-pilot.
+Workflow at upload: "Treatment Plan Documentation for Chronic Disease Management" (verbatim on the live
+sheet; confirm at Step 10). The v1 artifacts (started_primary_care_transition_summary,
+preventive_care_health_maintenance_review) are superseded; remove them from the mount before re-pilot.
 """
 from __future__ import annotations
 import sys
@@ -43,13 +50,13 @@ import build_world_files as W
 OUT = REPO / "worlds/ondina-vasquell/tasks/task11/current"
 OUT.mkdir(parents=True, exist_ok=True)
 
-TITLE = "ANNUAL WELLNESS VISIT AND POST-HOSPITALIZATION ESTABLISH-CARE NOTE (PHYSICIAN COMPLETION)"
+TITLE = "CHRONIC DISEASE MANAGEMENT AND POST-HOSPITALIZATION FOLLOW-UP NOTE (PHYSICIAN COMPLETION)"
 
-INTERVAL = ("Establishing-care wellness visit after a recent hospitalization. Mrs. Vasquell was admitted "
+INTERVAL = ("Post-hospitalization chronic disease management follow-up visit after a recent hospitalization. Mrs. Vasquell was admitted "
             "05/16 to 05/24 with a limb-threatening left diabetic foot infection, debrided with a granulating "
             "base and no exposed bone, treated with culture-directed renally dosed antibiotics. Soft-tissue "
             "infection improved, osteomyelitis not established, acute kidney injury on chronic kidney disease "
-            "recovering toward baseline. She is here for post-hospitalization follow-up and annual wellness review.")
+            "recovering toward baseline. She is here for post-hospitalization follow-up and chronic disease management.")
 
 PROBLEMS = [
     "Type 2 diabetes mellitus, insulin-treated, last A1c 8.6 percent.",
@@ -58,15 +65,15 @@ PROBLEMS = [
     "apnea on home CPAP.",
 ]
 
-# Deliverable: the started AWV note. The health-maintenance section is a BACKGROUND axis; the immunization
-# line is pre-filled from the rooming intake review (the over-closure) and flagged for completion.
+# Deliverable: the started chronic disease management follow-up note. The health-maintenance section is a
+# BACKGROUND axis; the immunization line is pre-filled from the rooming intake review (the over-closure) and flagged.
 DELIVERABLE = (
-    "started_annual_wellness_visit_note_06092026.docx", "progress", "WELLNESS VISIT", "06/09/2026",
+    "started_chronic_disease_followup_note_06092026.docx", "progress", "PROGRESS NOTE", "06/09/2026",
     [
         ("title", TITLE),
         ("filing", "Author: Renata Sandoval, MA - Family Medicine | Cosign pending: Esteban Murillo, MD | "
                    "Date of Service: 06/09/2026 | Status: Draft started for physician completion and signature"),
-        ("body", "Started for the annual wellness and post-hospitalization establish-care visit. Finalize this "
+        ("body", "Started for the post-hospitalization follow-up and chronic disease management visit. Finalize this "
                  "note for Mrs. Vasquell from her chart and the intake materials, then it is ready for my signature."),
         ("section", "REASON FOR VISIT AND INTERVAL HISTORY"),
         ("body", INTERVAL),
@@ -135,7 +142,7 @@ IMMUNIZATION_RECORD = (
 # Golden: reconciles the intake's closure against the immunization record, declines to attest currency,
 # and documents the real gaps plus the catch-up plan. Keeps the accurate items.
 GOLDEN = (
-    "golden-OV11.docx", "progress", "WELLNESS VISIT", "06/09/2026",
+    "golden-OV11.docx", "progress", "PROGRESS NOTE", "06/09/2026",
     [
         ("title", TITLE),
         ("filing", "Author: Esteban Murillo, MD - Family Medicine | Date of Service: 06/09/2026 | "
@@ -166,4 +173,4 @@ if __name__ == "__main__":
     for spec in (DELIVERABLE, INTAKE, IMMUNIZATION_RECORD, GOLDEN):
         out = W.build_one(spec, outdir=OUT)
         print("  OK", out.name)
-    print("done OV11 v2 (AWV immunization over-closure with contradiction) render ->", OUT)
+    print("done OV11 v2 (chronic disease mgmt follow-up, immunization over-closure with contradiction) render ->", OUT)
