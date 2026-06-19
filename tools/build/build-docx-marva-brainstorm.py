@@ -17,6 +17,7 @@ sys.path.insert(0, str(REPO))
 
 from tools.mode_a_clone import (
     integrity_gate,
+    scrub_all_metadata,
     scrub_core,
     set_text,
     verify_against_base,
@@ -208,6 +209,7 @@ def build() -> None:
 
     doc.save(str(tmp))
     scrub_core(str(tmp))
+    scrub_all_metadata(str(tmp))
     integrity_gate(str(tmp))
     OUT.write_bytes(tmp.read_bytes())
     integrity_gate(str(OUT))
