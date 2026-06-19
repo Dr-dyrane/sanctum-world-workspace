@@ -1,6 +1,8 @@
 # Marva Lydell: comorbidity + medication expansion (v2, corrected and master-packet-reconciled)
 
-Date 2026-06-19. v2 supersedes v1 after the review of 2026-06-19. PROPOSAL for physician ratification; nothing is applied to the brainstorm until you confirm. Doses go to the World Spec; name agents only here. Reconciled to W3-MASTER-PACKET Part 2 (spent levers) and Part 3 (substrate upgrade).
+Date 2026-06-19. v2 supersedes v1 after the review of 2026-06-19. Doses go to the World Spec; name agents only here. Reconciled to W3-MASTER-PACKET Part 2 (spent levers) and Part 3 (substrate upgrade).
+
+RATIFIED 2026-06-19: HFpEF confirmed; noise tier kept (hypothyroidism, GERD, constipation), declared noise; PAD omitted. Applied to submission/Marva_Lydell_Brainstorm.md World Setup (12 core + 3 noise = 15 named comorbidities; about 17 named baseline agents plus home oxygen and CPAP) and the docx rebuilt. Floor mechanics stay at the task/spec layer per the med-floor-to-task map below; the brainstorm carries only the clean substrate.
 
 ## The reframe that drove every correction
 Substrate does NOT arm floors. "A clean, internally-consistent chart is the IDEAL substrate; floors are MANUFACTURED AT THE TASK LAYER on top of it" (FLOOR-MECHANISM-LIBRARY.md:5). The substrate's job is to be clinically clean, supply the competing-authority and quiet-baseline material, and PRESERVE genuinely silent axes for a later task to exploit. Naming or actively managing an axis primes it and kills the floor it was meant to enable. v1 inverted this; v2 fixes it.
