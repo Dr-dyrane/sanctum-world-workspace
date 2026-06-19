@@ -1,6 +1,6 @@
 # Marva Lydell World - Cockpit
 
-Status: Brainstorm package built locally, pending human edit and real transcript provenance.
+Status: Brainstorm package built locally. Task workflows verbatim-valid against the 06/19 sheet and DOCX visual QA passed (2026-06-19). Pending: human sign-off, then Run Brainstorm AutoQC in Studio and Submit plan for review.
 
 Approved patient-world name: Marva Lydell.
 
@@ -99,4 +99,4 @@ Alexander edits or approves:
 3. Task architecture in `docs/PLANNING-CANVAS.md`.
 4. Live audit findings in `docs/BRAINSTORM-BUILD-LIVE-AUDIT.md`.
 
-After that, run Brainstorm AutoQC only with explicit authorization. Do not upload a transcript scaffold as if it were a real Claude share.
+Workflows are now verbatim-valid against the 06/19 sheet and the DOCX render passed visual QA (2026-06-19). Per the official Part 1 guide (`reference/source/phase-1-brainstorm/`), brainstorm submission is: upload the brainstorm document, Run AutoQC, address or justify each flag, then Submit plan for review. No Claude transcript is part of brainstorm-stage submission; the transcript scaffold here belongs to the later World Spec stage. Remaining before submission: final human sign-off, then run Brainstorm AutoQC with explicit authorization.

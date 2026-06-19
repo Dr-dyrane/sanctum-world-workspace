@@ -133,7 +133,7 @@ Render status:
 - Visual DOCX render attempted with the documents render helper.
 - First blocker was `liblcms2.2.dylib`; local user-cache patch redirected that and bundled freetype successfully.
 - Render is still blocked on missing `libfontconfig.1.dylib` in the bundled LibreOffice runtime.
-- Page-image QA is not passed. Do not claim rendered visual approval until fontconfig is installed or a working LibreOffice renderer is available.
+- Page-image QA: PASSED 2026-06-19 via the sandbox LibreOffice renderer (the local Mac fontconfig blocker was bypassed). The DOCX renders cleanly: masthead, three-column table, and all task rows with no clipping. If rebuilding on the Mac, still fix fontconfig or render where a working LibreOffice exists.
 
 ## Next Authorized Work When Resuming
 

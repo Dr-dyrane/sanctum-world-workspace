@@ -2,7 +2,7 @@
 
 Status: Brainstorm package built locally. No platform world exists.
 
-Last updated: 2026-06-18.
+Last updated: 2026-06-19.
 
 ## Current State
 
@@ -29,6 +29,9 @@ The canonical build factory is installed at `build/` from the Ondina pattern. It
 - 2026-06-18: Built `submission/Marva_Lydell_Brainstorm_Claude_Transcript.md` and `.docx` as a marked transcript scaffold. It is not upload-ready until a real Claude share/export is pasted or reconciled.
 - 2026-06-18: Mechanical gates passed: Marva world factory gate, active voice gate, banned dash and arrow scan, and Python compile for the new builders. Visual DOCX render is blocked locally because bundled LibreOffice still needs `libfontconfig.1.dylib`.
 - 2026-06-18: Updated workspace canon after a new reviewer failure example: current accepted KM and OV artifacts are grandfathered, but Marva and all future or reopened clinical artifacts must keep world-file, task-file, golden, prompt, and grader chart dates on or before 07/31/2025. Recut the Brainstorm snapshot to 07/10/2025 and task anchors to 07/11/2025 through 07/17/2025. Removed local task-code and priority-code surface language from the Brainstorm table.
+- 2026-06-19: Verified all ten task workflows verbatim against the current `reference/source/task-selection-categories/Sanctum_Task_Selection_Categories_Combined_06_19.docx`. Remapped three retired or absent strings: task 2 to `Medication Reconciliation` (P0), task 6 to `Specialty Consultation Note` (P1), task 8 to `Corrective Action Plan (CAP) Development and Tracking` (P1). The other seven were already valid and at least one P0 is present.
+- 2026-06-19: Rebuilt `submission/Marva_Lydell_Brainstorm.md` and `.docx`. Mode A fingerprint gate and `verify_world_factory.py` passed. Rendered the DOCX to page images with the sandbox LibreOffice and visually inspected: masthead, three-column table, and task rows render cleanly with no clipping.
+- 2026-06-19: Word render check + live-sheet verbatim pass. Re-rendered and inspected pages 1, 4, 6, 7: layout faithful, header row repeats, no clipping. All ten workflows verbatim-valid against the 06/19 sheet. The checks caught and fixed three priority errors from the human edit (the priority-spread summary plus per-task cells for tasks 3, 4, 10); all ten per-task priorities now match the sheet (six P0, four P1).
 
 ## Open Decisions
 
@@ -37,7 +40,7 @@ The canonical build factory is installed at `build/` from the Ondina pattern. It
 3. Phase A substrate ratification: exact comorbidities, medication classes, source documents, dates, and care-team roster.
 4. Which first three task levers should be designed for pilots.
 5. Which off-text evidence is realistic and peripheral enough to be missed.
-6. Live workflow validation before any task upload.
+6. Live workflow validation at Step 10. Local verbatim validation against the 06/19 sheet is done (2026-06-19); the platform menu can still retire or rename a workflow mid-flight, so reconfirm each string on the live sheet before any task upload.
 
 ## Current Guardrails
 
