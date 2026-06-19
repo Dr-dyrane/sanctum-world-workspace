@@ -19,7 +19,7 @@ SAVE the run verbatim FIRST, before drafting. When a pilot returns, copy the sel
 Cover all four, in prose, organized by severity (clinical first, then administrative, then style):
 1. What the agent got RIGHT - a brief competent baseline, one or two sentences, named specifically, as the setup for the turn. Lead with it but keep it short. Ahmad (Trigeminus, more recent than 06_09) cut the standalone "what the agent got right" paragraph: the FA stays failure-only, no praise paragraph.
 2. What the agent got WRONG - the central failure as a turn (it had the contradicting evidence and failed anyway), tied to the golden.
-3. Why the failure MATTERS - clinical mechanism and consequence. Quantify when possible. State the severity tier.
+3. Why the failure MATTERS - clinical mechanism and consequence. Quantify when possible. State the severity tier. State plainly that the output would not be deliverable by any competent practicing clinician; if you cannot say that, the failure is insufficient (Phase 3).
 4. The SCORE - state the analyzed run's score and the writer's own score, and tie the failure to them. Reference ONLY this run; the full distribution stays in the Status line, never the body (Abi single-run rule). Conclude the FA with the exact required line: `Overall Failure Score: X.XX / 1.0`. This is Alexander's own score, not the trajectory score.
 
 Writing standards (EXP), all required:
@@ -36,12 +36,37 @@ The GA assesses HOW WELL THE GRADER SCORED THE WORK. It is not a second justific
 2. What the grader got WRONG or COULD IMPROVE. This is REQUIRED and is the move the calibration-close form drops. Give at least one constructive point: a miscalibration, a phrasing overstatement, a distinct failure mode it should have named explicitly so it did not have to infer partial credit, or a place it was lenient or harsh. If the grader was genuinely sound, say so plainly and still add the stricter-or-looser-reading caveat (KM task1: "I would dock a full omission of a held medication harder, but the score is defensible"). When the gap is a real grader MISS (it never saw the failure), recommend a concrete rubric or failure-mode addition in Larry 3:10 form: name the missed issue, say why it matters, then "Recommend adding: ..." (his example: the grader did not flag the missing medication reconciliation plan; Recommend adding: "Identifies stale medication lists without documenting a correction plan"). For a MIS-SCORE (it saw the issue but scored it wrong), recommend how the scoring guidance should be clarified instead.
 3. Calibration judgment. The score is well placed or defensible. The closer "a deep floor would overstate X, and a high score would ignore Y, so the band is well placed" is acceptable, but it does NOT replace move 2.
 
-The grader RATING (Great / Good / Mediocre / Poor) is entered directly in the Studio field, never written anywhere in the FA/GA file. The gate rejects a rating line even in the Status line, so carry the rating to the writer separately, not in the paste.
+The grader RATING (Poor / Fair / Good / Great) is entered directly in the Studio field, never written anywhere in the FA/GA file. The gate rejects a rating line even in the Status line, so carry the rating to the writer separately, not in the paste.
 
 ## Writer's score (project guidance, 2026-06-18)
 Verbatim project guidance: "New Failure Analysis guidance. Please submit a score with your failure analysis about how you think the model did in your task. This score should be your own score, not the trajectory score, and will be compared against the agentic grader."
 
-Submit your OWN score of how the model did, alongside the FA. It is the writer's independent assessment of the model's task performance on the 0.0 to 1.0 scale, NOT the trajectory score (the agentic grader's number), and it is compared against the agentic grader to calibrate human-versus-grader agreement. Score the run on the task's own logic: the central failure caps it low, give partial credit for the accurate items, no credit for refusing to finish. Judge it independently; do not copy the trajectory number. It usually lands near the grader when the grader is calibrated; when it diverges, the GA's calibration move should explain why. Placement: the writer's score goes in the Studio score field AND inside the submitted FA field, because the Status line is internal and is not pasted into Studio. The FA must end with the exact required line: `Overall Failure Score: X.XX / 1.0`. Record it in the Status line too. This is the writer's own number; it is distinct from the banned grader-rating line (Great / Good / Mediocre / Poor), which never appears in the file, not even the Status line. Bind it to the same run the FA analyzes.
+Submit your OWN score of how the model did, alongside the FA. It is the writer's independent assessment of the model's task performance on the 0.0 to 1.0 scale, NOT the trajectory score (the agentic grader's number), and it is compared against the agentic grader to calibrate human-versus-grader agreement. Score the run on the task's own logic: the central failure caps it low, give partial credit for the accurate items, no credit for refusing to finish. Judge it independently; do not copy the trajectory number. It usually lands near the grader when the grader is calibrated; when it diverges, the GA's calibration move should explain why. Placement: the writer's score goes in the Studio score field AND inside the submitted FA field, because the Status line is internal and is not pasted into Studio. The FA must end with the exact required line: `Overall Failure Score: X.XX / 1.0`. Record it in the Status line too. This is the writer's own number; it is distinct from the banned grader-rating line (Poor / Fair / Good / Great), which never appears in the file, not even the Status line. Bind it to the same run the FA analyzes.
+
+## Phase 3 alignment: scoring bands, grader rating, headings-as-prose (official, captured 2026-06-19)
+Source of truth: reference/source/phase-3-evaluating/. Folded in 2026-06-19 (Stage 2). Structure decision B (Dyrane): keep the compressed two-paragraph prose form, which is clearing AutoQC and human review. Cover the official Phase 3 headings as prose beats, not literal headings.
+
+Self-score bands (the writer's Overall Failure Score; score independently, ignore the grader's number):
+- 91-100 perfect, deliverable as is.
+- 71-90 good enough to send. A self-score in this band means the task is TOO EASY and cannot be submitted.
+- 51-70 at least one significant error on a core question; needs real rework.
+- 31-50 noticeable core errors (several, or one that flips the conclusion).
+- 21-40 fundamentally defective; pervasive errors, not trustworthy.
+- below 20 unusable; misunderstands the assignment or hallucinates authority.
+
+Hard gate: any self-score above 70 means too easy, do not proceed. (The source 31-50 and 21-40 bands overlap; captured as written, flagged for clarification, does not change the above-70 gate.)
+
+Grader rating (Studio field only, never in the file; scale Poor / Fair / Good / Great), set by the gap between the writer's score and the grader's score:
+- Great within 5 points, Good within 10, Fair within 15, Poor more than 15 off.
+- If the grader's score is above 70, the rating cannot be Great.
+- The gap sets the CEILING. Downgrade for weak reasoning, never upgrade.
+
+The three GA rules (Phase 3):
+1. The GA must agree with the FA. The FA already scored the run at or below 70. Refute any grader claim that the output is "overwhelmingly correct" or otherwise flawless. A critical failure and near-perfection cannot coexist.
+2. If the grader scored above 70, the rating cannot be Great.
+3. Reasoning outweighs the gap. Start at the gap-implied ceiling, downgrade for weak reasoning, never upgrade.
+
+Headings as prose beats (decision B). The FA covers What the Agent Got Wrong (central failure anchored to the golden), Why the Failure Matters (would not be deliverable by a competent clinician), and the Output Score line. The GA covers Suggested Score (restate the writer's score in one line and name the gap to the grader's score) and Score Comparison (the grader audit, what it got right and wrong, citing the grading summary directly). Do not reference the self-score bands in the prose.
 
 ## Guardrails (gate-enforced; presubmit_task_gate.py + verify_voice.py)
 - Failure-only prose. Do not write "the grader credited"; write "it gave appropriate credit for" or "it credited correctly." The both-sides gate also bans the literal phrases "what the grader got right" and "what the model did well" anywhere in the file, including the Status line; phrase it "the grader correctly identified" or "it caught."
@@ -58,7 +83,8 @@ Submit your OWN score of how the model did, alongside the FA. It is the writer's
 The platform allows up to half a page / 10-12 sentences for the FA and 4-6 sentences for the GA. The local gate caps each field at about 1000 characters and two paragraphs. Treat the local cap as the working bound: a compressed but complete version that still carries all four FA components and both mandatory GA moves. Completeness of components beats hitting a character count.
 
 ## The locked checklist (run before handing back)
-FA: opens with "On trajectory N" (the 1-10 count); leads with what the model did right; names the central failure as a turn; states the clinical mechanism and consequence with a severity tier; names the specific source documents by author or date (not a generic reference); ends with `Overall Failure Score: X.XX / 1.0`; references only this run, never other runs' scores.
-GA: names what the grader identified correctly; names what the grader missed or mis-scored (NOT optional); recommends the relevant rubric or scoring clarification when needed; judges calibration; rating only in Studio, never in the file.
+FA: opens with "On trajectory N" (the 1-10 count); leads with what the model did right; names the central failure as a turn; states the clinical mechanism and consequence with a severity tier; states plainly it would not be deliverable by a competent clinician; names the specific source documents by author or date (not a generic reference); ends with `Overall Failure Score: X.XX / 1.0`; references only this run, never other runs' scores.
+GA: restates the writer's suggested score and the gap to the grader's score; names what the grader identified correctly; names what the grader missed or mis-scored (NOT optional); cites the grading summary; recommends the relevant rubric or scoring clarification when needed; judges calibration; does not reference the self-score bands; rating only in Studio, never in the file.
+Rating (Studio only): set by the score gap (Great within 5, Good within 10, Fair within 15, Poor over 15); never Great if the grader scored above 70; downgrade only for weak reasoning, never upgrade.
 Both: failure-only, no section names, no rating line in prose, no dashes, plain clinical speech, second-lowest distinct run from the latest valid run set, gates clean.
 Self-check: run `python3 tools/verify/lint_fa_ga.py <file>` and clear every FAIL (it enforces the "On trajectory N" opener, single-run-only, the score-line, a dated source-document citation, and the structure rules; it warns on semicolons and long sentences).

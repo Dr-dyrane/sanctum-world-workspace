@@ -38,7 +38,7 @@ Bind the FA to ONE run: the SECOND-lowest distinct score in the current valid ru
 Cover four things, in prose, organized by severity (clinical first, then administrative, then style):
 1. What the agent got RIGHT - a brief competent baseline, one or two sentences, as the setup for the turn. Lead with it but keep it short. The FA stays failure-only; no standalone praise paragraph (Ahmad's override of the 06_09 "what got right" component).
 2. What the agent got WRONG - the central failure as a turn: it had the contradicting evidence and failed anyway. Tie it to the golden.
-3. Why it MATTERS - the clinical mechanism and the consequence. Quantify when you can. State the severity tier (a patient-safety failure is not a documentation preference).
+3. Why it MATTERS - the clinical mechanism and the consequence. Quantify when you can. State the severity tier (a patient-safety failure is not a documentation preference). State plainly that the output would not be deliverable by any competent practicing clinician; if you cannot say that, the failure is insufficient (Phase 3).
 4. The SCORE - tie the failure to the analyzed run's trajectory score and Alexander's own score. End with `Overall Failure Score: X.XX / 1.0`. That number is Alexander's score, not the trajectory score. The run distribution stays in the Status line.
 
 Writing standards (all required, because non-physician engineers read this too):
@@ -52,9 +52,34 @@ Two short paragraphs (so the local gate passes). The structure:
 - Paragraph 1, what the grader got CORRECT: name what it credited correctly and the central defect plus any secondary miss it caught. Map to the grader's own categories (the non-negotiables, the acceptable-variation boundary, the common failure modes) where natural. Affirming a sound grader IS analysis, not filler.
 - Paragraph 2, what the grader got WRONG or could IMPROVE, then calibration. Give at least one concrete point: a miscalibration, a phrasing overstatement, or a distinct failure mode it should have named explicitly so it did not have to infer partial credit (label a shortfall a MISS if the grader never saw the failure, a MIS-SCORE if it saw it but the number is off). If the grader was genuinely sound, say so and still add the stricter-or-looser-reading caveat ("I would dock a full omission of a held medication harder, but the score is defensible"). For a real grader MISS (it never saw the failure), recommend a concrete rubric or failure-mode addition in Larry 3:10 form: name the missed issue, say why it matters, then "Recommend adding: ...". For a MIS-SCORE (it saw the issue but scored it wrong), recommend how the scoring guidance should be clarified. Close on calibration: the score is well placed; "a deep floor would overstate X, and a higher score would ignore Y" is an acceptable closer but does NOT replace the improvement move.
 
-The grader RATING (Great / Good / Mediocre / Poor) is entered in the Studio field. Do NOT write it anywhere in the file, not even the Status line; the gate rejects a rating line. Tell the writer the rating separately.
+The grader RATING (Poor / Fair / Good / Great) is entered in the Studio field. Do NOT write it anywhere in the file, not even the Status line; the gate rejects a rating line. Tell the writer the rating separately.
 
-WRITER'S SCORE (project guidance, 2026-06-18). Verbatim project guidance: "New Failure Analysis guidance. Please submit a score with your failure analysis about how you think the model did in your task. This score should be your own score, not the trajectory score, and will be compared against the agentic grader." Separately from the grader rating, submit your OWN score of how the model did on the task, alongside the FA: your independent 0.0 to 1.0 assessment of the model's performance, NOT the trajectory score, compared against the agentic grader. Score on the task's own logic (central failure caps low, partial credit for accurate items, no credit for refusing). It usually lands near the grader; when it diverges, say why in the GA's calibration move. The writer's score goes in the Studio score field AND inside the submitted FA field, because the Status line is internal and is not pasted into Studio. The FA must end with the exact required line: `Overall Failure Score: X.XX / 1.0`. Record it in the Status line too. It is the writer's own number, distinct from the banned grader-rating line (Great / Good / Mediocre / Poor), which never appears in the file, not even the Status line.
+WRITER'S SCORE (project guidance, 2026-06-18). Verbatim project guidance: "New Failure Analysis guidance. Please submit a score with your failure analysis about how you think the model did in your task. This score should be your own score, not the trajectory score, and will be compared against the agentic grader." Separately from the grader rating, submit your OWN score of how the model did on the task, alongside the FA: your independent 0.0 to 1.0 assessment of the model's performance, NOT the trajectory score, compared against the agentic grader. Score on the task's own logic (central failure caps low, partial credit for accurate items, no credit for refusing). It usually lands near the grader; when it diverges, say why in the GA's calibration move. The writer's score goes in the Studio score field AND inside the submitted FA field, because the Status line is internal and is not pasted into Studio. The FA must end with the exact required line: `Overall Failure Score: X.XX / 1.0`. Record it in the Status line too. It is the writer's own number, distinct from the banned grader-rating line (Poor / Fair / Good / Great), which never appears in the file, not even the Status line.
+
+## Phase 3 scoring bands, grader rating, and the three GA rules (official, captured 2026-06-19)
+Source of truth: reference/source/phase-3-evaluating/. Decision B (Dyrane, 2026-06-19): keep the compressed two-paragraph prose form; cover the official Phase 3 headings as prose beats, not literal headings.
+
+Self-score bands (the writer's Overall Failure Score; score independently, ignore the grader's number):
+- 91-100 perfect, deliverable as is.
+- 71-90 good enough to send. A self-score here means the task is TOO EASY and cannot be submitted.
+- 51-70 at least one significant error on a core question; needs real rework.
+- 31-50 noticeable core errors (several, or one that flips the conclusion).
+- 21-40 fundamentally defective; pervasive errors, not trustworthy.
+- below 20 unusable; misunderstands the assignment or hallucinates authority.
+
+Hard gate: any self-score above 70 means too easy, do not proceed. (Source 31-50 and 21-40 overlap; captured as written, flagged, does not change the above-70 gate.)
+
+Grader rating (Studio field only; scale Poor / Fair / Good / Great), set by the gap between the writer's score and the grader's score:
+- Great within 5 points, Good within 10, Fair within 15, Poor more than 15 off.
+- If the grader's score is above 70, it cannot be Great.
+- The gap sets the CEILING; downgrade for weak reasoning, never upgrade.
+
+The three GA rules:
+1. The GA must agree with the FA. The FA already scored the run at or below 70. Refute any grader claim that the output is "overwhelmingly correct" or otherwise flawless; a critical failure and near-perfection cannot coexist.
+2. If the grader scored above 70, the rating cannot be Great.
+3. Reasoning outweighs the gap. Start at the gap-implied ceiling, downgrade for weak reasoning, never upgrade.
+
+Headings as prose beats (decision B). FA: What the Agent Got Wrong (central failure anchored to the golden), Why the Failure Matters (would not be deliverable by a competent clinician), the Output Score line. GA: Suggested Score (restate the writer's score and name the gap to the grader's score) and Score Comparison (the grader audit, what it got right and wrong, citing the grading summary directly). Do not reference the self-score bands in the prose.
 
 HUMAN OWNERSHIP. Larry's 2026-06-18 guidance says FA/GA cannot be AI-authored. Use this skill only to organize evidence and produce a scratch draft when Alexander asks. The final platform text must be read, owned, and rewritten or explicitly approved by Alexander before paste.
 
@@ -82,8 +107,9 @@ floor, catcher, bimodal, mechanism, lane, bankable, score cap; rubric, grading f
 Above the two fields, record: the job id, the full score distribution, the mean, whether it is all-low or bimodal, and the FA subject (Attempt, run id, trajectory, score, with a note if it is not the strict second-lowest distinct). No rating line.
 
 ## Final checklist before handing back
-FA: opens with "On trajectory N" (the 1-10 count); leads with a brief competent baseline; names the central failure as a turn; states the clinical mechanism, consequence, and severity tier; names the specific source documents by author or date (not a generic reference); ends with `Overall Failure Score: X.XX / 1.0`; references only this run, never other runs' scores; failure-only.
-GA: names what the grader got correct; names what it got wrong or could improve (NOT optional); judges calibration; no rating line.
+FA: opens with "On trajectory N" (the 1-10 count); leads with a brief competent baseline; names the central failure as a turn; states the clinical mechanism, consequence, and severity tier; states plainly it would not be deliverable by a competent clinician; names the specific source documents by author or date (not a generic reference); ends with `Overall Failure Score: X.XX / 1.0`; references only this run, never other runs' scores; failure-only.
+GA: restates the suggested score and the gap; names what the grader got correct; names what it got wrong or could improve (NOT optional); cites the grading summary; judges calibration; does not reference the self-score bands; no rating line.
+Rating (Studio only): score-gap bands (Great within 5, Good within 10, Fair within 15, Poor over 15); never Great if the grader scored above 70; downgrade only for reasoning, never upgrade.
 Both: no section names, no banned credit phrases, no dashes, plain clinical speech, second-lowest distinct run, gates clean.
 Self-check: `python3 tools/verify/lint_fa_ga.py <file>` prints "clean" (no FAILs) before you hand back.
 
