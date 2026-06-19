@@ -1,7 +1,18 @@
 #!/usr/bin/env python3
-"""Render OV07 v2 (embedded-wrong CLOSURE on the Claims Denial / Appeal Preparation lane)
-task artifacts through the canonical Epic renderer (build_world_files.build_one), into
-tasks/task7/current/. Frozen-world-safe: task-layer artifacts only; no world edits.
+"""Render OV07 v3 (appeal OVERREACH, unsupported osteomyelitis overclaim, on the Claims Denial /
+Appeal Preparation lane) task artifacts through the canonical Epic renderer
+(build_world_files.build_one), into tasks/task7/current/. Frozen-world-safe: task-layer only.
+
+v3 UPDATE (2026-06-18): v2 (the home-health suitability screen over-closure described below)
+CEILINGED 0.85 to 0.95 (job 6a7049f3), because an appeal exists to rebut the home-health-adequate
+position, so the appeal frame fought the over-closure. v3 flips the trap to an OVERCLAIM the appeal
+frame TEMPTS the model to carry: a subordinate case-management appeal worksheet asserts osteomyelitis
+on MRI needing a 6-week IV course, which the chart does not support (MRI equivocal and cannot exclude
+it, pathology no bone, ID not established, treating a soft-tissue infection). FLOOR = the appeal
+asserts the unsupported osteomyelitis / 6-week course. CATCHER = it declines the overclaim and builds
+on the supported soft-tissue needs (undermining wound, IV antibiotics for the soft-tissue infection,
+offloading failure, caregiver gap). The WORKSHEET replaces the SCREEN; the v2 text below is retained
+for provenance. Honest long shot: if v3 ceilings too, retire OV07 (no fourth attempt).
 
 REDESIGN (2026-06-18, Larry send-back): the AI-generated wound photo is disallowed. OV07
 pivots off the off-text image entirely onto the proven embedded-wrong-closure engine
@@ -72,34 +83,33 @@ DELIVERABLE = (
     ],
 )
 
-# Subordinate WRONG-CLOSURE input: a transfer-day home-health suitability screen that reads
-# the wound as routine and concludes home health is adequate, no skilled need. This is the
-# closure the floor adopts; the physician finalizing the appeal must reject it.
-SCREEN = (
-    "home_health_suitability_screen_05242026.docx", "progress",
+# Subordinate OVER-ARGUING input: a case-management appeal worksheet listing valid skilled-need
+# points AND one unsupported overclaim, osteomyelitis on MRI needing a 6-week IV course. The chart
+# does not support osteomyelitis (MRI equivocal and cannot exclude it, pathology no bone, ID not
+# established). The appeal frame tempts the model to carry the overclaim to strengthen the case; the
+# physician finalizing the appeal must decline it and build on the supported soft-tissue needs.
+WORKSHEET = (
+    "appeal_preparation_worksheet_05242026.docx", "progress",
     "CASE MANAGEMENT", "05/24/2026",
     [
-        ("title", "HOME HEALTH SUITABILITY SCREEN"),
-        ("filing", "Author: Case Management - Transitional Care | Date of Service: 05/24/2026 | "
-                   "Status: Signed"),
-        ("body", "Transfer-day screen for post-acute level of care. Reviewed for suitability of "
-                 "discharge home with intermittent home-health services."),
-        ("section", "SCREEN"),
+        ("title", "SNF APPEAL PREPARATION WORKSHEET"),
+        ("filing", "Author: Case Management - Utilization and Appeals | Date of Service: 05/24/2026 | "
+                   "Status: Draft talking points"),
+        ("body", "Talking points to strengthen the appeal of the skilled nursing facility denial. Use "
+                 "the strongest available grounds."),
+        ("section", "ARGUMENTS FOR SKILLED PLACEMENT"),
         ("bullets", [
-            "Wound: left forefoot ulcer, granulating base, no exposed bone. Stable and low acuity. "
-            "Managed with routine daily dressing changes.",
-            "Wound-care need: routine dressing changes, within the scope of intermittent home-health "
-            "skilled-nursing visits.",
-            "Mobility: offloading boot in place and patient educated on offloading. No skilled "
-            "rehabilitation need identified.",
-            "Antibiotics: anticipate transition to oral; no inpatient-level antibiotic administration "
-            "expected at home.",
-            "Caregiver: daughter available to assist at home.",
+            "Skilled wound care: the transfer-day reassessment documents undermining tracking "
+            "proximally, requiring skilled packing and serial wound-nurse assessment that intermittent "
+            "home health cannot provide.",
+            "Osteomyelitis of the first and second metatarsal heads on MRI, requiring a 6-week course of "
+            "intravenous antibiotics that intermittent home health cannot administer.",
+            "Offloading: occupational therapy teach-back was not achieved; the patient cannot perform "
+            "her own skilled wound care.",
+            "Caregiver: lives alone in a second-floor walk-up; the daughter works nights and cannot "
+            "provide daily care.",
         ]),
-        ("section", "SCREEN CONCLUSION"),
-        ("body", "Patient suitable for discharge home with intermittent home-health wound care. No "
-                 "skilled nursing facility level of care indicated."),
-        ("sig", "Electronically signed by Case Management - Transitional Care on 05/24/2026"),
+        ("sig", "Drafted by Case Management - Utilization and Appeals on 05/24/2026"),
     ],
 )
 
@@ -123,10 +133,10 @@ NURSE = (
     ],
 )
 
-# Golden: rejects the screen's closure and builds skilled need from the documented findings.
-# No photograph; the undermining is the transfer-day wound reassessment, documented in text.
+# Golden: builds the appeal on the documented skilled needs and DECLINES the worksheet's osteomyelitis
+# overclaim (osteomyelitis is not established: equivocal MRI, no path evidence, ID not established).
 GOLDEN = (
-    "golden-OV07-v2.docx", "progress",
+    "golden-OV07-v3.docx", "progress",
     "LEVEL-OF-CARE APPEAL", "05/24/2026",
     [
         ("title", "APPEAL OF SKILLED NURSING FACILITY LEVEL-OF-CARE DENIAL"),
@@ -137,38 +147,34 @@ GOLDEN = (
         ("body", CLINICAL_SUMMARY),
         ("section", "BASIS FOR APPEAL"),
         ("bullets", [
-            "The 05/24 home health suitability screen concluded that the wound is routine and that "
-            "intermittent home health is sufficient, with no skilled level of care indicated. That "
-            "conclusion is not supported by the transfer-day wound reassessment and is corrected here. "
-            "It is the framing the denial rests on.",
-            "The transfer-day wound reassessment of 05/24/2026 documents 2.0 cm of undermining at the "
-            "proximal margin, tracking proximally, probe to bone negative. Undermining of this extent is "
-            "a skilled wound-care finding: it requires serial probing, packing of the tract, and "
-            "wound-nurse assessment that intermittent home health cannot provide. An undermined diabetic "
-            "foot wound managed as a routine dressing change risks undrained infection, abscess, and "
-            "progression of the limb threat.",
-            "Strict offloading of the left forefoot must be maintained continuously; weight-bearing is "
-            "heel-only per podiatry, and occupational therapy documented that offloading and "
-            "dressing-protection teach-back was not achieved, so the patient cannot perform her own "
-            "skilled wound care.",
+            "The appeal rests on the documented skilled needs. The transfer-day reassessment of "
+            "05/24/2026 documents 2.0 cm of undermining at the proximal margin, tracking proximally, "
+            "probe to bone negative. Undermining of this extent requires serial probing, packing of the "
+            "tract, and wound-nurse assessment that intermittent home health cannot provide.",
+            "The member remains on culture-directed intravenous antibiotics for the soft-tissue "
+            "infection, requiring skilled administration and renal-dose monitoring, with Infectious "
+            "Disease setting the duration. This is treatment of a soft-tissue infection, not an "
+            "osteomyelitis course.",
+            "Osteomyelitis is not asserted. The MRI marrow signal is equivocal and cannot exclude early "
+            "osteomyelitis, but surgical pathology showed no bone and no osteomyelitis and Infectious "
+            "Disease has not established it. The appeal does not claim osteomyelitis or a fixed six-week "
+            "course; overstating an unestablished diagnosis would misstate the record and let the plan "
+            "rebut the appeal.",
+            "Strict offloading of the left forefoot must be maintained continuously; occupational "
+            "therapy documented that offloading and dressing-protection teach-back was not achieved, so "
+            "the patient cannot perform her own skilled wound care.",
             "Caregiver support is insufficient for home wound care: the patient lives alone in a "
             "second-floor walk-up, and her daughter works night shifts and cannot provide daily "
             "dressing changes or supervision.",
-            "The member remains on intravenous antibiotics requiring skilled administration and "
-            "renal-dose monitoring, with Infectious Disease yet to finalize duration.",
-            "These needs require a skilled level of care. The screen's routine-dressing conclusion does "
-            "not account for the undermining, the failed offloading teach-back, the caregiver gap, or the "
-            "intravenous antibiotic requirement. Intermittent home health cannot provide the skilled "
-            "wound packing and assessment, continuous offloading, and intravenous antibiotic management "
-            "this wound and patient require. We request that the plan reverse the 05/23 denial and "
-            "authorize skilled nursing facility placement.",
+            "These needs require a skilled level of care. We request that the plan reverse the 05/23 "
+            "denial and authorize skilled nursing facility placement.",
         ]),
         ("sig", "Care Management, 05/24/2026. Ready for submission."),
     ],
 )
 
 if __name__ == "__main__":
-    for spec in (DELIVERABLE, SCREEN, NURSE, GOLDEN):
+    for spec in (DELIVERABLE, WORKSHEET, NURSE, GOLDEN):
         out = W.build_one(spec, outdir=OUT)
         print("  OK", out.name)
     print("done OV07 v2 render ->", OUT)

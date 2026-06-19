@@ -12,7 +12,7 @@ For live task status and lifecycle, docs/WORLD-STATUS.md governs. This file maps
 | OV04 | jqxv7246 | Medical Transcription and Clinical Documentation Completion | FLOOR bimodal | Delivered |
 | OV05 | 76d06fb2 | Wound Care SOAP / Clinical Progress Note (new lane) | v3 silver alginate commission FLOOR ~0.12 | Floored; FA/GA pending |
 | OV06 | 1rqn2959 | Referral Intake, Triage, and Scheduling Coordination | FLOOR 0.39 | Delivered |
-| OV07 | 6a7049f3 | Claims Denial Analysis and Appeal Preparation | v2 screen over-closure CEILING 0.85-0.95 | Ceilinged; fix or retire (appeal lane ceiling-prone) |
+| OV07 | v3 re-pilot pending | Claims Denial Analysis and Appeal Preparation | v3 appeal-overreach (osteomyelitis overclaim; v2 ceilinged) | Long-shot fix built; gates green; awaiting re-pilot |
 | OV08 | l6jo01e4 | Utilization Review Concurrent Stay Documentation | FLOOR 0.63 | Awaiting first human review |
 | OV09 | ebv61af9 | Post-Acute Care Coordination Documentation | FLOOR ~0.62 | Awaiting first human review |
 | OV10 | ilsjf671 | Discharge Summary | FLOOR ~0.15 uniform | Awaiting first human review; FA/GA submitted |
