@@ -1,6 +1,6 @@
 # OV07 v2 redesign - docx embedded-wrong closure (no image)
 
-Date: 2026-06-18. Status: DESIGN (planning). No build, golden, grader, prompt, task-file, upload, or pilot follows until Alexander authorizes that step. Reason for redesign: Larry's 2026-06-18 send-back disallows the AI-generated wound photo. This pivots OV07 off the image entirely, onto a docx mechanism, per Alexander's direction (use a docx, a nursing-documented report, no image, no license back-and-forth).
+Date: 2026-06-18. Status: BUILT 2026-06-18, awaiting re-pilot. The v2 artifacts are rendered through build_ov07.py (started appeal placeholder, home_health_suitability_screen, transfer-day wound note documenting the undermining, golden-OV07-v2), the grader and prompt are off "photograph," and the v1 image, its spec, and golden-v1 are archived. Gates green (verify_ondina, presubmit task7, verify_voice). Re-pilot, upload, and AutoQC remain gated on Alexander. Reason for redesign: Larry's 2026-06-18 send-back disallows the AI-generated wound photo. This pivots OV07 off the image entirely, onto a docx mechanism, per Alexander's direction (use a docx, a nursing-documented report, no image, no license back-and-forth).
 
 ## Why a documented-finding docx would ceiling (the constraint this design respects)
 
