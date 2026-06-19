@@ -1,6 +1,14 @@
 # Marva Lydell Brainstorm: pre-submission fixes (proposal for Alexander's human pass)
 
-Date 2026-06-19. These are the two gating fixes the latest Part 1 guide surfaced (reference/source/phase-1-brainstorm/). This is a PROPOSAL for the human edit pass to approve and apply; it is not applied to the brainstorm. Every workflow string and priority tier below must be confirmed against the LIVE Task Selection Categories sheet at upload (AGENTS guardrail 13); the local 06_19 copy is a snapshot.
+Date 2026-06-19. These are the two gating fixes the latest Part 1 guide surfaced (reference/source/phase-1-brainstorm/). Every workflow string and priority tier must be confirmed against the LIVE Task Selection Categories sheet at upload (AGENTS guardrail 13); the local 06_19 copy is a snapshot.
+
+## Applied 2026-06-19 (Alexander approved)
+- Priority column ADDED to submission/Marva_Lydell_Brainstorm.md (seven P0, three P1 at Tasks 4, 6, 8; at least one P0 present).
+- Task 2 -> Medication Reconciliation: APPLIED.
+- Task 6 -> Specialty Consultation Note: APPLIED (the recommended pick).
+- Task 8 -> Alexander chose Corrective Action Plan (CAP) Development and Tracking, not the recommended Peer Review Case Analysis. APPLIED as chosen. Note: CAP is an administrative tracking/quality genre, the same ceiling-prone family as peer review, so the Task 8 floor caveat below stands either way; it remains the slate's weakest floor bet.
+- docs/BRAINSTORM-DRAFT.md marked superseded; submission/Marva_Lydell_Brainstorm.md is now canonical.
+- Remaining before upload: confirm every workflow string AND priority tier against the LIVE sheet (especially the CAP and Medication Reconciliation strings and the three P1 tiers), rebuild the submission .docx from the .md, and do the final own-pass.
 
 ## Fix A: add a Priority column (P0/P1/P2)
 The guide (Rough Task Ideas, Standard 1), the Soya strong-example, and your own OV brainstorm all label priority per task. The Marva table has none. At least one P0 is required and is firmly met (Claims Denial, Medication Reconciliation, Post-Acute Coordination, and CDI Query Response Review are P0 on the snapshot). Proposed tiers, to confirm against the live sheet:

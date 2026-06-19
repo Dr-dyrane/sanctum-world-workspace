@@ -1,5 +1,7 @@
 # Brainstorm: Marva Lydell Cardiorenal Respiratory Transition
 
+> SUPERSEDED for the task table. The canonical, current brainstorm is `submission/Marva_Lydell_Brainstorm.md` (2026-06-19: it carries the approved Priority column and the corrected workflow strings for Tasks 2, 6, 8). Sections 1 to 3 still match. The task table below is retained for history and is stale on those three workflow strings and the priority column. Do not cite this table as current.
+
 Concept pitch for Team Lead review. World Type: Typical Clinical World (inpatient hospital medicine with post-discharge administrative and transition encounters). Snapshot: July 10, 2025 at 18:00. Patient: Marva Lydell, 72F. Document date: July 18, 2025.
 
 ## 1. World setup
