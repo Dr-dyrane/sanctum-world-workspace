@@ -15,7 +15,14 @@ from docx.text.paragraph import Paragraph
 REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO))
 
-from tools.mode_a_clone import integrity_gate, scrub_core, set_text, verify_against_base
+from tools.mode_a_clone import (
+    integrity_gate,
+    scrub_core,
+    set_text,
+    verify_against_base,
+    verify_no_km_identifiers,
+    verify_no_synthetic,
+)
 
 
 BASE = REPO / "worlds/korvin-merrow/submission/Korvin_Merrow_Brainstorm.docx"
@@ -109,6 +116,15 @@ def convert_markdown(lines: list[str]) -> list[str]:
             elif len(cells) == 3:
                 out.append(f"{cells[0]}: {cells[1]}")
                 out.append(f"Supporting record: {cells[2]}")
+            elif len(cells) >= 9:
+                out.append(f"{cells[0]}. {cells[2]}")
+                out.append(f"Requester: {cells[1]}")
+                out.append(f"Workflow: {cells[3]}")
+                out.append(f"Priority: {cells[4]}")
+                out.append(f"Structure: {cells[5]}")
+                out.append(f"Required decision: {cells[6]}")
+                out.append(f"Clinical trap: {cells[7]}")
+                out.append(f"Anchor: {cells[8]}")
             elif len(cells) >= 8:
                 out.append(f"{cells[0]}. {cells[2]}")
                 out.append(f"Requester: {cells[1]}")
@@ -196,6 +212,8 @@ def build() -> None:
     OUT.write_bytes(tmp.read_bytes())
     integrity_gate(str(OUT))
     verify_against_base(str(OUT), str(BASE))
+    verify_no_km_identifiers(str(OUT))
+    verify_no_synthetic(str(OUT))
     print(f"Wrote {OUT}")
 
 
