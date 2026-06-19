@@ -46,7 +46,7 @@ Each phase lists: INPUT, SPINE (automatable), GATE (physician), OUTPUT, PASS (th
 ### Phase 4 - Reference files
 - INPUT: the spec file plan + ratified substrate (as `clinical_data.py` constants).
 - SPINE: every docx renders through the ONE canonical Epic template (`epic.py` / `build_one`) by Mode A clone of a clean approved base - styles byte-identical, headers/footers rebuilt, metadata scrubbed, timestamps pinned, fingerprint diffed to zero; world files and task-level files built and PLACED separately (task files copied into each `platform/taskN/current/`).
-- GATE: physician confirms the trap-bearing content and any texture values; writer-produced images are delegated to a strict prompt spec and eye-verified.
+- GATE: physician confirms the trap-bearing content and any texture values; renderer-built report images are generated from task data and checked; genuine clinical photos require a public-domain or permissively licensed noncopyrighted real-image source, with source, license, retrieval date, edits, metadata stripping, and clinical-fit verification recorded. Do not use AI-generated clinical photos for future or reopened work.
 - OUTPUT: all world + task + supplementary docx, all images.
 - PASS: the one-command gate green (no synthetic, no prior-world identifier, no banned chars, scrubbed metadata, template parity, filename match, cross-file anchor consistency).
 
@@ -70,6 +70,7 @@ Each phase lists: INPUT, SPINE (automatable), GATE (physician), OUTPUT, PASS (th
 - 30+ world-level files; task-level files separate and never in the world bucket.
 - Temporal law: every task encounter and deliverable strictly after the world snapshot; nothing future-dated past the real present; for any new or reopened work after 2026-06-18, every evaluator-visible clinical narrative date is on or before 07/31/2025. Current accepted KM and OV artifacts are grandfathered unless review reopens them.
 - Prompt law: the task prompt cannot require public knowledge after 07/31/2025; it must constrain the model to the attached chart and any attached policy/reference files when guideline, drug-approval, coding, payer-policy, or quality-measure knowledge could otherwise drift in.
+- Image law: future or reopened tasks do not use AI-generated clinical photographs. Real clinical photos require a valid public-domain or permissively licensed noncopyrighted source with license documentation, metadata stripping, and clinical-fit verification. Renderer-built report images remain allowed for document or printout genres.
 - Deterministic build: pinned zip timestamps + core dates, pinned toolchain (`requirements.txt`), LF line endings.
 - Sanitized transcripts; scrubbed metadata on every docx.
 - The one-command gate green before any stage.
@@ -82,7 +83,7 @@ These are the only places a human is required. The generator emits each as an ex
 2. Every clinical value in the substrate pack - ratify or strike (Phase 2).
 3. Each task's prompt (persona voice), expected-output anchors, and failure design (Phase 3).
 4. Each task's workflow label, chosen from the LIVE categories sheet (Phase 3).
-5. Trap-bearing reference-file content + image prompt specs (Phase 4).
+5. Trap-bearing reference-file content + image sourcing decisions (Phase 4). Report images may be renderer-built. Clinical photos may not be AI-generated; use a valid real-image source or redesign.
 6. Prompts, goldens, grader standards, and the pilot read (Phase 6).
 
 ## 5. The toolchain map

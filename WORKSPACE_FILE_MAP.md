@@ -2,7 +2,7 @@
 
 > Output-voice standard: `docs/alexander-voice-dna.md` (enforced by `tools/verify/verify_voice.py`) governs all output text - prompts, goldens, graders, FA/GA, PLs, reviews.
 
-**Last updated: 2026-06-18 (World 3 is now `worlds/marva-lydell/`, approved as a Black older adult woman with cardiorenal respiratory transition-readiness as the product thesis. The Brainstorm package is built locally and recut to a 07/10/2025 snapshot with 07/11/2025 through 07/17/2025 task anchors. New and reopened clinical artifacts now use a hard 07/31/2025 narrative-date ceiling; accepted KM and OV artifacts are grandfathered unless review reopens them. Vagus 6/18 pins are canonical: technical questions route by channel, FA/GA uses the latest valid 2nd-lowest run with Alexander's own Overall Failure Score, GA distinguishes miss from mis-score, and PL uses A1-B3. No clinical substrate, task upload, prompt, golden, grader, or trajectory work has started. Ondina live state is governed by `worlds/ondina-vasquell/docs/WORLD-STATUS.md`; prior KM status remains KM01-KM06 delivered and KM07-KM10 Ready for Delivery.)**
+**Last updated: 2026-06-18 (World 3 is now `worlds/marva-lydell/`, approved as a Black older adult woman with cardiorenal respiratory transition-readiness as the product thesis. The Brainstorm package is built locally and recut to a 07/10/2025 snapshot with 07/11/2025 through 07/17/2025 task anchors. New and reopened clinical artifacts now use a hard 07/31/2025 narrative-date ceiling; accepted KM and OV artifacts are grandfathered unless review reopens them. Larry 6/18 is canonical: no AI-generated clinical photos for future or reopened work; use a licensed real-image source with documentation or redesign, while renderer-built report images remain allowed. Vagus 6/18 pins are canonical: technical questions route by channel, FA/GA uses the latest valid 2nd-lowest run with Alexander's own Overall Failure Score, GA distinguishes miss from mis-score, and PL uses A1-B3. No clinical substrate, task upload, prompt, golden, grader, or trajectory work has started. Ondina live state is governed by `worlds/ondina-vasquell/docs/WORLD-STATUS.md`; prior KM status remains KM01-KM06 delivered and KM07-KM10 Ready for Delivery.)**
 
 Single source of truth for repo structure, placement rules, and navigation.
 Read this + `AGENTS.md` at the start of any new session before touching files.
@@ -84,7 +84,9 @@ sanctum-world-workspace/
                                  phase-3-build-task-artifacts/platform/task6/current/,
                                  and phase-3-build-task-artifacts/platform/task7/current/.
                                  OV02, OV04, retired OV05, and OV07 use task-level images;
-                                 none of those images are world files. Active result,
+                                 none of those images are world files. These are historical
+                                 accepted or in-flight artifacts; future or reopened tasks do
+                                 not use AI-generated clinical photos. Active result,
                                  FA/GA, and PL backups live under
                                  phase-4-pilot-review-submit/.
                                  Other non-live task packets are parked under
