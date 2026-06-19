@@ -55,3 +55,21 @@ OV proved floors come from ONE engine: a COMPLETION frame plus a pre-filled or i
 ## Notes
 - Remapping 6 and 8 does not threaten the structure-variety gate; the slate still spans at least five distinct structures, with the completion frame reused across distinct deliverables (which OV did, and which the cap permits).
 - These two fixes plus your human edit-and-own pass are all that stand between the brainstorm and AutoQC upload, per the latest guide (no Claude transcript at the brainstorm stage).
+
+## Regression audit vs the KM brainstorm corrections (2026-06-19)
+Checked Marva against the KM brainstorm-lifecycle corrections (worlds/korvin-merrow/reviews/reviewer-feedback.md, the Stacey S send-back of 2026-05-29, plus brainstorm-autoqc-01). The two you named map exactly to KM revisions 3 and 4.
+
+CLEARED (KM was corrected; Marva already complies):
+- Fictional, non-celebrity patient name (KM rev 1): Marva Lydell. OK.
+- "World Type: Typical Clinical World" declaration (KM rev 2): present. OK.
+- Requester named on every task (autoqc-01 flag): all 10 have one. OK.
+- Distinct task-level trap per task (autoqc-01 flag): each task carries its own clinical trap. OK.
+- Letter-O "PO" vs P0 artifact (autoqc-01 flag): zero letter-O tokens in the built docx. OK.
+- No over-authoritative final synthesis (internal note): the brainstorm states "no single summary that states the final readiness conclusion." OK.
+- Workflow mapping + P0/P1 labels (internal note): applied and live-sheet verified. OK.
+
+REPEAT RISK (Marva currently mirrors KM's pre-correction state on both):
+1. Comorbidity list (KM rev 3, "expand comorbidity burden above the 10+ threshold"). Marva's World Setup names 8 chronic conditions: CHF, AFib, CKD 3b-4, COPD, OSA, T2DM, HTN, obesity. AutoQC treated under-10 as borderline at concept stage, but the KM human reviewer still sent it back, so pre-empt it. Recommend expanding to at least 10 with cardiorenal-coherent, common (non-zebra) conditions; physician to ratify from, e.g.: hyperlipidemia, anemia of CKD, CKD-MBD or secondary hyperparathyroidism, diabetic peripheral neuropathy, coronary artery disease, peripheral arterial disease, hypothyroidism, gout.
+2. Medications (KM rev 4, "add specific medication names ... current traps mention categories but no specific agents"). Marva names only classes (ACE inhibitor, SGLT2 inhibitor, metformin, diuretic, anticoagulant). The Soya strong-example names specific agents, and KM was sent back for exactly this. Recommend naming specific agents in the World Setup (doses belong in the World Spec); physician to ratify from, e.g.: torsemide or furosemide, metoprolol succinate or carvedilol, apixaban, sacubitril-valsartan or lisinopril, empagliflozin, metformin (held in AKI), insulin glargine, atorvastatin, spironolactone, a potassium binder, ferrous sulfate or an ESA, tiotropium plus albuterol, cholecalciferol or calcitriol.
+
+Both items are physician-owned clinical content, so the brainstorm is not edited here. Ratify the comorbidity and medication picks and I will apply them to submission/Marva_Lydell_Brainstorm.md and rebuild the docx through the gated builder.
