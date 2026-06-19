@@ -3,7 +3,7 @@ name: preference-labeling
 description: >-
   Draft a preference label (PL) comparing two model transcripts, Transcript A vs
   Transcript B, for an adversarial clinical-documentation eval task (Project
-  Sanctum / Korvin Merrow / Ondina Vasquell style). Scores the pair on the A1-B3
+  Sanctum / Korvin Merrow / Ondina Vasquell style). Scores the pair on the A4-B4
   scale against the task's golden and grader and produces a paste-ready label in
   the house format. Use this whenever the user pastes a Studio preference-labeling
   pair (for example "Transcript A 0.90 ... Transcript B 0.72", or "PREFERENCE
@@ -18,7 +18,7 @@ description: >-
 # Preference Labeling
 
 A preference label compares two model transcripts (A and B) for one eval task and
-records which is better, by how much on the A1-B3 scale, and why, in a paste-ready
+records which is better, by how much on the A4-B4 scale, and why, in a paste-ready
 house format. The whole verdict turns on one thing: how each output handled the
 task's central designed failure. Everything else (prose, formatting, length, step
 count) is noise the grader is told to ignore, so you must too.
@@ -77,24 +77,29 @@ failure is continuing or soft-pedaling it"). That sentence governs the verdict.
 5. Pick the tier with the conservative-margin calibration below.
 6. Write the label using `references/pl-format-template.md`.
 
-## The scale and the button (we cap at A1-B3)
+## The scale and the button (full A4-B4, pod-confirmed 2026-06-18)
 
-The platform exposes the full A4-B4 scale (eight buttons, A+++ through B+++). We
-deliberately cap our verdicts at A1-B3, plain through two plus, per the standing pod
-call. Do not select A+++ or B+++ (three plus, significantly better); if a pair seems
-to need it, it is almost always an A3/B3 with one central failure, which is two plus.
+Use the full A4-B4 scale, eight buttons, A+++ through B+++. The pod confirmed on
+2026-06-18 that the 06/09 instruction document, the Preference Label template, and the
+How to Do PLs section all use A4-B4, and that there is no documented narrowing to
+A1-B3. This supersedes the earlier interim A1-B3 cap. Conservative-margin discipline
+still governs the choice: pick the lowest tier the gap supports, never inflate.
 
-| Tier | When to use | Button | Scale Selection language |
+| Tier | When to use | Button | Scale Selection line |
 |---|---|---|---|
-| A1/B1 | Both close; one edges ahead on a narrow point | plain A or plain B (no plus) | marginally better |
-| A2/B2 | Meaningfully better; avoids a discrete error the other makes, or handles a key step the other does not | A+ or B+ (one plus) | slightly better |
-| A3/B3 | The other falls for the central designed trap or misses a critical finding | A++ or B++ (two plus) | moderately better |
+| A1/B1 | Both close; one edges ahead on a narrow point | plain A or plain B (no plus) | A1 (slightly better) |
+| A2/B2 | Meaningfully better; avoids a discrete error the other makes, or handles a key step the other does not | A+ or B+ (one plus) | A2 (better) |
+| A3/B3 | The other falls for the central designed trap or misses a critical finding | A++ or B++ (two plus) | A3 (much better) |
+| A4/B4 | The other has multiple major errors, gets the core diagnosis wrong, or is unsafe or unusable | A+++ or B+++ (three plus) | A4 (significantly better) |
 
-The Scale Selection language follows the official Part 7 template example
-("A++ (moderately better)"). The Part 7 Step 3 table names the tiers differently
-(slightly / better / much better); when they disagree, the pasted Scale Selection
-line uses the template language in the table above. The rating is set by the Button
-and stated once in the pasted Scale Selection line, never elsewhere in the prose.
+The Scale Selection line states the tier and the matching language, as the pod modeled
+("A2 (better)"). Mind the button mapping: the tier number is one ahead of the plus
+count, so A1 is plain, A2 is one plus, A3 is two plus, A4 is three plus. A clean
+catch-versus-floor where the loser is otherwise competent is A3 (two plus); reserve A4
+(three plus) for a multi-error, wrong-core-finding, or unsafe output. The Part 7
+Required Structure offers an alternate wording (marginally / slightly / moderately /
+significantly); when the doc is internally inconsistent, use the Step 3 tier language
+above, which the pod modeled.
 
 ## Conservative-margin calibration (the part that matters most)
 
@@ -108,7 +113,9 @@ supports. Hold to these:
   central item (neither catches the trap), cap the margin at one plus. Two pluses
   means one caught the designed trap and the other fell for it. When
   both only partially handle it, the most you are seeing is "less wrong," which is
-  one plus at most, and often plain.
+  one plus at most, and often plain. Three pluses (A4/B4) is reserved for an output
+  that is multi-error, gets the core finding wrong, or is unsafe or unusable, not a
+  single central miss.
 - Both-floor pairs are severity comparisons. Default to tier 1 (plain). Go to
   tier 2 only if one output is materially safer as a clinical result, a genuinely
   safer order or decision, not merely milder or better-hedged wording.
@@ -127,9 +134,11 @@ supports. Hold to these:
 
 ## The pasted sections (Scale Selection first)
 
-- Scale Selection: one line, the Button and the language, for example
-  "A++ (moderately better)". This is the lead line of the pasted block, restored per
-  the official Part 7 template. Language only, no numeric score, no tier letter-number.
+- Scale Selection: one line, the tier and the matching language, as the pod modeled
+  ("A2 (better)"). This is the lead line of the pasted block. State the tier here once;
+  do not restate it in the dimension prose, and never cite a grader score (that is what
+  "do not reference the preference score" means). Set the Button to the matching plus
+  count (A2 is one plus, A3 two plus, A4 three plus).
 - Preferred output: which one, and the single sentence that decides it.
 - Justification: why this tier. Carry the central-item argument and the cap
   reasoning (why not a higher or lower tier).
@@ -166,11 +175,11 @@ explaining what it did. This is enforced repo-wide by `tools/verify/verify_voice
 
 Copy `references/pl-format-template.md` and fill every field. Three recurring breaks:
 
-- Lead the pasted Comments box with the Scale Selection line, restored per the
-  official Part 7 template, for example "Scale Selection: A++ (moderately better)".
-  The pasted block runs from that line through "Summary:". Use the language only, not
-  a numeric or tier score (Part 7: do not reference the preference score). Set the
-  Button to match.
+- Lead the pasted Comments box with the Scale Selection line, for example
+  "Scale Selection: A2 (better)". The pasted block runs from that line through
+  "Summary:". State the tier once in this line; do not restate the tier in the
+  dimension prose and never cite a grader score (that is "do not reference the
+  preference score"). Set the Button to the matching plus count.
 - No em dashes or en dashes anywhere, in this file or any deliverable. Use plain
   hyphens and commas. (Run a quick scan for the characters before you finish.)
 - No eval-scaffolding narration in the prose (OCR, directory listing, tool calls,

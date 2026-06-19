@@ -6,9 +6,10 @@ Part 7 template). Do not use em or en dashes.
 
 The paste-ready part is the `## Justification` block, from "Scale Selection:"
 through the end of "Summary:". That is what goes in the platform Comments box. The
-Scale Selection line states the Button and the language only (for example
-"A++ (moderately better)"), never a numeric or tier score. We cap at A1-B3, so the
-Button is plain, one plus, or two plus, never three plus.
+Scale Selection line states the tier and the matching language, as the pod modeled
+("A2 (better)"), and the Button is set to the matching plus count. Use the full A4-B4
+scale: A1 plain, A2 one plus, A3 two plus, A4 three plus. Do not restate the tier in
+the dimension prose and never cite a grader score.
 
 ---
 
@@ -27,11 +28,11 @@ Evidence read: both deliverable summaries read against `golden-<TASK>.docx` and 
 
 KEY FINDING: <Who is better and why, in a paragraph. Name what both got right, then the central item, then the single decider, then the margin reasoning (why this tier and not one step up or down).>
 
-VERDICT: <A1/A2/A3 or B1/B2/B3>. Button = <plain A | A+ | A++ | plain B | B+ | B++>. (Internal tracking line, not pasted.)
+VERDICT: <A1/A2/A3/A4 or B1/B2/B3/B4>. Button = <plain A | A+ | A++ | A+++ | plain B | B+ | B++ | B+++>. (Internal tracking line, not pasted.)
 
 ## Justification
 
-Scale Selection: <A or B with plus signs> (<marginally | slightly | moderately> better)
+Scale Selection: <tier, e.g. A2> (<slightly better | better | much better | significantly better>)
 
 Preferred output: <A or B>
 
@@ -60,5 +61,5 @@ Summary: <Restate the preference, the tier, and why it is not one step higher or
 6. PL <N> of 3 for <TASK>. <Note distinct trajectories.>
 
 ## Submit mechanics
-Select <Button> (no plus / one plus / two plus; never three plus), paste from "Scale Selection:" through the Summary into Comments, submit the preference, confirm it appears in submission history, then run Preference Labels AutoQC. Do not submit until the writer authorizes this exact step.
+Select <Button> matching the tier (A1 plain, A2 one plus, A3 two plus, A4 three plus), paste from "Scale Selection:" through the Summary into Comments, submit the preference, confirm it appears in submission history, then run Preference Labels AutoQC. Do not submit until the writer authorizes this exact step.
 ```
