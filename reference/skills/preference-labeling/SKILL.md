@@ -138,10 +138,11 @@ supports. Hold to these:
   ("A2 (better)"). This is the lead line of the pasted block. State the tier here once;
   do not restate it in the dimension prose, and never cite a grader score (that is what
   "do not reference the preference score" means). Set the Button to the matching plus
-  count (A2 is one plus, A3 two plus, A4 three plus).
-- Preferred output: which one, and the single sentence that decides it.
-- Justification: why this tier. Carry the central-item argument and the cap
-  reasoning (why not a higher or lower tier).
+  count (A2 is one plus, A3 two plus, A4 three plus). There is no separate
+  "Preferred output:" line; the Scale Selection line names the side.
+- Justification: name the preferred side in the first sentence, on the clinical fact
+  that decides the pair, then give the tier reasoning. Open this differently across the
+  three labels; do not reuse a stock framing sentence.
 - Prompt adherence: did both answer the requested workflow and format. Usually a tie.
 - Correctness: clinical accuracy against the golden, the central item above all.
   Usually the deciding dimension.
@@ -170,6 +171,30 @@ explaining what it did. This is enforced repo-wide by `tools/verify/verify_voice
   review. These hard-fail the gate.
 - Keep the house PL structure and the scoring logic; the voice applies to the prose
   inside it.
+
+## Avoid AI-prose tells (vary the three labels)
+
+Three labels for one task invite a templated look that reads as machine-written. A
+reviewer flagged exactly this on OV05 (2026-06-19), and Abi flagged it earlier (6/7).
+The mandated sections stay; the prose inside them must not be a template with A and B
+swapped.
+
+- No formulaic opener. Do not lead every label with "Preferred output: X" and the
+  same framing sentence. There is no "Preferred output:" line; the Scale Selection
+  line names the side. Open the Justification on the specific clinical fact that
+  decides the pair, and open the three labels differently.
+- Do not mirror the labels. Two both-floor labels that differ only by swapping A for
+  B read as generated. Vary the lead, the order of the points, and the sentence
+  shapes so each label stands on its own.
+- No hedge stacking. State the tier once, in the Scale Selection line, then make the
+  case plainly. Do not pile "marginally cleaner of two floors," "plain A, not a full
+  step," "a severity call between two near-identical floors," and "slightly better
+  because" into one label. Say once why the margin is what it is, then stop.
+- Short declarative clinician sentences. A busy attending does not stack four
+  qualifiers; trim them.
+- The writer owns the final text (Rule 4). This skill drafts a scaffold; the writer
+  rewrites it in their own words before paste. That rewrite, not a re-generated draft,
+  is what clears an AI-prose flag.
 
 ## The house format (three easy ways to get it wrong)
 

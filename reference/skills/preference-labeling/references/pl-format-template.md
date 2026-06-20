@@ -34,11 +34,7 @@ VERDICT: <A1/A2/A3/A4 or B1/B2/B3/B4>. Button = <plain A | A+ | A++ | A+++ | pla
 
 Scale Selection: <tier, e.g. A2> (<slightly better | better | much better | significantly better>)
 
-Preferred output: <A or B>
-
-<Opening preference paragraph: the core argument for the preferred output, centered on the central item.>
-
-Justification: <Why this tier. The central-item argument plus the cap reasoning (why not higher, why not lower).>
+Justification: <Name the preferred side in the first sentence, on the specific clinical fact that decides the pair, then the tier reasoning (why not higher, why not lower). No "Preferred output:" lead and no stock framing sentence. Open this differently across the three labels, and do not mirror one label with A and B swapped. State the margin once; do not stack hedges.>
 
 Prompt adherence: <Did both answer the requested workflow and format. Usually a tie.>
 
@@ -53,7 +49,7 @@ Quality and clarity: <Organization and readability. The grader is told not to we
 Summary: <Restate the preference, the tier, and why it is not one step higher or lower.>
 
 ## Guardrails (must survive any edit)
-1. Preferred output is <A or B>. Button = <...>.
+1. Preferred side is <A or B> (named in the Scale Selection line, not a separate "Preferred output:" line). Button = <...>.
 2. The decider is <the central-item handling>. Do not drift it onto prose, formatting, or step count.
 3. Margin is <tier>, not <one step up> and not <one step down>, because <reason tied to the cap rule>.
 4. The deciding gap is <the discrete error, or the degree difference>. Record it.
