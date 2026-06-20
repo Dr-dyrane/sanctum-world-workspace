@@ -1,7 +1,7 @@
 # Marva Lydell World Spec Claude Transcript
 
 Run: Sanctum Coach veteran-mode World Spec session
-Source: claude.ai share URL to be attached on submit
+Source: https://claude.ai/chat/0c609626-c2d1-4440-a0f0-f4155ab39794
 Session date: June 20, 2026
 Scope: World Spec substrate ratification, spec assembly, file plan, the Sanctum Coach veteran assembly and audit, the timeline correction, and the submission DOCX build
 Status at close: World Spec and submission DOCX built and audited, reference template curation pending, then the automated quality check and human review
