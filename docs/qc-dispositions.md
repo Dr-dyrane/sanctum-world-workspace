@@ -6,6 +6,12 @@ Standing rule: do not re-pilot a healthy, correctly-graded task to appease a bor
 
 Voice: write every disposition to be read aloud first. It should sound like the writer making a point, not a legal brief. Vary the rhythm, one idea per breath, no semicolons, no compressed jargon ("transient rationale", "the restraint to credit"). Same flow rule as the FA/GA voice.
 
+## Dispute discipline: stay inside the sanctioned reasons
+
+Disputing is bounded, and the boundary matters. When the TaigaQA Env-Linter or Data-Quality report raises a flag, the only moves the report accepts are the ones shown on the flag: agree and fix it, disagree for a reason that is actually in the offered list, or mark it technical and not clinical. You cannot invent a reason that is not offered. A flag you agree with has to be fixed in the task or the world, not argued away, and if it genuinely cannot be addressed the task may have to be discarded rather than shipped over it. Every dismissal is reviewed externally, so a disagree is never a one-liner; it is a substantive, fact-referenced rebuttal (AGENTS.md guardrail 4) that maps to one of the offered reasons.
+
+So the dispositions below are disagree rebuttals for genuine over-reads only, and each one still has to be framed inside a sanctioned reason when you paste it. When you are not sure whether a flag is a borderline over-read or a real bug, treat it as a real bug and fix it; the fixable classes live in docs/qc-error-class-register.md. The full dispute rules are in the Phase-3 evaluation guidelines at reference/source/phase-3-evaluating/ (read phase-3-instructions-2026-06.md; the 2026-06-19 updated-guidelines screenshots are the raw source).
+
 ## D1. Trajectory floor flagged as output-constraint non-compliance
 Layer: Trajectory AutoQC, "Compliance with Output Constraints". When: a floor trajectory, the run where the model fails or refuses the deliverable, is flagged for violating the prompt's output constraint (e.g. "finalize it for submission").
 
