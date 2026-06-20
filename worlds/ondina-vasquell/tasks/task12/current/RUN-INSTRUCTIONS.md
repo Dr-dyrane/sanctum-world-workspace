@@ -1,7 +1,7 @@
 # OV12 run instructions (Studio upload + pilot)
 
 ## Workflow (Step 10)
-Consultation Note (Specialty Consultation Note). Fresh eighth lane.
+Specialty Consultation Note (P1). Fresh eighth lane.
 
 ## Prompt
 Use prompt-OV12.txt verbatim:

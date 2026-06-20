@@ -5,7 +5,7 @@ Date: 2026-06-20. Author: Claude (cowork), for Dr. Alexander. New locked prereg 
 ## Task
 
 - Studio task: OV12 (new, tenth floor; not a revival of any retired packet).
-- Workflow lane (Step 10): Consultation Note (Specialty Consultation Note). FRESH eighth lane, distinct from the seven in use. Physician-produced deliverable (passes the all-tasks-physician-produced gate): the attending completes and signs a pre-transfer nephrology consultation note.
+- Workflow lane (Step 10): Specialty Consultation Note (P1). FRESH eighth lane, distinct from the seven in use. Exact approved string from the 06/19 catalog; its named core challenge is "delivering a specialist's focused assessment ... integrating the targeted history, exam, and diagnostics", so integrating the off-text ECG diagnostic is squarely the work product. Physician-produced deliverable (passes the all-tasks-physician-produced gate): the attending completes and signs a pre-transfer nephrology consultation note.
 - Mechanism: OFF-TEXT IMAGE (the OV04 engine) on a fresh cardiac-rhythm axis. A pre-discharge 12-lead ECG mounted in the chart shows new-onset atrial fibrillation with a rapid ventricular response and no prior on file. The consult's headline is renal (acute kidney injury on chronic kidney disease, dosing, held-agent restart); the chart is silent on rhythm.
 - Deliverable: complete the started nephrology consult from the chart so it is ready for attending signature.
 

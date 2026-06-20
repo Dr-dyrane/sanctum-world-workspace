@@ -3,7 +3,7 @@
 artifacts through the canonical renderer into tasks/task12/current/. Frozen-world-safe:
 task-layer artifacts only; no world edits.
 
-Lane: Consultation Note (fresh 8th lane). Deliverable: a pre-transfer NEPHROLOGY consultation note
+Lane: Specialty Consultation Note (P1, fresh 8th lane). Deliverable: a pre-transfer NEPHROLOGY consultation note
 the attending completes and signs. Mechanism: the OV04 off-text-image engine on a fresh cardiac-
 rhythm axis. The consult's headline is renal (acute kidney injury on chronic kidney disease,
 dosing, held-agent restart); the chart is silent on rhythm; a pre-discharge 12-lead ECG (mounted

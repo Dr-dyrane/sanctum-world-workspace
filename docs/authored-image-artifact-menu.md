@@ -59,3 +59,9 @@ pathology, echo), authored as a printout. The report is always on-menu even when
 
 Floor = the model completes the deliverable from prose and never opens the file. Catcher = it opens
 the file, interprets the raw finding, and acts on it.
+
+## Related canon
+
+- Render method + the "why is this an image" fairness test: worlds/ondina-vasquell/docs/FLOOR-MECHANISM-LIBRARY.md (off-text image section) and docs/docx-generation-method.md section 5.
+- Per-world sourcing and licensing order (in-repo render > in-house simulator > verified public-domain): worlds/marva-lydell/docs/IMAGE-SOURCING-CHECKLIST.md.
+- Proven instances: OV04 (CPAP adherence report), OV12 (pre-discharge ECG, new-onset afib).

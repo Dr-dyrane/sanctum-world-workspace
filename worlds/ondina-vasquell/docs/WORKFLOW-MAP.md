@@ -17,7 +17,7 @@ For live task status and lifecycle, docs/WORLD-STATUS.md governs. This file maps
 | OV09 | ebv61af9 | Post-Acute Care Coordination Documentation | FLOOR ~0.62 | Awaiting first human review |
 | OV10 | ilsjf671 | Discharge Summary | FLOOR ~0.15 uniform | Awaiting first human review; FA/GA submitted |
 | OV11 | RETIRED | (vacated) Treatment Plan Documentation for Chronic Disease Management | RETIRED 2026-06-19 | Three mechanics all unshippable: v1 immunization silence floor (unfair), v2 immunization mounted-contradiction CEILING (e52ae4dd 0.85-0.95), v3 pioglitazone-in-HFpEF CEILING (glycemic primed + famous fact). Packet at tasks/_retired/2026-06-19-task11-treatmentplan-cdm-ceiling. Lane vacated; slate met at 9 floors |
-| OV12 | pilot-pending | Consultation Note / Specialty Consultation Note (new 8th lane) | off-text image: new-onset atrial fibrillation on a pre-discharge ECG (nephrology consult); built, gated, cold-benched 2026-06-20 | Pilot-pending |
+| OV12 | pilot-pending | Specialty Consultation Note (P1, new 8th lane) | off-text image: new-onset atrial fibrillation on a pre-discharge ECG (nephrology consult); built, gated, cold-benched 2026-06-20 | Pilot-pending |
 
 Eight distinct lanes. Medical Transcription carries three (OV02, OV03, OV04); the other seven lanes carry one each. OV05 (Referral) retired 2026-06-18 after an all-catch ceiling; the Referral lane keeps OV06. A workflow may carry 2 or more tasks (Dyrane 2026-06-17 target of 8 to 10 tasks across 6 to 7 lanes, met).
 
