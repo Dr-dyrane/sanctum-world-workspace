@@ -37,3 +37,5 @@ Assessment: the Coach is right, and this updates our earlier "keep July, the Coa
 - Snapshot: 07/10/2025 18:00 to 06/19/2025 18:00
 - Task anchors: 07/11 to 06/20, 07/12 to 06/21, 07/13 to 06/22, 07/15 to 06/24, 07/16 to 06/25, 07/17 to 06/26
 - In-world document date: 07/18/2025 to 06/27/2025
+
+RESOLVED 2026-06-20: Dyrane approved the shift. Applied to the spec as a uniform 21-day move and re-verified clean (47 rows, all dates in Key Milestones, no world file after the 06/19 snapshot, all anchors after it, latest anchor 06/26 before the cutoff, no dashes). The spec now runs snapshot 06/19/2025 with anchors 06/20 to 06/26. The submitted brainstorm and this transcript keep the original July dates as the record; the corrected calendar lives in the spec.

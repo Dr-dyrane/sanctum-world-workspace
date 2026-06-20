@@ -1,4 +1,4 @@
-Cover: MARVA LYDELL WORLD SPECIFICATION DOCUMENT || World Title: Cardiorenal Respiratory Transition | World Type: Typical Clinical World | Snapshot: July 10, 2025 at 18:00 | 10 Tasks || Clinical domain: inpatient hospital medicine, cardiology and nephrology, respiratory and post-acute transition, payer and documentation operations | Project Sanctum | Version 1.0 | July 18, 2025
+Cover: MARVA LYDELL WORLD SPECIFICATION DOCUMENT || World Title: Cardiorenal Respiratory Transition | World Type: Typical Clinical World | Snapshot: June 19, 2025 at 18:00 | 10 Tasks || Clinical domain: inpatient hospital medicine, cardiology and nephrology, respiratory and post-acute transition, payer and documentation operations | Project Sanctum | Version 1.0 | June 27, 2025
 
 | Field | Value |
 |---|---|
@@ -10,7 +10,7 @@ Cover: MARVA LYDELL WORLD SPECIFICATION DOCUMENT || World Title: Cardiorenal Res
 | Total Tasks | 10 |
 | Project | Project Sanctum |
 | Version | 1.0 |
-| Document date | July 18, 2025 |
+| Document date | June 27, 2025 |
 
 # 1. Clinical Scenario
 
@@ -100,11 +100,11 @@ When sources conflict, authority runs highest first: the active medication admin
 
 Marva Lydell is a 72-year-old woman with a long history of heart failure with preserved ejection fraction, atrial fibrillation for which she takes an oral anticoagulant, coronary artery disease with a prior percutaneous coronary intervention, and CKD stage 3b to 4 with a baseline estimated GFR near 30 and an anemia of chronic kidney disease. She also carries COPD and obstructive sleep apnea, for which she uses home oxygen and CPAP, type 2 diabetes with peripheral neuropathy, hypertension managed with an angiotensin receptor blocker because she had angioedema on an ACE inhibitor, obesity, and the quieter background of hypothyroidism, reflux, and chronic constipation. She lives alone in a two-story home with her bedroom upstairs. Her late husband had been her main support; her adult daughter, Tanielle, lives nearby but works full time, so day-to-day help at home is real but incomplete. At baseline she walks indoors with a cane, tires quickly, and already uses low-flow oxygen at night and with exertion.
 
-Over the week before admission she gained weight, her legs swelled, she became more short of breath climbing her stairs, and she slept sitting up. She presented to the emergency department on July 4, 2025 with dyspnea, lower-extremity edema, a weight about 7 kg above her dry weight, a resting oxygen saturation of 88 percent on room air, and a creatinine of 2.6 against her CKD baseline of about 1.7, consistent with a cardiorenal acute kidney injury on chronic disease. She was admitted to hospital medicine under Dr. Thorne for acute decompensated heart failure with hypoxemia. Intravenous diuresis was started, supplemental oxygen was titrated, and her empagliflozin, spironolactone, losartan, and metformin were held for the acute illness and kidney injury while her torsemide was continued and adjusted, her rate control and anticoagulation were continued, and her insulin, inhalers, statin, and the rest of her chronic agents were continued with renal dose checks.
+Over the week before admission she gained weight, her legs swelled, she became more short of breath climbing her stairs, and she slept sitting up. She presented to the emergency department on June 13, 2025 with dyspnea, lower-extremity edema, a weight about 7 kg above her dry weight, a resting oxygen saturation of 88 percent on room air, and a creatinine of 2.6 against her CKD baseline of about 1.7, consistent with a cardiorenal acute kidney injury on chronic disease. She was admitted to hospital medicine under Dr. Thorne for acute decompensated heart failure with hypoxemia. Intravenous diuresis was started, supplemental oxygen was titrated, and her empagliflozin, spironolactone, losartan, and metformin were held for the acute illness and kidney injury while her torsemide was continued and adjusted, her rate control and anticoagulation were continued, and her insulin, inhalers, statin, and the rest of her chronic agents were continued with renal dose checks.
 
 On hospital day two, cardiology under Dr. Varma confirmed preserved ejection fraction with grade II diastolic dysfunction on echocardiography and framed the admission as a volume problem to decongest while protecting the kidneys. On hospital day three, nephrology under Dr. Lund attributed the kidney injury to cardiorenal physiology and diuresis, kept the renin-angiotensin agent and the mineralocorticoid antagonist held until potassium and creatinine settled, and explicitly framed restart timing as a careful outpatient judgment rather than an automatic resume; telemetry over these days recorded rate-controlled atrial fibrillation. On hospital day four, pulmonology under Dr. Quayle addressed the COPD contribution to dyspnea and asked respiratory therapy to characterize her oxygen needs. On hospital day five, respiratory therapy under Mr. Reynel performed an oxygen titration and a six-minute walk test that showed an acceptable resting saturation but a clear desaturation into the low 80s with ambulation that corrected only with portable oxygen, and physical and occupational therapy documented that she could not yet manage her stairs or reliably set up and carry her own oxygen, with teach-back not achieved. On hospital day six, case management began screening disposition with the plan and the durable medical equipment vendor, and the family meeting recorded the daughter's willingness within the limits of her work schedule. By the evening of hospital day seven her weight was down about 5 kg, her creatinine had improved to 1.9, and her resting saturation sat at an acceptable level at rest, but she still desaturated with exertion, portable oxygen was not yet reliably delivered or teach-backed, the held cardiorenal and diabetes agents remained a deliberate restart judgment, and her stairs and caregiver schedule left the home plan unsafe.
 
-The world snapshot freezes the chart at 18:00 on July 10, 2025, hospital day seven, at this medically improving but operationally unsafe point. Every task in the world is an independent encounter that occurs strictly after this snapshot.
+The world snapshot freezes the chart at 18:00 on June 19, 2025, hospital day seven, at this medically improving but operationally unsafe point. Every task in the world is an independent encounter that occurs strictly after this snapshot.
 
 Procedural history is intentionally limited for this admission: there is no new cardiac catheterization, no intubation, no dialysis, and no new device this stay. The prior percutaneous coronary intervention is historical and stable, and her atrial fibrillation has been managed medically with rate control and anticoagulation rather than ablation.
 
@@ -112,26 +112,26 @@ Procedural history is intentionally limited for this admission: there is no new 
 
 | Date | Event |
 |---|---|
-| 06/20/2025 | Outpatient cardiology and primary care summary, baseline creatinine 1.7 and eGFR about 30, baseline hemoglobin about 10.0, dry weight about 88 kg, home oxygen 2 L nocturnal and exertional, baseline functional status (quiet baselines) |
-| 06/22/2025 | Prior outpatient echocardiogram, preserved ejection fraction, grade II diastolic dysfunction (baseline comparator) |
-| 07/04/2025 | ED presentation and admission, hospital day 1; weight 7 kg over dry, resting SpO2 88 percent, creatinine 2.6; IV diuresis, oxygen, medication holds |
-| 07/05/2025 | Cardiology consult and inpatient echocardiogram, hospital day 2; HFpEF confirmed |
-| 07/06/2025 | Nephrology consult, anticoagulation renal-dosing note, telemetry atrial fibrillation, hospital day 3 |
-| 07/07/2025 | Pulmonology consult, endocrine glycemic note, hospital day 4 |
-| 07/08/2025 | Respiratory therapy oxygen titration and six-minute walk test (exertional desaturation), PT and OT evaluations, hospital day 5 |
-| 07/09/2025 | Case management screen, family communication note, social work note, nursing oxygen-use flowsheet, hospital day 6 |
-| 07/10/2025 18:00 | World snapshot, hospital day 7, chart frozen, improving but operationally unsafe |
-| 07/11/2025 08:00 | External oxygen and SNF denial letter issued |
-| 07/11/2025 09:00 | Task 1, oxygen and skilled-nursing denial appeal |
-| 07/11/2025 10:00 | Task 2, discharge medication reconciliation |
-| 07/11/2025 14:00 | Task 3, continued-stay determination |
-| 07/12/2025 08:30 | Task 4, transition note completion |
-| 07/12/2025 13:00 | Task 5, post-acute coordination plan |
-| 07/13/2025 11:00 | Task 6, cardiorenal follow-up referral handoff |
-| 07/15/2025 10:00 | Task 7, home health versus skilled-nursing appeal |
-| 07/16/2025 09:00 | Task 8, post-readmission corrective-action safety review |
-| 07/17/2025 09:00 | Task 9, heart-failure transition quality abstraction |
-| 07/17/2025 12:00 | Task 10, documentation-integrity query response |
+| 05/30/2025 | Outpatient cardiology and primary care summary, baseline creatinine 1.7 and eGFR about 30, baseline hemoglobin about 10.0, dry weight about 88 kg, home oxygen 2 L nocturnal and exertional, baseline functional status (quiet baselines) |
+| 06/01/2025 | Prior outpatient echocardiogram, preserved ejection fraction, grade II diastolic dysfunction (baseline comparator) |
+| 06/13/2025 | ED presentation and admission, hospital day 1; weight 7 kg over dry, resting SpO2 88 percent, creatinine 2.6; IV diuresis, oxygen, medication holds |
+| 06/14/2025 | Cardiology consult and inpatient echocardiogram, hospital day 2; HFpEF confirmed |
+| 06/15/2025 | Nephrology consult, anticoagulation renal-dosing note, telemetry atrial fibrillation, hospital day 3 |
+| 06/16/2025 | Pulmonology consult, endocrine glycemic note, hospital day 4 |
+| 06/17/2025 | Respiratory therapy oxygen titration and six-minute walk test (exertional desaturation), PT and OT evaluations, hospital day 5 |
+| 06/18/2025 | Case management screen, family communication note, social work note, nursing oxygen-use flowsheet, hospital day 6 |
+| 06/19/2025 18:00 | World snapshot, hospital day 7, chart frozen, improving but operationally unsafe |
+| 06/20/2025 08:00 | External oxygen and SNF denial letter issued |
+| 06/20/2025 09:00 | Task 1, oxygen and skilled-nursing denial appeal |
+| 06/20/2025 10:00 | Task 2, discharge medication reconciliation |
+| 06/20/2025 14:00 | Task 3, continued-stay determination |
+| 06/21/2025 08:30 | Task 4, transition note completion |
+| 06/21/2025 13:00 | Task 5, post-acute coordination plan |
+| 06/22/2025 11:00 | Task 6, cardiorenal follow-up referral handoff |
+| 06/24/2025 10:00 | Task 7, home health versus skilled-nursing appeal |
+| 06/25/2025 09:00 | Task 8, post-readmission corrective-action safety review |
+| 06/26/2025 09:00 | Task 9, heart-failure transition quality abstraction |
+| 06/26/2025 12:00 | Task 10, documentation-integrity query response |
 
 ## 1.5 Clinical Complexity Overview
 
@@ -143,13 +143,13 @@ Terminology note: traps are informational obstacles embedded in the source files
 
 # 2. Task Specifications
 
-Each task is an independent encounter anchored strictly after the 07/10/2025 18:00 snapshot. Draft prompts are written in the requesting clinician's voice, assume chart access, and name a single deliverable without hinting at the traps. Expected outputs name the format, register, length, and the specific clinical anchors a grader verifies. Failure Design lists the highest-yield traps with remediations grounded in dated chart documents. The ten tasks map to ten approved workflows across eight structural categories, with Task 1 as the integration anchor. Every deliverable is physician-produced or physician-supervised.
+Each task is an independent encounter anchored strictly after the 06/19/2025 18:00 snapshot. Draft prompts are written in the requesting clinician's voice, assume chart access, and name a single deliverable without hinting at the traps. Expected outputs name the format, register, length, and the specific clinical anchors a grader verifies. Failure Design lists the highest-yield traps with remediations grounded in dated chart documents. The ten tasks map to ten approved workflows across eight structural categories, with Task 1 as the integration anchor. Every deliverable is physician-produced or physician-supervised.
 
 ## Task 1: Oxygen and Skilled-Nursing Denial Appeal
 
 Capability: multi-source synthesis into a binding payer appeal, the world integration anchor.
 Workflow: Claims Denial Analysis and Appeal Preparation, requested by the hospitalist attending at case management request.
-Anchor: 07/11/2025 at 09:00. Priority: P0. Difficulty: high. Time estimate: 30 to 40 minutes, synthesizing the respiratory therapy, PT, OT, equipment, and home documentation against the denial.
+Anchor: 06/20/2025 at 09:00. Priority: P0. Difficulty: high. Time estimate: 30 to 40 minutes, synthesizing the respiratory therapy, PT, OT, equipment, and home documentation against the denial.
 
 Expected Output: a physician appeal letter rebutting the Medicare Advantage denial of the skilled-nursing stay and the home-oxygen upgrade, with a clear appeal position and clinical rationale. Format: a physician appeal letter. Register: formal physician-to-payer. Length: 500 to 800 words. Correct responses rebut the improving-resting-vitals-equals-home framing by synthesizing the exertional desaturation on the respiratory therapy walk test, the physical and occupational therapy findings on stairs and oxygen logistics, the undelivered portable oxygen, the two-story home, and the work-limited caregiver, and do not over-defer to the payer's authority. Grader anchors: appeal grounded in the exertional desaturation from the formal walk test, not the resting saturation; functional and stairs findings cited; portable-oxygen delivery and teach-back gap stated; home and caregiver limits integrated; the appeal holds the treating position rather than conceding to the denial.
 
@@ -157,11 +157,11 @@ Failure Design
 
 | Key Trap | Remediation |
 |---|---|
-| Denial frames an acceptable resting saturation as a resolved oxygen need (shared world-level trap; primary here) | Cite the respiratory therapy titration and six-minute walk test showing exertional desaturation corrected only with portable oxygen (07/08; respiratory therapy walk test) |
+| Denial frames an acceptable resting saturation as a resolved oxygen need (shared world-level trap; primary here) | Cite the respiratory therapy titration and six-minute walk test showing exertional desaturation corrected only with portable oxygen (06/17; respiratory therapy walk test) |
 | Over-deference to payer authority | Hold the treating position; the denial is rebuttable from the chart (denial letter E1-T1) |
-| Functional tolerance and stairs omitted | Make the PT and OT findings and the two-story home central (07/08 to 07/09; PT, OT, case management) |
-| Portable oxygen treated as in place (shared world-level trap; primary in Task 5) | Cite the undelivered and not-teach-backed portable oxygen (07/08 to 07/09; OT, nursing oxygen flowsheet, case management) |
-| Volume improvement read as transition readiness (shared world-level trap; primary in Task 3) | Weigh the unresolved operational items against the improving congestion (07/08 to 07/10; progress notes, weights) |
+| Functional tolerance and stairs omitted | Make the PT and OT findings and the two-story home central (06/17 to 06/18; PT, OT, case management) |
+| Portable oxygen treated as in place (shared world-level trap; primary in Task 5) | Cite the undelivered and not-teach-backed portable oxygen (06/17 to 06/18; OT, nursing oxygen flowsheet, case management) |
+| Volume improvement read as transition readiness (shared world-level trap; primary in Task 3) | Weigh the unresolved operational items against the improving congestion (06/17 to 06/19; progress notes, weights) |
 
 Task-level files: E1-T1 Oxygen and Skilled-Nursing Denial Letter (external).
 
@@ -171,7 +171,7 @@ Draft Prompt: The plan denied the skilled-nursing stay and the home-oxygen upgra
 
 Capability: medication reconciliation against a documented source-of-truth hierarchy under renal recovery.
 Workflow: Discharge Medication Reconciliation, requested by the hospitalist attending.
-Anchor: 07/11/2025 at 10:00. Priority: P0. Difficulty: medium-high. Time estimate: 25 to 35 minutes, reconciling the home list, the MAR, the renal trend, and the outside list.
+Anchor: 06/20/2025 at 10:00. Priority: P0. Difficulty: medium-high. Time estimate: 25 to 35 minutes, reconciling the home list, the MAR, the renal trend, and the outside list.
 
 Expected Output: a reconciled discharge medication list, one row per drug with a disposition of continue, hold, change, stop, or defer and a short rationale, plus patient-facing instructions. Format: a headed reconciliation note with a disposition-per-medication structure. Register: hospitalist and pharmacist professional. Length: 450 to 700 words. Correct responses reconcile against the active MAR and current renal function rather than the stale outside list, treat the held cardiorenal and diabetes agents (empagliflozin, spironolactone, losartan, metformin) as deliberate deferred-restart judgments tied to renal recovery and follow-up rather than silently resuming or stopping them, keep apixaban at a renally correct dose without antiplatelet-anticoagulant duplication beyond the documented aspirin indication, and continue the noise agents unchanged. Grader anchors: reconciliation follows the active record over the outside list; the four held agents each handled as an explicit deferred restart, not a silent continue or stop; apixaban renally dosed and not duplicated; insulin continued without an invented change; no fabricated doses.
 
@@ -179,9 +179,9 @@ Failure Design
 
 | Key Trap | Remediation |
 |---|---|
-| Outside list carries a stale renal dose or continues a held agent | Reconcile to the active MAR and current renal function, not the outside list (07/11; outside medication list E1-T2; MAR, renal trend) |
-| Held oral agents read as auto-continue or discontinue (shared world-level trap; primary in Task 4) | Treat empagliflozin, spironolactone, losartan, metformin as parameter-gated restart decisions deferred to renal recovery and follow-up (07/04, 07/06; hold orders, nephrology note) |
-| Apixaban dosed at the admission renal value or duplicated (shared world-level trap; primary in Task 5) | Dose apixaban to current renal function and avoid anticoagulant duplication beyond the documented aspirin (07/06; anticoagulation note, MAR) |
+| Outside list carries a stale renal dose or continues a held agent | Reconcile to the active MAR and current renal function, not the outside list (06/20; outside medication list E1-T2; MAR, renal trend) |
+| Held oral agents read as auto-continue or discontinue (shared world-level trap; primary in Task 4) | Treat empagliflozin, spironolactone, losartan, metformin as parameter-gated restart decisions deferred to renal recovery and follow-up (06/13, 06/15; hold orders, nephrology note) |
+| Apixaban dosed at the admission renal value or duplicated (shared world-level trap; primary in Task 5) | Dose apixaban to current renal function and avoid anticoagulant duplication beyond the documented aspirin (06/15; anticoagulation note, MAR) |
 | Insulin regimen altered without basis | Continue home basal with the inpatient prandial scale de-escalated to the home regimen, no invented change (MAR, endocrine note) |
 | Noise agents reconciled as if load-bearing | Continue levothyroxine, pantoprazole, senna unchanged; they are distractors, not the decision (1.2 home meds) |
 
@@ -193,7 +193,7 @@ Draft Prompt: I am getting Mrs. Lydell ready to leave in the next day or two and
 
 Capability: a binding level-of-care determination on a designed borderline.
 Workflow: Utilization Review Concurrent Stay Documentation, requested by the physician advisor.
-Anchor: 07/11/2025 at 14:00. Priority: P1. Difficulty: medium. Time estimate: 20 to 30 minutes, applying criteria across the improvement and the unresolved-operational evidence.
+Anchor: 06/20/2025 at 14:00. Priority: P1. Difficulty: medium. Time estimate: 20 to 30 minutes, applying criteria across the improvement and the unresolved-operational evidence.
 
 Expected Output: a physician-advisor continued-stay determination with an explicit verdict and criteria-based rationale. Format: a physician-advisor continued-stay determination. Register: utilization-review. Length: 350 to 550 words. Correct responses find continued skilled-level need justified because the operational picture (exertional oxygen need, undelivered equipment, unsafe stairs and offloading of oxygen logistics, and partial home support) outweighs the improving congestion and creatinine, and apply criteria to both sides rather than reading improvement alone as readiness. Grader anchors: a binding determination is stated; both the improvement and the unresolved-operational criteria are weighed; the verdict rests on documented function and oxygen testing, not markers alone; no discharge-ready verdict from improvement alone.
 
@@ -201,11 +201,11 @@ Failure Design
 
 | Key Trap | Remediation |
 |---|---|
-| Improvement read as discharge readiness (shared world-level trap; primary here) | Weigh the unresolved operational criteria against the improving markers (07/08 to 07/10; respiratory therapy walk test, PT, OT, case management) |
+| Improvement read as discharge readiness (shared world-level trap; primary here) | Weigh the unresolved operational criteria against the improving markers (06/17 to 06/19; respiratory therapy walk test, PT, OT, case management) |
 | Verdict avoided or hedged | State a binding continued-stay determination (physician-advisor role) |
 | One-sided criteria | Apply criteria to both the improvement and the unsafety (full chart) |
 | Worksheet treats post-diuresis improvement as readiness | Use the external continued-stay worksheet as the prompt, not the answer (E1-T3) |
-| Exertional oxygen treated as resolved (shared world-level trap; primary in Task 1) | Keep the oxygen need open per the respiratory therapy testing (07/08; walk test) |
+| Exertional oxygen treated as resolved (shared world-level trap; primary in Task 1) | Keep the oxygen need open per the respiratory therapy testing (06/17; walk test) |
 
 Task-level files: E1-T3 Continued-Stay Review Worksheet (external).
 
@@ -215,7 +215,7 @@ Draft Prompt: As physician advisor, give me a continued-stay determination on Mr
 
 Capability: completion with true placeholders on the scored decisions, with a buried held-medication line.
 Workflow: Medical Transcription and Clinical Documentation Completion, requested by the discharging attending.
-Anchor: 07/12/2025 at 08:30. Priority: P0. Difficulty: high. Time estimate: 25 to 35 minutes, completing the placeholders from the respiratory, renal, and medication documentation.
+Anchor: 06/21/2025 at 08:30. Priority: P0. Difficulty: high. Time estimate: 25 to 35 minutes, completing the placeholders from the respiratory, renal, and medication documentation.
 
 Expected Output: a finalized transition-of-care note completed from a started draft. Format: a finalized transition-of-care note. Register: hospitalist documentation. Length: 400 to 650 words. The started draft is complete except the oxygen, fluid-status, and follow-up-ownership sections, which are left as true placeholders to complete from the chart; correct responses fill them with the documented exertional-oxygen reality and portable-oxygen requirement, the still-active diuresis and renal picture, and the deferred held-medication restarts assigned to named follow-up owners, and they do not rubber-stamp the draft's background discharge-medication line that would silently resume the held agents. Nothing the chart leaves open is closed. Grader anchors: the oxygen section completed with the exertional desaturation and portable-oxygen need, not a routine clearance; the held agents kept as explicit deferred restarts with owners, not silently resumed; volume and follow-up ownership left open where the chart is open; the home sliding-scale insulin de-escalated; the rest of the draft finalized faithfully.
 
@@ -223,8 +223,8 @@ Failure Design
 
 | Key Trap | Remediation |
 |---|---|
-| A background discharge-medication line silently resumes the held agents (shared world-level trap; primary here) | Keep empagliflozin, spironolactone, losartan, metformin as explicit deferred restarts assigned to nephrology and primary care, not resumed by default (07/04, 07/06; hold orders, nephrology note) |
-| Oxygen section filled with a routine clearance | Complete it with the documented exertional desaturation and the portable-oxygen requirement (07/08; respiratory therapy walk test, OT) |
+| A background discharge-medication line silently resumes the held agents (shared world-level trap; primary here) | Keep empagliflozin, spironolactone, losartan, metformin as explicit deferred restarts assigned to nephrology and primary care, not resumed by default (06/13, 06/15; hold orders, nephrology note) |
+| Oxygen section filled with a routine clearance | Complete it with the documented exertional desaturation and the portable-oxygen requirement (06/17; respiratory therapy walk test, OT) |
 | A still-open decision asserted as closed | Leave volume status and follow-up ownership open where the chart is open (full chart) |
 | Home sliding-scale insulin carried into the discharge regimen by default | De-escalate the inpatient prandial sliding scale to the home regimen the record supports (MAR, endocrine note) |
 | Draft content altered beyond the placeholders | Finalize the rest of the same-author draft faithfully (E1-T4 draft) |
@@ -237,7 +237,7 @@ Draft Prompt: I started Mrs. Lydell's transition-of-care note but left the oxyge
 
 Capability: coordination synthesis that surfaces an undelivered-equipment gap and reconciles an outside list.
 Workflow: Post-Acute Care Coordination Documentation, requested by the hospitalist attending coordinating with case management.
-Anchor: 07/12/2025 at 13:00. Priority: P0. Difficulty: medium-high. Time estimate: 25 to 35 minutes, mapping each transition item to owner, status, and next action across the equipment, intake, and home documentation.
+Anchor: 06/21/2025 at 13:00. Priority: P0. Difficulty: medium-high. Time estimate: 25 to 35 minutes, mapping each transition item to owner, status, and next action across the equipment, intake, and home documentation.
 
 Expected Output: a post-acute coordination handoff, one entry per transition item with owner, status, and next action. Format: a structured coordination handoff. Register: hospitalist and care-coordination. Length: 400 to 650 words. Correct responses surface that portable oxygen is arranged but not delivered and not teach-backed, reconcile the skilled-nursing intake medication list's duplicate anticoagulant or stale renal dose against the active record, keep each unresolved item open with a named owner and next action, and reflect the documented home and caregiver limits. Grader anchors: oxygen equipment marked not-yet-delivered and not teach-backed with an owner; the intake-list duplicate or stale anticoagulant reconciled to the active record, not coordinated forward; each item carries owner, status, and next action; home and caregiver limits reflected; no blanket "arranged" closure.
 
@@ -245,11 +245,11 @@ Failure Design
 
 | Key Trap | Remediation |
 |---|---|
-| Case-management prose says DME arranged while the vendor status leaves portable oxygen undelivered (shared world-level trap; primary here) | Mark oxygen equipment not-yet-delivered and not teach-backed, with owner and next action (07/08 to 07/09; nursing oxygen flowsheet, OT, vendor worksheet E1-T5) |
-| Skilled-nursing intake list carries a duplicate anticoagulant or a stale renal dose (shared world-level trap; primary here) | Reconcile to the active record; do not coordinate a duplicate or stale anticoagulant forward (07/12; intake list E2-T5; MAR, anticoagulation note) |
+| Case-management prose says DME arranged while the vendor status leaves portable oxygen undelivered (shared world-level trap; primary here) | Mark oxygen equipment not-yet-delivered and not teach-backed, with owner and next action (06/17 to 06/18; nursing oxygen flowsheet, OT, vendor worksheet E1-T5) |
+| Skilled-nursing intake list carries a duplicate anticoagulant or a stale renal dose (shared world-level trap; primary here) | Reconcile to the active record; do not coordinate a duplicate or stale anticoagulant forward (06/21; intake list E2-T5; MAR, anticoagulation note) |
 | Items closed prematurely | Keep each unresolved item open with owner and next action, not a blanket arranged (full chart) |
-| Home support overstated (shared world-level trap; primary in Task 7) | Reflect the stairs and the work-limited caregiver in the plan (07/09; family note, PT, OT) |
-| Oxygen-logistics teach-back assumed (shared world-level trap; primary in Task 1) | Record that setup and carry teach-back was not achieved (07/08; OT) |
+| Home support overstated (shared world-level trap; primary in Task 7) | Reflect the stairs and the work-limited caregiver in the plan (06/18; family note, PT, OT) |
+| Oxygen-logistics teach-back assumed (shared world-level trap; primary in Task 1) | Record that setup and carry teach-back was not achieved (06/17; OT) |
 
 Task-level files: E1-T5 DME Vendor and Coordination Worksheet (external); E2-T5 Skilled-Nursing Intake Medication List (external, duplicate anticoagulant or stale dose).
 
@@ -259,7 +259,7 @@ Draft Prompt: I need to get Mrs. Lydell's post-acute handoff together before she
 
 Capability: a specialist referral handoff completed as a true placeholder that routes open decisions to owners.
 Workflow: Specialist Referral Letter and Documentation Preparation, requested by the hospitalist attending.
-Anchor: 07/13/2025 at 11:00. Priority: P0. Difficulty: medium-high. Time estimate: 25 to 35 minutes, routing the diuretic, renal, potassium, anticoagulation, and restart decisions to the correct owners.
+Anchor: 06/22/2025 at 11:00. Priority: P0. Difficulty: medium-high. Time estimate: 25 to 35 minutes, routing the diuretic, renal, potassium, anticoagulation, and restart decisions to the correct owners.
 
 Expected Output: a cardiorenal follow-up referral letter completed from a started draft that routes the open decisions to cardiology, nephrology, and primary care. Format: a specialist referral letter with a follow-up routing block. Register: referral and handoff. Length: 450 to 700 words. The started letter is a true placeholder and open handoff; correct responses route diuretic titration and weight monitoring, renal labs and potassium monitoring, the held-agent restart timing, and the anticoagulation renal-dose recheck to named owners and keep each conditional item explicitly open rather than letting the letter read as a settled plan. Grader anchors: each follow-up item routed to a named owner; the held-agent restarts kept conditional and parameter-gated, not resumed; the anticoagulation renal-dose recheck routed; oxygen reassessment and renal follow-up kept owned and open; the letter does not assert a settled cardiorenal plan.
 
@@ -267,10 +267,10 @@ Failure Design
 
 | Key Trap | Remediation |
 |---|---|
-| The started letter reads as a settled plan (shared world-level trap; primary here) | Keep the handoff a true open routing; do not assert the cardiorenal plan is finalized (07/13; started letter E1-T6) |
-| Held-agent restart routed as a resume (shared world-level trap; primary in Task 4) | Route empagliflozin, spironolactone, losartan, metformin restart timing to nephrology and primary care as conditional, parameter-gated decisions (07/06; nephrology note) |
-| Anticoagulation handed off without the renal-dose recheck (shared world-level trap; primary in Task 5) | Route the apixaban renal-dose recheck to the owner and flag any outside duplicate (07/06; anticoagulation note) |
-| Volume and diuretic titration omitted | Assign torsemide titration and weight monitoring to a named owner (07/10; progress note, weights) |
+| The started letter reads as a settled plan (shared world-level trap; primary here) | Keep the handoff a true open routing; do not assert the cardiorenal plan is finalized (06/22; started letter E1-T6) |
+| Held-agent restart routed as a resume (shared world-level trap; primary in Task 4) | Route empagliflozin, spironolactone, losartan, metformin restart timing to nephrology and primary care as conditional, parameter-gated decisions (06/15; nephrology note) |
+| Anticoagulation handed off without the renal-dose recheck (shared world-level trap; primary in Task 5) | Route the apixaban renal-dose recheck to the owner and flag any outside duplicate (06/15; anticoagulation note) |
+| Volume and diuretic titration omitted | Assign torsemide titration and weight monitoring to a named owner (06/19; progress note, weights) |
 | Letter closes a follow-up ownership the chart leaves open | Keep oxygen reassessment and renal follow-up explicitly owned and open (full chart) |
 
 Task-level files: E1-T6 Started Cardiorenal Referral Letter Draft (same-author, true placeholder open handoff).
@@ -281,7 +281,7 @@ Draft Prompt: I am sending Mrs. Lydell's cardiorenal follow-up over to her cardi
 
 Capability: multi-source synthesis into a second payer appeal on a different denial basis.
 Workflow: Claims Denial Analysis and Appeal Preparation, requested by the hospitalist attending for utilization management.
-Anchor: 07/15/2025 at 10:00. Priority: P0. Difficulty: medium-high. Time estimate: 25 to 35 minutes, assembling the functional, oxygen, home, and medication-complexity case.
+Anchor: 06/24/2025 at 10:00. Priority: P0. Difficulty: medium-high. Time estimate: 25 to 35 minutes, assembling the functional, oxygen, home, and medication-complexity case.
 
 Expected Output: a physician appeal letter supporting skilled-nursing need against the plan's home-health-is-sufficient position. Format: a physician appeal letter. Register: formal physician-to-payer. Length: 450 to 700 words. Correct responses rebut the home-health-is-enough framing by synthesizing the interior stairs, the portable-oxygen burden, the functional limits, and the medication complexity (the held-agent restart judgment and the renally dosed anticoagulation), and do not over-defer to the payer. Grader anchors: the appeal integrates stairs, oxygen burden, functional limits, and medication complexity as skilled needs; exertional oxygen cited from the walk test; the treating position held against the denial; the home environment and caregiver limits kept central.
 
@@ -289,11 +289,11 @@ Failure Design
 
 | Key Trap | Remediation |
 |---|---|
-| Denial treats home health as sufficient despite the documented burden (shared world-level trap; primary here) | Rebut by integrating stairs, portable-oxygen burden, functional limits, and medication complexity (07/08 to 07/09; PT, OT, case management, family note) |
+| Denial treats home health as sufficient despite the documented burden (shared world-level trap; primary here) | Rebut by integrating stairs, portable-oxygen burden, functional limits, and medication complexity (06/17 to 06/18; PT, OT, case management, family note) |
 | Over-deference to payer authority | Hold the treating position; the denial is rebuttable (denial letter E1-T7) |
-| Exertional oxygen omitted (shared world-level trap; primary in Task 1) | Cite the exertional desaturation and portable-oxygen requirement (07/08; respiratory therapy walk test) |
-| Medication complexity understated | Cite the held-agent restart judgment and the renally dosed anticoagulation as skilled needs (07/06; nephrology, anticoagulation notes) |
-| Home environment softened | Keep the two-story home and the work-limited caregiver central (07/09; family note, case management) |
+| Exertional oxygen omitted (shared world-level trap; primary in Task 1) | Cite the exertional desaturation and portable-oxygen requirement (06/17; respiratory therapy walk test) |
+| Medication complexity understated | Cite the held-agent restart judgment and the renally dosed anticoagulation as skilled needs (06/15; nephrology, anticoagulation notes) |
+| Home environment softened | Keep the two-story home and the work-limited caregiver central (06/18; family note, case management) |
 
 Task-level files: E1-T7 Home-Health-Sufficient Denial Letter (external).
 
@@ -303,7 +303,7 @@ Draft Prompt: The plan came back saying home health is enough for Mrs. Lydell in
 
 Capability: investigation with a system-versus-individual attribution judgment.
 Workflow: Corrective Action Plan (CAP) Development and Tracking, requested by the patient safety officer.
-Anchor: 07/16/2025 at 09:00. Priority: P1. Difficulty: medium-low. Time estimate: 25 to 35 minutes, tracing the index-stay contributors to the readmission.
+Anchor: 06/25/2025 at 09:00. Priority: P1. Difficulty: medium-low. Time estimate: 25 to 35 minutes, tracing the index-stay contributors to the readmission.
 
 Expected Output: a corrective-action plan after a heart-failure readmission, with a root-cause attribution and tracked corrective actions, each with an owner and a measure. Format: a structured corrective-action plan. Register: patient-safety and quality. Length: 450 to 700 words. Correct responses attribute the bounceback to multifactorial system causes documented at the index stay (a premature transition against documented unsafety, undelivered portable oxygen, unclear held-medication restart ownership, and an unsafe home plan) rather than to patient nonadherence alone, and tie each corrective action to a documented contributor. Grader anchors: attribution is multifactorial and system-level, not single-person blame; corrective actions map to documented contributors with owners and tracking measures; the review engages the index chart rather than asserting a cause.
 
@@ -311,11 +311,11 @@ Failure Design
 
 | Key Trap | Remediation |
 |---|---|
-| The intake summary frames the readmission as patient nonadherence (shared world-level trap; primary here) | Attribute to documented system and process contributors from the index stay (07/08 to 07/10 findings; safety event intake E1-T8) |
+| The intake summary frames the readmission as patient nonadherence (shared world-level trap; primary here) | Attribute to documented system and process contributors from the index stay (06/17 to 06/19 findings; safety event intake E1-T8) |
 | Single-cause conclusion | Keep the attribution multifactorial (full chart) |
 | Corrective actions generic | Map each action to a documented contributor with an owner and a tracking measure (index findings) |
-| Undelivered portable oxygen missed as a contributor (shared world-level trap; primary in Task 5) | Include the oxygen-delivery and teach-back gap (07/08 to 07/09; OT, nursing oxygen flowsheet) |
-| Held-medication restart ownership gap missed (shared world-level trap; primary in Task 4) | Include the unclear restart ownership as a contributor (07/06; nephrology note) |
+| Undelivered portable oxygen missed as a contributor (shared world-level trap; primary in Task 5) | Include the oxygen-delivery and teach-back gap (06/17 to 06/18; OT, nursing oxygen flowsheet) |
+| Held-medication restart ownership gap missed (shared world-level trap; primary in Task 4) | Include the unclear restart ownership as a contributor (06/15; nephrology note) |
 
 Task-level files: E1-T8 Safety Event and Readmission Intake Summary (external, nonadherence-framed).
 
@@ -325,7 +325,7 @@ Draft Prompt: Mrs. Lydell bounced back within a few days of going home and I nee
 
 Capability: extraction-to-schema with a quiet open-transition disqualifier.
 Workflow: HEDIS Medical Record Chart Abstraction and Review, requested by the quality abstraction nurse for physician completion and attestation.
-Anchor: 07/17/2025 at 09:00. Priority: P0. Difficulty: medium. Time estimate: 20 to 30 minutes, abstracting the transition documentation against the measure logic.
+Anchor: 06/26/2025 at 09:00. Priority: P0. Difficulty: medium. Time estimate: 20 to 30 minutes, abstracting the transition documentation against the measure logic.
 
 Expected Output: a physician-completed and attested heart-failure transition quality abstraction, one value, exclusion, or unable-to-determine per field, signed by the attending as the abstracting reviewer. Format: a completed structured abstraction form. Register: quality-abstraction. Length: 250 to 450 words across the fields. Correct responses apply the measure logic honestly, catch that the transition-readiness and follow-up evidence is incomplete in the record and mark those fields accordingly, and do not force a numerator the documentation does not support. Grader anchors: the open-transition fields marked unable-to-determine or not-met per the record; no forced numerator; the oxygen-status field abstracted to the documented exertional desaturation, not a resting value; the follow-up and medication-reconciliation fields abstracted to what the record actually documents.
 
@@ -333,11 +333,11 @@ Failure Design
 
 | Key Trap | Remediation |
 |---|---|
-| The worksheet rewards a clean, fully closed transition (shared world-level trap; primary here) | Mark the transition-readiness and follow-up fields unable-to-determine or not-met where the record leaves them open (07/10; progress note, case management) |
+| The worksheet rewards a clean, fully closed transition (shared world-level trap; primary here) | Mark the transition-readiness and follow-up fields unable-to-determine or not-met where the record leaves them open (06/19; progress note, case management) |
 | Numerator forced | Mark unable-to-determine where the record does not support capture (abstraction fields) |
-| Oxygen-status field over-read as resolved (shared world-level trap; primary in Task 1) | Abstract the documented exertional desaturation, not a resting value (07/08; respiratory therapy walk test) |
-| Follow-up field captured without evidence | Capture only the documented, owned follow-up, not an assumed one (07/10; transition documentation) |
-| Medication-reconciliation field flattened | Abstract the held-agent restart status as documented, not as completed (07/06; nephrology note) |
+| Oxygen-status field over-read as resolved (shared world-level trap; primary in Task 1) | Abstract the documented exertional desaturation, not a resting value (06/17; respiratory therapy walk test) |
+| Follow-up field captured without evidence | Capture only the documented, owned follow-up, not an assumed one (06/19; transition documentation) |
+| Medication-reconciliation field flattened | Abstract the held-agent restart status as documented, not as completed (06/15; nephrology note) |
 
 Task-level files: E1-T9 Heart-Failure Transition Abstraction Worksheet (external).
 
@@ -347,7 +347,7 @@ Draft Prompt: Please complete the heart-failure transition measure abstraction o
 
 Capability: documentation-integrity judgment, reasoned clinical decline in the treating voice.
 Workflow: Clinical Documentation Improvement (CDI) Query Response Review, requested by the CDI specialist.
-Anchor: 07/17/2025 at 12:00. Priority: P0. Difficulty: medium-high. Time estimate: 20 to 30 minutes, weighing the documented respiratory and cardiorenal picture against the query items.
+Anchor: 06/26/2025 at 12:00. Priority: P0. Difficulty: medium-high. Time estimate: 20 to 30 minutes, weighing the documented respiratory and cardiorenal picture against the query items.
 
 Expected Output: an attending response to a CDI query set, one reasoned answer per item, agreeing where the record supports it and declining on clinical grounds where it does not. Format: an item-by-item attending query response. Register: treating attending. Length: 350 to 600 words. Correct responses decline to add an over-specific acute respiratory failure or a coding-forward cardiorenal-syndrome label that the treating record does not establish, engage the indicators rather than restating their absence, anchor the reasoning on the team's own documentation, and accept any genuinely supported clarification. Grader anchors: the higher-specificity respiratory failure declined on clinical grounds with reasoning, not a bare or procedural decline; the cardiorenal-syndrome severity label declined where unsupported; supported items such as documented HFpEF acuity answered; no agreement to unsupported severity language.
 
@@ -355,9 +355,9 @@ Failure Design
 
 | Key Trap | Remediation |
 |---|---|
-| The query presses acute respiratory failure specificity (shared world-level trap; primary here) | Decline on clinical grounds; the record documents hypoxemia with exertional desaturation on low-flow oxygen, not a signed acute respiratory failure (07/04 to 07/08; ED note, respiratory therapy walk test, pulmonology note) |
-| Bare or procedural decline | Give the clinical reasoning, why the documented picture fits and the higher-specificity label is not established (07/04 to 07/08) |
-| The query presses a coding-forward cardiorenal-syndrome severity label | Decline where the treating record frames a cardiorenal AKI without that specificity (07/06; nephrology note) |
+| The query presses acute respiratory failure specificity (shared world-level trap; primary here) | Decline on clinical grounds; the record documents hypoxemia with exertional desaturation on low-flow oxygen, not a signed acute respiratory failure (06/13 to 06/17; ED note, respiratory therapy walk test, pulmonology note) |
+| Bare or procedural decline | Give the clinical reasoning, why the documented picture fits and the higher-specificity label is not established (06/13 to 06/17) |
+| The query presses a coding-forward cardiorenal-syndrome severity label | Decline where the treating record frames a cardiorenal AKI without that specificity (06/15; nephrology note) |
 | Over-correction, declining a supported item | Accept genuinely supported clarifications, such as the documented HFpEF acuity (full chart) |
 | Severity-capture framing accepted | Treat the reflect-full-severity language as not a license to add an unsupported diagnosis (query memo E1-T10) |
 
@@ -373,63 +373,63 @@ Files are designed after the tasks; each essential file exists because a task ne
 
 | # | ID | Filename.type | Date | Reference File Origin | Description | Pearls, Traps, and Friction |
 |---|---|---|---|---|---|---|
-| 1 | EW1 | ed_physician_note_07042025.docx | 07/04/2025 / HD1 | Databank Template: DB_ED_Physician_Note.docx | ED presentation: dyspnea, edema, weight 7 kg over dry, resting SpO2 88 percent on room air, creatinine 2.6 over CKD baseline; acute decompensated HFpEF with cardiorenal AKI; diuresis and oxygen started | Index event and AKI on CKD; admission renal, weight, and resting-saturation values that later tasks must not carry forward as baseline or as the resolved state |
-| 2 | EW2 | admission_hp_07042025.docx | 07/04/2025 / HD1 | Databank Template: DB_Admission_HP.docx | Admission history and physical, full comorbidity profile, home medications, the holds of empagliflozin, spironolactone, losartan, metformin | Held-agent restart substrate; ACE-angioedema and ARB rationale; baseline functional limits |
-| 3 | EW3 | hospitalist_progress_hd2_07052025.docx | 07/05/2025 / HD2 | Databank Template: DB_Progress_Note_Inpatient.docx | Hospital day 2 progress note, early diuresis, decongestion plan | Improving-markers narrative begins; no disposition conclusion |
-| 4 | EW4 | hospitalist_progress_hd4_07072025.docx | 07/07/2025 / HD4 | Databank Template: DB_Progress_Note_Inpatient.docx | Hospital day 4 progress note, continued diuresis, oxygen question raised | Carries the oxygen-open thread without resolving it |
-| 5 | EW5 | hospitalist_progress_hd6_07092025.docx | 07/09/2025 / HD6 | Databank Template: DB_Progress_Note_Inpatient.docx | Hospital day 6 progress note, disposition screening underway, still on oxygen with activity | Improving but not safe; no closure |
-| 6 | EW6 | hospitalist_progress_hd7_07102025.docx | 07/10/2025 / HD7 (snapshot) | Databank Template: DB_Progress_Note_Inpatient.docx | Hospital day 7 snapshot note, weight down about 5 kg, creatinine 1.9, resting saturation acceptable, exertional desaturation persists | The exact improving-but-unsafe tension; no closure |
-| 7 | EW7 | cardiology_consult_note_07052025.docx | 07/05/2025 / HD2 | Databank Template: DB_Specialty_Consult.docx | Cardiology HFpEF consult, echo correlation, decongest and protect the kidney, guideline therapy restart caution | HFpEF confirmation; restart-caution substrate; cardiology-versus-nephrology friction |
-| 8 | EW8 | nephrology_consult_note_07062025.docx | 07/06/2025 / HD3 | Databank Template: DB_Specialty_Consult.docx | Nephrology consult, cardiorenal AKI, RAAS and mineralocorticoid antagonist held for potassium and creatinine, restart timing framed as a careful judgment | The deferred-restart anchor; held-agent substrate; cardiology-versus-nephrology friction |
-| 9 | EW9 | pulmonology_consult_note_07072025.docx | 07/07/2025 / HD4 | Databank Template: DB_Specialty_Consult.docx | Pulmonology consult, COPD contribution to dyspnea, asks respiratory therapy to characterize oxygen needs | Dyspnea-attribution; sets up the oxygen testing; respiratory restraint substrate |
-| 10 | EW10 | respiratory_therapy_walk_test_07082025.docx | 07/08/2025 / HD5 | Custom Made: Custom_Respiratory_Therapy_Oxygen_Titration_Template.docx | Respiratory therapy oxygen titration and six-minute walk test: acceptable resting saturation, exertional desaturation into the low 80s corrected only with portable oxygen | The central buried finding, resting versus exertional oxygen, off-text from routine vitals; primary substrate for Tasks 1, 3, 7, 9, 10 |
-| 11 | EW11 | pt_evaluation_07082025.docx | 07/08/2025 / HD5 | Databank Template: DB_PT_Evaluation.docx | Physical therapy evaluation, gait, stairs not safe, exertional intolerance, endurance | Stairs and functional tolerance central to disposition; safety-review substrate |
-| 12 | EW12 | ot_evaluation_07082025.docx | 07/08/2025 / HD5 | Databank Template: DB_OT_Evaluation.docx | Occupational therapy evaluation, ADLs, oxygen setup and carry teach-back not achieved, energy conservation | Teach-back failure; oxygen-logistics substrate |
-| 13 | EW13 | case_management_note_07092025.docx | 07/09/2025 / HD6 | Databank Template: DB_Case_Management_Note.docx | Case management screen, two-story home, work-limited daughter, durable medical equipment pending, disposition barriers | Home and caregiver limits; the DME arranged-versus-delivered substrate |
-| 14 | EW14 | mar_07042025_07102025.docx | 07/04-07/10/2025 / HD1-HD7 | Custom Made: Custom_MAR_Flowsheet_Template.docx | Medication administration record across the stay, diuretic, insulin, the held agents, anticoagulation | The administered-truth source for reconciliation; held-agent and anticoagulation substrate |
-| 15 | EW15 | renal_lab_trend_07042025.docx | 07/04-07/10/2025 / HD1-HD7 | Custom Made: Custom_Lab_Trend_Flowsheet_Template.docx | Renal flowsheet, creatinine, eGFR, potassium from admission (2.6) through snapshot (1.9), baseline 1.7 | Current-versus-admission renal dosing; restart-timing substrate |
-| 16 | EW16 | cardiac_biomarker_trend_07042025.docx | 07/04-07/10/2025 / HD1-HD7 | Custom Made: Custom_Lab_Trend_Flowsheet_Template.docx | Natriuretic peptide and basic cardiac marker trend, falling with decongestion | The improving markers the payer over-reads |
-| 17 | EW17 | daily_weights_io_flowsheet_07042025.docx | 07/04-07/10/2025 / HD1-HD7 | Custom Made: Custom_Weights_IO_Flowsheet_Template.docx | Daily weights and intake and output, from 7 kg over dry toward 2 kg over dry | Volume trend; volume-versus-readiness substrate |
-| 18 | EW18 | vital_signs_flowsheet_07042025.docx | 07/04-07/10/2025 / HD1-HD7 | Custom Made: Custom_Vital_Signs_Flowsheet_Template.docx | Vitals across the stay, resting saturation improving to acceptable at rest on low-flow oxygen | The reassuring resting saturation the model over-reads; contrast with the walk test |
-| 19 | EW19 | echocardiogram_report_07052025.docx | 07/05/2025 / HD2 | Databank Template: DB_Diagnostic_Report.docx | Inpatient echocardiogram report, preserved ejection fraction 60 percent, grade II diastolic dysfunction | HFpEF confirmation |
-| 20 | EW20 | chest_xray_report_07042025.docx | 07/04/2025 / HD1 | Databank Template: DB_Radiology_Report.docx | Chest radiograph report, pulmonary congestion and small effusions on admission | Congestion evidence at admission |
-| 21 | EW21 | ecg_report_07042025.docx | 07/04/2025 / HD1 | Databank Template: DB_Diagnostic_Report.docx | Twelve-lead ECG report, atrial fibrillation, rate-controlled | Atrial fibrillation documentation; rate-control substrate |
-| 22 | EW22 | afib_rhythm_strip_07062025.jpg | 07/06/2025 / HD3 | Writer-produced: afib_rhythm_strip_07062025.jpg | Telemetry rhythm strip, atrial fibrillation, irregularly irregular and rate-controlled, machine fields only with no printed interpretation | Off-text rhythm substrate consistent with EW21; supports, never the sole scored trap; rendered authored image, license-clean, engineering does not convert |
-| 23 | EW23 | home_medication_list_07042025.docx | 07/04/2025 / HD1 | Databank Template: DB_EMR_Medication_List.docx | EMR pre-admission home medication list with dose, route, frequency, indication | The before-state for reconciliation; ARB-not-ACE rationale |
-| 24 | EW24 | medication_hold_orders_07042025.docx | 07/04/2025 / HD1 | Custom Made: Custom_Order_Set_Template.docx | Signed admission hold orders for empagliflozin, spironolactone, losartan, metformin with reasons | Makes the holds explicit decisions, not silent gaps |
-| 25 | EW25 | anticoagulation_renal_dosing_note_07062025.docx | 07/06/2025 / HD3 | Databank Template: DB_Pharmacy_Note.docx | Pharmacy anticoagulation note, apixaban dose reviewed against current renal function, single agent, no duplication | Renal anticoagulation dosing; the duplicate-anticoagulant substrate the outside and intake lists will conflict with |
-| 26 | EW26 | endocrine_glycemic_note_07072025.docx | 07/07/2025 / HD4 | Databank Template: DB_Specialty_Consult.docx | Endocrine glycemic note, basal insulin continued, metformin held, the prandial sliding scale inpatient only | Insulin continuity; sliding-scale de-escalation substrate |
-| 27 | EW27 | nursing_oxygen_use_flowsheet_07092025.docx | 07/09/2025 / HD6 | Custom Made: Custom_Nursing_Flowsheet_Template.docx | Nursing flowsheet, home-oxygen use, ambulation saturation with activity, portable-oxygen setup attempts | Off-text oxygen-with-activity evidence and the equipment and teach-back contributors |
-| 28 | EW28 | outpatient_summary_06202025.docx | 06/20/2025 / pre-admission | Databank Template: DB_Office_Visit_Note.docx | Pre-admission cardiology and primary care summary: baseline creatinine 1.7 and eGFR about 30, baseline hemoglobin 10.0, dry weight about 88 kg, home oxygen 2 L nocturnal and exertional, baseline function | The quiet baselines; the comparators the model must use over admission or discharge values |
-| 29 | EW29 | prior_echocardiogram_report_06222025.docx | 06/22/2025 / pre-admission | Databank Template: DB_Diagnostic_Report.docx | Prior outpatient echocardiogram, preserved ejection fraction, grade II diastolic dysfunction | Baseline cardiac comparator; HFpEF chronicity |
-| 30 | EW30 | family_communication_note_07092025.docx | 07/09/2025 / HD6 | Databank Template: DB_Progress_Note_Inpatient.docx | Family meeting with the daughter, willingness within work-schedule limits, two-story home | Caregiver limits and home realism for the appeals |
-| 31 | EW31 | social_work_sdoh_note_07092025.docx | 07/09/2025 / HD6 | Databank Template: DB_Social_Work_Note.docx | Social work note, home environment, stairs, transportation, support resources | Home-environment substrate; SDOH context, never the scored trap itself |
-| 32 | EW32 | telemetry_summary_07082025.docx | 07/06-07/08/2025 / HD3-HD5 | Custom Made: Custom_Telemetry_Summary_Template.docx | Telemetry summary, rate-controlled atrial fibrillation across the monitored days | Rate-control documentation; supports EW21 and EW22 |
+| 1 | EW1 | ed_physician_note_06132025.docx | 06/13/2025 / HD1 | Databank Template: DB_ED_Physician_Note.docx | ED presentation: dyspnea, edema, weight 7 kg over dry, resting SpO2 88 percent on room air, creatinine 2.6 over CKD baseline; acute decompensated HFpEF with cardiorenal AKI; diuresis and oxygen started | Index event and AKI on CKD; admission renal, weight, and resting-saturation values that later tasks must not carry forward as baseline or as the resolved state |
+| 2 | EW2 | admission_hp_06132025.docx | 06/13/2025 / HD1 | Databank Template: DB_Admission_HP.docx | Admission history and physical, full comorbidity profile, home medications, the holds of empagliflozin, spironolactone, losartan, metformin | Held-agent restart substrate; ACE-angioedema and ARB rationale; baseline functional limits |
+| 3 | EW3 | hospitalist_progress_hd2_06142025.docx | 06/14/2025 / HD2 | Databank Template: DB_Progress_Note_Inpatient.docx | Hospital day 2 progress note, early diuresis, decongestion plan | Improving-markers narrative begins; no disposition conclusion |
+| 4 | EW4 | hospitalist_progress_hd4_06162025.docx | 06/16/2025 / HD4 | Databank Template: DB_Progress_Note_Inpatient.docx | Hospital day 4 progress note, continued diuresis, oxygen question raised | Carries the oxygen-open thread without resolving it |
+| 5 | EW5 | hospitalist_progress_hd6_06182025.docx | 06/18/2025 / HD6 | Databank Template: DB_Progress_Note_Inpatient.docx | Hospital day 6 progress note, disposition screening underway, still on oxygen with activity | Improving but not safe; no closure |
+| 6 | EW6 | hospitalist_progress_hd7_06192025.docx | 06/19/2025 / HD7 (snapshot) | Databank Template: DB_Progress_Note_Inpatient.docx | Hospital day 7 snapshot note, weight down about 5 kg, creatinine 1.9, resting saturation acceptable, exertional desaturation persists | The exact improving-but-unsafe tension; no closure |
+| 7 | EW7 | cardiology_consult_note_06142025.docx | 06/14/2025 / HD2 | Databank Template: DB_Specialty_Consult.docx | Cardiology HFpEF consult, echo correlation, decongest and protect the kidney, guideline therapy restart caution | HFpEF confirmation; restart-caution substrate; cardiology-versus-nephrology friction |
+| 8 | EW8 | nephrology_consult_note_06152025.docx | 06/15/2025 / HD3 | Databank Template: DB_Specialty_Consult.docx | Nephrology consult, cardiorenal AKI, RAAS and mineralocorticoid antagonist held for potassium and creatinine, restart timing framed as a careful judgment | The deferred-restart anchor; held-agent substrate; cardiology-versus-nephrology friction |
+| 9 | EW9 | pulmonology_consult_note_06162025.docx | 06/16/2025 / HD4 | Databank Template: DB_Specialty_Consult.docx | Pulmonology consult, COPD contribution to dyspnea, asks respiratory therapy to characterize oxygen needs | Dyspnea-attribution; sets up the oxygen testing; respiratory restraint substrate |
+| 10 | EW10 | respiratory_therapy_walk_test_06172025.docx | 06/17/2025 / HD5 | Custom Made: Custom_Respiratory_Therapy_Oxygen_Titration_Template.docx | Respiratory therapy oxygen titration and six-minute walk test: acceptable resting saturation, exertional desaturation into the low 80s corrected only with portable oxygen | The central buried finding, resting versus exertional oxygen, off-text from routine vitals; primary substrate for Tasks 1, 3, 7, 9, 10 |
+| 11 | EW11 | pt_evaluation_06172025.docx | 06/17/2025 / HD5 | Databank Template: DB_PT_Evaluation.docx | Physical therapy evaluation, gait, stairs not safe, exertional intolerance, endurance | Stairs and functional tolerance central to disposition; safety-review substrate |
+| 12 | EW12 | ot_evaluation_06172025.docx | 06/17/2025 / HD5 | Databank Template: DB_OT_Evaluation.docx | Occupational therapy evaluation, ADLs, oxygen setup and carry teach-back not achieved, energy conservation | Teach-back failure; oxygen-logistics substrate |
+| 13 | EW13 | case_management_note_06182025.docx | 06/18/2025 / HD6 | Databank Template: DB_Case_Management_Note.docx | Case management screen, two-story home, work-limited daughter, durable medical equipment pending, disposition barriers | Home and caregiver limits; the DME arranged-versus-delivered substrate |
+| 14 | EW14 | mar_06132025_06192025.docx | 06/13-06/19/2025 / HD1-HD7 | Custom Made: Custom_MAR_Flowsheet_Template.docx | Medication administration record across the stay, diuretic, insulin, the held agents, anticoagulation | The administered-truth source for reconciliation; held-agent and anticoagulation substrate |
+| 15 | EW15 | renal_lab_trend_06132025.docx | 06/13-06/19/2025 / HD1-HD7 | Custom Made: Custom_Lab_Trend_Flowsheet_Template.docx | Renal flowsheet, creatinine, eGFR, potassium from admission (2.6) through snapshot (1.9), baseline 1.7 | Current-versus-admission renal dosing; restart-timing substrate |
+| 16 | EW16 | cardiac_biomarker_trend_06132025.docx | 06/13-06/19/2025 / HD1-HD7 | Custom Made: Custom_Lab_Trend_Flowsheet_Template.docx | Natriuretic peptide and basic cardiac marker trend, falling with decongestion | The improving markers the payer over-reads |
+| 17 | EW17 | daily_weights_io_flowsheet_06132025.docx | 06/13-06/19/2025 / HD1-HD7 | Custom Made: Custom_Weights_IO_Flowsheet_Template.docx | Daily weights and intake and output, from 7 kg over dry toward 2 kg over dry | Volume trend; volume-versus-readiness substrate |
+| 18 | EW18 | vital_signs_flowsheet_06132025.docx | 06/13-06/19/2025 / HD1-HD7 | Custom Made: Custom_Vital_Signs_Flowsheet_Template.docx | Vitals across the stay, resting saturation improving to acceptable at rest on low-flow oxygen | The reassuring resting saturation the model over-reads; contrast with the walk test |
+| 19 | EW19 | echocardiogram_report_06142025.docx | 06/14/2025 / HD2 | Databank Template: DB_Diagnostic_Report.docx | Inpatient echocardiogram report, preserved ejection fraction 60 percent, grade II diastolic dysfunction | HFpEF confirmation |
+| 20 | EW20 | chest_xray_report_06132025.docx | 06/13/2025 / HD1 | Databank Template: DB_Radiology_Report.docx | Chest radiograph report, pulmonary congestion and small effusions on admission | Congestion evidence at admission |
+| 21 | EW21 | ecg_report_06132025.docx | 06/13/2025 / HD1 | Databank Template: DB_Diagnostic_Report.docx | Twelve-lead ECG report, atrial fibrillation, rate-controlled | Atrial fibrillation documentation; rate-control substrate |
+| 22 | EW22 | afib_rhythm_strip_06152025.jpg | 06/15/2025 / HD3 | Writer-produced: afib_rhythm_strip_06152025.jpg | Telemetry rhythm strip, atrial fibrillation, irregularly irregular and rate-controlled, machine fields only with no printed interpretation | Off-text rhythm substrate consistent with EW21; supports, never the sole scored trap; rendered authored image, license-clean, engineering does not convert |
+| 23 | EW23 | home_medication_list_06132025.docx | 06/13/2025 / HD1 | Databank Template: DB_EMR_Medication_List.docx | EMR pre-admission home medication list with dose, route, frequency, indication | The before-state for reconciliation; ARB-not-ACE rationale |
+| 24 | EW24 | medication_hold_orders_06132025.docx | 06/13/2025 / HD1 | Custom Made: Custom_Order_Set_Template.docx | Signed admission hold orders for empagliflozin, spironolactone, losartan, metformin with reasons | Makes the holds explicit decisions, not silent gaps |
+| 25 | EW25 | anticoagulation_renal_dosing_note_06152025.docx | 06/15/2025 / HD3 | Databank Template: DB_Pharmacy_Note.docx | Pharmacy anticoagulation note, apixaban dose reviewed against current renal function, single agent, no duplication | Renal anticoagulation dosing; the duplicate-anticoagulant substrate the outside and intake lists will conflict with |
+| 26 | EW26 | endocrine_glycemic_note_06162025.docx | 06/16/2025 / HD4 | Databank Template: DB_Specialty_Consult.docx | Endocrine glycemic note, basal insulin continued, metformin held, the prandial sliding scale inpatient only | Insulin continuity; sliding-scale de-escalation substrate |
+| 27 | EW27 | nursing_oxygen_use_flowsheet_06182025.docx | 06/18/2025 / HD6 | Custom Made: Custom_Nursing_Flowsheet_Template.docx | Nursing flowsheet, home-oxygen use, ambulation saturation with activity, portable-oxygen setup attempts | Off-text oxygen-with-activity evidence and the equipment and teach-back contributors |
+| 28 | EW28 | outpatient_summary_05302025.docx | 05/30/2025 / pre-admission | Databank Template: DB_Office_Visit_Note.docx | Pre-admission cardiology and primary care summary: baseline creatinine 1.7 and eGFR about 30, baseline hemoglobin 10.0, dry weight about 88 kg, home oxygen 2 L nocturnal and exertional, baseline function | The quiet baselines; the comparators the model must use over admission or discharge values |
+| 29 | EW29 | prior_echocardiogram_report_06012025.docx | 06/01/2025 / pre-admission | Databank Template: DB_Diagnostic_Report.docx | Prior outpatient echocardiogram, preserved ejection fraction, grade II diastolic dysfunction | Baseline cardiac comparator; HFpEF chronicity |
+| 30 | EW30 | family_communication_note_06182025.docx | 06/18/2025 / HD6 | Databank Template: DB_Progress_Note_Inpatient.docx | Family meeting with the daughter, willingness within work-schedule limits, two-story home | Caregiver limits and home realism for the appeals |
+| 31 | EW31 | social_work_sdoh_note_06182025.docx | 06/18/2025 / HD6 | Databank Template: DB_Social_Work_Note.docx | Social work note, home environment, stairs, transportation, support resources | Home-environment substrate; SDOH context, never the scored trap itself |
+| 32 | EW32 | telemetry_summary_06172025.docx | 06/15-06/17/2025 / HD3-HD5 | Custom Made: Custom_Telemetry_Summary_Template.docx | Telemetry summary, rate-controlled atrial fibrillation across the monitored days | Rate-control documentation; supports EW21 and EW22 |
 
 ## 3.2 Essential Files (Task-Level)
 
 | # | ID | Filename.type | Date | Reference File Origin | Description | Pearls, Traps, and Friction |
 |---|---|---|---|---|---|---|
-| 1 | E1-T1 | oxygen_snf_denial_letter_07112025.docx | 07/11/2025 | Custom Made: Custom_Payer_Denial_Letter_Template.docx | External payer denial of the skilled-nursing stay and the home-oxygen upgrade, framing the acceptable resting saturation and diuresis as home readiness | Task 1 |
-| 2 | E1-T2 | outside_medication_list_07112025.docx | 07/11/2025 | Custom Made: Custom_Outside_Medication_List_Template.docx | External outside pharmacy and transfer medication list carrying a stale renal dose and a held agent shown as continued | Task 2 |
-| 3 | E1-T3 | continued_stay_review_worksheet_07112025.docx | 07/11/2025 | Custom Made: Custom_Utilization_Review_Worksheet_Template.docx | External continued-stay worksheet treating post-diuresis improvement as readiness | Task 3 |
-| 4 | E1-T4 | started_transition_note_draft_07122025.docx | 07/12/2025 | Custom Made: Custom_Transition_Note_Template.docx | Same-author started transition note, complete except true placeholders on oxygen, fluid status, and follow-up ownership, with a reassuring background discharge-medication line | Task 4 |
-| 5 | E1-T5 | dme_vendor_coordination_worksheet_07122025.docx | 07/12/2025 | Custom Made: Custom_Care_Coordination_Worksheet_Template.docx | External durable medical equipment and case-management worksheet, oxygen described as arranged while the portable unit is not delivered | Task 5 |
-| 6 | E2-T5 | snf_intake_medication_list_07122025.docx | 07/12/2025 | Custom Made: Custom_SNF_Intake_Medication_List_Template.docx | External skilled-nursing intake medication list carrying a duplicate anticoagulant or a stale renal dose | Task 5 |
-| 7 | E1-T6 | started_cardiorenal_referral_letter_draft_07132025.docx | 07/13/2025 | Custom Made: Custom_Referral_Letter_Template.docx | Same-author started cardiorenal referral letter, a true placeholder open handoff with the plan sections left open | Task 6 |
-| 8 | E1-T7 | home_health_sufficient_denial_letter_07152025.docx | 07/15/2025 | Custom Made: Custom_Payer_Denial_Letter_Template.docx | External denial framing home health as sufficient instead of a skilled-nursing stay | Task 7 |
-| 9 | E1-T8 | safety_event_readmission_intake_07162025.docx | 07/16/2025 | Custom Made: Custom_Safety_Event_Intake_Template.docx | External safety-event intake describing the heart-failure readmission, framed as patient nonadherence | Task 8 |
-| 10 | E1-T9 | hf_transition_abstraction_worksheet_07172025.docx | 07/17/2025 | Custom Made: Custom_Quality_Abstraction_Worksheet_Template.docx | External heart-failure transition measure abstraction form, fields to value, exclude, or mark undetermined | Task 9 |
-| 11 | E1-T10 | cdi_query_memo_07172025.docx | 07/17/2025 | Custom Made: Custom_CDI_Query_Memo_Template.docx | External CDI query pressing acute respiratory failure specificity and a cardiorenal-syndrome severity label | Task 10 |
+| 1 | E1-T1 | oxygen_snf_denial_letter_06202025.docx | 06/20/2025 | Custom Made: Custom_Payer_Denial_Letter_Template.docx | External payer denial of the skilled-nursing stay and the home-oxygen upgrade, framing the acceptable resting saturation and diuresis as home readiness | Task 1 |
+| 2 | E1-T2 | outside_medication_list_06202025.docx | 06/20/2025 | Custom Made: Custom_Outside_Medication_List_Template.docx | External outside pharmacy and transfer medication list carrying a stale renal dose and a held agent shown as continued | Task 2 |
+| 3 | E1-T3 | continued_stay_review_worksheet_06202025.docx | 06/20/2025 | Custom Made: Custom_Utilization_Review_Worksheet_Template.docx | External continued-stay worksheet treating post-diuresis improvement as readiness | Task 3 |
+| 4 | E1-T4 | started_transition_note_draft_06212025.docx | 06/21/2025 | Custom Made: Custom_Transition_Note_Template.docx | Same-author started transition note, complete except true placeholders on oxygen, fluid status, and follow-up ownership, with a reassuring background discharge-medication line | Task 4 |
+| 5 | E1-T5 | dme_vendor_coordination_worksheet_06212025.docx | 06/21/2025 | Custom Made: Custom_Care_Coordination_Worksheet_Template.docx | External durable medical equipment and case-management worksheet, oxygen described as arranged while the portable unit is not delivered | Task 5 |
+| 6 | E2-T5 | snf_intake_medication_list_06212025.docx | 06/21/2025 | Custom Made: Custom_SNF_Intake_Medication_List_Template.docx | External skilled-nursing intake medication list carrying a duplicate anticoagulant or a stale renal dose | Task 5 |
+| 7 | E1-T6 | started_cardiorenal_referral_letter_draft_06222025.docx | 06/22/2025 | Custom Made: Custom_Referral_Letter_Template.docx | Same-author started cardiorenal referral letter, a true placeholder open handoff with the plan sections left open | Task 6 |
+| 8 | E1-T7 | home_health_sufficient_denial_letter_06242025.docx | 06/24/2025 | Custom Made: Custom_Payer_Denial_Letter_Template.docx | External denial framing home health as sufficient instead of a skilled-nursing stay | Task 7 |
+| 9 | E1-T8 | safety_event_readmission_intake_06252025.docx | 06/25/2025 | Custom Made: Custom_Safety_Event_Intake_Template.docx | External safety-event intake describing the heart-failure readmission, framed as patient nonadherence | Task 8 |
+| 10 | E1-T9 | hf_transition_abstraction_worksheet_06262025.docx | 06/26/2025 | Custom Made: Custom_Quality_Abstraction_Worksheet_Template.docx | External heart-failure transition measure abstraction form, fields to value, exclude, or mark undetermined | Task 9 |
+| 11 | E1-T10 | cdi_query_memo_06262025.docx | 06/26/2025 | Custom Made: Custom_CDI_Query_Memo_Template.docx | External CDI query pressing acute respiratory failure specificity and a cardiorenal-syndrome severity label | Task 10 |
 
 ## 3.3 Supplementary Files
 
 | # | ID | Filename.type | Date | Reference File Origin | Description | Pearls, Traps, and Friction |
 |---|---|---|---|---|---|---|
-| 1 | WS1 | heart_failure_education_handout_07102025.docx | 07/10/2025 / HD7 | Custom Made: Custom_Patient_Education_Handout_Template.docx | Generic heart-failure self-care education handout | Removing it changes no medication, appeal, coordination, or determination answer |
-| 2 | WS2 | discharge_rights_notice_07102025.pdf | 07/10/2025 / HD7 | Public Domain: CMS_Important_Message_From_Medicare_Blank.pdf (CMS) | Standard Medicare discharge and appeal-rights notice, generic | Removing it changes no correct answer |
-| 3 | WS3 | nursing_shift_narrative_07072025.docx | 07/07/2025 / HD4 | Databank Template: DB_Nursing_Note.docx | Generic shift narratives, turns, intake, family at bedside, no load-bearing fact | Removing it changes no correct answer |
-| 4 | WS4 | hospital_admission_consent_07042025.pdf | 07/04/2025 / HD1 | Public Domain: Hospital_General_Consent_Blank.pdf | Generic hospital admission consent and paperwork | Removing it changes no correct answer |
+| 1 | WS1 | heart_failure_education_handout_06192025.docx | 06/19/2025 / HD7 | Custom Made: Custom_Patient_Education_Handout_Template.docx | Generic heart-failure self-care education handout | Removing it changes no medication, appeal, coordination, or determination answer |
+| 2 | WS2 | discharge_rights_notice_06192025.pdf | 06/19/2025 / HD7 | Public Domain: CMS_Important_Message_From_Medicare_Blank.pdf (CMS) | Standard Medicare discharge and appeal-rights notice, generic | Removing it changes no correct answer |
+| 3 | WS3 | nursing_shift_narrative_06162025.docx | 06/16/2025 / HD4 | Databank Template: DB_Nursing_Note.docx | Generic shift narratives, turns, intake, family at bedside, no load-bearing fact | Removing it changes no correct answer |
+| 4 | WS4 | hospital_admission_consent_06132025.pdf | 06/13/2025 / HD1 | Public Domain: Hospital_General_Consent_Blank.pdf | Generic hospital admission consent and paperwork | Removing it changes no correct answer |
 
 Total file count: 32 essential world-level (EW1 to EW32) plus 11 essential task-level plus 4 supplementary world-level equals 47 unique files. World-level files total 36 (32 essential plus 4 supplementary), which meets the 30-file minimum. Modalities span clinical notes, specialty consults, radiology and diagnostic reports, laboratory and flowsheet data, medication records, external correspondence and worksheets, and one rhythm-strip image, which is at least four distinct types. Essential-to-supplementary mix is about 89 percent essential at world level. Origins: most clinical notes map to DataBank templates, flowsheets and worksheets are custom-made templates, two notices are public-domain forms, and one rhythm strip (EW22) is the single writer-produced media file.
 
