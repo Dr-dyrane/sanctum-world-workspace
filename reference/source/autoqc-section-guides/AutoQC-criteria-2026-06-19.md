@@ -57,6 +57,17 @@ The task AutoQC tightened substantially in mid-June 2026; it now runs a full pro
 - Grader guidelines explaining concepts (no concept-teaching; state what to assess)
 - Word counts in grader guidelines (no word-count instructions; keep ~1 page)
 
+## Trajectory AutoQC (the second QC layer, captured 2026-06-19)
+Separate from the task AutoQC above, the Trajectory AutoQC runs on the completed trajectory batch (the ten runs and their grading), at the Trajectories stage. Its criteria seen so far:
+- Compliance with Output Constraints
+- Grading Accuracy: Score Reflects Performance
+- Infrastructure Integrity: No Env Contamination
+- No Solution Leakage Detected
+- Task Design Quality: Tests Intended Capability
+- Appropriate Severity Calibration
+
+ADVERSARIAL-TASK NOTE (important). "Compliance with Output Constraints" will flag a FLOOR trajectory, the run where the model fails the deliverable, as a constraint violation. For a difficulty task that is the intended capture, not a defect: the model not finalizing is the measured failure, and the grader scores it low. Do NOT re-run a correctly-graded floor. Justify it in the Notes field: it is the task's designed failure mode, the grader confirms it, and other trajectories reach the constraint and score high, so the constraint is reachable. Paste-ready justification in docs/qc-dispositions.md.
+
 ## What we already guard locally (docs/qc-error-class-register.md)
 - Grader guideline boilerplate -> BANNED_BOILERPLATE list in presubmit + verify_ondina.
 - Filename match / Task overview matches prompt / cross-task contamination -> presubmit prints a per-task Studio FIELD MAP and flags a grader naming a golden absent from its dir.
