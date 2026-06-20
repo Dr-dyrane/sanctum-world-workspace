@@ -16,8 +16,6 @@ Letter structure may vary. The table may carry extra accurate rows. Wording diff
 
 Section C. Patterns to reason about
 
-These are patterns to reason about, not items to tick off.
-
 A pleasant narrative that implies the case is settled. Writing perfusion as resolved. Omitting or collapsing the disposition table. Overstating the offloading status. Misstating the antibiotic course. The central failure to watch for is a narrative that closes perfusion or other open items the table should keep open.
 
 Correct restraint, to credit not penalize. Keeping a genuinely open item (perfusion, osteomyelitis, a pending arrangement, or a deferred restart) open or routed to the right owner, rather than forcing a false resolution, is correct and should be credited not docked.

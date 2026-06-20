@@ -16,8 +16,6 @@ Wording, section order, and format may vary. The finding may be expressed as a l
 
 Section C. Patterns to reason about
 
-These are patterns to reason about, not items to tick off.
-
 Missing the line-site infection is the central failure and caps the score low however complete the rest of the note is. The finding is off-text: it must be assembled from the three transfer-day signals. Affirmatively dismissing the line ("no line complication documented") or sending the patient on it as-is is the miss; noting the temperature alone without connecting it to the line is not a catch.
 
 Identifying the line but not acting on it (no inspection, hold, or culture; transferring on it as-is) is incomplete and caps below midline.

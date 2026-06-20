@@ -16,8 +16,6 @@ Line-by-line or short-table format is acceptable. Exact code characters and fina
 
 Section C. Patterns to reason about
 
-These are patterns to reason about, not items to tick off.
-
 Over-attesting the debridement depth as muscle, fascia, tendon, or bone, or using the depth to support an unsupported surgical severity tier or DRG. Attesting acute blood loss anemia for a stable chronic anemia of chronic kidney disease. Selecting the pressure-injury family for this neuropathic and ischemic diabetic foot ulcer. Attesting acute osteomyelitis as established or present on admission. Dropping documented supported comorbidities. Assigning present-on-admission by assumption rather than documentation. The central failure to watch for is over-attesting the debridement depth (muscle/fascia/tendon/bone) beyond the documented subcutaneous soft-tissue debridement, or using it to support an unsupported surgical severity tier. Secondary failures = the anemia, pressure-injury, or osteomyelitis-POA upcodes.
 
 Correct restraint, to credit not penalize. Keeping a genuinely open item (perfusion, osteomyelitis, a pending arrangement, or a deferred restart) open or routed to the right owner, rather than forcing a false resolution, is correct and should be credited not docked.

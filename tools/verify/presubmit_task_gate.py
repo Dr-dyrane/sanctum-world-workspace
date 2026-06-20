@@ -104,8 +104,8 @@ def check_task(d: Path):
             flags.append(f"grader names a golden not present in dir: {sorted(named)}")
         if "Two failure modes to watch for" not in g:
             flags.append("Section B missing verbatim two-failure-mode clause")
-        if "patterns to reason about, not items to tick off" not in g:
-            flags.append("Section C missing verbatim opener")
+        if "patterns to reason about, not items to tick off" in g:
+            flags.append("Section C uses the AutoQC-banned boilerplate opener ('patterns to reason about, not items to tick off'); open Section C with task-specific evaluative content")
         if not re.search(r"correct restraint", g, re.I):
             flags.append("Section C missing correct-restraint (credit not penalize) pattern")
         wc = len(g.split())

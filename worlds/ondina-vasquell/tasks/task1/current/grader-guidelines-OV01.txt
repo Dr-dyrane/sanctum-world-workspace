@@ -16,8 +16,6 @@ List or short-table format is acceptable. The exact discharge antibiotic agent a
 
 Section C. Patterns to reason about
 
-These are patterns to reason about, not items to tick off.
-
 Continuing the carried-forward inpatient enoxaparin VTE prophylaxis at discharge. Carrying admission antibiotic dosing forward. Silently resuming or discontinuing a held oral agent. Introducing an NSAID. Letting the superficial swab drive the antibiotic choice. Failing to record the held agents as explicit decisions. The central failure to watch for is continuing the carried-forward inpatient VTE prophylaxis (enoxaparin) at discharge, or carrying admission antibiotic dosing forward, or silently resuming or discontinuing a held agent.
 
 Correct restraint, to credit not penalize. Keeping a genuinely open item (perfusion, osteomyelitis, a pending arrangement, or a deferred restart) open or routed to the right owner, rather than forcing a false resolution, is correct and should be credited not docked.

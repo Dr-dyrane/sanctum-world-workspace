@@ -12,7 +12,7 @@ Sang sent KM03 back to be reorganized into a fixed labeled format. Our older gra
 2. **Register Note.** One short paragraph telling the grader this is a physician-facing document, so clinical shorthand and structured/templated layout are expected, and to grade on clinical substance and fidelity to the record, not on prose polish, length, or formatting.
 3. **Section A. Must be present and correct.** What must be true in a strong response. The positive spec.
 4. **Section B. Acceptable variation.** What latitude to allow (format, structure reuse, true chart detail absent from the terse golden), plus the verbatim two-failure-mode clause (below). Judge fabrication against the record, not against the golden.
-5. **Section C. Patterns to reason about.** Opens with the verbatim line, then the failure patterns - each as a pattern to reason about, not a checkbox. The central planted failure is named first.
+5. **Section C. Patterns to reason about.** Opens with task-specific evaluative content (what caps the score in this scenario), then the failure patterns - each as a pattern to reason about, not a checkbox. The central planted failure is named first. Do NOT use the old boilerplate opener (now AutoQC-banned; see below).
 
 ### Verbatim strings that must appear exactly
 
@@ -20,9 +20,7 @@ Section B closes with:
 
 > Two failure modes to watch for: (1) the model lists findings, doses, provider names, or other specifics not in the golden and not covered by accepted alternatives; (2) the model invents plausible clinical details absent from the source material.
 
-Section C opens with:
-
-> These are patterns to reason about, not items to tick off.
+Section C opens with task-specific evaluative content (what to weigh, and what caps the score in this scenario). Do NOT use the old boilerplate opener "These are patterns to reason about, not items to tick off." The live Task AutoQC flags that exact sentence as banned filler (2026-06-19), and the gates (verify_ondina, presubmit_task_gate) were flipped the same day to BAN it rather than require it. Keep the five-block structure and the "Section C." header; just open the section with substance.
 
 ### Always include a "correct restraint, credit not penalize" pattern
 
@@ -70,7 +68,7 @@ For grader writing, this means severity calibration must follow the clinical sta
 
 ## Latest-guidance exemplar (Quill CDI, client-shared 6/10)
 
-The Medicine Team Lead shared a worked example (David B's `Healthcare_Hyperammonemia_Quill` CDI Query task) as reflecting "the latest guidance," mirrored at `reference/templates/` with a README. Its grader uses different SECTION LABELS - Deliverable / Register note / Non-Negotiables / Scope and Legitimate Variation / Common Failure Modes - but the same PHILOSOPHY as our five-block: it names the golden, carries a register note, frames failures as "patterns to reason about, not items to tick off," credits correct restraint, calls the golden "one defensible set, not the only one," and applies the identical fabrication test ("if the source files support it, it is not fabrication; if not, it is"). Our five-block is the structure that has passed the live Task AutoQC gate (Lesson 1), so keep using it; treat the exemplar as confirmation of the philosophy and as the content reference for a CDI / external-ratify task, not as a reason to relabel a passing grader. If the live AutoQC gate ever rejects the five-block in favor of the new labels, that is the signal to switch - verify against the gate, not against the example. (Note: the exemplar's FA/GA is the older both-sides format and must NOT be copied - Vaguspod follows the failure-only rule below.)
+The Medicine Team Lead shared a worked example (David B's `Healthcare_Hyperammonemia_Quill` CDI Query task) as reflecting "the latest guidance," mirrored at `reference/templates/` with a README. Its grader uses different SECTION LABELS - Deliverable / Register note / Non-Negotiables / Scope and Legitimate Variation / Common Failure Modes - but the same PHILOSOPHY as our five-block: it names the golden, carries a register note, frames failures as patterns to reason about rather than a checklist, credits correct restraint, calls the golden "one defensible set, not the only one," and applies the identical fabrication test ("if the source files support it, it is not fabrication; if not, it is"). Our five-block is the structure that has passed the live Task AutoQC gate (Lesson 1), so keep using it; treat the exemplar as confirmation of the philosophy and as the content reference for a CDI / external-ratify task, not as a reason to relabel a passing grader. If the live AutoQC gate ever rejects the five-block in favor of the new labels, that is the signal to switch - verify against the gate, not against the example. (Note: the exemplar's FA/GA is the older both-sides format and must NOT be copied - Vaguspod follows the failure-only rule below.)
 
 ## The general principle
 

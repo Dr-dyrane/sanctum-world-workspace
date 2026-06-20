@@ -16,8 +16,6 @@ Wording, order, and format may vary. The catch is acceptable in any form that re
 
 Section C. Patterns to reason about
 
-These are patterns to reason about, not items to tick off.
-
 Carrying the started resume of the held medications forward is the central failure and caps the score low however complete the rest of the handoff is. A handoff that resumes metformin, empagliflozin, and lisinopril at discharge has rubber-stamped a routine-looking medication line and missed that all three are held for AKI on CKD, sending the patient home on agents that risk lactic acidosis, ketoacidosis, and worsening renal function. Resuming one or two of the three, or resuming them with a vague caution but no hold, is incomplete and caps below midline. Refusing to finish earns no credit (anti-paralysis).
 
 Correct restraint, to credit not penalize: keeping the three agents held with restart deferred, continuing insulin and the accurate items, and leaving disposition open, is the correct completion.

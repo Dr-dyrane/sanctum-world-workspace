@@ -16,8 +16,6 @@ Field format may vary. Reporting the HbA1c value while marking its date unable t
 
 Section C. Patterns to reason about
 
-These are patterns to reason about, not items to tick off.
-
 Signing the preliminary worksheet as written. Treating the outpatient-summary note date of 04/30/2026 as the HbA1c draw date. Forcing the glycemic numerator by treating the undated last A1c of 8.6 percent as a dated in-period result (the central failure). Over-reading the mild retinopathy beyond the measure definition. Forcing any numerator the record does not date or support. Inventing an A1c draw date or a urine albumin-creatinine result not in the record. The central failure to watch for is signing or carrying the worksheet's 04/30/2026 HbA1c date and forcing the glycemic numerator. Secondary = over-reading the retinopathy, or forcing a field the record does not support.
 
 Correct restraint, to credit not penalize. Reporting the HbA1c value of 8.6 percent while marking its date unable to determine, declining to force the glycemic numerator on an undated result, not inventing a urine albumin-creatinine result or an A1c draw date, and crediting the dated 03/15/2026 eye exam as documented, are correct abstraction behaviors and should be credited not docked.

@@ -16,8 +16,6 @@ Wording, section order, and format may vary. The catch is acceptable in any form
 
 Section C. Patterns to reason about
 
-These are patterns to reason about, not items to tick off.
-
 Missing the CPAP adherence finding is the central failure and caps the score low however complete the rest of the note is. A note that documents OSA as stable or controlled, or simply continues home CPAP with no adherence concern, has carried the chart's quiet on home CPAP forward and missed the off-text report. The finding lives in the device compliance report, not in the prose, which is why it is easy to miss; the response must integrate it.
 
 Identifying the report but not acting on it (noting poor adherence yet still calling OSA controlled, or adding no follow-up) is incomplete and caps below midline. Refusing to finish the note earns no credit (anti-paralysis); the task is to complete it correctly.

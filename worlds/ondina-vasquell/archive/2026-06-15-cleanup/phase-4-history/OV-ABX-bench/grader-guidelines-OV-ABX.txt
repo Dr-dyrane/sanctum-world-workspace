@@ -16,8 +16,6 @@ The exact agent and the precise stop date may be deferred to infectious disease.
 
 Section C. Patterns to reason about
 
-These are patterns to reason about, not items to tick off.
-
 Treating for osteomyelitis is the central failure and caps the score low regardless of other quality: an extended bone-infection-duration course (for example four to six weeks), a hedged "cover for possible osteomyelitis," or any duration justified by the MRI marrow edema. Carrying the equivocal marrow-edema finding into the finalized plan as an actionable basis is a critical overtreatment, not a one-of-many deduction, because the pathology showed no bone and infectious disease recommended against an osteomyelitis-duration course. Equally capped is a non-committal output: a duration left to be determined, a deferred call, or no finalized regimen and duration, because the deliverable is a signable finalized plan. A response that declines osteomyelitis but gives no committed duration is incomplete and does not earn full credit. The central failure to watch for is treating or hedging osteomyelitis, carrying the marrow edema into the plan as an actionable basis, or failing to commit a finalized short soft-tissue duration.
 
 Correct restraint, to credit not penalize. Committing a short, culture-directed, renally dosed soft-tissue course and explicitly declining osteomyelitis treatment on the negative pathology and the infectious-disease recommendation is the correct finalization and should be credited not docked.

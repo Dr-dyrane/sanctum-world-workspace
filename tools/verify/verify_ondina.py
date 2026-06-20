@@ -43,7 +43,7 @@ GRADER_WORD_CAP = 540  # Sang/Kathy: grader ~1 page (~480-520 words); fail on le
 
 # Sang five-block sectioning canon (docs/grader-guidelines-lessons.md)
 SECTION_HEADERS = ["Preamble", "Register Note", "Section A", "Section B", "Section C"]
-SECC_OPENER = "These are patterns to reason about, not items to tick off."
+SECC_BANNED_OPENER = "patterns to reason about, not items to tick off"  # AutoQC fail-criterion filler; Section C must open with task-specific content, not this
 SECB_CLAUSE_1 = ("the model lists findings, doses, provider names, or other specifics "
                  "not in the golden and not covered by accepted alternatives")
 SECB_CLAUSE_2 = "the model invents plausible clinical details absent from the source material"
@@ -99,7 +99,7 @@ def task_consistency_fails():
 def grader_section_fails():
     """Lint grader sectioning vs the Sang five-block (docs/grader-guidelines-lessons.md):
     five labeled blocks in order, golden named in the Preamble, a chart-aware Register Note,
-    the verbatim Section B two-failure-mode clause, the verbatim Section C opener, and a
+    the verbatim Section B two-failure-mode clause, no AutoQC-banned Section C filler opener, and a
     credit-restraint pattern. Active tasks/task*/current -> fail; _paused/_retired -> warn
     (closes the scope hole where parked graders were never checked)."""
     active = sorted(glob.glob(str(P3 / "tasks/task*/current")))
@@ -135,8 +135,8 @@ def grader_section_fails():
                     bucket.append((nm, "register-not-chart-aware", "no 'verify ... against the chart/record'"))
                 if SECB_CLAUSE_1 not in t or SECB_CLAUSE_2 not in t:
                     bucket.append((nm, "sectionB-clause", "missing/paraphrased two-failure-mode clause"))
-                if SECC_OPENER not in t:
-                    bucket.append((nm, "sectionC-opener", "missing verbatim 'patterns to reason about' line"))
+                if SECC_BANNED_OPENER in t:
+                    bucket.append((nm, "sectionC-opener", "AutoQC-banned 'patterns to reason about, not items to tick off' filler; open Section C with task-specific content"))
                 if not restraint.search(t):
                     bucket.append((nm, "no-restraint", "no credit-restraint pattern"))
     return fails, warns

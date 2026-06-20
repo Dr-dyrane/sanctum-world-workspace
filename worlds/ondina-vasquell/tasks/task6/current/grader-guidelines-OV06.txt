@@ -16,8 +16,6 @@ Wording, order, and format may vary. The catch is acceptable in any form that ke
 
 Section C. Patterns to reason about
 
-These are patterns to reason about, not items to tick off.
-
 Closing or omitting the outpatient vascular surgery referral by deferring to the 05/23 addendum's adequate-perfusion conclusion is the central failure and caps the score low however complete the rest is. Accepting the noncompressible ankle indices as reassuring is the same miss. Treating the addendum as the final word because it is the most recent vascular note, against the toe pressures and the signed consult, is the same miss. Refusing to finish earns no credit (anti-paralysis).
 
 Correct restraint, to credit not penalize: keeping the vascular referral on the reduced toe pressures over the unreliable ankle index, consistent with the signed vascular consult, and finalizing the other referrals, is the correct coordination.

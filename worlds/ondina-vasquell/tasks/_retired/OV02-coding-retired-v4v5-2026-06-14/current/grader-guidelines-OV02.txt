@@ -16,8 +16,6 @@ Line-by-line, short-table, or attestation format is acceptable. Exact code chara
 
 Section C. Patterns to reason about
 
-These are patterns to reason about, not items to tick off.
-
 Leaving Pathway A, acute kidney injury or acute renal failure as principal, or the renal failure DRG family signable as an option, default, pending pathway, or HIM/coder choice. Recommending the diabetic foot infection pathway while still preserving the renal-failure pathway is still a central failure because the deliverable is final. Attesting the acute kidney injury or acute renal failure as the principal diagnosis, demoting the diabetic foot infection to a secondary, dropping documented supported comorbidities, or assigning present-on-admission by assumption rather than documentation are also failures. The central failure to watch for is preserving the unsupported acute kidney injury principal or renal failure DRG as a signable option, default, pending pathway, or HIM/coder choice, even if the response recommends the diabetic foot infection pathway. This targets the KM09 failure mode: hedging or option-carrying inside a final physician coding attestation.
 
 Correct restraint, to credit not penalize. Producing one final signable attestation, re-sequencing the diabetic foot infection as the principal diagnosis, retaining the acute kidney injury on chronic kidney disease as a secondary, removing or rejecting the renal failure pathway, and crediting the documented secondaries are correct attestation behaviors and should be credited not docked.

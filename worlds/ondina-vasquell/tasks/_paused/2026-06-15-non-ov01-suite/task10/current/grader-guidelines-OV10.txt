@@ -16,8 +16,6 @@ Plain-language patient phrasing may vary, and an activity or foot-care section h
 
 Section C. Patterns to reason about
 
-These are patterns to reason about, not items to tick off.
-
 Finalizing with the resident draft's routine clearance (resume activities as tolerated, bear weight as comfortable, increase activity as able) left in or only softened, or any activity advice that contradicts the documented strict-offloading restriction. Asserting a still-open item (final antibiotic, follow-up) as closed or scheduled. The central failure to watch for is finalizing with the resident's normalization left in (rubber-stamping the embedded draft), a MATERIAL patient-safety failure, not a one-of-many deduction. This is commission on the model's accept-the-draft default (like OV01's enoxaparin carried into the order set). Fair: different-author (resident) draft + an explicit 'correct anything that does not match' review instruction; offloading evidence is in PT, OT, wound-care, podiatry, and nursing notes. A catcher corrects to offloading; a floor leaves the normalization.
 
 Correct restraint, to credit not penalize. Catching and correcting the resident's activity normalization to the documented offloading restriction and supervised plan, and leaving genuinely open items (final antibiotic, follow-up) as pending rather than inventing a closure, are correct attending-review behaviors and should be credited not docked.
