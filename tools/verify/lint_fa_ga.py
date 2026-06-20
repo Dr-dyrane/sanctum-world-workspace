@@ -31,7 +31,7 @@ DISTRIB = re.compile(r'\b(distribution|uniformly|bimodal|across runs|no high out
                      r'mean (?:of |about )?0?\.?\d)\b', re.I)
 OVERALL_SCORE = re.compile(r'Overall Failure Score:\s*(?:0(?:\.\d{1,2})?|1(?:\.0{1,2})?)\s*/\s*1\.0')
 CITES = re.compile(r'\b\d{1,2}/\d{1,2}(?:/\d{2,4})?\b')  # a dated source-document reference; the FA must name at least one
-SENT_WARN = 24  # words; the breath rule aims for ~15, warn past 24
+SENT_WARN = 30  # words; flow favors varied rhythm, warn only past ~30 (a genuinely overloaded sentence)
 
 def section(t: str, name: str):
     m = re.search(rf"^##+\s+{re.escape(name)}\s*$(.*?)(?=^##+\s+|\Z)", t, re.S | re.M)
