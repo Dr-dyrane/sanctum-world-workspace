@@ -49,11 +49,23 @@ def pasted_block(t: str) -> str:
     return m.group(1) if m else ""
 
 
-def justification_opener(t: str) -> str:
-    m = re.search(r'Justification:\s*(.+?)(?:\n|$)', t)
-    if not m:
-        return ""
-    return re.split(r'(?<=[.!?])\s', m.group(1).strip())[0].strip().lower()
+INLINE_LABEL = re.compile(
+    r'\b(Scale Selection|Justification|Prompt adherence|Correctness|Completeness|'
+    r'Methodology|Quality and clarity|Summary)\s*:\s*', re.I)
+
+
+def opener_sentence(t: str) -> str:
+    """The label's de-facto opening sentence: the first substantial (>=8 word)
+    sentence of the pasted block, regardless of whether a 'Justification:' label is
+    used. The Scale Selection lead line and section labels are stripped first so the
+    first real clinical sentence is compared, which is where formulaic openers recur."""
+    block = INLINE_LABEL.sub('', pasted_block(t))
+    block = re.sub(r'^\s*[AB][1-4][^.\n]*[.\n]', '', block, count=1)  # drop the tier lead
+    for s in re.split(r'(?<=[.!?])\s+', block):
+        s = re.sub(r'\s+', ' ', s).strip()
+        if len(s.split()) >= 8:
+            return s.lower()
+    return ""
 
 
 def content_sentences(block: str):
@@ -96,13 +108,21 @@ def lint_one(path: str):
     return fails, warns
 
 
+def norm_ab(s: str) -> str:
+    """Neutralize the A/B subject so a label and its mirror (the same template with
+    A and B swapped) compare equal. 'a is the slightly better of two notes' and
+    'b is the slightly better of two notes' both become 'x is the slightly better
+    of two notes'. Run on already-lowercased text."""
+    return re.sub(r'\b[ab]\b', 'x', s)
+
+
 def cross(files):
     fails = []
     opener, sents = {}, {}
     for f in files:
         t = pathlib.Path(f).read_text(encoding='utf-8', errors='ignore')
-        opener[f] = justification_opener(t)
-        sents[f] = set(content_sentences(pasted_block(t)))
+        opener[f] = norm_ab(opener_sentence(t))
+        sents[f] = set(norm_ab(s) for s in content_sentences(pasted_block(t)))
     for a, b in combinations(files, 2):
         na, nb = pathlib.Path(a).name, pathlib.Path(b).name
         oa, ob = opener[a], opener[b]

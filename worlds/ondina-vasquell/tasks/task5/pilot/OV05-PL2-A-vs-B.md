@@ -18,7 +18,7 @@ VERDICT (internal): B1 (slightly better). Button = plain B (no plus).
 
 Scale Selection: B1 (slightly better)
 
-Justification: These two notes are near-duplicates, and B is the cleaner copy. Both keep the covering provider's silver alginate and foam on a clean, low-exudate granulating bed, neither swaps it for the moist dressing the consult ordered, and they score the same. What separates them is discipline: B writes the plan the chart supports and stops, while A keeps going with cross-cutting detail and numbers the terse plan never asked for. Against a golden that keeps the plan simple, the leaner note wins. The dressing is wrong in both, so this is the slimmest of margins.
+Justification: These two notes are near-duplicates, and B is the cleaner copy. Both keep the covering provider's silver alginate and foam on a clean, low-exudate granulating bed, neither swaps it for the moist dressing the consult ordered, and they score the same. What separates them is discipline: B writes the plan the chart supports and stops, while A keeps going with cross-cutting detail and numbers the terse plan never asked for. Against a golden that keeps the plan simple, the leaner note wins. The dressing is wrong in both, so the edge is completion discipline alone, not a clinical difference.
 
 Prompt adherence: Both complete the open plan into a signature-ready note. Tie.
 
