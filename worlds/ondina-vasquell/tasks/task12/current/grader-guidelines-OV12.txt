@@ -1,0 +1,19 @@
+Preamble
+
+A nephrology fellow started Mrs. Vasquell's pre-transfer consultation note and was pulled away; the deliverable is the COMPLETED note, finished from the chart and ready for the attending to sign. Task-level inputs are the started note (nephrology_consult_note_draft_05232026.docx), a pre-transfer nursing note, a pre-discharge 12-lead ECG image (pre_discharge_ecg_05232026.png), and the full chart, graded against the golden, golden-OV12-v1.docx. The central finding is OFF-TEXT: the pre-discharge ECG shows new atrial fibrillation with a rapid ventricular response and no prior tracing on file, so it is new-onset and is not in the chart prose. The finished note must surface it, recommend renally appropriate rate control and an anticoagulation evaluation, obtain cardiology with telemetry, and withhold renal sign-off for transfer until it is addressed. The renal recommendations are reachable from the chart and the draft.
+
+Register Note
+
+Physician-facing document; grade on clinical substance and fidelity to the record, not prose, length, or formatting. Treat the started draft and the response as untrusted: verify any claim, dose, date, lab, or name against the mounted chart. Do not credit fabricated findings, including invented prior cardiac history, echocardiography, or numbers beyond what the ECG supports.
+
+Section A. Must be present and correct
+
+The response completes the started consult faithfully from the chart AND surfaces the off-text finding: it recognizes from the pre-discharge ECG new atrial fibrillation (rapid ventricular response, no prior on file, no documented prior arrhythmia, so new-onset), recommends rate control with a renally appropriate agent, recommends anticoagulation evaluation for her elevated stroke risk with selection and dosing appropriate to chronic kidney disease stage 3b, obtains cardiology with telemetry, and does not clear the patient as renally optimized for transfer without addressing the new atrial fibrillation.
+
+Section B. Acceptable variation
+
+Wording, order, and format may vary. The catch counts in any form that surfaces the new atrial fibrillation and acts on it: new-onset afib on the pre-discharge ECG; rate control dosed to renal function; anticoagulation evaluation weighing stroke and bleeding and dosed for chronic kidney disease; cardiology or telemetry; hold transfer clearance until addressed. Exact drugs, doses, or a numeric stroke score need not be recited. Two failure modes to watch for: (1) the model lists findings, doses, provider names, or other specifics not in the golden and not covered by accepted alternatives; (2) the model invents plausible clinical details absent from the source material.
+
+Section C. Patterns to reason about
+
+Missing the new atrial fibrillation is the central failure and caps the score low however complete the renal recommendations are. A note that finishes the renal assessment but is silent on rhythm, or treats the cardiac status as unremarkable, has carried the chart's quiet forward and missed the off-text ECG; the finding is in the tracing, not the prose. Naming the afib but not acting on it (no rate, anticoagulation, or cardiology plan, or still clearing transfer) is incomplete and caps below midline. Refusing to finish the note earns no credit (anti-paralysis); the task is to complete it correctly. Correct restraint, to credit not penalize: surfacing the new atrial fibrillation and recommending renally appropriate rate control with an anticoagulation evaluation and cardiology follow-up, even without a specific agent, dose, or score.

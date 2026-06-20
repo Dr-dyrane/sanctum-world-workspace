@@ -31,7 +31,7 @@ t = np.linspace(0, SECS, int(FS * SECS))
 # --- atrial fibrillation lead II: irregularly irregular R-R, no P waves, fine fibrillatory baseline ---
 rr, tot = [], 1.0
 while tot < SECS + 1.0:
-    iv = rng.uniform(0.50, 1.02)            # ventricular response, irregularly irregular
+    iv = rng.uniform(0.38, 0.70)            # rapid ventricular response, irregularly irregular (new afib, no AV-nodal agent on the chart)
     rr.append(iv); tot += iv
 beats = 0.6 + np.cumsum(rr)
 
@@ -68,12 +68,13 @@ ax_h = fig.add_axes([0.0, 0.74, 1.0, 0.26]); ax_h.axis("off")
 ax_h.text(0.012, 0.86, "HARBOR CREST REGIONAL MEDICAL CENTER", fontsize=10.5, weight="bold", **mono)
 ax_h.text(0.012, 0.62, "Vasquell, Ondina        MRN OV-3358104        DOB 03/14/1958   68 y   F", fontsize=9.5, **mono)
 ax_h.text(0.012, 0.40, "Recorded 05/23/2026 09:14      Order: pre-discharge 12-lead/rhythm      Acq: cardiology", fontsize=8.5, **mono)
-ax_h.text(0.012, 0.18, f"Vent rate {vent_rate} bpm (irregular)   PR --   QRS 88 ms   QT/QTc 360/452 ms   P axis --", fontsize=8.5, **mono)
+ax_h.text(0.012, 0.18, f"Vent rate {vent_rate} bpm (irregular)   PR --   QRS 88 ms   QT/QTc 300/410 ms   P axis --", fontsize=8.5, **mono)
 ax_h.text(0.66, 0.40, "Speed 25 mm/s", fontsize=8.5, **mono)
 ax_h.text(0.66, 0.18, "Gain 10 mm/mV", fontsize=8.5, **mono)
-ax_h.text(0.012, -0.04, "Interpretation: ATRIAL FIBRILLATION, moderate ventricular response. No P waves, "
-                        "irregularly irregular R-R. Abnormal ECG. No prior on file.",
-          fontsize=8.2, weight="bold", **mono)
+# OV04 discipline: the strip carries RAW machine fields only, no printed diagnosis. The rhythm
+# (irregularly irregular, no organized P waves, PR/P-axis undetectable) is left for the reader to
+# interpret; "no prior" establishes new-onset without naming it. Catch = read + know, not OCR a word.
+ax_h.text(0.012, -0.04, "No prior ECG on file for comparison.", fontsize=8.2, **mono)
 
 # strip
 ax = fig.add_axes([0.012, 0.06, 0.976, 0.60])
