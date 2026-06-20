@@ -36,8 +36,8 @@ Bind the FA to ONE run: the SECOND-lowest distinct score in the current valid ru
 
 ## Failure Analysis - what the agent got wrong and why
 Cover four things, in prose, organized by severity (clinical first, then administrative, then style):
-1. What the agent got RIGHT - a brief competent baseline, one or two sentences, as the setup for the turn. Lead with it but keep it short. The FA stays failure-only; no standalone praise paragraph (Ahmad's override of the 06_09 "what got right" component).
-2. What the agent got WRONG - the central failure as a turn: it had the contradicting evidence and failed anyway. Tie it to the golden.
+1. Open with what the agent got WRONG. Do NOT lead with a competent baseline or anything the agent did right; the live AutoQC flags any positive framing in the FA, even one line or a "to its credit" clause, as a fail. The FA is exclusively the failure (Ahmad cut the 06_09 "what got right" component; the live AutoQC confirms no baseline opener either).
+2. The central failure as a turn: the agent had the contradicting evidence and failed anyway. Tie it to the golden. Naming the evidence it held is allowed only as the setup for the failure (it had X in hand and still did Y), never as credit.
 3. Why it MATTERS - the clinical mechanism and the consequence. Quantify when you can. State the severity tier (a patient-safety failure is not a documentation preference). State plainly that the output would not be deliverable by any competent practicing clinician; if you cannot say that, the failure is insufficient (Phase 3).
 4. The SCORE - tie the failure to the analyzed run's trajectory score and Alexander's own score. End with `Overall Failure Score: X.XX / 1.0`. That number is Alexander's score, not the trajectory score. The run distribution stays in the Status line.
 
@@ -107,7 +107,7 @@ floor, catcher, bimodal, mechanism, lane, bankable, score cap; rubric, grading f
 Above the two fields, record: the job id, the full score distribution, the mean, whether it is all-low or bimodal, and the FA subject (Attempt, run id, trajectory, score, with a note if it is not the strict second-lowest distinct). No rating line.
 
 ## Final checklist before handing back
-FA: opens with "On trajectory N" (the 1-10 count); leads with a brief competent baseline; names the central failure as a turn; states the clinical mechanism, consequence, and severity tier; states plainly it would not be deliverable by a competent clinician; names the specific source documents by author or date (not a generic reference); ends with `Overall Failure Score: X.XX / 1.0`; references only this run, never other runs' scores; failure-only.
+FA: opens with "On trajectory N" (the 1-10 count); opens on the failure with NO competent baseline or praise (any positive framing fails AutoQC); names the central failure as a turn; states the clinical mechanism, consequence, and severity tier; states plainly it would not be deliverable by a competent clinician; names the specific source documents by author or date (not a generic reference); ends with `Overall Failure Score: X.XX / 1.0`; references only this run, never other runs' scores; failure-only.
 GA: restates the suggested score and the gap; names what the grader got correct; names what it got wrong or could improve (NOT optional); cites the grading summary; judges calibration; does not reference the self-score bands; no rating line.
 Rating (Studio only): score-gap bands (Great within 5, Good within 10, Fair within 15, Poor over 15); never Great if the grader scored above 70; downgrade only for reasoning, never upgrade.
 Both: no section names, no banned credit phrases, no dashes, plain clinical speech, second-lowest distinct run, gates clean.

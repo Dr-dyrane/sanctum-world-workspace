@@ -17,8 +17,8 @@ SAVE the run verbatim FIRST, before drafting. When a pilot returns, copy the sel
 
 ## Failure Analysis - the four components (EXP Step 14)
 Cover all four, in prose, organized by severity (clinical first, then administrative, then style):
-1. What the agent got RIGHT - a brief competent baseline, one or two sentences, named specifically, as the setup for the turn. Lead with it but keep it short. Ahmad (Trigeminus, more recent than 06_09) cut the standalone "what the agent got right" paragraph: the FA stays failure-only, no praise paragraph.
-2. What the agent got WRONG - the central failure as a turn (it had the contradicting evidence and failed anyway), tied to the golden.
+1. Open with what the agent got WRONG. Do NOT lead with a competent baseline or anything the agent did right; the live AutoQC flags any positive framing in the FA, even one line, as a fail. The FA is exclusively the failure. Ahmad (Trigeminus, more recent than 06_09) cut the standalone "what the agent got right" paragraph, and the live AutoQC confirms no baseline opener either.
+2. The central failure as a turn: the agent had the contradicting evidence and failed anyway, tied to the golden. Naming the evidence it held is allowed only as the setup for the failure, never as credit.
 3. Why the failure MATTERS - clinical mechanism and consequence. Quantify when possible. State the severity tier. State plainly that the output would not be deliverable by any competent practicing clinician; if you cannot say that, the failure is insufficient (Phase 3).
 4. The SCORE - state the analyzed run's score and the writer's own score, and tie the failure to them. Reference ONLY this run; the full distribution stays in the Status line, never the body (Abi single-run rule). Conclude the FA with the exact required line: `Overall Failure Score: X.XX / 1.0`. This is Alexander's own score, not the trajectory score.
 

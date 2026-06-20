@@ -4,7 +4,7 @@ Status 2026-06-19 (redone from the latest run set; supersedes the d4eaa31b draft
 
 ## Failure Analysis
 
-On trajectory 3 the agent read the worksheet against the chart and rightly refused to rubber-stamp the discharge. It even surfaced the attending's HD6 note (Everet, 05/21), reaching no discharge conclusion and calling the patient unsafe for home. Yet having seen that, it declined to enter the determination, leaving the physician-advisor block blank. The task was to finalize that determination, and a worksheet returned blank finalizes nothing.
+On trajectory 3 the agent never entered the determination, the one move the task and the golden both require. It left the physician-advisor block blank and handed the call back to a physician advisor, and a worksheet returned blank finalizes nothing. This was no failure of evidence. The agent had the attending's HD6 note (Everet, 05/21) in hand, reaching no discharge conclusion and calling the patient unsafe for home, and still stopped short.
 
 The costlier miss came earlier: the agent never opened the MAR (mar_05162026_05212026). Had it looked, it would have found the patient on IV vancomycin, piperacillin-tazobactam, and cefepime through 05/21, no oral regimen in place and the sulfa allergy ruling out trimethoprim-sulfamethoxazole. Since home-health nursing cannot give IV antibiotics, that running course, not the softer barriers it cited, keeps discharge unsafe. A blank, MAR-blind determination is not one a competent physician advisor could sign. Overall Failure Score: 0.30 / 1.0
 
