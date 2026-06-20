@@ -43,7 +43,7 @@ GRADER_WORD_CAP = 540  # Sang/Kathy: grader ~1 page (~480-520 words); fail on le
 
 # Sang five-block sectioning canon (docs/grader-guidelines-lessons.md)
 SECTION_HEADERS = ["Preamble", "Register Note", "Section A", "Section B", "Section C"]
-SECC_BANNED_OPENER = "patterns to reason about, not items to tick off"  # AutoQC fail-criterion filler; Section C must open with task-specific content, not this
+BANNED_BOILERPLATE = ["patterns to reason about, not items to tick off"]  # AutoQC fail-criterion filler; EXTEND from the live AutoQC named-boilerplate list
 SECB_CLAUSE_1 = ("the model lists findings, doses, provider names, or other specifics "
                  "not in the golden and not covered by accepted alternatives")
 SECB_CLAUSE_2 = "the model invents plausible clinical details absent from the source material"
@@ -135,8 +135,10 @@ def grader_section_fails():
                     bucket.append((nm, "register-not-chart-aware", "no 'verify ... against the chart/record'"))
                 if SECB_CLAUSE_1 not in t or SECB_CLAUSE_2 not in t:
                     bucket.append((nm, "sectionB-clause", "missing/paraphrased two-failure-mode clause"))
-                if SECC_BANNED_OPENER in t:
-                    bucket.append((nm, "sectionC-opener", "AutoQC-banned 'patterns to reason about, not items to tick off' filler; open Section C with task-specific content"))
+                tl = t.lower()
+                for ph in BANNED_BOILERPLATE:
+                    if ph in tl:
+                        bucket.append((nm, "boilerplate", f"AutoQC-banned filler {ph!r}; open Section C with task-specific content"))
                 if not restraint.search(t):
                     bucket.append((nm, "no-restraint", "no credit-restraint pattern"))
     return fails, warns

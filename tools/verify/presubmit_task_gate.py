@@ -31,6 +31,13 @@ BOTHSIDES = re.compile(r"what the model did well|what the grader (got right|did 
                        r"|did much of .{0,30}carefully", re.I)
 SECNAME = re.compile(r"\bSection [ABC]\b")
 
+# AutoQC fail-criterion: generic boilerplate filler in graders (no task-specific evaluative
+# content). EXTEND this from the live AutoQC named-boilerplate list as we learn it. Matched
+# case-insensitively as a substring anywhere in the grader.
+BANNED_BOILERPLATE = [
+    "patterns to reason about, not items to tick off",
+]
+
 
 def golden_text(p):
     return " ".join(VIS.findall(zipfile.ZipFile(p).read("word/document.xml").decode()))
@@ -89,7 +96,7 @@ def check_task(d: Path):
     goldens = sorted(d.glob("golden-*.docx"))
     prompts = sorted(d.glob("prompt-*.txt"))
     if not graders:
-        return ["no grader-guidelines-*.txt"]
+        return ["no grader-guidelines-*.txt"], []
     if not goldens:
         flags.append("no golden-*.docx")
     for gpath in graders:
@@ -104,8 +111,10 @@ def check_task(d: Path):
             flags.append(f"grader names a golden not present in dir: {sorted(named)}")
         if "Two failure modes to watch for" not in g:
             flags.append("Section B missing verbatim two-failure-mode clause")
-        if "patterns to reason about, not items to tick off" in g:
-            flags.append("Section C uses the AutoQC-banned boilerplate opener ('patterns to reason about, not items to tick off'); open Section C with task-specific evaluative content")
+        gl = g.lower()
+        for ph in BANNED_BOILERPLATE:
+            if ph in gl:
+                flags.append(f"grader contains AutoQC-banned boilerplate filler {ph!r}; replace with task-specific evaluative content")
         if not re.search(r"correct restraint", g, re.I):
             flags.append("Section C missing correct-restraint (credit not penalize) pattern")
         wc = len(g.split())
@@ -121,7 +130,17 @@ def check_task(d: Path):
             flags.append(f"prompt long ({len(pt.split())} words): keep it a short first-person ask")
         if PROMPT_META.search(pt):
             flags.append("prompt carries meta-guidance (grader/trap/score language): move it to the grader")
-    return flags
+    # Mount manifest + referenced-task-file existence (catches the missing-upload class, e.g. OV08).
+    # Upload set = non-golden .docx in current/ (golden is the grader reference, not a mounted file).
+    mount_files = sorted(p.name for p in d.glob("*.docx") if not p.name.startswith("golden-"))
+    run = d / "RUN-INSTRUCTIONS.md"
+    if run.exists():
+        m = re.search(r"mount[^:\n]*:\s*([^\n]+)", run.read_text(errors="ignore"), re.I)
+        if m:
+            for fn in re.findall(r"[A-Za-z0-9_]+_\d{8}\.docx", m.group(1)):
+                if not (d / fn).exists():
+                    flags.append(f"RUN-INSTRUCTIONS lists mount file '{fn}' missing from {d.name}/ (build it or fix the name)")
+    return flags, mount_files
 
 
 def main():
@@ -132,7 +151,7 @@ def main():
     anyflag = False
     for dpath in dirs:
         d = Path(dpath)
-        flags = check_task(d)
+        flags, manifest = check_task(d)
         tag = d.parent.name
         if flags:
             anyflag = True
@@ -141,6 +160,8 @@ def main():
                 print(f"   - {f}")
         else:
             print(f"PASS {tag}")
+        if manifest:
+            print(f"   upload to Studio ({tag}): {', '.join(manifest)} + the full OV world chart")
     faga = check_fa_ga()
     if faga:
         anyflag = True
