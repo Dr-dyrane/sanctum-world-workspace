@@ -4,6 +4,8 @@ Two kinds of QC finding. REAL-BUG classes (boilerplate, missing upload, wrong-ta
 
 Standing rule: do not re-pilot a healthy, correctly-graded task to appease a borderline QC reading. A re-pilot is a fresh sample that can thin the floor or ceiling, and it forces an FA/GA rebind. Dispute instead.
 
+Voice: write every disposition to be read aloud first. It should sound like the writer making a point, not a legal brief. Vary the rhythm, one idea per breath, no semicolons, no compressed jargon ("transient rationale", "the restraint to credit"). Same flow rule as the FA/GA voice.
+
 ## D1. Trajectory floor flagged as output-constraint non-compliance
 Layer: Trajectory AutoQC, "Compliance with Output Constraints". When: a floor trajectory, the run where the model fails or refuses the deliverable, is flagged for violating the prompt's output constraint (e.g. "finalize it for submission").
 
@@ -14,9 +16,9 @@ Adapt the named deliverable and failure to the task. The shape holds for every f
 ## D2. Grader reasoning lists "what was done well" (read as the FA dwelling on positives)
 Layer: Task AutoQC, the failure-analysis criterion. When: the authored FA field is failure-only, but the selected model grader's per-trajectory reasoning enumerates positives ("what was done well", "there are some positives").
 
-> The authored failure analysis is failure-only, which this finding confirms. The cited "what was done well" and "positives" sections (name the flagged trajectories) are not part of it. They are the selected model grader's own scoring rationale, written at runtime as it weighs each response, and the writer neither authors nor edits a grader's reasoning. A grader acknowledging genuine improvement before naming the capping failure is correct behavior; the rubric directs it to weigh that improvement as the restraint to credit. The criterion governs the authored failure analysis, which lists no strengths. The grader's transient rationale is out of scope. We request the finding be waived.
+> The failure analysis here is already failure-only, and the finding says as much. The praise it points to isn't in the failure analysis at all. Those "what was done well" and "positives" lists, in [the flagged trajectories], are the model grader's own scoring notes, written as it reasons through each run, and that reasoning is the grader's, not ours. A grader that weighs the genuine improvement before it lands on the failure is doing exactly what the rubric asks of it. So the strengths sit in the grader's thinking, never in the failure analysis, which names only what went wrong. That places them outside what this criterion checks, and we ask that the finding be waived.
 
-(Name the specific flagged trajectories in the paste, e.g. traj_3603df058c2d, traj_3a69f35cdbb8, traj_5abe7cf086c1.)
+Name the specific flagged trajectories where bracketed (e.g. traj_3603df058c2d, traj_3a69f35cdbb8, traj_5abe7cf086c1).
 
 To reduce recurrence on future runs, avoid grader-guideline phrasing that invites a strengths list, then re-pilot; the writer cannot edit a grader's runtime reasoning, so for the current run the dispute is the path.
 
