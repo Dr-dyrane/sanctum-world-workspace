@@ -196,6 +196,12 @@ swapped.
   rewrites it in their own words before paste. That rewrite, not a re-generated draft,
   is what clears an AI-prose flag.
 
+Run `python3 tools/verify/lint_pl.py` on all three labels together before handing
+back. It mechanically enforces this section: it fails an em or en dash, a banned
+transition, the named hedge-stacking phrases, a Justification opener shared across the
+labels, and any sentence repeated verbatim across them. A clean run is necessary, not
+sufficient; the writer still rewrites the prose so each label reads as its own analysis.
+
 ## The house format (three easy ways to get it wrong)
 
 Copy `references/pl-format-template.md` and fill every field. Three recurring breaks:
@@ -206,11 +212,19 @@ Copy `references/pl-format-template.md` and fill every field. Three recurring br
   dimension prose and never cite a grader score (that is "do not reference the
   preference score"). Set the Button to the matching plus count.
 - No em dashes or en dashes anywhere, in this file or any deliverable. Use plain
-  hyphens and commas. (Run a quick scan for the characters before you finish.)
+  hyphens and commas. `tools/verify/lint_pl.py` catches these mechanically.
 - No eval-scaffolding narration in the prose (OCR, directory listing, tool calls,
   "the transcript shows"); use the clinical mechanism instead. Run
   `python3 tools/verify/verify_voice.py` before finishing; it must come back clean
   (no banned transitions, no scaffolding warns on the PL).
+- Self-check (run on the finished current-format labels, all three together):
+  `python3 tools/verify/lint_pl.py <PL1.md> <PL2.md> <PL3.md>` and clear every FAIL.
+  Passing the three together runs the cross-label checks that catch the templated
+  look a reviewer flags (OV05): a formulaic Justification opener shared across labels
+  and a sentence repeated verbatim across labels. It also fails an em or en dash, a
+  banned AI transition, a hedge-stacking phrase, a grader score in the pasted prose,
+  and a missing Scale Selection lead line, and warns on hedge density and long
+  sentences. It is the PL parallel of lint_fa_ga.py and complements verify_voice.py.
 
 ## Guardrails to put in every label
 
