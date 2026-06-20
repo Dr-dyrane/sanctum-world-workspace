@@ -1,17 +1,18 @@
-# Task Selection Categories (current)
+# Task Selection Categories (Appendix A + companions)
 
 The approved workflow / task-category menu, re-released roughly weekly.
 
-## CURRENT release (06/19): three companion files in this folder
+## APPENDIX A = the approved list
 
-- `Project_Sanctum_Task_Categories_with_Difficulty_Suggestions.docx` - the WORKING catalog for picking a workflow. Each row gives the workflow's Definition, Output (work product), and per-workflow "Suggestions to Increase Task Difficulty." Brainstorm and pick the Step-10 workflow from THIS file, then verify against the live sheet (below).
-- `Sanctum_Task_Selection_Categories_Combined_06_19.docx` - the broad combined menu. It is wider than the Difficulty-Suggestions file and can list workflows that are NOT selectable on the live sheet, so never lock a string from it alone.
+`Sanctum_Task_Selection_Categories_Combined_06_19.docx` is "Project Sanctum: Approved Task Selection Categories" (approved workflows as of 06/19/2026). This IS the Appendix A reviewers cite: one table, 237 workflows (P0 24, P1 92, P2 121), each with Priority, Workflow name, Definition, and Output (work product).
+
+Pick the EXACT workflow name AND tier from Appendix A, and match your deliverable to the workflow's stated work product, not just the name. Example: OV12 is "Acute Care Discharge Planning" (P1), work product "documented discharge plan including post-acute services, follow-up appointments, and patient education." "Specialty Consultation Note" is also in Appendix A (P1) but its work product is a specialist's own consult note, so it was the wrong match for a discharge plan, the deliverable decides, not the name.
+
+## Companions
+
+- `Project_Sanctum_Task_Categories_with_Difficulty_Suggestions.docx` - the same catalog with a per-workflow "Suggestions to Increase Task Difficulty" column. Use it for difficulty levers; it is not the authority on which strings are approved.
 - `Project_Sanctum_Resources_by_Category.docx` - per-category resource and simulator links.
 
-## THE LIVE SHEET WINS (AGENTS.md guardrail 13)
+## THE CATALOG MOVES (AGENTS.md guardrail 13)
 
-The menu changes mid-flight, and the saved snapshots can disagree with each other and with the live Step-10 list. Always confirm the EXACT workflow string against the live Task Selection Categories sheet at Step 10 before locking it.
-
-Cautionary example (2026-06-20, OV12): the Combined snapshot listed "Specialty Consultation Note," which was not on the live sheet; the live sheet and the Difficulty-Suggestions file carried "Acute Care Discharge Planning," the lane OV12 shipped on. Sourcing the string from the Combined snapshot alone caused a lane mislabel that had to be corrected. Pick from the Difficulty-Suggestions file, confirm on the live sheet.
-
-Prior versions are in `../_superseded/task-selection-categories/`.
+The list changes between cuts. The in-repo 06/19 Appendix A and Larry's 06/20 review disagree: the 06/19 file lists "Specialty Consultation Note" and lacks "Specialist Referral Documentation" and "Discharge Medication Reconciliation," while Larry's 06/20 remaps assume the reverse. So a newer cut exists beyond this 06/19 copy. Confirm the exact string and tier against the LATEST Appendix A or the live Step-10 sheet before locking. Prior versions are in `../_superseded/task-selection-categories/`.

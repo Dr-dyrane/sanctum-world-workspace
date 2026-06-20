@@ -88,8 +88,8 @@ W3 is at brainstorm (reviewed by Larry 2026-06-20). It already carries `W3-MASTE
 - Be careful with traps and input files (the fairness line above).
 - Remap workflows verbatim to Appendix A: Task 2 -> "Discharge Medication Reconciliation" (P0); Task 6 -> "Specialist Referral Documentation" or "Specialist Referral Letter and Documentation Preparation" (P0); Task 10 -> tier P0. Name-check non-compliance is a recurring Major.
 
-### The Appendix A gap (blocks the W3 spec and the procedural pointer)
-Larry's authority is Appendix A of the LATEST instruction document. The repo's newest instruction doc is 06_09, whose Appendix A is a pipeline how-to, not the workflow catalog; the catalog Larry quotes is in a newer doc not yet in the repo. The 06/18 and 06/19 task-selection snapshots demonstrably carry strings that are not on Appendix A. Get the new instruction document / Appendix A into `reference/source/instruction-doc/`, then (a) verify any future workflow string against it and (b) repoint AGENTS.md guardrail 13 and the reference READMEs at Appendix A instead of the 06/18 snapshot.
+### Appendix A (located 2026-06-20) and the version split
+Appendix A is `reference/source/task-selection-categories/Sanctum_Task_Selection_Categories_Combined_06_19.docx` (Project Sanctum: Approved Task Selection Categories, 237 workflows). It IS in the repo. OV12's lane "Acute Care Discharge Planning" is in it at P1 with a work product (documented discharge plan) that matches the deliverable exactly - confirmed. BUT the 06/19 Appendix A and Larry's 06/20 review disagree: the 06/19 file lists Specialty Consultation Note and lacks Specialist Referral Documentation and Discharge Medication Reconciliation, while Larry's 06/20 remaps assume the reverse. So a newer cut exists beyond the in-repo 06/19 copy. For W3, get Larry's 06/20 Appendix A to apply his remaps; for OV12 the 06/19 confirmation plus Dyrane's live-sheet check is sufficient. AGENTS.md guardrail 13 and the reference READMEs now name the 06/19 Appendix A and keep the verify-against-latest rule.
 
 ## 4. Open items and cleanup
 - Get Appendix A / the latest instruction document into the repo (above).
