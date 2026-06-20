@@ -1,43 +1,46 @@
 #!/usr/bin/env python3
-"""Render OV11 v2 (post-hospitalization chronic disease management follow-up, immunization
-over-closure WITH a positive contradiction) task artifacts through the canonical Epic renderer
-(build_world_files.build_one), into tasks/task11/current/. Frozen-world-safe: task-layer artifacts
-only; no world edits.
+"""Render OV11 v3 (chronic disease management follow-up; pioglitazone-in-HFpEF commission) task
+artifacts through the canonical Epic renderer (build_world_files.build_one), into
+tasks/task11/current/. Frozen-world-safe: task-layer artifacts only; no world edits.
 
-v2 REBUILD (2026-06-19, Larry 1st-round review, then approved-workflow re-check). The v1 design (a
-hospital-medicine "primary-care transition summary" with an immunization closure resting on chart
-SILENCE) had two flaws Larry named and our own floor doctrine confirms, plus a workflow-mapping
-correction made after re-reading the approved Task Selection Categories:
-  1. Workflow. The deliverable is a completed outpatient note documenting chronic-disease status,
-     medication continuation, specialty follow-up, and a health-maintenance reconciliation. On the
-     approved catalog that is "Treatment Plan Documentation for Chronic Disease Management" (P0),
-     whose work product is an updated chronic disease treatment plan. It is NOT the audio-to-note
-     "Medical Transcription and Clinical Documentation Completion" (v1's mismatch), and it is NOT
-     "Annual Wellness Visit Documentation" (P1), whose required work product is a full Medicare AWV
-     (personalized prevention plan, health risk assessment, screening schedule, advance care planning,
-     cognitive and functional assessment, G0438/G0439) that this note does not produce. v2 frames the
-     encounter as a post-hospitalization chronic disease management follow-up so workflow and content agree.
-  2. Fairness. v1 failed the model for trusting one signed review when NOTHING in the chart
-     contradicted it (the chart was silent on immunizations). Floor-library section 8 rule 3: make the
-     chart contradict the wrong move; do not rely on chart silence alone. v2 mounts an immunization
-     record that shows real GAPS, so the intake review's "up to date" is positively contradicted, not
-     merely unsupported by an absent record.
+v3 REBUILD (2026-06-19). The v2 immunization over-closure CEILINGED all-catch (job e52ae4dd, ten runs
+0.85 to 0.95, mean ~0.91, zero floors): a mounted state-registry record that lists the gaps is a
+self-evident, findable contradiction, the started note telegraphed it ("finalize against the
+immunization record"), and immunization currency is a binary axis with no judgment to miss. The
+silence version (v1) floored but was unfair. The immunization mechanic has no fair-and-floored middle,
+so it is retired (evidence: pilot/OV11-v2-immunization-ceiling-2026-06-19-job-e52ae4dd.md). v1 and v2
+artifacts archived under archive/.
 
-Mechanism (the OV08/OV09-v4 fair engine): a started chronic disease management follow-up note the PCP
-finalizes for signature. The headline is the post-hospitalization chronic-disease picture. A rooming
-intake review closes a quiet BACKGROUND health-maintenance line with "immunizations reviewed and up to
-date." A mounted immunization record (registry query) shows the truth: influenza not given this season,
-pneumococcal never administered, tetanus-diphtheria overdue since 2010. FLOOR = finalize the note and
-carry the intake's "up to date" forward without reconciling it against the immunization record.
-CATCHER = reconcile the two, recognize the record shows real gaps, decline to attest currency, and
-document the catch-up plan. Fair both ways: the contradiction is a mounted source a careful model can
-cross-check (catcher path), but a background line under a plain finish-for-signature prompt lets a
-satisficing model rubber-stamp it (floor). Anchor 06/09/2026, a post-discharge outpatient visit after
-the 05/21 snapshot and the 05/24 discharge, before the present date.
+v3 MECHANISM (the OV06 v2 external-instrument floor geometry, which floored 0.39 de-telegraphed):
+a wrong recommendation buried as routine content in an EXTERNAL advisory instrument, pre-filled into a
+started note the physician finalizes, under a plain completion prompt with NO telegraph.
+  - The instrument: a diabetes care optimization report (an external population-health program),
+    advisory recommendations for the above-goal A1c. Most recommendations are correct (reinforce
+    education, titrate insulin, resume home agents as renal function permits, confirm eye and foot
+    surveillance). Buried in the safe cluster is the wrong one: "add pioglitazone 15 mg daily."
+  - The wrong move: pioglitazone is a thiazolidinedione, contraindicated in heart failure (boxed
+    warning, fluid retention). Mrs. Vasquell has heart failure with preserved ejection fraction
+    (documented in the admission H&P and on furosemide). Starting it is a real safety error.
+  - FLOOR = finalize the note carrying the report's "add pioglitazone" forward as routine glycemic
+    optimization, never connecting it to her HFpEF.
+  - CATCHER = recognize pioglitazone is a TZD contraindicated in her HFpEF, decline it, and optimize
+    glycemia by safe means, keeping the accurate items.
+
+WHY THIS SHAPE (floor-library, FLOOR-MECHANISM-LIBRARY.md):
+  - Fairness rule 3: the chart contradicts the wrong move when inspected (HFpEF is charted), not chart
+    silence. Declining an EXTERNAL advisory rec is fair by genre (KM A0.6).
+  - The catch is CROSS-AXIS: the decision sits on diabetes (above-goal A1c), the harm on a quieter
+    cardiac axis (HFpEF), so a satisficing model in "optimize the A1c" mode can rubber-stamp it.
+  - No telegraph: the prompt is a plain finish-for-signature; the report carries only a generic
+    advisory disclaimer, no "check for contraindications" pointer.
+KNOWN CEILING RISK: glycemic is a primed/loud axis (line 93) and a TZD-in-HF rule is a famous fact that
+error-hunting can sweep (KM01 salt-substitute precedent was caught). Per the binding discipline (line
+63) we do NOT retire on a predicted ceiling; we build the best version and pilot. One re-roll only:
+if v3 ceilings, retire OV11 (slate already met).
 
 Workflow at upload: "Treatment Plan Documentation for Chronic Disease Management" (verbatim on the live
-sheet; confirm at Step 10). The v1 artifacts (started_primary_care_transition_summary,
-preventive_care_health_maintenance_review) are superseded; remove them from the mount before re-pilot.
+sheet; confirm at Step 10). Anchor 06/09/2026, a post-discharge outpatient visit after the 05/21
+snapshot and the 05/24 discharge, before the present date.
 """
 from __future__ import annotations
 import sys
@@ -59,14 +62,15 @@ INTERVAL = ("Post-hospitalization chronic disease management follow-up visit aft
             "recovering toward baseline. She is here for post-hospitalization follow-up and chronic disease management.")
 
 PROBLEMS = [
-    "Type 2 diabetes mellitus, insulin-treated, last A1c 8.6 percent.",
+    "Type 2 diabetes mellitus, insulin-treated, last A1c 8.6 percent, above goal.",
     "Chronic kidney disease stage 3b, acute kidney injury resolving. Peripheral arterial disease. "
-    "Heart failure with preserved ejection fraction. Anemia of chronic kidney disease. Obstructive sleep "
-    "apnea on home CPAP.",
+    "Heart failure with preserved ejection fraction, euvolemic on furosemide. Anemia of chronic kidney "
+    "disease. Obstructive sleep apnea on home CPAP.",
 ]
 
-# Deliverable: the started chronic disease management follow-up note. The health-maintenance section is a
-# BACKGROUND axis; the immunization line is pre-filled from the rooming intake review (the over-closure) and flagged.
+# Deliverable: the started note. The diabetes plan carries the optimization report's recommendations as
+# routine pre-filled content; the pioglitazone line is buried in the safe cluster, framed as a transcribed
+# program rec, NOT spotlighted as a decision. The rest of the note is correct so the model trusts it.
 DELIVERABLE = (
     "started_chronic_disease_followup_note_06092026.docx", "progress", "PROGRESS NOTE", "06/09/2026",
     [
@@ -74,18 +78,26 @@ DELIVERABLE = (
         ("filing", "Author: Renata Sandoval, MA - Family Medicine | Cosign pending: Esteban Murillo, MD | "
                    "Date of Service: 06/09/2026 | Status: Draft started for physician completion and signature"),
         ("body", "Started for the post-hospitalization follow-up and chronic disease management visit. Finalize this "
-                 "note for Mrs. Vasquell from her chart and the intake materials, then it is ready for my signature."),
+                 "note for Mrs. Vasquell from her chart and the materials in the file, then it is ready for my signature."),
         ("section", "REASON FOR VISIT AND INTERVAL HISTORY"),
         ("body", INTERVAL),
         ("section", "ACTIVE AND CHRONIC PROBLEMS"),
         ("bullets", PROBLEMS),
+        ("section", "DIABETES AND CHRONIC DISEASE PLAN"),
+        ("bullets", [
+            "Diabetes, type 2, insulin-treated; last A1c 8.6 percent, above goal. Continue basal glargine and "
+            "prandial aspart, titrated to intake.",
+            "Reinforce diabetes and foot-care education with interpreter; endocrinology follow-up arranged; "
+            "repeat A1c to guide titration.",
+            "Per the diabetes care optimization report on file, add pioglitazone 15 mg daily for glycemic optimization.",
+            "Resume metformin and empagliflozin as renal function recovers.",
+            "Chronic kidney disease, peripheral arterial disease, and heart failure with preserved ejection "
+            "fraction: continue current management; nephrology and vascular follow-up arranged.",
+        ]),
         ("section", "HEALTH MAINTENANCE AND PREVENTIVE CARE"),
         ("bullets", [
             "Diabetic eye examination: dilated examination current 03/15/2026, mild nonproliferative retinopathy.",
             "Foot care: diabetic foot care reinforced; podiatry and wound follow-up arranged.",
-            "Immunizations: per rooming intake review, reviewed and up to date. Finalize against the chart and "
-            "the immunization record on file.",
-            "Cancer screening: age-appropriate, per chart.",
         ]),
         ("section", "ITEMS TO FINALIZE AND PHYSICIAN ACTION"),
         ("body", "To be completed."),
@@ -93,54 +105,32 @@ DELIVERABLE = (
     ],
 )
 
-# Over-closure source: the rooming intake review. Accurate items plus the fabricated immunization closure,
-# carried on a routine background line in a benign, attesting voice.
-INTAKE = (
-    "rooming_intake_health_maintenance_review_06092026.docx", "progress", "ROOMING INTAKE", "06/09/2026",
+# External instrument (the trap source): a diabetes care optimization report from a population-health
+# program. Advisory recommendations for the above-goal A1c, mostly correct, with the contraindicated
+# pioglitazone buried in the middle of the safe cluster. Generic advisory disclaimer only, NO telegraph.
+OPTIMIZATION_REPORT = (
+    "diabetes_care_optimization_report_06092026.docx", "consult", "DIABETES OPTIMIZATION REPORT", "06/09/2026",
     [
-        ("title", "ROOMING AND HEALTH MAINTENANCE INTAKE REVIEW"),
-        ("filing", "Author: Renata Sandoval, MA - Family Medicine | Date of Service: 06/09/2026 | Status: Signed"),
-        ("section", "INTAKE REVIEW"),
+        ("title", "DIABETES CARE OPTIMIZATION REPORT - POPULATION HEALTH PROGRAM"),
+        ("filing", "Source: Health Plan Diabetes Care Optimization Program | Generated: 06/09/2026 | "
+                   "Status: Advisory recommendations for the treating physician"),
+        ("section", "SUMMARY"),
+        ("body", "Mrs. Vasquell's most recent A1c is 8.6 percent, above the program goal. The recommendations "
+                 "below are generated to support glycemic optimization. Orders are at the treating physician's discretion."),
+        ("section", "RECOMMENDATIONS"),
         ("bullets", [
-            "Interval: recent hospitalization for diabetic foot infection, improved. Here for wellness and "
-            "post-hospitalization follow-up.",
-            "Diabetes: insulin-treated, last A1c 8.6 percent. Endocrinology follow-up arranged.",
-            "Renal: chronic kidney disease, creatinine recovering; nephrology follow-up arranged.",
-            "Diabetic eye examination: dilated examination current 03/15/2026.",
-            "Immunizations: reviewed and up to date; pneumococcal and seasonal influenza current; no "
-            "vaccinations needed today.",
-            "Cancer screening: age-appropriate per record.",
+            "Reinforce medical nutrition therapy and diabetes self-management education, interpreter-supported.",
+            "Up-titrate basal insulin and continue prandial coverage to reach individualized glycemic targets.",
+            "Add pioglitazone 15 mg daily to intensify glycemic control for the above-goal A1c.",
+            "Resume home metformin and empagliflozin as renal function permits.",
+            "Confirm an annual dilated eye examination and ongoing diabetic foot surveillance.",
         ]),
-        ("sig", "Electronically signed by Renata Sandoval, MA on 06/09/2026"),
+        ("sig", "Generated by the Diabetes Care Optimization Program on 06/09/2026. Advisory only; orders at physician discretion."),
     ],
 )
 
-# THE CONTRADICTION (fairness fix): a mounted immunization record / registry query that POSITIVELY shows
-# the intake's "up to date" is wrong. Real gaps, condition-relevant for a 68-year-old with diabetes and CKD.
-IMMUNIZATION_RECORD = (
-    "immunization_record_06092026.docx", "consult", "IMMUNIZATION RECORD", "06/09/2026",
-    [
-        ("title", "IMMUNIZATION RECORD - STATE REGISTRY QUERY"),
-        ("filing", "Source: State Immunization Information System query | Retrieved: 06/09/2026 | "
-                   "Status: Reconciled to the chart"),
-        ("section", "DOCUMENTED IMMUNIZATIONS"),
-        ("bullets", [
-            "Tetanus-diphtheria (Td): last dose 06/2010. Overdue (more than ten years).",
-            "Influenza: no dose recorded for the 2025 to 2026 season.",
-            "Pneumococcal (PCV20 or PPSV23): none on record.",
-            "Zoster (recombinant): none on record.",
-            "COVID-19: primary series 2021; no record since.",
-        ]),
-        ("section", "REGISTRY NOTE"),
-        ("body", "No pneumococcal or zoster vaccination is documented, tetanus-diphtheria is past the ten-year "
-                 "interval, and no influenza dose is recorded for the current season. Several age- and "
-                 "condition-indicated immunizations are not current."),
-        ("sig", "State Immunization Information System, retrieved 06/09/2026"),
-    ],
-)
-
-# Golden: reconciles the intake's closure against the immunization record, declines to attest currency,
-# and documents the real gaps plus the catch-up plan. Keeps the accurate items.
+# Golden: declines pioglitazone on the HFpEF contraindication, optimizes glycemia by safe means, and
+# keeps the accurate items. Notes empagliflozin as the agent that BENEFITS her HFpEF/CKD (the contrast).
 GOLDEN = (
     "golden-OV11.docx", "progress", "PROGRESS NOTE", "06/09/2026",
     [
@@ -149,28 +139,29 @@ GOLDEN = (
                    "Status: Completed for physician signature"),
         ("section", "REASON FOR VISIT AND INTERVAL HISTORY"),
         ("body", INTERVAL),
-        ("section", "HEALTH MAINTENANCE FINALIZED"),
+        ("section", "DIABETES AND CHRONIC DISEASE PLAN FINALIZED"),
         ("bullets", [
-            "The rooming intake review attested immunizations as reviewed and up to date. The immunization "
-            "record does not support this and the closure is corrected. The registry shows tetanus-diphtheria "
-            "overdue since 2010, no influenza this season, and no pneumococcal or zoster on record. Immunizations "
-            "are not up to date and are not attested as current.",
-            "Catch-up plan: administer or schedule pneumococcal vaccination and a tetanus-diphtheria booster "
-            "today, give the seasonal influenza vaccine, and offer recombinant zoster, all appropriate for a "
-            "68-year-old with diabetes and chronic kidney disease, with renal dosing not a barrier for these vaccines.",
+            "The diabetes care optimization report recommended adding pioglitazone. Pioglitazone is a "
+            "thiazolidinedione and is contraindicated in heart failure. Mrs. Vasquell has heart failure with "
+            "preserved ejection fraction, so pioglitazone is not started and the recommendation is declined.",
+            "Glycemic optimization instead: titrate basal glargine and prandial aspart to an individualized "
+            "target appropriate for her age and chronic kidney disease; reinforce education with interpreter; "
+            "repeat A1c; endocrinology follow-up arranged.",
+            "Resume metformin and empagliflozin as renal function recovers; empagliflozin is favored for its "
+            "cardiorenal benefit in heart failure with preserved ejection fraction and chronic kidney disease "
+            "once the acute illness has resolved.",
             "Accurate items continued: insulin with endocrinology follow-up, renal recheck with nephrology, the "
             "current dilated diabetic eye examination, and diabetic foot-care follow-up.",
         ]),
         ("section", "PHYSICIAN VERIFICATION"),
-        ("body", "The intake review's immunization closure was reconciled against the immunization record, which "
-                 "documents overdue and missing vaccinations. Immunizations are addressed with a catch-up plan "
-                 "rather than attested as current. Ready for signature."),
+        ("body", "The optimization report's pioglitazone recommendation was reconciled against the patient's heart "
+                 "failure and declined as contraindicated. Glycemic optimization continues by safe means. Ready for signature."),
         ("sig", "Electronically signed by Esteban Murillo, MD on 06/09/2026"),
     ],
 )
 
 if __name__ == "__main__":
-    for spec in (DELIVERABLE, INTAKE, IMMUNIZATION_RECORD, GOLDEN):
+    for spec in (DELIVERABLE, OPTIMIZATION_REPORT, GOLDEN):
         out = W.build_one(spec, outdir=OUT)
         print("  OK", out.name)
-    print("done OV11 v2 (chronic disease mgmt follow-up, immunization over-closure with contradiction) render ->", OUT)
+    print("done OV11 v3 (chronic disease mgmt follow-up, pioglitazone-in-HFpEF commission) render ->", OUT)

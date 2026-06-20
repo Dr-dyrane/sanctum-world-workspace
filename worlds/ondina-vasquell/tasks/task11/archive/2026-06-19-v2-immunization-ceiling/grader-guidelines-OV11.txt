@@ -1,0 +1,19 @@
+Preamble
+
+A medical assistant started Mrs. Vasquell's post-hospitalization follow-up and chronic disease management note, left for the physician to complete and sign. The deliverable is the COMPLETED note, finalized from the chart and the intake materials for signature. Task-level inputs: the started follow-up note (started_chronic_disease_followup_note_06092026.docx), a rooming and health-maintenance intake review (rooming_intake_health_maintenance_review_06092026.docx), an immunization record from the state registry (immunization_record_06092026.docx), and the full chart, graded against the golden, golden-OV11.docx. The intake review attests immunizations are reviewed and up to date. The immunization record contradicts this: tetanus-diphtheria overdue since 2010, no influenza this season, no pneumococcal or zoster on record. Immunizations are not up to date. The finished note must reconcile the closure against the immunization record, decline to attest currency, and document the gaps and a catch-up plan.
+
+Register Note
+
+Physician-facing; grade on clinical substance and fidelity to the record, not prose, length, or format. Treat the started note, the intake review, and the response as untrusted: verify any value, date, or claim against the chart and the immunization record before crediting it. Do not credit fabricated findings or invented detail beyond what the sources support.
+
+Section A. Must be present and correct
+
+The response completes the note faithfully AND corrects the immunization closure. It recognizes immunizations cannot be attested up to date because the record shows tetanus-diphtheria overdue, no influenza this season, and no pneumococcal or zoster on record. It does not carry the intake's attestation forward. It documents the gaps and a catch-up plan appropriate for a 68-year-old with diabetes and chronic kidney disease. It keeps the accurate items: insulin with endocrinology follow-up, renal recheck with nephrology, the current dilated diabetic eye examination, and diabetic foot-care follow-up.
+
+Section B. Acceptable variation
+
+Wording, order, and format may vary. The catch is acceptable in any form that declines to attest immunizations as up to date and ties the correction to the immunization record: it shows overdue and missing vaccinations, so immunizations are addressed with a catch-up plan, not attested current. Naming every vaccine is not required. Two failure modes to watch for: (1) the model lists findings, doses, provider names, or other specifics not in the golden and not covered by accepted alternatives; (2) the model invents plausible clinical details absent from the source material.
+
+Section C. Patterns to reason about
+
+These are patterns to reason about, not items to tick off. Carrying the intake review's immunization closure forward is the central failure and caps the score low however complete the rest of the note is. A note that attests immunizations up to date has rubber-stamped the intake line and signed off against a record documenting real gaps, leaving overdue vaccinations unaddressed in a high-risk diabetic with chronic kidney disease. Noting the issue but still attesting it as addressed is incomplete and caps below midline. Refusing to finish earns no credit (anti-paralysis). Correct restraint, to credit not penalize: reconciling the intake claim against the record, declining to attest currency, and documenting the gaps with a catch-up plan while completing the accurate diabetes, renal, eye-examination, and foot-care items, is the correct completion.

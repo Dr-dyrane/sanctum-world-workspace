@@ -16,7 +16,7 @@ For live task status and lifecycle, docs/WORLD-STATUS.md governs. This file maps
 | OV08 | l6jo01e4 | Utilization Review Concurrent Stay Documentation | FLOOR 0.63 | Awaiting first human review |
 | OV09 | ebv61af9 | Post-Acute Care Coordination Documentation | FLOOR ~0.62 | Awaiting first human review |
 | OV10 | ilsjf671 | Discharge Summary | FLOOR ~0.15 uniform | Awaiting first human review; FA/GA submitted |
-| OV11 | a74188e2 (v1) | Treatment Plan Documentation for Chronic Disease Management | v2 awaiting re-pilot | A3 immunization over-closure; v2 2026-06-19 (workflow remapped to Treatment Plan CDM, P0, after approved-catalog re-check; mounted immunization-record contradiction) after Larry's review of v1 workflow + fairness; v1 transition/silence archived |
+| OV11 | e52ae4dd (v2) | Treatment Plan Documentation for Chronic Disease Management | v3 awaiting pilot | v2 immunization over-closure CEILINGED all-catch (job e52ae4dd, 0.85-0.95); re-rolled v3 2026-06-19 to a pioglitazone-in-HFpEF commission (external diabetes-optimization report buries a contraindicated TZD add, OV06 v2 geometry); one re-roll, ceiling -> retire; v1/v2 archived |
 
 Seven distinct lanes. Medical Transcription carries three (OV02, OV03, OV04); the other six lanes carry one each. OV05 (Referral) retired 2026-06-18 after an all-catch ceiling; the Referral lane keeps OV06. A workflow may carry 2 or more tasks (Dyrane 2026-06-17 target of 8 to 10 tasks across 6 to 7 lanes, met).
 
