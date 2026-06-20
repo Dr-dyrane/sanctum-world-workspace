@@ -13,6 +13,7 @@ The boilerplate failure (2026-06-19) happened because our local gates encoded a 
 | Banned boilerplate filler in the grader | "patterns to reason about, not items to tick off" (OV08, OV11) | gate REQUIRED a phrase AutoQC later banned | `BANNED_BOILERPLATE` list checked in `presubmit_task_gate.py` and `verify_ondina.py`; flags any listed filler. Extend the list from the AutoQC criteria. |
 | Task-file referenced but not uploaded | OV08 `continued_stay_determination_worksheet_05252026.docx` present in the repo but omitted from the Studio upload | manual upload omission; no machine checklist | `presubmit_task_gate.py` emits an explicit per-task UPLOAD MANIFEST and flags any RUN-INSTRUCTIONS mount-list file missing from the repo. Cross-check the manifest against the Studio upload before submitting. |
 | Undocumented chart discrepancy read as a trap | MAR omits ferrous sulfate / cholecalciferol while the H&P marks them "Continued" | frozen-chart authoring artifact, immaterial, not disclosed | `worlds/ondina-vasquell/docs/KNOWN-CHART-DISCREPANCIES.md` discloses it with a paste-ready dispute; the chart stays frozen. |
+| Wrong-task grader pasted into a Studio field | OV08's grader-guidelines field held the OV11 (pioglitazone) grader, naming golden-OV11.docx against the OV08 golden | manual paste into the wrong task while iterating several tasks in Studio; the older AutoQC did not run the prompt-golden-grader correlation | `presubmit_task_gate.py` prints a per-task Studio FIELD MAP (paste each field from its OWN task's file); the repo gate already flags a grader naming a golden absent from its dir; the live AutoQC now runs the full prompt-golden-grader correlation. Repo is the source of truth, re-paste the matching task's grader. |
 
 ## AutoQC named-boilerplate list (seed - extend me)
 
@@ -23,7 +24,7 @@ Add the rest from the criteria as they are confirmed; one entry per phrase, lowe
 
 ## Submit checklist (per task)
 
-1. `python3 tools/verify/presubmit_task_gate.py taskN` -> PASS, and read the printed UPLOAD MANIFEST.
-2. Confirm every manifest file is attached in the Studio task upload (the OV08 miss).
+1. `python3 tools/verify/presubmit_task_gate.py taskN` -> PASS, and read the printed STUDIO FIELD MAP.
+2. Paste each Studio field from the named file: grader-guidelines field from this task's grader, golden from this task's golden, prompt from this task's prompt, and attach every listed mount file (the OV08 miss). Pasting another task's grader is the OV08-vs-OV11 contamination.
 3. `python3 tools/verify/verify_ondina.py` -> PASS.
 4. Have any applicable KNOWN-CHART-DISCREPANCIES dispute ready to paste.

@@ -96,7 +96,7 @@ def check_task(d: Path):
     goldens = sorted(d.glob("golden-*.docx"))
     prompts = sorted(d.glob("prompt-*.txt"))
     if not graders:
-        return ["no grader-guidelines-*.txt"], []
+        return ["no grader-guidelines-*.txt"], None
     if not goldens:
         flags.append("no golden-*.docx")
     for gpath in graders:
@@ -140,7 +140,16 @@ def check_task(d: Path):
             for fn in re.findall(r"[A-Za-z0-9_]+_\d{8}\.docx", m.group(1)):
                 if not (d / fn).exists():
                     flags.append(f"RUN-INSTRUCTIONS lists mount file '{fn}' missing from {d.name}/ (build it or fix the name)")
-    return flags, mount_files
+    # Per-task Studio field map: paste each Studio field from its OWN task's file. The grader's
+    # named golden must match this task's golden (the existing golden-named-not-in-dir flag above
+    # catches a wrong-task grader pasted into the repo; this map prevents it at upload time).
+    manifest = {
+        "grader": ", ".join(p.name for p in graders),
+        "golden": ", ".join(p.name for p in goldens) or "MISSING",
+        "prompt": ", ".join(p.name for p in prompts) or "MISSING",
+        "mounts": mount_files,
+    }
+    return flags, manifest
 
 
 def main():
@@ -161,7 +170,11 @@ def main():
         else:
             print(f"PASS {tag}")
         if manifest:
-            print(f"   upload to Studio ({tag}): {', '.join(manifest)} + the full OV world chart")
+            print(f"   Studio field map ({tag}) - paste each field from its OWN matching repo file:")
+            print(f"     grader-guidelines  <- {manifest['grader']}")
+            print(f"     golden             <- {manifest['golden']}")
+            print(f"     prompt             <- {manifest['prompt']}")
+            print(f"     upload files       <- {', '.join(manifest['mounts'])} + full OV world chart")
     faga = check_fa_ga()
     if faga:
         anyflag = True
