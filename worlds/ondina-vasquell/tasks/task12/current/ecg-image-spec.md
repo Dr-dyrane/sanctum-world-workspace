@@ -39,3 +39,14 @@ PR and P axis undetectable, QRS narrow, no prior ECG on file). There is NO print
 - The grader does NOT read the image; it scores the model's text output against the golden, so the
   finding (new atrial fibrillation, rapid ventricular response, no prior on file) must be legible in
   the render and must match the golden and the renderer.
+
+## Checklist compliance (IMAGE-SOURCING-CHECKLIST per-asset gate + AGENTS.md guardrail 1)
+
+Canonical image guidance: worlds/marva-lydell/docs/IMAGE-SOURCING-CHECKLIST.md (its date rule is World-3-specific; the rest is general), AGENTS.md guardrail 1, and docs/authored-image-artifact-menu.md. OV12 clears every general line:
+
+- WHY-IS-THIS-AN-IMAGE: PASS. An ECG is natively a tracing printout, not chart prose forced into an image. A rhythm finding does not live as text in the EHR, so imaging it is realistic (the test the OV05 bottle photo failed).
+- NOT THE SOLE EVIDENCE, corroborated, agent-and-grader visible: the pre-transfer nursing note (pre_discharge_nursing_note_05232026.docx) points to the tracing ("12-lead ECG obtained... added to the chart"); the in-image machine header (vent rate 104 irregular, PR and P axis undetectable, no prior on file) is OCR-able text that corroborates the waveform; the grader scores the model's text against the golden and can OCR the strip. No separate chart vital states the rhythm, by design, because a 05/23 "HR 104 irregular" line in prose would telegraph the axis and ceiling the task (OV04 pattern).
+- SOURCE PATH 1 (in-repo render): authored by render_ecg.py, no external asset, no license, no AI anywhere in the chain.
+- LICENSE / SCRUB / MATCH: authored, so no copyright or PHI; PNG metadata-clean; morphology and raw fields match golden-OV12-v1.docx and the renderer.
+- TIMELESSNESS: OV is the grandfathered 2026 world (snapshot 05/21/2026), so the 05/23/2026 ECG matches that timeline. The 07/31/2025 narrative-date rule governs new worlds (World 3), not this grandfathered OV task.
+- PROVENANCE recorded: source (render_ecg.py), license (authored, none), scrub (metadata-clean), and the corroborating line (the nursing breadcrumb plus the in-image machine header), all above.
