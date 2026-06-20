@@ -13,7 +13,7 @@ Rules:
 | Folder | Holds | CURRENT source of truth (verified 2026-06-19) |
 |---|---|---|
 | `instruction-doc/` | The Project Sanctum instruction document (the weekly master guide) | `[EXP] Project Sanctum Instruction Document (06_09).md` |
-| `task-selection-categories/` | The approved workflow / task-category menu + companions | `Sanctum_Task_Selection_Categories_Combined_06_19.docx` (companions: `Project_Sanctum_Task_Categories_with_Difficulty_Suggestions.docx`, `Project_Sanctum_Resources_by_Category.docx`) |
+| `task-selection-categories/` | The approved workflow / task-category menu + companions | PICK from `Project_Sanctum_Task_Categories_with_Difficulty_Suggestions.docx` (Definition + work product + difficulty levers per workflow); the broad `Sanctum_Task_Selection_Categories_Combined_06_19.docx` may list non-live strings; `Project_Sanctum_Resources_by_Category.docx`. Confirm the final string on the LIVE Step-10 sheet (see below). |
 | `phase-1-brainstorm/` | Current capture of the instruction doc's Part 1 (Brainstorm): World Setup + Rough Task Ideas writing standards, Common Mistakes, and the Studio upload/AutoQC/submit flow (2026-06-19 screenshots) | `phase-1-brainstorm-instructions-2026-06.md` |
 | `phase-3-evaluating/` | Current capture of the instruction doc's Phase 3 (Evaluating): trajectories, TaigaQA, FA/GA, preference ranking, plus the 2026-06-19 "updated guidelines" screenshots | `phase-3-instructions-2026-06.md` |
 | `autoqc-section-guides/` | Official AutoQC section writer-docs held locally (Sections 5-6; Sections 2-4 are in `reference/templates/`) | `AutoQC_Section_5_Golden_Response_v6.6_writer.docx.pdf`, `AutoQC_Section_6_Grader_Guidelines_v6.6_writer.docx` |
@@ -23,7 +23,7 @@ Rules:
 
 ## The live sheet still wins
 
-Even the current Task Selection Categories file is a local snapshot. The menu changes mid-flight, so per AGENTS.md guardrail 13, verify each task's workflow string against the LIVE sheet at Step 10, not against any saved copy.
+Even the current Task Selection Categories file is a local snapshot. The menu changes mid-flight, so per AGENTS.md guardrail 13, verify each task's workflow string against the LIVE sheet at Step 10, not against any saved copy. The two snapshots can also disagree with each other: pick and brainstorm from `task-selection-categories/Project_Sanctum_Task_Categories_with_Difficulty_Suggestions.docx` (it carries the per-workflow difficulty levers and tracked the live sheet), and treat the broad `Sanctum_Task_Selection_Categories_Combined_06_19.docx` as a wider menu that may list non-live strings. Cautionary example (2026-06-20): the Combined snapshot listed "Specialty Consultation Note," not on the live sheet, while the live sheet and the Difficulty-Suggestions file had "Acute Care Discharge Planning" (OV12's lane); sourcing from the Combined alone caused a lane mislabel that had to be corrected.
 
 ## FA/GA worked examples are LIVE
 
