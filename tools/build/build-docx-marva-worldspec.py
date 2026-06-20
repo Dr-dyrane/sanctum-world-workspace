@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the Ondina Vasquell World Spec DOCX via Mode A clone of the approved KM spec.
+"""Build the Marva Lydell World Spec DOCX via Mode A clone of the approved KM spec.
 
 Clones the KM spec base (styles.xml, theme, numbering byte-identical), clears the
 body, and rebuilds it from the audited submission markdown applying KM's exact

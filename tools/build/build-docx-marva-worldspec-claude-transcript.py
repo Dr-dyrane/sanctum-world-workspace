@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the Ondina Vasquell World Spec Claude transcript DOCX."""
+"""Build the Marva Lydell World Spec Claude transcript DOCX."""
 
 from __future__ import annotations
 
@@ -301,7 +301,7 @@ def build_docx() -> None:
     for section in doc.sections:
         footer = section.footer.paragraphs[0]
         footer.alignment = WD_ALIGN_PARAGRAPH.RIGHT
-        footer_run = footer.add_run("Ondina Vasquell World Spec Claude transcript")
+        footer_run = footer.add_run("Marva Lydell World Spec Claude transcript")
         footer_run.font.name = "Arial"
         footer_run.font.size = Pt(8)
         footer_run.font.color.rgb = RGBColor.from_string("666666")
@@ -309,7 +309,7 @@ def build_docx() -> None:
     doc.core_properties.author = ""
     doc.core_properties.comments = ""
     doc.core_properties.subject = ""
-    doc.core_properties.title = "Ondina Vasquell World Spec Claude Transcript"
+    doc.core_properties.title = "Marva Lydell World Spec Claude Transcript"
     doc.core_properties.keywords = ""
     doc.core_properties.last_modified_by = ""
     doc.save(OUT)

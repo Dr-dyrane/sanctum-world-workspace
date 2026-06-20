@@ -239,7 +239,7 @@ def build_docx() -> None:
         add_plain(doc, line, bold_prefix=":" in line and current_role is None)
 
     footer = doc.sections[0].footer.paragraphs[0]
-    footer.text = "Marva Lydell Brainstorm transcript scaffold"
+    footer.text = "Marva Lydell Brainstorm transcript"
     for run in footer.runs:
         run.font.name = "Arial"
         run.font.size = Pt(8)
