@@ -3,16 +3,18 @@
 artifacts through the canonical renderer into tasks/task12/current/. Frozen-world-safe:
 task-layer artifacts only; no world edits.
 
-Lane: Specialty Consultation Note (P1, fresh 8th lane). Deliverable: a pre-transfer NEPHROLOGY consultation note
-the attending completes and signs. Mechanism: the OV04 off-text-image engine on a fresh cardiac-
-rhythm axis. The consult's headline is renal (acute kidney injury on chronic kidney disease,
-dosing, held-agent restart); the chart is silent on rhythm; a pre-discharge 12-lead ECG (mounted
-image, pre_discharge_ecg_05232026.png) shows new atrial fibrillation with a rapid ventricular
-response and no prior on file. Floor = the model completes the renal consult from chart prose and
-never opens the ECG, missing the new afib. Catcher = it reads the ECG, recognizes new-onset afib,
-and recommends rate control + anticoagulation evaluation dosed to renal function + cardiology, and
-does not clear transfer without addressing it. The grader scores the text against the golden; it
-does not read the image.
+Lane: Acute Care Discharge Planning (P1), exact string from the 06/18 Approved Task Selection
+Categories catalog. Work product: "Documented discharge plan including post-acute services,
+follow-up appointments, and patient education." Deliverable: the attending completes and signs
+Mrs. Vasquell's discharge plan for transfer to skilled nursing. Mechanism: the OV04 off-text-image
+engine on a fresh cardiac-rhythm axis. The plan's headline is discharge logistics (services,
+follow-ups, education); the chart is silent on rhythm; a pre-discharge 12-lead ECG (mounted image,
+pre_discharge_ecg_05232026.png) shows new atrial fibrillation with a rapid ventricular response and
+no prior on file. Floor = the model completes the plan's follow-ups and services from chart prose
+and never opens the ECG, clearing routine transfer and omitting cardiology. Catcher = it reads the
+ECG, recognizes new-onset afib, adds cardiology with rate control and a CKD-appropriate
+anticoagulation evaluation, and holds routine-transfer clearance until it is addressed. The grader
+scores the text against the golden; it does not read the image.
 """
 from __future__ import annotations
 import sys
@@ -25,70 +27,75 @@ import build_world_files as W
 OUT = REPO / "worlds/ondina-vasquell/tasks/task12/current"
 OUT.mkdir(parents=True, exist_ok=True)
 
-REASON = ("Nephrology consulted by Hospital Medicine for pre-transfer assessment of acute kidney "
-          "injury on chronic kidney disease stage 3b: confirm renal recovery, advise renal dosing "
-          "and nephrotoxin avoidance, and advise on timing for restart of the home agents held "
-          "since admission (metformin, empagliflozin, lisinopril) before transfer to skilled nursing.")
+DISPOSITION = ("Transfer to a skilled nursing facility for continued skilled wound care, intravenous "
+               "antibiotic therapy, and rehabilitation after a limb-threatening left diabetic foot "
+               "infection, now clinically improved. The patient is not safe to return to an "
+               "unsupported second-floor walk-up; her daughter, the primary caregiver, works night "
+               "shifts. Disposition coordinated with the patient and daughter through a certified "
+               "Spanish interpreter.")
 
-HIST = ("Sixty-eight-year-old woman admitted 05/16 with a limb-threatening left diabetic foot "
-        "infection, now clinically improved on culture-directed renally dosed intravenous cefepime "
-        "after bedside debridement and with strict offloading. Background of type 2 diabetes on "
-        "insulin, heart failure with preserved ejection fraction (euvolemic on furosemide), "
-        "peripheral arterial disease, anemia of chronic kidney disease, and a sulfa allergy. "
-        "Spanish-preferred; care coordinated through a certified interpreter.")
-
-RENAL_DATA = ("Creatinine 1.6 mg/dL, near the documented baseline of 1.5; eGFR 36; potassium 4.1. "
-              "Acute kidney injury on chronic kidney disease stage 3b, improving. Metformin, "
-              "empagliflozin, and lisinopril held since 05/16 for the acute injury. Nephrotoxins "
-              "and iodinated contrast avoided this stay; all agents renally dosed.")
-
-# renal recommendations, shared substance (golden completes them; the draft leaves them to finish)
-RENAL_RECS = [
-    "Acute kidney injury on chronic kidney disease stage 3b, improving: continue to trend "
-    "creatinine and potassium, maintain euvolemia, and keep avoiding nephrotoxins and iodinated "
-    "contrast.",
-    "Hold metformin and empagliflozin until renal function is stable at baseline off the acute "
-    "injury; restart is parameter-gated and reassessed by primary care, not automatic at transfer.",
-    "Resume lisinopril only once the creatinine is stable at baseline with an acceptable potassium; "
-    "recheck a renal panel one to two weeks after any restart.",
-    "Continue renal dosing of all medications at the facility and monitor the anemia of chronic "
-    "kidney disease.",
+SERVICES = [
+    "Skilled nursing: daily wound dressing to the left plantar forefoot with strict offloading at all times.",
+    "Intravenous antibiotics: continue culture-directed renally dosed cefepime; total duration and any "
+    "oral step-down per Infectious Disease (trimethoprim-sulfamethoxazole excluded for the sulfa allergy).",
+    "Therapy: physical and occupational therapy; fall precautions.",
+    "Glycemic: basal-bolus insulin with point-of-care glucose monitoring; oral agents remain held and "
+    "are reassessed by primary care against renal recovery.",
 ]
 
-# the off-text catch (golden only): new afib on the mounted pre-discharge ECG
+EDUCATION = [
+    "Diabetic foot care and strict non-weight-bearing offloading, taught through a certified interpreter "
+    "with teach-back before transfer.",
+    "Medication changes and the held-agent plan reviewed with the patient and daughter.",
+    "Facility and family given the follow-up schedule and the reasons to call.",
+]
+
+# follow-ups the model completes from the chart (the catch lives here as the cardiology line)
+FOLLOWUPS_GOLD = [
+    "Infectious Disease: finalize antibiotic duration and any oral step-down.",
+    "Vascular surgery (outpatient): repeat perfusion assessment of the left lower extremity.",
+    "Podiatry and wound care: ongoing debridement and offloading management.",
+    "Primary care and renal: reassess restart of the held agents (metformin, empagliflozin, lisinopril) "
+    "against renal recovery; monitor anemia of chronic kidney disease.",
+    "Endocrinology and ophthalmology: diabetes follow-up; annual dilated eye examination.",
+    "Cardiology (new): for new atrial fibrillation on the 05/23 pre-discharge ECG; arrange rate control "
+    "with a renally appropriate agent and an anticoagulation evaluation appropriate to chronic kidney "
+    "disease stage 3b, with telemetry or rhythm monitoring at a capable facility.",
+]
+
+# the off-text catch (golden only): new afib on the mounted pre-discharge ECG, and the readiness hold
 AFIB_GOLD = (
     "The pre-discharge 12-lead ECG obtained 05/23 shows new atrial fibrillation with a rapid "
     "ventricular response and no prior ECG on file for comparison; the record documents no prior "
-    "arrhythmia, so this is new-onset. It is not reflected in the started draft and must be "
-    "surfaced before sign. Recommend rate control with an agent dosed to renal function; evaluate "
-    "for anticoagulation given an elevated stroke risk from her age, hypertension, diabetes, and "
-    "vascular disease, choosing and dosing the agent for chronic kidney disease stage 3b and "
-    "weighing bleeding risk; obtain a cardiology consultation with telemetry; and do not clear the "
-    "patient as renally optimized for transfer until the new atrial fibrillation is addressed."
+    "arrhythmia, so this is new-onset. It is not reflected in the started plan and changes discharge "
+    "readiness. Before transfer the plan must add cardiology follow-up with rate control and an "
+    "anticoagulation evaluation appropriate to chronic kidney disease stage 3b, weighing her stroke "
+    "risk against bleeding and her dual antiplatelet therapy; the receiving facility must be able to "
+    "monitor rhythm and carry out the new orders. The patient is not cleared for routine skilled-"
+    "nursing transfer until the new atrial fibrillation is addressed."
 )
 
 DRAFT = (
-    "nephrology_consult_note_draft_05232026.docx", "progress",
-    "NEPHROLOGY CONSULTATION NOTE", "05/23/2026",
+    "discharge_plan_draft_05232026.docx", "progress",
+    "ACUTE CARE DISCHARGE PLAN", "05/23/2026",
     [
-        ("title", "NEPHROLOGY CONSULTATION NOTE (PHYSICIAN COMPLETION)"),
-        ("filing", "Author: Renata Solis, MD - Nephrology Fellow | Cosign pending: David Aronson, MD "
-                   "- Nephrology | Requested by: Hospital Medicine | Date of Service: 05/23/2026 | "
-                   "Status: Draft started for attending completion and signature"),
-        ("body", "Started on rounds; please complete the remaining sections from the chart for "
-                 "Mrs. Vasquell's pre-transfer nephrology review, then this note is ready for "
+        ("title", "ACUTE CARE DISCHARGE PLAN (PHYSICIAN COMPLETION)"),
+        ("filing", "Author: Daniel Foss, MD - Hospital Medicine | Cosign pending: Lillian Everet, MD | "
+                   "Date of Service: 05/23/2026 | Status: Draft started for attending completion and "
+                   "signature"),
+        ("body", "Started during discharge rounds; please complete the remaining sections from the "
+                 "chart for Mrs. Vasquell's transfer to skilled nursing, then this plan is ready for "
                  "attending signature."),
-        ("section", "REASON FOR CONSULTATION"),
-        ("body", REASON),
-        ("section", "RELEVANT HISTORY"),
-        ("body", HIST),
-        ("section", "PERTINENT RENAL DATA"),
-        ("body", RENAL_DATA),
-        ("section", "ASSESSMENT AND RECOMMENDATIONS"),
-        ("body", "Complete the renal assessment and recommendations from the chart: renal recovery, "
-                 "medication dosing, and the timing of the held agents."),
-        ("sig", "Drafted by Renata Solis, MD (Nephrology Fellow) on 05/23/2026; for completion and "
-                "signature by David Aronson, MD"),
+        ("section", "DISPOSITION"),
+        ("body", DISPOSITION),
+        ("section", "POST-ACUTE SERVICES"),
+        ("bullets", SERVICES),
+        ("section", "FOLLOW-UP APPOINTMENTS"),
+        ("body", "Complete the follow-up appointments from the chart."),
+        ("section", "PATIENT AND CAREGIVER EDUCATION"),
+        ("bullets", EDUCATION),
+        ("sig", "Drafted by Daniel Foss, MD (Hospital Medicine) on 05/23/2026; for completion and "
+                "signature by Lillian Everet, MD"),
     ],
 )
 
@@ -109,28 +116,28 @@ NURSE = (
 
 GOLDEN = (
     "golden-OV12-v1.docx", "progress",
-    "NEPHROLOGY CONSULTATION NOTE", "05/23/2026",
+    "ACUTE CARE DISCHARGE PLAN", "05/23/2026",
     [
-        ("title", "NEPHROLOGY CONSULTATION NOTE (PHYSICIAN COMPLETION)"),
-        ("filing", "Author: David Aronson, MD - Nephrology | Requested by: Hospital Medicine | "
-                   "Date of Service: 05/23/2026 | Status: Completed for physician signature"),
-        ("section", "REASON FOR CONSULTATION"),
-        ("body", REASON),
-        ("section", "RELEVANT HISTORY"),
-        ("body", HIST),
-        ("section", "PERTINENT RENAL DATA"),
-        ("body", RENAL_DATA),
-        ("section", "ASSESSMENT AND RECOMMENDATIONS"),
-        ("bullets", RENAL_RECS),
-        ("section", "NEW FINDING ON PRE-TRANSFER ECG"),
+        ("title", "ACUTE CARE DISCHARGE PLAN (PHYSICIAN COMPLETION)"),
+        ("filing", "Author: Lillian Everet, MD - Hospital Medicine | Date of Service: 05/23/2026 | "
+                   "Status: Completed for physician signature"),
+        ("section", "DISPOSITION"),
+        ("body", DISPOSITION),
+        ("section", "POST-ACUTE SERVICES"),
+        ("bullets", SERVICES),
+        ("section", "FOLLOW-UP APPOINTMENTS"),
+        ("bullets", FOLLOWUPS_GOLD),
+        ("section", "PATIENT AND CAREGIVER EDUCATION"),
+        ("bullets", EDUCATION),
+        ("section", "NEW FINDING ON PRE-TRANSFER ECG AND DISCHARGE READINESS"),
         ("body", AFIB_GOLD),
         ("section", "FLAGS FOR ATTENDING BEFORE SIGN"),
         ("body", "New atrial fibrillation on the 05/23 pre-discharge ECG, not previously documented. "
-                 "The completed note recommends renally dosed rate control, anticoagulation "
-                 "evaluation appropriate to chronic kidney disease stage 3b, a cardiology "
-                 "consultation with telemetry, and holds renal-optimization sign-off for transfer "
-                 "until the new atrial fibrillation is addressed."),
-        ("sig", "Electronically signed by David Aronson, MD on 05/23/2026"),
+                 "The completed plan adds cardiology follow-up with renally dosed rate control and a "
+                 "CKD-appropriate anticoagulation evaluation, routes the patient to a rhythm-monitoring-"
+                 "capable facility, and holds routine-transfer clearance until the new atrial "
+                 "fibrillation is addressed."),
+        ("sig", "Electronically signed by Lillian Everet, MD on 05/23/2026"),
     ],
 )
 
