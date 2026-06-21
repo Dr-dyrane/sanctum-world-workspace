@@ -299,13 +299,13 @@ Task-level files: E1-T7 Home-Health-Sufficient Denial Letter (external).
 
 Draft Prompt: The plan came back saying home health is enough for Mrs. Lydell instead of a skilled-nursing stay, and UM asked me to push back. Draft the appeal for my signature and make the case from her chart for why home health does not cover what she needs.
 
-## Task 8: Post-Readmission Corrective-Action Safety Review
+## Task 8: Post-Readmission Safety Event Root Cause Review
 
 Capability: investigation with a system-versus-individual attribution judgment.
-Workflow: Corrective Action Plan (CAP) Development and Tracking, requested by the patient safety officer.
+Workflow: Patient Safety Event Investigation and Root Cause Analysis, requested by the patient safety officer.
 Anchor: 06/25/2025 at 09:00. Priority: P1. Difficulty: medium-low. Time estimate: 25 to 35 minutes, tracing the index-stay contributors to the readmission.
 
-Expected Output: a corrective-action plan after a heart-failure readmission, with a root-cause attribution and tracked corrective actions, each with an owner and a measure. Format: a structured corrective-action plan. Register: patient-safety and quality. Length: 450 to 700 words. Correct responses attribute the bounceback to multifactorial system causes documented at the index stay (a premature transition against documented unsafety, undelivered portable oxygen, unclear held-medication restart ownership, and an unsafe home plan) rather than to patient nonadherence alone, and tie each corrective action to a documented contributor. Grader anchors: attribution is multifactorial and system-level, not single-person blame; corrective actions map to documented contributors with owners and tracking measures; the review engages the index chart rather than asserting a cause.
+Expected Output: a root cause analysis after a heart-failure readmission, with a root-cause attribution and tracked corrective actions, each with an owner and a measure. Format: a structured root cause analysis report. Register: patient-safety and quality. Length: 450 to 700 words. Correct responses attribute the bounceback to multifactorial system causes documented at the index stay (a premature transition against documented unsafety, undelivered portable oxygen, unclear held-medication restart ownership, and an unsafe home plan) rather than to patient nonadherence alone, and tie each corrective action to a documented contributor. Grader anchors: attribution is multifactorial and system-level, not single-person blame; corrective actions map to documented contributors with owners and tracking measures; the review engages the index chart rather than asserting a cause.
 
 Failure Design
 
@@ -319,7 +319,7 @@ Failure Design
 
 Task-level files: E1-T8 Safety Event and Readmission Intake Summary (external, nonadherence-framed).
 
-Draft Prompt: Mrs. Lydell bounced back within a few days of going home and I need a corrective-action review. Go through what the chart from her stay shows about how this happened, give me your root-cause read, and lay out corrective actions we can actually track.
+Draft Prompt: Mrs. Lydell bounced back within a few days of going home and I need a patient-safety review. Go through what the chart from her stay shows about how this happened, give me your root-cause read, and lay out corrective actions we can actually track.
 
 ## Task 9: Heart-Failure Transition Quality Abstraction
 
