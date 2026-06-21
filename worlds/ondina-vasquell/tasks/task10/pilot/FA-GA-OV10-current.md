@@ -4,7 +4,7 @@ Status: Job 0de174b1. Ten runs 0.30, 0.80, 0.72, 0.40, 0.85, 0.35, 0.45, 0.35, 0
 
 ## Failure Analysis
 
-On trajectory 1, Overall Failure Score: 0.30 / 1.0. The review declines to co-sign but misses the finding the co-signature turns on. The summary attests vitamin D repleted to target and CKD mineral-bone disease addressed. No vitamin D, PTH, calcium, phosphate, or DEXA was drawn. It even opened the 05/23 care-management note (Defreze, RN, CCM) the line came from and let it stand. The golden corrects it and keeps mineral-bone disease open for outpatient workup.
+Overall Failure Score: 0.30 / 1.0. On trajectory 1, the review declines to co-sign but misses the finding the co-signature turns on. The summary attests vitamin D repleted to target and CKD mineral-bone disease addressed. No vitamin D, PTH, calcium, phosphate, or DEXA was drawn. It even opened the 05/23 care-management note (Defreze, RN, CCM) the line came from and let it stand. The golden corrects it and keeps mineral-bone disease open for outpatient workup.
 
 Instead it chases an off-target reading, that the note is premature, and raises osteomyelitis and perfusion, neither scored. Attesting an unperformed bone workup as addressed forecloses the outpatient evaluation and leaves the metabolic bone disease unmonitored in a diabetic with chronic kidney disease. The model's own fix, relabel and complete later, carries the false attestation forward. A competent attending checking the line against the labs would not co-sign it. A documentation-integrity failure, not a wording preference.
 

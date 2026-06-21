@@ -9,7 +9,7 @@ Exit 0 when there are no FAILs (WARNs are allowed). Exit 1 on any FAIL.
 This complements presubmit_task_gate.py. The gate checks the whole task* tree for the
 structural basics (two paragraphs, <=1000 chars, dashes, banned credit phrases, rating
 line). This linter checks the SINGLE file being drafted, including the voice rules the
-gate does not enforce: the FA opens with "On trajectory N", only the analyzed run is
+gate does not enforce: the FA opens with the Overall Failure Score line then names the run, only the analyzed run is
 named (no other-run scores or distribution in the body), the writer's own score appears
 as the required Overall Failure Score line, and sentences stay short enough to read in one breath.
 
@@ -30,6 +30,9 @@ SCORE_RANGE = re.compile(r'0\.\d{1,2}\s*(?:to|through|-|and)\s*0\.\d{1,2}')
 DISTRIB = re.compile(r'\b(distribution|uniformly|bimodal|across runs|no high outlier|'
                      r'mean (?:of |about )?0?\.?\d)\b', re.I)
 OVERALL_SCORE = re.compile(r'Overall Failure Score:\s*(?:0(?:\.\d{1,2})?|1(?:\.0{1,2})?)\s*/\s*1\.0')
+# the FA may lead the Output Score in the 0-1 form ("Overall Failure Score: X.XX / 1.0") or the
+# Studio-confirmed percent form ("Overall Score: NN%"); both are score-first (Dyrane, 2026-06-20)
+SCORE_LEAD = re.compile(r'Overall (?:Failure )?Score:\s*(?:\d{1,3}\s*%|[01](?:\.\d{1,2})?\s*/\s*1\.0)')
 CITES = re.compile(r'\b\d{1,2}/\d{1,2}(?:/\d{2,4})?\b')  # a dated source-document reference; the FA must name at least one
 SENT_WARN = 30  # words; flow favors varied rhythm, warn only past ~30 (a genuinely overloaded sentence)
 # FA must be failure-only: no competent-baseline praise opener (the live AutoQC fails any positive framing)
@@ -87,15 +90,13 @@ def lint(path: str):
                 warns.append(f"{name}: long sentence ({n} words), consider splitting -> \"{s[:55]}...\"")
 
     if fa:
-        if not fa.startswith("On trajectory "):
-            fails.append("FA must open with 'On trajectory N' (the 1-10 count, not the run hash)")
-        if not OVERALL_SCORE.search(fa):
-            fails.append("FA must include the writer's own score line: 'Overall Failure Score: X.XX / 1.0'")
-        else:
-            fa_paras = [p for p in re.split(r'\n\s*\n', fa) if p.strip()]
-            if fa_paras and not OVERALL_SCORE.search(fa_paras[0]):
-                fails.append("FA must LEAD with the Output Score (state your score first, 2026-06-20 template): "
-                             "put the 'Overall Failure Score: X.XX / 1.0' line in the opening paragraph, not the close")
+        if not SCORE_LEAD.match(fa.strip()):
+            fails.append("FA must LEAD with the Output Score as the first element (2026-06-20 reviewer rule): "
+                         "start with 'Overall Failure Score: X.XX / 1.0' or 'Overall Score: NN%', then name the run. "
+                         "Any context, including 'On trajectory N', before the score is the AutoQC fail")
+        fa_open = re.split(r'\n\s*\n', fa)[0]
+        if "On trajectory " not in fa_open:
+            fails.append("FA opening must name the run as 'On trajectory N' right after the score line")
         if not CITES.search(fa):
             fails.append("FA cites no specific source document; name the consult, order, or note by author or date "
                          "(e.g. 'the wound-care consult (Olwyn, CWOCN, 05/20)') so a reviewer can verify. "

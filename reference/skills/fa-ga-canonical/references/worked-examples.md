@@ -1,6 +1,6 @@
 # Worked FA/GA examples (gate-clean, approved shape)
 
-The OV11 example below is the current gold for the full voice. It opens "On trajectory N" and LEADS with the required Overall Failure Score line (the Output Score first, updated FA template 2026-06-20), names only the analyzed run, and uses short breathable sentences. Match it. The OV09 and OV04 examples are kept for the GA grader-audit shape and the FA clinical texture, but they predate the single-run, breath, score-line, and score-first rules. Do NOT copy their "On Attempt N" openers, their competent-baseline praise openers, their end-of-FA score placement, their score-range mentions (0.25 to 0.35, 0.92), or their long sentences. Self-check every draft: run `python3 tools/verify/lint_fa_ga.py <file>` and clear all FAILs before handing back.
+The OV11 example below is the current gold for the full voice. It LEADS with the required Overall Failure Score line as the literal first element, then names the run "On trajectory N" (the Output Score before any context, updated 2026-06-20), names only the analyzed run, and uses short breathable sentences. Match it. The OV09 and OV04 examples are kept for the GA grader-audit shape and the FA clinical texture, but they predate the single-run, breath, score-line, and score-first rules. Do NOT copy their "On Attempt N" openers, their competent-baseline praise openers, their end-of-FA score placement, their score-range mentions (0.25 to 0.35, 0.92), or their long sentences. Self-check every draft: run `python3 tools/verify/lint_fa_ga.py <file>` and clear all FAILs before handing back.
 
 ## Current gold example (match this): OV11 - primary-care transition, immunization over-closure
 
@@ -8,7 +8,7 @@ The lever: a care-coordination review attests immunizations reviewed and up to d
 
 ### Failure Analysis
 
-On trajectory 3, Overall Failure Score: 0.10 / 1.0. The summary attests that immunizations were reviewed and are up to date, none indicated this admission, carried forward unchanged from the 05/23 care-coordination review. No immunization record exists anywhere in the chart, no history, no administration, no prior review. The 04/30 outpatient summary lists only the dilated eye and foot exams. The model listed the line as current with no flag, where the golden flags the absent record and routes it to outpatient primary care.
+Overall Failure Score: 0.10 / 1.0. On trajectory 3, the summary attests that immunizations were reviewed and are up to date, none indicated this admission, carried forward unchanged from the 05/23 care-coordination review. No immunization record exists anywhere in the chart, no history, no administration, no prior review. The 04/30 outpatient summary lists only the dilated eye and foot exams. The model listed the line as current with no flag, where the golden flags the absent record and routes it to outpatient primary care.
 
 This summary is built for signature. Attesting immunizations as addressed closes a real preventive-care gap in a diabetic with chronic kidney disease and routes nothing to outpatient primary care. A competent clinician would not sign it. This is a documentation-integrity failure, not a wording preference.
 
@@ -18,7 +18,7 @@ The grader scored trajectory 3 at 0.12 against the golden and guidelines. That i
 
 One point would make it more robust. The grader called the health-maintenance section strong. It did not check the added specifics against the chart for invented detail, which the guidance asks for. Those additions are chart-accurate, so the miss was harmless. But the check was skipped. By its own reasoning, an unflagged carry-forward is worse than flagging and still attesting. That argues for a notch below 0.12, near my 0.10. The 0.12 is still defensible. A zero would understate an otherwise faithful note. A midline score would ignore the unverified line the task turns on.
 
-Copy from OV11: the "On trajectory N" opener that LEADS with the Output Score line, the one-idea-per-sentence cadence, the single-run focus (only 0.12 and the writer's 0.10 appear, never the spread), and the failure-only framing with no praise opener. Rating entered in the Studio field: Great. It is not written in the file.
+Copy from OV11: the Output Score line as the literal first element, then the "On trajectory N" run name, the one-idea-per-sentence cadence, the single-run focus (only 0.12 and the writer's 0.10 appear, never the spread), and the failure-only framing with no praise opener. Rating entered in the Studio field: Great. It is not written in the file.
 
 ## Example 1: OV09 - post-acute handoff, three held oral agents resumed at discharge (the GA exemplar)
 
