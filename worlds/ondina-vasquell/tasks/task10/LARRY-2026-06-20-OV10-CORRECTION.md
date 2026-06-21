@@ -1,6 +1,6 @@
 # OV10 reviewer correction - Larry E, 1st review, 2026-06-20
 
-Status: OV10 is NOT being reworked yet (Alexander's direction). This file records the correction verbatim-in-substance and the distilled principles, and drives the World 3 (Marva Lydell) safety audit at worlds/marva-lydell/docs/W3-OV10-LESSONS-AUDIT.md.
+Status: OV10 is NOT being reworked yet (Alexander's direction). This file records the correction verbatim-in-substance and the distilled principles, and drives the World 3 (Marva Lydell) safety audit at worlds/marva-lydell/docs/W3-OV10-LESSONS-AUDIT.md. Canonicalized 2026-06-20 as pod doctrine binding all worlds and tasks at reference/world-spec-guidelines/POLICY-2026-06-20-deprecated-workflows-and-task-fairness.md.
 
 ## The flag
 Any task with consistent failure this low (~15%) across all ten runs is flagged as unfair. The trap and intent were understood; the issue is fairness of the failure, not effort or competence.

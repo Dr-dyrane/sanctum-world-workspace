@@ -49,3 +49,7 @@ Extracted from source guide mentions of GO, SEND BACK, reviewer expectations, Au
 - Not keeping physician judgment as source of truth.
 - Failing to document reviewer feedback and AutoQC results.
 
+
+## Deprecated note-completion workflow + task fairness floor (Larry E, 2026-06-20)
+
+A first-level OV10 review established standing doctrine for all worlds and tasks: note-completion and finish-the-note workflows are deprecated, the scored failure must come from a realistic catchable error and never a planted falsehood in the patient's own record, no task may floor every run (failing low across all ten is flagged unfair), and every build or resubmission uses the current grader guidelines, FA/GA, and PL formats. The endorsed replacement shape is review-and-correct a complete signed note that makes a common mistake. Full doctrine: reference/world-spec-guidelines/POLICY-2026-06-20-deprecated-workflows-and-task-fairness.md.
