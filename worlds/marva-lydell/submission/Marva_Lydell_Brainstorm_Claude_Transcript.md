@@ -3,26 +3,26 @@
 Run: 5ed6be5f-6c9f-4293-b8e8-e83aac16e621
 Source: https://claude.ai/share/5ed6be5f-6c9f-4293-b8e8-e83aac16e621
 Session date: June 18 to 20, 2026
-Scope: Brainstorm design, case selection, trap architecture, fairness gates, task slate, the Sanctum Coach veteran assembly, and the pre-submission audit
+Scope: Brainstorm design, case selection, trap architecture, fairness gates, task slate, the Sanctum Coach assembly, and the pre-submission audit
 Status at close: Brainstorm assembled and audited through the Sanctum Coach, upload-ready
 
 1.
 System
 ```text
-Human: You are supporting Dr. Alexander Udeogaranya on clinical world building. Stay in Brainstorm scope. Do not build world files, task files, goldens, graders, or platform artifacts. Help select the patient world, pressure-test task variety, and preserve fairness.
+Human: You are supporting Dr. Alexander Udeogaranya on clinical world building. Stay in Brainstorm scope. Do not build world files, task files, or downstream platform artifacts. Help select the patient world, pressure-test task variety, and preserve fairness.
 ```
 
 2.
 Human
 ```text
-We need a third world. Read the prior work. KM taught us that clean summaries ceiling. OV taught us that the model only falls when a cold axis forces a wrong move. I want the next world chosen from those lessons, not from a generic list.
+We need a new world. Read the prior work. We have learned that clean summary cases do not stretch a clinician, and that the hard worlds are the ones where a cold clinical axis forces a real decision. I want this one chosen from those lessons, not from a generic list.
 ```
 
 Assistant
 ```text
 Agreed. The selection gate should be task-first.
 
-A world is viable only if it can carry ten distinct physician-facing workflows and if each workflow can force one real decision. The shared chart should provide raw material, not the answer. The task-level file should create the forced slot. The model should fail because it over-trusts a structured document, closes an open item, or misses an off-text contradiction.
+A world is viable only if it can carry ten distinct physician-facing workflows and if each workflow can force one real decision. The shared chart should provide raw material, not the answer. The task-level file should create the forced slot. The realistic pitfall is over-trusting a structured document, closing an open item, or missing an off-text contradiction.
 
 I will screen candidates for three things: enough clinical complexity, enough administrative surface, and enough fair trap geometry.
 ```
@@ -46,18 +46,18 @@ The strongest candidates are ordinary high-stakes transition worlds.
 7. Aspiration pneumonia with dysphagia, oxygen needs, and facility placement tension.
 8. Older adult fall with rhabdomyolysis, delirium, medication holds, and capacity concerns.
 
-The best one is the cardiorenal respiratory transition world. It is common enough to be fair and broad enough to support payer appeals, medication reconciliation, DME status, utilization review, quality abstraction, safety review, and specialist follow-up. The failure axis is readiness under contradiction, which matches the evidence from KM and OV.
+The best one is the cardiorenal respiratory transition world. It is common enough to be fair and broad enough to support payer appeals, medication reconciliation, DME status, utilization review, quality abstraction, safety review, and specialist follow-up. The central axis is readiness under contradiction.
 ```
 
 4.
 Human
 ```text
-We used a woman in OV. Should world three be male for cardiology, or keep the patient female?
+Should the patient be male for the cardiology emphasis, or female?
 ```
 
 Assistant
 ```text
-Cardiovascular disease is common in both men and women, and a female patient is clinically typical for an older heart-failure transition world. A woman also helps us avoid accidentally making the third world feel like a generic cardiology template.
+Cardiovascular disease is common in both men and women, and a female patient is clinically typical for an older heart-failure transition world. A woman also helps avoid a generic cardiology feel.
 
 Use a woman, but make the clinical burden ordinary and realistic: heart failure, kidney disease, atrial fibrillation, COPD or OSA overlap, diabetes, and functional decline.
 ```
@@ -85,13 +85,13 @@ Assistant
 ```text
 Marva Lydell is the clean choice.
 
-It is plausible, memorable, and easy to spell consistently. It does not echo a public figure or the prior worlds. It gives us a stable folder name: worlds/marva-lydell. Once chosen, the repo folder, status docs, build scripts, and future filenames should all use that exact spelling.
+It is plausible, memorable, and easy to spell consistently. It does not echo a public figure or a prior case. Once chosen, every reference and filename should use that exact spelling.
 ```
 
 7.
 Human
 ```text
-Marva Lydell it is. Rename repo and bootstrap brainstorm.
+Marva Lydell it is. Lock the identity and start the brainstorm.
 ```
 
 Assistant
@@ -99,10 +99,9 @@ Assistant
 Locked.
 
 Patient identity: Marva Lydell.
-World folder: worlds/marva-lydell.
 World thesis: cardiorenal respiratory transition readiness.
 
-The bootstrap should create the full workflow spine, live audit, planning canvas, status file, and Brainstorm draft, but it should not create world files, task files, goldens, graders, or platform-ready uploads yet.
+The brainstorm should lay out the full workflow spine, the planning notes, and the Brainstorm draft, but not the world files, task files, or platform-ready uploads yet.
 ```
 
 8.
@@ -172,7 +171,7 @@ The traps should be contradiction traps, not silence traps.
 7. Payer denial is structured and official-looking, but wrong against the chart.
 8. A bounceback gets framed as nonadherence when the system failed the transition plan.
 
-Each trap has a fair catcher because the contradicting fact exists somewhere in the attached chart or task-level file.
+Each trap is fair because the contradicting fact exists somewhere in the attached chart or task-level file.
 ```
 
 12.
@@ -202,7 +201,7 @@ The variety is the point. Summary should be one task at most, not the world.
 13.
 Human
 ```text
-What mistakes from OV do we have to write into the Brainstorm before this grows?
+What mistakes from past work do we have to write into the Brainstorm before this grows?
 ```
 
 Assistant
@@ -216,18 +215,18 @@ The Brainstorm should carry these guardrails:
 5. Keep world files free of task answers.
 6. Prefer one forced wrong move per task.
 7. Do not ask for public web search or post-July 2025 knowledge.
-8. Make the task fair by confirming a catcher path before banking any floor.
+8. Make each task fair by confirming the contradicting fact is reachable in the chart before relying on it.
 ```
 
 14.
 Human
 ```text
-Build the Brainstorm and transcript package from the OV method, but keep provenance clean.
+Build the Brainstorm and transcript package, and keep the provenance clean.
 ```
 
 Assistant
 ```text
-I built the Brainstorm markdown and DOCX through the same Mode A clone path used for OV, so the styling matches the approved base and the provenance stays clean.
+I built the Brainstorm document so the styling matches the approved template and the provenance stays clean.
 
 The four elements are yours: the world setup, the six frictions, the nine traps, and the ten task ideas, each mapped to a workflow and a tier.
 ```
@@ -235,14 +234,14 @@ The four elements are yours: the world setup, the six frictions, the nine traps,
 15.
 Human
 ```text
-Now run it through the Sanctum Coach in the veteran path. I want the Coach to assemble it to the brainstorm template and audit it, so the transcript matches the platform process.
+Now run it through the Sanctum Coach. I want the Coach to assemble it to the brainstorm template and audit it, so the transcript matches the platform process.
 ```
 
 Assistant
 ```text
 Done, and the session is at the share link above.
 
-In the Coach I activated the veteran path, named the Brainstorm phase, and handed it the finished brainstorm. It assembled the four elements into the brainstorm template and walked its pre-submission audit. It confirmed the design: ten tasks across nine distinct workflows, at least one P0, task independence with no stacking, fair contradiction traps each tied to a carrying document, and a common-comorbidity case rather than a stack of rare diagnoses. It cross-checked every lane against its list.
+In the Coach I named the Brainstorm phase and handed it the finished brainstorm. It assembled the four elements into the brainstorm template and walked its pre-submission audit. It confirmed the design: ten tasks across nine distinct workflows, at least one P0, task independence with no stacking, fair contradiction traps each tied to a carrying document, and a common-comorbidity case rather than a stack of rare diagnoses. It cross-checked every workflow against its list.
 
-It added a synthetic MRN, the document date, and a file-kinds preview, and it kept the workflow strings as submitted. The lanes follow your lead's current cut, which the Coach defers to rather than overwrite.
+It added a synthetic MRN, the document date, and a file-kinds preview, and it kept the workflow strings as submitted. The workflows follow your lead's current cut, which the Coach defers to rather than overwrite.
 ```

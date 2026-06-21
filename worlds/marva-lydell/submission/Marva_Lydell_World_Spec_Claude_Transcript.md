@@ -1,10 +1,10 @@
 # Marva Lydell World Spec Claude Transcript
 
-Run: Sanctum Coach veteran-mode World Spec session
+Run: Sanctum Coach World Spec session
 Source: https://claude.ai/chat/0c609626-c2d1-4440-a0f0-f4155ab39794
 Session date: June 20, 2026
-Scope: World Spec substrate ratification, spec assembly, file plan, the Sanctum Coach veteran assembly and audit, the timeline correction, and the submission DOCX build
-Status at close: World Spec and submission DOCX built and audited, reference template curation pending, then the automated quality check and human review
+Scope: World Spec substrate ratification, spec assembly, file plan, the Sanctum Coach assembly and audit, the timeline correction, and the submission document build
+Status at close: World Spec and submission document built and audited, reference template curation pending, then the automated quality check and human review
 
 1.
 System
@@ -15,18 +15,18 @@ Human: You are continuing the same session with Dr. Alexander Udeogaranya, now i
 2.
 Human
 ```text
-The Brainstorm is approved. Authorize the phase shift to the World Spec and run continuous through substrate, spec, and the file plan. Keep my clinical authority. Flag anything you derive so I can strike or approve it in one pass. Hold the workflow lanes to the lead's current cut.
+The Brainstorm is approved. Authorize the phase shift to the World Spec and run continuous through substrate, spec, and the file plan. Keep my clinical authority. Flag anything you derive so I can strike or approve it in one pass. Hold the workflows to the lead's current cut.
 ```
 
 Assistant
 ```text
-Understood. I will run the phases back to back and keep one hold: no invented clinical specificity asserted as fact, and the lead's lanes stay as locked.
+Understood. I will run the phases back to back and keep one hold: no invented clinical specificity asserted as fact, and the lead's workflows stay as locked.
 
 Plan:
 
 1. Phase A, substrate. The clinical anchors for this patient, each flagged for your ratification.
-2. Phase B, spec. Clinical scenario, ten task specifications on the locked lanes, the world file plan, and the summary.
-3. Phase C, the Coach. Run the finished spec through the Sanctum Coach veteran path to assemble it to the template and audit it.
+2. Phase B, spec. Clinical scenario, ten task specifications on the locked workflows, the world file plan, and the summary.
+3. Phase C, the Coach. Run the finished spec through the Sanctum Coach to assemble it to the template and audit it.
 
 Derived values stay flagged until you ratify them. Final task prompts, reference answers, and scoring guidance remain yours.
 ```
@@ -60,7 +60,7 @@ A full hospital medicine, cardiology, nephrology, pulmonology, respiratory thera
 4.
 Human
 ```text
-Ratified. The exertional oxygen finding is the spine. Phase B. Assemble the spec. Ten tasks on the locked lanes, the file plan, the summary.
+Ratified. The exertional oxygen finding is the spine. Phase B. Assemble the spec. Ten tasks on the locked workflows, the file plan, the summary.
 ```
 
 Assistant
@@ -69,7 +69,7 @@ World Spec assembled:
 
 Clinical scenario. An improving but operationally unsafe cardiorenal respiratory transition. The record reads better at a glance, resting saturation acceptable, weight and creatinine improving, while the walk test, the therapy findings, the equipment status, and the home picture say the next move is not safe.
 
-Ten tasks, each independent and anchored after the snapshot, on the lead's locked lanes:
+Ten tasks, each independent and anchored after the snapshot, on the lead's locked workflows:
 1. Oxygen and skilled-nursing denial appeal. Claims Denial Analysis and Appeal Preparation, P0. The integration anchor.
 2. Discharge medication reconciliation. Discharge Medication Reconciliation, P0.
 3. Continued-stay determination. Utilization Review Concurrent Stay Documentation, P1.
@@ -89,12 +89,12 @@ Summary. The world tests whether a clinician can hold two true things at once, t
 5.
 Human
 ```text
-Hold the lanes. Phase C. Run it through the Sanctum Coach veteran path. Assemble to the World Spec template and audit against the pre-submission checklist.
+Hold the workflows. Phase C. Run it through the Sanctum Coach. Assemble to the World Spec template and audit against the pre-submission checklist.
 ```
 
 Assistant
 ```text
-Done. In the Coach I activated the veteran path, named the World Spec phase, and attached the finished spec. It assembled the spec into the World Spec template, the cover header, the four sections, the per-task blocks, and the seven-column file tables, and walked the lead checklist and the full pre-submission audit, cross-checking all ten lanes against its list.
+Done. In the Coach I named the World Spec phase and attached the finished spec. It assembled the spec into the World Spec template, the cover header, the four sections, the per-task blocks, and the seven-column file tables, and walked the lead checklist and the full pre-submission audit, cross-checking all ten workflows against its list.
 
 The build is strong. Timeline, two workflow findings, one soft item, and the rest clean. Details next.
 ```
@@ -109,7 +109,7 @@ Assistant
 ```text
 Timeline passes now.
 
-The Coach verified the snapshot at 06/19/2025 18:00, every task anchored 06/20 through 06/26, the latest anchor Task 10 on 06/26, and every world-level file dated on or before the snapshot. The whole calendar sits before the knowledge cutoff. The earlier July dates would have failed the date check, so I had shifted the entire timeline back twenty-one days into June, which moved every date and every filename stamp together and changed no clinical content. The blocker is cleared.
+The Coach verified the snapshot at 06/19/2025 18:00, every task anchored 06/20 through 06/26, the latest anchor Task 10 on 06/26, and every world-level file dated on or before the snapshot. The whole calendar sits before the knowledge cutoff. The earlier July dates would have fallen after the required cutoff, so I had shifted the entire timeline back twenty-one days into June, which moved every date and every filename stamp together and changed no clinical content. The blocker is cleared.
 ```
 
 7.
@@ -122,7 +122,7 @@ Assistant
 ```text
 Two findings, both the known stale-list gap, and I held your cut.
 
-The Coach checks lanes against the list it fetches, which lags your lead's current cut. Against that list, Task 6 (Specialist Referral Letter and Documentation Preparation, P0) is not a listed name and the nearest referral lanes are P1, and Task 10 (CDI Query Response Review) is listed at P1 rather than P0. The Coach declined to overwrite the lead's cut and recommended reconciling with the lead, which is exactly what the lock is. Task 2 it accepted as P0. The at-least-one-P0 requirement is safe regardless. I recorded both for your lead reconciliation and changed nothing.
+The Coach checks workflows against the list it fetches, which lags your lead's current cut. Against that list, Task 6 (Specialist Referral Letter and Documentation Preparation, P0) is not a listed name and the nearest referral workflows are P1, and Task 10 (CDI Query Response Review) is listed at P1 rather than P0. The Coach declined to overwrite the lead's cut and recommended reconciling with the lead, which is exactly what the lock is. Task 2 it accepted as P0. The at-least-one-P0 requirement is safe regardless. I recorded both for your lead reconciliation and changed nothing.
 ```
 
 8.
@@ -148,9 +148,9 @@ Assistant
 ```text
 Built.
 
-I rendered the submission DOCX from the locked markdown through the same Mode A clone path used for the prior world, so the styling matches the approved base: Arial throughout, the blue section and table headers, the cover box, and the file tables. The integrity gate passed, styles byte-identical to the base, the color palette in range, no dashes, and the fingerprint matches.
+I rendered the submission document from the locked draft so the styling matches the approved template: Arial throughout, the blue section and table headers, the header block, and the file tables. The formatting checks passed: the styling matches the template, the palette is in range, and there are no stray characters.
 
-Content verified in the document: the cover, the June 19 snapshot, all ten tasks with the locked lanes and tiers at eight P0 and two P1, the file plan from EW1 to EW32 with the task-level and supplementary tables, and the World Summary. The file is Alexander_World_Marva_latest_6_20.docx.
+Content verified in the document: the cover, the June 19 snapshot, all ten tasks with the locked workflows and tiers at eight P0 and two P1, the file plan from EW1 to EW32 with the task-level and supplementary tables, and the World Summary. The file is Alexander_World_Marva_latest_6_20.docx.
 ```
 
 10.
@@ -163,9 +163,9 @@ Assistant
 ```text
 Readiness:
 
-The World Spec, the submission DOCX, and both transcripts are ready for your review.
+The World Spec, the submission document, and both transcripts are ready for your review.
 
 What remains is yours and the next phase. Reference template curation comes next, one template or reference per world-level row, with the rhythm strip rendered separately, then the spec and the templates upload together for the automated quality check and human review. The task prompts, the reference answers, and the scoring guidance stay physician-authored. I did not take any platform action.
 
-Boundary held: every derived clinical value was flagged and ratified before it was used, the lead's lanes were held and the stale-list findings recorded rather than applied, and nothing was asserted as fact without your approval.
+Boundary held: every derived clinical value was flagged and ratified before it was used, the lead's workflows were held and the stale-list findings recorded rather than applied, and nothing was asserted as fact without your approval.
 ```
