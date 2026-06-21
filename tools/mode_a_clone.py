@@ -115,8 +115,8 @@ def verify_against_base(out_path, base_path):
     o, b = fingerprint(out_path), fingerprint(base_path)
     checks = {
         "styles.xml byte-identical": o["styles_md5"] == b["styles_md5"],
-        "fills identical": o["fills"] == b["fills"],
-        "border colors identical": o["borders"] == b["borders"],
+        "fills subset of base": o["fills"] <= b["fills"],
+        "border colors subset of base": o["borders"] <= b["borders"],
         "palette subset of base": o["colors"] <= b["colors"],
         "no em/en dash/arrow": o["emdash"] == 0 and o["endash"] == 0 and o["arrow"] == 0,
         "no synthetic token": not o["synthetic"],

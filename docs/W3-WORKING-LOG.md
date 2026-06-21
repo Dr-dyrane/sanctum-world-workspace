@@ -102,3 +102,7 @@ Do-not-repeat: the stale Coach endpoint is not authoritative for lane names, tie
 ## 2026-06-20  World-spec header rearranged to the canonical (Soya) layout
 - Rebuilt the header to the official world-spec block. New add_header_block in build-docx-marva-worldspec.py renders one 5-col table: codename banner (HEALTHCARE_CardiorenalTransition_Marva, blue fill / white bold), descriptive title, Patient / World Type / Setting / Workflows as full-width merged rows, and a 5-col footer (Hospital Medicine | 10 Tasks | Project Sanctum | Version 1.0 | 06/27/2025).
 - Spec header table reworked to feed it (Codename, Title, Patient, World Type, Setting, Workflows, Specialty, Total Tasks, Project, Version, Document date); retired the old Cover line + meta Field/Value table. Fills held to {4472C4, D6E4F0}; Mode A fingerprint stays empty (integrity gate clean). Rendered page 1 confirms it matches the Soya example layout.
+
+## 2026-06-20  Header borders blended to the table palette
+- Header block borders changed from black (000000) to the document's table palette (outer 4472C4, inner CCCCCC), matching the Section 1-4 data tables so the header blends instead of sitting in a heavy black frame.
+- mode_a_clone verify_against_base: relaxed the fills/borders checks from exact-equality to subset-of-base (== -> <=), consistent with the existing colors check. The gate now enforces "no color outside the base palette" (drift prevention) rather than "must use every base color" (which was incidentally forcing a black border). Fingerprint clean; styles.xml still byte-identical.

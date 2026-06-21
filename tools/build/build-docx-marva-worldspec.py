@@ -213,7 +213,7 @@ def add_header_block(doc, fields) -> None:
     nrows = 2 + len(info) + 1
     t = doc.add_table(rows=nrows, cols=5)
     t.style = "TableNormal"
-    set_borders(t, outer="000000", inner="000000")
+    set_borders(t, outer=DARKBLUE, inner="CCCCCC")
 
     def merged(r):
         cells = t.rows[r].cells
