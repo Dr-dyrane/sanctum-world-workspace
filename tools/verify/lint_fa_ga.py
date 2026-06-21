@@ -91,6 +91,11 @@ def lint(path: str):
             fails.append("FA must open with 'On trajectory N' (the 1-10 count, not the run hash)")
         if not OVERALL_SCORE.search(fa):
             fails.append("FA must include the writer's own score line: 'Overall Failure Score: X.XX / 1.0'")
+        else:
+            fa_paras = [p for p in re.split(r'\n\s*\n', fa) if p.strip()]
+            if fa_paras and not OVERALL_SCORE.search(fa_paras[0]):
+                fails.append("FA must LEAD with the Output Score (state your score first, 2026-06-20 template): "
+                             "put the 'Overall Failure Score: X.XX / 1.0' line in the opening paragraph, not the close")
         if not CITES.search(fa):
             fails.append("FA cites no specific source document; name the consult, order, or note by author or date "
                          "(e.g. 'the wound-care consult (Olwyn, CWOCN, 05/20)') so a reviewer can verify. "

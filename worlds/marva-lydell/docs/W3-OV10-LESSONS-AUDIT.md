@@ -42,4 +42,4 @@ W3 task creation must use the current project instructions, the new grader guide
 - Keep the rest of the trap architecture as is, it already satisfies the "realistic catchable error, no planted falsehood" rule.
 - Treat the difficulty spread as a hypothesis to confirm at pilot, kill any universal floor.
 - Build all task graders and FA/GA on the current format.
-Not implementing any of this yet; awaiting Alexander's call on the Task 4 / Task 6 redesign.
+APPROVED 2026-06-20 by Alexander: the recommendation stands, Tasks 4 and 6 to be redesigned off the completion format before they are built (at task creation, after the spec + templates clear World Spec AutoQC). Replacement designs not yet drafted.

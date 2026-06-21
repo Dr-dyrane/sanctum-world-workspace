@@ -127,7 +127,7 @@ These carry the metadata so the prose stays clinical; they are not part of the p
 - Format: two paragraphs each, no bullets, about 1000 characters each. No em dashes or en dashes anywhere; use plain hyphens and commas.
 - Gates before handback, both clean: `python3 tools/verify/verify_voice.py` and `python3 tools/verify/presubmit_task_gate.py task<N>`.
 - Boundaries: draft for the writer to read and own. No submission, paste, AutoQC, or platform action without the writer's explicit authorization for that exact step. One FA/GA per task.
-- Writer score: FA must include Alexander's own score, not the trajectory score, and end with `Overall Failure Score: X.XX / 1.0`. Larry's 2026-06-18 guidance says FA/GA cannot be AI-authored. Use this skill only as scratch support; Alexander must own the final platform text.
+- Writer score: FA must include Alexander's own score, not the trajectory score, and LEAD with `Overall Failure Score: X.XX / 1.0` (Output Score first per the 2026-06-20 template; this skill is superseded by fa-ga-canonical). Larry's 2026-06-18 guidance says FA/GA cannot be AI-authored. Use this skill only as scratch support; Alexander must own the final platform text.
 
 ## Worked example
 
