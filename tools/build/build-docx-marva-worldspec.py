@@ -194,6 +194,48 @@ def add_cover_box(doc, title: str, subtitles: list) -> None:
             fmt_para(psub, color=MUTED, size=SUB_SZ, bold=False, center=True)
 
 
+def add_header_block(doc, fields) -> None:
+    """Soya-style header block: one 5-col table. Row 1 codename banner (blue fill, white
+    bold), row 2 descriptive title (bold), then Patient / World Type / Setting / Workflows
+    as full-width merged rows, then a 5-col footer (Specialty | Tasks | Project | Version |
+    Date). Fills stay in {4472C4, D6E4F0} so the Mode A fingerprint stays empty."""
+    info = [("Patient", fields.get("Patient", "")),
+            ("World Type", fields.get("World Type", "")),
+            ("Setting", fields.get("Setting", "")),
+            ("Workflows", fields.get("Workflows", ""))]
+    tasks = fields.get("Total Tasks", "").strip()
+    ver = fields.get("Version", "").strip()
+    footer = [fields.get("Specialty", ""),
+              (tasks + " Tasks") if tasks else "",
+              fields.get("Project", "Project Sanctum"),
+              ("Version " + ver) if ver else "",
+              fields.get("Document date", "")]
+    nrows = 2 + len(info) + 1
+    t = doc.add_table(rows=nrows, cols=5)
+    t.style = "TableNormal"
+    set_borders(t, outer="000000", inner="000000")
+
+    def merged(r):
+        cells = t.rows[r].cells
+        m = cells[0]
+        for cc in cells[1:]:
+            m = m.merge(cc)
+        return m
+
+    b = merged(0); shade(b, DARKBLUE); b.text = fields.get("Codename", "")
+    fmt_para(b.paragraphs[0], color=WHITE, size=COVER_SZ, bold=True, center=True)
+    ti = merged(1); shade(ti, LIGHTBLUE); ti.text = fields.get("Title", "")
+    fmt_para(ti.paragraphs[0], color=BODY, size=SUB_SZ, bold=True, center=True)
+    for k, (label, val) in enumerate(info):
+        cc = merged(2 + k); shade(cc, LIGHTBLUE); cc.text = f"{label}: {val}"
+        fmt_para(cc.paragraphs[0], color=BODY, size=SZ, bold=False, center=True)
+    fr = nrows - 1
+    for c in range(5):
+        cell = t.cell(fr, c); shade(cell, LIGHTBLUE); cell.text = footer[c]
+        cell.width = Inches(1.3)
+        fmt_para(cell.paragraphs[0], color=BODY, size=SZ, bold=False, center=True)
+
+
 def add_note_box(doc, text: str) -> None:
     """Green note callout: green bold label before the first colon, italic gray body."""
     t = doc.add_table(rows=1, cols=1)
@@ -242,7 +284,11 @@ def build() -> None:
             block = []
             while i < n and lines[i].startswith("|"):
                 block.append(lines[i]); i += 1
-            add_data_table(doc, parse_md_table(block), meta=not first_table_seen)
+            rows = parse_md_table(block)
+            if not first_table_seen:
+                add_header_block(doc, {r[0]: r[1] for r in rows[1:] if len(r) >= 2})
+            else:
+                add_data_table(doc, rows, meta=False)
             first_table_seen = True
             continue
         if ln.startswith("# "):

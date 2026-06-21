@@ -1,16 +1,16 @@
-Cover: MARVA LYDELL WORLD SPECIFICATION DOCUMENT || World Title: Cardiorenal Respiratory Transition | World Type: Typical Clinical World | Snapshot: June 19, 2025 at 18:00 | 10 Tasks || Clinical domain: inpatient hospital medicine, cardiology and nephrology, respiratory and post-acute transition, payer and documentation operations | Project Sanctum | Version 1.0 | June 27, 2025
-
 | Field | Value |
 |---|---|
-| World Title | Cardiorenal Respiratory Transition |
-| Patient | Marva Lydell |
-| World Type | Typical Clinical World |
+| Codename | HEALTHCARE_CardiorenalTransition_Marva |
+| Title | Navigating Transition Readiness and Discharge Safety in Decompensated Heart Failure with Cardiorenal and Respiratory Complexity |
+| Patient | Marva Lydell (fictional) |
+| World Type | Typical Clinical |
 | Setting | Inpatient hospital medicine with post-discharge administrative and transition encounters |
-| Specialty / Workflow | Hospital Medicine, Cardiology and Nephrology, Respiratory and Post-Acute Transition, Payer and Documentation Operations |
+| Workflows | Claims Appeal, Medication Reconciliation, Utilization Review, Transition Documentation, Acute Care Discharge Planning, Specialist Referral, Root Cause Analysis, Quality Abstraction, Clinical Documentation Query |
+| Specialty | Hospital Medicine |
 | Total Tasks | 10 |
 | Project | Project Sanctum |
 | Version | 1.0 |
-| Document date | June 27, 2025 |
+| Document date | 06/27/2025 |
 
 # 1. Clinical Scenario
 
