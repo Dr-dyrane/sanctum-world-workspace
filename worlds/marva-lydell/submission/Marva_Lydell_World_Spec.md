@@ -5,7 +5,7 @@
 | Patient | Marva Lydell (fictional) |
 | World Type | Typical Clinical |
 | Setting | Inpatient hospital medicine with post-discharge administrative and transition encounters |
-| Workflows | Claims Appeal, Medication Reconciliation, Utilization Review, Peer Review Case Analysis, Post-Acute Care Coordination, Specialist Referral, Root Cause Analysis, Quality Abstraction, Clinical Documentation Query |
+| Workflows | Claims Appeal, Medication Reconciliation, Utilization Review, Peer Review Case Analysis, Post-Acute Care Coordination, Interdisciplinary Care Plan, Quality Indicator Second-Level Review, Quality Abstraction, Clinical Documentation Query |
 | Specialty | Hospital Medicine |
 | Total Tasks | 10 |
 | Project | Project Sanctum |
@@ -18,7 +18,7 @@
 
 Marva Lydell is a 72-year-old woman with heart failure with preserved ejection fraction, atrial fibrillation on anticoagulation, CKD stage 3b to 4, COPD, and obstructive sleep apnea who is admitted for acute decompensated heart failure with hypoxemia and a cardiorenal acute kidney injury and who is medically improving but operationally unsafe to transition home at the world snapshot. Over a 7-day admission she is diuresed, her oxygenation is reassessed, cardiology and nephrology balance decongestion against kidney recovery and potassium safety, respiratory therapy testing documents that she desaturates with exertion even though her resting saturation looks acceptable, and physical and occupational therapy find she cannot yet manage her stairs or her own oxygen logistics. Congestion and creatinine improve while the transition plan stays unsafe: portable oxygen is not reliably delivered or teach-backed, held cardiorenal and diabetes medications are a restart judgment rather than an automatic resume, her interior stairs and full-time-working daughter make home support partial, and payer, skilled-nursing, and equipment issues are all active.
 
-The world carries ten independent post-snapshot tasks spanning payer appeals, discharge medication reconciliation, a utilization determination, a transition-note peer review, post-acute coordination, a specialist referral handoff, a safety corrective-action review, quality abstraction, and a documentation-integrity query response. The integration anchor is Task 1, the oxygen and skilled-nursing denial appeal, which draws the widest synthesis across resting versus exertional oxygen, functional tolerance, equipment delivery, and home support. File-plan composition: 32 essential world-level files plus 11 essential task-level files plus 4 supplementary world-level files, for 47 unique files supporting the ten tasks.
+The world carries ten independent post-snapshot tasks spanning payer appeals, discharge medication reconciliation, a utilization determination, a transition-note peer review, post-acute coordination, a cardiorenal interdisciplinary care-plan handoff, a post-readmission quality-indicator review, quality abstraction, and a documentation-integrity query response. The integration anchor is Task 1, the oxygen and skilled-nursing denial appeal, which draws the widest synthesis across resting versus exertional oxygen, functional tolerance, equipment delivery, and home support. File-plan composition: 32 essential world-level files plus 11 essential task-level files plus 4 supplementary world-level files, for 47 unique files supporting the ten tasks.
 
 ## 1.2 Patient Profile
 
@@ -127,9 +127,9 @@ Procedural history is intentionally limited for this admission: there is no new 
 | 06/20/2025 14:00 | Task 3, continued-stay determination |
 | 06/21/2025 08:30 | Task 4, transition note peer review |
 | 06/21/2025 13:00 | Task 5, post-acute coordination plan |
-| 06/22/2025 11:00 | Task 6, cardiorenal follow-up referral handoff |
+| 06/22/2025 11:00 | Task 6, cardiorenal follow-up coordination plan |
 | 06/24/2025 10:00 | Task 7, home health versus skilled-nursing appeal |
-| 06/25/2025 09:00 | Task 8, post-readmission corrective-action safety review |
+| 06/25/2025 09:00 | Task 8, post-readmission quality-indicator review |
 | 06/26/2025 09:00 | Task 9, heart-failure transition quality abstraction |
 | 06/26/2025 12:00 | Task 10, documentation-integrity query response |
 
@@ -170,7 +170,7 @@ Draft Prompt: The plan denied the skilled-nursing stay and the home-oxygen upgra
 ## Task 2: Discharge Medication Reconciliation
 
 Capability: medication reconciliation against a documented source-of-truth hierarchy under renal recovery.
-Workflow: Discharge Medication Reconciliation, requested by the hospitalist attending.
+Workflow: Medication Reconciliation, requested by the hospitalist attending.
 Anchor: 06/20/2025 at 10:00. Priority: P0. Difficulty: medium-high. Time estimate: 25 to 35 minutes, reconciling the home list, the MAR, the renal trend, and the outside list.
 
 Expected Output: a reconciled discharge medication list, one row per drug with a disposition of continue, hold, change, stop, or defer and a short rationale, plus patient-facing instructions. Format: a headed reconciliation note with a disposition-per-medication structure. Register: hospitalist and pharmacist professional. Length: 450 to 700 words. Correct responses reconcile against the active MAR and current renal function rather than the stale outside list, treat the held cardiorenal and diabetes agents (empagliflozin, spironolactone, losartan, metformin) as deliberate deferred-restart judgments tied to renal recovery and follow-up rather than silently resuming or stopping them, keep apixaban at a renally correct dose without antiplatelet-anticoagulant duplication beyond the documented aspirin indication, and continue the noise agents unchanged. Grader anchors: reconciliation follows the active record over the outside list; the four held agents each handled as an explicit deferred restart, not a silent continue or stop; apixaban renally dosed and not duplicated; insulin continued without an invented change; no fabricated doses.
@@ -255,27 +255,27 @@ Task-level files: E1-T5 DME Vendor and Coordination Worksheet (external); E2-T5 
 
 Draft Prompt: I need to get Mrs. Lydell's post-acute handoff together before she transitions. Put together the coordination summary from her chart, list each piece of the plan with who owns it, where it stands, and what still has to happen, and flag anything that is not actually in place yet.
 
-## Task 6: Cardiorenal Follow-up Referral Handoff
+## Task 6: Cardiorenal Follow-up Coordination Plan
 
-Capability: a full specialist referral letter authored from the chart that routes the open decisions to owners without over-settling the plan.
-Workflow: Specialist Referral Letter and Documentation Preparation, requested by the hospitalist attending.
-Anchor: 06/22/2025 at 11:00. Priority: P0. Difficulty: medium-high. Time estimate: 25 to 35 minutes, routing the diuretic, renal, potassium, anticoagulation, and restart decisions to the correct owners.
+Capability: a full interdisciplinary care plan authored from the chart that routes the open decisions to owners without over-settling the plan.
+Workflow: Interdisciplinary Care Plan Development and Documentation, requested by the hospitalist attending.
+Anchor: 06/22/2025 at 11:00. Priority: P1. Difficulty: medium-high. Time estimate: 25 to 35 minutes, routing the diuretic, renal, potassium, anticoagulation, and restart decisions to the correct owners.
 
-Expected Output: a cardiorenal follow-up referral letter authored in full from the chart that routes the open decisions to cardiology, nephrology, and primary care. Format: a specialist referral letter with a follow-up routing block. Register: referral and handoff. Length: 450 to 700 words. Correct responses route diuretic titration and weight monitoring, renal labs and potassium monitoring, the held-agent restart timing, and the anticoagulation renal-dose recheck to named owners and keep each conditional item explicitly open rather than letting the letter read as a settled plan. Grader anchors: each follow-up item routed to a named owner; the held-agent restarts kept conditional and parameter-gated, not resumed; the anticoagulation renal-dose recheck routed; oxygen reassessment and renal follow-up kept owned and open; the letter does not assert a settled cardiorenal plan.
+Expected Output: a cardiorenal follow-up interdisciplinary care plan authored in full from the chart that routes the open decisions to cardiology, nephrology, and primary care. Format: an interdisciplinary care plan with a follow-up routing block. Register: care coordination and handoff. Length: 450 to 700 words. Correct responses route diuretic titration and weight monitoring, renal labs and potassium monitoring, the held-agent restart timing, and the anticoagulation renal-dose recheck to named owners and keep each conditional item explicitly open rather than letting the plan read as settled. Grader anchors: each follow-up item routed to a named owner; the held-agent restarts kept conditional and parameter-gated, not resumed; the anticoagulation renal-dose recheck routed; oxygen reassessment and renal follow-up kept owned and open; the care plan does not assert a settled cardiorenal plan.
 
 Failure Design
 
 | Key Trap | Remediation |
 |---|---|
-| The letter reads as a settled plan (shared world-level trap; primary here) | Keep the handoff a true open routing; do not assert the cardiorenal plan is finalized (06/19; progress note, nephrology note) |
+| The care plan reads as settled (shared world-level trap; primary here) | Keep the handoff a true open routing; do not assert the cardiorenal plan is finalized (06/19; progress note, nephrology note) |
 | Held-agent restart routed as a resume (shared world-level trap; primary in Task 4) | Route empagliflozin, spironolactone, losartan, metformin restart timing to nephrology and primary care as conditional, parameter-gated decisions (06/15; nephrology note) |
 | Anticoagulation handed off without the renal-dose recheck (shared world-level trap; primary in Task 5) | Route the apixaban renal-dose recheck to the owner and flag any outside duplicate (06/15; anticoagulation note) |
 | Volume and diuretic titration omitted | Assign torsemide titration and weight monitoring to a named owner (06/19; progress note, weights) |
 | Letter closes a follow-up ownership the chart leaves open | Keep oxygen reassessment and renal follow-up explicitly owned and open (full chart) |
 
-Task-level files: E1-T6 Cardiorenal Follow-up Referral Request (external; the hospitalist's request to refer to cardiology and nephrology, the trigger; the letter is authored in full from the chart).
+Task-level files: E1-T6 Cardiorenal Follow-up Referral Request (external; the hospitalist's request to refer to cardiology and nephrology, the trigger; the care plan is authored in full from the chart).
 
-Draft Prompt: I am sending Mrs. Lydell's cardiorenal follow-up over to her cardiologist and nephrologist. Please write the referral letter from her chart, make sure each follow-up item has a clear owner and where it stands, and do not make anything sound more settled than it is.
+Draft Prompt: I am sending Mrs. Lydell's cardiorenal follow-up over to her cardiologist and nephrologist. Please put together the follow-up care plan from her chart, make sure each follow-up item has a clear owner and where it stands, and do not make anything sound more settled than it is.
 
 ## Task 7: Home Health versus Skilled-Nursing Appeal
 
@@ -299,13 +299,13 @@ Task-level files: E1-T7 Home-Health-Sufficient Denial Letter (external).
 
 Draft Prompt: The plan came back saying home health is enough for Mrs. Lydell instead of a skilled-nursing stay, and UM asked me to push back. Draft the appeal for my signature and make the case from her chart for why home health does not cover what she needs.
 
-## Task 8: Post-Readmission Safety Event Root Cause Review
+## Task 8: Post-Readmission Quality Indicator Second-Level Review
 
-Capability: investigation with a system-versus-individual attribution judgment.
-Workflow: Patient Safety Event Investigation and Root Cause Analysis, requested by the patient safety officer.
-Anchor: 06/25/2025 at 09:00. Priority: P1. Difficulty: medium-low. Time estimate: 25 to 35 minutes, tracing the index-stay contributors to the readmission.
+Capability: a second-level quality review with a system-versus-individual attribution judgment.
+Workflow: Mortality and Quality Indicator Second-Level Review, requested by the patient safety officer.
+Anchor: 06/25/2025 at 09:00. Priority: P2. Difficulty: medium-low. Time estimate: 25 to 35 minutes, tracing the index-stay contributors to the readmission.
 
-Expected Output: a root cause analysis after a heart-failure readmission, with a root-cause attribution and tracked corrective actions, each with an owner and a measure. Format: a structured root cause analysis report. Register: patient-safety and quality. Length: 450 to 700 words. Correct responses attribute the bounceback to multifactorial system causes documented at the index stay (a premature transition against documented unsafety, undelivered portable oxygen, unclear held-medication restart ownership, and an unsafe home plan) rather than to patient nonadherence alone, and tie each corrective action to a documented contributor. Grader anchors: attribution is multifactorial and system-level, not single-person blame; corrective actions map to documented contributors with owners and tracking measures; the review engages the index chart rather than asserting a cause.
+Expected Output: a second-level quality review after a heart-failure readmission, with a contributor attribution and tracked corrective actions, each with an owner and a measure. Format: a structured quality indicator second-level review. Register: patient-safety and quality. Length: 450 to 700 words. Correct responses attribute the bounceback to multifactorial system causes documented at the index stay (a premature transition against documented unsafety, undelivered portable oxygen, unclear held-medication restart ownership, and an unsafe home plan) rather than to patient nonadherence alone, and tie each corrective action to a documented contributor. Grader anchors: attribution is multifactorial and system-level, not single-person blame; corrective actions map to documented contributors with owners and tracking measures; the review engages the index chart rather than asserting a single cause.
 
 Failure Design
 
@@ -319,7 +319,7 @@ Failure Design
 
 Task-level files: E1-T8 Safety Event and Readmission Intake Summary (external, nonadherence-framed).
 
-Draft Prompt: Mrs. Lydell bounced back within a few days of going home and I need a patient-safety review. Go through what the chart from her stay shows about how this happened, give me your root-cause read, and lay out corrective actions we can actually track.
+Draft Prompt: Mrs. Lydell bounced back within a few days of going home and I need a quality review of the readmission. Go through what the chart from her stay shows about how this happened, give me your read on what drove it, and lay out corrective actions we can actually track.
 
 ## Task 9: Heart-Failure Transition Quality Abstraction
 
@@ -347,7 +347,7 @@ Draft Prompt: Please complete the heart-failure transition measure abstraction o
 
 Capability: documentation-integrity judgment, reasoned clinical decline in the treating voice.
 Workflow: Clinical Documentation Improvement (CDI) Query Response Review, requested by the CDI specialist.
-Anchor: 06/26/2025 at 12:00. Priority: P0. Difficulty: medium-high. Time estimate: 20 to 30 minutes, weighing the documented respiratory and cardiorenal picture against the query items.
+Anchor: 06/26/2025 at 12:00. Priority: P1. Difficulty: medium-high. Time estimate: 20 to 30 minutes, weighing the documented respiratory and cardiorenal picture against the query items.
 
 Expected Output: an attending response to a CDI query set, one reasoned answer per item, agreeing where the record supports it and declining on clinical grounds where it does not. Format: an item-by-item attending query response. Register: treating attending. Length: 350 to 600 words. Correct responses decline to add an over-specific acute respiratory failure or a coding-forward cardiorenal-syndrome label that the treating record does not establish, engage the indicators rather than restating their absence, anchor the reasoning on the team's own documentation, and accept any genuinely supported clarification. Grader anchors: the higher-specificity respiratory failure declined on clinical grounds with reasoning, not a bare or procedural decline; the cardiorenal-syndrome severity label declined where unsupported; supported items such as documented HFpEF acuity answered; no agreement to unsupported severity language.
 
@@ -367,7 +367,7 @@ Draft Prompt: CDI sent a query on Mrs. Lydell. Please draft my response as the a
 
 # 3. World File Plan
 
-Files are designed after the tasks; each essential file exists because a task needs it for a correct answer. World-level files provide raw material, never an answer-key synthesis: there is no shared discharge summary, no final disposition statement, no settled cardiorenal plan, and no transition conclusion at world level. The severity-forward and administrative external surfaces (the two payer denials, the continued-stay worksheet, the DME and intake worksheets, the safety-event intake, the abstraction worksheet, the CDI query) are task-level so they cannot pre-answer their tasks. Task 4's task-level input is a complete signed resident transition note that carries two realistic errors for the attending review to catch; Task 6's is a referral request that triggers a letter authored in full from the chart. Neither is a placeholder to be finished. ID convention: EW for essential world-level, E#-T# for essential task-level keyed to the task, WS for supplementary world-level. Filenames are lowercase with underscores and an MMDDYYYY stamp matching the milestones. The file table uses seven columns: number, ID, filename.type, date or hospital-day anchor, Reference File Origin, description, and pearls, traps, and friction. Origins are curated against the DataBank (Template Curation, 06/20/2026): sixteen DataBank-template files cover the clinical notes, consults, flowsheets, reports, and forms; five custom templates cover the lab and MAR flowsheet, the order set, the pharmacy note, the shift note, and the telemetry summary; one notice is a public-domain form; and a single twelve-lead ECG tracing is the one writer-produced media file (rendered, license-clean, engineering does not convert it). Each row carries its document date so the reviewer can verify temporal anchoring at a glance.
+Files are designed after the tasks; each essential file exists because a task needs it for a correct answer. World-level files provide raw material, never an answer-key synthesis: there is no shared discharge summary, no final disposition statement, no settled cardiorenal plan, and no transition conclusion at world level. The severity-forward and administrative external surfaces (the two payer denials, the continued-stay worksheet, the DME and intake worksheets, the safety-event intake, the abstraction worksheet, the CDI query) are task-level so they cannot pre-answer their tasks. Task 4's task-level input is a complete signed resident transition note that carries two realistic errors for the attending review to catch; Task 6's is a referral request that triggers a care plan authored in full from the chart. Neither is a placeholder to be finished. ID convention: EW for essential world-level, E#-T# for essential task-level keyed to the task, WS for supplementary world-level. Filenames are lowercase with underscores and an MMDDYYYY stamp matching the milestones. The file table uses seven columns: number, ID, filename.type, date or hospital-day anchor, Reference File Origin, description, and pearls, traps, and friction. Origins are curated against the DataBank (Template Curation, 06/20/2026): sixteen DataBank-template files cover the clinical notes, consults, flowsheets, reports, and forms; five custom templates cover the lab and MAR flowsheet, the order set, the pharmacy note, the shift note, and the telemetry summary; one notice is a public-domain form; and a single twelve-lead ECG tracing is the one writer-produced media file (rendered, license-clean, engineering does not convert it). Each row carries its document date so the reviewer can verify temporal anchoring at a glance.
 
 ## 3.1 Essential Files (World-Level)
 
@@ -416,7 +416,7 @@ Files are designed after the tasks; each essential file exists because a task ne
 | 4 | E1-T4 | signed_resident_transition_note_06212025.docx | 06/21/2025 | Custom Made (Custom_Transition_Note_Template.docx) | Complete signed resident transition note that clears oxygen on the home setup and silently resumes the held cardiorenal and diabetes agents, the two common errors the peer review must catch | Task 4 |
 | 5 | E1-T5 | dme_vendor_coordination_worksheet_06212025.docx | 06/21/2025 | Custom Made (Custom_Care_Coordination_Worksheet_Template.docx) | External durable medical equipment and case-management worksheet, oxygen described as arranged while the portable unit is not delivered | Task 5 |
 | 6 | E2-T5 | snf_intake_medication_list_06212025.docx | 06/21/2025 | Custom Made (Custom_SNF_Intake_Medication_List_Template.docx) | External skilled-nursing intake medication list carrying a duplicate anticoagulant or a stale renal dose | Task 5 |
-| 7 | E1-T6 | cardiorenal_referral_request_06222025.docx | 06/22/2025 | Custom Made (Custom_Referral_Request_Template.docx) | Hospitalist referral request to cardiology and nephrology for cardiorenal follow-up; the trigger, the letter is authored in full from the chart | Task 6 |
+| 7 | E1-T6 | cardiorenal_referral_request_06222025.docx | 06/22/2025 | Custom Made (Custom_Referral_Request_Template.docx) | Hospitalist referral request to cardiology and nephrology for cardiorenal follow-up; the trigger, the care plan is authored in full from the chart | Task 6 |
 | 8 | E1-T7 | home_health_sufficient_denial_letter_06242025.docx | 06/24/2025 | Custom Made (Custom_Payer_Denial_Letter_Template.docx) | External denial framing home health as sufficient instead of a skilled-nursing stay | Task 7 |
 | 9 | E1-T8 | safety_event_readmission_intake_06252025.docx | 06/25/2025 | Custom Made (Custom_Safety_Event_Intake_Template.docx) | External safety-event intake describing the heart-failure readmission, framed as patient nonadherence | Task 8 |
 | 10 | E1-T9 | hf_transition_abstraction_worksheet_06262025.docx | 06/26/2025 | Custom Made (Custom_Quality_Abstraction_Worksheet_Template.docx) | External heart-failure transition measure abstraction form, fields to value, exclude, or mark undetermined | Task 9 |
