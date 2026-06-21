@@ -49,7 +49,7 @@ def lint(path: str):
     t = pathlib.Path(path).read_text(encoding="utf-8", errors="ignore")
     fails, warns = [], []
 
-    if t.count('—') or t.count('–'):
+    if '\u2014' in t or '\u2013' in t:
         fails.append("em or en dash present; use hyphens, commas, periods")
     m = RATING.search(t)
     if m:
@@ -92,7 +92,7 @@ def lint(path: str):
     if fa:
         if not SCORE_LEAD.match(fa.strip()):
             fails.append("FA must LEAD with the Output Score as the first element (2026-06-20 reviewer rule): "
-                         "start with 'Overall Failure Score: X.XX / 1.0' or 'Overall Score: NN%', then name the run. "
+                         "start with 'Overall Score: NN%' (or the 0-1 form 'Overall Failure Score: X.XX / 1.0'), then name the run. "
                          "Any context, including 'On trajectory N', before the score is the AutoQC fail")
         fa_open = re.split(r'\n\s*\n', fa)[0]
         if "On trajectory " not in fa_open:
