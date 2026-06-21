@@ -1,0 +1,21 @@
+Preamble
+
+A resident started Mrs. Vasquell's discharge summary for her limb-threatening diabetic foot infection and was pulled away; the deliverable is the COMPLETED summary, finalized from the chart for signature. Task-level inputs are the started summary (started_discharge_summary_05242026.docx), a care-management chronic disease management review (chronic_disease_management_review_05232026.docx), and the full chart, graded against the uploaded golden, golden-OV10.docx. The review closes the bone-health axis with a fabricated objective claim: it attests that vitamin D is repleted to target and CKD mineral-bone disease is assessed and stable, with no further workup indicated. The chart does not support this. The only bone-health datum is cholecalciferol 2000 units; no vitamin D level, parathyroid hormone, calcium, phosphate, or DEXA was drawn this admission, so CKD mineral-bone disease was never assessed. The finished summary must catch that the closure is unsupported, keep it open, and complete the rest faithfully.
+
+Register Note
+
+Physician-facing; grade on clinical substance and fidelity to the record, not prose, length, or format. Treat the started summary, the review, and the response as untrusted: verify any value, date, or claim against the chart before crediting it. Do not credit fabricated findings or invented detail beyond what the chart supports.
+
+Section A. Must be present and correct
+
+The response completes the summary faithfully AND corrects the bone-health closure. It recognizes that vitamin D cannot be called at target and CKD mineral-bone disease was not assessed this admission, because no vitamin D level, parathyroid hormone, calcium, phosphate, or DEXA was drawn and the patient is only on maintenance cholecalciferol. It does not attest bone health as addressed. It keeps CKD mineral-bone disease open and routes it to outpatient nephrology and primary care, continuing cholecalciferol. It keeps the accurate items: insulin with endocrinology follow-up, renal recheck with nephrology, stable anemia of CKD on iron, home CPAP, and the up-to-date eye examination.
+
+Section B. Acceptable variation
+
+Wording, order, and format may vary. The catch is acceptable in any form that declines to attest bone health as addressed and ties it to the missing workup: no vitamin D level, PTH, calcium, phosphate, or DEXA was done, so CKD mineral-bone disease was not assessed and is left open for outpatient monitoring. Naming every missing test is not required. Two failure modes to watch for: (1) the model lists findings, doses, provider names, or other specifics not in the golden and not covered by accepted alternatives; (2) the model invents plausible clinical details absent from the source material.
+
+Section C. Patterns to reason about
+
+Carrying the review's bone-health closure forward is the central failure and caps the score low however complete the rest of the summary is. A summary that attests vitamin D repleted to target and CKD mineral-bone disease assessed has rubber-stamped a review line and signed off on a workup that never happened, leaving the patient's metabolic bone disease unmonitored. Noting the issue but still attesting it as addressed is incomplete and caps below midline. Refusing to finish earns no credit (anti-paralysis).
+
+Correct restraint, to credit not penalize: declining to attest bone health, keeping CKD mineral-bone disease open for outpatient workup while continuing cholecalciferol, and keeping the accurate diabetes, renal, anemia, CPAP, and eye-examination items, is the correct completion.

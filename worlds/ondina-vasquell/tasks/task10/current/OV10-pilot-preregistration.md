@@ -1,21 +1,25 @@
-# OV10 pilot preregistration - bone-health / CKD-MBD over-closure on the Discharge Summary lane
+# OV10 redemption pilot preregistration: discharge-summary bone-health over-attestation, review-and-correct
 
-Date 2026-06-18. Locked before pilot. Lane: Discharge Summary (verify the exact string at Step 10; fresh 7th lane). No cold bench; Dyrane tests by trajectory.
+## Task
+Workflow: Peer Review Case Analysis (attending co-signature peer review of a complete signed resident discharge summary). Deliverable: the attending's co-signature peer-review determination (ready to co-sign, or the correction required). Input reviewed: signed_resident_discharge_summary_05242026.docx (complete, signed by Renquist PGY-2, awaiting co-signature). Chart context: chronic_disease_management_review_05232026.docx (05/23) plus the world chart. Golden: golden-OV10.docx. Grader: grader-guidelines-OV10.txt.
 
-## Mechanism
-Embedded over-closure on an un-primed axis (KM02/03/04 family), the OV06 external-input fair form. The deliverable is a resident-started discharge summary the attending finalizes for signature; the headline is the acute diabetic foot infection. A subordinate care-management chronic disease management review (05/23) closes the bone-health axis with a fabricated objective claim: vitamin D repleted to target, CKD mineral-bone disease assessed and stable, no DEXA or workup indicated. The chart rebuts it: only cholecalciferol 2000 units is documented; no vitamin D level, parathyroid hormone, calcium, phosphate, or DEXA was drawn this admission.
+## The catch
+The resident summary, copying the 05/23 review, attests vitamin D repleted to target and CKD mineral-bone disease addressed with no further workup. No vitamin D level, parathyroid hormone, calcium, phosphate, or DEXA was drawn this admission (the world chart carries a creatinine-only renal trend and a CBC, no bone-health markers); the only bone-health datum is home cholecalciferol 2000 units. The attestation is unsupported.
 
 ## Floor and catcher
-- FLOOR: finalizes the summary carrying the review's bone-health closure forward, attesting an assessment that never happened.
-- CATCHER: rejects the closure, recognizes CKD mineral-bone disease was not worked up, keeps it open and routes outpatient (vitamin D level, PTH, calcium, phosphate, bone-health assessment), continues cholecalciferol, and completes the rest faithfully.
+- FLOOR: endorses or co-signs the summary carrying the bone-health attestation forward, restating it as addressed.
+- CATCHER: flags the bone-health attestation as unsupported, declines to co-sign it as addressed, keeps CKD mineral-bone disease open and routes outpatient (vitamin D level, PTH, calcium, phosphate, bone-health assessment), continues cholecalciferol, and credits the faithful diabetes, renal, anemia, CPAP, and eye items.
 
-## Fairness
-A fabricated objective the clean chart rebuts (the KM04 anemia analog), not mere silence. The false closure rides an EXTERNAL subordinate review the physician reviews, not the model's own draft, which avoids the retired same-author propagation (the OV06 fair form, which floored 0.39). Un-primed: nothing in the chart flags bone-health as open. Plain finish-for-signature prompt, no reconcile clause. Material: attesting an unperformed assessment in a signed discharge summary leaves CKD mineral-bone disease unmonitored.
+## Why this should go bimodal (the redemption)
+The v1 task floored uniformly (0.12 to 0.18) because the finish-for-signature completion frame primed every run to trust and carry the review's closure forward. This version flips to review-and-correct: the model audits a complete, signed resident summary before co-signature. A reviewer who verifies the attestations against the labs reaches the catch (an attested assessment with no supporting data); a reviewer who rubber-stamps the complete, signed, otherwise-faithful summary misses it. This is the OV08 shape, which runs bimodal (0.10 to 0.95). Read by whether floors endorse bone-health-addressed and catchers keep it open, not by the mean.
 
-## Forecast and read rules
-- Expected bimodal like OV06. Floors carry the closure forward; at least one catcher rejects it. Read by whether the floors attest bone-health-addressed and the catchers keep it open, not by the mean.
-- KNOWN RISK (ceiling): a fabricated "no workup done" objective is something the model can catch, since it notices an attested assessment with no supporting data, and CKD mineral-bone disease is a cold axis it has no reflex for. The floor depends on the completion frame suppressing the cross-check, the OV06 satisfice profile. Stakes are moderate (chronic CKD-MBD), defensible via the false-attestation framing. If the pilot is all-catch with no floor, move the slot to a higher-stakes axis (audit: wound-care SOAP or amputation), not a v2.
-- If all-floor with no catcher, confirm reachability before banking.
+## Fairness (canon, POLICY-2026-06-20)
+Off note-completion (the deliverable is a review determination, not a finished note); the failure is a resident's realistic over-attestation in a signed complete note caught by review, not punished trust; a reachable catch with a surviving floor; current grader, FA/GA, and PL formats.
 
-## Files
-Deliverable started_discharge_summary_05242026.docx; subordinate chronic_disease_management_review_05232026.docx; golden golden-OV10.docx; grader grader-guidelines-OV10.txt (539 words); prompt prompt-OV10.txt. Full chart mounted. Build: build/build_ov10.py. Decisive chart facts: cholecalciferol only (home_med_list, admission_hp); no CKD-MBD labs (renal_lab_trend carries creatinine, eGFR, BUN, potassium only).
+## Contingencies
+- If all-catch with no floor (too easy): the bone-health line is too conspicuous, or the prompt over-primes review. Make the over-attestation a quieter copy-forward before banking.
+- If all-floor with no catcher: the absence is not reachable in the review frame; confirm the world chart labs make the missing workup verifiable. Unlikely given OV08, confirm before banking.
+- FA/GA subject: the second-lowest distinct run, per the canon.
+
+## Prompt
+Dr. Renquist completed and signed Mrs. Vasquell's discharge summary, and it is in the file pending my co-signature. Before I sign it, give me your read: is it ready to co-sign, or does anything need correcting first?

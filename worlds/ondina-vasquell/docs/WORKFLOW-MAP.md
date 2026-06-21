@@ -15,7 +15,7 @@ For live task status and lifecycle, docs/WORLD-STATUS.md governs. This file maps
 | OV07 | v3 re-pilot pending | Claims Denial Analysis and Appeal Preparation | v3 appeal-overreach (osteomyelitis overclaim; v2 ceilinged) | Long-shot fix built; gates green; awaiting re-pilot |
 | OV08 | l6jo01e4 | Utilization Review Concurrent Stay Documentation | FLOOR 0.63 | Awaiting first human review |
 | OV09 | ebv61af9 | Post-Acute Care Coordination Documentation | FLOOR ~0.62 | Awaiting first human review |
-| OV10 | ilsjf671 | Discharge Summary | FLOOR ~0.15 uniform | Awaiting first human review; FA/GA submitted |
+| OV10 | redemption pilot-pending | Peer Review Case Analysis (attending co-signature review) | REDEMPTION 2026-06-20: review-and-correct, was note-completion FLOOR ~0.15 uniform; built, gates green, golden satisfies Section A; expect bimodal (OV08 parity) | Pilot-pending |
 | OV11 | RETIRED | (vacated) Treatment Plan Documentation for Chronic Disease Management | RETIRED 2026-06-19 | Three mechanics all unshippable: v1 immunization silence floor (unfair), v2 immunization mounted-contradiction CEILING (e52ae4dd 0.85-0.95), v3 pioglitazone-in-HFpEF CEILING (glycemic primed + famous fact). Packet at tasks/_retired/2026-06-19-task11-treatmentplan-cdm-ceiling. Lane vacated; slate met at 9 floors |
 | OV12 | pilot-pending | Acute Care Discharge Planning (P1, new 8th lane) | off-text image: new-onset atrial fibrillation on a pre-discharge ECG (discharge plan); built, gated, cold-benched 2026-06-20 | Pilot-pending |
 
