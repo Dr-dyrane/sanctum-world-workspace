@@ -1,3 +1,5 @@
+> V3 CDI REFRAME 2026-06-21: workflow moved to Clinical Documentation Improvement (CDI) Query Review; the reviewed note is now a complete transition-of-care summary (bone-health line is the only defect); grader recalibrated so a thorough review that misses the one line lands mid-band, not the floor. The bimodal mechanism below is unchanged.
+
 # OV10 redemption pilot preregistration: discharge-summary bone-health over-attestation, review-and-correct
 
 ## Task
